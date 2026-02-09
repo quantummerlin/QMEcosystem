@@ -5,675 +5,675 @@
 
 var DEEP_CHIRON_READINGS = {
     Aries: {
-        title: "Chiron in Aries - The Wounded Warrior",
-        archetype: "Reclaiming the Right to Exist",
-        hook: "With Chiron in Aries, this soul carries a core wound around identity, self-assertion, and the fundamental right to exist and take up space. The journey is from feeling invisible or wrong for existing to becoming a powerful advocate for others' right to be themselves.",
+        title: "Quirón en Aries - El guerrero herido",
+        archetype: "Reclamando el derecho a existir",
+        hook: "Con Quirón en Aries, esta alma lleva una herida central en torno a la identidad, la autoafirmación y el derecho fundamental a existir y ocupar espacio. El viaje es desde sentirse invisible o equivocado por existir hasta convertirse en un poderoso defensor del derecho de los demás a ser ellos mismos.",
         
-        coreWound: `The Aries Chiron wound centers on the right to be a self. Early experiences may have challenged basic existence - parents who didn't want a child, feeling like a burden, or being punished for natural self-assertion. There may have been messages that expressing needs or having an identity was selfish or wrong.
+        coreWound: `La herida de Aries Quirón se centra en el derecho a ser uno mismo. Las primeras experiencias pueden haber desafiado la existencia básica: padres que no querían tener un hijo, sentirse como una carga o ser castigados por su autoafirmación natural. Es posible que haya habido mensajes de que expresar necesidades o tener una identidad era egoísta o incorrecto.
 
-This wound manifests as difficulty with basic self-assertion. Simple acts like stating preferences, taking initiative, or occupying space can feel forbidden or dangerous. There's often unconscious anger at having to justify one's existence or constantly prove worthiness to be here.
+Esta herida se manifiesta como dificultad con la autoafirmación básica. Actos simples como expresar preferencias, tomar iniciativa u ocupar espacio pueden parecer prohibidos o peligrosos. A menudo hay una ira inconsciente por tener que justificar la propia existencia o demostrar constantemente que uno es digno de estar aquí.
 
-The pain goes deep because it touches the most fundamental question: Do I have the right to be myself? Early experiences answered this with "no" or "only if you meet conditions." The child learned to diminish, disappear, or become who others needed rather than assert authentic selfhood.`,
+El dolor es profundo porque toca la pregunta más fundamental: ¿tengo derecho a ser yo mismo? Las primeras experiencias respondieron a esto con "no" o "sólo si cumples las condiciones". El niño aprendió a disminuir, desaparecer o convertirse en quien los demás necesitaban en lugar de afirmar su identidad auténtica.`,
         
-        woundedPatterns: `Aries Chiron often manifests as chronic self-doubt masked by either extreme passivity or aggressive overcompensation. There may be patterns of letting others lead even when you have better ideas, or conversely, being combative to prove you exist.
+        woundedPatterns: `Aries Quirón a menudo se manifiesta como una duda crónica enmascarada por una pasividad extrema o una sobrecompensación agresiva. Puede haber patrones de dejar que otros lideren incluso cuando uno tiene mejores ideas o, por el contrario, ser combativo para demostrar que existe.
 
-Identity confusion is common - not knowing who you are separate from others' needs and expectations. There may be a tendency to take on others' identities or completely disappear in relationships. Anger issues can arise, with rage that seems disproportionate because it's tied to existential threat.
+La confusión de identidad es común: no saber quién es usted separado de las necesidades y expectativas de los demás. Puede haber una tendencia a asumir la identidad de los demás o desaparecer por completo en las relaciones. Pueden surgir problemas de ira, con una ira que parece desproporcionada porque está ligada a una amenaza existencial.
 
-Many with this placement struggle with initiative and starting things. Beginning feels dangerous, like it requires permission that won't be granted. There's often a pattern of waiting for others to go first or needing external push to take action that should flow naturally.`,
+Muchas personas en esta ubicación tienen dificultades con la iniciativa y con empezar cosas. Empezar parece peligroso, como si requiriera un permiso que no se concede. A menudo existe un patrón de esperar a que otros actúen primero o de necesitar un impulso externo para tomar medidas que deberían fluir de forma natural.`,
         
-        healingJourney: `Healing Chiron in Aries requires reclaiming the right to exist as yourself without justification. This starts with recognizing that your existence doesn't require earning or proving. You don't need to be useful, perfect, or acceptable to have the right to be here.
+        healingJourney: `Curar a Quirón en Aries requiere reclamar el derecho a existir como uno mismo sin justificación. Esto comienza reconociendo que tu existencia no requiere ganar dinero ni demostrarlo. No es necesario ser útil, perfecto o aceptable para tener derecho a estar aquí.
 
-The work involves learning to assert needs and boundaries without guilt or aggression. This means practicing small acts of self-assertion: stating preferences, taking initiative, saying "I want" without apology. Each act of healthy assertion rewires the wounded belief.
+El trabajo implica aprender a hacer valer las necesidades y los límites sin culpa ni agresión. Esto significa practicar pequeños actos de autoafirmación: expresar preferencias, tomar la iniciativa, decir "quiero" sin disculparse. Cada acto de afirmación saludable reconfigura la creencia herida.
 
-Connecting with healthy anger is crucial. The rage underneath must be acknowledged and channeled constructively. This isn't about becoming aggressive; it's about honoring the anger that arose when your basic selfhood was denied and using it as fuel for healthy boundaries and authentic action.`,
+Conectarse con una ira saludable es crucial. La rabia subyacente debe reconocerse y canalizarse de manera constructiva. No se trata de volverse agresivo; se trata de honrar la ira que surgió cuando se le negó su identidad básica y utilizarla como combustible para establecer límites saludables y acciones auténticas.`,
         
-        healerGift: `Once integrated, Chiron in Aries creates powerful advocates for others' right to be themselves. You become someone who can see when others are dimming their light or disappearing, because you know that wound intimately.
+        healerGift: `Una vez integrado, Quirón en Aries crea poderosos defensores del derecho de los demás a ser ellos mismos. Te conviertes en alguien que puede ver cuando otros están atenuando su luz o desapareciendo, porque conoces esa herida íntimamente.
 
-The gift is the ability to give permission and encouragement for authentic self-expression that you once needed but didn't receive. You become fearless in supporting others' right to exist as they are, to take initiative, to be "selfish" in healthy ways.
+El don es la capacidad de dar permiso y aliento para una autoexpresión auténtica que alguna vez necesitó pero que no recibió. Te vuelves valiente al apoyar el derecho de los demás a existir tal como son, a tomar la iniciativa y a ser "egoístas" de manera saludable.
 
-There's often a gift for helping people find their anger and courage. You can guide others through the scary work of self-assertion because you've walked that path. Your presence gives others permission to exist fully, without apology.`,
+A menudo existe un don para ayudar a las personas a encontrar su ira y su coraje. Puedes guiar a otros a través del aterrador trabajo de la autoafirmación porque ya has recorrido ese camino. Tu presencia les da permiso a los demás para existir plenamente, sin disculpas.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Aries is that existence itself is sacred. You don't have to earn your place in the universe through achievement, usefulness, or being acceptable. Your being here is its own justification.
+        spiritualLesson: `La lección espiritual de Quirón en Aries es que la existencia misma es sagrada. No tienes que ganarte tu lugar en el universo a través de logros, utilidad o ser aceptable. Tu estar aquí es su propia justificación.
 
-The advanced teaching is that true selfhood isn't selfish - it's the prerequisite for genuine connection. Only by being fully yourself can you truly meet others. The wound taught you to disappear; the healing teaches that showing up fully is the greatest gift.
+La enseñanza avanzada es que la verdadera identidad no es egoísta: es el requisito previo para una conexión genuina. Sólo siendo plenamente tú mismo podrás conocer verdaderamente a los demás. La herida te enseñó a desaparecer; la curación enseña que mostrarse plenamente es el mayor regalo.
 
-Ultimately, this placement teaches that courage isn't the absence of fear of being yourself - it's being yourself anyway. The wound makes you intimately familiar with existential fear, which paradoxically gives you capacity for profound courage.`,
+En última instancia, esta ubicación enseña que el coraje no es la ausencia de miedo a ser uno mismo, sino ser uno mismo de todos modos. La herida te familiariza íntimamente con el miedo existencial, lo que paradójicamente te da capacidad de valentía profunda.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Aries is either complete self-erasure or aggressive overcompensation. You may swing between disappearing entirely and fighting everyone to prove you exist. Integration means finding the middle path of calm self-assertion.
+        shadowIntegration: `La sombra de Quirón no curado en Aries es un completo autoborrado o una sobrecompensación agresiva. Puedes oscilar entre desaparecer por completo y luchar contra todos para demostrar que existes. Integración significa encontrar el camino intermedio de la autoafirmación tranquila.
 
-Watch for patterns of self-sabotage just as you're about to succeed or be visible. The wounded part fears that being seen means being attacked. Shadow work involves questioning these unconscious beliefs and choosing visibility anyway.
+Esté atento a patrones de autosabotaje justo cuando está a punto de tener éxito o ser visible. La parte herida teme que ser vista signifique ser atacada. El trabajo en la sombra implica cuestionar estas creencias inconscientes y elegir la visibilidad de todos modos.
 
-Another shadow is vicarious living - being intensely invested in others' successes or identities because it's safer than claiming your own. Healing means transferring that investment to your own life and letting others handle their own journeys.`,
+Otra sombra es la vida indirecta: invertir intensamente en los éxitos o las identidades de los demás porque es más seguro que reclamar los propios. Sanar significa transferir esa inversión a tu propia vida y dejar que otros manejen sus propios viajes.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Aries creates patterns of disappearing or becoming what the partner needs. You may attract dominant partners who confirm the belief that there's not room for two full selves.
+        relationshipHealing: `En las relaciones, Quirón no curado en Aries crea patrones de desaparición o de convertirse en lo que la pareja necesita. Puede atraer socios dominantes que confirmen la creencia de que no hay lugar para dos yoes completos.
 
-Healing involves choosing partners who actively want you to be yourself and learning to maintain identity within intimacy. This means practicing saying "I" statements, maintaining separate interests, and disagreeing when you disagree.
+La curación implica elegir parejas que quieran activamente que seas tú mismo y aprender a mantener la identidad dentro de la intimidad. Esto significa practicar decir declaraciones en primera persona, mantener intereses separados y estar en desacuerdo cuando no está de acuerdo.
 
-The gift, once healed, is the ability to create relationships where both people get to be fully themselves. You teach partners that love doesn't require sacrifice of self, that intimacy deepens when both people show up authentically.`,
+El don, una vez sanado, es la capacidad de crear relaciones en las que ambas personas lleguen a ser plenamente ellas mismas. Enseñas a tus parejas que el amor no requiere sacrificio personal, que la intimidad se profundiza cuando ambas personas se muestran auténticas.`,
         
-        careerExpression: `Professionally, healed Chiron in Aries often leads to advocacy, coaching, or leadership roles where you help others find their voice and courage. You're drawn to work where you can encourage initiative and authentic self-expression.
+        careerExpression: `Profesionalmente, Quirón curado en Aries a menudo conduce a roles de defensa, entrenamiento o liderazgo en los que ayuda a otros a encontrar su voz y su coraje. Le atrae el trabajo donde pueda fomentar la iniciativa y la auténtica autoexpresión.
 
-Entrepreneurship may call strongly once healing begins - the ultimate act of self-assertion and initiative. You may also be drawn to fields like personal development, identity work, or helping marginalized people claim their right to exist and thrive.
+El espíritu empresarial puede ser una fuerte llamada una vez que comience la curación: el acto supremo de autoafirmación e iniciativa. También es posible que se sienta atraído por campos como el desarrollo personal, el trabajo de identidad o ayudar a personas marginadas a reclamar su derecho a existir y prosperar.
 
-The career challenge is overcoming fear of visibility and leadership. The wound says leading is dangerous; the healing says your leadership gives others permission to lead their own lives.`,
+El desafío profesional es superar el miedo a la visibilidad y al liderazgo. La herida dice que liderar es peligroso; la curación dice que tu liderazgo da permiso a otros para llevar sus propias vidas.`,
         
-        affirmation: "I have the right to exist as myself. My presence is valuable without justification. I take up space without apology and encourage others to do the same."
+        affirmation: "Tengo derecho a existir como yo mismo. Mi presencia es valiosa sin justificación. Ocupo espacio sin disculparme y animo a otros a hacer lo mismo."
     },
 
     Taurus: {
-        title: "Chiron in Taurus - The Wounded Worth",
-        archetype: "Reclaiming Inherent Value",
-        hook: "With Chiron in Taurus, this soul carries a core wound around self-worth, security, and the inherent right to have needs and enjoy material existence. The journey is from feeling fundamentally unworthy to recognizing value that doesn't require earning.",
+        title: "Quirón en Tauro - The Wounded Worth",
+        archetype: "Recuperar el valor inherente",
+        hook: "Con Quirón en Tauro, esta alma lleva una herida central en torno a la autoestima, la seguridad y el derecho inherente a tener necesidades y disfrutar de la existencia material. El viaje va desde sentirse fundamentalmente indigno hasta reconocer un valor que no requiere ganar dinero.",
         
-        coreWound: `The Taurus Chiron wound centers on worthiness and value. Early experiences may have involved poverty, material instability, or messages that you weren't worth investing in. There may have been neglect of basic physical needs or comparison to others deemed more valuable.
+        coreWound: `La herida de Tauro Quirón se centra en el mérito y el valor. Las primeras experiencias pueden haber involucrado pobreza, inestabilidad material o mensajes en los que no valía la pena invertir. Puede haber negligencia en las necesidades físicas básicas o comparación con otras consideradas más valiosas.
 
-This wound manifests as a deep sense of not being valuable enough - not worthy of nice things, comfort, security, or investment of resources. Self-worth becomes entirely dependent on external validation or achievement. There's often a wound around the physical body, feeling it's not good enough or valuable.
+Esta herida se manifiesta como una profunda sensación de no ser lo suficientemente valioso, no digno de cosas bonitas, comodidad, seguridad o inversión de recursos. La autoestima se vuelve completamente dependiente de la validación o el logro externos. A menudo hay una herida alrededor del cuerpo físico, sintiendo que no es lo suficientemente bueno o valioso.
 
-The pain is profound because it touches basic survival and belonging. If you don't have value, you don't deserve resources, and without resources, you can't survive. The wounded child concluded they had to earn worth through perfection, usefulness, or becoming who others valued.`,
+El dolor es profundo porque afecta la supervivencia y la pertenencia básicas. Si no tienes valor, no mereces recursos y sin recursos no puedes sobrevivir. El niño herido concluyó que tenía que ganarse el valor a través de la perfección, la utilidad o convertirse en quien los demás valoraban.`,
         
-        woundedPatterns: `Taurus Chiron manifests as chronic financial anxiety regardless of actual resources, or as compulsive accumulation to prove worth through possessions. There may be difficulty accepting gifts or spending money on yourself, feeling you don't deserve it.
+        woundedPatterns: `Tauro Quirón se manifiesta como una ansiedad financiera crónica independientemente de los recursos reales, o como una acumulación compulsiva para demostrar su valía a través de posesiones. Puede tener dificultades para aceptar regalos o gastar dinero en uno mismo, sintiendo que no lo merece.
 
-Self-worth volatility is common - feeling worthy only when achieving, producing, or receiving external validation. When those disappear, worth collapses. There's often overwork to prove value or difficulty asserting worth in negotiations (asking for raises, setting prices).
+La volatilidad de la autoestima es común: sentirse digno sólo cuando logra, produce o recibe validación externa. Cuando desaparecen, el valor se derrumba. A menudo hay exceso de trabajo para demostrar el valor o dificultad para afirmarlo en las negociaciones (pedir aumentos, fijar precios).
 
-Many struggle with enjoying physical pleasures without guilt. Eating well, resting, enjoying sensual experiences, or investing in comfort feels forbidden or shameful. The body may be treated as a thing to push rather than honor.`,
+A muchos les cuesta disfrutar de los placeres físicos sin sentirse culpables. Comer bien, descansar, disfrutar de experiencias sensuales o invertir en comodidad se siente prohibido o vergonzoso. El cuerpo puede ser tratado como algo a lo que hay que impulsar en lugar de honrarlo.`,
         
-        healingJourney: `Healing Chiron in Taurus requires separating worth from productivity or possession. This starts with recognizing that inherent value exists independent of what you do, have, or produce. You have worth because you exist, not because you earn it.
+        healingJourney: `Curar a Quirón en Tauro requiere separar el valor de la productividad o la posesión. Esto comienza con reconocer que el valor inherente existe independientemente de lo que usted hace, tiene o produce. Vales porque existes, no porque te lo ganes.
 
-The work involves practicing self-care and self-investment as radical acts. This means spending money on yourself without guilt, resting without justifying it, enjoying pleasures unapologetically. Each act challenges the wounded belief that you must earn the right to these things.
+El trabajo implica practicar el autocuidado y la autoinversión como actos radicales. Esto significa gastar dinero en uno mismo sin culpa, descansar sin justificarlo, disfrutar de los placeres sin pedir disculpas. Cada acto desafía la creencia herida de que uno debe ganarse el derecho a estas cosas.
 
-Developing healthy relationship with money and resources is crucial. This isn't about accumulation; it's about recognizing you deserve security and comfort. It means learning to receive graciously and to ask for compensation that reflects your value.`,
+Desarrollar una relación sana con el dinero y los recursos es crucial. No se trata de acumulación; se trata de reconocer que mereces seguridad y comodidad. Significa aprender a recibir con gracia y a pedir una compensación que refleje su valor.`,
         
-        healerGift: `Once integrated, Chiron in Taurus creates powerful healers around worth and value. You can help others recognize inherent value that doesn't require proving, because you've walked the journey from worthlessness to self-valuing.
+        healerGift: `Una vez integrado, Quirón en Tauro crea poderosos sanadores en torno al valor y el valor. Puedes ayudar a otros a reconocer un valor inherente que no requiere demostración, porque has recorrido el camino desde la inutilidad hasta la autovaloración.
 
-The gift is the ability to see value in others that they can't see in themselves. You become someone who invests in others' potential, who reminds them they deserve resources and comfort, who helps them separate worth from productivity.
+El don es la capacidad de ver en los demás un valor que no pueden ver en sí mismos. Te conviertes en alguien que invierte en el potencial de los demás, que les recuerda que merecen recursos y comodidad, que les ayuda a separar el valor de la productividad.
 
-There's often a gift for helping people heal relationship with money, body, or physical security. You can guide others through the scary work of claiming worth and asking for what they deserve because you know that territory intimately.`,
+A menudo existe un don para ayudar a las personas a sanar la relación con el dinero, el cuerpo o la seguridad física. Puedes guiar a otros a través del aterrador trabajo de reclamar valor y pedir lo que merecen porque conoces ese territorio íntimamente.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Taurus is that existence itself has value. You don't have to be useful, productive, or beautiful to be worthy of resources and comfort. Worth is inherent, not conditional.
+        spiritualLesson: `La lección espiritual de Quirón en Tauro es que la existencia misma tiene valor. No es necesario ser útil, productivo o hermoso para ser digno de recursos y comodidad. El valor es inherente, no condicional.
 
-The advanced teaching is that enjoying material life isn't shallow - it's honoring the incarnation. The wound taught you to deny physical needs; the healing teaches that caring for the body and enjoying earthly pleasures is sacred.
+La enseñanza avanzada es que disfrutar de la vida material no es algo superficial: es honrar la encarnación. La herida te enseñó a negar las necesidades físicas; la curación enseña que cuidar el cuerpo y disfrutar de los placeres terrenales es sagrado.
 
-Ultimately, this placement teaches that true security comes from internal sense of worth, not external accumulation. The wound creates money fears that paradoxically can lead to profound understanding of what real security means.`,
+En última instancia, esta ubicación enseña que la verdadera seguridad proviene del sentido interno de valor, no de la acumulación externa. La herida crea temores monetarios que, paradójicamente, pueden conducir a una comprensión profunda de lo que significa la seguridad real.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Taurus is either chronic deprivation or compulsive accumulation. You may deny yourself everything or try to fill the worth wound with possessions and achievement. Integration means finding enough without hoarding.
+        shadowIntegration: `La sombra de Quirón no curado en Tauro es la privación crónica o la acumulación compulsiva. Puede que te lo niegues todo o intentes llenar la herida del valor con posesiones y logros. Integración significa encontrar lo suficiente sin acaparar.
 
-Watch for self-worth that's entirely dependent on bank balance, possessions, or others' valuation. Shadow work involves developing worth that's independent of these external measures.
+Esté atento a la autoestima que depende por completo del saldo bancario, las posesiones o la valoración de los demás. El trabajo en la sombra implica desarrollar un valor independiente de estas medidas externas.
 
-Another shadow is denying others the help you wish you'd received, or conversely, giving away resources compulsively to prove worth. Healing means balanced giving and receiving.`,
+Otra sombra es negar a otros la ayuda que desearías haber recibido o, por el contrario, regalar recursos compulsivamente para demostrar tu valía. Sanar significa dar y recibir de forma equilibrada.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Taurus creates patterns of staying in situations where you're undervalued or trying to buy love through gifts and service. You may feel you must prove worth to deserve partnership.
+        relationshipHealing: `En las relaciones, Quirón en Tauro, que no ha sanado, crea patrones de permanecer en situaciones en las que estás infravalorado o de intentar comprar amor a través de regalos y servicios. Es posible que sienta que debe demostrar su valía para merecer una asociación.
 
-Healing involves choosing partners who value you intrinsically and learning to receive love without needing to earn it. This means accepting that your presence itself is the gift, not what you provide.
+La curación implica elegir parejas que te valoren intrínsecamente y aprender a recibir amor sin necesidad de ganártelo. Esto significa aceptar que tu presencia en sí misma es el regalo, no lo que tú brindas.
 
-The gift, once healed, is creating relationships built on mutual valuing where both people honor each other's worth. You teach partners that love isn't transactional.`,
+El don, una vez sanado, es crear relaciones basadas en la valoración mutua en las que ambas personas honran el valor del otro. Enseñas a tus socios que el amor no es transaccional.`,
         
-        careerExpression: `Professionally, healed Chiron in Taurus often leads to work around financial healing, body image work, or helping others recognize their value. You may be drawn to fields like financial counseling, pricing strategy, or work that helps people charge what they're worth.
+        careerExpression: `Profesionalmente, Quirón curado en Tauro a menudo conduce a trabajar en torno a la curación financiera, el trabajo de la imagen corporal o ayudar a otros a reconocer su valor. Es posible que se sienta atraído por campos como el asesoramiento financiero, la estrategia de precios o el trabajo que ayuda a las personas a cobrar lo que valen.
 
-Creative fields involving beauty, nature, or physical craft may call strongly. You have the potential to create genuine value and help others do the same. The challenge is charging appropriately for your work and not undervaluing yourself.
+Los campos creativos que involucran la belleza, la naturaleza o la artesanía física pueden ser muy atractivos. Tienes el potencial de crear valor genuino y ayudar a otros a hacer lo mismo. El desafío es cobrar adecuadamente por tu trabajo y no infravalorarte.
 
-The gift is the ability to help others build genuine security and worth. You understand the journey from scarcity consciousness to abundance.`,
+El don es la capacidad de ayudar a otros a construir seguridad y valor genuinos. Entiendes el viaje desde la conciencia de escasez a la abundancia.`,
         
-        affirmation: "I am inherently valuable. I deserve resources, comfort, and care. My worth is not conditional on what I do or have. I invest in myself without guilt."
+        affirmation: "Soy inherentemente valioso. Merezco recursos, consuelo y atención. Mi valor no está condicionado a lo que hago o tengo. Invierto en mí mismo sin culpa."
     },
 
     Gemini: {
-        title: "Chiron in Gemini - The Wounded Voice",
-        archetype: "Reclaiming the Right to Speak",
-        hook: "With Chiron in Gemini, this soul carries a core wound around communication, being heard, and intellectual validity. The journey is from believing your voice doesn't matter to becoming a powerful advocate for others' right to speak their truth.",
+        title: "Quirón en Géminis - La Voz Herida",
+        archetype: "Reclamando el derecho a hablar",
+        hook: "Con Quirón en Géminis, esta alma tiene una herida central en torno a la comunicación, ser escuchado y la validez intelectual. El viaje va desde creer que su voz no importa hasta convertirse en un poderoso defensor del derecho de los demás a decir su verdad.",
         
-        coreWound: `The Gemini Chiron wound centers on communication and being heard. Early experiences may have involved being silenced, dismissed, or told your thoughts didn't matter. There may have been learning differences that created shame, or speaking was met with punishment or mockery.
+        coreWound: `La herida de Géminis Quirón se centra en la comunicación y en ser escuchado. Las primeras experiencias pueden haber implicado que te silenciaran, te desestimaran o te dijeran que tus pensamientos no importaban. Es posible que haya habido diferencias de aprendizaje que crearon vergüenza, o que hablar fue recibido con castigo o burla.
 
-This wound manifests as deep doubt about whether your voice matters or your thoughts have value. There's often fear of speaking up, assuming others will dismiss or mock what you say. Intelligence may have been questioned or learning struggles created lasting insecurity.
+Esta herida se manifiesta como una duda profunda sobre si tu voz importa o tus pensamientos tienen valor. A menudo existe el miedo de hablar, asumiendo que los demás desestimarán o se burlarán de lo que usted diga. Es posible que se haya cuestionado la inteligencia o que las dificultades de aprendizaje hayan creado una inseguridad duradera.
 
-The pain is particularly acute because communication is how humans connect. When your voice was silenced or invalidated, the message was that connection requires silencing yourself. The wounded child learned to stay quiet or to speak only what others wanted to hear.`,
+El dolor es particularmente agudo porque la comunicación es la forma en que los humanos se conectan. Cuando su voz fue silenciada o invalidada, el mensaje fue que la conexión requiere silenciarse. El niño herido aprendió a quedarse callado o a hablar sólo lo que los demás querían oír.`,
         
-        woundedPatterns: `Gemini Chiron often manifests as either chronic silence or compulsive talking to prove intelligence. There may be difficulty expressing thoughts clearly, with mind going blank when trying to speak, or conversely, word-vomiting from anxiety.
+        woundedPatterns: `Géminis Quirón a menudo se manifiesta como un silencio crónico o un habla compulsiva para demostrar inteligencia. Puede haber dificultad para expresar los pensamientos con claridad, con la mente en blanco al intentar hablar o, por el contrario, vómitos de palabras debido a la ansiedad.
 
-Intellectual imposter syndrome is common - feeling like a fraud intellectually regardless of actual knowledge or accomplishment. There's often paralysis around writing or speaking publicly, convinced your thoughts aren't worth sharing.
+El síndrome del impostor intelectual es común: sentirse intelectualmente como un fraude, independientemente de sus conocimientos o logros reales. A menudo hay parálisis a la hora de escribir o hablar en público, convencidos de que no vale la pena compartir sus pensamientos.
 
-Many struggle with learning or information processing, sometimes having actual learning differences, sometimes just wounded confidence. There may be patterns of starting to say something then stopping, assuming others aren't interested.`,
+Muchos luchan con el aprendizaje o el procesamiento de la información, a veces tienen diferencias de aprendizaje reales y otras veces simplemente tienen una confianza herida. Puede haber patrones de empezar a decir algo y luego detenerse, asumiendo que los demás no están interesados.`,
         
-        healingJourney: `Healing Chiron in Gemini requires reclaiming the right to speak and be heard. This starts with recognizing that your thoughts and voice matter intrinsically, not because they're brilliant or perfectly articulated.
+        healingJourney: `Sanar a Quirón en Géminis requiere reclamar el derecho a hablar y ser escuchado. Esto comienza reconociendo que sus pensamientos y su voz importan intrínsecamente, no porque sean brillantes o estén perfectamente articulados.
 
-The work involves practicing speaking your truth even when afraid. This means sharing thoughts before they're perfect, asking "stupid" questions, and saying what you need to say regardless of others' reception. Each act of speaking rewires the wounded belief.
+El trabajo implica practicar decir la verdad incluso cuando se tiene miedo. Esto significa compartir pensamientos antes de que sean perfectos, hacer preguntas "estúpidas" y decir lo que necesita decir independientemente de la recepción de los demás. Cada acto de hablar reconfigura la creencia herida.
 
-Healing learning wounds is crucial. This might mean getting assessed for learning differences and getting support, or it might mean releasing perfectionism about how you learn. Your way of processing information is valid even if it's not standard.`,
+Curar las heridas del aprendizaje es crucial. Esto podría significar ser evaluado para detectar diferencias de aprendizaje y obtener apoyo, o podría significar liberar el perfeccionismo sobre cómo aprende. Su forma de procesar la información es válida aunque no sea estándar.`,
         
-        healerGift: `Once integrated, Chiron in Gemini creates powerful advocates for others' voices. You become someone who can draw out shy speakers, who creates space for all voices, who validates others' thoughts and communication styles.
+        healerGift: `Una vez integrado, Quirón en Géminis crea poderosos defensores de las voces de los demás. Te conviertes en alguien que puede atraer a los hablantes tímidos, que crea espacio para todas las voces, que valida los pensamientos y estilos de comunicación de los demás.
 
-The gift is the ability to help others find their voice and communicate with confidence. You're particularly gifted at working with people who struggle with communication, learning differences, or being heard.
+El don es la capacidad de ayudar a otros a encontrar su voz y comunicarse con confianza. Tiene un don especial para trabajar con personas que tienen dificultades para comunicarse, tener dificultades de aprendizaje o ser escuchadas.
 
-There's often a gift for translation - helping people articulate what they mean, bridging communication gaps, or making complex ideas accessible. Your wound taught you to think carefully about communication, which becomes a strength.`,
+A menudo existe un don para la traducción: ayudar a las personas a articular lo que quieren decir, cerrar brechas de comunicación o hacer accesibles ideas complejas. Tu herida te enseñó a pensar detenidamente en la comunicación, que se convierte en una fortaleza.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Gemini is that every voice matters and every perspective has value. You don't have to be brilliant or perfectly articulate to deserve to be heard.
+        spiritualLesson: `La lección espiritual de Quirón en Géminis es que cada voz importa y cada perspectiva tiene valor. No es necesario ser brillante ni hablar perfectamente para merecer ser escuchado.
 
-The advanced teaching is that communication is less about being right and more about connection. The wound taught you to silence yourself; the healing teaches that your authentic voice creates connection even when imperfect.
+La enseñanza avanzada es que la comunicación se trata menos de tener razón y más de conexión. La herida te enseñó a silenciarte; la curación enseña que tu voz auténtica crea conexión incluso cuando es imperfecta.
 
-Ultimately, this placement teaches that words have power and using your voice is an act of courage. The wound makes you intimately familiar with silencing, which makes your voice, once claimed, particularly powerful.`,
+En última instancia, esta ubicación enseña que las palabras tienen poder y que usar la voz es un acto de valentía. La herida te familiariza íntimamente con el silenciamiento, lo que hace que tu voz, una vez reclamada, sea particularmente poderosa.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Gemini is either complete silencing or compulsive over-talking. You may say nothing or talk constantly to prove intelligence. Integration means finding authentic communication.
+        shadowIntegration: `La sombra de Quirón no curado en Géminis es un silenciamiento total o un hablar excesivo compulsivo. Puede no decir nada o hablar constantemente para demostrar inteligencia. Integración significa encontrar una comunicación auténtica.
 
-Watch for intellectual arrogance as overcompensation for deep insecurity. Shadow work involves releasing the need to prove intelligence and accepting that being wrong or not knowing is okay.
+Esté atento a la arrogancia intelectual como compensación excesiva por una profunda inseguridad. El trabajo en la sombra implica liberar la necesidad de demostrar inteligencia y aceptar que estar equivocado o no saber está bien.
 
-Another shadow is speaking only what others want to hear or changing your message based on audience. Healing means developing consistent voice that expresses your truth.`,
+Otra sombra habla sólo lo que otros quieren escuchar o cambia su mensaje según la audiencia. Sanar significa desarrollar una voz consistente que exprese tu verdad.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Gemini creates patterns of not expressing needs or thoughts, assuming partners won't listen. You may attract partners who talk over you or dismiss your ideas.
+        relationshipHealing: `En las relaciones, Quirón no curado en Géminis crea patrones de no expresar necesidades o pensamientos, asumiendo que la pareja no escucha. Puede atraer socios que hablen de usted o desestimen sus ideas.
 
-Healing involves choosing partners who actively want to hear you and learning to express yourself fully in relationship. This means practicing sharing thoughts, asking for what you need, and disagreeing when you disagree.
+La curación implica elegir socios que quieran escucharte activamente y aprender a expresarte plenamente en la relación. Esto significa practicar compartir pensamientos, pedir lo que necesita y estar en desacuerdo cuando no está de acuerdo.
 
-The gift, once healed, is creating relationships built on genuine communication where both voices matter equally. You teach partners the sacred importance of really listening.`,
+El don, una vez sanado, es crear relaciones basadas en una comunicación genuina donde ambas voces importan por igual. Enseñas a tus socios la sagrada importancia de escuchar realmente.`,
         
-        careerExpression: `Professionally, healed Chiron in Gemini often leads to teaching, writing, speaking, or communication work. You're drawn to helping others find their voice, learn effectively, or communicate powerfully.
+        careerExpression: `Profesionalmente, Quirón curado en Géminis a menudo conduce a trabajos de enseñanza, escritura, oratoria o comunicación. Le atrae ayudar a otros a encontrar su voz, aprender de manera efectiva o comunicarse poderosamente.
 
-Work with learning differences, language barriers, or marginalized voices may call strongly. You have unique ability to help people who struggle to be heard because you understand that wound.
+Trabajar con diferencias de aprendizaje, barreras idiomáticas o voces marginadas puede resultar muy atractivo. Tienes una capacidad única para ayudar a las personas que luchan por ser escuchadas porque comprendes esa herida.
 
-The career challenge is overcoming fear of public speaking or publishing your thoughts. The wound says your voice doesn't matter; the healing says your voice is exactly what's needed.`,
+El desafío profesional es superar el miedo a hablar en público o publicar sus pensamientos. La herida dice que tu voz no importa; la curación dice que tu voz es exactamente lo que se necesita.`,
         
-        affirmation: "My voice matters. My thoughts have value. I speak my truth with confidence. I create space for all voices to be heard, including my own."
+        affirmation: "Mi voz importa. Mis pensamientos tienen valor. Hablo mi verdad con confianza. Creo un espacio para que todas las voces sean escuchadas, incluida la mía."
     },
 
     Cancer: {
-        title: "Chiron in Cancer - The Wounded Nurturer",
-        archetype: "Reclaiming Emotional Safety",
-        hook: "With Chiron in Cancer, this soul carries a core wound around nurturing, belonging, and emotional security. The journey is from feeling fundamentally unsafe and not belonging anywhere to becoming a powerful creator of true home and family.",
+        title: "Quirón en Cáncer - El cuidador herido",
+        archetype: "Recuperando la seguridad emocional",
+        hook: "Con Quirón en Cáncer, esta alma lleva una herida central en torno a la crianza, la pertenencia y la seguridad emocional. El viaje es desde sentirse fundamentalmente inseguro y sin pertenecer a ningún lugar hasta convertirse en un poderoso creador de un verdadero hogar y familia.",
         
-        coreWound: `The Cancer Chiron wound centers on home, family, and belonging. Early experiences may have involved family dysfunction, feeling unwanted, abandonment, or lack of proper nurturing. There may have been physical homelessness or emotional sense of never quite belonging anywhere.
+        coreWound: `La herida de Cancer Quiron se centra en el hogar, la familia y la pertenencia. Las primeras experiencias pueden haber involucrado disfunción familiar, sentimiento de no ser querido, abandono o falta de crianza adecuada. Es posible que haya habido falta de vivienda física o una sensación emocional de no pertenecer nunca a ningún lugar.
 
-This wound manifests as chronic emotional insecurity and difficulty trusting that anywhere is truly home or anyone is truly family. There's often deep hunger for belonging coupled with fear that revealing needs will lead to rejection or abandonment.
+Esta herida se manifiesta como inseguridad emocional crónica y dificultad para confiar en que cualquier lugar es verdaderamente un hogar o que alguien es verdaderamente una familia. A menudo hay un hambre profunda de pertenencia junto con el miedo de que revelar las necesidades conduzca al rechazo o al abandono.
 
-The pain is profound because it touches the most basic needs - nurturing, safety, belonging. When these weren't met early, the message is that you're unworthy of care or that the world fundamentally isn't safe. The wounded child learned to not need or to become the caregiver rather than ask for care.`,
+El dolor es profundo porque toca las necesidades más básicas: cariño, seguridad, pertenencia. Cuando estos no se cumplieron a tiempo, el mensaje es que no eres digno de atención o que el mundo fundamentalmente no es seguro. El niño herido aprendió a no necesitar cuidados o a convertirse en el cuidador en lugar de pedirlos.`,
         
-        woundedPatterns: `Cancer Chiron often manifests as compulsive caregiving to earn belonging or complete withdrawal from intimacy to avoid vulnerability. There may be difficulty receiving nurturing, always being the strong one who doesn't need anything.
+        woundedPatterns: `Cáncer Quirón a menudo se manifiesta como un cuidado compulsivo para ganarse la pertenencia o un retiro total de la intimidad para evitar la vulnerabilidad. Puede haber dificultades para recibir cuidados, siendo siempre el fuerte el que no necesita nada.
 
-Family wounds often run deep, with complicated relationships with mother or maternal figures. There may be patterns of creating "chosen family" then abandoning them when they get too close, or staying in toxic family situations hoping to finally get the love that wasn't there.
+Las heridas familiares suelen ser profundas, con relaciones complicadas con la madre o las figuras maternas. Puede haber patrones de crear una "familia elegida" y luego abandonarla cuando se acercan demasiado, o permanecer en situaciones familiares tóxicas con la esperanza de finalmente obtener el amor que no existía.
 
-Many struggle with creating home base or feeling at home anywhere. There may be constant moving or conversely, clinging to physical space because it represents security. Emotional expression can be extremely difficult or overwhelming.`,
+Muchos luchan por crear una base de operaciones o sentirse como en casa en cualquier lugar. Puede haber constante movimiento o por el contrario, aferrarse al espacio físico porque representa seguridad. La expresión emocional puede ser extremadamente difícil o abrumadora.`,
         
-        healingJourney: `Healing Chiron in Cancer requires learning to nurture yourself and create inner sense of home and safety. This starts with recognizing that you deserved nurturing and belonging, that the lack wasn't about your unworthiness.
+        healingJourney: `Curar a Quirón en Cáncer requiere aprender a nutrirse y crear una sensación interior de hogar y seguridad. Esto comienza reconociendo que merecías cariño y pertenencia, que la falta no se debía a tu indignidad.
 
-The work involves practicing self-nurturing without guilt and allowing others to nurture you. This means asking for emotional support, accepting care when offered, and building chosen family that reflects what family should be.
+El trabajo implica practicar la autocuidado sin culpa y permitir que otros lo cuiden. Esto significa pedir apoyo emocional, aceptar el cuidado cuando se le ofrece y construir una familia elegida que refleje lo que debería ser la familia.
 
-Grieving what you didn't receive is crucial. The wound often stays open because the loss was never acknowledged. Healing involves mourning the childhood and nurturing you deserved and didn't get, so you can move forward.`,
+Lamentar lo que no recibiste es crucial. La herida a menudo permanece abierta porque nunca se reconoció la pérdida. La curación implica llorar la infancia y cuidar lo que merecías y no recibiste, para que puedas seguir adelante.`,
         
-        healerGift: `Once integrated, Chiron in Cancer creates the most profound nurturers and family builders. You become someone who can create deep sense of belonging for others, because you know what its absence costs.
+        healerGift: `Una vez integrado, Quirón en Cáncer crea los cuidadores y constructores de familias más profundos. Te conviertes en alguien que puede crear un profundo sentido de pertenencia a los demás, porque sabes lo que cuesta su ausencia.
 
-The gift is the ability to see when others are emotionally hungry and provide the nurturing they need. You create chosen families and safe spaces where people can be vulnerable and know they belong unconditionally.
+El don es la capacidad de ver cuando otros tienen hambre emocional y brindarles el cuidado que necesitan. Creas familias elegidas y espacios seguros donde las personas pueden ser vulnerables y saber que pertenecen incondicionalmente.
 
-There's often a gift for working with family trauma, motherless children, or helping others grieve lack of proper nurturing. Your wound taught you what true nurturing looks like through its absence.`,
+A menudo existe un don para trabajar con traumas familiares, niños sin madre o ayudar a otros a llorar la falta de una atención adecuada. Tu herida te enseñó cómo se ve la verdadera crianza a través de su ausencia.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Cancer is that you can create for yourself the home and belonging that wasn't provided. You're not forever dependent on others to give you what you didn't get as a child.
+        spiritualLesson: `La lección espiritual de Quirón en Cáncer es que puedes crear para ti el hogar y la pertenencia que no te proporcionaron. No dependes siempre de que otros te den lo que no recibiste cuando eras niño.
 
-The advanced teaching is that nurturing yourself isn't selfish - it's the foundation for nurturing others sustainably. The wound taught you to deny your needs; the healing teaches that honoring your needs enables healthy caregiving.
+La enseñanza avanzada es que cuidarse a sí mismo no es egoísta: es la base para cuidar a los demás de manera sostenible. La herida te enseñó a negar tus necesidades; la curación enseña que honrar sus necesidades permite brindar cuidados saludables.
 
-Ultimately, this placement teaches that home is something you carry inside, not something external that can be taken away. The wound creates deep yearning that leads to building the most profound sense of belonging.`,
+En última instancia, esta ubicación enseña que el hogar es algo que se lleva dentro, no algo externo que se pueda quitar. La herida crea un anhelo profundo que lleva a construir el sentido de pertenencia más profundo.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Cancer is either smothering others with caretaking or refusing all intimacy and belonging. You may try to fill your emptiness by being needed, or wall yourself off completely. Integration means balanced giving and receiving.
+        shadowIntegration: `La sombra de Quirón no curado en Cáncer está asfixiando a los demás con cuidados o rechazando toda intimidad y pertenencia. Puedes intentar llenar tu vacío siendo necesitado o aislarte por completo. Integración significa dar y recibir equilibrado.
 
-Watch for martyrdom patterns - sacrificing yourself to earn love or belong. Shadow work involves recognizing you don't have to earn belonging through usefulness.
+Esté atento a los patrones de martirio: sacrificarse para ganarse el amor o pertenecer. El trabajo en la sombra implica reconocer que no es necesario ganarse la pertenencia a través de la utilidad.
 
-Another shadow is emotional manipulation - using others' guilt or need as control. Healing means developing secure attachment where love doesn't require manipulation.`,
+Otra sombra es la manipulación emocional: utilizar la culpa o la necesidad de los demás como control. Sanar significa desarrollar un apego seguro donde el amor no requiere manipulación.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Cancer creates patterns of either caretaking to exhaustion or emotional unavailability. You may attract partners who need mothering or who are emotionally cold.
+        relationshipHealing: `En las relaciones, Quirón en Cáncer que no ha sanado crea patrones de cuidado hasta el agotamiento o la indisponibilidad emocional. Puede atraer parejas que necesiten cuidados maternales o que sean emocionalmente frías.
 
-Healing involves choosing partners who can nurture you too and learning to receive care without feeling weak. This means being vulnerable about needs and trusting that love doesn't require being the strong one always.
+La curación implica elegir socios que también puedan cuidarlo y aprender a recibir cuidados sin sentirse débil. Esto significa ser vulnerable ante las necesidades y confiar en que el amor no requiere ser siempre fuerte.
 
-The gift, once healed, is creating profoundly safe relationships where both people can be emotionally vulnerable and know they belong. You teach partners what true emotional safety feels like.`,
+El don, una vez sanado, es crear relaciones profundamente seguras en las que ambas personas pueden ser emocionalmente vulnerables y saber que pertenecen. Enseñas a tus socios cómo se siente la verdadera seguridad emocional.`,
         
-        careerExpression: `Professionally, healed Chiron in Cancer often leads to caregiving professions, family therapy, work with homeless or abandoned populations, or creating communities where people belong.
+        careerExpression: `Profesionalmente, Quirón en Cáncer curado a menudo conduce a profesiones de cuidado, terapia familiar, trabajo con poblaciones sin hogar o abandonadas, o a la creación de comunidades a las que las personas pertenecen.
 
-Building actual homes or healing spaces may call strongly. You have unique ability to create environments where people feel safe to be vulnerable and know they're wanted.
+La construcción de hogares reales o espacios de curación puede ser una gran necesidad. Tienes una capacidad única para crear entornos donde las personas se sientan seguras de ser vulnerables y sepan que son deseadas.
 
-The career challenge is not giving so much that you deplete yourself. The wound says to earn belonging through usefulness; the healing says your presence itself is the gift.`,
+El desafío profesional es no dar tanto que te agotes. La herida dice ganarse la pertenencia a través de la utilidad; la curación dice que tu presencia misma es el regalo.`,
         
-        affirmation: "I am safe. I belong. I deserve nurturing and care. I create home within myself and offer genuine belonging to others. My needs matter."
+        affirmation: "Estoy a salvo. Yo pertenezco. Merezco cariño y cuidado. Creo un hogar dentro de mí y ofrezco una pertenencia genuina a los demás. Mis necesidades importan."
     },
 
     Leo: {
-        title: "Chiron in Leo - The Wounded Heart",
-        archetype: "Reclaiming the Right to Shine",
-        hook: "With Chiron in Leo, this soul carries a core wound around recognition, creative expression, and the right to be special or visible. The journey is from hiding your light to radiating authentic creative power without apology.",
+        title: "Quirón en Leo - El Corazón Herido",
+        archetype: "Reclamando el derecho a brillar",
+        hook: "Con Quirón en Leo, esta alma tiene una herida central en torno al reconocimiento, la expresión creativa y el derecho a ser especial o visible. El viaje va desde ocultar tu luz hasta irradiar auténtico poder creativo sin disculpas.",
         
-        coreWound: `The Leo Chiron wound centers on being seen, celebrated, and special. Early experiences may have involved being overshadowed, having gifts ignored or mocked, or being shamed for wanting attention or recognition. There may have been a more favored sibling or rejection when expressing natural creativity.
+        coreWound: `La herida de Leo Quirón se centra en ser visto, celebrado y especial. Las primeras experiencias pueden haber implicado ser eclipsado, ignorar o burlarse de sus regalos, o ser avergonzado por querer atención o reconocimiento. Puede que haya habido un hermano más favorecido o un rechazo al expresar la creatividad natural.
 
-This wound manifests as deep shame around wanting recognition or standing out. There's often suppression of natural creative gifts and difficulty allowing yourself to be visible or celebrated. Pride becomes tangled with shame.
+Esta herida se manifiesta como una profunda vergüenza por querer reconocimiento o destacarse. A menudo hay supresión de los dones creativos naturales y dificultad para permitirse ser visible o celebrado. El orgullo se enreda con la vergüenza.
 
-The pain is acute because it touches the heart and creative self-expression. When your light was dimmed or dismissed, the message was that there's something wrong with your essence. The wounded child learned to be small, invisible, or to perform only when safe.`,
+El dolor es agudo porque toca el corazón y la autoexpresión creativa. Cuando tu luz fue atenuada o descartada, el mensaje fue que algo anda mal con tu esencia. El niño herido aprendió a ser pequeño, invisible o a actuar sólo cuando estaba seguro.`,
         
-        woundedPatterns: `Leo Chiron often manifests as either hiding gifts completely or desperate performing to get the recognition you were denied. There may be creative blocks, feeling you have nothing special to offer, or conversely, attention-seeking that never satisfies.
+        woundedPatterns: `Leo Quirón a menudo se manifiesta ocultando completamente sus regalos o actuando desesperadamente para obtener el reconocimiento que le negaron. Puede haber bloqueos creativos, sentir que no tienes nada especial que ofrecer o, por el contrario, una búsqueda de atención que nunca satisface.
 
-Praise can feel like poison - either dismissed as insincere or desperately craved but never enough. There's often difficulty celebrating yourself or accepting compliments. Success may trigger self-sabotage because visibility feels dangerous.
+Los elogios pueden parecer veneno: ya sean descartados como poco sinceros o anhelados desesperadamente, pero nunca son suficientes. A menudo hay dificultades para celebrarse o aceptar elogios. El éxito puede desencadenar un autosabotaje porque la visibilidad parece peligrosa.
 
-Many struggle with romantic rejection sensitivity - taking it as confirmation that you're not lovable or special. There may be patterns of dimming yourself in relationships or choosing partners who don't celebrate you.`,
+Muchos luchan con la sensibilidad al rechazo romántico, tomándolo como una confirmación de que no eres adorable ni especial. Puede haber patrones de debilitarte en las relaciones o elegir socios que no te celebran.`,
         
-        healingJourney: `Healing Chiron in Leo requires reclaiming the right to shine and be celebrated. This starts with recognizing that wanting recognition isn't shameful narcissism - it's healthy need for validation and belonging.
+        healingJourney: `Curar a Quirón en Leo requiere reclamar el derecho a brillar y ser celebrado. Esto comienza con reconocer que querer reconocimiento no es un narcisismo vergonzoso, sino una necesidad saludable de validación y pertenencia.
 
-The work involves practicing visibility and self-celebration without apology. This means sharing your gifts, accepting compliments graciously, and letting yourself be seen even when scary. Each act of shining rewires the wounded belief.
+El trabajo implica practicar la visibilidad y la autocelebración sin disculpas. Esto significa compartir tus dones, aceptar los elogios con gracia y dejarte ver incluso cuando tengas miedo. Cada acto de brillar reconecta la creencia herida.
 
-Reconnecting with creative joy is crucial. This isn't about being good enough to share; it's about the sacred act of creation itself. Healing involves creating for the joy of it, not for external validation.`,
+Reconectar con la alegría creativa es crucial. No se trata de ser lo suficientemente bueno para compartir; se trata del acto sagrado de la creación misma. La curación implica crear por el placer de hacerlo, no para la validación externa.`,
         
-        healerGift: `Once integrated, Chiron in Leo creates powerful supporters of others' gifts and visibility. You become someone who can see others' unique light and celebrate it genuinely, giving the recognition you once needed.
+        healerGift: `Una vez integrado, Quirón en Leo crea poderosos partidarios de los dones y la visibilidad de los demás. Te conviertes en alguien que puede ver la luz única de los demás y celebrarla genuinamente, brindándole el reconocimiento que alguna vez necesitabas.
 
-The gift is the ability to help others shine without shame. You're particularly gifted at working with people who hide their talents or feel unworthy of recognition. You can give permission to be visible because you understand the wound of hiding.
+El don es la capacidad de ayudar a otros a brillar sin vergüenza. Tienes un don especial para trabajar con personas que ocultan sus talentos o se sienten indignas de reconocimiento. Puedes dar permiso para ser visible porque comprendes la herida de esconderte.
 
-There's often a gift for helping others heal performance anxiety, creative blocks, or fear of visibility. Your wound taught you about the courage required to shine, which makes you a powerful guide for others.`,
+A menudo existe un don para ayudar a otros a curar la ansiedad por el desempeño, los bloqueos creativos o el miedo a la visibilidad. Tu herida te enseñó sobre el coraje necesario para brillar, lo que te convierte en una guía poderosa para los demás.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Leo is that your unique essence is valuable and deserves to be seen. You don't have to earn the right to shine or be celebrated - your existence itself is worthy of recognition.
+        spiritualLesson: `La lección espiritual de Quirón en Leo es que tu esencia única es valiosa y merece ser vista. No tienes que ganarte el derecho a brillar o ser celebrado: tu existencia misma es digna de reconocimiento.
 
-The advanced teaching is that true confidence comes from inner validation, not external applause. The wound taught you to seek recognition desperately; the healing teaches that you can appreciate recognition while not depending on it for worth.
+La enseñanza avanzada es que la verdadera confianza proviene de la validación interna, no del aplauso externo. La herida te enseñó a buscar reconocimiento desesperadamente; la curación enseña que se puede apreciar el reconocimiento sin depender de él para que valga la pena.
 
-Ultimately, this placement teaches that hiding your light doesn't serve anyone. When you shine, you give others permission to shine too. The wound creates deep understanding of why people hide, which makes your visibility particularly powerful.`,
+En última instancia, esta ubicación enseña que ocultar la luz no le sirve a nadie. Cuando brillas, les das permiso a los demás para que también brillen. La herida crea una comprensión profunda de por qué la gente se esconde, lo que hace que tu visibilidad sea particularmente poderosa.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Leo is either complete hiding or narcissistic attention-seeking. You may make yourself invisible or demand constant applause. Integration means healthy pride and visibility.
+        shadowIntegration: `La sombra de Quirón no curado en Leo se esconde por completo o busca atención narcisista. Puede que te hagas invisible o exijas un aplauso constante. Integración significa sano orgullo y visibilidad.
 
-Watch for dismissing your own gifts while celebrating others', or conversely, being unable to celebrate others because you're so hungry for recognition yourself. Shadow work involves developing authentic pride that doesn't require comparison.
+Esté atento a descartar sus propios dones mientras celebra los de los demás o, por el contrario, a no poder celebrar a los demás porque usted mismo tiene mucha hambre de reconocimiento. El trabajo en la sombra implica desarrollar un orgullo auténtico que no requiere comparación.
 
-Another shadow is performing what you think others want rather than expressing authentic creativity. Healing means creating from your truth, not for approval.`,
+Otra sombra es realizar lo que crees que los demás quieren en lugar de expresar auténtica creatividad. Sanar significa crear desde tu verdad, no para aprobación.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Leo creates patterns of hiding yourself or demanding partners constantly affirm how special you are. You may attract partners who don't celebrate you or who need you to hide so they can shine.
+        relationshipHealing: `En las relaciones, Quirón en Leo, que no ha sanado, crea patrones de esconderse o de que sus parejas exigentes afirmen constantemente lo especial que es. Puedes atraer socios que no te celebran o que necesitan que te escondas para poder brillar.
 
-Healing involves choosing partners who genuinely celebrate your gifts and learning to be visible in relationship. This means sharing your talents, being proud of achievements, and expecting mutual celebration.
+La curación implica elegir socios que realmente celebren sus dones y aprender a ser visibles en la relación. Esto significa compartir sus talentos, estar orgulloso de los logros y esperar una celebración mutua.
 
-The gift, once healed, is creating relationships where both people get to shine and celebrate each other. You teach partners that love includes honoring each other's specialness.`,
+El don, una vez sanado, es crear relaciones en las que ambas personas brillen y se celebren mutuamente. Enseñas a tus socios que el amor incluye honrar la especialidad del otro.`,
         
-        careerExpression: `Professionally, healed Chiron in Leo often leads to creative fields, performance, leadership that celebrates others, or work helping people overcome creative blocks and shine.
+        careerExpression: `Profesionalmente, Quirón curado en Leo a menudo conduce a campos creativos, desempeño, liderazgo que celebra a los demás o trabajo que ayuda a las personas a superar bloqueos creativos y brillar.
 
-Entertainment, arts, coaching, or any work requiring visibility may call strongly. You have unique ability to help others be visible because you understand the fear.
+El entretenimiento, las artes, el coaching o cualquier trabajo que requiera visibilidad pueden llamar con fuerza. Tienes una capacidad única para ayudar a otros a ser visibles porque comprendes el miedo.
 
-The career challenge is allowing yourself to be visible and celebrated. The wound says being seen is dangerous; the healing says your visibility inspires others.`,
+El desafío profesional es permitirse ser visible y celebrado. La herida dice que ser vista es peligroso; la curación dice que tu visibilidad inspira a otros.`,
         
-        affirmation: "I am worthy of recognition and celebration. My light shines brightly and inspires others. I share my gifts generously and receive appreciation graciously."
+        affirmation: "Soy digno de reconocimiento y celebración. Mi luz brilla intensamente e inspira a otros. Comparto mis regalos generosamente y recibo agradecimiento con gentileza."
     },
 
     Virgo: {
-        title: "Chiron in Virgo - The Wounded Perfectionist",
-        archetype: "Reclaiming Wholeness in Imperfection",
-        hook: "With Chiron in Virgo, this soul carries a core wound around perfection, worthiness through usefulness, and health anxiety. The journey is from never being good enough to accepting beautiful imperfection.",
+        title: "Quirón en Virgo - El perfeccionista herido",
+        archetype: "Recuperando la plenitud en la imperfección",
+        hook: "Con Quirón en Virgo, esta alma lleva una herida central en torno a la perfección, el valor a través de la utilidad y la ansiedad por la salud. El viaje va desde nunca ser lo suficientemente bueno hasta aceptar la hermosa imperfección.",
         
-        coreWound: `The Virgo Chiron wound centers on perfection and worth through function. Early experiences may have involved impossible standards, criticism for imperfection, or only receiving attention when sick or useful. There may have been health issues or anxiety about contamination or germs.
+        coreWound: `La herida de Virgo Quirón se centra en la perfección y el valor a través de la función. Las primeras experiencias pueden haber implicado estándares imposibles, críticas por imperfección o recibir atención sólo cuando estaba enfermo o era útil. Es posible que haya habido problemas de salud o ansiedad por la contaminación o los gérmenes.
 
-This wound manifests as chronic sense of never being good enough, no matter how much you improve or achieve. Worth becomes tied to perfection and usefulness. There's often harsh self-criticism and anxiety about making mistakes.
+Esta herida se manifiesta como una sensación crónica de no ser nunca lo suficientemente bueno, sin importar cuánto se mejore o se logre. El valor queda ligado a la perfección y la utilidad. A menudo hay una dura autocrítica y ansiedad por cometer errores.
 
-The pain is exhausting because it's relentless. Every flaw confirms unworthiness; every success reveals new flaws. The wounded child learned that love and acceptance are conditional on perfection and being helpful.`,
+El dolor es agotador porque es implacable. Cada defecto confirma la indignidad; cada éxito revela nuevos defectos. El niño herido aprendió que el amor y la aceptación están condicionados a la perfección y a ser útil.`,
         
-        woundedPatterns: `Virgo Chiron often manifests as paralysis from perfectionism or compulsive fixing of self and others. There may be chronic dissatisfaction, always seeing what's wrong rather than what's right. Procrastination from fear of imperfection is common.
+        woundedPatterns: `Virgo Quirón a menudo se manifiesta como parálisis por perfeccionismo o fijación compulsiva de uno mismo y de los demás. Puede haber insatisfacción crónica y ver siempre lo que está mal en lugar de lo que está bien. La procrastinación por miedo a la imperfección es común.
 
-Health anxiety or actual health issues often manifest. The body becomes the battlefield where the perfection wound plays out. There may be eating disorders, excessive cleaning, or other control behaviors around purity and perfection.
+A menudo se manifiesta ansiedad por la salud o problemas de salud reales. El cuerpo se convierte en el campo de batalla donde se desarrolla la herida de la perfección. Puede haber trastornos alimentarios, limpieza excesiva u otras conductas de control en torno a la pureza y la perfección.
 
-Many struggle with accepting help or rest, feeling they only have worth when useful. There's often overwork to prove value and difficulty with self-care unless it's framed as improving productivity.`,
+Muchos luchan por aceptar ayuda o descanso, sintiendo que sólo valen la pena cuando son útiles. A menudo hay exceso de trabajo para demostrar el valor y dificultades con el cuidado personal a menos que se enmarque como una mejora de la productividad.`,
         
-        healingJourney: `Healing Chiron in Virgo requires separating worth from perfection and usefulness. This starts with recognizing that you have inherent value even when imperfect, even when not helpful.
+        healingJourney: `Curar a Quirón en Virgo requiere separar el valor de la perfección y la utilidad. Esto comienza reconociendo que usted tiene un valor inherente incluso cuando es imperfecto, incluso cuando no es útil.
 
-The work involves practicing imperfection deliberately. This means showing "messy" work, making mistakes without self-attack, and accepting "good enough." Each act of accepting imperfection challenges the wounded belief.
+El trabajo implica practicar la imperfección deliberadamente. Esto significa mostrar un trabajo "desordenado", cometer errores sin autoatacarse y aceptar "suficientemente bueno". Cada acto de aceptación de la imperfección desafía la creencia herida.
 
-Developing compassionate self-talk is crucial. The critical inner voice must be recognized as the wound, not truth. Healing involves speaking to yourself as you would to someone you love.`,
+Desarrollar un diálogo interno compasivo es crucial. La voz interior crítica debe reconocerse como la herida, no la verdad. La curación implica hablar contigo mismo como lo harías con alguien a quien amas.`,
         
-        healerGift: `Once integrated, Chiron in Virgo creates the most compassionate healers and helpers. You become someone who can see others' wounds without judgment and help without fixing, because you've learned to accept your own imperfection.
+        healerGift: `Una vez integrado, Quirón en Virgo crea los sanadores y ayudantes más compasivos. Te conviertes en alguien que puede ver las heridas de los demás sin juzgar y ayudar sin arreglar, porque has aprendido a aceptar tu propia imperfección.
 
-The gift is the ability to help others release perfectionism and self-criticism. You're particularly gifted at working with people who struggle with self-worth or health anxiety.
+El don es la capacidad de ayudar a otros a liberar el perfeccionismo y la autocrítica. Tiene un don especial para trabajar con personas que luchan contra su autoestima o ansiedad por su salud.
 
-There's often a gift for actual healing work - you understand the body-mind-spirit connection intimately. Your wound taught you to pay attention to detail and systems, which becomes powerful when applied with compassion.`,
+A menudo hay un don para el trabajo de curación real: comprendes íntimamente la conexión cuerpo-mente-espíritu. Tu herida te enseñó a prestar atención a los detalles y a los sistemas, lo que se vuelve poderoso cuando se aplica con compasión.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Virgo is that perfection isn't required for worthiness or lovability. You are whole even with your flaws, and in fact, your flaws are part of your wholeness.
+        spiritualLesson: `La lección espiritual de Quirón en Virgo es que la perfección no es necesaria para ser digno o ser querido. Eres completo incluso con tus defectos y, de hecho, tus defectos son parte de tu totalidad.
 
-The advanced teaching is that the quest for perfection prevents presence. The wound taught you to always be improving; the healing teaches that being here now, as you are, is enough.
+La enseñanza avanzada es que la búsqueda de la perfección impide la presencia. La herida te enseñó a estar siempre mejorando; la curación enseña que estar aquí ahora, tal como estás, es suficiente.
 
-Ultimately, this placement teaches that true service comes from wholeness, not woundedness. You don't have to be perfect to help others; in fact, your imperfection makes you more relatable and effective.`,
+En última instancia, esta ubicación enseña que el verdadero servicio proviene de la plenitud, no de la herida. No es necesario ser perfecto para ayudar a los demás; de hecho, tu imperfección te hace más identificable y efectivo.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Virgo is either crippling self-criticism or critical judgment of others. You may attack yourself relentlessly or project the perfectionism onto others. Integration means compassionate standards.
+        shadowIntegration: `La sombra de Quirón no curado en Virgo es una autocrítica paralizante o un juicio crítico hacia los demás. Puede atacarse a sí mismo implacablemente o proyectar su perfeccionismo en los demás. Integración significa estándares compasivos.
 
-Watch for fixing others to avoid your own feelings of being broken. Shadow work involves recognizing that your compulsion to help others might be displaced self-help.
+Esté atento a arreglar a los demás para evitar sus propios sentimientos de estar roto. El trabajo en la sombra implica reconocer que su compulsión por ayudar a los demás podría ser una autoayuda desplazada.
 
-Another shadow is using health or productivity as worth measures. Healing means developing worth that exists even when sick or resting.`,
+Otra sombra es utilizar la salud o la productividad como medidas de valor. Sanar significa desarrollar un valor que existe incluso cuando estamos enfermos o descansando.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Virgo creates patterns of either serving to earn love or criticizing partners constantly. You may attract partners who need fixing or who criticize you.
+        relationshipHealing: `En las relaciones, Quirón no curado en Virgo crea patrones de servir para ganarse el amor o criticar constantemente a la pareja. Puede atraer socios que necesiten ser arreglados o que lo critiquen.
 
-Healing involves choosing partners who accept your imperfection and learning to receive without needing to earn it through usefulness. This means being vulnerable about flaws and trusting you're lovable anyway.
+La curación implica elegir socios que acepten tu imperfección y aprender a recibir sin necesidad de ganártelo mediante la utilidad. Esto significa ser vulnerable a tus defectos y confiar en que eres adorable de todos modos.
 
-The gift, once healed, is creating relationships built on acceptance rather than perfection. You teach partners that love doesn't require being flawless.`,
+El don, una vez sanado, es crear relaciones basadas en la aceptación más que en la perfección. Enseñas a tus parejas que el amor no requiere ser perfecto.`,
         
-        careerExpression: `Professionally, healed Chiron in Virgo often leads to healing professions, systems improvement, or work helping others with health or perfectionism issues.
+        careerExpression: `Profesionalmente, Quirón curado en Virgo a menudo conduce a profesiones curativas, mejoras de sistemas o trabajos para ayudar a otros con problemas de salud o perfeccionismo.
 
-Healthcare, nutrition, therapy, or organizational work may call strongly. You have unique ability to help without fixing because you understand the perfectionism trap.
+La atención médica, la nutrición, la terapia o el trabajo organizacional pueden llamar con fuerza. Tienes una capacidad única para ayudar sin arreglar porque comprendes la trampa del perfeccionismo.
 
-The career challenge is not working to exhaustion to prove worth. The wound says worth comes from usefulness; the healing says your being is enough.`,
+El desafío profesional no es trabajar hasta el agotamiento para demostrar su valía. La herida dice que el valor proviene de la utilidad; la curación dice que tu ser es suficiente.`,
         
-        affirmation: "I am whole and worthy as I am. Imperfection is beautiful and human. I serve from wholeness, not woundedness. I am enough."
+        affirmation: "Soy completo y digno tal como soy. La imperfección es bella y humana. Sirvo desde la integridad, no desde la herida. Soy suficiente."
     },
 
     Libra: {
-        title: "Chiron in Libra - The Wounded Balance",
-        archetype: "Reclaiming Self in Relationship",
-        hook: "With Chiron in Libra, this soul carries a core wound around relationships, fairness, and being truly seen by others. The journey is from losing yourself in relationships to creating balanced partnerships where you exist fully.",
+        title: "Quirón en Libra - El equilibrio herido",
+        archetype: "Reclamar uno mismo en la relación",
+        hook: "Con Quirón en Libra, esta alma tiene una herida central en torno a las relaciones, la justicia y ser verdaderamente visto por los demás. El viaje va desde perderse en las relaciones hasta crear asociaciones equilibradas en las que exista plenamente.",
         
-        coreWound: `The Libra Chiron wound centers on relationships and being seen. Early experiences may have involved unfair treatment, parents' bad marriage, or feeling invisible unless paired with someone. There may have been conditional love based on being pleasant or accommodating.
+        coreWound: `La herida de Libra Quirón se centra en las relaciones y en ser visto. Las primeras experiencias pueden haber implicado un trato injusto, el mal matrimonio de los padres o sentirse invisible a menos que se le empareje con alguien. Es posible que haya habido un amor condicional basado en ser agradable o complaciente.
 
-This wound manifests as chronic doubt about lovability and tendency to disappear in relationships. There's often pattern of attracting unbalanced partnerships or unfair treatment, unconsciously recreating the wound.
+Esta herida se manifiesta como una duda crónica sobre la amabilidad y una tendencia a desaparecer en las relaciones. A menudo hay un patrón de atracción de asociaciones desequilibradas o de trato injusto, recreando inconscientemente la herida.
 
-The pain is profound because it touches the core need for partnership and recognition. When relationships were where you disappeared or were treated unfairly, the message was that being yourself prevents love. The wounded child learned to be whatever the other person needed.`,
+El dolor es profundo porque toca la necesidad fundamental de asociación y reconocimiento. Cuando en las relaciones desaparecías o te trataban injustamente, el mensaje era que ser uno mismo impide el amor. El niño herido aprendió a ser lo que la otra persona necesitaba.`,
         
-        woundedPatterns: `Libra Chiron often manifests as chronic people-pleasing or inability to be alone. There may be serial relationships with no gap between them, or conversely, avoiding relationship entirely because it means losing yourself.
+        woundedPatterns: `Libra Quirón a menudo se manifiesta como un agrado crónico de las personas o una incapacidad para estar solo. Puede haber relaciones en serie sin brecha entre ellas o, por el contrario, evitar la relación por completo porque significa perderse a uno mismo.
 
-Difficulty with decision-making is common, especially when it might displease others. There's often pattern of seeing others' perspectives so clearly that your own disappears. Conflict avoidance creates situations where resentment builds.
+La dificultad para tomar decisiones es común, especialmente cuando podría desagradar a los demás. A menudo existe un patrón de ver las perspectivas de los demás con tanta claridad que la propia desaparece. La evitación de conflictos crea situaciones en las que se acumula el resentimiento.
 
-Many struggle with asserting needs in relationship or even knowing what they need separate from partners. There may be attraction to narcissistic partners who seem complete while you feel incomplete alone.`,
+Muchos luchan por hacer valer sus necesidades en la relación o incluso por saber lo que necesitan aparte de sus parejas. Puede sentir atracción por parejas narcisistas que parecen completas mientras que usted se siente incompleto solo.`,
         
-        healingJourney: `Healing Chiron in Libra requires learning to maintain self in relationship. This starts with recognizing that you're complete as an individual, not half seeking another half.
+        healingJourney: `Curar a Quirón en Libra requiere aprender a mantenerse en la relación. Esto comienza reconociendo que estás completo como individuo, que no estás buscando la mitad de otra mitad.
 
-The work involves practicing staying connected to yourself while in relationship. This means knowing and expressing preferences, maintaining boundaries, and disagreeing when you disagree. Spending time alone to discover who you are separate from others is crucial.
+El trabajo implica practicar cómo mantenerse conectado consigo mismo durante la relación. Esto significa conocer y expresar preferencias, mantener límites y estar en desacuerdo cuando no se está de acuerdo. Pasar tiempo a solas para descubrir quién eres y separado de los demás es crucial.
 
-Learning that conflict can be healthy is essential. The wound taught you peace requires accommodation; the healing teaches that real harmony includes both people's authentic selves, which sometimes means productive conflict.`,
+Aprender que el conflicto puede ser saludable es esencial. La herida te enseñó que la paz requiere acomodación; la curación enseña que la verdadera armonía incluye el yo auténtico de ambas personas, lo que a veces significa conflicto productivo.`,
         
-        healerGift: `Once integrated, Chiron in Libra creates powerful relationship counselors and mediators. You become someone who can see all perspectives while helping everyone maintain their authentic self.
+        healerGift: `Una vez integrado, Quirón en Libra crea poderosos consejeros y mediadores de relaciones. Te conviertes en alguien que puede ver todas las perspectivas y al mismo tiempo ayuda a todos a mantener su yo auténtico.
 
-The gift is the ability to create genuinely balanced relationships and help others do the same. You're particularly gifted at working with codependency, helping people find themselves while staying in relationship.
+El don es la capacidad de crear relaciones genuinamente equilibradas y ayudar a otros a hacer lo mismo. Tienes un don especial para trabajar con la codependencia, ayudando a las personas a encontrarse a sí mismas mientras mantienen la relación.
 
-There's often a gift for advocating for fairness and justice because you know what unfairness costs. Your wound taught you about the complexity of relationships, making you wise guide for others.`,
+A menudo hay un don para defender la equidad y la justicia porque sabes lo que cuesta la injusticia. Tu herida te enseñó sobre la complejidad de las relaciones, convirtiéndote en un guía sabio para los demás.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Libra is that you're complete alone and relationship is enhancement, not completion. You don't need to lose yourself to be loved.
+        spiritualLesson: `La lección espiritual de Quirón en Libra es que estás completo solo y la relación es una mejora, no una finalización. No necesitas perderte para ser amado.
 
-The advanced teaching is that true partnership requires two whole people. The wound taught you to disappear to connect; the healing teaches that showing up fully creates deeper connection.
+La enseñanza avanzada es que una verdadera asociación requiere dos personas completas. La herida te enseñó a desaparecer para conectarte; la curación enseña que mostrarse plenamente crea una conexión más profunda.
 
-Ultimately, this placement teaches that being alone is sometimes necessary for knowing yourself. The wound creates fear of aloneness that, when healed, leads to comfortable solitude and healthier relationships.`,
+En última instancia, esta colocación enseña que a veces estar solo es necesario para conocerse a uno mismo. La herida crea miedo a la soledad que, cuando se cura, conduce a una soledad cómoda y a relaciones más saludables.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Libra is either complete self-sacrifice in relationship or refusing relationship entirely. You may lose yourself completely or protect yourself through isolation. Integration means connected autonomy.
+        shadowIntegration: `La sombra de Quirón no curado en Libra es un completo autosacrificio en la relación o un rechazo total de la relación. Puede perderse por completo o protegerse mediante el aislamiento. Integración significa autonomía conectada.
 
-Watch for making relationship your entire identity or maintaining superficial relationships to avoid vulnerability. Shadow work involves developing self that exists whether partnered or not.
+Esté atento a hacer de la relación toda su identidad o mantener relaciones superficiales para evitar la vulnerabilidad. El trabajo en la sombra implica el desarrollo de uno mismo que existe ya sea en pareja o no.
 
-Another shadow is passive-aggressive behavior when needs aren't met directly. Healing means direct communication about needs and wants.`,
+Otra sombra es el comportamiento pasivo-agresivo cuando las necesidades no se satisfacen directamente. Sanación significa comunicación directa sobre necesidades y deseos.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Libra creates patterns of complete accommodation or attracting partners who take advantage. You may have no needs or constantly sacrifice for the relationship.
+        relationshipHealing: `En las relaciones, Quirón en Libra que no ha sanado crea patrones de acomodación total o de atracción de socios que se aprovechan. Es posible que no tengas necesidades o te sacrifiques constantemente por la relación.
 
-Healing involves choosing partners who want you to be yourself and learning to maintain identity in intimacy. This means having separate interests, maintaining friendships, and disagreeing when you disagree.
+La curación implica elegir parejas que quieran que seas tú mismo y aprender a mantener la identidad en la intimidad. Esto significa tener intereses separados, mantener amistades y estar en desacuerdo cuando no se está de acuerdo.
 
-The gift, once healed, is creating genuinely balanced relationships where both people are fully present. You teach partners that love includes maintaining authentic self.`,
+El don, una vez sanado, es crear relaciones genuinamente equilibradas donde ambas personas están plenamente presentes. Enseñas a tus socios que el amor incluye mantenerse auténtico.`,
         
-        careerExpression: `Professionally, healed Chiron in Libra often leads to relationship counseling, mediation, justice work, or helping others create balance. You're drawn to creating fairness and authentic partnership.
+        careerExpression: `Profesionalmente, Quirón en Libra curado a menudo conduce a asesoramiento sobre relaciones, mediación, trabajo de justicia o ayuda a otros a crear equilibrio. Le atrae crear equidad y una asociación auténtica.
 
-Law, diplomacy, couples therapy, or partnership consulting may call strongly. You have unique ability to see all sides while helping everyone maintain autonomy.
+El derecho, la diplomacia, la terapia de pareja o la consultoría de asociaciones pueden llamar con fuerza. Tienes una capacidad única para ver todos los lados mientras ayudas a todos a mantener la autonomía.
 
-The career challenge is not losing yourself in clients' issues or always accommodating others' needs. The wound says peace requires self-sacrifice; the healing says authentic service maintains boundaries.`,
+El desafío profesional es no perderse en los problemas de los clientes ni adaptarse siempre a las necesidades de los demás. La herida dice que la paz requiere abnegación; la curación dice que el servicio auténtico mantiene límites.`,
         
-        affirmation: "I am complete as I am. I maintain myself in relationship. I deserve partnership that honors my authentic self. Balance includes my needs too."
+        affirmation: "Estoy completo tal como soy. Me mantengo en la relación. Merezco una asociación que honre mi yo auténtico. El saldo también incluye mis necesidades."
     },
 
     Scorpio: {
-        title: "Chiron in Scorpio - The Wounded Depths",
-        archetype: "Reclaiming Power and Trust",
-        hook: "With Chiron in Scorpio, this soul carries a core wound around trust, power, and deep intimacy. The journey is from betrayal and powerlessness to becoming a transformer who guides others through their darkness.",
+        title: "Quirón en Escorpio - Las Profundidades Heridas",
+        archetype: "Recuperando poder y confianza",
+        hook: "Con Quirón en Escorpio, esta alma lleva una herida central en torno a la confianza, el poder y la profunda intimidad. El viaje es desde la traición y la impotencia hasta convertirse en un transformador que guía a otros a través de su oscuridad.",
         
-        coreWound: `The Scorpio Chiron wound centers on trust, power, and violation. Early experiences may have involved betrayal, abuse, violation of boundaries, or experiencing death/loss too young. There may have been power struggles or witnessing traumatic events.
+        coreWound: `La herida de Escorpio Quirón se centra en la confianza, el poder y la violación. Las primeras experiencias pueden haber involucrado traición, abuso, violación de límites o experimentar la muerte o pérdida siendo demasiado joven. Es posible que haya habido luchas de poder o presenciar eventos traumáticos.
 
-This wound manifests as deep difficulty trusting anyone completely and fear of vulnerability. There's often complicated relationship with power - either refusing it completely or using it defensively. Intimacy feels dangerous.
+Esta herida se manifiesta como una profunda dificultad para confiar completamente en alguien y miedo a la vulnerabilidad. A menudo existe una relación complicada con el poder, ya sea rechazándolo por completo o usándolo a la defensiva. La intimidad se siente peligrosa.
 
-The pain is profound because it touches the deepest human needs - trust, safety in vulnerability, and appropriate power. When these were violated, the message was that letting anyone close means being hurt. The wounded child learned to trust no one and reveal nothing.`,
+El dolor es profundo porque toca las necesidades humanas más profundas: confianza, seguridad en la vulnerabilidad y poder apropiado. Cuando estos fueron violados, el mensaje fue que dejar que alguien se acerque significa resultar herido. El niño herido aprendió a no confiar en nadie y a no revelar nada.`,
         
-        woundedPatterns: `Scorpio Chiron often manifests as either complete emotional walls or test-based relating where others must prove trustworthiness constantly. There may be attraction to intense, even dangerous relationships that recreate the wound.
+        woundedPatterns: `Escorpio Quirón a menudo se manifiesta como muros emocionales completos o como relaciones basadas en pruebas en las que los demás deben demostrar confiabilidad constantemente. Puede haber atracción por relaciones intensas, incluso peligrosas, que recrean la herida.
 
-Control issues are common - needing to control everything and everyone to feel safe. There's often difficulty with surrendering or being vulnerable. Sexuality may be complicated, tangled with power, shame, or past violation.
+Los problemas de control son comunes: la necesidad de controlar todo y a todos para sentirse seguros. A menudo hay dificultades para rendirse o ser vulnerable. La sexualidad puede ser complicada, enredada con el poder, la vergüenza o las violaciones del pasado.
 
-Many struggle with forgiveness or letting go of grudges. There may be patterns of seeking revenge or cutting people off completely at first sign of betrayal. Fear of loss can create clinging or preemptive abandonment.`,
+Muchos luchan por perdonar o dejar de lado los rencores. Puede haber patrones de búsqueda de venganza o de aislar completamente a las personas ante la primera señal de traición. El miedo a la pérdida puede crear apego o abandono preventivo.`,
         
-        healingJourney: `Healing Chiron in Scorpio requires learning to trust again without naivety. This starts with recognizing that the violation wasn't your fault and that being hurt doesn't mean you're weak.
+        healingJourney: `Sanar a Quirón en Escorpio requiere aprender a confiar nuevamente sin ingenuidad. Esto comienza reconociendo que la violación no fue culpa tuya y que ser herido no significa que seas débil.
 
-The work involves practicing vulnerability in small doses with safe people. This means sharing feelings, allowing others to see your fears, and gradually building trust. Professional help is often essential for processing trauma.
+El trabajo consiste en practicar la vulnerabilidad en pequeñas dosis con personas seguras. Esto significa compartir sentimientos, permitir que otros vean sus miedos y generar confianza gradualmente. La ayuda profesional suele ser esencial para procesar el trauma.
 
-Reclaiming power is crucial. This isn't about controlling others; it's about owning your personal power and using it appropriately. Healing involves learning the difference between healthy power and violation.`,
+Recuperar el poder es crucial. No se trata de controlar a los demás; se trata de ser dueño de tu poder personal y usarlo apropiadamente. La curación implica aprender la diferencia entre el poder saludable y la violación.`,
         
-        healerGift: `Once integrated, Chiron in Scorpio creates the most powerful transformational healers. You become someone who can guide others through their darkest experiences because you've walked through darkness and emerged.
+        healerGift: `Una vez integrado, Quirón en Escorpio crea los sanadores transformacionales más poderosos. Te conviertes en alguien que puede guiar a otros a través de sus experiencias más oscuras porque caminaste a través de la oscuridad y emergiste.
 
-The gift is the ability to hold space for others' trauma and pain without being overwhelmed. You're particularly gifted at working with abuse survivors, those with trust issues, or people facing transformation through crisis.
+El don es la capacidad de dejar espacio para el trauma y el dolor de los demás sin sentirse abrumado. Tiene un talento especial para trabajar con sobrevivientes de abuso, personas con problemas de confianza o personas que enfrentan una transformación a través de una crisis.
 
-There's often a gift for shadow work and helping others integrate their darkness. Your wound taught you about the depths of human experience, making you fearless guide in dark territory.`,
+A menudo hay un don para trabajar en la sombra y ayudar a otros a integrar su oscuridad. Tu herida te enseñó acerca de las profundidades de la experiencia humana, convirtiéndote en un guía intrépido en territorio oscuro.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Scorpio is that vulnerability is the ultimate courage, not weakness. Opening your heart after betrayal is the bravest act possible.
+        spiritualLesson: `La lección espiritual de Quirón en Escorpio es que la vulnerabilidad es el valor supremo, no la debilidad. Abrir el corazón después de una traición es el acto más valiente posible.
 
-The advanced teaching is that transformation requires death of old forms. The wound taught you about endings and rebirth intimately, which gives you capacity to guide others through necessary deaths.
+La enseñanza avanzada es que la transformación requiere la muerte de las viejas formas. La herida te enseñó íntimamente sobre los finales y el renacimiento, lo que te da la capacidad de guiar a otros a través de muertes necesarias.
 
-Ultimately, this placement teaches that true intimacy requires risk. You can't have deep connection without vulnerability, and that's terrifying when you've been hurt. The healing is choosing connection anyway.`,
+En última instancia, esta ubicación enseña que la verdadera intimidad requiere riesgo. No puedes tener una conexión profunda sin vulnerabilidad, y eso es aterrador cuando te han herido. La curación es elegir la conexión de todos modos.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Scorpio is either complete emotional shutdown or manipulative control. You may trust no one or manipulate to maintain power. Integration means appropriate trust and healthy power.
+        shadowIntegration: `La sombra de Quirón no curado en Escorpio es un cierre emocional total o un control manipulador. Es posible que no confíes en nadie ni lo manipules para mantener el poder. Integración significa confianza adecuada y poder saludable.
 
-Watch for using sexuality as power or connection without real intimacy. Shadow work involves separating sex from power dynamics and reclaiming sexuality as sacred connection.
+Esté atento al uso de la sexualidad como poder o conexión sin intimidad real. El trabajo en la sombra implica separar el sexo de las dinámicas de poder y reclamar la sexualidad como una conexión sagrada.
 
-Another shadow is staying in victim identity or conversely, becoming the abuser. Healing means neither - it's reclaiming power without misusing it.`,
+Otra sombra es permanecer en la identidad de víctima o, por el contrario, convertirse en abusador. La curación no significa ninguna de las dos cosas: es recuperar el poder sin abusar de él.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Scorpio creates patterns of either complete walls or merging that consumes. You may attract partners who betray you or who you can control completely.
+        relationshipHealing: `En las relaciones, Quirón no curado en Escorpio crea patrones de paredes completas o de fusión que consume. Puedes atraer socios que te traicionen o a quienes puedas controlar por completo.
 
-Healing involves choosing partners who are trustworthy and learning to be vulnerable gradually. This means sharing your depths, trusting intentions, and believing betrayal isn't inevitable.
+La curación implica elegir parejas que sean dignas de confianza y aprender a ser vulnerables gradualmente. Esto significa compartir lo más profundo, confiar en las intenciones y creer que la traición no es inevitable.
 
-The gift, once healed, is creating profoundly intimate relationships built on trust and appropriate power. You teach partners what real intimacy requires.`,
+El don, una vez sanado, es crear relaciones profundamente íntimas basadas en la confianza y el poder apropiado. Enseñas a tus socios lo que requiere la verdadera intimidad.`,
         
-        careerExpression: `Professionally, healed Chiron in Scorpio often leads to depth psychology, trauma work, crisis intervention, or transformation facilitation. You're drawn to helping others through their darkest moments.
+        careerExpression: `Profesionalmente, Quirón curado en Escorpio a menudo conduce a una psicología profunda, trabajo en trauma, intervención en crisis o facilitación de la transformación. Te atrae ayudar a otros en sus momentos más oscuros.
 
-Therapy, hospice, crisis counseling, or shadow work facilitation may call strongly. You have unique ability to work with intensity and darkness without flinching.
+La terapia, los cuidados paliativos, el asesoramiento en caso de crisis o la facilitación del trabajo en la sombra pueden ser una gran necesidad. Tienes una capacidad única para trabajar con intensidad y oscuridad sin inmutarse.
 
-The career challenge is not becoming consumed by others' trauma or using your insights manipulatively. The wound says power is for protection; the healing says power is for service.`,
+El desafío profesional es no dejarse consumir por el trauma de los demás ni utilizar sus conocimientos de forma manipuladora. La herida dice que el poder es para protección; la curación dice que el poder es para el servicio.`,
         
-        affirmation: "I trust wisely. I am powerful without controlling. I am vulnerable without being weak. I transform darkness into wisdom and help others do the same."
+        affirmation: "Confío sabiamente. Soy poderoso sin controlar. Soy vulnerable sin ser débil. Transformo la oscuridad en sabiduría y ayudo a otros a hacer lo mismo."
     },
 
     Sagittarius: {
-        title: "Chiron in Sagittarius - The Wounded Seeker",
-        archetype: "Reclaiming Faith and Meaning",
-        hook: "With Chiron in Sagittarius, this soul carries a core wound around meaning, faith, and truth. The journey is from existential despair or dogmatism to authentic personal truth and restored faith in life's meaning.",
+        title: "Quirón en Sagitario - El buscador herido",
+        archetype: "Recuperando la fe y el significado",
+        hook: "Con Quirón en Sagitario, esta alma lleva una herida central en torno al significado, la fe y la verdad. El viaje es desde la desesperación existencial o el dogmatismo hasta la auténtica verdad personal y la fe restaurada en el significado de la vida.",
         
-        coreWound: `The Sagittarius Chiron wound centers on meaning, belief, and truth. Early experiences may have involved religious trauma, beliefs being shattered, or disillusionment with promised meaning. There may have been dogmatic upbringing or conversely, complete lack of guiding philosophy.
+        coreWound: `La herida de Sagitario Quirón se centra en el significado, la creencia y la verdad. Las primeras experiencias pueden haber implicado traumas religiosos, creencias destrozadas o desilusión con el significado prometido. Es posible que haya habido una educación dogmática o, por el contrario, una completa falta de una filosofía rectora.
 
-This wound manifests as either desperate search for meaning or cynical rejection of all meaning-making. There's often crisis around what to believe and whether life has purpose. Truth becomes either rigidly held or completely relativized.
+Esta herida se manifiesta como una búsqueda desesperada de significado o como un rechazo cínico de toda creación de significado. A menudo hay crisis sobre qué creer y si la vida tiene un propósito. La verdad se mantiene rígidamente o se relativiza por completo.
 
-The pain is existential - it touches the human need for meaning and purpose. When faith was broken or twisted, the message was that the universe is meaningless or that truth is unknowable. The wounded child learned to either cling to rigid beliefs or trust nothing.`,
+El dolor es existencial: toca la necesidad humana de significado y propósito. Cuando la fe fue rota o torcida, el mensaje fue que el universo no tiene sentido o que la verdad es incognoscible. El niño herido aprendió a aferrarse a creencias rígidas o a no confiar en nada.`,
         
-        woundedPatterns: `Sagittarius Chiron often manifests as either religious fundamentalism or aggressive atheism - both defenses against the wound. There may be constant seeking, moving from belief system to belief system, never finding what fills the emptiness.
+        woundedPatterns: `Sagitario Quirón a menudo se manifiesta como fundamentalismo religioso o ateísmo agresivo, ambas defensas contra la herida. Puede haber una búsqueda constante, moviéndose de un sistema de creencias a otro, sin encontrar nunca lo que llena el vacío.
 
-Teaching or preaching what you don't actually believe is common. There's often presentation of certainty while privately struggling with doubt. Alternatively, there may be cynicism about anyone who claims to have found truth or meaning.
+Enseñar o predicar lo que en realidad no se cree es común. A menudo se presenta una certeza mientras en privado se lucha con la duda. Alternativamente, puede haber cinismo hacia cualquiera que afirme haber encontrado la verdad o el significado.
 
-Many struggle with commitment to any path, educational or spiritual. There may be patterns of starting philosophical or educational journeys then abandoning them. Dogmatism and relativism can alternate.`,
+Muchos luchan con el compromiso con cualquier camino, educativo o espiritual. Puede haber patrones de iniciar viajes filosóficos o educativos y luego abandonarlos. El dogmatismo y el relativismo pueden alternarse.`,
         
-        healingJourney: `Healing Chiron in Sagittarius requires finding authentic personal truth rather than adopted beliefs. This starts with recognizing that meaning exists even if you haven't found your version yet.
+        healingJourney: `Curar a Quirón en Sagitario requiere encontrar una verdad personal auténtica en lugar de creencias adoptadas. Esto comienza reconociendo que el significado existe incluso si aún no has encontrado tu versión.
 
-The work involves exploring different philosophies and beliefs without needing to commit forever or reject everything. This means allowing yourself to believe while remaining open to growth and change in those beliefs.
+El trabajo implica explorar diferentes filosofías y creencias sin necesidad de comprometerse para siempre o rechazarlo todo. Esto significa permitirse creer mientras permanece abierto al crecimiento y al cambio de esas creencias.
 
-Making peace with uncertainty is crucial. The wound creates need for absolute certainty; the healing teaches that authentic faith includes doubt. Learning to live meaningfully even when ultimate truth is unknowable is advanced work.`,
+Hacer las paces con la incertidumbre es crucial. La herida crea la necesidad de una certeza absoluta; la curación enseña que la fe auténtica incluye la duda. Aprender a vivir significativamente incluso cuando la verdad última es incognoscible es un trabajo avanzado.`,
         
-        healerGift: `Once integrated, Chiron in Sagittarius creates powerful teachers of authentic meaning-making. You become someone who can help others find their truth without imposing yours.
+        healerGift: `Una vez integrado, Quirón en Sagitario crea poderosos maestros de auténtica creación de significado. Te conviertes en alguien que puede ayudar a otros a encontrar su verdad sin imponer la tuya.
 
-The gift is the ability to restore faith and meaning for those who've lost it. You're particularly gifted at working with religious trauma, existential crisis, or helping people find purpose.
+El don es la capacidad de restaurar la fe y el significado para aquellos que la han perdido. Está especialmente dotado para trabajar con traumas religiosos, crisis existenciales o ayudar a las personas a encontrar un propósito.
 
-There's often a gift for teaching and philosophy that honors multiple truths. Your wound taught you that dogmatic certainty is false certainty, making you wise, open-minded guide for seekers.`,
+A menudo hay un don para la enseñanza y la filosofía que honra múltiples verdades. Tu herida te enseñó que la certeza dogmática es una certeza falsa, lo que te convierte en un guía sabio y de mente abierta para los buscadores.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Sagittarius is that authentic faith includes doubt and that personal truth is valid even if not universal. You don't need perfect certainty to live meaningfully.
+        spiritualLesson: `La lección espiritual de Quirón en Sagitario es que la fe auténtica incluye la duda y que la verdad personal es válida aunque no sea universal. No necesitas una certeza perfecta para vivir con sentido.
 
-The advanced teaching is that the search itself is meaningful. The wound taught you to seek answers; the healing teaches that the journey is the point.
+La enseñanza avanzada es que la búsqueda en sí misma es significativa. La herida te enseñó a buscar respuestas; la curación enseña que el viaje es el punto.
 
-Ultimately, this placement teaches that wisdom is knowing you don't know while still choosing to believe and find meaning. The wound creates deep questioning that leads to profound philosophical understanding.`,
+En última instancia, esta ubicación enseña que la sabiduría es saber que no se sabe y al mismo tiempo elegir creer y encontrar significado. La herida crea un profundo cuestionamiento que conduce a una profunda comprensión filosófica.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Sagittarius is either rigid fundamentalism or nihilistic cynicism. You may cling to dogma desperately or reject all meaning. Integration means authentic, flexible faith.
+        shadowIntegration: `La sombra de Quirón no curado en Sagitario es un fundamentalismo rígido o un cinismo nihilista. Puede que te aferres desesperadamente al dogma o rechaces todo significado. Integración significa fe auténtica y flexible.
 
-Watch for preaching at others or mocking others' beliefs. Shadow work involves recognizing that your strong reactions to others' beliefs reflect your own wound.
+Esté atento a sermonear a otros o burlarse de las creencias de los demás. El trabajo en la sombra implica reconocer que sus fuertes reacciones ante las creencias de los demás reflejan su propia herida.
 
-Another shadow is constant seeking without ever landing. Healing means commitment to your truth while remaining open to evolution.`,
+Otra sombra busca constantemente sin aterrizar jamás. Sanar significa compromiso con tu verdad mientras permaneces abierto a la evolución.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Sagittarius creates patterns of either forcing beliefs on partners or avoiding anyone who believes differently. You may need partners who share exact beliefs or refuse anyone with strong beliefs.
+        relationshipHealing: `En las relaciones, Quirón no curado en Sagitario crea patrones para imponer creencias a la pareja o evitar a cualquiera que crea de manera diferente. Es posible que necesite socios que compartan creencias exactas o que rechacen a cualquiera que tenga creencias sólidas.
 
-Healing involves choosing partners whose beliefs you respect even if different and learning that love doesn't require identical meaning-making. This means honoring multiple truths.
+La curación implica elegir parejas cuyas creencias respetes, incluso si son diferentes, y aprender que el amor no requiere una creación de significado idéntica. Esto significa honrar múltiples verdades.
 
-The gift, once healed, is creating relationships where both people's beliefs are honored and meaning is co-created. You teach partners that love transcends dogma.`,
+El don, una vez sanado, es crear relaciones en las que se honren las creencias de ambas personas y se cocree el significado. Enseñas a tus socios que el amor trasciende los dogmas.`,
         
-        careerExpression: `Professionally, healed Chiron in Sagittarius often leads to teaching, religious leadership, philosophy, or helping others find meaning and purpose.
+        careerExpression: `Profesionalmente, Quirón curado en Sagitario a menudo conduce a la enseñanza, al liderazgo religioso, a la filosofía o a ayudar a otros a encontrar significado y propósito.
 
-Higher education, cross-cultural work, spiritual counseling, or travel-related fields may call strongly. You have unique ability to help others navigate meaning crises because you've lived that territory.
+La educación superior, el trabajo intercultural, el asesoramiento espiritual o los campos relacionados con los viajes pueden ser una gran necesidad. Tienes una capacidad única para ayudar a otros a navegar crisis significativas porque has vivido ese territorio.
 
-The career challenge is not imposing your truth as the truth. The wound says certainty proves worth; the healing says authentic teaching honors students' own truth-finding.`,
+El desafío profesional no es imponer tu verdad como la verdad. La herida dice que la certeza demuestra su valor; la curación dice que la enseñanza auténtica honra la propia búsqueda de la verdad de los estudiantes.`,
         
-        affirmation: "I find authentic meaning in my own way. I have faith while honoring doubt. I teach truth without claiming certainty. My beliefs evolve and that's wisdom, not weakness."
+        affirmation: "Encuentro significado auténtico a mi manera. Tengo fe mientras honro la duda. Enseño la verdad sin pretender certeza. Mis creencias evolucionan y eso es sabiduría, no debilidad."
     },
 
     Capricorn: {
-        title: "Chiron in Capricorn - The Wounded Authority",
-        archetype: "Reclaiming Personal Authority",
-        hook: "With Chiron in Capricorn, this soul carries a core wound around authority, achievement, and success. The journey is from feeling like a failure or being crushed by expectations to becoming your own healthy authority.",
+        title: "Quirón en Capricornio - La Autoridad Herida",
+        archetype: "Reclamar autoridad personal",
+        hook: "Con Quirón en Capricornio, esta alma lleva una herida central en torno a la autoridad, el logro y el éxito. El viaje va desde sentirse fracasado o aplastado por las expectativas hasta convertirse en su propia autoridad saludable.",
         
-        coreWound: `The Capricorn Chiron wound centers on achievement, authority, and worthiness through success. Early experiences may have involved harsh authority figures, impossible expectations, or being made to feel like a failure. There may have been parentification or lack of support for ambitions.
+        coreWound: `La herida de Capricornio Quirón se centra en el logro, la autoridad y la dignidad a través del éxito. Las primeras experiencias pueden haber involucrado figuras de autoridad duras, expectativas imposibles o que lo hicieran sentir como un fracaso. Es posible que haya habido parentificación o falta de apoyo a las ambiciones.
 
-This wound manifests as either driven overachievement to prove worth or giving up entirely, convinced you'll fail. There's often complicated relationship with authority - either rebelling against it or desperately seeking approval from it.
+Esta herida se manifiesta como un esfuerzo excesivo para demostrar su valía o como una renuncia total, convencido de que fracasará. A menudo existe una relación complicada con la autoridad, ya sea rebelándose contra ella o buscando desesperadamente su aprobación.
 
-The pain is relentless because it touches core worth and social standing. When achievement was demanded but support withheld, or when authority was harsh, the message was that you're not good enough and must prove yourself endlessly. The wounded child learned that worth comes only through achievement.`,
+El dolor es implacable porque afecta el valor fundamental y la posición social. Cuando se exigía un logro pero se negaba el apoyo, o cuando la autoridad era dura, el mensaje era que no eres lo suficientemente bueno y debes demostrar tu valía sin cesar. El niño herido aprendió que el valor sólo se consigue mediante los logros.`,
         
-        woundedPatterns: `Capricorn Chiron often manifests as workaholism to prove worth or self-sabotage that prevents success. There may be patterns of almost reaching goals then falling apart, unconsciously confirming the belief that you're a failure.
+        woundedPatterns: `Capricornio Quirón a menudo se manifiesta como una adicción al trabajo para demostrar su valía o un autosabotaje que impide el éxito. Puede haber patrones en los que casi alcanzas tus metas y luego te desmoronas, lo que confirma inconscientemente la creencia de que eres un fracaso.
 
-Authority issues are profound - either being unable to respect any authority or desperately needing approval from authority figures. There's often difficulty becoming authority yourself, feeling like an imposter in leadership roles.
+Los problemas de autoridad son profundos: ya sea por no poder respetar ninguna autoridad o por necesitar desesperadamente la aprobación de figuras de autoridad. A menudo hay dificultades para convertirse en autoridad y sentirse como un impostor en roles de liderazgo.
 
-Many struggle with ambition - either having none (to avoid failure) or being driven by it in unhealthy ways. There may be sense that you're behind in life, not measuring up to societal standards, or that success would prove you're actually worthy.`,
+Muchos luchan contra la ambición, ya sea porque no la tienen (para evitar el fracaso) o porque se dejan llevar por ella de manera poco saludable. Puede tener la sensación de que estás atrasado en la vida, que no estás a la altura de los estándares sociales, o que el éxito demostraría que realmente eres digno.`,
         
-        healingJourney: `Healing Chiron in Capricorn requires separating worth from achievement and becoming your own healthy authority. This starts with recognizing that worth isn't earned through success - it's inherent.
+        healingJourney: `Curar a Quirón en Capricornio requiere separar el valor de los logros y convertirse en su propia autoridad saludable. Esto comienza reconociendo que el valor no se gana con el éxito, sino que es inherente.
 
-The work involves redefining success on your own terms and releasing others' definitions and expectations. This means choosing goals that matter to you, not goals that would prove something to others.
+El trabajo implica redefinir el éxito en sus propios términos y liberar las definiciones y expectativas de los demás. Esto significa elegir metas que sean importantes para usted, no metas que demostrarían algo a los demás.
 
-Learning to parent yourself with appropriate discipline and support is crucial. The wound often involves authority that was either too harsh or absent. Healing involves providing yourself with healthy structure and encouragement.`,
+Aprender a ser padre usted mismo con la disciplina y el apoyo adecuados es fundamental. La herida a menudo implica una autoridad demasiado dura o ausente. La curación implica proporcionarse una estructura saludable y estímulo.`,
         
-        healerGift: `Once integrated, Chiron in Capricorn creates powerful mentors and healthy authority figures. You become someone who can guide others to success while supporting them, giving what you didn't receive.
+        healerGift: `Una vez integrado, Quirón en Capricornio crea mentores poderosos y figuras de autoridad saludables. Te conviertes en alguien que puede guiar a otros hacia el éxito mientras los apoyas, dando lo que tú no recibiste.
 
-The gift is the ability to help others achieve their goals without crushing them with expectations. You're particularly gifted at working with people who struggle with authority or fear of failure.
+El don es la capacidad de ayudar a otros a alcanzar sus objetivos sin aplastarlos con expectativas. Tiene un don especial para trabajar con personas que luchan contra la autoridad o el miedo al fracaso.
 
-There's often a gift for true leadership that empowers rather than controls. Your wound taught you what harmful authority looks like, making you capable of being genuinely supportive leader.`,
+A menudo existe un don para el verdadero liderazgo que empodera en lugar de controlar. Tu herida te enseñó cómo es la autoridad dañina, haciéndote capaz de ser un líder genuinamente solidario.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Capricorn is that achievement doesn't create worth - worth enables authentic achievement. You don't have to prove yourself; you can accomplish from wholeness.
+        spiritualLesson: `La lección espiritual de Quirón en Capricornio es que el logro no crea valor: el valor permite un logro auténtico. No tienes que demostrar tu valía; puedes lograr desde la plenitud.
 
-The advanced teaching is that true success is internal, not external. The wound taught you to seek external validation; the healing teaches that your own approval is what matters.
+La enseñanza avanzada es que el verdadero éxito es interno, no externo. La herida te enseñó a buscar validación externa; la curación enseña que lo que importa es tu propia aprobación.
 
-Ultimately, this placement teaches that becoming your own authority is the greatest achievement. The wound creates deep understanding of unhealthy authority, making you capable of embodying healthy authority.`,
+En última instancia, esta colocación enseña que convertirse en su propia autoridad es el mayor logro. La herida crea una comprensión profunda de la autoridad malsana, lo que te hace capaz de encarnar una autoridad saludable.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Capricorn is either punishing ambition or complete avoidance of responsibility. You may work yourself to death or refuse any achievement. Integration means healthy ambition and self-authority.
+        shadowIntegration: `La sombra de Quirón no curado en Capricornio castiga la ambición o evita por completo la responsabilidad. Puedes trabajar hasta morir o rechazar cualquier logro. Integración significa ambición sana y autoridad propia.
 
-Watch for being the harsh authority to others that was modeled for you. Shadow work involves breaking cycles and becoming supportive authority.
+Esté atento a ser la autoridad dura para los demás que fue modelada para usted. El trabajo en la sombra implica romper ciclos y convertirse en una autoridad de apoyo.
 
-Another shadow is measuring worth entirely by worldly success. Healing means developing worth that exists regardless of achievement.`,
+Otra sombra mide el valor enteramente por el éxito mundano. Sanar significa desarrollar un valor que existe independientemente de los logros.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Capricorn creates patterns of either choosing partners who are authority figures or avoiding commitment. You may seek parental partners or refuse anyone who expects anything.
+        relationshipHealing: `En las relaciones, Quirón en Capricornio, que no ha sanado, crea patrones de elección de parejas que sean figuras de autoridad o de evitar el compromiso. Puede buscar parejas parentales o rechazar a cualquiera que espere algo.
 
-Healing involves choosing partners who respect your authority and learning to be equal. This means neither being the child nor being the parent in relationships.
+La curación implica elegir socios que respeten su autoridad y aprender a ser iguales. Esto significa no ser el niño ni el padre en las relaciones.
 
-The gift, once healed, is creating relationships built on mutual respect for each other's paths and achievements. You teach partners that love doesn't require being impressive.`,
+El don, una vez sanado, es crear relaciones basadas en el respeto mutuo por los caminos y logros de cada uno. Enseñas a tus parejas que el amor no requiere ser impresionante.`,
         
-        careerExpression: `Professionally, healed Chiron in Capricorn often leads to mentorship, coaching, organizational leadership, or helping others achieve their goals healthily.
+        careerExpression: `Profesionalmente, Quirón curado en Capricornio a menudo conduce a la tutoría, el entrenamiento, el liderazgo organizacional o a ayudar a otros a lograr sus objetivos de manera saludable.
 
-Management, career coaching, or building structures that support rather than crush may call strongly. You have unique ability to support achievement without demanding it.
+La gestión, el asesoramiento profesional o la construcción de estructuras que apoyen en lugar de aplastar pueden ser una fuerte llamada. Tienes una capacidad única para apoyar los logros sin exigirlos.
 
-The career challenge is not proving worth through work. The wound says achievement creates value; the healing says you create value regardless of achievement.`,
+El desafío profesional no es demostrar su valía a través del trabajo. La herida dice que el logro crea valor; la curación dice que creas valor independientemente de los logros.`,
         
-        affirmation: "I am my own authority. My worth doesn't depend on achievement. I accomplish from wholeness, not woundedness. I support others without crushing them."
+        affirmation: "Soy mi propia autoridad. Mi valor no depende de los logros. Lo logro desde la plenitud, no desde la herida. Apoyo a los demás sin aplastarlos."
     },
 
     Aquarius: {
-        title: "Chiron in Aquarius - The Wounded Outsider",
-        archetype: "Reclaiming Uniqueness and Belonging",
-        hook: "With Chiron in Aquarius, this soul carries a core wound around belonging while being different. The journey is from feeling like an alien or hiding uniqueness to celebrating individuality while finding true community.",
+        title: "Quirón en Acuario: el forastero herido",
+        archetype: "Reclamando la unicidad y la pertenencia",
+        hook: "Con Quirón en Acuario, esta alma lleva una herida central en torno a pertenecer y al mismo tiempo ser diferente. El viaje va desde sentirse como un extraterrestre u ocultar la singularidad hasta celebrar la individualidad y encontrar al mismo tiempo una verdadera comunidad.",
         
-        coreWound: `The Aquarius Chiron wound centers on belonging and being different. Early experiences may have involved being ostracized for uniqueness, having to hide true self to fit in, or feeling fundamentally alien. There may have been trauma around peer groups or being treated as weird.
+        coreWound: `La herida de Acuario Quirón se centra en pertenecer y ser diferente. Las primeras experiencias pueden haber implicado ser excluido por ser único, tener que ocultar su verdadero yo para encajar o sentirse fundamentalmente extraño. Es posible que haya habido un trauma en torno a los grupos de compañeros o que lo hayan tratado como algo extraño.
 
-This wound manifests as painful tension between need for belonging and being genuinely different. There's often pattern of either hiding uniqueness to fit in or being defiantly weird and isolated.
+Esta herida se manifiesta como una tensión dolorosa entre la necesidad de pertenecer y ser genuinamente diferente. A menudo hay un patrón de ocultar la singularidad para encajar o ser desafiantemente raro y aislado.
 
-The pain is profound because it touches the human need for community while honoring authentic self. When being yourself meant exclusion, the message was that you must choose between authenticity and belonging. The wounded child learned to either conform or rebel, losing authentic self either way.`,
+El dolor es profundo porque toca la necesidad humana de comunidad y al mismo tiempo honra el yo auténtico. Cuando ser uno mismo significaba exclusión, el mensaje era que hay que elegir entre autenticidad y pertenencia. El niño herido aprendió a conformarse o rebelarse, perdiendo su yo auténtico en cualquier caso.`,
         
-        woundedPatterns: `Aquarius Chiron often manifests as either complete conformity or aggressive outsider identity. There may be patterns of joining groups then feeling alien, or refusing all groups to avoid rejection.
+        woundedPatterns: `Acuario Quirón a menudo se manifiesta como una conformidad total o una identidad externa agresiva. Puede haber patrones de unirse a grupos y luego sentirse extraño, o rechazar todos los grupos para evitar el rechazo.
 
-Difficulty with intimacy is common - easier to have many acquaintances than deep connections. There's often presentation of not needing anyone while secretly longing for understanding and belonging.
+Las dificultades con la intimidad son comunes: es más fácil tener muchos conocidos que conexiones profundas. A menudo se presenta la idea de no necesitar a nadie mientras se anhela secretamente comprensión y pertenencia.
 
-Many struggle with trusting their uniqueness as valuable. There may be suppression of unusual ideas, interests, or perspectives to seem normal, or conversely, cultivating weirdness as identity when uniqueness is natural.`,
+Muchos luchan por confiar en que su singularidad es valiosa. Puede haber supresión de ideas, intereses o perspectivas inusuales para que parezcan normales o, por el contrario, cultivar la rareza como identidad cuando la singularidad es natural.`,
         
-        healingJourney: `Healing Chiron in Aquarius requires finding community that celebrates uniqueness rather than demanding conformity. This starts with recognizing that true belonging doesn't require hiding yourself.
+        healingJourney: `Sanar a Quirón en Acuario requiere encontrar una comunidad que celebre la singularidad en lugar de exigir conformidad. Esto comienza reconociendo que la verdadera pertenencia no requiere esconderse.
 
-The work involves embracing authentic uniqueness without making it performance or defense. This means expressing genuine interests and perspectives, trusting that real community appreciates authenticity.
+El trabajo implica abrazar la auténtica singularidad sin convertirla en actuación o defensa. Esto significa expresar intereses y perspectivas genuinos, confiando en que la comunidad real aprecia la autenticidad.
 
-Finding "your people" is crucial - this often means creating chosen family of fellow outsiders who've found each other. Healing involves accepting that you won't belong everywhere and that's not failure.`,
+Encontrar a "tu gente" es crucial; esto a menudo significa crear una familia elegida de compañeros externos que se han encontrado entre sí. La curación implica aceptar que no pertenecerás a todas partes y eso no es un fracaso.`,
         
-        healerGift: `Once integrated, Chiron in Aquarius creates powerful community builders for outsiders. You become someone who creates space where different is celebrated, where uniqueness is the price of admission.
+        healerGift: `Una vez integrado, Quirón en Acuario crea poderosos constructores de comunidades para los forasteros. Te conviertes en alguien que crea un espacio donde se celebra lo diferente, donde la singularidad es el precio de la entrada.
 
-The gift is the ability to help others embrace their weirdness and find their people. You're particularly gifted at working with social anxiety, identity issues, or helping others find authentic community.
+El don es la capacidad de ayudar a otros a aceptar sus rarezas y encontrar a su gente. Tiene un don especial para trabajar con ansiedad social, problemas de identidad o para ayudar a otros a encontrar una comunidad auténtica.
 
-There's often a gift for innovation and seeing future possibilities because you're not limited by conventional thinking. Your wound taught you to question belonging norms, making you visionary community creator.`,
+A menudo existe un don para innovar y ver posibilidades futuras porque no estás limitado por el pensamiento convencional. Tu herida te enseñó a cuestionar las normas de pertenencia, convirtiéndote en un creador de comunidades visionario.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Aquarius is that true belonging comes from being yourself, not hiding yourself. Authentic community celebrates uniqueness, doesn't require conformity.
+        spiritualLesson: `La lección espiritual de Quirón en Acuario es que la verdadera pertenencia proviene de ser uno mismo, no de esconderse. La comunidad auténtica celebra la singularidad, no requiere conformidad.
 
-The advanced teaching is that being an outsider gives you perspective insiders can't have. The wound taught you about exclusion; the healing teaches that your outsider perspective is valuable.
+La enseñanza avanzada es que ser un outsider te da una perspectiva que los insiders no pueden tener. La herida te enseñó sobre la exclusión; la curación enseña que tu perspectiva externa es valiosa.
 
-Ultimately, this placement teaches that you can be both unique and belonging. The wound creates false choice between authenticity and community; the healing shows they enhance each other.`,
+En última instancia, esta ubicación le enseña que puede ser único y pertenecer al mismo tiempo. La herida crea una falsa elección entre autenticidad y comunidad; la curación muestra que se potencian mutuamente.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Aquarius is either complete conformity or defiant isolation. You may hide all uniqueness or refuse any group. Integration means authentic individuality within genuine community.
+        shadowIntegration: `La sombra de Quirón no curado en Acuario es una conformidad total o un aislamiento desafiante. Puede ocultar toda singularidad o rechazar cualquier grupo. Integración significa individualidad auténtica dentro de una comunidad genuina.
 
-Watch for dehumanizing yourself or others - becoming so detached from emotion that you're disconnected. Shadow work involves staying human while being unique.
+Esté atento a deshumanizarse a sí mismo o a los demás, alejándose tanto de las emociones que se desconecte. El trabajo en la sombra implica mantenerse humano y al mismo tiempo ser único.
 
-Another shadow is intellectual superiority as defense against hurt. Healing means releasing need to be special through intelligence and accepting your uniqueness is inherent.`,
+Otra sombra es la superioridad intelectual como defensa contra el daño. Sanar significa liberar la necesidad de ser especial a través de la inteligencia y aceptar tu singularidad es inherente.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Aquarius creates patterns of emotional distance or choosing partners who don't really know you. You may have many surface relationships but no real intimacy.
+        relationshipHealing: `En las relaciones, Quirón no curado en Acuario crea patrones de distancia emocional o elige parejas que realmente no te conocen. Es posible que tengas muchas relaciones superficiales pero ninguna intimidad real.
 
-Healing involves choosing partners who love your weirdness and learning to be truly known. This means showing authentic self, sharing unusual interests, and trusting that you're lovable as you are.
+La curación implica elegir socios que amen tus rarezas y aprender a ser verdaderamente conocido. Esto significa mostrarse auténtico, compartir intereses inusuales y confiar en que usted es adorable tal como es.
 
-The gift, once healed, is creating relationships where both people can be completely themselves. You teach partners that love celebrates uniqueness.`,
+El don, una vez sanado, es crear relaciones en las que ambas personas puedan ser completamente ellas mismas. Enseñas a tus socios que el amor celebra la singularidad.`,
         
-        careerExpression: `Professionally, healed Chiron in Aquarius often leads to community building, advocacy for marginalized groups, innovation, or work that celebrates diversity and uniqueness.
+        careerExpression: `Profesionalmente, Quirón curado en Acuario a menudo conduce a la construcción de comunidades, la defensa de grupos marginados, la innovación o el trabajo que celebra la diversidad y la singularidad.
 
-Technology, social justice, group facilitation, or creating platforms for outsiders may call strongly. You have unique ability to see future possibilities and create belonging for the different.
+La tecnología, la justicia social, la facilitación de grupos o la creación de plataformas para personas externas pueden ser muy importantes. Tienes una capacidad única para ver posibilidades futuras y crear pertenencia a los diferentes.
 
-The career challenge is not isolating yourself or becoming too detached. The wound says difference means aloneness; the healing says difference attracts true community.`,
+El desafío profesional no es aislarse ni desapegarse demasiado. La herida dice que diferencia significa soledad; la curación dice que la diferencia atrae la verdadera comunidad.`,
         
-        affirmation: "I belong while being myself. My uniqueness is valuable. I find my people and create community that celebrates authentic expression. I am both individual and connected."
+        affirmation: "Pertenezco siendo yo mismo. Mi singularidad es valiosa. Encuentro a mi gente y creo una comunidad que celebra la expresión auténtica. Soy a la vez individual y conectado."
     },
 
     Pisces: {
-        title: "Chiron in Pisces - The Wounded Mystic",
-        archetype: "Reclaiming Spiritual Boundaries",
-        hook: "With Chiron in Pisces, this soul carries a core wound around boundaries, spirituality, and overwhelming sensitivity. The journey is from being lost in others' pain or addictive escape to grounded spiritual connection and healthy compassion.",
+        title: "Quirón en Piscis - El místico herido",
+        archetype: "Reclamando límites espirituales",
+        hook: "Con Quirón en Piscis, esta alma lleva una herida central en torno a los límites, la espiritualidad y una sensibilidad abrumadora. El viaje va desde estar perdido en el dolor de los demás o un escape adictivo hasta una conexión espiritual sólida y una compasión saludable.",
         
-        coreWound: `The Pisces Chiron wound centers on boundaries, spirituality, and sensitivity. Early experiences may have involved boundary violations, spiritual confusion, exposure to addiction or mental illness, or being overwhelmed by empathy. There may have been chaotic home or absent parent.
+        coreWound: `La herida de Piscis Quirón se centra en los límites, la espiritualidad y la sensibilidad. Las primeras experiencias pueden haber implicado violaciones de límites, confusión espiritual, exposición a adicciones o enfermedades mentales, o sentirse abrumado por la empatía. Es posible que haya habido un hogar caótico o un padre ausente.
 
-This wound manifests as either porous boundaries where everyone's pain becomes yours or rigid walls to avoid overwhelm. There's often confusion about spirituality - either addiction to transcendence or rejection of all spiritual connection.
+Esta herida se manifiesta como límites porosos donde el dolor de todos se convierte en tuyo o como paredes rígidas para evitar el abrumador. A menudo hay confusión acerca de la espiritualidad: ya sea adicción a la trascendencia o rechazo de toda conexión espiritual.
 
-The pain is disorienting because it touches the boundary between self and other, material and spiritual. When boundaries were violated or sensitivity was overwhelming, the message was that being open means being consumed. The wounded child learned to either merge completely or shut down all sensitivity.`,
+El dolor es desorientador porque toca el límite entre uno mismo y el otro, lo material y lo espiritual. Cuando se violaban los límites o la sensibilidad era abrumadora, el mensaje era que ser abierto significa ser consumido. El niño herido aprendió a fusionarse por completo o a apagar toda sensibilidad.`,
         
-        woundedPatterns: `Pisces Chiron often manifests as either codependency and over-empathy or complete emotional shutdown. There may be patterns of taking on others' pain as if it's your own or refusing all emotional connection to avoid overwhelm.
+        woundedPatterns: `Piscis Quirón a menudo se manifiesta como codependencia y exceso de empatía o como un cierre emocional total. Puede haber patrones de asumir el dolor de los demás como si fuera propio o de rechazar toda conexión emocional para evitar sentirse abrumado.
 
-Addiction or escapism is common - alcohol, drugs, fantasy, or spiritual bypassing to avoid painful reality. There's often difficulty with discernment - everyone seems like they need saving or no one can be trusted.
+La adicción o el escapismo son comunes: alcohol, drogas, fantasía o evasión espiritual para evitar la dolorosa realidad. A menudo hay dificultades con el discernimiento: parece que todos necesitan ser salvados o que no se puede confiar en nadie.
 
-Many struggle with victim identity or savior complex. There may be pattern of attracting wounded people to rescue or being the perpetual victim needing rescue. Spiritual confusion or religious trauma often manifests.`,
+Muchos luchan con la identidad de víctima o el complejo de salvador. Puede haber un patrón de atraer a personas heridas para rescatarlas o ser la víctima perpetua que necesita rescate. A menudo se manifiesta confusión espiritual o trauma religioso.`,
         
-        healingJourney: `Healing Chiron in Pisces requires developing healthy boundaries while maintaining connection and compassion. This starts with recognizing that you can be empathetic without absorbing others' pain.
+        healingJourney: `Sanar a Quirón en Piscis requiere desarrollar límites saludables mientras se mantiene la conexión y la compasión. Esto comienza reconociendo que se puede ser empático sin absorber el dolor de los demás.
 
-The work involves learning energetic boundaries and discernment. This means distinguishing your feelings from others', knowing when to help and when to step back, and protecting your sensitivity rather than shutting it down.
+El trabajo implica aprender límites energéticos y discernimiento. Esto significa distinguir tus sentimientos de los de los demás, saber cuándo ayudar y cuándo dar un paso atrás, y proteger tu sensibilidad en lugar de silenciarla.
 
-Developing grounded spirituality is crucial. The wound often involves either spiritual bypassing or rejecting spirituality entirely. Healing means finding spiritual connection that includes healthy reality rather than escaping it.`,
+Desarrollar una espiritualidad fundamentada es crucial. La herida a menudo implica ya sea un desvío espiritual o un rechazo total de la espiritualidad. Sanar significa encontrar una conexión espiritual que incluya una realidad saludable en lugar de escapar de ella.`,
         
-        healerGift: `Once integrated, Chiron in Pisces creates the most profound healers and spiritual guides. You become someone who can work with the most wounded while maintaining boundaries, offering true compassion without codependency.
+        healerGift: `Una vez integrado, Quirón en Piscis crea los sanadores y guías espirituales más profundos. Te conviertes en alguien que puede trabajar con los más heridos manteniendo los límites, ofreciendo verdadera compasión sin codependencia.
 
-The gift is the ability to hold space for suffering without taking it on. You're particularly gifted at working with addiction, mental health, spiritual crisis, or helping others develop healthy boundaries.
+El don es la capacidad de reservar espacio para el sufrimiento sin asumirlo. Tiene un don especial para trabajar con adicciones, salud mental, crisis espirituales o para ayudar a otros a desarrollar límites saludables.
 
-There's often a gift for spiritual teaching that's grounded in reality. Your wound taught you about spiritual bypassing and healthy spirituality, making you wise guide between worlds.`,
+A menudo hay un don para la enseñanza espiritual que se basa en la realidad. Tu herida te enseñó sobre la superación espiritual y la espiritualidad saludable, convirtiéndote en un guía sabio entre mundos.`,
         
-        spiritualLesson: `The spiritual lesson of Chiron in Pisces is that boundaries don't prevent connection - they enable it. You can be open-hearted without being consumed.
+        spiritualLesson: `La lección espiritual de Quirón en Piscis es que los límites no impiden la conexión: la permiten. Puedes tener el corazón abierto sin consumirte.
 
-The advanced teaching is that true compassion includes self-compassion. The wound taught you to sacrifice yourself for others; the healing teaches that you matter too and that helping from depletion helps no one.
+La enseñanza avanzada es que la verdadera compasión incluye la autocompasión. La herida te enseñó a sacrificarte por los demás; la curación enseña que tú también importas y que ayudar a superar el agotamiento no ayuda a nadie.
 
-Ultimately, this placement teaches that spirituality should ground you in reality, not escape from it. The wound creates understanding of both spiritual connection and spiritual bypassing, which is profound wisdom.`,
+En última instancia, esta ubicación enseña que la espiritualidad debe conectarte con la realidad, no escapar de ella. La herida crea comprensión tanto de la conexión espiritual como de la evasión espiritual, lo cual es una sabiduría profunda.`,
         
-        shadowIntegration: `The shadow of unhealed Chiron in Pisces is either martyr complex or complete disconnection. You may sacrifice yourself endlessly for others or refuse all empathy. Integration means boundaried compassion.
+        shadowIntegration: `La sombra de Quirón no curado en Piscis es un complejo de mártir o una desconexión total. Puede sacrificarse infinitamente por los demás o rechazar toda empatía. Integración significa compasión limitada.
 
-Watch for using spirituality to avoid reality or practical responsibility. Shadow work involves staying grounded while maintaining spiritual connection.
+Esté atento al uso de la espiritualidad para evitar la realidad o la responsabilidad práctica. El trabajo en la sombra implica mantenerse firme mientras se mantiene la conexión espiritual.
 
-Another shadow is enabling others' dysfunction to feel needed. Healing means helping without rescuing and allowing others their own journey.`,
+Otra sombra es permitir que la disfunción de los demás se sienta necesaria. Sanar significa ayudar sin rescatar y permitir a los demás su propio camino.`,
         
-        relationshipHealing: `In relationships, unhealed Chiron in Pisces creates patterns of either merging completely or staying disconnected. You may lose yourself in partners' needs or maintain emotional distance to avoid overwhelm.
+        relationshipHealing: `En las relaciones, Quirón no curado en Piscis crea patrones de fusión total o de permanecer desconectado. Puede perderse en las necesidades de su pareja o mantener una distancia emocional para evitar sentirse abrumado.
 
-Healing involves choosing partners who respect boundaries and learning to stay yourself while connecting deeply. This means saying no to rescue dynamics and yes to mutual support.
+La curación implica elegir socios que respeten los límites y aprender a ser uno mismo mientras se conecta profundamente. Esto significa decir no a las dinámicas de rescate y sí al apoyo mutuo.
 
-The gift, once healed, is creating profoundly spiritual relationships with healthy boundaries. You teach partners that intimacy doesn't require merger.`,
+El don, una vez sanado, es crear relaciones profundamente espirituales con límites saludables. Enseñas a tus socios que la intimidad no requiere fusión.`,
         
-        careerExpression: `Professionally, healed Chiron in Pisces often leads to healing professions, addiction counseling, spiritual teaching, or creative work that channels sensitivity.
+        careerExpression: `Profesionalmente, Quirón curado en Piscis a menudo conduce a profesiones curativas, asesoramiento sobre adicciones, enseñanza espiritual o trabajo creativo que canaliza la sensibilidad.
 
-Therapy, hospice, twelve-step facilitation, or arts that express transcendent experience may call strongly. You have unique ability to work with suffering without being consumed.
+La terapia, los cuidados paliativos, la facilitación de doce pasos o las artes que expresan una experiencia trascendente pueden llamar con fuerza. Tienes una capacidad única para trabajar con el sufrimiento sin consumirte.
 
-The career challenge is not depleting yourself through boundary-less helping. The wound says you should sacrifice for others; the healing says sustainable service requires self-care.`,
+El desafío profesional no es agotarse a través de una ayuda sin límites. La herida dice que debes sacrificarte por los demás; la curación dice que el servicio sostenible requiere autocuidado.`,
         
-        affirmation: "I have healthy boundaries. I am compassionate without absorbing others' pain. I am spiritually connected and grounded in reality. I help from wholeness, not woundedness."
+        affirmation: "Tengo límites saludables. Soy compasivo sin absorber el dolor de los demás. Estoy espiritualmente conectado y arraigado en la realidad. Ayudo desde la plenitud, no desde la herida."
     }
 };
 

@@ -1,73 +1,80 @@
 // ============================================
-// TONE VARIATIONS SYSTEM
+// SISTEMA DE VARIACIONES DE TONO
 // ============================================
-// Applies subtle language variations based on color mode:
-// - Pink: Slightly feminine/nurturing tone
-// - Blue: Slightly masculine/action-oriented tone
-// - Purple (default): Neutral/balanced tone
+// Aplica variaciones sutiles de lenguaje según el modo de color:
+// - Rosa: Tono ligeramente femenino/acogedor
+// - Azul: Tono ligeramente masculino/orientado a la acción
+// - Púrpura (predeterminado): Tono neutro/equilibrado
 // ============================================
 
 /**
- * Word substitutions based on tone
- * Format: { neutral: { feminine: "word", masculine: "word", neutral: "word" } }
+ * Sustituciones de palabras según el tono
+ * Formato: { neutro: { femenino: "palabra", masculino: "palabra", neutro: "palabra" } }
  */
 var TONE_SUBSTITUTIONS = {
-    // Pronouns and references
-    "This individual": { feminine: "She", masculine: "He", neutral: "This soul" },
-    "this individual": { feminine: "she", masculine: "he", neutral: "this soul" },
-    "This soul": { feminine: "She", masculine: "He", neutral: "This soul" },
-    "this soul": { feminine: "she", masculine: "he", neutral: "this soul" },
-    "They are": { feminine: "She is", masculine: "He is", neutral: "They are" },
-    "they are": { feminine: "she is", masculine: "he is", neutral: "they are" },
-    "They have": { feminine: "She has", masculine: "He has", neutral: "They have" },
-    "they have": { feminine: "she has", masculine: "he has", neutral: "they have" },
-    "They will": { feminine: "She will", masculine: "He will", neutral: "They will" },
-    "they will": { feminine: "she will", masculine: "he will", neutral: "they will" },
-    "Their": { feminine: "Her", masculine: "His", neutral: "Their" },
-    "their": { feminine: "her", masculine: "his", neutral: "their" },
-    "them": { feminine: "her", masculine: "him", neutral: "them" },
-    "themselves": { feminine: "herself", masculine: "himself", neutral: "themselves" },
+    // Pronombres y referencias
+    "Este individuo": { feminine: "Ella", masculine: "Él", neutral: "Esta alma" },
+    "este individuo": { feminine: "ella", masculine: "él", neutral: "esta alma" },
+    "Esta alma": { feminine: "Ella", masculine: "Él", neutral: "Esta alma" },
+    "esta alma": { feminine: "ella", masculine: "él", neutral: "esta alma" },
+    "Tienen": { feminine: "Ella tiene", masculine: "Él tiene", neutral: "Tienen" },
+    "tienen": { feminine: "ella tiene", masculine: "él tiene", neutral: "tienen" },
+    "Son": { feminine: "Ella es", masculine: "Él es", neutral: "Son" },
+    "son": { feminine: "ella es", masculine: "él es", neutral: "son" },
+    "Su ": { feminine: "Su ", masculine: "Su ", neutral: "Su " },
+    "su ": { feminine: "su ", masculine: "su ", neutral: "su " },
+    "sí mismos": { feminine: "sí misma", masculine: "sí mismo", neutral: "sí mismos" },
     
-    // Descriptive adjustments
-    "strength": { feminine: "inner strength", masculine: "strength", neutral: "strength" },
-    "powerful": { feminine: "deeply powerful", masculine: "powerful", neutral: "powerful" },
-    "courage": { feminine: "quiet courage", masculine: "bold courage", neutral: "courage" },
-    "warrior": { feminine: "warrior spirit", masculine: "warrior", neutral: "warrior" },
-    "gentle": { feminine: "gentle", masculine: "quietly strong", neutral: "gentle" },
-    "sensitive": { feminine: "sensitive", masculine: "perceptive", neutral: "sensitive" },
-    "nurturing": { feminine: "nurturing", masculine: "supportive", neutral: "nurturing" },
-    "protective": { feminine: "protective", masculine: "protective", neutral: "protective" },
-    "ambitious": { feminine: "quietly ambitious", masculine: "ambitious", neutral: "ambitious" },
-    "driven": { feminine: "purposefully driven", masculine: "driven", neutral: "driven" },
-    "leader": { feminine: "leader and guide", masculine: "leader", neutral: "leader" },
-    "fighter": { feminine: "advocate", masculine: "fighter", neutral: "champion" },
-    "conquer": { feminine: "overcome", masculine: "conquer", neutral: "overcome" },
-    "dominate": { feminine: "excel in", masculine: "dominate", neutral: "master" },
-    "aggressive": { feminine: "assertive", masculine: "aggressive", neutral: "assertive" },
-    "tender": { feminine: "tender", masculine: "thoughtful", neutral: "caring" },
-    "intuition": { feminine: "intuition", masculine: "instinct", neutral: "intuition" },
-    "emotional": { feminine: "emotionally attuned", masculine: "emotionally intelligent", neutral: "emotionally aware" },
-    "feelings": { feminine: "feelings", masculine: "inner world", neutral: "emotions" },
-    "heart": { feminine: "heart", masculine: "core", neutral: "heart" }
+    // Ajustes descriptivos
+    "fuerza": { feminine: "fuerza interior", masculine: "fuerza", neutral: "fuerza" },
+    "poderoso": { feminine: "profundamente poderosa", masculine: "poderoso", neutral: "poderoso" },
+    "poderosa": { feminine: "profundamente poderosa", masculine: "poderoso", neutral: "poderosa" },
+    "valentía": { feminine: "valentía silenciosa", masculine: "valentía audaz", neutral: "valentía" },
+    "guerrero": { feminine: "espíritu guerrero", masculine: "guerrero", neutral: "guerrero" },
+    "guerrera": { feminine: "espíritu guerrero", masculine: "guerrero", neutral: "guerrera" },
+    "gentil": { feminine: "gentil", masculine: "silenciosamente fuerte", neutral: "gentil" },
+    "sensible": { feminine: "sensible", masculine: "perceptivo", neutral: "sensible" },
+    "protector": { feminine: "protectora", masculine: "protector", neutral: "protector" },
+    "protectora": { feminine: "protectora", masculine: "protector", neutral: "protectora" },
+    "ambicioso": { feminine: "silenciosamente ambiciosa", masculine: "ambicioso", neutral: "ambicioso" },
+    "ambiciosa": { feminine: "silenciosamente ambiciosa", masculine: "ambicioso", neutral: "ambiciosa" },
+    "determinado": { feminine: "con propósito determinado", masculine: "determinado", neutral: "determinado" },
+    "determinada": { feminine: "con propósito determinado", masculine: "determinado", neutral: "determinada" },
+    "líder": { feminine: "líder y guía", masculine: "líder", neutral: "líder" },
+    "luchador": { feminine: "defensora", masculine: "luchador", neutral: "campeón" },
+    "luchadora": { feminine: "defensora", masculine: "luchador", neutral: "campeona" },
+    "conquistar": { feminine: "superar", masculine: "conquistar", neutral: "superar" },
+    "dominar": { feminine: "sobresalir en", masculine: "dominar", neutral: "dominar" },
+    "agresivo": { feminine: "asertiva", masculine: "agresivo", neutral: "asertivo" },
+    "agresiva": { feminine: "asertiva", masculine: "agresivo", neutral: "asertiva" },
+    "tierno": { feminine: "tierna", masculine: "reflexivo", neutral: "cariñoso" },
+    "tierna": { feminine: "tierna", masculine: "reflexivo", neutral: "cariñosa" },
+    "intuición": { feminine: "intuición", masculine: "instinto", neutral: "intuición" },
+    "emocional": { feminine: "emocionalmente sintonizada", masculine: "emocionalmente inteligente", neutral: "emocionalmente consciente" },
+    "sentimientos": { feminine: "sentimientos", masculine: "mundo interior", neutral: "emociones" },
+    "corazón": { feminine: "corazón", masculine: "esencia", neutral: "corazón" }
 };
 
 /**
- * Phrase-level substitutions for more natural reading
+ * Sustituciones a nivel de frase para una lectura más natural
  */
 var PHRASE_SUBSTITUTIONS = {
-    "destined to lead": { feminine: "destined to inspire and lead", masculine: "destined to lead", neutral: "destined to guide" },
-    "born to fight": { feminine: "born to advocate", masculine: "born to fight", neutral: "born to champion" },
-    "natural-born leader": { feminine: "natural-born leader and nurturer", masculine: "natural-born leader", neutral: "natural guide" },
-    "conquering challenges": { feminine: "transforming challenges", masculine: "conquering challenges", neutral: "overcoming challenges" },
-    "fierce determination": { feminine: "graceful determination", masculine: "fierce determination", neutral: "quiet determination" },
-    "battle their way": { feminine: "navigate their way", masculine: "battle their way", neutral: "find their way" },
-    "dominating presence": { feminine: "commanding presence", masculine: "dominating presence", neutral: "notable presence" },
-    "aggressive approach": { feminine: "assertive approach", masculine: "aggressive approach", neutral: "direct approach" }
+    "destinado a liderar": { feminine: "destinada a inspirar y liderar", masculine: "destinado a liderar", neutral: "destinado a guiar" },
+    "destinada a liderar": { feminine: "destinada a inspirar y liderar", masculine: "destinado a liderar", neutral: "destinada a guiar" },
+    "nacido para luchar": { feminine: "nacida para defender", masculine: "nacido para luchar", neutral: "nacido para ser campeón" },
+    "nacida para luchar": { feminine: "nacida para defender", masculine: "nacido para luchar", neutral: "nacida para ser campeona" },
+    "líder nato": { feminine: "líder y protectora nata", masculine: "líder nato", neutral: "guía natural" },
+    "líder nata": { feminine: "líder y protectora nata", masculine: "líder nato", neutral: "guía natural" },
+    "conquistando desafíos": { feminine: "transformando desafíos", masculine: "conquistando desafíos", neutral: "superando desafíos" },
+    "determinación feroz": { feminine: "determinación elegante", masculine: "determinación feroz", neutral: "determinación silenciosa" },
+    "abrirse camino a la fuerza": { feminine: "navegar su camino", masculine: "abrirse camino a la fuerza", neutral: "encontrar su camino" },
+    "presencia dominante": { feminine: "presencia imponente", masculine: "presencia dominante", neutral: "presencia notable" },
+    "enfoque agresivo": { feminine: "enfoque asertivo", masculine: "enfoque agresivo", neutral: "enfoque directo" }
 };
 
 /**
- * Get the current tone based on color mode
- * @returns {string} 'feminine', 'masculine', or 'neutral'
+ * Obtener el tono actual según el modo de color
+ * @returns {string} 'feminine', 'masculine', o 'neutral'
  */
 function getCurrentTone() {
     if (document.body.classList.contains('color-mode-pink')) {
@@ -75,13 +82,13 @@ function getCurrentTone() {
     } else if (document.body.classList.contains('color-mode-blue')) {
         return 'masculine';
     }
-    return 'neutral'; // Purple/default
+    return 'neutral'; // Púrpura/predeterminado
 }
 
 /**
- * Apply tone variations to reading text
- * @param {string} text - The original reading text
- * @returns {string} - Text with tone variations applied
+ * Aplicar variaciones de tono al texto de la lectura
+ * @param {string} text - El texto original de la lectura
+ * @returns {string} - Texto con variaciones de tono aplicadas
  */
 function applyToneVariations(text) {
     if (!text) return text;
@@ -89,12 +96,12 @@ function applyToneVariations(text) {
     const tone = getCurrentTone();
     let result = text;
     
-    // Apply phrase substitutions first (longer patterns first)
+    // Aplicar sustituciones de frases primero (patrones más largos primero)
     for (const [original, replacements] of Object.entries(PHRASE_SUBSTITUTIONS)) {
         const replacement = replacements[tone] || replacements.neutral;
         const regex = new RegExp(original, 'gi');
         result = result.replace(regex, (match) => {
-            // Preserve original capitalization
+            // Preservar mayúsculas originales
             if (match[0] === match[0].toUpperCase()) {
                 return replacement.charAt(0).toUpperCase() + replacement.slice(1);
             }
@@ -102,10 +109,10 @@ function applyToneVariations(text) {
         });
     }
     
-    // Apply word substitutions
+    // Aplicar sustituciones de palabras
     for (const [original, replacements] of Object.entries(TONE_SUBSTITUTIONS)) {
         const replacement = replacements[tone] || replacements.neutral;
-        // Use word boundary matching for single words
+        // Usar coincidencia de límites de palabra para palabras individuales
         const regex = new RegExp(`\\b${original}\\b`, 'g');
         result = result.replace(regex, replacement);
     }
@@ -114,43 +121,43 @@ function applyToneVariations(text) {
 }
 
 /**
- * Hook into reading display to apply tone variations
- * This wraps the original createReadingCard function if it exists
+ * Conectar a la visualización de lecturas para aplicar variaciones de tono
+ * Esto envuelve la función original createReadingCard si existe
  */
 function initToneVariations() {
-    // Check if original function exists
+    // Verificar si existe la función original
     if (typeof window.originalCreateReadingCard === 'undefined' && typeof createReadingCard !== 'undefined') {
         window.originalCreateReadingCard = createReadingCard;
         
-        // Override with tone-aware version
+        // Sobrescribir con versión consciente del tono
         window.createReadingCard = function(title, subtitle, keywords, content, strengths, challenges) {
-            // Apply tone variations to content
+            // Aplicar variaciones de tono al contenido
             const tonedContent = applyToneVariations(content);
             const tonedStrengths = Array.isArray(strengths) ? strengths.map(applyToneVariations) : strengths;
             const tonedChallenges = Array.isArray(challenges) ? challenges.map(applyToneVariations) : challenges;
             
-            // Call original function with modified content
+            // Llamar a la función original con contenido modificado
             return window.originalCreateReadingCard(title, subtitle, keywords, tonedContent, tonedStrengths, tonedChallenges);
         };
     }
 }
 
 /**
- * Re-apply tone when color mode changes
+ * Re-aplicar tono cuando cambia el modo de color
  */
 function onColorModeChange() {
-    // If readings are already displayed, we could refresh them
-    // For now, tone is applied at generation time
-    // Future: Could add live re-rendering of readings
+    // Si las lecturas ya se muestran, podríamos actualizarlas
+    // Por ahora, el tono se aplica en el momento de la generación
+    // Futuro: Podría agregar re-renderizado en vivo de las lecturas
 }
 
-// Initialize when DOM is ready
+// Inicializar cuando el DOM esté listo
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initToneVariations);
 } else {
     initToneVariations();
 }
 
-// Export for use
+// Exportar para uso
 window.applyToneVariations = applyToneVariations;
 window.getCurrentTone = getCurrentTone;

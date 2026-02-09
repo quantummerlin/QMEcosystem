@@ -5,603 +5,603 @@
 
 var DEEP_LILITH_READINGS = {
     Aries: {
-        title: "Lilith in Aries - The Suppressed Warrior",
-        archetype: "Reclaiming Primal Anger and Independence",
-        hook: "With Black Moon Lilith in Aries, this soul carries suppressed or rejected anger, independence, and warrior energy. The journey is from shame around assertiveness to unapologetic self-assertion and righteous anger.",
+        title: "Lilith en Aries - El guerrero reprimido",
+        archetype: "Recuperando la ira y la independencia primigenias",
+        hook: "Con Black Moon Lilith en Aries, esta alma lleva la ira, la independencia y la energía guerrera reprimidas o rechazadas. El viaje es desde la vergüenza en torno a la asertividad hasta la autoafirmación sin remordimientos y la ira justa.",
         
-        suppressedPower: `Lilith in Aries represents power around anger, fighting, and asserting yourself that was deemed unacceptable - especially for women or those socialized as female. Early experiences may have involved punishment for anger, messages that being assertive is aggressive, or shaming for standing up for yourself.
+        suppressedPower: `Lilith en Aries representa el poder en torno a la ira, la lucha y la afirmación de uno mismo que se consideró inaceptable, especialmente para las mujeres o aquellas socializadas como mujeres. Las experiencias tempranas pueden haber implicado castigo por la ira, mensajes de que ser asertivo es agresivo o vergüenza por defenderse.
 
-The suppressed power is pure, primal anger and the instinct to fight back. This is warrior energy, the right to defend yourself and your boundaries, the capacity for healthy aggression. When this was shamed or punished, it went underground, becoming either explosive or entirely repressed.
+El poder suprimido es la ira pura y primaria y el instinto de contraatacar. Esta es la energía del guerrero, el derecho a defenderse a sí mismo y a sus límites, la capacidad de una agresión saludable. Cuando esto era avergonzado o castigado, pasaba a la clandestinidad, volviéndose explosivo o completamente reprimido.
 
-The shadow is rage that wasn't allowed expression. Aries Lilith often has a volcano of anger underneath polite exterior, because every time you wanted to fight back, you learned it was wrong or dangerous. This anger doesn't disappear - it waits.`,
+La sombra es rabia a la que no se le permitía expresarse. Aries Lilith a menudo tiene un volcán de ira debajo de un exterior educado, porque cada vez que querías contraatacar, aprendías que era incorrecto o peligroso. Esta ira no desaparece, espera.`,
         
-        howItManifests: `Lilith in Aries often manifests as either people-pleasing passivity (to avoid seeming aggressive) or explosive outbursts of rage. There may be chronic guilt about any anger or assertiveness, feeling that you're "too much" or "too aggressive" when you're actually just setting boundaries.
+        howItManifests: `Lilith en Aries a menudo se manifiesta como pasividad agradable a las personas (para evitar parecer agresiva) o estallidos explosivos de rabia. Puede haber culpa crónica por cualquier enojo o asertividad, sintiendo que eres "demasiado" o "demasiado agresivo" cuando en realidad solo estás estableciendo límites.
 
-Competition can trigger shame - either avoiding it entirely or becoming overly competitive to overcompensate. There's often difficulty with leadership or initiative, feeling that taking charge makes you bossy or controlling.
+La competencia puede provocar vergüenza, ya sea evitándola por completo o volviéndose demasiado competitiva para compensar en exceso. A menudo hay dificultades con el liderazgo o la iniciativa, sintiendo que hacerse cargo te hace mandón o controlador.
 
-Many with this placement attract aggressive partners or situations that keep triggering the suppressed anger. The universe keeps offering opportunities to reclaim this power, but if you don't recognize the pattern, you may keep choosing the victim role.`,
+Muchos con esta colocación atraen a parejas agresivas o situaciones que siguen desencadenando la ira reprimida. El universo sigue ofreciendo oportunidades para recuperar este poder, pero si no reconoces el patrón, puedes seguir eligiendo el papel de víctima.`,
         
-        shadowWork: `Shadow work with Lilith in Aries involves recognizing that anger is a healthy emotion and assertiveness is not aggression. This starts with allowing yourself to feel rage without immediately suppressing or judging it.
+        shadowWork: `El trabajo de sombras con Lilith en Aries implica reconocer que la ira es una emoción saludable y la asertividad no es agresión. Esto comienza con permitirte sentir rabia sin reprimirla o juzgarla de inmediato.
 
-The work requires distinguishing between healthy anger (which defends boundaries and rights) and unhealthy aggression (which violates others). Your Lilith anger is likely the healthy kind that was shamed into hiding.
+El trabajo requiere distinguir entre la ira saludable (que defiende los límites y los derechos) y la agresión no saludable (que viola a los demás). Tu enojo de Lilith es probablemente del tipo saludable que fue avergonzado para esconderse.
 
-Practicing small acts of assertiveness without guilt is crucial. This means saying no, stating needs directly, disagreeing when you disagree, and defending your boundaries. Each act reclaims the suppressed warrior.`,
+Practicar pequeños actos de asertividad sin culpa es crucial. Esto significa decir que no, declarar las necesidades directamente, estar en desacuerdo cuando no estás de acuerdo y defender tus límites. Cada acto reclama al guerrero reprimido.`,
         
-        reclaimedGift: `Once integrated, Lilith in Aries becomes fierce protector energy - the warrior who defends the vulnerable and stands up to bullies. Your reclaimed anger becomes righteous force for justice and boundary-keeping.
+        reclaimedGift: `Una vez integrada, Lilith en Aries se convierte en una feroz energía protectora: la guerrera que defiende a los vulnerables y se enfrenta a los acosadores. Tu ira recuperada se convierte en una fuerza justa para la justicia y el mantenimiento de límites.
 
-The gift is the ability to assert yourself and others without apology. You become someone who can fight when fighting is needed, who defends those who can't defend themselves, who teaches others that anger can be holy.
+El don es la capacidad de afirmarte a ti mismo y a los demás sin disculparte. Te conviertes en alguien que puede luchar cuando se necesita luchar, que defiende a aquellos que no pueden defenderse a sí mismos, que enseña a otros que la ira puede ser santa.
 
-There's often a gift for leadership that's bold and unapologetic. Your suppressed warrior, once freed, leads with courage and authenticity, giving others permission to be warriors too.`,
+A menudo hay un don para el liderazgo que es audaz y sin disculpas. Tu guerrero reprimido, una vez liberado, lidera con coraje y autenticidad, dando permiso a otros para ser guerreros también.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Aries may manifest as difficulty initiating or asking for what you want. There may be pattern of being passive or pleasing rather than asserting desires.
+        sexualExpression: `Sexualmente, la Lilith reprimida en Aries puede manifestarse como dificultad para iniciar o pedir lo que quieres. Puede haber un patrón de ser pasivo o agradable en lugar de afirmar deseos.
 
-Integration means reclaiming sexual agency and initiative. This is about knowing what you want and going for it, being the hunter rather than only the hunted, owning your sexual power without shame.
+La integración significa recuperar el albedrío y la iniciativa sexual. Se trata de saber lo que quieres e ir a por ello, ser el cazador en lugar de solo el cazado, poseer tu poder sexual sin vergüenza.
 
-The gift is passionate, honest sexuality where both anger and desire are allowed. You teach partners that being wanted actively is exciting, that your desire and initiative are gifts, not threats.`,
+El regalo es una sexualidad apasionada y honesta donde se permite tanto la ira como el deseo. Enseñas a los socios que ser buscado activamente es emocionante, que tu deseo e iniciativa son regalos, no amenazas.`,
         
-        relationships: `In relationships, unintegrated Lilith in Aries attracts dynamics where you're either dominated or fighting for control. You may choose aggressive partners (living your Lilith through them) or become the aggressive one yourself.
+        relationships: `En las relaciones, la Lilith no integrada en Aries atrae dinámicas en las que estás dominado o luchando por el control. Puede elegir socios agresivos (viviendo su Lilith a través de ellos) o convertirse en el agresivo usted mismo.
 
-Integration means choosing equals and maintaining your warrior self in partnership. This means disagreeing without apologizing, fighting fairly when needed, and never dimming your strength.
+La integración significa elegir iguales y mantener tu yo guerrero en asociación. Esto significa estar en desacuerdo sin disculparse, luchar de manera justa cuando sea necesario y nunca disminuir tu fuerza.
 
-The gift is relationships where both people can be strong, where anger is processed healthily, where neither person has to be nice all the time.`,
+El regalo son las relaciones donde ambas personas pueden ser fuertes, donde la ira se procesa de manera saludable, donde ninguna de las personas tiene que ser amable todo el tiempo.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Aries teaches that anger is sacred when it defends life and boundaries. The divine feminine includes the warrior goddess, not just the nurturing mother.
+        spiritualMeaning: `Espiritualmente, Lilith en Aries enseña que la ira es sagrada cuando defiende la vida y los límites. El femenino divino incluye a la diosa guerrera, no solo a la madre nutritiva.
 
-Your spiritual work involves reclaiming the sacred warrior within. This is Kali energy - fierce, protective, willing to destroy what needs destroying. This isn't evil; it's necessary force.
+Tu trabajo espiritual implica reclamar al guerrero sagrado que llevas dentro. Esta es la energía de Kali: feroz, protectora, dispuesta a destruir lo que necesita ser destruido. Esto no es maldad; es fuerza necesaria.
 
-The lesson is that being nice isn't the same as being good. Sometimes goodness requires fierceness. Your Lilith teaches you when to fight and how to wield power righteously.`,
+La lección es que ser amable no es lo mismo que ser bueno. A veces la bondad requiere ferocidad. Tu Lilith te enseña cuándo luchar y cómo ejercer el poder con rectitud.`,
         
-        affirmation: "My anger is holy. I assert myself without apology. I fight for what matters and defend my boundaries fiercely. I am the warrior I was taught to suppress."
+        affirmation: "Mi ira es santa. Me reafirmo sin disculparme. Lucho por lo que importa y defiendo mis límites ferozmente. Soy el guerrero que me enseñaron a reprimir."
     },
 
     Taurus: {
-        title: "Lilith in Taurus - The Suppressed Sensuality",
-        archetype: "Reclaiming Pleasure and Material Power",
-        hook: "With Black Moon Lilith in Taurus, this soul carries suppressed or rejected sensuality, desire, and material power. The journey is from shame around pleasure and worth to unapologetic enjoyment and self-valuing.",
+        title: "Lilith en Tauro - La sensualidad reprimida",
+        archetype: "Recuperando el placer y el poder material",
+        hook: "Con Black Moon Lilith en Tauro, esta alma lleva sensualidad, deseo y poder material suprimidos o rechazados. El viaje va desde la vergüenza en torno al placer y el valor hasta el disfrute sin complejos y la autovaloración.",
         
-        suppressedPower: `Lilith in Taurus represents power around sensual pleasure, material desires, and body sovereignty that was shamed or rejected. Early experiences may have involved messages that wanting nice things is greedy, that pleasure (especially physical/sexual pleasure) is shameful, or that your body doesn't belong to you.
+        suppressedPower: `Lilith en Tauro representa el poder en torno al placer sensual, los deseos materiales y la soberanía corporal que fue avergonzada o rechazada. Las primeras experiencias pueden haber implicado mensajes de que querer cosas bonitas es codicioso, que el placer (especialmente el placer físico/sexual) es vergonzoso o que tu cuerpo no te pertenece.
 
-The suppressed power is the capacity for deep sensual enjoyment and the right to accumulate resources. This is the power to say "I want this, I deserve this, and I will have it." When shamed, this goes underground, becoming either compulsive indulgence or total denial.
+El poder suprimido es la capacidad de disfrute sensual profundo y el derecho a acumular recursos. Este es el poder de decir "Quiero esto, me lo merezco y lo tendré." Cuando se avergüenza, esto pasa a la clandestinidad, convirtiéndose en indulgencia compulsiva o en negación total.
 
-The shadow is desire itself - for pleasure, for comfort, for luxury, for sexual satisfaction. Taurus Lilith often has enormous capacity for pleasure that was taught to suppress or feel guilty about.`,
+La sombra es el deseo mismo: por placer, por comodidad, por lujo, por satisfacción sexual. Taurus Lilith a menudo tiene una enorme capacidad de placer que se le enseñó a suprimir o sentir culpa.`,
         
-        howItManifests: `Lilith in Taurus often manifests as either denial of all pleasure (living ascetically to prove you're not greedy or shameful) or secret indulgence with guilt. There may be shame about wanting nice things or enjoying sensual experiences.
+        howItManifests: `Lilith en Tauro a menudo se manifiesta como la negación de todo placer (vivir ascéticamente para demostrar que no eres codicioso o vergonzoso) o la complacencia secreta con la culpa. Puede haber vergüenza por querer cosas bonitas o disfrutar de experiencias sensuales.
 
-Body shame is common, especially around sexuality or appetite. There's often pattern of either depriving yourself or compulsive consumption, unable to find healthy middle ground with pleasure.
+La vergüenza corporal es común, especialmente en torno a la sexualidad o el apetito. A menudo hay un patrón de privación o consumo compulsivo, incapaz de encontrar un término medio saludable con placer.
 
-Many attract situations where resources or pleasure are withheld or controlled by others. You may have pattern of financial dependency or relationships where you're not allowed to enjoy yourself fully.`,
+Muchos atraen situaciones en las que los recursos o el placer son retenidos o controlados por otros. Es posible que tenga un patrón de dependencia financiera o relaciones en las que no se le permita disfrutar plenamente.`,
         
-        shadowWork: `Shadow work with Lilith in Taurus involves reclaiming the right to desire and enjoy. This starts with recognizing that wanting pleasure and nice things isn't shameful or selfish - it's human.
+        shadowWork: `El trabajo de sombra con Lilith en Tauro implica reclamar el derecho a desear y disfrutar. Esto comienza con el reconocimiento de que querer placer y cosas buenas no es vergonzoso o egoísta, es humano.
 
-The work requires rebuilding relationship with your body and its desires. This means eating what you want without guilt, enjoying sexual pleasure, spending money on yourself, and allowing yourself comfort.
+El trabajo requiere reconstruir la relación con tu cuerpo y sus deseos. Esto significa comer lo que quieras sin culpa, disfrutar del placer sexual, gastar dinero en ti mismo y permitirte consuelo.
 
-Developing unapologetic self-worth is crucial. The Lilith shadow here is believing you don't deserve good things. Integration means claiming "I am worth this" about pleasure, resources, and care.`,
+Desarrollar una autoestima sin complejos es crucial. La sombra de Lilith aquí cree que no mereces cosas buenas. La integración significa afirmar "Yo valgo esto" sobre el placer, los recursos y el cuidado.`,
         
-        reclaimedGift: `Once integrated, Lilith in Taurus becomes embodied sensual wisdom - the power to enjoy material life without apology and teach others to do the same. Your reclaimed pleasure becomes medicine for a culture that shames embodiment.
+        reclaimedGift: `Una vez integrada, Lilith en Tauro se convierte en sabiduría sensual encarnada: el poder de disfrutar de la vida material sin disculpas y enseñar a otros a hacer lo mismo. Tu placer recuperado se convierte en medicina para una cultura que avergüenza la encarnación.
 
-The gift is the ability to be completely comfortable in your body and with your desires. You become someone who gives others permission to want, to enjoy, to take up space, to indulge without guilt.
+El regalo es la capacidad de estar completamente cómodo en tu cuerpo y con tus deseos. Te conviertes en alguien que da permiso a los demás para querer, disfrutar, ocupar espacio, disfrutar sin culpa.
 
-There's often a gift for helping others heal body shame, eating disorders, or fear of pleasure. Your journey from shame to unapologetic enjoyment becomes a map for others.`,
+A menudo hay un don para ayudar a otros a sanar la vergüenza corporal, los trastornos alimentarios o el miedo al placer. Tu viaje de la vergüenza al disfrute sin complejos se convierte en un mapa para los demás.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Taurus may manifest as difficulty enjoying sex fully or shame about sexual appetite. There may be pattern of disconnection from body during sex or guilt about desire.
+        sexualExpression: `Sexualmente, la Lilith suprimida en Tauro puede manifestarse como dificultad para disfrutar plenamente del sexo o vergüenza por el apetito sexual. Puede haber un patrón de desconexión del cuerpo durante el sexo o culpa por el deseo.
 
-Integration means reclaiming full sensual presence and sexual enjoyment. This is about being completely in your body during pleasure, asking for what feels good, and taking time for full satisfaction.
+La integración significa recuperar la plena presencia sensual y el disfrute sexual. Se trata de estar completamente en tu cuerpo durante el placer, pedir lo que se siente bien y dedicar tiempo a la plena satisfacción.
 
-The gift is deeply embodied, unhurried sexuality where pleasure is the point. You teach partners that bodies are sacred, that pleasure is holy, that taking time for full enjoyment is worship.`,
+El regalo es la sexualidad profundamente encarnada y sin prisas, donde el placer es el punto. Les enseñas a los compañeros que los cuerpos son sagrados, que el placer es santo, que tomarse un tiempo para disfrutar plenamente es adoración.`,
         
-        relationships: `In relationships, unintegrated Lilith in Taurus attracts dynamics around control of resources or pleasure. You may choose partners who control finances or deny you pleasure, or become controlling yourself.
+        relationships: `En las relaciones, la Lilith no integrada en Tauro atrae dinámicas en torno al control de los recursos o el placer. Puede elegir socios que controlen las finanzas o le nieguen el placer, o que se controlen a sí mismos.
 
-Integration means choosing partners who encourage your pleasure and maintaining material independence. This means having your own money, indulging yourself, and sharing pleasure freely.
+La integración significa elegir socios que fomenten tu placer y mantener la independencia material. Esto significa tener tu propio dinero, consentirte y compartir el placer libremente.
 
-The gift is relationships built on mutual enjoyment and material security where both people can pleasure themselves and each other without shame or control.`,
+El regalo son las relaciones basadas en el disfrute mutuo y la seguridad material, donde ambas personas pueden darse placer a sí mismas y a los demás sin vergüenza ni control.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Taurus teaches that material life and embodied pleasure are sacred. The divine feminine includes the body, sexuality, and earthly enjoyment, not just transcendent spirit.
+        spiritualMeaning: `Espiritualmente, Lilith en Tauro enseña que la vida material y el placer encarnado son sagrados. Lo femenino divino incluye el cuerpo, la sexualidad y el disfrute terrenal, no solo el espíritu trascendente.
 
-Your spiritual work involves reclaiming the sacredness of the senses. This is goddess energy - enjoying beautiful things, delighting in food, celebrating sexuality, honoring the material.
+Tu trabajo espiritual implica reclamar la sacralidad de los sentidos. Esta es la energía de la diosa: disfrutar de cosas hermosas, deleitarse con la comida, celebrar la sexualidad, honrar el material.
 
-The lesson is that spiritual bypass that denies the body or material life is incomplete. Your Lilith teaches embodied spirituality where pleasure is prayer.`,
+La lección es que el bypass espiritual que niega el cuerpo o la vida material está incompleto. Tu Lilith enseña la espiritualidad encarnada donde el placer es la oración.`,
         
-        affirmation: "I deserve pleasure. My body is sacred. I enjoy material life without guilt. My desires are holy. I am worth having nice things and feeling good."
+        affirmation: "Merezco placer. Mi cuerpo es sagrado. Disfruto de la vida material sin culpa. Mis deseos son sagrados. Merece la pena tener cosas bonitas y sentirme bien."
     },
 
     Gemini: {
-        title: "Lilith in Gemini - The Suppressed Truth-Teller",
-        archetype: "Reclaiming Dangerous Words",
-        hook: "With Black Moon Lilith in Gemini, this soul carries suppressed or rejected truth-telling, dangerous ideas, and unfiltered communication. The journey is from silencing what needs to be said to speaking forbidden truths.",
+        title: "Lilith en Géminis: la narradora de la verdad suprimida",
+        archetype: "Recuperar palabras peligrosas",
+        hook: "Con Black Moon Lilith en Géminis, esta alma lleva la verdad suprimida o rechazada, ideas peligrosas y comunicación sin filtro. El viaje es desde silenciar lo que hay que decir hasta decir verdades prohibidas.",
         
-        suppressedPower: `Lilith in Gemini represents power around speaking truths others don't want to hear, expressing taboo ideas, and refusing to lie or be nice for comfort. Early experiences may have involved punishment for honesty, being silenced, or learning that certain truths must never be spoken.
+        suppressedPower: `Lilith en Géminis representa el poder de decir verdades que otros no quieren escuchar, expresar ideas tabú y negarse a mentir o ser amable por comodidad. Las experiencias tempranas pueden haber implicado castigo por honestidad, ser silenciado o aprender que ciertas verdades nunca deben ser dichas.
 
-The suppressed power is radical honesty and the intelligence that sees through social pretenses. This is the power to name what everyone knows but no one says, to ask questions that expose contradictions, to refuse polite lies.
+El poder suprimido es la honestidad radical y la inteligencia que ve a través de las pretensiones sociales. Este es el poder de nombrar lo que todos saben pero nadie dice, de hacer preguntas que exponen contradicciones, de rechazar mentiras educadas.
 
-The shadow is truth itself - the things you know and see but have learned to never say. Gemini Lilith often has penetrating perception of reality that others find threatening.`,
+La sombra es la verdad en sí misma: las cosas que sabes y ves pero que has aprendido a no decir nunca. Géminis Lilith a menudo tiene una percepción penetrante de la realidad que otros encuentran amenazante.`,
         
-        howItManifests: `Lilith in Gemini often manifests as either chronic people-pleasing communication (never saying what you really think) or blurting uncomfortable truths then feeling ashamed. There may be pattern of self-censoring constantly.
+        howItManifests: `Lilith en Géminis a menudo se manifiesta como una comunicación crónica que agrada a las personas (nunca dice lo que realmente piensa) o suelta verdades incómodas y luego se siente avergonzada. Puede haber un patrón de autocensura constante.
 
-Writing or speaking blocks are common - knowing you have things to say but feeling forbidden from saying them. There's often pattern of starting to say something true, then stopping and saying something acceptable instead.
+Los bloques para escribir o hablar son comunes: saber que tienes cosas que decir pero sentirte prohibido de decirlas. A menudo hay un patrón de comenzar a decir algo cierto, luego detenerse y decir algo aceptable en su lugar.
 
-Many attract situations where they're silenced or where their words are twisted. You may have pattern of being told you're "too honest" or "too blunt," which reinforces the wound.`,
+Muchos atraen situaciones en las que son silenciados o en las que sus palabras son retorcidas. Es posible que tenga un patrón de que le digan que es "demasiado honesto" o "demasiado contundente", lo que refuerza la herida.`,
         
-        shadowWork: `Shadow work with Lilith in Gemini involves reclaiming the right to speak your truth even when it makes others uncomfortable. This starts with recognizing that authentic communication is more valuable than nice lies.
+        shadowWork: `El trabajo en la sombra con Lilith en Géminis implica reclamar el derecho a decir tu verdad incluso cuando hace que los demás se sientan incómodos. Esto comienza con el reconocimiento de que la comunicación auténtica es más valiosa que las buenas mentiras.
 
-The work requires practicing truth-telling in small doses. This means saying what you actually think, naming dynamics others pretend don't exist, and refusing to pretend for others' comfort.
+El trabajo requiere practicar la verdad en pequeñas dosis. Esto significa decir lo que realmente piensas, nombrar dinámicas que otros pretenden que no existen y negarse a fingir para la comodidad de los demás.
 
-Developing trust in your perceptions is crucial. The Lilith shadow here is doubting what you clearly see because others deny it. Integration means trusting that if you perceive it, it's real.`,
+Desarrollar la confianza en tus percepciones es crucial. La sombra de Lilith aquí está dudando de lo que ves claramente porque otros lo niegan. Integración significa confiar en que si lo percibes, es real.`,
         
-        reclaimedGift: `Once integrated, Lilith in Gemini becomes powerful truth-teller - the voice that names what everyone feels but no one says. Your reclaimed words become liberation for others who've been silenced too.
+        reclaimedGift: `Una vez integrada, Lilith en Géminis se convierte en una poderosa habladora de la verdad, la voz que nombra lo que todos sienten pero nadie dice. Tus palabras recuperadas se convierten en liberación para otros que también han sido silenciados.
 
-The gift is the ability to speak forbidden truths with clarity and sometimes humor. You become someone who can say the uncomfortable thing that needs saying, who breaks through polite pretense to reality.
+El don es la capacidad de decir verdades prohibidas con claridad y, a veces, con humor. Te conviertes en alguien que puede decir lo incómodo que hay que decir, que rompe con la pretensión cortés de la realidad.
 
-There's often a gift for writing or speaking that challenges consensus reality. Your suppressed intelligence, once freed, articulates what the culture hasn't found words for yet.`,
+A menudo hay un don para escribir o hablar que desafía la realidad del consenso. Tu inteligencia suprimida, una vez liberada, articula aquello para lo que la cultura aún no ha encontrado palabras.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Gemini may manifest as inability to say what you want or dirty talk. There may be shame about sexual fantasies or difficulty communicating desires verbally.
+        sexualExpression: `Sexualmente, la Lilith suprimida en Géminis puede manifestarse como incapacidad para decir lo que quiere o charla sucia. Puede haber vergüenza por las fantasías sexuales o dificultad para comunicar los deseos verbalmente.
 
-Integration means reclaiming sexual communication - dirty talk, explicit requests, naming what you want. This is about words as turn-on, communication as foreplay, speaking desire unapologetically.
+La integración significa recuperar la comunicación sexual: conversaciones sucias, solicitudes explícitas, nombrar lo que quieres. Se trata de palabras tan excitantes, comunicación como juegos previos, hablar del deseo sin disculpas.
 
-The gift is sexuality where everything can be said, where taboo can be named, where words and ideas are as erotic as touch. You teach partners that speaking desire is powerful.`,
+El regalo es la sexualidad donde todo se puede decir, donde se puede nombrar un tabú, donde las palabras y las ideas son tan eróticas como el tacto. Les enseñas a los compañeros que hablar del deseo es poderoso.`,
         
-        relationships: `In relationships, unintegrated Lilith in Gemini attracts dynamics where you can't say what you really think. You may choose partners who punish honesty or become overly blunt to overcompensate.
+        relationships: `En las relaciones, la Lilith no integrada en Géminis atrae dinámicas en las que no puedes decir lo que realmente piensas. Puede elegir socios que castiguen la honestidad o se vuelvan demasiado bruscos para compensar en exceso.
 
-Integration means choosing partners who want your truth and learning to communicate authentically without cruelty. This means saying what you think, naming what you see, and trusting honesty deepens intimacy.
+La integración significa elegir socios que quieran tu verdad y aprender a comunicarte auténticamente sin crueldad. Esto significa decir lo que piensas, nombrar lo que ves y confiar en la honestidad profundiza la intimidad.
 
-The gift is relationships built on radical honesty where both people can say anything and truth creates closeness rather than distance.`,
+El regalo son las relaciones construidas sobre la honestidad radical donde ambas personas pueden decir cualquier cosa y la verdad crea cercanía en lugar de distancia.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Gemini teaches that some truths are sacred even when they're uncomfortable. The divine feminine includes the voice that speaks what must be heard, not just comforting words.
+        spiritualMeaning: `Espiritualmente, Lilith en Géminis enseña que algunas verdades son sagradas incluso cuando son incómodas. El femenino divino incluye la voz que habla lo que debe ser escuchado, no solo palabras reconfortantes.
 
-Your spiritual work involves becoming a vessel for truth. This is oracle energy - speaking what comes through you even when you don't know why it needs to be said.
+Tu trabajo espiritual implica convertirte en un recipiente para la verdad. Esta es la energía del oráculo: hablar de lo que viene a través de ti, incluso cuando no sabes por qué hay que decirlo.
 
-The lesson is that kindness sometimes requires truth that hurts temporarily. Your Lilith teaches when to speak and how to wield words as medicine, even when that medicine is bitter.`,
+La lección es que la bondad a veces requiere una verdad que duele temporalmente. Tu Lilith enseña cuándo hablar y cómo manejar las palabras como medicina, incluso cuando esa medicina es amarga.`,
         
-        affirmation: "I speak my truth. My words matter. I name what others fear to say. My perception is valid. I communicate authentically without apology."
+        affirmation: "Digo mi verdad. Mis palabras importan. Nombro lo que otros temen decir. Mi percepción es válida. Me comunico auténticamente sin disculparme."
     },
 
     Cancer: {
-        title: "Lilith in Cancer - The Dark Mother",
-        archetype: "Reclaiming Complex Feelings About Nurturing",
-        hook: "With Black Moon Lilith in Cancer, this soul carries suppressed or rejected maternal complexity, difficult emotions, and the shadow side of nurturing. The journey is from guilt about imperfect mothering to accepting all emotions.",
+        title: "Lilith en Cáncer - La Madre Oscura",
+        archetype: "Recuperar sentimientos complejos sobre la crianza",
+        hook: "Con Black Moon Lilith en Cáncer, esta alma lleva la complejidad materna suprimida o rechazada, las emociones difíciles y el lado oscuro de la crianza. El viaje es desde la culpa por la maternidad imperfecta hasta la aceptación de todas las emociones.",
         
-        suppressedPower: `Lilith in Cancer represents power around complex maternal feelings, the right to not want to nurture, and embracing full emotional range including the dark emotions. Early experiences may have involved mother wounds, pressure to be nurturing, or shame about not wanting children or caretaking.
+        suppressedPower: `Lilith en Cáncer representa el poder en torno a los sentimientos maternales complejos, el derecho a no querer nutrir y abrazar el rango emocional completo, incluidas las emociones oscuras. Las primeras experiencias pueden haber involucrado heridas maternas, presión para nutrir o vergüenza por no querer tener hijos o cuidarlos.
 
-The suppressed power is the capacity to say "no" to nurturing demands and to feel full range of emotions including rage, resentment, or not wanting to care for others. This is the shadow mother - not always giving, not always nice.
+El poder suprimido es la capacidad de decir "no" a las demandas nutritivas y sentir una amplia gama de emociones, incluida la rabia, el resentimiento o no querer preocuparse por los demás. Esta es la madre sombra: no siempre da, no siempre es agradable.
 
-The shadow is the feelings you're not supposed to have about family, motherhood, or caregiving - the resentment, the rage, the desire to be selfish sometimes, the ambivalence about children.`,
+La sombra son los sentimientos que se supone que no debes tener sobre la familia, la maternidad o el cuidado: el resentimiento, la rabia, el deseo de ser egoísta a veces, la ambivalencia sobre los niños.`,
         
-        howItManifests: `Lilith in Cancer often manifests as either compulsive caretaking (to prove you're not the bad mother/nurturer) or refusing all nurturing roles. There may be guilt about not wanting children or not being "maternal enough."
+        howItManifests: `Lilith en Cáncer a menudo se manifiesta como una atención compulsiva (para demostrar que no eres la mala madre/cuidadora) o rechazando todos los roles de crianza. Puede haber culpa por no querer tener hijos o no ser "lo suficientemente maternal".
 
-Complex feelings about mother are common - love mixed with rage, gratitude mixed with resentment. There's often difficulty allowing yourself "dark" emotions about family or feeling guilty for any emotional response that isn't loving.
+Los sentimientos complejos sobre la madre son comunes: amor mezclado con rabia, gratitud mezclada con resentimiento. A menudo hay dificultades para permitirse emociones "oscuras" sobre la familia o sentirse culpable por cualquier respuesta emocional que no sea amorosa.
 
-Many attract situations where nurturing is demanded or where they're made to feel guilty for having needs instead of meeting others' needs. You may have pattern of emotional martyrdom or shutting down emotionally entirely.`,
+Muchos atraen situaciones en las que se exige la crianza o en las que se les hace sentir culpables por tener necesidades en lugar de satisfacer las necesidades de los demás. Es posible que tenga un patrón de martirio emocional o cierre emocional por completo.`,
         
-        shadowWork: `Shadow work with Lilith in Cancer involves accepting that it's okay to have complex, even negative feelings about nurturing and family. This starts with recognizing that not always wanting to care for others doesn't make you a bad person.
+        shadowWork: `El trabajo de sombra con Lilith en Cáncer implica aceptar que está bien tener sentimientos complejos, incluso negativos, sobre la crianza y la familia. Esto comienza con el reconocimiento de que no siempre querer cuidar a los demás no te convierte en una mala persona.
 
-The work requires allowing the full range of emotions, including the ones that aren't nurturing or nice. This means feeling your rage at family, your resentment about demands, your desire to not be responsible for others sometimes.
+El trabajo requiere permitir toda la gama de emociones, incluidas las que no son nutritivas o agradables. Esto significa sentir su rabia hacia la familia, su resentimiento por las demandas, su deseo de no ser responsable de los demás a veces.
 
-Releasing guilt about imperfect mothering or not wanting to mother is crucial. The Lilith shadow here is the internalized belief that you must always nurture. Integration means choosing when to nurture from fullness, not obligation.`,
+Liberarse de la culpa por ser madre imperfecta o no querer ser madre es crucial. La sombra de Lilith aquí es la creencia interiorizada de que siempre debes nutrirte. La integración significa elegir cuándo nutrirse de la plenitud, no de la obligación.`,
         
-        reclaimedGift: `Once integrated, Lilith in Cancer becomes fierce protective energy that knows when to nurture and when to refuse. Your reclaimed power is authentic caregiving that doesn't require self-sacrifice and permission to have boundaries.
+        reclaimedGift: `Una vez integrada, Lilith en Cáncer se convierte en una energía protectora feroz que sabe cuándo nutrir y cuándo rechazar. Su poder recuperado es el cuidado auténtico que no requiere auto-sacrificio y permiso para tener límites.
 
-The gift is the ability to nurture without losing yourself and to refuse nurturing without guilt. You become someone who teaches that caregiving requires care for the caregiver, that "no" protects the quality of "yes."
+El don es la capacidad de nutrirse sin perderse y de negarse a nutrirse sin culpa. Te conviertes en alguien que enseña que el cuidado requiere el cuidado del cuidador, que el "no" protege la calidad del "sí".
 
-There's often a gift for working with mother wounds, helping others process complex family feelings, or teaching authentic self-nurturing. Your journey from guilt to boundaries becomes a guide.`,
+A menudo hay un don para trabajar con las heridas maternas, ayudar a otros a procesar sentimientos familiares complejos o enseñar el autocuidado auténtico. Tu viaje de la culpa a los límites se convierte en una guía.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Cancer may manifest as difficulty separating sexuality from nurturing or shame about sexual needs in context of motherhood. There may be belief that mothers/nurturers shouldn't be sexual.
+        sexualExpression: `Sexualmente, la Lilith suprimida en Cáncer puede manifestarse como dificultad para separar la sexualidad de la crianza o vergüenza sobre las necesidades sexuales en el contexto de la maternidad. Puede existir la creencia de que las madres/cuidadoras no deben ser sexuales.
 
-Integration means reclaiming sexuality as separate from caregiving. This is about being sexual person who may also nurture, not nurturing person who guiltily has sex.
+La integración significa reclamar la sexualidad como algo separado del cuidado. Se trata de ser una persona sexual que también puede nutrir, no nutrir a una persona que tiene relaciones sexuales culpables.
 
-The gift is sexuality where emotional depth enhances rather than conflicts with desire, where you can be both nurturing and sexual, where family roles don't erase erotic self.`,
+El regalo es la sexualidad donde la profundidad emocional mejora en lugar de entrar en conflicto con el deseo, donde puedes ser tanto cariñoso como sexual, donde los roles familiares no borran el yo erótico.`,
         
-        relationships: `In relationships, unintegrated Lilith in Cancer attracts dynamics of either mothering partners (and resenting it) or being mothered (and feeling smothered). You may choose partners who demand emotional labor you resent giving.
+        relationships: `En las relaciones, la Lilith no integrada en Cáncer atrae la dinámica de ser madre (y resentirse) o ser madre (y sentirse asfixiada). Puede elegir socios que exijan trabajo emocional que le molesta dar.
 
-Integration means choosing partners who don't need mothering and learning to nurture when it feels good, not from obligation. This means having boundaries about emotional labor and expecting reciprocal care.
+La integración significa elegir parejas que no necesitan ser madres y aprender a nutrir cuando se siente bien, no por obligación. Esto significa tener límites sobre el trabajo emocional y esperar un cuidado recíproco.
 
-The gift is relationships of mutual nurturing where both people care for each other without martyrdom, where emotional needs are met without one person being designated caregiver.`,
+El regalo son las relaciones de cuidado mutuo donde ambas personas se cuidan mutuamente sin martirio, donde las necesidades emocionales se satisfacen sin que se designe a una persona como cuidadora.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Cancer teaches that the divine feminine includes the dark mother - Kali who destroys, not just the nurturing Demeter. Not all feminine energy is soft and giving.
+        spiritualMeaning: `Espiritualmente, Lilith en Cáncer enseña que el divino femenino incluye a la madre oscura, Kali, que destruye, no solo al nutritivo Deméter. No toda la energía femenina es suave y generosa.
 
-Your spiritual work involves integrating shadow mother energies. This is accepting that you can be fierce, withholding, protective of your own energy, and still be whole.
+Su trabajo espiritual implica la integración de las energías de la madre sombra. Esto es aceptar que puedes ser feroz, retener, proteger tu propia energía y aún así estar completo.
 
-The lesson is that boundaries in caregiving are sacred. Your Lilith teaches when to give and when to withhold, how to care without depleting, how to honor all emotions as valid.`,
+La lección es que los límites en el cuidado son sagrados. Tu Lilith enseña cuándo dar y cuándo retener, cómo cuidar sin agotar, cómo honrar todas las emociones como válidas.`,
         
-        affirmation: "I nurture from choice, not obligation. My complex feelings are valid. I am allowed to have needs. I protect my emotional energy. Not always giving doesn't make me bad."
+        affirmation: "Me alimento de la elección, no de la obligación. Mis sentimientos complejos son válidos. Se me permite tener necesidades. Protejo mi energía emocional. No siempre dar no me hace malo."
     },
 
     Leo: {
-        title: "Lilith in Leo - The Suppressed Queen",
-        archetype: "Reclaiming Unapologetic Radiance",
-        hook: "With Black Moon Lilith in Leo, this soul carries suppressed or rejected creative power, ambition for recognition, and the right to shine brightly. The journey is from hiding your light to radiating without apology.",
+        title: "Lilith en Leo - La reina reprimida",
+        archetype: "Recuperando un resplandor sin complejos",
+        hook: "Con Black Moon Lilith en Leo, esta alma lleva el poder creativo suprimido o rechazado, la ambición de reconocimiento y el derecho a brillar intensamente. El viaje es desde esconder tu luz hasta irradiar sin disculpas.",
         
-        suppressedPower: `Lilith in Leo represents power around wanting attention, being the center, and creative self-expression that was shamed as narcissistic or attention-seeking. Early experiences may have involved being told you were "showing off," that wanting recognition was vain, or being overshadowed deliberately.
+        suppressedPower: `Lilith en Leo representa el poder de querer atención, ser el centro y la autoexpresión creativa que fue avergonzada como narcisista o que busca atención. Las primeras experiencias pueden haber implicado que te dijeran que estabas "presumiendo", que querer reconocimiento era en vano o que te eclipsaran deliberadamente.
 
-The suppressed power is the capacity to be radiantly yourself and demand appreciation. This is the power to take up space, to want applause, to be ambitious for glory and recognition. When shamed, this goes underground, becoming either desperate performance or complete hiding.
+El poder suprimido es la capacidad de ser radiante y exigir aprecio. Este es el poder de ocupar espacio, de querer aplausos, de ser ambiciosos de gloria y reconocimiento. Cuando se avergüenza, esto pasa a la clandestinidad, convirtiéndose en una actuación desesperada o en un completo escondite.
 
-The shadow is the desire to be special, celebrated, and seen - the part that wants to be the star, the queen, the one everyone notices. Leo Lilith often has enormous creative power and natural magnetism that was taught to dim.`,
+La sombra es el deseo de ser especial, celebrado y visto, la parte que quiere ser la estrella, la reina, la que todos notan. Leo Lilith a menudo tiene un enorme poder creativo y un magnetismo natural que se le enseñó a atenuar.`,
         
-        howItManifests: `Lilith in Leo often manifests as either hiding all gifts and playing small (to avoid seeming narcissistic) or desperate performing for attention that never satisfies. There may be shame about any desire for recognition or accomplishment.
+        howItManifests: `Lilith en Leo a menudo se manifiesta ya sea escondiendo todos los regalos y jugando pequeño (para evitar parecer narcisista) o desesperada por una atención que nunca satisface. Puede haber vergüenza por cualquier deseo de reconocimiento o logro.
 
-Creative blocks are common, often linked to fear that creating means being seen and judged. There's often pattern of starting to shine then self-sabotaging because visibility feels dangerous or wrong.
+Los bloqueos creativos son comunes, a menudo vinculados al miedo de que crear signifique ser visto y juzgado. A menudo hay un patrón de comenzar a brillar y luego auto-sabotearse porque la visibilidad se siente peligrosa o incorrecta.
 
-Many attract situations where they're overlooked or where someone else gets the credit. You may have pattern of supporting others' visibility while staying invisible yourself, or of being called narcissistic when you're actually just confident.`,
+Muchos atraen situaciones en las que se pasan por alto o en las que otra persona se lleva el crédito. Es posible que tengas un patrón de apoyo a la visibilidad de los demás mientras te mantienes invisible, o de que te llamen narcisista cuando en realidad solo tienes confianza.`,
         
-        shadowWork: `Shadow work with Lilith in Leo involves reclaiming the right to shine and be celebrated. This starts with recognizing that wanting recognition isn't narcissistic - it's healthy need for validation and appreciation.
+        shadowWork: `El trabajo de sombra con Lilith en Leo implica reclamar el derecho a brillar y ser celebrado. Esto comienza con el reconocimiento de que querer el reconocimiento no es narcisista, es una necesidad saludable de validación y apreciación.
 
-The work requires practicing visibility and self-celebration without apology. This means sharing your work, accepting praise, taking credit, and allowing yourself to be the center sometimes. Each act of shining reclaims suppressed power.
+El trabajo requiere practicar la visibilidad y la auto-celebración sin disculpas. Esto significa compartir tu trabajo, aceptar elogios, tomar crédito y permitirte ser el centro a veces. Cada acto de resplandor reclama el poder suprimido.
 
-Developing pride without shame is crucial. The Lilith shadow here is believing that pride is a sin or that wanting attention makes you bad. Integration means healthy pride and appropriate self-celebration.`,
+Desarrollar el orgullo sin vergüenza es crucial. La sombra de Lilith aquí es creer que el orgullo es un pecado o que querer atención te hace malo. Integración significa orgullo saludable y auto-celebración apropiada.`,
         
-        reclaimedGift: `Once integrated, Lilith in Leo becomes radiant creative power that inspires others to shine too. Your reclaimed light becomes permission for others to stop hiding their gifts.
+        reclaimedGift: `Una vez integrada, Lilith en Leo se convierte en un poder creativo radiante que inspira a otros a brillar también. Tu luz recuperada se convierte en permiso para que otros dejen de ocultar sus dones.
 
-The gift is the ability to be unapologetically visible and celebrated while helping others do the same. You become someone who takes the spotlight when appropriate and shares it generously, who teaches that shining doesn't require dimming others.
+El regalo es la capacidad de ser visible y celebrado sin disculpas mientras ayuda a otros a hacer lo mismo. Te conviertes en alguien que toma el centro de atención cuando es apropiado y lo comparte generosamente, que enseña que brillar no requiere atenuar a los demás.
 
-There's often a gift for performance, leadership, or creative work that moves people. Your suppressed star power, once freed, is magnetic and inspiring rather than threatening.`,
+A menudo hay un don para el rendimiento, el liderazgo o el trabajo creativo que mueve a las personas. Tu poder estelar suprimido, una vez liberado, es magnético e inspirador en lugar de amenazador.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Leo may manifest as difficulty being fully present and expressive during sex or shame about being the focus of attention. There may be pattern of only giving pleasure, never receiving spotlight of being pleasured.
+        sexualExpression: `Sexualmente, la Lilith suprimida en Leo puede manifestarse como dificultad para estar completamente presente y expresiva durante el sexo o vergüenza por ser el centro de atención. Puede haber un patrón de solo dar placer, nunca recibir atención de ser complacido.
 
-Integration means reclaiming sexual radiance and the right to be the center of erotic attention. This is about being worshipped, being watched, being celebrated sexually without shame.
+La integración significa recuperar la luminosidad sexual y el derecho a ser el centro de la atención erótica. Se trata de ser adorado, ser observado, ser celebrado sexualmente sin vergüenza.
 
-The gift is sexuality where you can perform and be performed for, where attention enhances arousal, where being desired visibly is powerful and you claim that power.`,
+El regalo es la sexualidad donde puedes actuar y ser representado, donde la atención aumenta la excitación, donde ser deseado visiblemente es poderoso y reclamas ese poder.`,
         
-        relationships: `In relationships, unintegrated Lilith in Leo attracts dynamics where you either hide completely or need constant validation. You may choose partners who don't celebrate you or become dependent on their praise.
+        relationships: `En las relaciones, la Lilith no integrada en Leo atrae dinámicas en las que te escondes por completo o necesitas una validación constante. Puedes elegir socios que no te celebren o que se vuelvan dependientes de sus elogios.
 
-Integration means choosing partners who genuinely appreciate you and learning to be visible without needing constant validation. This means sharing achievements, accepting compliments, and shining within relationship.
+La integración significa elegir socios que realmente te aprecien y aprender a ser visible sin necesidad de una validación constante. Esto significa compartir logros, aceptar cumplidos y brillar dentro de la relación.
 
-The gift is relationships where both people can be stars, where celebration is mutual, where neither has to hide their light for the other to shine.`,
+El regalo son las relaciones donde ambas personas pueden ser estrellas, donde la celebración es mutua, donde ninguno tiene que ocultar su luz para que el otro brille.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Leo teaches that divine feminine includes the queen, the goddess who rules and radiates. Not all spiritual power is humble and hidden - some is gloriously visible.
+        spiritualMeaning: `Espiritualmente, Lilith en Leo enseña que lo divino femenino incluye a la reina, la diosa que gobierna e irradia. No todo el poder espiritual es humilde y oculto, algunos son gloriosamente visibles.
 
-Your spiritual work involves reclaiming sacred pride and creative power. This is goddess energy in full regalia - unashamed, celebrated, powerful.
+Tu trabajo espiritual implica reclamar el orgullo sagrado y el poder creativo. Esta es la energía de la diosa en todo su esplendor: desvergonzada, celebrada, poderosa.
 
-The lesson is that your light is meant to be seen. Your Lilith teaches that hiding your gifts doesn't serve the world - radiating them does.`,
+La lección es que tu luz está destinada a ser vista. Tu Lilith enseña que esconder tus dones no sirve al mundo, irradiarlos sí lo hace.`,
         
-        affirmation: "I shine without apology. I deserve recognition and celebration. My creative power is meant to be seen. I am the star of my own life. My radiance inspires others."
+        affirmation: "Brillo sin disculparme. Merezco reconocimiento y celebración. Mi poder creativo está destinado a ser visto. Soy la estrella de mi propia vida. Mi resplandor inspira a otros."
     },
 
     Virgo: {
-        title: "Lilith in Virgo - The Suppressed Critic",
-        archetype: "Reclaiming Discernment Without Shame",
-        hook: "With Black Moon Lilith in Virgo, this soul carries suppressed or rejected critical thinking, high standards, and the ability to see flaws. The journey is from apologizing for discernment to wielding it as wisdom.",
+        title: "Lilith en Virgo - La crítica suprimida",
+        archetype: "Recuperar el discernimiento sin vergüenza",
+        hook: "Con Black Moon Lilith en Virgo, esta alma lleva un pensamiento crítico reprimido o rechazado, altos estándares y la capacidad de ver defectos. El viaje es desde disculparse por el discernimiento hasta esgrimirlo como sabiduría.",
         
-        suppressedPower: `Lilith in Virgo represents power around critical analysis, seeing what's wrong, and maintaining high standards that was shamed as being too critical or perfectionist. Early experiences may have involved being told you're too judgmental, that your standards are too high, or that pointing out flaws is mean.
+        suppressedPower: `Lilith en Virgo representa el poder en torno al análisis crítico, ver lo que está mal y mantener altos estándares que fueron avergonzados por ser demasiado críticos o perfeccionistas. Las primeras experiencias pueden haber implicado que te digan que eres demasiado crítico, que tus estándares son demasiado altos o que señalar defectos es malo.
 
-The suppressed power is penetrating discernment and the ability to see what needs improving. This is the power to say "this isn't good enough" and demand better, to notice flaws others miss, to maintain excellence. When shamed, this goes underground, becoming either harsh self-criticism or suppression of all standards.
+El poder suprimido es el discernimiento penetrante y la capacidad de ver lo que necesita mejorar. Este es el poder de decir "esto no es lo suficientemente bueno" y exigir mejor, notar las fallas que otros pasan por alto, mantener la excelencia. Cuando se avergüenza, esto pasa a la clandestinidad, convirtiéndose en una dura autocrítica o en la supresión de todos los estándares.
 
-The shadow is critical vision itself - the part that sees everything that's wrong or could be better, the voice that says "not good enough." Virgo Lilith often has brilliant analytical mind that was taught to silence itself.`,
+La sombra es la visión crítica en sí misma: la parte que ve todo lo que está mal o podría ser mejor, la voz que dice "no es lo suficientemente bueno". "Virgo Lilith a menudo tiene una mente analítica brillante a la que se le enseñó a silenciarse.`,
         
-        howItManifests: `Lilith in Virgo often manifests as either turning all criticism inward (brutal self-attack) or refusing to have any standards (to avoid being "judgmental"). There may be shame about noticing flaws or having high expectations.
+        howItManifests: `Lilith en Virgo a menudo se manifiesta ya sea volviendo todas las críticas hacia adentro (autoataque brutal) o negándose a tener ningún estándar (para evitar ser "crítica"). Puede haber vergüenza por notar fallas o tener altas expectativas.
 
-Difficulty expressing critical feedback is common. There's often pattern of silently judging while outwardly accepting everything, or being excessively harsh then feeling guilty about it.
+La dificultad para expresar comentarios críticos es común. A menudo hay un patrón de juzgar en silencio mientras se acepta todo exteriormente, o ser excesivamente duro y luego sentirse culpable por ello.
 
-Many attract situations where they're criticized harshly or where their standards are dismissed as impossible. You may have pattern of overworking to meet impossible standards or giving up entirely and accepting mediocrity.`,
+Muchos atraen situaciones en las que son criticados duramente o en las que sus estándares se descartan como imposibles. Es posible que tengas un patrón de exceso de trabajo para cumplir con estándares imposibles o renunciar por completo y aceptar la mediocridad.`,
         
-        shadowWork: `Shadow work with Lilith in Virgo involves reclaiming discernment as different from cruelty. This starts with recognizing that seeing flaws and having standards isn't the same as being mean - it's wisdom.
+        shadowWork: `El trabajo de sombra con Lilith en Virgo implica reclamar el discernimiento como diferente de la crueldad. Esto comienza con el reconocimiento de que ver defectos y tener estándares no es lo mismo que ser mezquino, es sabiduría.
 
-The work requires learning to express critical thinking constructively. This means giving feedback that helps, maintaining standards without perfectionism, and using analytical gifts to improve rather than destroy.
+El trabajo requiere aprender a expresar el pensamiento crítico de manera constructiva. Esto significa dar retroalimentación que ayude, mantener los estándares sin perfeccionismo y usar los dones analíticos para mejorar en lugar de destruir.
 
-Separating self-worth from perfection is crucial. The Lilith shadow here is believing you must be perfect to have worth. Integration means accepting imperfection while maintaining appropriate standards.`,
+Separar la autoestima de la perfección es crucial. La sombra de Lilith aquí cree que debes ser perfecto para valer la pena. Integración significa aceptar la imperfección mientras se mantienen los estándares apropiados.`,
         
-        reclaimedGift: `Once integrated, Lilith in Virgo becomes wise discernment that improves everything it touches. Your reclaimed critical eye becomes gift for excellence and helpful improvement rather than destructive judgment.
+        reclaimedGift: `Una vez integrada, Lilith en Virgo se convierte en un sabio discernimiento que mejora todo lo que toca. Su ojo crítico recuperado se convierte en un don para la excelencia y la mejora útil en lugar de un juicio destructivo.
 
-The gift is the ability to see what needs fixing and help fix it without shame or cruelty. You become someone who maintains high standards while accepting human limitation, who teaches that discernment serves growth.
+El don es la capacidad de ver lo que hay que arreglar y ayudar a arreglarlo sin vergüenza ni crueldad. Te conviertes en alguien que mantiene altos estándares mientras acepta la limitación humana, que enseña que el discernimiento sirve para el crecimiento.
 
-There's often a gift for healing, editing, or quality control. Your suppressed analytical power, once freed, sees systems clearly and knows exactly what needs to change.`,
+A menudo hay un don para la curación, la edición o el control de calidad. Su poder analítico suprimido, una vez liberado, ve los sistemas con claridad y sabe exactamente lo que debe cambiar.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Virgo may manifest as difficulty enjoying sex because you're analyzing it or shame about sexual preferences and details. There may be pattern of perfectionism preventing presence.
+        sexualExpression: `Sexualmente, la Lilith reprimida en Virgo puede manifestarse como dificultad para disfrutar del sexo porque lo estás analizando o vergüenza por las preferencias y detalles sexuales. Puede haber un patrón de perfeccionismo que impida la presencia.
 
-Integration means reclaiming erotic discernment - knowing exactly what you want and asking for it specifically. This is about technical precision in pleasure, about the details mattering, about perfectionism as enhancement.
+La integración significa recuperar el discernimiento erótico: saber exactamente lo que quieres y pedirlo específicamente. Se trata de precisión técnica en el placer, de que los detalles importen, del perfeccionismo como mejora.
 
-The gift is sexuality where you can be analytical without losing arousal, where specific preferences are honored, where the details of pleasure are celebrated not shamed.`,
+El regalo es la sexualidad donde se puede ser analítico sin perder la excitación, donde se honran preferencias específicas, donde se celebran los detalles del placer sin avergonzarse.`,
         
-        relationships: `In relationships, unintegrated Lilith in Virgo attracts dynamics where you're either constantly criticized or silently judging. You may choose partners who are harsh or become excessively critical yourself.
+        relationships: `En las relaciones, la Lilith no integrada en Virgo atrae dinámicas en las que se te critica constantemente o se te juzga en silencio. Puede elegir socios que sean duros o que se vuelvan excesivamente críticos.
 
-Integration means choosing partners who appreciate your discernment and learning to give feedback constructively. This means naming what needs improvement while maintaining love, having standards while accepting humanity.
+La integración significa elegir socios que aprecien su discernimiento y aprender a dar retroalimentación de manera constructiva. Esto significa nombrar lo que necesita mejorar mientras se mantiene el amor, tener estándares mientras se acepta la humanidad.
 
-The gift is relationships where both people can give and receive constructive feedback, where growth is supported without perfectionism, where standards enhance rather than destroy connection.`,
+El regalo son las relaciones donde ambas personas pueden dar y recibir comentarios constructivos, donde el crecimiento se apoya sin perfeccionismo, donde los estándares mejoran en lugar de destruir la conexión.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Virgo teaches that discernment is a spiritual gift. The divine feminine includes the wise woman who sees clearly and speaks truth about what needs healing or changing.
+        spiritualMeaning: `Espiritualmente, Lilith en Virgo enseña que el discernimiento es un don espiritual. El femenino divino incluye a la mujer sabia que ve con claridad y dice la verdad sobre lo que necesita curación o cambio.
 
-Your spiritual work involves using analytical gifts in service. This is healer energy - seeing precisely what's wrong and knowing exactly how to fix it.
+Su trabajo espiritual implica el uso de dones analíticos en el servicio. Esta es la energía del sanador: ver con precisión lo que está mal y saber exactamente cómo solucionarlo.
 
-The lesson is that critical thinking serves love when wielded with compassion. Your Lilith teaches how to improve, heal, and refine without destroying through criticism.`,
+La lección es que el pensamiento crítico sirve al amor cuando se ejerce con compasión. Tu Lilith enseña cómo mejorar, sanar y refinar sin destruir a través de la crítica.`,
         
-        affirmation: "My discernment is wisdom. I see clearly and speak truth constructively. I maintain standards without perfectionism. My critical gifts serve healing. I am both analytical and compassionate."
+        affirmation: "Mi discernimiento es sabiduría. Veo con claridad y digo la verdad de manera constructiva. Mantengo estándares sin perfeccionismo. Mis dones críticos sirven para sanar. Soy a la vez analítico y compasivo."
     },
 
     Libra: {
-        title: "Lilith in Libra - The Suppressed Selfishness",
-        archetype: "Reclaiming Personal Needs in Relationship",
-        hook: "With Black Moon Lilith in Libra, this soul carries suppressed or rejected personal desires in partnerships and the right to be 'selfish.' The journey is from constant accommodation to claiming equal space in relationship.",
+        title: "Lilith en Libra - El egoísmo reprimido",
+        archetype: "Recuperar las necesidades personales en la relación",
+        hook: "Con Black Moon Lilith en Libra, esta alma lleva deseos personales reprimidos o rechazados en asociaciones y el derecho a ser 'egoísta'. "El viaje es desde el alojamiento constante hasta reclamar el mismo espacio en la relación.",
         
-        suppressedPower: `Lilith in Libra represents power around having own needs in relationships, refusing to accommodate, and claiming equal partnership that was shamed as selfish or unloving. Early experiences may have involved messages that relationships require self-sacrifice, that having needs makes you demanding, or that keeping peace means silencing yourself.
+        suppressedPower: `Lilith en Libra representa el poder de tener sus propias necesidades en las relaciones, negarse a acomodarse y reclamar una asociación igualitaria que fue avergonzada como egoísta o sin amor. Las primeras experiencias pueden haber involucrado mensajes de que las relaciones requieren autosacrificio, que tener necesidades te hace exigente o que mantener la paz significa silenciarte.
 
-The suppressed power is the capacity to say "I matter too" and to refuse to accommodate when it costs too much. This is the power to be selfish sometimes, to choose yourself over partnership, to demand equality. When shamed, this goes underground, becoming either resentful accommodation or relationship avoidance.
+El poder suprimido es la capacidad de decir "yo también importo" y de negarse a acomodarse cuando cuesta demasiado. Este es el poder de ser egoísta a veces, de elegirte a ti mismo sobre la asociación, de exigir igualdad. Cuando se avergüenza, esto pasa a la clandestinidad, convirtiéndose en un alojamiento resentido o en una evitación de la relación.
 
-The shadow is your own needs and desires when they conflict with others' - the part that wants your way, that won't compromise, that says "you accommodate me for once." Libra Lilith often has strong will and clear desires that were taught to suppress for harmony.`,
+La sombra son tus propias necesidades y deseos cuando entran en conflicto con los de los demás: la parte que quiere tu camino, que no se comprometerá, que dice "me acomodas por una vez." Libra Lilith a menudo tiene una fuerte voluntad y deseos claros que se enseñaron a suprimir para la armonía.`,
         
-        howItManifests: `Lilith in Libra often manifests as either chronic people-pleasing in relationships (losing yourself completely) or avoiding relationships entirely to protect autonomy. There may be shame about any desire that might displease partners.
+        howItManifests: `Lilith en Libra a menudo se manifiesta como personas crónicas: complacer en las relaciones (perderse por completo) o evitar las relaciones por completo para proteger la autonomía. Puede haber vergüenza por cualquier deseo que pueda desagradar a las parejas.
 
-Difficulty making decisions is common, especially when someone might be unhappy with your choice. There's often pattern of accommodating until resentment explodes, then feeling guilty for expressing anger.
+La dificultad para tomar decisiones es común, especialmente cuando alguien podría estar descontento con tu elección. A menudo hay un patrón de acomodación hasta que el resentimiento explota, y luego se siente culpable por expresar enojo.
 
-Many attract unbalanced relationships where they give far more than they receive. You may have pattern of choosing selfish partners (living your Lilith through them) or becoming the accommodating one who has no needs.`,
+Muchos atraen relaciones desequilibradas en las que dan mucho más de lo que reciben. Es posible que tengas un patrón de elegir parejas egoístas (vivir tu Lilith a través de ellas) o convertirte en la persona complaciente que no tiene necesidades.`,
         
-        shadowWork: `Shadow work with Lilith in Libra involves reclaiming the right to have needs and desires in relationship. This starts with recognizing that partnership doesn't require constant self-sacrifice.
+        shadowWork: `El trabajo de sombra con Lilith en Libra implica reclamar el derecho a tener necesidades y deseos en la relación. Esto comienza con el reconocimiento de que la asociación no requiere un sacrificio constante.
 
-The work requires practicing healthy selfishness. This means saying what you want, refusing to accommodate when it's not okay, and expecting partners to consider your needs as important as their own.
+El trabajo requiere practicar un egoísmo saludable. Esto significa decir lo que quieres, negarte a acomodarte cuando no está bien y esperar que los socios consideren tus necesidades tan importantes como las suyas.
 
-Learning that you can be alone is crucial. The Lilith shadow here is fear of being alone leading to self-erasure in relationship. Integration means being okay solo, which enables authentic partnership.`,
+Aprender que puedes estar solo es crucial. La sombra de Lilith aquí es el miedo a estar solo, lo que lleva a la autoeliminación en la relación. La integración significa estar bien solo, lo que permite una asociación auténtica.`,
         
-        reclaimedGift: `Once integrated, Lilith in Libra becomes powerful advocate for balanced partnerships. Your reclaimed right to have needs becomes teaching that relationship requires two whole people.
+        reclaimedGift: `Una vez integrada, Lilith en Libra se convierte en una poderosa defensora de las asociaciones equilibradas. Su derecho reclamado a tener necesidades se convierte en la enseñanza de que la relación requiere dos personas enteras.
 
-The gift is the ability to create genuinely equal relationships and help others do the same. You become someone who refuses to accommodate at own expense and teaches that true harmony includes both people's authentic selves.
+El don es la capacidad de crear relaciones genuinamente iguales y ayudar a otros a hacer lo mismo. Te conviertes en alguien que se niega a acomodarse a sus expensas y enseña que la verdadera armonía incluye el yo auténtico de ambas personas.
 
-There's often a gift for relationship counseling or mediation that honors both parties. Your suppressed equality drive, once freed, creates partnerships where both people matter equally.`,
+A menudo hay un regalo para el asesoramiento o la mediación en las relaciones que honra a ambas partes. Su impulso de igualdad suprimido, una vez liberado, crea asociaciones en las que ambas personas importan por igual.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Libra may manifest as only pleasing partners without asking for own pleasure or shame about sexual preferences that might not suit partners. There may be pattern of accommodating sexually to keep peace.
+        sexualExpression: `Sexualmente, la Lilith suprimida en Libra puede manifestarse solo como parejas agradables sin pedir placer propio o vergüenza por preferencias sexuales que podrían no ser adecuadas para las parejas. Puede haber un patrón de acomodación sexual para mantener la paz.
 
-Integration means reclaiming sexual reciprocity and demanding equal pleasure. This is about your satisfaction mattering as much, about partners pleasing you as much as you please them.
+La integración significa reclamar la reciprocidad sexual y exigir el mismo placer. Se trata de que tu satisfacción importe tanto, de que los socios te complazcan tanto como tú a ellos.
 
-The gift is sexuality where pleasure is mutual, where both people's desires matter, where giving and receiving are balanced, where you can refuse what doesn't work for you.`,
+El regalo es la sexualidad donde el placer es mutuo, donde los deseos de ambas personas importan, donde dar y recibir están equilibrados, donde puedes rechazar lo que no funciona para ti.`,
         
-        relationships: `In relationships, unintegrated Lilith in Libra creates patterns of complete accommodation or choosing partners who accommodate you. You may lose yourself entirely or demand partners lose themselves.
+        relationships: `En las relaciones, Lilith no integrada en Libra crea patrones de acomodación completa o elige parejas que se adapten a ti. Puede perderse por completo o exigir que los socios se pierdan a sí mismos.
 
-Integration means choosing equal partnerships and learning to maintain self while connected. This means having needs, expressing them, and expecting them to matter as much as partners' needs.
+La integración significa elegir asociaciones iguales y aprender a mantenerse conectado. Esto significa tener necesidades, expresarlas y esperar que importen tanto como las necesidades de los socios.
 
-The gift is relationships of true equality where both people are fully present, where neither accommodates at own expense, where balance is real not performed.`,
+El regalo son las relaciones de verdadera igualdad en las que ambas personas están plenamente presentes, en las que ninguna se acomoda a sus expensas, en las que el equilibrio es real y no se realiza.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Libra teaches that sacrifice isn't always sacred. The divine feminine includes the goddess who says "no," who protects her own energy, who demands equality.
+        spiritualMeaning: `Espiritualmente, Lilith en Libra enseña que el sacrificio no siempre es sagrado. La divinidad femenina incluye a la diosa que dice "no", que protege su propia energía, que exige igualdad.
 
-Your spiritual work involves reclaiming sacred selfishness. This is goddess energy that knows her worth and refuses to diminish it for relationship.
+Tu trabajo espiritual implica reclamar el egoísmo sagrado. Esta es la energía de la diosa que conoce su valor y se niega a disminuirla para la relación.
 
-The lesson is that you can't truly love others if you abandon yourself. Your Lilith teaches that real partnership requires two whole people, not one person and one shadow.`,
+La lección es que no puedes amar verdaderamente a los demás si te abandonas a ti mismo. Tu Lilith enseña que la verdadera asociación requiere dos personas enteras, no una persona y una sombra.`,
         
-        affirmation: "My needs matter as much as others'. I maintain myself in relationship. I am selfish when necessary. True partnership includes my authentic self. I demand equality."
+        affirmation: "Mis necesidades importan tanto como las de los demás. Me mantengo en relación. Soy egoísta cuando es necesario. La verdadera asociación incluye mi auténtico yo. Exijo igualdad."
     },
 
     Scorpio: {
-        title: "Lilith in Scorpio - The Ultimate Taboo",
-        archetype: "Reclaiming Sexual and Transformative Power",
-        hook: "With Black Moon Lilith in Scorpio, this soul carries suppressed or rejected sexual power, occult gifts, and comfort with darkness. The journey is from shame about intensity to owning full power.",
+        title: "Lilith en Escorpio: el último tabú",
+        archetype: "Recuperar el poder sexual y transformador",
+        hook: "Con Black Moon Lilith en Escorpio, esta alma lleva poder sexual suprimido o rechazado, regalos ocultos y consuelo con la oscuridad. El viaje es de la vergüenza por la intensidad a poseer todo el poder.",
         
-        suppressedPower: `Lilith in Scorpio represents the fullest expression of Lilith energy - suppressed sexual power, psychic abilities, and comfort with death/taboo/transformation. Early experiences may have involved sexual shaming, occult/spiritual gifts being dismissed or feared, or punishment for intensity.
+        suppressedPower: `Lilith en Escorpio representa la expresión más completa de la energía de Lilith: poder sexual suprimido, habilidades psíquicas y comodidad con la muerte/tabú/transformación. Las primeras experiencias pueden haber implicado la vergüenza sexual, el rechazo o el temor de los dones ocultos/espirituales, o el castigo por la intensidad.
 
-The suppressed power is raw sexual magnetism, psychic perception, and the ability to transform through crisis. This is the power of the witch, the sexual priestess, the transformer - the feminine that society most fears. When suppressed, this becomes self-destructive intensity or complete shutdown.
+El poder suprimido es el magnetismo sexual crudo, la percepción psíquica y la capacidad de transformarse a través de la crisis. Este es el poder de la bruja, la sacerdotisa sexual, la transformadora, lo femenino que la sociedad más teme. Cuando se suprime, esto se convierte en intensidad autodestructiva o apagado completo.
 
-The shadow is your full power - sexual, psychic, transformative. Scorpio Lilith is often intensely powerful in ways that scare others and that you've learned to hide or destroy. This is Lilith in her home, undiluted.`,
+La sombra es todo tu poder: sexual, psíquico, transformador. Escorpio Lilith a menudo es intensamente poderosa en formas que asustan a los demás y que has aprendido a ocultar o destruir. Esta es Lilith en su casa, sin diluir.`,
         
-        howItManifests: `Lilith in Scorpio often manifests as either complete sexual/emotional shutdown (to avoid seeming too intense) or being overwhelmed by own intensity. There may be shame about sexual desires, psychic experiences, or depth of feeling.
+        howItManifests: `Lilith en Escorpio a menudo se manifiesta como un cierre sexual/emocional completo (para evitar parecer demasiado intenso) o sentirse abrumada por su propia intensidad. Puede haber vergüenza sobre los deseos sexuales, las experiencias psíquicas o la profundidad de los sentimientos.
 
-Difficulty with trust and vulnerability is profound. There's often pattern of testing people to destruction or refusing intimacy entirely. Power struggles in relationships are common.
+La dificultad con la confianza y la vulnerabilidad es profunda. A menudo hay un patrón de someter a las personas a la destrucción o rechazar la intimidad por completo. Las luchas de poder en las relaciones son comunes.
 
-Many attract situations involving betrayal, sexual shame, or occult experiences. You may have pattern of destructive relationships or withdrawing from all connection to avoid being hurt.`,
+Muchos atraen situaciones que involucran traición, vergüenza sexual o experiencias ocultas. Es posible que tenga un patrón de relaciones destructivas o que se retire de toda conexión para evitar ser herido.`,
         
-        shadowWork: `Shadow work with Lilith in Scorpio involves reclaiming full power without apology. This starts with recognizing that intensity, sexuality, and psychic gifts aren't shameful - they're your nature.
+        shadowWork: `El trabajo de sombras con Lilith en Escorpio implica reclamar todo el poder sin disculparse. Esto comienza con el reconocimiento de que la intensidad, la sexualidad y los dones psíquicos no son vergonzosos, son tu naturaleza.
 
-The work requires embracing the taboo, the sexual, the dark feminine in all her power. This means owning your sexuality completely, trusting psychic perceptions, and being comfortable with intensity and transformation.
+El trabajo requiere abrazar el tabú, lo sexual, lo femenino oscuro en todo su poder. Esto significa ser dueño de tu sexualidad por completo, confiar en las percepciones psíquicas y sentirte cómodo con la intensidad y la transformación.
 
-Learning to use power without destroying is crucial. The Lilith shadow here is power that was suppressed becoming destructive when released. Integration means wielding power responsibly.`,
+Aprender a usar el poder sin destruir es crucial. La sombra de Lilith aquí es el poder que fue suprimido volviéndose destructivo cuando se libera. La integración significa ejercer el poder de manera responsable.`,
         
-        reclaimedGift: `Once integrated, Lilith in Scorpio becomes the most powerful transformer and healer. Your reclaimed sexuality and psychic gifts become medicine for collective sexual and spiritual wounding.
+        reclaimedGift: `Una vez integrada, Lilith en Escorpio se convierte en la transformadora y sanadora más poderosa. Tu sexualidad recuperada y tus dones psíquicos se convierten en medicina para las heridas sexuales y espirituales colectivas.
 
-The gift is the ability to work with the darkest, most taboo material without flinching. You become someone who can hold space for others' shadow, who can facilitate deep transformation, who teaches that darkness is sacred.
+El regalo es la capacidad de trabajar con el material más oscuro y tabú sin inmutarse. Te conviertes en alguien que puede tener espacio para la sombra de los demás, que puede facilitar una transformación profunda, que enseña que la oscuridad es sagrada.
 
-There's often a gift for sexual healing, occult work, or trauma transformation. Your suppressed power, once freed, is profound force for healing through darkness and intensity.`,
+A menudo hay un regalo para la curación sexual, el trabajo oculto o la transformación del trauma. Tu poder suprimido, una vez liberado, es una fuerza profunda para sanar a través de la oscuridad y la intensidad.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Scorpio may manifest as either complete shutdown or overwhelming intensity. There may be shame about depth of sexual desire or specific desires that feel too dark.
+        sexualExpression: `Sexualmente, la Lilith suprimida en Escorpio puede manifestarse como un cierre completo o una intensidad abrumadora. Puede haber vergüenza por la profundidad del deseo sexual o deseos específicos que se sienten demasiado oscuros.
 
-Integration means fully owning sexual power and preferences. This is about being completely unapologetic in sexuality, about intensity being gift not curse, about darkness in sexuality being sacred.
+La integración significa poseer plenamente el poder y las preferencias sexuales. Se trata de no disculparse por completo en la sexualidad, de que la intensidad es un regalo, no una maldición, de que la oscuridad en la sexualidad es sagrada.
 
-The gift is sexuality as transformative spiritual practice, as power, as deep intimacy. You teach that sexual intensity and darkness can be holy, that taboo can be healing.`,
+El don es la sexualidad como práctica espiritual transformadora, como poder, como intimidad profunda. Enseñas que la intensidad sexual y la oscuridad pueden ser sagradas, que el tabú puede ser curativo.`,
         
-        relationships: `In relationships, unintegrated Lilith in Scorpio creates patterns of intense merging or complete walls. You may attract destructive partnerships or refuse vulnerability entirely.
+        relationships: `En las relaciones, Lilith no integrada en Escorpio crea patrones de intensa fusión o paredes completas. Puede atraer asociaciones destructivas o rechazar la vulnerabilidad por completo.
 
-Integration means choosing partners who can handle your intensity and learning to trust without consuming. This means being fully yourself - intense, sexual, powerful - while respecting boundaries.
+La integración significa elegir socios que puedan manejar tu intensidad y aprender a confiar sin consumir. Esto significa ser completamente tú mismo: intenso, sexual, poderoso, respetando los límites.
 
-The gift is relationships of profound depth and transformation where both people can be fully powerful, where intensity creates growth, where darkness is accepted.`,
+El regalo son relaciones de profunda profundidad y transformación donde ambas personas pueden ser plenamente poderosas, donde la intensidad crea crecimiento, donde la oscuridad es aceptada.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Scorpio teaches that the darkest aspects of divine feminine are sacred. The goddess of sex, death, and transformation is as holy as the gentle mother.
+        spiritualMeaning: `Espiritualmente, Lilith en Escorpio enseña que los aspectos más oscuros de lo divino femenino son sagrados. La diosa del sexo, la muerte y la transformación es tan santa como la gentil madre.
 
-Your spiritual work involves becoming comfortable in darkness and teaching others to transform through it. This is full dark goddess energy - Kali, Hecate, Lilith herself.
+Tu trabajo espiritual implica sentirte cómodo en la oscuridad y enseñar a otros a transformarse a través de ella. Esta es la energía completa de la diosa oscura: Kali, Hécate, la propia Lilith.
 
-The lesson is that transformation requires death of old forms and that darkness is where power lives. Your Lilith teaches the sacred nature of all that culture rejects - sex, death, power, darkness.`,
+La lección es que la transformación requiere la muerte de las viejas formas y que la oscuridad es donde vive el poder. Tu Lilith enseña la naturaleza sagrada de todo lo que la cultura rechaza: sexo, muerte, poder, oscuridad.`,
         
-        affirmation: "I am powerful without apology. My sexuality is sacred. My intensity is a gift. I transform darkness into wisdom. I am the dark goddess embodied."
+        affirmation: "Soy poderoso sin disculparme. Mi sexualidad es sagrada. Mi intensidad es un regalo. Transformo la oscuridad en sabiduría. Soy la diosa oscura encarnada."
     },
 
     Sagittarius: {
-        title: "Lilith in Sagittarius - The Wild Truth-Teller",
-        archetype: "Reclaiming Undomesticated Freedom",
-        hook: "With Black Moon Lilith in Sagittarius, this soul carries suppressed or rejected wild freedom and inconvenient truths. The journey is from taming yourself to being gloriously untamed and speaking truth regardless of consequences.",
+        title: "Lilith en Sagitario: la salvaje narradora de la verdad",
+        archetype: "Recuperando la libertad no domesticada",
+        hook: "Con Lilith Luna Negra en Sagitario, esta alma lleva libertad salvaje reprimida o rechazada y verdades inconvenientes. El viaje es de domarte a ser gloriosamente indomable y decir la verdad sin importar las consecuencias.",
         
-        suppressedPower: `Lilith in Sagittarius represents power around wild freedom, truth-telling that challenges authority, and refusing to be tamed or domesticated. Early experiences may have involved punishment for wildness, being told your truths were inappropriate, or shaming for refusing to fit in.
+        suppressedPower: `Lilith en Sagitario representa el poder en torno a la libertad salvaje, decir la verdad que desafía a la autoridad y negarse a ser domesticado o domesticado. Las primeras experiencias pueden haber implicado un castigo por lo salvaje, que te dijeran que tus verdades eran inapropiadas o que te avergonzaran por negarte a encajar.
 
-The suppressed power is the capacity to be completely free and to speak truth regardless of social consequences. This is the power of the wild woman, the untamed truth-teller, the one who won't be contained by convention. When suppressed, this becomes either rebelliousness that hurts yourself or complete conformity.
+El poder suprimido es la capacidad de ser completamente libre y de decir la verdad independientemente de las consecuencias sociales. Este es el poder de la mujer salvaje, la indómita que dice la verdad, la que no será contenida por la convención. Cuando se reprime, esto se convierte en rebeldía que te lastima o en completa conformidad.
 
-The shadow is your wildness and the truths you see that others don't want spoken - the part that refuses religion, convention, cultural lies. Sagittarius Lilith often has vision beyond cultural conditioning that was taught to suppress.`,
+La sombra es tu salvajismo y las verdades que ves que otros no quieren que se hablen, la parte que rechaza la religión, las convenciones, las mentiras culturales. Sagitario Lilith a menudo tiene una visión más allá del condicionamiento cultural que se le enseñó a suprimir.`,
         
-        howItManifests: `Lilith in Sagittarius often manifests as either complete rebellion against all authority and structure or taming yourself to fit in while internally yearning for freedom. There may be shame about wanderlust, restlessness, or refusing to settle down.
+        howItManifests: `Lilith en Sagitario a menudo se manifiesta como una rebelión completa contra toda autoridad y estructura o domándote a ti mismo para encajar mientras anhelas internamente la libertad. Puede haber vergüenza por la pasión por los viajes, la inquietud o la negativa a establecerse.
 
-Difficulty with commitment is common. There's often pattern of running from anything that feels confining or staying in confinement while part of you dies.
+La dificultad con el compromiso es común. A menudo hay un patrón de huir de cualquier cosa que se sienta confinada o permanecer en confinamiento mientras una parte de ti muere.
 
-Many attract situations where freedom is restricted or truth-telling is punished. You may have pattern of getting in trouble for honesty or suppressing your real beliefs to avoid conflict.`,
+Muchos atraen situaciones en las que se restringe la libertad o se castiga el decir la verdad. Es posible que tenga un patrón de meterse en problemas por honestidad o suprimir sus creencias reales para evitar conflictos.`,
         
-        shadowWork: `Shadow work with Lilith in Sagittarius involves reclaiming the right to be wild and free. This starts with recognizing that refusing to be tamed isn't immaturity - it's honoring your nature.
+        shadowWork: `El trabajo de sombra con Lilith en Sagitario implica reclamar el derecho a ser salvaje y libre. Esto comienza con el reconocimiento de que negarse a ser domesticado no es inmadurez, es honrar tu naturaleza.
 
-The work requires practicing freedom and truth-telling. This means following wanderlust, speaking truths others find uncomfortable, and refusing to fit into boxes that are too small.
+El trabajo requiere practicar la libertad y decir la verdad. Esto significa seguir la pasión por los viajes, decir verdades que a otros les resultan incómodas y negarse a encajar en cajas que son demasiado pequeñas.
 
-Learning to balance freedom with responsibility is crucial. The Lilith shadow here is freedom that's self-destructive versus freedom that's liberating. Integration means freedom with wisdom.`,
+Aprender a equilibrar la libertad con la responsabilidad es crucial. La sombra de Lilith aquí es la libertad que es autodestructiva frente a la libertad que es liberadora. Integración significa libertad con sabiduría.`,
         
-        reclaimedGift: `Once integrated, Lilith in Sagittarius becomes powerful liberator and truth-teller. Your reclaimed wildness becomes permission for others to free themselves from cultural conditioning.
+        reclaimedGift: `Una vez integrada, Lilith en Sagitario se convierte en una poderosa liberadora y habladora de la verdad. Tu salvajismo recuperado se convierte en permiso para que otros se liberen del condicionamiento cultural.
 
-The gift is the ability to live freely and help others do the same. You become someone who speaks truths others are afraid to voice, who shows that you can refuse domestication and thrive.
+El don es la capacidad de vivir libremente y ayudar a otros a hacer lo mismo. Te conviertes en alguien que dice verdades que otros temen expresar, que demuestra que puedes rechazar la domesticación y prosperar.
 
-There's often a gift for teaching freedom, spiritual independence, or helping others break free from limiting beliefs. Your suppressed wildness, once freed, is revolutionary force.`,
+A menudo hay un don para enseñar libertad, independencia espiritual o ayudar a otros a liberarse de creencias limitantes. Tu salvajismo reprimido, una vez liberado, es una fuerza revolucionaria.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Sagittarius may manifest as either promiscuity that's actually self-destructive or complete sexual conformity hiding wild desires. There may be shame about sexual freedom or adventure.
+        sexualExpression: `Sexualmente, la Lilith suprimida en Sagitario puede manifestarse como una promiscuidad que en realidad es autodestructiva o una conformidad sexual completa que oculta deseos salvajes. Puede haber vergüenza por la libertad sexual o la aventura.
 
-Integration means reclaiming sexual freedom and adventure. This is about sexuality without commitment guilt, about exploration being valid, about refusing to be owned sexually.
+La integración significa recuperar la libertad sexual y la aventura. Se trata de la sexualidad sin compromiso de culpa, de que la exploración sea válida, de negarse a ser poseído sexualmente.
 
-The gift is sexuality as freedom, as adventure, as exploration. You teach that sexual independence is valid, that commitment is choice not requirement, that wildness in sexuality is natural.`,
+El don es la sexualidad como libertad, como aventura, como exploración. Enseñas que la independencia sexual es válida, que el compromiso es una elección, no un requisito, que lo salvaje en la sexualidad es natural.`,
         
-        relationships: `In relationships, unintegrated Lilith in Sagittarius creates patterns of either running from commitment or feeling trapped in it. You may attract partners who try to tame you or refuse commitment entirely.
+        relationships: `En las relaciones, Lilith no integrada en Sagitario crea patrones de huir del compromiso o sentirse atrapada en él. Puedes atraer socios que intenten domarte o que rechacen el compromiso por completo.
 
-Integration means choosing partners who celebrate your freedom and learning to commit without being tamed. This means maintaining independence within relationship, having separate adventures, refusing to be owned.
+La integración significa elegir socios que celebren tu libertad y aprendan a comprometerse sin ser domesticados. Esto significa mantener la independencia dentro de la relación, tener aventuras separadas, negarse a ser dueño.
 
-The gift is relationships where both people are free, where commitment enhances rather than restricts autonomy, where wildness is celebrated.`,
+El regalo son las relaciones donde ambas personas son libres, donde el compromiso mejora en lugar de restringir la autonomía, donde se celebra lo salvaje.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Sagittarius teaches that divine feminine includes the wild woman who refuses domestication. Not all goddess energy is cultured and tame - some is gloriously wild.
+        spiritualMeaning: `Espiritualmente, Lilith en Sagitario enseña que lo divino femenino incluye a la mujer salvaje que rechaza la domesticación. No toda la energía de la diosa es cultivada y domesticada, algunas son gloriosamente salvajes.
 
-Your spiritual work involves reclaiming spiritual freedom and independence. This is goddess energy that creates own relationship with divine, that refuses dogma, that is accountable to truth not tradition.
+Tu trabajo espiritual implica recuperar la libertad y la independencia espirituales. Esta es la energía de la diosa que crea su propia relación con lo divino, que rechaza el dogma, que es responsable ante la verdad, no ante la tradición.
 
-The lesson is that some truths will make you unpopular and freedom is worth it. Your Lilith teaches that being wild and free is sacred, that truth-telling serves even when it costs.`,
+La lección es que algunas verdades te harán impopular y la libertad vale la pena. Tu Lilith enseña que ser salvaje y libre es sagrado, que decir la verdad sirve incluso cuando cuesta.`,
         
-        affirmation: "I am wild and free. I speak truth without apology. I refuse to be tamed or domesticated. My freedom is sacred. I follow my own path regardless of approval."
+        affirmation: "Soy salvaje y libre. Hablo la verdad sin disculparme. Me niego a ser domesticado o domesticado. Mi libertad es sagrada. Sigo mi propio camino independientemente de la aprobación."
     },
 
     Capricorn: {
-        title: "Lilith in Capricorn - The Suppressed Ambition",
-        archetype: "Reclaiming Worldly Power",
-        hook: "With Black Moon Lilith in Capricorn, this soul carries suppressed or rejected ambition, worldly power, and the drive for success. The journey is from apologizing for ambition to owning your drive for achievement.",
+        title: "Lilith en Capricornio - La ambición reprimida",
+        archetype: "Recuperando el poder mundano",
+        hook: "Con Black Moon Lilith en Capricornio, esta alma lleva ambición reprimida o rechazada, poder mundano y el impulso para el éxito. El viaje es desde disculparse por la ambición hasta ser dueño de tu impulso hacia el logro.",
         
-        suppressedPower: `Lilith in Capricorn represents power around ambition, authority, and material success that was shamed - especially for women. Early experiences may have involved messages that ambition is unfeminine, that wanting power is wrong, or being punished for competing or leading.
+        suppressedPower: `Lilith en Capricornio representa el poder en torno a la ambición, la autoridad y el éxito material que fue avergonzado, especialmente para las mujeres. Las primeras experiencias pueden haber implicado mensajes de que la ambición no es femenina, que querer el poder está mal o ser castigado por competir o liderar.
 
-The suppressed power is the capacity to be ambitious, powerful, and successful in worldly terms without apology. This is the power to want the corner office, to compete and win, to lead and command. When suppressed, this becomes either ruthless ambition or refusing all achievement.
+El poder suprimido es la capacidad de ser ambicioso, poderoso y exitoso en términos mundanos sin disculparse. Este es el poder de querer la oficina de la esquina, competir y ganar, liderar y comandar. Cuando se suprime, esto se convierte en una ambición despiadada o en rechazar todo logro.
 
-The shadow is your desire for power, status, and success - the part that wants to be CEO, to have authority, to be recognized as powerful. Capricorn Lilith often has enormous ambition that was taught to hide or feel guilty about.`,
+La sombra es tu deseo de poder, estatus y éxito, la parte que quiere ser CEO, tener autoridad, ser reconocido como poderoso. Capricornio Lilith a menudo tiene una enorme ambición de la que se le enseñó a esconderse o sentirse culpable.`,
         
-        howItManifests: `Lilith in Capricorn often manifests as either hiding ambition and playing small (to avoid seeming too aggressive) or ruthless striving with guilt. There may be shame about wanting success, power, or status.
+        howItManifests: `Lilith en Capricornio a menudo se manifiesta como esconder la ambición y jugar a lo pequeño (para evitar parecer demasiado agresiva) o luchar despiadadamente con la culpa. Puede haber vergüenza por querer el éxito, el poder o el estatus.
 
-Difficulty owning authority is common. There's often pattern of achieving success then sabotaging it, or refusing positions of power you're qualified for because it feels wrong.
+La dificultad para poseer autoridad es común. A menudo hay un patrón de lograr el éxito y luego sabotearlo, o rechazar posiciones de poder para las que estás calificado porque te sientes mal.
 
-Many attract situations where they're blocked from advancement or where ambition is punished. You may have pattern of supporting men's careers while suppressing your own, or of being called "cold" or "masculine" when you're just competent.`,
+Muchos atraen situaciones en las que se les impide avanzar o en las que se castiga la ambición. Es posible que tenga un patrón de apoyo a las carreras de los hombres mientras suprime las suyas, o de ser llamado "frío" o "masculino" cuando solo es competente.`,
         
-        shadowWork: `Shadow work with Lilith in Capricorn involves reclaiming ambition as healthy and natural. This starts with recognizing that wanting power and success isn't shameful - it's valid human drive.
+        shadowWork: `El trabajo de sombra con Lilith en Capricornio implica reclamar la ambición como saludable y natural. Esto comienza con el reconocimiento de que querer el poder y el éxito no es vergonzoso, es un impulso humano válido.
 
-The work requires owning your ambition and pursuing goals without apology. This means competing when appropriate, taking leadership, and claiming authority you've earned.
+El trabajo requiere ser dueño de tu ambición y perseguir objetivos sin disculparte. Esto significa competir cuando sea apropiado, asumir el liderazgo y reclamar la autoridad que te has ganado.
 
-Learning to use power wisely is crucial. The Lilith shadow here is power that was suppressed becoming corrupted when released. Integration means ethical ambition and responsible authority.`,
+Aprender a usar el poder sabiamente es crucial. La sombra de Lilith aquí es el poder que se suprimió y se corrompió cuando se liberó. La integración significa ambición ética y autoridad responsable.`,
         
-        reclaimedGift: `Once integrated, Lilith in Capricorn becomes powerful, ethical leader. Your reclaimed ambition becomes force for creating structures that serve rather than oppress.
+        reclaimedGift: `Una vez integrada, Lilith en Capricornio se convierte en una líder poderosa y ética. Su ambición recuperada se convierte en fuerza para crear estructuras que sirvan en lugar de oprimir.
 
-The gift is the ability to achieve and lead without apology while maintaining integrity. You become someone who shows that women/feminine people can be powerful, that authority doesn't require becoming masculine.
+El don es la capacidad de lograr y liderar sin disculpas mientras se mantiene la integridad. Te conviertes en alguien que demuestra que las mujeres/personas femeninas pueden ser poderosas, que la autoridad no requiere volverse masculino.
 
-There's often a gift for business, leadership, or helping others achieve their ambitions. Your suppressed drive, once freed, creates success that uplifts others too.`,
+A menudo hay un regalo para los negocios, el liderazgo o para ayudar a otros a alcanzar sus ambiciones. Tu impulso reprimido, una vez liberado, crea un éxito que también eleva a los demás.`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Capricorn may manifest as difficulty allowing sexuality alongside professional power or shame about being sexually powerful/dominant. There may be belief that you must choose between being respected and being sexual.
+        sexualExpression: `Sexualmente, la Lilith reprimida en Capricornio puede manifestarse como dificultad para permitir la sexualidad junto con el poder profesional o la vergüenza de ser sexualmente poderosa/dominante. Puede existir la creencia de que debes elegir entre ser respetado y ser sexual.
 
-Integration means reclaiming sexual authority and power. This is about being dominant sexually if that's your nature, about power being erotic, about competence being sexy.
+La integración significa recuperar la autoridad y el poder sexual. Se trata de ser dominante sexualmente si esa es tu naturaleza, de que el poder sea erótico, de que la competencia sea sexy.
 
-The gift is sexuality where power and sex enhance each other, where you can be both professionally powerful and sexually expressed, where dominance and submission are explored without shame.`,
+El regalo es la sexualidad donde el poder y el sexo se potencian mutuamente, donde puedes ser tanto profesionalmente poderoso como sexualmente expresado, donde el dominio y la sumisión se exploran sin vergüenza.`,
         
-        relationships: `In relationships, unintegrated Lilith in Capricorn attracts dynamics where you either suppress ambition for partners or choose partners threatened by your success. You may have pattern of downplaying achievements.
+        relationships: `En las relaciones, la Lilith no integrada en Capricornio atrae dinámicas en las que reprimes la ambición por los socios o eliges socios amenazados por tu éxito. Es posible que tenga un patrón de minimizar los logros.
 
-Integration means choosing partners who celebrate your success and learning to maintain ambition in relationship. This means pursuing goals even if it threatens partners, having career that matters to you.
+La integración significa elegir socios que celebren tu éxito y aprender a mantener la ambición en la relación. Esto significa perseguir objetivos, incluso si amenaza a los socios, tener una carrera que te importe.
 
-The gift is relationships where both people can be ambitious and successful, where power is shared, where achievement is celebrated not threatening.`,
+El regalo son las relaciones donde ambas personas pueden ser ambiciosas y exitosas, donde el poder se comparte, donde los logros se celebran sin amenazar.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Capricorn teaches that feminine can be powerful in worldly terms. The divine feminine includes queens and leaders, not just nurturers and mystics.
+        spiritualMeaning: `Espiritualmente, Lilith en Capricornio enseña que lo femenino puede ser poderoso en términos mundanos. El femenino divino incluye reinas y líderes, no solo nutridores y místicos.
 
-Your spiritual work involves reclaiming sacred ambition. This is goddess energy that rules, that has authority, that uses power for good.
+Tu trabajo espiritual implica reclamar la ambición sagrada. Esta es la energía de la diosa que gobierna, que tiene autoridad, que usa el poder para el bien.
 
-The lesson is that power in feminine hands can transform structures. Your Lilith teaches that ambition serves when wielded with integrity.`,
+La lección es que el poder en manos femeninas puede transformar las estructuras. Tu Lilith enseña que la ambición sirve cuando se ejerce con integridad.`,
         
-        affirmation: "I am ambitious without apology. I claim power and authority I've earned. My success is valid. I lead with integrity. Feminine power transforms the world."
+        affirmation: "Soy ambicioso sin disculparme. Reclamo el poder y la autoridad que me he ganado. Mi éxito es válido. Dirijo con integridad. El poder femenino transforma el mundo."
     },
 
     Aquarius: {
-        title: "Lilith in Aquarius - The Suppressed Revolutionary",
-        archetype: "Reclaiming Radical Vision",
-        hook: "With Black Moon Lilith in Aquarius, this soul carries suppressed or rejected revolutionary thinking and refusal to conform. The journey is from hiding your radical nature to being unapologetically revolutionary.",
+        title: "Lilith en Acuario: la revolucionaria suprimida",
+        archetype: "Recuperando la visión radical",
+        hook: "Con Lilith Luna Negra en Acuario, esta alma lleva el pensamiento revolucionario reprimido o rechazado y la negativa a conformarse. El viaje es desde esconder tu naturaleza radical hasta ser revolucionario sin pedir disculpas.",
         
-        suppressedPower: `Lilith in Aquarius represents power around revolutionary ideas, radical independence, and refusing to conform that was shamed as too weird or threatening. Early experiences may have involved punishment for being different, having ideas dismissed as crazy, or being ostracized for nonconformity.
+        suppressedPower: `Lilith en Acuario representa el poder en torno a ideas revolucionarias, independencia radical y negarse a conformarse que fue avergonzado como demasiado extraño o amenazante. Las experiencias tempranas pueden haber implicado un castigo por ser diferente, tener ideas descartadas como locas o ser condenado al ostracismo por inconformismo.
 
-The suppressed power is the capacity to think beyond cultural limitations and to refuse all attempts to normalize you. This is the power of the revolutionary, the innovator, the one whose ideas threaten the status quo. When suppressed, this becomes either hidden eccentricity or rebelliousness that's self-destructive.
+El poder suprimido es la capacidad de pensar más allá de las limitaciones culturales y rechazar todos los intentos de normalizarte. Este es el poder del revolucionario, del innovador, de aquel cuyas ideas amenazan el statu quo. Cuando se suprime, esto se convierte en una excentricidad oculta o en una rebeldía autodestructiva.
 
-The shadow is your radical vision and refusal to be like everyone else - the part that sees what culture could be, that won't pretend to be normal, that knows the system is broken. Aquarius Lilith often has genuinely revolutionary consciousness that was taught to hide.`,
+La sombra es tu visión radical y tu negativa a ser como todos los demás: la parte que ve lo que podría ser la cultura, que no pretende ser normal, que sabe que el sistema está roto. Acuario Lilith a menudo tiene una conciencia genuinamente revolucionaria que se le enseñó a ocultar.`,
         
-        howItManifests: `Lilith in Aquarius often manifests as either complete conformity (hiding all weirdness) or being aggressively weird in ways that isolate you. There may be shame about being different or having ideas others can't understand.
+        howItManifests: `Lilith en Acuario a menudo se manifiesta como una conformidad completa (ocultando todas las rarezas) o siendo agresivamente extraña de maneras que te aíslan. Puede haber vergüenza por ser diferente o tener ideas que otros no pueden entender.
 
-Difficulty with intimacy is common - easier to have many acquaintances than deep connections. There's often pattern of intellectualizing emotions or staying detached to avoid vulnerability.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Many attract situations where they're punished for being different or where their ideas are stolen by others. You may have pattern of sharing revolutionary concepts that others get credit for.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 52 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        shadowWork: `Shadow work with Lilith in Aquarius involves reclaiming your revolutionary nature and radical ideas. This starts with recognizing that being different isn't wrong - it's your gift.
+        shadowWork: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 50 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The work requires owning your weirdness and sharing your vision even when others don't understand. This means expressing unconventional ideas, refusing to conform for comfort, and trusting your innovative perceptions.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 49 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Learning to balance independence with connection is crucial. The Lilith shadow here is using detachment to avoid intimacy. Integration means staying revolutionary while allowing closeness.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 47 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        reclaimedGift: `Once integrated, Lilith in Aquarius becomes powerful change agent and visionary. Your reclaimed revolutionary thinking becomes blueprint for new world.
+        reclaimedGift: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 45 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The gift is the ability to see beyond current limitations and inspire others to question norms. You become someone who creates space for difference, who champions innovation, who shows that weird is wisdom.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 43 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-There's often a gift for technology, social change, or creating communities of misfits. Your suppressed vision, once freed, revolutionizes whatever field you touch.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 41 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Aquarius may manifest as either complete conventionality (hiding kinky or unusual desires) or sexuality that's detached from emotion. There may be shame about non-traditional sexual preferences.
+        sexualExpression: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 39 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Integration means reclaiming sexual freedom and experimentation. This is about sexuality that's unconventional, that refuses norms, that celebrates difference and exploration.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 38 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The gift is sexuality as freedom and revolution, where anything consensual is valid, where conventional is questioned, where your particular desires are honored.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 36 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        relationships: `In relationships, unintegrated Lilith in Aquarius creates patterns of emotional detachment or choosing partners who try to normalize you. You may refuse intimacy to protect independence or hide your weirdness for acceptance.
+        relationships: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 34 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Integration means choosing partners who celebrate your uniqueness and learning to be both independent and intimate. This means being fully weird within relationship, maintaining separate identity.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 32 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The gift is relationships where both people can be radically themselves, where difference is celebrated, where intimacy doesn't require conformity.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 31 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        spiritualMeaning: `Spiritually, Lilith in Aquarius teaches that divine feminine includes the revolutionary, the one who breaks all rules and creates new paradigms. Not all goddess energy honors tradition.
+        spiritualMeaning: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 29 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Your spiritual work involves trusting your revolutionary vision and using it to serve collective evolution. This is goddess energy that destroys outdated systems and births new possibilities.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 28 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The lesson is that your weird ideas might be exactly what humanity needs. Your Lilith teaches that revolutionary thinking is sacred service.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        affirmation: "I am revolutionary without apology. My weird is wisdom. I think beyond limitations. I refuse to conform. My radical vision serves the future."
+        affirmation: "Soy revolucionario sin disculpas. Mi rareza es la sabiduría. Creo que más allá de las limitaciones. Me niego a conformarme. Mi visión radical sirve al futuro."
     },
 
     Pisces: {
-        title: "Lilith in Pisces - The Suppressed Mystic",
-        archetype: "Reclaiming Psychic Power",
-        hook: "With Black Moon Lilith in Pisces, this soul carries suppressed or rejected psychic abilities, mystical experiences, and spiritual gifts. The journey is from doubting your intuition to trusting your mystical power.",
+        title: "Lilith en Piscis - La mística reprimida",
+        archetype: "Recuperando el poder psíquico",
+        hook: "Con Lilith Luna Negra en Piscis, esta alma lleva habilidades psíquicas suprimidas o rechazadas, experiencias místicas y dones espirituales. El viaje es de dudar de tu intuición a confiar en tu poder místico.",
         
-        suppressedPower: `Lilith in Pisces represents power around psychic abilities, mystical experiences, and spiritual gifts that were dismissed, feared, or pathologized. Early experiences may have involved being told your intuitions weren't real, having spiritual experiences dismissed as imagination, or being shamed for sensitivity.
+        suppressedPower: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 25 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The suppressed power is the capacity to perceive beyond physical reality and to connect with spiritual realms. This is the power of the mystic, the psychic, the one who bridges worlds. When suppressed, this becomes either addiction/escapism or rigid materialism that denies all spiritual perception.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 23 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The shadow is your psychic awareness and mystical experiences - the part that knows things you shouldn't know, that sees spirits or energy, that receives downloads or visions. Pisces Lilith often has genuine spiritual gifts that were taught to doubt or fear.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 22 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        howItManifests: `Lilith in Pisces often manifests as either complete distrust of intuition (only believing what's provable) or being overwhelmed by psychic input. There may be shame about mystical experiences or pattern of medicating/escaping sensitivity.
+        howItManifests: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 20 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Boundary issues are common - absorbing others' emotions, not knowing where you end and others begin. There's often pattern of being called "too sensitive" or "crazy" when you're actually perceiving accurately.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Many attract situations involving spiritual confusion, addiction, or martyrdom. You may have pattern of saving wounded people or using substances/fantasy to manage overwhelming sensitivity.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 17 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        shadowWork: `Shadow work with Lilith in Pisces involves reclaiming your psychic abilities and spiritual gifts. This starts with recognizing that your perceptions are valid even when others can't perceive the same things.
+        shadowWork: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 15 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The work requires developing discernment and boundaries while trusting intuition. This means honoring psychic impressions, protecting your energy, and using spiritual gifts without getting lost in them.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 14 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Learning to stay grounded while accessing mystical realms is crucial. The Lilith shadow here is psychic ability that overwhelms or becomes escapism. Integration means using gifts while staying embodied.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 12 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        reclaimedGift: `Once integrated, Lilith in Pisces becomes powerful mystic and healer. Your reclaimed psychic abilities become medicine for collective spiritual starvation.
+        reclaimedGift: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 10 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The gift is the ability to work with spiritual realms while staying grounded. You become someone who validates others' mystical experiences, who teaches that psychic gifts are real, who bridges worlds skillfully.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 08 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-There's often a gift for healing work, mediumship, or spiritual teaching that honors the mystical. Your suppressed abilities, once freed and trained, serve collective awakening.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 07 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        sexualExpression: `Sexually, suppressed Lilith in Pisces may manifest as either complete merge where boundaries dissolve or disconnection to protect against overwhelm. There may be shame about spiritual/tantric sexuality or using sex as escape.
+        sexualExpression: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 05 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Integration means reclaiming sacred sexuality and energetic awareness in intimacy. This is about sex as spiritual practice, about feeling energy exchange, about tantric connection.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 04 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The gift is sexuality as mystical union, where energies merge consciously, where pleasure becomes prayer, where you stay present to spiritual dimensions of intimacy.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 02 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        relationships: `In relationships, unintegrated Lilith in Pisces creates patterns of complete merger or complete withdrawal. You may lose yourself in others' pain or protect yourself through emotional absence.
+        relationships: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 52 MINUTES 01 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Integration means choosing partners who respect your sensitivity and learning to maintain boundaries while connecting deeply. This means feeling others without absorbing them, being empathetic without martyring yourself.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 51 MINUTES 59 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The gift is relationships of profound spiritual connection with healthy boundaries, where both people can be sensitive without being consumed.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 51 MINUTES 57 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        spiritualMeaning: `Spiritually, Lilith in Pisces teaches that psychic abilities and mystical experiences are real and sacred. The divine feminine includes the mystic who sees beyond veils.
+        spiritualMeaning: `MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 51 MINUTES 56 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-Your spiritual work involves developing and using your gifts skillfully. This is full mystical goddess energy - the oracle, the seer, the one who knows.
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 51 MINUTES 54 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE
 
-The lesson is that your sensitivity and psychic awareness serve if you learn to work with them rather than suppress or be overwhelmed by them. Your Lilith teaches grounded mysticism.`,
+MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  12 HOURS 51 MINUTES 53 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE`,
         
-        affirmation: "My psychic gifts are real. I trust my mystical experiences. I perceive beyond the physical. I bridge worlds with skill. My sensitivity is sacred power."
+        affirmation: "Mis dones psíquicos son reales. Confío en mis experiencias místicas. Percibo más allá de lo físico. Puenteo mundos con habilidad. Mi sensibilidad es poder sagrado."
     }
 };
 

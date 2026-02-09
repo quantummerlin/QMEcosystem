@@ -49,7 +49,7 @@ function updatePaginationControls() {
     
     if (prevBtn) prevBtn.disabled = currentPage === 0;
     if (nextBtn) nextBtn.disabled = currentPage === totalPages - 1;
-    if (indicator) indicator.textContent = `Section ${currentPage + 1} of ${totalPages}`;
+    if (indicator) indicator.textContent = `Sección ${currentPage + 1} de ${totalPages}`;
 }
 
 function nextPage() {
@@ -66,11 +66,11 @@ function prevPage() {
 
 function generateGiftReading() {
     const userData = JSON.parse(localStorage.getItem('lastReading') || '{}');
-    const name = userData.name || 'this special soul';
+    const name = userData.name || 'esta alma especial';
     const birthDate = formatDate(userData.birthDate);
-    const birthTime = userData.birthTime || 'a sacred moment';
-    const birthPlace = userData.birthPlace || 'their special place';
-    const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    const birthTime = userData.birthTime || 'un momento sagrado';
+    const birthPlace = userData.birthPlace || 'su lugar especial';
+    const today = new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
     
     // Get all reading content
     const readingSections = document.querySelectorAll('.reading-section');
@@ -94,7 +94,7 @@ function generateGiftReading() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Moment in Time - A Gift for ${name}</title>
+    <title>Un Momento en el Tiempo - Un Regalo para ${name}</title>
     <style>
         /* ============================================ */
         /* GIFT READING STYLES                         */
@@ -480,10 +480,10 @@ function generateGiftReading() {
         <!-- Gift Cover -->
         <div class="gift-cover">
             <div class="gift-ribbon">🎁</div>
-            <h1 class="gift-title">A Moment in Time</h1>
-            <p class="gift-subtitle">A Cosmic Gift Reading</p>
+            <h1 class="gift-title">Un Momento en el Tiempo</h1>
+            <p class="gift-subtitle">Una Lectura Cósmica de Regalo</p>
             <div class="gift-for">
-                Specially Created For
+                Creado Especialmente Para
                 <strong>${name}</strong>
             </div>
         </div>
@@ -491,58 +491,58 @@ function generateGiftReading() {
         <!-- Gift Letter -->
         <div class="gift-letter">
             <div class="letter-header">
-                <h2>✨ A Letter For You ✨</h2>
+                <h2>✨ Una Carta Para Ti ✨</h2>
                 <p class="letter-date">${today}</p>
             </div>
             <div class="letter-body">
-                <p class="greeting">Dear ${name},</p>
+                <p class="greeting">Querido/a ${name},</p>
                 
-                <p>This reading is a <span class="highlight">gift</span> — a cosmic portrait captured at the exact moment you entered this world. At <span class="highlight">${birthTime}</span> on <span class="highlight">${birthDate}</span> in <span class="highlight">${birthPlace}</span>, the stars, planets, and cosmic forces aligned in a pattern that has never existed before and will never exist again.</p>
+                <p>Esta lectura es un <span class="highlight">regalo</span> — un retrato cósmico capturado en el momento exacto en que llegaste a este mundo. A las <span class="highlight">${birthTime}</span> del <span class="highlight">${birthDate}</span> en <span class="highlight">${birthPlace}</span>, las estrellas, los planetas y las fuerzas cósmicas se alinearon en un patrón que nunca ha existido antes y nunca volverá a existir.</p>
                 
-                <p>What follows is not a prediction of who you must become, nor a limitation on what you can achieve. It is a <span class="highlight">map of possibilities</span> — the unique gifts you carry, the challenges that help you grow, and the cosmic themes woven into your very essence.</p>
+                <p>Lo que sigue no es una predicción de quién debes ser, ni una limitación de lo que puedes lograr. Es un <span class="highlight">mapa de posibilidades</span> — los dones únicos que llevas, los desafíos que te ayudan a crecer y los temas cósmicos tejidos en tu propia esencia.</p>
                 
-                <p>Some insights will resonate immediately, as if someone finally put words to what you've always felt. Others may take years to reveal their meaning. <span class="highlight">This reading is a lifelong companion</span>, not a daily forecast. Return to it during times of change, confusion, or celebration. Let it remind you of who you are beneath all the roles you play.</p>
+                <p>Algunas perspectivas resonarán inmediatamente, como si alguien finalmente pusiera palabras a lo que siempre has sentido. Otras pueden tardar años en revelar su significado. <span class="highlight">Esta lectura es una compañera de por vida</span>, no un pronóstico diario. Vuelve a ella durante momentos de cambio, confusión o celebración. Deja que te recuerde quién eres debajo de todos los roles que desempeñas.</p>
                 
-                <p>This is not about astrology predicting your fate. It's about recognizing the cosmic themes that make you <span class="highlight">irreplaceably you</span>.</p>
+                <p>Esto no se trata de que la astrología prediga tu destino. Se trata de reconocer los temas cósmicos que te hacen <span class="highlight">irreemplazablemente tú</span>.</p>
                 
-                <p>You are the only person in all of human history who has ever had this exact cosmic blueprint. You are <span class="highlight">literally one of a kind</span>.</p>
+                <p>Eres la única persona en toda la historia de la humanidad que ha tenido este plano cósmico exacto. Eres <span class="highlight">literalmente único/a</span>.</p>
             </div>
             <div class="letter-closing">
-                With cosmic love and wonder,
+                Con amor y asombro cósmico,
                 <div class="signature">✨ Quantum Merlin ✨</div>
             </div>
         </div>
         
         <!-- How to Keep Forever -->
         <div class="save-instructions">
-            <h3>How to Keep This Gift Forever</h3>
+            <h3>Cómo Conservar Este Regalo Para Siempre</h3>
             <div class="save-steps">
                 <div class="save-step">
                     <div class="step-icon">💾</div>
-                    <h4>Save This File</h4>
-                    <p>This is a complete HTML file. Save it to your computer, phone, or cloud storage to access anytime — even offline!</p>
+                    <h4>Guarda Este Archivo</h4>
+                    <p>Este es un archivo HTML completo. Guárdalo en tu computadora, teléfono o almacenamiento en la nube para acceder en cualquier momento, ¡incluso sin conexión!</p>
                 </div>
                 <div class="save-step">
                     <div class="step-icon">🖨️</div>
-                    <h4>Print It</h4>
-                    <p>Press Ctrl+P (or Cmd+P on Mac) to print this reading. It's designed to look beautiful on paper.</p>
+                    <h4>Imprímelo</h4>
+                    <p>Presiona Ctrl+P (o Cmd+P en Mac) para imprimir esta lectura. Está diseñada para verse hermosa en papel.</p>
                 </div>
                 <div class="save-step">
                     <div class="step-icon">📱</div>
-                    <h4>Open Anytime</h4>
-                    <p>Double-click this file anytime to open it in any web browser — no internet required!</p>
+                    <h4>Ábrelo Cuando Quieras</h4>
+                    <p>Haz doble clic en este archivo en cualquier momento para abrirlo en cualquier navegador web, ¡no se necesita internet!</p>
                 </div>
                 <div class="save-step">
                     <div class="step-icon">🎁</div>
-                    <h4>Share the Gift</h4>
-                    <p>Send this file to friends and family so they can read your cosmic blueprint too!</p>
+                    <h4>Comparte el Regalo</h4>
+                    <p>¡Envía este archivo a amigos y familiares para que puedan leer tu plano cósmico también!</p>
                 </div>
             </div>
         </div>
         
         <!-- Birth Details -->
         <div class="birth-banner">
-            <h3>✨ Cosmic Coordinates ✨</h3>
+            <h3>✨ Coordenadas Cósmicas ✨</h3>
             <div class="birth-details">
                 <span>📅 ${birthDate}</span>
                 <span>🕐 ${birthTime}</span>
@@ -557,17 +557,17 @@ function generateGiftReading() {
         
         <!-- Footer -->
         <div class="gift-footer">
-            <p>"You are made of starstuff."</p>
+            <p>"Estás hecho de polvo de estrellas."</p>
             <p>— Carl Sagan</p>
-            <p class="brand">✨ Quantum Merlin Soul Blueprint ✨</p>
-            <p style="color: #666; font-size: 0.9rem; margin-top: 20px;">Generated ${today} at quantummerlin.com</p>
+            <p class="brand">✨ Quantum Merlin - Un Momento en el Tiempo ✨</p>
+            <p style="color: #666; font-size: 0.9rem; margin-top: 20px;">Generado el ${today} en quantummerlin.com</p>
         </div>
     </div>
 </body>
 </html>`;
 
     // Create and download the gift file
-    const fileName = `${name.replace(/[^a-zA-Z0-9]/g, '-')}-Moment-in-Time-Gift.html`;
+    const fileName = `${name.replace(/[^a-zA-Z0-9]/g, '-')}-Momento-en-el-Tiempo-Regalo.html`;
     const blob = new Blob([giftHTML], { type: 'text/html;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -589,15 +589,15 @@ function showGiftConfirmation(name) {
     modal.innerHTML = `
         <div class="gift-modal-content">
             <div class="gift-modal-icon">🎁</div>
-            <h2>Gift Created!</h2>
-            <p>A beautiful gift reading for <strong>${name}</strong> has been downloaded.</p>
+            <h2>¡Regalo Creado!</h2>
+            <p>Se ha descargado una hermosa lectura de regalo para <strong>${name}</strong>.</p>
             <div class="gift-modal-tips">
-                <p>📁 Find it in your Downloads folder</p>
-                <p>📧 Email it to someone special</p>
-                <p>🖨️ Print it as a keepsake</p>
-                <p>💾 Save it forever — works offline!</p>
+                <p>📁 Encuéntralo en tu carpeta de Descargas</p>
+                <p>📧 Envíalo por correo a alguien especial</p>
+                <p>🖨️ Imprímelo como recuerdo</p>
+                <p>💾 Guárdalo para siempre — ¡funciona sin conexión!</p>
             </div>
-            <button onclick="this.parentElement.parentElement.remove()" class="gift-modal-close">✨ Got it! ✨</button>
+            <button onclick="this.parentElement.parentElement.remove()" class="gift-modal-close">✨ ¡Entendido! ✨</button>
         </div>
     `;
     
@@ -707,7 +707,7 @@ function printReading() {
 
 function downloadReading() {
     const userData = JSON.parse(localStorage.getItem('lastReading') || '{}');
-    const fileName = `${userData.name || 'moment'}-reading-${new Date().toISOString().split('T')[0]}.html`;
+    const fileName = `${userData.name || 'momento'}-lectura-${new Date().toISOString().split('T')[0]}.html`;
     
     // Clone the page content
     const clone = document.cloneNode(true);
@@ -729,7 +729,7 @@ function downloadReading() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Moment in Time for ${userData.name}</title>
+    <title>Un Momento en el Tiempo para ${userData.name}</title>
     <style>
         ${document.getElementById('dynamic-styles').innerHTML}
     </style>
@@ -737,10 +737,10 @@ function downloadReading() {
 <body>
     <div class="container">
         <header>
-            <h1>A Moment in Time for ${userData.name}</h1>
-            <p>Born: ${formatDate(userData.birthDate)} at ${userData.birthTime || 'unknown time'}</p>
-            <p>Location: ${userData.birthPlace || 'unknown location'}</p>
-            <p>Generated: ${new Date().toLocaleDateString()}</p>
+            <h1>Un Momento en el Tiempo para ${userData.name}</h1>
+            <p>Nacido/a: ${formatDate(userData.birthDate)} a las ${userData.birthTime || 'hora desconocida'}</p>
+            <p>Ubicación: ${userData.birthPlace || 'ubicación desconocida'}</p>
+            <p>Generado: ${new Date().toLocaleDateString('es-ES')}</p>
         </header>
         ${document.getElementById('results').innerHTML}
     </div>
@@ -761,7 +761,7 @@ function downloadReading() {
 
 function formatDate(dateStr) {
     const date = new Date(dateStr);
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    return date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
 // ============================================
@@ -771,8 +771,8 @@ function formatDate(dateStr) {
 async function shareReading() {
     const userData = JSON.parse(localStorage.getItem('lastReading') || '{}');
     const shareData = {
-        title: `A Moment in Time for ${userData.name}`,
-        text: `Check out ${userData.name}'s Moment in Time reading with 65+ personalized insights!`,
+        title: `Un Momento en el Tiempo para ${userData.name}`,
+        text: `¡Mira la lectura de Un Momento en el Tiempo de ${userData.name} con más de 65 perspectivas personalizadas!`,
         url: window.location.href
     };
     
@@ -800,7 +800,7 @@ function fallbackShare(shareData) {
     document.body.removeChild(tempInput);
     
     // Show confirmation
-    alert('Link copied to clipboard! Share it with friends and family.');
+    alert('¡Enlace copiado al portapapeles! Compártelo con amigos y familiares.');
 }
 
 // ============================================
@@ -843,7 +843,7 @@ function loadLastReading() {
 }
 
 function clearReading() {
-    if (confirm('Start a new reading? This will clear the current reading.')) {
+    if (confirm('¿Comenzar una nueva lectura? Esto borrará la lectura actual.')) {
         localStorage.removeItem('lastReading');
         localStorage.removeItem('lastReadingData');
         location.reload();

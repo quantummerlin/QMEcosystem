@@ -1,146 +1,146 @@
 // ============================================
-// STRANGER PATTERNS - BRAND CONFIGURATION
+// PATRONES EXTRAÑOS - CONFIGURACIÓN DE MARCA
 // ============================================
-// Stranger Things themed branding
-// Copy this file to config.js to activate
+// Marca temática Stranger Things
+// Copia este archivo a config.js para activar
 // ============================================
 
 const BRAND_CONFIG = {
     // ============================================
-    // BRAND IDENTITY
+    // IDENTIDAD DE MARCA
     // ============================================
-    brandName: "Stranger Patterns",
-    tagline: "The Upside Down Oracle",
-    subTagline: "58 Readings • Complete Subject Profile • Your Hawkins Blueprint",
+    brandName: "Patrones Extraños",
+    tagline: "El Oráculo del Mundo Invertido",
+    subTagline: "58 Lecturas • Perfil Completo del Sujeto • Tu Plano de Hawkins",
     
-    // Who is this reading for?
-    subjectType: "person",
-    subjectLabel: "Subject",
-    subjectLabelPlural: "Subjects",
+    // ¿Para quién es esta lectura?
+    subjectType: "persona",
+    subjectLabel: "Sujeto",
+    subjectLabelPlural: "Sujetos",
     
     // ============================================
-    // COPY & LANGUAGE
+    // TEXTO E IDIOMA
     // ============================================
     inputLabels: {
-        name: "Subject Name",
-        namePlaceholder: "Enter your name",
-        nameHelper: "Your identity in this dimension",
+        name: "Nombre del Sujeto",
+        namePlaceholder: "Ingresa tu nombre",
+        nameHelper: "Tu identidad en esta dimensión",
         
-        birthDate: "Date of Manifestation",
-        birthDateHelper: "When you entered this dimension",
+        birthDate: "Fecha de Manifestación",
+        birthDateHelper: "Cuándo entraste en esta dimensión",
         
-        birthTime: "Time of Manifestation",
-        birthTimeHelper: "For accurate dimensional alignment",
+        birthTime: "Hora de Manifestación",
+        birthTimeHelper: "Para una alineación dimensional precisa",
         
-        birthPlace: "Location of Origin",
-        birthPlacePlaceholder: "City, Country",
-        birthPlaceHelper: "Where your story began"
+        birthPlace: "Lugar de Origen",
+        birthPlacePlaceholder: "Ciudad, País",
+        birthPlaceHelper: "Donde comenzó tu historia"
     },
     
-    ctaButton: "🔮 Open the Gate",
-    loadingMessage: "Accessing the Upside Down...",
+    ctaButton: "🔮 Abrir el Portal",
+    loadingMessage: "Accediendo al Mundo Invertido...",
     
-    // Result page copy
-    resultTitle: "Subject Analysis Complete",
-    resultSubtitle: "Dimensional Profile of",
-    generatedBy: "Transmitted from Stranger Patterns",
+    // Texto de la página de resultados
+    resultTitle: "Análisis del Sujeto Completo",
+    resultSubtitle: "Perfil Dimensional de",
+    generatedBy: "Transmitido desde Patrones Extraños",
     
     // ============================================
-    // SECTION NAMES - Stranger Things Themed
+    // NOMBRES DE SECCIONES - Tema Stranger Things
     // ============================================
     sections: {
         celestial: {
-            name: "Celestial Anomalies",
+            name: "Anomalías Celestiales",
             icon: "🔮",
-            description: "Your planetary influences from beyond the gate"
+            description: "Tus influencias planetarias desde más allá del portal"
         },
         numbers: {
-            name: "Hidden Numbers",
+            name: "Números Ocultos",
             icon: "011",
-            description: "The numerological patterns in your dimensional code"
+            description: "Los patrones numerológicos en tu código dimensional"
         },
         soul: {
-            name: "Psychic Mission",
+            name: "Misión Psíquica",
             icon: "⚡",
-            description: "Your deeper purpose and supernatural gifts"
+            description: "Tu propósito más profundo y dones sobrenaturales"
         },
         forecasts: {
-            name: "Dimensional Portals",
+            name: "Portales Dimensionales",
             icon: "🌀",
-            description: "What the Upside Down reveals about your future"
+            description: "Lo que el Mundo Invertido revela sobre tu futuro"
         },
         cycles: {
-            name: "Temporal Shifts",
+            name: "Cambios Temporales",
             icon: "⏳",
-            description: "Key phases in your dimensional journey"
+            description: "Fases clave en tu viaje dimensional"
         }
     },
     
     // ============================================
-    // READING TITLES - Stranger Things Themed
+    // TÍTULOS DE LECTURAS - Tema Stranger Things
     // ============================================
     readingTitles: {
-        sunSign: "Sun Sign - Your Core Frequency",
-        moonSign: "Moon Sign - Your Shadow Self",
-        risingSign: "Rising Sign - Your Dimensional Mask",
-        mercurySign: "Mercury - Your Psychic Communication",
-        venusSign: "Venus - Your Heart's Dimension",
-        marsSign: "Mars - Your Fighting Energy",
-        jupiterSign: "Jupiter - Your Expansion Portal",
-        saturnSign: "Saturn - Your Dimensional Lessons",
-        chineseZodiac: "Spirit Animal - Your Creature Guide",
-        moonPhase: "Birth Moon Phase - Your Manifestation Energy",
+        sunSign: "Signo Solar - Tu Frecuencia Central",
+        moonSign: "Signo Lunar - Tu Yo Sombra",
+        risingSign: "Signo Ascendente - Tu Máscara Dimensional",
+        mercurySign: "Mercurio - Tu Comunicación Psíquica",
+        venusSign: "Venus - La Dimensión de Tu Corazón",
+        marsSign: "Marte - Tu Energía de Lucha",
+        jupiterSign: "Júpiter - Tu Portal de Expansión",
+        saturnSign: "Saturno - Tus Lecciones Dimensionales",
+        chineseZodiac: "Animal Espiritual - Tu Guía Criatura",
+        moonPhase: "Fase Lunar de Nacimiento - Tu Energía de Manifestación",
         
-        lifePath: "Life Path - Your Subject Number",
-        destiny: "Destiny Number - Your Mission Code",
-        soulUrge: "Soul Urge - Your Hidden Frequency",
-        personality: "Personality Number - Your Surface Pattern",
-        birthday: "Birthday Number - Your Power Source",
-        maturity: "Maturity Number - Your Final Form",
+        lifePath: "Camino de Vida - Tu Número de Sujeto",
+        destiny: "Número del Destino - Tu Código de Misión",
+        soulUrge: "Impulso del Alma - Tu Frecuencia Oculta",
+        personality: "Número de Personalidad - Tu Patrón Superficial",
+        birthday: "Número de Cumpleaños - Tu Fuente de Poder",
+        maturity: "Número de Madurez - Tu Forma Final",
         
-        personalYear: "Current Dimensional Cycle",
-        pinnacle: "Life Pinnacles - Major Gate Openings",
-        challenge: "Challenges - Demogorgon Lessons",
+        personalYear: "Energía Dimensional Actual",
+        pinnacle: "Pináculos de Vida - Portales Principales",
+        challenge: "Desafíos Dimensionales - Áreas de Crecimiento",
         
-        northNode: "North Node - Your Destiny Gate",
-        southNode: "South Node - Your Past Dimension",
-        lifeLesson: "Core Dimensional Lesson",
+        northNode: "Nodo Norte - Tu Misión en Esta Dimensión",
+        southNode: "Nodo Sur - Dones de Otras Dimensiones",
+        lifeLesson: "Lección Central del Sujeto",
         
-        yearAhead: "This Season's Forecast",
-        firstYear: "Origin Year Energy"
+        yearAhead: "Pronóstico del Próximo Ciclo",
+        firstYear: "Primer Ciclo Dimensional"
     },
     
     // ============================================
-    // COLORS & STYLING - Stranger Things Theme
+    // COLORES Y ESTILO - Tema Stranger Things
     // ============================================
     colors: {
-        primary: "#8B0000",      // Dark red
-        secondary: "#FFD700",    // Gold/yellow
-        accent: "#FF4500",       // Orange red
-        background: "#0a0515",   // Near black
-        backgroundDark: "#050208",
-        text: "#ffffff",
+        primary: "#FF0000",
+        secondary: "#FFD700",
+        accent: "#00FF00",
+        background: "#1a1a2e",
+        backgroundDark: "#0a0a1a",
+        text: "#e0e0e0",
         textLight: "#ffffff",
-        cardBg: "rgba(139,0,0,0.1)",
-        cardBorder: "rgba(139,0,0,0.3)"
+        cardBg: "#2d2d44",
+        cardBorder: "#FF0000"
     },
     
     // ============================================
-    // FONTS
+    // FUENTES
     // ============================================
     fonts: {
-        heading: "'ITC Benguiat', 'Times New Roman', serif",
-        body: "'Courier New', 'Consolas', monospace",
-        accent: "'ITC Benguiat', 'Times New Roman', serif"
+        heading: "'Playfair Display', Georgia, serif",
+        body: "'Inter', 'Segoe UI', sans-serif",
+        accent: "'Playfair Display', Georgia, serif"
     },
     
     // ============================================
-    // THEME
+    // TEMA
     // ============================================
     theme: "dark",
     
     // ============================================
-    // FEATURES
+    // FUNCIONALIDADES
     // ============================================
     features: {
         showBirthTime: true,
@@ -154,38 +154,38 @@ const BRAND_CONFIG = {
     },
     
     // ============================================
-    // SOCIAL SHARING
+    // COMPARTIR EN REDES
     // ============================================
     sharing: {
-        hashtags: ["StrangerPatterns", "UpsideDown", "StrangerThings", "Hawkins"],
-        defaultMessage: "I just discovered my dimensional profile! 🔮 The Upside Down revealed...",
-        twitterHandle: "@strangerpattern"
+        hashtags: ["PatronesExtraños", "MundoInvertido", "CódigoDimensional"],
+        defaultMessage: "He descifrado mis patrones dimensionales en Patrones Extraños... 🔮",
+        twitterHandle: "@quantummerlin"
     },
     
     // ============================================
-    // PREMIUM FEATURES
+    // FUNCIONES PREMIUM
     // ============================================
     premium: {
         enabled: false,
         price: "$11.11",
         features: [
-            "PDF Download",
-            "No Ads",
-            "Printable Format",
-            "Character Match"
+            "Descarga en PDF",
+            "Sin Anuncios",
+            "Formato Imprimible",
+            "Actualizaciones Anuales"
         ]
     },
     
     // ============================================
-    // FOOTER
+    // PIE DE PÁGINA
     // ============================================
     footer: {
-        copyright: "© 2025 Stranger Patterns",
-        disclaimer: "For entertainment purposes only. Not affiliated with Netflix or Stranger Things. Friends don't lie! 🧇",
+        copyright: "© 2026 Patrones Extraños por Quantum Merlin",
+        disclaimer: "Con fines de entretenimiento. No es una herramienta de vigilancia real del Laboratorio Nacional de Hawkins.",
         links: [
-            { text: "Privacy Policy", url: "/privacy.html" },
-            { text: "Terms of Service", url: "/terms.html" },
-            { text: "Contact", url: "/contact.html" }
+            { text: "Política de Privacidad", url: "privacy.html" },
+            { text: "Términos de Servicio", url: "terms.html" },
+            { text: "Contacto", url: "/contact.html" }
         ]
     },
     
@@ -193,13 +193,13 @@ const BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "Stranger Patterns - The Upside Down Oracle | Stranger Things Numerology",
-        description: "Discover your dimensional profile with 58 personalized readings! Find your Stranger Things character match, psychic abilities, and Hawkins destiny. Free supernatural blueprint.",
-        keywords: "stranger things personality, upside down oracle, hawkins numerology, stranger things astrology, eleven powers, demogorgon, stranger patterns"
+        title: "Patrones Extraños - El Oráculo del Mundo Invertido",
+        description: "Descubre tu perfil dimensional con más de 58 lecturas cósmicas. Astrología y numerología con el estilo del Mundo Invertido. Gratis e ilimitado.",
+        keywords: "patrones extraños, mundo invertido, oráculo cósmico, lectura dimensional, carta natal"
     }
 };
 
-const BRAND_PRESETS = {
+var BRAND_PRESETS = {
     stranger: BRAND_CONFIG
 };
 

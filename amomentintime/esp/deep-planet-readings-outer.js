@@ -5,363 +5,363 @@
 
 var DEEP_JUPITER_READINGS = {
     Aries: {
-        title: "The Pioneer's Luck",
-        hook: "Fortune favors the bold first step.",
-        coreNature: `Jupiter in Aries expands through courage, initiative, and the pioneering spirit. This soul grows by going first, by taking risks that others avoid, by trusting that action creates opportunity. Their luck activates when they're brave.
+        title: "La suerte del pionero",
+        hook: "La fortuna favorece el primer paso audaz.",
+        coreNature: `Júpiter en Aries se expande a través del coraje, la iniciativa y el espíritu pionero. Esta alma crece al ir primero, al tomar riesgos que otros evitan, al confiar en que la acción crea oportunidades. Su suerte se activa cuando son valientes.
 
-They are natural entrepreneurs of spirit, seeing opportunity where others see obstacle. Their optimism isn't naive—it's backed by the courage to act on their vision.`,
+Son emprendedores naturales de espíritu, que ven oportunidades donde otros ven obstáculos. Su optimismo no es ingenuo: está respaldado por el coraje de actuar según su visión.`,
         
-        expansion: `They expand through new beginnings. Each fresh start brings growth; stagnation brings contraction. They need to be initiating something to feel that life has meaning.
+        expansion: `Se expanden a través de nuevos comienzos. Cada nuevo comienzo trae crecimiento; el estancamiento trae contracción. Necesitan estar iniciando algo para sentir que la vida tiene significado.
 
-Adventure is their growth fuel. Travel, new experiences, and challenges that test their courage all serve their expansion. Playing it safe shrinks their world.`,
+La aventura es su combustible de crecimiento. Los viajes, las nuevas experiencias y los desafíos que ponen a prueba su coraje sirven para su expansión. Ir a lo seguro encoge su mundo.`,
         
-        wisdom: `Their wisdom comes through action. They learn by doing, by trying, by making mistakes and trying again. Theoretical knowledge means little until tested in real fire.
+        wisdom: `Su sabiduría viene a través de la acción. Aprenden haciendo, intentando, cometiendo errores y volviendo a intentarlo. El conocimiento teórico significa poco hasta que se prueba en fuego real.
 
-They teach others through example and encouragement. They inspire courage, activate initiative, and remind people that action is the antidote to fear.`,
+Enseñan a otros a través del ejemplo y el estímulo. Inspiran coraje, activan la iniciativa y recuerdan a la gente que la acción es el antídoto contra el miedo.`,
         
-        luck: `Luck finds them when they move first. Opportunities come to those who are already in motion. Waiting for perfect conditions misses the magic.
+        luck: `La suerte los encuentra cuando se mueven primero. Las oportunidades llegan a quienes ya están en movimiento. Esperar a que las condiciones sean perfectas hace que se pierda la magia.
 
-Their guardian angels reward boldness. The universe seems to support their leaps of faith, catching them when they fall and celebrating when they soar.`,
+Sus ángeles de la guarda recompensan la audacia. El universo parece apoyar sus actos de fe, atrapándolos cuando caen y celebrando cuando se elevan.`,
         
-        challenges: `The shadow is overconfidence and reckless expansion. They may take on too much, move too fast, or believe in their luck past the point of wisdom.
+        challenges: `La sombra es el exceso de confianza y la expansión imprudente. Es posible que asuman demasiado, se muevan demasiado rápido o crean en su suerte más allá del punto de la sabiduría.
 
-They may also struggle to consolidate gains, always moving to the next thing before fully realizing the potential of the current thing.`,
+También pueden tener dificultades para consolidar sus logros, y siempre pasan a lo siguiente antes de darse cuenta plenamente del potencial de lo actual.`,
         
-        parentGuidance: `Encourage this child's courage while teaching them discernment. They need to take risks—help them learn which risks are worthy. Celebrate their initiative.
+        parentGuidance: `Fomente el coraje de este niño mientras le enseña discernimiento. Necesitan correr riesgos; ayúdeles a aprender qué riesgos valen la pena. Celebre su iniciativa.
 
-Teach them that patience and planning can serve their bold vision. Help them finish some things before starting others. Model brave action alongside careful thought.`,
+Enséñeles que la paciencia y la planificación pueden contribuir a su visión audaz. Ayúdelos a terminar algunas cosas antes de comenzar otras. Modele una acción valiente junto con un pensamiento cuidadoso.`,
         
-        affirmation: "My courageous spirit opens doors. I leap with faith and learn from every landing."
+        affirmation: "Mi espíritu valiente abre puertas. Salto con fe y aprendo de cada aterrizaje."
     },
     
     Taurus: {
-        title: "The Abundant Builder",
-        hook: "Fortune blesses what's built to last.",
-        coreNature: `Jupiter in Taurus expands through patience, material building, and the appreciation of earthly abundance. This soul grows by creating lasting value, by investing wisely, and by enjoying the fruits of their labor.
+        title: "El constructor abundante",
+        hook: "La fortuna bendice lo que está construido para durar.",
+        coreNature: `Júpiter en Tauro se expande a través de la paciencia, la construcción material y la apreciación de la abundancia terrenal. Esta alma crece creando valor duradero, invirtiendo sabiamente y disfrutando los frutos de su trabajo.
 
-They are natural wealth builders, understanding that true abundance comes through steady accumulation rather than sudden windfalls. Their optimism is grounded in what they've already built.`,
+Son creadores de riqueza natural y entienden que la verdadera abundancia se obtiene a través de una acumulación constante y no de ganancias inesperadas y repentinas. Su optimismo se basa en lo que ya han construido.`,
         
-        expansion: `They expand through material growth. Building wealth, creating beautiful things, and developing tangible assets all serve their growth. Abstract expansion without material expression feels incomplete.
+        expansion: `Se expanden a través del crecimiento material. Generar riqueza, crear cosas hermosas y desarrollar activos tangibles contribuyen a su crecimiento. La expansión abstracta sin expresión material se siente incompleta.
 
-Nature and sensory pleasure are growth resources. Time in beautiful environments, good food, physical comfort—these aren't indulgences but necessities for their expansion.`,
+La naturaleza y el placer sensorial son recursos de crecimiento. El tiempo en entornos bellos, la buena comida y la comodidad física no son indulgencias sino necesidades para su expansión.`,
         
-        wisdom: `Their wisdom is practical and embodied. They understand how things grow, how value accumulates, how patience creates abundance. They teach through example and provision.
+        wisdom: `Su sabiduría es práctica y encarnada. Entienden cómo crecen las cosas, cómo se acumula el valor, cómo la paciencia crea abundancia. Enseñan a través del ejemplo y la provisión.
 
-They remind others that the body matters, that the earth provides, that slow and steady truly wins races. Their wisdom is touch-able.`,
+Les recuerdan a los demás que el cuerpo importa, que la tierra proporciona, que las carreras se ganan con lentitud y constancia. Su sabiduría se puede tocar.`,
         
-        luck: `Luck finds them through consistency. Opportunities come to those who show up reliably, who build reputation over time, who can be counted on.
+        luck: `La suerte los encuentra a través de la constancia. Las oportunidades llegan para aquellos que se presentan de manera confiable, que construyen reputación con el tiempo y con quienes se puede contar.
 
-Their guardian angels bless material efforts. Investments grow, gardens flourish, physical creations succeed when they apply their patient touch.`,
+Sus ángeles de la guarda bendicen los esfuerzos materiales. Las inversiones crecen, los jardines florecen, las creaciones físicas tienen éxito cuando se les aplica su toque paciente.`,
         
-        challenges: `The shadow is greed and over-attachment. They may grip too tightly to what they've built, or expand materially past the point of actual enjoyment.
+        challenges: `La sombra es la codicia y el apego excesivo. Es posible que se aferren demasiado a lo que han construido o que se expandan materialmente más allá del punto de disfrute real.
 
-They may also become too comfortable, too resistant to change, letting their material success become a trap rather than a foundation.`,
+También pueden volverse demasiado cómodos y demasiado resistentes al cambio, dejando que su éxito material se convierta en una trampa en lugar de una base.`,
         
-        parentGuidance: `Give this child opportunities to build and grow things—gardens, savings, projects. Let them experience the satisfaction of patient creation.
+        parentGuidance: `Dele a este niño oportunidades para construir y hacer crecer cosas: jardines, ahorros, proyectos. Permítales experimentar la satisfacción de la creación paciente.
 
-Teach them that true abundance includes generosity, that letting go can create space for more. Help them find security in themselves, not just in possessions.`,
+Enséñeles que la verdadera abundancia incluye generosidad, que dejar ir puede crear espacio para más. Ayúdelos a encontrar seguridad en sí mismos, no sólo en sus posesiones.`,
         
-        affirmation: "My patient building creates lasting abundance. I enjoy what I have while creating more."
+        affirmation: "Mi construcción paciente crea abundancia duradera. Disfruto lo que tengo mientras creo más."
     },
     
     Gemini: {
-        title: "The Curious Sage",
-        hook: "Fortune flows through words and connections.",
-        coreNature: `Jupiter in Gemini expands through learning, communication, and the exchange of ideas. This soul grows by gathering information, making connections, and sharing what they discover. Their optimism springs from endless curiosity.
+        title: "El sabio curioso",
+        hook: "La fortuna fluye a través de palabras y conexiones.",
+        coreNature: `Júpiter en Géminis se expande a través del aprendizaje, la comunicación y el intercambio de ideas. Esta alma crece al recopilar información, hacer conexiones y compartir lo que descubre. Su optimismo surge de una curiosidad infinita.
 
-They are natural networkers and knowledge-sharers, understanding that wisdom multiplies when shared. Their expansion happens through mental activity and communication.`,
+Son creadores de redes naturales y comparten conocimientos, y comprenden que la sabiduría se multiplica cuando se comparte. Su expansión ocurre a través de la actividad mental y la comunicación.`,
         
-        expansion: `They expand through learning and communicating. Every new piece of information, every new connection, every new skill adds to their growth. Stagnation in learning is stagnation in life.
+        expansion: `Se expanden a través del aprendizaje y la comunicación. Cada nueva información, cada nueva conexión, cada nueva habilidad contribuye a su crecimiento. El estancamiento en el aprendizaje es estancamiento en la vida.
 
-Variety is their expansion fuel. They grow by doing many things, knowing many people, and exploring many ideas. Depth may come later; breadth comes first.`,
+La variedad es su combustible de expansión. Crecen haciendo muchas cosas, conociendo a mucha gente y explorando muchas ideas. La profundidad puede llegar más tarde; La amplitud es lo primero.`,
         
-        wisdom: `Their wisdom is connective. They see relationships between things that others miss, linking diverse fields into new understanding. They synthesize rather than specialize.
+        wisdom: `Su sabiduría es conectiva. Ven relaciones entre cosas que otros pasan por alto, vinculando diversos campos hacia una nueva comprensión. Sintetizan en lugar de especializarse.
 
-They teach through explanation, translation, and making complex things accessible. They're natural educators and communicators of wisdom.`,
+Enseñan mediante explicaciones, traducciones y haciendo accesibles cosas complejas. Son educadores naturales y comunicadores de sabiduría.`,
         
-        luck: `Luck finds them through connections. The right information at the right time, the right person who knows the right person—their network is their lucky charm.
+        luck: `La suerte los encuentra a través de conexiones. La información adecuada en el momento adecuado, la persona adecuada que conoce a la persona adecuada: su red es su amuleto de la suerte.
 
-Their guardian angels speak through synchronicity and communication. Messages, conversations, and "random" information often carry hidden gifts.`,
+Sus ángeles de la guarda hablan a través de la sincronicidad y la comunicación. Los mensajes, las conversaciones y la información "aleatoria" suelen contener regalos ocultos.`,
         
-        challenges: `The shadow is scattered expansion and superficial wisdom. They may know a little about many things but master nothing. Breadth without depth becomes trivial.
+        challenges: `La sombra es expansión dispersa y sabiduría superficial. Puede que sepan un poco sobre muchas cosas pero no dominen nada. La amplitud sin profundidad se vuelve trivial.
 
-They may also over-commit socially and mentally, saying yes to everything until their energy scatters beyond usefulness.`,
+También pueden comprometerse demasiado social y mentalmente, diciendo sí a todo hasta que su energía se dispersa más allá de su utilidad.`,
         
-        parentGuidance: `Feed this child's curiosity broadly while gently encouraging some depth. They need variety—let them explore. Help them see that some knowledge deserves deeper investment.
+        parentGuidance: `Alimente ampliamente la curiosidad de este niño mientras fomenta suavemente un poco de profundidad. Necesitan variedad; déjeles explorar. Ayúdelos a ver que algunos conocimientos merecen una inversión más profunda.
 
-Teach them that silence has wisdom too, that not every thought needs expression. Channel their communication gifts toward meaningful sharing.`,
+Enséñales que el silencio también tiene sabiduría, que no todo pensamiento necesita expresión. Canalice sus dotes de comunicación hacia un intercambio significativo.`,
         
-        affirmation: "My curious mind discovers endless treasures. I share wisdom while continuing to learn."
+        affirmation: "Mi mente curiosa descubre infinitos tesoros. Comparto sabiduría mientras sigo aprendiendo."
     },
     
     Cancer: {
-        title: "The Nurturing Fortune",
-        hook: "Abundance flows through home and heart.",
-        coreNature: `Jupiter in Cancer expands through nurturing, emotional connection, and creating security. This soul grows by taking care of others, by building home and family, by developing their emotional depth.
+        title: "La fortuna nutritiva",
+        hook: "La abundancia fluye por el hogar y el corazón.",
+        coreNature: `Júpiter en Cáncer se expande a través de la conexión emocional y enriquecedora y la creación de seguridad. Esta alma crece cuidando a los demás, construyendo un hogar y una familia, desarrollando su profundidad emocional.
 
-They are natural protectors and providers, understanding that true abundance includes emotional richness. Their optimism springs from feeling connected and secure.`,
+Son protectores y proveedores naturales, y entienden que la verdadera abundancia incluye la riqueza emocional. Su optimismo surge de sentirse conectados y seguros.`,
         
-        expansion: `They expand through family and home. Growing the family, improving the home, deepening emotional bonds—these are their paths to expansion.
+        expansion: `Se expanden a través de la familia y el hogar. Hacer crecer la familia, mejorar el hogar, profundizar los vínculos emocionales: estos son sus caminos hacia la expansión.
 
-Emotional generosity is their growth fuel. The more they nurture, the more they grow. Giving creates receiving in their world.`,
+La generosidad emocional es su combustible de crecimiento. Cuanto más se nutren, más crecen. Dar crea recibir en su mundo.`,
         
-        wisdom: `Their wisdom is emotional and intuitive. They understand the heart, the needs of others, the subtleties of care. They teach through nurturing and example.
+        wisdom: `Su sabiduría es emocional e intuitiva. Entienden el corazón, las necesidades de los demás, las sutilezas del cuidado. Enseñan a través de la crianza y el ejemplo.
 
-They remind others that feelings matter, that home is essential, that care is a form of power. Their wisdom embraces the tender.`,
+Recuerdan a los demás que los sentimientos importan, que el hogar es esencial, que el cuidado es una forma de poder. Su sabiduría abraza lo tierno.`,
         
-        luck: `Luck finds them through family and emotional connection. Opportunities come through those they love and care for. Their support network is their wealth.
+        luck: `La suerte los encuentra a través de la conexión familiar y emocional. Las oportunidades llegan a través de aquellos a quienes aman y cuidan. Su red de apoyo es su riqueza.
 
-Their guardian angels protect home and heart. Real estate, family ventures, and emotionally meaningful projects tend to succeed.`,
+Sus ángeles de la guarda protegen el hogar y el corazón. Los bienes raíces, las empresas familiares y los proyectos emocionalmente significativos tienden a tener éxito.`,
         
-        challenges: `The shadow is smothering care and using nurturing for control. They may give too much or give with strings attached, expecting emotional return on investment.
+        challenges: `La sombra está sofocando el cuidado y utilizando el cariño para el control. Es posible que den demasiado o lo hagan con condiciones, esperando un retorno emocional de la inversión.
 
-They may also become insular, expanding only within the circle of known and safe, missing opportunities that lie beyond the familiar.`,
+También pueden volverse insulares, expandiéndose sólo dentro del círculo de lo conocido y seguro, perdiendo oportunidades que se encuentran más allá de lo familiar.`,
         
-        parentGuidance: `Let this child nurture—pets, plants, younger children, anything that needs care. They grow by giving care. Honor their emotional intelligence.
+        parentGuidance: `Deje que este niño se cuide: mascotas, plantas, niños más pequeños, cualquier cosa que necesite cuidados. Crecen dando cuidados. Honra su inteligencia emocional.
 
-Teach them that healthy nurturing includes letting go, that care can become control. Help them expand beyond the familiar while honoring their need for security.`,
+Enséñeles que una crianza saludable incluye dejar ir, que el cuidado puede convertirse en control. Ayúdelos a expandirse más allá de lo familiar mientras respeta su necesidad de seguridad.`,
         
-        affirmation: "My caring heart creates abundance for all. I nurture freely without attachment."
+        affirmation: "Mi corazón bondadoso crea abundancia para todos. Me cuido libremente sin apego."
     },
     
     Leo: {
-        title: "The Generous King",
-        hook: "Fortune celebrates the radiant heart.",
-        coreNature: `Jupiter in Leo expands through creativity, self-expression, and generous giving. This soul grows by shining, by creating, by sharing their gifts lavishly with the world.
+        title: "El rey generoso",
+        hook: "La fortuna celebra el corazón radiante.",
+        coreNature: `Júpiter en Leo se expande a través de la creatividad, la autoexpresión y la generosidad. Esta alma crece brillando, creando, compartiendo generosamente sus dones con el mundo.
 
-They are natural performers and creators, understanding that joy expands everything it touches. Their optimism is contagious, their faith in life dramatic and visible.`,
+Son intérpretes y creadores natos y entienden que la alegría expande todo lo que toca. Su optimismo es contagioso, su fe en la vida dramática y visible.`,
         
-        expansion: `They expand through creative expression. Making things, performing, leading, and expressing their unique vision all serve their growth.
+        expansion: `Se expanden a través de la expresión creativa. Hacer cosas, actuar, liderar y expresar su visión única contribuyen a su crecimiento.
 
-Recognition fuels their expansion. Being seen, appreciated, and celebrated for their contributions energizes their continued giving. They need audiences.`,
+El reconocimiento impulsa su expansión. Ser visto, apreciado y celebrado por sus contribuciones energiza su don continuo. Necesitan audiencias.`,
         
-        wisdom: `Their wisdom is heart-centered and generous. They understand that giving creates receiving, that joy multiplies when shared, that the heart leads the way.
+        wisdom: `Su sabiduría está centrada en el corazón y es generosa. Entienden que dar crea recibir, que la alegría se multiplica cuando se comparte, que el corazón marca el camino.
 
-They teach through inspiration and example. They show what's possible when you believe in yourself and give freely from your gifts.`,
+Enseñan a través de la inspiración y el ejemplo. Muestran lo que es posible cuando crees en ti mismo y das gratuitamente con tus dones.`,
         
-        luck: `Luck finds them in the spotlight. Opportunities come when they're visible, when they're performing, when they're sharing their light without reservation.
+        luck: `La suerte los encuentra en el centro de atención. Las oportunidades llegan cuando son visibles, cuando actúan, cuando comparten su luz sin reservas.
 
-Their guardian angels reward generosity and courage. What they give comes back multiplied. The universe loves a generous heart.`,
+Sus ángeles de la guarda recompensan la generosidad y el coraje. Lo que dan vuelve multiplicado. El universo ama un corazón generoso.`,
         
-        challenges: `The shadow is ego-expansion and requiring constant appreciation. They may become addicted to recognition, unable to give without getting credit.
+        challenges: `La sombra es una expansión del ego y requiere una apreciación constante. Pueden volverse adictos al reconocimiento, incapaces de dar sin recibir crédito.
 
-They may also overextend in their generosity, giving past the point of sustainability, or expect their gifts to be repaid in admiration.`,
+También pueden extenderse demasiado en su generosidad, dando más allá del punto de sostenibilidad, o esperar que sus regalos sean devueltos con admiración.`,
         
-        parentGuidance: `Give this child stages and appreciation. They need to shine—let them. Celebrate their creations and performances genuinely.
+        parentGuidance: `Dale a este niño etapas y aprecio. Necesitan brillar, déjenlos. Celebre genuinamente sus creaciones y actuaciones.
 
-Teach them that true generosity expects nothing back, that the joy of giving is the reward. Help them develop inner confidence that doesn't require external validation.`,
+Enséñeles que la verdadera generosidad no espera nada a cambio, que la alegría de dar es la recompensa. Ayúdelos a desarrollar una confianza interior que no requiera validación externa.`,
         
-        affirmation: "My radiant heart creates joy for all. I shine my light and celebrate others' brightness."
+        affirmation: "Mi corazón radiante crea alegría para todos. Hago brillar mi luz y celebro el brillo de los demás."
     },
     
     Virgo: {
-        title: "The Skilled Healer",
-        hook: "Fortune blesses competence and service.",
-        coreNature: `Jupiter in Virgo expands through skill development, service, and practical improvement. This soul grows by becoming better at useful things, by helping effectively, by solving real problems.
+        title: "El sanador experto",
+        hook: "La fortuna bendice la competencia y el servicio.",
+        coreNature: `Júpiter en Virgo se expande a través del desarrollo de habilidades, el servicio y la mejora práctica. Esta alma crece mejorando en cosas útiles, ayudando eficazmente, resolviendo problemas reales.
 
-They are natural helpers and improvers, understanding that growth happens through humble work. Their optimism is grounded in competence.`,
+Son ayudantes y mejoradores naturales, y comprenden que el crecimiento se produce a través del trabajo humilde. Su optimismo se basa en la competencia.`,
         
-        expansion: `They expand through skill mastery. Learning to do things well, developing expertise, and refining their craft all serve their growth.
+        expansion: `Se expanden a través del dominio de habilidades. Aprender a hacer las cosas bien, desarrollar experiencia y perfeccionar su oficio contribuyen a su crecimiento.
 
-Service is their expansion fuel. The more they help, the more they grow. Making a difference through practical effort energizes them.`,
+El servicio es su combustible de expansión. Cuanto más ayudan, más crecen. Marcar la diferencia a través del esfuerzo práctico les da energía.`,
         
-        wisdom: `Their wisdom is practical and applicable. They know how things work, how to fix what's broken, how to improve what exists. Their teaching is hands-on.
+        wisdom: `Su sabiduría es práctica y aplicable. Saben cómo funcionan las cosas, cómo arreglar lo que está roto, cómo mejorar lo que existe. Su enseñanza es práctica.
 
-They remind others that the small things matter, that excellence is achievable, that service is nobility. Their wisdom serves.`,
+Recuerdan a los demás que las pequeñas cosas importan, que la excelencia se puede lograr y que el servicio es nobleza. Su sabiduría sirve.`,
         
-        luck: `Luck finds them through competence and helpfulness. Opportunities come to those who can actually deliver, who show up and do the work well.
+        luck: `La suerte los encuentra a través de la competencia y la ayuda. Las oportunidades llegan a aquellos que realmente pueden cumplir, que se presentan y hacen bien el trabajo.
 
-Their guardian angels reward diligence. Health often protects them; their careful approach prevents problems others encounter.`,
+Sus ángeles de la guarda recompensan la diligencia. La salud muchas veces los protege; su enfoque cuidadoso previene los problemas que otros encuentran.`,
         
-        challenges: `The shadow is perfectionism that blocks expansion. They may refuse opportunities that aren't perfect, or criticize their way out of growth.
+        challenges: `La sombra es el perfeccionismo que bloquea la expansión. Pueden rechazar oportunidades que no sean perfectas o criticar su manera de salir del crecimiento.
 
-They may also get so lost in details that they miss the larger picture, expanding in minutiae while life's bigger opportunities pass.`,
+También pueden perderse tanto en los detalles que pierden el panorama más amplio, ampliándose en minucias mientras pasan las mayores oportunidades de la vida.`,
         
-        parentGuidance: `Give this child skills to learn and ways to help. They grow through useful accomplishment. Praise effort and improvement, not just perfection.
+        parentGuidance: `Dele a este niño habilidades para aprender y maneras de ayudar. Crecen a través de logros útiles. Elogie el esfuerzo y la mejora, no sólo la perfección.
 
-Teach them that good enough is sometimes excellent, that expansion includes risk and imperfection. Help them see the forest as well as the trees.`,
+Enséñeles que a veces lo suficientemente bueno es excelente, que la expansión incluye riesgo e imperfección. Ayúdalos a ver el bosque además de los árboles.`,
         
-        affirmation: "My skilled service creates real good. I improve what I touch while accepting imperfection."
+        affirmation: "Mi servicio cualificado crea un verdadero bien. Mejoro lo que toco acepto la imperfección."
     },
     
     Libra: {
-        title: "The Fair Diplomat",
-        hook: "Fortune flows through beautiful balance.",
-        coreNature: `Jupiter in Libra expands through partnership, fairness, and the creation of beauty. This soul grows by creating harmony, by building relationships, by making the world more beautiful and just.
+        title: "El justo diplomático",
+        hook: "La fortuna fluye a través de un hermoso equilibrio.",
+        coreNature: `Júpiter en Libra se expande a través de la asociación, la justicia y la creación de belleza. Esta alma crece creando armonía, construyendo relaciones, haciendo el mundo más bello y justo.
 
-They are natural diplomats and artists, understanding that balance creates abundance. Their optimism springs from faith in fairness.`,
+Son diplomáticos y artistas natos y entienden que el equilibrio crea abundancia. Su optimismo surge de la fe en la justicia.`,
         
-        expansion: `They expand through partnership. Everything grows larger when shared with the right person. Collaboration multiplies their efforts.
+        expansion: `Se expanden a través de asociaciones. Todo se hace más grande cuando se comparte con la persona adecuada. La colaboración multiplica sus esfuerzos.
 
-Beauty and justice fuel their expansion. Creating harmony, making things more beautiful, and establishing fairness all serve their growth.`,
+La belleza y la justicia alimentan su expansión. Crear armonía, hacer las cosas más bellas y establecer la justicia contribuyen a su crecimiento.`,
         
-        wisdom: `Their wisdom sees all sides. They understand that truth lives between extremes, that fairness creates lasting solutions, that beauty heals.
+        wisdom: `Su sabiduría ve todos los lados. Entienden que la verdad vive entre los extremos, que la justicia crea soluciones duraderas, que la belleza cura.
 
-They teach through example and mediation. They show what's possible when people work together, when balance is achieved.`,
+Enseñan a través del ejemplo y la mediación. Muestran lo que es posible cuando las personas trabajan juntas, cuando se logra el equilibrio.`,
         
-        luck: `Luck finds them through relationships. The right partnership at the right time opens doors nothing else could. Their connections are their fortune.
+        luck: `La suerte los encuentra a través de las relaciones. La asociación adecuada en el momento adecuado abre puertas que nada más podría abrir. Sus conexiones son su fortuna.
 
-Their guardian angels work through others. Help comes through allies; opportunities come through partnerships; grace comes through love.`,
+Sus ángeles de la guarda actúan a través de otros. La ayuda llega a través de aliados; las oportunidades surgen a través de asociaciones; la gracia viene a través del amor.`,
         
-        challenges: `The shadow is dependency and indecision. They may wait so long for the perfect partner or the fair solution that expansion stalls.
+        challenges: `La sombra es dependencia e indecisión. Es posible que esperen tanto tiempo por el socio perfecto o la solución justa que la expansión se detenga.
 
-They may also avoid necessary conflict, keeping false peace at the expense of true growth. Not every situation has a fair middle ground.`,
+También pueden evitar conflictos necesarios, manteniendo una paz falsa a expensas del crecimiento verdadero. No todas las situaciones tienen un término medio justo.`,
         
-        parentGuidance: `Help this child build good partnerships and appreciate beauty. They grow through relationship and fairness. Let them see you resolving conflicts fairly.
+        parentGuidance: `Ayude a este niño a construir buenas asociaciones y a apreciar la belleza. Crecen a través de la relación y la justicia. Deja que te vean resolviendo conflictos de manera justa.
 
-Teach them to act even without perfect balance, to hold their own position while remaining open to others. Help them find their own center.`,
+Enséñales a actuar incluso sin un equilibrio perfecto, a mantener su propia posición y permanecer abiertos a los demás. Ayúdalos a encontrar su propio centro.`,
         
-        affirmation: "My balanced heart creates harmony and beauty. I partner wisely while remaining whole myself."
+        affirmation: "Mi corazón equilibrado crea armonía y belleza. Colaboro sabiamente sin dejar de ser completo."
     },
     
     Scorpio: {
-        title: "The Deep Transformer",
-        hook: "Fortune rises from the depths.",
-        coreNature: `Jupiter in Scorpio expands through depth, transformation, and the embrace of shadow. This soul grows by going where others fear, by facing the dark, by transforming what seems fixed.
+        title: "El transformador profundo",
+        hook: "La fortuna surge de las profundidades.",
+        coreNature: `Júpiter en Escorpio se expande a través de la profundidad, la transformación y el abrazo de la sombra. Esta alma crece yendo a donde otros temen, enfrentando la oscuridad, transformando lo que parece fijo.
 
-They are natural investigators and healers, understanding that true expansion includes the places we hide. Their optimism springs from faith in regeneration.`,
+Son investigadores y sanadores naturales, y comprenden que la verdadera expansión incluye los lugares donde nos escondemos. Su optimismo surge de la fe en la regeneración.`,
         
-        expansion: `They expand through depth and intensity. Surface growth means nothing; they need to go to the core. Transformation is their expansion path.
+        expansion: `Se expanden a través de la profundidad y la intensidad. El crecimiento superficial no significa nada; necesitan ir al núcleo. La transformación es su camino de expansión.
 
-Facing shadow fuels their growth. What others avoid, they embrace. Crisis becomes opportunity; death becomes rebirth.`,
+Enfrentarse a la sombra impulsa su crecimiento. Lo que otros evitan, ellos lo abrazan. La crisis se convierte en oportunidad; la muerte se convierte en renacimiento.`,
         
-        wisdom: `Their wisdom sees through illusion. They understand the hidden motivations, the denied truths, the power of what's suppressed. Their teaching transforms.
+        wisdom: `Su sabiduría ve a través de la ilusión. Entienden las motivaciones ocultas, las verdades negadas, el poder de lo reprimido. Su enseñanza se transforma.
 
-They remind others that depth is available, that transformation is possible, that the shadow holds treasure. Their wisdom heals.`,
+Recuerdan a los demás que la profundidad está disponible, que la transformación es posible, que la sombra guarda un tesoro. Su sabiduría cura.`,
         
-        luck: `Luck finds them in crisis. When things fall apart, they find opportunity. Other people's endings become their beginnings.
+        luck: `La suerte los encuentra en crisis. Cuando las cosas se desmoronan, encuentran oportunidades. Los finales de otras personas se convierten en sus comienzos.
 
-Their guardian angels work through transformation. Inheritances, deep partnerships, psychological breakthroughs—their fortune comes from the underworld.`,
+Sus ángeles de la guarda actúan mediante la transformación. Herencias, asociaciones profundas, avances psicológicos: su fortuna proviene del inframundo.`,
         
-        challenges: `The shadow is manipulation and power accumulation. They may use their depth-perception for control rather than healing.
+        challenges: `La sombra es manipulación y acumulación de poder. Pueden usar su percepción profunda para controlar en lugar de curar.
 
-They may also become too drawn to darkness, seeking crisis when peace is available, unable to enjoy life's lighter gifts.`,
+También pueden sentirse demasiado atraídos por la oscuridad, buscando las crisis cuando hay paz disponible, incapaces de disfrutar los regalos más ligeros de la vida.`,
         
-        parentGuidance: `Allow this child depth and privacy. They grow through intense focus and don't need to share everything. Trust their process.
+        parentGuidance: `Permita que este niño tenga profundidad y privacidad. Crecen a través de una concentración intensa y no necesitan compartirlo todo. Confía en su proceso.
 
-Teach them that power serves healing, not control. Help them balance their attraction to depth with appreciation of life's simple pleasures.`,
+Enséñeles que el poder sirve para curar, no para controlar. Ayúdelos a equilibrar su atracción por la profundidad con la apreciación de los placeres simples de la vida.`,
         
-        affirmation: "My deep sight discovers hidden treasure. I transform with power and heal with wisdom."
+        affirmation: "Mi mirada profunda descubre tesoros escondidos. Me transformo con poder y sano con sabiduría."
     },
     
     Sagittarius: {
-        title: "The True Seeker",
-        hook: "Fortune loves the optimistic adventurer.",
-        coreNature: `Jupiter in Sagittarius is Jupiter at home—expansion expressing in its most natural, enthusiastic, and far-reaching form. This soul grows by seeking truth, exploring the world, and expanding their understanding of meaning.
+        title: "El verdadero buscador",
+        hook: "La fortuna ama al aventurero optimista.",
+        coreNature: `Júpiter en Sagitario es Júpiter en casa: la expansión se expresa en su forma más natural, entusiasta y de mayor alcance. Esta alma crece buscando la verdad, explorando el mundo y ampliando su comprensión del significado.
 
-They are natural philosophers and adventurers, understanding that growth is life's purpose. Their optimism is their superpower.`,
+Son filósofos naturales y aventureros que entienden que el crecimiento es el propósito de la vida. Su optimismo es su superpoder.`,
         
-        expansion: `They expand in every direction. Physical travel, intellectual exploration, spiritual seeking, cultural bridge-building—all paths serve their growth.
+        expansion: `Se expanden en todas direcciones. Los viajes físicos, la exploración intelectual, la búsqueda espiritual, la construcción de puentes culturales: todos los caminos sirven a su crecimiento.
 
-Meaning fuels their expansion. They need to feel that their life is significant, that they're contributing to something larger.`,
+El significado alimenta su expansión. Necesitan sentir que su vida es importante, que están contribuyendo a algo más grande.`,
         
-        wisdom: `Their wisdom is expansive and inspiring. They see the big picture, understand the larger patterns, and can communicate vision that motivates others.
+        wisdom: `Su sabiduría es expansiva e inspiradora. Ven el panorama general, comprenden los patrones más amplios y pueden comunicar una visión que motiva a los demás.
 
-They teach through inspiration and sharing. Their faith is contagious; their optimism uplifts everyone they encounter.`,
+Enseñan a través de la inspiración y el intercambio. Su fe es contagiosa; su optimismo eleva a todos los que encuentran.`,
         
-        luck: `Luck follows them everywhere. They seem charmed, protected, blessed in ways that defy rational explanation. Their faith creates its own support.
+        luck: `La suerte los sigue a todas partes. Parecen encantados, protegidos y bendecidos de maneras que desafían toda explicación racional. Su fe crea su propio apoyo.
 
-Their guardian angels love them visibly. Opportunities appear; help arrives; things work out in ways that confirm their optimism.`,
+Sus ángeles de la guarda los aman visiblemente. Aparecen oportunidades; llega ayuda; las cosas funcionan de manera que confirman su optimismo.`,
         
-        challenges: `The shadow is overexpansion and self-righteousness. They may promise more than they deliver, take on more than they can handle, or believe their truth is the only truth.
+        challenges: `La sombra es la sobreexpansión y la superioridad moral. Pueden prometer más de lo que cumplen, asumir más de lo que pueden manejar o creer que su verdad es la única verdad.
 
-They may also avoid commitment and grounding, always reaching for the next horizon without appreciating what's already here.`,
+También pueden evitar el compromiso y el arraigo, siempre buscando el próximo horizonte sin apreciar lo que ya está aquí.`,
         
-        parentGuidance: `Feed this child's hunger for meaning and adventure. They need to explore—physically, mentally, spiritually. Let them reach.
+        parentGuidance: `Alimente el hambre de significado y aventura de este niño. Necesitan explorar: física, mental y espiritualmente. Déjalos llegar.
 
-Teach them that truth includes what's right here, that commitment creates its own freedom. Help them appreciate the journey, not just the destination.`,
+Enséñeles que la verdad incluye lo que está bien aquí, que el compromiso crea su propia libertad. Ayúdelos a apreciar el viaje, no sólo el destino.`,
         
-        affirmation: "My seeking heart finds meaning everywhere. I reach for horizons while honoring what's here."
+        affirmation: "Mi corazón buscador encuentra significado en todas partes. Alcanzo horizontes mientras honro lo que hay aquí."
     },
     
     Capricorn: {
-        title: "The Wise Builder",
-        hook: "Fortune rewards the patient architect.",
-        coreNature: `Jupiter in Capricorn expands through discipline, long-term building, and the achievement of lasting success. This soul grows by mastering their craft, building their reputation, and creating structures that endure.
+        title: "El sabio constructor",
+        hook: "La fortuna recompensa al arquitecto paciente.",
+        coreNature: `Júpiter en Capricornio se expande a través de la disciplina, la construcción a largo plazo y el logro de un éxito duradero. Esta alma crece al dominar su oficio, construir su reputación y crear estructuras duraderas.
 
-They are natural executives and authorities, understanding that true expansion includes responsibility. Their optimism is tempered by realism.`,
+Son ejecutivos y autoridades naturales, y entienden que la verdadera expansión incluye responsabilidad. Su optimismo se ve atenuado por el realismo.`,
         
-        expansion: `They expand through achievement. Each accomplishment builds on the last, each success creates platform for more. Their growth is structured and intentional.
+        expansion: `Se expanden a través de los logros. Cada logro se basa en el anterior, cada éxito crea una plataforma para más. Su crecimiento es estructurado e intencional.
 
-Mastery fuels their expansion. They grow by becoming truly excellent at something, not by sampling many things lightly.`,
+El dominio impulsa su expansión. Crecen al volverse verdaderamente excelentes en algo, no al probar muchas cosas a la ligera.`,
         
-        wisdom: `Their wisdom is earned through experience. They understand how things actually work, what success actually requires, how to build what lasts.
+        wisdom: `Su sabiduría se gana a través de la experiencia. Entienden cómo funcionan realmente las cosas, qué requiere realmente el éxito, cómo construir algo duradero.
 
-They teach through example and mentorship. They show what's possible through sustained effort, and they develop others' capacity.`,
+Enseñan a través del ejemplo y la tutoría. Muestran lo que es posible mediante un esfuerzo sostenido y desarrollan la capacidad de los demás.`,
         
-        luck: `Luck finds them through reputation. Opportunities come to those known for reliability, for competence, for delivering results.
+        luck: `La suerte los encuentra a través de la reputación. Las oportunidades llegan a aquellos conocidos por su confiabilidad, competencia y resultados.
 
-Their guardian angels reward patience. What they build slowly grows large; what they invest in carefully returns well.`,
+Sus ángeles de la guarda recompensan la paciencia. Lo que construyen crece lentamente; lo que invierten con cuidado rinde bien.`,
         
-        challenges: `The shadow is cold ambition and joyless achievement. They may succeed in worldly terms while starving spiritually and emotionally.
+        challenges: `La sombra es una fría ambición y un logro triste. Pueden tener éxito en términos mundanos mientras pasan hambre espiritual y emocionalmente.
 
-They may also become so focused on what they're building that they miss living. Learning that being matters as much as doing is essential.`,
+También pueden concentrarse tanto en lo que están construyendo que extrañan vivir. Aprender que el ser importa tanto como el hacer es fundamental.`,
         
-        parentGuidance: `Respect this child's ambition and help them set meaningful goals. They grow through achievement. Teach them to value the journey.
+        parentGuidance: `Respete la ambición de este niño y ayúdelo a establecer metas significativas. Crecen a través de los logros. Enséñales a valorar el viaje.
 
-Show them that play and rest serve success, that relationships matter as much as accomplishments. Help them find joy in the process.`,
+Muéstreles que el juego y el descanso contribuyen al éxito, que las relaciones son tan importantes como los logros. Ayúdelos a encontrar alegría en el proceso.`,
         
-        affirmation: "My patient building creates lasting success. I achieve with wisdom and enjoy with gratitude."
+        affirmation: "Mi construcción paciente crea un éxito duradero. Lo logro con sabiduría y disfruto con gratitud."
     },
     
     Aquarius: {
-        title: "The Visionary Reformer",
-        hook: "Fortune serves the future's helper.",
-        coreNature: `Jupiter in Aquarius expands through innovation, collective benefit, and the pursuit of progress. This soul grows by serving humanity, by thinking originally, by bringing the future into the present.
+        title: "El reformador visionario",
+        hook: "La fortuna sirve al ayudante del futuro.",
+        coreNature: `Júpiter en Acuario se expande a través de la innovación, el beneficio colectivo y la búsqueda del progreso. Esta alma crece sirviendo a la humanidad, pensando originalmente, trayendo el futuro al presente.
 
-They are natural reformers and visionaries, understanding that true expansion includes collective evolution. Their optimism is for humanity.`,
+Son reformadores y visionarios natos, que entienden que la verdadera expansión incluye la evolución colectiva. Su optimismo es por la humanidad.`,
         
-        expansion: `They expand through innovation and social contribution. New ideas, new technologies, new ways of organizing that serve collective good all feed their growth.
+        expansion: `Se expanden a través de la innovación y la contribución social. Nuevas ideas, nuevas tecnologías, nuevas formas de organización que sirven al bien colectivo alimentan su crecimiento.
 
-Community fuels their expansion. They grow by connecting with like-minded people, by being part of movements larger than themselves.`,
+La comunidad impulsa su expansión. Crecen al conectarse con personas de ideas afines, al ser parte de movimientos más grandes que ellos.`,
         
-        wisdom: `Their wisdom is progressive and inclusive. They understand where things are heading, what the collective needs, how to think beyond current limitations.
+        wisdom: `Su sabiduría es progresista e inclusiva. Entienden hacia dónde se dirigen las cosas, qué necesita el colectivo, cómo pensar más allá de las limitaciones actuales.
 
-They teach through sharing vision and empowering others. Their wisdom serves the many, not the few.`,
+Enseñan compartiendo una visión y empoderando a otros. Su sabiduría sirve a muchos, no a unos pocos.`,
         
-        luck: `Luck finds them through the collective. Groups, networks, and causes that serve humanity bring opportunities.
+        luck: `La suerte los encuentra a través del colectivo. Los grupos, redes y causas que sirven a la humanidad traen oportunidades.
 
-Their guardian angels work through innovation. Technology, new approaches, and unconventional methods often bring their fortune.`,
+Sus ángeles de la guarda trabajan a través de la innovación. La tecnología, los nuevos enfoques y los métodos no convencionales a menudo aportan fortuna.`,
         
-        challenges: `The shadow is utopianism and emotional detachment. They may believe so strongly in the future that they neglect present realities and relationships.
+        challenges: `La sombra es el utopismo y el desapego emocional. Pueden creer tan firmemente en el futuro que descuiden las realidades y relaciones presentes.
 
-They may also feel superior to those who think conventionally, missing the wisdom in tradition.`,
+También pueden sentirse superiores a aquellos que piensan de manera convencional, perdiendo la sabiduría de la tradición.`,
         
-        parentGuidance: `Support this child's unusual ideas and care for others. They grow through innovation and contribution. Let them be different.
+        parentGuidance: `Apoye las ideas inusuales de este niño y cuídese de los demás. Crecen a través de la innovación y la contribución. Que sean diferentes.
 
-Teach them that individual relationships matter as much as collective good, that emotion has its own wisdom. Help them ground their vision in practical reality.`,
+Enséñeles que las relaciones individuales importan tanto como el bien colectivo, que la emoción tiene su propia sabiduría. Ayúdelos a fundamentar su visión en la realidad práctica.`,
         
-        affirmation: "My innovative heart serves the future. I help humanity while valuing each individual."
+        affirmation: "Mi corazón innovador sirve al futuro. Ayudo a la humanidad valorando a cada individuo."
     },
     
     Pisces: {
-        title: "The Compassionate Mystic",
-        hook: "Fortune blesses the open heart.",
-        coreNature: `Jupiter in Pisces is Jupiter at home in a different way—expansion expressing through compassion, spirituality, and the dissolution of boundaries. This soul grows by opening their heart, by embracing the sacred, by dissolving limitations through love.
+        title: "El místico compasivo",
+        hook: "La fortuna bendice el corazón abierto.",
+        coreNature: `Júpiter en Piscis es Júpiter en casa de una manera diferente: la expansión se expresa a través de la compasión, la espiritualidad y la disolución de las fronteras. Esta alma crece abriendo su corazón, abrazando lo sagrado, disolviendo las limitaciones a través del amor.
 
-They are natural healers and artists, understanding that true expansion includes transcendence. Their optimism is spiritual.`,
+Son curanderos y artistas naturales, y entienden que la verdadera expansión incluye la trascendencia. Su optimismo es espiritual.`,
         
-        expansion: `They expand through compassion and creativity. Helping those who suffer, creating art that touches souls, and connecting with the divine all serve their growth.
+        expansion: `Se expanden a través de la compasión y la creatividad. Ayudar a quienes sufren, crear arte que toque las almas y conectarse con lo divino sirven para su crecimiento.
 
-Surrender fuels their expansion. They grow by letting go, by trusting, by allowing grace rather than forcing achievement.`,
+La rendición alimenta su expansión. Crecen al dejarse llevar, al confiar, al permitir la gracia en lugar de forzar el logro.`,
         
-        wisdom: `Their wisdom is transcendent. They understand what cannot be said, what lies beyond ordinary perception, what heals at the deepest levels.
+        wisdom: `Su sabiduría es trascendente. Entienden lo que no se puede decir, lo que está más allá de la percepción ordinaria, lo que cura en los niveles más profundos.
 
-They teach through presence and creative expression. Their wisdom flows rather than instructs.`,
+Enseñan a través de la presencia y la expresión creativa. Su sabiduría fluye en lugar de instruir.`,
         
-        luck: `Luck finds them through faith. When they trust, when they release, when they open their heart—support appears.
+        luck: `La suerte los encuentra a través de la fe. Cuando confían, cuando se liberan, cuando abren su corazón, aparece el apoyo.
 
-Their guardian angels work through synchronicity and grace. Help comes from unexpected sources; opportunities feel miraculous.`,
+Sus ángeles guardianes trabajan a través de la sincronicidad y la gracia. La ayuda proviene de fuentes inesperadas; Las oportunidades parecen milagrosas.`,
         
-        challenges: `The shadow is escapism and boundary loss. They may dissolve so completely that they lose practical function, or escape into fantasy rather than facing reality.
+        challenges: `La sombra es el escapismo y la pérdida de límites. Pueden disolverse tan completamente que pierdan su función práctica o escapar a la fantasía en lugar de enfrentarse a la realidad.
 
-They may also be naive, trusting where skepticism is needed, giving where discernment is required.`,
+También pueden ser ingenuos, confiar cuando se necesita escepticismo y dar cuando se requiere discernimiento.`,
         
-        parentGuidance: `Honor this child's sensitivity and creativity. They grow through compassion and art. Don't dismiss their spiritual inclinations.
+        parentGuidance: `Honre la sensibilidad y la creatividad de este niño. Crecen a través de la compasión y el arte. No descartes sus inclinaciones espirituales.
 
-Teach them practical skills and healthy boundaries without crushing their tenderness. Help them stay grounded while reaching for transcendence.`,
+Enséñeles habilidades prácticas y límites saludables sin aplastar su ternura. Ayúdalos a mantenerse firmes mientras alcanzan la trascendencia.`,
         
-        affirmation: "My open heart receives and gives abundantly. I trust the flow while keeping my feet on the ground."
+        affirmation: "Mi corazón abierto recibe y da en abundancia. Confío en la corriente manteniendo los pies en la tierra."
     }
 };
 
@@ -371,339 +371,339 @@ Teach them practical skills and healthy boundaries without crushing their tender
 
 var DEEP_SATURN_READINGS = {
     Aries: {
-        title: "The Disciplined Pioneer",
-        hook: "Learning courage through patience.",
-        coreNature: `Saturn in Aries faces their core lessons around independence, courage, and the right to act. This soul is learning to balance self-assertion with responsibility, to be brave while being wise.
+        title: "El pionero disciplinado",
+        hook: "Aprendiendo coraje a través de la paciencia.",
+        coreNature: `Saturno en Aries enfrenta sus lecciones fundamentales sobre la independencia, el coraje y el derecho a actuar. Esta alma está aprendiendo a equilibrar la autoafirmación con la responsabilidad, a ser valiente y al mismo tiempo sabia.
 
-They may have felt blocked or criticized in their initiative, learning that action requires timing and that courage includes patience.`,
+Es posible que se hayan sentido bloqueados o criticados en su iniciativa, al haber aprendido que la acción requiere tiempo y que el coraje incluye paciencia.`,
         
-        lessons: `Their central lesson is about mature assertiveness. Learning to act from wisdom rather than impulse, to lead with accountability, to be courageous without being reckless.
+        lessons: `Su lección central es sobre la asertividad madura. Aprender a actuar con sabiduría en lugar de impulso, a liderar con responsabilidad, a ser valiente sin ser imprudente.
 
-They're learning that true independence includes interdependence, that self-reliance doesn't mean isolation, that strength is patient.`,
+Están aprendiendo que la verdadera independencia incluye la interdependencia, que la autosuficiencia no significa aislamiento, que la fortaleza es la paciencia.`,
         
-        challenges: `Early experiences may have made them doubt their right to initiate, to be first, to take space. Fear of being pushy or selfish may inhibit natural assertiveness.
+        challenges: `Es posible que las primeras experiencias les hayan hecho dudar de su derecho a iniciar, a ser los primeros, a ocupar un espacio. El miedo a ser agresivo o egoísta puede inhibir la asertividad natural.
 
-Or the opposite—they may have over-developed aggression and willfulness, needing to learn restraint and consideration.`,
+O al contrario: es posible que tengan una agresividad y una obstinación excesivamente desarrolladas y necesiten aprender a ser moderados y considerados.`,
         
-        mastery: `Mastery comes when they can act decisively from wisdom rather than impulse, when they lead with both courage and accountability.
+        mastery: `La maestría llega cuando pueden actuar con decisión con sabiduría en lugar de impulso, cuando lideran con valentía y responsabilidad.
 
-They become authorities on effective action, teaching others how to be brave responsibly, how to pioneer sustainably.`,
+Se convierten en autoridades en materia de acción eficaz y enseñan a otros a ser valientes y responsables, a ser pioneros de forma sostenible.`,
         
-        gifts: `Their gifts include strategic courage, earned leadership, and the ability to initiate what actually works. They don't just start things—they start things that last.`,
+        gifts: `Sus dones incluyen coraje estratégico, liderazgo ganado y la capacidad de iniciar lo que realmente funciona. No sólo empiezan cosas, sino que empiezan cosas que perduran.`,
         
-        parentGuidance: `This child needs encouragement to act while learning patience. Don't over-restrict their initiative—they need to develop healthy assertiveness. Also don't let them run wild without accountability.
+        parentGuidance: `Este niño necesita estímulo para actuar mientras aprende a tener paciencia. No restrinja demasiado su iniciativa: necesitan desarrollar una asertividad saludable. Tampoco dejes que se vuelvan locos sin rendir cuentas.
 
-Teach them that timing matters, that courage includes waiting, that true strength is patient. Help them believe they have the right to take up space.`,
+Enséñeles que el tiempo importa, que el coraje incluye esperar, que la verdadera fuerza es la paciencia. Ayúdelos a creer que tienen derecho a ocupar un espacio.`,
         
-        affirmation: "I act with courageous wisdom. My initiative serves what truly matters."
+        affirmation: "Actúo con valiente sabiduría. Mi iniciativa sirve a lo que realmente importa."
     },
     
     Taurus: {
-        title: "The Patient Steward",
-        hook: "Learning security through trust.",
-        coreNature: `Saturn in Taurus faces their core lessons around security, value, and material stability. This soul is learning that true security comes from within, not from accumulation alone.
+        title: "El mayordomo paciente",
+        hook: "Aprender seguridad a través de la confianza.",
+        coreNature: `Saturno en Tauro enfrenta sus lecciones centrales en torno a la seguridad, el valor y la estabilidad material. Esta alma está aprendiendo que la verdadera seguridad proviene del interior, no sólo de la acumulación.
 
-They may have experienced material scarcity or instability, creating either over-focus on financial security or unusual ability to live simply.`,
+Es posible que hayan experimentado escasez o inestabilidad material, lo que les generó una concentración excesiva en la seguridad financiera o una capacidad inusual para vivir con sencillez.`,
         
-        lessons: `Their central lesson is about mature relationship with resources. Learning that security includes sharing, that value isn't only material, that enough is possible.
+        lessons: `Su lección central es la relación madura con los recursos. Aprender que la seguridad incluye compartir, que el valor no es sólo material, que lo suficiente es posible.
 
-They're learning to trust that their needs will be met without gripping, that their worth isn't measured by what they have.`,
+Están aprendiendo a confiar en que sus necesidades serán satisfechas sin aferrarse, que su valor no se mide por lo que tienen.`,
         
-        challenges: `Early experiences may have created scarcity consciousness, a fear that there's never enough, a tendency to hold too tightly to resources.
+        challenges: `Las primeras experiencias pueden haber creado una conciencia de escasez, un miedo a que nunca hay suficiente, una tendencia a aferrarse demasiado a los recursos.
 
-Or they may have experienced abundance that created different lessons about value and what truly matters.`,
+O tal vez hayan experimentado una abundancia que generó diferentes lecciones sobre el valor y lo que realmente importa.`,
         
-        mastery: `Mastery comes when they can provide sustainably, build wisely, and hold resources with open hands. They become true stewards rather than mere accumulators.
+        mastery: `El dominio llega cuando pueden proporcionar de manera sostenible, construir sabiamente y conservar los recursos con las manos abiertas. Se convierten en verdaderos administradores en lugar de meros acumuladores.
 
-They teach others about real value, about enough, about security that doesn't require constant accumulation.`,
+Enseñan a otros sobre el valor real, sobre lo suficiente, sobre la seguridad que no requiere una acumulación constante.`,
         
-        gifts: `Their gifts include financial wisdom, patient building, and the ability to create lasting material security. They understand how to build what endures.`,
+        gifts: `Sus dones incluyen sabiduría financiera, desarrollo paciente y la capacidad de crear seguridad material duradera. Saben cómo construir lo que perdura.`,
         
-        parentGuidance: `This child needs to learn healthy relationship with money and resources. Don't create scarcity consciousness through excessive restriction or anxiety about money.
+        parentGuidance: `Este niño necesita aprender a tener una relación sana con el dinero y los recursos. No crees conciencia de escasez mediante restricciones excesivas o ansiedad por el dinero.
 
-Teach them that they are valuable regardless of what they have, that security includes generosity, that simple living can be rich living.`,
+Enséñeles que son valiosos independientemente de lo que tengan, que la seguridad incluye la generosidad, que una vida sencilla puede convertirse en una vida rica.`,
         
-        affirmation: "I create security through wisdom and trust. I am valuable beyond what I have."
+        affirmation: "Creo seguridad a través de la sabiduría y la confianza. Soy valioso más allá de lo que tengo."
     },
     
     Gemini: {
-        title: "The Thoughtful Speaker",
-        hook: "Learning wisdom through careful words.",
-        coreNature: `Saturn in Gemini faces their core lessons around communication, learning, and mental expression. This soul is learning to think deeply, speak carefully, and learn thoroughly.
+        title: "El orador reflexivo",
+        hook: "Aprendiendo sabiduría a través de palabras cuidadosas.",
+        coreNature: `Saturno en Géminis enfrenta sus lecciones centrales en torno a la comunicación, el aprendizaje y la expresión mental. Esta alma está aprendiendo a pensar profundamente, hablar con atención y aprender a fondo.
 
-They may have felt inadequate about their intelligence or faced challenges in learning, driving them toward mental mastery.`,
+Es posible que se hayan sentido inadecuados con respecto a su inteligencia o hayan enfrentado desafíos en el aprendizaje, lo que los impulsó hacia el dominio mental.`,
         
-        lessons: `Their central lesson is about mature communication. Learning that words have weight, that knowledge requires depth, that the mind is a tool to be developed.
+        lessons: `Su lección central es la comunicación madura. Aprender que las palabras tienen peso, que el conocimiento requiere profundidad, que la mente es una herramienta a desarrollar.
 
-They're learning to think before speaking, to study before teaching, to listen as carefully as they speak.`,
+Están aprendiendo a pensar antes de hablar, a estudiar antes de enseñar, a escuchar con tanta atención como hablan.`,
         
-        challenges: `Early experiences may have created doubt about their intelligence, fear of speaking up, or shame about their ideas.
+        challenges: `Las primeras experiencias pueden haber creado dudas sobre su inteligencia, miedo a hablar o vergüenza por sus ideas.
 
-Or they may have talked too much without substance, needing to learn that silence has value and that not every thought needs expression.`,
+O tal vez hayan hablado demasiado sin sustancia, necesitando aprender que el silencio tiene valor y que no todos los pensamientos necesitan expresión.`,
         
-        mastery: `Mastery comes when they can communicate with authority, when their words carry weight earned through careful thinking.
+        mastery: `La maestría llega cuando pueden comunicarse con autoridad, cuando sus palabras tienen un peso ganado a través de un pensamiento cuidadoso.
 
-They teach others to think critically, to speak wisely, to value substance over cleverness.`,
+Enseñan a otros a pensar críticamente, a hablar sabiamente, a valorar la sustancia por encima de la inteligencia.`,
         
-        gifts: `Their gifts include mental discipline, structured learning, and the ability to communicate complex ideas clearly. They think thoroughly and speak effectively.`,
+        gifts: `Sus dones incluyen disciplina mental, aprendizaje estructurado y la capacidad de comunicar ideas complejas con claridad. Piensan detenidamente y hablan con eficacia.`,
         
-        parentGuidance: `This child needs encouragement about their intelligence while learning to think carefully. Don't dismiss their ideas—help them develop them. Don't let them chatter without substance.
+        parentGuidance: `Este niño necesita estímulo sobre su inteligencia mientras aprende a pensar con cuidado. No descarte sus ideas; ayúdelos a desarrollarlas. No dejes que hablen sin sustancia.
 
-Teach them that silence is wise, that listening teaches, that depth matters more than breadth.`,
+Enséñeles que el silencio es sabio, que escuchar enseña, que la profundidad importa más que la amplitud.`,
         
-        affirmation: "I think deeply and speak wisely. My words carry weight because they're carefully chosen."
+        affirmation: "Pienso profundamente y hablo sabiamente. Mis palabras tienen peso porque son elegidas cuidadosamente."
     },
     
     Cancer: {
-        title: "The Resilient Nurturer",
-        hook: "Learning security through self-care.",
-        coreNature: `Saturn in Cancer faces their core lessons around emotional security, family, and the ability to nurture. This soul is learning to create internal safety, to mother themselves, to build home from within.
+        title: "El cuidador resiliente",
+        hook: "Aprender la seguridad a través del autocuidado.",
+        coreNature: `Saturno en Cáncer enfrenta sus lecciones centrales sobre la seguridad emocional, la familia y la capacidad de cuidar. Esta alma está aprendiendo a crear seguridad interna, a ser madre de sí misma, a construir un hogar desde dentro.
 
-They may have experienced emotional lack or family difficulties, creating deep work around belonging and care.`,
+Es posible que hayan experimentado carencia emocional o dificultades familiares, creando un trabajo profundo en torno a la pertenencia y el cuidado.`,
         
-        lessons: `Their central lesson is about mature emotional life. Learning to feel without drowning, to care without losing themselves, to need without being needy.
+        lessons: `Su lección central es sobre la vida emocional madura. Aprender a sentir sin ahogarse, a cuidar sin perderse, a necesitar sin necesitar.
 
-They're learning to parent themselves, to create internal security, to find home wherever they are.`,
+Están aprendiendo a ser padres, a crear seguridad interna, a encontrar un hogar dondequiera que estén.`,
         
-        challenges: `Early experiences may have created emotional walls, difficulty receiving nurture, or fear of their own vulnerability.
+        challenges: `Las primeras experiencias pueden haber creado muros emocionales, dificultad para recibir cuidados o miedo a su propia vulnerabilidad.
 
-Or they may have become overly dependent on others for emotional security, needing to develop self-sustaining safety.`,
+O es posible que se hayan vuelto demasiado dependientes de los demás para su seguridad emocional y necesiten desarrollar una seguridad autosostenible.`,
         
-        mastery: `Mastery comes when they can nurture from overflow rather than emptiness, when their emotional security is internally sourced.
+        mastery: `La maestría llega cuando pueden nutrirse del desbordamiento en lugar del vacío, cuando su seguridad emocional tiene un origen interno.
 
-They teach others about real emotional safety, about healthy vulnerability, about home as internal reality.`,
+Enseñan a otros sobre la verdadera seguridad emocional, sobre la vulnerabilidad saludable, sobre el hogar como realidad interna.`,
         
-        gifts: `Their gifts include emotional resilience, mature nurturing, and the ability to create true security for themselves and others.`,
+        gifts: `Sus dones incluyen resiliencia emocional, crianza madura y la capacidad de crear verdadera seguridad para ellos y los demás.`,
         
-        parentGuidance: `This child needs consistent emotional presence while learning to self-soothe. Don't dismiss their feelings—help them process them. Don't over-protect—help them develop resilience.
+        parentGuidance: `Este niño necesita una presencia emocional constante mientras aprende a calmarse. No descartes sus sentimientos; ayúdalos a procesarlos. No sobreproteja: ayúdelos a desarrollar resiliencia.
 
-Teach them that they can create their own safety, that emotions are manageable, that home is something they carry within.`,
+Enséñeles que pueden crear su propia seguridad, que las emociones son manejables, que el hogar es algo que llevan dentro.`,
         
-        affirmation: "I create emotional safety from within. I nurture myself and others from overflow."
+        affirmation: "Creo seguridad emocional desde dentro. Me nutro a mí mismo y a los demás desde el desbordamiento."
     },
     
     Leo: {
-        title: "The Humble King",
-        hook: "Learning confidence through substance.",
-        coreNature: `Saturn in Leo faces their core lessons around self-expression, creativity, and the right to shine. This soul is learning to shine from achievement rather than display, to create from discipline rather than inspiration alone.
+        title: "El Rey Humilde",
+        hook: "Aprender la confianza a través de la sustancia.",
+        coreNature: `Saturno en Leo enfrenta sus lecciones centrales sobre la autoexpresión, la creatividad y el derecho a brillar. Esta alma está aprendiendo a brillar por los logros en lugar de por la exhibición, a crear a partir de la disciplina en lugar de solo por la inspiración.
 
-They may have felt blocked in self-expression, criticized for creativity, or struggled with the balance between confidence and humility.`,
+Es posible que se hayan sentido bloqueados en la autoexpresión, criticados por su creatividad o luchados con el equilibrio entre confianza y humildad.`,
         
-        lessons: `Their central lesson is about mature self-expression. Learning that true confidence is earned, that creativity requires craft, that the spotlight follows substance.
+        lessons: `Su lección central es sobre la autoexpresión madura. Aprender que la verdadera confianza se gana, que la creatividad requiere habilidad, que la atención sigue a la sustancia.
 
-They're learning to shine by being excellent rather than by demanding attention, to lead through contribution rather than charisma alone.`,
+Están aprendiendo a brillar siendo excelentes en lugar de exigir atención, a liderar mediante la contribución y no sólo con el carisma.`,
         
-        challenges: `Early experiences may have dimmed their light, created doubt about their creative worth, or blocked playfulness and joy.
+        challenges: `Las primeras experiencias pueden haber atenuado su luz, creado dudas sobre su valor creativo o bloqueado la alegría y el juego.
 
-Or they may have been over-praised, needing to learn that real confidence comes from competence, not compliments.`,
+O tal vez hayan sido demasiado elogiados y necesiten aprender que la verdadera confianza proviene de la competencia, no de los elogios.`,
         
-        mastery: `Mastery comes when they can lead with quiet authority, when their creative work speaks for itself, when their light shines from achievement.
+        mastery: `La maestría llega cuando pueden liderar con tranquila autoridad, cuando su trabajo creativo habla por sí solo, cuando su luz brilla a partir de los logros.
 
-They teach others about earned confidence, about disciplined creativity, about leadership that serves.`,
+Enseñan a otros acerca de la confianza ganada, la creatividad disciplinada y el liderazgo que sirve.`,
         
-        gifts: `Their gifts include mature leadership, disciplined creativity, and the ability to shine sustainably. Their light is steady rather than flashy.`,
+        gifts: `Sus dones incluyen un liderazgo maduro, creatividad disciplinada y la capacidad de brillar de manera sostenible. Su luz es más fija que llamativa.`,
         
-        parentGuidance: `This child needs encouragement to express while learning that substance matters. Don't crush their playfulness—develop it. Don't over-praise—help them build real confidence.
+        parentGuidance: `Este niño necesita estímulo para expresarse mientras aprende que la sustancia importa. No aplastes su alegría: desarrollala. No elogie demasiado; ayúdelos a desarrollar una verdadera confianza.
 
-Teach them that creative discipline is freedom, that earned recognition lasts, that humble confidence is the most attractive kind.`,
+Enséñeles que la disciplina creativa es libertad, que el reconocimiento ganado perdura, que la confianza humilde es la más atractiva.`,
         
-        affirmation: "I shine through my contributions. My confidence grows from what I create."
+        affirmation: "Brillo a través de mis contribuciones. Mi confianza crece a partir de lo que creo."
     },
     
     Virgo: {
-        title: "The Patient Perfecter",
-        hook: "Learning excellence through acceptance.",
-        coreNature: `Saturn in Virgo faces their core lessons around service, skill, and the pursuit of excellence. This soul is learning to work effectively without being enslaved by perfection, to help without self-abandonment.
+        title: "El paciente perfeccionador",
+        hook: "Aprender la excelencia a través de la aceptación.",
+        coreNature: `Saturno en Virgo enfrenta sus lecciones centrales en torno al servicio, las habilidades y la búsqueda de la excelencia. Esta alma está aprendiendo a trabajar eficazmente sin dejarse esclavizar por la perfección, a ayudar sin abandonarse.
 
-They may have felt never good enough, driving them toward either excessive perfectionism or avoidance of effort.`,
+Es posible que nunca se hayan sentido lo suficientemente buenos, lo que los llevó hacia un perfeccionismo excesivo o hacia la evitación del esfuerzo.`,
         
-        lessons: `Their central lesson is about mature competence. Learning that good enough is excellent, that service includes self-care, that criticism serves growth rather than destruction.
+        lessons: `Su lección central es sobre la competencia madura. Aprender que lo suficientemente bueno es excelente, que el servicio incluye el autocuidado, que la crítica sirve al crecimiento y no a la destrucción.
 
-They're learning to work well without working obsessively, to improve without punishing themselves for imperfection.`,
+Están aprendiendo a trabajar bien sin trabajar obsesivamente, a mejorar sin castigarse por la imperfección.`,
         
-        challenges: `Early experiences may have created impossible standards, chronic self-criticism, or health issues connected to stress.
+        challenges: `Las primeras experiencias pueden haber creado estándares imposibles, autocrítica crónica o problemas de salud relacionados con el estrés.
 
-Or they may have avoided effort entirely, needing to learn that disciplined work creates satisfaction.`,
+O tal vez hayan evitado el esfuerzo por completo, necesitando aprender que el trabajo disciplinado genera satisfacción.`,
         
-        mastery: `Mastery comes when they can pursue excellence without perfectionism, when they can serve effectively while caring for themselves.
+        mastery: `La maestría llega cuando pueden perseguir la excelencia sin perfeccionismo, cuando pueden servir eficazmente mientras se preocupan por sí mismos.
 
-They teach others about healthy standards, about work as service, about improvement without self-destruction.`,
+Enseñan a otros sobre normas saludables, sobre el trabajo como servicio, sobre la mejora sin autodestrucción.`,
         
-        gifts: `Their gifts include exceptional competence, efficient systems, and the ability to improve anything they touch. Their standards elevate everything around them.`,
+        gifts: `Sus dones incluyen una competencia excepcional, sistemas eficientes y la capacidad de mejorar todo lo que tocan. Sus estándares elevan todo lo que los rodea.`,
         
-        parentGuidance: `This child needs help developing skills without crushing their confidence. Don't add criticism—they provide plenty themselves. Celebrate improvement, not just perfection.
+        parentGuidance: `Este niño necesita ayuda para desarrollar habilidades sin arruinar su confianza. No agregue críticas: ellos mismos brindan muchas. Celebre la mejora, no solo la perfección.
 
-Teach them that rest is productive, that good enough is excellent, that their worth isn't measured by their output.`,
+Enséñeles que el descanso es productivo, que lo suficientemente bueno es excelente y que su valor no se mide por su rendimiento.`,
         
-        affirmation: "My skilled work serves with wisdom. I pursue excellence while accepting my humanity."
+        affirmation: "Mi trabajo especializado sirve con sabiduría. Busco la excelencia mientras acepto mi humanidad."
     },
     
     Libra: {
-        title: "The Balanced Partner",
-        hook: "Learning harmony through honest negotiation.",
-        coreNature: `Saturn in Libra is Saturn exalted—discipline expressing through balance, fairness, and mature relationship. This soul is learning that true partnership requires work, that harmony must be built, not just wished for.
+        title: "El socio equilibrado",
+        hook: "Aprender la armonía a través de una negociación honesta.",
+        coreNature: `Saturno en Libra es Saturno exaltado: la disciplina se expresa a través del equilibrio, la justicia y las relaciones maduras. Esta alma está aprendiendo que la verdadera asociación requiere trabajo, que la armonía debe construirse, no sólo desearse.
 
-They may have experienced relationship challenges that taught them to take connection seriously.`,
+Es posible que hayan experimentado desafíos en las relaciones que les enseñaron a tomar en serio la conexión.`,
         
-        lessons: `Their central lesson is about mature relationship. Learning that love requires effort, that fairness sometimes means conflict, that true harmony includes honest negotiation.
+        lessons: `Su lección central es sobre las relaciones maduras. Aprender que el amor requiere esfuerzo, que la justicia a veces significa conflicto, que la verdadera armonía incluye una negociación honesta.
 
-They're learning to commit seriously, to work through difficulty rather than avoid it, to build partnership that lasts.`,
+Están aprendiendo a comprometerse seriamente, a superar las dificultades en lugar de evitarlas, a construir una asociación duradera.`,
         
-        challenges: `Early experiences may have created fear of commitment, relationship cynicism, or over-seriousness about partnership.
+        challenges: `Las primeras experiencias pueden haber creado miedo al compromiso, cinismo en las relaciones o excesiva seriedad en la relación de pareja.
 
-Or they may have stayed in unbalanced relationships too long, needing to learn that leaving can be the fair choice.`,
+O tal vez hayan permanecido en relaciones desequilibradas durante demasiado tiempo y necesiten aprender que irse puede ser la elección justa.`,
         
-        mastery: `Mastery comes when they can build lasting partnerships through honest work, when they can create fairness without avoiding conflict.
+        mastery: `La maestría llega cuando pueden construir asociaciones duraderas a través del trabajo honesto, cuando pueden crear justicia sin evitar conflictos.
 
-They teach others about sustainable relationship, about the work of love, about harmony that includes truth.`,
+Enseñan a otros sobre las relaciones sostenibles, sobre el trabajo del amor, sobre la armonía que incluye la verdad.`,
         
-        gifts: `Their gifts include relationship wisdom, fair dealing, and the ability to build partnerships that stand the test of time.`,
+        gifts: `Sus dones incluyen sabiduría en las relaciones, trato justo y la capacidad de construir asociaciones que resistan la prueba del tiempo.`,
         
-        parentGuidance: `This child is learning about relationship through their family. Model healthy partnership—the work, the fairness, the honest negotiation.
+        parentGuidance: `Este niño está aprendiendo sobre las relaciones a través de su familia. Modele una asociación saludable: el trabajo, la justicia, la negociación honesta.
 
-Teach them that love requires effort, that conflict can be healthy, that they can be whole alone while better together.`,
+Enséñeles que el amor requiere esfuerzo, que el conflicto puede ser saludable, que pueden estar completos solos y mejor juntos.`,
         
-        affirmation: "I build lasting partnerships through honest work. My relationships are fair and true."
+        affirmation: "Construyo asociaciones duraderas a través del trabajo honesto. Mis relaciones son justas y verdaderas."
     },
     
     Scorpio: {
-        title: "The Fearless Transformer",
-        hook: "Learning power through surrender.",
-        coreNature: `Saturn in Scorpio faces their core lessons around power, transformation, and the embrace of shadow. This soul is learning to wield power wisely, to transform rather than destroy, to face the dark without being consumed.
+        title: "El transformador intrépido",
+        hook: "Aprender el poder a través de la rendición.",
+        coreNature: `Saturno en Escorpio enfrenta sus lecciones centrales en torno al poder, la transformación y la aceptación de la sombra. Esta alma está aprendiendo a ejercer el poder sabiamente, a transformar en lugar de destruir, a enfrentar la oscuridad sin ser consumida.
 
-They may have experienced power struggles, loss, or crisis that demanded they develop strength from depths.`,
+Es posible que hayan experimentado luchas de poder, pérdidas o crisis que les exigieron desarrollar fuerza desde lo más profundo.`,
         
-        lessons: `Their central lesson is about mature power. Learning that real power includes letting go, that transformation requires surrender, that the shadow serves healing.
+        lessons: `Su lección central es sobre el poder maduro. Aprender que el verdadero poder incluye dejar ir, que la transformación requiere entrega, que la sombra sirve para curar.
 
-They're learning to face fear without numbing, to hold power without abusing it, to die and rise again consciously.`,
+Están aprendiendo a enfrentar el miedo sin adormecerse, a mantener el poder sin abusar de él, a morir y resucitar conscientemente.`,
         
-        challenges: `Early experiences may have created control issues, fear of vulnerability, or traumatic relationship with power.
+        challenges: `Las primeras experiencias pueden haber creado problemas de control, miedo a la vulnerabilidad o una relación traumática con el poder.
 
-Or they may have avoided their power entirely, needing to learn that strength is their birthright.`,
+O tal vez hayan evitado su poder por completo, necesitando aprender que la fuerza es su derecho de nacimiento.`,
         
-        mastery: `Mastery comes when they can transform with wisdom, when they wield power for healing, when they face the dark without flinching.
+        mastery: `La maestría llega cuando pueden transformarse con sabiduría, cuando ejercen el poder para sanar, cuando enfrentan la oscuridad sin inmutarse.
 
-They teach others about real power, about healthy transformation, about the strength found in surrender.`,
+Enseñan a otros sobre el poder real, sobre la transformación saludable, sobre la fuerza que se encuentra en la rendición.`,
         
-        gifts: `Their gifts include unshakeable strength, transformative wisdom, and the ability to help others through their own dark nights.`,
+        gifts: `Sus dones incluyen una fuerza inquebrantable, una sabiduría transformadora y la capacidad de ayudar a otros en sus propias noches oscuras.`,
         
-        parentGuidance: `This child needs help with power—both claiming it and using it wisely. Don't engage in power struggles—model healthy power. Help them process intense experiences.
+        parentGuidance: `Este niño necesita ayuda con el poder, tanto para reclamarlo como para usarlo sabiamente. No participe en luchas de poder: modele un poder saludable. Ayúdelos a procesar experiencias intensas.
 
-Teach them that vulnerability is strength, that letting go is power, that they can face anything that life brings.`,
+Enséñeles que la vulnerabilidad es fuerza, que dejar ir es poder, que pueden afrontar cualquier cosa que les depare la vida.`,
         
-        affirmation: "I wield power with wisdom and surrender. I transform what I touch into healing."
+        affirmation: "Ejerzo el poder con sabiduría y rendición. Transformo lo que toco en sanación."
     },
     
     Sagittarius: {
-        title: "The Grounded Seeker",
-        hook: "Learning wisdom through humility.",
-        coreNature: `Saturn in Sagittarius faces their core lessons around meaning, truth, and the right to believe. This soul is learning to build faith that survives testing, to seek wisdom with humility, to teach with authority earned through experience.
+        title: "El buscador fundamentado",
+        hook: "Aprendiendo sabiduría a través de la humildad.",
+        coreNature: `Saturno en Sagitario enfrenta sus lecciones centrales sobre el significado, la verdad y el derecho a creer. Esta alma está aprendiendo a construir una fe que sobreviva las pruebas, a buscar sabiduría con humildad, a enseñar con autoridad ganada a través de la experiencia.
 
-They may have experienced beliefs challenged or expanded, creating mature relationship with truth.`,
+Es posible que hayan experimentado creencias cuestionadas o ampliadas, creando una relación madura con la verdad.`,
         
-        lessons: `Their central lesson is about mature faith. Learning that truth includes doubt, that wisdom requires humility, that teaching must follow learning.
+        lessons: `Su lección central es acerca de la fe madura. Aprender que la verdad incluye la duda, que la sabiduría requiere humildad, que la enseñanza debe seguir al aprendizaje.
 
-They're learning to hold beliefs lightly while acting on them firmly, to seek truth without claiming to own it.`,
+Están aprendiendo a mantener sus creencias a la ligera mientras actúan en consecuencia con firmeza, a buscar la verdad sin pretender poseerla.`,
         
-        challenges: `Early experiences may have created doubt about meaning, cynicism about belief, or excessive rigidity in worldview.
+        challenges: `Las primeras experiencias pueden haber creado dudas sobre el significado, cinismo sobre las creencias o rigidez excesiva en la visión del mundo.
 
-Or they may have been so expanded that grounding was lost, needing to learn that the body and present moment hold truth too.`,
+O es posible que se hayan expandido tanto que se perdió la base, necesitando aprender que el cuerpo y el momento presente también contienen la verdad.`,
         
-        mastery: `Mastery comes when they can teach with authority and humility, when their faith is both strong and flexible.
+        mastery: `La maestría llega cuando pueden enseñar con autoridad y humildad, cuando su fe es fuerte y flexible.
 
-They teach others about tested faith, about humble wisdom, about meaning that survives doubt.`,
+Enseñan a otros sobre la fe probada, sobre la sabiduría humilde, sobre el significado que sobrevive a la duda.`,
         
-        gifts: `Their gifts include grounded wisdom, authoritative teaching, and the ability to find meaning that endures.`,
+        gifts: `Sus dones incluyen sabiduría fundamentada, enseñanza autorizada y la capacidad de encontrar un significado duradero.`,
         
-        parentGuidance: `This child is developing their worldview. Don't impose beliefs—help them explore. Don't dismiss their seeking—guide it.
+        parentGuidance: `Este niño está desarrollando su visión del mundo. No impongas creencias; ayúdalos a explorar. No descartes su búsqueda; guíala.
 
-Teach them that doubt serves faith, that no one owns the truth, that the best teachers remain students.`,
+Enséñales que la duda sirve a la fe, que nadie es dueño de la verdad, que los mejores maestros siguen siendo los estudiantes.`,
         
-        affirmation: "I seek truth with humble authority. My faith is tested and strong."
+        affirmation: "Busco la verdad con humilde autoridad. Mi fe es probada y fuerte."
     },
     
     Capricorn: {
-        title: "The Wise Master",
-        hook: "Learning achievement through purpose.",
-        coreNature: `Saturn in Capricorn is Saturn at home—discipline expressing in its most natural, focused form. This soul is learning mastery, achievement, and the responsible use of authority.
+        title: "El sabio maestro",
+        hook: "Logro del aprendizaje a través del propósito.",
+        coreNature: `Saturno en Capricornio es Saturno en casa: la disciplina se expresa en su forma más natural y enfocada. Esta alma está aprendiendo el dominio, el logro y el uso responsable de la autoridad.
 
-They may feel the weight of responsibility early, driving them toward maturity and achievement.`,
+Es posible que sientan temprano el peso de la responsabilidad, lo que los impulsará hacia la madurez y el logro.`,
         
-        lessons: `Their central lesson is about mature authority. Learning that real success serves others, that achievement requires purpose, that power is responsibility.
+        lessons: `Su lección central es acerca de la autoridad madura. Aprender que el verdadero éxito sirve a los demás, que el logro requiere un propósito, que el poder es responsabilidad.
 
-They're learning to build what matters, to lead with integrity, to achieve without losing their humanity.`,
+Están aprendiendo a construir lo que importa, a liderar con integridad y a lograr logros sin perder su humanidad.`,
         
-        challenges: `Early experiences may have created excessive seriousness, fear of failure, or over-identification with achievement.
+        challenges: `Las experiencias tempranas pueden haber creado una seriedad excesiva, miedo al fracaso o una identificación excesiva con el logro.
 
-Or they may have rejected responsibility entirely, needing to learn that structure creates freedom.`,
+O tal vez hayan rechazado la responsabilidad por completo, necesitando aprender que la estructura crea libertad.`,
         
-        mastery: `Mastery comes when they achieve what truly matters, when their authority serves, when their building includes enjoyment.
+        mastery: `La maestría llega cuando logran lo que realmente importa, cuando su autoridad sirve, cuando su construcción incluye el disfrute.
 
-They teach others about real success, about responsible power, about achievement that includes life.`,
+Enseñan a otros sobre el éxito real, sobre el poder responsable, sobre el logro que incluye la vida.`,
         
-        gifts: `Their gifts include focused achievement, natural authority, and the ability to build what stands the test of time.`,
+        gifts: `Sus dones incluyen logros enfocados, autoridad natural y la capacidad de construir lo que resiste la prueba del tiempo.`,
         
-        parentGuidance: `This child feels responsibility deeply. Don't add weight—help them find joy alongside duty. Don't dismiss their ambition—direct it toward meaning.
+        parentGuidance: `Este niño siente profundamente la responsabilidad. No agregue peso; ayúdelos a encontrar la alegría junto con el deber. No descartes su ambición: dirígela hacia el significado.
 
-Teach them that rest is achievement, that relationships matter as much as results, that the journey is the destination.`,
+Enséñeles que el descanso es un logro, que las relaciones importan tanto como los resultados, que el viaje es el destino.`,
         
-        affirmation: "I build what truly matters. My authority serves with wisdom and integrity."
+        affirmation: "Construyo lo que realmente importa. Mi autoridad sirve con sabiduría e integridad."
     },
     
     Aquarius: {
-        title: "The Committed Visionary",
-        hook: "Learning individuality through contribution.",
-        coreNature: `Saturn in Aquarius faces their core lessons around individuality, community, and the right to be different. This soul is learning to contribute their uniqueness sustainably, to be original within structure.
+        title: "El visionario comprometido",
+        hook: "Aprender la individualidad a través de la contribución.",
+        coreNature: `Saturno en Acuario enfrenta sus lecciones centrales sobre la individualidad, la comunidad y el derecho a ser diferente. Esta alma está aprendiendo a aportar su singularidad de manera sostenible, a ser original dentro de la estructura.
 
-They may have felt their difference criticized or their ideas ahead of their time.`,
+Es posible que hayan sentido que se criticaba su diferencia o que sus ideas se adelantaban a su tiempo.`,
         
-        lessons: `Their central lesson is about mature individuality. Learning that true originality serves the collective, that rebellion can be responsible, that the future needs builders.
+        lessons: `Su lección central es sobre la individualidad madura. Aprender que la verdadera originalidad sirve al colectivo, que la rebelión puede ser responsable, que el futuro necesita constructores.
 
-They're learning to be different in ways that help, to innovate sustainably, to contribute their uniqueness effectively.`,
+Están aprendiendo a ser diferentes de maneras que ayuden, a innovar de manera sostenible y a contribuir con su singularidad de manera efectiva.`,
         
-        challenges: `Early experiences may have created fear of being different, or the opposite—rebelliousness that sabotages rather than builds.
+        challenges: `Las primeras experiencias pueden haber creado miedo a ser diferente, o lo contrario: rebeldía que sabotea en lugar de construir.
 
-They may have felt alienated from groups, needing to learn that individuality and belonging can coexist.`,
+Es posible que se hayan sentido alienados de los grupos y necesiten aprender que la individualidad y la pertenencia pueden coexistir.`,
         
-        mastery: `Mastery comes when they can innovate within structure, when their uniqueness serves the collective, when they belong without losing themselves.
+        mastery: `La maestría llega cuando pueden innovar dentro de la estructura, cuando su singularidad sirve al colectivo, cuando pertenecen sin perderse a sí mismos.
 
-They teach others about sustainable innovation, about responsible rebellion, about individuality that includes connection.`,
+Enseñan a otros sobre innovación sostenible, sobre rebelión responsable, sobre individualidad que incluye conexión.`,
         
-        gifts: `Their gifts include structured innovation, sustainable vision, and the ability to bring the future into practical reality.`,
+        gifts: `Sus dones incluyen innovación estructurada, visión sostenible y la capacidad de hacer realidad el futuro.`,
         
-        parentGuidance: `This child needs permission to be different while learning to contribute. Don't force conformity—help them channel uniqueness. Don't encourage rebellion for its own sake.
+        parentGuidance: `Este niño necesita permiso para ser diferente mientras aprende a contribuir. No fuerces la conformidad; ayúdalos a canalizar la singularidad. No fomentes la rebelión por sí misma.
 
-Teach them that they can be original and connected, that innovation requires patience, that the future needs builders, not just visionaries.`,
+Enséñeles que pueden ser originales y estar conectados, que la innovación requiere paciencia, que el futuro necesita constructores, no sólo visionarios.`,
         
-        affirmation: "I contribute my uniqueness responsibly. I innovate in ways that truly help."
+        affirmation: "Aporto mi singularidad de manera responsable. Innovo de maneras que realmente ayudan."
     },
     
     Pisces: {
-        title: "The Grounded Mystic",
-        hook: "Learning transcendence through discipline.",
-        coreNature: `Saturn in Pisces faces their core lessons around spirituality, imagination, and the relationship between the practical and the transcendent. This soul is learning to bring spirit into form, to dream in ways that manifest.
+        title: "El místico fundamentado",
+        hook: "Aprender la trascendencia a través de la disciplina.",
+        coreNature: `Saturno en Piscis enfrenta sus lecciones centrales en torno a la espiritualidad, la imaginación y la relación entre lo práctico y lo trascendente. Esta alma está aprendiendo a darle forma al espíritu, a soñar de manera que se manifieste.
 
-They may have felt their sensitivity criticized or their imagination dismissed as impractical.`,
+Es posible que hayan sentido que se criticaba su sensibilidad o que se descartaba su imaginación por considerarla poco práctica.`,
         
-        lessons: `Their central lesson is about mature spirituality. Learning that transcendence requires grounding, that imagination needs form, that compassion includes boundaries.
+        lessons: `Su lección central es sobre la espiritualidad madura. Aprender que la trascendencia requiere conexión a tierra, que la imaginación necesita forma, que la compasión incluye límites.
 
-They're learning to use their gifts practically, to dream in ways that build, to transcend while remaining present.`,
+Están aprendiendo a usar sus dones de manera práctica, a soñar de manera constructiva, a trascender sin dejar de estar presentes.`,
         
-        challenges: `Early experiences may have created fear of their sensitivity, dismissal of spiritual experience, or over-grounding that blocked transcendence.
+        challenges: `Las experiencias tempranas pueden haber creado miedo a su sensibilidad, desestimación de la experiencia espiritual o un exceso de conexión a tierra que bloqueó la trascendencia.
 
-Or they may have escaped so completely that practical life suffered, needing to learn that spirit lives in form too.`,
+O puede que hayan escapado tan completamente que la vida práctica sufrió, necesitando aprender que el espíritu también vive en la forma.`,
         
-        mastery: `Mastery comes when they can manifest their dreams, when spirituality includes practicality, when transcendence is grounded.
+        mastery: `La maestría llega cuando pueden manifestar sus sueños, cuando la espiritualidad incluye lo práctico, cuando la trascendencia está cimentada.
 
-They teach others about practical magic, about grounded spirituality, about bringing heaven to earth.`,
+Enseñan a otros sobre magia práctica, sobre espiritualidad fundamentada, sobre cómo traer el cielo a la tierra.`,
         
-        gifts: `Their gifts include manifested imagination, grounded spirituality, and the ability to bring the invisible into visible form.`,
+        gifts: `Sus dones incluyen imaginación manifestada, espiritualidad sólida y la capacidad de hacer visible lo invisible.`,
         
-        parentGuidance: `This child is sensitive and imaginative. Don't dismiss their inner world—help them express it practically. Don't over-ground them—honor their transcendence.
+        parentGuidance: `Este niño es sensible e imaginativo. No descartes su mundo interior; ayúdalos a expresarlo de manera práctica. No los sobrecargues: honra su trascendencia.
 
-Teach them that dreams need form, that sensitivity is strength, that they can be spiritual and effective.`,
+Enséñales que los sueños necesitan forma, que la sensibilidad es fuerza, que pueden ser espirituales y eficaces.`,
         
-        affirmation: "I bring my dreams into form. My spirituality is grounded and my creativity serves."
+        affirmation: "Doy forma a mis sueños. Mi espiritualidad está cimentada y mi creatividad sirve."
     }
 };
 

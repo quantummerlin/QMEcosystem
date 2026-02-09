@@ -8,159 +8,159 @@
 
 var PART_OF_FORTUNE_READINGS = {
     Aries: {
-        title: "Part of Fortune in Aries - Joy Through Action",
-        keywords: ["Initiative", "Courage", "Independence", "Leadership"],
-        reading: `With the Part of Fortune in Aries, this child finds their greatest joy and natural success through independence, courage, and taking initiative. Their luck flows when they're being bold, starting new things, and leading rather than following.
+        title: "Parte de la fortuna en Aries: alegría a través de la acción",
+        keywords: ["Iniciativa", "Coraje", "Independencia", "Liderazgo"],
+        reading: `Con la Parte de Fortuna en Aries, este niño encuentra su mayor alegría y éxito natural a través de la independencia, el coraje y la toma de iniciativa. Su suerte fluye cuando son audaces, comienzan cosas nuevas y lideran en lugar de seguir.
 
-Fortune favors them when they trust their instincts and act quickly. They have a natural ability to be in the right place at the right time when they're being authentic and assertive. Success comes through pioneering spirit and willingness to go first.
+La suerte les favorece cuando confían en sus instintos y actúan con rapidez. Tienen una habilidad natural para estar en el lugar correcto en el momento correcto cuando son auténticos y asertivos. El éxito se logra mediante el espíritu pionero y la voluntad de ir primero.
 
-Encourage them to start projects, take healthy risks, and develop leadership skills. Their fortune point is activated through physical activity, competitive sports, and situations where they can be first or best. They're learning that their courage itself is a form of luck.
+Anímelos a iniciar proyectos, asumir riesgos saludables y desarrollar habilidades de liderazgo. Su punto de fortuna se activa a través de la actividad física, los deportes competitivos y situaciones en las que pueden quedar primeros o mejores. Están aprendiendo que su coraje en sí mismo es una forma de suerte.
 
-The universe rewards their boldness. When they're hesitant or overly cautious, fortune seems to elude them. When they leap with confidence, doors open magically. Help them trust this inner knowing that action creates opportunity.`,
-        guidance: "Fortune flows through courage and initiative. Encourage bold action and leadership."
+El universo premia su audacia. Cuando dudan o son demasiado cautelosos, la fortuna parece eludirlos. Cuando saltan con confianza, las puertas se abren mágicamente. Ayúdelos a confiar en este conocimiento interno de que la acción crea oportunidades.`,
+        guidance: "La fortuna fluye a través del coraje y la iniciativa. Fomentar la acción y el liderazgo audaces."
     },
     
     Taurus: {
-        title: "Part of Fortune in Taurus - Joy Through Stability",
-        keywords: ["Security", "Beauty", "Resources", "Patience"],
-        reading: `The Part of Fortune in Taurus brings luck through building, creating beauty, and establishing security. This child's greatest joy comes from tangible results, material comfort, and the slow, steady accumulation of valuable things - whether money, skills, or beautiful objects.
+        title: "Parte de la fortuna en Tauro: alegría a través de la estabilidad",
+        keywords: ["Seguridad", "Belleza", "Recursos", "Paciencia"],
+        reading: `La Parte de la Fortuna en Tauro trae suerte al construir, crear belleza y establecer seguridad. La mayor alegría de este niño proviene de los resultados tangibles, la comodidad material y la acumulación lenta y constante de cosas valiosas, ya sea dinero, habilidades u objetos hermosos.
 
-Fortune favors them in matters of finance, nature, art, and anything requiring patience and persistence. They have a natural ability to attract resources and make things grow. Their "green thumb" applies to money, gardens, and creative projects alike.
+La fortuna les favorece en cuestiones de finanzas, naturaleza, arte y todo lo que requiera paciencia y perseverancia. Tienen una habilidad natural para atraer recursos y hacer crecer las cosas. Su "pulgar verde" se aplica tanto al dinero como a los jardines y a los proyectos creativos.
 
-Encourage investment in quality over quantity, connection with nature, and development of artistic talents. Their fortune point activates through singing, cooking, gardening, or working with their hands. Beauty and comfort aren't luxuries for them - they're pathways to success.
+Fomentar la inversión en calidad sobre cantidad, conexión con la naturaleza y desarrollo de talentos artísticos. Su punto de fortuna se activa cantando, cocinando, haciendo jardinería o trabajando con las manos. La belleza y la comodidad no son lujos para ellos: son caminos hacia el éxito.
 
-The universe rewards their patience and appreciation for the physical world. Rushing rarely brings them luck, but steady, sensual engagement with life opens doors. Help them trust that slow growth is real growth and that what they build will last.`,
-        guidance: "Fortune flows through patience, beauty, and building lasting value. Encourage slow, steady growth."
+El universo recompensa su paciencia y aprecio por el mundo físico. Las prisas rara vez les traen suerte, pero el compromiso constante y sensual con la vida les abre puertas. Ayúdelos a confiar en que un crecimiento lento es un crecimiento real y que lo que construyen durará.`,
+        guidance: "La fortuna fluye a través de la paciencia, la belleza y la creación de valor duradero. Fomentar un crecimiento lento y constante."
     },
     
     Gemini: {
-        title: "Part of Fortune in Gemini - Joy Through Connection",
-        keywords: ["Communication", "Curiosity", "Versatility", "Learning"],
-        reading: `With Part of Fortune in Gemini, this child's luck flows through communication, learning, and making connections. Their greatest joy and success come from talking, writing, teaching, and endlessly curious exploration of ideas and people.
+        title: "Parte de la fortuna en Géminis: alegría a través de la conexión",
+        keywords: ["Comunicación", "Curiosidad", "Versatilidad", "Aprendiendo"],
+        reading: `Con Parte de la Fortuna en Géminis, la suerte de este niño fluye a través de la comunicación, el aprendizaje y el establecimiento de conexiones. Su mayor alegría y éxito provienen de hablar, escribir, enseñar y explorar con infinita curiosidad ideas y personas.
 
-Fortune favors them when they're networking, asking questions, reading widely, and sharing information. They seem to "just happen" to meet the right people, find the right book, or hear exactly what they need when they're in a state of open curiosity and communication.
+La suerte les favorece cuando hacen contactos, hacen preguntas, leen mucho y comparten información. Parece que "por casualidad" conocen a las personas adecuadas, encuentran el libro adecuado o escuchan exactamente lo que necesitan cuando se encuentran en un estado de abierta curiosidad y comunicación.
 
-Encourage writing, speaking, studying multiple subjects, and maintaining diverse friendships. Their fortune point activates through social media, blogging, teaching younger children, or any activity involving words and ideas. Siblings and neighbors may also be sources of opportunity.
+Fomente escribir, hablar, estudiar múltiples materias y mantener diversas amistades. Su punto de fortuna se activa a través de las redes sociales, los blogs, la enseñanza a niños más pequeños o cualquier actividad que involucre palabras e ideas. Los hermanos y vecinos también pueden ser fuentes de oportunidades.
 
-The universe rewards their mental agility and social grace. When they're isolated or stuck in one perspective, luck seems to dry up. When they're connecting, conversing, and learning, synchronicities multiply. Help them see that their curiosity itself is a magnet for good fortune.`,
-        guidance: "Fortune flows through communication and curiosity. Encourage wide learning and connection."
+El universo premia su agilidad mental y gracia social. Cuando están aislados o atrapados en una perspectiva, la suerte parece agotarse. Cuando se conectan, conversan y aprenden, las sincronicidades se multiplican. Ayúdelos a ver que su curiosidad en sí misma es un imán de buena suerte.`,
+        guidance: "La fortuna fluye a través de la comunicación y la curiosidad. Fomentar un amplio aprendizaje y conexión."
     },
     
     Cancer: {
-        title: "Part of Fortune in Cancer - Joy Through Nurturing",
-        keywords: ["Family", "Emotions", "Home", "Care"],
-        reading: `The Part of Fortune in Cancer brings luck through family, home, and emotional connection. This child finds their greatest joy and success through nurturing others, creating safe spaces, and honoring their feelings and intuition.
+        title: "Parte de la fortuna en Cáncer: alegría a través de la crianza",
+        keywords: ["Familia", "Emociones", "Hogar", "Cuidado"],
+        reading: `La Parte de la Fortuna en Cáncer trae suerte a través de la familia, el hogar y la conexión emocional. Este niño encuentra su mayor alegría y éxito al cuidar a los demás, crear espacios seguros y honrar sus sentimientos e intuición.
 
-Fortune favors them in domestic matters, family businesses, caregiving roles, and any situation where emotional intelligence matters. They have natural luck with real estate, cooking, childcare, and creating homes that feel like sanctuaries. Their intuition about people and timing is often remarkably accurate.
+La fortuna les favorece en los asuntos domésticos, los negocios familiares, las funciones de cuidado y cualquier situación en la que la inteligencia emocional importe. Tienen suerte natural con los bienes raíces, la cocina, el cuidado de los niños y la creación de hogares que parecen santuarios. Su intuición sobre las personas y el momento oportuno suele ser notablemente precisa.
 
-Encourage cooking, decorating their space, caring for younger siblings or pets, and expressing emotions healthily. Their fortune point activates through family gatherings, creating cozy environments, and trusting gut feelings. What feels right usually is right for them.
+Fomentar la cocina, la decoración de su espacio, el cuidado de los hermanos menores o de las mascotas y la expresión de emociones de forma saludable. Su punto de fortuna se activa a través de reuniones familiares, la creación de ambientes acogedores y la confianza en sus instintos. Lo que les parece correcto suele serlo para ellos.
 
-The universe rewards their emotional authenticity and nurturing nature. When they suppress feelings or ignore family needs, luck wanes. When they create emotional safety for themselves and others, opportunities flow. Help them trust that caring is a strength and that home is their power base.`,
-        guidance: "Fortune flows through nurturing and emotional authenticity. Home and family are power sources."
+El universo recompensa su autenticidad emocional y su naturaleza cariñosa. Cuando reprimen sentimientos o ignoran las necesidades familiares, la suerte disminuye. Cuando crean seguridad emocional para ellos y para los demás, las oportunidades fluyen. Ayúdelos a confiar en que el cariño es una fortaleza y que el hogar es su base de poder.`,
+        guidance: "La fortuna fluye a través de la autenticidad emocional y la crianza. El hogar y la familia son fuentes de energía."
     },
     
     Leo: {
-        title: "Part of Fortune in Leo - Joy Through Expression",
-        keywords: ["Creativity", "Performance", "Joy", "Generosity"],
-        reading: `With Part of Fortune in Leo, this child's luck flows through creative self-expression, performance, and generous sharing of their gifts. Their greatest joy and success come from being seen, celebrated, and allowed to shine authentically.
+        title: "Parte de la fortuna en Leo: alegría a través de la expresión",
+        keywords: ["Creatividad", "Actuación", "Alegría", "Generosidad"],
+        reading: `Con Parte de la Fortuna en Leo, la suerte de este niño fluye a través de la autoexpresión creativa, el desempeño y el compartir generoso de sus dones. Su mayor alegría y éxito provienen de ser vistos, celebrados y permitidos brillar auténticamente.
 
-Fortune favors them on stage, in creative pursuits, in romance, and anywhere they can express their unique personality boldly. They have natural luck in entertainment, arts, working with children, and any field where charisma matters. When they're having fun and being generous, opportunities appear magically.
+La fortuna los favorece en el escenario, en las actividades creativas, en el romance y en cualquier lugar donde puedan expresar con valentía su personalidad única. Tienen suerte natural en el entretenimiento, las artes, el trabajo con niños y cualquier campo donde el carisma sea importante. Cuando se divierten y son generosos, las oportunidades aparecen mágicamente.
 
-Encourage drama, art, music, dance, and any form of creative performance. Their fortune point activates through praise, celebration, and situations where they can be the star. This isn't vanity - it's their actual success pathway. Let them shine.
+Fomente el teatro, el arte, la música, la danza y cualquier forma de actuación creativa. Su punto de fortuna se activa a través de elogios, celebraciones y situaciones en las que puede ser la estrella. Esto no es vanidad: es su verdadero camino hacia el éxito. Déjalos brillar.
 
-The universe rewards their authentic joy and creative courage. When they dim their light to fit in, luck disappears. When they shine unapologetically and share their joy generously, doors open everywhere. Help them understand that their happiness itself creates fortune for themselves and others.`,
-        guidance: "Fortune flows through authentic self-expression and creative joy. Let them shine brightly."
+El universo premia su auténtica alegría y su coraje creativo. Cuando atenúan la luz para encajar, la suerte desaparece. Cuando brillan sin pedir disculpas y comparten generosamente su alegría, las puertas se abren en todas partes. Ayúdelos a comprender que su felicidad misma crea fortuna para ellos y para los demás.`,
+        guidance: "La fortuna fluye a través de la auténtica autoexpresión y la alegría creativa. Déjalos brillar intensamente."
     },
     
     Virgo: {
-        title: "Part of Fortune in Virgo - Joy Through Service",
-        keywords: ["Precision", "Service", "Health", "Improvement"],
-        reading: `The Part of Fortune in Virgo brings luck through service, attention to detail, and practical improvement of whatever they touch. This child finds greatest joy and success through being useful, creating order, and perfecting their skills.
+        title: "Parte de la fortuna en Virgo: alegría a través del servicio",
+        keywords: ["Precisión", "Servicio", "Salud", "Mejora"],
+        reading: `La Parte de la Fortuna en Virgo trae suerte a través del servicio, la atención al detalle y la mejora práctica de todo lo que toca. Este niño encuentra la mayor alegría y éxito al ser útil, crear orden y perfeccionar sus habilidades.
 
-Fortune favors them in health fields, service industries, crafts requiring precision, and any role where quality matters more than quantity. They have natural luck when they're organized, helpful, and focused on making things better. Their eye for detail is actually a form of fortune-seeing.
+La suerte los favorece en los campos de la salud, las industrias de servicios, los oficios que requieren precisión y cualquier función en la que la calidad importe más que la cantidad. Tienen suerte natural cuando son organizados, serviciales y concentrados en mejorar las cosas. Su ojo para los detalles es en realidad una forma de adivinar la fortuna.
 
-Encourage organization systems, helping with household tasks, caring for pets, and developing specialized skills. Their fortune point activates through routine, healthy habits, and opportunities to be genuinely useful. Perfectionism can block them, but excellence opens doors.
+Fomentar los sistemas de organización, ayudar en las tareas del hogar, cuidar de las mascotas y desarrollar habilidades especializadas. Su punto de fortuna se activa a través de la rutina, los hábitos saludables y las oportunidades para ser genuinamente útiles. El perfeccionismo puede bloquearlos, pero la excelencia abre puertas.
 
-The universe rewards their dedication to improvement and service. When they're critical without being constructive, luck stalls. When they apply their skills helpfully and humbly, opportunities multiply. Help them see that being of service is how they serve their own fortune.`,
-        guidance: "Fortune flows through skillful service and attention to detail. Excellence over perfection."
+El universo premia su dedicación a la mejora y al servicio. Cuando son críticos sin ser constructivos, la suerte se estanca. Cuando aplican sus habilidades con ayuda y humildad, las oportunidades se multiplican. Ayúdelos a ver que ser de servicio es la forma en que sirven a su propia fortuna.`,
+        guidance: "La fortuna fluye a través de un servicio hábil y atención al detalle. Excelencia sobre perfección."
     },
     
     Libra: {
-        title: "Part of Fortune in Libra - Joy Through Partnership",
-        keywords: ["Balance", "Relationships", "Beauty", "Harmony"],
-        reading: `With Part of Fortune in Libra, this child's luck flows through relationships, collaboration, and creating beauty and harmony. Their greatest success comes not from solo efforts but through partnership and balanced exchange.
+        title: "Parte de la fortuna en Libra: alegría a través de la asociación",
+        keywords: ["Balance", "Relaciones", "Belleza", "Armonía"],
+        reading: `Con Parte de la Fortuna en Libra, la suerte de este niño fluye a través de las relaciones, la colaboración y la creación de belleza y armonía. Su mayor éxito no proviene de esfuerzos individuales sino de asociaciones y intercambios equilibrados.
 
-Fortune favors them in the arts, law, counseling, design, and any field requiring diplomacy or aesthetic sense. They have natural luck in love and friendship - the right people tend to appear at the right time. Their fortune multiplies when shared with others.
+La fortuna los favorece en las artes, el derecho, el asesoramiento, el diseño y cualquier campo que requiera diplomacia o sentido estético. Tienen suerte natural en el amor y la amistad: las personas adecuadas suelen aparecer en el momento adecuado. Su fortuna se multiplica cuando la comparten con otros.
 
-Encourage collaborative projects, artistic pursuits, conflict resolution skills, and appreciation of beauty. Their fortune point activates through partnerships, social events, and situations requiring fairness and balance. They literally need others to access their full luck potential.
+Fomentar proyectos colaborativos, actividades artísticas, habilidades de resolución de conflictos y apreciación de la belleza. Su punto de fortuna se activa a través de asociaciones, eventos sociales y situaciones que requieren justicia y equilibrio. Literalmente necesitan que otros accedan a todo su potencial de suerte.
 
-The universe rewards their commitment to harmony and justice. When they're alone too much or being unfair, luck fades. When they're creating beauty and building balanced relationships, synchronicities abound. Help them understand that partnership isn't weakness - it's their power source.`,
-        guidance: "Fortune flows through partnership and creating harmony. Collaboration is key to success."
+El universo recompensa su compromiso con la armonía y la justicia. Cuando están demasiado solos o son injustos, la suerte se desvanece. Cuando crean belleza y construyen relaciones equilibradas, abundan las sincronicidades. Ayúdelos a comprender que la asociación no es una debilidad, sino su fuente de poder.`,
+        guidance: "La fortuna fluye a través de la asociación y la creación de armonía. La colaboración es clave para el éxito."
     },
     
     Scorpio: {
-        title: "Part of Fortune in Scorpio - Joy Through Depth",
-        keywords: ["Transformation", "Intensity", "Power", "Truth"],
-        reading: `The Part of Fortune in Scorpio brings luck through depth, transformation, and fearless engagement with life's mysteries. This child finds greatest joy and success through intense focus, emotional honesty, and willingness to transform.
+        title: "Parte de la fortuna en Escorpio: alegría a través de la profundidad",
+        keywords: ["Transformación", "Intensidad", "Fuerza", "Verdad"],
+        reading: `La Parte de la Fortuna en Escorpio trae suerte a través de la profundidad, la transformación y el compromiso valiente con los misterios de la vida. Este niño encuentra la mayor alegría y éxito a través de una concentración intensa, honestidad emocional y voluntad de transformarse.
 
-Fortune favors them in psychology, research, healing, managing resources, and any field requiring depth and courage. They have natural luck with other people's money, shared resources, and situations requiring profound trust. Crisis often reveals their fortune - they're lucky in transformation.
+La fortuna les favorece en psicología, investigación, curación, gestión de recursos y cualquier campo que requiera profundidad y valentía. Tienen suerte natural con el dinero de otras personas, los recursos compartidos y las situaciones que requieren una profunda confianza. Las crisis a menudo revelan su suerte: tienen suerte en la transformación.
 
-Encourage deep interests, research skills, emotional honesty, and exploration of life's mysteries (age-appropriately). Their fortune point activates through profound connections, transformative experiences, and situations requiring real courage. Superficiality blocks their luck.
+Fomente intereses profundos, habilidades de investigación, honestidad emocional y exploración de los misterios de la vida (apropiadamente para la edad). Su punto de fortuna se activa a través de conexiones profundas, experiencias transformadoras y situaciones que requieren verdadero coraje. La superficialidad bloquea su suerte.
 
-The universe rewards their emotional courage and commitment to truth. When they're shallow or dishonest, fortune eludes them. When they go deep and embrace transformation, powerful synchronicities occur. Help them trust that intensity is their gift and depth is their path to success.`,
-        guidance: "Fortune flows through depth and transformation. Encourage emotional courage and profound engagement."
+El universo recompensa su coraje emocional y su compromiso con la verdad. Cuando son superficiales o deshonestos, la fortuna se les escapa. Cuando profundizan y abrazan la transformación, se producen poderosas sincronicidades. Ayúdalos a confiar en que la intensidad es su don y la profundidad es su camino hacia el éxito.`,
+        guidance: "La fortuna fluye a través de la profundidad y la transformación. Fomente el coraje emocional y el compromiso profundo."
     },
     
     Sagittarius: {
-        title: "Part of Fortune in Sagittarius - Joy Through Expansion",
-        keywords: ["Adventure", "Wisdom", "Freedom", "Faith"],
-        reading: `With Part of Fortune in Sagittarius, this child's luck flows through exploration, learning, and expansion beyond the familiar. Their greatest success comes through optimism, adventure, and commitment to growth and truth.
+        title: "Parte de la fortuna en Sagitario: alegría a través de la expansión",
+        keywords: ["Aventura", "Sabiduría", "Libertad", "Fe"],
+        reading: `Con Parte de la Fortuna en Sagitario, la suerte de este niño fluye a través de la exploración, el aprendizaje y la expansión más allá de lo familiar. Su mayor éxito proviene del optimismo, la aventura y el compromiso con el crecimiento y la verdad.
 
-Fortune favors them in travel, education, publishing, teaching, and anything involving different cultures or philosophies. They have remarkable luck when they're traveling, learning, or sharing wisdom. Opportunities often come from far away or through educational pursuits.
+La fortuna los favorece en los viajes, la educación, las publicaciones, la enseñanza y cualquier cosa que involucre diferentes culturas o filosofías. Tienen una suerte extraordinaria cuando viajan, aprenden o comparten sabiduría. Las oportunidades a menudo vienen de lejos o a través de actividades educativas.
 
-Encourage reading widely, travel when possible, learning languages, and exposure to different cultures and beliefs. Their fortune point activates through expansion - physical, mental, or spiritual. Staying small and safe actually blocks their luck.
+Fomentar la lectura amplia, viajar cuando sea posible, aprender idiomas y la exposición a diferentes culturas y creencias. Su punto de fortuna se activa a través de la expansión: física, mental o espiritual. Mantenerse pequeños y seguros en realidad bloquea su suerte.
 
-The universe rewards their faith and willingness to explore. When they're pessimistic or narrow-minded, luck disappears. When they're optimistic and open to adventure, amazing opportunities appear. Help them trust that their wanderlust and wonder are actually fortune-finding tools.`,
-        guidance: "Fortune flows through adventure and expansion. Encourage broad learning and optimistic faith."
+El universo recompensa su fe y voluntad de explorar. Cuando son pesimistas o de mente estrecha, la suerte desaparece. Cuando son optimistas y están abiertos a la aventura, aparecen oportunidades asombrosas. Ayúdelos a confiar en que su pasión por los viajes y sus maravillas son en realidad herramientas para encontrar fortuna.`,
+        guidance: "La fortuna fluye a través de la aventura y la expansión. Fomentar el aprendizaje amplio y la fe optimista."
     },
     
     Capricorn: {
-        title: "Part of Fortune in Capricorn - Joy Through Achievement",
-        keywords: ["Ambition", "Structure", "Mastery", "Recognition"],
-        reading: `The Part of Fortune in Capricorn brings luck through ambition, achievement, and building lasting structures. This child finds greatest joy and success through goals, hard work, and earning recognition through genuine accomplishment.
+        title: "Parte de la fortuna en Capricornio: alegría a través de los logros",
+        keywords: ["Ambición", "Estructura", "Maestría", "Reconocimiento"],
+        reading: `La Parte de la Fortuna en Capricornio trae suerte a través de la ambición, los logros y la construcción de estructuras duraderas. Este niño encuentra la mayor alegría y éxito a través de metas, trabajo duro y reconocimiento a través de logros genuinos.
 
-Fortune favors them in business, leadership, traditional fields, and any arena requiring patience and strategic planning. They have natural luck with authority figures, career advancement, and public success. Time is their ally - their fortune grows as they mature.
+La fortuna los favorece en los negocios, el liderazgo, los campos tradicionales y cualquier ámbito que requiera paciencia y planificación estratégica. Tienen suerte natural con las figuras de autoridad, el avance profesional y el éxito público. El tiempo es su aliado: su fortuna crece a medida que maduran.
 
-Encourage goal-setting, responsibility, skill mastery, and engagement with authority figures who can mentor them. Their fortune point activates through achievement, public recognition, and situations requiring maturity beyond their years. Early responsibility builds later luck.
+Fomente el establecimiento de objetivos, la responsabilidad, el dominio de habilidades y el compromiso con figuras de autoridad que puedan guiarlos. Su punto de fortuna se activa a través de logros, reconocimiento público y situaciones que requieren madurez más allá de su edad. La responsabilidad temprana genera suerte posterior.
 
-The universe rewards their discipline and long-term vision. When they're lazy or seeking shortcuts, luck fades. When they're working steadily toward meaningful goals, doors open at the highest levels. Help them trust that their ambition is healthy and their achievements will compound.`,
-        guidance: "Fortune flows through disciplined achievement. Set goals and reward steady progress."
+El universo premia su disciplina y visión de largo plazo. Cuando son perezosos o buscan atajos, la suerte se desvanece. Cuando trabajan de manera constante para alcanzar metas significativas, se abren puertas en los niveles más altos. Ayúdelos a confiar en que su ambición es saludable y que sus logros se multiplicarán.`,
+        guidance: "La fortuna fluye a través de logros disciplinados. Establezca objetivos y recompense el progreso constante."
     },
     
     Aquarius: {
-        title: "Part of Fortune in Aquarius - Joy Through Innovation",
-        keywords: ["Innovation", "Community", "Freedom", "Vision"],
-        reading: `With Part of Fortune in Aquarius, this child's luck flows through innovation, friendship, and working toward collective visions. Their greatest success comes through being different, embracing technology, and contributing to community.
+        title: "Parte de la fortuna en Acuario: alegría a través de la innovación",
+        keywords: ["Innovación", "Comunidad", "Libertad", "Visión"],
+        reading: `Con Parte de la Fortuna en Acuario, la suerte de este niño fluye a través de la innovación, la amistad y el trabajo hacia visiones colectivas. Su mayor éxito proviene de ser diferentes, adoptar la tecnología y contribuir a la comunidad.
 
-Fortune favors them in technology, humanitarian work, group endeavors, and anything ahead of its time. They have natural luck through friendships and group affiliations - the right crowd attracts the right opportunities. Their uniqueness is actually their fortune magnet.
+La fortuna los favorece en tecnología, trabajo humanitario, esfuerzos grupales y cualquier cosa que se adelante a su tiempo. Tienen suerte natural a través de amistades y afiliaciones grupales: la gente adecuada atrae las oportunidades adecuadas. Su singularidad es en realidad su imán de fortuna.
 
-Encourage diverse friendships, technological skills, humanitarian interests, and expression of their unique perspectives. Their fortune point activates through groups, innovative projects, and situations where being different is valued. Conformity blocks their luck.
+Fomentar diversas amistades, habilidades tecnológicas, intereses humanitarios y la expresión de sus perspectivas únicas. Su punto de fortuna se activa a través de grupos, proyectos innovadores y situaciones donde se valora ser diferente. El conformismo bloquea su suerte.
 
-The universe rewards their authenticity and commitment to collective good. When they're trying to fit in or being selfish, fortune disappears. When they're embracing their weird and working for community betterment, synchronicities explode. Help them trust that different equals lucky for them.`,
-        guidance: "Fortune flows through innovation and community. Celebrate their uniqueness and social conscience."
+El universo premia su autenticidad y compromiso con el bien colectivo. Cuando intentan encajar o son egoístas, la fortuna desaparece. Cuando aceptan lo extraño y trabajan para mejorar la comunidad, las sincronicidades explotan. Ayúdalos a confiar en que lo diferente es igual a lo afortunado para ellos.`,
+        guidance: "La fortuna fluye a través de la innovación y la comunidad. Celebre su singularidad y conciencia social."
     },
     
     Pisces: {
-        title: "Part of Fortune in Pisces - Joy Through Compassion",
-        keywords: ["Intuition", "Compassion", "Creativity", "Spirituality"],
-        reading: `The Part of Fortune in Pisces brings luck through compassion, imagination, and spiritual connection. This child finds greatest joy and success through helping others, creative expression, and trusting their powerful intuition.
+        title: "Parte de la fortuna en Piscis: alegría a través de la compasión",
+        keywords: ["Intuición", "Compasión", "Creatividad", "Espiritualidad"],
+        reading: `La Parte de la Fortuna en Piscis trae suerte a través de la compasión, la imaginación y la conexión espiritual. Este niño encuentra la mayor alegría y éxito ayudando a los demás, expresando su creatividad y confiando en su poderosa intuición.
 
-Fortune favors them in the arts, healing, spiritual work, and any field requiring empathy and imagination. They have natural luck when following intuitive hunches - their dreams and feelings often guide them to the right place at the right time. Their sensitivity is actually psychic fortune-telling.
+La fortuna los favorece en las artes, la curación, el trabajo espiritual y cualquier campo que requiera empatía e imaginación. Tienen suerte natural cuando siguen corazonadas intuitivas: sus sueños y sentimientos a menudo los guían al lugar correcto en el momento correcto. Su sensibilidad es en realidad una adivinación psíquica.
 
-Encourage creative arts, compassionate service, spiritual exploration, and trust in their intuition. Their fortune point activates through music, art, time near water, meditation, and situations requiring faith over logic. Their imagination literally creates their luck.
+Fomente las artes creativas, el servicio compasivo, la exploración espiritual y la confianza en su intuición. Su punto de fortuna se activa a través de la música, el arte, el tiempo cerca del agua, la meditación y situaciones que requieren fe sobre la lógica. Su imaginación literalmente crea su suerte.
 
-The universe rewards their compassion and faith. When they're cynical or hardhearted, luck vanishes. When they're open, compassionate, and following their dreams, miracles occur regularly. Help them understand that their sensitivity is a superpower and their kindness creates their fortune.`,
-        guidance: "Fortune flows through compassion and imagination. Trust their intuition and creative visions."
+El universo recompensa su compasión y fe. Cuando son cínicos o insensibles, la suerte se desvanece. Cuando son abiertos, compasivos y persiguen sus sueños, los milagros ocurren con regularidad. Ayúdalos a comprender que su sensibilidad es un superpoder y que su amabilidad crea su fortuna.`,
+        guidance: "La fortuna fluye a través de la compasión y la imaginación. Confíe en su intuición y visiones creativas."
     }
 };
 
@@ -170,39 +170,39 @@ The universe rewards their compassion and faith. When they're cynical or hardhea
 
 var TRANSIT_READINGS = {
     saturn: {
-        title: "Saturn's Lessons - Building Foundations",
-        currentSign: "Pisces",
-        keywords: ["Discipline", "Boundaries", "Structure", "Maturity"],
-        reading: `Saturn, the planet of structure and responsibility, is currently teaching collective lessons about boundaries in spiritual and emotional realms. For this little one, Saturn's influence means learning healthy boundaries, developing emotional resilience, and understanding that structure supports rather than restricts dreams.
+        title: "Lecciones de Saturno: construcción de cimientos",
+        currentSign: "Piscis",
+        keywords: ["Disciplina", "Límites", "Estructura", "Madurez"],
+        reading: `Saturno, el planeta de la estructura y la responsabilidad, actualmente está enseñando lecciones colectivas sobre los límites en los ámbitos espiritual y emocional. Para este pequeño, la influencia de Saturno significa aprender límites saludables, desarrollar resiliencia emocional y comprender que la estructura apoya los sueños en lugar de restringirlos.
 
-As they grow during this Saturn cycle (2023-2026), they're learning that compassion needs boundaries, that dreams need plans, and that spiritual truths require practical application. These early years are teaching them to balance imagination with reality.
+A medida que crecen durante este ciclo de Saturno (2023-2026), aprenden que la compasión necesita límites, que los sueños necesitan planes y que las verdades espirituales requieren una aplicación práctica. Estos primeros años les están enseñando a equilibrar la imaginación con la realidad.
 
-Parents can support this by providing consistent routines while honoring emotions, setting clear boundaries with empathy, and showing that discipline creates the freedom to dream bigger. The structures you build now become the containers for their future visions.`,
-        guidance: "Provide loving structure. Boundaries are gifts that create safety for dreams."
+Los padres pueden apoyar esto proporcionando rutinas consistentes mientras honran las emociones, establecen límites claros con empatía y muestran que la disciplina crea la libertad de soñar en grande. Las estructuras que construyes ahora se convierten en contenedores de sus visiones futuras.`,
+        guidance: "Proporcionar una estructura amorosa. Los límites son regalos que crean seguridad para los sueños."
     },
     
     pluto: {
-        title: "Pluto's Transformation - Collective Evolution",
-        currentSign: "Aquarius",
-        keywords: ["Transformation", "Power", "Rebirth", "Evolution"],
-        reading: `Pluto in Aquarius (2024-2044) marks a 20-year period of profound transformation in technology, community, and human connection. This child is being born into a generation that will revolutionize how humanity relates and shares power.
+        title: "La transformación de Plutón - Evolución colectiva",
+        currentSign: "Acuario",
+        keywords: ["Transformación", "Fuerza", "Renacimiento", "Evolución"],
+        reading: `Plutón en Acuario (2024-2044) marca un período de 20 años de profunda transformación en la tecnología, la comunidad y la conexión humana. Este niño nace en una generación que revolucionará la forma en que la humanidad se relaciona y comparte el poder.
 
-They're part of a collective mission to transform society's structures, democratize power, and create new forms of community. Their generation will question everything about how we organize ourselves and will rebuild from the ground up with innovation and equality.
+Son parte de una misión colectiva para transformar las estructuras de la sociedad, democratizar el poder y crear nuevas formas de comunidad. Su generación cuestionará todo sobre cómo nos organizamos y reconstruiremos desde cero con innovación e igualdad.
 
-These early years plant seeds for their future role in collective transformation. Encourage their natural rebellion, innovation, and concern for fairness. They're not just learning to adapt to the future - they're the generation creating it.`,
-        guidance: "Honor their innovative spirit. They're here to help transform the world."
+Estos primeros años plantan semillas para su papel futuro en la transformación colectiva. Fomente su rebelión natural, su innovación y su preocupación por la justicia. No sólo están aprendiendo a adaptarse al futuro: son la generación que lo crea.`,
+        guidance: "Honre su espíritu innovador. Están aquí para ayudar a transformar el mundo."
     },
     
     jupiter: {
-        title: "Jupiter's Blessings - Current Growth",
-        currentSign: "Gemini",
-        keywords: ["Growth", "Expansion", "Opportunities", "Optimism"],
-        reading: `Jupiter in Gemini brings expansion through communication, learning, and connection. Currently, growth opportunities come through exposure to diverse ideas, early education, and building communication skills.
+        title: "Las bendiciones de Júpiter: crecimiento actual",
+        currentSign: "Géminis",
+        keywords: ["Crecimiento", "Expansión", "Oportunidades", "Optimismo"],
+        reading: `Júpiter en Géminis trae expansión a través de la comunicación, el aprendizaje y la conexión. Actualmente, las oportunidades de crecimiento surgen a través de la exposición a ideas diversas, la educación temprana y el desarrollo de habilidades de comunicación.
 
-This is an excellent time for language development, introducing books and stories, and encouraging curiosity about everything. Jupiter's blessing in Gemini means that learning comes easily and joyfully right now - every question is an opportunity.
+Este es un momento excelente para el desarrollo del lenguaje, presentar libros e historias y fomentar la curiosidad por todo. La bendición de Júpiter en Géminis significa que el aprendizaje llega con facilidad y alegría en este momento: cada pregunta es una oportunidad.
 
-Watch for natural talents in communication emerging. This Jupiter transit suggests they may be especially curious, verbal, or interested in learning during this period. Feed that curiosity generously - it's Jupiter's gift opening their mind.`,
-        guidance: "Feed their curiosity. Books, conversation, and diverse experiences bring growth now."
+Esté atento a los talentos naturales que emergen en la comunicación. Este tránsito de Júpiter sugiere que pueden ser especialmente curiosos, verbales o interesados ​​en aprender durante este período. Alimente esa curiosidad generosamente: es el regalo de Júpiter que les abre la mente.`,
+        guidance: "Alimenta su curiosidad. Los libros, las conversaciones y las diversas experiencias generan crecimiento ahora."
     }
 };
 
@@ -241,189 +241,189 @@ if (typeof module !== 'undefined' && module.exports) {
 
 var HOUSE_STELLIUM_READINGS = {
     1: {
-        title: "1st House Concentration - The Radiant Self",
-        rarity: "Rare (~1 in 50 charts)",
-        keywords: ["Self-Expression", "Identity", "Personal Power", "Visibility"],
-        archetype: "The Authentic Beacon",
-        reading: `An extraordinary concentration of planets in the 1st House creates a soul whose very presence commands attention. This is not mere ego - it's a cosmic mandate to be visible, authentic, and to lead by example.
+        title: "Concentración en la primera casa: el yo radiante",
+        rarity: "Raro (~1 en 50 gráficos)",
+        keywords: ["Autoexpresión", "Identidad", "poder personal", "Visibilidad"],
+        archetype: "El auténtico faro",
+        reading: `Una extraordinaria concentración de planetas en la Casa 1 crea un alma cuya sola presencia llama la atención. Esto no es mero ego: es un mandato cósmico de ser visible, auténtico y predicar con el ejemplo.
 
-With multiple celestial bodies illuminating the house of self, this person's identity is multi-faceted and powerful. They're not just "one thing" - they're a kaleidoscope of energies, all expressed through their personal presence.
+Con múltiples cuerpos celestes iluminando la casa del yo, la identidad de esta persona es multifacética y poderosa. No son sólo "una cosa": son un caleidoscopio de energías, todas expresadas a través de su presencia personal.
 
-This concentration creates someone who MUST be themselves fully to feel alive. Suppressing any part of their complex identity creates deep frustration. They're here to demonstrate authentic self-expression.`,
-        superpower: "The ability to inspire others simply by being themselves - their presence teaches authenticity.",
-        shadow: "Can become overly self-focused or feel the weight of constant visibility.",
-        integration: "Learning to be both central and gracious, visible yet inclusive of others."
+Esta concentración crea a alguien que DEBE ser él mismo plenamente para sentirse vivo. Suprimir cualquier parte de su compleja identidad crea una profunda frustración. Están aquí para demostrar una auténtica autoexpresión.`,
+        superpower: "La capacidad de inspirar a otros simplemente siendo ellos mismos: su presencia enseña autenticidad.",
+        shadow: "Puede volverse demasiado egocéntrico o sentir el peso de la visibilidad constante.",
+        integration: "Aprender a ser central y amable, visible pero inclusivo con los demás."
     },
     2: {
-        title: "2nd House Concentration - The Wealth Architect",
-        rarity: "Uncommon (~1 in 60 charts)",
-        keywords: ["Resources", "Values", "Abundance", "Self-Worth", "Material Mastery"],
-        archetype: "The Value Translator",
-        reading: `An extraordinary concentration of planets in the 2nd House creates a soul with a profound, multi-layered relationship to value, resources, and material reality. This is the chart of someone born to understand and master the material plane at the deepest level.
+        title: "Concentración de la segunda casa: el arquitecto de la riqueza",
+        rarity: "Poco común (~1 en 60 gráficos)",
+        keywords: ["Recursos", "Valores", "Abundancia", "Autoestima", "Dominio de materiales"],
+        archetype: "El traductor de valores",
+        reading: `Una concentración extraordinaria de planetas en la Casa 2 crea un alma con una relación profunda y multicapa con el valor, los recursos y la realidad material. Esta es la carta de alguien nacido para comprender y dominar el plano material en el nivel más profundo.
 
-This concentration indicates strong "Wealth DNA" - an innate understanding of how value flows, accumulates, and multiplies. They intuitively grasp that money is energy, and they know how to work with that energy. In practical terms, they often show early financial awareness - knowing instinctively what something is worth, negotiating naturally, or finding ways to monetize skills others overlook.
+Esta concentración indica un fuerte "ADN de riqueza": una comprensión innata de cómo fluye, se acumula y se multiplica el valor. Captan intuitivamente que el dinero es energía y saben cómo trabajar con esa energía. En términos prácticos, a menudo muestran una conciencia financiera temprana: saben instintivamente cuánto vale algo, negocian con naturalidad o encuentran formas de monetizar habilidades que otros pasan por alto.
 
-WHAT THIS LOOKS LIKE IN DAILY LIFE:
-• They may collect, curate, or invest - drawn to building tangible reserves of any kind
-• Career choices often revolve around value creation: finance, real estate, art dealing, luxury goods, resource management
-• They notice price discrepancies, undervalued assets, and untapped markets before others do
-• Their sense of personal security is directly tied to what they've built with their own hands
+CÓMO SE VE ESTO EN LA VIDA DIARIA:
+• Pueden recolectar, conservar o invertir, atraídos por la creación de reservas tangibles de cualquier tipo.
+• Las opciones profesionales a menudo giran en torno a la creación de valor: finanzas, bienes raíces, comercio de arte, artículos de lujo, gestión de recursos.
+• Se dan cuenta de las discrepancias de precios, los activos infravalorados y los mercados sin explotar antes que otros.
+• Su sensación de seguridad personal está directamente ligada a lo que han construido con sus propias manos.
 
-THE LIBRA DIMENSION (If stellium is in Libra): When this 2nd House concentration falls in Libra, wealth-building becomes relational and aesthetic. They earn through partnerships, beauty, mediation, or creating harmony. Their financial instinct is refined rather than aggressive - they attract resources through charm, fairness, and an eye for balance. Joint ventures and collaborative business models suit them better than solo enterprises.
+LA DIMENSIÓN DE LIBRA (si el stellium está en Libra): cuando esta concentración de la Segunda Casa cae en Libra, la creación de riqueza se vuelve relacional y estética. Se ganan a través de asociaciones, belleza, mediación o creación de armonía. Su instinto financiero es más refinado que agresivo: atraen recursos mediante su encanto, su justicia y su ojo para el equilibrio. Las empresas conjuntas y los modelos de negocio colaborativos les convienen más que las empresas individuales.
 
-THE SELF-WORTH CONNECTION: Multiple planets here create someone whose self-worth is intimately connected to what they can build, earn, and provide. This isn't shallow materialism - it's the soul's way of proving its capacity to manifest in the physical world. The lesson is learning that they ARE valuable, not just what they produce.`,
-        superpower: "The ability to see and create value where others see nothing - they're natural wealth builders who can turn any skill, idea, or connection into a tangible resource.",
-        shadow: "May tie self-worth too closely to material success, become overly attached to possessions, or feel worthless during financial downturns. Can hoard resources from fear rather than building from vision.",
-        integration: "Understanding that true security comes from within, while still honoring their gift for material creation. The goal is building wealth that serves their values, not values that serve their wealth.",
+LA CONEXIÓN CON LA AUTOVALOR: Múltiples planetas aquí crean a alguien cuya autoestima está íntimamente conectada con lo que pueden construir, ganar y proporcionar. Esto no es un materialismo superficial: es la forma que tiene el alma de demostrar su capacidad para manifestarse en el mundo físico. La lección es aprender que SON valiosos, no sólo lo que producen.`,
+        superpower: "La capacidad de ver y crear valor donde otros no ven nada: son creadores de riqueza natural que pueden convertir cualquier habilidad, idea o conexión en un recurso tangible.",
+        shadow: "Puede vincular demasiado la autoestima al éxito material, apegarse demasiado a las posesiones o sentirse inútil durante las crisis financieras. Puede acumular recursos a partir del miedo en lugar de construir a partir de la visión.",
+        integration: "Comprender que la verdadera seguridad proviene del interior, sin dejar de honrar su don para la creación material. El objetivo es generar riqueza que sirva a sus valores, no valores que sirvan a su riqueza.",
         practicalAdvice: [
-            "Track your financial instincts - start a journal of hunches about investments or purchases, and note which ones prove correct",
-            "Create multiple income streams rather than depending on one source - your chart supports diversified value creation",
-            "Separate self-worth from net worth through daily practices that affirm your inherent value",
-            "Use your natural eye for value to help others - financial advising, curating, or teaching resource management"
+            "Realice un seguimiento de sus instintos financieros: inicie un diario de corazonadas sobre inversiones o compras y observe cuáles resultan correctas.",
+            "Cree múltiples flujos de ingresos en lugar de depender de una sola fuente: su gráfico respalda la creación de valor diversificada",
+            "Separe la autoestima del patrimonio neto mediante prácticas diarias que afirmen su valor inherente",
+            "Utilice su ojo natural para detectar valor y ayudar a otros: asesoramiento financiero, curación o gestión de recursos didácticos."
         ]
     },
     3: {
-        title: "3rd House Concentration - The Master Communicator",
-        rarity: "Uncommon (~1 in 55 charts)",
-        keywords: ["Communication", "Learning", "Connections", "Information", "Mental Agility"],
-        archetype: "The Bridge Builder",
-        reading: `An extraordinary concentration of planets in the 3rd House creates a soul whose life revolves around communication, learning, and connecting ideas and people. Their mind is their primary instrument.
+        title: "Concentración en la Tercera Casa: El Maestro Comunicador",
+        rarity: "Poco común (~1 en 55 gráficos)",
+        keywords: ["Comunicación", "Aprendiendo", "Conexiones", "Información", "Agilidad Mental"],
+        archetype: "El constructor de puentes",
+        reading: `Una extraordinaria concentración de planetas en la Casa 3 crea un alma cuya vida gira en torno a la comunicación, el aprendizaje y la conexión de ideas y personas. Su mente es su instrumento principal.
 
-This is the chart of natural teachers, writers, speakers, and networkers. Multiple planets here create someone who processes everything through language and logic, constantly learning and sharing.
+Este es el cuadro de maestros, escritores, oradores y creadores de redes naturales. Múltiples planetas aquí crean a alguien que procesa todo a través del lenguaje y la lógica, aprendiendo y compartiendo constantemente.
 
-Siblings, neighbors, and early education play significant roles in their development. Their local community becomes their stage for expression.`,
-        superpower: "The ability to translate complex ideas into accessible forms and connect disparate people and concepts.",
-        shadow: "May become scattered, superficial, or anxious from constant mental activity.",
-        integration: "Learning to go deep as well as wide, finding quality over quantity in connections."
+Los hermanos, los vecinos y la educación temprana desempeñan papeles importantes en su desarrollo. Su comunidad local se convierte en su escenario de expresión.`,
+        superpower: "La capacidad de traducir ideas complejas en formas accesibles y conectar personas y conceptos dispares.",
+        shadow: "Puede volverse disperso, superficial o ansioso debido a una actividad mental constante.",
+        integration: "Aprender a profundizar y ampliar, a encontrar calidad sobre cantidad en las conexiones."
     },
     4: {
-        title: "4th House Concentration - The Root Creator",
-        rarity: "Uncommon (~1 in 55 charts)",
-        keywords: ["Home", "Family", "Roots", "Emotional Foundation", "Ancestry"],
-        archetype: "The Sanctuary Builder",
-        reading: `An extraordinary concentration of planets in the 4th House creates a soul whose power base is home, family, and emotional foundation. Their roots run impossibly deep.
+        title: "Concentración de la Casa 4: El Creador de Raíces",
+        rarity: "Poco común (~1 en 55 gráficos)",
+        keywords: ["Hogar", "Familia", "Raíces", "Fundación emocional", "Ascendencia"],
+        archetype: "El constructor del santuario",
+        reading: `Una extraordinaria concentración de planetas en la Casa 4 crea un alma cuya base de poder es el hogar, la familia y la base emocional. Sus raíces son increíblemente profundas.
 
-This is someone whose family karma, ancestry, and early home environment carry enormous weight. Multiple planets here suggest that family themes dominate the life journey.
+Se trata de alguien cuyo karma familiar, ascendencia y entorno familiar temprano tienen un peso enorme. Varios planetas aquí sugieren que los temas familiares dominan el viaje de la vida.
 
-They're here to create sanctuaries - not just physical homes, but emotional safe spaces where others can heal and grow.`,
-        superpower: "The ability to create belonging wherever they go and to hold space for others' emotional healing.",
-        shadow: "May become overly attached to family, struggle to leave home, or get trapped in family dynamics.",
-        integration: "Building a strong internal home that allows them to be rooted yet free."
+Están aquí para crear santuarios, no sólo hogares físicos, sino espacios emocionales seguros donde otros puedan sanar y crecer.`,
+        superpower: "La capacidad de crear pertenencia dondequiera que vayan y de mantener un espacio para la curación emocional de los demás.",
+        shadow: "Puede apegarse demasiado a la familia, tener dificultades para salir de casa o quedar atrapado en la dinámica familiar.",
+        integration: "Construir un hogar interno fuerte que les permita estar arraigados pero libres."
     },
     5: {
-        title: "5th House Concentration - The Creative Supernova",
-        rarity: "Uncommon (~1 in 60 charts)",
-        keywords: ["Creativity", "Joy", "Self-Expression", "Romance", "Children"],
-        archetype: "The Radiant Creator",
-        reading: `An extraordinary concentration of planets in the 5th House creates a soul whose very purpose is creative expression, joy, and celebration of life. They're here to PLAY on the cosmic stage.
+        title: "Concentración de la Quinta Casa: La Supernova Creativa",
+        rarity: "Poco común (~1 en 60 gráficos)",
+        keywords: ["Creatividad", "Alegría", "Autoexpresión", "romance", "Niños"],
+        archetype: "El creador radiante",
+        reading: `Una extraordinaria concentración de planetas en la Quinta Casa crea un alma cuyo propósito es la expresión creativa, la alegría y la celebración de la vida. Están aquí para JUGAR en el escenario cósmico.
 
-This is the chart of artists, performers, lovers of life, and those who bring light to darkness. Multiple planets here demand expression - creative energy builds up and must be released.
+Este es el cuadro de los artistas, intérpretes, amantes de la vida y aquellos que traen luz a las tinieblas. Aquí, múltiples planetas exigen expresión: la energía creativa se acumula y debe ser liberada.
 
-Children, romance, and creative projects are major life themes. They may have complex relationships with their own children or inner child work.`,
-        superpower: "The ability to create joy and beauty that transforms darkness into light.",
-        shadow: "May become attention-seeking, dramatic, or treat life as a perpetual performance.",
-        integration: "Learning that the deepest creativity comes from authentic expression, not applause."
+Los niños, el romance y los proyectos creativos son temas importantes en la vida. Es posible que tengan relaciones complejas con sus propios hijos o con el trabajo de su niño interior.`,
+        superpower: "La capacidad de crear alegría y belleza que transforma la oscuridad en luz.",
+        shadow: "Puede volverse dramático, buscador de atención o tratar la vida como una actuación perpetua.",
+        integration: "Aprender que la creatividad más profunda proviene de la expresión auténtica, no del aplauso."
     },
     6: {
-        title: "6th House Concentration - The Sacred Servant",
-        rarity: "Uncommon (~1 in 65 charts)",
-        keywords: ["Service", "Health", "Work", "Improvement", "Daily Rituals"],
-        archetype: "The Practical Healer",
-        reading: `An extraordinary concentration of planets in the 6th House creates a soul whose life path is centered on service, health, and the sacred nature of daily work. They find meaning through being useful.
+        title: "Concentración de la Sexta Casa - El Siervo Sagrado",
+        rarity: "Poco común (~1 en 65 gráficos)",
+        keywords: ["Servicio", "Salud", "Trabajar", "Mejora", "Rituales diarios"],
+        archetype: "El sanador práctico",
+        reading: `Una extraordinaria concentración de planetas en la Casa 6 crea un alma cuyo camino de vida se centra en el servicio, la salud y la naturaleza sagrada del trabajo diario. Encuentran significado siendo útiles.
 
-This is the chart of natural healers, skilled craftspeople, and those who improve everything they touch. Multiple planets here create someone whose identity is bound up with competence and helpfulness.
+Esta es la carta de los curanderos naturales, los artesanos expertos y los que mejoran todo lo que tocan. Múltiples planetas aquí crean a alguien cuya identidad está ligada a la competencia y la ayuda.
 
-Health - physical, mental, and environmental - is a major life theme. Their own well-being teaches them lessons they'll use to help others.`,
-        superpower: "The ability to see what needs fixing and systematically make it better.",
-        shadow: "May become perfectionistic, workaholic, or critical of self and others.",
-        integration: "Learning that some things don't need fixing, and that rest is also sacred."
+La salud (física, mental y ambiental) es un tema importante en la vida. Su propio bienestar les enseña lecciones que utilizarán para ayudar a los demás.`,
+        superpower: "La capacidad de ver lo que hay que arreglar y mejorarlo sistemáticamente.",
+        shadow: "Puede volverse perfeccionista, adicto al trabajo o crítico consigo mismo y con los demás.",
+        integration: "Aprender que algunas cosas no necesitan arreglarse y que el descanso también es sagrado."
     },
     7: {
-        title: "7th House Concentration - The Partnership Soul",
-        rarity: "Uncommon (~1 in 60 charts)",
-        keywords: ["Partnership", "Relationships", "Others", "Balance", "Justice"],
-        archetype: "The Sacred Partner",
-        reading: `An extraordinary concentration of planets in the 7th House creates a soul who discovers themselves primarily through relationship with others. "I am" becomes "we are."
+        title: "Concentración de la Séptima Casa: El alma de la asociación",
+        rarity: "Poco común (~1 en 60 gráficos)",
+        keywords: ["Asociación", "Relaciones", "Otros", "Balance", "Justicia"],
+        archetype: "El compañero sagrado",
+        reading: `Una extraordinaria concentración de planetas en la Casa Séptima crea un alma que se descubre a sí misma principalmente a través de la relación con los demás. "Yo soy" se convierte en "nosotros somos".
 
-This is the chart of someone whose life lessons come through partnerships - romantic, business, and all forms of significant one-on-one relating. Multiple planets here create complex relationship karma.
+Este es el mapa de alguien cuyas lecciones de vida surgen a través de asociaciones: románticas, comerciales y todas las formas de relación uno a uno significativa. Múltiples planetas aquí crean un karma de relaciones complejo.
 
-They may attract intense partners who mirror hidden aspects of themselves. Relationship is their spiritual path.`,
-        superpower: "The ability to see through others' eyes and create deep partnership harmony.",
-        shadow: "May lose themselves in relationships or define themselves entirely through partners.",
-        integration: "Building a strong sense of self that can fully meet another without losing identity."
+Pueden atraer parejas intensas que reflejen aspectos ocultos de sí mismos. La relación es su camino espiritual.`,
+        superpower: "La capacidad de ver a través de los ojos de los demás y crear una profunda armonía en la asociación.",
+        shadow: "Pueden perderse en las relaciones o definirse completamente a través de sus parejas.",
+        integration: "Construir un fuerte sentido de uno mismo que pueda encontrarse plenamente con el otro sin perder la identidad."
     },
     8: {
-        title: "8th House Concentration - The Depth Navigator",
-        rarity: "Rare (~1 in 70 charts)",
-        keywords: ["Transformation", "Shared Resources", "Psychology", "Death/Rebirth", "Intimacy"],
-        archetype: "The Shadow Alchemist",
-        reading: `An extraordinary concentration of planets in the 8th House creates a soul destined for profound transformation and intimate understanding of life's mysteries. They live in the depths.
+        title: "Concentración en la octava casa: el navegador de profundidad",
+        rarity: "Raro (~1 en 70 gráficos)",
+        keywords: ["Transformación", "Recursos compartidos", "Psicología", "Muerte/Renacimiento", "Intimidad"],
+        archetype: "El alquimista de las sombras",
+        reading: `Una extraordinaria concentración de planetas en la Casa 8 crea un alma destinada a una transformación profunda y una comprensión íntima de los misterios de la vida. Viven en las profundidades.
 
-This is the chart of psychologists, healers, researchers of hidden things, and those who face death (literal or metaphorical) as part of their path. Multiple planets here create someone who cannot do shallow.
+Esta es la carta de los psicólogos, curanderos, investigadores de lo oculto y de quienes enfrentan la muerte (literal o metafórica) como parte de su camino. Múltiples planetas aquí crean a alguien que no puede hacer cosas superficiales.
 
-Shared resources, inheritances, and other people's money may be significant themes. They're drawn to understand what others fear to look at.`,
-        superpower: "The ability to transform darkness into light and heal through witnessing deep truth.",
-        shadow: "May become controlling, obsessive, or lost in the underworld of intense emotions.",
-        integration: "Learning when to surface and how to bring the gifts of depth into everyday light."
+Los recursos compartidos, las herencias y el dinero de otras personas pueden ser temas importantes. Se sienten atraídos por comprender lo que otros temen mirar.`,
+        superpower: "La capacidad de transformar la oscuridad en luz y sanar al ser testigo de una verdad profunda.",
+        shadow: "Puede volverse controlador, obsesivo o perderse en el inframundo de emociones intensas.",
+        integration: "Aprender cuándo salir a la superficie y cómo llevar los dones de la profundidad a la luz cotidiana."
     },
     9: {
-        title: "9th House Concentration - The Wisdom Seeker",
-        rarity: "Very Rare (~1 in 80 charts)",
-        keywords: ["Philosophy", "Higher Learning", "Travel", "Truth", "Expansion"],
-        archetype: "The Eternal Explorer",
-        paradox: "The Immovable Visionary - craving adventure while needing stability",
-        reading: `An extraordinary concentration of planets in the 9th House creates a soul whose life purpose is the pursuit and sharing of wisdom. They're born philosophers, travelers, and seekers of meaning.
+        title: "Concentración de la novena casa: el buscador de sabiduría",
+        rarity: "Muy raro (~1 en 80 gráficos)",
+        keywords: ["Filosofía", "Aprendizaje Superior", "Viajar", "Verdad", "Expansión"],
+        archetype: "El eterno explorador",
+        paradox: "The Immovable Visionary: anhela la aventura y necesita estabilidad",
+        reading: `Una extraordinaria concentración de planetas en la Casa 9 crea un alma cuyo propósito de vida es la búsqueda y el intercambio de sabiduría. Nacen filósofos, viajeros y buscadores de significado.
 
-This concentration is EXTREMELY RARE - having 3+ planets, let alone 5 personal planets here represents perhaps 1 in 15,000 or rarer births. This marks someone with an unusual cosmic mandate for expanding consciousness.
+Esta concentración es EXTREMADAMENTE RARA: tener más de 3 planetas, y mucho menos 5 planetas personales aquí, representa quizás 1 de cada 15.000 o más raros nacimientos. Esto marca a alguien con un mandato cósmico inusual para expandir la conciencia.
 
-Higher education, travel, publishing, teaching, and spiritual quest are major life themes. They process life by seeking its deeper meaning and sharing what they discover.
+La educación superior, los viajes, las publicaciones, la enseñanza y la búsqueda espiritual son temas importantes en la vida. Procesan la vida buscando su significado más profundo y compartiendo lo que descubren.
 
-THE VISIONARY PARADOX: When combined with grounded signs like Taurus, this creates the "Immovable Visionary" - someone who dreams of distant horizons while needing deep roots. This isn't a contradiction but their unique gift: they can bring visionary ideas into practical reality.`,
-        superpower: "The ability to see life's bigger patterns and share wisdom that expands others' horizons.",
-        shadow: "May become preachy, restless, over-confident, or addicted to seeking without finding.",
-        integration: "Learning that the infinite can be found in the immediate, that depth is also expansion."
+LA PARADOJA VISIONARIA: Cuando se combina con signos arraigados como Tauro, esto crea el "Visionario Inamovible", alguien que sueña con horizontes distantes y al mismo tiempo necesita raíces profundas. Esto no es una contradicción, sino su don único: pueden convertir ideas visionarias en realidad práctica.`,
+        superpower: "La capacidad de ver los patrones más importantes de la vida y compartir sabiduría que amplía los horizontes de los demás.",
+        shadow: "Puede volverse sermoneador, inquieto, demasiado confiado o adicto a buscar sin encontrar.",
+        integration: "Aprender que lo infinito se puede encontrar en lo inmediato, que la profundidad también es expansión."
     },
     10: {
-        title: "10th House Concentration - The Legacy Builder",
-        rarity: "Uncommon (~1 in 55 charts)",
-        keywords: ["Career", "Public Life", "Achievement", "Authority", "Legacy"],
-        archetype: "The Destined Leader",
-        reading: `An extraordinary concentration of planets in the 10th House creates a soul destined for public recognition and worldly achievement. Their light is meant to shine in the world.
+        title: "Concentración de la Décima Casa: El Constructor de Legado",
+        rarity: "Poco común (~1 en 55 gráficos)",
+        keywords: ["Carrera", "Vida pública", "Logro", "Autoridad", "Legado"],
+        archetype: "El líder destinado",
+        reading: `Una extraordinaria concentración de planetas en la Casa Décima crea un alma destinada al reconocimiento público y los logros mundanos. Su luz está destinada a brillar en el mundo.
 
-This is the chart of natural leaders, executives, and those whose work becomes their legacy. Multiple planets here create complex relationship with authority, status, and public image.
+Este es el cuadro de los líderes naturales, los ejecutivos y aquellos cuyo trabajo se convierte en su legado. Múltiples planetas aquí crean relaciones complejas con la autoridad, el estatus y la imagen pública.
 
-Career isn't just a job - it's a calling. Their reputation and what they build in the world carries enormous weight in their development.`,
-        superpower: "The ability to build lasting structures and inspire through achievement and leadership.",
-        shadow: "May become workaholic, status-obsessed, or lose private life to public demands.",
-        integration: "Building a legacy that includes love and inner fulfillment, not just external achievement."
+La carrera no es sólo un trabajo, es una vocación. Su reputación y lo que construyen en el mundo tiene un peso enorme en su desarrollo.`,
+        superpower: "La capacidad de construir estructuras duraderas e inspirar a través de logros y liderazgo.",
+        shadow: "Puede volverse adicto al trabajo, obsesionado con el estatus o perder la vida privada ante demandas públicas.",
+        integration: "Construir un legado que incluya amor y realización interior, no sólo logros externos."
     },
     11: {
-        title: "11th House Concentration - The Future Architect",
-        rarity: "Uncommon (~1 in 60 charts)",
-        keywords: ["Community", "Future", "Innovation", "Friendship", "Humanitarian"],
-        archetype: "The Collective Visionary",
-        reading: `An extraordinary concentration of planets in the 11th House creates a soul whose life purpose unfolds through community, friendship, and vision for collective future. They're here to build new paradigms.
+        title: "Concentración de la Casa 11: El futuro arquitecto",
+        rarity: "Poco común (~1 en 60 gráficos)",
+        keywords: ["Comunidad", "Futuro", "Innovación", "Amistad", "Humanitario"],
+        archetype: "El visionario colectivo",
+        reading: `Una extraordinaria concentración de planetas en la Casa 11 crea un alma cuyo propósito de vida se desarrolla a través de la comunidad, la amistad y la visión de un futuro colectivo. Están aquí para construir nuevos paradigmas.
 
-This is the chart of humanitarians, innovators, community builders, and those who think generations ahead. Multiple planets here create someone whose identity is bound up with their tribes and causes.
+Este es el cuadro de los humanitarios, los innovadores, los constructores de comunidades y aquellos que piensan en las generaciones venideras. Múltiples planetas aquí crean a alguien cuya identidad está ligada a sus tribus y causas.
 
-Friendship isn't casual - it's central to their path. They find themselves through groups and working toward shared dreams.`,
-        superpower: "The ability to envision better futures and inspire collective action toward them.",
-        shadow: "May become detached, rebellious for its own sake, or lose individual identity in groups.",
-        integration: "Balancing individual needs with collective vision, being both unique and unified."
+La amistad no es casual: es fundamental en su camino. Se encuentran a sí mismos a través de grupos y trabajando por sueños compartidos.`,
+        superpower: "La capacidad de imaginar futuros mejores e inspirar acciones colectivas hacia ellos.",
+        shadow: "Puede volverse distante, rebelde por sí mismo o perder la identidad individual en grupos.",
+        integration: "Equilibrar las necesidades individuales con la visión colectiva, siendo a la vez únicos y unificados."
     },
     12: {
-        title: "12th House Concentration - The Mystic Soul",
-        rarity: "Rare (~1 in 70 charts)",
-        keywords: ["Spirituality", "Dreams", "Hidden Realms", "Sacrifice", "Transcendence"],
-        archetype: "The Sacred Dreamer",
-        reading: `An extraordinary concentration of planets in the 12th House creates a soul with unusual access to spiritual dimensions, dreams, and the collective unconscious. They live between worlds.
+        title: "Concentración de la Casa 12: El Alma Mística",
+        rarity: "Raro (~1 en 70 gráficos)",
+        keywords: ["Espiritualidad", "Sueños", "Reinos ocultos", "Sacrificio", "Trascendencia"],
+        archetype: "El soñador sagrado",
+        reading: `Una extraordinaria concentración de planetas en la Casa 12 crea un alma con un acceso inusual a las dimensiones espirituales, los sueños y el inconsciente colectivo. Viven entre mundos.
 
-This is the chart of mystics, artists, healers of the soul, and those who sacrifice for higher purposes. Multiple planets here create someone who may feel they don't fully belong in ordinary reality.
+Esta es la carta de los místicos, los artistas, los sanadores del alma y aquellos que se sacrifican por propósitos superiores. Múltiples planetas aquí crean a alguien que puede sentir que no pertenece completamente a la realidad ordinaria.
 
-Their gifts often work behind the scenes or through subtle channels. They absorb collective energy and must learn psychic hygiene.`,
-        superpower: "The ability to access spiritual wisdom and bring healing from transcendent dimensions.",
-        shadow: "May escape into fantasy, become victimized, or lose themselves in others' energy.",
-        integration: "Staying grounded while honoring their connection to unseen realms."
+Sus dones a menudo funcionan detrás de escena o a través de canales sutiles. Absorben energía colectiva y deben aprender higiene psíquica.`,
+        superpower: "La capacidad de acceder a la sabiduría espiritual y traer sanación desde dimensiones trascendentes.",
+        shadow: "Pueden escapar a la fantasía, convertirse en víctimas o perderse en la energía de los demás.",
+        integration: "Mantenerse firme mientras honra su conexión con reinos invisibles."
     }
 };
 
@@ -433,59 +433,59 @@ Their gifts often work behind the scenes or through subtle channels. They absorb
 
 var WEALTH_BLUEPRINT_READINGS = {
     secondHouseStellium: {
-        title: "Wealth DNA Activation",
-        keywords: ["Financial Intelligence", "Value Creation", "Resource Mastery"],
-        reading: `With a stellium in the 2nd House, this soul carries potent "Wealth DNA" - an innate understanding of how value flows in the material world. This isn't just about money; it's about recognizing, creating, and multiplying worth in all its forms.
+        title: "Activación del ADN de la riqueza",
+        keywords: ["Inteligencia financiera", "Creación de valor", "Dominio de recursos"],
+        reading: `Con un stellium en la Casa 2, esta alma lleva un potente "ADN de riqueza": una comprensión innata de cómo fluye el valor en el mundo material. No se trata sólo de dinero; se trata de reconocer, crear y multiplicar el valor en todas sus formas.
 
-THE VALUE TRANSLATOR SUPERPOWER: This placement grants the ability to see value where others don't and to translate intangible assets into tangible resources. They understand instinctively that money is energy, and they know how to move that energy.
+EL SUPERPODER DEL TRADUCTOR DE VALOR: Esta ubicación otorga la capacidad de ver valor donde otros no lo ven y de traducir activos intangibles en recursos tangibles. Entienden instintivamente que el dinero es energía y saben cómo mover esa energía.
 
-WEALTH INDICATORS PRESENT:
-• Natural understanding of resource accumulation
-• Instinct for timing in financial matters  
-• Ability to build sustainable value over time
-• Talent for recognizing undervalued assets
+INDICADORES DE RIQUEZA PRESENTES:
+• Comprensión natural de la acumulación de recursos.
+• Instinto de oportunidad en asuntos financieros  
+• Capacidad de generar valor sostenible en el tiempo
+• Talento para reconocer activos infravalorados
 
-The combination creates someone who can turn ideas into income, skills into services, and vision into value. Their relationship with money is complex - it's not just a tool but a teaching.`,
-        guidance: "Trust your financial instincts. You were born understanding value. The key is aligning wealth-building with your deeper values."
+La combinación crea a alguien que puede convertir ideas en ingresos, habilidades en servicios y visión en valor. Su relación con el dinero es compleja: no es sólo una herramienta sino una enseñanza.`,
+        guidance: "Confía en tus instintos financieros. Naciste entendiendo el valor. La clave es alinear la creación de riqueza con sus valores más profundos."
     },
     
     jupiterSaturn2ndHouse: {
-        title: "The Master Builder's Fortune",
-        keywords: ["Disciplined Expansion", "Structured Wealth", "Legacy Building"],
-        reading: `Jupiter and Saturn together in the 2nd House create a powerful wealth combination - the expansion of Jupiter meeting the structure of Saturn in the house of resources.
+        title: "La fortuna del maestro constructor",
+        keywords: ["Expansión disciplinada", "Riqueza estructurada", "Edificio heredado"],
+        reading: `Júpiter y Saturno juntos en la Casa 2 crean una poderosa combinación de riqueza: la expansión de Júpiter se encuentra con la estructura de Saturno en la casa de los recursos.
 
-This is the signature of those who build lasting wealth through disciplined growth. Not get-rich-quick energy, but build-rich-forever energy. The key is patience married to vision.
+Ésta es la firma de quienes generan riqueza duradera mediante un crecimiento disciplinado. No energía para enriquecerse rápidamente, sino energía para enriquecerse para siempre. La clave es la paciencia unida a la visión.
 
-Jupiter expands what Saturn structures. Saturn grounds what Jupiter envisions. Together in the 2nd House, they create someone capable of building significant material legacy.
+Júpiter expande lo que estructura Saturno. Saturno fundamenta lo que Júpiter imagina. Juntos en la Casa 2, crean a alguien capaz de construir un legado material significativo.
 
-WEALTH BLUEPRINT: Start with structure (Saturn), then expand (Jupiter). Build foundations before growing. Your wealth will be steady and lasting rather than volatile.`,
-        timing: "Major wealth opportunities often come during Saturn returns or Jupiter transits to natal positions."
+PLAN DE RIQUEZA: Comience con la estructura (Saturno), luego expanda (Júpiter). Construya las bases antes de crecer. Su riqueza será estable y duradera en lugar de volátil.`,
+        timing: "Las principales oportunidades de riqueza a menudo surgen durante los retornos de Saturno o los tránsitos de Júpiter a posiciones natales."
     },
     
     pluto2ndHouse: {
-        title: "Transformative Wealth",
-        keywords: ["Financial Transformation", "Power Through Resources", "Phoenix Finances"],
-        reading: `Pluto in the 2nd House brings intense, transformative energy to matters of money and possessions. This is not comfortable wealth - it's powerful, sometimes volatile, and always transforming.
+        title: "Riqueza transformadora",
+        keywords: ["Transformación financiera", "Poder a través de recursos", "Finanzas Fénix"],
+        reading: `Plutón en la Casa 2 aporta una energía intensa y transformadora a cuestiones de dinero y posesiones. Esta no es una riqueza cómoda: es poderosa, a veces volátil y siempre transformadora.
 
-This placement often indicates that relationship with money will go through profound changes - possibly complete financial "deaths and rebirths." Old relationships with value must die for new ones to emerge.
+Esta ubicación a menudo indica que la relación con el dinero pasará por cambios profundos, posiblemente completas "muertes y renacimientos" financieros. Las viejas relaciones con valor deben morir para que surjan otras nuevas.
 
-POWER DYNAMICS: There may be complex power dynamics around shared resources, inheritances, or issues of financial control. The soul lesson involves learning healthy relationship with financial power.
+DINÁMICA DE PODER: Puede haber dinámicas de poder complejas en torno a recursos compartidos, herencias o cuestiones de control financiero. La lección del alma implica aprender una relación sana con el poder financiero.
 
-PHOENIX ENERGY: After any financial setback, this placement grants remarkable ability to rise again, often to greater heights than before.`,
-        shadow: "Watch for using money as power over others, or allowing others' money to control you."
+PHOENIX ENERGY: Después de cualquier revés financiero, esta ubicación otorga una notable capacidad para volver a ascender, a menudo a mayores alturas que antes.`,
+        shadow: "Tenga cuidado con el uso del dinero como poder sobre los demás, o con permitir que el dinero de los demás le controle."
     },
     
     taurus2ndHouse: {
-        title: "The Natural Abundance Field",
-        keywords: ["Organic Wealth", "Sensory Value", "Grounded Prosperity"],
-        reading: `Taurus energy in the 2nd House is the sign in its natural home - a double emphasis on material mastery, security, and the ability to attract resources.
+        title: "El campo de la abundancia natural",
+        keywords: ["Riqueza Orgánica", "Valor sensorial", "Prosperidad fundamentada"],
+        reading: `La energía de Tauro en la Casa 2 es el signo en su hogar natural: un doble énfasis en el dominio material, la seguridad y la capacidad de atraer recursos.
 
-This creates a natural "abundance field" around the person. They don't just attract money - they attract comfort, beauty, good food, and all forms of sensory wealth.
+Esto crea un "campo de abundancia" natural alrededor de la persona. No sólo atraen dinero: atraen comodidad, belleza, buena comida y todas las formas de riqueza sensorial.
 
-ACCUMULATION TALENT: There's a natural gift for steady accumulation. Like the bull grazing in the pasture, wealth builds slowly but surely through consistent effort and patience.
+TALENTO DE ACUMULACIÓN: Existe un don natural para la acumulación constante. Al igual que el toro pastando en el pasto, la riqueza se acumula de forma lenta pero segura mediante un esfuerzo constante y paciencia.
 
-VALUE CREATION: Their greatest financial gift is understanding what has lasting value. They're rarely seduced by flash-in-the-pan investments or get-rich-quick schemes.`,
-        guidance: "Your wealth grows best when you can touch it, see it, feel it. Tangible assets speak to you more than abstract investments."
+CREACIÓN DE VALOR: Su mayor don financiero es comprender lo que tiene un valor duradero. Rara vez se dejan seducir por inversiones improvisadas o planes para enriquecerse rápidamente.`,
+        guidance: "Tu riqueza crece mejor cuando puedes tocarla, verla y sentirla. Los activos tangibles le hablan más que las inversiones abstractas."
     }
 };
 
@@ -495,46 +495,46 @@ VALUE CREATION: Their greatest financial gift is understanding what has lasting 
 
 var CHAKRA_BLUEPRINT_READINGS = {
     taurusThroat: {
-        title: "Throat Chakra Blueprint",
-        chakra: "5th Chakra - Vishuddha",
-        bodyArea: "Throat, neck, thyroid, jaw, mouth, ears",
-        keywords: ["Expression", "Voice", "Truth", "Communication", "Singing"],
-        reading: `Taurus rules the throat, and with significant Taurus placements, the 5th Chakra (Throat) becomes a central point of power and potential challenge.
+        title: "Plano del chakra de la garganta",
+        chakra: "5to chakra - Vishuddha",
+        bodyArea: "Garganta, cuello, tiroides, mandíbula, boca, orejas.",
+        keywords: ["Expresión", "Voz", "Verdad", "Comunicación", "Cantando"],
+        reading: `Tauro gobierna la garganta y, con ubicaciones significativas de Tauro, el quinto chakra (la garganta) se convierte en un punto central de poder y desafío potencial.
 
-THE THROAT CHAKRA MANDATE: This soul is here to find their voice - literally and figuratively. Self-expression isn't optional; it's essential for their well-being. When they speak their truth, their whole system aligns.
+EL MANDATO DEL CHAKRA DE LA GARGANTA: Esta alma está aquí para encontrar su voz, literal y figurativamente. La autoexpresión no es opcional; es esencial para su bienestar. Cuando dicen su verdad, todo su sistema se alinea.
 
-PHYSICAL MANIFESTATIONS: The throat area may be especially sensitive. They might experience:
-• Throat/thyroid issues when suppressing truth
-• Neck tension when feeling unheard
-• Strong singing or speaking voice when aligned
-• Sensitivity to what they consume (food, words, media)
+MANIFESTACIONES FÍSICAS: La zona de la garganta puede estar especialmente sensible. Podrían experimentar:
+• Problemas de garganta o tiroides al suprimir la verdad
+• Tensión en el cuello cuando no se siente escuchado
+• Voz fuerte para cantar o hablar cuando está alineado
+• Sensibilidad a lo que consumen (comida, palabras, medios)
 
-THE TAURUS VOICE: Their voice carries weight and authority, even if soft. When they speak, people listen - not because they're loud, but because their words carry the density of earth.
+LA VOZ DE TAURO: Su voz tiene peso y autoridad, aunque sea suave. Cuando hablan, la gente escucha, no porque hablen en voz alta, sino porque sus palabras tienen la densidad de la tierra.
 
-CREATIVE EXPRESSION: There's often natural talent for singing, speaking, voice work, or any form of communication that uses the physical voice.`,
+EXPRESIÓN CREATIVA: A menudo existe un talento natural para cantar, hablar, trabajar la voz o cualquier forma de comunicación que utilice la voz física.`,
         healingPractices: [
-            "Singing, humming, or toning practices",
-            "Speaking truth even when uncomfortable",
-            "Throat chakra meditations with blue light",
-            "Neck and shoulder bodywork",
-            "Writing and journaling to express unspeakables"
+            "Prácticas de canto, tarareo o tonificación.",
+            "Decir la verdad incluso cuando te sientas incómodo",
+            "Meditaciones del chakra de la garganta con luz azul.",
+            "Carrocería de cuello y hombros.",
+            "Escribir y llevar un diario para expresar lo indescriptible"
         ],
-        affirmation: "My voice matters. My truth heals. I speak with the steady power of earth."
+        affirmation: "Mi voz importa. Mi verdad cura. Hablo con el poder constante de la tierra."
     },
     
     chakraBySign: {
-        Aries: { chakra: "3rd - Solar Plexus", area: "Stomach, will, personal power" },
-        Taurus: { chakra: "5th - Throat", area: "Voice, expression, truth" },
-        Gemini: { chakra: "5th - Throat", area: "Communication, arms, hands" },
-        Cancer: { chakra: "4th - Heart", area: "Chest, nurturing, emotional center" },
-        Leo: { chakra: "4th - Heart", area: "Heart, courage, love expression" },
-        Virgo: { chakra: "3rd - Solar Plexus", area: "Digestive system, analysis" },
-        Libra: { chakra: "4th - Heart", area: "Balance, harmony, relationships" },
-        Scorpio: { chakra: "2nd - Sacral", area: "Transformation, intimacy, power" },
-        Sagittarius: { chakra: "3rd - Solar Plexus", area: "Expansion, belief, liver/hips" },
-        Capricorn: { chakra: "1st - Root", area: "Bones, structure, foundation" },
-        Aquarius: { chakra: "6th - Third Eye", area: "Vision, innovation, nervous system" },
-        Pisces: { chakra: "7th - Crown", area: "Spirituality, feet, immune system" }
+        Aries: { chakra: "3º - Plexo solar", area: "Estómago, voluntad, poder personal." },
+        Taurus: { chakra: "5to - Garganta", area: "Voz, expresión, verdad." },
+        Gemini: { chakra: "5to - Garganta", area: "Comunicación, brazos, manos." },
+        Cancer: { chakra: "4to - Corazón", area: "Pecho, centro emocional y de crianza." },
+        Leo: { chakra: "4to - Corazón", area: "Corazón, coraje, expresión de amor." },
+        Virgo: { chakra: "3º - Plexo solar", area: "Sistema digestivo, análisis." },
+        Libra: { chakra: "4to - Corazón", area: "Equilibrio, armonía, relaciones." },
+        Scorpio: { chakra: "2do - Sacro", area: "Transformación, intimidad, poder." },
+        Sagittarius: { chakra: "3º - Plexo solar", area: "Expansión, creencia, hígado/caderas." },
+        Capricorn: { chakra: "1º - Raíz", area: "Huesos, estructura, fundamento." },
+        Aquarius: { chakra: "6to - Tercer Ojo", area: "Visión, innovación, sistema nervioso." },
+        Pisces: { chakra: "7mo - Corona", area: "Espiritualidad, pies, sistema inmunológico." }
     }
 };
 
@@ -544,132 +544,132 @@ CREATIVE EXPRESSION: There's often natural talent for singing, speaking, voice w
 
 var ARCHETYPE_SYNTHESIS_READINGS = {
     wealthyMonk: {
-        title: "The Wealthy Monk",
-        triggers: ["Taurus stellium", "2nd house emphasis", "spiritual indicators"],
-        reading: `When profound Taurus/2nd House energy meets spiritual depth, it creates the "Wealthy Monk" archetype - someone who understands that material and spiritual wealth are not opposites but partners.
+        title: "El monje rico",
+        triggers: ["estelio de tauro", "énfasis en la segunda casa", "indicadores espirituales"],
+        reading: `Cuando la energía profunda de Tauro/Casa 2 se encuentra con la profundidad espiritual, se crea el arquetipo del "monje rico": alguien que entiende que la riqueza material y espiritual no son opuestos sino socios.
 
-This is the soul who knows that money is a form of energy, that abundance is a spiritual law, and that one can be both materially successful and spiritually evolved.
+Ésta es el alma que sabe que el dinero es una forma de energía, que la abundancia es una ley espiritual y que uno puede tener éxito material y evolucionar espiritualmente.
 
-THE WEALTHY MONK PATH:
-• Values both silence and prosperity
-• Finds meditation in practical tasks
-• Creates beauty as spiritual practice
-• Understands resources as responsibility
-• Builds wealth to fund purpose
+EL CAMINO DEL MONJE RICO:
+• Valora tanto el silencio como la prosperidad.
+• Encuentra la meditación en tareas prácticas.
+• Crea belleza como práctica espiritual.
+• Entiende los recursos como responsabilidad
+• Genera riqueza para financiar el propósito
 
-This archetype rejects the false choice between spirit and matter. They're here to demonstrate that you can have both - that enlightenment doesn't require poverty, and that wealth can serve awakening.`,
-        archetype: "Sacred Materialism"
+Este arquetipo rechaza la falsa elección entre espíritu y materia. Están aquí para demostrar que se pueden tener ambas cosas: que la iluminación no requiere pobreza y que la riqueza puede servir para despertar.`,
+        archetype: "Materialismo sagrado"
     },
     
     sensoryMystic: {
-        title: "The Sensory Mystic",
-        triggers: ["Taurus Moon", "Taurus with Neptune/12th house"],
-        reading: `When Taurus' sensory nature meets spiritual sensitivity, it creates the "Sensory Mystic" - someone who finds the divine through physical experience, not in escape from it.
+        title: "El místico sensorial",
+        triggers: ["Luna de Tauro", "Tauro con Neptuno/casa 12"],
+        reading: `Cuando la naturaleza sensorial de Tauro se encuentra con la sensibilidad espiritual, crea el "Místico Sensorial", alguien que encuentra lo divino a través de la experiencia física, no escapando de ella.
 
-This is the soul who tastes God in good food, feels the sacred in silk on skin, hears angels in beautiful music. Their mysticism is embodied, not ethereal.
+Ésta es el alma que prueba a Dios en la buena comida, siente lo sagrado en la seda sobre la piel, escucha a los ángeles en una hermosa música. Su misticismo es encarnado, no etéreo.
 
-THE SENSORY MYSTIC PATH:
-• Spiritual experiences through the body
-• Nature as primary temple
-• Pleasure as path to divine
-• Grounded intuition and practical magic
-• Healing through touch and presence
+EL CAMINO MÍSTICO SENSORIAL:
+• Experiencias espirituales a través del cuerpo.
+• La naturaleza como templo principal
+• El placer como camino hacia lo divino
+• Intuición fundamentada y magia práctica.
+• Sanación a través del tacto y la presencia
 
-This archetype collapses the mind/body split. They know that spirit isn't "up there" but "right here" - in the weight of a warm cup, the smell of earth after rain, the comfort of a strong embrace.`,
-        practiceGuidance: "Your spiritual path is through your senses, not around them. Honor the body as temple."
+Este arquetipo colapsa la división mente/cuerpo. Saben que el espíritu no está "allí arriba" sino "justo aquí": en el peso de una taza caliente, el olor de la tierra después de la lluvia, el consuelo de un fuerte abrazo.`,
+        practiceGuidance: "Tu camino espiritual pasa a través de tus sentidos, no alrededor de ellos. Honra el cuerpo como templo."
     },
     
     sacredHedonism: {
-        title: "Sacred Hedonism",
-        triggers: ["5th house emphasis", "Venus strong", "Taurus emphasis"],
-        reading: `"Sacred Hedonism" emerges when someone discovers that pleasure, when conscious, is a spiritual path. This isn't indulgence without awareness - it's deep presence to joy.
+        title: "Hedonismo sagrado",
+        triggers: ["énfasis en la quinta casa", "venus fuerte", "Énfasis en Tauro"],
+        reading: `El "hedonismo sagrado" surge cuando alguien descubre que el placer, cuando es consciente, es un camino espiritual. Esto no es indulgencia sin conciencia: es una presencia profunda en la alegría.
 
-THE PHILOSOPHY:
-The body is not the obstacle to spirit - it's the gateway. Pleasure is not distraction from enlightenment - it can be enlightenment itself. Joy is not the opposite of depth - it can be depth itself.
+LA FILOSOFÍA:
+El cuerpo no es el obstáculo para el espíritu: es la puerta de entrada. El placer no es una distracción de la iluminación: puede ser la iluminación misma. La alegría no es lo opuesto a la profundidad; puede ser la profundidad misma.
 
-SACRED HEDONISM PRACTICES:
-• Eating as meditation (slow, present, grateful)
-• Touch as prayer (conscious, loving, healing)
-• Beauty as devotion (creating and surrounding self with it)
-• Comfort as spiritual practice (caring for the body-temple)
-• Joy as service (your happiness lifts others)
+PRÁCTICAS SAGRADAS DEL HEDONISMO:
+• Comer como meditación (lento, presente, agradecido)
+• Tocar como oración (consciente, amorosa, sanadora)
+• La belleza como devoción (creándose y rodeándose de ella)
+• El consuelo como práctica espiritual (cuidado del cuerpo-templo)
+• La alegría como servicio (tu felicidad eleva a los demás)
 
-This philosophy says: why would God create a world of beauty if we weren't meant to enjoy it? The sin isn't pleasure - it's unconscious consumption. When pleasure is awake, it's worship.`,
-        shadow: "Without consciousness, this becomes mere indulgence. The 'sacred' must remain active."
+Esta filosofía dice: ¿por qué Dios crearía un mundo de belleza si no estuviéramos destinados a disfrutarlo? El pecado no es el placer, es el consumo inconsciente. Cuando el placer está despierto, es adoración.`,
+        shadow: "Sin conciencia, esto se convierte en mera indulgencia. Lo "sagrado" debe permanecer activo."
     },
     
     embodiedTeacher: {
-        title: "The Embodied Teacher",
-        triggers: ["9th house emphasis", "Taurus emphasis", "Mercury strong"],
-        reading: `When teaching energy (9th House) meets embodied wisdom (Taurus), it creates "The Embodied Teacher" - someone who teaches not just through ideas but through demonstration.
+        title: "El maestro encarnado",
+        triggers: ["énfasis en la novena casa", "Énfasis en Tauro", "Mercurio fuerte"],
+        reading: `Cuando la energía de la enseñanza (Casa 9) se encuentra con la sabiduría encarnada (Tauro), se crea "El Maestro encarnado", alguien que enseña no sólo a través de ideas sino también a través de demostraciones.
 
-THE EMBODIED TEACHER PATH:
-They don't just tell - they show. They don't just theorize - they practice. They don't just know - they live what they teach.
+EL CAMINO DEL MAESTRO ENCARNADO:
+No sólo cuentan, sino que muestran. No sólo teorizan, sino que practican. No sólo saben: viven lo que enseñan.
 
-TEACHING STYLE:
-• Learns best through direct experience
-• Teaches best through practical demonstration
-• Values "walking the talk" above all
-• Distrusts purely intellectual knowledge
-• Seeks to make abstract wisdom practical
+ESTILO DE ENSEÑANZA:
+• Aprende mejor a través de la experiencia directa
+• Enseña mejor a través de demostraciones prácticas.
+• Valora "predicar con el ejemplo" sobre todo
+• Desconfía del conocimiento puramente intelectual
+• Busca hacer práctica la sabiduría abstracta
 
-Others learn from this person not just from their words but from their presence, their steadiness, their living example. Their life IS their teaching.`,
-        optimalEnvironment: "Hands-on learning environments, apprenticeship models, nature classrooms, experiential education."
+Otros aprenden de esta persona no sólo por sus palabras sino por su presencia, su firmeza, su ejemplo de vida. Su vida ES su enseñanza.`,
+        optimalEnvironment: "Entornos de aprendizaje práctico, modelos de aprendizaje, aulas de naturaleza, educación experiencial."
     },
     
     completionSpecialist: {
-        title: "The Completion Specialist",
-        triggers: ["Waning Crescent Moon", "Life Path 9", "12th house"],
-        reading: `When Waning Crescent Moon energy (the final phase before new) meets Life Path 9 (the completing number), it creates "The Completion Specialist" - a soul whose gift is finishing what others start and releasing what's complete.
+        title: "El especialista en finalización",
+        triggers: ["Luna creciente menguante", "Camino de vida 9", "casa 12"],
+        reading: `Cuando la energía de la Luna Creciente Menguante (la fase final antes de la nueva) se encuentra con el Camino de Vida 9 (el número de finalización), se crea "El especialista en finalización", un alma cuyo don es terminar lo que otros comienzan y liberar lo que está completo.
 
-This is the old soul energy of someone who has done this before, many times. They carry the wisdom of endings, the grace of letting go, the understanding that death makes room for birth.
+Ésta es la vieja energía del alma de alguien que ha hecho esto antes, muchas veces. Llevan la sabiduría de los finales, la gracia de dejar ir, la comprensión de que la muerte deja lugar al nacimiento.
 
-THE COMPLETION SPECIALIST PATH:
-• Natural talent for finishing projects
-• Ability to gracefully close chapters
-• Wisdom about when things are "done"
-• Skill in helping others release
-• Understanding that endings are beginnings
+EL CAMINO DEL ESPECIALISTA EN FINALIZACIÓN:
+• Talento natural para terminar proyectos.
+• Capacidad para cerrar capítulos con gracia
+• Sabiduría sobre cuándo se "hacen" las cosas
+• Habilidad para ayudar a otros a liberarse.
+• Comprender que los finales son comienzos
 
-In a world obsessed with starting new things, this soul is gifted at completing. They know that nothing new can be born until the old is properly released.`,
-        lifeWork: "Hospice work, editing, therapy focused on closure, estate management, helping with transitions of all kinds."
+En un mundo obsesionado con comenzar cosas nuevas, esta alma tiene el don de completarlas. Saben que nada nuevo puede nacer hasta que lo viejo se libere adecuadamente.`,
+        lifeWork: "Trabajos de hospicio, edición, terapia enfocada al cierre, gestión patrimonial, ayuda en transiciones de todo tipo."
     },
     
     aestheticAuthority: {
-        title: "Aesthetic Authority",
-        triggers: ["Venus strong", "Taurus/Libra emphasis", "2nd/7th house"],
-        reading: `When strong Venus energy combines with Taurus/Libra placements, it creates "Aesthetic Authority" - someone whose taste and eye for beauty carries natural credibility.
+        title: "Autoridad estética",
+        triggers: ["venus fuerte", "Énfasis en Tauro/Libra", "casa 2/7"],
+        reading: `Cuando la fuerte energía de Venus se combina con las posiciones de Tauro/Libra, se crea una "Autoridad Estética", alguien cuyo gusto y ojo para la belleza conlleva una credibilidad natural.
 
-This person doesn't just appreciate beauty - they define it. Their sense of what looks good, sounds good, feels good becomes influential. Others naturally defer to their aesthetic judgment.
+Esta persona no sólo aprecia la belleza, sino que la define. Su sentido de lo que se ve bien, suena bien y se siente bien se vuelve influyente. Otros, naturalmente, se remiten a su criterio estético.
 
-AESTHETIC AUTHORITY DOMAINS:
-• Personal style and appearance
-• Environment and space design
-• Quality assessment in all things
-• Cultural taste-making
-• Beauty industry of all kinds
+DOMINIOS DE AUTORIDAD ESTÉTICA:
+• Estilo y apariencia personal
+• Diseño de entornos y espacios.
+• Evaluación de la calidad en todo.
+• Elaboración de gustos culturales
+• Industria de la belleza de todo tipo.
 
-This isn't vanity - it's a real gift. In a world often ugly or chaotic, this soul brings order through beauty, healing through aesthetics, meaning through form.`,
-        brandImplication: "Your personal brand should emphasize taste, quality, beauty, and refined judgment."
+Esto no es vanidad, es un verdadero regalo. En un mundo a menudo feo o caótico, esta alma trae orden a través de la belleza, curación a través de la estética, significado a través de la forma.`,
+        brandImplication: "Tu marca personal debe enfatizar el gusto, la calidad, la belleza y el criterio refinado."
     },
     
     immovableVisionary: {
-        title: "The Immovable Visionary",
-        triggers: ["Taurus emphasis", "9th house emphasis", "Sagittarius influence"],
-        reading: `The "Immovable Visionary" emerges when the stability of Taurus meets the expansive vision of the 9th House - someone who dreams of distant horizons while needing deep roots.
+        title: "El visionario inamovible",
+        triggers: ["Énfasis en Tauro", "énfasis en la novena casa", "influencia de sagitario"],
+        reading: `El "Visionario Inamovible" surge cuando la estabilidad de Tauro se encuentra con la visión expansiva de la Casa 9: alguien que sueña con horizontes lejanos y necesita raíces profundas.
 
-THE PARADOX:
-This isn't a contradiction but a unique gift. They can bring visionary ideas into practical reality. While others dream without building, or build without dreaming, this soul does both.
+LA PARADOJA:
+Esto no es una contradicción sino un regalo único. Pueden convertir ideas visionarias en realidad práctica. Mientras otros sueñan sin construir, o construyen sin soñar, esta alma hace ambas cosas.
 
-THE IMMOVABLE VISIONARY PATH:
-• Anchored enough to sustain big visions
-• Visionary enough to transform stable foundations
-• Patient enough to wait for dreams to manifest
-• Grounded enough to make philosophy practical
-• Adventurous enough to keep roots from becoming prisons
+EL CAMINO VISIONARIO INMOVIBLE:
+• Lo suficientemente anclados como para sostener grandes visiones
+• Lo suficientemente visionario como para transformar cimientos estables
+• Lo suficientemente paciente como para esperar a que los sueños se manifiesten
+• Lo suficientemente fundamentado para hacer que la filosofía sea práctica.
+• Lo suficientemente aventurero como para evitar que las raíces se conviertan en prisiones.
 
-This is the philosopher-farmer, the dreaming builder, the traveler who always comes home. Their gift is making the impossible seem inevitable through steady, patient work.`,
-        challenge: "May feel torn between comfort and adventure. The resolution: create adventures FROM your stable base."
+Éste es el filósofo-granjero, el constructor soñador, el viajero que siempre vuelve a casa. Su don es hacer que lo imposible parezca inevitable mediante un trabajo constante y paciente.`,
+        challenge: "Puede sentirse dividido entre la comodidad y la aventura. La resolución: crear aventuras DESDE tu base estable."
     }
 };
 
@@ -687,21 +687,21 @@ var RARITY_CALCULATIONS = {
         if (stellium.count >= 5) {
             // 5+ planets in one sign is extremely rare
             return {
-                odds: "1 in 10,000-15,000",
-                description: "Extremely Rare - Cosmic Mandate Configuration",
-                significance: "This concentration is so unusual that it represents a specific cosmic purpose."
+                odds: "1 entre 10.000-15.000",
+                description: "Extremadamente raro: configuración de mandato cósmico",
+                significance: "Esta concentración es tan inusual que representa un propósito cósmico específico."
             };
         } else if (stellium.count === 4) {
             return {
-                odds: "1 in 500-1,000",
-                description: "Very Rare - Power Focus Configuration",
-                significance: "Strong concentration suggesting major life themes in this area."
+                odds: "1 en 500-1000",
+                description: "Muy raro: configuración de enfoque de poder",
+                significance: "Fuerte concentración que sugiere importantes temas de vida en esta área."
             };
         } else if (stellium.count === 3) {
             return {
-                odds: "1 in 50-100",
-                description: "Uncommon - Significant Emphasis",
-                significance: "Notable concentration creating particular strengths here."
+                odds: "1 en 50-100",
+                description: "Poco común: énfasis significativo",
+                significance: "Una concentración notable que crea aquí puntos fuertes particulares."
             };
         }
         return null;
@@ -709,30 +709,30 @@ var RARITY_CALCULATIONS = {
     
     // Calculate rarity of Sun-Moon same sign
     sunMoonSameSign: {
-        odds: "1 in 144",
-        description: "Having both luminaries in the same sign creates unusual emotional-identity coherence",
-        significance: "When Sun and Moon share a sign, there's powerful alignment between conscious will and emotional needs."
+        odds: "1 entre 144",
+        description: "Tener ambas luminarias en el mismo signo crea una inusual coherencia de identidad emocional",
+        significance: "Cuando el Sol y la Luna comparten un signo, existe una poderosa alineación entre la voluntad consciente y las necesidades emocionales."
     },
     
     // House concentration rarity
     houseConcentrationRarity: function(count, house) {
         const descriptions = {
-            9: "9th House concentration of personal planets is exceptionally rare, indicating a philosophical/expansive life purpose",
-            2: "2nd House concentration indicates strong wealth/value themes",
-            8: "8th House concentration suggests deep transformation as life path"
+            9: "La concentración de planetas personales en la Casa 9 es excepcionalmente rara, lo que indica un propósito de vida filosófico/expansivo.",
+            2: "La concentración de la segunda casa indica fuertes temas de riqueza/valor",
+            8: "La concentración en la Casa 8 sugiere una transformación profunda como camino de vida"
         };
         
         if (count >= 5) {
             return {
-                odds: "1 in 15,000+",
+                odds: "1 entre 15.000+",
                 description: descriptions[house] || "Exceptional concentration in this life area",
-                significance: "This represents an almost unprecedented focus of cosmic energy."
+                significance: "Esto representa un foco de energía cósmica casi sin precedentes."
             };
         } else if (count >= 3) {
             return {
-                odds: "1 in 200-500",
+                odds: "1 entre 200-500",
                 description: descriptions[house] || "Significant concentration in this life area",
-                significance: "This represents strong cosmic emphasis in this area."
+                significance: "Esto representa un fuerte énfasis cósmico en esta área."
             };
         }
         return null;
@@ -748,83 +748,83 @@ var TIMING_READINGS = {
         1: {
             theme: "New Beginnings & Independence",
             powerMonths: [1, 4, 10], // January, April, October
-            dailyPowerTime: "Morning (6am-10am) - Initiative energy peaks",
-            seasonalPattern: "Spring brings strongest activation",
-            ageResonance: "Particularly powerful if age reduces to 1"
+            dailyPowerTime: "Mañana (6 a. m. a 10 a. m.): picos de energía de la iniciativa",
+            seasonalPattern: "La primavera trae una activación más fuerte",
+            ageResonance: "Particularmente poderoso si la edad se reduce a 1"
         },
         2: {
             theme: "Partnership & Patience",
             powerMonths: [2, 6, 11],
-            dailyPowerTime: "Evening (4pm-8pm) - Receptive energy peaks",
-            seasonalPattern: "Autumn brings balance",
-            ageResonance: "Particularly powerful if age reduces to 2"
+            dailyPowerTime: "Tarde (16:00 a 20:00 horas): picos de energía receptiva",
+            seasonalPattern: "El otoño trae equilibrio",
+            ageResonance: "Particularmente poderoso si la edad se reduce a 2"
         },
         3: {
             theme: "Creativity & Expression",
             powerMonths: [3, 7, 12],
-            dailyPowerTime: "Midday (10am-2pm) - Creative energy peaks",
-            seasonalPattern: "Summer brings expansion",
-            ageResonance: "Particularly powerful if age reduces to 3"
+            dailyPowerTime: "Mediodía (10:00 a 14:00 horas): picos de energía creativa",
+            seasonalPattern: "El verano trae expansión",
+            ageResonance: "Particularmente poderoso si la edad se reduce a 3"
         },
         4: {
             theme: "Building & Foundation",
             powerMonths: [1, 4, 8],
-            dailyPowerTime: "Early morning (4am-8am) - Structure energy peaks",
-            seasonalPattern: "Winter brings consolidation",
-            ageResonance: "Particularly powerful if age reduces to 4"
+            dailyPowerTime: "Temprano en la mañana (4 a. m. a 8 a. m.): picos de energía de la estructura",
+            seasonalPattern: "El invierno trae consolidación",
+            ageResonance: "Particularmente poderoso si la edad se reduce a 4 años."
         },
         5: {
             theme: "Change & Freedom",
             powerMonths: [5, 9, 11],
-            dailyPowerTime: "Afternoon (2pm-6pm) - Dynamic energy peaks",
-            seasonalPattern: "Transitional seasons (spring/fall) bring movement",
-            ageResonance: "Particularly powerful if age reduces to 5"
+            dailyPowerTime: "Tarde (14:00 a 18:00 horas): picos de energía dinámicos",
+            seasonalPattern: "Las estaciones de transición (primavera/otoño) traen movimiento",
+            ageResonance: "Particularmente poderoso si la edad se reduce a 5 años."
         },
         6: {
             theme: "Love & Responsibility",
             powerMonths: [2, 6, 9],
-            dailyPowerTime: "Evening (6pm-10pm) - Heart energy peaks",
-            seasonalPattern: "Summer brings love, autumn brings responsibility",
-            ageResonance: "Particularly powerful if age reduces to 6"
+            dailyPowerTime: "Tarde (6:00 p. m. a 10:00 p. m.): picos de energía del corazón",
+            seasonalPattern: "El verano trae amor, el otoño trae responsabilidad.",
+            ageResonance: "Particularmente poderoso si la edad se reduce a 6 años."
         },
         7: {
             theme: "Introspection & Wisdom",
             powerMonths: [3, 7, 10],
-            dailyPowerTime: "Night (10pm-2am) - Intuitive energy peaks",
-            seasonalPattern: "Winter brings depth",
-            ageResonance: "Particularly powerful if age reduces to 7"
+            dailyPowerTime: "Noche (22:00-02:00): picos de energía intuitivos",
+            seasonalPattern: "El invierno trae profundidad",
+            ageResonance: "Particularmente poderoso si la edad se reduce a 7 años."
         },
         8: {
             theme: "Power & Achievement",
             powerMonths: [1, 5, 8],
-            dailyPowerTime: "Morning (8am-12pm) - Achievement energy peaks",
-            seasonalPattern: "Spring and Summer bring harvest",
-            ageResonance: "Particularly powerful if age reduces to 8"
+            dailyPowerTime: "Mañana (8 a.m. a 12 p.m.): picos de energía de logros",
+            seasonalPattern: "La primavera y el verano traen cosecha",
+            ageResonance: "Particularmente poderoso si la edad se reduce a 8 años."
         },
         9: {
             theme: "Completion & Release",
             powerMonths: [4, 9, 12],
-            dailyPowerTime: "Late evening (8pm-midnight) - Release energy peaks",
-            seasonalPattern: "Autumn brings natural letting go",
-            ageResonance: "Particularly powerful if age reduces to 9"
+            dailyPowerTime: "A última hora de la tarde (de 8:00 p. m. a medianoche): libera picos de energía.",
+            seasonalPattern: "El otoño trae un abandono natural",
+            ageResonance: "Particularmente poderoso si la edad se reduce a 9 años."
         }
     },
     
     tripleNumberSignificance: {
-        title: "Triple Number Activation",
-        reading: `When a number appears three times in a numerological profile (birthday, soul urge, pinnacle, etc.), it creates "Triple Activation" - an amplification of that number's energy that cannot be ignored.
+        title: "Activación de Número Triple",
+        reading: `Cuando un número aparece tres veces en un perfil numerológico (cumpleaños, impulso del alma, pináculo, etc.), se crea una "Triple Activación", una amplificación de la energía de ese número que no se puede ignorar.
 
-This isn't coincidence; it's cosmic emphasis. The universe is saying "pay attention to this energy" three times over.
+Esto no es una coincidencia; es énfasis cósmico. El universo dice "presta atención a esta energía" tres veces.
 
-TRIPLE 3 SIGNIFICANCE (if applicable):
-When 3 appears as Birthday Number, Soul Urge Number, and current Pinnacle, it creates a "Creative Mandate" - expression, communication, and joy are not optional but essential to fulfillment.
+TRIPLE 3 SIGNIFICADO (si aplica):
+Cuando el 3 aparece como número de cumpleaños, número de impulso del alma y pináculo actual, crea un "mandato creativo": la expresión, la comunicación y la alegría no son opcionales sino esenciales para la realización.
 
-TRIPLE NUMBER EFFECTS:
-• The energy becomes impossible to suppress
-• Life repeatedly brings themes of this number
-• Mastering this number becomes core life work
-• The gifts of this number are amplified
-• The challenges of this number must be faced`
+EFECTOS DEL NÚMERO TRIPLE:
+• La energía se vuelve imposible de suprimir.
+• La vida trae repetidamente temas de este número.
+• Dominar este número se convierte en el trabajo central de la vida.
+• Los dones de este número se amplifican.
+• Los desafíos de este número deben ser enfrentados`
     }
 };
 
@@ -834,52 +834,52 @@ TRIPLE NUMBER EFFECTS:
 
 var HEALTH_BLUEPRINT_READINGS = {
     taurus: {
-        title: "Taurus Health Blueprint",
-        keywords: ["Throat", "Thyroid", "Voice", "Neck", "Metabolism"],
-        bodyRuler: "Throat, neck, thyroid, voice",
-        vulnerabilities: `With Taurus emphasis, health awareness focuses on:
+        title: "Plan de salud de Tauro",
+        keywords: ["Garganta", "Tiroides", "Voz", "Cuello", "Metabolismo"],
+        bodyRuler: "Garganta, cuello, tiroides, voz.",
+        vulnerabilities: `Con énfasis en Tauro, la conciencia sobre la salud se centra en:
 
-THROAT & VOICE:
-• The throat chakra is your power center - protect it
-• Thyroid function may need monitoring throughout life
-• Voice strain from unexpressed emotions or overuse
-• Neck tension holds accumulated stress
+GARGANTA Y VOZ:
+• El chakra de la garganta es tu centro de poder: protégelo
+• Es posible que sea necesario controlar la función tiroidea durante toda la vida
+• Tensión de la voz debido a emociones no expresadas o uso excesivo
+• La tensión del cuello retiene el estrés acumulado
 
-METABOLIC CONSIDERATIONS:
-• Naturally slower metabolism - this is feature, not bug
-• Steady energy preferred over quick bursts
-• May need longer recovery time after illness
-• Weight responds to stress and emotional states
+CONSIDERACIONES METABÓLICAS:
+• Metabolismo naturalmente más lento: esto es una característica, no un error
+• Se prefiere la energía constante a las ráfagas rápidas
+• Puede necesitar un tiempo de recuperación más prolongado después de una enfermedad
+• El peso responde al estrés y a los estados emocionales.
 
-THE HEALTH-WEALTH CONNECTION:
-This is crucial for Taurus emphasis: Your financial and physical health are mysteriously linked. When one suffers, the other often follows. Financial stress shows up in throat/neck issues. Physical neglect impacts earning capacity.
+LA CONEXIÓN SALUD-RIQUEZA:
+Esto es crucial para el énfasis de Tauro: su salud financiera y física están misteriosamente vinculadas. Cuando uno sufre, el otro suele seguirlo. El estrés financiero se manifiesta en los problemas de garganta y cuello. La negligencia física afecta la capacidad de generar ingresos.
 
-WELLNESS APPROACH:
-• Slow, sensory self-care (massage, aromatherapy, quality food)
-• Regular routine over intense sporadic efforts
-• Voice work, singing, or vocal expression as therapy
-• Connection to nature for grounding and healing`,
-        guidance: "Your body is your first wealth. Treat it as the valuable asset it is.",
-        affirmation: "I honor my body's wisdom and natural rhythms."
+ENFOQUE DE BIENESTAR:
+• Autocuidado lento y sensorial (masajes, aromaterapia, alimentación de calidad)
+• Rutina regular sobre esfuerzos esporádicos intensos
+• Trabajo de voz, canto o expresión vocal como terapia.
+• Conexión con la naturaleza para conectar con la tierra y sanar`,
+        guidance: "Tu cuerpo es tu primera riqueza. Trátelo como el activo valioso que es.",
+        affirmation: "Honro la sabiduría de mi cuerpo y los ritmos naturales."
     },
     
     moonTaurus: {
-        title: "Taurus Moon Health Patterns",
-        emphasis: "Emotional health through physical comfort",
-        reading: `With Moon in Taurus, emotional wellbeing is deeply tied to physical comfort:
+        title: "Patrones de salud de la luna de Tauro",
+        emphasis: "Salud emocional a través del confort físico",
+        reading: `Con la Luna en Tauro, el bienestar emocional está profundamente ligado al confort físico:
 
-• Stress manifests physically more than mentally
-• Comfort eating is a real pattern to watch
-• Need for physical security affects sleep quality
-• Sensory deprivation causes emotional distress
-• Touch and physical affection are essential for emotional health
+• El estrés se manifiesta físicamente más que mentalmente
+• Comer reconfortante es un patrón real que hay que observar
+• La necesidad de seguridad física afecta la calidad del sueño
+• La privación sensorial causa angustia emocional
+• El tacto y el afecto físico son esenciales para la salud emocional
 
-HEALING MODALITIES:
-• Massage and bodywork
-• Aromatherapy and essential oils
-• Nature immersion
-• Quality sleep environment
-• Comfort objects and familiar surroundings`
+MODALIDADES DE CURACIÓN:
+• Masajes y trabajo corporal
+• Aromaterapia y aceites esenciales
+• Inmersión en la naturaleza
+• Ambiente de sueño de calidad
+• Objetos reconfortantes y entorno familiar.`
     }
 };
 
@@ -889,59 +889,59 @@ HEALING MODALITIES:
 
 var TEACHING_STYLE_READINGS = {
     embodiedTeacher: {
-        title: "The Embodied Teacher Method",
-        subtitle: "Teaching Through Being, Not Just Knowing",
-        keywords: ["Demonstration", "Presence", "Practical Wisdom", "Patience"],
-        reading: `With 9th House emphasis combined with Taurus energy, you teach through embodiment rather than abstraction:
+        title: "El método del maestro encarnado",
+        subtitle: "Enseñar a través del ser, no sólo del saber",
+        keywords: ["Demostración", "Presencia", "Sabiduría práctica", "Paciencia"],
+        reading: `Con el énfasis de la Novena Casa combinado con la energía de Tauro, enseñas a través de la encarnación en lugar de la abstracción:
 
-YOUR TEACHING STYLE:
-• You demonstrate before you explain
-• Your presence teaches as much as your words
-• Patience with slow learners (you understand depth takes time)
-• Practical applications over theoretical frameworks
-• Students feel safe and grounded in your presence
+SU ESTILO DE ENSEÑANZA:
+• Demuestras antes de explicar
+• Tu presencia enseña tanto como tus palabras.
+• Paciencia con los estudiantes lentos (comprende que la profundidad requiere tiempo)
+• Aplicaciones prácticas sobre marcos teóricos.
+• Los estudiantes se sienten seguros y fundamentados en su presencia.
 
-HOW YOU LEARN BEST:
-• Hands-on experience over lectures
-• Taking your time to truly absorb information
-• Physical environment matters (comfort aids learning)
-• Learning through all senses, not just reading
-• Repetition and practice until mastery is embodied
+CÓMO SE APRENDE MEJOR:
+• Experiencia práctica en conferencias.
+• Tomarse su tiempo para absorber verdaderamente la información
+• El entorno físico importa (la comodidad ayuda al aprendizaje)
+• Aprender a través de todos los sentidos, no solo leyendo
+• Repetición y práctica hasta que se materialice el dominio.
 
-OPTIMAL LEARNING ENVIRONMENTS:
-• Comfortable, beautiful spaces
-• Unhurried pace with time for integration
-• Nature settings or natural elements present
-• Quality over quantity of information
-• Teacher who respects your process
+ENTORNOS ÓPTIMOS DE APRENDIZAJE:
+• Espacios cómodos y hermosos
+• Ritmo pausado con tiempo para la integración
+• Entornos naturales o elementos naturales presentes
+• Calidad sobre cantidad de información
+• Profesor que respeta tu proceso
 
-WHAT YOU'RE HERE TO TEACH:
-• That wisdom must be lived, not just known
-• That slow and steady creates lasting change
-• That the body holds intelligence
-• That material and spiritual aren't separate
-• That patience is a superpower`,
-        superpower: "Making complex spiritual concepts feel tangible and achievable",
-        shadow: "May become frustrated with students who want quick fixes"
+LO QUE ESTÁS AQUÍ PARA ENSEÑAR:
+• Que la sabiduría debe vivirse, no sólo conocerse
+• Que lo lento y lo constante creen un cambio duradero
+• Que el cuerpo contiene inteligencia
+• Que lo material y lo espiritual no están separados
+• Que la paciencia es un superpoder`,
+        superpower: "Hacer que conceptos espirituales complejos se sientan tangibles y alcanzables",
+        shadow: "Puede sentirse frustrado con los estudiantes que quieren soluciones rápidas."
     },
     
     ninthHouseTeacher: {
-        title: "9th House Teaching Gifts",
-        keywords: ["Philosophy", "Higher Learning", "Publishing", "Travel"],
-        reading: `Strong 9th House energy indicates natural gifts in:
+        title: "Regalos de enseñanza de la novena casa",
+        keywords: ["Filosofía", "Aprendizaje Superior", "Publicación", "Viajar"],
+        reading: `Una fuerte energía de la Novena Casa indica dones naturales en:
 
-• Higher education and advanced learning
-• Publishing, broadcasting, sharing ideas widely
-• Cross-cultural communication and bridging worlds
-• Making philosophical concepts accessible
-• Inspiring others toward growth and expansion
+• Educación superior y aprendizaje avanzado
+• Publicar, difundir y compartir ideas ampliamente
+• Comunicación intercultural y puentes entre mundos
+• Hacer accesibles los conceptos filosóficos
+• Inspirar a otros hacia el crecimiento y la expansión
 
-CAREER EXPRESSIONS:
-• Professor, lecturer, workshop leader
-• Author, blogger, content creator
-• Travel guide or cultural bridge
-• Life coach or philosophical counselor
-• Religious/spiritual teacher`
+EXPRESIONES DE CARRERA:
+• Profesor, conferencista, líder de taller
+• Autor, blogger, creador de contenido
+• Guía de viaje o puente cultural
+• Entrenador de vida o consejero filosófico
+• Maestro religioso/espiritual`
     }
 };
 
@@ -951,55 +951,55 @@ CAREER EXPRESSIONS:
 
 var PHILOSOPHICAL_FRAMEWORK_READINGS = {
     taurus9thHouse: {
-        title: "Grounded Philosophy",
-        subtitle: "Where Material Meets Meaning",
-        keywords: ["Practical Wisdom", "Embodied Belief", "Value Philosophy"],
-        reading: `The combination of Taurus energy with 9th House emphasis creates a unique philosophical framework:
+        title: "Filosofía fundamentada",
+        subtitle: "Donde el material se encuentra con el significado",
+        keywords: ["Sabiduría práctica", "Creencia encarnada", "Filosofía de valor"],
+        reading: `La combinación de la energía de Tauro con el énfasis de la Casa 9 crea un marco filosófico único:
 
-YOUR BELIEF SYSTEM:
-You're not interested in philosophy that can't be lived. Abstract ideas must pass through the filter of "But does it WORK?" Your spirituality is earthy, practical, sensory.
+SU SISTEMA DE CREENCIAS:
+No te interesa la filosofía que no se puede vivir. Las ideas abstractas deben pasar por el filtro del "¿Pero FUNCIONA?" Tu espiritualidad es terrenal, práctica, sensorial.
 
-CORE PHILOSOPHICAL TENSIONS:
-• Material vs. Spiritual (you're here to prove they're the same)
-• Possession vs. Detachment (you find the middle way)
-• Pleasure vs. Asceticism (sacred hedonism is your path)
-• Tradition vs. Innovation (you honor both)
+TENSIONES FILOSÓFICAS FUNDAMENTALES:
+• Material vs. Espiritual (estás aquí para demostrar que son lo mismo)
+• Posesión vs. Desapego (encontrarás el camino intermedio)
+• Placer versus ascetismo (el hedonismo sagrado es tu camino)
+• Tradición vs. Innovación (honras ambas)
 
-HOW BELIEFS BECOME REALITY:
-For you, a belief isn't real until it changes behavior. You don't just think abundance - you create it. You don't just believe in self-worth - you demonstrate it through choices.
+CÓMO LAS CREENCIAS SE HACEN REALIDAD:
+Para usted, una creencia no es real hasta que cambia el comportamiento. No sólo piensas en la abundancia, sino que la creas. No sólo crees en la autoestima, sino que la demuestras a través de elecciones.
 
-THE VALUE PHILOSOPHY:
-Everything is an energy exchange. You intuitively understand:
-• Money as crystallized life force
-• Possessions as materialized values
-• Time as the ultimate currency
-• Quality as a spiritual practice
+LA FILOSOFÍA DE VALOR:
+Todo es un intercambio de energía. Entiendes intuitivamente:
+• El dinero como fuerza vital cristalizada
+• Las posesiones como valores materializados
+• El tiempo como moneda definitiva
+• La calidad como práctica espiritual
 
-SPIRITUAL BUT PRACTICAL:
-Your path isn't about renouncing the world but sanctifying it. Every purchase is a vote for values. Every possession is a relationship. Every financial decision is a spiritual choice.`,
-        keyInsight: "You prove your beliefs by how you spend your money and time.",
-        integration: "Your philosophical task is to make the material sacred without making the sacred material."
+ESPIRITUAL PERO PRÁCTICO:
+Tu camino no se trata de renunciar al mundo sino de santificarlo. Cada compra es un voto por los valores. Cada posesión es una relación. Cada decisión financiera es una elección espiritual.`,
+        keyInsight: "Demuestras tus creencias por cómo gastas tu dinero y tu tiempo.",
+        integration: "Tu tarea filosófica es hacer que lo material sea sagrado sin hacer que el material sea sagrado."
     },
     
     wealthPhilosophy: {
-        title: "Philosophy of Wealth",
-        keywords: ["Abundance", "Value", "Exchange", "Stewardship"],
-        reading: `Your unique philosophical perspective on wealth:
+        title: "Filosofía de la riqueza",
+        keywords: ["Abundancia", "Valor", "Intercambio", "Administración"],
+        reading: `Su perspectiva filosófica única sobre la riqueza:
 
-WEALTH AS ENERGY:
-• Money is neither good nor evil - it's amplified intention
-• Abundance flows toward those who feel worthy of it
-• Scarcity thinking creates scarcity reality
-• Generosity and abundance are the same energy
+LA RIQUEZA COMO ENERGÍA:
+• El dinero no es ni bueno ni malo: es una intención amplificada.
+• La abundancia fluye hacia quienes se sienten merecedores de ella.
+• El pensamiento de escasez crea una realidad de escasez
+• Generosidad y abundancia son la misma energía.
 
-YOUR WEALTH BELIEFS:
-• Quality matters more than quantity
-• Lasting value over quick gains
-• Building wealth is a form of self-respect
-• Financial freedom enables life purpose
+SUS CREENCIAS SOBRE LA RIQUEZA:
+• La calidad importa más que la cantidad
+• Valor duradero sobre ganancias rápidas
+• Generar riqueza es una forma de respeto por uno mismo
+• La libertad financiera permite un propósito en la vida
 
-THE GIVING-RECEIVING BALANCE:
-With Taurus-9th House energy, you understand that wealth must flow. Hoarding creates stagnation. Excessive giving depletes. The art is in the rhythm - receiving with grace, giving with intention, building with purpose.`
+EL SALDO DAR-RECIBIR:
+Con la energía de Tauro-Casa 9, comprendes que la riqueza debe fluir. El acaparamiento crea estancamiento. Dar excesivamente agota. El arte está en el ritmo: recibir con gracia, dar con intención, construir con propósito.`
     }
 };
 
@@ -1009,28 +1009,28 @@ With Taurus-9th House energy, you understand that wealth must flow. Hoarding cre
 
 var LOCATION_READINGS = {
     abuDhabi: {
-        title: "Abu Dhabi Birth Signature",
-        coordinates: "24.4539° N, 54.3773° E",
-        significance: `Being born in Abu Dhabi carries specific energetic signatures:
+        title: "Firma de nacimiento de Abu Dhabi",
+        coordinates: "24,4539° N, 54,3773° E",
+        significance: `Nacer en Abu Dhabi conlleva firmas energéticas específicas:
 
-GEOGRAPHIC ENERGY:
-• Desert meets sea - fire and water elements in constant dialogue
-• Ancient crossroads of civilizations and trade routes
-• Modern prosperity built on ancient resources
-• Meeting point of East and West influences
+ENERGÍA GEOGRÁFICA:
+• El desierto se encuentra con el mar: elementos de fuego y agua en constante diálogo
+• Antiguo cruce de civilizaciones y rutas comerciales
+• La prosperidad moderna basada en recursos antiguos
+• Punto de encuentro de influencias de Oriente y Occidente
 
-ASTROLOGICAL IMPLICATIONS:
-• Specific rising sign calculations based on this latitude
-• Unique house system configurations for this location
-• Solar and lunar angles specific to this geography
+IMPLICACIONES ASTROLÓGICAS:
+• Cálculos específicos del signo ascendente basados en esta latitud
+• Configuraciones de sistema de casa únicas para esta ubicación
+• Ángulos solares y lunares específicos de esta geografía.
 
-SOUL LEVEL MEANING:
-Choosing to be born in Abu Dhabi suggests themes of:
-• Bridging worlds and cultures
-• Material prosperity with spiritual roots
-• Modern innovation honoring tradition
-• Building lasting structures from resources`,
-        guidance: "Your birth location chose YOU. The energy of this place is part of your cosmic blueprint."
+SIGNIFICADO DEL NIVEL DEL ALMA:
+Elegir nacer en Abu Dhabi sugiere temas de:
+• Uniendo mundos y culturas
+• Prosperidad material con raíces espirituales
+• Innovación moderna que honra la tradición
+• Construir estructuras duraderas a partir de recursos`,
+        guidance: "Tu lugar de nacimiento te eligió a TI. La energía de este lugar es parte de vuestro plano cósmico."
     }
 };
 
@@ -1087,7 +1087,7 @@ function analyzeWealthBlueprint(readings) {
             wealthIndicators.push({
                 type: 'secondHouseEmphasis',
                 planets: house2Planets,
-                significance: 'Strong wealth potential through resource mastery'
+                significance: 'Fuerte potencial de riqueza a través del dominio de los recursos.'
             });
         }
         
@@ -1181,7 +1181,7 @@ function analyzeTripleNumbers(readings) {
             return {
                 number: parseInt(num),
                 occurrences: count,
-                significance: `Triple ${num} activation - this energy is a cosmic mandate`,
+                significance: `Triple activación ${num}: esta energía es un mandato cósmico`,
                 reading: TIMING_READINGS.tripleNumberSignificance.reading
             };
         }
@@ -1200,7 +1200,7 @@ function analyzeSunMoonConjunction(readings) {
         return {
             ...RARITY_CALCULATIONS.sunMoonSameSign,
             sign: sunSign,
-            synthesis: `Sun and Moon both in ${sunSign} creates powerful internal coherence - identity and emotion are unified.`
+            synthesis: `Tanto el Sol como la Luna en ${sunSign} crean una poderosa coherencia interna: la identidad y la emoción están unificadas.`
         };
     }
     return null;
@@ -1317,75 +1317,75 @@ function analyzeBirthLocation(birthPlace) {
 
 var STELLIUM_INTEGRATION_READINGS = {
     "9-2": {
-        title: "The Philosophical Wealth Builder",
-        subtitle: "9th House + 2nd House Stellium Synthesis",
-        keywords: ["Wisdom-Wealth Bridge", "Teaching for Profit", "Philosophical Abundance", "Value Through Vision"],
-        reading: `This is one of the most powerful stellium combinations for creating meaningful wealth. The 9th House (philosophy, higher learning, expansion) feeds directly into the 2nd House (resources, value, material mastery), creating someone who can literally profit from their wisdom.
+        title: "El generador de riqueza filosófica",
+        subtitle: "Síntesis de Stellium de la Casa 9 + Casa 2",
+        keywords: ["Puente sabiduría-riqueza", "Enseñar con fines de lucro", "Abundancia filosófica", "Valor a través de la visión"],
+        reading: `Esta es una de las combinaciones de stellium más poderosas para crear riqueza significativa. La Casa 9 (filosofía, educación superior, expansión) alimenta directamente la Casa 2 (recursos, valor, dominio material), creando a alguien que literalmente puede beneficiarse de su sabiduría.
 
-THE PHILOSOPHY-TO-PROFIT PIPELINE:
-The 9th House stellium generates big-picture thinking, visionary beliefs, and a hunger for truth. The 2nd House stellium translates those visions into tangible value. This isn't someone who just thinks about abundance - they build it from their beliefs.
+EL TUBO DE LA FILOSOFÍA AL LUCRO:
+El stellium de la novena casa genera un pensamiento amplio, creencias visionarias y hambre de verdad. El stellium de la Segunda Casa traduce esas visiones en valor tangible. No es alguien que sólo piensa en la abundancia: la construye a partir de sus creencias.
 
-HOW THIS PLAYS OUT IN REAL LIFE:
-• They may earn through teaching, publishing, consulting, or sharing specialized knowledge
-• Travel and cross-cultural experiences become sources of income or business ideas
-• Their philosophical stance directly shapes their financial decisions (e.g., ethical investing, conscious capitalism)
-• Higher education or spiritual study often leads to their most profitable ventures
-• They see money as a vehicle for spreading their message, not just personal comfort
+CÓMO SE REALIZA ESTO EN LA VIDA REAL:
+• Pueden ganar dinero enseñando, publicando, consultando o compartiendo conocimientos especializados.
+• Los viajes y las experiencias interculturales se convierten en fuentes de ingresos o ideas de negocios.
+• Su postura filosófica influye directamente en sus decisiones financieras (por ejemplo, inversión ética, capitalismo consciente).
+• La educación superior o el estudio espiritual a menudo conducen a sus empresas más rentables.
+• Ven el dinero como un vehículo para difundir su mensaje, no sólo como una comodidad personal.
 
-THE VIRTUOUS CYCLE:
-The more they learn and expand (9th House), the more they earn (2nd House). The more resources they accumulate (2nd House), the more they can invest in growth, travel, and education (9th House). This self-reinforcing cycle can create both deep wisdom and significant material abundance.
+EL CICLO VIRTUOSO:
+Cuanto más aprenden y se expanden (Casa 9), más ganan (Casa 2). Cuantos más recursos acumulen (casa 2), más podrán invertir en crecimiento, viajes y educación (casa 9). Este ciclo que se refuerza a sí mismo puede crear tanto una sabiduría profunda como una abundancia material significativa.
 
-POTENTIAL TENSION:
-The 9th House wants to give knowledge freely. The 2nd House wants fair compensation for value. The integration challenge is pricing their wisdom appropriately - neither giving it all away nor hoarding it behind paywalls.`,
-        guidance: "Your greatest wealth comes from what you know and believe. Build businesses, careers, or investments that align with your philosophical vision. The money follows the meaning.",
+TENSIÓN POTENCIAL:
+La Casa IX quiere dar conocimiento libremente. La Segunda Cámara quiere una compensación justa por el valor. El desafío de la integración es valorar adecuadamente su sabiduría, sin regalarla toda ni acapararla detrás de muros de pago.`,
+        guidance: "Tu mayor riqueza proviene de lo que sabes y crees. Construya negocios, carreras o inversiones que se alineen con su visión filosófica. El dinero sigue el significado.",
         practicalSteps: [
-            "Create a course, book, or coaching program that packages your unique philosophical insights",
-            "Invest in experiences and education that expand your worldview - these ARE your wealth-building tools",
-            "Seek international or cross-cultural business opportunities where your broad perspective gives you an edge",
-            "Price your wisdom fairly - undercharging dishonors both your knowledge and others' capacity to value it"
+            "Cree un curso, libro o programa de entrenamiento que incluya sus conocimientos filosóficos únicos.",
+            "Invierta en experiencias y educación que amplíen su visión del mundo: estas SON sus herramientas para generar riqueza",
+            "Busque oportunidades comerciales internacionales o interculturales donde su amplia perspectiva le brinde una ventaja.",
+            "Ponle un precio justo a tu sabiduría: cobrar menos de lo necesario deshonra tanto tu conocimiento como la capacidad de los demás para valorarlo."
         ]
     },
     "1-7": {
-        title: "The Self-Through-Partnership Dynamo",
-        subtitle: "1st House + 7th House Stellium Synthesis",
-        keywords: ["Identity Partnership", "Self-Other Balance", "Relational Power"],
-        reading: `The axis of Self (1st House) and Other (7th House) is fully activated. This creates someone whose personal identity is profoundly shaped by their relationships, and whose relationships are profoundly shaped by their personal power. The challenge is maintaining individuality within deep partnership.`,
-        guidance: "You grow most when in relationship, but must never lose yourself in one."
+        title: "El dínamo de la autoasociación",
+        subtitle: "Síntesis de Stellium de la Casa 1 + Casa 7",
+        keywords: ["Asociación de identidad", "Equilibrio entre uno mismo y otro", "Poder relacional"],
+        reading: `El eje del Yo (Casa 1) y del Otro (Casa 7) está completamente activado. Esto crea a alguien cuya identidad personal está profundamente moldeada por sus relaciones, y cuyas relaciones están profundamente moldeadas por su poder personal. El desafío es mantener la individualidad dentro de una asociación profunda.`,
+        guidance: "Creces más cuando estás en una relación, pero nunca debes perderte en una."
     },
     "4-10": {
-        title: "The Private Foundation Builder",
-        subtitle: "4th House + 10th House Stellium Synthesis",
-        keywords: ["Home-Career Balance", "Legacy Foundation", "Public-Private Integration"],
-        reading: `The axis of Home (4th House) and Career (10th House) is fully activated. This creates someone who builds their public legacy on the foundation of their private world. Family business, working from home, or careers in real estate, hospitality, or family services are natural expressions.`,
-        guidance: "Your career and home life are meant to reinforce each other, not compete."
+        title: "El constructor de fundaciones privadas",
+        subtitle: "Síntesis de Stellium de la Casa 4 + Casa 10",
+        keywords: ["Equilibrio entre el hogar y la carrera", "Fundación heredada", "Integración público-privada"],
+        reading: `El eje del Hogar (Casa 4) y la Carrera (Casa 10) está totalmente activado. Esto crea a alguien que construye su legado público sobre la base de su mundo privado. Los negocios familiares, el trabajo desde casa o las carreras en bienes raíces, hotelería o servicios familiares son expresiones naturales.`,
+        guidance: "Su carrera y su vida familiar están destinadas a reforzarse mutuamente, no a competir."
     },
     "2-8": {
-        title: "The Transformational Financier",
-        subtitle: "2nd House + 8th House Stellium Synthesis",
-        keywords: ["Wealth Alchemy", "Financial Transformation", "Shared Resources"],
-        reading: `The axis of Personal Resources (2nd House) and Shared Resources (8th House) is fully activated. This creates exceptional financial instinct spanning personal wealth AND other people's money. Investment banking, insurance, estate planning, or any field involving financial transformation is natural territory.`,
-        guidance: "You understand both sides of the wealth equation - what you earn and what you inherit, invest, or transform."
+        title: "El financiero transformacional",
+        subtitle: "Síntesis de Stellium de la Casa 2 + Casa 8",
+        keywords: ["Alquimia de la riqueza", "Transformación financiera", "Recursos compartidos"],
+        reading: `El eje de Recursos Personales (Casa 2) y Recursos Compartidos (Casa 8) está totalmente activado. Esto crea un instinto financiero excepcional que abarca la riqueza personal Y el dinero de otras personas. La banca de inversión, los seguros, la planificación patrimonial o cualquier campo que implique transformación financiera es territorio natural.`,
+        guidance: "Usted comprende ambos lados de la ecuación de la riqueza: lo que gana y lo que hereda, invierte o transforma."
     },
     "5-11": {
-        title: "The Creative Community Catalyst",
-        subtitle: "5th House + 11th House Stellium Synthesis",
-        keywords: ["Creative Networking", "Joyful Community", "Innovation Through Play"],
-        reading: `The axis of Personal Creativity (5th House) and Collective Vision (11th House) is fully activated. This creates someone who channels personal creative expression into group movements, community projects, or social innovation. Their joy and play become catalysts for collective change.`,
-        guidance: "Your creativity is amplified through community. Share your creative gifts with groups who share your vision."
+        title: "El catalizador de la comunidad creativa",
+        subtitle: "Síntesis de Stellium de la Casa 5 + Casa 11",
+        keywords: ["Redes creativas", "Comunidad alegre", "Innovación a través del juego"],
+        reading: `El eje de la Creatividad Personal (Casa 5) y la Visión Colectiva (Casa 11) está totalmente activado. Esto crea a alguien que canaliza la expresión creativa personal hacia movimientos grupales, proyectos comunitarios o innovación social. Su alegría y juego se convierten en catalizadores del cambio colectivo.`,
+        guidance: "Tu creatividad se amplifica a través de la comunidad. Comparta sus dones creativos con grupos que compartan su visión."
     },
     "3-9": {
-        title: "The Knowledge Transmitter",
-        subtitle: "3rd House + 9th House Stellium Synthesis",
-        keywords: ["Communication Mastery", "Local-Global Bridge", "Teaching Power"],
-        reading: `The axis of Local Communication (3rd House) and Higher Knowledge (9th House) is fully activated. This creates a born teacher, writer, or media personality who can take complex ideas and make them accessible. They bridge academia and everyday understanding.`,
-        guidance: "You're meant to translate big ideas into practical language. Teaching, writing, and media are your natural platforms."
+        title: "El transmisor del conocimiento",
+        subtitle: "Síntesis de Stellium de la Casa 3 + Casa 9",
+        keywords: ["Dominio de la comunicación", "Puente Local-Global", "Poder de enseñanza"],
+        reading: `El eje de la Comunicación Local (Casa 3) y del Conocimiento Superior (Casa 9) está plenamente activado. Esto crea un maestro, escritor o personalidad mediática nato que puede tomar ideas complejas y hacerlas accesibles. Unen la academia y la comprensión cotidiana.`,
+        guidance: "Estás destinado a traducir grandes ideas a un lenguaje práctico. La enseñanza, la escritura y los medios son sus plataformas naturales."
     },
     "6-12": {
-        title: "The Sacred Healer",
-        subtitle: "6th House + 12th House Stellium Synthesis",
-        keywords: ["Holistic Healing", "Service Through Surrender", "Body-Spirit Bridge"],
-        reading: `The axis of Daily Health (6th House) and Spiritual Dissolution (12th House) is fully activated. This creates someone drawn to healing arts that bridge body and spirit - holistic medicine, energy work, therapeutic practices that address root spiritual causes of physical symptoms.`,
-        guidance: "Your healing gift combines practical skill with spiritual sensitivity. Honor both."
+        title: "El sanador sagrado",
+        subtitle: "Síntesis de Stellium de la Casa 6 + Casa 12",
+        keywords: ["Curación Holística", "Servicio a través de la rendición", "Puente cuerpo-espíritu"],
+        reading: `El eje de Salud Diaria (Casa 6) y Disolución Espiritual (Casa 12) está totalmente activado. Esto crea una persona atraída por las artes curativas que unen el cuerpo y el espíritu: medicina holística, trabajo energético, prácticas terapéuticas que abordan las causas espirituales fundamentales de los síntomas físicos.`,
+        guidance: "Tu don curativo combina habilidad práctica con sensibilidad espiritual. Honra a ambos."
     }
 };
 
@@ -1426,11 +1426,11 @@ function analyzeStelliumIntegration(readings) {
             } else {
                 // Generate dynamic integration for unlisted pairs
                 integrations.push({
-                    title: `House ${h1} + House ${h2} Resonance`,
-                    subtitle: `Dual Stellium Integration`,
-                    keywords: ["Multi-Focus Power", "Life Theme Integration", "Complex Purpose"],
-                    reading: `Having stelliums in both the ${h1}th and ${h2}th Houses creates a unique dual focus in life. The energies of these two life areas are both amplified, creating someone with extraordinary capacity in both domains. The key to fulfillment is finding ways to make these areas reinforce rather than compete with each other.`,
-                    guidance: `Look for careers, relationships, or projects that engage both your House ${h1} and House ${h2} strengths simultaneously.`
+                    title: `Casa ${h1} + Casa ${h2} Resonancia`,
+                    subtitle: `Integración dual de Stellium`,
+                    keywords: ["Poder de enfoque múltiple", "Integración del tema de la vida", "Propósito complejo"],
+                    reading: `Tener stelliums en las casas ${h1}th y ${h2}th crea un enfoque dual único en la vida. Las energías de estas dos áreas de la vida se amplifican, creando a alguien con una capacidad extraordinaria en ambos dominios. La clave para la realización es encontrar maneras de hacer que estas áreas se refuercen en lugar de competir entre sí.`,
+                    guidance: `Busque carreras, relaciones o proyectos que involucren las fortalezas de su Casa ${h1} y de su Casa ${h2} simultáneamente.`
                 });
             }
         }
@@ -1445,136 +1445,136 @@ function analyzeStelliumIntegration(readings) {
 
 var LIFE_PHASE_READINGS = {
     earlyChildhood: {
-        title: "Foundation Years (Ages 0-7)",
-        description: "The Imprint Phase",
-        reading: `The first seven years are the most psychologically formative period in any life. During this phase, the Moon sign is the dominant influence — the child is essentially living through their Moon, absorbing emotional patterns that will run beneath every decision they make for the rest of their life.
+        title: "Años de fundación (edades 0-7)",
+        description: "La fase de impresión",
+        reading: `Los primeros siete años son el período psicológicamente más formativo de cualquier vida. Durante esta fase, el signo lunar es la influencia dominante: el niño esencialmente vive a través de su Luna, absorbiendo patrones emocionales que estarán detrás de cada decisión que tome por el resto de su vida.
 
-Everything experienced during this time becomes the emotional operating system. How safety feels, what love looks like, whether the world is trustworthy or threatening — these aren't learned intellectually but absorbed cellularly. The 4th House energy shapes the literal and emotional home environment that creates this foundation.
+Todo lo experimentado durante este tiempo se convierte en el sistema operativo emocional. Cómo se siente la seguridad, cómo es el amor, si el mundo es digno de confianza o amenazante: todo esto no se aprende intelectualmente sino que se absorbe celularmente. La energía de la Cuarta Casa da forma al ambiente hogareño literal y emocional que crea esta base.
 
-This is when attachment patterns form. A child who feels consistently seen and soothed develops secure attachment that becomes the template for every future relationship. A child whose needs are inconsistently met develops adaptive strategies — people-pleasing, withdrawal, hypervigilance — that are brilliantly intelligent survival responses but can become limiting patterns in adulthood.
+Aquí es cuando se forman patrones de apego. Un niño que se siente constantemente visto y tranquilizado desarrolla un apego seguro que se convierte en el modelo para toda relación futura. Un niño cuyas necesidades no se satisfacen de manera consistente desarrolla estrategias adaptativas (complacer a las personas, retraimiento, hipervigilancia) que son respuestas de supervivencia brillantemente inteligentes, pero que pueden convertirse en patrones limitantes en la edad adulta.
 
-The IC (Imum Coeli) and any planets in the 4th House are actively shaping reality during this phase. Whatever sign sits on the IC describes the emotional atmosphere being absorbed. Whatever planets occupy the 4th House describe the specific energies present in the home environment — for better and for more complicated.`
+El IC (Imum Coeli) y todos los planetas de la Casa 4 están dando forma activamente a la realidad durante esta fase. Cualquier signo que se encuentre en el CI describe la atmósfera emocional que se está absorbiendo. Cualesquiera que sean los planetas que ocupan la Casa 4, describen las energías específicas presentes en el entorno del hogar, para bien o para mal.`
     },
     middleChildhood: {
-        title: "Mercury Years (Ages 7-14)",
-        description: "The Learning Phase",
-        reading: `Between seven and fourteen, Mercury takes the lead. The mind awakens properly — not just absorbing anymore, but actively processing, questioning, categorising, and forming opinions about the world. This is when intellectual identity crystallises: am I smart? Am I good with words? Do my thoughts matter?
+        title: "Años de Mercurio (de 7 a 14 años)",
+        description: "La fase de aprendizaje",
+        reading: `Entre las siete y los catorce años, Mercurio toma la delantera. La mente despierta adecuadamente: ya no solo absorbe, sino que procesa, cuestiona, categoriza y forma opiniones activamente sobre el mundo. Es entonces cuando cristaliza la identidad intelectual: ¿soy inteligente? ¿Soy bueno con las palabras? ¿Importan mis pensamientos?
 
-The Mercury sign and 3rd House become the dominant influences during this phase. How information is processed, how communication develops, and how the child relates to siblings, schoolmates, and their immediate environment all take shape now. Learning style solidifies — whether they're visual, verbal, kinetic, or intuitive learners becomes clear.
+El signo de Mercurio y la Casa 3 se convierten en las influencias dominantes durante esta fase. Ahora toman forma cómo se procesa la información, cómo se desarrolla la comunicación y cómo se relaciona el niño con sus hermanos, sus compañeros de escuela y su entorno inmediato. El estilo de aprendizaje se solidifica: queda claro si son estudiantes visuales, verbales, cinéticos o intuitivos.
 
-Social awareness explodes. The child moves from the family-centred world of early childhood into the peer-centred world of school and neighbourhood. They begin to understand that other families operate differently, that there are rules beyond home, and that they need to find their place in a social hierarchy they didn't create.
+La conciencia social explota. El niño pasa del mundo de la primera infancia, centrado en la familia, al mundo de la escuela y el vecindario, centrado en sus pares. Comienzan a comprender que otras familias operan de manera diferente, que existen reglas más allá del hogar y que necesitan encontrar su lugar en una jerarquía social que no crearon.
 
-This is also when the inner voice takes shape. The way adults speak to this child during these years literally becomes their internal monologue. Encouragement becomes self-encouragement. Criticism becomes self-criticism. The 3rd House placements describe not just how they communicate with others, but how they'll communicate with themselves for the rest of their life.`
+Aquí es también cuando la voz interior toma forma. La forma en que los adultos le hablan a este niño durante estos años se convierte literalmente en su monólogo interno. El estímulo se convierte en autoestímulo. La crítica se convierte en autocrítica. Las ubicaciones de la Tercera Casa describen no sólo cómo se comunican con los demás, sino también cómo se comunicarán consigo mismos por el resto de su vida.`
     },
     adolescence: {
-        title: "Venus Awakening (Ages 14-21)",
-        description: "The Values Phase",
-        reading: `Adolescence marks the activation of Venus energy — the awakening of values, aesthetics, relationships, and the burning question of self-worth. This isn't just about romantic crushes, though those certainly arrive. It's a fundamental reckoning with what matters, what's beautiful, and what the self is worth.
+        title: "El despertar de Venus (edades 14-21)",
+        description: "La fase de valores",
+        reading: `La adolescencia marca la activación de la energía de Venus: el despertar de los valores, la estética, las relaciones y la candente cuestión de la autoestima. No se trata sólo de enamoramientos románticos, aunque éstos ciertamente llegan. Es un análisis fundamental de lo que importa, lo que es bello y lo que vale el yo.
 
-The Venus sign and the 2nd and 7th House themes become primary influences. Values that may have been inherited from family are now questioned, tested, and either claimed or rejected. The teenager isn't being difficult — they're doing the essential developmental work of deciding what they actually believe versus what they were told to believe.
+El signo de Venus y los temas de las Casas 2 y 7 se convierten en influencias principales. Los valores que pueden haber sido heredados de la familia ahora se cuestionan, se ponen a prueba y se reivindican o rechazan. El adolescente no está siendo difícil: está haciendo el trabajo de desarrollo esencial de decidir lo que realmente cree versus lo que le dijeron que creyera.
 
-Relationships become the primary classroom. First loves, first heartbreaks, and first experiences of genuine peer intimacy teach lessons no parent or teacher can convey. The 7th House Descendant begins activating — the kind of person they're drawn to, the relationship patterns they'll carry into adulthood, all start forming through these early experiences.
+Las relaciones se convierten en el aula principal. Los primeros amores, los primeros desamores y las primeras experiencias de intimidad genuina entre pares enseñan lecciones que ningún padre o maestro puede transmitir. El Descendente de la Séptima Casa comienza a activarse: el tipo de persona que les atrae, los patrones de relación que llevarán hasta la edad adulta, todo comienza a formarse a través de estas primeras experiencias.
 
-Self-worth is the hidden battleground of this phase. The 2nd House themes of value — both material and personal — become intensely relevant. How they feel about their body, their abilities, their worthiness of love and success are being shaped in real time. The messages they receive about their value during this phase echo for decades. This is when the foundation for their adult relationship with money, beauty, and self-esteem is laid.`
+La autoestima es el campo de batalla oculto de esta fase. Los temas de valor de la Segunda Casa, tanto materiales como personales, se vuelven intensamente relevantes. Lo que sienten acerca de su cuerpo, sus habilidades, su valor de amor y éxito se está moldeando en tiempo real. Los mensajes que reciben sobre su valor durante esta fase resuenan durante décadas. Es entonces cuando se sientan las bases de su relación adulta con el dinero, la belleza y la autoestima.`
     },
     youngAdult: {
-        title: "Solar Activation (Ages 21-30)",
-        description: "The Identity Phase",
-        reading: `The twenties are when the Sun sign truly comes online. Before this, identity was largely a reflection of family, peers, and circumstance. Now it becomes a conscious project — who am I, really? What do I actually want? The Sun sign's energy, which may have been dormant or muted, begins demanding authentic expression.
+        title: "Activación Solar (Edades 21-30)",
+        description: "La fase de identidad",
+        reading: `Los años veinte es cuando el signo solar realmente se activa. Antes de esto, la identidad era en gran medida un reflejo de la familia, los pares y las circunstancias. Ahora se convierte en un proyecto consciente: ¿quién soy yo realmente? ¿Qué es lo que realmente quiero? La energía del signo solar, que puede haber estado latente o apagada, comienza a exigir una expresión auténtica.
 
-This is the decade of experimentation and false starts that aren't actually false — every career tried, relationship entered, and identity tested teaches something essential. The Sun sign's needs become increasingly non-negotiable. A Leo Sun who spent their teens being quiet starts needing the spotlight. A Capricorn Sun who drifted through school suddenly develops fierce ambition.
+Esta es la década de experimentación y comienzos en falso que en realidad no son falsos: cada carrera que se intenta, cada relación que se inicia y cada prueba de identidad enseña algo esencial. Las necesidades del signo solar se vuelven cada vez más innegociables. Un Leo Sol que pasó su adolescencia callado comienza a necesitar ser el centro de atención. Un Sol de Capricornio que vagaba por la escuela de repente desarrolla una ambición feroz.
 
-The Midheaven (10th House) begins asserting itself professionally. Career direction, public identity, and the question of legacy start mattering in ways they didn't before. The choices made during this phase — what to study, where to work, who to commit to — are the first truly self-authored decisions.
+El Medio Cielo (Casa 10) comienza a afirmarse profesionalmente. La dirección profesional, la identidad pública y la cuestión del legado empiezan a importar como antes. Las decisiones que se toman durante esta fase (qué estudiar, dónde trabajar, con quién comprometerse) son las primeras decisiones verdaderamente tomadas por uno mismo.
 
-The late twenties bring the approach of the first Saturn Return, which creates increasing pressure to get serious. What felt like infinite options in the early twenties starts narrowing as reality demands commitment. This isn't loss of freedom — it's the development of focus. The Saturn Return at 27-30 will crystallise everything this decade has been building toward.`
+A finales de los años veinte se acerca el primer retorno de Saturno, lo que crea una presión cada vez mayor para ponerse serios. Lo que a principios de los años veinte parecían opciones infinitas, empiezan a reducirse a medida que la realidad exige compromiso. Esto no es una pérdida de libertad: es el desarrollo de la concentración. El regreso de Saturno entre el 27 y el 30 cristalizará todo lo que se ha estado gestando en esta década.`
     },
     saturn1: {
-        title: "First Saturn Return (Ages 27-30)",
-        description: "The Reality Check",
-        reading: `The first Saturn Return is arguably the most significant astrological transit of young adulthood. Saturn returns to the exact position it occupied at birth, and everything that isn't authentically yours gets tested. Relationships that were based on convenience rather than genuine compatibility crack. Careers chosen to please parents rather than serve purpose become unbearable. The self-image built on others' expectations rather than inner truth starts collapsing.
+        title: "Primer regreso de Saturno (edades 27 a 30)",
+        description: "La verificación de la realidad",
+        reading: `El primer retorno de Saturno es posiblemente el tránsito astrológico más significativo de la edad adulta joven. Saturno vuelve a la posición exacta que ocupaba al nacer y todo lo que no es auténticamente tuyo se pone a prueba. Las relaciones que se basaban en la conveniencia más que en la compatibilidad genuina se rompen. Las carreras elegidas para complacer a los padres en lugar de cumplir un propósito se vuelven insoportables. La autoimagen construida sobre las expectativas de los demás y no sobre la verdad interior comienza a colapsar.
 
-This isn't punishment — it's liberation disguised as crisis. Saturn removes what's false so that what's real can be built properly. The structures that survive the Saturn Return become the genuine foundation for the next thirty years. The ones that crumble needed to crumble, even when it doesn't feel that way in the moment.
+Esto no es un castigo: es una liberación disfrazada de crisis. Saturno elimina lo falso para que lo real pueda construirse adecuadamente. Las estructuras que sobrevivan al retorno de Saturno se convertirán en la verdadera base para los próximos treinta años. Los que se desmoronan necesitaban desmoronarse, incluso cuando no se siente así en el momento.
 
-The Saturn sign in the natal chart describes the specific nature of this test. Saturn in Aries tests independence and courage. Saturn in Cancer tests emotional authenticity. Saturn in Capricorn tests whether the ambition is genuine or performative. Whatever Saturn touches in the birth chart is where the most demanding — and ultimately most rewarding — restructuring happens.
+El signo de Saturno en la carta natal describe la naturaleza específica de esta prueba. Saturno en Aries pone a prueba la independencia y el coraje. Saturno en Cáncer pone a prueba la autenticidad emocional. Saturno en Capricornio pone a prueba si la ambición es genuina o performativa. Cualquier cosa que toque Saturno en la carta natal es donde ocurre la reestructuración más exigente y, en última instancia, más gratificante.
 
-Many of life's most defining decisions are made during or immediately after the first Saturn Return: marriage or divorce, career commitment or radical change, having children, moving countries, starting businesses. These decisions carry weight because they're made with adult awareness rather than youthful optimism. What's chosen now is chosen with eyes open.`
+Muchas de las decisiones más importantes de la vida se toman durante o inmediatamente después del primer retorno de Saturno: matrimonio o divorcio, compromiso profesional o cambio radical, tener hijos, mudarse de país, iniciar negocios. Estas decisiones tienen peso porque se toman con conciencia adulta y no con optimismo juvenil. Lo que se elige ahora se elige con los ojos abiertos.`
     },
     earlyMiddle: {
-        title: "Mars Mastery (Ages 30-40)",
-        description: "The Building Phase",
-        reading: `The thirties are the action decade — Mars energy is at its peak productive capacity. The identity questions of the twenties have (mostly) been answered, the Saturn Return has cleared the false starts, and now it's time to build. Career advancement, family creation, reputation establishment, and the serious work of becoming who you're meant to be all accelerate.
+        title: "Dominio de Marte (edades 30-40)",
+        description: "La fase de construcción",
+        reading: `Los años treinta son la década de la acción: la energía de Marte está en su máxima capacidad productiva. Las cuestiones de identidad de los años veinte han sido (en su mayoría) respondidas, el retorno de Saturno ha despejado los comienzos en falso y ahora es el momento de construir. El avance profesional, la creación de una familia, el establecimiento de una reputación y el trabajo serio de convertirse en quien debe ser, se aceleran.
 
-The Midheaven and 10th House become central to daily life. Professional identity isn't just forming — it's being tested and proved in the real world. The difference between the twenties and thirties is that the thirties demand results, not just potential. Mars provides the drive, ambition, and competitive energy needed to claim a place in the world.
+El Medio Cielo y la Décima Casa se vuelven centrales para la vida diaria. La identidad profesional no sólo se está formando: se está probando y demostrando en el mundo real. La diferencia entre los años veinte y los treinta es que los treinta exigen resultados, no sólo potencial. Marte proporciona el impulso, la ambición y la energía competitiva necesarios para reclamar un lugar en el mundo.
 
-This decade often brings the greatest physical vitality combined with the greatest external pressure. There are mortgages, children, career demands, ageing parents — the responsibilities multiply while the energy to handle them is at its peak. The Mars sign describes how this energy is channelled: Mars in earth signs builds methodically, Mars in fire signs charges forward aggressively, Mars in air signs strategises and networks, Mars in water signs navigates intuitively.
+Esta década suele traer la mayor vitalidad física combinada con la mayor presión externa. Hay hipotecas, hijos, exigencias profesionales, padres ancianos: las responsabilidades se multiplican mientras la energía para manejarlas está en su punto máximo. El signo de Marte describe cómo se canaliza esta energía: Marte en los signos de tierra construye metódicamente, Marte en los signos de fuego carga hacia adelante agresivamente, Marte en los signos de aire crea estrategias y redes, Marte en los signos de agua navega intuitivamente.
 
-The danger of this decade is losing the inner life to external demands. The building is necessary, but if the soul's deeper needs — creativity, spirituality, emotional intimacy — are sacrificed entirely for productivity, the Pluto Square at 36-40 will deliver a forceful reminder that the inner world cannot be indefinitely postponed.`
+El peligro de esta década es perder la vida interior a causa de las exigencias externas. La construcción es necesaria, pero si las necesidades más profundas del alma (creatividad, espiritualidad, intimidad emocional) se sacrifican por completo en aras de la productividad, la cuadratura de Plutón en 36-40 ofrecerá un contundente recordatorio de que el mundo interior no puede posponerse indefinidamente.`
     },
     plutoSquare: {
-        title: "Pluto Square (Ages 36-40)",
-        description: "The Power Reckoning",
-        reading: `Transiting Pluto squares natal Pluto between approximately 36 and 40, triggering a confrontation with power, desire, and everything that's been buried. This is the transit that asks: what have you been afraid to want? What power have you given away? What truth have you been avoiding because facing it would change everything?
+        title: "Plutón Cuadratura (Edades 36-40)",
+        description: "El ajuste de cuentas del poder",
+        reading: `Plutón en tránsito forma una cuadratura con Plutón natal entre aproximadamente 36 y 40, lo que desencadena una confrontación con el poder, el deseo y todo lo que ha sido enterrado. Este es el tránsito que pregunta: ¿qué has tenido miedo de querer? ¿Qué poder has regalado? ¿Qué verdad has estado evitando porque enfrentarla cambiaría todo?
 
-This transit often manifests as a period of intense internal pressure. Repressed desires surface with volcanic force. The person who spent their thirties being responsible suddenly feels a desperate need for authenticity that transcends duty. It might look like a crisis to outsiders, but internally it feels like finally waking up.
+Este tránsito suele manifestarse como un período de intensa presión interna. Los deseos reprimidos afloran con fuerza volcánica. La persona que pasó sus treinta años siendo responsable de repente siente una necesidad desesperada de autenticidad que trasciende el deber. Puede parecer una crisis para los de afuera, pero internamente se siente como si finalmente despertara.
 
-Pluto's house position in the natal chart determines where this reckoning plays out. Pluto in Libra (a common generation) experiences it through relationships — the partnership dynamics that worked in the twenties and thirties may suddenly feel intolerable. Pluto in Scorpio faces the reckoning through identity itself — who they've been pretending to be versus who they actually are.
+La posición de la casa de Plutón en la carta natal determina dónde se desarrolla este cálculo. Plutón en Libra (una generación común) lo experimenta a través de las relaciones: la dinámica de asociación que funcionó en los años veinte y treinta de repente puede parecer intolerable. Plutón en Escorpio enfrenta el ajuste de cuentas a través de la identidad misma: quiénes han estado fingiendo ser versus quiénes son en realidad.
 
-The gift of the Pluto Square is reclaimed power. Whatever was surrendered — to parents, partners, employers, social expectations — can now be consciously reclaimed. This doesn't have to be destructive. The healthiest version of this transit involves honest self-examination, therapeutic work, and the courage to make changes that serve the authentic self even when they're inconvenient for the constructed one.`
+El regalo de Plutón en Cuadratura es el poder recuperado. Todo lo que se entregó (a los padres, la pareja, los empleadores, las expectativas sociales) ahora puede recuperarse conscientemente. Esto no tiene por qué ser destructivo. La versión más saludable de este tránsito implica un autoexamen honesto, trabajo terapéutico y el coraje de realizar cambios que sirvan al yo auténtico incluso cuando sean inconvenientes para el construido.`
     },
     lateMiddle: {
-        title: "Jupiter Expansion (Ages 40-50)",
-        description: "The Wisdom Phase",
-        reading: `The forties bring Jupiter energy to the forefront — the drive to find meaning, to expand beyond the structures built in the previous decade, and to ask bigger questions than "how do I succeed?" The question becomes "what does success actually mean?" The 9th House themes of philosophy, higher learning, travel, and spiritual exploration activate with new urgency.
+        title: "Expansión de Júpiter (40-50 años)",
+        description: "La fase de sabiduría",
+        reading: `Los años cuarenta ponen en primer plano la energía de Júpiter: el impulso de encontrar significado, de expandirse más allá de las estructuras construidas en la década anterior y de plantearse preguntas más importantes que "¿cómo puedo tener éxito?". La pregunta es "¿qué significa realmente el éxito?" Los temas de la novena casa: filosofía, educación superior, viajes y exploración espiritual se activan con nueva urgencia.
 
-Many people experience a genuine vocational shift during this decade. The career that was built in the thirties may feel hollow without meaning. The desire to teach, to mentor, to share accumulated wisdom with others becomes increasingly strong. Jupiter says: you've learned enough to have something genuine to offer. Now share it.
+Muchas personas experimentan un auténtico cambio vocacional durante esta década. La carrera que se construyó en los años treinta puede parecer vacía y sin significado. El deseo de enseñar, orientar y compartir la sabiduría acumulada con los demás se vuelve cada vez más fuerte. Júpiter dice: has aprendido lo suficiente como para tener algo genuino que ofrecer. Ahora compártelo.
 
-This is often when spiritual life deepens significantly. Religious or philosophical frameworks that were inherited or rejected in youth may be revisited with mature eyes. The question isn't whether to believe, but what genuinely resonates now that enough life has been lived to test ideas against experience. Some find faith; others find philosophy; many find a personal synthesis that doesn't fit any existing category.
+Esto es a menudo cuando la vida espiritual se profundiza significativamente. Los marcos religiosos o filosóficos que fueron heredados o rechazados en la juventud pueden revisarse con ojos maduros. La pregunta no es si creer, sino qué resuena genuinamente ahora que se ha vivido suficiente vida para comparar las ideas con la experiencia. Algunos encuentran fe; otros encuentran la filosofía; muchos encuentran una síntesis personal que no encaja en ninguna categoría existente.
 
-Travel and cross-cultural experience, if not already pursued, become magnetically attractive during this phase. The world feels both larger and more accessible. The desire to understand how other people live, what other cultures value, and where one's own perspective fits in the grand human tapestry fuels genuine expansion of consciousness.`
+Los viajes y las experiencias interculturales, si aún no se practican, se vuelven magnéticamente atractivos durante esta fase. El mundo parece más grande y más accesible. El deseo de comprender cómo viven otras personas, qué valoran otras culturas y dónde encaja la propia perspectiva en el gran tapiz humano alimenta una genuina expansión de la conciencia.`
     },
     uranus: {
-        title: "Uranus Opposition (Ages 40-44)",
-        description: "The Liberation Crisis",
-        reading: `The Uranus Opposition is what popular culture calls the "midlife crisis" — but it's far more purposeful than that dismissive label suggests. Transiting Uranus opposes natal Uranus, creating an electrical charge that demands liberation from every role, habit, and identity that has become a cage rather than a choice.
+        title: "Oposición de Urano (Edades 40-44)",
+        description: "La crisis de la liberación",
+        reading: `La Oposición de Urano es lo que la cultura popular llama la "crisis de la mediana edad", pero tiene mucho más propósito de lo que sugiere esa etiqueta desdeñosa. Urano en tránsito se opone a Urano natal, creando una carga eléctrica que exige la liberación de cada rol, hábito e identidad que se ha convertido en una jaula en lugar de una elección.
 
-The form this takes depends entirely on what's been suppressed. For someone who's lived authentically, the Uranus Opposition might feel like an exciting acceleration — new opportunities, creative breakthroughs, sudden clarity about what comes next. For someone who's been living a borrowed life — the career their parents wanted, the relationship that looked right but felt wrong, the image that pleased everyone but themselves — it can feel like an earthquake.
+La forma que esto adopte depende enteramente de lo que se haya suprimido. Para alguien que ha vivido auténticamente, la Oposición de Urano puede parecer una aceleración emocionante: nuevas oportunidades, avances creativos, claridad repentina sobre lo que viene después. Para alguien que ha estado viviendo una vida prestada (la carrera que querían sus padres, la relación que parecía buena pero que no parecía buena, la imagen que agradaba a todos menos a sí mismo) puede sentirse como un terremoto.
 
-The Uranus sign in the natal chart describes the generational quality of this awakening. Uranus in Leo demands creative authenticity. Uranus in Virgo demands liberation from perfectionism and duty. Uranus in Libra demands relationship truth. The house position personalises it further — Uranus in the 10th faces career liberation; Uranus in the 4th faces domestic revolution.
+El signo de Urano en la carta natal describe la cualidad generacional de este despertar. Urano en Leo exige autenticidad creativa. Urano en Virgo exige la liberación del perfeccionismo y del deber. Urano en Libra exige la verdad en la relación. La posición de la casa lo personaliza aún más: Urano en la casa 10 se enfrenta a la liberación profesional; Urano en la Casa 4 se enfrenta a una revolución interna.
 
-The healthiest response to the Uranus Opposition is to make the changes consciously rather than waiting for them to happen chaotically. The energy is going to create change regardless — the choice is between riding the wave and being crashed by it. This is the time to ask: if I had no obligations, no reputation to protect, no one to please — what would I do? The answer to that question contains the seed of the next chapter.`
+La respuesta más saludable a la oposición de Urano es hacer los cambios conscientemente en lugar de esperar a que sucedan caóticamente. La energía generará cambios de todos modos: la elección es entre subirse a la ola o ser estrellado por ella. Este es el momento de preguntar: si no tuviera obligaciones, ni una reputación que proteger, ni nadie a quien complacer, ¿qué haría? La respuesta a esa pregunta contiene la semilla del próximo capítulo.`
     },
     chiron: {
-        title: "Chiron Return (Ages 49-51)",
-        description: "The Healing Threshold",
-        reading: `Chiron returns to its birth position around age 50, bringing the deepest wound to the surface one final time — not to reopen it, but to transform it into medicine. This is the transit that turns the wounded into the healer, the broken into the beautifully mended, the person who suffered into the one who understands suffering.
+        title: "El regreso de Quirón (edades 49-51)",
+        description: "El umbral de curación",
+        reading: `Quirón regresa a su posición de nacimiento alrededor de los 50 años, sacando a la superficie la herida más profunda por última vez, no para reabrirla, sino para transformarla en medicina. Este es el tránsito que convierte al herido en el que sana, al quebrantado en el bellamente reparado, a la persona que sufrió en la que comprende el sufrimiento.
 
-The Chiron sign and house in the natal chart describe the specific nature of this wound and where it manifests. Chiron in Aries carries wounds around identity and the right to exist. Chiron in the 7th House carries wounds around partnership and betrayal. Whatever the specifics, the Chiron Return asks: can you finally accept this wound not as damage but as wisdom?
+El signo y la casa de Quirón en la carta natal describen la naturaleza específica de esta herida y dónde se manifiesta. Quirón en Aries conlleva heridas en torno a la identidad y el derecho a existir. Quirón en la Casa Séptima tiene heridas relacionadas con la asociación y la traición. Cualesquiera que sean los detalles, el Retorno de Quirón pregunta: ¿puedes finalmente aceptar esta herida no como daño sino como sabiduría?
 
-Many people experience a health wake-up call during this transit — not necessarily serious illness, but a clear signal from the body that something needs attention. The body becomes the messenger for what the psyche has been avoiding. This is often the catalyst for genuine lifestyle change, therapeutic breakthrough, or spiritual deepening.
+Muchas personas experimentan una llamada de atención durante este tránsito: no necesariamente una enfermedad grave, pero sí una señal clara del cuerpo de que algo necesita atención. El cuerpo se convierte en el mensajero de lo que la psique ha estado evitando. Esto suele ser el catalizador para un cambio genuino en el estilo de vida, un avance terapéutico o una profundización espiritual.
 
-The gift of the Chiron Return is profound empathy born from personal experience. Having lived with a wound for fifty years, there's a depth of understanding available that no amount of training can replicate. Many people discover their true vocation as healers, mentors, or guides during or after this transit — not because they've transcended their wound, but because they've learned to live with it gracefully enough to help others do the same.`
+El regalo del Retorno de Quirón es una profunda empatía nacida de la experiencia personal. Habiendo vivido con una herida durante cincuenta años, existe una comprensión profunda disponible que ninguna cantidad de entrenamiento puede replicar. Muchas personas descubren su verdadera vocación como sanadores, mentores o guías durante o después de este tránsito, no porque hayan trascendido su herida, sino porque han aprendido a vivir con ella con la gracia suficiente para ayudar a otros a hacer lo mismo.`
     },
     saturn2: {
-        title: "Second Saturn Return (Ages 56-60)",
-        description: "The Elder Threshold",
-        reading: `The second Saturn Return is the gateway to genuine elderhood. Where the first Saturn Return asked "who are you, really?" the second asks "what have you built, and what will you leave behind?" This is the transit of legacy — evaluating not just what was accomplished, but whether it mattered.
+        title: "Segundo regreso de Saturno (edades 56-60)",
+        description: "El umbral mayor",
+        reading: `El segundo retorno de Saturno es la puerta de entrada a una vejez genuina. Cuando el primer retorno de Saturno preguntó "¿quién eres realmente?" el segundo pregunta "¿qué has construido y qué dejarás atrás?" Este es el tránsito del legado: evaluar no sólo lo que se logró, sino también si importó.
 
-The structures built after the first Saturn Return — the career, the family, the reputation, the home — are all evaluated with unflinching honesty. Some hold up beautifully. Others reveal themselves as hollow. There's still time to rebuild what needs rebuilding, but the awareness that time is finite adds urgency that wasn't there before.
+Las estructuras construidas después del primer regreso de Saturno (la carrera, la familia, la reputación, el hogar) se evalúan con absoluta honestidad. Algunos aguantan maravillosamente. Otros se revelan vacíos. Todavía hay tiempo para reconstruir lo que necesita reconstrucción, pero la conciencia de que el tiempo es finito añade una urgencia que antes no existía.
 
-Retirement, if it's on the horizon, forces confrontation with identity beyond productivity. For someone whose entire sense of self was built around their career, this transition can feel like death. For someone who maintained inner life alongside professional life, it can feel like liberation. The Saturn sign describes how this threshold is experienced — Saturn in earth signs may struggle to release professional identity; Saturn in water signs may struggle with the emotional weight of time passing.
+La jubilación, si está en el horizonte, obliga a confrontar la identidad más allá de la productividad. Para alguien cuyo sentido de sí mismo se construyó en torno a su carrera, esta transición puede parecer la muerte. Para alguien que mantuvo la vida interior junto con la vida profesional, puede parecer una liberación. El signo de Saturno describe cómo se experimenta este umbral: Saturno en los signos de tierra puede tener dificultades para liberar su identidad profesional; Saturno en signos de agua puede tener dificultades con el peso emocional del paso del tiempo.
 
-The second Saturn Return often brings a settling into authenticity that the first Return only initiated. By sixty, most people have learned — sometimes painfully — that pretending is exhausting and ultimately pointless. The gift is permission to finally be exactly who you are, without apology, performance, or compromise. The elder who emerges from this transit has earned the right to speak truth and the wisdom to do it kindly.`
+El segundo Retorno de Saturno a menudo trae consigo un asentamiento en la autenticidad que el primer Retorno sólo inició. A los sesenta, la mayoría de la gente ha aprendido (a veces dolorosamente) que fingir es agotador y, en última instancia, inútil. El regalo es el permiso para finalmente ser exactamente quien eres, sin disculpas, actuaciones ni compromisos. El anciano que emerge de este tránsito se ha ganado el derecho a decir la verdad y la sabiduría para hacerlo con amabilidad.`
     },
     elder: {
-        title: "Elder Wisdom (Ages 60+)",
-        description: "The Harvest Phase",
-        reading: `The elder years belong to the outer planets — Neptune, Pluto, and the transpersonal forces that operate beyond individual will. The ego concerns that dominated earlier decades gradually dissolve, replaced by questions that are simultaneously simpler and more profound: what matters? What was this all for? What continues after me?
+        title: "Sabiduría de los mayores (mayores de 60 años)",
+        description: "La fase de cosecha",
+        reading: `Los años mayores pertenecen a los planetas exteriores: Neptuno, Plutón y las fuerzas transpersonales que operan más allá de la voluntad individual. Las preocupaciones sobre el ego que dominaron décadas anteriores se disuelven gradualmente, reemplazadas por preguntas que son a la vez más simples y más profundas: ¿qué importa? ¿Para qué fue todo esto? ¿Qué sigue después de mí?
 
-Spiritual depth increases naturally during this phase, whether or not it's pursued consciously. The veils between the personal and the universal thin. Dreams become more vivid, intuition sharper, and the sense of connection to something larger than the individual self grows stronger. Neptune's influence softens the boundaries that kept the ego feeling separate.
+La profundidad espiritual aumenta naturalmente durante esta fase, ya sea que se persiga conscientemente o no. Los velos entre lo personal y lo universal se adelgazan. Los sueños se vuelven más vívidos, la intuición más aguda y la sensación de conexión con algo más grande que el yo individual se fortalece. La influencia de Neptuno suaviza los límites que mantenían al ego sintiéndose separado.
 
-The desire to pass on wisdom becomes central. This isn't ego-driven teaching — it's the natural impulse of someone who's learned enough to know what matters and what doesn't. Mentoring younger people, whether formally or through simple presence and availability, becomes one of the most fulfilling activities available. The elder has something no younger person can have: perspective earned through decades of living.
+El deseo de transmitir sabiduría se vuelve central. Esta no es una enseñanza impulsada por el ego: es el impulso natural de alguien que ha aprendido lo suficiente como para saber qué importa y qué no. Ser mentor de personas más jóvenes, ya sea formalmente o mediante la simple presencia y disponibilidad, se convierte en una de las actividades disponibles más satisfactorias. El anciano tiene algo que ningún joven puede tener: la perspectiva ganada a lo largo de décadas de vida.
 
-Legacy takes its final form during this phase. Not just material legacy — though wills and inheritances matter — but the intangible legacy of how they made people feel, what they stood for, and whether they lived with integrity. The harvest isn't about what was accumulated but about what was genuinely given. The richest elders, in the truest sense, are those who gave more than they kept.`
+El legado toma su forma final durante esta fase. No sólo el legado material (aunque los testamentos y las herencias importan), sino el legado intangible de cómo hicieron sentir a las personas, qué representaron y si vivieron con integridad. La cosecha no se trata de lo acumulado sino de lo que fue genuinamente dado. Los mayores más ricos, en el sentido más estricto, son aquellos que dieron más de lo que guardaron.`
     }
 };
 
@@ -1612,33 +1612,33 @@ function generateAgeTimeline(readings, birthDate) {
         // Add Personal Year context for current phase
         let personalYearNote = '';
         if (status === 'current' && readings.numerology?.personalYear) {
-            personalYearNote = `Currently in Personal Year ${readings.numerology.personalYear}, adding its specific energy to this life phase.`;
+            personalYearNote = `Actualmente en Año Personal ${readings.numerology.personalYear}, sumando su energía específica a esta fase de vida.`;
         }
         
         // Add sign-specific context
         let signContext = '';
         if (phase.key === 'earlyChildhood' && readings.astrology?.moonSign) {
-            signContext = `With Moon in ${readings.astrology.moonSign.name}, the emotional foundation is shaped by ${readings.astrology.moonSign.name} qualities — this is the emotional operating system running beneath everything.`;
+            signContext = `Con Moon en ${readings.astrology.moonSign.name}, la base emocional está formada por las cualidades de ${readings.astrology.moonSign.name}: este es el sistema operativo emocional que se ejecuta debajo de todo.`;
         } else if (phase.key === 'middleChildhood' && readings.astrology?.mercury) {
             const mercName = readings.astrology.mercury.name || readings.astrology.mercury;
-            signContext = `With Mercury in ${mercName}, the learning style and inner voice developing during this phase carry ${mercName}'s qualities — shaping how information is processed and how they talk to themselves for life.`;
+            signContext = `Con Mercurio en ${mercName}, el estilo de aprendizaje y la voz interior que se desarrollan durante esta fase llevan las cualidades de ${mercName}: dan forma a cómo se procesa la información y cómo se hablan a sí mismos de por vida.`;
         } else if (phase.key === 'adolescence' && readings.astrology?.venus) {
             const venusName = readings.astrology.venus.name || readings.astrology.venus;
-            signContext = `With Venus in ${venusName}, values and relationship patterns take on ${venusName}'s qualities — first loves and early self-worth lessons are filtered through this energy.`;
+            signContext = `Con Venus en ${venusName}, los valores y los patrones de relación adquieren las cualidades de ${venusName}: los primeros amores y las primeras lecciones de autoestima se filtran a través de esta energía.`;
         } else if (phase.key === 'youngAdult' && readings.astrology?.sunSign) {
-            signContext = `With Sun in ${readings.astrology.sunSign.name}, identity crystallises around ${readings.astrology.sunSign.name} themes — the authentic self that emerges during this decade carries this sign's unmistakable imprint.`;
+            signContext = `Con el Sol en ${readings.astrology.sunSign.name}, la identidad cristaliza en torno a temas ${readings.astrology.sunSign.name}: el yo auténtico que emerge durante esta década lleva la huella inconfundible de este signo.`;
         } else if (phase.key === 'saturn1' && readings.astrology?.saturn) {
             const saturnName = readings.astrology.saturn.name || readings.astrology.saturn;
-            signContext = `With natal Saturn in ${saturnName}, this return specifically tests ${saturnName}-related themes — the accountability demanded is focused through this sign's lens.`;
+            signContext = `Con Saturno natal en ${saturnName}, este regreso prueba específicamente temas relacionados con ${saturnName}: la responsabilidad exigida se enfoca a través de la lente de este signo.`;
         } else if (phase.key === 'earlyMiddle' && readings.astrology?.mars) {
             const marsName = readings.astrology.mars.name || readings.astrology.mars;
-            signContext = `With Mars in ${marsName}, the building energy of this decade is channelled through ${marsName}'s style — this is how ambition, drive, and competitive energy express themselves.`;
+            signContext = `Con Marte en ${marsName}, la energía constructiva de esta década se canaliza a través del estilo de ${marsName}: así es como se expresan la ambición, el impulso y la energía competitiva.`;
         } else if (phase.key === 'lateMiddle' && readings.astrology?.jupiter) {
             const jupName = readings.astrology.jupiter.name || readings.astrology.jupiter;
-            signContext = `With Jupiter in ${jupName}, the search for meaning and expansion during this phase is coloured by ${jupName} themes — wisdom and growth arrive through this sign's particular lens.`;
+            signContext = `Con Júpiter en ${jupName}, la búsqueda de significado y expansión durante esta fase está coloreada por temas ${jupName}: la sabiduría y el crecimiento llegan a través de la lente particular de este signo.`;
         } else if (phase.key === 'elder' && readings.astrology?.neptune) {
             const nepName = readings.astrology.neptune.name || readings.astrology.neptune;
-            signContext = `With Neptune in ${nepName}, the spiritual deepening of the elder years carries ${nepName}'s generational quality — the dissolution of ego boundaries follows this sign's path.`;
+            signContext = `Con Neptuno en ${nepName}, la profundización espiritual de los años mayores conlleva la cualidad generacional de ${nepName}: la disolución de los límites del ego sigue el camino de este signo.`;
         }
         
         timeline.push({
@@ -1662,34 +1662,34 @@ function generateAgeTimeline(readings, birthDate) {
 
 var VERTEX_ACTIVATION_READINGS = {
     timing: {
-        title: "When Destiny Knocks",
-        reading: `The Vertex is called the "electric axis" of the chart - it activates suddenly and unmistakably when fated people, events, or opportunities enter your life. Unlike slower planetary progressions, Vertex activations feel like lightning strikes of destiny.
+        title: "Cuando el destino llama",
+        reading: `El vértice se llama el "eje eléctrico" de la carta: se activa repentina e inequívocamente cuando personas, eventos u oportunidades destinados entran en tu vida. A diferencia de las progresiones planetarias más lentas, las activaciones de Vertex se sienten como relámpagos del destino.
 
-WHEN TO EXPECT VERTEX ACTIVATION:
-• When transiting planets (especially Jupiter, Saturn, Uranus, Neptune, or Pluto) conjunct or oppose the natal Vertex
-• During eclipses that fall near the Vertex degree
-• When another person's planets conjunct your Vertex (this is the "fated meeting" signature)
-• During progressed Moon or progressed Sun aspects to the natal Vertex
+CUÁNDO ESPERAR LA ACTIVACIÓN DEL VERTEX:
+• Cuando los planetas en tránsito (especialmente Júpiter, Saturno, Urano, Neptuno o Plutón) están en conjunción o en oposición al Vértice natal
+• Durante eclipses que caen cerca del grado de vértice
+• Cuando los planetas de otra persona están en conjunción con su Vértice (esta es la firma del "encuentro predestinado")
+• Durante aspectos de Luna progresada o Sol progresados hacia el Vértice natal
 
-HOW YOU'LL KNOW IT'S HAPPENING:
-Vertex activations feel different from regular transits. There's an uncanny quality - a sense that you were "meant" to be in a certain place at a certain time. People who enter your life during Vertex transits often feel instantly significant, as if you've known them before.
+CÓMO SABRÁS QUE ESTÁ PASANDO:
+Las activaciones de vértice se sienten diferentes a los tránsitos regulares. Hay una cualidad extraña: la sensación de que estabas "destinado" a estar en un lugar determinado en un momento determinado. Las personas que entran en su vida durante los tránsitos de Vertex a menudo se sienten significativas al instante, como si las conociera de antes.
 
-THE RECOGNITION FACTOR:
-Events triggered by Vertex transits have a quality of "recognition" rather than surprise. Even if they're unexpected, something deep inside says "of course" rather than "what?" This is the mark of destined encounters versus random ones.`
+EL FACTOR DE RECONOCIMIENTO:
+Los eventos desencadenados por los tránsitos de Vertex tienen una cualidad de "reconocimiento" más que de sorpresa. Incluso si son inesperados, algo en el fondo dice "por supuesto" en lugar de "¿qué?". Esta es la marca de los encuentros destinados frente a los aleatorios.`
     },
     bySign: {
-        Aries: "Vertex activations bring bold new people or situations that demand courage. Fated meetings often happen through competitive environments, physical activities, or crisis situations.",
-        Taurus: "Vertex activations come through beauty, finances, or sensory experiences. Fated meetings often happen in gardens, galleries, restaurants, or through shared appreciation of beauty.",
-        Gemini: "Vertex activations arrive through words, ideas, or communication. Fated meetings often happen through writing, teaching, social media, or chance conversations.",
-        Cancer: "Vertex activations come through family events, emotional vulnerability, or nurturing situations. Fated meetings often happen at home, through family, or in caregiving contexts.",
-        Leo: "Vertex activations arrive through creative expression, performance, or children. Fated meetings often happen on stage, through art, or in situations requiring courage and visibility.",
-        Virgo: "Vertex activations come through health events, work situations, or service opportunities. Fated meetings often happen in workplaces, health settings, or through shared daily routines.",
-        Libra: "Vertex activations arrive through partnerships, legal matters, or aesthetic experiences. Fated meetings often happen through introductions, art events, or situations requiring balance and mediation.",
-        Scorpio: "Vertex activations come through crisis, intimacy, or transformation. Fated meetings often happen during intense emotional experiences, shared vulnerability, or financial entanglements.",
-        Sagittarius: "Vertex activations arrive through travel, education, or cross-cultural encounters. Fated meetings often happen abroad, in universities, or through philosophical/spiritual communities.",
-        Capricorn: "Vertex activations come through career milestones, authority figures, or responsibility. Fated meetings often happen in professional settings, through mentors, or during ambitious endeavors.",
-        Aquarius: "Vertex activations arrive through groups, technology, or humanitarian causes. Fated meetings often happen at social gatherings, through online connections, or in activist communities.",
-        Pisces: "Vertex activations come through spiritual experiences, artistic inspiration, or compassionate service. Fated meetings often happen in retreat settings, through music/art, or during moments of surrender."
+        Aries: "Las activaciones de Vertex traen personas o situaciones nuevas y audaces que exigen valentía. Las reuniones predestinadas a menudo ocurren en entornos competitivos, actividades físicas o situaciones de crisis.",
+        Taurus: "Las activaciones de vértices se producen a través de la belleza, las finanzas o las experiencias sensoriales. Los encuentros predestinados suelen ocurrir en jardines, galerías, restaurantes o mediante una apreciación compartida de la belleza.",
+        Gemini: "Las activaciones de vértice llegan a través de palabras, ideas o comunicación. Las reuniones predestinadas a menudo ocurren a través de la escritura, la enseñanza, las redes sociales o conversaciones casuales.",
+        Cancer: "Las activaciones de vértices se producen a través de acontecimientos familiares, vulnerabilidad emocional o situaciones enriquecedoras. Las reuniones predestinadas a menudo ocurren en el hogar, en la familia o en contextos de cuidado.",
+        Leo: "Las activaciones de vértices llegan a través de la expresión creativa, la actuación o los niños. Los encuentros predestinados a menudo ocurren en el escenario, a través del arte o en situaciones que requieren coraje y visibilidad.",
+        Virgo: "Las activaciones de vértice se producen a través de eventos de salud, situaciones laborales u oportunidades de servicio. Las reuniones predestinadas a menudo ocurren en lugares de trabajo, entornos de salud o mediante rutinas diarias compartidas.",
+        Libra: "Las activaciones de Vertex llegan a través de asociaciones, asuntos legales o experiencias estéticas. Las reuniones predestinadas a menudo ocurren a través de presentaciones, eventos artísticos o situaciones que requieren equilibrio y mediación.",
+        Scorpio: "Las activaciones de vértices se producen a través de crisis, intimidad o transformación. Las reuniones predestinadas a menudo ocurren durante experiencias emocionales intensas, vulnerabilidad compartida o enredos financieros.",
+        Sagittarius: "Las activaciones de Vertex llegan a través de viajes, educación o encuentros interculturales. Los encuentros predestinados a menudo ocurren en el extranjero, en universidades o a través de comunidades filosóficas/espirituales.",
+        Capricorn: "Las activaciones de Vertex se producen a través de hitos profesionales, figuras de autoridad o responsabilidad. Las reuniones predestinadas suelen ocurrir en entornos profesionales, a través de mentores o durante esfuerzos ambiciosos.",
+        Aquarius: "Las activaciones de Vertex llegan a través de grupos, tecnología o causas humanitarias. Las reuniones predestinadas suelen ocurrir en reuniones sociales, a través de conexiones en línea o en comunidades de activistas.",
+        Pisces: "Las activaciones de vértice se obtienen a través de experiencias espirituales, inspiración artística o servicio compasivo. Los encuentros predestinados a menudo ocurren en entornos de retiro, a través de la música/el arte o durante momentos de rendición."
     }
 };
 
@@ -1715,82 +1715,82 @@ function analyzeVertexActivation(readings) {
 
 var RELATIONSHIP_STYLE_READINGS = {
     venusDescendant: {
-        title: "Love Language Blueprint",
-        subtitle: "Venus + 7th House Synthesis",
-        reading: `Understanding love style requires looking at both Venus (how you love) and the 7th House/Descendant (who you attract and what you need in partnership).`
+        title: "Plano del lenguaje del amor",
+        subtitle: "Venus + Síntesis de la Casa 7",
+        reading: `Comprender el estilo de amor requiere mirar tanto a Venus (cómo amas) como a la Casa Séptima/Descendente (a quién atraes y qué necesitas en pareja).`
     },
     byVenusSign: {
         Aries: {
-            loveStyle: "Love is an action verb for Venus in Aries. They don't wait to feel ready — they dive in headfirst with a courage that can take people's breath away. Affection is shown through initiative: planning the date, making the first move, fighting for the relationship when it matters. They want to be someone's hero and they need a partner who can match their directness without flinching.",
-            attractionPattern: "They're drawn to people who have their own fire — independence, confidence, and a willingness to push back rather than simply agree. Nothing kills attraction faster than passivity or game-playing. They want honest, uncomplicated desire — someone who says what they mean and means what they say.",
-            conflictStyle: "Arguments are direct and hot but usually short-lived. They'd rather fight openly than let resentment build. The danger is saying things in anger they can't take back. They need a partner who can handle heat without crumbling, and who doesn't hold grudges because they don't.",
-            attachment: "Passionate and freedom-loving. They commit deeply but need space to remain themselves within the relationship. Possessiveness from either side feels suffocating. The ideal is two independent people choosing each other daily, not two dependent people clinging."
+            loveStyle: "Amor es un verbo de acción para Venus en Aries. No esperan a sentirse preparados: se lanzan de cabeza con un coraje que puede dejar a la gente sin aliento. El afecto se demuestra a través de la iniciativa: planificar la cita, dar el primer paso, luchar por la relación cuando sea necesario. Quieren ser el héroe de alguien y necesitan un compañero que pueda igualar su franqueza sin inmutarse.",
+            attractionPattern: "Se sienten atraídos por personas que tienen su propio fuego: independencia, confianza y voluntad de retroceder en lugar de simplemente aceptar. Nada mata la atracción más rápido que la pasividad o el juego. Quieren un deseo honesto y sin complicaciones: alguien que diga lo que quiere decir y quiera decir lo que dice.",
+            conflictStyle: "Las discusiones son directas y acaloradas, pero normalmente de corta duración. Prefieren luchar abiertamente antes que dejar que se acumule el resentimiento. El peligro es decir cosas con ira de las que no pueda retractarse. Necesitan una pareja que pueda soportar el calor sin desmoronarse y que no guarde rencor porque ellos no lo hacen.",
+            attachment: "Apasionado y amante de la libertad. Se comprometen profundamente pero necesitan espacio para seguir siendo ellos mismos dentro de la relación. La posesividad de ambos lados se siente asfixiante. Lo ideal es que dos personas independientes se elijan a diario, no dos personas dependientes que se aferren."
         },
         Taurus: {
-            loveStyle: "Venus in Taurus loves through the senses and through steadfast presence. They show up, consistently, without drama or fanfare. Love is the home-cooked meal, the thoughtful gift, the hand held during difficult moments. They build love like they build everything — slowly, thoroughly, and with the intention that it last forever.",
-            attractionPattern: "They're drawn to stability, physical beauty, and people who feel like home. Reliability is genuinely attractive to them. They want someone who keeps promises, who smells good, who creates comfort. Chaos, unpredictability, and emotional games are deeply unattractive — they want to know what they're getting.",
-            conflictStyle: "Slow to anger but formidable once pushed past their limit. They'll absorb a lot before reacting, which means by the time they're upset, it's serious. They need time to process feelings and shouldn't be pushed for immediate resolution. Patience from a partner during conflict is essential.",
-            attachment: "Deeply loyal and possessive in the most protective sense. Once committed, they're in it for the long haul and expect the same in return. Breaking trust is almost unforgivable. They need physical touch, quality time, and the assurance that what they've built together is safe."
+            loveStyle: "Venus en Tauro ama a través de los sentidos y mediante una presencia constante. Aparecen de manera constante, sin dramatismo ni fanfarria. El amor es la comida casera, el regalo atento, la mano tomada en los momentos difíciles. Construyen el amor como construyen todo: lenta, minuciosamente y con la intención de que dure para siempre.",
+            attractionPattern: "Se sienten atraídos por la estabilidad, la belleza física y las personas que se sienten como en casa. La fiabilidad les resulta realmente atractiva. Quieren a alguien que cumpla sus promesas, que huela bien y que genere consuelo. El caos, la imprevisibilidad y los juegos emocionales son profundamente poco atractivos: quieren saber qué se encuentran.",
+            conflictStyle: "Lento para la ira pero formidable una vez superado su límite. Absorberán mucho antes de reaccionar, lo que significa que cuando estén molestos, ya es grave. Necesitan tiempo para procesar sus sentimientos y no se les debe presionar para que tengan una resolución inmediata. La paciencia de la pareja durante el conflicto es fundamental.",
+            attachment: "Profundamente leal y posesivo en el sentido más protector. Una vez comprometidos, permanecen en esto a largo plazo y esperan lo mismo a cambio. Romper la confianza es casi imperdonable. Necesitan contacto físico, tiempo de calidad y la seguridad de que lo que han construido juntos es seguro."
         },
         Gemini: {
-            loveStyle: "Venus in Gemini loves through conversation, curiosity, and keeping things interesting. They need mental stimulation as much as emotional connection — a boring relationship is a dead relationship to them. They show affection through clever texts, inside jokes, asking real questions, and being genuinely interested in their partner's inner world.",
-            attractionPattern: "They're drawn to wit, intelligence, and social ease. Someone who can hold their own in conversation, introduce new ideas, and make them laugh will always get their attention. They need variety — not necessarily in partners, but in experiences within a partnership. Routine and predictability feel like slow death.",
-            conflictStyle: "They'll talk through problems — sometimes too much, sometimes from their head rather than their heart. They may intellectualise emotions rather than feeling them, or use humour to deflect from real issues. They need a partner who can say 'I hear you thinking, but what are you feeling?'",
-            attachment: "Light and spacious but genuinely caring. They need freedom to socialise, explore ideas, and maintain their own identity. A partner who tries to be their entire world will find themselves losing them. The paradox is that giving them space is what makes them want to stay close."
+            loveStyle: "Venus en Géminis ama la conversación, la curiosidad y mantener las cosas interesantes. Necesitan tanto estimulación mental como conexión emocional: una relación aburrida es una relación muerta para ellos. Muestran afecto a través de mensajes de texto ingeniosos, chistes internos, haciendo preguntas reales y estando genuinamente interesados ​​en el mundo interior de su pareja.",
+            attractionPattern: "Se sienten atraídos por el ingenio, la inteligencia y la tranquilidad social. Alguien que pueda defenderse en una conversación, presentar nuevas ideas y hacerlos reír siempre llamará su atención. Necesitan variedad, no necesariamente en los socios, sino en las experiencias dentro de una asociación. La rutina y la previsibilidad parecen una muerte lenta.",
+            conflictStyle: "Hablarán de los problemas, a veces demasiado, a veces desde la cabeza en lugar de desde el corazón. Pueden intelectualizar las emociones en lugar de sentirlas, o utilizar el humor para desviarse de los problemas reales. Necesitan un compañero que pueda decir: 'Te oigo pensar, pero ¿qué sientes?'",
+            attachment: "Luminoso y espacioso pero genuinamente atento. Necesitan libertad para socializar, explorar ideas y mantener su propia identidad. Un socio que intenta ser todo su mundo se encontrará perdiéndolo. La paradoja es que darles espacio es lo que les hace querer permanecer cerca."
         },
         Cancer: {
-            loveStyle: "Venus in Cancer loves with everything they have. They nurture, they remember, they create emotional worlds so warm that partners never want to leave. Love is shown through care-taking — remembering preferences, anticipating needs, creating safe spaces where vulnerability isn't just accepted but cherished. When they love you, they carry your whole emotional history in their heart.",
-            attractionPattern: "They're drawn to emotional availability, family orientation, and people who feel safe. Someone who opens up genuinely, who values home and closeness, who doesn't treat vulnerability as weakness. They can sense emotional walls from across a room and they're not interested in climbing them unless the person behind them is willing to come out.",
-            conflictStyle: "Indirect and protective. They may withdraw, go quiet, or use passive signals rather than stating what's wrong directly. Harsh criticism cuts deeply and stays with them. They need gentleness in conflict — the message matters, but how it's delivered matters more. A partner who can be honest without being cruel is essential.",
-            attachment: "Deep, devoted, and sometimes anxious. They give everything to relationships and need reassurance that the investment is mutual. Emotional availability from their partner isn't optional — it's the foundation. They remember every kindness and every slight, so consistency in how they're treated shapes everything."
+            loveStyle: "Venus en Cáncer ama con todo lo que tiene. Nutren, recuerdan, crean mundos emocionales tan cálidos que la pareja nunca quiere irse. El amor se demuestra a través del cuidado: recordar preferencias, anticipar necesidades, crear espacios seguros donde la vulnerabilidad no sólo se acepta sino que se valora. Cuando te aman, llevan toda tu historia emocional en su corazón.",
+            attractionPattern: "Se sienten atraídos por la disponibilidad emocional, la orientación familiar y las personas que se sienten seguras. Alguien que se abre genuinamente, que valora el hogar y la cercanía, que no trata la vulnerabilidad como debilidad. Pueden sentir las paredes emocionales desde el otro lado de una habitación y no están interesados ​​en escalarlas a menos que la persona detrás de ellos esté dispuesta a salir.",
+            conflictStyle: "Indirecto y protector. Es posible que se retraigan, se queden callados o utilicen señales pasivas en lugar de decir directamente lo que está mal. Las duras críticas los cortan profundamente y permanecen con ellos. Necesitan gentileza en los conflictos: el mensaje importa, pero más importa cómo se transmite. Es esencial una pareja que pueda ser honesta sin ser cruel.",
+            attachment: "Profundo, devoto y, a veces, ansioso. Lo dan todo por las relaciones y necesitan tener la seguridad de que la inversión es mutua. La disponibilidad emocional de su pareja no es opcional: es la base. Recuerdan cada amabilidad y cada desaire, por lo que la coherencia en la forma en que los tratan da forma a todo."
         },
         Leo: {
-            loveStyle: "Venus in Leo loves generously, dramatically, and with their whole chest. When they're in, they're all in — grand gestures, unwavering loyalty, and a warmth that makes their partner feel like the most important person alive. They want romance to feel like a story worth telling. Love should be celebrated, not hidden or downplayed.",
-            attractionPattern: "They're drawn to confidence, creativity, and people who know how to appreciate them. Admiration isn't vanity for Venus in Leo — it's the love language. They need to feel seen, desired, and chosen. A partner who is enthusiastic about them, who isn't afraid to express it, who makes them feel special. Indifference is the ultimate rejection.",
-            conflictStyle: "Pride can be a barrier. They struggle to admit fault and may become dramatic when hurt. They need their dignity respected even during disagreements. The worst thing a partner can do is humiliate them. Arguments work best when both sides acknowledge the other's value first, then address the problem.",
-            attachment: "Loyal, warm, and needing reciprocal enthusiasm. They give generously and expect generosity in return — not materially, but emotionally. A partner who takes them for granted slowly extinguishes their fire. They need regular, genuine appreciation to keep their heart open and their love flowing."
+            loveStyle: "Venus en Leo ama generosamente, dramáticamente y con todo el pecho. Cuando están dentro, lo están todo: grandes gestos, lealtad inquebrantable y una calidez que hace que su pareja se sienta como la persona más importante del mundo. Quieren que el romance parezca una historia que valga la pena contar. El amor debe celebrarse, no ocultarse ni restarse importancia.",
+            attractionPattern: "Se sienten atraídos por la confianza, la creatividad y las personas que saben apreciarlos. La admiración no es vanidad para Venus en Leo: es el lenguaje del amor. Necesitan sentirse vistos, deseados y elegidos. Una pareja que le entusiasme, que no tenga miedo de expresarlo, que le haga sentir especial. La indiferencia es el rechazo máximo.",
+            conflictStyle: "El orgullo puede ser una barrera. Les cuesta admitir sus errores y pueden volverse dramáticos cuando se sienten heridos. Necesitan que se respete su dignidad incluso durante los desacuerdos. Lo peor que puede hacer una pareja es humillarla. Los argumentos funcionan mejor cuando ambas partes reconocen primero el valor del otro y luego abordan el problema.",
+            attachment: "Leal, cálido y necesitado de entusiasmo recíproco. Dan generosamente y esperan generosidad a cambio, no material, sino emocional. Un compañero que los da por sentado apaga lentamente su fuego. Necesitan un reconocimiento regular y genuino para mantener su corazón abierto y su amor fluyendo."
         },
         Virgo: {
-            loveStyle: "Venus in Virgo loves through acts of service and quiet, steady devotion. They notice what needs doing and they do it — not for recognition, but because love means making someone's life easier and better. They remember how their partner takes their tea, they notice when something's wrong before it's mentioned, they fix things. Love is practical and expressed through consistency rather than grand gestures.",
-            attractionPattern: "They're drawn to intelligence, competence, and genuine goodness. Someone who takes care of themselves, who has integrity, who pays attention to the details of life. Flashiness without substance repels them. They want a real person, not a performance. Health-consciousness and self-improvement are genuinely attractive to them.",
-            conflictStyle: "They can become critical under stress, pointing out flaws in their partner's logic or behaviour with surgical precision. This comes from anxiety, not cruelty, but it can feel harsh. They need a partner who understands that their criticism is often displaced worry, and who can gently redirect them toward expressing the feeling underneath.",
-            attachment: "Devoted and anxious in equal measure. They worry about the relationship the way they worry about everything — thoroughly. They need partners who are consistent and who don't create unnecessary drama. Reliability is deeply reassuring to them. They love through service and need their service acknowledged, not expected."
+            loveStyle: "Venus en Virgo ama a través de actos de servicio y devoción tranquila y constante. Se dan cuenta de lo que hay que hacer y lo hacen, no para recibir reconocimiento, sino porque amar significa hacer la vida de alguien más fácil y mejor. Recuerdan cómo su pareja toma el té, se dan cuenta cuando algo anda mal antes de mencionarlo, arreglan las cosas. El amor es práctico y se expresa a través de la coherencia más que de grandes gestos.",
+            attractionPattern: "Se sienten atraídos por la inteligencia, la competencia y la bondad genuina. Alguien que se cuide, que tenga integridad, que preste atención a los detalles de la vida. La ostentación sin sustancia los repele. Quieren una persona real, no una actuación. La conciencia de la salud y la superación personal les resultan realmente atractivos.",
+            conflictStyle: "Pueden volverse críticos bajo estrés, señalando fallas en la lógica o el comportamiento de su pareja con precisión quirúrgica. Esto proviene de la ansiedad, no de la crueldad, pero puede resultar duro. Necesitan una pareja que comprenda que sus críticas a menudo son preocupaciones desplazadas y que pueda redirigirlos suavemente para que expresen el sentimiento subyacente.",
+            attachment: "Devoto y ansioso a partes iguales. Se preocupan por la relación de la misma manera que se preocupan por todo: minuciosamente. Necesitan socios que sean coherentes y que no creen dramas innecesarios. La confiabilidad les resulta profundamente tranquilizadora. Aman a través del servicio y necesitan que su servicio sea reconocido, no esperado."
         },
         Libra: {
-            loveStyle: "Venus in Libra is in its home sign, creating someone for whom partnership is art. They create beautiful relationships the way others create beautiful homes — with intention, balance, and genuine care for how things feel. They're attentive to their partner's experience, making sure both people feel valued, heard, and considered. Romance isn't an accessory to the relationship; it's the atmosphere they naturally create.",
-            attractionPattern: "They're drawn to refinement, fairness, and people who carry themselves with grace. Someone who can hold a conversation, who treats people well, who appreciates beauty in all its forms. Rudeness, selfishness, and aggressive energy are deeply off-putting. They want a partner who makes the world a more pleasant place simply by being in it.",
-            conflictStyle: "They avoid it, sometimes to their own detriment. They'll accommodate, compromise, and absorb discomfort before admitting something is wrong. When they finally do address conflict, it comes out measured and diplomatic — but the suppressed feelings underneath may be far more intense than their words suggest. They need a partner who creates safety for honest disagreement.",
-            attachment: "Partnership-oriented to their core. They feel most themselves when part of a meaningful couple. This isn't codependency — it's genuine fulfilment through shared life. They need equality, reciprocity, and the sense that both people are contributing to the relationship's beauty. Imbalance, where one person gives more than the other, slowly erodes them."
+            loveStyle: "Venus en Libra está en su signo natal, lo que crea a alguien para quien la asociación es un arte. Crean hermosas relaciones de la misma manera que otros crean hermosos hogares: con intención, equilibrio y cuidado genuino por cómo se sienten las cosas. Están atentos a la experiencia de su pareja y se aseguran de que ambas personas se sientan valoradas, escuchadas y consideradas. El romance no es un accesorio de la relación; es la atmósfera que crean naturalmente.",
+            attractionPattern: "Se sienten atraídos por el refinamiento, la justicia y las personas que se comportan con gracia. Alguien que pueda mantener una conversación, que trate bien a las personas, que aprecie la belleza en todas sus formas. La mala educación, el egoísmo y la energía agresiva son profundamente desagradables. Quieren un socio que haga del mundo un lugar más agradable simplemente por estar en él.",
+            conflictStyle: "Lo evitan, a veces en detrimento propio. Se adaptarán, harán concesiones y absorberán la incomodidad antes de admitir que algo anda mal. Cuando finalmente abordan el conflicto, lo hacen con mesura y diplomacia, pero los sentimientos reprimidos que hay en el fondo pueden ser mucho más intensos de lo que sugieren sus palabras. Necesitan un socio que genere seguridad para un desacuerdo honesto.",
+            attachment: "Orientados a la asociación hasta el fondo. Se sienten más ellos mismos cuando forman parte de una pareja significativa. Esto no es codependencia: es una realización genuina a través de la vida compartida. Necesitan igualdad, reciprocidad y la sensación de que ambas personas contribuyen a la belleza de la relación. El desequilibrio, donde una persona da más que la otra, los erosiona lentamente."
         },
         Scorpio: {
-            loveStyle: "Venus in Scorpio loves with an intensity that can be overwhelming for those who aren't ready for it. This is all-or-nothing love — they don't do casual, they don't do surface, and they don't do pretend. When they choose someone, they choose them completely and expect the same in return. Love means full emotional transparency, deep loyalty, and the willingness to face the darkest parts of each other together.",
-            attractionPattern: "They're drawn to depth, mystery, and emotional courage. Someone who has layers, who isn't afraid of their own shadow, who can handle intensity without running. Superficiality is invisible to them — they can't be attracted to a surface. They want to know who someone really is, underneath everything, and they're patient enough to wait for that truth.",
-            conflictStyle: "Intense and sometimes punishing. They feel betrayal deeply and may respond with withdrawal, testing, or the cold shoulder. Forgiveness is hard-won. They need a partner who understands that their intensity comes from how deeply they care, and who can stay present during emotional storms without escalating or abandoning.",
-            attachment: "Fiercely loyal and deeply possessive. Once bonded, the connection is almost unbreakable — and they expect it to be exclusive and total. Trust, once broken, is nearly impossible to rebuild. They need a partner who understands that their jealousy is really fear of loss, and who proves their loyalty through actions, not just words."
+            loveStyle: "Venus en Escorpio ama con una intensidad que puede resultar abrumadora para quienes no están preparados para ello. Este es un amor de todo o nada: no son casuales, no salen a la superficie y no fingen. Cuando eligen a alguien, lo eligen por completo y esperan lo mismo a cambio. Amor significa total transparencia emocional, profunda lealtad y la voluntad de enfrentar juntos las partes más oscuras del otro.",
+            attractionPattern: "Se sienten atraídos por la profundidad, el misterio y el coraje emocional. Alguien que tenga capas, que no le tenga miedo a su propia sombra, que pueda soportar la intensidad sin correr. La superficialidad es invisible para ellos: no pueden sentirse atraídos por una superficie. Quieren saber quién es realmente alguien, detrás de todo, y son lo suficientemente pacientes como para esperar esa verdad.",
+            conflictStyle: "Intenso y a veces castigador. Sienten profundamente la traición y pueden responder con retraimiento, pruebas o frialdad. El perdón se gana con esfuerzo. Necesitan una pareja que comprenda que su intensidad proviene de lo profundamente que se preocupan y que pueda permanecer presente durante las tormentas emocionales sin intensificarse ni abandonarse.",
+            attachment: "Ferozmente leal y profundamente posesivo. Una vez unidos, la conexión es casi inquebrantable y esperan que sea exclusiva y total. La confianza, una vez rota, es casi imposible de reconstruir. Necesitan una pareja que comprenda que sus celos son en realidad miedo a perder y que demuestre su lealtad con acciones, no solo con palabras."
         },
         Sagittarius: {
-            loveStyle: "Venus in Sagittarius loves through adventure, honesty, and the shared pursuit of meaning. They want a relationship that expands both people — that makes life bigger, not smaller. Affection is shown through planning trips together, sharing philosophies, laughing until it hurts, and always being genuinely honest, even when it's uncomfortable.",
-            attractionPattern: "They're drawn to optimism, independence, and open-mindedness. Someone who has their own adventures, their own beliefs, their own life that they're excited about. A partner who wants to grow together rather than settle into routine. Possessiveness, pessimism, and narrow thinking are deeply unattractive. They want a companion for the journey, not a jailer.",
-            conflictStyle: "Blunt and sometimes tactless. They believe honesty is always better than diplomacy, which can feel brutal to more sensitive partners. They may also avoid conflict by leaving — physically or emotionally — rather than staying to work through discomfort. They need a partner who can handle direct truth and who can also teach them that delivery matters.",
-            attachment: "Freedom-loving but capable of deep commitment when it doesn't feel like a cage. They need space to grow, explore, and be themselves. The partner who says 'go have your adventure and tell me everything when you come home' wins their heart permanently. Trying to pin them down achieves the opposite of the intended result."
+            loveStyle: "Venus en Sagitario ama a través de la aventura, la honestidad y la búsqueda compartida de significado. Quieren una relación que expanda a ambas personas, que haga la vida más grande, no más pequeña. El afecto se demuestra planificando viajes juntos, compartiendo filosofías, riendo hasta que duela y siendo siempre genuinamente honesto, incluso cuando sea incómodo.",
+            attractionPattern: "Se sienten atraídos por el optimismo, la independencia y la mentalidad abierta. Alguien que tiene sus propias aventuras, sus propias creencias, su propia vida que le entusiasma. Una pareja que quiere crecer juntos en lugar de adaptarse a la rutina. La posesividad, el pesimismo y el pensamiento estrecho son profundamente poco atractivos. Quieren un compañero de viaje, no un carcelero.",
+            conflictStyle: "Contundente y a veces sin tacto. Creen que la honestidad siempre es mejor que la diplomacia, que puede resultar brutal para los socios más sensibles. También pueden evitar conflictos al irse, física o emocionalmente, en lugar de quedarse a trabajar aunque se sientan incómodos. Necesitan un socio que pueda manejar la verdad directa y que también pueda enseñarles que la entrega es importante.",
+            attachment: "Amante de la libertad pero capaz de un compromiso profundo cuando no se siente como una jaula. Necesitan espacio para crecer, explorar y ser ellos mismos. La pareja que dice 've a vivir tu aventura y cuéntamelo todo cuando vuelvas a casa' se gana su corazón permanentemente. Tratar de precisarlos logra el resultado opuesto al deseado."
         },
         Capricorn: {
-            loveStyle: "Venus in Capricorn loves through commitment, provision, and building something that lasts. They may not say 'I love you' easily, but they show it through loyalty, hard work, and the steady creation of a shared future. Love is proven over time, not declared in a moment. They take partnership as seriously as they take their career — perhaps more so.",
-            attractionPattern: "They're drawn to ambition, maturity, and people who have their life together. Someone who takes responsibility, who has goals, who doesn't play games. They respect accomplishment and competence. A potential partner who is unreliable, immature, or aimless holds no appeal regardless of other qualities. They want someone they can build an empire with.",
-            conflictStyle: "Controlled and sometimes emotionally withheld. They may shut down rather than express hurt, or address relationship issues with the same pragmatism they'd bring to a business problem. They need a partner who can draw out their feelings gently and who doesn't interpret their emotional reserve as lack of caring.",
-            attachment: "Loyal, committed, and quietly devoted. Once they've chosen someone, they're remarkably consistent. But they need to feel respected — taken for granted or treated disrespectfully, and they'll quietly build walls that become permanent. Status and how the relationship appears to others does matter to them, even if they'd deny it."
+            loveStyle: "Venus en Capricornio ama a través del compromiso, la provisión y la construcción de algo duradero. Puede que no digan "te amo" fácilmente, pero lo demuestran a través de la lealtad, el trabajo duro y la creación constante de un futuro compartido. El amor se prueba con el tiempo, no se declara en un momento. Se toman las asociaciones tan en serio como se toman su carrera, quizás más.",
+            attractionPattern: "Se sienten atraídos por la ambición, la madurez y las personas que tienen su vida en orden. Alguien que asuma responsabilidades, que tenga objetivos, que no juegue. Respetan los logros y la competencia. Un socio potencial que no es confiable, es inmaduro o no tiene ningún atractivo, independientemente de sus otras cualidades. Quieren a alguien con quien puedan construir un imperio.",
+            conflictStyle: "Controlado y a veces reprimido emocionalmente. Es posible que se cierren en lugar de expresar su dolor, o que aborden los problemas de relación con el mismo pragmatismo que aplicarían a un problema empresarial. Necesitan una pareja que pueda expresar sus sentimientos con suavidad y que no interprete su reserva emocional como falta de interés.",
+            attachment: "Leal, comprometido y silenciosamente dedicado. Una vez que han elegido a alguien, son notablemente consistentes. Pero necesitan sentirse respetados, dados por sentado o tratados irrespetuosamente, y silenciosamente construirán muros que se volverán permanentes. El estatus y cómo ven la relación los demás sí les importa, incluso si lo niegan."
         },
         Aquarius: {
-            loveStyle: "Venus in Aquarius loves through intellectual connection, shared ideals, and respecting each other's individuality. They show affection by being genuinely interested in what makes their partner unique, by supporting their independence, and by building a partnership that doesn't follow anyone else's rules. Friendship is the foundation of their romance — without it, attraction alone isn't enough.",
-            attractionPattern: "They're drawn to uniqueness, intelligence, and people who think for themselves. Someone who challenges norms, who has interesting ideas, who doesn't need external validation to feel secure. Conformity and emotional neediness are unattractive. They want a partner who is their best friend first — someone they'd choose to talk to even without romantic interest.",
-            conflictStyle: "Detached and analytical. They may intellectualise emotions rather than feeling them, or retreat into cool distance when things get too heated. They struggle with the messy, irrational parts of human emotion. They need a partner who can say 'come back to your body and feel this' without judgement.",
-            attachment: "Independent and somewhat unconventional in how they show love. They need significant personal space and time for their own interests. A partner who interprets this as lack of love will always feel insecure. But when they choose someone, the commitment is genuine — it just looks different from the traditional model."
+            loveStyle: "Venus en Acuario ama a través de la conexión intelectual, los ideales compartidos y el respeto a la individualidad de cada uno. Muestran afecto estando genuinamente interesados ​​en lo que hace que su pareja sea única, apoyando su independencia y construyendo una relación que no sigue las reglas de nadie más. La amistad es la base de su romance; sin ella, la atracción por sí sola no es suficiente.",
+            attractionPattern: "Se sienten atraídos por la singularidad, la inteligencia y las personas que piensan por sí mismas. Alguien que desafíe las normas, que tenga ideas interesantes, que no necesite validación externa para sentirse seguro. La conformidad y la necesidad emocional no son atractivas. Quieren una pareja que sea su mejor amiga primero, alguien con quien elegirían hablar incluso sin un interés romántico.",
+            conflictStyle: "Separado y analítico. Pueden intelectualizar las emociones en lugar de sentirlas, o retirarse a una fría distancia cuando las cosas se ponen demasiado acaloradas. Luchan con las partes confusas e irracionales de las emociones humanas. Necesitan un compañero que pueda decir "vuelve a tu cuerpo y siente esto" sin juzgarlo.",
+            attachment: "Independientes y algo poco convencionales en su forma de demostrar el amor. Necesitan mucho espacio y tiempo personal para sus propios intereses. Una pareja que interpreta esto como desamor siempre se sentirá insegura. Pero cuando eligen a alguien, el compromiso es genuino: simplemente parece diferente del modelo tradicional."
         },
         Pisces: {
-            loveStyle: "Venus in Pisces loves with boundless compassion, imagination, and a kind of spiritual devotion that sees the best in people even when they can't see it themselves. They create magic in relationships — romantic gestures that feel like poetry, emotional attunement so deep it borders on telepathic, and a willingness to sacrifice that can be either beautiful or self-destructive depending on the partner.",
-            attractionPattern: "They're drawn to sensitivity, creativity, and spiritual depth. Someone who feels things deeply, who has an inner world rich enough to explore endlessly, who isn't afraid of the mystical side of life. Harshness, cynicism, and emotional brutality repel them. They want a soul connection — anything less feels like settling.",
-            conflictStyle: "Avoidant and absorptive. They may take on their partner's emotions as their own, making it hard to distinguish whose feelings are whose. They tend to sacrifice their own needs to keep the peace, then feel resentful when that sacrifice isn't noticed. They need a partner who actively asks what they need, because they rarely volunteer it.",
-            attachment: "Deeply devoted and sometimes boundary-less. They can lose themselves in love, merging so completely with a partner that they forget who they are alone. They need a partner who actively encourages their individuality and who doesn't take advantage of their giving nature. When healthy, their love is the most unconditional in the zodiac."
+            loveStyle: "Venus en Piscis ama con compasión ilimitada, imaginación y una especie de devoción espiritual que ve lo mejor de las personas incluso cuando ellas mismas no pueden verlo. Crean magia en las relaciones: gestos románticos que parecen poesía, una sintonía emocional tan profunda que raya en lo telepático y una voluntad de sacrificio que puede ser hermosa o autodestructiva dependiendo de la pareja.",
+            attractionPattern: "Se sienten atraídos por la sensibilidad, la creatividad y la profundidad espiritual. Alguien que siente las cosas profundamente, que tiene un mundo interior lo suficientemente rico como para explorarlo sin cesar, que no le teme al lado místico de la vida. La dureza, el cinismo y la brutalidad emocional los repelen. Quieren una conexión con el alma; cualquier cosa menos les parece un acuerdo.",
+            conflictStyle: "Evitativo y absorbente. Pueden asumir las emociones de su pareja como propias, lo que dificulta distinguir los sentimientos de quién. Tienden a sacrificar sus propias necesidades para mantener la paz y luego se sienten resentidos cuando no se nota ese sacrificio. Necesitan un socio que les pregunte activamente qué necesitan, porque rara vez lo ofrecen voluntariamente.",
+            attachment: "Profundamente devoto y, a veces, sin límites. Pueden perderse en el amor, fusionándose tan completamente con su pareja que olvidan quiénes están solos. Necesitan una pareja que fomente activamente su individualidad y que no se aproveche de su naturaleza generosa. Cuando están sanos, su amor es el más incondicional del zodíaco."
         }
     }
 };
@@ -1808,7 +1808,7 @@ function analyzeRelationshipStyle(readings) {
     const moonSign = moon?.name || moon;
     
     const result = {
-        title: "Relationship Style Blueprint",
+        title: "Plano de estilo de relación",
         sections: []
     };
     
@@ -1824,7 +1824,7 @@ function analyzeRelationshipStyle(readings) {
             venusContent += `\n\n<strong>Attachment Style:</strong> ${venusData.attachment}`;
         }
         result.sections.push({
-            subtitle: `Venus in ${venusSign} - How They Love`,
+            subtitle: `Venus en ${venusSign} - Cómo aman`,
             content: venusContent
         });
     }
@@ -1832,9 +1832,9 @@ function analyzeRelationshipStyle(readings) {
     // Mars desire style - now with its own unique content
     if (marsSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[marsSign]) {
         const marsData = RELATIONSHIP_STYLE_READINGS.byVenusSign[marsSign];
-        const marsContent = `Mars reveals what ignites desire and how pursuit works in relationships. With Mars in ${marsSign}, attraction is physical and instinctive — the chemistry either sparks or it doesn't, and no amount of logic changes it.\n\n${marsData.loveStyle.replace(/Shows love/gi, 'Pursues connection').replace(/love is/gi, 'desire is').replace(/They show affection/gi, 'They pursue')}\n\n<strong>What Sparks Chemistry:</strong> ${marsData.attractionPattern.replace(/They're drawn/gi, 'Physical chemistry ignites with')}`;
+        const marsContent = `Marte revela qué enciende el deseo y cómo funciona la búsqueda en las relaciones. Con Marte en ${marsSign}, la atracción es física e instintiva: la química se enciende o no, y ninguna cantidad de lógica la cambia.\n\n${marsData.loveStyle.replace(/Shows love/gi, 'Pursues connection').replace(/love is/gi, 'desire is').replace(/They show affection/gi, 'They pursue')}\n\n<strong>Lo que enciende la química:</strong> ${marsData.attractionPattern.replace(/They're drawn/gi, 'Physical chemistry ignites with')}`;
         result.sections.push({
-            subtitle: `Mars in ${marsSign} - Desire & Chemistry`,
+            subtitle: `Marte en ${marsSign} - Deseo y Química`,
             content: marsContent
         });
     }
@@ -1842,20 +1842,20 @@ function analyzeRelationshipStyle(readings) {
     // Moon emotional needs in relationship
     if (moonSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[moonSign]) {
         const moonData = RELATIONSHIP_STYLE_READINGS.byVenusSign[moonSign];
-        const moonContent = `The Moon reveals what's needed for emotional safety in relationships — the non-negotiable needs that, if unmet, make no amount of attraction or compatibility enough.\n\nWith Moon in ${moonSign}, emotional security comes through ${moonData.attachment || moonData.loveStyle}\n\n<strong>When Emotionally Triggered:</strong> ${moonData.conflictStyle || 'Emotional reactions follow the patterns of ' + moonSign + ' energy — requiring understanding rather than logic from a partner.'}`;
+        const moonContent = `La Luna revela lo que se necesita para la seguridad emocional en las relaciones: las necesidades no negociables que, si no se satisfacen, ninguna cantidad de atracción o compatibilidad es suficiente.\n\nCon la Luna en ${moonSign}, la seguridad emocional llega a través de ${moonData.attachment || moonData.loveStyle}\n\n<strong>Cuando se activa emocionalmente:</strong> ${moonData.conflictStyle || 'Emotional reactions follow the patterns of ' + moonSign + ' energy — requiring understanding rather than logic from a partner.'}`;
         result.sections.push({
-            subtitle: `Moon in ${moonSign} - Emotional Needs in Love`,
+            subtitle: `Luna en ${moonSign} - Necesidades Emocionales en el Amor`,
             content: moonContent
         });
     }
     
     // Venus-Mars dynamic (if different signs)
     if (venusSign && marsSign && venusSign !== marsSign) {
-        const venusElement = { Aries: 'Fire', Taurus: 'Earth', Gemini: 'Air', Cancer: 'Water', Leo: 'Fire', Virgo: 'Earth', Libra: 'Air', Scorpio: 'Water', Sagittarius: 'Fire', Capricorn: 'Earth', Aquarius: 'Air', Pisces: 'Water' };
+        const venusElement = { Aries: 'Fuego', Taurus: 'Tierra', Gemini: 'Aire', Cancer: 'Agua', Leo: 'Fuego', Virgo: 'Tierra', Libra: 'Aire', Scorpio: 'Agua', Sagittarius: 'Fuego', Capricorn: 'Tierra', Aquarius: 'Aire', Pisces: 'Agua' };
         const vEl = venusElement[venusSign];
         const mEl = venusElement[marsSign];
         
-        let dynamicContent = `Venus in ${venusSign} and Mars in ${marsSign} create a distinctive internal relationship dynamic — what they want in love (Venus) and how they pursue it (Mars) operate differently.\n\n`;
+        let dynamicContent = `Venus en ${venusSign} y Marte en ${marsSign} crean una dinámica de relación interna distintiva: lo que quieren en el amor (Venus) y cómo lo persiguen (Marte) operan de manera diferente.\n\n`;
         
         if (vEl === mEl) {
             dynamicContent += `Both Venus and Mars are in ${vEl} signs, creating consistency between desire and pursuit. What they want and how they go after it are aligned, making their romantic energy straightforward and coherent. Partners know where they stand.`;
@@ -1866,7 +1866,7 @@ function analyzeRelationshipStyle(readings) {
         }
         
         result.sections.push({
-            subtitle: `Venus-Mars Dynamic - Heart vs Drive`,
+            subtitle: `Dinámica Venus-Marte: corazón versus impulso`,
             content: dynamicContent
         });
     }
@@ -1874,7 +1874,7 @@ function analyzeRelationshipStyle(readings) {
     // Descendant - who you attract
     if (descendantSign) {
         const descData = SIGN_PARTNER_QUALITIES ? SIGN_PARTNER_QUALITIES[descendantSign] : null;
-        let descContent = `The Descendant in ${descendantSign} reveals the qualities most naturally attracted into this life through partnership. These aren't just preferences — they're the qualities the soul is learning to integrate, often by encountering them in others first.\n\n`;
+        let descContent = `El Descendente en ${descendantSign} revela las cualidades que se atraen más naturalmente a esta vida a través de la asociación. Estas no son sólo preferencias: son cualidades que el alma está aprendiendo a integrar, a menudo encontrándolas primero en los demás.\n\n`;
         
         if (descData) {
             descContent += `Partners who embody ${descData.qualities} are magnetically drawn in. The ideal partnership lifestyle involves ${descData.lifestyle}.\n\n`;
@@ -1884,7 +1884,7 @@ function analyzeRelationshipStyle(readings) {
         }
         
         result.sections.push({
-            subtitle: `Descendant in ${descendantSign} - Who You Attract`,
+            subtitle: `Descendiente en ${descendantSign} - A quién atraes`,
             content: descContent
         });
     }
@@ -1899,33 +1899,33 @@ function analyzeRelationshipStyle(readings) {
 // ============================================
 
 var HOUSE_CAREER_THEMES = {
-    1: { domain: "Personal Branding & Leadership", paths: ["Life coach or personal development speaker", "Fitness trainer or image consultant", "Solo entrepreneur or startup founder", "YouTube creator, influencer, or personal brand builder", "Sports athlete or competitive performer"], verb: "leading by personal example", specific: "They thrive when THEY are the product — their presence, story, or expertise. Self-employment, content creation, and any role where personal magnetism drives success." },
-    2: { domain: "Finance & Value Creation", paths: ["Financial planner or wealth management advisor", "Real estate investor or property developer", "Art dealer, antiques appraiser, or luxury curator", "Accountant, banker, or investment analyst", "Chef, sommelier, or artisan food producer"], verb: "building and managing resources", specific: "Careers that involve building tangible value, evaluating worth, and creating beautiful or valuable things from raw materials." },
-    3: { domain: "Communication & Media", paths: ["Journalist, editor, or news correspondent", "Social media strategist or content marketer", "Podcast host, radio presenter, or broadcaster", "Copywriter, technical writer, or translator", "Primary school teacher or tutor"], verb: "communicating and connecting ideas", specific: "They excel wherever information must be gathered, synthesised, and communicated clearly — media, education, marketing, and digital content." },
-    4: { domain: "Home & Family Services", paths: ["Interior designer or home stager", "Real estate agent or property manager", "Family therapist or child psychologist", "Hotel manager or Airbnb host", "Baker, caterer, or family restaurant owner"], verb: "creating safe, nurturing spaces", specific: "Careers rooted in creating comfort, nurturing others, and building spaces where people feel at home and cared for." },
-    5: { domain: "Creative Arts & Entertainment", paths: ["Actor, musician, or performing artist", "Film director, screenwriter, or content creator", "Children's book author or youth programme director", "Game designer or creative director", "Event planner or entertainment promoter"], verb: "creative expression and inspiring joy", specific: "They need a stage — literal or metaphorical. Any career where creativity, performance, and the ability to bring joy is valued." },
-    6: { domain: "Health & Service Industries", paths: ["Nurse, paramedic, or occupational therapist", "Nutritionist, dietitian, or wellness coach", "Veterinarian or animal behaviourist", "Data analyst or quality assurance engineer", "Office manager, executive assistant, or operations lead"], verb: "improving systems and serving others", specific: "Careers where meticulous attention to detail, service orientation, and the drive to improve processes create tangible results." },
-    7: { domain: "Partnership & Mediation", paths: ["Lawyer, mediator, or arbitrator", "Marriage and couples therapist", "Diplomat, public relations director, or lobbyist", "Business development manager or partnership broker", "Wedding planner or relationship coach"], verb: "creating harmony between people", specific: "They excel in roles that require balancing competing interests, building alliances, and creating win-win outcomes between parties." },
-    8: { domain: "Transformation & Shared Resources", paths: ["Psychologist, depth therapist, or trauma counsellor", "Insurance underwriter, estate planner, or forensic accountant", "Detective, criminal profiler, or investigative journalist", "Surgeon, oncologist, or hospice worker", "Debt restructuring specialist or crisis manager"], verb: "facilitating deep transformation", specific: "Careers involving life-and-death stakes, other people's resources, hidden information, and the courage to face what others avoid." },
-    9: { domain: "Education & Expansion", paths: ["University professor or academic researcher", "Travel guide, cultural consultant, or study-abroad coordinator", "Publisher, literary agent, or thought leadership author", "Philosopher, theologian, or interfaith minister", "International development worker or foreign correspondent"], verb: "expanding horizons and sharing wisdom", specific: "They thrive in careers that combine learning, teaching, travel, and the communication of ideas that change how people see the world." },
-    10: { domain: "Executive Leadership & Legacy", paths: ["CEO, managing director, or C-suite executive", "Politician, city councillor, or government administrator", "Architect, urban planner, or civil engineer", "Executive coach or organisational consultant", "Judge, magistrate, or senior civil servant"], verb: "building lasting public achievement", specific: "They're built for positions of authority and public responsibility — careers where reputation, discipline, and long-term impact matter." },
-    11: { domain: "Technology & Humanitarian Work", paths: ["Software engineer, UX designer, or AI researcher", "Nonprofit director or social enterprise founder", "Community organiser or political campaign strategist", "Environmental scientist or sustainability consultant", "Network engineer or open-source developer"], verb: "innovating for collective benefit", specific: "Careers at the intersection of technology, community, and social progress — building systems that serve the many, not just the few." },
-    12: { domain: "Spirituality & Behind-the-Scenes", paths: ["Psychotherapist, hypnotherapist, or dream analyst", "Chaplain, spiritual director, or retreat facilitator", "Film editor, music producer, or ghostwriter", "Medical researcher or pharmaceutical scientist", "Archivist, librarian, or museum conservator"], verb: "working with unseen dimensions", specific: "Careers that operate behind the scenes, in solitude, or at the boundary between the visible and invisible — healing, research, and creative production done in private." }
+    1: { domain: "Marca personal y liderazgo", paths: ["Entrenador de vida o orador de desarrollo personal", "Entrenador físico o asesor de imagen.", "Emprendedor solitario o fundador de una startup", "Creador de YouTube, influencer o creador de marca personal", "Atleta deportivo o artista competitivo."], verb: "liderando con el ejemplo personal", specific: "Prosperan cuando ELLOS son el producto: su presencia, historia o experiencia. Trabajo por cuenta propia, creación de contenido y cualquier rol donde el magnetismo personal impulse el éxito." },
+    2: { domain: "Finanzas y creación de valor", paths: ["Planificador financiero o asesor de gestión patrimonial", "Inversor inmobiliario o promotor inmobiliario", "Marchante de arte, tasador de antigüedades o curador de lujo", "Contador, banquero o analista de inversiones", "Chef, sumiller o productor de alimentos artesanales"], verb: "construir y gestionar recursos", specific: "Carreras que implican construir valor tangible, evaluar el valor y crear cosas hermosas o valiosas a partir de materias primas." },
+    3: { domain: "Comunicación y Medios", paths: ["Periodista, editor o corresponsal de noticias", "Estratega de redes sociales o comercializador de contenidos.", "Presentador de podcast, presentador de radio o locutor", "Redactor, redactor técnico o traductor", "Profesor o tutor de escuela primaria"], verb: "comunicar y conectar ideas", specific: "Destacan en cualquier lugar donde se debe recopilar, sintetizar y comunicar información con claridad: medios, educación, marketing y contenido digital." },
+    4: { domain: "Servicios para el hogar y la familia", paths: ["Diseñador de interiores o home stager", "Agente inmobiliario o administrador de propiedades", "Terapeuta familiar o psicólogo infantil", "Gerente de hotel o anfitrión de Airbnb", "Propietario de panadero, catering o restaurante familiar"], verb: "creando espacios seguros y enriquecedores", specific: "Carreras basadas en crear comodidad, nutrir a los demás y construir espacios donde las personas se sientan como en casa y cuidadas." },
+    5: { domain: "Artes creativas y entretenimiento", paths: ["Actor, músico o artista escénico", "Director de cine, guionista o creador de contenidos", "Autor de libros infantiles o director de programas para jóvenes.", "Diseñador de juegos o director creativo", "Planificador de eventos o promotor de entretenimiento."], verb: "expresión creativa y alegría inspiradora", specific: "Necesitan un escenario, literal o metafórico. Cualquier carrera donde se valore la creatividad, el desempeño y la capacidad de brindar alegría." },
+    6: { domain: "Industrias de salud y servicios", paths: ["Enfermero, paramédico o terapeuta ocupacional", "Nutricionista, dietista o entrenador de bienestar", "Veterinario o conductista animal.", "Analista de datos o ingeniero de control de calidad.", "Gerente de oficina, asistente ejecutivo o líder de operaciones"], verb: "Mejorar los sistemas y servir a los demás.", specific: "Carreras donde la atención meticulosa al detalle, la orientación al servicio y el impulso para mejorar los procesos crean resultados tangibles." },
+    7: { domain: "Asociación y mediación", paths: ["Abogado, mediador o árbitro", "Terapeuta matrimonial y de parejas", "Diplomático, director de relaciones públicas o cabildero", "Gerente de desarrollo empresarial o corredor de asociaciones", "Planificador de bodas o asesor de relaciones"], verb: "creando armonía entre las personas", specific: "Se destacan en roles que requieren equilibrar intereses en competencia, construir alianzas y generar resultados beneficiosos para todas las partes." },
+    8: { domain: "Transformación y recursos compartidos", paths: ["Psicólogo, terapeuta profundo o consejero de trauma", "Asegurador de seguros, planificador patrimonial o contador forense", "Detective, perfilador criminal o periodista de investigación.", "Cirujano, oncólogo o trabajador de cuidados paliativos", "Especialista en reestructuración de deuda o gestor de crisis."], verb: "facilitando una transformación profunda", specific: "Carreras que involucran riesgos de vida o muerte, recursos de otras personas, información oculta y el coraje de enfrentar lo que otros evitan." },
+    9: { domain: "Educación y expansión", paths: ["Profesor universitario o investigador académico.", "Guía de viajes, consultor cultural o coordinador de estudios en el extranjero.", "Editor, agente literario o autor de liderazgo intelectual.", "Filósofo, teólogo o ministro interreligioso", "Trabajador de desarrollo internacional o corresponsal extranjero"], verb: "Ampliando horizontes y compartiendo sabiduría.", specific: "Prosperan en carreras que combinan el aprendizaje, la enseñanza, los viajes y la comunicación de ideas que cambian la forma en que las personas ven el mundo." },
+    10: { domain: "Liderazgo ejecutivo y legado", paths: ["CEO, director general o ejecutivo de alto nivel", "Político, concejal o administrador gubernamental", "Arquitecto, urbanista o ingeniero civil", "Coach ejecutivo o consultor organizacional", "Juez, magistrado o alto funcionario"], verb: "construir logros públicos duraderos", specific: "Están diseñados para puestos de autoridad y responsabilidad pública: carreras donde la reputación, la disciplina y el impacto a largo plazo son importantes." },
+    11: { domain: "Tecnología y trabajo humanitario", paths: ["Ingeniero de software, diseñador de UX o investigador de IA", "Director de una organización sin fines de lucro o fundador de una empresa social", "Organizador comunitario o estratega de campaña política.", "Científico ambiental o consultor de sostenibilidad.", "Ingeniero de redes o desarrollador de código abierto"], verb: "innovando para el beneficio colectivo", specific: "Carreras en la intersección de la tecnología, la comunidad y el progreso social: construyendo sistemas que sirvan a muchos, no solo a unos pocos." },
+    12: { domain: "Espiritualidad y detrás de escena", paths: ["Psicoterapeuta, hipnoterapeuta o analista de sueños.", "Capellán, director espiritual o facilitador de retiros", "Editor de cine, productor musical o escritor fantasma", "Investigador médico o científico farmacéutico.", "Archivero, bibliotecario o conservador de museo"], verb: "trabajando con dimensiones invisibles", specific: "Carreras que operan detrás de escena, en soledad o en el límite entre lo visible y lo invisible: curación, investigación y producción creativa realizadas en privado." }
 };
 
 var SIGN_CAREER_FLAVORS = {
-    Aries: { style: "pioneering and competitive", modifier: "in fast-paced, first-to-market environments" },
-    Taurus: { style: "patient and quality-focused", modifier: "emphasizing craftsmanship, beauty, and lasting value" },
-    Gemini: { style: "versatile and communicative", modifier: "involving multiple projects, networking, and information exchange" },
-    Cancer: { style: "nurturing and intuitive", modifier: "centered on care, family needs, and emotional connection" },
-    Leo: { style: "creative and charismatic", modifier: "with visibility, performance, and inspiring leadership" },
-    Virgo: { style: "meticulous and service-oriented", modifier: "with attention to detail, efficiency, and practical improvement" },
-    Libra: { style: "collaborative and aesthetic", modifier: "through partnerships, beauty, and balanced approaches" },
-    Scorpio: { style: "intense and investigative", modifier: "involving depth, research, and transformative impact" },
-    Sagittarius: { style: "adventurous and philosophical", modifier: "with travel, teaching, and big-picture thinking" },
-    Capricorn: { style: "disciplined and ambitious", modifier: "building authority, structure, and long-term legacy" },
-    Aquarius: { style: "innovative and humanitarian", modifier: "using technology, community, and unconventional methods" },
-    Pisces: { style: "imaginative and compassionate", modifier: "through artistic vision, healing, and spiritual service" }
+    Aries: { style: "pioneering and competitive", modifier: "en entornos dinámicos y pioneros en el mercado" },
+    Taurus: { style: "patient and quality-focused", modifier: "enfatizando la artesanía, la belleza y el valor duradero" },
+    Gemini: { style: "versatile and communicative", modifier: "involucrando múltiples proyectos, networking e intercambio de información." },
+    Cancer: { style: "nurturing and intuitive", modifier: "centrado en el cuidado, las necesidades familiares y la conexión emocional" },
+    Leo: { style: "creative and charismatic", modifier: "con visibilidad, desempeño y liderazgo inspirador" },
+    Virgo: { style: "meticulous and service-oriented", modifier: "con atención al detalle, eficiencia y mejora práctica" },
+    Libra: { style: "collaborative and aesthetic", modifier: "a través de asociaciones, belleza y enfoques equilibrados" },
+    Scorpio: { style: "intense and investigative", modifier: "involucrando profundidad, investigación e impacto transformador" },
+    Sagittarius: { style: "adventurous and philosophical", modifier: "con viajes, enseñanza y pensamiento global" },
+    Capricorn: { style: "disciplined and ambitious", modifier: "construir autoridad, estructura y legado a largo plazo" },
+    Aquarius: { style: "innovative and humanitarian", modifier: "usando tecnología, comunidad y métodos no convencionales" },
+    Pisces: { style: "imaginative and compassionate", modifier: "a través de la visión artística, la curación y el servicio espiritual." }
 };
 
 function analyzeCareerSynthesis(readings) {
@@ -1966,7 +1966,7 @@ function analyzeCareerSynthesis(readings) {
     }
     if (sunSign) signCounts[sunSign] = (signCounts[sunSign] || 0) + 2;
     const dominantSign = Object.entries(signCounts).sort((a, b) => b[1] - a[1])[0]?.[0];
-    const signFlavor = SIGN_CAREER_FLAVORS[dominantSign] || SIGN_CAREER_FLAVORS[sunSign] || { style: "unique", modifier: "in their own distinctive way" };
+    const signFlavor = SIGN_CAREER_FLAVORS[dominantSign] || SIGN_CAREER_FLAVORS[sunSign] || { style: "unique", modifier: "a su manera distintiva" };
 
     const scenarios = [];
 
@@ -1983,9 +1983,9 @@ function analyzeCareerSynthesis(readings) {
         const scenario = {
             title: theme.paths[0],
             domain: theme.domain,
-            why: `${planets.join(', ')} in House ${h} creates natural talent for ${theme.verb}. ${theme.specific}`,
-            signNote: `Their ${signFlavor.style} approach means this works best ${signFlavor.modifier}`,
-            examples: `Top career matches: ${topPaths}`
+            why: `${planets.join(', ')} en House ${h} crea talento natural para ${theme.verb}. ${theme.specific}`,
+            signNote: `Su enfoque ${signFlavor.style} significa que esto funciona mejor ${signFlavor.modifier}`,
+            examples: `Mejores partidos de su carrera: ${topPaths}`
         };
         scenarios.push(scenario);
     });
@@ -1999,10 +1999,10 @@ function analyzeCareerSynthesis(readings) {
             const comboPaths = [];
             if (h1.paths[1] && h2.paths[0]) comboPaths.push(`${h1.paths[1]} meets ${h2.paths[0]}`);
             scenarios.push({
-                title: `${h1.domain} × ${h2.domain} Fusion`,
-                domain: "Cross-Domain Innovation",
-                why: `The rare combination of House ${primaryHouses[0]} (${h1.verb}) and House ${primaryHouses[1]} (${h2.verb}) creates a unique career sweet spot that few people can fill`,
-                signNote: `Best expressed ${signFlavor.modifier}`,
+                title: `${h1.domain} × ${h2.domain} Fusión`,
+                domain: "Innovación entre dominios",
+                why: `La rara combinación de la Casa ${primaryHouses[0]} (${h1.verb}) y la Casa ${primaryHouses[1]} (${h2.verb}) crea un punto ideal profesional único que pocas personas pueden llenar.`,
+                signNote: `Mejor expresado ${signFlavor.modifier}`,
                 examples: comboPaths.length > 0 ? `Think: ${comboPaths[0]}` : ''
             });
         }
@@ -2012,16 +2012,16 @@ function analyzeCareerSynthesis(readings) {
     if (mcSign && SIGN_CAREER_FLAVORS[mcSign]) {
         const mcFlavor = SIGN_CAREER_FLAVORS[mcSign];
         scenarios.push({
-            title: `${mcSign} Midheaven Path`,
-            domain: "Public Reputation & Calling",
-            why: `With ${mcSign} at the Midheaven, the public role is ${mcFlavor.style}`,
-            signNote: `Career fulfilment comes ${mcFlavor.modifier}`
+            title: `${mcSign} Camino del Medio Cielo`,
+            domain: "Reputación pública y vocación",
+            why: `Con ${mcSign} en el Medio Cielo, el rol público es ${mcFlavor.style}`,
+            signNote: `La realización profesional llega ${mcFlavor.modifier}`
         });
     }
 
     return {
-        title: "Career Path Scenarios",
-        subtitle: "Real-world paths aligned with this chart",
+        title: "Escenarios de trayectoria profesional",
+        subtitle: "Caminos del mundo real alineados con este gráfico",
         dominantSign: dominantSign,
         signFlavor: signFlavor,
         scenarios: scenarios,
@@ -2039,30 +2039,30 @@ function analyzeCareerSynthesis(readings) {
 // ============================================
 
 var SIGN_PARTNER_QUALITIES = {
-    Aries: { qualities: "bold, independent, energetic, courageous", lifestyle: "active, adventurous, spontaneous", warning: "Can be too impulsive or competitive; may clash with need for calm" },
-    Taurus: { qualities: "stable, sensual, patient, reliable", lifestyle: "comfort-loving, nature-connected, routine-oriented", warning: "Can be too stubborn or possessive; may resist necessary change" },
-    Gemini: { qualities: "witty, curious, adaptable, communicative", lifestyle: "socially active, intellectually stimulating, variety-seeking", warning: "Can be too scattered or non-committal; may struggle with emotional depth" },
-    Cancer: { qualities: "nurturing, emotionally deep, protective, intuitive", lifestyle: "home-centered, family-focused, emotionally available", warning: "Can be too clingy or moody; may take things too personally" },
-    Leo: { qualities: "warm, generous, creative, confident", lifestyle: "expressive, socially magnetic, celebration-oriented", warning: "Can be too attention-seeking or dramatic; may need constant validation" },
-    Virgo: { qualities: "thoughtful, detail-oriented, helpful, health-conscious", lifestyle: "organized, wellness-focused, self-improving", warning: "Can be too critical or perfectionistic; may overthink emotions" },
-    Libra: { qualities: "charming, fair-minded, romantic, harmonious", lifestyle: "beauty-appreciating, socially graceful, partnership-oriented", warning: "Can be too indecisive or conflict-avoidant; may suppress true feelings for peace" },
-    Scorpio: { qualities: "intense, loyal, perceptive, emotionally brave", lifestyle: "deeply private, transformation-seeking, all-or-nothing", warning: "Can be too controlling or secretive; may test loyalty to extremes" },
-    Sagittarius: { qualities: "adventurous, optimistic, honest, philosophical", lifestyle: "travel-loving, growth-seeking, freedom-valuing", warning: "Can be too restless or blunt; may struggle with routine or emotional nuance" },
-    Capricorn: { qualities: "ambitious, responsible, disciplined, provider-type", lifestyle: "goal-oriented, structured, tradition-respecting", warning: "Can be too rigid or emotionally guarded; may prioritize work over connection" },
-    Aquarius: { qualities: "unique, intellectual, humanitarian, independent", lifestyle: "unconventional, community-minded, future-focused", warning: "Can be too detached or emotionally distant; may intellectualize feelings" },
-    Pisces: { qualities: "compassionate, creative, spiritual, empathetic", lifestyle: "artistic, intuition-led, spiritually open", warning: "Can be too escapist or boundary-less; may idealize partners unrealistically" }
+    Aries: { qualities: "audaz, independiente, enérgico, valiente", lifestyle: "activo, aventurero, espontaneo", warning: "Puede ser demasiado impulsivo o competitivo; puede chocar con la necesidad de calma" },
+    Taurus: { qualities: "estable, sensual, paciente, confiable", lifestyle: "amante de la comodidad, conectado con la naturaleza, orientado a la rutina", warning: "Puede ser demasiado terco o posesivo; puede resistir el cambio necesario" },
+    Gemini: { qualities: "ingenioso, curioso, adaptable, comunicativo", lifestyle: "Socialmente activo, intelectualmente estimulante, buscador de variedad.", warning: "Puede estar demasiado disperso o evasivo; puede tener dificultades con la profundidad emocional" },
+    Cancer: { qualities: "nutritivo, emocionalmente profundo, protector, intuitivo", lifestyle: "centrado en el hogar, centrado en la familia, emocionalmente disponible", warning: "Puede ser demasiado pegajoso o de mal humor; puede tomar las cosas demasiado personalmente" },
+    Leo: { qualities: "Cálido, generoso, creativo, seguro.", lifestyle: "expresivo, socialmente magnético, orientado a la celebración.", warning: "Puede ser demasiado llamativo o dramático; puede necesitar validación constante" },
+    Virgo: { qualities: "reflexivo, orientado a los detalles, servicial, consciente de la salud", lifestyle: "organizado, centrado en el bienestar, en superación personal", warning: "Puede ser demasiado crítico o perfeccionista; puede pensar demasiado en las emociones" },
+    Libra: { qualities: "encantador, imparcial, romántico, armonioso", lifestyle: "que aprecia la belleza, socialmente elegante, orientado a la asociación", warning: "Puede ser demasiado indeciso o evitar los conflictos; puede suprimir los verdaderos sentimientos de paz" },
+    Scorpio: { qualities: "intenso, leal, perspicaz, emocionalmente valiente", lifestyle: "profundamente privado, que busca la transformación, todo o nada", warning: "Puede ser demasiado controlador o reservado; puede poner a prueba la lealtad hasta los extremos" },
+    Sagittarius: { qualities: "aventurero, optimista, honesto, filosófico", lifestyle: "amante de los viajes, buscador de crecimiento, valorador de la libertad", warning: "Puede ser demasiado inquieto o directo; puede tener dificultades con la rutina o los matices emocionales" },
+    Capricorn: { qualities: "Ambicioso, responsable, disciplinado, tipo proveedor.", lifestyle: "orientado a objetivos, estructurado, respetuoso de la tradición", warning: "Puede ser demasiado rígido o emocionalmente reservado; puede priorizar el trabajo sobre la conexión" },
+    Aquarius: { qualities: "Único, intelectual, humanitario, independiente.", lifestyle: "poco convencional, con mentalidad comunitaria y centrado en el futuro", warning: "Puede ser demasiado distante o emocionalmente distante; puede intelectualizar los sentimientos" },
+    Pisces: { qualities: "compasivo, creativo, espiritual, empático", lifestyle: "artístico, guiado por la intuición, espiritualmente abierto", warning: "Puede ser demasiado escapista o sin límites; Puede idealizar a sus socios de manera poco realista." }
 };
 
 var SIGN_COMPLEMENTS = {
-    Aries: "Libra", Taurus: "Scorpio", Gemini: "Sagittarius", Cancer: "Capricorn",
-    Leo: "Aquarius", Virgo: "Pisces", Libra: "Aries", Scorpio: "Taurus",
-    Sagittarius: "Gemini", Capricorn: "Cancer", Aquarius: "Leo", Pisces: "Virgo"
+    Aries: "Libra", Taurus: "Escorpión", Gemini: "Sagitario", Cancer: "Capricornio",
+    Leo: "Acuario", Virgo: "Piscis", Libra: "Aries", Scorpio: "Tauro",
+    Sagittarius: "Géminis", Capricorn: "Cáncer", Aquarius: "León", Pisces: "Virgo"
 };
 
 var ELEMENT_MAP = {
-    Aries: "Fire", Taurus: "Earth", Gemini: "Air", Cancer: "Water",
-    Leo: "Fire", Virgo: "Earth", Libra: "Air", Scorpio: "Water",
-    Sagittarius: "Fire", Capricorn: "Earth", Aquarius: "Air", Pisces: "Water"
+    Aries: "Fuego", Taurus: "Tierra", Gemini: "Aire", Cancer: "Agua",
+    Leo: "Fuego", Virgo: "Tierra", Libra: "Aire", Scorpio: "Agua",
+    Sagittarius: "Fuego", Capricorn: "Tierra", Aquarius: "Aire", Pisces: "Agua"
 };
 
 function analyzeIdealPartner(readings) {
@@ -2083,8 +2083,8 @@ function analyzeIdealPartner(readings) {
     if (descendantSign && SIGN_PARTNER_QUALITIES[descendantSign]) {
         const descData = SIGN_PARTNER_QUALITIES[descendantSign];
         result.sections.push({
-            title: `${descendantSign} Descendant - Who You Attract`,
-            content: `The 7th House cusp in ${descendantSign} reveals the qualities most needed in a life partner. You naturally attract and are drawn to people who are ${descData.qualities}. An ideal partner's lifestyle is ${descData.lifestyle}. This reflects qualities that complement your own ${risingSign || sunSign || ''} energy - what you admire in others is often what you're learning to integrate in yourself.`
+            title: `${descendantSign} Descendiente - A quién atraes`,
+            content: `La cúspide de la Casa Séptima en ${descendantSign} revela las cualidades más necesarias en un compañero de vida. Naturalmente, atraes y te sientes atraído por personas que son ${descData.qualities}. El estilo de vida de una pareja ideal es ${descData.lifestyle}. Esto refleja cualidades que complementan tu propia energía: lo que admiras en los demás es a menudo lo que estás aprendiendo a integrar en ti mismo.`
         });
     }
 
@@ -2092,8 +2092,8 @@ function analyzeIdealPartner(readings) {
     if (moonSign && SIGN_PARTNER_QUALITIES[moonSign]) {
         const moonData = SIGN_PARTNER_QUALITIES[moonSign];
         result.sections.push({
-            title: `Moon in ${moonSign} - Emotional Security Needs`,
-            content: `For emotional safety in partnership, the Moon in ${moonSign} needs a partner who is ${moonData.qualities}. The ideal home life together is ${moonData.lifestyle}. Without this emotional foundation, no amount of attraction will sustain the relationship long-term.`
+            title: `Luna en ${moonSign} - Necesidades de seguridad emocional`,
+            content: `Para seguridad emocional en pareja, la Luna en ${moonSign} necesita un compañero que sea ${moonData.qualities}. La vida hogareña ideal juntos es ${moonData.lifestyle}. Sin esta base emocional, ninguna atracción sostendrá la relación a largo plazo.`
         });
     }
 
@@ -2101,8 +2101,8 @@ function analyzeIdealPartner(readings) {
     if (venusSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign]) {
         const venusData = RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign];
         result.sections.push({
-            title: `Venus in ${venusSign} - Love Language`,
-            content: `Venus shows how love is given and received. ${venusData.loveStyle} Attraction pattern: ${venusData.attractionPattern}`
+            title: `Venus en ${venusSign} - Lenguaje del amor`,
+            content: `Venus muestra cómo se da y recibe el amor. ${venusData.loveStyle} Patrón de atracción: ${venusData.attractionPattern}`
         });
     }
 
@@ -2110,8 +2110,8 @@ function analyzeIdealPartner(readings) {
     if (marsSign && SIGN_PARTNER_QUALITIES[marsSign]) {
         const marsData = SIGN_PARTNER_QUALITIES[marsSign];
         result.sections.push({
-            title: `Mars in ${marsSign} - Chemistry & Pursuit`,
-            content: `Mars reveals what ignites passion and how pursuit works. With Mars in ${marsSign}, chemistry sparks with someone who is ${marsData.qualities}. The pursuit style is ${marsData.lifestyle}. Physical and energetic compatibility flows best when these qualities are present.`
+            title: `Marte en ${marsSign} - Química y búsqueda`,
+            content: `Marte revela qué enciende la pasión y cómo funciona la búsqueda. Con Marte en ${marsSign}, la química surge con alguien que es ${marsData.qualities}. El estilo de persecución es ${marsData.lifestyle}. La compatibilidad física y energética fluye mejor cuando estas cualidades están presentes.`
         });
     }
 
@@ -2131,17 +2131,17 @@ function analyzeIdealPartner(readings) {
 
     // Build a vivid persona paragraph
     const ELEMENT_VIBES = {
-        Fire: { energy: "warm and dynamic", date: "an adventurous day out — hiking, live music, or spontaneous road trips", home: "lively and full of laughter, with plenty of passion and directness" },
-        Earth: { energy: "grounded and steady", date: "a beautifully cooked meal, a walk in nature, or a quiet evening at home", home: "comfortable and stable, with sensory pleasures — good food, soft fabrics, peaceful routines" },
-        Air: { energy: "intellectually stimulating and socially engaging", date: "a thought-provoking conversation over coffee, a gallery opening, or a lively debate", home: "buzzing with ideas, books everywhere, and plenty of freedom for both partners" },
-        Water: { energy: "emotionally deep and intuitively connected", date: "a quiet evening sharing feelings, a sunset walk by water, or a meaningful creative experience", home: "emotionally safe, deeply intimate, and rich with unspoken understanding" }
+        Fire: { energy: "cálido y dinámico", date: "un día de aventuras: caminatas, música en vivo o viajes espontáneos por carretera", home: "animado y lleno de risas, con mucha pasión y franqueza" },
+        Earth: { energy: "conectado a tierra y estable", date: "una comida deliciosamente cocinada, un paseo por la naturaleza o una velada tranquila en casa", home: "cómodo y estable, con placeres sensoriales: buena comida, telas suaves, rutinas tranquilas" },
+        Air: { energy: "intelectualmente estimulante y socialmente atractivo", date: "una conversación estimulante tomando un café, la inauguración de una galería o un debate animado", home: "Lleno de ideas, libros por todas partes y mucha libertad para ambos socios." },
+        Water: { energy: "emocionalmente profundo e intuitivamente conectado", date: "una tarde tranquila compartiendo sentimientos, un paseo al atardecer junto al agua o una experiencia creativa significativa", home: "emocionalmente seguro, profundamente íntimo y rico en comprensión tácita" }
     };
 
     const vibe = ELEMENT_VIBES[dominantElement] || ELEMENT_VIBES.Water;
     const descLifestyle = descendantSign ? SIGN_PARTNER_QUALITIES[descendantSign]?.lifestyle : '';
     const moonLifestyle = moonSign ? SIGN_PARTNER_QUALITIES[moonSign]?.lifestyle?.split(',')[0] : '';
 
-    let personaContent = `<strong>Picture this person:</strong> Someone whose energy is ${vibe.energy}. They walk into a room and you notice something ${uniqueQualities.slice(0, 2).join(' and ')} about them immediately. A perfect date looks like ${vibe.date}. At home together, life feels ${vibe.home}.\n\n`;
+    let personaContent = `<strong>Imagínate a esta persona:</strong> Alguien cuya energía es ${vibe.energy}. Entran en una habitación y notas algo ${uniqueQualities.slice(0, 2).join(' and ')} en ellos inmediatamente. Una cita perfecta parece ${vibe.date}. Juntos en casa, la vida se siente ${vibe.home}.\n\n`;
 
     personaContent += `They embody a blend of ${uniqueQualities.join(', ')} — qualities that ${descendantSign ? `your ${descendantSign} Descendant is specifically coded to attract` : 'your chart naturally draws in'}. `;
 
@@ -2156,7 +2156,7 @@ function analyzeIdealPartner(readings) {
     personaContent += `This isn't about finding a perfect person — it's about recognising the qualities your soul is specifically wired to grow alongside.`;
 
     result.sections.push({
-        title: "Your Ideal Partner — A Portrait",
+        title: "Su pareja ideal: un retrato",
         content: personaContent
     });
 
@@ -2164,7 +2164,7 @@ function analyzeIdealPartner(readings) {
     const redFlagSigns = [];
     if (moonSign) {
         const moonElement = ELEMENT_MAP[moonSign];
-        const clashElements = { Fire: 'Water', Water: 'Fire', Earth: 'Air', Air: 'Earth' };
+        const clashElements = { Fire: 'Agua', Water: 'Fuego', Earth: 'Aire', Air: 'Tierra' };
         const clashElement = clashElements[moonElement];
         if (clashElement) {
             const clashSigns = Object.entries(ELEMENT_MAP).filter(([s, e]) => e === clashElement).map(([s]) => s);
@@ -2173,8 +2173,8 @@ function analyzeIdealPartner(readings) {
     }
     if (redFlagSigns.length > 0) {
         result.sections.push({
-            title: "Compatibility Challenges",
-            content: `Partners with strong ${redFlagSigns.join(' or ')} energy may create friction - not because these signs are inherently incompatible, but because their core needs can clash with the emotional security patterns here. These partnerships require extra conscious effort to bridge elemental differences. The key is understanding each other's emotional language rather than assuming one way is "right."`
+            title: "Desafíos de compatibilidad",
+            content: `Las parejas con una fuerte energía ${redFlagSigns.join(' or ')} pueden crear fricción, no porque estos signos sean inherentemente incompatibles, sino porque sus necesidades básicas pueden chocar con los patrones de seguridad emocional aquí. Estas asociaciones requieren un esfuerzo extra consciente para salvar las diferencias elementales. La clave es comprender el lenguaje emocional de cada uno en lugar de asumir que una forma es "correcta".`
         });
     }
 
@@ -2189,75 +2189,75 @@ function analyzeIdealPartner(readings) {
 
 var ENERGY_AXES = {
     "stability-adventure": {
-        title: "The Stability-Adventure Paradox",
-        signs: { stability: ["Taurus", "Cancer", "Virgo", "Capricorn"], adventure: ["Sagittarius", "Aries", "Gemini", "Aquarius"] },
+        title: "La paradoja estabilidad-aventura",
+        signs: { stability: ["Tauro", "Cáncer", "Virgo", "Capricornio"], adventure: ["Sagitario", "Aries", "Géminis", "Acuario"] },
         houses: { stability: [2, 4, 6], adventure: [3, 9, 11] },
         resolution: {
-            daily: "Morning: Stable routine, grounding practices. Midday: Expansive work, creative exploration. Evening: Return to comfort, familiar spaces.",
-            weekly: "Weekdays: Steady, focused work and building. Weekends: Exploration, learning, new experiences.",
-            yearly: "Most of the year: Deep, consistent work building foundations. A few months: Travel, study, horizon-expanding adventures.",
-            life: "Build a secure base, then launch adventures FROM that base. Return to integrate what was learned. Expand the base with new wisdom. Repeat.",
-            integration: "This soul isn't choosing between stability and adventure - they're creating a life where stability ENABLES adventure, and adventure ENRICHES stability. The home base is the launchpad, not the prison."
+            daily: "Mañana: Rutina estable, prácticas de puesta a tierra. Mediodía: Trabajo expansivo, exploración creativa. Tarde: Regreso al confort, espacios familiares.",
+            weekly: "Días laborables: Trabajo y construcción estables y concentrados. Fines de semana: Exploración, aprendizaje, nuevas experiencias.",
+            yearly: "La mayor parte del año: Trabajo profundo y consistente construyendo cimientos. Unos meses: viajes, estudios, aventuras que amplían horizontes.",
+            life: "Construye una base segura y luego lanza aventuras DESDE esa base. Volver a integrar lo aprendido. Expande la base con nueva sabiduría. Repetir.",
+            integration: "Esta alma no elige entre estabilidad y aventura: está creando una vida donde la estabilidad PERMITE la aventura y la aventura ENRIQUECE la estabilidad. La base de operaciones es la plataforma de lanzamiento, no la prisión."
         }
     },
     "independence-partnership": {
-        title: "The Independence-Partnership Paradox",
-        signs: { independence: ["Aries", "Aquarius", "Sagittarius"], partnership: ["Libra", "Cancer", "Pisces"] },
+        title: "La paradoja independencia-asociación",
+        signs: { independence: ["Aries", "Acuario", "Sagitario"], partnership: ["Libra", "Cáncer", "Piscis"] },
         houses: { independence: [1, 11], partnership: [7, 4, 8] },
         resolution: {
-            daily: "Solo time for independent projects. Shared time for connection and collaboration. Neither dominates the whole day.",
-            weekly: "Dedicated alone time for personal pursuits. Dedicated together time for deep relating. Both are non-negotiable.",
-            yearly: "Periods of intense togetherness balanced with periods of personal adventure or solo projects.",
-            life: "Partnerships that celebrate individuality. Independence that makes space for deep connection. Choosing partners who want a teammate, not a clone.",
-            integration: "This soul needs partnerships that enhance rather than diminish their independence. They bring the most to relationships when they're also fulfilled individually."
+            daily: "Tiempo en solitario para proyectos independientes. Tiempo compartido para la conexión y la colaboración. Ninguno domina todo el día.",
+            weekly: "Dedicar tiempo a solas para actividades personales. Dedicamos tiempo juntos para una relación profunda. Ambos son no negociables.",
+            yearly: "Períodos de intensa unión equilibrados con períodos de aventuras personales o proyectos en solitario.",
+            life: "Asociaciones que celebran la individualidad. Independencia que deja espacio para una conexión profunda. Elegir socios que quieran un compañero de equipo, no un clon.",
+            integration: "Esta alma necesita asociaciones que mejoren, en lugar de disminuir, su independencia. Aportan más a las relaciones cuando también se realizan individualmente."
         }
     },
     "emotion-logic": {
-        title: "The Heart-Mind Paradox",
-        signs: { emotion: ["Cancer", "Pisces", "Scorpio"], logic: ["Virgo", "Gemini", "Aquarius", "Capricorn"] },
+        title: "La paradoja del corazón y la mente",
+        signs: { emotion: ["Cáncer", "Piscis", "Escorpión"], logic: ["Virgo", "Géminis", "Acuario", "Capricornio"] },
         houses: { emotion: [4, 8, 12], logic: [3, 6, 10] },
         resolution: {
-            daily: "Start decisions with intuition (what does this feel like?), then validate with logic (does this make sense?). Neither alone gives the full picture.",
-            weekly: "Allow emotional processing time without demanding rational explanations. Allow analytical time without demanding feelings.",
-            yearly: "Creative, intuitive seasons alternate with structured, practical seasons. Both are productive in different ways.",
-            life: "The greatest breakthroughs come when heart and mind agree. Develop BOTH emotional intelligence and analytical skill - they're complementary, not competing.",
-            integration: "This soul has access to both deep feeling and sharp thinking. The gift is becoming bilingual - fluent in both the language of emotion and the language of reason."
+            daily: "Empiece a tomar decisiones con intuición (¿cómo se siente esto?), luego valídelas con lógica (¿tiene sentido?). Ninguno de los dos por sí solo ofrece una imagen completa.",
+            weekly: "Permita tiempo de procesamiento emocional sin exigir explicaciones racionales. Permita tiempo analítico sin sentimientos exigentes.",
+            yearly: "Las estaciones creativas e intuitivas se alternan con estaciones estructuradas y prácticas. Ambos son productivos de diferentes maneras.",
+            life: "Los mayores avances se producen cuando el corazón y la mente están de acuerdo. Desarrolla TANTO la inteligencia emocional como la habilidad analítica: son complementarias, no competitivas.",
+            integration: "Esta alma tiene acceso tanto a sentimientos profundos como a pensamientos agudos. El don se está volviendo bilingüe: habla con fluidez tanto el lenguaje de la emoción como el lenguaje de la razón."
         }
     },
     "visibility-privacy": {
-        title: "The Spotlight-Sanctuary Paradox",
-        signs: { visibility: ["Leo", "Aries", "Sagittarius"], privacy: ["Scorpio", "Cancer", "Pisces", "Virgo"] },
+        title: "La paradoja del centro de atención y el santuario",
+        signs: { visibility: ["León", "Aries", "Sagitario"], privacy: ["Escorpión", "Cáncer", "Piscis", "Virgo"] },
         houses: { visibility: [1, 5, 10], privacy: [4, 8, 12] },
         resolution: {
-            daily: "Public-facing work during peak energy hours. Private restoration during quiet hours. Respect the natural rhythm.",
-            weekly: "Days for being 'on' and visible. Days for retreat and restoration. Don't let either dominate the entire week.",
-            yearly: "Seasons of visibility, launching, and public engagement. Seasons of retreat, reflection, and creative incubation.",
-            life: "Build a public life that's authentic enough to sustain, and a private life that's rich enough to nourish. The stage needs a backstage.",
-            integration: "This soul shines brightest when they've had enough darkness to recharge. Their public power comes FROM their private depth."
+            daily: "Trabajo de cara al público en horas punta de energía. Restauración privada en horas de tranquilidad. Respeta el ritmo natural.",
+            weekly: "Días para estar 'on' y visible. Días de retiro y restauración. No dejes que ninguno de los dos domine toda la semana.",
+            yearly: "Temporadas de visibilidad, lanzamiento y participación pública. Estaciones de retiro, reflexión e incubación creativa.",
+            life: "Construir una vida pública que sea lo suficientemente auténtica como para sostenerla y una vida privada que sea lo suficientemente rica como para nutrirla. El escenario necesita un backstage.",
+            integration: "Esta alma brilla más cuando ha tenido suficiente oscuridad para recargarse. Su poder público proviene de su profundidad privada."
         }
     },
     "structure-freedom": {
-        title: "The Structure-Freedom Paradox",
-        signs: { structure: ["Capricorn", "Virgo", "Taurus"], freedom: ["Aquarius", "Sagittarius", "Aries", "Gemini"] },
+        title: "La paradoja estructura-libertad",
+        signs: { structure: ["Capricornio", "Virgo", "Tauro"], freedom: ["Acuario", "Sagitario", "Aries", "Géminis"] },
         houses: { structure: [6, 10], freedom: [5, 9, 11] },
         resolution: {
-            daily: "Structured morning routine provides the container for afternoon creative freedom. The structure CREATES freedom.",
-            weekly: "Disciplined work blocks earn free exploration blocks. Neither works without the other.",
-            yearly: "Goal-setting and discipline in career. Spontaneous adventure in personal life. Both feed each other.",
-            life: "Build structures that serve your freedom, not prisons that limit it. Rules and routines should be chosen, not imposed.",
-            integration: "This soul discovers that structure and freedom aren't opposites - structure is the skeleton that lets the body of freedom dance."
+            daily: "La rutina matutina estructurada proporciona el contenedor para la libertad creativa de la tarde. La estructura CREA libertad.",
+            weekly: "Los bloques de trabajo disciplinados obtienen bloques de exploración gratuitos. Ninguno funciona sin el otro.",
+            yearly: "Establecimiento de objetivos y disciplina en la carrera. Aventura espontánea en la vida personal. Ambos se alimentan mutuamente.",
+            life: "Construya estructuras que sirvan a su libertad, no prisiones que la limiten. Las reglas y rutinas deben elegirse, no imponerse.",
+            integration: "Esta alma descubre que la estructura y la libertad no son opuestas: la estructura es el esqueleto que permite bailar al cuerpo de la libertad."
         }
     },
     "material-spiritual": {
-        title: "The Material-Spiritual Paradox",
-        signs: { material: ["Taurus", "Virgo", "Capricorn"], spiritual: ["Pisces", "Sagittarius", "Scorpio"] },
+        title: "La paradoja material-espiritual",
+        signs: { material: ["Tauro", "Virgo", "Capricornio"], spiritual: ["Piscis", "Sagitario", "Escorpión"] },
         houses: { material: [2, 6, 10], spiritual: [9, 12, 8] },
         resolution: {
-            daily: "Ground spiritual insights into practical action. Let practical work become a meditation. Neither realm is 'higher' than the other.",
-            weekly: "Material world engagement (work, money, body) balanced with spiritual practices (meditation, reflection, nature).",
-            yearly: "Periods of worldly ambition fuelled by periods of spiritual renewal. Neither is sustainable alone.",
-            life: "The goal isn't choosing between wealth and wisdom - it's making wisdom profitable and wealth meaningful. Become the bridge between heaven and earth.",
-            integration: "This soul's unique gift is bringing spiritual depth into material reality. They make the sacred practical and the practical sacred."
+            daily: "Consolidar los conocimientos espirituales en acción práctica. Dejemos que el trabajo práctico se convierta en una meditación. Ningún reino es "más alto" que el otro.",
+            weekly: "Compromiso con el mundo material (trabajo, dinero, cuerpo) equilibrado con prácticas espirituales (meditación, reflexión, naturaleza).",
+            yearly: "Períodos de ambición mundana impulsados ​​por períodos de renovación espiritual. Ninguno de los dos es sostenible por sí solo.",
+            life: "El objetivo no es elegir entre riqueza y sabiduría, sino hacer que la sabiduría sea rentable y la riqueza tenga sentido. Conviértete en el puente entre el cielo y la tierra.",
+            integration: "El don único de esta alma es aportar profundidad espiritual a la realidad material. Hacen lo sagrado práctico y lo práctico sagrado."
         }
     }
 };

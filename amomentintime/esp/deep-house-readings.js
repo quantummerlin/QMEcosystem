@@ -12,300 +12,300 @@
 var DEEP_HOUSE_READINGS = {
     Moon: {
         9: {
-            title: "Moon in 9th House - The Wandering Heart",
-            keywords: ["Philosophical Soul", "Emotional Explorer", "Truth Seeker", "Restless Heart"],
-            reading: `The Moon in the 9th House creates a soul whose emotional foundation is built on meaning, expansion, and the constant pursuit of truth. This is not someone who finds security in the familiar — their emotional home exists in the realm of ideas, beliefs, and horizons yet unexplored.
+            title: "Luna en Casa 9 - El Corazón Errante",
+            keywords: ["Alma filosófica", "Explorador emocional", "Buscador de la verdad", "Corazón inquieto"],
+            reading: `La Luna en la Casa IX crea un alma cuya base emocional se basa en el significado, la expansión y la búsqueda constante de la verdad. No se trata de alguien que encuentre seguridad en lo familiar: su hogar emocional existe en el ámbito de las ideas, creencias y horizontes aún inexplorados.
 
-<strong>Core Psychology:</strong>
-At the deepest level, emotional security comes from understanding life's larger purpose. Small talk drains them. Routine without meaning creates a subtle but persistent emptiness. They need to feel that their life is going somewhere — that there's a point, a philosophy, a truth worth pursuing. This isn't intellectual curiosity alone; it's an emotional hunger for significance.
+<strong>Psicología básica:</strong>
+En el nivel más profundo, la seguridad emocional proviene de la comprensión del propósito más amplio de la vida. Las pequeñas conversaciones los agotan. La rutina sin significado crea un vacío sutil pero persistente. Necesitan sentir que su vida va hacia alguna parte, que hay un punto, una filosofía, una verdad que vale la pena seguir. Esto no es sólo curiosidad intelectual; es un hambre emocional de significado.
 
-You may notice they become restless when life feels too predictable. What others call "stability" can feel like stagnation to this placement. Their inner world needs regular injections of new perspectives, foreign ideas, or experiences that challenge what they thought they knew.
+Puede notar que se vuelven inquietos cuando la vida parece demasiado predecible. Lo que otros llaman "estabilidad" puede parecer estancamiento en esta ubicación. Su mundo interior necesita inyecciones periódicas de nuevas perspectivas, ideas extrañas o experiencias que desafíen lo que creían saber.
 
-<strong>Behaviour Patterns:</strong>
-This placement often manifests as:
-• A deep need to travel, explore, or experience other cultures — not as tourism, but as soul food
-• Emotional attachment to teachers, mentors, or philosophical systems that offer meaning
-• Difficulty settling in one place, relationship, or belief system for too long
-• Using education and learning as emotional comfort during stress
-• An almost physical need for freedom that can confuse those who love them
+<strong>Patrones de comportamiento:</strong>
+Esta ubicación a menudo se manifiesta como:
+• Una profunda necesidad de viajar, explorar o experimentar otras culturas, no como turismo, sino como alimento para el alma.
+• Apego emocional a maestros, mentores o sistemas filosóficos que ofrecen significado.
+• Dificultad para establecerse en un lugar, relación o sistema de creencias durante demasiado tiempo
+• Utilizar la educación y el aprendizaje como consuelo emocional durante el estrés.
+• Una necesidad casi física de libertad que puede confundir a quienes los aman.
 
-When stressed, they don't want comfort in the conventional sense — they want perspective. A good book, a meaningful conversation, or simply space to think does more for their emotional state than any amount of coddling.
+Cuando están estresados, no quieren comodidad en el sentido convencional: quieren perspectiva. Un buen libro, una conversación significativa o simplemente un espacio para pensar influye más en su estado emocional que cualquier mimo.
 
-<strong>Hidden Strength:</strong>
-When developed, this placement produces someone others naturally turn to for perspective. They have the rare ability to zoom out from emotional situations and find meaning in difficulty. Where others see only pain, they can often perceive the lesson or growth opportunity embedded within it.
+<strong>Fuerza oculta:</strong>
+Cuando se desarrolla, esta ubicación produce alguien a quien los demás recurren naturalmente en busca de perspectiva. Tienen la rara capacidad de alejarse de situaciones emocionales y encontrar significado a las dificultades. Donde otros sólo ven dolor, a menudo pueden percibir la lección o la oportunidad de crecimiento que conlleva.
 
-They become natural teachers, counsellors, or guides — not because they have all the answers, but because they ask the questions that help others find their own. Their emotional wisdom comes from breadth of experience rather than depth in one narrow area.
+Se convierten en maestros, consejeros o guías naturales, no porque tengan todas las respuestas, sino porque hacen preguntas que ayudan a otros a encontrar las suyas propias. Su sabiduría emocional proviene de una amplia experiencia más que de la profundidad en un área limitada.
 
-<strong>Shadow Expression:</strong>
-When misaligned, this can become chronic emotional escapism disguised as "seeking." Always planning the next trip, the next course, the next spiritual system — but never quite arriving anywhere. The shadow here is using expansion to avoid intimacy, using philosophy to intellectualize feelings that need to be felt.
+<strong>Expresión de sombra:</strong>
+Cuando no está alineado, esto puede convertirse en un escapismo emocional crónico disfrazado de "búsqueda". Siempre planeando el próximo viaje, el próximo curso, el próximo sistema espiritual, pero nunca llegando a ninguna parte. La sombra aquí utiliza la expansión para evitar la intimidad, utiliza la filosofía para intelectualizar los sentimientos que deben sentirse.
 
-There's also a tendency toward emotional preachiness — believing their truth must become everyone's truth. When insecure, they may become dogmatic, dismissing others' perspectives while paradoxically claiming to value open-mindedness.
+También hay una tendencia hacia el sermón emocional: creer que su verdad debe convertirse en la verdad de todos. Cuando se sienten inseguros, pueden volverse dogmáticos y descartar las perspectivas de los demás mientras, paradójicamente, afirman valorar la mentalidad abierta.
 
-The fear underneath is often that standing still means being trapped. Commitment can feel like the death of possibility.
+El miedo subyacente es a menudo que quedarse quieto significa quedar atrapado. El compromiso puede parecer la muerte de la posibilidad.
 
-<strong>Integration Path:</strong>
-Growth comes from recognising that depth and breadth are not opposites. The most profound truths are often found not in constant movement, but in the courage to stay — with a feeling, a person, a place — long enough to truly know it.
+<strong>Ruta de integración:</strong>
+El crecimiento proviene del reconocimiento de que la profundidad y la amplitud no son opuestos. Las verdades más profundas a menudo no se encuentran en el movimiento constante, sino en el coraje de permanecer (con un sentimiento, una persona, un lugar) el tiempo suficiente para conocerlo verdaderamente.
 
-Their task is to bring the foreign home. To find the sacred in the mundane. To realise that the meaning they seek across oceans might be waiting in their own heart, if they can be still enough to find it.
+Su tarea es traer al extranjero a casa. Encontrar lo sagrado en lo mundano. Para darse cuenta de que el significado que buscan a través de los océanos podría estar esperándolos en su propio corazón, si son suficientes para encontrarlo.
 
-<strong>Parenting Insight:</strong>
-This child needs intellectual and experiential stimulation as emotional nurturing. Read them stories from around the world. Discuss big ideas at the dinner table. When they're upset, sometimes the best comfort is a question: "What do you think this experience is trying to teach you?"
+<strong>Perspectiva sobre la crianza de los hijos:</strong>
+Este niño necesita estimulación intelectual y experiencial como alimento emocional. Léales historias de todo el mundo. Discuta grandes ideas en la mesa. Cuando están molestos, a veces el mejor consuelo es una pregunta: "¿Qué crees que esta experiencia intenta enseñarte?"
 
-But also teach them that running toward something is different from running away.`,
-            strengths: ["Natural wisdom and perspective", "Ability to find meaning in difficulty", "Cultural adaptability", "Philosophical resilience"],
-            challenges: ["Emotional restlessness", "Difficulty with commitment", "May intellectualize feelings", "Can become preachy when insecure"]
+Pero también enséñeles que correr hacia algo es diferente a huir.`,
+            strengths: ["Sabiduría natural y perspectiva.", "Capacidad para encontrar significado en las dificultades.", "Adaptabilidad cultural", "Resiliencia filosófica"],
+            challenges: ["Inquietud emocional", "Dificultad con el compromiso.", "Puede intelectualizar los sentimientos.", "Puede volverse sermoneador cuando se siente inseguro"]
         }
     },
     
     Mercury: {
         9: {
-            title: "Mercury in 9th House - The Philosophical Mind",
-            keywords: ["Big-Picture Thinker", "Truth Seeker", "Natural Teacher", "Visionary Communicator"],
-            reading: `Mercury in the 9th House creates a mind that is constitutionally incapable of small thinking. This is intellect oriented toward meaning, pattern recognition across vast scales, and the eternal question: "But what does it all mean?"
+            title: "Mercurio en la Casa 9 - La Mente Filosófica",
+            keywords: ["Pensador de gran panorama", "Buscador de la verdad", "Maestro Natural", "Comunicador visionario"],
+            reading: `Mercurio en la Casa 9 crea una mente que es constitucionalmente incapaz de pensar en cosas pequeñas. Se trata de un intelecto orientado hacia el significado, el reconocimiento de patrones a través de grandes escalas y la eterna pregunta: "¿Pero qué significa todo esto?"
 
-<strong>Core Psychology:</strong>
-The mind here is not built for detail work alone — it needs context, purpose, framework. They process information by fitting it into larger patterns of understanding. Random facts frustrate them; connected wisdom satisfies them. They think in frameworks, philosophies, and paradigms.
+<strong>Psicología básica:</strong>
+La mente aquí no está hecha sólo para el trabajo detallado: necesita contexto, propósito y marco. Procesan información adaptándola a patrones de comprensión más amplios. Los hechos aleatorios los frustran; la sabiduría conectada los satisface. Piensan en marcos, filosofías y paradigmas.
 
-This isn't daydreaming or abstraction for its own sake. It's a genuine cognitive orientation toward synthesis over analysis. While others break things down, this mind builds things up — connecting ideas that seem unrelated until they show you the pattern.
+Esto no es ensoñación ni abstracción por sí misma. Es una auténtica orientación cognitiva hacia la síntesis sobre el análisis. Mientras que otros descomponen las cosas, esta mente las construye, conectando ideas que parecen no tener relación hasta que te muestran el patrón.
 
-You may notice they become intellectually restless in environments that don't allow for expansion. Jobs requiring repetitive, detailed work without broader purpose will slowly drain their mental energy. Their mind needs room to roam.
+Quizás notes que se vuelven intelectualmente inquietos en ambientes que no permiten la expansión. Los trabajos que requieren un trabajo repetitivo y detallado sin un propósito más amplio agotarán lentamente su energía mental. Su mente necesita espacio para vagar.
 
-<strong>Behaviour Patterns:</strong>
-This placement typically manifests as:
-• Voracious consumption of ideas — books, documentaries, lectures, conversations
-• A teaching instinct that emerges even in casual conversation
-• Thinking out loud, often in long-form exploration rather than quick conclusions
-• Attraction to foreign languages, cultures, or ways of thinking
-• Difficulty staying focused on narrow topics for extended periods
-• Using travel (physical or mental) as a way to process and refresh
+<strong>Patrones de comportamiento:</strong>
+Esta ubicación normalmente se manifiesta como:
+• Consumo voraz de ideas: libros, documentales, conferencias, conversaciones.
+• Un instinto de enseñanza que emerge incluso en una conversación informal.
+• Pensar en voz alta, a menudo mediante una exploración extensa en lugar de sacar conclusiones rápidas.
+• Atracción por lenguas, culturas o formas de pensar extranjeras.
+• Dificultad para mantenerse concentrado en temas específicos durante períodos prolongados.
+• Utilizar los viajes (físicos o mentales) como forma de procesar y refrescarse.
 
-When learning something new, they want to know where it fits. History, context, implications, connections — these matter more than isolated mastery.
+Cuando aprenden algo nuevo, quieren saber dónde encaja. Historia, contexto, implicaciones, conexiones: todo esto importa más que el dominio aislado.
 
-<strong>Hidden Strength:</strong>
-When developed, this placement produces powerful communicators of complex ideas. They have a gift for translating abstract concepts into accessible understanding. Teachers, writers, professors, podcasters, thought leaders — many with this placement find themselves explaining the world to others.
+<strong>Fuerza oculta:</strong>
+Cuando se desarrolla, esta ubicación produce poderosos comunicadores de ideas complejas. Tienen el don de traducir conceptos abstractos en una comprensión accesible. Maestros, escritores, catedráticos, presentadores de podcasts, líderes de opinión: muchos de ellos en esta ubicación se encuentran explicando el mundo a los demás.
 
-Their superpower is synthesis: seeing how disparate fields connect, how ancient wisdom applies to modern problems, how local events reflect universal patterns. This makes them invaluable in any role requiring vision.
+Su superpoder es la síntesis: ver cómo se conectan campos dispares, cómo la sabiduría antigua se aplica a los problemas modernos, cómo los acontecimientos locales reflejan patrones universales. Esto los hace invaluables en cualquier rol que requiera visión.
 
-<strong>Shadow Expression:</strong>
-When misaligned, the shadow emerges as intellectual arrogance disguised as open-mindedness. They may become attached to their worldview while claiming to welcome all perspectives. "I'm not closed-minded, you just haven't understood my point yet."
+<strong>Expresión de sombra:</strong>
+Cuando están desalineadas, la sombra emerge como arrogancia intelectual disfrazada de mentalidad abierta. Pueden apegarse a su visión del mundo mientras afirman que acogen con agrado todas las perspectivas. "No soy de mente cerrada, simplemente aún no has entendido mi punto".
 
-There's also a tendency toward all theory, no practice. Endlessly learning about things without ever doing them. Reading about meditation instead of meditating. Studying entrepreneurship instead of starting anything.
+También hay una tendencia hacia toda teoría, nada de práctica. Aprender sin cesar sobre cosas sin siquiera hacerlas. Leer sobre meditación en lugar de meditar. Estudiar emprendimiento en lugar de empezar nada.
 
-The deeper shadow is using intellectual expansion to avoid emotional depth. Some of the most philosophically sophisticated people are emotionally quite shallow — not because they can't feel, but because they've learned to live in their heads to avoid the messiness of the heart.
+La sombra más profunda está utilizando la expansión intelectual para evitar la profundidad emocional. Algunas de las personas más filosóficamente sofisticadas son bastante superficiales emocionalmente, no porque no puedan sentir, sino porque han aprendido a vivir en sus cabezas para evitar el desorden del corazón.
 
-<strong>Integration Path:</strong>
-Growth comes from grounding big ideas in small actions. The test of a philosophy is whether it improves how you treat the person in front of you. Wisdom without application is just entertainment.
+<strong>Ruta de integración:</strong>
+El crecimiento proviene de fundamentar grandes ideas en pequeñas acciones. La prueba de una filosofía es si mejora la forma en que tratas a la persona que tienes delante. La sabiduría sin aplicación es sólo entretenimiento.
 
-Their task is to become a bridge — not just an explorer of high ideas, but someone who brings those ideas down to earth where they can actually help people. The best teachers don't just know things; they change how their students live.
+Su tarea es convertirse en un puente, no sólo en un explorador de grandes ideas, sino en alguien que las lleve a la tierra, donde realmente puedan ayudar a las personas. Los mejores profesores no sólo saben cosas; cambian la forma en que viven sus estudiantes.
 
-<strong>Parenting Insight:</strong>
-This child's education should be rich with meaning and connection. Don't just teach them facts — discuss why those facts matter. Encourage questioning, not just of others, but of their own assumptions.
+<strong>Perspectiva sobre la crianza de los hijos:</strong>
+La educación de este niño debe ser rica en significado y conexión. No se limite a enseñarles hechos: analice por qué esos hechos son importantes. Fomentar el cuestionamiento, no sólo de los demás, sino también de sus propias suposiciones.
 
-Give them access to big ideas early. Philosophy, comparative religion, history, science — presented not as separate subjects but as different lenses on the same questions. Their mind will thrive on this integration.
+Bríndeles acceso temprano a grandes ideas. Filosofía, religión comparada, historia, ciencia, presentadas no como temas separados sino como lentes diferentes sobre las mismas cuestiones. Su mente prosperará con esta integración.
 
-But also teach them the value of finishing what they start, even when something more interesting appears.`,
-            strengths: ["Synthesising complex information", "Natural teaching ability", "Cross-cultural communication", "Visionary thinking"],
-            challenges: ["May neglect details", "Can be intellectually restless", "Theory over practice tendency", "May appear preachy or know-it-all"]
+Pero también enseñarles el valor de terminar lo que empiezan, incluso cuando aparezca algo más interesante.`,
+            strengths: ["Sintetizar información compleja", "Capacidad de enseñanza natural.", "Comunicación intercultural", "Pensamiento visionario"],
+            challenges: ["Puede descuidar los detalles", "Puede ser intelectualmente inquieto", "Teoría sobre tendencia práctica.", "Puede parecer sermoneador o sabelotodo"]
         }
     },
     
     Venus: {
         9: {
-            title: "Venus in 9th House - Love of the Horizon",
-            keywords: ["Romantic Adventurer", "Philosophical Heart", "Freedom in Love", "Cross-Cultural Connection"],
-            reading: `Venus in the 9th House creates a heart that finds beauty in expansion, meaning in adventure, and love in the unfamiliar. This placement doesn't just appreciate different cultures — it is genuinely, aesthetically, romantically moved by them.
+            title: "Venus en la Casa 9 - Amor del Horizonte",
+            keywords: ["Aventurero romántico", "Corazón filosófico", "Libertad en el amor", "Conexión intercultural"],
+            reading: `Venus en la Casa 9 crea un corazón que encuentra belleza en la expansión, significado en la aventura y amor en lo desconocido. Esta ubicación no sólo aprecia las diferentes culturas, sino que se siente genuina, estética y románticamente conmovida por ellas.
 
-<strong>Core Psychology:</strong>
-For this placement, love and freedom are not opposites — they are the same thing. The heart opens through expansion, not through settling. What attracts them is not security but possibility. Not the familiar but the fascinating.
+<strong>Psicología básica:</strong>
+Para esta ubicación, el amor y la libertad no son opuestos: son la misma cosa. El corazón se abre mediante la expansión, no mediante el asentamiento. Lo que les atrae no es la seguridad sino la posibilidad. No lo familiar sino lo fascinante.
 
-This doesn't mean they can't commit. But they need relationships that grow, explore, and evolve. A partnership that stays exactly the same year after year will slowly suffocate their heart. They need someone who is also becoming, not someone who has already arrived.
+Esto no significa que no puedan comprometerse. Pero necesitan relaciones que crezcan, exploren y evolucionen. Una relación que se mantiene exactamente igual año tras año asfixiará poco a poco su corazón. Necesitan a alguien que también se esté convirtiendo, no a alguien que ya ha llegado.
 
-Beauty, for them, often has an exotic or foreign quality. They may be drawn to aesthetics from other cultures, philosophies from other traditions, or people from backgrounds very different from their own.
+La belleza, para ellos, a menudo tiene una cualidad exótica o extraña. Es posible que se sientan atraídos por estéticas de otras culturas, filosofías de otras tradiciones o personas de entornos muy diferentes al suyo.
 
-<strong>Behaviour Patterns:</strong>
-This placement typically manifests as:
-• Romantic attraction to people from different backgrounds, cultures, or belief systems
-• Finding love through education, travel, or spiritual pursuits
-• Valuing freedom and growth in relationships above security and stability
-• Aesthetically drawn to foreign art, music, philosophy, or culture
-• May idealise long-distance relationships or "love across borders"
-• Bringing beauty and harmony into discussions of meaning and truth
+<strong>Patrones de comportamiento:</strong>
+Esta ubicación normalmente se manifiesta como:
+• Atracción romántica hacia personas de diferentes orígenes, culturas o sistemas de creencias.
+• Encontrar el amor a través de la educación, los viajes o actividades espirituales
+• Valorar la libertad y el crecimiento en las relaciones por encima de la seguridad y la estabilidad.
+• Estéticamente atraído por el arte, la música, la filosofía o la cultura extranjera.
+• Puede idealizar las relaciones a distancia o el "amor a través de fronteras"
+• Llevar belleza y armonía a las discusiones sobre el significado y la verdad.
 
-In relationships, they need intellectual and philosophical compatibility. Someone can be physically attractive and emotionally available, but if they can't discuss ideas that matter, the attraction fades.
+En las relaciones, necesitan compatibilidad intelectual y filosófica. Alguien puede ser físicamente atractivo y emocionalmente disponible, pero si no puede discutir ideas importantes, la atracción se desvanece.
 
-<strong>Hidden Strength:</strong>
-When developed, this placement creates someone who can find beauty and love in contexts others might find foreign or threatening. They become cultural bridges in their relationships — bringing families, traditions, and worldviews together through the power of genuine appreciation.
+<strong>Fuerza oculta:</strong>
+Cuando se desarrolla, esta ubicación crea a alguien que puede encontrar la belleza y el amor en contextos que otros podrían encontrar extraños o amenazantes. Se convierten en puentes culturales en sus relaciones, uniendo familias, tradiciones y visiones del mundo a través del poder del aprecio genuino.
 
-Their gift is seeing the sacred in difference. While others fear what's unfamiliar, they're attracted to it. This makes them natural harmonisers in diverse environments.
+Su don es ver lo sagrado en la diferencia. Mientras que otros temen lo desconocido, ellos se sienten atraídos por ello. Esto los convierte en armonizadores naturales en diversos entornos.
 
-<strong>Shadow Expression:</strong>
-When misaligned, the shadow emerges as chronic romantic restlessness. Always believing the "real" love is somewhere else — in another country, another philosophy, another possibility not yet explored. Using the search for ideal love as an escape from the imperfect love that's actually available.
+<strong>Expresión de sombra:</strong>
+Cuando está desalineada, la sombra emerge como una inquietud romántica crónica. Siempre creyendo que el amor "real" está en otra parte: en otro país, en otra filosofía, en otra posibilidad aún no explorada. Utilizar la búsqueda del amor ideal como escape del amor imperfecto que realmente está disponible.
 
-There's also a tendency to intellectualise matters of the heart. Turning relationship problems into philosophical debates. Using "we just have different beliefs" as an excuse for genuine intimacy failures.
+También hay una tendencia a intelectualizar los asuntos del corazón. Convertir los problemas de relación en debates filosóficos. Usar "simplemente tenemos creencias diferentes" como excusa para fallas genuinas en la intimidad.
 
-The deeper shadow is fear of being ordinary. If they settle into regular domestic life, who are they? The constant need for expansion can mask a fear that they're not enough as they are.
+La sombra más profunda es el miedo a ser normal y corriente. Si se adaptan a la vida doméstica normal, ¿quiénes son? La constante necesidad de expansión puede enmascarar el temor de que no sean suficientes tal como están.
 
-<strong>Integration Path:</strong>
-Growth comes from finding the foreign in the familiar. The truth is that every person, fully known, is a universe of difference. The adventure they seek abroad exists in the depths of any genuine intimacy — if they have the courage to explore it.
+<strong>Ruta de integración:</strong>
+El crecimiento proviene de encontrar lo extraño en lo familiar. La verdad es que cada persona, plenamente conocida, es un universo de diferencia. La aventura que buscan en el extranjero existe en lo más profundo de cualquier intimidad genuina, si tienen el coraje de explorarla.
 
-Their task is to bring the wonder they feel for distant shores to the person across the table. To find that the greatest journey might not be measured in miles.
+Su tarea es llevar el asombro que sienten por las costas lejanas a la persona que está al otro lado de la mesa. Descubrir que el viaje más grande puede no medirse en millas.
 
-<strong>Relationship Insight:</strong>
-Partners should expect that this person needs growth to feel in love. Plan travel together. Take courses together. Have deep conversations about meaning. If the relationship becomes routine, they'll feel the love dimming even if everything else is fine.
+<strong>Perspectiva de la relación:</strong>
+Los socios deben esperar que esta persona necesite crecimiento para sentirse enamorada. Planifiquen viajes juntos. Tomar cursos juntos. Tenga conversaciones profundas sobre el significado. Si la relación se vuelve rutinaria, sentirán que el amor se apaga incluso si todo lo demás está bien.
 
-But remember: the adventure they need isn't necessarily external. The most profound exploration often happens when two people are brave enough to truly see each other.`,
-            strengths: ["Finds beauty in diversity", "Philosophical approach to love", "Cultural appreciation", "Brings harmony to diverse groups"],
-            challenges: ["Romantic restlessness", "May idealise the foreign", "Can intellectualise heart matters", "Commitment may feel like limitation"]
+Pero recuerda: la aventura que necesitan no es necesariamente externa. La exploración más profunda suele ocurrir cuando dos personas son lo suficientemente valientes como para verse de verdad.`,
+            strengths: ["Encuentra la belleza en la diversidad", "Enfoque filosófico del amor.", "Apreciación cultural", "Aporta armonía a grupos diversos."],
+            challenges: ["Inquietud romántica", "Puede idealizar lo extranjero", "¿Puede intelectualizar los asuntos del corazón?", "El compromiso puede parecer una limitación"]
         }
     },
     
     Mars: {
         9: {
-            title: "Mars in 9th House - The Crusader Spirit",
-            keywords: ["Passionate Believer", "Philosophical Warrior", "Truth Fighter", "Adventurous Drive"],
-            reading: `Mars in the 9th House creates a drive that is ignited by belief, fueled by meaning, and directed toward truth. This is not casual conviction — it's warrior energy in service of philosophy. They don't just have beliefs; they fight for them.
+            title: "Marte en la Casa 9 - El espíritu cruzado",
+            keywords: ["Creyente apasionado", "Guerrero filosófico", "Luchador de la verdad", "Viaje aventurero"],
+            reading: `Marte en la Casa 9 crea un impulso que se enciende con la creencia, se alimenta con el significado y se dirige hacia la verdad. Esta no es una convicción casual: es energía guerrera al servicio de la filosofía. No sólo tienen creencias; luchan por ellos.
 
-<strong>Core Psychology:</strong>
-At the deepest level, their will and their worldview are fused. They cannot act meaninglessly. Every significant action must serve a larger purpose. When their actions align with their beliefs, they have extraordinary energy and courage. When they don't, they feel fundamentally lost.
+<strong>Psicología básica:</strong>
+En el nivel más profundo, su voluntad y su visión del mundo están fusionadas. No pueden actuar sin sentido. Cada acción significativa debe servir a un propósito más amplio. Cuando sus acciones se alinean con sus creencias, tienen una energía y un coraje extraordinarios. Cuando no lo hacen, se sienten fundamentalmente perdidos.
 
-This creates someone who needs a cause. Not necessarily a political one, but something larger than personal gain that they can pour their considerable energy into. Without this, their drive turns inward as frustration or outward as aggression.
+Esto crea a alguien que necesita una causa. No necesariamente político, sino algo más grande que un beneficio personal en el que puedan invertir su considerable energía. Sin esto, su impulso se vuelve hacia adentro como frustración o hacia afuera como agresión.
 
-You may notice they have strong opinions about big questions — and they're not afraid to voice them. Their passion for truth can be inspiring or intimidating, depending on whether it's aligned or misaligned.
+Quizás notes que tienen opiniones firmes sobre cuestiones importantes y que no tienen miedo de expresarlas. Su pasión por la verdad puede resultar inspiradora o intimidante, dependiendo de si está alineada o desalineada.
 
-<strong>Behaviour Patterns:</strong>
-This placement typically manifests as:
-• Taking action on beliefs rather than just holding them
-• Physical energy that comes alive during travel, adventure, or exploration
-• Competitive drive in educational or philosophical contexts
-• Willingness to fight (literally or figuratively) for truth as they see it
-• Athletic or adventurous pursuits that involve exploration
-• Anger that ignites when beliefs are challenged or when truth is suppressed
+<strong>Patrones de comportamiento:</strong>
+Esta ubicación normalmente se manifiesta como:
+• Tomar medidas sobre las creencias en lugar de limitarse a mantenerlas
+• Energía física que cobra vida durante el viaje, la aventura o la exploración.
+• Impulso competitivo en contextos educativos o filosóficos.
+• Voluntad de luchar (literal o figurativamente) por la verdad tal como la ven.
+• Actividades atléticas o aventureras que impliquen exploración.
+• Ira que se enciende cuando se cuestionan las creencias o cuando se suprime la verdad.
 
-When motivated by meaning, their energy is almost inexhaustible. When the purpose is unclear, they struggle to get started at all.
+Cuando están motivados por el significado, su energía es casi inagotable. Cuando el propósito no está claro, les cuesta empezar.
 
-<strong>Hidden Strength:</strong>
-When developed, this placement produces leaders who can rally others around vision and truth. They have the courage to say what others only think, to act where others only talk. Their willingness to put themselves on the line for their beliefs creates a natural authority.
+<strong>Fuerza oculta:</strong>
+Cuando se desarrolla, esta ubicación produce líderes que pueden unir a otros en torno a la visión y la verdad. Tienen el coraje de decir lo que otros sólo piensan, de actuar donde otros sólo hablan. Su disposición a arriesgarse por sus creencias crea una autoridad natural.
 
-They become powerful advocates, teachers, and visionaries — people who don't just dream of better worlds but actually move toward them. Their combination of belief and action is rare and valuable.
+Se convierten en poderosos defensores, maestros y visionarios: personas que no sólo sueñan con mundos mejores, sino que realmente avanzan hacia ellos. Su combinación de creencia y acción es rara y valiosa.
 
-<strong>Shadow Expression:</strong>
-When misaligned, the shadow emerges as righteous aggression — fighting for truth becomes fighting everyone who disagrees. The crusader becomes a bully. The conviction becomes fanaticism.
+<strong>Expresión de sombra:</strong>
+Cuando no están alineadas, la sombra emerge como una agresión justa: luchar por la verdad se convierte en luchar contra todos los que no están de acuerdo. El cruzado se convierte en un matón. La convicción se convierte en fanatismo.
 
-There's also a tendency toward reckless expansion — taking risks with travel, legal matters, or philosophical positions without adequate preparation. The desire for adventure can override prudent caution.
+También hay una tendencia hacia una expansión imprudente: asumir riesgos en viajes, asuntos legales o posiciones filosóficas sin la preparación adecuada. El deseo de aventura puede anular la prudencia.
 
-The deeper shadow is using ideology to justify anger. Some with this placement have significant rage that they've learned to channel into "noble" causes — but the rage came first, and the cause is its justification.
+La sombra más profunda está utilizando la ideología para justificar la ira. Algunos con esta ubicación tienen una rabia significativa que han aprendido a canalizar hacia causas "nobles", pero la rabia vino primero y la causa es su justificación.
 
-<strong>Integration Path:</strong>
-Growth comes from recognising that true strength includes the courage to doubt. The bravest warriors are those who can question their own cause. The deepest truth-seekers are those who know they might be wrong.
+<strong>Ruta de integración:</strong>
+El crecimiento proviene del reconocimiento de que la verdadera fuerza incluye el coraje de dudar. Los guerreros más valientes son aquellos que pueden cuestionar su propia causa. Los buscadores más profundos de la verdad son aquellos que saben que podrían estar equivocados.
 
-Their task is to channel their formidable drive into action that actually helps — not just action that expresses their beliefs. Impact matters more than intensity. Building matters more than fighting.
+Su tarea es canalizar su formidable impulso hacia acciones que realmente ayuden, no sólo acciones que expresen sus creencias. El impacto importa más que la intensidad. Construir importa más que luchar.
 
-<strong>Parenting Insight:</strong>
-This child has a warrior spirit that needs direction, not suppression. Channel it into sports, adventure activities, debate teams, or causes they can genuinely contribute to.
+<strong>Perspectiva sobre la crianza de los hijos:</strong>
+Este niño tiene un espíritu guerrero que necesita dirección, no represión. Canalícelo hacia deportes, actividades de aventura, equipos de debate o causas a las que realmente puedan contribuir.
 
-Teach them that the strongest position is often curiosity rather than certainty. And that sometimes the most courageous thing is to change your mind.`,
-            strengths: ["Courage of conviction", "Action aligned with meaning", "Natural advocate", "Inspirational energy"],
-            challenges: ["Can become fanatical", "Righteous anger", "May be reckless in pursuit of truth", "Difficulty with nuance"]
+Enséñeles que la posición más fuerte suele ser la curiosidad más que la certeza. Y que a veces lo más valiente es cambiar de opinión.`,
+            strengths: ["Coraje de convicción", "Acción alineada con el significado", "Defensor natural", "Energía inspiradora"],
+            challenges: ["Puede volverse fanático", "Ira justa", "Puede ser imprudente en la búsqueda de la verdad.", "Dificultad con los matices"]
         }
     },
     
     Jupiter: {
         2: {
-            title: "Jupiter in 2nd House - The Abundance Attractor",
-            keywords: ["Natural Wealth", "Value Expansion", "Generous Resources", "Material Blessing"],
-            reading: `Jupiter in the 2nd House creates a natural relationship with abundance that others often find remarkable — or enviable. This is someone for whom resources tend to expand, values tend to clarify, and material blessings tend to appear with unusual frequency.
+            title: "Júpiter en la Casa 2: el atractor de la abundancia",
+            keywords: ["Riqueza natural", "Expansión de valor", "Recursos generosos", "Bendición material"],
+            reading: `Júpiter en la Casa 2 crea una relación natural con la abundancia que otros suelen encontrar notable o envidiable. Se trata de alguien para quien los recursos tienden a ampliarse, los valores tienden a aclararse y las bendiciones materiales tienden a aparecer con una frecuencia inusual.
 
-<strong>Core Psychology:</strong>
-At the deepest level, this placement indicates a fundamental trust in life's abundance. They don't approach resources from scarcity; they approach them from overflow. This isn't naïveté — it's a genuine orientation that often becomes self-fulfilling. Those who believe abundance is possible tend to create it.
+<strong>Psicología básica:</strong>
+En el nivel más profundo, esta ubicación indica una confianza fundamental en la abundancia de la vida. No abordan los recursos desde la escasez; se acercan a ellos desde el desbordamiento. Esto no es ingenuidad: es una orientación genuina que a menudo se vuelve autocumplida. Quienes creen que la abundancia es posible tienden a crearla.
 
-Their sense of self-worth is generally healthy and optimistic. They believe they deserve good things, and this belief opens doors that remain closed to those who doubt their worth. There's something almost magnetic about their relationship with value.
+Su sentido de autoestima es generalmente saludable y optimista. Creen que merecen cosas buenas y esta creencia abre puertas que permanecen cerradas para quienes dudan de su valor. Hay algo casi magnético en su relación con el valor.
 
-You may notice they seem unusually lucky with money or resources. Opportunities appear. Generosity returns to them multiplied. What they give away tends to come back.
+Quizás notes que parecen inusualmente afortunados con el dinero o los recursos. Aparecen oportunidades. La generosidad vuelve hacia ellos multiplicada. Lo que regalan tiende a regresar.
 
-<strong>Behaviour Patterns:</strong>
-This placement typically manifests as:
-• A natural ability to attract financial resources and opportunities
-• Generous spending habits — sometimes too generous
-• Interest in growing wealth through education, travel, or philosophy
-• Valuing quality over quantity, even when resources are limited
-• Optimism about financial future that often proves justified
-• Making money through teaching, publishing, travel, or wisdom-sharing
+<strong>Patrones de comportamiento:</strong>
+Esta ubicación normalmente se manifiesta como:
+• Una capacidad natural para atraer recursos y oportunidades financieras.
+• Hábitos de gasto generosos (a veces demasiado generosos)
+• Interés en aumentar la riqueza a través de la educación, los viajes o la filosofía.
+• Valorar la calidad sobre la cantidad, incluso cuando los recursos son limitados
+• Optimismo sobre el futuro financiero que a menudo resulta justificado
+• Ganar dinero enseñando, publicando, viajando o compartiendo sabiduría
 
-When it comes to resources, they think big. They're not interested in barely getting by; they want abundance that allows for freedom, generosity, and expansion.
+Cuando se trata de recursos, piensan en grande. No les interesa sobrevivir apenas; Quieren abundancia que permita libertad, generosidad y expansión.
 
-<strong>Hidden Strength:</strong>
-When developed, this placement produces people who understand that wealth is a flow, not a destination. They know how to grow resources, but more importantly, they know how to use resources wisely — for growth, for meaning, for impact greater than themselves.
+<strong>Fuerza oculta:</strong>
+Cuando se desarrolla, esta ubicación produce personas que entienden que la riqueza es un flujo, no un destino. Saben cómo hacer crecer los recursos, pero lo que es más importante, saben cómo utilizarlos sabiamente: para lograr crecimiento, significado y un impacto mayor que ellos mismos.
 
-Their superpower is maintaining optimism about abundance even during difficult times. This faith becomes a magnet for opportunity when others have given up. They often become the person who sees potential value where others see none.
+Su superpoder es mantener el optimismo sobre la abundancia incluso en tiempos difíciles. Esta fe se convierte en un imán de oportunidades cuando otros se han dado por vencidos. A menudo se convierten en personas que ven valor potencial donde otros no ven ninguno.
 
-<strong>Shadow Expression:</strong>
-When misaligned, the shadow emerges as excess and waste. So much belief in more coming that there's no reason to be careful with what's here. Overspending, overindulgence, overconfidence about financial matters.
+<strong>Expresión de sombra:</strong>
+Cuando está desalineada, la sombra emerge como exceso y desperdicio. Hay tanta creencia en que vendrán más que no hay razón para tener cuidado con lo que hay aquí. Gasto excesivo, exceso de indulgencia, exceso de confianza en asuntos financieros.
 
-There's also a tendency toward laziness around money — assuming abundance will handle itself without the effort that actually creates it. Jupiter expands what's there; if effort isn't there, it expands nothing.
+También hay una tendencia a la pereza en torno al dinero, asumiendo que la abundancia se manejará sola sin el esfuerzo que realmente la crea. Júpiter expande lo que hay allí; si no hay esfuerzo, no se expande nada.
 
-The deeper shadow is using wealth as a substitute for meaning. Accumulating more and more but never asking what it's for. The abundance becomes a gilded trap rather than a tool for purpose.
+La sombra más profunda es utilizar la riqueza como sustituto del significado. Acumulando más y más pero sin preguntar nunca para qué sirve. La abundancia se convierte en una trampa dorada en lugar de una herramienta para lograr un propósito.
 
-<strong>Integration Path:</strong>
-Growth comes from recognising that abundance is a responsibility, not just a blessing. Resources are meant to flow toward purpose. The question isn't just "how can I have more?" but "what is this abundance for?"
+<strong>Ruta de integración:</strong>
+El crecimiento proviene del reconocimiento de que la abundancia es una responsabilidad, no sólo una bendición. Los recursos están destinados a fluir hacia un propósito. La pregunta no es sólo "¿cómo puedo tener más?" pero "¿para qué sirve esta abundancia?"
 
-Their task is to become a channel rather than just a container — to let abundance move through them toward meaningful ends. The most successful expression of this placement is generous impact, not just generous accumulation.
+Su tarea es convertirse en un canal y no simplemente en un contenedor: dejar que la abundancia fluya a través de ellos hacia fines significativos. La expresión más exitosa de esta colocación es el impacto generoso, no sólo la acumulación generosa.
 
-<strong>Practical Insight:</strong>
-This person likely has genuine financial talents that, when developed, could create significant wealth. But they need structure and purpose to maximise this potential.
+<strong>Información práctica:</strong>
+Es probable que esta persona tenga talentos financieros genuinos que, cuando se desarrollen, podrían generar una riqueza significativa. Pero necesitan estructura y propósito para maximizar este potencial.
 
-Encourage investment in growth — education, experiences, quality over quantity. But also teach the value of limits. Jupiter's shadow is always excess, and the 2nd house shadow is always attachment. Together, they can create someone who has a lot but is owned by what they have.`,
-            strengths: ["Natural abundance attraction", "Healthy self-worth", "Generous spirit", "Optimistic about resources"],
-            challenges: ["Tendency toward excess", "May overspend or overindulge", "Can be lazy about financial management", "May equate worth with wealth"]
+Fomentar la inversión en crecimiento: educación, experiencias, calidad sobre cantidad. Pero también enseñar el valor de los límites. La sombra de Júpiter siempre es excesiva y la sombra de la segunda casa es siempre apego. Juntos, pueden crear a alguien que tenga mucho pero que sea dueño de lo que tiene.`,
+            strengths: ["Atracción de abundancia natural", "Autoestima saludable", "espíritu generoso", "Optimista sobre los recursos"],
+            challenges: ["Tendencia al exceso", "Puede gastar demasiado o darse un capricho excesivo", "Puede ser perezoso con la gestión financiera.", "Puede equiparar el valor con la riqueza"]
         }
     },
     
     Saturn: {
         2: {
-            title: "Saturn in 2nd House - The Value Architect",
-            keywords: ["Earned Worth", "Patient Builder", "Financial Mastery", "Self-Worth Lessons"],
-            reading: `Saturn in the 2nd House creates a relationship with value, worth, and resources that is earned rather than given. This placement demands that self-worth be built from the ground up — a process that is often difficult early in life but produces extraordinary solidity later.
+            title: "Saturno en la Casa 2 - The Value Architect",
+            keywords: ["Valor ganado", "Constructor de pacientes", "Dominio financiero", "Lecciones de autoestima"],
+            reading: `Saturno en la Casa 2 crea una relación con valor, valor y recursos que se ganan en lugar de darse. Esta ubicación exige que se construya la autoestima desde cero, un proceso que a menudo es difícil en las primeras etapas de la vida pero que produce una solidez extraordinaria más adelante.
 
-<strong>Core Psychology:</strong>
-At the deepest level, this placement indicates that value must be proven, not assumed. There may be early experiences of material lack, or more commonly, a feeling of lack — that what they have isn't enough, that they aren't enough. This isn't truth; it's Saturn's teaching method.
+<strong>Psicología básica:</strong>
+En el nivel más profundo, esta ubicación indica que el valor debe demostrarse, no asumirse. Puede haber experiencias tempranas de carencia material o, más comúnmente, un sentimiento de carencia: que lo que tienen no es suficiente, que no son suficientes. Esto no es verdad; es el método de enseñanza de Saturno.
 
-The lesson is that worth is built through effort, integrity, and time. Not inherited, not given, not assumed — but constructed through the patient accumulation of genuine value. Those who learn this lesson become unshakeable in their self-worth because it's built on actual foundation, not on luck or appearance.
+La lección es que el valor se construye a través del esfuerzo, la integridad y el tiempo. No se hereda, no se da, no se asume, sino que se construye mediante la acumulación paciente de valor genuino. Aquellos que aprenden esta lección se vuelven inquebrantables en su autoestima porque está construida sobre cimientos reales, no sobre la suerte o la apariencia.
 
-You may notice a complicated relationship with money and possessions early in life. Either actual scarcity, or abundance that didn't feel secure, or a family environment where worth was conditional on achievement.
+Es posible que notes una relación complicada con el dinero y las posesiones a una edad temprana. O escasez real, o abundancia que no parecía segura, o un ambiente familiar donde el valor estaba condicionado al logro.
 
-<strong>Behaviour Patterns:</strong>
-This placement typically manifests as:
-• Careful, sometimes anxious relationship with money and resources
-• Strong drive to build financial security and stability
-• Tendency to save rather than spend, sometimes to extreme
-• Delayed financial success that accelerates with maturity
-• Self-worth issues that improve significantly with age
-• Values built on substance rather than appearance
+<strong>Patrones de comportamiento:</strong>
+Esta ubicación normalmente se manifiesta como:
+• Relación cuidadosa, a veces ansiosa, con el dinero y los recursos.
+• Fuerte impulso para construir seguridad y estabilidad financiera
+• Tendencia a ahorrar en lugar de gastar, a veces hasta el extremo
+• Éxito financiero retrasado que se acelera con la madurez
+• Problemas de autoestima que mejoran significativamente con la edad
+• Valores basados en la sustancia más que en la apariencia
 
-They often feel they have to work twice as hard for half as much — at least early in life. But this teaches them financial skills and resource management that others never learn.
+A menudo sienten que tienen que trabajar el doble por la mitad, al menos en una etapa temprana de su vida. Pero esto les enseña habilidades financieras y de gestión de recursos que otros nunca aprenden.
 
-<strong>Hidden Strength:</strong>
-When developed, this placement produces masters of value creation. They understand what things are actually worth because they've had to learn it the hard way. No one can fool them about value — in business, in relationships, in themselves.
+<strong>Fuerza oculta:</strong>
+Cuando se desarrolla, esta ubicación produce maestros en la creación de valor. Entienden el valor real de las cosas porque han tenido que aprenderlo por las malas. Nadie puede engañarlos en cuanto al valor: en los negocios, en las relaciones, en ellos mismos.
 
-Their superpower is building lasting wealth and worth from scratch. They don't inherit or luck into success; they construct it. And what's constructed properly lasts. Late-life financial success is extremely common with this placement.
+Su superpoder es generar riqueza y valor duraderos desde cero. No heredan ni la suerte les lleva al éxito; ellos lo construyen. Y lo que se construye correctamente perdura. El éxito financiero en la vejez es extremadamente común en esta ubicación.
 
-<strong>Shadow Expression:</strong>
-When misaligned, the shadow emerges as chronic scarcity consciousness. Never having enough, never being enough, no matter how much they accumulate. The poverty is internal rather than external — and no amount of external wealth can fill an internal void.
+<strong>Expresión de sombra:</strong>
+Cuando está desalineada, la sombra emerge como una conciencia de escasez crónica. Nunca tener suficiente, nunca ser suficiente, por mucho que acumulen. La pobreza es interna más que externa, y ninguna cantidad de riqueza externa puede llenar un vacío interno.
 
-There's also a tendency toward excessive materialism as compensation for feeling worthless. Or the opposite — rejecting material concerns entirely, calling it spiritual while actually avoiding the lessons Saturn is trying to teach.
+También existe una tendencia hacia el materialismo excesivo como compensación por sentirse inútil. O lo contrario: rechazar por completo las preocupaciones materiales, llamándolas espirituales y, en realidad, evitar las lecciones que Saturno está tratando de enseñar.
 
-The deeper shadow is conditional self-worth that never relaxes. Feeling that they're only as good as their last achievement, their current net worth, their visible accomplishments. Worth becomes a performance that can never stop.
+La sombra más profunda es la autoestima condicional que nunca se relaja. Sentir que son tan buenos como su último logro, su patrimonio neto actual, sus logros visibles. Worth se convierte en una actuación que nunca puede parar.
 
-<strong>Integration Path:</strong>
-Growth comes from recognising that Saturn's restrictions are teachings, not punishments. The scarcity wasn't meant to crush them but to teach them what can't be taken away. When worth is built from genuine foundation, no external loss can destroy it.
+<strong>Ruta de integración:</strong>
+El crecimiento proviene del reconocimiento de que las restricciones de Saturno son enseñanzas, no castigos. La escasez no tenía como objetivo aplastarlos sino enseñarles lo que no se les puede quitar. Cuando el valor se construye a partir de una base genuina, ninguna pérdida externa puede destruirlo.
 
-Their task is to become someone who has proven their worth to themselves — not to the world, not to parents, not to critics, but to themselves. The moment that happens, Saturn's lessons are complete, and the abundance begins to flow.
+Su tarea es convertirse en alguien que haya demostrado su valía ante sí mismo: no ante el mundo, ni ante los padres, ni ante los críticos, sino ante sí mismos. En el momento en que eso sucede, las lecciones de Saturno se completan y la abundancia comienza a fluir.
 
-<strong>Life Timing:</strong>
-This placement often indicates a "late bloomer" financially. Don't be discouraged by early difficulties — they're part of the teaching. The most successful people with this placement often say their greatest achievements came after 35 or 40, once they'd integrated Saturn's lessons.
+<strong>Tiempo de vida:</strong>
+Esta ubicación a menudo indica un "desarrollo tardío" financieramente. No se desanime por las dificultades tempranas: son parte de la enseñanza. Las personas más exitosas con esta ubicación suelen decir que sus mayores logros se produjeron después de los 35 o 40 años, una vez que integraron las lecciones de Saturno.
 
-The promise is this: what you build will last. What you earn, you keep. What you become cannot be taken from you. Saturn delays but does not deny — and what it eventually grants is more solid than anything given freely could ever be.`,
-            strengths: ["Builds lasting value", "Financial discipline", "Unshakeable self-worth when developed", "Masters resource management"],
-            challenges: ["Early scarcity experiences", "Self-worth struggles", "Can be overly restrictive", "May fear financial loss"]
+La promesa es esta: lo que construyas durará. Lo que ganas, lo conservas. Lo que llegas a ser no te lo pueden quitar. Saturno retrasa pero no niega, y lo que finalmente concede es más sólido de lo que cualquier cosa dada gratuitamente podría ser jamás.`,
+            strengths: ["Genera valor duradero", "Disciplina financiera", "Autovaloración inquebrantable cuando se desarrolla", "Gestión de recursos de maestría."],
+            challenges: ["Experiencias tempranas de escasez", "Luchas de autoestima", "Puede ser demasiado restrictivo", "Puede temer pérdidas financieras"]
         }
     }
 };

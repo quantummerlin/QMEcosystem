@@ -5,687 +5,687 @@
 
 var DEEP_NORTH_NODE_READINGS = {
     Aries: {
-        title: "North Node in Aries - The Warrior's Path",
-        archetype: "From Harmony Keeper to Independent Warrior",
+        title: "Nodo Norte en Aries – El Camino del Guerrero",
+        archetype: "De guardián de la armonía a guerrero independiente",
         southNode: "Libra",
-        hook: "With North Node in Aries, this soul's journey is toward independence, courage, and self-assertion. The comfort zone (South Node in Libra) was relationships, harmony, and considering others - but growth requires learning to put self first and act with warrior courage.",
+        hook: "Con el Nodo Norte en Aries, el viaje de esta alma es hacia la independencia, el coraje y la autoafirmación. La zona de confort (Nodo Sur en Libra) eran las relaciones, la armonía y la consideración de los demás, pero el crecimiento requiere aprender a anteponerse a uno mismo y actuar con valentía guerrera.",
         
-        pastLifePatterns: `The South Node in Libra reveals past life (or early childhood) patterns of focusing entirely on others, seeking approval, and maintaining harmony at all costs. This soul was the diplomat, the peacemaker, the one who always considered others' needs before their own.
+        pastLifePatterns: `El Nodo Sur en Libra revela patrones de vidas pasadas (o de la primera infancia) de centrarse exclusivamente en los demás, buscar aprobación y mantener la armonía a toda costa. Esta alma era la diplomática, la pacificadora, la que siempre consideraba las necesidades de los demás antes que las suyas propias.
 
-In past incarnations, success came through partnership, compromise, and social grace. There was skill at reading others, maintaining balance, and creating beautiful relationships. The gift was natural diplomacy and the ability to see all sides.
+En encarnaciones pasadas, el éxito se produjo a través de la colaboración, el compromiso y la gracia social. Había habilidad para leer a los demás, mantener el equilibrio y crear hermosas relaciones. El don era la diplomacia natural y la capacidad de ver todos los lados.
 
-But the shadow of this pattern is losing oneself in others, being unable to act without consensus, and avoiding conflict to the point of self-erasure. Too many lifetimes of "What do you think?" and "Whatever you prefer" created dependency on others' approval and inability to stand alone.`,
+Pero la sombra de este patrón es perderse en los demás, ser incapaz de actuar sin consenso y evitar el conflicto hasta el punto de autoborrarse. Demasiadas vidas de "¿Qué opinas?" y "Lo que prefieras" creaba dependencia de la aprobación de los demás y la incapacidad de valerse por sí solo.`,
         
-        oldComfortZone: `The Libra South Node comfort zone manifests as chronic people-pleasing, difficulty making decisions without consulting others, and fear of being alone or disliked. There's an automatic impulse to accommodate, compromise, and maintain peace even at great personal cost.
+        oldComfortZone: `La zona de confort del Nodo Sur de Libra se manifiesta como un agrado crónico a las personas, dificultad para tomar decisiones sin consultar a los demás y miedo a estar solo o no ser querido. Existe un impulso automático de acomodarse, comprometerse y mantener la paz incluso a un gran costo personal.
 
-This soul may find themselves naturally drawn to relationships, sometimes jumping from one to another without pause. Being alone feels wrong or scary. Making decisions for yourself triggers anxiety - what if you choose wrong? What if others don't approve?
+Esta alma puede sentirse atraída naturalmente por las relaciones, a veces saltando de una a otra sin pausa. Estar solo se siente mal o da miedo. Tomar decisiones por uno mismo genera ansiedad: ¿qué pasa si eliges mal? ¿Qué pasa si otros no lo aprueban?
 
-The old pattern is to wait for others to lead, to define yourself through partnerships, and to believe you're only valuable in relation to someone else. Independence feels selfish; assertiveness feels aggressive. The reflex is always to consider the other person first.`,
+El viejo patrón es esperar a que otros lideren, definirse a sí mismo a través de asociaciones y creer que sólo es valioso en relación con otra persona. La independencia se siente egoísta; la asertividad se siente agresiva. El reflejo es siempre considerar primero a la otra persona.`,
         
-        newDirection: `The Aries North Node calls this soul to develop independence, courage, and healthy selfishness. This means learning to act without permission, to put yourself first without guilt, and to embrace conflict when it serves truth.
+        newDirection: `El Nodo Norte de Aries llama a esta alma a desarrollar independencia, coraje y un egoísmo saludable. Esto significa aprender a actuar sin permiso, a ponerse a sí mismo en primer lugar sin sentirse culpable y a aceptar el conflicto cuando sirve a la verdad.
 
-Growth requires developing the capacity to stand alone. This doesn't mean being anti-relationship; it means being whole within relationship, maintaining your identity rather than merging. It means sometimes choosing yourself even when it disappoints others.
+El crecimiento requiere desarrollar la capacidad de valerse por sí solo. Esto no significa estar en contra de las relaciones; significa estar completo dentro de la relación, manteniendo tu identidad en lugar de fusionarte. A veces significa elegirse a uno mismo incluso cuando esto decepciona a los demás.
 
-The journey is toward discovering what YOU want, independent of others' preferences. It's about making quick decisions without consensus, taking action without approval, and being willing to be disliked for being yourself. It's warrior training for someone who was taught to be diplomat.`,
+El viaje es hacia descubrir lo que TÚ quieres, independientemente de las preferencias de los demás. Se trata de tomar decisiones rápidas sin consenso, actuar sin aprobación y estar dispuesto a que no te gusten por ser tú mismo. Es un entrenamiento guerrero para alguien a quien le enseñaron a ser diplomático.`,
         
-        evolutionaryGoal: `The ultimate goal is to become a strong individual who can then create balanced partnerships from wholeness rather than need. The Aries development doesn't negate Libra gifts - it completes them.
+        evolutionaryGoal: `El objetivo final es convertirse en un individuo fuerte que luego pueda crear asociaciones equilibradas a partir de la totalidad y no de la necesidad. El desarrollo de Aries no niega los dones de Libra: los completa.
 
-This soul is learning that true harmony comes from two whole people, not from one person accommodating the other. Real partnership requires the ability to stand alone, disagree, and fight fairly. The warrior energy serves relationship by ensuring both people remain authentic.
+Esta alma está aprendiendo que la verdadera armonía proviene de dos personas enteras, no de que una persona se adapte a la otra. Una verdadera asociación requiere la capacidad de permanecer solos, estar en desacuerdo y luchar de manera justa. La energía guerrera sirve a la relación al garantizar que ambas personas sigan siendo auténticas.
 
-Success looks like: initiating rather than waiting, stating preferences clearly, acting decisively, setting boundaries without guilt, being comfortable alone, and leading when appropriate. The evolved expression is independent warrior who chooses partnership from strength, not need.`,
+El éxito se ve así: iniciar en lugar de esperar, expresar claramente las preferencias, actuar con decisión, establecer límites sin culpa, sentirse cómodo solo y liderar cuando sea apropiado. La expresión evolucionada es la de guerrero independiente que elige la colaboración por la fuerza, no por la necesidad.`,
         
-        challenges: `The primary challenge is overcoming guilt about being "selfish." Every time growth calls for putting yourself first, old conditioning screams that you're being mean or wrong. Learning that self-care isn't selfish is constant work.
+        challenges: `El principal desafío es superar la culpa por ser "egoísta". Cada vez que el crecimiento exige que te pongas a ti mismo en primer lugar, el viejo condicionamiento te grita que estás siendo malo o equivocado. Aprender que el autocuidado no es egoísta es un trabajo constante.
 
-Conflict avoidance is another major hurdle. Growth often requires disagreeing, saying no, or standing your ground - all of which feel dangerous to the Libra South Node. Learning that conflict can be healthy and even strengthen relationships is crucial.
+Evitar conflictos es otro obstáculo importante. El crecimiento a menudo requiere estar en desacuerdo, decir no o mantenerse firme, todo lo cual resulta peligroso para el Nodo Sur de Libra. Es crucial aprender que el conflicto puede ser saludable e incluso fortalecer las relaciones.
 
-Decision-making paralysis can be crippling. The old pattern of considering all options and seeking others' input creates inability to choose quickly or trust your own judgment. Learning to decide alone and live with consequences is essential growth.`,
+La parálisis en la toma de decisiones puede ser paralizante. El viejo patrón de considerar todas las opciones y buscar la opinión de los demás crea incapacidad para elegir rápidamente o confiar en su propio criterio. Aprender a decidir solo y vivir con las consecuencias es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node placement requires learning to maintain self while partnered. This means having your own friends, interests, and opinions that may differ from your partner's. It means being okay with your partner being unhappy sometimes.
+        relationships: `En las relaciones, esta ubicación en el Nodo Norte requiere aprender a mantenerse a sí mismo mientras se está en pareja. Esto significa tener tus propios amigos, intereses y opiniones que pueden diferir de los de tu pareja. Significa estar bien con que tu pareja sea infeliz a veces.
 
-The growth edge is staying when there's conflict rather than immediately accommodating to restore peace. It's learning to fight fairly, express anger appropriately, and trust that the relationship can handle disagreement.
+La ventaja del crecimiento es permanecer cuando hay conflicto en lugar de adaptarse inmediatamente para restaurar la paz. Es aprender a pelear de manera justa, expresar la ira de manera apropiada y confiar en que la relación puede manejar los desacuerdos.
 
-The gift you bring to relationships once evolved is the Libra social grace combined with Aries authenticity. You create partnerships where both people are fully themselves, where harmony is real rather than performed, where love doesn't require self-sacrifice.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la gracia social de Libra combinada con la autenticidad de Aries. Creas asociaciones donde ambas personas son plenamente ellas mismas, donde la armonía es real en lugar de representada, donde el amor no requiere autosacrificio.`,
         
-        careerPath: `Professionally, this North Node calls toward independent ventures, leadership roles, or positions requiring quick decision-making and courageous action. You may be drawn to entrepreneurship, where you must act alone and lead.
+        careerPath: `Profesionalmente, este Nodo Norte llama a emprendimientos independientes, roles de liderazgo o puestos que requieren una toma de decisiones rápida y una acción valiente. Es posible que se sienta atraído por el espíritu empresarial, donde debe actuar solo y liderar.
 
-Fields involving advocacy, athletics, military, or pioneering new territory serve this nodal path. The key is roles where you can't hide behind others or wait for consensus - where you must step forward and lead.
+Los campos que involucran defensa, atletismo, ejército o nuevos territorios pioneros sirven a este camino nodal. La clave son los roles en los que no puedes esconderte detrás de los demás ni esperar el consenso, en los que debes dar un paso adelante y liderar.
 
-The career challenge is overcoming fear of being the boss, making the call, or standing alone in your vision. Success requires developing comfort with being the first, the one in charge, the person everyone looks to for direction.`,
+El desafío profesional es superar el miedo a ser el jefe, tomar la decisión o quedarse solo en su visión. El éxito requiere sentirse cómodo con ser el primero, el que está a cargo, la persona a la que todos buscan dirección.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that selfhood is sacred. You don't have to earn the right to exist, to have needs, or to take up space. Your preferences matter as much as anyone else's.
+        spiritualLesson: `La lección espiritual de este eje nodal es que la individualidad es sagrada. No es necesario ganarse el derecho a existir, a tener necesidades o a ocupar espacio. Tus preferencias importan tanto como las de cualquier otra persona.
 
-The deeper teaching is that true love doesn't require self-sacrifice - it requires two whole people showing up authentically. The Libra pattern taught you about relationship; the Aries path teaches you there must be a self to relate FROM.
+La enseñanza más profunda es que el verdadero amor no requiere autosacrificio: requiere que dos personas enteras se presenten auténticamente. El patrón de Libra te enseñó sobre las relaciones; El camino de Aries te enseña que debe haber un yo con quien relacionarte.
 
-Ultimately, this placement is about learning that independence and relationship aren't opposites - they support each other. The warrior who knows how to stand alone creates the deepest partnerships because they choose them from freedom, not need.`,
+En última instancia, esta colocación se trata de aprender que la independencia y las relaciones no son opuestas: se apoyan mutuamente. El guerrero que sabe mantenerse solo crea las asociaciones más profundas porque las elige por la libertad, no por la necesidad.`,
         
-        affirmation: "I am becoming courageously myself. I act without needing permission or approval. I put myself first without guilt. My independence serves my relationships by ensuring I show up whole."
+        affirmation: "Me estoy volviendo valientemente yo mismo. Actúo sin necesidad de permiso o aprobación. Me pongo a mí mismo en primer lugar sin culpa. Mi independencia sirve a mis relaciones al garantizar que me presente íntegro."
     },
 
     Taurus: {
-        title: "North Node in Taurus - The Path of Simple Abundance",
-        archetype: "From Crisis to Peace",
-        southNode: "Scorpio",
-        hook: "With North Node in Taurus, this soul's journey is toward stability, simplicity, and self-worth. The comfort zone (South Node in Scorpio) was intensity, crisis, and depending on others' resources - but growth requires building your own security and finding peace.",
+        title: "Nodo Norte en Tauro: el camino de la abundancia simple",
+        archetype: "De la crisis a la paz",
+        southNode: "Escorpión",
+        hook: "Con el Nodo Norte en Tauro, el viaje de esta alma es hacia la estabilidad, la simplicidad y la autoestima. La zona de confort (Nodo Sur en Escorpio) era la intensidad, la crisis y la dependencia de los recursos de los demás, pero el crecimiento requiere construir su propia seguridad y encontrar la paz.",
         
-        pastLifePatterns: `The South Node in Scorpio reveals past life patterns of intensity, transformation through crisis, and deep entanglement with others' resources and energies. This soul was the transformer, the detective, the one who delved into darkness and emerged changed.
+        pastLifePatterns: `El Nodo Sur en Escorpio revela patrones de intensidad de vidas pasadas, transformación a través de crisis y profundo enredo con los recursos y energías de los demás. Esta alma fue la transformadora, la detective, la que profundizó en la oscuridad y emergió transformada.
 
-In past incarnations, life was dramatic and intense. Power, secrets, sexuality, death, and rebirth were familiar territory. There was skill at navigating crisis, perceiving hidden truths, and wielding psychological power. The gift was depth and transformative capacity.
+En encarnaciones pasadas, la vida era dramática e intensa. El poder, los secretos, la sexualidad, la muerte y el renacimiento eran territorio familiar. Había habilidad para afrontar crisis, percibir verdades ocultas y ejercer poder psicológico. El don fue profundidad y capacidad transformadora.
 
-But the shadow of this pattern is addiction to intensity, creating or attracting crisis, and inability to find peace in simplicity. Too many lifetimes of emotional extremes created belief that calm means something's wrong and that transformation requires trauma.`,
+Pero la sombra de este patrón es la adicción a la intensidad, que crea o atrae crisis y la incapacidad de encontrar la paz en la simplicidad. Demasiadas vidas de extremos emocionales crearon la creencia de que la calma significa que algo anda mal y que la transformación requiere un trauma.`,
         
-        oldComfortZone: `The Scorpio South Node comfort zone manifests as attraction to drama, crisis, and intensity. This soul may unconsciously create or attract situations that require survival mode, crisis management, or deep transformation. Calm feels boring or wrong.
+        oldComfortZone: `La zona de confort del Nodo Sur de Escorpio se manifiesta como atracción por el drama, la crisis y la intensidad. Esta alma puede crear o atraer inconscientemente situaciones que requieran un modo de supervivencia, gestión de crisis o una transformación profunda. La calma se siente aburrida o incorrecta.
 
-There's often pattern of depending on others' resources - whether financial, emotional, or energetic. Relationships may involve power dynamics, jealousy, or enmeshment. The reflex is to merge deeply rather than maintain healthy boundaries.
+A menudo existe un patrón de dependencia de los recursos de los demás, ya sean financieros, emocionales o energéticos. Las relaciones pueden implicar dinámicas de poder, celos o enredos. El reflejo es fusionarse profundamente en lugar de mantener límites saludables.
 
-The old pattern is to believe that growth requires crisis, that depth requires darkness, and that peace means stagnation. Simple pleasures feel shallow; stability feels like a trap. The familiar territory is transformation through trauma rather than gentle cultivation.`,
+El viejo patrón es creer que el crecimiento requiere crisis, que la profundidad requiere oscuridad y que la paz significa estancamiento. Los placeres simples parecen superficiales; La estabilidad se siente como una trampa. El territorio familiar es la transformación a través del trauma más que el cultivo suave.`,
         
-        newDirection: `The Taurus North Node calls this soul to develop stability, simplicity, and self-sufficiency. This means learning to build your own resources, find peace in ordinary moments, and value yourself independently of drama or others' validation.
+        newDirection: `El Nodo Norte de Tauro llama a esta alma a desarrollar estabilidad, sencillez y autosuficiencia. Esto significa aprender a desarrollar sus propios recursos, encontrar la paz en los momentos cotidianos y valorarse independientemente del drama o de la validación de los demás.
 
-Growth requires cultivating patience and steady effort rather than relying on crisis to catalyze change. It's about creating security through your own work, enjoying simple pleasures without guilt, and finding depth in stability rather than chaos.
+El crecimiento requiere cultivar la paciencia y el esfuerzo constante en lugar de depender de la crisis para catalizar el cambio. Se trata de crear seguridad a través del propio trabajo, disfrutar de placeres simples sin culpa y encontrar profundidad en la estabilidad en lugar del caos.
 
-The journey is toward discovering that peace is productive, that slow growth is real growth, and that you can be powerful without being intense. It's learning to accumulate rather than transform, to build rather than burn down and rebuild.`,
+El viaje consiste en descubrir que la paz es productiva, que el crecimiento lento es un crecimiento real y que se puede ser poderoso sin ser intenso. Es aprender a acumular en lugar de transformar, a construir en lugar de quemar y reconstruir.`,
         
-        evolutionaryGoal: `The ultimate goal is to become someone who is secure within themselves, who owns their own resources, and who can appreciate life's simple pleasures. The Taurus development doesn't negate Scorpio depth - it grounds it.
+        evolutionaryGoal: `El objetivo final es convertirse en alguien seguro de sí mismo, dueño de sus propios recursos y capaz de apreciar los placeres simples de la vida. El desarrollo de Tauro no niega la profundidad de Escorpio: la fundamenta.
 
-This soul is learning that transformation doesn't always require crisis. Growth can be gentle, steady, and sustainable. Peace isn't stagnation - it's the foundation for genuine creativity and joy.
+Esta alma está aprendiendo que la transformación no siempre requiere crisis. El crecimiento puede ser suave, constante y sostenible. La paz no es estancamiento: es la base de una creatividad y alegría genuinas.
 
-Success looks like: financial independence, comfortable routine, enjoying sensory pleasures, patience with process, steady self-improvement, and inner calm. The evolved expression is someone who carries Scorpio depth but lives in Taurus peace.`,
+El éxito se manifiesta en: independencia financiera, rutina cómoda, disfrute de los placeres sensoriales, paciencia con el proceso, superación personal constante y calma interior. La expresión evolucionada es alguien que lleva la profundidad de Escorpio pero vive en la paz de Tauro.`,
         
-        challenges: `The primary challenge is releasing addiction to intensity and drama. When life is peaceful, the old pattern wants to create crisis to feel alive. Learning that calm is desirable, not boring, requires conscious rewiring.
+        challenges: `El principal desafío es liberar la adicción a la intensidad y el drama. Cuando la vida es pacífica, el viejo patrón quiere crear crisis para sentirse vivo. Aprender que la calma es deseable, no aburrida, requiere una reconfiguración consciente.
 
-Developing self-worth independent of crisis or achievement is another major hurdle. The Scorpio pattern often involved proving worth through handling intensity. Learning that you have value just existing, not just transforming, is profound work.
+Desarrollar la autoestima independientemente de las crisis o los logros es otro obstáculo importante. El patrón de Escorpio a menudo implicaba demostrar su valía mediante el manejo de la intensidad. Aprender que vale la pena simplemente existir, no solo transformar, es un trabajo profundo.
 
-Building your own resources rather than depending on or merging with others' requires patience this soul may not naturally have. Learning to work steadily toward financial independence and to enjoy the slow accumulation is essential growth.`,
+Desarrollar sus propios recursos en lugar de depender de los demás o fusionarse con ellos requiere una paciencia que esta alma tal vez no tenga naturalmente. Aprender a trabajar de manera constante hacia la independencia financiera y disfrutar de la lenta acumulación es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node requires learning to maintain separateness and build your own resources. This means not merging finances or energies completely, maintaining your own income, and not depending on partners for security.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a mantener la separación y construir sus propios recursos. Esto significa no fusionar completamente las finanzas o las energías, mantener sus propios ingresos y no depender de socios para su seguridad.
 
-The growth edge is choosing peaceful partnerships over intense ones. It's learning that calm relationships can be deep, that intensity isn't the same as intimacy, and that jealousy isn't love.
+La ventaja del crecimiento es elegir asociaciones pacíficas en lugar de intensas. Es aprender que las relaciones tranquilas pueden ser profundas, que la intensidad no es lo mismo que la intimidad y que los celos no son amor.
 
-The gift you bring to relationships once evolved is the Scorpio emotional depth combined with Taurus stability. You create partnerships that are both profound and peaceful, intense when appropriate but not addicted to drama.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la profundidad emocional de Escorpio combinada con la estabilidad de Tauro. Creas asociaciones que son a la vez profundas y pacíficas, intensas cuando es apropiado pero no adictas al drama.`,
         
-        careerPath: `Professionally, this North Node calls toward work that builds something tangible and provides steady income. Banking, real estate, agriculture, art, craftsmanship, or any field requiring patience and producing concrete results serves this path.
+        careerPath: `Profesionalmente, este Nodo Norte exige un trabajo que construya algo tangible y proporcione ingresos estables. La banca, el sector inmobiliario, la agricultura, el arte, la artesanía o cualquier campo que requiera paciencia y produzca resultados concretos sirve a este camino.
 
-The key is roles where you develop your own resources and skills rather than managing others' resources or navigating crisis. Building financial security through your own steady effort is the growth edge.
+La clave son los roles en los que usted desarrolla sus propios recursos y habilidades en lugar de administrar los recursos de otros o afrontar crisis. Construir seguridad financiera a través de su propio esfuerzo constante es la ventaja del crecimiento.
 
-The career challenge is staying with the slow build rather than seeking dramatic transformations or crisis-driven change. Success requires valuing consistency over intensity.`,
+El desafío profesional es permanecer en la lenta construcción en lugar de buscar transformaciones dramáticas o cambios impulsados ​​por la crisis. El éxito requiere valorar la coherencia sobre la intensidad.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that peace is sacred and that your inherent worth doesn't require proving through crisis or achievement. You deserve comfort, pleasure, and security just for existing.
+        spiritualLesson: `La lección espiritual de este eje nodal es que la paz es sagrada y que su valor inherente no requiere demostrarlo a través de crisis o logros. Mereces comodidad, placer y seguridad sólo por existir.
 
-The deeper teaching is that transformation can be gentle. The Scorpio pattern taught you about death and rebirth; the Taurus path teaches you about steady growth and patient cultivation.
+La enseñanza más profunda es que la transformación puede ser suave. El patrón de Escorpio te enseñó sobre la muerte y el renacimiento; El camino de Tauro te enseña sobre el crecimiento constante y la cultivación paciente.
 
-Ultimately, this placement is about learning that enjoying life's simple pleasures isn't shallow - it's the point. The depth you carry doesn't require darkness to validate it. Peace is the evolved state.`,
+En última instancia, esta colocación trata de aprender que disfrutar de los placeres simples de la vida no es algo superficial: ese es el punto. La profundidad que llevas no requiere oscuridad para validarla. La paz es el estado evolucionado.`,
         
-        affirmation: "I am building stable abundance. I deserve comfort and pleasure. I grow through gentle cultivation, not crisis. My worth is inherent, not earned through intensity."
+        affirmation: "Estoy construyendo abundancia estable. Merezco comodidad y placer. Crezco mediante una cultivación suave, no mediante una crisis. Mi valor es inherente, no se gana mediante la intensidad."
     },
 
     Gemini: {
-        title: "North Node in Gemini - The Student's Path",
-        archetype: "From Preacher to Student",
-        southNode: "Sagittarius",
-        hook: "With North Node in Gemini, this soul's journey is toward learning, curiosity, and open-minded communication. The comfort zone (South Node in Sagittarius) was having answers, teaching truth, and certainty - but growth requires becoming a perpetual student who questions everything.",
+        title: "Nodo Norte en Géminis: el camino del estudiante",
+        archetype: "De predicador a estudiante",
+        southNode: "Sagitario",
+        hook: "Con el Nodo Norte en Géminis, el viaje de esta alma es hacia el aprendizaje, la curiosidad y la comunicación con la mente abierta. La zona de confort (Nodo Sur en Sagitario) era tener respuestas, enseñar verdad y certeza, pero el crecimiento requiere convertirse en un estudiante perpetuo que lo cuestiona todo.",
         
-        pastLifePatterns: `The South Node in Sagittarius reveals past life patterns of being the teacher, philosopher, or guru - the one with answers, vision, and truth. This soul was the preacher, the adventurer, the one who knew the meaning and shared it confidently.
+        pastLifePatterns: `El Nodo Sur en Sagitario revela patrones de vidas pasadas de ser maestro, filósofo o gurú, el que tiene respuestas, visión y verdad. Esta alma era la predicadora, la aventurera, la que conocía el significado y lo compartía con confianza.
 
-In past incarnations, success came through having faith, teaching others, and providing philosophical frameworks. There was natural ability to inspire, to see the big picture, and to offer hope and meaning. The gift was vision and the capacity to uplift others.
+En encarnaciones pasadas, el éxito se lograba teniendo fe, enseñando a otros y brindando marcos filosóficos. Había una capacidad natural para inspirar, ver el panorama general y ofrecer esperanza y significado. El don era la visión y la capacidad de elevar a los demás.
 
-But the shadow of this pattern is dogmatism, preaching without listening, and being so certain of truth that you stop learning. Too many lifetimes of being the teacher created addiction to being right and difficulty admitting you don't know.`,
+Pero la sombra de este patrón es el dogmatismo, predicar sin escuchar y estar tan seguro de la verdad que dejas de aprender. Demasiadas vidas como maestro crearon adicción a tener razón y dificultad para admitir que no se sabe.`,
         
-        oldComfortZone: `The Sagittarius South Node comfort zone manifests as immediately forming opinions, teaching rather than listening, and being uncomfortable with not knowing. This soul may find themselves automatically adopting the teacher/guru role even when it's not appropriate.
+        oldComfortZone: `La zona de confort del Nodo Sur de Sagitario se manifiesta formando opiniones de inmediato, enseñando en lugar de escuchar y sintiéndose incómodo por no saber. Esta alma puede encontrarse adoptando automáticamente el papel de maestro/gurú incluso cuando no sea apropiado.
 
-There's often pattern of seeking one truth system (religion, philosophy, ideology) and defending it against all others. Ambiguity feels threatening; certainty feels necessary. The reflex is to answer rather than ask, to preach rather than discuss.
+A menudo existe un patrón de buscar un sistema de verdad (religión, filosofía, ideología) y defenderlo frente a todos los demás. La ambigüedad se siente amenazadora; la certeza se siente necesaria. El reflejo es responder en lugar de preguntar, predicar en lugar de discutir.
 
-The old pattern is to believe you already know, that learning is beneath you, and that truth is singular rather than multifaceted. Questions feel like weakness; teaching feels like your role. The familiar territory is providing answers rather than exploring questions.`,
+El viejo patrón es creer que ya sabes, que el aprendizaje está por debajo de ti y que la verdad es singular y no multifacética. Las preguntas parecen debilidad; la enseñanza se siente como su papel. El territorio familiar proporciona respuestas en lugar de explorar preguntas.`,
         
-        newDirection: `The Gemini North Node calls this soul to become a perpetual student - curious, open-minded, and always learning. This means asking questions more than answering them, listening more than talking, and being comfortable with not knowing.
+        newDirection: `El Nodo Norte de Géminis llama a esta alma a convertirse en una estudiante perpetua: curiosa, de mente abierta y siempre aprendiendo. Esto significa hacer preguntas más que responderlas, escuchar más que hablar y sentirse cómodo sin saber.
 
-Growth requires developing genuine curiosity about perspectives different from yours. It's about gathering information before forming opinions, staying local and engaged with immediate environment, and communicating as exchange rather than sermon.
+El crecimiento requiere desarrollar una curiosidad genuina sobre perspectivas diferentes a la suya. Se trata de recopilar información antes de formar opiniones, permanecer local y comprometido con el entorno inmediato y comunicar como intercambio en lugar de sermón.
 
-The journey is toward discovering that truth is multifaceted, that everyone has something to teach you, and that admitting "I don't know" is wisdom, not weakness. It's student training for someone who was taught to be teacher.`,
+El viaje es hacia el descubrimiento de que la verdad es multifacética, que todo el mundo tiene algo que enseñarte y que admitir "no sé" es sabiduría, no debilidad. Es la formación estudiantil para alguien a quien le enseñaron a ser maestro.`,
         
-        evolutionaryGoal: `The ultimate goal is to become someone who learns from everyone and everything, who communicates to understand rather than convince, and who remains intellectually flexible. The Gemini development doesn't negate Sagittarius vision - it makes it nuanced.
+        evolutionaryGoal: `El objetivo final es convertirse en alguien que aprende de todos y de todo, que se comunica para comprender en lugar de convencer y que permanece intelectualmente flexible. El desarrollo de Géminis no niega la visión de Sagitario, sino que la matiza.
 
-This soul is learning that real wisdom comes from staying curious, that preaching prevents learning, and that local, immediate experiences matter as much as grand philosophies. The teacher becomes student, and paradoxically, that makes the teaching more profound.
+Esta alma está aprendiendo que la verdadera sabiduría proviene de la curiosidad, que la predicación impide el aprendizaje y que las experiencias locales e inmediatas importan tanto como las grandes filosofías. El maestro se convierte en alumno y, paradójicamente, eso hace que la enseñanza sea más profunda.
 
-Success looks like: asking genuine questions, changing your mind based on new information, learning from anyone, enjoying not knowing, communicating clearly, and staying present. The evolved expression is wise teacher who remains humble student.`,
+El éxito se parece a: hacer preguntas genuinas, cambiar de opinión basándose en nueva información, aprender de cualquiera, disfrutar del no saber, comunicarse con claridad y permanecer presente. La expresión evolucionada es maestro sabio que sigue siendo estudiante humilde.`,
         
-        challenges: `The primary challenge is releasing need to have answers and be right. Every time growth calls for saying "I don't know" or changing your mind, old conditioning wants to defend certainty. Learning that flexibility is wisdom is constant work.
+        challenges: `El principal desafío es liberar la necesidad de tener respuestas y tener razón. Cada vez que el crecimiento exige decir "no sé" o cambiar de opinión, el viejo condicionamiento quiere defender la certeza. Aprender que la flexibilidad es sabiduría es un trabajo constante.
 
-Listening without immediately forming judgment is another major hurdle. The Sagittarius pattern is to hear enough to categorize then stop listening. Growth requires actually hearing people fully before responding.
+Escuchar sin emitir un juicio inmediato es otro obstáculo importante. El patrón de Sagitario es escuchar lo suficiente para categorizar y luego dejar de escuchar. El crecimiento requiere escuchar plenamente a las personas antes de responder.
 
-Staying present and local rather than escaping into philosophies or travel is difficult. The old pattern seeks meaning in the distance; growth requires finding it here and now in everyday interactions.`,
+Es difícil mantenerse presente y local en lugar de escapar a filosofías o viajar. El viejo patrón busca significado en la distancia; el crecimiento requiere encontrarlo aquí y ahora en las interacciones cotidianas.`,
         
-        relationships: `In relationships, this North Node requires learning to have conversations rather than deliver sermons. This means asking your partner questions, being genuinely curious about their perspective, and not always needing to be the wise one.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a tener conversaciones en lugar de dar sermones. Esto significa hacerle preguntas a tu pareja, sentir verdadera curiosidad por su perspectiva y no tener que ser siempre el sabio.
 
-The growth edge is admitting when you're wrong, saying you don't know, and learning from your partner rather than always teaching them. It's valuing their local, practical wisdom alongside your philosophical insights.
+La ventaja del crecimiento es admitir cuando te equivocas, decir que no lo sabes y aprender de tu pareja en lugar de enseñarle siempre. Es valorar su sabiduría práctica local junto con sus conocimientos filosóficos.
 
-The gift you bring to relationships once evolved is the Sagittarius inspiration combined with Gemini curiosity. You create partnerships where both people teach and learn, where truth is co-discovered, where certainty makes room for wonder.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la inspiración de Sagitario combinada con la curiosidad de Géminis. Creas asociaciones donde ambas personas enseñan y aprenden, donde la verdad se descubre conjuntamente, donde la certeza deja lugar al asombro.`,
         
-        careerPath: `Professionally, this North Node calls toward work involving communication, writing, teaching (as facilitator not preacher), or gathering and sharing information. Journalism, education, sales, or any field requiring daily learning serves this path.
+        careerPath: `Profesionalmente, este Nodo Norte llama al trabajo que involucra comunicación, escritura, enseñanza (como facilitador, no predicador) o recopilación y intercambio de información. El periodismo, la educación, las ventas o cualquier campo que requiera un aprendizaje diario sirve a este camino.
 
-The key is roles where you must stay current, learn constantly, and communicate clearly rather than philosophize. Teaching works if it's about drawing knowledge out of students rather than imposing your truth.
+La clave son los roles en los que debes mantenerte actualizado, aprender constantemente y comunicarte con claridad en lugar de filosofar. La enseñanza funciona si se trata de extraer conocimiento de los estudiantes en lugar de imponer su verdad.
 
-The career challenge is staying in beginner's mind rather than expert mindset. Success requires valuing what you're learning today as much as what you knew yesterday.`,
+El desafío profesional es permanecer en la mente de principiante en lugar de en la mentalidad de experto. El éxito requiere valorar lo que estás aprendiendo hoy tanto como lo que sabías ayer.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that wisdom includes admitting you don't know. Certainty can be ego; curiosity can be spirituality. Questions are as sacred as answers.
+        spiritualLesson: `La lección espiritual de este eje nodal es que la sabiduría incluye admitir que no se sabe. La certeza puede ser ego; la curiosidad puede ser espiritualidad. Las preguntas son tan sagradas como las respuestas.
 
-The deeper teaching is that meaning is found in the everyday, not just the exotic or philosophical. The Sagittarius pattern taught you to seek truth in the distance; the Gemini path teaches you it's right here in conversation, in books, in daily learning.
+La enseñanza más profunda es que el significado se encuentra en lo cotidiano, no sólo en lo exótico o filosófico. El patrón de Sagitario te enseñó a buscar la verdad en la distancia; El camino de Géminis te enseña que está aquí en la conversación, en los libros y en el aprendizaje diario.
 
-Ultimately, this placement is about learning that staying curious keeps you alive and growing. The preacher who becomes student discovers truth is richer and more complex than any single philosophy can capture.`,
+En última instancia, esta colocación se trata de aprender que mantener la curiosidad te mantiene vivo y creciendo. El predicador que se convierte en estudiante descubre que la verdad es más rica y compleja de lo que cualquier filosofía puede captar.`,
         
-        affirmation: "I remain curious and open. I learn from everyone and everything. I ask more than I answer. My wisdom deepens as I release need to be right and embrace the joy of not knowing."
+        affirmation: "Sigo siendo curioso y abierto. Aprendo de todos y de todo. Pregunto más de lo que respondo. Mi sabiduría se profundiza a medida que libero la necesidad de tener razón y acepto la alegría de no saber."
     },
 
     Cancer: {
-        title: "North Node in Cancer - The Nurturer's Path",
-        archetype: "From Authority to Caregiver",
-        southNode: "Capricorn",
-        hook: "With North Node in Cancer, this soul's journey is toward emotional connection, nurturing, and creating home. The comfort zone (South Node in Capricorn) was achievement, authority, and emotional control - but growth requires developing emotional intelligence and allowing vulnerability.",
+        title: "Nodo norte en cáncer: el camino del cuidador",
+        archetype: "De autoridad a cuidador",
+        southNode: "Capricornio",
+        hook: "Con el Nodo Norte en Cáncer, el viaje de esta alma es hacia la conexión emocional, la crianza y la creación de un hogar. La zona de confort (nodo sur en Capricornio) era el logro, la autoridad y el control emocional, pero el crecimiento requiere desarrollar la inteligencia emocional y permitir la vulnerabilidad.",
         
-        pastLifePatterns: `The South Node in Capricorn reveals past life patterns of being the authority, the achiever, the one who had it all together professionally. This soul was the leader, manager, or public figure whose value came through accomplishment and control.
+        pastLifePatterns: `El Nodo Sur en Capricornio revela patrones de vidas pasadas de ser la autoridad, el triunfador, el que lo tenía todo en orden profesionalmente. Esta alma era el líder, gerente o figura pública cuyo valor provenía de los logros y el control.
 
-In past incarnations, success came through discipline, responsibility, and public achievement. There was natural ability to lead, organize, and accomplish. The gift was competence and the capacity to build structures that serve.
+En encarnaciones pasadas, el éxito se produjo a través de la disciplina, la responsabilidad y los logros públicos. Había una capacidad natural para liderar, organizar y lograr. El don fue la competencia y la capacidad de construir estructuras que sirvan.
 
-But the shadow of this pattern is emotional suppression, workaholism, and inability to show vulnerability. Too many lifetimes of being the authority created disconnection from feelings and difficulty receiving care.`,
+Pero la sombra de este patrón es la supresión emocional, la adicción al trabajo y la incapacidad de mostrar vulnerabilidad. Demasiadas vidas siendo autoridad crearon desconexión de los sentimientos y dificultad para recibir atención.`,
         
-        oldComfortZone: `The Capricorn South Node comfort zone manifests as prioritizing career over family, suppressing emotions to maintain control, and measuring worth through achievement. This soul may find themselves automatically taking leadership roles even in personal relationships.
+        oldComfortZone: `La zona de confort del Nodo Sur de Capricornio se manifiesta dando prioridad a la carrera profesional sobre la familia, reprimiendo las emociones para mantener el control y midiendo el valor a través de los logros. Esta alma puede encontrarse automáticamente asumiendo roles de liderazgo incluso en las relaciones personales.
 
-There's often pattern of emotional unavailability, difficulty asking for help, and being the strong one who doesn't need anything. Vulnerability feels weak; authority feels necessary. The reflex is to achieve rather than feel, to control rather than nurture.
+A menudo hay un patrón de indisponibilidad emocional, dificultad para pedir ayuda y ser el fuerte que no necesita nada. La vulnerabilidad se siente débil; la autoridad se siente necesaria. El reflejo es lograr más que sentir, controlar más que nutrir.
 
-The old pattern is to believe success means career achievement, that emotions are inconvenient, and that being needed is better than needing. Home feels like a place to rest between work; family feels like a responsibility rather than a source of joy.`,
+El viejo patrón es creer que el éxito significa un logro profesional, que las emociones son inconvenientes y que ser necesitado es mejor que necesitar. El hogar se siente como un lugar para descansar entre el trabajo; La familia se siente más como una responsabilidad que como una fuente de alegría.`,
         
-        newDirection: `The Cancer North Node calls this soul to develop emotional intelligence, create nurturing environments, and prioritize family and feelings. This means learning to show vulnerability, ask for emotional support, and value home life as much as career.
+        newDirection: `El Nodo Norte de Cáncer llama a esta alma a desarrollar inteligencia emocional, crear ambientes enriquecedores y priorizar la familia y los sentimientos. Esto significa aprender a mostrar vulnerabilidad, pedir apoyo emocional y valorar la vida hogareña tanto como la carrera.
 
-Growth requires connecting with your own emotions and others'. It's about creating a home that feels like sanctuary, developing nurturing abilities, and allowing yourself to need and be needed emotionally, not just practically.
+El crecimiento requiere conectarse con las emociones propias y las de los demás. Se trata de crear un hogar que se sienta como un santuario, desarrollar habilidades de crianza y permitirse necesitar y ser necesitado emocionalmente, no sólo en la práctica.
 
-The journey is toward discovering that feelings matter, that vulnerability is strength, and that your value isn't only in what you achieve. It's learning to mother yourself and others, to create belonging, to prioritize emotional connection.`,
+El viaje es hacia el descubrimiento de que los sentimientos importan, que la vulnerabilidad es fuerza y ​​que tu valor no está sólo en lo que logras. Es aprender a ser madre de uno mismo y de los demás, a crear pertenencia, a priorizar la conexión emocional.`,
         
-        evolutionaryGoal: `The ultimate goal is to become emotionally available and nurturing while maintaining the Capricorn competence. The Cancer development doesn't negate professional achievement - it balances it with emotional fulfillment.
+        evolutionaryGoal: `El objetivo final es volverse emocionalmente disponible y enriquecedor manteniendo al mismo tiempo la competencia de Capricornio. El desarrollo de Cáncer no niega los logros profesionales: los equilibra con la satisfacción emocional.
 
-This soul is learning that true success includes emotional intimacy, that leadership can include vulnerability, and that creating a loving home is as important as building a career. The authority becomes caregiver, and paradoxically, that makes leadership more effective.
+Esta alma está aprendiendo que el verdadero éxito incluye intimidad emocional, que el liderazgo puede incluir vulnerabilidad y que crear un hogar amoroso es tan importante como construir una carrera. La autoridad se convierte en cuidadora y, paradójicamente, eso hace que el liderazgo sea más eficaz.
 
-Success looks like: emotional vulnerability, creating nurturing home, prioritizing family, showing feelings, asking for help, and being available emotionally. The evolved expression is accomplished professional who is also present parent/partner/friend.`,
+El éxito se manifiesta en: vulnerabilidad emocional, crear un hogar acogedor, priorizar la familia, mostrar sentimientos, pedir ayuda y estar disponible emocionalmente. La expresión evolucionada es la de un profesional consumado que también es padre/pareja/amigo presente.`,
         
-        challenges: `The primary challenge is releasing identity as the authority and allowing yourself to be vulnerable. Every time growth calls for showing emotion or admitting need, old conditioning says that's weakness. Learning that vulnerability is courage is profound work.
+        challenges: `El principal desafío es liberar la identidad como autoridad y permitirse ser vulnerable. Cada vez que el crecimiento requiere mostrar emoción o admitir una necesidad, el viejo condicionamiento dice que eso es debilidad. Aprender que la vulnerabilidad es coraje es un trabajo profundo.
 
-Prioritizing emotional life over career is another major hurdle. The Capricorn pattern wants to always work harder, achieve more, maintain control. Growth requires sometimes choosing family dinner over important meeting, presence over productivity.
+Dar prioridad a la vida emocional sobre la carrera es otro obstáculo importante. El patrón Capricornio siempre quiere trabajar más duro, lograr más y mantener el control. El crecimiento requiere a veces elegir la cena familiar en lugar de una reunión importante, la presencia en lugar de la productividad.
 
-Developing emotional literacy when you were trained to suppress feelings is difficult. Learning to name emotions, express them appropriately, and value emotional intelligence as much as professional competence is essential growth.`,
+Desarrollar la alfabetización emocional cuando estás entrenado para reprimir los sentimientos es difícil. Aprender a nombrar las emociones, expresarlas adecuadamente y valorar la inteligencia emocional tanto como la competencia profesional es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node requires learning to be emotionally present and vulnerable. This means sharing your feelings, admitting when you're hurt or scared, and allowing partners to see you not being strong.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a estar emocionalmente presente y vulnerable. Esto significa compartir tus sentimientos, admitir cuando estás herido o asustado y permitir que tus socios vean que no eres fuerte.
 
-The growth edge is being the one who's nurtured sometimes rather than always nurturing others practically while staying emotionally distant. It's receiving emotional support and letting people take care of you.
+La ventaja del crecimiento es ser aquel que a veces es nutrido en lugar de nutrir siempre a los demás prácticamente mientras se mantiene emocionalmente distante. Es recibir apoyo emocional y dejar que la gente te cuide.
 
-The gift you bring to relationships once evolved is the Capricorn stability combined with Cancer emotional depth. You create partnerships that are both solid and intimate, where achievement is balanced with emotional connection.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la estabilidad de Capricornio combinada con la profundidad emocional de Cáncer. Crea asociaciones que son sólidas e íntimas, donde el logro se equilibra con la conexión emocional.`,
         
-        careerPath: `Professionally, this North Node calls toward work involving nurturing, family, emotions, or creating home-like environments. Therapy, nursing, hospitality, real estate, or family business can serve this path - but it also works in any field if you prioritize emotional connection.
+        careerPath: `Profesionalmente, este Nodo Norte llama hacia trabajos que involucran crianza, familia, emociones o creación de ambientes hogareños. La terapia, la enfermería, la hostelería, el sector inmobiliario o los negocios familiares pueden servir en este camino, pero también funcionan en cualquier campo si se prioriza la conexión emocional.
 
-The key is bringing empathy and emotional availability to work rather than seeing career as separate from emotions. Creating work cultures that feel like family or working from home can serve this nodal path.
+La clave es aportar empatía y disponibilidad emocional al trabajo en lugar de ver la carrera como algo separado de las emociones. Crear culturas laborales que se sientan como en familia o trabajar desde casa puede contribuir a este camino nodal.
 
-The career challenge is not letting work consume you at expense of family and emotional life. Success requires choosing roles that allow emotional presence and family priority.`,
+El desafío profesional es no dejar que el trabajo te consuma a expensas de la vida familiar y emocional. El éxito requiere elegir roles que permitan presencia emocional y prioridad familiar.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that feelings are sacred and emotional connection is as important as worldly achievement. You don't have to earn love through accomplishment - you deserve it for existing.
+        spiritualLesson: `La lección espiritual de este eje nodal es que los sentimientos son sagrados y la conexión emocional es tan importante como los logros mundanos. No tienes que ganarte el amor a través de los logros: lo mereces por existir.
 
-The deeper teaching is that vulnerability is strength, not weakness. The Capricorn pattern taught you about authority and achievement; the Cancer path teaches you that power without heart is hollow.
+La enseñanza más profunda es que la vulnerabilidad es fortaleza, no debilidad. El patrón de Capricornio te enseñó sobre la autoridad y los logros; El camino de Cáncer te enseña que el poder sin corazón es vacío.
 
-Ultimately, this placement is about learning that creating loving home and emotional connections IS success, not something that happens after career success. The home you create becomes the foundation for all else.`,
+En última instancia, esta colocación se trata de aprender que crear conexiones amorosas en el hogar y emocionales ES el éxito, no algo que sucede después del éxito profesional. El hogar que creas se convierte en la base de todo lo demás.`,
         
-        affirmation: "I am emotionally available and vulnerable. I create nurturing home. I prioritize family and feelings. My worth isn't only in achievement - I am valuable simply for being, for caring, for loving."
+        affirmation: "Estoy emocionalmente disponible y vulnerable. Creo un hogar acogedor. Priorizo ​​la familia y los sentimientos. Mi valor no está sólo en los logros: soy valioso simplemente por ser, por preocuparme, por amar."
     },
 
     Leo: {
-        title: "North Node in Leo - The Star's Path",
-        archetype: "From Observer to Performer",
-        southNode: "Aquarius",
-        hook: "With North Node in Leo, this soul's journey is toward creative self-expression, following the heart, and individual recognition. The comfort zone (South Node in Aquarius) was the group, detachment, and suppressing individual needs - but growth requires becoming unapologetically yourself and shining.",
+        title: "Nodo Norte en Leo - El camino de las estrellas",
+        archetype: "De observador a intérprete",
+        southNode: "Acuario",
+        hook: "Con el Nodo Norte en Leo, el viaje de esta alma es hacia la autoexpresión creativa, siguiendo el corazón y el reconocimiento individual. La zona de confort (Nodo Sur en Acuario) era el grupo, el desapego y la supresión de las necesidades individuales, pero el crecimiento requiere volverse uno mismo y brillar sin pedir disculpas.",
         
-        pastLifePatterns: `The South Node in Aquarius reveals past life patterns of being part of the collective, prioritizing group over self, and maintaining emotional detachment. This soul was the revolutionary, the humanitarian, the one who served the many at expense of the one.
+        pastLifePatterns: `El Nodo Sur en Acuario revela patrones de vidas pasadas de ser parte del colectivo, priorizar el grupo sobre uno mismo y mantener el desapego emocional. Esta alma era la revolucionaria, la humanitaria, la que servía a muchos a expensas de uno.
 
-In past incarnations, success came through group contribution, intellectual understanding, and staying detached from personal drama. There was natural ability to see the big picture, honor all perspectives equally, and innovate. The gift was vision for humanity's future.
+En encarnaciones pasadas, el éxito se produjo a través de la contribución del grupo, la comprensión intelectual y el mantenerse alejado del drama personal. Existía una capacidad natural para ver el panorama general, respetar todas las perspectivas por igual e innovar. El regalo fue una visión para el futuro de la humanidad.
 
-But the shadow of this pattern is suppressing individual needs for the group, emotional unavailability, and inability to take center stage. Too many lifetimes of serving the collective created difficulty honoring your unique heart and creative expression.`,
+Pero la sombra de este patrón es la supresión de las necesidades individuales para el grupo, la indisponibilidad emocional y la incapacidad de ocupar un lugar central. Demasiadas vidas sirviendo al colectivo crearon dificultades para honrar su corazón único y su expresión creativa.`,
         
-        oldComfortZone: `The Aquarius South Node comfort zone manifests as always thinking of the group, intellectualizing emotions, and being uncomfortable with personal recognition. This soul may automatically deflect attention back to the team or cause.
+        oldComfortZone: `La zona de confort del Nodo Sur de Acuario se manifiesta pensando siempre en el grupo, intelectualizando las emociones y sintiéndose incómodo con el reconocimiento personal. Esta alma puede automáticamente desviar la atención hacia el equipo o la causa.
 
-There's often pattern of having many acquaintances but few deep connections, staying emotionally distant, and suppressing personal desires that don't serve the collective. Spotlight feels wrong; blending in feels right. The reflex is to think rather than feel, to serve humanity rather than self.
+A menudo existe un patrón de tener muchos conocidos pero pocas conexiones profundas, permanecer emocionalmente distante y suprimir deseos personales que no sirven al colectivo. Spotlight se siente mal; integrarse se siente bien. El reflejo es pensar en lugar de sentir, servir a la humanidad en lugar de a uno mismo.
 
-The old pattern is to believe individual needs are selfish, that emotions are illogical, and that standing out is egotistical. Heart desires feel frivolous; group consensus feels essential. The familiar territory is being one of many rather than the one.`,
+El viejo patrón es creer que las necesidades individuales son egoístas, que las emociones son ilógicas y que destacar es egoísta. Los deseos del corazón parecen frívolos; El consenso del grupo se siente esencial. El territorio familiar está siendo uno de muchos más que uno.`,
         
-        newDirection: `The Leo North Node calls this soul to develop creative self-expression, follow the heart even when it's not logical, and allow yourself to be seen and celebrated. This means creating for the joy of it, expressing your unique gifts, and being comfortable in the spotlight.
+        newDirection: `El Nodo Norte de Leo llama a esta alma a desarrollar la autoexpresión creativa, seguir el corazón incluso cuando no sea lógico y permitirse ser visto y celebrado. Esto significa crear por el placer de hacerlo, expresar tus dones únicos y sentirte cómodo en el centro de atención.
 
-Growth requires prioritizing personal joy and creative expression over group needs sometimes. It's about developing your individual talents, allowing your heart to lead, and being willing to shine individually even if it means standing out from the collective.
+El crecimiento requiere a veces priorizar la alegría personal y la expresión creativa sobre las necesidades del grupo. Se trata de desarrollar tus talentos individuales, permitir que tu corazón lidere y estar dispuesto a brillar individualmente incluso si eso significa destacar entre el colectivo.
 
-The journey is toward discovering what brings YOU joy, what YOUR heart wants, and what makes YOU special - independent of how it serves the group. It's star training for someone who was taught to be ensemble member.`,
+El viaje es hacia descubrir lo que te trae alegría, lo que TU corazón quiere y lo que te hace especial, independientemente de cómo sirve al grupo. Es un entrenamiento estrella para alguien a quien le enseñaron a ser miembro de un conjunto.`,
         
-        evolutionaryGoal: `The ultimate goal is to become creatively expressive and individually radiant while maintaining Aquarius humanitarian vision. The Leo development doesn't negate group consciousness - it ensures you have a self to contribute.
+        evolutionaryGoal: `El objetivo final es volverse creativamente expresivo e individualmente radiante manteniendo al mismo tiempo la visión humanitaria de Acuario. El desarrollo de Leo no niega la conciencia de grupo: garantiza que usted tenga un yo que pueda contribuir.
 
-This soul is learning that you serve the collective better when you're expressing your unique gifts than when you're suppressing them. The most revolutionary act is sometimes being unapologetically yourself.
+Esta alma está aprendiendo que sirves mejor al colectivo cuando expresas tus dones únicos que cuando los suprimes. A veces, el acto más revolucionario es ser uno mismo sin pedir disculpas.
 
-Success looks like: creative expression, following your heart, accepting recognition graciously, prioritizing joy, developing your talents, and being seen. The evolved expression is someone who shines individually and inspires others to do the same.`,
+El éxito se ve así: expresión creativa, seguir tu corazón, aceptar el reconocimiento con gracia, priorizar la alegría, desarrollar tus talentos y ser visto. La expresión evolucionada es alguien que brilla individualmente e inspira a otros a hacer lo mismo.`,
         
-        challenges: `The primary challenge is releasing guilt about being "selfish" or standing out. Every time growth calls for putting your joy or expression first, old conditioning says you should be thinking of the group. Learning that your joy serves the world is profound work.
+        challenges: `El principal desafío es liberarse de la culpa por ser "egoísta" o destacarse. Cada vez que el crecimiento requiere que antepongas tu alegría o tu expresión, el viejo condicionamiento dice que debes pensar en el grupo. Aprender que tu alegría sirve al mundo es un trabajo profundo.
 
-Developing comfort with emotions and heart-centered decision-making is another major hurdle. The Aquarius pattern intellectualizes everything; growth requires sometimes following your heart even when it's not logical.
+Desarrollar comodidad con las emociones y la toma de decisiones centrada en el corazón es otro obstáculo importante. El patrón de Acuario lo intelectualiza todo; El crecimiento requiere a veces seguir tu corazón incluso cuando no es lógico.
 
-Accepting personal recognition without deflecting is difficult. The old pattern wants to give credit to the team or cause. Learning to receive applause and acknowledge your individual contribution is essential growth.`,
+Aceptar el reconocimiento personal sin desviarse es difícil. El viejo patrón quiere dar crédito al equipo o a la causa. Aprender a recibir aplausos y reconocer su contribución individual es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node requires learning to be emotionally available and romantically engaged rather than intellectually distant. This means showing your heart, expressing affection demonstratively, and allowing relationships to be dramatic and fun.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a estar emocionalmente disponible y comprometido románticamente en lugar de distante intelectualmente. Esto significa mostrar su corazón, expresar afecto de manera demostrativa y permitir que las relaciones sean dramáticas y divertidas.
 
-The growth edge is choosing partners who celebrate your specialness rather than those who need you to blend in or serve their cause. It's being the star sometimes rather than always the supporter.
+La ventaja del crecimiento es elegir socios que celebren su especialidad en lugar de aquellos que necesitan que usted se integre o sirva a su causa. Se trata de ser a veces la estrella y no siempre el seguidor.
 
-The gift you bring to relationships once evolved is the Aquarius acceptance of all people combined with Leo warmth and heart. You create partnerships where both people can shine, where emotional expression is valued, where you celebrate each other's specialness.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la aceptación de Acuario de todas las personas combinada con la calidez y el corazón de Leo. Creas asociaciones donde ambas personas pueden brillar, donde se valora la expresión emocional, donde celebran lo especial de cada uno.`,
         
-        careerPath: `Professionally, this North Node calls toward creative fields, performance, leadership that inspires, or work where you can be individually recognized. Entertainment, arts, motivational speaking, or entrepreneurship serves this path.
+        careerPath: `En lo profesional, este Nodo Norte llama hacia campos creativos, desempeño, liderazgo que inspire o trabajos donde puedas ser reconocido individualmente. El entretenimiento, las artes, las charlas motivacionales o el emprendimiento sirven en este camino.
 
-The key is roles where you can't hide in the collective, where your individual expression and talents are what's valued. Work that requires being visible, creative, and authentically yourself serves this nodal path.
+La clave son los roles en los que no puedes esconderte en el colectivo, donde lo que se valora es tu expresión individual y tus talentos. El trabajo que requiere ser visible, creativo y auténticamente uno mismo sirve a este camino nodal.
 
-The career challenge is allowing yourself to be the star rather than always being team player. Success requires comfort with personal recognition and individual achievement.`,
+El desafío profesional es permitirse ser la estrella en lugar de ser siempre un jugador de equipo. El éxito requiere comodidad con el reconocimiento personal y los logros individuales.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that your individual joy and creative expression are sacred. You don't have to justify following your heart or standing out. Your unique light is meant to be seen.
+        spiritualLesson: `La lección espiritual de este eje nodal es que tu alegría individual y tu expresión creativa son sagradas. No tienes que justificar seguir tu corazón o destacarte. Tu luz única está destinada a ser vista.
 
-The deeper teaching is that you serve humanity best when you're being fully yourself. The Aquarius pattern taught you about collective consciousness; the Leo path teaches you that the collective needs your individual brilliance.
+La enseñanza más profunda es que sirves mejor a la humanidad cuando eres plenamente tú mismo. El patrón de Acuario te enseñó sobre la conciencia colectiva; El camino de Leo te enseña que el colectivo necesita tu brillantez individual.
 
-Ultimately, this placement is about learning that creativity, joy, and self-expression aren't frivolous - they're the point. When you shine, you give others permission to shine too. Your individual radiance serves the whole.`,
+En última instancia, esta colocación trata de aprender que la creatividad, la alegría y la autoexpresión no son frívolas: son el objetivo. Cuando brillas, les das permiso a los demás para que también brillen. Tu resplandor individual sirve al todo.`,
         
-        affirmation: "I shine unapologetically. I follow my heart. I express my unique gifts. I accept recognition graciously. My joy and creativity serve the world. I am the star of my own life."
+        affirmation: "Brillo sin disculpas. Sigo mi corazón. Expreso mis dones únicos. Acepto el reconocimiento gentilmente. Mi alegría y creatividad sirven al mundo. Soy la estrella de mi propia vida."
     },
 
     Virgo: {
-        title: "North Node in Virgo - The Path of Sacred Service",
-        archetype: "From Mystic to Practitioner",
-        southNode: "Pisces",
-        hook: "With North Node in Virgo, this soul's journey is toward practical service, discernment, and grounded routines. The comfort zone (South Node in Pisces) was mysticism, escapism, and boundlessness - but growth requires developing discrimination, health habits, and useful skills.",
+        title: "Nodo Norte en Virgo - El Camino del Servicio Sagrado",
+        archetype: "De místico a practicante",
+        southNode: "Piscis",
+        hook: "Con el Nodo Norte en Virgo, el viaje de esta alma es hacia el servicio práctico, el discernimiento y las rutinas sólidas. La zona de confort (Nodo Sur en Piscis) era el misticismo, el escapismo y la inmensidad, pero el crecimiento requiere desarrollar discriminación, hábitos de salud y habilidades útiles.",
         
-        pastLifePatterns: `The South Node in Pisces reveals past life patterns of mysticism, escapism, and merging with the divine or collective unconscious. This soul was the mystic, the martyr, the one who dissolved boundaries and sacrificed self for spiritual unity.
+        pastLifePatterns: `El Nodo Sur en Piscis revela patrones de vidas pasadas de misticismo, escapismo y fusión con el inconsciente divino o colectivo. Esta alma fue la mística, la mártir, la que disolvió las fronteras y se sacrificó por la unidad espiritual.
 
-In past incarnations, success came through faith, surrender, and compassion. There was natural ability to access spiritual realms, feel others' pain, and serve selflessly. The gift was boundless empathy and connection to something greater than self.
+En encarnaciones pasadas, el éxito llegó a través de la fe, la entrega y la compasión. Existía una capacidad natural para acceder a los reinos espirituales, sentir el dolor de los demás y servir desinteresadamente. El regalo fue una empatía ilimitada y una conexión con algo más grande que uno mismo.
 
-But the shadow of this pattern is escapism, victim mentality, and inability to function practically in the material world. Too many lifetimes of spiritual bypassing created difficulty with boundaries, discernment, and embodied living.`,
+Pero la sombra de este patrón es el escapismo, la mentalidad de víctima y la incapacidad de funcionar prácticamente en el mundo material. Demasiadas vidas de evasión espiritual crearon dificultades con los límites, el discernimiento y la vida encarnada.`,
         
-        oldComfortZone: `The Pisces South Node comfort zone manifests as escaping into spirituality, fantasy, or substances rather than dealing with practical reality. This soul may find themselves spacing out, avoiding details, or martyring themselves.
+        oldComfortZone: `La zona de confort del Nodo Sur de Piscis se manifiesta como un escape a la espiritualidad, la fantasía o las sustancias en lugar de lidiar con la realidad práctica. Esta alma puede encontrarse distraída, evitando detalles o martirizándose.
 
-There's often pattern of poor boundaries, absorbing others' energies, and having vague sense of being victim to forces beyond control. Practical tasks feel harsh; spiritual realms feel like home. The reflex is to escape, merge, or surrender rather than analyze and organize.
+A menudo hay un patrón de límites deficientes, de absorber las energías de los demás y de tener una vaga sensación de ser víctima de fuerzas que escapan a nuestro control. Las tareas prácticas resultan duras; Los reinos espirituales se sienten como en casa. El reflejo es escapar, fusionarse o rendirse en lugar de analizar y organizar.
 
-The old pattern is to believe suffering is noble, that boundaries are unspiritual, and that the material world is less real than spiritual realms. Organization feels petty; routine feels like prison. The familiar territory is beautiful confusion rather than practical clarity.`,
+El viejo patrón es creer que el sufrimiento es noble, que las fronteras no son espirituales y que el mundo material es menos real que los reinos espirituales. La organización parece mezquina; La rutina se siente como una prisión. El territorio familiar es una hermosa confusión más que una claridad práctica.`,
         
-        newDirection: `The Virgo North Node calls this soul to develop practical skills, healthy routines, and discernment. This means learning to function efficiently in the material world, create order, and serve others in practical ways rather than vague spiritual ones.
+        newDirection: `El Nodo Norte de Virgo llama a esta alma a desarrollar habilidades prácticas, rutinas saludables y discernimiento. Esto significa aprender a funcionar eficientemente en el mundo material, crear orden y servir a los demás de manera práctica en lugar de vagamente espiritual.
 
-Growth requires developing strong boundaries, analytical thinking, and attention to detail. It's about creating healthy daily habits, organizing your life, and being useful in concrete ways. It's about being discerning about who and what you give your energy to.
+El crecimiento requiere desarrollar límites sólidos, pensamiento analítico y atención al detalle. Se trata de crear hábitos diarios saludables, organizar tu vida y ser útil de manera concreta. Se trata de discernir sobre a quién y a qué le das tu energía.
 
-The journey is toward discovering that the body is sacred, that organization is spiritual, and that practical service is as holy as prayer. It's learning to analyze, discriminate, and create healthy systems.`,
+El viaje es hacia el descubrimiento de que el cuerpo es sagrado, que la organización es espiritual y que el servicio práctico es tan santo como la oración. Es aprender a analizar, discriminar y crear sistemas saludables.`,
         
-        evolutionaryGoal: `The ultimate goal is to bring Pisces spiritual gifts into practical Virgo service - becoming a healer who shows up on time with clean tools, a mystic who pays bills and maintains health. The Virgo development doesn't negate spirituality - it embodies it.
+        evolutionaryGoal: `El objetivo final es llevar los dones espirituales de Piscis al servicio práctico de Virgo: convertirse en un sanador que llega a tiempo con herramientas limpias, un místico que paga facturas y mantiene la salud. El desarrollo de Virgo no niega la espiritualidad: la encarna.
 
-This soul is learning that true service requires being functional, that compassion includes having boundaries, and that the body and material world are sacred temples requiring maintenance.
+Esta alma está aprendiendo que el verdadero servicio requiere ser funcional, que la compasión incluye tener límites y que el cuerpo y el mundo material son templos sagrados que requieren mantenimiento.
 
-Success looks like: healthy routines, practical skills, strong boundaries, analytical thinking, useful service, and organized life. The evolved expression is grounded mystic who serves the divine through humble, practical work.`,
+El éxito se manifiesta en: rutinas saludables, habilidades prácticas, límites fuertes, pensamiento analítico, servicio útil y vida organizada. La expresión evolucionada es la de un místico arraigado que sirve a lo divino a través de un trabajo humilde y práctico.`,
         
-        challenges: `The primary challenge is releasing escapism and fantasy for practical engagement with reality. Every time growth calls for organizing or analyzing, old conditioning wants to space out. Learning that details matter is constant work.
+        challenges: `El principal desafío es liberar el escapismo y la fantasía para un compromiso práctico con la realidad. Cada vez que el crecimiento exige organización o análisis, el viejo condicionamiento quiere espaciarse. Aprender que los detalles importan es un trabajo constante.
 
-Developing boundaries when you were trained to merge is another major hurdle. Growth requires sometimes saying no, protecting your energy, and serving selectively rather than indiscriminately.
+Desarrollar límites cuando fuiste entrenado para fusionarte es otro obstáculo importante. El crecimiento requiere a veces decir no, proteger su energía y servir de forma selectiva en lugar de indiscriminadamente.
 
-Creating and maintaining routines when you crave fluidity is difficult. The old pattern resists structure; growth requires discovering that routine creates freedom and that healthy habits support spiritual work.`,
+Crear y mantener rutinas cuando anhelas fluidez es difícil. El viejo patrón se resiste a la estructura; El crecimiento requiere descubrir que la rutina crea libertad y que los hábitos saludables apoyan el trabajo espiritual.`,
         
-        relationships: `In relationships, this North Node requires learning to have clear boundaries and communicate practical needs. This means discussing logistics, division of labor, and expectations rather than assuming spiritual connection handles everything.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a tener límites claros y comunicar necesidades prácticas. Esto significa discutir la logística, la división del trabajo y las expectativas en lugar de asumir que la conexión espiritual se encarga de todo.
 
-The growth edge is not losing yourself in partners, not martyring yourself, and not enabling dysfunctional behavior under guise of compassion. It's learning that true love includes healthy boundaries.
+La ventaja del crecimiento es no perderse en la pareja, no martirizarse y no permitir comportamientos disfuncionales disfrazados de compasión. Es aprender que el amor verdadero incluye límites saludables.
 
-The gift you bring to relationships once evolved is the Pisces empathy combined with Virgo discernment. You create partnerships that are both spiritually connected and functionally healthy, where serving each other includes practical support.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la empatía de Piscis combinada con el discernimiento de Virgo. Crea asociaciones que están conectadas espiritualmente y funcionalmente saludables, donde servirse mutuamente incluye apoyo práctico.`,
         
-        careerPath: `Professionally, this North Node calls toward healing professions, service roles, or work requiring skill, organization, and attention to detail. Healthcare, accounting, editing, or craftwork serves this path.
+        careerPath: `Profesionalmente, este Nodo Norte llama hacia profesiones curativas, roles de servicio o trabajos que requieren habilidad, organización y atención al detalle. La atención sanitaria, la contabilidad, la edición o la artesanía sirven en este camino.
 
-The key is roles where you must show up consistently, perform specific tasks well, and serve others practically. Work that requires technical skill and daily discipline rather than just spiritual inspiration serves this nodal path.
+La clave son los roles en los que debes presentarte de manera constante, realizar bien tareas específicas y servir a los demás de manera práctica. El trabajo que requiere habilidad técnica y disciplina diaria en lugar de sólo inspiración espiritual sirve a este camino nodal.
 
-The career challenge is maintaining professional boundaries, showing up reliably, and developing actual skills rather than just intuition. Success requires valuing competence and usefulness.`,
+El desafío profesional es mantener los límites profesionales, presentarse de manera confiable y desarrollar habilidades reales en lugar de solo intuición. El éxito requiere valorar la competencia y la utilidad.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that the sacred is in the everyday. Washing dishes can be prayer; organizing your space can be spiritual practice. The body is a temple requiring care.
+        spiritualLesson: `La lección espiritual de este eje nodal es que lo sagrado está en lo cotidiano. Lavar los platos puede ser oración; Organizar tu espacio puede ser una práctica espiritual. El cuerpo es un templo que requiere cuidados.
 
-The deeper teaching is that true service requires being functional. The Pisces pattern taught you about universal love; the Virgo path teaches you that love expressed through practical acts of service is most healing.
+La enseñanza más profunda es que el verdadero servicio requiere ser funcional. El patrón de Piscis te enseñó sobre el amor universal; El camino de Virgo te enseña que el amor expresado a través de actos prácticos de servicio es sumamente sanador.
 
-Ultimately, this placement is about learning that spirituality includes embodiment, that service requires skill, and that organization isn't antithetical to the divine - it honors it.`,
+En última instancia, esta ubicación trata de aprender que la espiritualidad incluye la encarnación, que el servicio requiere habilidad y que la organización no es la antítesis de lo divino: lo honra.`,
         
-        affirmation: "I serve the divine through practical work. I maintain healthy boundaries. I honor my body as sacred temple. My daily routines are spiritual practice. Discernment is compassion."
+        affirmation: "Sirvo a lo divino a través del trabajo práctico. Mantengo límites saludables. Honro mi cuerpo como templo sagrado. Mis rutinas diarias son práctica espiritual. El discernimiento es compasión."
     },
 
     Libra: {
-        title: "North Node in Libra - The Diplomat's Path",
-        archetype: "From Warrior to Peacemaker",
+        title: "Nodo Norte en Libra: el camino del diplomático",
+        archetype: "De guerrero a pacificador",
         southNode: "Aries",
-        hook: "With North Node in Libra, this soul's journey is toward partnership, compromise, and considering others. The comfort zone (South Node in Aries) was independence, doing things your way, and self-focus - but growth requires learning to collaborate and create harmony.",
+        hook: "Con el Nodo Norte en Libra, el viaje de esta alma es hacia la asociación, el compromiso y la consideración de los demás. La zona de confort (nodo sur en Aries) era la independencia, hacer las cosas a tu manera y concentrarte en ti mismo, pero el crecimiento requiere aprender a colaborar y crear armonía.",
         
-        pastLifePatterns: `The South Node in Aries reveals past life patterns of independence, warrior energy, and doing things alone. This soul was the pioneer, the fighter, the one who forged ahead without needing anyone's help or approval.
+        pastLifePatterns: `El Nodo Sur en Aries revela patrones de vidas pasadas de independencia, energía guerrera y hacer cosas solo. Esta alma fue la pionera, la luchadora, la que siguió adelante sin necesitar la ayuda ni la aprobación de nadie.
 
-In past incarnations, success came through courage, quick action, and self-reliance. There was natural ability to lead, initiate, and survive alone. The gift was independence and the capacity to act decisively.
+En encarnaciones pasadas, el éxito se logró mediante el coraje, la acción rápida y la autosuficiencia. Existía una capacidad natural para liderar, iniciar y sobrevivir solo. El regalo fue la independencia y la capacidad de actuar con decisión.
 
-But the shadow of this pattern is inability to partner, difficulty compromising, and believing you must do everything yourself. Too many lifetimes of warrior independence created blindness to others' needs and inability to share power or decision-making.`,
+Pero la sombra de este patrón es la incapacidad de asociarse, la dificultad para llegar a acuerdos y la creencia de que debe hacerlo todo usted mismo. Demasiadas vidas de independencia guerrera crearon ceguera ante las necesidades de los demás e incapacidad para compartir el poder o la toma de decisiones.`,
         
-        oldComfortZone: `The Aries South Node comfort zone manifests as automatic independence, difficulty asking for help, and discomfort with compromise. This soul may find themselves acting unilaterally, not consulting others, or dominating relationships without meaning to.
+        oldComfortZone: `La zona de confort del Nodo Sur de Aries se manifiesta como independencia automática, dificultad para pedir ayuda e incomodidad con el compromiso. Esta alma puede encontrarse actuando unilateralmente, sin consultar a los demás o dominando las relaciones sin querer.
 
-There's often pattern of being the one in charge, making decisions without input, and believing you know best. Partnership feels like weakness; independence feels necessary. The reflex is to do it yourself rather than collaborate.
+A menudo existe el patrón de ser el que está a cargo, tomar decisiones sin participación y creer que usted sabe más. La asociación se siente como una debilidad; la independencia se siente necesaria. El reflejo es hacerlo uno mismo en lugar de colaborar.
 
-The old pattern is to believe considering others slows you down, that compromise means losing, and that needing others means weakness. Teamwork feels frustrating; solo action feels right. The familiar territory is "my way" rather than "our way."`,
+El viejo patrón es creer que considerar a los demás te frena, que ceder significa perder y que necesitar a los demás significa debilidad. El trabajo en equipo resulta frustrante; La acción en solitario se siente bien. El territorio familiar es "a mi manera" y no "a nuestra manera".`,
         
-        newDirection: `The Libra North Node calls this soul to develop partnership skills, diplomatic communication, and genuine consideration of others' perspectives. This means learning to consult, compromise, and create win-win solutions.
+        newDirection: `El Nodo Norte de Libra llama a esta alma a desarrollar habilidades de asociación, comunicación diplomática y consideración genuina de las perspectivas de los demás. Esto significa aprender a consultar, hacer concesiones y crear soluciones beneficiosas para todos.
 
-Growth requires valuing relationships as much as achievements, considering others' needs alongside your own, and developing social grace. It's about learning to share power, make joint decisions, and create beauty and harmony.
+El crecimiento requiere valorar las relaciones tanto como los logros, considerar las necesidades de los demás además de las propias y desarrollar la gracia social. Se trata de aprender a compartir el poder, tomar decisiones conjuntas y crear belleza y armonía.
 
-The journey is toward discovering that partnership makes you stronger, not weaker, that others' input improves outcomes, and that considering their needs doesn't erase yours. It's learning to be "we" while honoring "me."`,
+El viaje consiste en descubrir que la colaboración te hace más fuerte, no más débil, que las aportaciones de los demás mejoran los resultados y que considerar sus necesidades no borra las tuyas. Es aprender a ser "nosotros" mientras nos honramos a "mí".`,
         
-        evolutionaryGoal: `The ultimate goal is to become a skilled partner who can collaborate while maintaining the Aries strength. The Libra development doesn't negate independence - it enhances it through partnership.
+        evolutionaryGoal: `El objetivo final es convertirse en un socio capacitado que pueda colaborar manteniendo la fuerza de Aries. El desarrollo de Libra no niega la independencia: la mejora a través de la asociación.
 
-This soul is learning that true strength includes the ability to compromise, that leadership can be shared, and that beauty and harmony are worth creating. The warrior becomes diplomat, and paradoxically, that increases their effectiveness.
+Esta alma está aprendiendo que la verdadera fuerza incluye la capacidad de comprometerse, que el liderazgo puede ser compartido y que vale la pena crear la belleza y la armonía. El guerrero se vuelve diplomático y, paradójicamente, eso aumenta su eficacia.
 
-Success looks like: healthy partnerships, compromise without resentment, consultation before action, considering others' needs, creating beauty, and diplomatic communication. The evolved expression is strong individual who creates powerful partnerships.`,
+El éxito se manifiesta en: asociaciones saludables, compromiso sin resentimiento, consulta antes de actuar, consideración de las necesidades de los demás, creación de belleza y comunicación diplomática. La expresión evolucionada es un individuo fuerte que crea asociaciones poderosas.`,
         
-        challenges: `The primary challenge is releasing need to be in charge and right. Every time growth calls for compromising or consulting others, old conditioning wants to just do it your way. Learning that cooperation enhances outcomes is constant work.
+        challenges: `El principal desafío es liberar la necesidad de estar a cargo y tener razón. Cada vez que el crecimiento exige comprometerse o consultar a los demás, el viejo condicionamiento simplemente quiere hacerlo a su manera. Aprender que la cooperación mejora los resultados es un trabajo constante.
 
-Slowing down to consider others when you're used to quick independent action is another major hurdle. The Aries pattern wants to act now; growth requires sometimes waiting for input and consensus.
+Dejar de considerar a los demás cuando estás acostumbrado a la acción rápida e independiente es otro obstáculo importante. El patrón de Aries quiere actuar ahora; el crecimiento exige a veces esperar a recibir aportaciones y consenso.
 
-Developing patience with people and processes when you could do it faster alone is difficult. Learning that relationship-building and harmony-creating are valuable, not just efficient action, is essential growth.`,
+Es difícil desarrollar paciencia con las personas y los procesos cuando uno solo podría hacerlo más rápido. Aprender que la construcción de relaciones y la creación de armonía son valiosas, no sólo una acción eficiente, es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node requires learning to truly partner - sharing decisions, power, and space. This means asking "What do you think?" before acting, considering partner's needs, and being willing to compromise.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a asociarse verdaderamente: compartir decisiones, poder y espacio. Esto significa preguntar "¿Qué piensas?" antes de actuar, considerar las necesidades de la pareja y estar dispuesto a hacer concesiones.
 
-The growth edge is not always being the leader, not assuming you know best, and being willing to follow sometimes. It's learning that healthy relationship requires both people having equal say.
+La ventaja del crecimiento no siempre es ser el líder, no asumir que sabes lo que es mejor y, a veces, estar dispuesto a seguirlo. Es aprender que una relación sana requiere que ambas personas tengan la misma voz.
 
-The gift you bring to relationships once evolved is the Aries strength combined with Libra diplomacy. You create partnerships where both people are powerful, where decisions are shared, where independence and togetherness coexist.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la fuerza de Aries combinada con la diplomacia de Libra. Creas asociaciones donde ambas personas son poderosas, donde las decisiones se comparten, donde la independencia y la unión coexisten.`,
         
-        careerPath: `Professionally, this North Node calls toward work requiring collaboration, diplomacy, or creating beauty and harmony. Law, mediation, counseling, design, or any partnership-based business serves this path.
+        careerPath: `Profesionalmente, este Nodo Norte llama hacia trabajos que requieren colaboración, diplomacia o creación de belleza y armonía. El derecho, la mediación, el asesoramiento, el diseño o cualquier negocio de colaboración sirven para este camino.
 
-The key is roles where you can't succeed alone, where you must work with others, consider multiple perspectives, and create consensus. Work requiring social grace and aesthetic sense serves this nodal path.
+La clave son los roles en los que no se puede tener éxito solo, en los que se debe trabajar con otros, considerar múltiples perspectivas y crear consenso. El trabajo que requiere gracia social y sentido estético sirve a este camino nodal.
 
-The career challenge is sharing credit and power rather than doing everything yourself. Success requires valuing collaboration and beauty-creation.`,
+El desafío profesional es compartir el crédito y el poder en lugar de hacerlo todo uno mismo. El éxito requiere valorar la colaboración y la creación de belleza.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that relationship is sacred. You don't have to do everything alone. Partnership doesn't diminish you - it completes you.
+        spiritualLesson: `La lección espiritual de este eje nodal es que la relación es sagrada. No tienes que hacer todo solo. La asociación no te disminuye, te completa.
 
-The deeper teaching is that considering others' needs is strength, not weakness. The Aries pattern taught you about independence; the Libra path teaches you that interdependence is the evolved state.
+La enseñanza más profunda es que considerar las necesidades de los demás es fortaleza, no debilidad. El patrón de Aries te enseñó sobre la independencia; El camino de Libra te enseña que la interdependencia es el estado evolucionado.
 
-Ultimately, this placement is about learning that creating harmony and beauty is spiritual work, that compromise isn't losing, and that partnership allows you to achieve what you never could alone.`,
+En última instancia, esta colocación se trata de aprender que crear armonía y belleza es un trabajo espiritual, que el compromiso no es perder y que la asociación le permite lograr lo que nunca podría lograr solo.`,
         
-        affirmation: "I partner gracefully. I consider others' needs alongside my own. I compromise without resentment. I share power and decisions. My relationships make me stronger."
+        affirmation: "Soy socio con gracia. Considero las necesidades de los demás junto con las mías. Me comprometo sin resentimiento. Comparto el poder y las decisiones. Mis relaciones me hacen más fuerte."
     },
 
     Scorpio: {
-        title: "North Node in Scorpio - The Transformer's Path",
-        archetype: "From Comfort to Depth",
-        southNode: "Taurus",
-        hook: "With North Node in Scorpio, this soul's journey is toward transformation, intimacy, and shared resources. The comfort zone (South Node in Taurus) was stability, simplicity, and self-sufficiency - but growth requires embracing change, depth, and interdependence.",
+        title: "Nodo Norte en Escorpio: el camino del transformador",
+        archetype: "De la comodidad a la profundidad",
+        southNode: "Tauro",
+        hook: "Con el Nodo Norte en Escorpio, el viaje de esta alma es hacia la transformación, la intimidad y los recursos compartidos. La zona de confort (Nodo Sur en Tauro) era la estabilidad, la simplicidad y la autosuficiencia, pero el crecimiento requiere aceptar el cambio, la profundidad y la interdependencia.",
         
-        pastLifePatterns: `The South Node in Taurus reveals past life patterns of building security, enjoying simple pleasures, and relying only on yourself. This soul was the farmer, artisan, or builder who created stability through their own steady effort.
+        pastLifePatterns: `El Nodo Sur en Tauro revela patrones de vidas pasadas en los que se construye seguridad, se disfruta de placeres simples y se confía únicamente en uno mismo. Esta alma era el granjero, el artesano o el constructor que creaba estabilidad mediante su propio esfuerzo constante.
 
-In past incarnations, success came through patience, self-sufficiency, and appreciating material world's pleasures. There was natural ability to work steadily, build resources, and find peace in simplicity. The gift was stability and grounded presence.
+En encarnaciones pasadas, el éxito llegó a través de la paciencia, la autosuficiencia y la apreciación de los placeres del mundo material. Existía una capacidad natural para trabajar de manera constante, generar recursos y encontrar la paz en la simplicidad. El regalo fue estabilidad y presencia sólida.
 
-But the shadow of this pattern is resistance to change, avoiding depth to maintain comfort, and inability to merge or share resources. Too many lifetimes of safe stability created fear of transformation and difficulty with intimacy.`,
+Pero la sombra de este patrón es la resistencia al cambio, el evitar la profundidad para mantener la comodidad y la incapacidad de fusionar o compartir recursos. Demasiadas vidas de estabilidad segura crearon miedo a la transformación y dificultades con la intimidad.`,
         
-        oldComfortZone: `The Taurus South Node comfort zone manifests as clinging to security, avoiding anything that threatens stability, and keeping relationships surface-level. This soul may find themselves accumulating possessions, resisting change, or staying in comfort zone even when growth calls.
+        oldComfortZone: `La zona de confort del Nodo Sur de Tauro se manifiesta como aferrarse a la seguridad, evitar cualquier cosa que amenace la estabilidad y mantener las relaciones superficiales. Esta alma puede encontrarse acumulando posesiones, resistiéndose al cambio o permaneciendo en la zona de confort incluso cuando el crecimiento lo llama.
 
-There's often pattern of financial independence to the point of refusing help, avoiding emotional intensity, and preferring predictable routine over transformative experiences. Change feels threatening; status quo feels safe. The reflex is to maintain rather than transform.
+A menudo existe un patrón de independencia financiera hasta el punto de rechazar ayuda, evitar la intensidad emocional y preferir la rutina predecible a las experiencias transformadoras. El cambio se siente amenazador; El status quo se siente seguro. El reflejo es mantener más que transformar.
 
-The old pattern is to believe safety requires avoiding depth, that change is dangerous, and that depending on others' resources or energies is risky. Transformation feels like loss; stability feels essential. The familiar territory is pleasant surface rather than transformative depth.`,
+El viejo patrón es creer que la seguridad requiere evitar la profundidad, que el cambio es peligroso y que depender de los recursos o energías de otros es arriesgado. La transformación se siente como una pérdida; la estabilidad se siente esencial. El territorio familiar es una superficie agradable más que una profundidad transformadora.`,
         
-        newDirection: `The Scorpio North Node calls this soul to embrace transformation, develop psychological depth, and merge resources and energies with others. This means being willing to let things die so new forms can emerge, diving into emotional depths, and becoming interdependent.
+        newDirection: `El Nodo Norte de Escorpio llama a esta alma a abrazar la transformación, desarrollar profundidad psicológica y fusionar recursos y energías con los demás. Esto significa estar dispuesto a dejar que las cosas mueran para que puedan surgir nuevas formas, sumergirse en profundidades emocionales y volverse interdependiente.
 
-Growth requires developing comfort with intensity, crisis as catalyst, and loss as gateway to rebirth. It's about sharing finances and energies, exploring shadow, and allowing yourself to be changed by intimacy.
+El crecimiento requiere desarrollar la comodidad con intensidad, la crisis como catalizador y la pérdida como puerta de entrada al renacimiento. Se trata de compartir finanzas y energías, explorar las sombras y dejarse cambiar por la intimidad.
 
-The journey is toward discovering that transformation is productive, that depth is nourishing, and that merging with others (financially, sexually, psychologically) opens power you can't access alone. It's learning to die and be reborn.`,
+El viaje es hacia el descubrimiento de que la transformación es productiva, que la profundidad es nutritiva y que fusionarse con otros (financiera, sexual y psicológicamente) abre un poder al que no puedes acceder solo. Es aprender a morir y renacer.`,
         
-        evolutionaryGoal: `The ultimate goal is to become someone who navigates transformation gracefully, accesses deep intimacy, and works skillfully with shared resources - while maintaining Taurus groundedness. The Scorpio development doesn't negate stability - it transforms it.
+        evolutionaryGoal: `El objetivo final es convertirse en alguien que navegue por la transformación con gracia, acceda a una intimidad profunda y trabaje hábilmente con recursos compartidos, manteniendo al mismo tiempo la base de Tauro. El desarrollo de Escorpio no niega la estabilidad: la transforma.
 
-This soul is learning that real security comes from capacity to transform, not from avoiding change. True wealth is sometimes found in merging resources. The deepest pleasures require vulnerability.
+Esta alma está aprendiendo que la verdadera seguridad proviene de la capacidad de transformar, no de evitar el cambio. La verdadera riqueza a veces se encuentra en la fusión de recursos. Los placeres más profundos requieren vulnerabilidad.
 
-Success looks like: embracing transformation, psychological depth, intimate partnerships, shared resources, shadow work, and rebirth capacity. The evolved expression is someone grounded enough to handle intensity, stable enough to risk transformation.`,
+El éxito se ve así: abrazar la transformación, la profundidad psicológica, las asociaciones íntimas, los recursos compartidos, el trabajo en la sombra y la capacidad de renacer. La expresión evolucionada es alguien lo suficientemente arraigado como para manejar la intensidad, lo suficientemente estable como para arriesgarse a la transformación.`,
         
-        challenges: `The primary challenge is releasing attachment to comfort and safety. Every time growth calls for transformation or depth, old conditioning wants to stay surface and stable. Learning that change is beneficial is profound work.
+        challenges: `El principal desafío es liberar el apego a la comodidad y la seguridad. Cada vez que el crecimiento exige transformación o profundidad, el viejo condicionamiento quiere permanecer superficial y estable. Aprender que el cambio es beneficioso es un trabajo profundo.
 
-Developing intimacy that requires vulnerability and merging is another major hurdle. The Taurus pattern wants independence; growth requires sometimes depending on others and allowing them to see your shadows.
+Desarrollar una intimidad que requiera vulnerabilidad y fusión es otro obstáculo importante. El patrón Tauro quiere independencia; El crecimiento requiere a veces depender de los demás y permitirles ver tus sombras.
 
-Working with shared resources - whether money, property, or energy - triggers control issues. Learning to merge finances or energies, to trust others with resources, is essential growth.`,
+Trabajar con recursos compartidos (ya sea dinero, propiedad o energía) genera problemas de control. Aprender a fusionar finanzas o energías, a confiar recursos a otros, es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node requires learning to merge deeply - emotionally, sexually, financially. This means sharing bank accounts (or at least discussing money), exploring psychological depths together, and allowing transformative intimacy.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a fusionarse profundamente: emocional, sexual y financieramente. Esto significa compartir cuentas bancarias (o al menos hablar de dinero), explorar juntos profundidades psicológicas y permitir una intimidad transformadora.
 
-The growth edge is being vulnerable enough to be changed by relationship, surrendering control to create something together, and navigating jealousy and power dynamics rather than avoiding them.
+La ventaja del crecimiento es ser lo suficientemente vulnerable como para ser cambiado por la relación, ceder el control para crear algo juntos y navegar por los celos y las dinámicas de poder en lugar de evitarlos.
 
-The gift you bring to relationships once evolved is the Taurus steadiness combined with Scorpio intensity. You create partnerships that are both stable and transformative, comfortable and deeply intimate.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la estabilidad de Tauro combinada con la intensidad de Escorpio. Creas asociaciones que son a la vez estables y transformadoras, cómodas y profundamente íntimas.`,
         
-        careerPath: `Professionally, this North Node calls toward work involving transformation, psychology, shared resources, or crisis management. Therapy, finance, research, surgery, or any field dealing with life/death/rebirth serves this path.
+        careerPath: `En lo profesional, este Nodo Norte llama a trabajos que impliquen transformación, psicología, recursos compartidos o gestión de crisis. La terapia, las finanzas, la investigación, la cirugía o cualquier campo relacionado con la vida/muerte/renacimiento sirven en este camino.
 
-The key is roles requiring depth, intensity, or managing others' resources. Work involving investigation, transformation, or navigating crisis serves this nodal path.
+La clave son los roles que requieren profundidad, intensidad o gestión de los recursos de los demás. El trabajo que implica investigación, transformación o gestión de crisis sirve a este camino nodal.
 
-The career challenge is embracing intensity and crisis rather than seeking comfortable routine. Success requires developing comfort with depth and change.`,
+El desafío profesional es aceptar la intensidad y la crisis en lugar de buscar una rutina cómoda. El éxito requiere desarrollar comodidad con la profundidad y el cambio.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that transformation is sacred and death leads to rebirth. Avoiding change to maintain comfort prevents growth. Real security comes from capacity to transform, not from avoiding it.
+        spiritualLesson: `La lección espiritual de este eje nodal es que la transformación es sagrada y la muerte conduce al renacimiento. Evitar el cambio para mantener la comodidad previene el crecimiento. La verdadera seguridad proviene de la capacidad de transformar, no de evitarla.
 
-The deeper teaching is that intimacy requires vulnerability and merging. The Taurus pattern taught you about self-sufficiency; the Scorpio path teaches you that real power comes through deep union with others.
+La enseñanza más profunda es que la intimidad requiere vulnerabilidad y fusión. El patrón Tauro te enseñó acerca de la autosuficiencia; El camino de Escorpio te enseña que el verdadero poder surge de la unión profunda con los demás.
 
-Ultimately, this placement is about learning that intensity and transformation aren't threats - they're gateways to power and depth you can't access from comfort zone. You must die to be reborn.`,
+En última instancia, esta ubicación trata de aprender que la intensidad y la transformación no son amenazas: son puertas de entrada al poder y la profundidad a las que no se puede acceder desde la zona de confort. Debes morir para renacer.`,
         
-        affirmation: "I embrace transformation. I dive into depth. I merge with others intimately. I release attachment to comfort. I trust the death-rebirth cycle. Crisis catalyzes my growth."
+        affirmation: "Acepto la transformación. Me sumerjo en profundidad. Me fusiono íntimamente con los demás. Libero el apego a la comodidad. Confío en el ciclo muerte-renacimiento. La crisis cataliza mi crecimiento."
     },
 
     Sagittarius: {
-        title: "North Node in Sagittarius - The Seeker's Path",
-        archetype: "From Details to Vision",
-        southNode: "Gemini",
-        hook: "With North Node in Sagittarius, this soul's journey is toward faith, meaning, and expansive truth. The comfort zone (South Node in Gemini) was gathering information, staying local, and intellectual curiosity - but growth requires developing wisdom, teaching, and having faith in larger truth.",
+        title: "Nodo Norte en Sagitario: el camino del buscador",
+        archetype: "De los detalles a la visión",
+        southNode: "Géminis",
+        hook: "Con el Nodo Norte en Sagitario, el viaje de esta alma es hacia la fe, el significado y la verdad expansiva. La zona de confort (Nodo Sur en Géminis) era recopilar información, mantenerse local y tener curiosidad intelectual, pero el crecimiento requiere desarrollar sabiduría, enseñar y tener fe en una verdad más amplia.",
         
-        pastLifePatterns: `The South Node in Gemini reveals past life patterns of constant learning, information gathering, and intellectual exploration without ever synthesizing it into wisdom. This soul was the student, messenger, or communicator who knew many things but lacked overarching philosophy.
+        pastLifePatterns: `El Nodo Sur en Géminis revela patrones de vidas pasadas de aprendizaje constante, recopilación de información y exploración intelectual sin siquiera sintetizarlos en sabiduría. Esta alma era el estudiante, mensajero o comunicador que sabía muchas cosas pero carecía de una filosofía general.
 
-In past incarnations, success came through staying curious, asking questions, and communicating. There was natural ability to learn, adapt, and see multiple perspectives. The gift was intellectual flexibility and communication skill.
+En encarnaciones pasadas, el éxito se lograba manteniendo la curiosidad, haciendo preguntas y comunicándose. Había una capacidad natural para aprender, adaptarse y ver múltiples perspectivas. El don fue flexibilidad intelectual y habilidad de comunicación.
 
-But the shadow of this pattern is perpetual student who never becomes teacher, gathering information without finding meaning, and intellectual restlessness that prevents depth. Too many lifetimes of questions without answers created inability to commit to truth.`,
+Pero la sombra de este patrón es el perpetuo estudiante que nunca llega a ser maestro, reuniendo información sin encontrarle sentido, y una inquietud intelectual que impide profundizar. Demasiadas vidas de preguntas sin respuestas crearon incapacidad para comprometerse con la verdad.`,
         
-        oldComfortZone: `The Gemini South Node comfort zone manifests as perpetual information gathering, difficulty forming firm opinions, and intellectual approach to everything. This soul may find themselves constantly learning but never teaching, always having more questions, unable to commit to philosophy or truth.
+        oldComfortZone: `La zona de confort del Nodo Sur de Géminis se manifiesta como una recopilación perpetua de información, dificultad para formar opiniones firmes y un enfoque intelectual para todo. Esta alma puede encontrarse constantemente aprendiendo pero nunca enseñando, siempre teniendo más preguntas, incapaz de comprometerse con la filosofía o la verdad.
 
-There's often pattern of staying local and familiar, avoiding adventure that requires leaving comfort zone, and intellectualizing rather than developing faith. Certainty feels limiting; endless questions feel safe. The reflex is to gather more information rather than act on wisdom.
+A menudo existe un patrón de permanecer local y familiar, evitar aventuras que requieran abandonar la zona de confort e intelectualizar en lugar de desarrollar la fe. La certeza se siente limitante; Un sinfín de preguntas te hacen sentir seguro. El reflejo es recopilar más información en lugar de actuar según la sabiduría.
 
-The old pattern is to believe there's always more to learn before you can teach, that committing to truth is close-minded, and that local/familiar is safer than distant/unknown. Philosophy feels pretentious; facts feel trustworthy. The familiar territory is intelligent questions rather than wise answers.`,
+El viejo patrón es creer que siempre hay más que aprender antes de poder enseñar, que comprometerse con la verdad es una actitud cerrada y que lo local/familiar es más seguro que lo distante/desconocido. La filosofía parece pretenciosa; los hechos se sienten dignos de confianza. El territorio familiar son las preguntas inteligentes más que las respuestas sabias.`,
         
-        newDirection: `The Sagittarius North Node calls this soul to synthesize information into wisdom, commit to truth even if imperfect, and teach others from your learning. This means developing faith in larger meaning, seeking adventure and expansion, and being willing to have answers.
+        newDirection: `El Nodo Norte de Sagitario llama a esta alma a sintetizar información en sabiduría, comprometerse con la verdad incluso si es imperfecta y enseñar a otros a partir de su aprendizaje. Esto significa desarrollar la fe en un significado más amplio, buscar aventuras y expansión y estar dispuesto a tener respuestas.
 
-Growth requires developing philosophical framework, teaching rather than just learning, and pursuing truth with conviction. It's about adventuring beyond familiar territory, having faith that life has meaning, and inspiring others with your vision.
+El crecimiento requiere desarrollar un marco filosófico, enseñar en lugar de simplemente aprender y buscar la verdad con convicción. Se trata de aventurarse más allá de un territorio familiar, tener fe en que la vida tiene significado e inspirar a otros con su visión.
 
-The journey is toward discovering that wisdom comes from committing to truth, that teaching deepens learning, and that faith in meaning serves better than endless intellectual inquiry. It's becoming the teacher after lifetimes as student.`,
+El viaje es hacia el descubrimiento de que la sabiduría proviene del compromiso con la verdad, que la enseñanza profundiza el aprendizaje y que la fe en el significado sirve mejor que la investigación intelectual interminable. Es convertirse en maestro después de toda una vida como estudiante.`,
         
-        evolutionaryGoal: `The ultimate goal is to become wise teacher with philosophical vision while maintaining Gemini curiosity and communication skill. The Sagittarius development doesn't negate learning - it synthesizes it into wisdom.
+        evolutionaryGoal: `El objetivo final es convertirse en un maestro sabio con visión filosófica manteniendo al mismo tiempo la curiosidad y la capacidad de comunicación de Géminis. El desarrollo de Sagitario no niega el aprendizaje: lo sintetiza en sabiduría.
 
-This soul is learning that gathering information without finding meaning leaves you empty. True intelligence includes faith. The student who becomes teacher discovers the deepest learning happens through teaching.
+Esta alma está aprendiendo que reunir información sin encontrar significado te deja vacío. La verdadera inteligencia incluye la fe. El estudiante que se convierte en maestro descubre que el aprendizaje más profundo se produce a través de la enseñanza.
 
-Success looks like: philosophical framework, teaching others, having faith, adventuring beyond comfort zone, committing to truth, and inspiring vision. The evolved expression is wise teacher who remains curious student.`,
+El éxito se ve así: marco filosófico, enseñar a otros, tener fe, aventurarse más allá de la zona de confort, comprometerse con la verdad y una visión inspiradora. La expresión evolucionada es maestro sabio que sigue siendo estudiante curioso.`,
         
-        challenges: `The primary challenge is releasing intellectual safety of endless questions for commitment to imperfect truth. Every time growth calls for teaching or having answers, old conditioning wants to stay in student role. Learning that having philosophy doesn't make you dogmatic is constant work.
+        challenges: `El principal desafío es liberar la seguridad intelectual de un sinfín de preguntas para comprometerse con la verdad imperfecta. Cada vez que el crecimiento exige enseñar o tener respuestas, el viejo condicionamiento quiere permanecer en el papel de estudiante. Aprender que tener filosofía no te vuelve dogmático es un trabajo constante.
 
-Developing faith when trained for skepticism is another major hurdle. The Gemini pattern wants proof and logic; growth requires sometimes believing in meaning you can't prove.
+Desarrollar la fe cuando se está entrenado para el escepticismo es otro obstáculo importante. El patrón Géminis necesita pruebas y lógica; el crecimiento requiere a veces creer en un significado que no puedes probar.
 
-Adventuring beyond familiar territory when comfort zone is local and known is difficult. Learning that expansion requires leaving safety of the familiar is essential growth.`,
+Aventurarse más allá de un territorio familiar cuando la zona de confort es local y conocida es difícil. Aprender que la expansión requiere abandonar la seguridad de lo familiar es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node requires learning to share your vision and wisdom rather than just exchanging information. This means having philosophical discussions, inspiring your partner, and sometimes being the wise one rather than always the curious student.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a compartir su visión y sabiduría en lugar de simplemente intercambiar información. Esto significa tener discusiones filosóficas, inspirar a su pareja y, a veces, ser el sabio en lugar de siempre el estudiante curioso.
 
-The growth edge is committing to relationship despite not having all information, having faith in love's meaning rather than analyzing it endlessly, and adventuring together to distant places and ideas.
+La ventaja del crecimiento es comprometerse con la relación a pesar de no tener toda la información, tener fe en el significado del amor en lugar de analizarlo sin cesar y aventurarse juntos a lugares e ideas distantes.
 
-The gift you bring to relationships once evolved is the Gemini communication skill combined with Sagittarius inspiration. You create partnerships where you explore meaning together, where both teaching and learning happen, where truth is pursued.`,
+El don que aportas a las relaciones una vez evolucionadas es la habilidad de comunicación de Géminis combinada con la inspiración de Sagitario. Creas asociaciones en las que exploras el significado juntos, donde ocurren tanto la enseñanza como el aprendizaje, donde se busca la verdad.`,
         
-        careerPath: `Professionally, this North Node calls toward teaching, publishing, philosophy, travel, or any work involving sharing wisdom and expanding consciousness. Higher education, ministry, international work, or motivational speaking serves this path.
+        careerPath: `Profesionalmente, este Nodo Norte llama a la enseñanza, las publicaciones, la filosofía, los viajes o cualquier trabajo que implique compartir sabiduría y expandir la conciencia. La educación superior, el ministerio, el trabajo internacional o las charlas motivacionales sirven en este camino.
 
-The key is roles where you must teach, inspire, or share larger vision rather than just gather and communicate facts. Work requiring faith, adventure, or philosophical framework serves this nodal path.
+La clave son los roles en los que debes enseñar, inspirar o compartir una visión más amplia en lugar de simplemente recopilar y comunicar hechos. El trabajo que requiere fe, aventura o un marco filosófico sirve a este camino nodal.
 
-The career challenge is transitioning from student to teacher, from questioner to vision-holder. Success requires developing confidence in your wisdom.`,
+El desafío profesional es la transición de estudiante a maestro, de cuestionador a poseedor de una visión. El éxito requiere desarrollar confianza en su sabiduría.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that wisdom comes from synthesizing information into meaning. Learning without finding truth leaves you lost. Faith in larger meaning is strength, not weakness.
+        spiritualLesson: `La lección espiritual de este eje nodal es que la sabiduría proviene de sintetizar información en significado. Aprender sin encontrar la verdad te deja perdido. La fe, en un sentido más amplio, es fortaleza, no debilidad.
 
-The deeper teaching is that you must sometimes commit to imperfect truth to grow. The Gemini pattern taught you to question; the Sagittarius path teaches you that having answers, even evolving ones, serves better than endless inquiry.
+La enseñanza más profunda es que a veces debes comprometerte con la verdad imperfecta para crecer. El patrón Géminis te enseñó a cuestionar; El camino de Sagitario te enseña que tener respuestas, incluso las que evolucionan, es mejor que una investigación interminable.
 
-Ultimately, this placement is about learning that teaching deepens your learning, that adventure expands your consciousness, and that faith in meaning makes life rich. You honor your learning by sharing wisdom.`,
+En última instancia, esta colocación se trata de aprender que la enseñanza profundiza su aprendizaje, que la aventura expande su conciencia y que la fe en el significado enriquece la vida. Honras tu aprendizaje compartiendo sabiduría.`,
         
-        affirmation: "I teach what I've learned. I commit to truth with faith. I adventure beyond my comfort zone. I inspire others with my vision. My wisdom serves the world."
+        affirmation: "Enseño lo que he aprendido. Me comprometo con la verdad con fe. Me aventuro más allá de mi zona de confort. Inspiro a otros con mi visión. Mi sabiduría sirve al mundo."
     },
 
     Capricorn: {
-        title: "North Node in Capricorn - The Authority's Path",
-        archetype: "From Dependent to Leader",
-        southNode: "Cancer",
-        hook: "With North Node in Capricorn, this soul's journey is toward professional achievement, authority, and emotional discipline. The comfort zone (South Node in Cancer) was family, emotions, and being taken care of - but growth requires becoming the authority and achieving public success.",
+        title: "Nodo Norte en Capricornio – El camino de la autoridad",
+        archetype: "De dependiente a líder",
+        southNode: "Cáncer",
+        hook: "Con el Nodo Norte en Capricornio, el viaje de esta alma es hacia el logro profesional, la autoridad y la disciplina emocional. La zona de confort (Nodo Sur en Cáncer) era la familia, las emociones y ser atendido, pero el crecimiento requiere convertirse en autoridad y lograr el éxito público.",
         
-        pastLifePatterns: `The South Node in Cancer reveals past life patterns of nurturing others, prioritizing family, and being the emotional center. This soul was the mother, caregiver, or emotional foundation who everyone depended on for nurturance.
+        pastLifePatterns: `El Nodo Sur en Cáncer revela patrones de vidas pasadas de cuidar a los demás, priorizar la familia y ser el centro emocional. Esta alma era la madre, la cuidadora o la base emocional de la que todos dependían para su sustento.
 
-In past incarnations, success came through creating home, emotional availability, and caring for others. There was natural ability to nurture, empathize, and create belonging. The gift was emotional intelligence and capacity to make others feel safe.
+En encarnaciones pasadas, el éxito se produjo a través de la creación de un hogar, la disponibilidad emocional y el cuidado de los demás. Había una capacidad natural para nutrir, empatizar y crear pertenencia. El don fue inteligencia emocional y capacidad para hacer que los demás se sintieran seguros.
 
-But the shadow of this pattern is emotional dependency, inability to leave family/home, and avoiding professional achievement out of guilt or fear. Too many lifetimes of being needed emotionally created difficulty achieving outside of family context.`,
+Pero la sombra de este patrón es la dependencia emocional, la incapacidad de dejar la familia/el hogar y evitar el logro profesional por culpa o miedo. Demasiadas vidas en las que se nos necesitaba emocionalmente crearon dificultades para lograr logros fuera del contexto familiar.`,
         
-        oldComfortZone: `The Cancer South Node comfort zone manifests as prioritizing family over career, being emotionally enmeshed, and avoiding public roles. This soul may find themselves always being the nurturer, staying home, or feeling guilty about professional ambition.
+        oldComfortZone: `La zona de confort del Nodo Sur de Cáncer se manifiesta como priorizar la familia sobre la carrera, estar enredado emocionalmente y evitar roles públicos. Esta alma puede encontrarse siempre siendo la cuidadora, quedándose en casa o sintiéndose culpable por su ambición profesional.
 
-There's often pattern of being overly emotional, taking things personally, and depending on family approval. Achievement feels selfish; staying close to home feels right. The reflex is to nurture rather than lead, to prioritize emotional security over professional success.
+A menudo existe un patrón de ser demasiado emocional, tomar las cosas personalmente y depender de la aprobación familiar. El logro se siente egoísta; quedarse cerca de casa se siente bien. El reflejo es nutrir en lugar de liderar, priorizar la seguridad emocional sobre el éxito profesional.
 
-The old pattern is to believe family should always come first, that professional success means abandoning loved ones, and that being needed emotionally is your value. Authority feels cold; nurturing feels like your role. The familiar territory is private emotional life rather than public achievement.`,
+El viejo patrón es creer que la familia siempre debe ser lo primero, que el éxito profesional significa abandonar a los seres queridos y que ser necesitado emocionalmente es tu valor. La autoridad se siente fría; nutrir se siente como tu papel. El territorio familiar es la vida emocional privada más que el logro público.`,
         
-        newDirection: `The Capricorn North Node calls this soul to develop professional competence, achieve public recognition, and become an authority. This means prioritizing career sometimes, developing emotional discipline, and being the one in charge.
+        newDirection: `El Nodo Norte de Capricornio llama a esta alma a desarrollar competencia profesional, lograr reconocimiento público y convertirse en una autoridad. Esto significa a veces priorizar la carrera, desarrollar disciplina emocional y ser quien está a cargo.
 
-Growth requires leaving emotional comfort zone of family to achieve in the world. It's about building professional reputation, taking responsibility, and being willing to lead even when it means being less emotionally available.
+El crecimiento requiere abandonar la zona de confort emocional de la familia para lograr logros en el mundo. Se trata de construir una reputación profesional, asumir responsabilidades y estar dispuesto a liderar incluso cuando eso signifique estar menos disponible emocionalmente.
 
-The journey is toward discovering that achievement matters, that becoming authority serves others, and that professional success doesn't negate family love. It's learning to be the boss, the achiever, the competent one.`,
+El viaje consiste en descubrir que los logros importan, que convertirse en autoridad sirve a los demás y que el éxito profesional no niega el amor familiar. Es aprender a ser el jefe, el triunfador, el competente.`,
         
-        evolutionaryGoal: `The ultimate goal is to become professionally successful and authoritative while maintaining Cancer's emotional intelligence. The Capricorn development doesn't negate family love - it balances it with worldly achievement.
+        evolutionaryGoal: `El objetivo final es tener éxito profesional y autoridad manteniendo al mismo tiempo la inteligencia emocional de Cáncer. El desarrollo de Capricornio no niega el amor familiar: lo equilibra con los logros mundanos.
 
-This soul is learning that you can love family AND achieve professionally. Authority can be nurturing. The caregiver who becomes leader discovers they serve more people from position of authority.
+Esta alma está aprendiendo que se puede amar a la familia Y lograr logros profesionales. La autoridad puede ser enriquecedora. El cuidador que se convierte en líder descubre que atiende a más personas desde una posición de autoridad.
 
-Success looks like: professional achievement, public recognition, leadership roles, emotional discipline, and authority. The evolved expression is competent leader who brings emotional intelligence to professional realm.`,
+El éxito se manifiesta en: logros profesionales, reconocimiento público, roles de liderazgo, disciplina emocional y autoridad. La expresión evolucionada es la de un líder competente que aporta la inteligencia emocional al ámbito profesional.`,
         
-        challenges: `The primary challenge is releasing guilt about prioritizing career over family. Every time growth calls for professional focus, old conditioning says you're abandoning loved ones. Learning that achievement serves everyone is profound work.
+        challenges: `El principal desafío es liberar la culpa por priorizar la carrera sobre la familia. Cada vez que el crecimiento requiere un enfoque profesional, el viejo condicionamiento dice que estás abandonando a tus seres queridos. Aprender que los logros sirven a todos es un trabajo profundo.
 
-Developing emotional discipline when trained for emotional availability is another major hurdle. Growth requires sometimes being the authority who can't indulge everyone's feelings, who must make hard decisions.
+Desarrollar disciplina emocional cuando se entrena para la disponibilidad emocional es otro obstáculo importante. El crecimiento requiere a veces ser la autoridad que no puede complacer los sentimientos de todos, que debe tomar decisiones difíciles.
 
-Leaving home/family comfort zone to achieve publicly when safety feels like staying close is difficult. Learning that professional success doesn't mean losing family is essential growth.`,
+Salir de la zona de confort del hogar/familia para lograr logros públicos cuando la seguridad parece estar cerca es difícil. Aprender que el éxito profesional no significa perder a la familia es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node requires learning to maintain professional identity and not be consumed by family role. This means having career that matters to you, not just being the nurturer, and sometimes choosing work over family time.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a mantener la identidad profesional y no dejarse consumir por el rol familiar. Esto significa tener una carrera que sea importante para usted, no solo ser un cuidador y, a veces, elegir el trabajo en lugar del tiempo en familia.
 
-The growth edge is being the strong one who leads rather than always being the emotional one who nurtures. It's maintaining boundaries even when partner/family want you to be more available.
+La ventaja del crecimiento es ser el fuerte que lidera en lugar de ser siempre el emocional que nutre. Es mantener los límites incluso cuando la pareja o la familia quieren que estés más disponible.
 
-The gift you bring to relationships once evolved is the Cancer emotional depth combined with Capricorn stability. You create partnerships where both people can achieve, where emotional connection coexists with professional success.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la profundidad emocional de Cáncer combinada con la estabilidad de Capricornio. Creas asociaciones donde ambas personas pueden lograr logros, donde la conexión emocional coexiste con el éxito profesional.`,
         
-        careerPath: `Professionally, this North Node calls toward leadership roles, entrepreneurship, or positions of authority and public recognition. Management, building businesses, politics, or any field requiring professional competence and achievement serves this path.
+        careerPath: `En lo profesional, este Nodo Norte llama hacia roles de liderazgo, emprendimiento o posiciones de autoridad y reconocimiento público. La gestión, la creación de empresas, la política o cualquier campo que requiera competencia y logros profesionales sirven a este camino.
 
-The key is roles where you must be the authority, make hard decisions, and build professional reputation. Work requiring discipline and long-term achievement serves this nodal path.
+La clave son los roles en los que usted debe ser la autoridad, tomar decisiones difíciles y construir una reputación profesional. El trabajo que requiere disciplina y logros a largo plazo sirve a este camino nodal.
 
-The career challenge is overcoming guilt about ambition and allowing yourself to achieve publicly. Success requires valuing professional accomplishment.`,
+El desafío profesional es superar la culpa por la ambición y permitirse lograr logros públicamente. El éxito requiere valorar los logros profesionales.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that achievement is sacred and professional success serves the world. You don't have to stay small to be loving. Authority can be nurturing.
+        spiritualLesson: `La lección espiritual de este eje nodal es que el logro es sagrado y el éxito profesional sirve al mundo. No es necesario permanecer pequeño para ser cariñoso. La autoridad puede ser enriquecedora.
 
-The deeper teaching is that you serve family best when you're fulfilled professionally. The Cancer pattern taught you about emotional connection; the Capricorn path teaches you that achievement gives you more to offer.
+La enseñanza más profunda es que uno sirve mejor a la familia cuando se siente realizado profesionalmente. El patrón de Cáncer te enseñó sobre la conexión emocional; El camino de Capricornio te enseña que los logros te dan más que ofrecer.
 
-Ultimately, this placement is about learning that professional success and family love aren't mutually exclusive. When you achieve, you model possibility for those you love. Your authority serves the world.`,
+En última instancia, esta colocación se trata de aprender que el éxito profesional y el amor familiar no son mutuamente excluyentes. Cuando lo logras, modelas posibilidades para tus seres queridos. Tu autoridad sirve al mundo.`,
         
-        affirmation: "I achieve without guilt. I lead with authority. I prioritize my career. I serve the world through professional success. My achievement makes me a better partner and parent."
+        affirmation: "Lo logro sin culpa. Lidero con autoridad. Priorizo ​​mi carrera. Sirvo al mundo a través del éxito profesional. Mi logro me convierte en un mejor socio y padre."
     },
 
     Aquarius: {
-        title: "North Node in Aquarius - The Revolutionary's Path",
-        archetype: "From Drama to Detachment",
-        southNode: "Leo",
-        hook: "With North Node in Aquarius, this soul's journey is toward collective consciousness, innovation, and emotional detachment. The comfort zone (South Node in Leo) was personal recognition, creative drama, and being the star - but growth requires serving the collective and releasing need for applause.",
+        title: "Nodo Norte en Acuario - El camino del revolucionario",
+        archetype: "Del drama al desapego",
+        southNode: "León",
+        hook: "Con el Nodo Norte en Acuario, el viaje de esta alma es hacia la conciencia colectiva, la innovación y el desapego emocional. La zona de confort (Nodo Sur en Leo) era el reconocimiento personal, el drama creativo y ser la estrella, pero el crecimiento requiere servir al colectivo y liberar la necesidad de aplausos.",
         
-        pastLifePatterns: `The South Node in Leo reveals past life patterns of creative expression, receiving recognition, and being center stage. This soul was the king, performer, or creative genius whose value came through individual brilliance and personal love.
+        pastLifePatterns: `El Nodo Sur en Leo revela patrones de expresión creativa, reconocimiento y protagonismo de vidas pasadas. Esta alma era el rey, el intérprete o el genio creativo cuyo valor provenía de la brillantez individual y el amor personal.
 
-In past incarnations, success came through creative self-expression, following your heart, and being celebrated for your unique gifts. There was natural ability to shine, lead, and inspire through personal magnetism. The gift was radiance and creative joy.
+En encarnaciones pasadas, el éxito se produjo a través de la autoexpresión creativa, siguiendo tu corazón y siendo celebrado por tus dones únicos. Había una capacidad natural para brillar, liderar e inspirar a través del magnetismo personal. El regalo fue resplandor y alegría creativa.
 
-But the shadow of this pattern is addiction to recognition, drama, and inability to think of the collective. Too many lifetimes of being the star created need for constant attention and difficulty with group consciousness.`,
+Pero la sombra de este patrón es la adicción al reconocimiento, el drama y la incapacidad de pensar en lo colectivo. Demasiadas vidas siendo la estrella crearon una necesidad de atención constante y dificultades con la conciencia grupal.`,
         
-        oldComfortZone: `The Leo South Node comfort zone manifests as needing to be center of attention, making everything dramatic and personal, and measuring worth through recognition. This soul may find themselves automatically taking lead, seeking applause, or creating drama to feel alive.
+        oldComfortZone: `La zona de confort del Nodo Sur de Leo se manifiesta como la necesidad de ser el centro de atención, haciendo que todo sea dramático y personal, y midiendo el valor a través del reconocimiento. Esta alma puede encontrarse automáticamente tomando la iniciativa, buscando aplausos o creando drama para sentirse viva.
 
-There's often pattern of prioritizing personal joy over group needs, being emotionally reactive, and surrounding yourself with admirers rather than equals. Spotlight feels necessary; being one of many feels wrong. The reflex is to make it about you rather than the collective.
+A menudo existe un patrón de priorizar la alegría personal sobre las necesidades del grupo, ser emocionalmente reactivo y rodearse de admiradores en lugar de iguales. Spotlight se siente necesario; ser uno de muchos se siente mal. El reflejo es hacerlo sobre ti y no sobre el colectivo.
 
-The old pattern is to believe your individual expression is most important, that recognition validates your worth, and that group consciousness means losing yourself. Being ordinary feels like death; being special feels essential. The familiar territory is "look at me" rather than "what serves the whole?"`,
+El viejo patrón es creer que tu expresión individual es lo más importante, que el reconocimiento valida tu valor y que la conciencia grupal significa perderte a ti mismo. Ser ordinario se siente como la muerte; ser especial se siente esencial. El territorio familiar es "mírame" en lugar de "¿qué sirve al todo?".`,
         
-        newDirection: `The Aquarius North Node calls this soul to develop collective consciousness, innovative thinking, and emotional detachment. This means considering what serves the group, releasing need for personal recognition, and using your gifts to benefit humanity.
+        newDirection: `El Nodo Norte de Acuario llama a esta alma a desarrollar la conciencia colectiva, el pensamiento innovador y el desapego emocional. Esto significa considerar lo que sirve al grupo, liberar la necesidad de reconocimiento personal y utilizar tus dones para beneficiar a la humanidad.
 
-Growth requires thinking about the many rather than the one, developing intellectual approach to emotions, and innovating for collective benefit. It's about being part of the team, releasing drama, and serving the future.
+El crecimiento requiere pensar en todos en lugar de en uno, desarrollar un enfoque intelectual de las emociones e innovar para el beneficio colectivo. Se trata de ser parte del equipo, lanzar drama y servir al futuro.
 
-The journey is toward discovering that serving the collective is more fulfilling than personal glory, that innovation serves better than self-expression, and that being one of many equals is more revolutionary than being the star. It's learning to think of "we" instead of "me."`,
+El viaje es hacia el descubrimiento de que servir al colectivo es más satisfactorio que la gloria personal, que la innovación sirve mejor que la autoexpresión y que ser uno de muchos iguales es más revolucionario que ser la estrella. Es aprender a pensar en "nosotros" en lugar de "mí".`,
         
-        evolutionaryGoal: `The ultimate goal is to use your Leo creative gifts and leadership for collective benefit while releasing need for personal recognition. The Aquarius development doesn't negate your specialness - it shares it for humanity's benefit.
+        evolutionaryGoal: `El objetivo final es utilizar sus dones creativos y su liderazgo Leo para el beneficio colectivo y al mismo tiempo liberar la necesidad de reconocimiento personal. El desarrollo de Acuario no niega tu carácter especial: lo comparte para beneficio de la humanidad.
 
-This soul is learning that you serve better when you're thinking of the group, that innovation requires releasing personal drama for intellectual clarity, and that true revolution comes from collective action, not individual glory.
+Esta alma está aprendiendo que sirves mejor cuando piensas en el grupo, que la innovación requiere liberar el drama personal para lograr claridad intelectual y que la verdadera revolución proviene de la acción colectiva, no de la gloria individual.
 
-Success looks like: serving the collective, innovative thinking, emotional detachment, group consciousness, releasing drama, and humanitarian focus. The evolved expression is someone whose Leo creativity serves Aquarian vision for humanity.`,
+El éxito se ve así: servir al colectivo, pensamiento innovador, desapego emocional, conciencia de grupo, liberación del drama y enfoque humanitario. La expresión evolucionada es alguien cuya creatividad Leo sirve a la visión de Acuario para la humanidad.`,
         
-        challenges: `The primary challenge is releasing addiction to recognition and drama. Every time growth calls for serving the group without personal credit, old conditioning wants applause. Learning that contribution without recognition is valuable is profound work.
+        challenges: `El principal desafío es liberar la adicción al reconocimiento y al drama. Cada vez que el crecimiento exige servir al grupo sin crédito personal, el viejo condicionamiento busca aplausos. Aprender que la contribución sin reconocimiento es valiosa es un trabajo profundo.
 
-Developing emotional detachment when trained for heart-centered drama is another major hurdle. Growth requires intellectual approach rather than emotional reactivity.
+Desarrollar el desapego emocional cuando se entrena para el drama centrado en el corazón es otro obstáculo importante. El crecimiento requiere un enfoque intelectual más que una reactividad emocional.
 
-Being one of many equals when you're used to being the star is difficult. Learning that group consciousness doesn't erase your uniqueness is essential growth.`,
+Ser uno de muchos iguales cuando estás acostumbrado a ser la estrella es difícil. Aprender que la conciencia de grupo no borra tu singularidad es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node requires learning to have friendships rather than fan clubs, and partnerships where you're equals rather than star and admirer. This means releasing need for constant validation and drama.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a tener amistades en lugar de clubes de fans, y asociaciones en las que eres igual en lugar de estrella y admirador. Esto significa liberar la necesidad de validación y dramatismo constantes.
 
-The growth edge is choosing partners who challenge you intellectually rather than those who worship you emotionally. It's being part of community of equals rather than always being the special one.
+La ventaja del crecimiento es elegir socios que lo desafíen intelectualmente en lugar de aquellos que lo adoren emocionalmente. Es ser parte de una comunidad de iguales en lugar de ser siempre el especial.
 
-The gift you bring to relationships once evolved is the Leo warmth combined with Aquarius acceptance. You create partnerships and friendships where everyone can be unique, where the collective benefits from each person's gifts.`,
+El regalo que aportas a las relaciones una vez evolucionadas es la calidez de Leo combinada con la aceptación de Acuario. Creas asociaciones y amistades donde cada uno puede ser único, donde el colectivo se beneficia de los dones de cada persona.`,
         
-        careerPath: `Professionally, this North Node calls toward work serving humanity, innovation, or group-based projects. Technology, social reform, science, or community organizing serves this path.
+        careerPath: `En lo profesional, este Nodo Norte convoca al trabajo al servicio de la humanidad, la innovación o proyectos grupales. La tecnología, la reforma social, la ciencia o la organización comunitaria sirven en este camino.
 
-The key is roles where you serve the collective rather than seeking personal glory, where innovation benefits many, where you're part of a team. Work requiring vision for humanity's future serves this nodal path.
+La clave son roles en los que sirves al colectivo en lugar de buscar la gloria personal, donde la innovación beneficia a muchos, donde eres parte de un equipo. El trabajo que requiere una visión para el futuro de la humanidad sirve a este camino nodal.
 
-The career challenge is releasing need for individual recognition and working for collective benefit. Success requires valuing contribution over applause.`,
+El desafío profesional es liberar la necesidad de reconocimiento individual y trabajar para el beneficio colectivo. El éxito requiere valorar la contribución por encima de los aplausos.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that serving the collective is more fulfilling than personal glory. Recognition is empty compared to contributing to humanity's evolution.
+        spiritualLesson: `La lección espiritual de este eje nodal es que servir al colectivo es más satisfactorio que la gloria personal. El reconocimiento es vacío en comparación con la contribución a la evolución de la humanidad.
 
-The deeper teaching is that true leadership means innovating for the many, not performing for applause. The Leo pattern taught you about individual expression; the Aquarius path teaches you that your gifts serve best when shared for collective benefit.
+La enseñanza más profunda es que el verdadero liderazgo significa innovar para la mayoría, no actuar para obtener aplausos. El patrón Leo te enseñó sobre la expresión individual; El camino de Acuario te enseña que tus dones sirven mejor cuando se comparten para el beneficio colectivo.
 
-Ultimately, this placement is about learning that being part of humanity's forward movement is more meaningful than being the star. When you serve the future, you become immortal in ways personal glory never achieves.`,
+En última instancia, esta colocación se trata de aprender que ser parte del avance de la humanidad es más significativo que ser la estrella. Cuando sirves al futuro, te vuelves inmortal de una manera que la gloria personal nunca logra.`,
         
-        affirmation: "I serve the collective. I release need for recognition. I innovate for humanity's benefit. I am one of many equals. My gifts serve the future."
+        affirmation: "Yo sirvo al colectivo. Libero la necesidad de reconocimiento. Innovo para el beneficio de la humanidad. Soy uno de muchos iguales. Mis dones sirven al futuro."
     },
 
     Pisces: {
-        title: "North Node in Pisces - The Mystic's Path",
-        archetype: "From Analysis to Surrender",
+        title: "Nodo Norte en Piscis - El camino del místico",
+        archetype: "Del análisis a la rendición",
         southNode: "Virgo",
-        hook: "With North Node in Pisces, this soul's journey is toward faith, compassion, and surrender to something greater. The comfort zone (South Node in Virgo) was analysis, perfection, and control - but growth requires releasing into mystery and trusting the unseen.",
+        hook: "Con el Nodo Norte en Piscis, el viaje de esta alma es hacia la fe, la compasión y la entrega a algo más grande. La zona de confort (Nodo Sur en Virgo) era el análisis, la perfección y el control, pero el crecimiento requiere liberarse del misterio y confiar en lo invisible.",
         
-        pastLifePatterns: `The South Node in Virgo reveals past life patterns of analysis, service, and perfectionism. This soul was the healer, craftsperson, or analyst whose value came through skill, discernment, and fixing problems.
+        pastLifePatterns: `El Nodo Sur en Virgo revela patrones de análisis, servicio y perfeccionismo de vidas pasadas. Esta alma era el sanador, artesano o analista cuyo valor provenía de la habilidad, el discernimiento y la solución de problemas.
 
-In past incarnations, success came through precision, practical service, and attention to detail. There was natural ability to analyze, organize, and perfect. The gift was competence and the capacity to serve practically.
+En encarnaciones pasadas, el éxito se logró a través de la precisión, el servicio práctico y la atención al detalle. Había una capacidad natural para analizar, organizar y perfeccionar. El don era la competencia y la capacidad de servir prácticamente.
 
-But the shadow of this pattern is over-analysis, criticism, and inability to surrender to faith. Too many lifetimes of trying to perfect and control created anxiety, inability to trust, and disconnection from spiritual mystery.`,
+Pero la sombra de este patrón es el exceso de análisis, la crítica y la incapacidad de rendirse a la fe. Demasiadas vidas tratando de perfeccionar y controlar crearon ansiedad, incapacidad para confiar y desconexión del misterio espiritual.`,
         
-        oldComfortZone: `The Virgo South Node comfort zone manifests as analyzing everything, trying to fix and perfect, and being anxious about details. This soul may find themselves unable to relax, constantly criticizing self and others, or trying to control outcomes through preparation.
+        oldComfortZone: `La zona de confort del Nodo Sur de Virgo se manifiesta analizando todo, tratando de arreglar y perfeccionar y estando ansioso por los detalles. Esta alma puede encontrarse incapaz de relajarse, criticándose constantemente a sí misma y a los demás, o tratando de controlar los resultados mediante la preparación.
 
-There's often pattern of serving to the point of martyrdom, having anxiety about health and function, and being unable to trust anything you can't verify. Faith feels irresponsible; analysis feels necessary. The reflex is to worry and prepare rather than trust and surrender.
+A menudo hay un patrón de servir hasta el punto del martirio, tener ansiedad por la salud y el funcionamiento y ser incapaz de confiar en nada que no pueda verificar. Faith se siente irresponsable; el análisis se siente necesario. El reflejo es preocuparse y prepararse en lugar de confiar y rendirse.
 
-The old pattern is to believe you must earn your place through usefulness, that surrender means irresponsibility, and that mystery is uncomfortable. Perfection feels essential; accepting flaws feels like failure. The familiar territory is anxious control rather than peaceful surrender.`,
+El viejo patrón es creer que uno debe ganarse su lugar mediante la utilidad, que rendirse significa irresponsabilidad y que el misterio es incómodo. La perfección se siente esencial; Aceptar los defectos se siente como un fracaso. El territorio familiar es un control ansioso más que una rendición pacífica.`,
         
-        newDirection: `The Pisces North Node calls this soul to develop faith, compassion, and surrender to mystery. This means releasing need to understand and control everything, trusting the unseen, and serving through spiritual rather than just practical means.
+        newDirection: `El Nodo Norte de Piscis llama a esta alma a desarrollar fe, compasión y entrega al misterio. Esto significa liberar la necesidad de comprender y controlar todo, confiar en lo invisible y servir a través de medios espirituales en lugar de sólo prácticos.
 
-Growth requires accepting imperfection, yours and others', and finding peace in not knowing. It's about developing spiritual practices, accessing intuition over analysis, and surrendering to something greater than yourself.
+El crecimiento requiere aceptar la imperfección, la propia y la de los demás, y encontrar la paz en el no saber. Se trata de desarrollar prácticas espirituales, acceder a la intuición en lugar del análisis y rendirse a algo más grande que uno mismo.
 
-The journey is toward discovering that faith is productive, that not everything needs fixing, and that compassion matters more than criticism. It's learning to trust the mystery, to surrender control, to access the mystical.`,
+El viaje es hacia el descubrimiento de que la fe es productiva, que no todo necesita arreglo y que la compasión importa más que la crítica. Es aprender a confiar en el misterio, a ceder el control, a acceder a lo místico.`,
         
-        evolutionaryGoal: `The ultimate goal is to bring your Virgo competence into service of Piscean vision - becoming a healer who works with energy and faith as much as technique, an analyst who trusts intuition. The Pisces development doesn't negate skill - it infuses it with grace.
+        evolutionaryGoal: `El objetivo final es poner tu competencia de Virgo al servicio de la visión de Piscis: convertirte en un sanador que trabaja con energía y fe tanto como con técnica, un analista que confía en la intuición. El desarrollo de Piscis no niega la habilidad: la infunde gracia.
 
-This soul is learning that true healing includes the spiritual, that perfect technique without compassion doesn't serve, and that surrendering control allows divine grace to work through you.
+Esta alma está aprendiendo que la verdadera curación incluye lo espiritual, que la técnica perfecta sin compasión no sirve y que entregar el control permite que la gracia divina actúe a través de usted.
 
-Success looks like: faith in mystery, compassion for all, spiritual practice, intuitive guidance, release of perfectionism, and surrender to grace. The evolved expression is skilled practitioner infused with mystical wisdom.`,
+El éxito se ve así: fe en el misterio, compasión por todos, práctica espiritual, guía intuitiva, liberación del perfeccionismo y entrega a la gracia. La expresión evolucionada es practicante experto infundido de sabiduría mística.`,
         
-        challenges: `The primary challenge is releasing anxiety and need for control. Every time growth calls for faith, old conditioning wants proof and preparation. Learning that surrender isn't irresponsibility is profound work.
+        challenges: `El principal desafío es liberar la ansiedad y la necesidad de control. Cada vez que el crecimiento exige fe, el viejo condicionamiento exige pruebas y preparación. Aprender que rendirse no es irresponsabilidad es un trabajo profundo.
 
-Developing compassion when trained for criticism is another major hurdle. Growth requires accepting imperfection in yourself and others rather than constantly trying to fix and improve.
+Desarrollar la compasión cuando se está capacitado para criticar es otro obstáculo importante. El crecimiento requiere aceptar la imperfección en uno mismo y en los demás en lugar de tratar constantemente de corregirla y mejorarla.
 
-Accessing spiritual mystery when you're trained for material analysis is difficult. Learning to trust what you can't verify, to value intuition over logic, is essential growth.`,
+Acceder al misterio espiritual cuando estás capacitado para el análisis material es difícil. Aprender a confiar en lo que no se puede verificar, a valorar la intuición por encima de la lógica, es un crecimiento esencial.`,
         
-        relationships: `In relationships, this North Node requires learning to accept partners and yourself as imperfect rather than constantly trying to fix and improve. This means offering compassion instead of criticism, trusting rather than worrying.
+        relationships: `En las relaciones, este Nodo Norte requiere aprender a aceptar a la pareja y a usted mismo como imperfectos en lugar de intentar arreglar y mejorar constantemente. Esto significa ofrecer compasión en lugar de crítica, confiar en lugar de preocuparse.
 
-The growth edge is spiritual connection over practical service, accepting your partner's path even when you don't understand it, and having faith in relationship rather than trying to perfect it.
+La ventaja del crecimiento es la conexión espiritual sobre el servicio práctico, aceptar el camino de tu pareja incluso cuando no lo entiendes y tener fe en la relación en lugar de intentar perfeccionarla.
 
-The gift you bring to relationships once evolved is the Virgo practical skill combined with Pisces compassion. You create partnerships that are both functional and spiritually nourishing, where acceptance creates space for growth.`,
+El don que aportas a las relaciones una vez evolucionadas es la habilidad práctica de Virgo combinada con la compasión de Piscis. Creas asociaciones que son a la vez funcionales y espiritualmente nutritivas, donde la aceptación crea espacio para el crecimiento.`,
         
-        careerPath: `Professionally, this North Node calls toward spiritual healing, creative arts, work with the unseen, or service to those suffering. Counseling, energy work, music, photography, or charity work serves this path.
+        careerPath: `Profesionalmente, este Nodo Norte apela a la sanación espiritual, las artes creativas, el trabajo con lo invisible o el servicio a quienes sufren. En este camino sirven el asesoramiento, el trabajo energético, la música, la fotografía o las obras de caridad.
 
-The key is roles requiring faith, intuition, and compassion rather than just technical skill. Work involving spirituality, creativity, or serving the lost and forgotten serves this nodal path.
+La clave son los roles que requieren fe, intuición y compasión en lugar de solo habilidades técnicas. El trabajo que involucra espiritualidad, creatividad o servir a los perdidos y olvidados sirve a este camino nodal.
 
-The career challenge is trusting your intuition and spiritual gifts rather than only relying on technical competence. Success requires valuing what can't be measured.`,
+El desafío profesional es confiar en su intuición y sus dones espirituales en lugar de depender únicamente de la competencia técnica. El éxito requiere valorar lo que no se puede medir.`,
         
-        spiritualLesson: `The spiritual lesson of this nodal axis is that surrender is sacred and faith is productive. You can't control or perfect everything - nor should you. Mystery is to be honored, not solved.
+        spiritualLesson: `La lección espiritual de este eje nodal es que la entrega es sagrada y la fe es productiva. No puedes controlarlo ni perfeccionarlo todo, ni deberías hacerlo. El misterio debe ser honrado, no resuelto.
 
-The deeper teaching is that compassion heals more than criticism. The Virgo pattern taught you about skill; the Pisces path teaches you that grace working through you matters more than your technique.
+La enseñanza más profunda es que la compasión cura más que la crítica. El patrón de Virgo te enseñó habilidades; El camino de Piscis te enseña que la gracia que actúa a través de ti importa más que tu técnica.
 
-Ultimately, this placement is about learning that spiritual service is as valuable as practical service, that accepting imperfection is wisdom, and that surrendering to something greater than yourself is the ultimate healing.`,
+En última instancia, esta colocación se trata de aprender que el servicio espiritual es tan valioso como el servicio práctico, que aceptar la imperfección es sabiduría y que rendirse a algo más grande que uno mismo es la curación definitiva.`,
         
-        affirmation: "I surrender to faith. I trust the mystery. I offer compassion instead of criticism. I accept imperfection as part of the divine plan. Grace works through me."
+        affirmation: "Me entrego a la fe. Confío en el misterio. Ofrezco compasión en lugar de crítica. Acepto la imperfección como parte del plan divino. La gracia actúa a través de mí."
     }
 };
 
@@ -696,759 +696,759 @@ Ultimately, this placement is about learning that spiritual service is as valuab
 
 var DEEP_SOUTH_NODE_READINGS = {
     Aries: {
-        title: "South Node in Aries - The Warrior's Comfort Zone",
-        archetype: "From Independence to Partnership",
+        title: "Nodo Sur en Aries: la zona de confort del guerrero",
+        archetype: "De la independencia a la asociación",
         northNode: "Libra",
-        hook: "With South Node in Aries, this soul's past incarnations were spent mastering independence, courage, and self-assertion. You came into this life knowing how to stand alone, act decisively, and prioritize yourself - now you're learning partnership and consideration of others.",
+        hook: "Con el Nodo Sur en Aries, las encarnaciones pasadas de esta alma las pasó dominando la independencia, el coraje y la autoafirmación. Llegaste a esta vida sabiendo cómo estar solo, actuar con decisión y priorizarte a ti mismo; ahora estás aprendiendo a colaborar y a tener en cuenta a los demás.",
         
-        masterPattern: `The South Node in Aries represents lifetimes of warrior energy - being the pioneer, the first, the one who forges ahead alone. You were the soldier, the entrepreneur, the independent spirit who needed no one's help or approval.
+        masterPattern: `El Nodo Sur en Aries representa vidas de energía guerrera: ser el pionero, el primero, el que avanza solo. Eras el soldado, el empresario, el espíritu independiente que no necesitaba ayuda ni aprobación de nadie.
 
-In those incarnations, you learned courage, quick decision-making, and self-reliance. You became skilled at initiating, leading, and surviving alone. Independence was your strength and your identity.
+En esas encarnaciones, aprendiste coraje, toma rápida de decisiones y autosuficiencia. Te volviste hábil para iniciar, liderar y sobrevivir solo. La independencia era tu fuerza y ​​tu identidad.
 
-These skills are gifts you carry into this life - the capacity to act decisively, stand alone when necessary, and lead courageously. The Aries South Node makes you naturally brave and self-sufficient.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de actuar con decisión, permanecer solo cuando sea necesario y liderar con valentía. El Nodo Sur de Aries te hace naturalmente valiente y autosuficiente.`,
         
-        comfortablePattern: `The comfortable pattern is doing things your way, making decisions without consulting others, and believing you know best. You may find yourself automatically taking charge, acting unilaterally, or feeling frustrated when you have to accommodate others.
+        comfortablePattern: `El patrón cómodo es hacer las cosas a tu manera, tomar decisiones sin consultar a los demás y creer que sabes más. Es posible que usted se haga cargo automáticamente, actúe unilateralmente o se sienta frustrado cuando tenga que adaptarse a los demás.
 
-There's deep familiarity with being "the boss" - whether formally or informally. You're comfortable with conflict and competition because that's where you've spent lifetimes. Independence feels right; dependency feels wrong.
+Existe una profunda familiaridad con ser "el jefe", ya sea formal o informalmente. Te sientes cómodo con el conflicto y la competencia porque ahí es donde has pasado toda tu vida. La independencia se siente bien; la dependencia se siente mal.
 
-The ease with which you can stand alone, make quick decisions, and take action is your gift. But it becomes problematic when you can't partner, compromise, or consider others. The pattern that once served survival now prevents intimacy and collaboration.`,
+La facilidad con la que puedes estar solo, tomar decisiones rápidas y actuar es tu don. Pero se vuelve problemático cuando no puedes asociarte, comprometerte o considerar a los demás. El patrón que alguna vez sirvió para la supervivencia ahora impide la intimidad y la colaboración.`,
         
-        whenItServes: `The Aries South Node serves you in situations requiring courage, quick action, or independence. When crisis demands someone step forward and lead, you can. When decisions need to be made quickly without time for consensus, you're capable.
+        whenItServes: `El Nodo Sur de Aries te sirve en situaciones que requieren coraje, acción rápida o independencia. Cuando la crisis exige que alguien dé un paso adelante y lidere, usted puede hacerlo. Cuando es necesario tomar decisiones rápidamente sin tiempo para el consenso, usted es capaz.
 
-Your ability to stand alone serves when everyone else is looking for someone else to take charge. Your decisiveness serves when action is needed immediately. Your self-reliance serves when resources are scarce and everyone must fend for themselves.
+Su capacidad para mantenerse solo sirve cuando todos los demás buscan a alguien que se haga cargo. Su decisión sirve cuando se necesita acción inmediata. Su autosuficiencia sirve cuando los recursos son escasos y todos deben valerse por sí mismos.
 
-In your career, Aries gifts of leadership, initiative, and courage are valuable. In personal development, your ability to be independent ensures you never lose yourself completely in others.`,
+En su carrera, los dones de liderazgo, iniciativa y coraje de Aries son valiosos. En el desarrollo personal, su capacidad de ser independiente garantiza que nunca se pierda por completo en los demás.`,
         
-        whenItLimits: `The Aries South Node limits you when partnership, collaboration, or considering others' needs is required. Relationships suffer when you automatically do things your way without consulting your partner. Teams fail when you can't share leadership.
+        whenItLimits: `El Nodo Sur de Aries te limita cuando se requiere asociación, colaboración o consideración de las necesidades de los demás. Las relaciones sufren cuando automáticamente haces las cosas a tu manera sin consultar a tu pareja. Los equipos fracasan cuando no se puede compartir el liderazgo.
 
-The pattern limits growth when you need to compromise but experience it as losing. It prevents intimacy when you can't be vulnerable or admit you need someone. It damages relationships when you act unilaterally on joint decisions.
+El patrón limita el crecimiento cuando necesitas hacer concesiones pero lo experimentas como una pérdida. Previene la intimidad cuando no puedes ser vulnerable o admitir que necesitas a alguien. Daña las relaciones cuando se actúa unilateralmente en decisiones conjuntas.
 
-The warrior independence that once ensured survival now creates loneliness and conflict. What was mastery in past lives becomes obstacle in this one when relationship and harmony are the growth edges.`,
+La independencia guerrera que alguna vez aseguró la supervivencia ahora crea soledad y conflicto. Lo que fue dominio en vidas pasadas se convierte en obstáculo en ésta cuando la relación y la armonía son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Aries South Node is selfishness, impulsiveness, and inability to collaborate. You may find yourself dominating relationships without meaning to, making decisions that affect others without consulting them, or feeling annoyed by others' needs.
+        shadowExpression: `La sombra del Nodo Sur de Aries es el egoísmo, la impulsividad y la incapacidad para colaborar. Es posible que se encuentre dominando las relaciones sin querer, tomando decisiones que afectan a los demás sin consultarlos o sintiéndose molesto por las necesidades de los demás.
 
-There can be anger issues - not because you're an angry person, but because you have warrior energy trained for battle and haven't yet learned Libra's diplomacy. Compromise feels like losing; others' input feels like an attack.
+Puede haber problemas de ira, no porque seas una persona enojada, sino porque tienes energía de guerrero entrenada para la batalla y aún no has aprendido la diplomacia de Libra. El compromiso se siente como perder; Las aportaciones de los demás se sienten como un ataque.
 
-The darkest shadow is isolation - being so independent that you can't let anyone in, so self-sufficient that you never experience true partnership. The warrior who wins every battle but ends up alone.`,
+La sombra más oscura es el aislamiento: ser tan independiente que no puedes dejar entrar a nadie, tan autosuficiente que nunca experimentas una verdadera asociación. El guerrero que gana todas las batallas pero termina solo.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Libra is strength. You're not learning partnership from weakness or codependency - you're learning it as a strong individual who can stand alone but chooses partnership.
+        giftToNorthNode: `El regalo que traes a tu viaje al Nodo Norte en Libra es la fuerza. No se aprende a asociarse a partir de la debilidad o la codependencia; se aprende como un individuo fuerte que puede valerse por sí solo pero elige asociarse.
 
-Your Aries courage allows you to engage in conflict within relationship rather than avoiding it to keep peace. Your decisiveness balances Libra indecision. Your independence ensures you don't lose yourself in others.
+Tu coraje de Aries te permite involucrarte en conflictos dentro de la relación en lugar de evitarlos para mantener la paz. Tu decisión equilibra la indecisión de Libra. Tu independencia garantiza que no te pierdas en los demás.
 
-The most powerful expression is using your warrior strength to fight FOR relationship rather than dominance, to courageously engage in the vulnerability partnership requires. You become the strong partner who chooses collaboration from power, not need.`,
+La expresión más poderosa es usar tu fuerza guerrera para luchar POR la ​​relación en lugar del dominio, para participar con valentía en la vulnerabilidad que requiere la asociación. Te conviertes en el socio fuerte que elige la colaboración en lugar del poder, no la necesidad.`,
         
-        evolutionPath: `Evolution means recognizing when the Aries pattern serves and when it limits. It's learning to still access courage and independence but not default to them in every situation.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Aries sirve y cuándo limita. Es aprender a seguir accediendo al coraje y la independencia, pero no a utilizarlos por defecto en cada situación.
 
-The path forward is developing Libra skills - consultation, compromise, considering others' perspectives - while maintaining Aries strengths. It's being ABLE to stand alone but choosing partnership. It's being CAPABLE of unilateral action but consulting anyway.
+El camino a seguir es desarrollar las habilidades de Libra (consulta, compromiso, consideración de las perspectivas de los demás) manteniendo al mismo tiempo las fortalezas de Aries. Es ser CAPAZ de estar solo pero elegir asociarse. Es ser CAPAZ de actuar unilateralmente pero consultar de todos modos.
 
-Success looks like: accessing courage when needed but not when partnership is called for; maintaining independence while creating true collaboration; leading when appropriate but following sometimes; being strong enough to be gentle.`,
+El éxito se ve así: acceder al coraje cuando sea necesario, pero no cuando se requiere asociación; mantener la independencia mientras se crea una verdadera colaboración; liderar cuando sea apropiado pero seguir a veces; ser lo suficientemente fuerte como para ser gentil.`,
         
-        relationshipPattern: `In relationships, the Aries South Node pattern is being overly independent, making decisions without consulting your partner, and not considering how your actions affect them. You may find yourself automatically taking charge or feeling frustrated when your partner has different preferences.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Aries es ser demasiado independiente, tomar decisiones sin consultar a su pareja y no considerar cómo sus acciones la afectan. Es posible que automáticamente te hagas cargo o te sientas frustrado cuando tu pareja tiene preferencias diferentes.
 
-The growth edge is learning that considering your partner doesn't diminish you, that compromise isn't losing, and that partnership can make you stronger than independence. It's learning to ask "What do you think?" before acting.
+La ventaja del crecimiento es aprender que considerar a tu pareja no te disminuye, que el compromiso no significa perder y que la asociación puede hacerte más fuerte que la independencia. Es aprender a preguntar "¿Qué opinas?" antes de actuar.
 
-The evolved expression is being a strong individual who creates powerful partnership, someone who CAN stand alone but CHOOSES to stand together, who brings warrior strength to collaborative effort.`,
+La expresión evolucionada es ser un individuo fuerte que crea asociaciones poderosas, alguien que PUEDE mantenerse solo pero ELIGE permanecer unido, que aporta fuerza guerrera al esfuerzo colaborativo.`,
         
-        spiritualMeaning: `Spiritually, the Aries South Node represents mastery of individual will and self-development. You've spent lifetimes learning who you are independent of others. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Aries representa el dominio de la voluntad individual y el autodesarrollo. Has pasado vidas aprendiendo quién eres independientemente de los demás. Ese trabajo está completo.
 
-This lifetime is about discovering that the next level of evolution includes others. Not losing yourself in them (Cancer South Node's lesson) but maintaining yourself while creating union. The spiritual warrior who learns diplomacy.
+Esta vida se trata de descubrir que el siguiente nivel de evolución incluye a otros. No perderte en ellos (lección del Nodo Sur de Cáncer) sino mantenerte mientras creas unión. El guerrero espiritual que aprende diplomacia.
 
-The deeper teaching is that true strength includes the ability to compromise, true leadership includes following sometimes, and the highest expression of independence is choosing interdependence from wholeness.`,
+La enseñanza más profunda es que la verdadera fuerza incluye la capacidad de comprometerse, el verdadero liderazgo incluye a veces seguir y la expresión más elevada de independencia es elegir la interdependencia de la plenitud.`,
         
-        affirmation: "I honor my warrior gifts of courage and independence. I use my strength to create partnership. I choose collaboration from power, not need. I am learning that considering others enhances rather than diminishes me."
+        affirmation: "Honro mis dones guerreros de coraje e independencia. Utilizo mi fuerza para crear alianzas. Elijo la colaboración desde el poder, no la necesidad. Estoy aprendiendo que considerar a los demás me mejora en lugar de disminuirme."
     },
 
     Taurus: {
-        title: "South Node in Taurus - The Builder's Comfort Zone",
-        archetype: "From Stability to Transformation",
-        northNode: "Scorpio",
-        hook: "With South Node in Taurus, this soul's past incarnations were spent building security, enjoying simple pleasures, and cultivating self-sufficiency. You came into this life knowing how to create stability through your own effort - now you're learning transformation and shared resources.",
+        title: "Nodo Sur en Tauro: la zona de confort del constructor",
+        archetype: "De la estabilidad a la transformación",
+        northNode: "Escorpión",
+        hook: "Con el Nodo Sur en Tauro, las encarnaciones pasadas de esta alma las pasó construyendo seguridad, disfrutando de placeres simples y cultivando la autosuficiencia. Viniste a esta vida sabiendo cómo crear estabilidad a través de tu propio esfuerzo; ahora estás aprendiendo sobre la transformación y los recursos compartidos.",
         
-        masterPattern: `The South Node in Taurus represents lifetimes of building material security - being the farmer, artisan, or provider who created wealth through patient effort. You were the one who worked steadily, accumulated resources, and found peace in simplicity.
+        masterPattern: `El Nodo Sur en Tauro representa vidas de seguridad material de construcción: ser el agricultor, el artesano o el proveedor que creó riqueza a través del esfuerzo paciente. Tú fuiste quien trabajó con constancia, acumuló recursos y encontró la paz en la sencillez.
 
-In those incarnations, you learned patience, self-sufficiency, and appreciation for material world. You became skilled at working with earth, creating beauty, and building security. Stability was your achievement and your identity.
+En esas encarnaciones, aprendiste paciencia, autosuficiencia y aprecio por el mundo material. Te volviste hábil para trabajar con la tierra, crear belleza y construir seguridad. La estabilidad fue tu logro y tu identidad.
 
-These skills are gifts you carry into this life - the capacity to work steadily, create abundance, and find joy in simple pleasures. The Taurus South Node makes you naturally grounded and capable of building wealth.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de trabajar de manera constante, crear abundancia y encontrar alegría en los placeres simples. El Nodo Sur de Tauro te hace estar naturalmente conectado a la tierra y ser capaz de generar riqueza.`,
         
-        comfortablePattern: `The comfortable pattern is relying only on yourself, building your own resources, and avoiding anything that threatens stability. You may find yourself automatically choosing security over growth, comfort over transformation, predictability over depth.
+        comfortablePattern: `El patrón cómodo es confiar sólo en uno mismo, desarrollar sus propios recursos y evitar cualquier cosa que amenace la estabilidad. Es posible que se encuentre automáticamente eligiendo seguridad antes que crecimiento, comodidad antes que transformación, previsibilidad antes que profundidad.
 
-There's deep familiarity with self-sufficiency - you don't like depending on others financially or emotionally. You're comfortable with routine and accumulation because that's where you've spent lifetimes. Stability feels right; change feels threatening.
+Existe una profunda familiaridad con la autosuficiencia: no le gusta depender de otros financiera o emocionalmente. Te sientes cómodo con la rutina y la acumulación porque ahí es donde has pasado toda tu vida. La estabilidad se siente bien; el cambio se siente amenazador.
 
-The ease with which you can build material security, work patiently, and enjoy life's pleasures is your gift. But it becomes problematic when you resist transformation, avoid depth, or can't share resources. The pattern that once created wealth now prevents deeper intimacy and growth.`,
+La facilidad con la que puedes construir seguridad material, trabajar con paciencia y disfrutar de los placeres de la vida es tu regalo. Pero se vuelve problemático cuando uno se resiste a la transformación, evita la profundidad o no puede compartir recursos. El patrón que alguna vez creó riqueza ahora impide una intimidad y un crecimiento más profundos.`,
         
-        whenItServes: `The Taurus South Node serves you in situations requiring patience, steady effort, or practical skills. When long-term building is needed, you can sustain effort. When everyone else is chasing drama, you can maintain stability.
+        whenItServes: `El Nodo Sur de Tauro te sirve en situaciones que requieren paciencia, esfuerzo constante o habilidades prácticas. Cuando se necesita una construcción a largo plazo, se puede mantener el esfuerzo. Cuando todos los demás persiguen el drama, puedes mantener la estabilidad.
 
-Your ability to work steadily serves when quick fixes won't work. Your self-sufficiency serves when others are unreliable. Your groundedness serves when everyone else is caught in intensity.
+Su capacidad para trabajar de manera constante le resulta útil cuando las soluciones rápidas no funcionan. Tu autosuficiencia sirve cuando los demás no son confiables. Tu conexión con la tierra sirve cuando todos los demás están atrapados en la intensidad.
 
-In your career, Taurus gifts of persistence, craftsmanship, and resource building are valuable. In personal development, your ability to create security ensures you have foundation for transformation.`,
+En su carrera, los dones de persistencia, artesanía y creación de recursos de Tauro son valiosos. En el desarrollo personal, su capacidad para crear seguridad garantiza que tenga una base para la transformación.`,
         
-        whenItLimits: `The Taurus South Node limits you when transformation, depth, or shared resources are required. Relationships stay surface when you avoid emotional intensity. Growth stagnates when you cling to security.
+        whenItLimits: `El Nodo Sur de Tauro te limita cuando se requiere transformación, profundidad o recursos compartidos. Las relaciones permanecen superficiales cuando evitas la intensidad emocional. El crecimiento se estanca cuando te aferras a la seguridad.
 
-The pattern limits evolution when you need to let something die but can't release it. It prevents intimacy when you can't merge finances or energies with others. It blocks rebirth when you hold onto what's comfortable but no longer serves.
+El patrón limita la evolución cuando necesitas dejar que algo muera pero no puedes liberarlo. Previene la intimidad cuando no se pueden fusionar finanzas o energías con los demás. Bloquea el renacimiento cuando te aferras a lo que te resulta cómodo pero que ya no sirve.
 
-The stable security that once was achievement now becomes prison. What was mastery in past lives becomes obstacle in this one when transformation and depth are the growth edges.`,
+La seguridad estable que alguna vez fue un logro ahora se convierte en prisión. Lo que fue dominio en vidas pasadas se convierte en obstáculo en ésta cuando la transformación y la profundidad son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Taurus South Node is materialism, resistance to change, and inability to transform. You may find yourself accumulating possessions for security, staying in situations that are comfortable but dead, or avoiding emotional depth.
+        shadowExpression: `La sombra del Nodo Sur de Tauro es el materialismo, la resistencia al cambio y la incapacidad de transformarse. Es posible que se encuentre acumulando posesiones por motivos de seguridad, permaneciendo en situaciones cómodas pero muertas o evitando la profundidad emocional.
 
-There can be stubbornness - not because you're oppositional, but because change feels threatening to your core. Letting go feels like loss; transformation feels like destruction rather than rebirth.
+Puede haber terquedad, no porque seas oposicionista, sino porque el cambio te resulta amenazador. Dejar ir se siente como una pérdida; La transformación se siente más como destrucción que como renacimiento.
 
-The darkest shadow is stagnation - being so attached to comfort that you never grow, so focused on material security that you miss depth, so resistant to change that life has to force transformation through crisis.`,
+La sombra más oscura es el estancamiento: estar tan apegado a la comodidad que nunca creces, tan concentrado en la seguridad material que pierdes profundidad, tan resistente al cambio que la vida tiene que forzar la transformación a través de la crisis.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Scorpio is groundedness. You're not learning transformation from chaos or instability - you're learning it as someone who can create security, which makes you capable of sustainable transformation.
+        giftToNorthNode: `El regalo que traes a tu viaje al Nodo Norte en Escorpio es la conexión a tierra. No estás aprendiendo la transformación a partir del caos o la inestabilidad; la estás aprendiendo como alguien que puede crear seguridad, lo que te hace capaz de una transformación sostenible.
 
-Your Taurus patience allows deep transformation rather than impulsive drama. Your self-sufficiency means merging with others is choice, not desperation. Your groundedness allows you to navigate intensity without getting lost.
+Tu paciencia de Tauro permite una transformación profunda en lugar de un drama impulsivo. Tu autosuficiencia significa que fusionarte con los demás es una elección, no una desesperación. Tu conexión con la tierra te permite navegar la intensidad sin perderte.
 
-The most powerful expression is using your building capacity to create transformation that lasts - not burning everything down but consciously evolving. You become the stable force who can handle profound change.`,
+La expresión más poderosa es utilizar tu capacidad de construcción para crear una transformación duradera, sin quemarlo todo, sino evolucionando conscientemente. Te conviertes en la fuerza estable que puede manejar un cambio profundo.`,
         
-        evolutionPath: `Evolution means recognizing when Taurus pattern serves and when it limits. It's learning to still access stability and patience but not let them prevent necessary transformation.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Tauro sirve y cuándo limita. Es aprender a seguir accediendo a la estabilidad y la paciencia, pero no dejar que impidan la transformación necesaria.
 
-The path forward is developing Scorpio skills - embracing change, diving into depth, sharing resources - while maintaining Taurus groundedness. It's being ABLE to create security but willing to transform it. It's being CAPABLE of stability but open to rebirth.
+El camino a seguir es desarrollar las habilidades de Escorpio (abrazar el cambio, profundizar, compartir recursos) manteniendo al mismo tiempo la base de Tauro. Es ser CAPAZ de crear seguridad pero dispuesto a transformarla. Es ser CAPAZ de estabilidad pero abierto al renacimiento.
 
-Success looks like: accessing patience when it serves but not when it prevents growth; maintaining groundedness while embracing transformation; building security but being willing to transform what you've built; enjoying pleasure while diving into depth.`,
+El éxito se ve así: acceder a la paciencia cuando sirve pero no cuando impide el crecimiento; mantener la conexión a tierra mientras se abraza la transformación; construir seguridad pero estar dispuesto a transformar lo que has construido; disfrutando del placer mientras se sumerge en las profundidades.`,
         
-        relationshipPattern: `In relationships, the Taurus South Node pattern is keeping things comfortable and surface, avoiding emotional intensity, and maintaining financial independence. You may find yourself resisting merging finances or energies, keeping relationships pleasant but not deep.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Tauro mantiene las cosas cómodas y superficiales, evita la intensidad emocional y mantiene la independencia financiera. Es posible que se resista a fusionar finanzas o energías, manteniendo relaciones agradables pero no profundas.
 
-The growth edge is learning that intimacy requires vulnerability and merging, that transformation deepens love, and that sharing resources creates union. It's learning to dive into emotional depths and navigate power dynamics.
+La ventaja del crecimiento es aprender que la intimidad requiere vulnerabilidad y fusión, que la transformación profundiza el amor y que compartir recursos crea unión. Es aprender a sumergirse en profundidades emocionales y navegar en dinámicas de poder.
 
-The evolved expression is being grounded enough to handle intensity, stable enough to risk transformation, self-sufficient enough to merge from choice rather than need.`,
+La expresión evolucionada es estar lo suficientemente arraigado para manejar la intensidad, lo suficientemente estable como para arriesgarse a la transformación, lo suficientemente autosuficiente para fusionarse a partir de la elección en lugar de la necesidad.`,
         
-        spiritualMeaning: `Spiritually, the Taurus South Node represents mastery of material plane and building form. You've spent lifetimes learning how to manifest in the physical world. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Tauro representa el dominio del plano material y la forma de construcción. Habéis pasado vidas aprendiendo cómo manifestaros en el mundo físico. Ese trabajo está completo.
 
-This lifetime is about discovering that form must transform, that security can be spiritual as well as material, and that depth enriches life beyond simple pleasures. The builder who learns alchemy.
+Esta vida se trata de descubrir que la forma debe transformarse, que la seguridad puede ser tanto espiritual como material, y que la profundidad enriquece la vida más allá de los simples placeres. El constructor que aprende alquimia.
 
-The deeper teaching is that transformation isn't destruction - it's evolution. And that the ultimate security comes not from what you accumulate but from your capacity to transform and be reborn.`,
+La enseñanza más profunda es que la transformación no es destrucción, es evolución. Y que la seguridad última no proviene de lo que acumulas sino de tu capacidad de transformarte y renacer.`,
         
-        affirmation: "I honor my builder gifts of patience and stability. I use my groundedness to navigate transformation. I choose depth over comfort, evolution over stagnation. I am learning that transformation serves my soul more than security serves my ego."
+        affirmation: "Honro los dones de paciencia y estabilidad de mi constructor. Utilizo mi base para navegar la transformación. Elijo la profundidad a la comodidad, la evolución al estancamiento. Estoy aprendiendo que la transformación sirve a mi alma más que la seguridad a mi ego."
     },
 
     Gemini: {
-        title: "South Node in Gemini - The Student's Comfort Zone",
-        archetype: "From Questions to Wisdom",
-        northNode: "Sagittarius",
-        hook: "With South Node in Gemini, this soul's past incarnations were spent gathering information, communicating, and staying curious. You came into this life knowing how to learn and ask questions - now you're learning to teach and commit to truth.",
+        title: "Nodo Sur en Géminis: la zona de confort del estudiante",
+        archetype: "De las preguntas a la sabiduría",
+        northNode: "Sagitario",
+        hook: "Con el Nodo Sur en Géminis, las encarnaciones pasadas de esta alma se dedicaron a recopilar información, comunicarse y mantener la curiosidad. Viniste a esta vida sabiendo cómo aprender y hacer preguntas; ahora estás aprendiendo a enseñar y comprometerte con la verdad.",
         
-        masterPattern: `The South Node in Gemini represents lifetimes as the student, messenger, or communicator - being the one who gathered information, asked questions, and shared knowledge. You were the curious mind, the networker, the one who knew a little about everything.
+        masterPattern: `El Nodo Sur en Géminis representa vidas como estudiante, mensajero o comunicador, siendo quien recopiló información, hizo preguntas y compartió conocimientos. Eras la mente curiosa, la networker, la que sabía un poco de todo.
 
-In those incarnations, you learned intellectual flexibility, communication skill, and how to learn quickly. You became skilled at adapting, seeing multiple perspectives, and conveying information. Learning was your mastery.
+En esas encarnaciones, aprendiste flexibilidad intelectual, habilidades de comunicación y cómo aprender rápidamente. Adquiriste habilidades para adaptarte, ver múltiples perspectivas y transmitir información. El aprendizaje era tu dominio.
 
-These skills are gifts you carry into this life - the capacity to learn quickly, communicate clearly, and see multiple sides. The Gemini South Node makes you naturally curious and intellectually agile.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de aprender rápidamente, comunicarte con claridad y ver múltiples lados. El Nodo Sur de Géminis te vuelve naturalmente curioso e intelectualmente ágil.`,
         
-        comfortablePattern: `The comfortable pattern is staying in student mode, constantly learning without ever feeling you know enough to teach. You may find yourself automatically gathering more information rather than forming conclusions, asking questions rather than providing answers.
+        comfortablePattern: `El patrón cómodo es permanecer en modo estudiante, aprendiendo constantemente sin sentir nunca que sabes lo suficiente para enseñar. Es posible que se encuentre recopilando automáticamente más información en lugar de sacar conclusiones, haciendo preguntas en lugar de dar respuestas.
 
-There's deep familiarity with intellectual exploration without commitment - knowing many things without claiming expertise in any. You're comfortable with questions because that's where you've spent lifetimes. Knowing feels presumptuous; learning feels safe.
+Existe una profunda familiaridad con la exploración intelectual sin compromiso: saber muchas cosas sin pretender tener experiencia en ninguna. Te sientes cómodo con las preguntas porque ahí es donde has pasado toda tu vida. Saber parece presuntuoso; aprender se siente seguro.
 
-The ease with which you can learn, communicate, and adapt is your gift. But it becomes problematic when you never synthesize information into wisdom, never commit to teaching, or intellectualize rather than finding meaning. The pattern that once created knowledge now prevents wisdom.`,
+La facilidad con la que puedes aprender, comunicarte y adaptarte es tu don. Pero se vuelve problemático cuando nunca se sintetiza la información en sabiduría, nunca se compromete a enseñar o se intelectualiza en lugar de encontrar significado. El patrón que alguna vez creó el conocimiento ahora impide la sabiduría.`,
         
-        whenItServes: `The Gemini South Node serves you in situations requiring quick learning, clear communication, or intellectual flexibility. When information needs gathering, you excel. When ideas need conveying clearly, you can.
+        whenItServes: `El Nodo Sur de Géminis le sirve en situaciones que requieren un aprendizaje rápido, una comunicación clara o flexibilidad intelectual. Cuando es necesario recopilar información, usted sobresale. Cuando es necesario transmitir las ideas con claridad, usted puede hacerlo.
 
-Your ability to see multiple perspectives serves in negotiation and mediation. Your communication skill serves in teaching (when you finally step into that role). Your intellectual agility serves when adaptation is needed.
+Su capacidad para ver múltiples perspectivas sirve en la negociación y la mediación. Tu habilidad de comunicación sirve en la enseñanza (cuando finalmente asumes ese rol). Tu agilidad intelectual sirve cuando se necesita adaptación.
 
-In your career, Gemini gifts of learning, communication, and mental flexibility are valuable. In personal development, your curiosity ensures you keep growing.`,
+En su carrera, los dones de aprendizaje, comunicación y flexibilidad mental de Géminis son valiosos. En el desarrollo personal, tu curiosidad te asegura seguir creciendo.`,
         
-        whenItLimits: `The Gemini South Node limits you when wisdom, teaching, or commitment to truth is required. Growth stagnates when you endlessly gather information without ever feeling you know enough. Purpose feels elusive when you never claim expertise.
+        whenItLimits: `El Nodo Sur de Géminis te limita cuando se requiere sabiduría, enseñanza o compromiso con la verdad. El crecimiento se estanca cuando recopilas información sin cesar sin sentir que sabes lo suficiente. El propósito parece difícil de alcanzar cuando nunca afirmas tener experiencia.
 
-The pattern limits evolution when you intellectualize emotions rather than feeling them, stay local when expansion is needed, or know many things without finding overarching meaning. Relationships stay surface when you analyze rather than connecting through shared philosophy.
+El patrón limita la evolución cuando intelectualizas las emociones en lugar de sentirlas, te mantienes local cuando se necesita expansión o sabes muchas cosas sin encontrar un significado general. Las relaciones permanecen superficiales cuando analizas en lugar de conectarte a través de una filosofía compartida.
 
-The perpetual student pattern that once created knowledge now prevents you from becoming the teacher. What was mastery in past lives becomes obstacle when wisdom and faith are the growth edges.`,
+El perpetuo patrón estudiantil que una vez creó el conocimiento ahora te impide convertirte en maestro. Lo que fue dominio en vidas pasadas se convierte en obstáculo cuando la sabiduría y la fe son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Gemini South Node is superficiality, intellectual arrogance, and analysis paralysis. You may find yourself knowing facts without understanding meaning, talking more than listening (despite being "the student"), or being unable to commit to any philosophy.
+        shadowExpression: `La sombra del Nodo Sur de Géminis es la superficialidad, la arrogancia intelectual y la parálisis del análisis. Es posible que conozca hechos sin comprender el significado, que hable más que escuchar (a pesar de ser "el estudiante") o que no pueda comprometerse con ninguna filosofía.
 
-There can be scattered energy - starting many things but finishing none, being interested in everything but expert in nothing. The mind becomes both your gift and your prison.
+Puede haber energía dispersa: comenzar muchas cosas pero no terminar ninguna, estar interesado en todo pero no ser experto en nada. La mente se convierte a la vez en tu regalo y en tu prisión.
 
-The darkest shadow is meaninglessness - accumulating information without finding truth, being so open-minded that nothing has value, intellectualizing life rather than living it. The student who never becomes teacher because they never admit they know enough.`,
+La sombra más oscura es la falta de sentido: acumular información sin encontrar la verdad, tener una mente tan abierta que nada tiene valor, intelectualizar la vida en lugar de vivirla. El estudiante que nunca se convierte en maestro porque nunca admite que sabe lo suficiente.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Sagittarius is intellectual foundation. You're not developing wisdom from ignorance - you're synthesizing vast knowledge into teachable philosophy.
+        giftToNorthNode: `El regalo que traes a tu viaje al Nodo Norte en Sagitario es una base intelectual. No estás desarrollando sabiduría a partir de la ignorancia: estás sintetizando un vasto conocimiento en una filosofía que se puede enseñar.
 
-Your Gemini communication skill makes you better teacher than those who never learned to convey ideas clearly. Your curiosity ensures your philosophy stays current rather than dogmatic. Your mental flexibility prevents your teaching from becoming rigid.
+Tu habilidad comunicativa Géminis te convierte en mejor maestro que aquellos que nunca aprendieron a transmitir ideas con claridad. Su curiosidad garantiza que su filosofía se mantenga actualizada y no dogmática. Tu flexibilidad mental evita que tu enseñanza se vuelva rígida.
 
-The most powerful expression is using your learning capacity to absorb wisdom traditions, then teaching them accessibly. You become the wise teacher who remains humble student - the highest Sagittarian expression.`,
+La expresión más poderosa es utilizar su capacidad de aprendizaje para absorber tradiciones de sabiduría y luego enseñarlas de manera accesible. Te conviertes en el maestro sabio que sigue siendo un estudiante humilde: la expresión más elevada de Sagitario.`,
         
-        evolutionPath: `Evolution means recognizing when Gemini pattern serves and when it limits. It's learning to still access curiosity and communication skill but also commit to wisdom and teaching.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Géminis sirve y cuándo limita. Es aprender a seguir accediendo a la curiosidad y a las habilidades de comunicación, pero también a comprometerse con la sabiduría y la enseñanza.
 
-The path forward is developing Sagittarius skills - forming philosophy, teaching others, having faith in meaning - while maintaining Gemini intellectual honesty. It's being ABLE to see all sides but choosing truth anyway. It's being CAPABLE of endless learning but committing to teach what you know.
+El camino a seguir es desarrollar las habilidades de Sagitario (formar filosofía, enseñar a otros, tener fe en el significado) manteniendo al mismo tiempo la honestidad intelectual de Géminis. Es ser CAPAZ de ver todos los lados pero elegir la verdad de todos modos. Es ser CAPAZ de aprender sin fin pero comprometerse a enseñar lo que sabes.
 
-Success looks like: accessing curiosity when it serves but not when it prevents commitment; maintaining mental flexibility while developing philosophical framework; learning continuously but also teaching; analyzing when useful but having faith in meaning.`,
+El éxito se ve así: acceder a la curiosidad cuando sirve pero no cuando impide el compromiso; mantener la flexibilidad mental mientras se desarrolla un marco filosófico; aprender continuamente pero también enseñar; analizar cuando es útil pero tener fe en el significado.`,
         
-        relationshipPattern: `In relationships, the Gemini South Node pattern is keeping things light and intellectual, avoiding emotional or philosophical depth, and needing constant mental stimulation. You may find yourself analyzing your partner rather than connecting, or staying surface to avoid intensity.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Géminis mantiene las cosas ligeras e intelectuales, evita la profundidad emocional o filosófica y necesita estimulación mental constante. Es posible que te encuentres analizando a tu pareja en lugar de conectarte, o quedándote en la superficie para evitar la intensidad.
 
-The growth edge is learning that shared philosophy creates deeper bond than shared interests, that teaching and inspiring your partner matters, and that some truths must be felt rather than analyzed.
+La ventaja del crecimiento es aprender que la filosofía compartida crea un vínculo más profundo que los intereses compartidos, que enseñar e inspirar a la pareja es importante y que algunas verdades deben sentirse en lugar de analizarse.
 
-The evolved expression is being intellectually engaging while also philosophically deep, communicating clearly while also inspiring with vision, staying curious while also having wisdom to share.`,
+La expresión evolucionada es ser intelectualmente atractivo y al mismo tiempo filosóficamente profundo, comunicarse con claridad y al mismo tiempo inspirar con una visión, mantener la curiosidad y al mismo tiempo tener sabiduría para compartir.`,
         
-        spiritualMeaning: `Spiritually, the Gemini South Node represents mastery of mind and knowledge gathering. You've spent lifetimes learning how to learn, how to communicate, how to think. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Géminis representa el dominio de la mente y la recopilación de conocimientos. Han pasado vidas aprendiendo cómo aprender, cómo comunicarse, cómo pensar. Ese trabajo está completo.
 
-This lifetime is about discovering that knowledge without wisdom is empty, that learning without teaching doesn't serve, and that faith in meaning matters more than intellectual understanding. The eternal student who becomes wise teacher.
+Esta vida se trata de descubrir que el conocimiento sin sabiduría es vacío, que aprender sin enseñanza no sirve y que la fe en el significado importa más que la comprensión intelectual. El eterno alumno que se convierte en sabio maestro.
 
-The deeper teaching is that sometimes you must commit to truth even when you can still see other perspectives. And that teaching what you know deepens your learning more than gathering more information.`,
+La enseñanza más profunda es que a veces debes comprometerte con la verdad incluso cuando todavía puedes ver otras perspectivas. Y que enseñar lo que sabes profundiza tu aprendizaje más que recopilar más información.`,
         
-        affirmation: "I honor my student gifts of curiosity and communication. I synthesize my knowledge into wisdom. I commit to teaching even while remaining student. I am learning that meaning serves my soul more than information serves my mind."
+        affirmation: "Honro los dones de curiosidad y comunicación de mis estudiantes. Sintetizo mi conocimiento en sabiduría. Me comprometo a enseñar incluso siendo estudiante. Estoy aprendiendo que el significado sirve a mi alma más que la información a mi mente."
     },
 
     Cancer: {
-        title: "South Node in Cancer - The Nurturer's Comfort Zone",
-        archetype: "From Emotion to Authority",
-        northNode: "Capricorn",
-        hook: "With South Node in Cancer, this soul's past incarnations were spent nurturing, creating home, and being emotionally available. You came into this life knowing how to care for others and create belonging - now you're learning professional achievement and emotional discipline.",
+        title: "Nodo Sur en Cáncer: la zona de confort del cuidador",
+        archetype: "De la emoción a la autoridad",
+        northNode: "Capricornio",
+        hook: "Con el Nodo Sur en Cáncer, las encarnaciones pasadas de esta alma las pasó nutriendo, creando un hogar y estando emocionalmente disponible. Llegaste a esta vida sabiendo cómo cuidar de los demás y crear pertenencia; ahora estás aprendiendo logros profesionales y disciplina emocional.",
         
-        masterPattern: `The South Node in Cancer represents lifetimes as the mother, caregiver, or emotional center - being the one everyone turned to for nurturance and safety. You were the homemaker, the emotional foundation, the one who kept the family together.
+        masterPattern: `El Nodo Sur en Cáncer representa vidas como madre, cuidadora o centro emocional, siendo a quien todos acuden en busca de cuidado y seguridad. Eras el ama de casa, la base emocional, la que mantenía unida a la familia.
 
-In those incarnations, you learned empathy, emotional intelligence, and how to create belonging. You became skilled at nurturing, feeling what others feel, and making people feel safe. Caring was your mastery.
+En esas encarnaciones, aprendiste empatía, inteligencia emocional y cómo crear pertenencia. Te volviste hábil para cuidar, sentir lo que sienten los demás y hacer que las personas se sientan seguras. El cuidado era tu dominio.
 
-These skills are gifts you carry into this life - the capacity to empathize deeply, create home, and nurture others. The Cancer South Node makes you naturally emotionally intelligent and caring.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de sentir una profunda empatía, crear un hogar y nutrir a los demás. El Nodo Sur de Cáncer te hace naturalmente emocionalmente inteligente y afectuoso.`,
         
-        comfortablePattern: `The comfortable pattern is prioritizing family and emotional life, being the nurturer, and measuring your worth through how well you care for others. You may find yourself automatically putting family first, being emotionally enmeshed, or feeling guilty about professional ambition.
+        comfortablePattern: `El patrón cómodo es priorizar la vida familiar y emocional, ser el cuidador y medir tu valor a través de lo bien que te preocupas por los demás. Es posible que automáticamente ponga a la familia en primer lugar, se sienta enredado emocionalmente o se sienta culpable por su ambición profesional.
 
-There's deep familiarity with being needed emotionally - you know how to make people feel safe, how to create home, how to be the emotional center. Nurturing feels right; achieving professionally feels selfish.
+Hay una profunda familiaridad con el hecho de que te necesiten emocionalmente: sabes cómo hacer que las personas se sientan seguras, cómo crear un hogar, cómo ser el centro emocional. Criar se siente bien; lograrlo profesionalmente se siente egoísta.
 
-The ease with which you can empathize, nurture, and create emotional safety is your gift. But it becomes problematic when you avoid professional achievement, take everything personally, or can't maintain emotional boundaries. The pattern that once created belonging now prevents your own achievement.`,
+La facilidad con la que puedes sentir empatía, nutrirte y crear seguridad emocional es tu don. Pero se vuelve problemático cuando evitas los logros profesionales, te lo tomas todo personalmente o no puedes mantener límites emocionales. El patrón que una vez creó la pertenencia ahora impide tus propios logros.`,
         
-        whenItServes: `The Cancer South Node serves you in situations requiring emotional intelligence, empathy, or creating safe space. When someone needs nurturing, you can provide it. When emotional attunement is needed, you have it.
+        whenItServes: `El Nodo Sur de Cáncer te atiende en situaciones que requieren inteligencia emocional, empatía o crear un espacio seguro. Cuando alguien necesita cuidados, tú puedes proporcionárselos. Cuando se necesita sintonía emocional, la tienes.
 
-Your ability to feel what others feel serves in counseling, parenting, or any caregiving role. Your home-creation skills serve in hospitality or real estate. Your emotional availability serves when others need to be truly seen.
+Su capacidad para sentir lo que otros sienten sirve en el asesoramiento, la crianza de los hijos o cualquier función de cuidado. Sus habilidades para la creación de viviendas sirven en la hostelería o el sector inmobiliario. Tu disponibilidad emocional sirve cuando los demás necesitan ser vistos de verdad.
 
-In your personal life, Cancer gifts of empathy and nurturing create deep connections. In your professional life, emotional intelligence makes you effective leader - when you finally step into leadership.`,
+En su vida personal, los dones de empatía y cariño de Cáncer crean conexiones profundas. En su vida profesional, la inteligencia emocional le convierte en un líder eficaz, cuando finalmente asume el liderazgo.`,
         
-        whenItLimits: `The Cancer South Node limits you when professional achievement, authority, or emotional discipline is required. Career stagnates when you always prioritize family. Leadership eludes you when you're too emotionally involved to make hard decisions.
+        whenItLimits: `El Nodo Sur de Cáncer te limita cuando se requieren logros profesionales, autoridad o disciplina emocional. La carrera se estanca cuando siempre priorizas la familia. El liderazgo se te escapa cuando estás demasiado involucrado emocionalmente para tomar decisiones difíciles.
 
-The pattern limits evolution when you take things personally that are professional, when you need everyone to like you rather than respect you, or when emotional enmeshment prevents healthy boundaries.
+El patrón limita la evolución cuando te tomas las cosas como algo personal y profesional, cuando necesitas agradar a todos en lugar de respetarte, o cuando el enredo emocional impide establecer límites saludables.
 
-The nurturing pattern that once created belonging now prevents your own growth. What was mastery in past lives becomes obstacle when professional achievement and authority are the growth edges.`,
+El patrón de crianza que una vez creó la pertenencia ahora impide tu propio crecimiento. Lo que fue dominio en vidas pasadas se convierte en obstáculo cuando el logro profesional y la autoridad son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Cancer South Node is emotional manipulation, guilt-tripping, and smothering those you love. You may find yourself making others responsible for your feelings, being the martyr, or keeping others dependent to feel needed.
+        shadowExpression: `La sombra del Nodo Sur de Cáncer es la manipulación emocional, la sensación de culpa y la asfixia de sus seres queridos. Es posible que se encuentre responsabilizando a otros de sus sentimientos, siendo un mártir o haciendo que otros dependan para que se sientan necesitados.
 
-There can be moodiness and taking things personally - not because you're overly sensitive, but because you've spent lifetimes in the emotional realm and haven't yet developed Capricorn's discipline and perspective.
+Puede haber mal humor y tomarse las cosas personalmente, no porque sea demasiado sensible, sino porque ha pasado vidas en el ámbito emocional y aún no ha desarrollado la disciplina y la perspectiva de Capricornio.
 
-The darkest shadow is emotional dependency disguised as caregiving - needing to be needed, keeping others small so you can nurture them, avoiding your own ambitions to stay in the comfortable caregiver role.`,
+La sombra más oscura es la dependencia emocional disfrazada de cuidado: necesitar ser necesitado, mantener a los demás pequeños para poder cuidarlos, evitar sus propias ambiciones de permanecer en el cómodo papel de cuidador.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Capricorn is emotional intelligence. You're not learning leadership from coldness or authority from disconnection - you're bringing empathy to professional realm.
+        giftToNorthNode: `El regalo que traes a tu viaje al Nodo Norte en Capricornio es la inteligencia emocional. No estás aprendiendo liderazgo de la frialdad o autoridad de la desconexión: estás llevando la empatía al ámbito profesional.
 
-Your Cancer emotional attunement makes you leader who sees the human in every situation. Your nurturing instinct makes you boss people want to work for. Your ability to create belonging makes you build organizations that feel like family.
+Tu sintonía emocional con Cáncer te convierte en un líder que ve al ser humano en cada situación. Tu instinto de crianza hace que la gente con la que eres jefe quiera trabajar. Tu capacidad para crear pertenencia te hace construir organizaciones que te hacen sentir como una familia.
 
-The most powerful expression is using your emotional intelligence in service of professional achievement - becoming the compassionate authority, the nurturing boss, the emotionally available leader. You bring humanity to the professional world.`,
+La expresión más poderosa es utilizar su inteligencia emocional al servicio del logro profesional: convertirse en la autoridad compasiva, el jefe cariñoso, el líder emocionalmente disponible. Traes humanidad al mundo profesional.`,
         
-        evolutionPath: `Evolution means recognizing when Cancer pattern serves and when it limits. It's learning to still access empathy and emotional intelligence but also develop discipline and professional achievement.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Cáncer sirve y cuándo limita. Es aprender a seguir accediendo a la empatía y la inteligencia emocional pero también a desarrollar la disciplina y los logros profesionales.
 
-The path forward is developing Capricorn skills - professional competence, authority, emotional discipline - while maintaining Cancer's heart. It's being ABLE to nurture but not letting it prevent achievement. It's being CAPABLE of emotional availability but maintaining professional boundaries.
+El camino a seguir es desarrollar las habilidades de Capricornio (competencia profesional, autoridad, disciplina emocional) mientras se mantiene el corazón de Cáncer. Es ser CAPAZ de nutrir pero no dejar que impida el logro. Es ser CAPAZ de disponibilidad emocional pero manteniendo límites profesionales.
 
-Success looks like: accessing empathy when it serves but not when it prevents necessary discipline; maintaining emotional intelligence while developing authority; caring for others while also achieving professionally; being available emotionally but maintaining boundaries.`,
+El éxito se ve así: acceder a la empatía cuando sirve pero no cuando impide la disciplina necesaria; mantener la inteligencia emocional mientras se desarrolla la autoridad; cuidar de los demás y al mismo tiempo lograr logros profesionales; Estar disponible emocionalmente pero manteniendo los límites.`,
         
-        relationshipPattern: `In relationships, the Cancer South Node pattern is being overly emotionally enmeshed, sacrificing your professional life for family, and taking your partner's moods personally. You may find yourself being the one who always accommodates emotionally, who puts relationship before career.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Cáncer es estar demasiado enredado emocionalmente, sacrificar su vida profesional por la familia y tomarse el estado de ánimo de su pareja como algo personal. Es posible que usted sea el que siempre se adapta emocionalmente, el que antepone las relaciones a la carrera.
 
-The growth edge is learning that healthy partnership includes both people having careers that matter, that emotional boundaries strengthen relationships, and that you can love your family while also achieving professionally.
+La ventaja del crecimiento es aprender que una relación saludable incluye que las personas tengan carreras importantes, que los límites emocionales fortalecen las relaciones y que uno puede amar a su familia y al mismo tiempo lograr logros profesionales.
 
-The evolved expression is being emotionally available while also professionally successful, nurturing your family while also building career, being the emotional center while also being the authority.`,
+La expresión evolucionada es estar disponible emocionalmente y al mismo tiempo tener éxito profesional, nutrir a su familia y al mismo tiempo desarrollar su carrera, ser el centro emocional y al mismo tiempo ser la autoridad.`,
         
-        spiritualMeaning: `Spiritually, the Cancer South Node represents mastery of emotional realm and creation of belonging. You've spent lifetimes learning how to love, how to nurture, how to create home. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Cáncer representa el dominio del ámbito emocional y la creación de pertenencia. Habéis pasado vidas aprendiendo a amar, a cuidar, a crear un hogar. Ese trabajo está completo.
 
-This lifetime is about discovering that achievement serves those you love, that authority can be nurturing, and that your professional success models possibility for those you care for. The mother who becomes leader.
+Esta vida se trata de descubrir que los logros sirven a quienes amas, que la autoridad puede ser enriquecedora y que tu éxito profesional es un modelo de posibilidades para quienes te importan. La madre que se convierte en líder.
 
-The deeper teaching is that you serve family better when you're fulfilled professionally. And that true love includes encouraging those you care for to achieve, not just keeping them safe and comfortable.`,
+La enseñanza más profunda es que uno sirve mejor a la familia cuando se siente realizado profesionalmente. Y ese amor verdadero incluye animar a sus seres queridos a lograr sus objetivos, no sólo mantenerlos seguros y cómodos.`,
         
-        affirmation: "I honor my nurturer gifts of empathy and care. I use my emotional intelligence in professional realm. I achieve without guilt. I am learning that professional success serves those I love, and that authority can be compassionate."
+        affirmation: "Honro mis dones de empatía y cuidado. Utilizo mi inteligencia emocional en el ámbito profesional. Lo logro sin culpa. Estoy aprendiendo que el éxito profesional sirve a quienes amo y que la autoridad puede ser compasiva."
     },
 
     Leo: {
-        title: "South Node in Leo - The Star's Comfort Zone",
-        archetype: "From Recognition to Revolution",
-        northNode: "Aquarius",
-        hook: "With South Node in Leo, this soul's past incarnations were spent in the spotlight, expressing creatively, and receiving recognition. You came into this life knowing how to shine and be special - now you're learning to serve the collective and release need for applause.",
+        title: "Nodo Sur en Leo - La Zona de Confort de la Estrella",
+        archetype: "Del reconocimiento a la revolución",
+        northNode: "Acuario",
+        hook: "Con el Nodo Sur en Leo, las encarnaciones pasadas de esta alma estuvieron en el centro de atención, expresándose creativamente y recibiendo reconocimiento. Viniste a esta vida sabiendo cómo brillar y ser especial; ahora estás aprendiendo a servir al colectivo y liberar la necesidad de aplausos.",
         
-        masterPattern: `The South Node in Leo represents lifetimes as the king, performer, or creative genius - being the one who shone brightly and received love and admiration. You were the leader, the artist, the one who was celebrated for your unique gifts.
+        masterPattern: `El Nodo Sur en Leo representa vidas como rey, intérprete o genio creativo, siendo aquel que brilló y recibió amor y admiración. Eras el líder, el artista, el que era celebrado por tus dones únicos.
 
-In those incarnations, you learned creative expression, leadership through personal magnetism, and how to inspire through your radiance. You became skilled at performing, leading, and bringing joy. Being special was your identity.
+En esas encarnaciones, aprendiste la expresión creativa, el liderazgo a través del magnetismo personal y cómo inspirar a través de tu resplandor. Te volviste hábil para actuar, liderar y brindar alegría. Ser especial era tu identidad.
 
-These skills are gifts you carry into this life - the capacity to create, lead, and inspire. The Leo South Node makes you naturally charismatic and creatively gifted.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de crear, liderar e inspirar. El Nodo Sur de Leo te hace carismático por naturaleza y dotado de creatividad.`,
         
-        comfortablePattern: `The comfortable pattern is being center of attention, measuring your worth through recognition, and leading through personal charisma. You may find yourself automatically taking the spotlight, needing applause to feel valuable, or making everything about you.
+        comfortablePattern: `El patrón cómodo es ser el centro de atención, medir su valor mediante el reconocimiento y liderar mediante el carisma personal. Es posible que automáticamente te encuentres siendo el centro de atención, necesitando aplausos para sentirte valioso o haciendo todo por ti.
 
-There's deep familiarity with being the star - you know how to command attention, how to perform, how to make people love you. Recognition feels necessary; being one of many feels wrong.
+Hay una profunda familiaridad con ser la estrella: sabes cómo llamar la atención, cómo actuar, cómo hacer que la gente te ame. El reconocimiento se siente necesario; ser uno de muchos se siente mal.
 
-The ease with which you can shine, create, and inspire is your gift. But it becomes problematic when you need constant recognition, can't think of the group, or make everything dramatic and personal. The pattern that once brought joy now prevents serving the collective.`,
+La facilidad con la que puedes brillar, crear e inspirar es tu don. Pero se vuelve problemático cuando necesitas un reconocimiento constante, no puedes pensar en el grupo o hacer que todo sea dramático y personal. El patrón que alguna vez trajo alegría ahora impide servir al colectivo.`,
         
-        whenItServes: `The Leo South Node serves you in situations requiring creativity, leadership through inspiration, or bringing joy. When someone needs to lift spirits or inspire hope, you can. When creative expression is needed, you have it.
+        whenItServes: `El Nodo Sur de Leo le sirve en situaciones que requieren creatividad, liderazgo a través de la inspiración o brindar alegría. Cuando alguien necesita levantar el ánimo o inspirar esperanza, usted puede hacerlo. Cuando se necesita expresión creativa, la tienes.
 
-Your ability to lead through personal magnetism serves when vision needs embodiment. Your creativity serves when beauty and joy are needed. Your radiance serves when others need inspiration.
+Su capacidad para liderar a través del magnetismo personal sirve cuando la visión necesita encarnarse. Tu creatividad sirve cuando se necesita belleza y alegría. Tu resplandor sirve cuando otros necesitan inspiración.
 
-In your career, Leo gifts of creativity, leadership, and performance are valuable. In personal development, your ability to express yourself ensures you honor your uniqueness while serving the collective.`,
+En su carrera, los dones de creatividad, liderazgo y desempeño de Leo son valiosos. En el desarrollo personal, su capacidad para expresarse garantiza que honre su singularidad mientras sirve al colectivo.`,
         
-        whenItLimits: `The Leo South Node limits you when group consciousness, innovation, or emotional detachment is required. Progress stalls when you need recognition for every contribution. Teams fail when you always need to be the star.
+        whenItLimits: `El Nodo Sur de Leo te limita cuando se requiere conciencia de grupo, innovación o desapego emocional. El progreso se estanca cuando se necesita reconocimiento por cada contribución. Los equipos fallan cuando siempre necesitas ser la estrella.
 
-The pattern limits evolution when you make everything personal and dramatic, when you can't think of what serves the group, or when you need to be special rather than one of many equals.
+El patrón limita la evolución cuando haces que todo sea personal y dramático, cuando no puedes pensar en lo que sirve al grupo o cuando necesitas ser especial en lugar de uno entre muchos iguales.
 
-The star pattern that once brought joy now creates isolation. What was mastery in past lives becomes obstacle when serving humanity and releasing ego are the growth edges.`,
+El patrón de estrellas que alguna vez trajo alegría ahora crea aislamiento. Lo que fue dominio en vidas pasadas se vuelve obstáculo cuando servir a la humanidad y liberar el ego son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Leo South Node is narcissism, drama addiction, and inability to think beyond yourself. You may find yourself creating drama to feel alive, needing constant validation, or being the "star" who makes the team about them.
+        shadowExpression: `La sombra del Nodo Sur de Leo es el narcisismo, la adicción al drama y la incapacidad de pensar más allá de uno mismo. Es posible que te encuentres creando drama para sentirte vivo, necesitando validación constante o siendo la "estrella" que forma el equipo sobre ellos.
 
-There can be emotional reactivity and taking things personally - not because you're immature, but because you've spent lifetimes in heart-centered expression and haven't yet developed Aquarius's emotional detachment and group consciousness.
+Puede haber reactividad emocional y tomar las cosas personalmente, no porque seas inmaduro, sino porque has pasado vidas en una expresión centrada en el corazón y aún no has desarrollado el desapego emocional y la conciencia grupal de Acuario.
 
-The darkest shadow is empty recognition - being celebrated but feeling hollow, having admirers but not equals, being the star who's ultimately alone because they can't step out of the spotlight long enough to be one of the team.`,
+La sombra más oscura es el reconocimiento vacío: ser celebrado pero sentirse vacío, tener admiradores pero no iguales, ser la estrella que en última instancia está sola porque no puede alejarse del centro de atención el tiempo suficiente para ser uno más del equipo.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Aquarius is creative leadership. You're not learning to serve the collective from lack of talent - you're using your creative gifts for humanity's benefit rather than personal glory.
+        giftToNorthNode: `El regalo que traes a tu viaje al Nodo Norte en Acuario es el liderazgo creativo. No estás aprendiendo a servir al colectivo por falta de talento: estás utilizando tus dones creativos para el beneficio de la humanidad en lugar de para la gloria personal.
 
-Your Leo charisma makes you effective revolutionary when you apply it to collective cause. Your creative ability makes you innovator when you turn it toward serving the future. Your leadership makes you visionary when you lead for the many rather than the one.
+Tu carisma Leo te convierte en un revolucionario eficaz cuando lo aplicas a una causa colectiva. Tu capacidad creativa te convierte en innovador cuando la diriges hacia el servicio del futuro. Tu liderazgo te vuelve visionario cuando lideras para muchos en lugar de para uno solo.
 
-The most powerful expression is using your star power to light the way for humanity - becoming the creative revolutionary, the charismatic humanitarian, the leader who inspires collective change. You bring joy and creativity to serve the future.`,
+La expresión más poderosa es usar tu poder estelar para iluminar el camino de la humanidad: convertirte en el revolucionario creativo, el humanitario carismático, el líder que inspira el cambio colectivo. Traes alegría y creatividad para servir al futuro.`,
         
-        evolutionPath: `Evolution means recognizing when Leo pattern serves and when it limits. It's learning to still access creativity and leadership but in service of collective rather than personal glory.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón Leo sirve y cuándo limita. Es aprender a seguir accediendo a la creatividad y al liderazgo, pero al servicio de la gloria colectiva y no personal.
 
-The path forward is developing Aquarius skills - group consciousness, innovation, emotional detachment - while maintaining Leo's creative fire. It's being ABLE to shine but choosing when it serves the group. It's being CAPABLE of leadership but leading for collective benefit.
+El camino a seguir es desarrollar las habilidades de Acuario (conciencia de grupo, innovación, desapego emocional) mientras se mantiene el fuego creativo de Leo. Es ser CAPAZ de brillar pero eligiendo cuando sirve al grupo. Es ser CAPAZ de liderazgo pero liderar para beneficio colectivo.
 
-Success looks like: accessing creativity when it serves humanity; maintaining leadership ability while thinking of the group; creating for collective benefit rather than recognition; inspiring others while being one of many equals.`,
+El éxito se ve así: acceder a la creatividad cuando ésta sirve a la humanidad; mantener la capacidad de liderazgo pensando en el grupo; crear para beneficio colectivo en lugar de reconocimiento; inspirar a otros siendo uno de muchos iguales.`,
         
-        relationshipPattern: `In relationships, the Leo South Node pattern is needing to be adored, creating drama, and making it all about you. You may find yourself choosing partners who worship you rather than challenge you, or creating emotional scenes to feel alive.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Leo necesita ser adorado, creando drama y haciendo que todo gire en torno a ti. Es posible que te encuentres eligiendo parejas que te adoren en lugar de desafiarte, o creando escenas emocionales para sentirte vivo.
 
-The growth edge is learning that community of equals serves better than fan club, that intellectual connection matters as much as romantic drama, and that true love includes being part of "we" rather than always being the special one.
+La ventaja del crecimiento es aprender que la comunidad de iguales sirve mejor que el club de fans, que la conexión intelectual importa tanto como el drama romántico y que el amor verdadero incluye ser parte de "nosotros" en lugar de ser siempre el especial.
 
-The evolved expression is being creatively expressive while also thinking of the collective, being warm and generous while also emotionally detached enough to see clearly, leading while being one of equals.`,
+La expresión evolucionada es ser creativamente expresivo y al mismo tiempo pensar en el colectivo, ser cálido y generoso y, al mismo tiempo, lo suficientemente distante emocionalmente para ver con claridad, liderar y al mismo tiempo ser uno de iguales.`,
         
-        spiritualMeaning: `Spiritually, the Leo South Node represents mastery of individual creative expression and leadership through personal power. You've spent lifetimes learning how to shine, how to create, how to inspire through your radiance. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Leo representa el dominio de la expresión creativa individual y el liderazgo a través del poder personal. Has pasado vidas aprendiendo cómo brillar, cómo crear, cómo inspirar a través de tu resplandor. Ese trabajo está completo.
 
-This lifetime is about discovering that your gifts serve best when applied to collective benefit, that true leadership means innovating for the many, and that the most revolutionary act is releasing need for personal recognition. The king who becomes revolutionary.
+Esta vida se trata de descubrir que tus dones sirven mejor cuando se aplican al beneficio colectivo, que el verdadero liderazgo significa innovar para muchos y que el acto más revolucionario es liberar la necesidad de reconocimiento personal. El rey que se vuelve revolucionario.
 
-The deeper teaching is that you become immortal not through being remembered as individual, but through contributing to humanity's evolution. And that serving the future with your creativity is more fulfilling than any personal recognition.`,
+La enseñanza más profunda es que te vuelves inmortal no porque te recuerden como individuo, sino porque contribuyes a la evolución de la humanidad. Y que servir al futuro con tu creatividad es más gratificante que cualquier reconocimiento personal.`,
         
-        affirmation: "I honor my creative gifts and leadership. I use my radiance to serve the collective. I release need for personal recognition. I am learning that my greatest contribution is to humanity's future, not my personal glory."
+        affirmation: "Honro mis dones creativos y mi liderazgo. Utilizo mi resplandor para servir al colectivo. Libero la necesidad de reconocimiento personal. Estoy aprendiendo que mi mayor contribución es al futuro de la humanidad, no mi gloria personal."
     },
 
     Virgo: {
-        title: "South Node in Virgo - The Healer's Comfort Zone",
-        archetype: "From Perfection to Faith",
-        northNode: "Pisces",
-        hook: "With South Node in Virgo, this soul's past incarnations were spent analyzing, perfecting, and serving practically. You came into this life knowing how to fix problems and be useful - now you're learning to surrender to faith and trust the mystery.",
+        title: "Nodo Sur en Virgo: la zona de confort del sanador",
+        archetype: "De la perfección a la fe",
+        northNode: "Piscis",
+        hook: "Con el Nodo Sur en Virgo, las encarnaciones pasadas de esta alma las pasó analizando, perfeccionando y sirviendo en la práctica. Viniste a esta vida sabiendo cómo solucionar problemas y ser útil; ahora estás aprendiendo a rendirte a la fe y a confiar en el misterio.",
         
-        masterPattern: `The South Node in Virgo represents lifetimes as the healer, craftsperson, or analyst - being the one who fixed problems through skill and attention to detail. You were the doctor, the artisan, the efficient servant who made things work better.
+        masterPattern: `El Nodo Sur en Virgo representa vidas como sanador, artesano o analista, siendo quien solucionó los problemas mediante habilidad y atención al detalle. Eras el médico, el artesano, el servidor eficiente que hacía que las cosas funcionaran mejor.
 
-In those incarnations, you learned precision, practical service, and how to perfect your craft. You became skilled at analyzing, organizing, and fixing what was broken. Competence was your identity.
+En esas encarnaciones, aprendiste precisión, servicio práctico y cómo perfeccionar tu oficio. Te volviste hábil para analizar, organizar y arreglar lo que estaba roto. La competencia era tu identidad.
 
-These skills are gifts you carry into this life - the capacity to serve practically, attend to details, and perfect your work. The Virgo South Node makes you naturally skilled and capable.`,
+Estas habilidades son regalos que llevas en esta vida: la capacidad de servir de manera práctica, atender a los detalles y perfeccionar tu trabajo. El Nodo Sur de Virgo te hace naturalmente hábil y capaz.`,
         
-        comfortablePattern: `The comfortable pattern is analyzing everything, trying to fix and perfect, and measuring your worth through usefulness. You may find yourself constantly improving things, being critical of yourself and others, or feeling anxious when you can't control outcomes.
+        comfortablePattern: `El patrón cómodo es analizarlo todo, intentar arreglarlo y perfeccionarlo, y medir tu valor a través de la utilidad. Es posible que se encuentre mejorando cosas constantemente, siendo crítico consigo mismo y con los demás, o sintiéndose ansioso cuando no puede controlar los resultados.
 
-There's deep familiarity with being the competent one - you know how to analyze problems, create systems, and serve practically. Useful service feels right; surrendering to faith feels irresponsible.
+Hay una profunda familiaridad con ser competente: sabes cómo analizar problemas, crear sistemas y servir de manera práctica. El servicio útil se siente bien; rendirse a la fe se siente irresponsable.
 
-The ease with which you can analyze, organize, and perfect is your gift. But it becomes problematic when you can't surrender to mystery, when criticism prevents compassion, or when perfectionism creates anxiety. The pattern that once created excellence now prevents peace.`,
+La facilidad con la que puedes analizar, organizar y perfeccionar es tu don. Pero se vuelve problemático cuando no puedes rendirte al misterio, cuando la crítica impide la compasión o cuando el perfeccionismo crea ansiedad. El patrón que alguna vez creó la excelencia ahora impide la paz.`,
         
-        whenItServes: `The Virgo South Node serves you in situations requiring analysis, practical service, or attention to detail. When systems need organizing, you excel. When problems need practical solutions, you can provide them.
+        whenItServes: `El Nodo Sur de Virgo le sirve en situaciones que requieren análisis, servicio práctico o atención al detalle. Cuando los sistemas necesitan organización, usted sobresale. Cuando los problemas necesitan soluciones prácticas, usted puede proporcionárselas.
 
-Your ability to analyze serves in troubleshooting and improvement. Your service orientation serves in healthcare, craftsmanship, or any helping profession. Your attention to detail serves when precision matters.
+Su capacidad de análisis sirve para la resolución de problemas y la mejora. Su orientación de servicio sirve en la atención médica, la artesanía o cualquier profesión de ayuda. Su atención al detalle es útil cuando la precisión importa.
 
-In your career, Virgo gifts of skill, service, and organization are valuable. In personal development, your competence ensures you can function well in material world while developing spiritual dimension.`,
+En su carrera, los dones de habilidad, servicio y organización de Virgo son valiosos. En el desarrollo personal, su competencia garantiza que pueda funcionar bien en el mundo material mientras desarrolla la dimensión espiritual.`,
         
-        whenItLimits: `The Virgo South Node limits you when faith, surrender, or compassion is required. Spiritual growth stalls when you try to analyze and control it. Relationships stay surface when you criticize rather than accept.
+        whenItLimits: `El Nodo Sur de Virgo te limita cuando se requiere fe, entrega o compasión. El crecimiento espiritual se detiene cuando intentas analizarlo y controlarlo. Las relaciones permanecen superficiales cuando criticas en lugar de aceptar.
 
-The pattern limits evolution when you need to trust but keep trying to verify, when problems require surrender rather than fixing, or when perfectionism prevents you from accepting divine imperfection.
+El patrón limita la evolución cuando necesitas confiar pero sigues intentando verificar, cuando los problemas requieren rendirte en lugar de solucionarlos, o cuando el perfeccionismo te impide aceptar la imperfección divina.
 
-The analytical pattern that once created excellence now creates anxiety. What was mastery in past lives becomes obstacle when faith and surrender are the growth edges.`,
+El patrón analítico que alguna vez creó la excelencia ahora genera ansiedad. Lo que fue dominio en vidas pasadas se convierte en obstáculo cuando la fe y la entrega son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Virgo South Node is hyper-criticism, anxiety, and inability to accept imperfection. You may find yourself constantly worried, being the martyr who serves but resents it, or criticizing yourself and others relentlessly.
+        shadowExpression: `La sombra del Nodo Sur de Virgo es la hipercrítica, la ansiedad y la incapacidad para aceptar la imperfección. Es posible que te encuentres constantemente preocupado, siendo el mártir que sirve pero que se resiente, o criticándote a ti mismo y a los demás sin descanso.
 
-There can be health anxiety and obsessive attention to body - not because you're a hypochondriac, but because you've spent lifetimes perfecting physical form and haven't yet developed Pisces' trust in divine plan.
+Puede haber ansiedad por la salud y atención obsesiva al cuerpo, no porque seas hipocondríaco, sino porque has pasado vidas perfeccionando la forma física y aún no has desarrollado la confianza de Piscis en el plan divino.
 
-The darkest shadow is anxious perfectionism that prevents peace - being so focused on flaws that you can't see wholeness, so busy fixing that you never surrender, so competent that you can't receive grace.`,
+La sombra más oscura es el perfeccionismo ansioso que impide la paz: estar tan concentrado en los defectos que no puedes ver la totalidad, tan ocupado solucionándolos que nunca te rindes, tan competente que no puedes recibir la gracia.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Pisces is skill. You're not learning surrender from chaos or faith from incompetence - you're bringing competence to spiritual realm.
+        giftToNorthNode: `El regalo que aportas a tu viaje al Nodo Norte en Piscis es la habilidad. No estás aprendiendo a rendirte del caos ni a la fe de la incompetencia; estás llevando la competencia al ámbito espiritual.
 
-Your Virgo analytical ability makes you effective healer when combined with Piscean intuition. Your service orientation makes you compassionate helper when infused with faith. Your attention to detail makes you create spiritual practices that actually work.
+Tu capacidad analítica de Virgo te convierte en un sanador eficaz cuando se combina con la intuición de Piscis. Su orientación al servicio lo convierte en un ayudante compasivo cuando está infundido de fe. Tu atención al detalle te hace crear prácticas espirituales que realmente funcionan.
 
-The most powerful expression is using your skill in service of mystery - becoming the healer who works with energy as well as technique, the analyst who trusts intuition, the perfectionist who surrenders to divine imperfection. You bring mastery to mysticism.`,
+La expresión más poderosa es usar tu habilidad al servicio del misterio: convertirte en el sanador que trabaja tanto con energía como con técnica, el analista que confía en la intuición, el perfeccionista que se rinde a la imperfección divina. Aportas maestría al misticismo.`,
         
-        evolutionPath: `Evolution means recognizing when Virgo pattern serves and when it limits. It's learning to still access skill and discernment but also develop faith and surrender.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Virgo sirve y cuándo limita. Es aprender a seguir accediendo a la habilidad y al discernimiento, pero también a desarrollar la fe y la entrega.
 
-The path forward is developing Pisces skills - trust in mystery, compassion, spiritual connection - while maintaining Virgo's competence. It's being ABLE to analyze but choosing to trust. It's being CAPABLE of perfecting but accepting divine imperfection.
+El camino a seguir es desarrollar las habilidades de Piscis (confianza en el misterio, compasión, conexión espiritual) mientras se mantiene la competencia de Virgo. Es ser CAPAZ de analizar pero elegir confiar. Es ser CAPAZ de perfeccionar pero aceptar la imperfección divina.
 
-Success looks like: accessing analytical skill when it serves but surrendering when faith is needed; maintaining competence while developing trust; serving practically while also accessing spiritual dimension; being skilled while accepting that some things can't be fixed, only accepted.`,
+El éxito se ve así: acceder a la habilidad analítica cuando es útil, pero rendirse cuando se necesita fe; mantener la competencia mientras se desarrolla la confianza; servir prácticamente y al mismo tiempo acceder a la dimensión espiritual; ser hábil y aceptar que algunas cosas no se pueden arreglar, solo aceptarse.`,
         
-        relationshipPattern: `In relationships, the Virgo South Node pattern is being critical, trying to fix your partner, and serving resentfully. You may find yourself analyzing rather than accepting, pointing out flaws rather than offering compassion.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Virgo es ser crítico, tratar de arreglar a su pareja y servir con resentimiento. Es posible que se encuentre analizando en lugar de aceptar, señalando defectos en lugar de ofrecer compasión.
 
-The growth edge is learning that love requires accepting imperfection, that sometimes people need compassion more than solutions, and that spiritual connection matters more than perfect functionality.
+La ventaja del crecimiento es aprender que el amor requiere aceptar la imperfección, que a veces las personas necesitan compasión más que soluciones y que la conexión espiritual importa más que la funcionalidad perfecta.
 
-The evolved expression is being practically helpful while also spiritually accepting, serving skillfully while also surrendering to relationship's mystery, being competent while also having faith in love's divine imperfection.`,
+La expresión evolucionada es ser útil en la práctica y al mismo tiempo aceptar espiritualmente, servir hábilmente y al mismo tiempo rendirse al misterio de la relación, ser competente y al mismo tiempo tener fe en la imperfección divina del amor.`,
         
-        spiritualMeaning: `Spiritually, the Virgo South Node represents mastery of material realm and perfection of craft. You've spent lifetimes learning how to serve, how to perfect, how to function skillfully in physical world. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Virgo representa el dominio del reino material y la perfección del oficio. Habéis pasado vidas aprendiendo cómo servir, cómo perfeccionar, cómo funcionar hábilmente en el mundo físico. Ese trabajo está completo.
 
-This lifetime is about discovering that some things can't be fixed only accepted, that faith serves better than analysis, and that compassion heals more than criticism. The healer who surrenders to mystery becomes mystic healer.
+Esta vida se trata de descubrir que algunas cosas no pueden arreglarse sólo aceptarse, que la fe sirve mejor que el análisis y que la compasión cura más que la crítica. El sanador que se entrega al misterio se convierte en sanador místico.
 
-The deeper teaching is that divine plan includes imperfection, that grace works beyond your technique, and that trusting the unseen is the ultimate skill. And that serving with faith is more powerful than serving with anxiety.`,
+La enseñanza más profunda es que el plan divino incluye la imperfección, que la gracia obra más allá de nuestra técnica y que confiar en lo invisible es la habilidad suprema. Y que servir con fe es más poderoso que servir con ansiedad.`,
         
-        affirmation: "I honor my healer gifts of skill and service. I infuse my competence with faith. I offer compassion instead of criticism. I am learning that surrender is strength, that mystery is to be honored, and that divine imperfection is perfection."
+        affirmation: "Honro los dones de habilidad y servicio de mi sanador. Infundo fe en mi competencia. Ofrezco compasión en lugar de crítica. Estoy aprendiendo que la entrega es fortaleza, que el misterio debe ser honrado y que la imperfección divina es perfección."
     },
 
     Libra: {
-        title: "South Node in Libra - The Diplomat's Comfort Zone",
-        archetype: "From Harmony to Independence",
+        title: "Nodo Sur en Libra: la zona de confort del diplomático",
+        archetype: "De la armonía a la independencia",
         northNode: "Aries",
-        hook: "With South Node in Libra, this soul's past incarnations were spent creating harmony, partnering, and considering others. You came into this life knowing how to compromise and maintain peace - now you're learning to be independent and put yourself first.",
+        hook: "Con el Nodo Sur en Libra, las encarnaciones pasadas de esta alma se dedicaron a crear armonía, asociarse y considerar a los demás. Viniste a esta vida sabiendo cómo hacer concesiones y mantener la paz; ahora estás aprendiendo a ser independiente y a ponerte a ti mismo en primer lugar.",
         
-        masterPattern: `The South Node in Libra represents lifetimes as the diplomat, partner, or peacemaker - being the one who created harmony and excelled in relationships. You were the mediator, the balanced one, the person who always found the win-win solution.
+        masterPattern: `El Nodo Sur en Libra representa vidas como diplomático, socio o pacificador, siendo quien creó la armonía y destacó en las relaciones. Eras el mediador, el equilibrado, la persona que siempre encontraba la solución beneficiosa para todos.
 
-In those incarnations, you learned partnership, compromise, and how to create beauty and peace. You became skilled at seeing all perspectives, maintaining balance, and social grace. Harmony was your mastery.
+En esas encarnaciones, aprendiste la asociación, el compromiso y cómo crear belleza y paz. Te volviste hábil para ver todas las perspectivas, mantener el equilibrio y la gracia social. La armonía era tu dominio.
 
-These skills are gifts you carry into this life - the capacity to partner well, see multiple perspectives, and create beauty. The Libra South Node makes you naturally diplomatic and relationship-oriented.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de asociarte bien, ver múltiples perspectivas y crear belleza. El Nodo Sur de Libra te hace naturalmente diplomático y orientado a las relaciones.`,
         
-        comfortablePattern: `The comfortable pattern is always considering others first, compromising even at your own expense, and measuring your worth through relationships. You may find yourself unable to make decisions without consulting others, keeping peace at all costs, or losing yourself in partnerships.
+        comfortablePattern: `El patrón cómodo es siempre considerar a los demás primero, hacer concesiones incluso a costa propia y medir su valor a través de las relaciones. Es posible que se sienta incapaz de tomar decisiones sin consultar a los demás, mantener la paz a toda costa o perderse en asociaciones.
 
-There's deep familiarity with being the diplomatic one - you know how to make people happy, how to create harmony, how to balance all perspectives. Relationship feels essential; independence feels selfish.
+Hay una profunda familiaridad con ser diplomático: sabes cómo hacer feliz a la gente, cómo crear armonía, cómo equilibrar todas las perspectivas. La relación se siente esencial; la independencia se siente egoísta.
 
-The ease with which you can partner, compromise, and create harmony is your gift. But it becomes problematic when you can't stand alone, when you sacrifice yourself for peace, or when you need others' approval to know what you want. The pattern that once created beautiful relationships now prevents your own development.`,
+La facilidad con la que puedes asociarte, comprometerte y crear armonía es tu regalo. Pero se vuelve problemático cuando no puedes estar solo, cuando te sacrificas por la paz o cuando necesitas la aprobación de los demás para saber lo que quieres. El patrón que alguna vez creó hermosas relaciones ahora impide tu propio desarrollo.`,
         
-        whenItServes: `The Libra South Node serves you in situations requiring mediation, partnership, or creating harmony. When conflict needs resolution, you excel. When social grace is needed, you have it naturally.
+        whenItServes: `El Nodo Sur de Libra le sirve en situaciones que requieren mediación, asociación o creación de armonía. Cuando un conflicto necesita resolución, usted sobresale. Cuando se necesita gracia social, la tienes de forma natural.
 
-Your ability to see all perspectives serves in counseling, law, or mediation. Your partnership skills serve in business collaborations. Your aesthetic sense serves in design or any field requiring beauty.
+Su capacidad para ver todas las perspectivas sirve en asesoramiento, derecho o mediación. Sus habilidades de asociación sirven en colaboraciones comerciales. Tu sentido estético sirve en el diseño o en cualquier campo que requiera belleza.
 
-In your personal life, Libra gifts of diplomacy and partnership create harmonious relationships. In professional life, your ability to collaborate serves well - once you've developed enough independence to bring whole self to partnership.`,
+En su vida personal, los dones de diplomacia y asociación de Libra crean relaciones armoniosas. En la vida profesional, su capacidad para colaborar resulta útil, una vez que haya desarrollado suficiente independencia para colaborar por completo.`,
         
-        whenItLimits: `The Libra South Node limits you when independence, quick action, or self-assertion is required. Personal growth stalls when you can't make decisions without consensus. Identity gets lost when you're always accommodating others.
+        whenItLimits: `El Nodo Sur de Libra te limita cuando se requiere independencia, acción rápida o autoafirmación. El crecimiento personal se estanca cuando no se pueden tomar decisiones sin consenso. La identidad se pierde cuando siempre estás complaciendo a los demás.
 
-The pattern limits evolution when you need to disagree but keep peace instead, when you must act quickly but wait for others' input, or when you sacrifice your needs to maintain harmony.
+El patrón limita la evolución cuando necesitas estar en desacuerdo pero mantener la paz, cuando debes actuar rápidamente pero esperar la opinión de los demás, o cuando sacrificas tus necesidades para mantener la armonía.
 
-The diplomatic pattern that once created beautiful relationships now prevents you from being whole individual. What was mastery in past lives becomes obstacle when independence and self-assertion are the growth edges.`,
+El patrón diplomático que alguna vez creó hermosas relaciones ahora te impide ser un individuo completo. Lo que fue dominio en vidas pasadas se convierte en obstáculo cuando la independencia y la autoafirmación son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Libra South Node is people-pleasing, inability to stand alone, and passive-aggressive resentment. You may find yourself saying yes when you mean no, accommodating until you resent it, or being so focused on fairness that you never just choose what YOU want.
+        shadowExpression: `La sombra del Nodo Sur de Libra es complacer a la gente, la incapacidad de mantenerse solo y el resentimiento pasivo-agresivo. Es posible que te encuentres diciendo sí cuando en realidad quieres decir no, complaciéndote hasta resentirte o centrándote tanto en la justicia que nunca eliges simplemente lo que TÚ quieres.
 
-There can be decision-making paralysis - not because you're indecisive, but because you've spent lifetimes considering all perspectives and haven't yet developed Aries' ability to just choose and act.
+Puede haber parálisis en la toma de decisiones, no porque seas indeciso, sino porque has pasado vidas considerando todas las perspectivas y aún no has desarrollado la capacidad de Aries para simplemente elegir y actuar.
 
-The darkest shadow is self-erasure in service of harmony - having no idea what you want independent of others, being unable to function alone, maintaining beautiful relationships while having no self to relate from.`,
+La sombra más oscura es el autoborrado al servicio de la armonía: no tener idea de lo que quieres independientemente de los demás, ser incapaz de funcionar solo, mantener hermosas relaciones sin tener un yo con quien relacionarte.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Aries is social grace. You're not learning independence from isolation or self-assertion from rudeness - you're becoming strong individual who maintains diplomatic skill.
+        giftToNorthNode: `El regalo que traes a tu viaje por el Nodo Norte en Aries es la gracia social. No estás aprendiendo a ser independiente del aislamiento ni a la autoafirmación de la mala educación: te estás convirtiendo en un individuo fuerte que mantiene habilidades diplomáticas.
 
-Your Libra ability to see all perspectives makes you fair leader when you finally step into leadership. Your partnership skills make you better at independence because you know what you're choosing versus. Your social grace makes your Aries directness palatable rather than harsh.
+Tu capacidad de Libra para ver todas las perspectivas te convierte en un líder justo cuando finalmente asumes el liderazgo. Tus habilidades de asociación te hacen mejor en cuanto a independencia porque sabes lo que estás eligiendo. Tu gracia social hace que tu franqueza de Aries sea más agradable que dura.
 
-The most powerful expression is using your diplomatic gifts while maintaining strong self - becoming the graceful warrior, the diplomatic leader, the person who can fight fairly because they've mastered peace. You bring beauty to battle.`,
+La expresión más poderosa es usar tus dotes diplomáticas mientras te mantienes fuerte: convertirte en el guerrero elegante, el líder diplomático, la persona que puede luchar de manera justa porque ha dominado la paz. Traes belleza a la batalla.`,
         
-        evolutionPath: `Evolution means recognizing when Libra pattern serves and when it limits. It's learning to still access partnership skills but also develop fierce independence.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Libra sirve y cuándo limita. Es aprender a seguir accediendo a habilidades de asociación pero también a desarrollar una independencia feroz.
 
-The path forward is developing Aries skills - independence, quick decision-making, self-assertion - while maintaining Libra's grace. It's being ABLE to compromise but choosing yourself sometimes. It's being CAPABLE of partnership but standing alone when needed.
+El camino a seguir es desarrollar las habilidades de Aries (independencia, toma rápida de decisiones, autoafirmación) manteniendo al mismo tiempo la gracia de Libra. Es ser CAPAZ de comprometerse pero elegirse a uno mismo a veces. Es ser CAPAZ de asociarse pero estar solo cuando sea necesario.
 
-Success looks like: accessing diplomacy when it serves but not when independence is needed; maintaining partnership skills while developing strong self; creating harmony when appropriate but being willing to create necessary conflict; being graceful while also being fierce.`,
+El éxito se ve así: acceder a la diplomacia cuando sea útil, pero no cuando se necesita independencia; mantener habilidades de asociación mientras se desarrolla una personalidad fuerte; crear armonía cuando sea apropiado pero estar dispuesto a crear el conflicto necesario; ser elegante y al mismo tiempo feroz.`,
         
-        relationshipPattern: `In relationships, the Libra South Node pattern is losing yourself in your partner, being unable to disagree, and maintaining peace at expense of authenticity. You may find yourself always accommodating, not knowing what you want, or being the peacekeeper who suppresses conflict.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Libra es perderse en su pareja, no poder estar en desacuerdo y mantener la paz a expensas de la autenticidad. Es posible que siempre se muestre complaciente, sin saber lo que quiere o siendo el pacificador que suprime los conflictos.
 
-The growth edge is learning that healthy relationships require two whole people, that disagreement can strengthen bonds, and that you must know what YOU want to co-create with another.
+La ventaja del crecimiento es aprender que las relaciones saludables requieren dos personas integrales, que el desacuerdo puede fortalecer los vínculos y que debes saber lo que TÚ quieres co-crear con el otro.
 
-The evolved expression is being excellent partner while maintaining fierce independence, being diplomatic while also asserting your needs, creating harmony while also being willing to disrupt it when necessary.`,
+La expresión evolucionada es ser un excelente socio manteniendo una feroz independencia, ser diplomático y al mismo tiempo hacer valer sus necesidades, crear armonía y al mismo tiempo estar dispuesto a interrumpirla cuando sea necesario.`,
         
-        spiritualMeaning: `Spiritually, the Libra South Node represents mastery of relationship and creation of harmony. You've spent lifetimes learning how to partner, how to balance, how to create beauty through union. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Libra representa el dominio de las relaciones y la creación de armonía. Han pasado vidas aprendiendo cómo asociarse, cómo equilibrar, cómo crear belleza a través de la unión. Ese trabajo está completo.
 
-This lifetime is about discovering that you must be whole individual before you can truly partner, that asserting yourself serves relationships, and that sometimes the most loving thing is to disagree. The diplomat who becomes warrior.
+Esta vida se trata de descubrir que debes ser un individuo completo antes de poder asociarte verdaderamente, que afirmarte sirve a las relaciones y que, a veces, lo más amoroso es no estar de acuerdo. El diplomático que se convierte en guerrero.
 
-The deeper teaching is that true partnership requires two whole people, that harmony created through self-sacrifice isn't real harmony, and that learning to stand alone makes you better partner. And that your independence serves love better than your accommodation.`,
+La enseñanza más profunda es que una verdadera asociación requiere dos personas enteras, que la armonía creada mediante el autosacrificio no es una armonía real y que aprender a estar solo te convierte en un mejor socio. Y que tu independencia sirve mejor al amor que tu acomodación.`,
         
-        affirmation: "I honor my diplomatic gifts and partnership skills. I become fierce independent individual. I assert my needs without guilt. I am learning that standing alone makes me better partner, and that healthy relationships require me to put myself first sometimes."
+        affirmation: "Honro mis dotes diplomáticas y mis habilidades de asociación. Me convierto en un individuo independiente y feroz. Hago valer mis necesidades sin culpa. Estoy aprendiendo que estar solo me convierte en un mejor socio y que las relaciones saludables requieren que a veces me ponga a mí mismo en primer lugar."
     },
 
     Scorpio: {
-        title: "South Node in Scorpio - The Transformer's Comfort Zone",
-        archetype: "From Intensity to Peace",
-        northNode: "Taurus",
-        hook: "With South Node in Scorpio, this soul's past incarnations were spent in intensity, transformation, and merging with others. You came into this life knowing depth and crisis - now you're learning to find peace in simplicity and build your own security.",
+        title: "Nodo Sur en Escorpio: la zona de confort del transformador",
+        archetype: "De la intensidad a la paz",
+        northNode: "Tauro",
+        hook: "Con el Nodo Sur en Escorpio, las encarnaciones pasadas de esta alma transcurrieron en intensidad, transformación y fusión con otras. Viniste a esta vida conociendo la profundidad y la crisis; ahora estás aprendiendo a encontrar la paz en la simplicidad y construir tu propia seguridad.",
         
-        masterPattern: `The South Node in Scorpio represents lifetimes of intense transformation - being the shaman, the investigator, or the one who navigated life's depths. You were the transformer, the keeper of secrets, the one who understood power and shadow.
+        masterPattern: `El Nodo Sur en Escorpio representa vidas de intensa transformación: ser el chamán, el investigador o aquel que navegó por las profundidades de la vida. Eras el transformador, el guardián de los secretos, el que entendía el poder y la sombra.
 
-In those incarnations, you learned psychological depth, how to navigate crisis, and how to access hidden dimensions. You became skilled at transformation, intimate merging, and working with shared resources. Intensity was your mastery.
+En esas encarnaciones, aprendiste la profundidad psicológica, cómo afrontar las crisis y cómo acceder a dimensiones ocultas. Te volviste hábil en la transformación, la fusión íntima y el trabajo con recursos compartidos. La intensidad era tu dominio.
 
-These skills are gifts you carry into this life - the capacity for depth, psychological insight, and transformation. The Scorpio South Node makes you naturally able to handle crisis and navigate shadow.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de profundidad, percepción psicológica y transformación. El Nodo Sur de Escorpio te hace naturalmente capaz de manejar las crisis y navegar en las sombras.`,
         
-        comfortablePattern: `The comfortable pattern is seeking intensity and depth, being drawn to crisis and drama, and merging resources and energies with others. You may find yourself unable to enjoy simple pleasures, creating or attracting crisis, or depending on others' resources.
+        comfortablePattern: `El patrón cómodo es buscar intensidad y profundidad, sentirse atraído por la crisis y el drama, y ​​fusionar recursos y energías con los demás. Es posible que se sienta incapaz de disfrutar de placeres simples, creando o atrayendo crisis, o dependiendo de los recursos de los demás.
 
-There's deep familiarity with transformation through trauma - you know how to die and be reborn, how to navigate shadow, how to wield power. Intensity feels alive; simplicity feels boring.
+Hay una profunda familiaridad con la transformación a través del trauma: sabes cómo morir y renacer, cómo navegar en las sombras, cómo ejercer el poder. La intensidad se siente viva; la simplicidad parece aburrida.
 
-The ease with which you can transform, handle crisis, and dive into psychological depths is your gift. But it becomes problematic when you can't find peace in stability, when you create unnecessary drama, or when you can't build your own resources. The pattern that once created profound transformation now prevents simple contentment.`,
+La facilidad con la que puedes transformarte, manejar las crisis y sumergirte en profundidades psicológicas es tu don. Pero se vuelve problemático cuando no puedes encontrar la paz en la estabilidad, cuando creas un drama innecesario o cuando no puedes construir tus propios recursos. El patrón que alguna vez creó una transformación profunda ahora impide la simple satisfacción.`,
         
-        whenItServes: `The Scorpio South Node serves you in situations requiring depth, transformation, or crisis management. When others are overwhelmed by intensity, you can navigate it. When psychological insight is needed, you have it naturally.
+        whenItServes: `El Nodo Sur de Escorpio te sirve en situaciones que requieren profundidad, transformación o gestión de crisis. Cuando otros se sienten abrumados por la intensidad, tú puedes navegar por ella. Cuando se necesita conocimiento psicológico, lo tienes de forma natural.
 
-Your ability to transform serves in therapy, healing, or any deep change work. Your capacity for intimacy serves in close relationships. Your skill with shared resources serves in finance or partnered ventures.
+Tu capacidad de transformarte sirve en terapia, sanación o cualquier trabajo de cambio profundo. Tu capacidad de intimidad sirve en las relaciones cercanas. Su habilidad con recursos compartidos sirve en finanzas o emprendimientos asociados.
 
-In your career, Scorpio gifts of depth, investigation, and crisis management are valuable. In personal development, your transformative capacity ensures you can change when needed while learning to appreciate stability.`,
+En su carrera, los dones de profundidad, investigación y gestión de crisis de Escorpio son valiosos. En el desarrollo personal, su capacidad transformadora garantiza que pueda cambiar cuando sea necesario mientras aprende a apreciar la estabilidad.`,
         
-        whenItLimits: `The Scorpio South Node limits you when stability, simplicity, or self-sufficiency is required. Peace eludes you when you're addicted to intensity. Financial security is difficult when you depend on others' resources.
+        whenItLimits: `El Nodo Sur de Escorpio te limita cuando se requiere estabilidad, sencillez o autosuficiencia. La paz se te escapa cuando eres adicto a la intensidad. La seguridad financiera es difícil cuando dependes de los recursos de otros.
 
-The pattern limits evolution when you create crisis to feel alive, when you can't appreciate simple pleasures without drama, or when you merge so completely with others that you have nothing of your own.
+El patrón limita la evolución cuando creas una crisis para sentirte vivo, cuando no puedes apreciar los placeres simples sin dramatismo o cuando te fusionas tan completamente con los demás que no tienes nada propio.
 
-The transformation pattern that once created growth now prevents peace. What was mastery in past lives becomes obstacle when building stable security and finding contentment are the growth edges.`,
+El patrón de transformación que alguna vez generó crecimiento ahora impide la paz. Lo que era dominio en vidas pasadas se convierte en un obstáculo cuando construir una seguridad estable y encontrar satisfacción son las ventajas del crecimiento.`,
         
-        shadowExpression: `The shadow of Scorpio South Node is drama addiction, manipulation through emotional intensity, and inability to function without crisis. You may find yourself creating problems to solve, wielding power through controlling shared resources, or being jealous and possessive.
+        shadowExpression: `La sombra del Nodo Sur de Escorpio es la adicción al drama, la manipulación a través de la intensidad emocional y la incapacidad de funcionar sin crisis. Es posible que se encuentre creando problemas que resolver, ejerciendo poder mediante el control de recursos compartidos o siendo celoso y posesivo.
 
-There can be obsession with depth to the point where nothing satisfies - not because you're hard to please, but because you've spent lifetimes in intensity and haven't yet developed Taurus' ability to find meaning in simple pleasures.
+Puede haber una obsesión por la profundidad hasta el punto de que nada te satisface, no porque seas difícil de complacer, sino porque has pasado vidas en intensidad y aún no has desarrollado la capacidad de Tauro para encontrar significado a los placeres simples.
 
-The darkest shadow is transformation addiction - burning everything down repeatedly rather than building something stable, being so comfortable with crisis that you sabotage peace, merging so completely with others that you have no independent resources or identity.`,
+La sombra más oscura es la adicción a la transformación: quemarlo todo repetidamente en lugar de construir algo estable, estar tan cómodo con la crisis que saboteas la paz, fusionarte tan completamente con los demás que no tienes recursos ni identidad independientes.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Taurus is transformative capacity. You're not learning to build security from naivety - you're creating stability with full knowledge of darkness and change.
+        giftToNorthNode: `El regalo que aportas a tu viaje al Nodo Norte en Tauro es la capacidad transformadora. No estás aprendiendo a construir seguridad a partir de la ingenuidad: estás creando estabilidad con pleno conocimiento de la oscuridad y el cambio.
 
-Your Scorpio depth makes your Taurus building profound rather than superficial. Your crisis management skills ensure you can protect what you build. Your psychological insight makes you create security that serves your whole being.
+Tu profundidad en Escorpio hace que tu construcción en Tauro sea profunda en lugar de superficial. Tus habilidades de gestión de crisis garantizan que puedas proteger lo que construyes. Tu percepción psicológica te hace crear una seguridad que sirve a todo tu ser.
 
-The most powerful expression is using your transformative wisdom to build something beautiful and stable - becoming the peaceful builder who carries depth, the self-sufficient one who understands interdependence, the person who finds meaning in simplicity because they've known intensity. You bring depth to stability.`,
+La expresión más poderosa es usar tu sabiduría transformadora para construir algo hermoso y estable: convertirte en el constructor pacífico que lleva profundidad, el autosuficiente que entiende la interdependencia, la persona que encuentra significado en la simplicidad porque ha conocido la intensidad. Aportas profundidad a la estabilidad.`,
         
-        evolutionPath: `Evolution means recognizing when Scorpio pattern serves and when it limits. It's learning to still access depth and transformative capacity but also develop peace and stability.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Escorpio sirve y cuándo limita. Es aprender a acceder a la profundidad y a la capacidad transformadora, pero también a desarrollar la paz y la estabilidad.
 
-The path forward is developing Taurus skills - building security, enjoying simplicity, self-sufficiency - while maintaining Scorpio's depth. It's being ABLE to transform but choosing stability. It's being CAPABLE of intensity but finding peace.
+El camino a seguir es desarrollar las habilidades de Tauro (construir seguridad, disfrutar de la simplicidad y la autosuficiencia) manteniendo al mismo tiempo la profundidad de Escorpio. Es ser CAPAZ de transformar pero elegir la estabilidad. Es ser CAPAZ de intensidad pero encontrar paz.
 
-Success looks like: accessing depth when it serves but not creating unnecessary crisis; maintaining transformative capacity while building stable foundation; being able to merge but building your own resources; appreciating simple pleasures while carrying profound depth.`,
+El éxito se ve así: acceder a la profundidad cuando sea útil pero sin crear crisis innecesarias; mantener la capacidad transformadora y al mismo tiempo construir una base estable; poder fusionarse pero construyendo recursos propios; apreciar los placeres simples mientras se lleva una profundidad profunda.`,
         
-        relationshipPattern: `In relationships, the Scorpio South Node pattern is intense merging, jealousy, and power dynamics. You may find yourself unable to maintain healthy boundaries, depending on partners financially or emotionally, or creating drama to feel connected.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Escorpio es una intensa fusión, celos y dinámica de poder. Es posible que se sienta incapaz de mantener límites saludables, dependiendo de sus socios financiera o emocionalmente, o creando drama para sentirse conectado.
 
-The growth edge is learning that stable, peaceful relationships can be deep, that building your own resources makes you better partner, and that simplicity in relating can be profound.
+La ventaja del crecimiento es aprender que las relaciones estables y pacíficas pueden ser profundas, que desarrollar sus propios recursos lo convierte en un mejor socio y que la simplicidad en las relaciones puede ser profunda.
 
-The evolved expression is being capable of deep intimacy while maintaining financial independence, creating peaceful partnerships while carrying depth, being profound while also being simple.`,
+La expresión evolucionada es ser capaz de tener una intimidad profunda mientras se mantiene la independencia financiera, crear asociaciones pacíficas y al mismo tiempo tener profundidad, ser profundo y al mismo tiempo simple.`,
         
-        spiritualMeaning: `Spiritually, the Scorpio South Node represents mastery of transformation, shadow work, and deep merging. You've spent lifetimes learning how to die and be reborn, how to navigate darkness, how to access power. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Escorpio representa el dominio de la transformación, el trabajo con las sombras y la fusión profunda. Habéis pasado vidas aprendiendo cómo morir y renacer, cómo navegar en la oscuridad, cómo acceder al poder. Ese trabajo está completo.
 
-This lifetime is about discovering that peace is the prize of transformation, that stability can be spiritual, and that building simple abundance honors your depth. The shaman who becomes farmer.
+Esta vida se trata de descubrir que la paz es el premio de la transformación, que la estabilidad puede ser espiritual y que construir abundancia simple honra tu profundidad. El chamán que se convierte en agricultor.
 
-The deeper teaching is that you've transformed enough - now it's time to enjoy the fruit of that work. And that building something stable and beautiful in the material world is the next level of spiritual work. And that self-sufficiency is power too.`,
+La enseñanza más profunda es que ya te has transformado lo suficiente; ahora es el momento de disfrutar el fruto de ese trabajo. Y que construir algo estable y hermoso en el mundo material es el siguiente nivel del trabajo espiritual. Y esa autosuficiencia también es poder.`,
         
-        affirmation: "I honor my transformer gifts of depth and crisis management. I choose peace over drama. I build my own stable security. I am learning that simple pleasures are profound, that stability serves my soul, and that I've transformed enough - now I can simply be."
+        affirmation: "Honro mis dones transformadores de profundidad y gestión de crisis. Elijo la paz al drama. Construyo mi propia seguridad estable. Estoy aprendiendo que los placeres simples son profundos, que la estabilidad sirve a mi alma y que me he transformado lo suficiente: ahora simplemente puedo ser."
     },
 
     Sagittarius: {
-        title: "South Node in Sagittarius - The Seeker's Comfort Zone",
-        archetype: "From Vision to Curiosity",
-        northNode: "Gemini",
-        hook: "With South Node in Sagittarius, this soul's past incarnations were spent teaching truth, seeking meaning, and having faith. You came into this life knowing the big picture - now you're learning to stay curious, ask questions, and appreciate local details.",
+        title: "Nodo Sur en Sagitario: la zona de confort del buscador",
+        archetype: "De la visión a la curiosidad",
+        northNode: "Géminis",
+        hook: "Con el Nodo Sur en Sagitario, las encarnaciones pasadas de esta alma las pasó enseñando la verdad, buscando significado y teniendo fe. Llegaste a esta vida conociendo el panorama general; ahora estás aprendiendo a mantener la curiosidad, hacer preguntas y apreciar los detalles locales.",
         
-        masterPattern: `The South Node in Sagittarius represents lifetimes as the teacher, philosopher, or seeker - being the one who held vision and taught truth. You were the guru, the adventurer, the one who found meaning and inspired others with it.
+        masterPattern: `El Nodo Sur en Sagitario representa vidas como maestro, filósofo o buscador, siendo quien tuvo la visión y enseñó la verdad. Eras el gurú, el aventurero, el que encontraba significado e inspiraba a otros con él.
 
-In those incarnations, you learned faith, philosophical thinking, and how to inspire with vision. You became skilled at teaching, seeing patterns, and providing meaning. Wisdom was your mastery.
+En esas encarnaciones, aprendiste la fe, el pensamiento filosófico y cómo inspirar con la visión. Te volviste hábil para enseñar, ver patrones y dar significado. La sabiduría era tu dominio.
 
-These skills are gifts you carry into this life - the capacity to see the big picture, have faith, and inspire others. The Sagittarius South Node makes you naturally philosophical and visionary.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de ver el panorama general, tener fe e inspirar a otros. El Nodo Sur de Sagitario te vuelve naturalmente filosófico y visionario.`,
         
-        comfortablePattern: `The comfortable pattern is always teaching rather than learning, having answers rather than questions, and seeking meaning in distant places rather than here. You may find yourself automatically in guru role, preaching your truth, or being unable to stay present with details.
+        comfortablePattern: `El patrón cómodo es siempre enseñar en lugar de aprender, tener respuestas en lugar de preguntas y buscar significado en lugares distantes en lugar de aquí. Es posible que te encuentres automáticamente en el papel de gurú, predicando tu verdad o siendo incapaz de estar presente con los detalles.
 
-There's deep familiarity with being the wise one - you know how to inspire, how to provide philosophical framework, how to see meaning. Teaching feels right; being student feels regressive.
+Hay una profunda familiaridad con ser el sabio: sabes cómo inspirar, cómo proporcionar un marco filosófico, cómo ver el significado. La enseñanza se siente bien; Ser estudiante se siente regresivo.
 
-The ease with which you can teach, inspire, and provide vision is your gift. But it becomes problematic when you can't stay curious, when you preach rather than discuss, or when your certainty prevents learning. The pattern that once provided meaning now prevents growth.`,
+La facilidad con la que puedes enseñar, inspirar y brindar visión es tu don. Pero se vuelve problemático cuando no puedes mantener la curiosidad, cuando predicas en lugar de discutir, o cuando tu certeza impide aprender. El patrón que alguna vez proporcionó significado ahora impide el crecimiento.`,
         
-        whenItServes: `The Sagittarius South Node serves you in situations requiring vision, inspiration, or philosophical framework. When people need meaning, you can provide it. When big-picture thinking is needed, you naturally see patterns.
+        whenItServes: `El Nodo Sur de Sagitario le sirve en situaciones que requieren visión, inspiración o marco filosófico. Cuando las personas necesitan significado, tú puedes proporcionárselo. Cuando se necesita pensar en términos generales, naturalmente se ven patrones.
 
-Your ability to teach serves in education, ministry, or motivational speaking. Your vision serves in strategic planning. Your faith serves when others are lost in despair.
+Su capacidad para enseñar sirve en educación, ministerio o discursos motivacionales. Su visión sirve en la planificación estratégica. Tu fe sirve cuando otros están perdidos en la desesperación.
 
-In your career, Sagittarius gifts of vision, teaching, and inspiration are valuable. In personal development, your ability to find meaning ensures you don't get lost in minutiae while learning to appreciate details.`,
+En su carrera, los dones de visión, enseñanza e inspiración de Sagitario son valiosos. En el desarrollo personal, su capacidad para encontrar significado garantiza que no se pierda en minucias mientras aprende a apreciar los detalles.`,
         
-        whenItLimits: `The Sagittarius South Node limits you when curiosity, learning, or attention to details is required. Growth stalls when you think you already know and stop being student. Communication fails when you preach rather than discuss.
+        whenItLimits: `El Nodo Sur de Sagitario te limita cuando se requiere curiosidad, aprendizaje o atención a los detalles. El crecimiento se detiene cuando crees que ya sabes y dejas de ser estudiante. La comunicación falla cuando se predica en lugar de discutir.
 
-The pattern limits evolution when you need to ask questions but provide answers instead, when problems require local solutions but you're thinking philosophically, or when you're so focused on distant truth that you miss what's right here.
+El patrón limita la evolución cuando necesitas hacer preguntas pero, en cambio, proporcionas respuestas, cuando los problemas requieren soluciones locales pero estás pensando filosóficamente, o cuando estás tan concentrado en una verdad distante que te pierdes lo que hay aquí.
 
-The teacher pattern that once inspired now prevents your own learning. What was mastery in past lives becomes obstacle when staying curious and appreciating details are the growth edges.`,
+El patrón docente que alguna vez inspiró ahora impide tu propio aprendizaje. Lo que fue dominio en vidas pasadas se convierte en un obstáculo cuando mantener la curiosidad y apreciar los detalles son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Sagittarius South Node is dogmatism, intellectual arrogance disguised as faith, and inability to be present. You may find yourself preaching at people, believing you're always right, or seeking meaning in travel/philosophy while ignoring the meaningful right in front of you.
+        shadowExpression: `La sombra del Nodo Sur de Sagitario es el dogmatismo, la arrogancia intelectual disfrazada de fe y la incapacidad de estar presente. Es posible que te encuentres predicando a la gente, creyendo que siempre tienes razón o buscando significado en los viajes/filosofía mientras ignoras lo significativo que tienes delante.
 
-There can be restlessness and inability to appreciate the local - not because you're flighty, but because you've spent lifetimes seeking truth in distant places and haven't yet developed Gemini's appreciation for what's here.
+Puede haber inquietud e incapacidad para apreciar lo local, no porque seas voluble, sino porque has pasado vidas buscando la verdad en lugares distantes y aún no has desarrollado el aprecio de Géminis por lo que hay aquí.
 
-The darkest shadow is the guru who stopped learning - being so certain of your truth that you miss others' wisdom, teaching the same philosophy for lifetimes without integrating new information, being the wise one who's ultimately ignorant because you can't be student.`,
+La sombra más oscura es el gurú que dejó de aprender: estar tan seguro de tu verdad que te pierdes la sabiduría de los demás, enseñar la misma filosofía durante toda la vida sin integrar nueva información, ser el sabio que en última instancia es ignorante porque no puedes ser estudiante.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Gemini is wisdom foundation. You're not learning to communicate from emptiness - you're developing curiosity about how to convey your wisdom more effectively and learning that others have wisdom too.
+        giftToNorthNode: `El regalo que traes a tu viaje al Nodo Norte en Géminis es la base de la sabiduría. No estás aprendiendo a comunicarte desde el vacío: estás desarrollando curiosidad sobre cómo transmitir tu sabiduría de manera más efectiva y aprendiendo que otros también tienen sabiduría.
 
-Your Sagittarius vision makes your Gemini learning purposeful rather than scattered. Your teaching ability makes you better communicator when you finally learn to also listen. Your faith gives foundation to your intellectual exploration.
+Tu visión de Sagitario hace que tu aprendizaje en Géminis sea decidido en lugar de disperso. Tu capacidad de enseñanza te convierte en un mejor comunicador cuando finalmente aprendes a escuchar también. Tu fe da fundamento a tu exploración intelectual.
 
-The most powerful expression is using your wisdom to ask better questions - becoming the wise student, the philosophical conversationalist, the teacher who learns from everyone. You bring meaning to curiosity.`,
+La expresión más poderosa es usar tu sabiduría para hacer mejores preguntas: convertirte en el estudiante sabio, el conversador filosófico, el maestro que aprende de todos. Le das significado a la curiosidad.`,
         
-        evolutionPath: `Evolution means recognizing when Sagittarius pattern serves and when it limits. It's learning to still access vision and teaching but also develop genuine curiosity and student mind.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Sagitario sirve y cuándo limita. Es aprender a seguir accediendo a la visión y la enseñanza, pero también a desarrollar una curiosidad genuina y una mente estudiantil.
 
-The path forward is developing Gemini skills - curiosity, learning, local appreciation - while maintaining Sagittarius wisdom. It's being ABLE to teach but choosing to learn. It's being CAPABLE of providing answers but asking questions.
+El camino a seguir es desarrollar las habilidades de Géminis (curiosidad, aprendizaje, apreciación local) manteniendo al mismo tiempo la sabiduría de Sagitario. Es ser CAPAZ de enseñar pero elegir aprender. Es ser CAPAZ de dar respuestas pero hacer preguntas.
 
-Success looks like: accessing vision when it serves but staying curious; maintaining teaching ability while being perpetual student; having philosophical framework while remaining open to new information; inspiring others while learning from them.`,
+El éxito se ve así: acceder a la visión cuando es útil pero mantener la curiosidad; mantener la capacidad de enseñar siendo estudiante perpetuo; tener un marco filosófico sin dejar de estar abierto a nueva información; inspirar a otros mientras aprende de ellos.`,
         
-        relationshipPattern: `In relationships, the Sagittarius South Node pattern is always being the wise one, needing freedom and adventure, and teaching your partner rather than learning from them. You may find yourself preaching, being the one with answers, or escaping into philosophy when emotional presence is needed.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Sagitario es siempre ser el sabio, necesitar libertad y aventura, y enseñarle a su pareja en lugar de aprender de ella. Es posible que te encuentres predicando, siendo tú quien tenga las respuestas o escapando a la filosofía cuando se necesita presencia emocional.
 
-The growth edge is learning that conversation serves better than sermon, that your partner has wisdom to share, and that everyday moments together can be as meaningful as philosophical discussions or adventures.
+La ventaja del crecimiento es aprender que la conversación sirve mejor que el sermón, que su pareja tiene sabiduría para compartir y que los momentos cotidianos juntos pueden ser tan significativos como las discusiones filosóficas o las aventuras.
 
-The evolved expression is being philosophically inspiring while also genuinely curious about your partner, teaching while also learning, providing vision while also appreciating daily life together.`,
+La expresión evolucionada es ser filosóficamente inspirador y al mismo tiempo genuinamente curioso acerca de su pareja, enseñar y al mismo tiempo aprender, brindar una visión y al mismo tiempo apreciar la vida diaria juntos.`,
         
-        spiritualMeaning: `Spiritually, the Sagittarius South Node represents mastery of meaning-making, faith, and teaching. You've spent lifetimes learning how to find truth, how to inspire, how to provide vision. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Sagitario representa el dominio de la creación de significado, la fe y la enseñanza. Habéis pasado vidas aprendiendo cómo encontrar la verdad, cómo inspirar, cómo proporcionar una visión. Ese trabajo está completo.
 
-This lifetime is about discovering that staying curious keeps truth alive, that everyone is both teacher and student, and that wisdom is found in everyday moments as much as grand philosophies. The guru who becomes student.
+Esta vida se trata de descubrir que mantener la curiosidad mantiene viva la verdad, que todos somos maestros y estudiantes, y que la sabiduría se encuentra tanto en los momentos cotidianos como en las grandes filosofías. El gurú que se convierte en estudiante.
 
-The deeper teaching is that your teaching deepens when you remain open to learning, that truth is richer when you explore multiple perspectives, and that the local and immediate are as sacred as the distant and philosophical. And that the ultimate wisdom is knowing you don't know.`,
+La enseñanza más profunda es que tu enseñanza se profundiza cuando permaneces abierto al aprendizaje, que la verdad es más rica cuando exploras múltiples perspectivas y que lo local e inmediato son tan sagrados como lo distante y filosófico. Y que la sabiduría suprema es saber que no lo sabes.`,
         
-        affirmation: "I honor my teacher gifts of vision and inspiration. I remain curious and open. I learn from everyone. I am discovering that asking questions deepens my wisdom, that being student serves better than always being guru, and that truth is here in the everyday."
+        affirmation: "Honro los dones de visión e inspiración de mi maestro. Sigo siendo curioso y abierto. Aprendo de todos. Estoy descubriendo que hacer preguntas profundiza mi sabiduría, que ser estudiante sirve mejor que ser siempre gurú, y que la verdad está aquí en lo cotidiano."
     },
 
     Capricorn: {
-        title: "South Node in Capricorn - The Authority's Comfort Zone",
-        archetype: "From Control to Nurturing",
-        northNode: "Cancer",
-        hook: "With South Node in Capricorn, this soul's past incarnations were spent achieving, leading, and maintaining control. You came into this life knowing how to succeed professionally - now you're learning emotional availability and the value of family and home.",
+        title: "Nodo Sur en Capricornio: la zona de confort de la autoridad",
+        archetype: "Del control a la crianza",
+        northNode: "Cáncer",
+        hook: "Con el Nodo Sur en Capricornio, las encarnaciones pasadas de esta alma las pasó logrando, liderando y manteniendo el control. Llegaste a esta vida sabiendo cómo triunfar profesionalmente; ahora estás aprendiendo la disponibilidad emocional y el valor de la familia y el hogar.",
         
-        masterPattern: `The South Node in Capricorn represents lifetimes as the authority, leader, or achiever - being the one in charge, the public figure whose value came through accomplishment. You were the king, the CEO, the responsible one who made things work.
+        masterPattern: `El Nodo Sur en Capricornio representa vidas como autoridad, líder o triunfador, siendo el que está a cargo, la figura pública cuyo valor proviene de los logros. Eras el rey, el director ejecutivo, el responsable que hacía que las cosas funcionaran.
 
-In those incarnations, you learned discipline, professional competence, and how to achieve. You became skilled at leadership, organization, and public success. Authority was your mastery.
+En esas encarnaciones, aprendiste disciplina, competencia profesional y cómo lograr logros. Te volviste experto en liderazgo, organización y éxito público. La autoridad era tu dominio.
 
-These skills are gifts you carry into this life - the capacity to lead, achieve, and take responsibility. The Capricorn South Node makes you naturally competent and capable of success.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de liderar, lograr y asumir responsabilidades. El Nodo Sur de Capricornio te hace naturalmente competente y capaz de tener éxito.`,
         
-        comfortablePattern: `The comfortable pattern is prioritizing career over family, maintaining emotional control, and measuring worth through achievement. You may find yourself automatically being the authority, suppressing emotions to stay professional, or feeling guilty about wanting emotional connection.
+        comfortablePattern: `El patrón cómodo es priorizar la carrera sobre la familia, mantener el control emocional y medir el valor a través de los logros. Es posible que automáticamente se convierta en la autoridad, reprima las emociones para mantenerse profesional o se sienta culpable por querer una conexión emocional.
 
-There's deep familiarity with being the competent one - you know how to lead, how to achieve, how to be responsible. Professional success feels essential; emotional life feels like distraction.
+Hay una profunda familiaridad con ser el competente: sabes cómo liderar, cómo lograr, cómo ser responsable. El éxito profesional se siente esencial; la vida emocional se siente como una distracción.
 
-The ease with which you can achieve, lead, and take responsibility is your gift. But it becomes problematic when you can't be emotionally available, when work consumes you at expense of family, or when you can't show vulnerability. The pattern that once created success now prevents emotional fulfillment.`,
+La facilidad con la que puedes lograr, liderar y asumir responsabilidades es tu don. Pero se vuelve problemático cuando no puedes estar disponible emocionalmente, cuando el trabajo te consume a expensas de la familia o cuando no puedes mostrar vulnerabilidad. El patrón que alguna vez creó el éxito ahora impide la realización emocional.`,
         
-        whenItServes: `The Capricorn South Node serves you in situations requiring leadership, professional competence, or discipline. When organization is needed, you excel. When someone must take responsibility, you can.
+        whenItServes: `El Nodo Sur de Capricornio te sirve en situaciones que requieren liderazgo, competencia profesional o disciplina. Cuando se necesita organización, sobresales. Cuando alguien debe asumir la responsabilidad, tú puedes hacerlo.
 
-Your ability to achieve serves in business, management, or any professional realm. Your discipline serves in long-term projects. Your leadership serves when structure and authority are needed.
+Su capacidad de logro sirve en los negocios, la gestión o cualquier ámbito profesional. Tu disciplina sirve en proyectos de largo plazo. Su liderazgo sirve cuando se necesita estructura y autoridad.
 
-In your career, Capricorn gifts of competence, achievement, and leadership are invaluable. In personal development, your ability to succeed professionally provides foundation for developing emotional dimension.`,
+En su carrera, los dones de competencia, logros y liderazgo de Capricornio son invaluables. En el desarrollo personal, su capacidad para tener éxito profesional proporciona la base para desarrollar la dimensión emocional.`,
         
-        whenItLimits: `The Capricorn South Node limits you when emotional availability, family priority, or vulnerability is required. Relationships suffer when you're always working. Growth stalls when you can't show feelings or admit need.
+        whenItLimits: `El Nodo Sur de Capricornio te limita cuando se requiere disponibilidad emocional, prioridad familiar o vulnerabilidad. Las relaciones sufren cuando siempre estás trabajando. El crecimiento se detiene cuando no puedes mostrar tus sentimientos o admitir tu necesidad.
 
-The pattern limits evolution when you need emotional connection but stay in control, when family needs you but career calls, or when success is empty because there's no emotional fulfillment.
+El patrón limita la evolución cuando necesitas una conexión emocional pero mantienes el control, cuando la familia te necesita pero te llama la carrera, o cuando el éxito es vacío porque no hay satisfacción emocional.
 
-The achievement pattern that once created success now prevents intimacy. What was mastery in past lives becomes obstacle when emotional availability and family connection are the growth edges.`,
+El patrón de logro que alguna vez creó el éxito ahora impide la intimidad. Lo que fue dominio en vidas pasadas se convierte en obstáculo cuando la disponibilidad emocional y la conexión familiar son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Capricorn South Node is workaholism, emotional unavailability, and using achievement to avoid feelings. You may find yourself always working, being cold or distant emotionally, or measuring everyone (including yourself) by productivity.
+        shadowExpression: `La sombra del Nodo Sur de Capricornio es la adicción al trabajo, la indisponibilidad emocional y el uso de los logros para evitar los sentimientos. Es posible que siempre esté trabajando, siendo frío o distante emocionalmente, o midiendo a todos (incluido usted mismo) según su productividad.
 
-There can be inability to show weakness or ask for help - not because you're arrogant, but because you've spent lifetimes being the authority and haven't yet developed Cancer's capacity to be vulnerable and emotionally open.
+Puede haber incapacidad para mostrar debilidad o pedir ayuda, no porque sea arrogante, sino porque ha pasado vidas siendo la autoridad y aún no ha desarrollado la capacidad de Cáncer para ser vulnerable y emocionalmente abierto.
 
-The darkest shadow is empty success - achieving everything professionally but having no emotional connections, being respected but not loved, being the authority who's ultimately alone because they couldn't show their heart.`,
+La sombra más oscura es el éxito vacío: lograr todo profesionalmente pero sin conexiones emocionales, ser respetado pero no amado, ser la autoridad que en última instancia está sola porque no pudo mostrar su corazón.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Cancer is stability. You're not learning emotional availability from chaos - you're bringing professional competence to family realm, ensuring your emotional connections have foundation.
+        giftToNorthNode: `El regalo que aportas a tu viaje por el Nodo Norte en Cáncer es la estabilidad. No estás aprendiendo la disponibilidad emocional del caos: estás llevando la competencia profesional al ámbito familiar, asegurando que tus conexiones emocionales tengan base.
 
-Your Capricorn discipline makes you reliable parent/partner when you finally prioritize family. Your leadership makes you head of household who can provide. Your achievement capacity ensures your family has security.
+Tu disciplina en Capricornio te convierte en un padre/pareja confiable cuando finalmente priorizas a la familia. Su liderazgo lo convierte en cabeza de familia que puede proveer. Tu capacidad de logro garantiza que tu familia tenga seguridad.
 
-The most powerful expression is using your authority to create and protect family - becoming the emotionally available leader, the competent parent, the professional who knows that success includes love. You bring stability to emotional realm.`,
+La expresión más poderosa es usar su autoridad para crear y proteger a la familia: convertirse en el líder emocionalmente disponible, el padre competente, el profesional que sabe que el éxito incluye el amor. Aportas estabilidad al ámbito emocional.`,
         
-        evolutionPath: `Evolution means recognizing when Capricorn pattern serves and when it limits. It's learning to still access competence and achievement but also develop emotional availability.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Capricornio sirve y cuándo limita. Es aprender a seguir accediendo a la competencia y los logros, pero también a desarrollar la disponibilidad emocional.
 
-The path forward is developing Cancer skills - emotional vulnerability, family priority, nurturing - while maintaining Capricorn's professional success. It's being ABLE to achieve but choosing family sometimes. It's being CAPABLE of authority but showing vulnerability.
+El camino a seguir es desarrollar las habilidades de Cáncer (vulnerabilidad emocional, prioridad familiar, crianza) mientras se mantiene el éxito profesional de Capricornio. Es ser CAPAZ de lograrlo pero elegir familia a veces. Es ser CAPAZ de autoridad pero mostrar vulnerabilidad.
 
-Success looks like: accessing professional competence when needed but prioritizing family; maintaining achievement capacity while developing emotional intelligence; being the authority while also being emotionally available; succeeding professionally while being fulfilled emotionally.`,
+El éxito se ve así: acceder a la competencia profesional cuando sea necesario pero priorizando a la familia; mantener la capacidad de logro mientras se desarrolla la inteligencia emocional; ser la autoridad y al mismo tiempo estar emocionalmente disponible; triunfar profesionalmente y al mismo tiempo sentirse realizado emocionalmente.`,
         
-        relationshipPattern: `In relationships, the Capricorn South Node pattern is emotional unavailability, prioritizing work over partner/family, and being the strong one who doesn't need anything. You may find yourself unable to show feelings, working when you should be present, or maintaining professional demeanor even at home.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Capricornio es la indisponibilidad emocional, priorizar el trabajo sobre la pareja/familia y ser el fuerte que no necesita nada. Es posible que se sienta incapaz de mostrar sus sentimientos, trabajar cuando debería estar presente o mantener una conducta profesional incluso en casa.
 
-The growth edge is learning that vulnerability strengthens relationships, that family deserves priority, and that being emotionally available is strength, not weakness.
+La ventaja del crecimiento es aprender que la vulnerabilidad fortalece las relaciones, que la familia merece prioridad y que estar emocionalmente disponible es fortaleza, no debilidad.
 
-The evolved expression is being professionally successful while emotionally available, being the authority in work while being vulnerable at home, providing stability while also providing emotional nurturance.`,
+La expresión evolucionada es tener éxito profesional y estar emocionalmente disponible, ser la autoridad en el trabajo y al mismo tiempo ser vulnerable en el hogar, brindar estabilidad y al mismo tiempo brindar apoyo emocional.`,
         
-        spiritualMeaning: `Spiritually, the Capricorn South Node represents mastery of worldly achievement and professional success. You've spent lifetimes learning how to lead, achieve, and be authority. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Capricornio representa el dominio de los logros mundanos y el éxito profesional. Has pasado vidas aprendiendo cómo liderar, lograr y ser autoridad. Ese trabajo está completo.
 
-This lifetime is about discovering that true success includes emotional fulfillment, that being vulnerable is power, and that family and emotional connections matter as much as professional achievement. The king who becomes parent.
+Esta vida se trata de descubrir que el verdadero éxito incluye la satisfacción emocional, que ser vulnerable es poder y que las conexiones familiares y emocionales son tan importantes como los logros profesionales. El rey que se convierte en padre.
 
-The deeper teaching is that you've achieved enough professionally - now it's time to develop emotional dimension. And that showing your heart doesn't diminish your authority - it makes you complete. And that being needed emotionally is as valuable as being respected professionally.`,
+La enseñanza más profunda es que ya has logrado lo suficiente profesionalmente; ahora es el momento de desarrollar la dimensión emocional. Y que mostrar tu corazón no disminuye tu autoridad: te hace completo. Y que ser necesitado emocionalmente es tan valioso como ser respetado profesionalmente.`,
         
-        affirmation: "I honor my authority gifts of competence and achievement. I prioritize emotional life and family. I show vulnerability without shame. I am learning that true success includes love, that being emotionally available is strength, and that my heart matters as much as my accomplishments."
+        affirmation: "Honro mis dones de autoridad, competencia y logros. Priorizo ​​la vida emocional y la familia. Muestro vulnerabilidad sin vergüenza. Estoy aprendiendo que el verdadero éxito incluye el amor, que estar emocionalmente disponible es fortaleza y que mi corazón importa tanto como mis logros."
     },
 
     Aquarius: {
-        title: "South Node in Aquarius - The Revolutionary's Comfort Zone",
-        archetype: "From Detachment to Heart",
-        northNode: "Leo",
-        hook: "With South Node in Aquarius, this soul's past incarnations were spent serving the collective, innovating for humanity, and maintaining emotional detachment. You came into this life knowing about group consciousness - now you're learning to honor your individual heart and creative expression.",
+        title: "Nodo Sur en Acuario: la zona de confort del revolucionario",
+        archetype: "Del desapego al corazón",
+        northNode: "León",
+        hook: "Con el Nodo Sur en Acuario, las encarnaciones pasadas de esta alma las pasó sirviendo al colectivo, innovando para la humanidad y manteniendo el desapego emocional. Viniste a esta vida sabiendo acerca de la conciencia grupal; ahora estás aprendiendo a honrar tu corazón individual y tu expresión creativa.",
         
-        masterPattern: `The South Node in Aquarius represents lifetimes of revolutionary service - being the innovator, the reformer, or the one who thought of humanity's future. You were the visionary, the rebel, the one who served the many over the one.
+        masterPattern: `El Nodo Sur en Acuario representa vidas de servicio revolucionario: ser el innovador, el reformador o el que pensó en el futuro de la humanidad. Fuiste el visionario, el rebelde, el que sirvió a muchos por encima de uno.
 
-In those incarnations, you learned collective consciousness, innovation, and how to think beyond personal concerns. You became skilled at seeing humanity's needs, creating change, and maintaining objective perspective. Serving the future was your mastery.
+En esas encarnaciones, aprendiste conciencia colectiva, innovación y cómo pensar más allá de las preocupaciones personales. Te volviste hábil para ver las necesidades de la humanidad, crear cambios y mantener una perspectiva objetiva. Servir al futuro era tu maestría.
 
-These skills are gifts you carry into this life - the capacity to innovate, think collectively, and serve humanity. The Aquarius South Node makes you naturally progressive and humanitarian.`,
+Estas habilidades son regalos que llevas a esta vida: la capacidad de innovar, pensar colectivamente y servir a la humanidad. El Nodo Sur de Acuario te hace naturalmente progresista y humanitario.`,
         
-        comfortablePattern: `The comfortable pattern is always thinking of the group, maintaining emotional detachment, and measuring worth through contribution to collective. You may find yourself automatically prioritizing humanitarian concerns over personal joy, intellectualizing feelings, or being uncomfortable with recognition.
+        comfortablePattern: `El patrón cómodo es pensar siempre en el grupo, mantener el desapego emocional y medir el valor a través de la contribución al colectivo. Es posible que automáticamente priorices las preocupaciones humanitarias sobre la alegría personal, intelectualices los sentimientos o te sientas incómodo con el reconocimiento.
 
-There's deep familiarity with being one of many equals - you know how to serve the collective, how to think objectively, how to innovate. Group consciousness feels right; individual expression feels egotistical.
+Hay una profunda familiaridad con ser uno entre muchos iguales: sabes cómo servir al colectivo, cómo pensar objetivamente, cómo innovar. La conciencia de grupo se siente bien; la expresión individual se siente egoísta.
 
-The ease with which you can think collectively, innovate, and maintain perspective is your gift. But it becomes problematic when you can't follow your heart, when you suppress personal joy for collective service, or when you're so detached you can't feel. The pattern that once served humanity now prevents your own fulfillment.`,
+La facilidad con la que puedes pensar colectivamente, innovar y mantener la perspectiva es tu don. Pero se vuelve problemático cuando no puedes seguir tu corazón, cuando suprimes la alegría personal por el servicio colectivo, o cuando estás tan desapegado que no puedes sentir. El patrón que alguna vez sirvió a la humanidad ahora impide vuestra propia realización.`,
         
-        whenItServes: `The Aquarius South Node serves you in situations requiring innovation, group consciousness, or objective perspective. When collective vision is needed, you can provide it. When emotions are running high and someone needs to think clearly, you can.
+        whenItServes: `El Nodo Sur de Acuario te sirve en situaciones que requieren innovación, conciencia de grupo o perspectiva objetiva. Cuando se necesita una visión colectiva, usted puede brindarla. Cuando las emociones están a flor de piel y alguien necesita pensar con claridad, usted puede hacerlo.
 
-Your ability to innovate serves in technology, reform, or progressive movements. Your group consciousness serves in community organizing. Your objectivity serves when personal bias would cloud judgment.
+Su capacidad para innovar sirve en la tecnología, la reforma o los movimientos progresistas. Su conciencia de grupo sirve en la organización comunitaria. Su objetividad sirve cuando los prejuicios personales nublan el juicio.
 
-In your career, Aquarius gifts of innovation, vision, and humanitarian focus are valuable. In personal development, your collective awareness ensures you don't become too self-absorbed while learning to honor your heart.`,
+En su carrera, los dones de innovación, visión y enfoque humanitario de Acuario son valiosos. En el desarrollo personal, su conciencia colectiva garantiza que no se ensimule demasiado mientras aprende a honrar su corazón.`,
         
-        whenItLimits: `The Aquarius South Node limits you when personal joy, creative expression, or emotional warmth is required. Personal fulfillment eludes you when you always think of the group. Relationships stay cool when you can't access heart.
+        whenItLimits: `El Nodo Sur de Acuario te limita cuando se requiere alegría personal, expresión creativa o calidez emocional. La realización personal se te escapa cuando piensas siempre en el grupo. Las relaciones se mantienen frías cuando no puedes acceder al corazón.
 
-The pattern limits evolution when you need to follow personal joy but think of collective instead, when you suppress creative expression to be one of many, or when you're so detached that you can't feel passion.
+El patrón limita la evolución cuando necesitas seguir la alegría personal pero piensas en lo colectivo, cuando suprimes la expresión creativa para ser uno de muchos, o cuando estás tan desapegado que no puedes sentir pasión.
 
-The revolutionary pattern that once served humanity now prevents your own joy. What was mastery in past lives becomes obstacle when creative self-expression and heart-centered living are the growth edges.`,
+El patrón revolucionario que una vez sirvió a la humanidad ahora impide vuestra propia alegría. Lo que era dominio en vidas pasadas se convierte en un obstáculo cuando la autoexpresión creativa y la vida centrada en el corazón son las aristas del crecimiento.`,
         
-        shadowExpression: `The shadow of Aquarius South Node is cold detachment, using collective service to avoid personal intimacy, and suppressing joy or recognition as egotistical. You may find yourself unable to celebrate your uniqueness, being emotionally unavailable, or making everything about "the cause" rather than personal connection.
+        shadowExpression: `La sombra del Nodo Sur de Acuario es el frío desapego, que utiliza el servicio colectivo para evitar la intimidad personal y suprime la alegría o el reconocimiento como egoístas. Es posible que se sienta incapaz de celebrar su singularidad, que no esté disponible emocionalmente o que todo se centre en "la causa" en lugar de en la conexión personal.
 
-There can be inability to receive love or recognition - not because you're humble, but because you've spent lifetimes serving the collective and haven't yet developed Leo's capacity to honor your individual heart and receive celebration.
+Puede haber incapacidad para recibir amor o reconocimiento, no porque seas humilde, sino porque has pasado toda tu vida sirviendo al colectivo y aún no has desarrollado la capacidad de Leo para honrar tu corazón individual y recibir celebración.
 
-The darkest shadow is emotional disconnection disguised as enlightenment - being so focused on humanity that you miss the human in front of you, so committed to future that you can't be present with your own heart, so identified with being one of many that you have no individual creative expression.`,
+La sombra más oscura es la desconexión emocional disfrazada de iluminación: estar tan concentrado en la humanidad que extrañas al ser humano que tienes delante, tan comprometido con el futuro que no puedes estar presente con tu propio corazón, tan identificado con ser uno de muchos que no tienes expresión creativa individual.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Leo is perspective. You're not learning creative expression from narcissism - you're bringing humanitarian vision to individual creativity, ensuring your expression serves.
+        giftToNorthNode: `El regalo que aportas a tu viaje al Nodo Norte en Leo es la perspectiva. No estás aprendiendo la expresión creativa del narcisismo: estás aportando una visión humanitaria a la creatividad individual, asegurándote de que tu expresión sirva.
 
-Your Aquarius group consciousness ensures your Leo creativity benefits others not just yourself. Your innovation makes your creative expression cutting-edge. Your objectivity prevents your individual expression from becoming self-absorbed.
+Tu conciencia de grupo de Acuario garantiza que tu creatividad de Leo beneficie a otros, no sólo a ti mismo. Su innovación hace que su expresión creativa sea vanguardista. Tu objetividad evita que tu expresión individual se vuelva ensimismada.
 
-The most powerful expression is using your individual creative gifts to inspire collective evolution - becoming the creative revolutionary, the performer with a message, the star who uplifts humanity. You bring vision to creative expression.`,
+La expresión más poderosa es utilizar tus dones creativos individuales para inspirar la evolución colectiva: convertirte en el revolucionario creativo, el intérprete con un mensaje, la estrella que eleva a la humanidad. Aportas visión a la expresión creativa.`,
         
-        evolutionPath: `Evolution means recognizing when Aquarius pattern serves and when it limits. It's learning to still access group consciousness but also honor individual heart and creative expression.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Acuario sirve y cuándo limita. Es aprender a seguir accediendo a la conciencia grupal pero también a honrar el corazón individual y la expresión creativa.
 
-The path forward is developing Leo skills - creative self-expression, following your heart, accepting recognition - while maintaining Aquarius vision. It's being ABLE to think collectively but honoring personal joy. It's being CAPABLE of objectivity but also following your heart.
+El camino a seguir es desarrollar las habilidades de Leo (autoexpresión creativa, seguir el corazón, aceptar el reconocimiento) manteniendo al mismo tiempo la visión de Acuario. Es ser CAPAZ de pensar colectivamente pero honrando la alegría personal. Es ser CAPAZ de objetividad pero también de seguir tu corazón.
 
-Success looks like: accessing group consciousness when it serves but honoring individual needs; maintaining humanitarian focus while expressing creatively; thinking of collective while also celebrating your specialness; being objective while also being passionate.`,
+El éxito se ve así: acceder a la conciencia grupal cuando sea útil pero honrando las necesidades individuales; mantener un enfoque humanitario mientras se expresa creativamente; pensando en colectivo y al mismo tiempo celebrando tu especialidad; ser objetivo y al mismo tiempo apasionado.`,
         
-        relationshipPattern: `In relationships, the Aquarius South Node pattern is emotional detachment, having many acquaintances but few intimate connections, and intellectualizing rather than feeling. You may find yourself unable to express affection warmly, keeping relationships friendly but not passionate, or thinking about love rather than feeling it.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Acuario es el desapego emocional, tener muchos conocidos pero pocas conexiones íntimas e intelectualizar en lugar de sentir. Es posible que se sienta incapaz de expresar afecto con calidez, mantener relaciones amistosas pero no apasionadas o pensar en el amor en lugar de sentirlo.
 
-The growth edge is learning that romantic passion serves you, that being someone's special person (not just one of many friends) is beautiful, and that following your heart in love matters.
+La ventaja del crecimiento es aprender que la pasión romántica te sirve, que ser la persona especial de alguien (no sólo uno entre muchos amigos) es hermoso y que seguir tu corazón en el amor es importante.
 
-The evolved expression is being humanitarian while also warmly loving, maintaining friendships while having passionate romance, thinking clearly while also feeling deeply.`,
+La expresión evolucionada es ser humanitario y al mismo tiempo amar cálidamente, mantener amistades mientras se tiene un romance apasionado, pensar con claridad y al mismo tiempo sentir profundamente.`,
         
-        spiritualMeaning: `Spiritually, the Aquarius South Node represents mastery of collective consciousness and service to humanity. You've spent lifetimes learning how to innovate, serve the many, think objectively. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Acuario representa el dominio de la conciencia colectiva y el servicio a la humanidad. Han pasado vidas aprendiendo cómo innovar, servir a la mayoría y pensar objetivamente. Ese trabajo está completo.
 
-This lifetime is about discovering that your individual joy serves the collective, that following your heart is revolutionary, and that creative self-expression is spiritual practice. The revolutionary who becomes creator.
+Esta vida se trata de descubrir que tu alegría individual sirve al colectivo, que seguir tu corazón es revolucionario y que la autoexpresión creativa es una práctica espiritual. El revolucionario que se convierte en creador.
 
-The deeper teaching is that you serve humanity best when you're honoring your unique creative expression, that passion is wisdom, and that being celebrated for your individuality doesn't diminish you - it completes you. And that your heart is as important as your ideals.`,
+La enseñanza más profunda es que sirves mejor a la humanidad cuando honras tu expresión creativa única, que la pasión es sabiduría y que ser celebrado por tu individualidad no te disminuye: te completa. Y que tu corazón es tan importante como tus ideales.`,
         
-        affirmation: "I honor my revolutionary gifts and humanitarian vision. I follow my heart and express creatively. I accept recognition for my uniqueness. I am learning that my individual joy serves the collective, that passion is sacred, and that celebrating my specialness is revolutionary."
+        affirmation: "Honro mis dones revolucionarios y mi visión humanitaria. Sigo mi corazón y me expreso creativamente. Acepto el reconocimiento por mi singularidad. Estoy aprendiendo que mi alegría individual sirve al colectivo, que la pasión es sagrada y que celebrar mi especialidad es revolucionario."
     },
 
     Pisces: {
-        title: "South Node in Pisces - The Mystic's Comfort Zone",
-        archetype: "From Surrender to Skill",
+        title: "Nodo Sur en Piscis - La zona de confort del místico",
+        archetype: "De la rendición a la habilidad",
         northNode: "Virgo",
-        hook: "With South Node in Pisces, this soul's past incarnations were spent in spiritual realms, surrendering to faith, and merging with the divine. You came into this life knowing mysticism - now you're learning practical skill and grounded service.",
+        hook: "Con el Nodo Sur en Piscis, las encarnaciones pasadas de esta alma transcurrieron en reinos espirituales, entregándose a la fe y fusionándose con lo divino. Viniste a esta vida sabiendo misticismo; ahora estás aprendiendo habilidades prácticas y un servicio fundamentado.",
         
-        masterPattern: `The South Node in Pisces represents lifetimes of mystical experience - being the mystic, the artist, or the one who accessed spiritual dimensions. You were the dreamer, the compassionate one, the person who dissolved into unity.
+        masterPattern: `El Nodo Sur en Piscis representa vidas de experiencia mística: ser el místico, el artista o el que accedió a las dimensiones espirituales. Fuiste el soñador, el compasivo, la persona que se disolvió en la unidad.
 
-In those incarnations, you learned faith, compassion, and how to access the unseen. You became skilled at spiritual practice, surrendering to divine will, and feeling universal love. Mysticism was your mastery.
+En esas encarnaciones, aprendiste la fe, la compasión y cómo acceder a lo invisible. Te volviste hábil en la práctica espiritual, entregándote a la voluntad divina y sintiendo el amor universal. El misticismo era tu maestría.
 
-These skills are gifts you carry into this life - the capacity for faith, deep compassion, and spiritual connection. The Pisces South Node makes you naturally intuitive and spiritually attuned.`,
+Estas habilidades son dones que llevas a esta vida: la capacidad de fe, compasión profunda y conexión espiritual. El Nodo Sur de Piscis te hace naturalmente intuitivo y en sintonía espiritual.`,
         
-        comfortablePattern: `The comfortable pattern is escaping into spiritual realms, surrendering rather than taking action, and believing the material world is less real than spiritual dimensions. You may find yourself spacing out, having poor boundaries, or avoiding practical matters.
+        comfortablePattern: `El patrón cómodo es escapar a los reinos espirituales, rendirse en lugar de actuar y creer que el mundo material es menos real que las dimensiones espirituales. Es posible que se encuentre distraído, teniendo límites deficientes o evitando asuntos prácticos.
 
-There's deep familiarity with being the compassionate mystic - you know how to access intuition, feel others' pain, surrender to faith. Spiritual life feels essential; material world feels harsh.
+Hay una profunda familiaridad con ser un místico compasivo: sabes cómo acceder a la intuición, sentir el dolor de los demás y rendirte a la fe. La vida espiritual se siente esencial; El mundo material se siente duro.
 
-The ease with which you can access spiritual dimensions, feel compassion, and have faith is your gift. But it becomes problematic when you can't function practically, when you have no boundaries, or when you escape rather than engage. The pattern that once connected you to divine now prevents functioning in material world.`,
+La facilidad con la que puedes acceder a las dimensiones espirituales, sentir compasión y tener fe es tu regalo. Pero se vuelve problemático cuando no puedes funcionar en la práctica, cuando no tienes límites o cuando escapas en lugar de involucrarte. El patrón que una vez los conectó con lo divino ahora impide funcionar en el mundo material.`,
         
-        whenItServes: `The Pisces South Node serves you in situations requiring faith, compassion, or spiritual connection. When others are lost in despair, you can offer faith. When deep empathy is needed, you feel it naturally.
+        whenItServes: `El Nodo Sur de Piscis te sirve en situaciones que requieren fe, compasión o conexión espiritual. Cuando otros están perdidos en la desesperación, puedes ofrecer fe. Cuando se necesita una empatía profunda, la sientes de forma natural.
 
-Your ability to access intuition serves in healing, counseling, or spiritual work. Your compassion serves when others are suffering. Your faith serves when life requires surrender to what can't be controlled.
+Su capacidad para acceder a la intuición sirve para la curación, el asesoramiento o el trabajo espiritual. Tu compasión sirve cuando otros sufren. Tu fe sirve cuando la vida requiere entregarse a lo que no se puede controlar.
 
-In your career, Pisces gifts of intuition, compassion, and spiritual connection are valuable when combined with Virgo skill. In personal development, your spiritual foundation ensures you don't become too materialistic while learning practical competence.`,
+En su carrera, los dones de intuición, compasión y conexión espiritual de Piscis son valiosos cuando se combinan con la habilidad de Virgo. En el desarrollo personal, su base espiritual garantiza que no se vuelva demasiado materialista mientras aprende competencias prácticas.`,
         
-        whenItLimits: `The Pisces South Node limits you when practical skill, boundaries, or material world competence is required. Life becomes chaotic when you can't organize or attend to details. Relationships suffer when you have no boundaries.
+        whenItLimits: `El Nodo Sur de Piscis te limita cuando se requieren habilidades prácticas, límites o competencia en el mundo material. La vida se vuelve caótica cuando no puedes organizarte o atender los detalles. Las relaciones sufren cuando no tienes límites.
 
-The pattern limits evolution when you escape into spirituality rather than developing practical skills, when you're so compassionate you enable dysfunction, or when you trust so much you're not discerning.
+El patrón limita la evolución cuando escapas a la espiritualidad en lugar de desarrollar habilidades prácticas, cuando eres tan compasivo que permites la disfunción o cuando confías tanto que no disciernes.
 
-The mystic pattern that once connected you to divine now prevents functioning in the world. What was mastery in past lives becomes obstacle when practical skill and grounded service are the growth edges.`,
+El patrón místico que una vez te conectó con lo divino ahora impide funcionar en el mundo. Lo que era dominio en vidas pasadas se convierte en un obstáculo cuando la habilidad práctica y el servicio fundamentado son las ventajas del crecimiento.`,
         
-        shadowExpression: `The shadow of Pisces South Node is escapism disguised as spirituality, victim mentality, and inability to function practically. You may find yourself spacing out, playing the martyr, or believing material competence is "unspiritual."
+        shadowExpression: `La sombra del Nodo Sur de Piscis es el escapismo disfrazado de espiritualidad, mentalidad de víctima e incapacidad para funcionar en la práctica. Es posible que se encuentre distraído, haciéndose el mártir o creyendo que la competencia material es "no espiritual".
 
-There can be addiction issues or fantasy addiction - not because you're weak, but because you've spent lifetimes in spiritual realms and haven't yet developed Virgo's capacity to function skillfully in material world.
+Puede haber problemas de adicción o adicción a las fantasías, no porque seas débil, sino porque has pasado vidas en los reinos espirituales y aún no has desarrollado la capacidad de Virgo para funcionar hábilmente en el mundo material.
 
-The darkest shadow is spiritual bypassing - using faith and compassion to avoid developing competence, being so surrendered you're irresponsible, having such poor boundaries you absorb everyone's dysfunction, being the mystic who can't pay rent.`,
+La sombra más oscura es el desvío espiritual: usar la fe y la compasión para evitar desarrollar competencias, estar tan rendido que eres irresponsable, tener límites tan pobres que absorbes la disfunción de todos, ser el místico que no puede pagar el alquiler.`,
         
-        giftToNorthNode: `The gift you bring to your North Node journey in Virgo is spiritual depth. You're not learning practical skills from spiritual emptiness - you're bringing mystical wisdom into material service.
+        giftToNorthNode: `El regalo que aportas a tu viaje al Nodo Norte en Virgo es la profundidad espiritual. No estás aprendiendo habilidades prácticas del vacío espiritual: estás aportando sabiduría mística al servicio material.
 
-Your Pisces intuition makes your Virgo healing work profound rather than just technical. Your compassion ensures your service has heart. Your faith allows you to serve without burnout because you trust larger plan.
+Tu intuición de Piscis hace que tu trabajo de curación de Virgo sea profundo y no sólo técnico. Su compasión garantiza que su servicio tenga corazón. Tu fe te permite servir sin agotarte porque confías en un plan más amplio.
 
-The most powerful expression is using your spiritual gifts through practical skill - becoming the healer who combines technique with intuition, the analyst who accesses spiritual guidance, the servant whose competence is infused with compassion. You bring grace to skill.`,
+La expresión más poderosa es utilizar tus dones espirituales a través de habilidades prácticas: convertirte en el sanador que combina la técnica con la intuición, el analista que accede a la guía espiritual, el sirviente cuya competencia está imbuida de compasión. Aportas gracia a la habilidad.`,
         
-        evolutionPath: `Evolution means recognizing when Pisces pattern serves and when it limits. It's learning to still access faith and spirituality but also develop practical competence.
+        evolutionPath: `Evolución significa reconocer cuándo el patrón de Piscis sirve y cuándo limita. Es aprender a seguir accediendo a la fe y la espiritualidad, pero también a desarrollar competencias prácticas.
 
-The path forward is developing Virgo skills - practical service, organization, discernment - while maintaining Pisces spiritual connection. It's being ABLE to access intuition but also developing skill. It's being CAPABLE of faith but also being competent.
+El camino a seguir es desarrollar las habilidades de Virgo (servicio práctico, organización, discernimiento) mientras se mantiene la conexión espiritual de Piscis. Es ser CAPAZ de acceder a la intuición pero también desarrollar habilidades. Es ser CAPAZ de fe pero también ser competente.
 
-Success looks like: accessing spiritual wisdom when it serves but being practically competent; maintaining compassion while having boundaries; trusting faith while developing skills; being spiritually connected while functionally grounded.`,
+El éxito se ve así: acceder a la sabiduría espiritual cuando sirve pero siendo prácticamente competente; mantener la compasión y al mismo tiempo tener límites; confiar en la fe mientras se desarrollan habilidades; estar espiritualmente conectado mientras funcionalmente conectado a tierra.`,
         
-        relationshipPattern: `In relationships, the Pisces South Node pattern is having no boundaries, being the martyr, and enabling dysfunction under guise of compassion. You may find yourself absorbing your partner's emotions, sacrificing yourself, or being so compassionate you allow mistreatment.
+        relationshipPattern: `En las relaciones, el patrón del Nodo Sur de Piscis es no tener límites, ser el mártir y permitir la disfunción bajo el pretexto de la compasión. Es posible que se encuentre absorbiendo las emociones de su pareja, sacrificándose o siendo tan compasivo que permita el maltrato.
 
-The growth edge is learning that boundaries strengthen relationships, that practical support serves better than vague compassion, and that sometimes the most loving thing is to be discerning rather than endlessly understanding.
+La ventaja del crecimiento es aprender que los límites fortalecen las relaciones, que el apoyo práctico sirve mejor que la vaga compasión y que a veces lo más amoroso es discernir en lugar de comprender infinitamente.
 
-The evolved expression is being deeply compassionate while maintaining boundaries, spiritually connected while practically supportive, faithful while also discerning.`,
+La expresión evolucionada es ser profundamente compasivo mientras se mantienen los límites, estar conectado espiritualmente y al mismo tiempo brindar apoyo en la práctica, ser fiel y al mismo tiempo discernir.`,
         
-        spiritualMeaning: `Spiritually, the Pisces South Node represents mastery of mystical realms and surrender to divine. You've spent lifetimes learning how to access spiritual dimensions, how to have faith, how to feel universal love. That work is complete.
+        spiritualMeaning: `Espiritualmente, el Nodo Sur de Piscis representa el dominio de los reinos místicos y la entrega a lo divino. Habéis pasado vidas aprendiendo cómo acceder a las dimensiones espirituales, cómo tener fe, cómo sentir el amor universal. Ese trabajo está completo.
 
-This lifetime is about discovering that spirituality includes embodiment, that serving practically is sacred, and that developing skill honors the divine. The mystic who becomes healer.
+Esta vida se trata de descubrir que la espiritualidad incluye la encarnación, que servir en la práctica es sagrado y que desarrollar habilidades honra lo divino. El místico que se convierte en sanador.
 
-The deeper teaching is that you serve the divine best when you're functional in the material world, that boundaries are spiritual practice, and that combining your spiritual gifts with practical competence creates the most powerful service. And that the body and material world are as sacred as spiritual realms.`,
+La enseñanza más profunda es que sirves mejor a lo divino cuando eres funcional en el mundo material, que los límites son práctica espiritual y que combinar tus dones espirituales con competencia práctica crea el servicio más poderoso. Y que el cuerpo y el mundo material son tan sagrados como los reinos espirituales.`,
         
-        affirmation: "I honor my mystic gifts of faith and compassion. I develop practical skills and boundaries. I serve the divine through competent work. I am learning that embodiment is spiritual, that discernment serves love, and that my practical competence serves my soul."
+        affirmation: "Honro mis dones místicos de fe y compasión. Desarrollo habilidades prácticas y límites. Sirvo a lo divino a través del trabajo competente. Estoy aprendiendo que la encarnación es espiritual, que el discernimiento sirve al amor y que mi competencia práctica sirve a mi alma."
     }
 };
 

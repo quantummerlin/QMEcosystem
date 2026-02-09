@@ -7,267 +7,267 @@
 var ASPECT_READINGS = {
     "Sun-Moon": {
         Conjunction: {
-            title: "Sun-Moon Conjunction - Unified Spirit",
-            keywords: ["Integration", "Wholeness", "Purpose", "Alignment"],
-            reading: `With the Sun and Moon together in the same sign, this child has a beautiful unity between their conscious will and emotional needs. What they want and what they feel are aligned - a rare gift that creates internal harmony.
+            title: "Conjunción Sol-Luna - Espíritu Unificado",
+            keywords: ["Integración", "Integridad", "Objetivo", "Alineación"],
+            reading: `Con el Sol y la Luna juntos en el mismo signo, este niño tiene una hermosa unidad entre su voluntad consciente y sus necesidades emocionales. Lo que quieren y lo que sienten están alineados: un don poco común que crea armonía interna.
 
-This integration means they know themselves deeply from an early age. There's no war between head and heart, between purpose and feeling. They can trust their instincts because their emotions and will speak the same language.
+Esta integración significa que se conocen profundamente a sí mismos desde una edad temprana. No hay guerra entre la cabeza y el corazón, entre el propósito y el sentimiento. Pueden confiar en sus instintos porque sus emociones y hablarán el mismo idioma.
 
-The challenge is that they may have difficulty understanding people who ARE conflicted internally, since this isn't their experience. They might seem very certain of themselves, which can be both inspiring and occasionally inflexible.
+El desafío es que pueden tener dificultades para comprender a las personas que ESTÁN en conflicto internamente, ya que ésta no es su experiencia. Pueden parecer muy seguros de sí mismos, lo que puede resultar a la vez inspirador y, en ocasiones, inflexible.
 
-This unified energy makes them powerful manifesto
+Esta energía unificada los convierte en un poderoso manifiesto.
 
-rs. When they want something and feel it's right, they have tremendous focus and drive. Support their strong sense of self while teaching empathy for those who struggle with internal conflicts.`,
-            nature: "harmonious",
-            strength: "Emotional-will integration creates powerful self-knowledge and focus",
-            challenge: "May struggle to understand internal conflicts in others"
+rs. Cuando quieren algo y sienten que es correcto, tienen una concentración y un impulso tremendos. Apoye su fuerte sentido de sí mismo mientras enseña empatía a quienes luchan con conflictos internos.`,
+            nature: "armonioso",
+            strength: "La integración de la voluntad emocional crea un poderoso autoconocimiento y enfoque.",
+            challenge: "Puede tener dificultades para comprender los conflictos internos de los demás."
         },
         Opposition: {
-            title: "Sun-Moon Opposition - Dynamic Balance",
-            keywords: ["Tension", "Awareness", "Balance", "Growth"],
-            reading: `The Sun and Moon opposing each other creates internal tension between what this child wants (Sun) and what they need emotionally (Moon). This can feel like being pulled in two directions - their heart wants one thing while their will wants another.
+            title: "Oposición Sol-Luna - Equilibrio dinámico",
+            keywords: ["Tensión", "Conciencia", "Balance", "Crecimiento"],
+            reading: `El Sol y la Luna opuestos crean una tensión interna entre lo que este niño quiere (Sol) y lo que necesita emocionalmente (Luna). Esto puede parecer como si lo tiraran en dos direcciones: su corazón quiere una cosa mientras que su voluntad quiere otra.
 
-This tension, while challenging, creates remarkable self-awareness. They learn early that life involves balancing competing needs. This makes them understanding of complexity and skilled at seeing multiple sides of situations.
+Esta tensión, aunque desafiante, crea una notable autoconciencia. Aprenden temprano que la vida implica equilibrar necesidades en competencia. Esto les hace comprender la complejidad y ser hábiles para ver múltiples lados de las situaciones.
 
-They may swing between extremes - very private one day, very public the next. Their emotions and ego take turns leading. This back-and-forth can feel confusing to them and to parents, but it's teaching them valuable lessons about balance.
+Pueden oscilar entre los extremos: muy privados un día, muy públicos al siguiente. Sus emociones y su ego se turnan para liderar. Este ir y venir puede resultar confuso para ellos y para los padres, pero les está enseñando valiosas lecciones sobre el equilibrio.
 
-The gift is objectivity. Unlike those with Sun-Moon conjunction who may be overly identified with their feelings, this child develops the ability to step back and observe themselves. They're learning to integrate opposites - a powerful life skill.`,
-            nature: "challenging",
-            strength: "Develops objectivity and ability to balance opposing needs",
-            challenge: "Internal tension between feelings and will can create confusion"
+El don es la objetividad. A diferencia de aquellos con conjunción Sol-Luna que pueden estar demasiado identificados con sus sentimientos, este niño desarrolla la capacidad de dar un paso atrás y observarse a sí mismo. Están aprendiendo a integrar los opuestos, una poderosa habilidad para la vida.`,
+            nature: "desafiante",
+            strength: "Desarrolla objetividad y capacidad para equilibrar necesidades opuestas.",
+            challenge: "La tensión interna entre los sentimientos y la voluntad puede crear confusión"
         },
         Square: {
-            title: "Sun-Moon Square - Creative Friction",
-            keywords: ["Friction", "Motivation", "Crisis", "Action"],
-            reading: `The square between Sun and Moon creates internal friction that becomes a powerful motivator. This child will feel a fundamental discomfort between who they are (Sun) and what they need emotionally (Moon). This tension refuses to let them settle into complacency.
+            title: "Cuadrado Sol-Luna - Fricción Creativa",
+            keywords: ["Fricción", "Motivación", "Crisis", "Acción"],
+            reading: `La cuadratura entre el Sol y la Luna crea una fricción interna que se convierte en un poderoso motivador. Este niño sentirá un malestar fundamental entre quién es (Sol) y lo que necesita emocionalmente (Luna). Esta tensión no les permite caer en la complacencia.
 
-They're driven to resolve this inner conflict through action and achievement. The friction becomes fuel. They may work harder than others, push themselves more, always trying to reconcile their emotional needs with their life direction.
+Están impulsados ​​a resolver este conflicto interno mediante la acción y los logros. La fricción se convierte en combustible. Es posible que trabajen más duro que otros, se esfuercen más y siempre intenten conciliar sus necesidades emocionales con la dirección de su vida.
 
-Crisis points occur periodically when these two parts of themselves clash. A parent may notice times when the child seems torn between what they "should" do and what they feel. These moments are growth opportunities, teaching integration through challenge.
+Los puntos de crisis ocurren periódicamente cuando estas dos partes de sí mismas chocan. Un padre puede notar momentos en que el niño parece dividido entre lo que "debería" hacer y lo que siente. Estos momentos son oportunidades de crecimiento, enseñando la integración a través del desafío.
 
-The gift is drive and accomplishment. While harmonious aspects can create ease, squares create achievers. Support them through their internal struggles while celebrating the strength those struggles create. They're learning to turn friction into diamonds.`,
-            nature: "challenging",
-            strength: "Friction creates powerful drive and motivation to achieve",
-            challenge: "Periodic crisis points when will and emotions clash"
+El don es impulso y logro. Mientras que los aspectos armoniosos pueden crear tranquilidad, los cuadrados crean triunfadores. Apóyelos en sus luchas internas mientras celebra la fuerza que crean esas luchas. Están aprendiendo a convertir la fricción en diamantes.`,
+            nature: "desafiante",
+            strength: "La fricción crea un poderoso impulso y motivación para lograr",
+            challenge: "Puntos de crisis periódicos en los que la voluntad y las emociones chocan"
         },
         Trine: {
-            title: "Sun-Moon Trine - Flowing Harmony",
-            keywords: ["Ease", "Flow", "Harmony", "Natural Gifts"],
-            reading: `The trine between Sun and Moon is one of the most beautiful aspects in astrology - a flowing harmony between will and emotion. This child has an easy relationship with themselves. What they want and what they need flow together naturally, creating inner peace.
+            title: "Trígono Sol-Luna - Armonía que fluye",
+            keywords: ["Facilidad", "Fluir", "Armonía", "Regalos Naturales"],
+            reading: `El trígono entre el Sol y la Luna es uno de los aspectos más bellos de la astrología: una armonía fluida entre la voluntad y la emoción. Este niño tiene una relación fácil consigo mismo. Lo que quieren y lo que necesitan fluyen juntos de forma natural, creando paz interior.
 
-Life comes a bit easier to them than to others. There's natural confidence, emotional stability, and a sense that things will work out. They're often well-liked because their inner harmony creates an pleasant, peaceful presence that others enjoy.
+La vida les resulta un poco más fácil que a otros. Hay confianza natural, estabilidad emocional y una sensación de que las cosas saldrán bien. Suelen ser queridos porque su armonía interior crea una presencia agradable y pacífica que los demás disfrutan.
 
-The challenge with such ease is that they may not develop the drive that comes from friction. They can be too comfortable, not pushing themselves because internal peace makes ambition feel unnecessary. They may underestimate their own abilities.
+El desafío con tal facilidad es que es posible que no desarrollen el impulso que surge de la fricción. Pueden sentirse demasiado cómodos y no esforzarse porque la paz interna hace que la ambición parezca innecesaria. Es posible que subestimen sus propias capacidades.
 
-Parents should gently encourage them to use their natural gifts. The harmony they possess is meant to be shared with the world, not kept in comfortable stillness. They have talents that flow easily - help them recognize and develop these rather than taking them for granted.`,
-            nature: "harmonious",
-            strength: "Natural inner peace and emotional stability",
-            challenge: "May be too comfortable, lacking drive to achieve"
+Los padres deben alentarlos gentilmente a utilizar sus dones naturales. La armonía que poseen está destinada a ser compartida con el mundo, no a mantenerse en una cómoda quietud. Tienen talentos que fluyen fácilmente; ayúdelos a reconocerlos y desarrollarlos en lugar de darlos por sentado.`,
+            nature: "armonioso",
+            strength: "Paz interior natural y estabilidad emocional.",
+            challenge: "Puede resultar demasiado cómodo y carecer de impulso para lograr objetivos."
         },
         Sextile: {
-            title: "Sun-Moon Sextile - Opportunity for Integration",
-            keywords: ["Opportunity", "Cooperation", "Potential", "Harmony"],
-            reading: `The sextile between Sun and Moon offers opportunities for harmony between will and emotion. Unlike the trine's automatic ease, the sextile requires some effort to activate - but when engaged, it creates beautiful integration.
+            title: "Sextil Sol-Luna: Oportunidad de integración",
+            keywords: ["Oportunidad", "Cooperación", "Potencial", "Armonía"],
+            reading: `El sextil entre el Sol y la Luna ofrece oportunidades de armonía entre la voluntad y la emoción. A diferencia de la facilidad automática del trígono, el sextil requiere algo de esfuerzo para activarse, pero cuando se activa, crea una hermosa integración.
 
-This child has the potential for great emotional intelligence and self-understanding, but must reach for it. Opportunities to align their feelings with their purpose appear regularly, but they must choose to take advantage of them.
+Este niño tiene potencial para una gran inteligencia emocional y autocomprensión, pero debe alcanzarlo. Regularmente aparecen oportunidades para alinear sus sentimientos con su propósito, pero deben decidir aprovecharlas.
 
-They may show early talent for understanding both themselves and others. The ability to balance emotional needs with conscious goals is available to them - it just requires some attention and practice.
+Pueden mostrar un talento temprano para comprenderse a sí mismos y a los demás. Tienen a su disposición la capacidad de equilibrar las necesidades emocionales con objetivos conscientes; sólo requiere algo de atención y práctica.
 
-Parents can help by pointing out moments when their child's emotions and actions align beautifully, and by creating opportunities for them to practice emotional intelligence. The gifts are there, ready to be developed with just a bit of conscious effort.`,
-            nature: "harmonious",
-            strength: "Natural opportunities for emotional-will integration with small effort",
-            challenge: "Requires conscious activation - gifts won't develop automatically"
+Los padres pueden ayudar señalando momentos en los que las emociones y acciones de sus hijos se alinean maravillosamente y creando oportunidades para que practiquen la inteligencia emocional. Los dones están ahí, listos para ser desarrollados con sólo un poco de esfuerzo consciente.`,
+            nature: "armonioso",
+            strength: "Oportunidades naturales para la integración de la voluntad emocional con un pequeño esfuerzo.",
+            challenge: "Requiere activación consciente: los dones no se desarrollarán automáticamente"
         }
     },
     
     "Venus-Mars": {
         Conjunction: {
-            title: "Venus-Mars Conjunction - Passionate Heart",
-            keywords: ["Passion", "Desire", "Attraction", "Energy"],
-            reading: `With Venus and Mars together, love and desire are unified in this child. What they love (Venus) and what they want (Mars) are the same - creating passionate, direct pursuit of what attracts them. This is the aspect of the romantic, the artist, the person who loves with their whole being.
+            title: "Conjunción Venus-Marte - Corazón Apasionado",
+            keywords: ["Pasión", "Deseo", "Atracción", "Energía"],
+            reading: `Con Venus y Marte juntos, el amor y el deseo se unifican en este niño. Lo que aman (Venus) y lo que quieren (Marte) son lo mismo: crean una búsqueda apasionada y directa de lo que les atrae. Éste es el aspecto del romántico, del artista, de la persona que ama con todo su ser.
 
-Even as a child, they pursue what they love with enthusiasm and energy. If they like something, they really like it. Their attractions are strong and direct. Creative and romantic energy flow together naturally.
+Ya desde pequeños persiguen lo que aman con entusiasmo y energía. Si les gusta algo, les gusta mucho. Sus atracciones son fuertes y directas. La energía creativa y romántica fluyen juntas de forma natural.
 
-As they mature, relationships will be passionate affairs. They fall in love easily and express affection directly. Creative pursuits combine beauty (Venus) with drive (Mars), making them natural artists or performers. They want beautiful things and aren't shy about going after them.
+A medida que maduren, las relaciones serán apasionadas. Se enamoran fácilmente y expresan cariño directamente. Las actividades creativas combinan la belleza (Venus) con el impulso (Marte), lo que los convierte en artistas o intérpretes naturales. Quieren cosas hermosas y no tienen reparos en perseguirlas.
 
-The challenge is learning balance and patience. They can be impulsive in both love and creative pursuits, jumping in before thinking. Teach them that sometimes attraction needs time to develop, and that not every desire requires immediate gratification.`,
+El desafío es aprender a tener equilibrio y paciencia. Pueden ser impulsivos tanto en el amor como en las actividades creativas, y se lanzan a la acción antes de pensar. Enséñeles que a veces la atracción necesita tiempo para desarrollarse y que no todos los deseos requieren una gratificación inmediata.`,
             nature: "neutral",
-            strength: "Passionate pursuit of love and beauty, integrated desire and affection",
-            challenge: "Impulsiveness in relationships and creative pursuits"
+            strength: "Búsqueda apasionada del amor y la belleza, deseo y afecto integrados.",
+            challenge: "Impulsividad en las relaciones y actividades creativas."
         },
         Opposition: {
-            title: "Venus-Mars Opposition - Romantic Tension",
-            keywords: ["Attraction", "Tension", "Balance", "Relationships"],
-            reading: `Venus opposite Mars creates dynamic tension in relationships and desires. What this child loves and what they desire pull in opposite directions - creating a fascinating dance between harmony and passion, peace and excitement.
+            title: "Oposición Venus-Marte - Tensión romántica",
+            keywords: ["Atracción", "Tensión", "Balance", "Relaciones"],
+            reading: `Venus frente a Marte crea tensión dinámica en las relaciones y los deseos. Lo que este niño ama y lo que desea van en direcciones opuestas, creando una danza fascinante entre armonía y pasión, paz y emoción.
 
-They may swing between wanting peace (Venus) and craving excitement (Mars). In relationships later, they'll be attracted to people who are both similar and different, comfortable and challenging. This keeps life interesting but can create confusion.
+Pueden oscilar entre el deseo de paz (Venus) y el anhelo de emoción (Marte). En las relaciones posteriores, se sentirán atraídos por personas similares y diferentes, cómodas y desafiantes. Esto mantiene la vida interesante pero puede crear confusión.
 
-The opposition creates a relationship radar - they notice attraction and tension in themselves and others. They're learning to balance giving and taking, peace and passion, compromise and assertion. Each relationship becomes a classroom.
+La oposición crea un radar en las relaciones: notan atracción y tensión en ellos mismos y en los demás. Están aprendiendo a equilibrar el dar y el recibir, la paz y la pasión, el compromiso y la afirmación. Cada relación se convierte en un aula.
 
-The gift is understanding that love involves both harmony and healthy conflict. They won't settle for boring relationships nor destroy good ones with too much drama. They're learning the dynamic balance that makes relationships truly alive.`,
-            nature: "challenging",
-            strength: "Deep understanding of relationship dynamics and attraction",
-            challenge: "Confusion between peaceful love and passionate desire"
+El don es comprender que el amor implica tanto armonía como conflicto saludable. No se conformarán con relaciones aburridas ni destruirán las buenas con demasiado drama. Están aprendiendo el equilibrio dinámico que hace que las relaciones sean realmente vivas.`,
+            nature: "desafiante",
+            strength: "Comprensión profunda de la dinámica de las relaciones y la atracción.",
+            challenge: "Confusión entre amor pacífico y deseo apasionado"
         },
         Square: {
-            title: "Venus-Mars Square - Dynamic Desire",
-            keywords: ["Friction", "Passion", "Creative Tension", "Drive"],
-            reading: `The square between Venus and Mars creates friction between love and desire, between what's pleasant and what's exciting. This tension generates creative and romantic energy - they're driven to create beauty and pursue what they love, but the path isn't smooth.
+            title: "Cuadratura Venus-Marte - Deseo Dinámico",
+            keywords: ["Fricción", "Pasión", "Tensión creativa", "Conducir"],
+            reading: `La cuadratura entre Venus y Marte crea fricción entre el amor y el deseo, entre lo placentero y lo excitante. Esta tensión genera energía creativa y romántica: se sienten impulsados ​​a crear belleza y perseguir lo que aman, pero el camino no es fácil.
 
-In creative pursuits, they have vision (Venus) and energy (Mars) but these two don't always cooperate. They may start projects passionately then lose interest, or love something but struggle to achieve it. This friction, while frustrating, generates remarkable creative drive.
+En actividades creativas, tienen visión (Venus) y energía (Marte), pero estas dos no siempre cooperan. Pueden comenzar proyectos con pasión y luego perder el interés, o amar algo pero luchar por lograrlo. Esta fricción, aunque frustrante, genera un impulso creativo notable.
 
-In future relationships, they'll experience both attraction and irritation - the square creates chemistry but also challenge. They need partners who can handle both their affection and their fire. Boring relationships won't satisfy them.
+En relaciones futuras, experimentarán tanto atracción como irritación: el cuadrado crea química pero también desafío. Necesitan socios que puedan manejar tanto su afecto como su fuego. Las relaciones aburridas no los satisfarán.
 
-The gift is passion. This aspect creates people who care deeply, love strongly, and create powerfully - even if the process is sometimes frustrating. Support their creative pursuits while teaching persistence when passion and execution don't immediately align.`,
-            nature: "challenging",
-            strength: "Tremendous creative and romantic passion and drive",
-            challenge: "Friction between desire and affection creates frustration"
+El regalo es pasión. Este aspecto crea personas que se preocupan profundamente, aman intensamente y crean poderosamente, incluso si el proceso es a veces frustrante. Apoye sus actividades creativas mientras les enseña perseverancia cuando la pasión y la ejecución no se alinean de inmediato.`,
+            nature: "desafiante",
+            strength: "Tremenda pasión e impulso creativo y romántico.",
+            challenge: "La fricción entre el deseo y el afecto genera frustración"
         },
         Trine: {
-            title: "Venus-Mars Trine - Graceful Desire",
-            keywords: ["Harmony", "Attraction", "Creativity", "Ease"],
-            reading: `The trine between Venus and Mars is one of the most beautiful aspects for creativity and future relationships. Love and desire flow together harmoniously - they're attracted to what's good for them and able to pursue what they love with grace and success.
+            title: "Trígono Venus-Marte - Deseo agraciado",
+            keywords: ["Armonía", "Atracción", "Creatividad", "Facilidad"],
+            reading: `El trígono entre Venus y Marte es uno de los aspectos más bellos para la creatividad y las relaciones futuras. El amor y el deseo fluyen juntos armoniosamente: se sienten atraídos por lo que es bueno para ellos y pueden perseguir lo que aman con gracia y éxito.
 
-Creative talents come naturally. They have both artistic vision (Venus) and the energy to manifest it (Mars). In relationships later, they attract easily and know how to balance affection with passion. They're naturally charming and magnetic.
+Los talentos creativos surgen de forma natural. Tienen tanto visión artística (Venus) como energía para manifestarla (Marte). En las relaciones posteriores, se atraen fácilmente y saben equilibrar el afecto con la pasión. Son naturalmente encantadores y magnéticos.
 
-This ease can be a double-edged sword. Because attraction and achievement in creative/romantic realms comes so naturally, they may not develop the grit that challenges create. They can be lazy about talents because they work so effortlessly.
+Esta facilidad puede ser un arma de doble filo. Debido a que la atracción y los logros en los ámbitos creativos/románticos son tan naturales, es posible que no desarrollen el coraje que crean los desafíos. Pueden ser perezosos con respecto a los talentos porque trabajan sin esfuerzo.
 
-Parents should encourage them to fully develop their natural creative and social gifts rather than taking them for granted. They have the potential for real artistry and beautiful relationships - help them reach for that potential rather than coasting on natural charm.`,
-            nature: "harmonious",
-            strength: "Natural creativity, charm, and ability to attract what they love",
-            challenge: "May not develop gifts fully due to ease of expression"
+Los padres deben alentarlos a desarrollar plenamente sus dones creativos y sociales naturales en lugar de darlos por sentado. Tienen el potencial para un verdadero arte y relaciones hermosas; ayúdelos a alcanzar ese potencial en lugar de dejarse llevar por el encanto natural.`,
+            nature: "armonioso",
+            strength: "Creatividad natural, encanto y capacidad para atraer lo que aman.",
+            challenge: "Puede que no desarrolle plenamente sus dones debido a su facilidad de expresión."
         }
     },
     
     "Mars-Saturn": {
         Conjunction: {
-            title: "Mars-Saturn Conjunction - Disciplined Warrior",
-            keywords: ["Discipline", "Endurance", "Control", "Achievement"],
-            reading: `Mars conjunct Saturn is one of the most powerful aspects for achievement through disciplined effort. This child has energy (Mars) naturally structured by patience and endurance (Saturn). They understand early that good things take time and hard work.
+            title: "Conjunción Marte-Saturno - Guerrero disciplinado",
+            keywords: ["Disciplina", "Resistencia", "Control", "Logro"],
+            reading: `Marte en conjunción con Saturno es uno de los aspectos más poderosos para lograr logros a través del esfuerzo disciplinado. Este niño tiene energía (Marte) naturalmente estructurada por la paciencia y la resistencia (Saturno). Entienden desde el principio que las cosas buenas requieren tiempo y trabajo duro.
 
-Where other children give up when things get hard, this one keeps going. They have natural grit, self-discipline, and the ability to delay gratification. Athletic or skill-based pursuits suit them - they'll practice longer than others.
+Mientras que otros niños se dan por vencidos cuando las cosas se ponen difíciles, este sigue adelante. Tienen valor natural, autodisciplina y la capacidad de retrasar la gratificación. Las actividades deportivas o basadas en habilidades les convienen: practicarán más que otros.
 
-The challenge is that Saturn can restrict Mars' natural spontaneity and enthusiasm. They may be too controlled, too careful, holding back natural impulses out of fear of failure or judgment. Frustration can build when their energy meets constant internal resistance.
+El desafío es que Saturno puede restringir la espontaneidad y el entusiasmo naturales de Marte. Es posible que sean demasiado controlados, demasiado cuidadosos y repriman sus impulsos naturales por miedo al fracaso o al juicio. La frustración puede aumentar cuando su energía encuentra una resistencia interna constante.
 
-The gift is ultimately incredible achievement. Through patient, persistent effort, they accomplish what others only dream about. Support their discipline while ensuring they also experience spontaneous joy and permission to try without guarantee of success.`,
-            nature: "challenging",
-            strength: "Exceptional discipline, endurance, and ability to achieve through sustained effort",
-            challenge: "Restricted spontaneity, frustration, fear of failure"
+El regalo es, en última instancia, un logro increíble. A través de un esfuerzo paciente y persistente, logran lo que otros sólo sueñan. Apoye su disciplina y al mismo tiempo asegúrese de que también experimenten alegría espontánea y permiso para intentarlo sin garantía de éxito.`,
+            nature: "desafiante",
+            strength: "Disciplina, resistencia y capacidad excepcionales para lograr logros a través del esfuerzo sostenido.",
+            challenge: "Espontaneidad restringida, frustración, miedo al fracaso."
         },
         Opposition: {
-            title: "Mars-Saturn Opposition - Balanced Force",
-            keywords: ["Tension", "Control", "Timing", "Authority"],
-            reading: `Mars opposite Saturn creates tension between action and restraint, between pushing forward and holding back. This child will experience an internal tug-of-war between their desire to act (Mars) and messages to wait, be careful, or control themselves (Saturn).
+            title: "Oposición Marte-Saturno - Fuerza equilibrada",
+            keywords: ["Tensión", "Control", "Momento", "Autoridad"],
+            reading: `Marte opuesto a Saturno crea tensión entre acción y moderación, entre empujar hacia adelante y reprimirse. Este niño experimentará un tira y afloja interno entre su deseo de actuar (Marte) y los mensajes de esperar, tener cuidado o controlarse (Saturno).
 
-They may alternate between impulsive action and over-cautious restraint, never quite finding the middle ground. Parents might see them rush into things then suddenly freeze, or hold back and back until they explode into action. This is them learning timing.
+Pueden alternar entre la acción impulsiva y la moderación excesivamente cautelosa, sin encontrar nunca el término medio. Los padres pueden verlos precipitarse hacia las cosas y luego congelarse repentinamente, o contenerse y retroceder hasta que estallan en acción. Estos son ellos aprendiendo el tiempo.
 
-Authority figures and rules may feel particularly restrictive to them. They need to act but also need structure - finding the balance between freedom and discipline becomes a lifelong lesson. Rebellion and submission take turns.
+Las figuras de autoridad y las reglas pueden parecerles particularmente restrictivas. Necesitan actuar, pero también estructura: encontrar el equilibrio entre libertad y disciplina se convierte en una lección para toda la vida. La rebelión y la sumisión se turnan.
 
-The gift is learning perfect timing. Eventually, they develop an instinct for when to push and when to wait. They become people who can both act decisively and exercise remarkable self-control. This balance, once learned, is incredibly powerful.`,
-            nature: "challenging",
-            strength: "Eventually develops excellent timing and balance of action/restraint",
-            challenge: "Internal conflict between impulse and restriction creates frustration"
+El don es aprender el momento perfecto. Con el tiempo, desarrollan un instinto para saber cuándo presionar y cuándo esperar. Se convierten en personas que pueden actuar con decisión y ejercer un notable autocontrol. Este equilibrio, una vez aprendido, es increíblemente poderoso.`,
+            nature: "desafiante",
+            strength: "Con el tiempo desarrolla una sincronización excelente y un equilibrio entre acción y moderación.",
+            challenge: "El conflicto interno entre impulso y restricción crea frustración."
         }
     },
     
     "Sun-Jupiter": {
         Conjunction: {
-            title: "Sun-Jupiter Conjunction - Boundless Spirit",
-            keywords: ["Optimism", "Expansion", "Luck", "Confidence"],
-            reading: `The Sun conjunct Jupiter blesses this child with natural optimism, confidence, and good fortune. Their identity is tied to expansion, growth, and seeing the bright side of life. They radiate warmth and generosity that attracts opportunities.
+            title: "Conjunción Sol-Júpiter - Espíritu ilimitado",
+            keywords: ["Optimismo", "Expansión", "Suerte", "Confianza"],
+            reading: `El Sol en conjunción con Júpiter bendice a este niño con optimismo natural, confianza y buena suerte. Su identidad está ligada a la expansión, el crecimiento y a ver el lado bueno de la vida. Irradian calidez y generosidad que atrae oportunidades.
 
-This is one of the luckiest aspects in astrology. They seem to be in the right place at the right time, meeting the right people. Their positive outlook creates a self-fulfilling prophecy - expecting good things, they often receive them.
+Este es uno de los aspectos más afortunados de la astrología. Parecen estar en el lugar correcto en el momento correcto y conociendo a las personas adecuadas. Su actitud positiva crea una profecía autocumplida: esperan cosas buenas y a menudo las reciben.
 
-The challenge is excess. They may overestimate their abilities, promise more than they can deliver, or expect success without effort. Their confidence, while magnetic, can tip into arrogance or overindulgence.
+El desafío es el exceso. Es posible que sobreestimen sus capacidades, prometan más de lo que pueden cumplir o esperen el éxito sin esfuerzo. Su confianza, aunque magnética, puede convertirse en arrogancia o exceso de indulgencia.
 
-Guide their expansive spirit with gentle reality checks while never dampening their beautiful optimism. They're meant to inspire others and live large - just with appropriate boundaries.`,
-            nature: "harmonious",
-            strength: "Natural luck, optimism, and ability to attract opportunities",
-            challenge: "Overconfidence, excess, expecting rewards without effort"
+Guíe su espíritu expansivo con suaves controles de la realidad sin apagar nunca su hermoso optimismo. Están destinados a inspirar a otros y vivir en grande, sólo que con límites apropiados.`,
+            nature: "armonioso",
+            strength: "Suerte natural, optimismo y capacidad para atraer oportunidades.",
+            challenge: "Exceso de confianza, exceso, esperar recompensas sin esfuerzo."
         },
         Trine: {
-            title: "Sun-Jupiter Trine - Lucky Star",
-            keywords: ["Fortune", "Ease", "Growth", "Wisdom"],
-            reading: `Sun trine Jupiter bestows natural good fortune and an easy path to growth and wisdom. This child has guardian-angel energy - things tend to work out for them, and they develop a deep trust in life's benevolence.
+            title: "Trígono Sol-Júpiter - Estrella de la suerte",
+            keywords: ["Fortuna", "Facilidad", "Crecimiento", "Sabiduría"],
+            reading: `Sol trígono con Júpiter otorga buena fortuna natural y un camino fácil hacia el crecimiento y la sabiduría. Este niño tiene energía de ángel de la guarda: las cosas tienden a salirle bien y desarrolla una profunda confianza en la benevolencia de la vida.
 
-Their generous spirit attracts generosity in return. They share naturally and receive abundantly. Educational and travel opportunities flow to them. They may show early wisdom beyond their years.
+Su espíritu generoso atrae generosidad a cambio. Comparten con naturalidad y reciben en abundancia. Les llegan oportunidades educativas y de viaje. Pueden mostrar una sabiduría temprana más allá de su edad.
 
-The ease of this aspect means they may not develop resilience through struggle. When rare difficulties arise, they may be unprepared. Help them appreciate that their good fortune is a gift to be used wisely, not taken for granted.`,
-            nature: "harmonious",
-            strength: "Natural good fortune, wisdom, and generous spirit",
-            challenge: "May lack resilience when facing rare difficulties"
+La facilidad de este aspecto significa que es posible que no desarrollen resiliencia a través de la lucha. Cuando surgen dificultades excepcionales, es posible que no estén preparados. Ayúdelos a apreciar que su buena suerte es un regalo que debe usarse sabiamente, no darse por sentado.`,
+            nature: "armonioso",
+            strength: "Buena fortuna natural, sabiduría y espíritu generoso.",
+            challenge: "Puede carecer de resiliencia cuando se enfrenta a dificultades raras."
         },
         Square: {
-            title: "Sun-Jupiter Square - Restless Growth",
-            keywords: ["Excess", "Ambition", "Friction", "Overreach"],
-            reading: `Sun square Jupiter creates friction between identity and expansion. This child wants MORE - more experience, more recognition, more of everything. This restless drive for growth can achieve great things but also lead to overextension.
+            title: "Cuadratura Sol-Júpiter - Crecimiento inquieto",
+            keywords: ["Exceso", "Ambición", "Fricción", "Extralimitarse"],
+            reading: `El Sol en cuadratura con Júpiter crea fricción entre identidad y expansión. Este niño quiere MÁS: más experiencia, más reconocimiento, más de todo. Este impulso incansable de crecimiento puede lograr grandes cosas, pero también conducir a una extensión excesiva.
 
-They may promise more than they can deliver, take on too much, or expect recognition before it's earned. Their ambition exceeds their patience. Yet this very friction drives them to accomplish more than those who are content.
+Es posible que prometan más de lo que pueden cumplir, que asuman demasiado o que esperen reconocimiento antes de ganárselo. Su ambición supera su paciencia. Sin embargo, esta misma fricción los impulsa a lograr más que aquellos que están contentos.
 
-The challenge is learning appropriate limits without losing their magnificent ambition. They need gentle boundaries while being encouraged to dream big. Balance their expansive nature with practical steps toward their grand visions.`,
-            nature: "challenging",
-            strength: "Tremendous ambition and drive for growth",
-            challenge: "Overextension, restlessness, impatience for recognition"
+El desafío es aprender los límites adecuados sin perder su magnífica ambición. Necesitan límites suaves y al mismo tiempo se les anima a soñar en grande. Equilibre su naturaleza expansiva con pasos prácticos hacia sus grandes visiones.`,
+            nature: "desafiante",
+            strength: "Tremenda ambición e impulso para el crecimiento.",
+            challenge: "Extensión excesiva, inquietud, impaciencia por el reconocimiento."
         }
     },
     
     "Mercury-Neptune": {
         Conjunction: {
-            title: "Mercury-Neptune Conjunction - Dreaming Mind",
-            keywords: ["Imagination", "Intuition", "Creativity", "Inspiration"],
-            reading: `Mercury conjunct Neptune gives this child a mind that operates on both logical and mystical wavelengths. Their thinking is infused with imagination, intuition, and creative inspiration. They may show artistic or psychic talents early.
+            title: "Conjunción Mercurio-Neptuno - Mente soñadora",
+            keywords: ["Imaginación", "Intuición", "Creatividad", "Inspiración"],
+            reading: `Mercurio en conjunción con Neptuno le da a este niño una mente que opera en longitudes de onda tanto lógicas como místicas. Su pensamiento está impregnado de imaginación, intuición e inspiración creativa. Pueden mostrar talentos artísticos o psíquicos temprano.
 
-Learning happens differently for them - through images, feelings, and inspiration rather than pure logic. They absorb information from their environment almost psychically. Music, art, and fantasy deeply engage their mind.
+Para ellos el aprendizaje ocurre de manera diferente: a través de imágenes, sentimientos e inspiración en lugar de pura lógica. Absorben información de su entorno casi psíquicamente. La música, el arte y la fantasía ocupan profundamente su mente.
 
-The challenge is distinguishing reality from imagination. They may believe things that aren't true, have difficulty with precise facts, or struggle with deception (giving or receiving). Clear boundaries between real and imagined are essential.
+El desafío es distinguir la realidad de la imaginación. Pueden creer cosas que no son ciertas, tener dificultades con hechos precisos o luchar contra el engaño (dar o recibir). Es esencial establecer límites claros entre lo real y lo imaginado.
 
-Nurture their magical thinking while grounding them in practical reality. They have gifts for creative and intuitive fields - just ensure they also develop discernment and healthy skepticism.`,
+Fomente su pensamiento mágico mientras los conecta con la realidad práctica. Tienen dones para los campos creativos e intuitivos; solo asegúrese de que también desarrollen discernimiento y un sano escepticismo.`,
             nature: "neutral",
-            strength: "Brilliant creative imagination and intuitive intelligence",
-            challenge: "Confusion between fact and fantasy, difficulty with precision"
+            strength: "Brillante imaginación creativa e inteligencia intuitiva.",
+            challenge: "Confusión entre realidad y fantasía, dificultad con la precisión"
         },
         Square: {
-            title: "Mercury-Neptune Square - Foggy Insights",
-            keywords: ["Confusion", "Creativity", "Deception", "Imagination"],
-            reading: `Mercury square Neptune creates friction between logical thinking and intuitive knowing. This child's mind may feel foggy or confused at times, struggling to grasp concrete details while perceiving subtle, intangible truths.
+            title: "Cuadratura Mercurio-Neptuno - Foggy Insights",
+            keywords: ["Confusión", "Creatividad", "Engaño", "Imaginación"],
+            reading: `Mercurio en cuadratura con Neptuno crea fricción entre el pensamiento lógico y el conocimiento intuitivo. La mente de este niño puede sentirse nublada o confundida a veces, luchando por captar detalles concretos mientras percibe verdades sutiles e intangibles.
 
-They may have learning differences - not because they're less intelligent, but because their mind works differently. Abstract and creative thinking comes naturally; rote memorization and precise facts are challenging.
+Es posible que tengan dificultades de aprendizaje, no porque sean menos inteligentes, sino porque su mente funciona de manera diferente. El pensamiento abstracto y creativo es algo natural; la memorización de memoria y datos precisos son un desafío.
 
-The gift is accessing realms of imagination and intuition that logical minds miss. They think in poetry, metaphor, and vision. Creative, spiritual, and artistic pursuits suit their non-linear intelligence.
+El don es acceder a reinos de la imaginación y la intuición que las mentes lógicas pasan por alto. Piensan en poesía, metáfora y visión. Las actividades creativas, espirituales y artísticas se adaptan a su inteligencia no lineal.
 
-Patience with their different learning style is essential. Avoid labeling their foggy moments as flaws - instead, help them translate their intuitive insights into practical expression.`,
-            nature: "challenging",
-            strength: "Access to intuitive and creative intelligence beyond logic",
-            challenge: "Mental confusion, difficulty with facts and precision"
+La paciencia con su diferente estilo de aprendizaje es esencial. Evite etiquetar sus momentos confusos como defectos; en su lugar, ayúdelos a traducir sus conocimientos intuitivos en expresiones prácticas.`,
+            nature: "desafiante",
+            strength: "Acceso a una inteligencia intuitiva y creativa más allá de la lógica",
+            challenge: "Confusión mental, dificultad con los hechos y la precisión."
         }
     },
     
     "Jupiter-Saturn": {
         Conjunction: {
-            title: "Jupiter-Saturn Conjunction - Grounded Expansion",
-            keywords: ["Balance", "Achievement", "Wisdom", "Timing"],
-            reading: `Jupiter conjunct Saturn is a rare and powerful aspect that balances expansion with limitation, optimism with realism. This child understands instinctively that big dreams require practical steps, and that patience enhances rather than limits growth.
+            title: "Conjunción Júpiter-Saturno - Expansión a tierra",
+            keywords: ["Balance", "Logro", "Sabiduría", "Momento"],
+            reading: `Júpiter en conjunción con Saturno es un aspecto raro y poderoso que equilibra la expansión con la limitación, el optimismo con el realismo. Este niño comprende instintivamente que los grandes sueños requieren pasos prácticos y que la paciencia mejora el crecimiento en lugar de limitarlo.
 
-They take calculated risks rather than blind leaps. Their ambitions are realistic, their plans practical. They inspire others with vision while also being able to execute. This combination creates natural leaders and successful achievers.
+Toman riesgos calculados en lugar de dar saltos a ciegas. Sus ambiciones son realistas y sus planes prácticos. Inspiran a otros con su visión y al mismo tiempo son capaces de ejecutar. Esta combinación crea líderes naturales y triunfadores exitosos.
 
-The internal balance may sometimes feel like internal conflict - the part that wants MORE battling the part that says WAIT. This tension, once integrated, becomes their greatest strength.
+El equilibrio interno a veces puede parecer un conflicto interno: la parte que quiere MÁS lucha contra la parte que dice ESPERA. Esta tensión, una vez integrada, se convierte en su mayor fortaleza.
 
-This aspect occurs only every 20 years, marking generational themes. Support their natural ability to dream big while building carefully. They're learning to balance faith and fear, expansion and contraction.`,
+Este aspecto se da sólo cada 20 años, marcando temas generacionales. Apoye su capacidad natural de soñar en grande mientras construye con cuidado. Están aprendiendo a equilibrar la fe y el miedo, la expansión y la contracción.`,
             nature: "neutral",
-            strength: "Perfect balance of vision and practical execution",
-            challenge: "Internal tension between expansion and limitation"
+            strength: "Equilibrio perfecto entre visión y ejecución práctica.",
+            challenge: "Tensión interna entre expansión y limitación."
         },
         Opposition: {
-            title: "Jupiter-Saturn Opposition - Expansion vs. Limitation",
-            keywords: ["Tension", "Balance", "Growth", "Restriction"],
-            reading: `Jupiter opposite Saturn creates a tug-of-war between wanting more and needing less, between faith and fear, between expansion and contraction. This child will experience periods of growth alternating with periods of restriction.
+            title: "Oposición Júpiter-Saturno: expansión versus limitación",
+            keywords: ["Tensión", "Balance", "Crecimiento", "Restricción"],
+            reading: `Júpiter opuesto a Saturno crea un tira y afloja entre querer más y necesitar menos, entre fe y miedo, entre expansión y contracción. Este niño experimentará períodos de crecimiento que se alternarán con períodos de restricción.
 
-They may swing between excessive optimism and excessive caution, between taking on too much and holding back too long. Finding the middle ground between these extremes becomes a central life lesson.
+Pueden oscilar entre un optimismo excesivo y una cautela excesiva, entre asumir demasiado y retrasarse demasiado. Encontrar el punto medio entre estos extremos se convierte en una lección de vida central.
 
-The gift is eventual mastery of timing. They learn when to expand and when to consolidate, when to leap and when to wait. This wisdom, hard-earned through experience, makes them excellent advisors.`,
-            nature: "challenging",
-            strength: "Develops excellent timing and balanced judgment",
-            challenge: "Swings between excess and restriction until balance is found"
+El don es el eventual dominio del tiempo. Aprenden cuándo expandirse y cuándo consolidarse, cuándo dar un salto y cuándo esperar. Esta sabiduría, adquirida con esfuerzo a través de la experiencia, los convierte en excelentes asesores.`,
+            nature: "desafiante",
+            strength: "Desarrolla una sincronización excelente y un juicio equilibrado.",
+            challenge: "Oscila entre el exceso y la restricción hasta encontrar el equilibrio"
         }
     }
 };

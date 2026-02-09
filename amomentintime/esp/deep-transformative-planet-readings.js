@@ -5,135 +5,135 @@
 
 var DEEP_URANUS_READINGS = {
     Aries: {
-        title: "Uranus in Aries - Revolutionary Pioneer",
-        archetype: "The Lightning Strike Leader",
-        hook: "With Uranus in Aries, this soul carries revolutionary courage and the ability to lead humanity into new territories. They are here to break trails, shatter limitations, and inspire others to be free.",
+        title: "Urano en Aries - Pionero revolucionario",
+        archetype: "El líder del rayo",
+        hook: "Con Urano en Aries, esta alma lleva coraje revolucionario y la capacidad de llevar a la humanidad a nuevos territorios. Están aquí para abrir caminos, romper limitaciones e inspirar a otros a ser libres.",
         
-        coreExpression: `Uranus in Aries creates the revolutionary warrior - someone who isn't just rebelling for its own sake but pioneering genuinely new ways of being. This is the innovator who acts, the rebel who leads, the awakener who goes first.
+        coreExpression: `Urano en Aries crea al guerrero revolucionario, alguien que no sólo se rebela por sí mismo sino que es pionero en formas de ser genuinamente nuevas. Este es el innovador que actúa, el rebelde que lidera, el que despierta y que va primero.
 
-This placement combines Uranian breakthrough energy with Aries initiative. They don't just think about revolution - they embody it. They don't theorize about freedom - they live it immediately.
+Esta ubicación combina la energía revolucionaria de Urano con la iniciativa de Aries. No sólo piensan en la revolución: la encarnan. No teorizan sobre la libertad: la viven inmediatamente.
 
-Their gift is the capacity to start movements, to be the first to try what everyone else fears, to break through barriers with sudden decisive action. They are lightning strikes of change.`,
+Su don es la capacidad de iniciar movimientos, de ser los primeros en intentar lo que todos temen, de romper barreras con acciones repentinas y decisivas. Son relámpagos de cambio.`,
         
-        innovation: `Their innovation is action-based and immediate. While others are planning revolutions, they're already implementing them. They invent new ways of doing, being, and moving through the world.
+        innovation: `Su innovación se basa en la acción y es inmediata. Mientras otros planean revoluciones, ya las están implementando. Inventan nuevas formas de hacer, ser y moverse por el mundo.
 
-They may pioneer new sports, new forms of activism, new leadership models, or entirely new ways of being independent. Their creativity is kinetic and often physical.
+Pueden ser pioneros en nuevos deportes, nuevas formas de activismo, nuevos modelos de liderazgo o formas completamente nuevas de ser independientes. Su creatividad es cinética y, a menudo, física.
 
-The key is that their innovations don't wait for approval or consensus. They act on their genius immediately, often surprising themselves as much as others with what they create.`,
+La clave es que sus innovaciones no esperan aprobación o consenso. Actúan basándose en su genio de inmediato y, a menudo, se sorprenden a sí mismos tanto como a los demás con lo que crean.`,
         
-        rebellion: `Their rebellion is personal and direct. They refuse to be controlled, dominated, or told what to do. Authority figures trigger immediate revolutionary response.
+        rebellion: `Su rebelión es personal y directa. Se niegan a ser controlados, dominados o que les digan qué hacer. Las figuras de autoridad desencadenan una respuesta revolucionaria inmediata.
 
-But their rebellion isn't just reactive - it's creative. They don't just break rules; they demonstrate better ways. They don't just fight systems; they build alternatives by living them.
+Pero su rebelión no es sólo reactiva: es creativa. No sólo rompen las reglas; demuestran mejores maneras. No sólo luchan contra los sistemas; construyen alternativas viviéndolas.
 
-The most powerful expression is the rebel who doesn't need to fight because they're so busy creating freedom that the old system becomes irrelevant.`,
+La expresión más poderosa es la del rebelde que no necesita luchar porque está tan ocupado creando libertad que el viejo sistema se vuelve irrelevante.`,
         
-        freedom: `Freedom for them is immediate and non-negotiable. They need autonomy in action - the ability to move, choose, and lead without constraint. Any attempt to control them triggers crisis.
+        freedom: `La libertad para ellos es inmediata y no negociable. Necesitan autonomía en la acción: la capacidad de moverse, elegir y liderar sin restricciones. Cualquier intento de controlarlos desencadena una crisis.
 
-Their freedom isn't philosophical - it's visceral. They need to feel free in their body, in their choices, in their capacity to act on impulse. Spontaneity is oxygen.
+Su libertad no es filosófica: es visceral. Necesitan sentirse libres en su cuerpo, en sus elecciones, en su capacidad de actuar por impulso. La espontaneidad es oxígeno.
 
-The challenge is learning that true freedom includes the discipline to use it well, and that sometimes collaborative freedom serves better than solo independence.`,
+El desafío es aprender que la verdadera libertad incluye la disciplina para usarla bien y que a veces la libertad colaborativa es mejor que la independencia individual.`,
         
-        genius: `Their genius flashes through in moments of crisis or opportunity requiring immediate action. They're brilliant at seeing what needs to happen NOW and making it happen before others have processed the situation.
+        genius: `Su genio se manifiesta en momentos de crisis u oportunidades que requieren acción inmediata. Son brillantes al ver lo que debe suceder AHORA y hacerlo realidad antes de que otros hayan procesado la situación.
 
-They have revolutionary instinct - an ability to sense when systems are ready to break, when people are ready for change, when the moment for action has arrived. They strike when the iron is hot.
+Tienen instinto revolucionario: la capacidad de sentir cuándo los sistemas están listos para colapsar, cuándo la gente está lista para el cambio, cuándo ha llegado el momento de actuar. Golpean cuando el hierro está caliente.
 
-Their insights often come through action rather than contemplation. They discover truth by doing, understand by experiencing, learn by pioneering.`,
+Sus ideas a menudo surgen a través de la acción más que de la contemplación. Descubren la verdad haciendo, comprenden experimentando, aprenden siendo pioneros.`,
         
-        generational: `As a generational influence (Uranus spends about 7 years per sign), Uranus in Aries marks periods of revolutionary change in leadership, individual rights, and pioneering ventures. Wars often begin or end, new nations are born, individual expression surges.
+        generational: `Como influencia generacional (Urano pasa alrededor de 7 años por signo), Urano en Aries marca períodos de cambios revolucionarios en el liderazgo, los derechos individuales y las empresas pioneras. Las guerras a menudo comienzan o terminan, nacen nuevas naciones, surge la expresión individual.
 
-On the personal level, it creates a generation of natural rebels and pioneers who challenge existing authority and create new models of leadership and independence.`,
+A nivel personal, crea una generación de rebeldes y pioneros naturales que desafían la autoridad existente y crean nuevos modelos de liderazgo e independencia.`,
         
-        relationships: `In relationships, they need partners who honor their autonomy and may even share their revolutionary spirit. They're attracted to unusual, exciting, non-traditional partnerships.
+        relationships: `En las relaciones, necesitan socios que respeten su autonomía y que incluso compartan su espíritu revolucionario. Se sienten atraídos por asociaciones inusuales, emocionantes y no tradicionales.
 
-The growth edge is learning that true partnership can enhance freedom rather than limit it, and that revolutionary change includes relating in new ways, not just acting alone.
+La ventaja del crecimiento es aprender que una verdadera asociación puede mejorar la libertad en lugar de limitarla, y que el cambio revolucionario incluye relacionarse de nuevas maneras, no sólo actuar solo.
 
-They may pioneer new relationship models - open relationships, living apart together, collaborative entrepreneurship as romantic partnership, or entirely new forms they invent.`,
+Pueden ser pioneros en nuevos modelos de relación: relaciones abiertas, vivir separados, emprendimiento colaborativo como asociación romántica o formas completamente nuevas que inventen.`,
         
-        lifeWork: `Their life work involves pioneering, leadership in innovative fields, activism, or any area where they can be first and free. Entrepreneurship, revolutionary movements, extreme sports, or cutting-edge technology serves them.
+        lifeWork: `El trabajo de su vida implica ser pioneros, liderazgo en campos innovadores, activismo o cualquier área en la que puedan ser los primeros y libres. Les sirve el emprendimiento, los movimientos revolucionarios, los deportes extremos o la tecnología de punta.
 
-They're here to show others that freedom is possible, that you can break from tradition and survive (even thrive), that new ways of being are available to those brave enough to try them.
+Están aquí para mostrar a los demás que la libertad es posible, que es posible romper con la tradición y sobrevivir (incluso prosperar), que hay nuevas formas de ser disponibles para aquellos lo suficientemente valientes como para probarlas.
 
-The most fulfilling path is one where they're constantly breaking new ground, leading others into unexplored territory, and living proof that liberation works.`,
+El camino más satisfactorio es aquel en el que constantemente están abriendo nuevos caminos, llevando a otros a territorios inexplorados y siendo una prueba viviente de que la liberación funciona.`,
         
-        shadowWork: `The shadow is recklessness, destructive rebellion, and change for change's sake. They may break things just to prove they can, rebel without purpose, or be so focused on freedom that they can't create anything lasting.
+        shadowWork: `La sombra es imprudencia, rebelión destructiva y cambio por cambiar. Pueden romper cosas sólo para demostrar que pueden, rebelarse sin propósito o estar tan concentrados en la libertad que no pueden crear nada duradero.
 
-There can be violence (physical or emotional) when their freedom is threatened. Learning to channel revolutionary energy constructively is essential.
+Puede haber violencia (física o emocional) cuando su libertad se ve amenazada. Aprender a canalizar la energía revolucionaria de manera constructiva es esencial.
 
-The deeper shadow is isolation - being so independent and unusual that they can't connect, so focused on breaking free that they never build anything, so committed to being first that they're always alone.`,
+La sombra más profunda es el aislamiento: ser tan independientes e inusuales que no pueden conectarse, tan concentrados en liberarse que nunca construyen nada, tan comprometidos con ser los primeros que siempre están solos.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Aries represents the soul who incarnated to demonstrate that immediate liberation is possible. They're here to show that awakening can happen in an instant, that freedom doesn't require preparation, that breakthrough is one courageous choice away.
+        spiritualMeaning: `Espiritualmente, Urano en Aries representa el alma que encarnó para demostrar que la liberación inmediata es posible. Están aquí para demostrar que el despertar puede ocurrir en un instante, que la libertad no requiere preparación, que el avance está a una decisión valiente de distancia.
 
-Their spiritual gift is catalyzing others' awakening through their example. When people see them living freely, acting boldly, breaking through limitations, it triggers their own revolutionary spirit.
+Su don espiritual está catalizando el despertar de otros a través de su ejemplo. Cuando la gente los ve vivir libremente, actuar con valentía y superar las limitaciones, se desencadena su propio espíritu revolucionario.
 
-The ultimate expression is the spiritual warrior who fights for collective liberation by living their own freedom so completely that it inspires revolution in all who witness it.`,
+La máxima expresión es el guerrero espiritual que lucha por la liberación colectiva viviendo su propia libertad de manera tan completa que inspira la revolución en todos los que la presencian.`,
         
-        affirmation: "I am lightning strike of change. My courage pioneers new possibilities. I break through limitations and inspire others to freedom. My revolutionary spirit serves human liberation."
+        affirmation: "Soy un rayo de cambio. Mi coraje abre nuevas posibilidades. Rompo las limitaciones e inspiro a otros a la libertad. Mi espíritu revolucionario está al servicio de la liberación humana."
     },
 
     Taurus: {
-        title: "Uranus in Taurus - Revolutionary Abundance",
-        archetype: "The Wealth Revolutionary",
-        hook: "With Uranus in Taurus, this soul carries revolutionary relationship with resources, value, and embodiment. They are here to transform how humanity relates to earth, money, and material security.",
+        title: "Urano en Tauro - Abundancia Revolucionaria",
+        archetype: "El revolucionario de la riqueza",
+        hook: "Con Urano en Tauro, esta alma tiene una relación revolucionaria con los recursos, el valor y la encarnación. Están aquí para transformar la forma en que la humanidad se relaciona con la tierra, el dinero y la seguridad material.",
         
-        coreExpression: `Uranus in Taurus creates the revolutionary builder - someone who innovates in the material realm, who finds new ways to create security, who disrupts economic systems while creating stable alternatives.
+        coreExpression: `Urano en Tauro crea al constructor revolucionario: alguien que innova en el ámbito material, que encuentra nuevas formas de crear seguridad, que perturba los sistemas económicos y al mismo tiempo crea alternativas estables.
 
-This placement combines Uranian breakthrough with Taurean groundedness. They don't just theorize about new economic models - they build them. They don't just rebel against materialism - they create new relationships with matter.
+Esta ubicación combina el avance uraniano con la conexión a tierra de Tauro. No sólo teorizan sobre nuevos modelos económicos: los construyen. No sólo se rebelan contra el materialismo: crean nuevas relaciones con la materia.
 
-Their gift is capacity to revolutionize the stable, to bring innovation to what's traditionally slow, to transform relationship with earth and resources while maintaining groundedness.`,
+Su don es la capacidad de revolucionar lo estable, de llevar innovación a lo que tradicionalmente es lento, de transformar la relación con la tierra y los recursos manteniendo la conexión a tierra.`,
         
-        innovation: `Their innovation is material and practical. They invent new currencies, new farming methods, new sustainable technologies, new ways of relating to earth's resources, new financial systems, or new forms of security.
+        innovation: `Su innovación es material y práctica. Inventan nuevas monedas, nuevos métodos agrícolas, nuevas tecnologías sostenibles, nuevas formas de relacionarse con los recursos de la tierra, nuevos sistemas financieros o nuevas formas de seguridad.
 
-They may pioneer cryptocurrency, regenerative agriculture, alternative economics, sustainable architecture, or entirely new relationships with body and earth.
+Pueden ser pioneros en criptomonedas, agricultura regenerativa, economía alternativa, arquitectura sostenible o relaciones completamente nuevas con el cuerpo y la tierra.
 
-The key is that their innovations are grounded and functional. They create revolutions that work practically, that sustain themselves, that transform how we live on earth.`,
+La clave es que sus innovaciones estén fundamentadas y sean funcionales. Crean revoluciones que funcionan en la práctica, que se sostienen a sí mismas y que transforman la forma en que vivimos en la Tierra.`,
         
-        rebellion: `Their rebellion is against economic injustice, environmental destruction, and systems that make security inaccessible. They refuse to accept that some must struggle while others hoard.
+        rebellion: `Su rebelión es contra la injusticia económica, la destrucción ambiental y los sistemas que hacen que la seguridad sea inaccesible. Se niegan a aceptar que algunos deben luchar mientras otros acaparan.
 
-But their rebellion creates alternatives. They build new systems, demonstrate new possibilities, create working models of revolutionary economics. Their protest is constructive.
+Pero su rebelión crea alternativas. Construyen nuevos sistemas, demuestran nuevas posibilidades, crean modelos funcionales de economía revolucionaria. Su protesta es constructiva.
 
-The most powerful expression is revolutionizing wealth distribution not through destruction but through creating abundance systems that naturally serve everyone.`,
+La expresión más poderosa es revolucionar la distribución de la riqueza, no mediante la destrucción sino mediante la creación de sistemas de abundancia que naturalmente sirvan a todos.`,
         
-        freedom: `Freedom for them is economic and physical. They need financial sovereignty - the ability to create security without being trapped in traditional systems. They need bodily autonomy.
+        freedom: `La libertad para ellos es económica y física. Necesitan soberanía financiera: la capacidad de crear seguridad sin quedar atrapados en los sistemas tradicionales. Necesitan autonomía corporal.
 
-Their freedom quest may involve creating alternative income streams, building self-sufficient homesteads, or developing new technologies that liberate from economic dependence.
+Su búsqueda de libertad puede implicar la creación de flujos de ingresos alternativos, la construcción de viviendas autosuficientes o el desarrollo de nuevas tecnologías que los liberen de la dependencia económica.
 
-The challenge is that sudden changes in finance can be destabilizing. Learning to bring revolutionary vision to economic life while maintaining security is their journey.`,
+El desafío es que los cambios repentinos en las finanzas pueden ser desestabilizadores. Su viaje es aprender a llevar una visión revolucionaria a la vida económica manteniendo la seguridad.`,
         
-        genius: `Their genius is in seeing how to create stable abundance through innovative means. They understand how to make revolutionary ideas work practically, how to sustain change, how to build security differently.
+        genius: `Su genio está en ver cómo crear abundancia estable a través de medios innovadores. Entienden cómo hacer que las ideas revolucionarias funcionen en la práctica, cómo sostener el cambio, cómo construir la seguridad de manera diferente.
 
-They have revolutionary instinct about resources - knowing when systems are ready to transform, when new technologies can replace old, when humanity is ready for new economic models.
+Tienen un instinto revolucionario sobre los recursos: saben cuándo los sistemas están listos para transformarse, cuándo las nuevas tecnologías pueden reemplazar a las antiguas, cuándo la humanidad está lista para nuevos modelos económicos.
 
-Their insights often combine ecological wisdom with technological innovation - finding ways to live on earth that are both ancient and futuristic.`,
+Sus ideas a menudo combinan sabiduría ecológica con innovación tecnológica, encontrando formas de vivir en la Tierra que son a la vez antiguas y futuristas.`,
         
-        generational: `As generational influence, Uranus in Taurus marks periods of revolutionary change in economics, agriculture, ecology, and relationship with earth. Financial systems transform, new currencies emerge, environmental consciousness shifts.
+        generational: `Como influencia generacional, Urano en Tauro marca períodos de cambios revolucionarios en la economía, la agricultura, la ecología y la relación con la tierra. Los sistemas financieros se transforman, surgen nuevas monedas, la conciencia ambiental cambia.
 
-On the personal level, it creates a generation who pioneers new relationship with resources, body, and earth - finding ways to live sustainably and abundantly.`,
+A nivel personal, crea una generación que es pionera en nuevas relaciones con los recursos, el cuerpo y la tierra, encontrando formas de vivir de manera sostenible y abundante.`,
         
-        relationships: `In relationships, they need partners who share their values about resources and earth, who don't need traditional markers of security to feel safe. They're attracted to unusual but stable partnerships.
+        relationships: `En las relaciones, necesitan socios que compartan sus valores sobre los recursos y la tierra, que no necesiten marcadores tradicionales de seguridad para sentirse seguros. Se sienten atraídos por asociaciones inusuales pero estables.
 
-The growth edge is learning that intimacy itself is revolutionary, that sharing resources deeply can be freedom, that stable partnership can enhance rather than limit autonomy.
+La ventaja del crecimiento es aprender que la intimidad en sí misma es revolucionaria, que compartir profundamente los recursos puede ser libertad, que una asociación estable puede mejorar, en lugar de limitar, la autonomía.
 
-They may pioneer new models of economic partnership - collaborative businesses, shared resources with clear boundaries, or entirely new ways of building wealth together.`,
+Pueden ser pioneros en nuevos modelos de asociación económica: negocios colaborativos, recursos compartidos con límites claros o formas completamente nuevas de generar riqueza juntos.`,
         
-        lifeWork: `Their life work involves revolutionary building - sustainable technology, alternative economics, regenerative agriculture, body-based healing, or any field where they can transform material reality.
+        lifeWork: `El trabajo de su vida implica construcción revolucionaria: tecnología sostenible, economía alternativa, agricultura regenerativa, curación basada en el cuerpo o cualquier campo donde puedan transformar la realidad material.
 
-They're here to show that security doesn't require traditional systems, that abundance can be created sustainably, that relationship with earth and resources can be both revolutionary and grounding.
+Están aquí para demostrar que la seguridad no requiere sistemas tradicionales, que la abundancia se puede crear de manera sostenible, que la relación con la tierra y los recursos puede ser a la vez revolucionaria y fundamental.
 
-The most fulfilling path is one where they're building tangible alternatives to broken systems, demonstrating new possibilities that others can replicate and adapt.`,
+El camino más satisfactorio es aquel en el que construyen alternativas tangibles a sistemas rotos, demostrando nuevas posibilidades que otros pueden replicar y adaptar.`,
         
-        shadowWork: `The shadow is stubborn attachment to their revolutionary ways, or conversely, sudden destabilization of security through reckless change. They may cling to alternative systems that aren't working or destroy stability in pursuit of freedom.
+        shadowWork: `La sombra es el apego obstinado a sus métodos revolucionarios o, por el contrario, la desestabilización repentina de la seguridad a través de cambios imprudentes. Es posible que se aferren a sistemas alternativos que no funcionan o destruyan la estabilidad en su búsqueda de la libertad.
 
-Financial upheaval can be constant if they can't ground their revolutionary energy. Learning to change steadily rather than explosively serves them.
+La agitación financiera puede ser constante si no pueden fundamentar su energía revolucionaria. Les resulta útil aprender a cambiar de manera constante y no explosiva.
 
-The deeper shadow is materialism disguised as revolution - hoarding alternative currencies, building sustainable empires that serve ego, or using environmental consciousness as status rather than genuine care.`,
+La sombra más profunda es el materialismo disfrazado de revolución: acaparar monedas alternativas, construir imperios sustentables que sirvan al ego o utilizar la conciencia ambiental como estatus en lugar de cuidado genuino.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Taurus represents souls who incarnated to heal humanity's relationship with earth and embody revolutionary sustainability. They're here to show that material and spiritual aren't separate.
+        spiritualMeaning: `Espiritualmente, Urano en Tauro representa almas que encarnaron para sanar la relación de la humanidad con la tierra y encarnar la sostenibilidad revolucionaria. Están aquí para mostrar que lo material y lo espiritual no están separados.
 
-Their spiritual gift is demonstrating that awakening includes body and earth, that liberation includes economic justice, that enlightenment can be grounded and practical.
+Su don espiritual está demostrando que el despertar incluye el cuerpo y la tierra, que la liberación incluye la justicia económica, que la iluminación puede ser práctica y fundamentada.
 
-The ultimate expression is the spiritual revolutionary who transforms material reality, creating heaven on earth not as concept but as lived experience available to all.`,
+La máxima expresión es el revolucionario espiritual que transforma la realidad material, creando el cielo en la tierra no como un concepto sino como una experiencia vivida disponible para todos.`,
         
-        affirmation: "I revolutionize relationship with resources. My innovations create sustainable abundance. I build new systems that serve earth and all beings. My revolutionary vision is grounded and practical."
+        affirmation: "Revoluciono la relación con los recursos. Mis innovaciones crean abundancia sostenible. Construyo nuevos sistemas que sirven a la Tierra y a todos los seres. Mi visión revolucionaria es fundamentada y práctica."
     },
     
     // Continue with remaining 10 signs following same comprehensive pattern
@@ -141,2235 +141,2235 @@ The ultimate expression is the spiritual revolutionary who transforms material r
     // In production, each would have full 10+ sections like Aries and Taurus above
     
     Gemini: {
-        title: "Uranus in Gemini - Communication Revolutionary",
-        archetype: "The Mind Liberation",
-        hook: "With Uranus in Gemini, this soul carries revolutionary communication and mental innovation. They are here to transform how humanity thinks, connects, and shares ideas.",
+        title: "Urano en Géminis - Revolucionario de la comunicación",
+        archetype: "La liberación de la mente",
+        hook: "Con Urano en Géminis, esta alma lleva comunicación revolucionaria e innovación mental. Están aquí para transformar la forma en que la humanidad piensa, se conecta y comparte ideas.",
         
-        coreExpression: `Uranus in Gemini creates the mental revolutionary - someone who doesn't just communicate differently but transforms communication itself. This is the inventor of new languages, new technologies, new ways of connecting minds.
+        coreExpression: `Urano en Géminis crea al revolucionario mental: alguien que no sólo se comunica de manera diferente sino que transforma la comunicación misma. Este es el inventor de nuevos lenguajes, nuevas tecnologías, nuevas formas de conectar mentes.
 
-This placement combines Uranian breakthrough with Gemini's mental agility. They don't just think outside the box - they dismantle the box and create entirely new frameworks. Their mind is electric, connecting disparate ideas in revolutionary ways.
+Esta ubicación combina el avance uraniano con la agilidad mental de Géminis. No sólo piensan fuera de lo común: desmantelan la caja y crean marcos completamente nuevos. Su mente es eléctrica y conecta ideas dispares de maneras revolucionarias.
 
-Their gift is capacity to see patterns others miss, to communicate the uncommunicable, to make complex ideas accessible through revolutionary methods. They are lightning conductors of thought.`,
+Su don es la capacidad de ver patrones que otros pasan por alto, de comunicar lo incomunicable, de hacer accesibles ideas complejas a través de métodos revolucionarios. Son pararrayos del pensamiento.`,
         
-        innovation: `Their innovation is mental and communicative. They may invent new communication technologies, create new languages or coding systems, develop revolutionary educational methods, or pioneer new forms of media.
+        innovation: `Su innovación es mental y comunicativa. Pueden inventar nuevas tecnologías de comunicación, crear nuevos lenguajes o sistemas de codificación, desarrollar métodos educativos revolucionarios o ser pioneros en nuevas formas de medios.
 
-They might revolutionize journalism, create viral communication platforms, develop AI that thinks differently, or invent entirely new ways for minds to connect. Their creativity is intellectual and connective.
+Podrían revolucionar el periodismo, crear plataformas de comunicación viral, desarrollar inteligencia artificial que piense de manera diferente o inventar formas completamente nuevas para que las mentes se conecten. Su creatividad es intelectual y conectiva.
 
-The key is that their innovations change HOW humanity thinks and communicates. They don't just use existing systems better - they create new systems that make old ones obsolete.`,
+La clave es que sus innovaciones cambian la CÓMO piensa y se comunica la humanidad. No sólo utilizan mejor los sistemas existentes, sino que crean nuevos sistemas que hacen obsoletos los antiguos.`,
         
-        rebellion: `Their rebellion is against propaganda, censorship, and control of information. They refuse to accept that truth can be owned, that communication can be controlled, that minds can be manipulated.
+        rebellion: `Su rebelión es contra la propaganda, la censura y el control de la información. Se niegan a aceptar que se puede poseer la verdad, que se puede controlar la comunicación, que se pueden manipular las mentes.
 
-But their rebellion creates alternatives. They build platforms for free speech, develop technologies that bypass censorship, create educational systems that teach critical thinking. Their protest is through innovation.
+Pero su rebelión crea alternativas. Construyen plataformas para la libertad de expresión, desarrollan tecnologías que evitan la censura, crean sistemas educativos que enseñan el pensamiento crítico. Su protesta es a través de la innovación.
 
-The most powerful expression is revolutionizing information flow so completely that attempts to control it become futile - creating such abundance of communication channels that truth flows freely.`,
+La expresión más poderosa es revolucionar el flujo de información tan completamente que los intentos de controlarlo se vuelven inútiles, creando tal abundancia de canales de comunicación que la verdad fluye libremente.`,
         
-        freedom: `Freedom for them is mental and communicative. They need freedom to think, speak, write, and connect without censorship or control. Any attempt to limit their communication triggers revolutionary response.
+        freedom: `La libertad para ellos es mental y comunicativa. Necesitan libertad para pensar, hablar, escribir y conectarse sin censura ni control. Cualquier intento de limitar su comunicación desencadena una respuesta revolucionaria.
 
-Their freedom quest may involve creating encrypted communication, building decentralized networks, or developing technologies that protect free thought and expression.
+Su búsqueda de libertad puede implicar la creación de comunicaciones cifradas, la construcción de redes descentralizadas o el desarrollo de tecnologías que protejan la libertad de pensamiento y expresión.
 
-The challenge is that constant mental stimulation can be overwhelming. Learning to ground revolutionary ideas while maintaining freedom of thought is their journey.`,
+El desafío es que la estimulación mental constante puede resultar abrumadora. Su viaje es aprender a fundamentar las ideas revolucionarias manteniendo la libertad de pensamiento.`,
         
-        genius: `Their genius flashes through in sudden insights that connect previously unrelated ideas. They see how everything connects, how thoughts create reality, how communication shapes consciousness.
+        genius: `Su genio se manifiesta en percepciones repentinas que conectan ideas que antes no estaban relacionadas. Ven cómo todo se conecta, cómo los pensamientos crean la realidad, cómo la comunicación da forma a la conciencia.
 
-They have revolutionary instinct about information - knowing when ideas are ready to spread, when minds are ready for new concepts, when communication systems are ready to transform.
+Tienen un instinto revolucionario respecto a la información: saben cuándo las ideas están listas para difundirse, cuándo las mentes están listas para nuevos conceptos, cuándo los sistemas de comunicación están listos para transformarse.
 
-Their insights often come through conversation, reading, or information overload that their unique mind synthesizes into revolutionary understanding.`,
+Sus ideas a menudo surgen a través de conversaciones, lecturas o sobrecargas de información que su mente única sintetiza en una comprensión revolucionaria.`,
         
-        generational: `As generational influence, Uranus in Gemini marks periods of revolutionary change in communication, technology, education, and thinking. New media emerges, information systems transform, ways of learning revolutionize.
+        generational: `Como influencia generacional, Urano en Géminis marca períodos de cambios revolucionarios en la comunicación, la tecnología, la educación y el pensamiento. Surgen nuevos medios, los sistemas de información se transforman, las formas de aprender revolucionan.
 
-On personal level, it creates a generation of mental revolutionaries who transform how we think, connect, and share ideas - the inventors of new communication paradigms.`,
+A nivel personal, crea una generación de revolucionarios mentales que transforman la forma en que pensamos, conectamos y compartimos ideas: los inventores de nuevos paradigmas de comunicación.`,
         
-        relationships: `In relationships, they need partners who can keep up mentally, who value intellectual connection, who don't need constant emotional intensity but thrive on idea exchange.
+        relationships: `En las relaciones, necesitan socios que puedan mantenerse al día mentalmente, que valoren la conexión intelectual, que no necesiten una intensidad emocional constante sino que prosperen en el intercambio de ideas.
 
-The growth edge is learning that communication includes listening, that connection requires presence, that revolutionary ideas need grounding through relationship.
+La ventaja del crecimiento es aprender que la comunicación incluye escuchar, que la conexión requiere presencia, que las ideas revolucionarias necesitan cimentarse a través de la relación.
 
-They may pioneer new relationship models based on intellectual partnership, long-distance connections through technology, or entirely new ways of relating through ideas.`,
+Pueden ser pioneros en nuevos modelos de relación basados ​​en asociaciones intelectuales, conexiones a larga distancia a través de la tecnología o formas completamente nuevas de relacionarse a través de ideas.`,
         
-        lifeWork: `Their life work involves revolutionary communication - technology, media, education, writing, or any field where they can transform how minds connect and ideas spread.
+        lifeWork: `El trabajo de su vida implica comunicación revolucionaria: tecnología, medios, educación, escritura o cualquier campo donde puedan transformar la forma en que las mentes se conectan y las ideas se difunden.
 
-They're here to show that communication can be liberated, that minds can connect in new ways, that thinking itself can evolve through revolutionary methods.
+Están aquí para mostrar que la comunicación puede liberarse, que las mentes pueden conectarse de nuevas maneras, que el pensamiento mismo puede evolucionar a través de métodos revolucionarios.
 
-The most fulfilling path is one where they're constantly innovating in how information flows, creating platforms or methods that fundamentally change human connectivity.`,
+El camino más satisfactorio es aquel en el que se innova constantemente en cómo fluye la información, creando plataformas o métodos que cambian fundamentalmente la conectividad humana.`,
         
-        shadowWork: `The shadow is mental chaos, information overload, or scattered brilliance that never grounds into practical application. They may have so many ideas they implement none.
+        shadowWork: `La sombra es un caos mental, una sobrecarga de información o una brillantez dispersa que nunca llega a su aplicación práctica. Es posible que tengan tantas ideas que no implementen ninguna.
 
-There can be difficulty with focus, commitment to one idea, or completing projects. The revolutionary mind wants to move to the next innovation before finishing the current one.
+Puede haber dificultades para concentrarse, comprometerse con una idea o completar proyectos. La mente revolucionaria quiere pasar a la siguiente innovación antes de terminar la actual.
 
-The deeper shadow is using communication to manipulate, spreading misinformation in the name of free thought, or mental detachment that prevents real human connection.`,
+La sombra más profunda es utilizar la comunicación para manipular, difundir información errónea en nombre del libre pensamiento o del desapego mental que impide la conexión humana real.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Gemini represents souls who incarnated to liberate collective mind. They're here to show that consciousness evolves through communication, that minds can connect in ways that transcend physical limits.
+        spiritualMeaning: `Espiritualmente, Urano en Géminis representa las almas que encarnaron para liberar la mente colectiva. Están aquí para mostrar que la conciencia evoluciona a través de la comunicación, que las mentes pueden conectarse de maneras que trascienden los límites físicos.
 
-Their spiritual gift is demonstrating that thought is creative power, that communication can awaken, that revolutionary ideas can transform reality when shared freely.
+Su don espiritual es demostrar que el pensamiento es poder creativo, que la comunicación puede despertar, que las ideas revolucionarias pueden transformar la realidad cuando se comparten libremente.
 
-The ultimate expression is the mental revolutionary whose innovations in communication serve collective awakening, whose ideas liberate minds from limiting beliefs.`,
+La máxima expresión es el revolucionario mental cuyas innovaciones en comunicación sirven al despertar colectivo, cuyas ideas liberan las mentes de las creencias limitantes.`,
         
-        affirmation: "My revolutionary communication liberates minds. I innovate how humanity thinks and connects. My ideas transform consciousness. I am mental lightning awakening collective intelligence."
+        affirmation: "Mi comunicación revolucionaria libera mentes. Innovo cómo la humanidad piensa y se conecta. Mis ideas transforman la conciencia. Soy un rayo mental que despierta la inteligencia colectiva."
     },
     
     Cancer: {
-        title: "Uranus in Cancer - Emotional Liberation",
-        archetype: "The Family Revolutionary",
-        hook: "With Uranus in Cancer, this soul carries revolutionary emotional expression and innovative nurturing. They are here to transform how humanity creates family, belonging, and emotional security.",
+        title: "Urano en Cáncer - Liberación Emocional",
+        archetype: "La familia revolucionaria",
+        hook: "Con Urano en Cáncer, esta alma lleva una expresión emocional revolucionaria y una crianza innovadora. Están aquí para transformar la forma en que la humanidad crea familia, pertenencia y seguridad emocional.",
         
-        coreExpression: `Uranus in Cancer creates the emotional revolutionary - someone who transforms family structures, who creates belonging in unexpected ways, who nurtures through innovation rather than tradition.
+        coreExpression: `Urano en Cáncer crea al revolucionario emocional: alguien que transforma las estructuras familiares, que crea pertenencia de maneras inesperadas, que se nutre a través de la innovación en lugar de la tradición.
 
-This placement combines Uranian breakthrough with Cancer's nurturing instinct. They don't just rebel against family - they create new models of belonging. They don't reject nurturing - they revolutionize it.
+Esta ubicación combina el avance uraniano con el instinto protector de Cáncer. No sólo se rebelan contra la familia: crean nuevos modelos de pertenencia. No rechazan la crianza: la revolucionan.
 
-Their gift is capacity to make everyone feel they belong while honoring that belonging can look radically different, to provide emotional security through unconventional means, to mother in ways never seen before.`,
+Su don es la capacidad de hacer que todos sientan que pertenecen y, al mismo tiempo, honrar esa pertenencia puede verse radicalmente diferente, brindar seguridad emocional a través de medios no convencionales, a la madre de maneras nunca antes vistas.`,
         
-        innovation: `Their innovation is in creating family and home. They may pioneer chosen families, create communal living situations, develop new parenting models, or invent entirely new ways of belonging.
+        innovation: `Su innovación está en crear familia y hogar. Pueden ser pioneros en familias elegidas, crear situaciones de vida comunitaria, desarrollar nuevos modelos de crianza o inventar formas de pertenencia completamente nuevas.
 
-They might revolutionize childcare, create housing cooperatives, develop emotional technologies, or pioneer therapeutic communities. Their creativity is nurturing and inclusive.
+Podrían revolucionar el cuidado infantil, crear cooperativas de vivienda, desarrollar tecnologías emocionales o ser pioneras en comunidades terapéuticas. Su creatividad es enriquecedora e inclusiva.
 
-The key is that their innovations provide genuine security and belonging while being completely unconventional. They prove that family doesn't require tradition.`,
+La clave es que sus innovaciones brindan seguridad y pertenencia genuinas y, al mismo tiempo, son completamente poco convencionales. Demuestran que la familia no requiere tradición.`,
         
-        rebellion: `Their rebellion is against toxic family patterns, emotional manipulation, and the nuclear family ideal that doesn't serve everyone. They refuse to accept that family must look one way.
+        rebellion: `Su rebelión es contra los patrones familiares tóxicos, la manipulación emocional y el ideal de familia nuclear que no sirve a todos. Se niegan a aceptar que la familia debe mirar hacia un lado.
 
-But their rebellion creates alternatives. They build chosen families, demonstrate new parenting, create communities that nurture better than traditional structures. Their protest is through building.
+Pero su rebelión crea alternativas. Construyen familias elegidas, demuestran una nueva paternidad, crean comunidades que se nutren mejor que las estructuras tradicionales. Su protesta es a través de la construcción.
 
-The most powerful expression is revolutionizing family so completely that people find belonging in authenticity rather than conformity.`,
+La expresión más poderosa es revolucionar la familia de tal manera que la gente encuentre pertenencia en la autenticidad más que en la conformidad.`,
         
-        freedom: `Freedom for them is emotional and relational. They need freedom to feel all emotions without judgment, to create family in their own way, to nurture without being trapped in caregiving.
+        freedom: `La libertad para ellos es emocional y relacional. Necesitan libertad para sentir todas las emociones sin juzgar, para crear una familia a su manera, para cuidar sin quedar atrapados en el cuidado.
 
-Their freedom quest may involve leaving biological family, creating distance while maintaining love, or building support systems that honor autonomy alongside belonging.
+Su búsqueda de libertad puede implicar abandonar la familia biológica, crear distancia mientras mantienen el amor o construir sistemas de apoyo que honren la autonomía junto con la pertenencia.
 
-The challenge is that unpredictable emotional life can be destabilizing. Learning to provide security while maintaining freedom is their journey.`,
+El desafío es que la vida emocional impredecible puede ser desestabilizadora. Aprender a brindar seguridad manteniendo la libertad es su viaje.`,
         
-        genius: `Their genius is in creating emotional breakthroughs and new forms of belonging. They instinctively know how to make people feel safe while being completely unconventional.
+        genius: `Su genio está en crear avances emocionales y nuevas formas de pertenencia. Saben instintivamente cómo hacer que las personas se sientan seguras y al mismo tiempo son completamente poco convencionales.
 
-They have revolutionary instinct about family - sensing when old structures are failing, when people need new models, when communities are ready for innovative belonging.
+Tienen un instinto revolucionario respecto de la familia: perciben cuándo las viejas estructuras están fallando, cuándo la gente necesita nuevos modelos, cuándo las comunidades están preparadas para una pertenencia innovadora.
 
-Their insights often come through emotional experience - they discover better ways to nurture by paying attention to what they needed and didn't receive.`,
+Sus conocimientos a menudo surgen a través de experiencias emocionales: descubren mejores formas de nutrirse prestando atención a lo que necesitaban y no recibieron.`,
         
-        generational: `As generational influence, Uranus in Cancer marks periods of family structure transformation - women's liberation from domestic roles, alternative family models emerging, emotional expression changing.
+        generational: `Como influencia generacional, Urano en Cáncer marca períodos de transformación de la estructura familiar: la liberación de las mujeres de los roles domésticos, el surgimiento de modelos familiares alternativos y el cambio de la expresión emocional.
 
-On personal level, it creates a generation who will pioneer new ways of belonging, who show that family is about love not structure, who revolutionize emotional authenticity.`,
+A nivel personal, crea una generación que será pionera en nuevas formas de pertenencia, que mostrará que la familia se trata de amor, no de estructura, que revolucionará la autenticidad emocional.`,
         
-        relationships: `In relationships, they need partners who understand that family and home can be unconventional, who don't require traditional domestic roles, who can handle emotional intensity and change.
+        relationships: `En las relaciones, necesitan socios que comprendan que la familia y el hogar pueden ser poco convencionales, que no requieran roles domésticos tradicionales y que puedan manejar la intensidad y el cambio emocional.
 
-The growth edge is learning that belonging requires some consistency, that nurturing includes staying, that revolutionary family still needs commitment.
+La ventaja del crecimiento es aprender que pertenecer requiere cierta coherencia, que cuidar incluye permanecer, que la familia revolucionaria todavía necesita compromiso.
 
-They may pioneer new parenting models, create communal child-rearing, or invent entirely new ways of building home together.`,
+Pueden ser pioneros en nuevos modelos de crianza, crear una crianza comunitaria de los niños o inventar formas completamente nuevas de construir un hogar juntos.`,
         
-        lifeWork: `Their life work involves revolutionizing nurturing - innovative childcare, creating intentional communities, therapeutic work, or any field where they transform how we create belonging.
+        lifeWork: `El trabajo de su vida implica revolucionar la crianza: cuidado infantil innovador, creación de comunidades intencionales, trabajo terapéutico o cualquier campo donde transformen la forma en que creamos pertenencia.
 
-They're here to show that family can look radically different and still provide security, that emotional authenticity serves better than traditional roles.
+Están aquí para mostrar que la familia puede verse radicalmente diferente y aun así brindar seguridad, que la autenticidad emocional sirve mejor que los roles tradicionales.
 
-The most fulfilling path is one where they're building new models of family and belonging that others can adapt and make their own.`,
+El camino más satisfactorio es aquel en el que construyen nuevos modelos de familia y pertenencia que otros pueden adaptar y hacer suyos.`,
         
-        shadowWork: `The shadow is emotional instability, rebellion against all roots, or such devotion to freedom that they can't commit to anyone. They may destroy belonging in pursuit of liberation.
+        shadowWork: `La sombra es la inestabilidad emocional, la rebelión contra todas las raíces o tal devoción por la libertad que no pueden comprometer con nadie. Pueden destruir la pertenencia en pos de la liberación.
 
-There can be difficulty with consistency in nurturing, leaving when relationships require compromise, or creating such unusual family that children feel isolated.
+Puede haber dificultades con la coherencia en la crianza, con la separación cuando las relaciones requieren un compromiso o con la creación de una familia tan inusual que los niños se sientan aislados.
 
-The deeper shadow is using family revolution as excuse to avoid genuine intimacy, claiming independence while secretly longing for belonging.`,
+La sombra más profunda es utilizar la revolución familiar como excusa para evitar una intimidad genuina, reclamando independencia mientras secretamente anhela pertenecer.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Cancer represents souls who incarnated to heal collective family wounds and show that belonging doesn't require conformity.
+        spiritualMeaning: `Espiritualmente, Urano en Cáncer representa almas que encarnaron para sanar heridas familiares colectivas y mostrar que pertenecer no requiere conformidad.
 
-Their spiritual gift is demonstrating that everyone deserves to belong exactly as they are, that emotional authenticity is the real family bond, that revolution includes nurturing.
+Su don espiritual demuestra que todos merecen pertenecer exactamente como son, que la autenticidad emocional es el verdadero vínculo familiar, que la revolución incluye la crianza.
 
-The ultimate expression is the revolutionary nurturer whose unconventional family models provide such genuine security that traditional structures transform to match.`,
+La máxima expresión es el cuidador revolucionario cuyos modelos familiares no convencionales brindan una seguridad tan genuina que las estructuras tradicionales se transforman para adaptarse.`,
         
-        affirmation: "I revolutionize family and belonging. My nurturing is authentic and innovative. I create emotional security through freedom. I am unconventional home where all belong."
+        affirmation: "Revoluciono la familia y la pertenencia. Mi crianza es auténtica e innovadora. Creo seguridad emocional a través de la libertad. Soy un hogar poco convencional al que todos pertenecen."
     },
     
     Leo: {
-        title: "Uranus in Leo - Creative Revolution",
-        archetype: "The Authentic Expression",
-        hook: "With Uranus in Leo, this soul carries revolutionary creativity and innovative self-expression. They are here to transform how humanity celebrates individuality, creates art, and expresses authentic self.",
+        title: "Urano en Leo - Revolución Creativa",
+        archetype: "La expresión auténtica",
+        hook: "Con Urano en Leo, esta alma lleva una creatividad revolucionaria y una autoexpresión innovadora. Están aquí para transformar la forma en que la humanidad celebra la individualidad, crea arte y expresa su yo auténtico.",
         
-        coreExpression: `Uranus in Leo creates the creative revolutionary - someone who doesn't just make art but transforms what art can be, who expresses self so authentically it gives others permission to be themselves.
+        coreExpression: `Urano en Leo crea al revolucionario creativo: alguien que no sólo hace arte sino que transforma lo que el arte puede ser, que se expresa de manera tan auténtica que da permiso a los demás para ser ellos mismos.
 
-This placement combines Uranian innovation with Leo's creative fire. They don't just break creative rules - they invent entirely new art forms. They don't just express uniquely - they redefine what expression means.
+Esta ubicación combina la innovación uraniana con el fuego creativo de Leo. No sólo rompen las reglas creativas, sino que inventan formas de arte completamente nuevas. No sólo se expresan de manera única: redefinen lo que significa expresión.
 
-Their gift is capacity to shine so authentically that it illuminates the path for others, to create joy that's infectious, to demonstrate that true creativity comes from being fearlessly yourself.`,
+Su don es la capacidad de brillar de manera tan auténtica que ilumina el camino de los demás, de crear una alegría contagiosa, de demostrar que la verdadera creatividad proviene de ser uno mismo sin miedo.`,
         
-        innovation: `Their innovation is in creative expression and leadership. They may invent new art forms, create revolutionary entertainment, develop new ways of celebrating individuality, or pioneer authentic leadership models.
+        innovation: `Su innovación está en la expresión creativa y el liderazgo. Pueden inventar nuevas formas de arte, crear entretenimiento revolucionario, desarrollar nuevas formas de celebrar la individualidad o ser pioneros en modelos de liderazgo auténticos.
 
-They might revolutionize performance, create viral self-expression platforms, develop technologies for creative freedom, or invent entirely new ways of celebrating life and joy.
+Podrían revolucionar el desempeño, crear plataformas virales de autoexpresión, desarrollar tecnologías para la libertad creativa o inventar formas completamente nuevas de celebrar la vida y la alegría.
 
-The key is that their innovations give others permission to be themselves, to create from authenticity, to shine without apology. They democratize creative expression.`,
+La clave es que sus innovaciones dan permiso a los demás para ser ellos mismos, para crear desde la autenticidad, para brillar sin disculpas. democratizan la expresión creativa.`,
         
-        rebellion: `Their rebellion is against creative conformity, suppression of individuality, and systems that demand people dim their light. They refuse to accept that only certain people deserve recognition.
+        rebellion: `Su rebelión es contra la conformidad creativa, la supresión de la individualidad y los sistemas que exigen que las personas atenúen su luz. Se niegan a aceptar que sólo determinadas personas merecen reconocimiento.
 
-But their rebellion celebrates. They don't just fight suppression - they create spaces where everyone can shine. They don't just tear down hierarchies - they build stages for all.
+Pero su rebelión celebra. No sólo luchan contra la represión: crean espacios donde todos pueden brillar. No sólo derriban jerarquías: construyen escenarios para todos.
 
-The most powerful expression is revolutionizing creativity so that self-expression becomes everyone's birthright, not privilege for the talented few.`,
+La expresión más poderosa es revolucionar la creatividad para que la autoexpresión se convierta en un derecho de nacimiento de todos, no en un privilegio de unos pocos talentosos.`,
         
-        freedom: `Freedom for them is creative and expressive. They need freedom to be completely themselves, to create without censorship, to shine without requiring approval.
+        freedom: `La libertad para ellos es creativa y expresiva. Necesitan libertad para ser completamente ellos mismos, para crear sin censura, para brillar sin requerir aprobación.
 
-Their freedom quest may involve leaving traditional career paths for creative freedom, building platforms for authentic expression, or developing independence that allows full self-actualization.
+Su búsqueda de la libertad puede implicar abandonar las carreras profesionales tradicionales por la libertad creativa, construir plataformas para la expresión auténtica o desarrollar una independencia que permita la plena autorrealización.
 
-The challenge is that constant need for creative freedom can make collaboration difficult. Learning to shine alongside others rather than alone becomes growth edge.`,
+El desafío es que la necesidad constante de libertad creativa puede dificultar la colaboración. Aprender a brillar junto a los demás en lugar de hacerlo solo se convierte en una ventaja para el crecimiento.`,
         
-        genius: `Their genius flashes through in revolutionary creative insights. They see how to express what everyone feels but hasn't found words or form for. They channel collective creative longing into innovative forms.
+        genius: `Su genio se refleja en ideas creativas revolucionarias. Ven cómo expresar lo que todos sienten pero no han encontrado palabras ni forma para ello. Canalizan el anhelo creativo colectivo hacia formas innovadoras.
 
-They have revolutionary instinct about creativity - knowing when art forms are ready to transform, when people are ready for new expressions, when cultural creativity wants to evolve.
+Tienen un instinto revolucionario sobre la creatividad: saben cuándo las formas de arte están listas para transformarse, cuándo las personas están listas para nuevas expresiones, cuándo la creatividad cultural quiere evolucionar.
 
-Their insights often come through play, spontaneity, and joyful experimentation. They discover breakthrough creativity by following delight.`,
+Sus conocimientos a menudo surgen a través del juego, la espontaneidad y la experimentación alegre. Descubren una creatividad revolucionaria siguiendo el deleite.`,
         
-        generational: `As generational influence, Uranus in Leo marks periods of creative revolution - new art forms emerging, individual expression transforming, leadership models changing, entertainment revolutionizing.
+        generational: `Como influencia generacional, Urano en Leo marca períodos de revolución creativa: surgen nuevas formas de arte, se transforma la expresión individual, cambian los modelos de liderazgo y se revoluciona el entretenimiento.
 
-On personal level, it creates a generation who will pioneer authentic self-expression, who show that everyone deserves to shine, who revolutionize creativity and celebration.`,
+A nivel personal, crea una generación que será pionera en la auténtica autoexpresión, que demostrará que todos merecen brillar, que revolucionará la creatividad y la celebración.`,
         
-        relationships: `In relationships, they need partners who celebrate their uniqueness, who aren't threatened by their shine, who can be equally authentic and creative themselves.
+        relationships: `En las relaciones, necesitan socios que celebren su singularidad, que no se sientan amenazados por su brillo, que puedan ser igualmente auténticos y creativos.
 
-The growth edge is learning that love includes making space for another's light, that partnership can enhance rather than dim creative expression, that shared creativity can be revolutionary.
+La ventaja del crecimiento es aprender que el amor incluye hacer espacio para la luz del otro, que la asociación puede mejorar en lugar de atenuar la expresión creativa, que la creatividad compartida puede ser revolucionaria.
 
-They may pioneer new relationship models based on mutual celebration, creative collaboration as romance, or entirely new ways of honoring both autonomy and togetherness.`,
+Pueden ser pioneros en nuevos modelos de relación basados ​​en la celebración mutua, la colaboración creativa como romance o formas completamente nuevas de honrar tanto la autonomía como la unión.`,
         
-        lifeWork: `Their life work involves revolutionizing creativity - entertainment innovation, authentic leadership, art that breaks boundaries, or any field where they can transform self-expression and celebration.
+        lifeWork: `El trabajo de su vida implica revolucionar la creatividad: innovación en entretenimiento, liderazgo auténtico, arte que rompe fronteras o cualquier campo donde puedan transformar la autoexpresión y la celebración.
 
-They're here to show that everyone has creative genius when given freedom to be themselves, that authentic self-expression serves collective awakening.
+Están aquí para demostrar que todos tienen genio creativo cuando se les da la libertad de ser ellos mismos, que la auténtica autoexpresión sirve para el despertar colectivo.
 
-The most fulfilling path is one where they're constantly innovating creatively while inspiring others to discover their own unique expression.`,
+El camino más satisfactorio es aquel en el que innovan constantemente de forma creativa y al mismo tiempo inspiran a otros a descubrir su propia expresión única.`,
         
-        shadowWork: `The shadow is narcissism, attention addiction, or rebellion that's just ego rather than authentic expression. They may shine so bright they blind others or demand recognition constantly.
+        shadowWork: `La sombra es narcisismo, adicción a la atención o rebelión que es sólo ego en lugar de expresión auténtica. Pueden brillar tanto que cieguen a los demás o exijan reconocimiento constantemente.
 
-There can be difficulty sharing spotlight, collaborating without dominating, or creating anything that isn't all about them. Learning that authentic expression can be humble becomes crucial.
+Puede haber dificultades para compartir la atención, colaborar sin dominar o crear algo que no se centre exclusivamente en ellos. Aprender que la expresión auténtica puede ser humilde se vuelve crucial.
 
-The deeper shadow is hiding authentic self behind performance, creating personas rather than expressing truth, using creativity to get attention rather than liberate.`,
+La sombra más profunda esconde el yo auténtico detrás de la actuación, creando personas en lugar de expresar la verdad, usando la creatividad para llamar la atención en lugar de liberar.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Leo represents souls who incarnated to show that authentic self-expression is sacred act, that everyone's unique light serves the divine.
+        spiritualMeaning: `Espiritualmente, Urano en Leo representa almas que encarnaron para mostrar que la auténtica autoexpresión es un acto sagrado, que la luz única de cada uno sirve a lo divino.
 
-Their spiritual gift is demonstrating that true creativity is channeling divine through individual uniqueness, that shining your light is spiritual service.
+Su don espiritual demuestra que la verdadera creatividad es canalizar lo divino a través de la singularidad individual, que hacer brillar tu luz es servicio espiritual.
 
-The ultimate expression is the creative revolutionary whose authentic self-expression is so free it awakens others to their own divine uniqueness, whose art serves collective liberation.`,
+La máxima expresión es el revolucionario creativo cuya auténtica autoexpresión es tan libre que despierta a otros a su propia unicidad divina, cuyo arte sirve a la liberación colectiva.`,
         
-        affirmation: "I express my authentic self boldly. My creativity revolutionizes what's possible. I shine my unique light and inspire others to shine theirs. My authentic expression serves all."
+        affirmation: "Expreso mi yo auténtico con valentía. Mi creatividad revoluciona lo que es posible. Hago brillar mi luz única e inspiro a otros a hacer brillar la suya. Mi expresión auténtica sirve a todos."
     },
     
     Virgo: {
-        title: "Uranus in Virgo - Service Revolution",
-        archetype: "The Healing Innovation",
-        hook: "With Uranus in Virgo, this soul carries revolutionary approach to service, health, and daily life. They are here to transform how humanity relates to work, wellness, and practical living.",
+        title: "Urano en Virgo - Revolución de servicio",
+        archetype: "La innovación curativa",
+        hook: "Con Urano en Virgo, esta alma tiene un enfoque revolucionario hacia el servicio, la salud y la vida diaria. Están aquí para transformar la forma en que la humanidad se relaciona con el trabajo, el bienestar y la vida práctica.",
         
-        coreExpression: `Uranus in Virgo creates the revolutionary healer - someone who doesn't just serve but transforms service itself, who innovates health practices, who revolutionizes the mundane details of daily life.
+        coreExpression: `Urano en Virgo crea al sanador revolucionario: alguien que no sólo sirve sino que transforma el servicio mismo, que innova las prácticas de salud, que revoluciona los detalles mundanos de la vida diaria.
 
-This placement combines Uranian breakthrough with Virgo's practical precision. They don't just want better systems - they invent them. They don't just improve health - they revolutionize it.
+Esta ubicación combina el avance uraniano con la precisión práctica de Virgo. No sólo quieren mejores sistemas: los inventan. No sólo mejoran la salud: la revolucionan.
 
-Their gift is capacity to see innovative solutions to practical problems, to make revolutionary healing accessible, to transform work from meaningless labor to purposeful service.`,
+Su don es la capacidad de ver soluciones innovadoras a problemas prácticos, de hacer accesible la curación revolucionaria, de transformar el trabajo sin sentido en un servicio con propósito.`,
         
-        innovation: `Their innovation is in health, service, and practical systems. They may pioneer alternative medicine, create revolutionary organizational methods, develop new approaches to wellness, or invent technologies that improve daily life.
+        innovation: `Su innovación está en la salud, el servicio y los sistemas prácticos. Pueden ser pioneros en la medicina alternativa, crear métodos organizativos revolucionarios, desarrollar nuevos enfoques para el bienestar o inventar tecnologías que mejoren la vida diaria.
 
-They might revolutionize healthcare, create efficiency systems, develop holistic healing modalities, or pioneer new understandings of mind-body connection.
+Podrían revolucionar la atención médica, crear sistemas eficientes, desarrollar modalidades de curación holísticas o ser pioneros en nuevas comprensiones de la conexión mente-cuerpo.
 
-The key is that their innovations serve practical needs while being completely unconventional. They make revolutionary ideas work in daily life.`,
+La clave es que sus innovaciones satisfacen necesidades prácticas y al mismo tiempo son completamente poco convencionales. Hacen que las ideas revolucionarias funcionen en la vida diaria.`,
         
-        rebellion: `Their rebellion is against unhealthy systems, meaningless labor, and medical approaches that don't heal. They refuse to accept that work must be suffering or that health is only physical.
+        rebellion: `Su rebelión es contra los sistemas insalubres, el trabajo sin sentido y los enfoques médicos que no curan. Se niegan a aceptar que el trabajo debe ser sufrimiento o que la salud es sólo física.
 
-But their rebellion serves. They don't just criticize broken systems - they build better ones. They don't just reject conventional medicine - they develop alternatives that work.
+Pero su rebelión sirve. No sólo critican los sistemas defectuosos, sino que construyen otros mejores. No sólo rechazan la medicina convencional, sino que desarrollan alternativas que funcionan.
 
-The most powerful expression is revolutionizing health and service so effectively that old systems transform to match their innovations.`,
+La expresión más poderosa es revolucionar la salud y los servicios con tanta eficacia que los viejos sistemas se transforman para adaptarse a sus innovaciones.`,
         
-        freedom: `Freedom for them is in healthy routines and meaningful service. They need freedom to create their own systems, to approach health unconventionally, to serve in their unique way.
+        freedom: `Para ellos la libertad está en rutinas saludables y en un servicio significativo. Necesitan libertad para crear sus propios sistemas, abordar la salud de manera poco convencional y servir a su manera.
 
-Their freedom quest may involve creating flexible work arrangements, developing personalized health practices, or building service structures that honor individual needs.
+Su búsqueda de libertad puede implicar la creación de acuerdos laborales flexibles, el desarrollo de prácticas de salud personalizadas o la construcción de estructuras de servicios que satisfagan las necesidades individuales.
 
-The challenge is that too much disruption of routines can create chaos. Learning to maintain revolutionary health while staying grounded is their journey.`,
+El desafío es que demasiada alteración de las rutinas puede crear caos. Aprender a mantener una salud revolucionaria mientras se mantienen firmes es su viaje.`,
         
-        genius: `Their genius is in seeing how to make revolutionary ideas practical. They have gift for innovative problem-solving, for finding unconventional solutions that actually work in daily application.
+        genius: `Su genio consiste en ver cómo hacer prácticas las ideas revolucionarias. Tienen don para la resolución innovadora de problemas, para encontrar soluciones no convencionales que realmente funcionen en la aplicación diaria.
 
-They have revolutionary instinct about health and service - knowing when systems are ready to transform, when people need new approaches, when old methods are failing.
+Tienen un instinto revolucionario en materia de salud y servicio: saben cuándo los sistemas están listos para transformarse, cuándo la gente necesita nuevos enfoques, cuándo los viejos métodos están fallando.
 
-Their insights often come through noticing details others miss, through analyzing what isn't working and envisioning precise improvements.`,
+Sus ideas a menudo surgen al notar detalles que otros pasan por alto, al analizar lo que no funciona y al visualizar mejoras precisas.`,
         
-        generational: `As generational influence, Uranus in Virgo marks periods of health revolution - alternative medicine emerging, work structures transforming, daily life innovating, wellness understanding expanding.
+        generational: `Como influencia generacional, Urano en Virgo marca períodos de revolución en la salud: emerge la medicina alternativa, se transforman las estructuras laborales, se innova la vida diaria y se expande la comprensión del bienestar.
 
-On personal level, it creates a generation who will transform healthcare, service, and practical living - who show that wellness includes mind and spirit, that work can be meaningful.`,
+A nivel personal, crea una generación que transformará la atención sanitaria, los servicios y la vida práctica, que demostrará que el bienestar incluye la mente y el espíritu, que el trabajo puede tener sentido.`,
         
-        relationships: `In relationships, they need partners who share their health values, who don't require traditional domestic routines, who understand their need for meaningful service and innovative daily life.
+        relationships: `En las relaciones, necesitan socios que compartan sus valores de salud, que no requieran rutinas domésticas tradicionales, que comprendan su necesidad de un servicio significativo y una vida diaria innovadora.
 
-The growth edge is learning that intimacy includes accepting imperfection, that service to partner means presence not fixing, that revolutionary health includes emotional wellness.
+La ventaja del crecimiento es aprender que la intimidad incluye aceptar la imperfección, que servir a la pareja significa presencia y no arreglar, que la salud revolucionaria incluye el bienestar emocional.
 
-They may pioneer new relationship models based on shared health practices, collaborative service work, or entirely new approaches to domestic partnership.`,
+Pueden ser pioneros en nuevos modelos de relación basados ​​en prácticas de salud compartidas, trabajo de servicio colaborativo o enfoques completamente nuevos para las parejas de hecho.`,
         
-        lifeWork: `Their life work involves revolutionizing service and health - alternative medicine, innovative organizational systems, wellness technologies, or any field where they transform practical daily living.
+        lifeWork: `El trabajo de su vida implica revolucionar los servicios y la salud: medicina alternativa, sistemas organizativos innovadores, tecnologías de bienestar o cualquier campo en el que transformen la vida diaria práctica.
 
-They're here to show that health is holistic, that work can be service, that daily routines can be revolutionary acts of self-care and world-healing.
+Están aquí para demostrar que la salud es holística, que el trabajo puede ser un servicio, que las rutinas diarias pueden ser actos revolucionarios de autocuidado y curación del mundo.
 
-The most fulfilling path is one where they're constantly innovating practical solutions that make life genuinely better for many people.`,
+El camino más satisfactorio es aquel en el que se innovan constantemente en soluciones prácticas que mejoran la vida de muchas personas.`,
         
-        shadowWork: `The shadow is perfectionist rebellion, health anxiety, or criticism disguised as service. They may become so focused on revolutionary systems they criticize anything traditional.
+        shadowWork: `La sombra es la rebelión perfeccionista, la ansiedad por la salud o la crítica disfrazada de servicio. Es posible que se centren tanto en los sistemas revolucionarios que critiquen cualquier cosa tradicional.
 
-There can be difficulty accepting that not every system needs revolutionizing, that sometimes good enough is enough, that health obsession can be unhealthy.
+Puede resultar difícil aceptar que no todos los sistemas necesitan una revolución, que a veces lo bueno es suficiente y que la obsesión por la salud puede ser perjudicial.
 
-The deeper shadow is using service revolution as way to avoid intimacy, hiding behind useful contribution while remaining emotionally unavailable.`,
+La sombra más profunda es utilizar la revolución de los servicios como forma de evitar la intimidad, escondiéndose detrás de contribuciones útiles sin dejar de estar emocionalmente indisponibles.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Virgo represents souls who incarnated to show that daily life is sacred, that service is spiritual practice, that body is temple requiring innovative care.
+        spiritualMeaning: `Espiritualmente, Urano en Virgo representa almas que encarnaron para mostrar que la vida diaria es sagrada, que el servicio es práctica espiritual, que el cuerpo es un templo que requiere cuidados innovadores.
 
-Their spiritual gift is demonstrating that enlightenment includes physical health, that awakening requires practical grounding, that revolution starts in daily choices.
+Su don espiritual demuestra que la iluminación incluye la salud física, que el despertar requiere una base práctica, que la revolución comienza en las elecciones diarias.
 
-The ultimate expression is the revolutionary healer whose practical innovations serve collective wellness, whose service transforms both physical and spiritual health.`,
+La máxima expresión es el sanador revolucionario cuyas innovaciones prácticas sirven al bienestar colectivo, cuyo servicio transforma la salud física y espiritual.`,
         
-        affirmation: "I revolutionize health and service. My innovations make wellness accessible. I transform work into meaningful contribution. My practical genius serves collective healing."
+        affirmation: "Revoluciono la salud y el servicio. Mis innovaciones hacen que el bienestar sea accesible. Transformo el trabajo en una contribución significativa. Mi genio práctico sirve a la curación colectiva."
     },
     
     Libra: {
-        title: "Uranus in Libra - Relationship Revolution",
-        archetype: "The Partnership Liberation",
-        hook: "With Uranus in Libra, this soul carries revolutionary approach to partnership and justice. They are here to transform how humanity relates, partners, and creates equality.",
+        title: "Urano en Libra - Revolución en las relaciones",
+        archetype: "La liberación de la asociación",
+        hook: "Con Urano en Libra, esta alma tiene un enfoque revolucionario hacia la asociación y la justicia. Están aquí para transformar la forma en que la humanidad se relaciona, se asocia y crea igualdad.",
         
-        coreExpression: `Uranus in Libra creates the relationship revolutionary - someone who doesn't just partner differently but transforms what partnership means, who innovates collaboration, who revolutionizes justice and fairness.
+        coreExpression: `Urano en Libra crea la relación revolucionaria: alguien que no sólo se asocia de manera diferente sino que transforma lo que significa asociación, que innova la colaboración, que revoluciona la justicia y la equidad.
 
-This placement combines Uranian breakthrough with Libra's relational genius. They don't just want better relationships - they invent entirely new models. They don't just seek justice - they create revolutionary fairness.
+Esta ubicación combina el avance uraniano con el genio relacional de Libra. No sólo quieren mejores relaciones, sino que inventan modelos completamente nuevos. No sólo buscan justicia: crean equidad revolucionaria.
 
-Their gift is capacity to create partnerships that honor both independence and togetherness, to build justice systems that truly serve all, to relate in ways that liberate rather than bind.`,
+Su don es la capacidad de crear asociaciones que honren tanto la independencia como la unión, construir sistemas de justicia que realmente sirvan a todos, relacionarse de maneras que liberen en lugar de obligar.`,
         
-        innovation: `Their innovation is in relationship and social justice. They may pioneer new partnership models, create revolutionary legal systems, develop innovative mediation approaches, or invent collaborative technologies.
+        innovation: `Su innovación está en las relaciones y la justicia social. Pueden ser pioneros en nuevos modelos de asociación, crear sistemas legales revolucionarios, desarrollar enfoques de mediación innovadores o inventar tecnologías colaborativas.
 
-They might revolutionize marriage, create relationship structures never seen before, develop new approaches to equality, or pioneer social movements for justice.
+Podrían revolucionar el matrimonio, crear estructuras de relación nunca antes vistas, desarrollar nuevos enfoques hacia la igualdad o ser pioneros en movimientos sociales por la justicia.
 
-The key is that their innovations prove partnership can be free, that commitment doesn't require sacrifice of autonomy, that justice can be revolutionary yet fair.`,
+La clave es que sus innovaciones demuestran que la asociación puede ser libre, que el compromiso no requiere el sacrificio de la autonomía, que la justicia puede ser revolucionaria pero justa.`,
         
-        rebellion: `Their rebellion is against relationship inequality, restrictive partnerships, and injustice of all kinds. They refuse to accept that love requires losing yourself or that fairness is impossible.
+        rebellion: `Su rebelión es contra la desigualdad en las relaciones, las sociedades restrictivas y la injusticia de todo tipo. Se niegan a aceptar que el amor requiere perderse a uno mismo o que la justicia es imposible.
 
-But their rebellion partners. They don't just leave relationships - they transform them. They don't just fight injustice - they build collaborative movements for change.
+Pero sus compañeros de rebelión. No sólo abandonan las relaciones, sino que las transforman. No sólo luchan contra la injusticia: construyen movimientos colaborativos para el cambio.
 
-The most powerful expression is revolutionizing partnership so completely that relating becomes liberation, that commitment enhances freedom for both.`,
+La expresión más poderosa es revolucionar la asociación de tal manera que la relación se convierta en liberación, que el compromiso realce la libertad para ambos.`,
         
-        freedom: `Freedom for them is relational. They need freedom within partnership, autonomy alongside intimacy, space to be individual while deeply connected.
+        freedom: `La libertad para ellos es relacional. Necesitan libertad dentro de la asociación, autonomía junto con la intimidad, espacio para ser individuales y al mismo tiempo estar profundamente conectados.
 
-Their freedom quest may involve creating open relationships, building collaborative partnerships with clear boundaries, or developing entirely new ways of being together that honor independence.
+Su búsqueda de la libertad puede implicar la creación de relaciones abiertas, la construcción de asociaciones de colaboración con límites claros o el desarrollo de formas completamente nuevas de estar juntos que honren la independencia.
 
-The challenge is that constant change in relationships can prevent depth. Learning to commit to revolutionary partnership rather than leaving when it requires work is growth edge.`,
+El desafío es que el cambio constante en las relaciones puede impedir la profundidad. Aprender a comprometerse con una asociación revolucionaria en lugar de abandonarla cuando requiere trabajo es una ventaja para el crecimiento.`,
         
-        genius: `Their genius is in seeing how to create fairness through innovation, how to build partnerships that serve both individuals, how to collaborate in ways no one has tried.
+        genius: `Su genio está en ver cómo crear justicia a través de la innovación, cómo construir asociaciones que sirvan a ambos individuos, cómo colaborar de maneras que nadie ha intentado.
 
-They have revolutionary instinct about relationships - knowing when old models are failing, when people are ready for new ways of partnering, when justice systems need transformation.
+Tienen un instinto revolucionario en cuanto a las relaciones: saben cuándo los viejos modelos están fallando, cuándo las personas están preparadas para nuevas formas de asociarse, cuándo los sistemas de justicia necesitan una transformación.
 
-Their insights often come through experiencing relationship inequality and envisioning precise improvements that serve both individuals and collective.`,
+Sus ideas a menudo surgen de experimentar desigualdad en las relaciones e imaginar mejoras precisas que sirvan tanto a los individuos como al colectivo.`,
         
-        generational: `As generational influence, Uranus in Libra marks periods of relationship revolution - marriage transforming, equality movements surging, partnership models changing, justice systems innovating.
+        generational: `Como influencia generacional, Urano en Libra marca períodos de revolución en las relaciones: transformación del matrimonio, surgimiento de movimientos por la igualdad, cambios en los modelos de asociación, innovación en los sistemas de justicia.
 
-On personal level, it creates a generation who will pioneer new ways of relating, who show that partnership can enhance freedom, who revolutionize justice and collaboration.`,
+A nivel personal, crea una generación que será pionera en nuevas formas de relacionarse, que demostrará que la asociación puede mejorar la libertad, que revolucionará la justicia y la colaboración.`,
         
-        relationships: `In relationships, they need partners who honor their autonomy, who want revolutionary partnership, who can handle unconventional relating and unexpected changes.
+        relationships: `En las relaciones, necesitan socios que respeten su autonomía, que quieran una asociación revolucionaria, que puedan manejar relaciones poco convencionales y cambios inesperados.
 
-The growth edge is learning that commitment itself can be revolutionary, that stability in partnership can coexist with freedom, that intimacy deepens through consistency.
+La ventaja del crecimiento es aprender que el compromiso en sí mismo puede ser revolucionario, que la estabilidad en la asociación puede coexistir con la libertad, que la intimidad se profundiza a través de la coherencia.
 
-They may pioneer polyamory, living apart together, collaborative business partnerships as romance, or entirely new relationship structures they invent.`,
+Pueden ser pioneros en el poliamor, vivir separados, asociaciones comerciales colaborativas como romance o estructuras de relación completamente nuevas que inventen.`,
         
-        lifeWork: `Their life work involves revolutionizing relationships and justice - mediation innovation, creating new legal frameworks, relationship counseling that honors autonomy, or social movements for equality.
+        lifeWork: `El trabajo de su vida implica revolucionar las relaciones y la justicia: innovación en la mediación, creación de nuevos marcos legales, asesoramiento sobre relaciones que honre la autonomía o movimientos sociales por la igualdad.
 
-They're here to show that partnership doesn't require traditional structures, that justice can be innovative, that relating can be both deep and free.
+Están aquí para mostrar que la colaboración no requiere estructuras tradicionales, que la justicia puede ser innovadora, que la relación puede ser a la vez profunda y libre.
 
-The most fulfilling path is one where they're creating new models of relating and fairness that others can adapt and evolve.`,
+El camino más satisfactorio es aquel en el que se crean nuevos modelos de relación y equidad que otros pueden adaptar y evolucionar.`,
         
-        shadowWork: `The shadow is relationship instability, rebellion against all commitment, or such focus on freedom that partnership never deepens. They may leave every relationship before it becomes real.
+        shadowWork: `La sombra es la inestabilidad de las relaciones, la rebelión contra todo compromiso o tal concentración en la libertad que la asociación nunca se profundiza. Es posible que abandonen toda relación antes de que se vuelva real.
 
-There can be difficulty with compromise, staying when partnership requires sacrifice, or building anything lasting because commitment feels like prison.
+Puede haber dificultades para llegar a un compromiso, permanecer cuando la asociación requiere sacrificio o construir algo duradero porque el compromiso se siente como una prisión.
 
-The deeper shadow is using relationship revolution as excuse to avoid intimacy, claiming independence while unable to truly connect deeply with anyone.`,
+La sombra más profunda es utilizar la revolución de las relaciones como excusa para evitar la intimidad, reclamando independencia sin poder conectarse verdaderamente profundamente con nadie.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Libra represents souls who incarnated to show that partnership can be spiritual practice, that relating is revolutionary act, that justice is divine principle.
+        spiritualMeaning: `Espiritualmente, Urano en Libra representa almas que encarnaron para mostrar que la asociación puede ser una práctica espiritual, que relacionarse es un acto revolucionario, que la justicia es un principio divino.
 
-Their spiritual gift is demonstrating that love doesn't require loss of self, that true partnership enhances both individuals, that fairness can be innovative.
+Su don espiritual demuestra que el amor no requiere la pérdida de uno mismo, que la verdadera asociación mejora a ambos individuos y que la justicia puede ser innovadora.
 
-The ultimate expression is the relationship revolutionary whose partnerships are so free and fair they inspire transformation in all who witness them.`,
+La máxima expresión es la relación revolucionaria cuyas asociaciones son tan libres y justas que inspiran transformación en todos los que las presencian.`,
         
-        affirmation: "I revolutionize partnership and justice. My relationships honor both freedom and connection. I create fairness through innovation. Love liberates me and my partners."
+        affirmation: "Revoluciono la colaboración y la justicia. Mis relaciones honran tanto la libertad como la conexión. Creo justicia a través de la innovación. El amor nos libera a mí y a mis parejas."
     },
     
     Scorpio: {
-        title: "Uranus in Scorpio - Power Revolution",
-        archetype: "The Taboo Breaker",
-        hook: "With Uranus in Scorpio, this soul carries revolutionary transformation and power innovation. They are here to break through taboos and transform human relationship with power, sex, death, and the hidden realms.",
+        title: "Urano en Escorpio - Revolución de poder",
+        archetype: "El rompe tabúes",
+        hook: "Con Urano en Escorpio, esta alma conlleva una transformación revolucionaria y una innovación poderosa. Están aquí para romper tabúes y transformar la relación humana con el poder, el sexo, la muerte y los reinos ocultos.",
         
-        coreExpression: `Uranus in Scorpio creates the revolutionary transformer - someone who doesn't just explore depth but revolutionizes it, who breaks taboos not for shock but for liberation, who transforms power dynamics themselves.
+        coreExpression: `Urano en Escorpio crea el transformador revolucionario: alguien que no sólo explora la profundidad sino que la revoluciona, que rompe tabúes no para causar conmoción sino para liberar, que transforma las propias dinámicas de poder.
 
-This placement combines Uranian breakthrough with Scorpio's penetrating intensity. They don't just change - they die and are reborn in revolutionary ways. They don't just seek truth - they expose what's been hidden.
+Esta ubicación combina el avance uraniano con la penetrante intensidad de Escorpio. No sólo cambian: mueren y renacen de manera revolucionaria. No sólo buscan la verdad: exponen lo que se ha ocultado.
 
-Their gift is capacity to bring revolutionary awareness to taboo subjects, to transform toxic power into empowerment, to make the hidden visible in ways that liberate.`,
+Su don es la capacidad de generar conciencia revolucionaria sobre temas tabú, de transformar el poder tóxico en empoderamiento, de hacer visible lo oculto de maneras que liberen.`,
         
-        innovation: `Their innovation is in depth psychology, sexuality, power dynamics, and transformation itself. They may pioneer new therapeutic methods, revolutionize understanding of sexuality, create breakthrough healing modalities, or transform occult practices.
+        innovation: `Su innovación es en profundidad la psicología, la sexualidad, la dinámica de poder y la transformación misma. Pueden ser pioneros en nuevos métodos terapéuticos, revolucionar la comprensión de la sexualidad, crear modalidades curativas innovadoras o transformar prácticas ocultas.
 
-They might revolutionize psychology, create new approaches to trauma healing, develop innovative spiritual practices involving shadow work, or pioneer research into death and rebirth.
+Podrían revolucionar la psicología, crear nuevos enfoques para la curación de traumas, desarrollar prácticas espirituales innovadoras que impliquen trabajo en la sombra o ser pioneras en investigaciones sobre la muerte y el renacimiento.
 
-The key is that their innovations bring light to darkness, make taboo subjects discussable, transform shame into power. They democratize depth.`,
+La clave es que sus innovaciones iluminan la oscuridad, hacen discutibles temas tabú y transforman la vergüenza en poder. democratizan la profundidad.`,
         
-        rebellion: `Their rebellion is against power abuse, sexual repression, death denial, and keeping secrets that harm. They refuse to accept that some truths must stay hidden or that power inherently corrupts.
+        rebellion: `Su rebelión es contra el abuso de poder, la represión sexual, la negación de la muerte y el guardar secretos que hacen daño. Se niegan a aceptar que algunas verdades deban permanecer ocultas o que el poder corrompe inherentemente.
 
-But their rebellion exposes and transforms. They don't just break taboos - they create new understanding. They don't just fight power abuse - they teach empowerment.
+Pero su rebelión expone y transforma. No sólo rompen tabúes: crean nuevos conocimientos. No sólo luchan contra el abuso de poder: enseñan empoderamiento.
 
-The most powerful expression is revolutionizing depth work so completely that shadow becomes integrated, that power serves transformation, that sex and death are honored.`,
+La expresión más poderosa es revolucionar el trabajo en profundidad de manera tan completa que la sombra se integra, que el poder sirve a la transformación, que el sexo y la muerte son honrados.`,
         
-        freedom: `Freedom for them is emotional and sexual. They need freedom to explore depth without shame, to express sexuality authentically, to investigate taboo subjects, to transform without limits.
+        freedom: `La libertad para ellos es emocional y sexual. Necesitan libertad para explorar la profundidad sin vergüenza, para expresar la sexualidad de manera auténtica, para investigar temas tabú, para transformarse sin límites.
 
-Their freedom quest may involve sexual liberation, breaking family secrets, researching occult subjects, or developing practices that integrate shadow freely.
+Su búsqueda de libertad puede implicar la liberación sexual, revelar secretos familiares, investigar temas ocultos o desarrollar prácticas que integren las sombras libremente.
 
-The challenge is that constant intensity and taboo-breaking can be exhausting. Learning to ground revolutionary transformation while maintaining depth is their journey.`,
+El desafío es que la intensidad constante y la ruptura de tabúes pueden resultar agotadores. Su viaje es aprender a fundamentar la transformación revolucionaria manteniendo la profundidad.`,
         
-        genius: `Their genius is in seeing through facades to hidden truth, in revolutionary insights about power and transformation. They instinctively know what's really happening beneath surface.
+        genius: `Su genio está en ver a través de las fachadas la verdad oculta, en ideas revolucionarias sobre el poder y la transformación. Saben instintivamente lo que realmente sucede debajo de la superficie.
 
-They have revolutionary instinct about depth - knowing when secrets need exposing, when power dynamics need transforming, when collective shadow is ready to integrate.
+Tienen un instinto revolucionario en cuanto a la profundidad: saben cuándo es necesario exponer los secretos, cuándo es necesario transformar las dinámicas de poder, cuándo la sombra colectiva está lista para integrarse.
 
-Their insights often come through crisis, through facing their own darkness, through intimate encounters that reveal hidden truths. They discover breakthrough understanding in depths.`,
+Sus ideas a menudo surgen a través de crisis, al enfrentar su propia oscuridad, a través de encuentros íntimos que revelan verdades ocultas. Descubren una comprensión revolucionaria en las profundidades.`,
         
-        generational: `As generational influence, Uranus in Scorpio marks periods of sexual revolution, psychological transformation, power structure exposure, occult interest surge, and death/rebirth of societal taboos.
+        generational: `Como influencia generacional, Urano en Escorpio marca períodos de revolución sexual, transformación psicológica, exposición de estructuras de poder, aumento de intereses ocultos y muerte/renacimiento de tabúes sociales.
 
-On personal level, it creates a generation who will transform collective relationship with power, sex, death - who expose abuse, heal trauma, integrate shadow.`,
+A nivel personal, crea una generación que transformará la relación colectiva con el poder, el sexo y la muerte, que expondrá el abuso, sanará el trauma e integrará la sombra.`,
         
-        relationships: `In relationships, they need partners who can handle intensity, who aren't afraid of depth, who want revolutionary intimacy that transforms both people repeatedly.
+        relationships: `En las relaciones, necesitan socios que puedan manejar la intensidad, que no le teman a la profundidad, que quieran una intimidad revolucionaria que transforme a ambas personas repetidamente.
 
-The growth edge is learning that intimacy includes lightness, that not every moment needs intensity, that revolutionary transformation can be gentle.
+La ventaja del crecimiento es aprender que la intimidad incluye ligereza, que no todos los momentos necesitan intensidad, que la transformación revolucionaria puede ser suave.
 
-They may pioneer new relationship models based on radical honesty, tantric practices, power exchange that's conscious, or entirely new ways of merging that honor autonomy.`,
+Pueden ser pioneros en nuevos modelos de relación basados ​​en la honestidad radical, las prácticas tántricas, el intercambio de poder consciente o formas completamente nuevas de fusionar que honren la autonomía.`,
         
-        lifeWork: `Their life work involves revolutionizing depth work - innovative psychology, sexual healing, trauma transformation, occult research, or any field exploring power, death, and hidden realms.
+        lifeWork: `El trabajo de su vida implica revolucionar el trabajo profundo: psicología innovadora, curación sexual, transformación de traumas, investigación oculta o cualquier campo que explore el poder, la muerte y los reinos ocultos.
 
-They're here to show that taboo subjects need revolutionary exploration, that power can be transformed, that shadow work liberates, that death is doorway to rebirth.
+Están aquí para mostrar que los temas tabú necesitan una exploración revolucionaria, que el poder puede transformarse, que el trabajo en la sombra libera, que la muerte es la puerta al renacimiento.
 
-The most fulfilling path is one where they're constantly breaking through to deeper truth, transforming toxic power, helping others integrate shadow.`,
+El camino más satisfactorio es aquel en el que constantemente se abren paso hacia una verdad más profunda, transformando el poder tóxico y ayudando a otros a integrar la sombra.`,
         
-        shadowWork: `The shadow is power obsession, destructive rebellion, or using intensity to manipulate. They may become what they fight - abusing power in name of transformation.
+        shadowWork: `La sombra es obsesión por el poder, rebelión destructiva o uso de la intensidad para manipular. Pueden convertirse en lo que luchan: abusar del poder en nombre de la transformación.
 
-There can be difficulty with trust, releasing control, or finding peace because constant crisis feels more real than stability. Learning that transformation includes integration becomes crucial.
+Puede haber dificultades para confiar, liberar el control o encontrar la paz porque la crisis constante parece más real que la estabilidad. Aprender que la transformación incluye la integración se vuelve crucial.
 
-The deeper shadow is using taboo-breaking as excuse for boundary violation, claiming depth work while avoiding genuine intimacy, manipulating through "honesty."`,
+La sombra más profunda está utilizando la ruptura de tabúes como excusa para violar los límites, reclamando un trabajo profundo mientras evita la intimidad genuina, manipulando a través de la "honestidad".`,
         
-        spiritualMeaning: `Spiritually, Uranus in Scorpio represents souls who incarnated to transform collective shadow, to show that darkness integrated becomes power, that death is spiritual doorway.
+        spiritualMeaning: `Espiritualmente, Urano en Escorpio representa las almas que encarnaron para transformar la sombra colectiva, para mostrar que la oscuridad integrada se convierte en poder, que la muerte es una puerta espiritual.
 
-Their spiritual gift is demonstrating that facing shadow leads to liberation, that power can serve awakening, that transformation is ongoing revolutionary process.
+Su don espiritual demuestra que enfrentar la sombra conduce a la liberación, que el poder puede servir para despertar, que la transformación es un proceso revolucionario continuo.
 
-The ultimate expression is the revolutionary transformer whose depth work is so complete they embody phoenix, whose integration of shadow serves collective healing.`,
+La máxima expresión es el transformador revolucionario cuyo trabajo profundo es tan completo que encarna al fénix, cuya integración de la sombra sirve para la curación colectiva.`,
         
-        affirmation: "I revolutionize power and transformation. My depth work liberates collective shadow. I break taboos that bind us. My intensity serves healing and awakening."
+        affirmation: "Revoluciono el poder y la transformación. Mi trabajo en profundidad libera la sombra colectiva. Rompo tabúes que nos atan. Mi intensidad sirve para la curación y el despertar."
     },
     
     Sagittarius: {
-        title: "Uranus in Sagittarius - Freedom Revolution",
-        archetype: "The Belief Breaker",
-        hook: "With Uranus in Sagittarius, this soul carries revolutionary philosophy and innovative spirituality. They are here to transform human relationship with truth, meaning, freedom, and belief itself.",
+        title: "Urano en Sagitario - Revolución de la Libertad",
+        archetype: "El rompe creencias",
+        hook: "Con Urano en Sagitario, esta alma lleva una filosofía revolucionaria y una espiritualidad innovadora. Están aquí para transformar la relación humana con la verdad, el significado, la libertad y la creencia misma.",
         
-        coreExpression: `Uranus in Sagittarius creates the revolutionary seeker - someone who doesn't just question beliefs but transforms understanding itself, who breaks dogma to reveal universal truth, who innovates spirituality.
+        coreExpression: `Urano en Sagitario crea al buscador revolucionario: alguien que no sólo cuestiona las creencias sino que transforma la comprensión misma, que rompe los dogmas para revelar la verdad universal, que innova la espiritualidad.
 
-This placement combines Uranian breakthrough with Sagittarian expansiveness. They don't just seek truth - they revolutionize what truth means. They don't just travel - they pioneer new territories of consciousness.
+Esta ubicación combina el avance uraniano con la expansividad sagitaria. No sólo buscan la verdad: revolucionan el significado de la verdad. No sólo viajan: son pioneros en nuevos territorios de conciencia.
 
-Their gift is capacity to see connections between diverse wisdom traditions, to innovate spiritual practices, to liberate seekers from limiting beliefs while pointing toward genuine truth.`,
+Su don es la capacidad de ver conexiones entre diversas tradiciones de sabiduría, innovar en prácticas espirituales y liberar a los buscadores de creencias limitantes mientras apuntan hacia la verdad genuina.`,
         
-        innovation: `Their innovation is in philosophy, spirituality, education, and freedom itself. They may pioneer new spiritual practices, create revolutionary educational methods, develop innovative approaches to meaning-making, or invent technologies that expand consciousness.
+        innovation: `Su innovación está en la filosofía, la espiritualidad, la educación y la libertad misma. Pueden ser pioneros en nuevas prácticas espirituales, crear métodos educativos revolucionarios, desarrollar enfoques innovadores para la creación de significado o inventar tecnologías que expandan la conciencia.
 
-They might revolutionize religion, create synthesis of global wisdom, develop new forms of pilgrimage or exploration, or pioneer understanding of consciousness that transcends existing frameworks.
+Podrían revolucionar la religión, crear una síntesis de sabiduría global, desarrollar nuevas formas de peregrinación o exploración, o ser pioneras en una comprensión de la conciencia que trascienda los marcos existentes.
 
-The key is that their innovations expand what's possible to believe and understand, that they make truth more accessible, that they liberate minds from dogma.`,
+La clave es que sus innovaciones amplían lo que es posible creer y comprender, que hacen que la verdad sea más accesible, que liberan las mentes del dogma.`,
         
-        rebellion: `Their rebellion is against dogma, limited thinking, enforced beliefs, and systems that claim monopoly on truth. They refuse to accept that truth belongs to any one tradition or that freedom has limits.
+        rebellion: `Su rebelión es contra el dogma, el pensamiento limitado, las creencias impuestas y los sistemas que reclaman el monopolio de la verdad. Se niegan a aceptar que la verdad pertenece a una tradición determinada o que la libertad tiene límites.
 
-But their rebellion expands. They don't just reject religion - they find universal truths within all paths. They don't just fight dogma - they demonstrate that genuine spirituality transcends belief systems.
+Pero su rebelión se expande. No sólo rechazan la religión: encuentran verdades universales en todos los caminos. No sólo luchan contra los dogmas: demuestran que la espiritualidad genuina trasciende los sistemas de creencias.
 
-The most powerful expression is revolutionizing understanding so completely that truth becomes experiential rather than believed, that spirituality becomes direct rather than mediated.`,
+La expresión más poderosa es revolucionar la comprensión tan completamente que la verdad se vuelve experiencial en lugar de creer, que la espiritualidad se vuelve directa en lugar de mediada.`,
         
-        freedom: `Freedom for them is philosophical and spiritual. They need freedom to explore all paths, to question everything, to seek truth wherever it leads, to believe unconventionally or not believe at all.
+        freedom: `La libertad para ellos es filosófica y espiritual. Necesitan libertad para explorar todos los caminos, cuestionarlo todo, buscar la verdad dondequiera que los lleve, creer de manera no convencional o no creer en absoluto.
 
-Their freedom quest may involve world travel, studying diverse traditions, breaking from religious upbringing, or developing spiritual practices that honor individual experience over doctrine.
+Su búsqueda de libertad puede implicar viajes por el mundo, estudiar diversas tradiciones, romper con la educación religiosa o desarrollar prácticas espirituales que honren la experiencia individual por encima de la doctrina.
 
-The challenge is that constant seeking can prevent arriving. Learning to ground revolutionary understanding while maintaining openness is their journey.`,
+El desafío es que la búsqueda constante puede impedir llegar. Su viaje es aprender a fundamentar la comprensión revolucionaria manteniendo la apertura.`,
         
-        genius: `Their genius is in seeing universal patterns across diverse systems, in revolutionary synthesis of global wisdom. They instinctively understand how all truth traditions point toward common reality.
+        genius: `Su genialidad reside en ver patrones universales en diversos sistemas, en una síntesis revolucionaria de sabiduría global. Entienden instintivamente cómo todas las tradiciones de la verdad apuntan hacia la realidad común.
 
-They have revolutionary instinct about belief - knowing when dogma needs breaking, when new understanding is emerging, when humanity is ready for expanded consciousness.
+Tienen un instinto revolucionario sobre las creencias: saben cuándo es necesario romper el dogma, cuándo está surgiendo una nueva comprensión, cuándo la humanidad está lista para una conciencia expandida.
 
-Their insights often come through travel, cross-cultural experiences, or sudden revelations that connect previously separate understandings into revolutionary new framework.`,
+Sus ideas a menudo surgen a través de viajes, experiencias interculturales o revelaciones repentinas que conectan entendimientos previamente separados en un nuevo marco revolucionario.`,
         
-        generational: `As generational influence, Uranus in Sagittarius marks periods of spiritual revolution, global consciousness expansion, educational transformation, and freedom movements surging worldwide.
+        generational: `Como influencia generacional, Urano en Sagitario marca períodos de revolución espiritual, expansión de la conciencia global, transformación educativa y movimientos de libertad que surgen en todo el mundo.
 
-On personal level, it creates a generation who will transform how humanity seeks truth, who pioneer global spiritual synthesis, who revolutionize education and expand collective understanding.`,
+A nivel personal, crea una generación que transformará la forma en que la humanidad busca la verdad, que será pionera en la síntesis espiritual global, que revolucionará la educación y ampliará la comprensión colectiva.`,
         
-        relationships: `In relationships, they need partners who share their love of freedom and exploration, who want philosophical connection, who can handle their need for space and adventure.
+        relationships: `En las relaciones, necesitan socios que compartan su amor por la libertad y la exploración, que quieran una conexión filosófica, que puedan manejar su necesidad de espacio y aventura.
 
-The growth edge is learning that commitment can be adventure, that deep partnership doesn't limit freedom, that staying can be as revolutionary as leaving.
+La ventaja del crecimiento es aprender que el compromiso puede ser una aventura, que una asociación profunda no limita la libertad, que quedarse puede ser tan revolucionario como irse.
 
-They may pioneer long-distance relationships, partnerships based on shared questing, or entirely new models that honor both deep connection and individual freedom to explore.`,
+Pueden ser pioneros en relaciones a larga distancia, asociaciones basadas en búsquedas compartidas o modelos completamente nuevos que honran tanto la conexión profunda como la libertad individual para explorar.`,
         
-        lifeWork: `Their life work involves revolutionizing understanding - innovative education, spiritual synthesis, philosophical breakthrough, global connection work, or any field expanding human consciousness.
+        lifeWork: `El trabajo de su vida implica revolucionar la comprensión: educación innovadora, síntesis espiritual, avances filosóficos, trabajo de conexión global o cualquier campo que expanda la conciencia humana.
 
-They're here to show that truth transcends dogma, that genuine spirituality is experiential and free, that understanding can evolve, that meaning-making itself can be revolutionary.
+Están aquí para mostrar que la verdad trasciende el dogma, que la espiritualidad genuina es experiencial y libre, que la comprensión puede evolucionar, que la creación de significado en sí misma puede ser revolucionaria.
 
-The most fulfilling path is one where they're constantly expanding understanding while helping others break free from limiting beliefs.`,
+El camino más satisfactorio es aquel en el que amplían constantemente su comprensión mientras ayudan a otros a liberarse de creencias limitantes.`,
         
-        shadowWork: `The shadow is believing nothing (nihilism), spiritual bypassing, or such constant seeking they never commit to any path deeply enough to gain real wisdom.
+        shadowWork: `La sombra es no creer en nada (nihilismo), pasar por alto lo espiritual o una búsqueda tan constante que nunca se comprometen con ningún camino lo suficientemente profundo como para obtener verdadera sabiduría.
 
-There can be difficulty with grounding insights, following through on visions, or building anything because freedom feels more important than completion.
+Puede haber dificultades para fundamentar ideas, llevar a cabo visiones o construir cualquier cosa porque la libertad se siente más importante que la realización.
 
-The deeper shadow is using freedom revolution as excuse to avoid depth, claiming spiritual evolution while running from intimacy, teaching enlightenment without embodying it.`,
+La sombra más profunda está utilizando la revolución de la libertad como excusa para evitar la profundidad, afirmando la evolución espiritual mientras huyen de la intimidad, enseñando la iluminación sin encarnarla.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Sagittarius represents souls who incarnated to liberate collective understanding, to show that truth is bigger than any belief system, that spirituality can evolve.
+        spiritualMeaning: `Espiritualmente, Urano en Sagitario representa almas que encarnaron para liberar la comprensión colectiva, para mostrar que la verdad es más grande que cualquier sistema de creencias, que la espiritualidad puede evolucionar.
 
-Their spiritual gift is demonstrating that genuine seeking leads to universal truth, that freedom and spirituality aren't separate, that revolutionary consciousness serves awakening.
+Su don espiritual demuestra que la búsqueda genuina conduce a la verdad universal, que la libertad y la espiritualidad no están separadas, que la conciencia revolucionaria sirve para despertar.
 
-The ultimate expression is the revolutionary teacher whose innovations in understanding liberate seekers from dogma while guiding toward genuine truth experienced directly.`,
+La máxima expresión es el maestro revolucionario cuyas innovaciones en la comprensión liberan a los buscadores del dogma y al mismo tiempo los guían hacia la verdad genuina experimentada directamente.`,
         
-        affirmation: "I revolutionize understanding and truth-seeking. My freedom serves collective awakening. I break dogma to reveal universal wisdom. My seeking liberates all."
+        affirmation: "Revoluciono la comprensión y la búsqueda de la verdad. Mi libertad sirve al despertar colectivo. Rompo el dogma para revelar la sabiduría universal. Mi búsqueda lo libera todo."
     },
     
     Capricorn: {
-        title: "Uranus in Capricorn - Authority Revolution",
-        archetype: "The Structure Transformer",
-        hook: "With Uranus in Capricorn, this soul carries revolutionary leadership and innovative system-building. They are here to transform how humanity organizes, governs, and creates lasting structures that serve evolution.",
+        title: "Urano en Capricornio - Revolución de Autoridad",
+        archetype: "El transformador de estructura",
+        hook: "Con Urano en Capricornio, esta alma lleva un liderazgo revolucionario y una construcción de sistemas innovadores. Están aquí para transformar la forma en que la humanidad organiza, gobierna y crea estructuras duraderas que sirvan a la evolución.",
         
-        coreExpression: `Uranus in Capricorn creates the revolutionary builder - someone who doesn't just tear down authority but builds innovative alternatives, who transforms structures from within, who leads through revolutionary integrity.
+        coreExpression: `Urano en Capricornio crea al constructor revolucionario: alguien que no sólo derriba la autoridad sino que construye alternativas innovadoras, que transforma las estructuras desde dentro, que lidera a través de la integridad revolucionaria.
 
-This placement combines Uranian breakthrough with Capricorn's mastery of form. They don't just rebel against systems - they create better ones. They don't just reject authority - they become new kind of leader.
+Esta ubicación combina el avance uraniano con el dominio de la forma de Capricornio. No sólo se rebelan contra los sistemas: crean otros mejores. No sólo rechazan la autoridad: se convierten en un nuevo tipo de líder.
 
-Their gift is capacity to build revolutionary structures that last, to lead with both vision and discipline, to transform institutions from the inside out with patient radical change.`,
+Su don es la capacidad de construir estructuras revolucionarias duraderas, de liderar con visión y disciplina, de transformar las instituciones desde adentro hacia afuera con un paciente cambio radical.`,
         
-        innovation: `Their innovation is in organization, governance, and structural design. They may pioneer new business models, create revolutionary government frameworks, develop innovative leadership approaches, or invent organizational technologies.
+        innovation: `Su innovación está en la organización, la gobernanza y el diseño estructural. Pueden ser pioneros en nuevos modelos de negocios, crear marcos gubernamentales revolucionarios, desarrollar enfoques de liderazgo innovadores o inventar tecnologías organizacionales.
 
-They might revolutionize corporations, create new economic structures, develop sustainable systems that replace extractive ones, or pioneer entirely new forms of social organization.
+Podrían revolucionar las corporaciones, crear nuevas estructuras económicas, desarrollar sistemas sostenibles que reemplacen a los extractivos o ser pioneros en formas completamente nuevas de organización social.
 
-The key is that their innovations create stable revolution - changes that last because they're built on solid foundations, that transform through excellence rather than just disruption.`,
+La clave es que sus innovaciones crean una revolución estable: cambios que perduran porque están construidos sobre bases sólidas, que se transforman a través de la excelencia y no solo de la disrupción.`,
         
-        rebellion: `Their rebellion is against corrupt authority, rigid hierarchies, and systems that serve power rather than people. They refuse to accept that leadership must be dominating or that structure must be oppressive.
+        rebellion: `Su rebelión es contra la autoridad corrupta, las jerarquías rígidas y los sistemas que sirven al poder y no al pueblo. Se niegan a aceptar que el liderazgo deba ser dominante o que la estructura deba ser opresiva.
 
-But their rebellion builds. They don't just tear down corrupt systems - they create alternatives that work better. They don't just reject authority - they demonstrate revolutionary leadership.
+Pero su rebelión crece. No sólo derriban sistemas corruptos: crean alternativas que funcionan mejor. No sólo rechazan la autoridad: demuestran un liderazgo revolucionario.
 
-The most powerful expression is transforming power structures so completely that authority becomes service, that hierarchy becomes natural organization rather than domination.`,
+La expresión más poderosa es transformar las estructuras de poder de manera tan completa que la autoridad se convierta en servicio, que la jerarquía se convierta en organización natural en lugar de dominación.`,
         
-        freedom: `Freedom for them is through innovative structure. They need autonomy to build systems their way, freedom to lead unconventionally, space to create lasting change without conforming to traditional methods.
+        freedom: `La libertad para ellos se logra a través de una estructura innovadora. Necesitan autonomía para construir sistemas a su manera, libertad para liderar de manera no convencional, espacio para crear cambios duraderos sin ajustarse a los métodos tradicionales.
 
-Their freedom quest may involve entrepreneurship, creating alternative organizations, or developing leadership roles that allow revolutionary approaches while maintaining stability.
+Su búsqueda de la libertad puede implicar el espíritu empresarial, la creación de organizaciones alternativas o el desarrollo de roles de liderazgo que permitan enfoques revolucionarios manteniendo al mismo tiempo la estabilidad.
 
-The challenge is that need for control over structure can limit collaboration. Learning to revolutionize collectively rather than alone becomes growth edge.`,
+El desafío es que la necesidad de control sobre la estructura puede limitar la colaboración. Aprender a revolucionar colectivamente, en lugar de hacerlo solo, se convierte en una ventaja para el crecimiento.`,
         
-        genius: `Their genius is in seeing how to make revolutionary vision structurally sound, how to build change that lasts. They understand both innovation and sustainability, both breakthrough and discipline.
+        genius: `Su genialidad está en ver cómo hacer que una visión revolucionaria sea estructuralmente sólida, cómo generar un cambio duradero. Entienden tanto la innovación como la sostenibilidad, tanto el avance como la disciplina.
 
-They have revolutionary instinct about systems - knowing when institutions are ready to transform, when leadership models need changing, when structures have outlived their purpose.
+Tienen un instinto revolucionario respecto de los sistemas: saben cuándo las instituciones están listas para transformarse, cuándo es necesario cambiar los modelos de liderazgo, cuándo las estructuras han dejado de cumplir su propósito.
 
-Their insights often come through experiencing broken systems from within, then envisioning precise structural innovations that serve better while remaining stable.`,
+Sus ideas a menudo provienen de experimentar sistemas rotos desde adentro y luego imaginar innovaciones estructurales precisas que sirven mejor y al mismo tiempo permanecen estables.`,
         
-        generational: `As generational influence, Uranus in Capricorn marks periods of institutional transformation, government revolution, economic system changes, and authority structure overhaul.
+        generational: `Como influencia generacional, Urano en Capricornio marca períodos de transformación institucional, revolución gubernamental, cambios en el sistema económico y revisión de la estructura de autoridad.
 
-On personal level, it creates a generation who will transform how humanity organizes and leads, who build new institutions that serve evolution, who demonstrate revolutionary integrity.`,
+A nivel personal, crea una generación que transformará la forma en que la humanidad se organiza y dirige, que construirá nuevas instituciones que sirvan a la evolución, que demuestre integridad revolucionaria.`,
         
-        relationships: `In relationships, they need partners who respect their ambition and structural innovations, who can handle their commitment to revolutionary building, who don't need traditional relationship structures.
+        relationships: `En las relaciones, necesitan socios que respeten su ambición y sus innovaciones estructurales, que puedan manejar su compromiso con la construcción revolucionaria, que no necesiten estructuras de relación tradicionales.
 
-The growth edge is learning that intimacy requires vulnerability not just integrity, that partnership includes emotional availability alongside shared goals.
+La ventaja del crecimiento es aprender que la intimidad requiere vulnerabilidad, no sólo integridad, que la asociación incluye disponibilidad emocional junto con objetivos compartidos.
 
-They may pioneer business partnerships that are also romantic, committed relationships with unconventional structures, or entirely new models of building life together.`,
+Pueden ser pioneros en asociaciones comerciales que también sean románticas, relaciones comprometidas con estructuras no convencionales o modelos completamente nuevos de construcción de vida juntos.`,
         
-        lifeWork: `Their life work involves revolutionary system-building - innovative business, transformative governance, organizational design, sustainable economics, or any field creating structures that serve evolution.
+        lifeWork: `El trabajo de su vida implica la construcción de sistemas revolucionarios: negocios innovadores, gobernanza transformadora, diseño organizacional, economía sostenible o cualquier campo que cree estructuras que sirvan a la evolución.
 
-They're here to show that authority can be revolutionary, that leadership can serve, that structures can be both stable and innovative, that systems can evolve.
+Están aquí para mostrar que la autoridad puede ser revolucionaria, que el liderazgo puede servir, que las estructuras pueden ser a la vez estables e innovadoras, que los sistemas pueden evolucionar.
 
-The most fulfilling path is one where they're building lasting alternatives to broken systems, leading through example, creating organizations that transform their field.`,
+El camino más satisfactorio es aquel en el que construyen alternativas duraderas a sistemas rotos, liderando con el ejemplo y creando organizaciones que transforman su campo.`,
         
-        shadowWork: `The shadow is becoming rigid revolutionary, enforcing their innovations as new dogma, or using authority to dominate even while claiming to transform power structures.
+        shadowWork: `La sombra se está volviendo revolucionaria rígida, imponiendo sus innovaciones como un nuevo dogma o utilizando la autoridad para dominar incluso mientras afirma transformar las estructuras de poder.
 
-There can be difficulty releasing control, allowing others to lead differently, or accepting that not every structure needs perfecting.
+Puede haber dificultades para liberar el control, permitir que otros lideren de manera diferente o aceptar que no todas las estructuras necesitan perfeccionarse.
 
-The deeper shadow is workaholism disguised as revolution, using structural innovation to avoid intimacy, building empires while claiming to serve.`,
+La sombra más profunda es la adicción al trabajo disfrazada de revolución, que utiliza la innovación estructural para evitar la intimidad y construye imperios mientras afirma servir.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Capricorn represents souls who incarnated to show that material success and spiritual integrity can align, that authority is sacred responsibility, that structure serves evolution.
+        spiritualMeaning: `Espiritualmente, Urano en Capricornio representa almas que encarnaron para mostrar que el éxito material y la integridad espiritual pueden alinearse, que la autoridad es una responsabilidad sagrada, que la estructura sirve a la evolución.
 
-Their spiritual gift is demonstrating that building sustainable systems is spiritual work, that leadership can be enlightened service, that revolution includes discipline.
+Su don espiritual demuestra que construir sistemas sostenibles es un trabajo espiritual, que el liderazgo puede ser un servicio iluminado, que la revolución incluye la disciplina.
 
-The ultimate expression is the revolutionary leader whose structural innovations create containers for collective evolution, whose integrity transforms what authority means.`,
+La máxima expresión es el líder revolucionario cuyas innovaciones estructurales crean contenedores para la evolución colectiva, cuya integridad transforma lo que significa autoridad.`,
         
-        affirmation: "I build revolutionary structures that last. My leadership serves collective evolution. I transform authority into service. My innovations create sustainable freedom."
+        affirmation: "Construyo estructuras revolucionarias que perduran. Mi liderazgo sirve a la evolución colectiva. Transformo la autoridad en servicio. Mis innovaciones crean una libertad sostenible."
     },
     
     Aquarius: {
-        title: "Uranus in Aquarius - Ultimate Revolution",
-        archetype: "The Future Builder",
-        hook: "With Uranus in Aquarius, this soul embodies pure revolutionary energy - Uranus in its home sign. They are here to transform humanity itself, to build the future, to catalyze evolutionary leaps in collective consciousness.",
+        title: "Urano en Acuario - Revolución definitiva",
+        archetype: "El constructor del futuro",
+        hook: "Con Urano en Acuario, esta alma encarna pura energía revolucionaria: Urano en su signo natal. Están aquí para transformar a la humanidad misma, para construir el futuro, para catalizar saltos evolutivos en la conciencia colectiva.",
         
-        coreExpression: `Uranus in Aquarius creates the ultimate revolutionary - someone who doesn't just change systems but envisions entirely new paradigms of human existence. This is innovation at its purest, revolution for evolution's sake.
+        coreExpression: `Urano en Acuario crea al revolucionario supremo: alguien que no sólo cambia sistemas sino que visualiza paradigmas completamente nuevos de la existencia humana. Esto es innovación en estado puro, revolución por el bien de la evolución.
 
-This placement is Uranus fully expressed - breakthrough energy unfiltered. They don't just see the future - they download it, embody it, build it. They are lightning strikes of human potential.
+Esta ubicación es Urano plenamente expresada: energía revolucionaria sin filtrar. No sólo ven el futuro: lo descargan, lo encarnan y lo construyen. Son rayos del potencial humano.
 
-Their gift is capacity to access revolutionary vision beyond current understanding, to see what humanity can become, to catalyze collective evolution through being decades or centuries ahead.`,
+Su don es la capacidad de acceder a una visión revolucionaria más allá de la comprensión actual, de ver lo que la humanidad puede llegar a ser, de catalizar la evolución colectiva adelantándose décadas o siglos.`,
         
-        innovation: `Their innovation spans all fields simultaneously - technology, social organization, consciousness, relationship, governance. They may pioneer technologies that don't yet exist conceptually, create social movements that redefine humanity.
+        innovation: `Su innovación abarca todos los campos simultáneamente: tecnología, organización social, conciencia, relaciones, gobernanza. Pueden ser pioneros en tecnologías que aún no existen conceptualmente, crear movimientos sociales que redefinan a la humanidad.
 
-They might invent breakthrough technologies, create entirely new fields of study, develop revolutionary understanding of consciousness, or access insights that transform multiple domains at once.
+Podrían inventar tecnologías innovadoras, crear campos de estudio completamente nuevos, desarrollar una comprensión revolucionaria de la conciencia o acceder a conocimientos que transformen múltiples dominios a la vez.
 
-The key is that their innovations aren't incremental - they're quantum leaps. They don't improve existing systems - they make them obsolete through creating entirely new paradigms.`,
+La clave es que sus innovaciones no son incrementales: son saltos cuánticos. No mejoran los sistemas existentes: los vuelven obsoletos mediante la creación de paradigmas completamente nuevos.`,
         
-        rebellion: `Their rebellion is against all limitations on human potential. They refuse to accept that humanity must stay as it is, that evolution has ended, that current structures define what's possible.
+        rebellion: `Su rebelión es contra todas las limitaciones del potencial humano. Se niegan a aceptar que la humanidad debe permanecer como está, que la evolución ha terminado, que las estructuras actuales definen lo que es posible.
 
-But their rebellion builds future. They don't just fight the old - they make it irrelevant by creating alternatives so superior that transformation becomes inevitable.
+Pero su rebelión construye futuro. No sólo luchan contra lo viejo: lo vuelven irrelevante creando alternativas tan superiores que la transformación se vuelve inevitable.
 
-The most powerful expression is revolutionizing humanity so completely that we become new species - homo consciousness, awakened collective, technological-spiritual fusion beyond current imagination.`,
+La expresión más poderosa es revolucionar a la humanidad tan completamente que nos convertimos en nuevas especies: conciencia homo, fusión colectiva tecnológica-espiritual despierta más allá de la imaginación actual.`,
         
-        freedom: `Freedom for them is universal and absolute. They need freedom to experiment with consciousness, to build impossible futures, to connect with minds across space and time, to be completely unprecedented.
+        freedom: `La libertad para ellos es universal y absoluta. Necesitan libertad para experimentar con la conciencia, construir futuros imposibles, conectarse con mentes a través del espacio y el tiempo, algo sin precedentes.
 
-Their freedom quest may involve creating technologies that liberate humanity, building communities that operate on new principles, or developing practices that expand human capacity itself.
+Su búsqueda de la libertad puede implicar la creación de tecnologías que liberen a la humanidad, la construcción de comunidades que operen según nuevos principios o el desarrollo de prácticas que amplíen la propia capacidad humana.
 
-The challenge is that being so far ahead can be isolating. Learning to stay connected to current humanity while building future is their journey.`,
+El desafío es que estar tan por delante puede resultar aislante. Su viaje es aprender a mantenerse conectados con la humanidad actual mientras construyen el futuro.`,
         
-        genius: `Their genius is visionary and collective. They download revolutionary understanding directly from field of potential, channel innovations from future, or access insights through connection to collective mind.
+        genius: `Su genio es visionario y colectivo. Descargan conocimientos revolucionarios directamente del campo de potencial, canalizan innovaciones del futuro o acceden a conocimientos a través de la conexión con la mente colectiva.
 
-They have revolutionary instinct about human evolution - knowing what's trying to emerge, what humanity is ready for, what innovations will catalyze quantum leaps.
+Tienen un instinto revolucionario sobre la evolución humana: saben qué está tratando de surgir, para qué está preparada la humanidad, qué innovaciones catalizarán saltos cuánticos.
 
-Their insights often come through states of expanded consciousness, through connection to something beyond individual mind - collective intelligence, future selves, or universal awareness.`,
+Sus conocimientos a menudo surgen a través de estados de conciencia expandida, a través de la conexión con algo más allá de la mente individual: la inteligencia colectiva, el yo futuro o la conciencia universal.`,
         
-        generational: `As generational influence, Uranus in Aquarius marks periods of maximum social transformation, technological revolution, and collective consciousness shifts. Major evolutionary leaps occur.
+        generational: `Como influencia generacional, Urano en Acuario marca períodos de máxima transformación social, revolución tecnológica y cambios de conciencia colectiva. Se producen grandes saltos evolutivos.
 
-On personal level, it creates a generation who will transform humanity itself, who bridge current and future states, who embody next stage of human evolution.`,
+A nivel personal, crea una generación que transformará a la humanidad misma, que unirá los estados actuales y futuros, que encarnará la próxima etapa de la evolución humana.`,
         
-        relationships: `In relationships, they need partners who share their revolutionary vision, who want to build future together, who can handle their mental intensity and need for extraordinary connection.
+        relationships: `En las relaciones, necesitan socios que compartan su visión revolucionaria, que quieran construir un futuro juntos, que puedan manejar su intensidad mental y su necesidad de una conexión extraordinaria.
 
-The growth edge is learning that revolution includes emotional intimacy, that building future requires grounded presence, that love itself can be revolutionary practice.
+La ventaja del crecimiento es aprender que la revolución incluye intimidad emocional, que construir el futuro requiere una presencia sólida, que el amor en sí mismo puede ser una práctica revolucionaria.
 
-They may pioneer relationships conducted through technology, partnerships focused on collective service, or entirely new forms of connection that blend technological and spiritual.`,
+Pueden ser pioneros en relaciones llevadas a cabo a través de la tecnología, asociaciones centradas en el servicio colectivo o formas de conexión completamente nuevas que combinan lo tecnológico y lo espiritual.`,
         
-        lifeWork: `Their life work involves building future - revolutionary technology, social transformation movements, consciousness evolution work, or any field where they're pioneering human potential.
+        lifeWork: `El trabajo de su vida implica construir el futuro: tecnología revolucionaria, movimientos de transformación social, trabajo de evolución de la conciencia o cualquier campo en el que sean pioneros en el potencial humano.
 
-They're here to show that humanity can evolve beyond current limits, that technology and consciousness can merge, that future is available to those brave enough to build it.
+Están aquí para mostrar que la humanidad puede evolucionar más allá de los límites actuales, que la tecnología y la conciencia pueden fusionarse, que el futuro está disponible para aquellos que sean lo suficientemente valientes como para construirlo.
 
-The most fulfilling path is one where they're constantly accessing future potential and making it present reality, where their innovations serve collective evolution.`,
+El camino más satisfactorio es aquel en el que acceden constantemente al potencial futuro y lo convierten en realidad presente, en el que sus innovaciones sirven a la evolución colectiva.`,
         
-        shadowWork: `The shadow is detachment from humanity, being so far ahead they can't relate, or revolutionary extremism that destroys rather than builds.
+        shadowWork: `La sombra es el desapego de la humanidad, que está tan por delante que no pueden identificarse, o el extremismo revolucionario que destruye en lugar de construir.
 
-There can be difficulty with emotional connection, staying grounded, or accepting current reality when future is so vivid. Learning to honor what is while building what's possible becomes essential.
+Puede haber dificultades con la conexión emocional, con los pies en la tierra o con la aceptación de la realidad actual cuando el futuro es tan vívido. Aprender a honrar lo que es mientras se construye lo que es posible se vuelve esencial.
 
-The deeper shadow is utopian delusion, using future-building to escape present, or cold revolutionary vision that sacrifices individuals for collective ideal.`,
+La sombra más profunda es la ilusión utópica, que utiliza la construcción del futuro para escapar del presente, o una fría visión revolucionaria que sacrifica a los individuos por el ideal colectivo.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Aquarius represents souls who incarnated to catalyze human evolution, to serve as bridges between current and future states of consciousness.
+        spiritualMeaning: `Espiritualmente, Urano en Acuario representa almas que encarnaron para catalizar la evolución humana, para servir como puentes entre los estados de conciencia actuales y futuros.
 
-Their spiritual gift is demonstrating that humanity can evolve consciously, that we can choose our next stage, that revolution is spiritual path when serving collective awakening.
+Su don espiritual está demostrando que la humanidad puede evolucionar conscientemente, que podemos elegir nuestra próxima etapa, que la revolución es un camino espiritual al servicio del despertar colectivo.
 
-The ultimate expression is the future human embodied now - someone so revolutionary they demonstrate what we all can become, whose innovations serve conscious evolution of entire species.`,
+La máxima expresión es el futuro humano encarnado ahora: alguien tan revolucionario que demuestra lo que todos podemos llegar a ser, cuyas innovaciones sirven a la evolución consciente de especies enteras.`,
         
-        affirmation: "I am the future of humanity. My revolutionary vision serves collective evolution. I build new paradigms that transform what's possible. I am conscious evolution incarnate."
+        affirmation: "Yo soy el futuro de la humanidad. Mi visión revolucionaria sirve a la evolución colectiva. Construyo nuevos paradigmas que transforman lo posible. Soy la evolución consciente encarnada."
     },
     
     Pisces: {
-        title: "Uranus in Pisces - Spiritual Revolution",
-        archetype: "The Boundary Dissolver",
-        hook: "With Uranus in Pisces, this soul carries revolutionary spirituality and innovative mysticism. They are here to transform how humanity connects with divine, to dissolve separation through breakthrough awakening.",
+        title: "Urano en Piscis - Revolución Espiritual",
+        archetype: "El disolvente de límites",
+        hook: "Con Urano en Piscis, esta alma lleva una espiritualidad revolucionaria y un misticismo innovador. Están aquí para transformar la forma en que la humanidad se conecta con lo divino, para disolver la separación a través de un despertar revolucionario.",
         
-        coreExpression: `Uranus in Pisces creates the spiritual revolutionary - someone who doesn't just seek enlightenment but revolutionizes spirituality itself, who brings sudden awakening, who innovates mystical practice for modern age.
+        coreExpression: `Urano en Piscis crea al revolucionario espiritual: alguien que no sólo busca la iluminación sino que revoluciona la espiritualidad misma, que trae un despertar repentino, que innova la práctica mística para la era moderna.
 
-This placement combines Uranian breakthrough with Piscean boundlessness. They don't just transcend ego - they do it suddenly and show others how. They don't just merge with divine - they innovate paths for all to follow.
+Esta ubicación combina el avance uraniano con la inmensidad pisciana. No sólo trascienden el ego: lo hacen de repente y muestran a los demás cómo hacerlo. No sólo se fusionan con lo divino: innovan caminos para que todos los sigan.
 
-Their gift is capacity to make spirituality accessible through innovation, to trigger awakening through unconventional methods, to dissolve boundaries between material and divine in revolutionary ways.`,
+Su don es la capacidad de hacer accesible la espiritualidad a través de la innovación, de provocar el despertar a través de métodos no convencionales, de disolver las fronteras entre lo material y lo divino de manera revolucionaria.`,
         
-        innovation: `Their innovation is in spiritual practice, healing modalities, and consciousness technologies. They may pioneer new meditation methods, create revolutionary artistic-spiritual fusion, develop innovative healing that works with energy and consciousness.
+        innovation: `Su innovación está en la práctica espiritual, modalidades de curación y tecnologías de conciencia. Pueden ser pioneros en nuevos métodos de meditación, crear una fusión artístico-espiritual revolucionaria, desarrollar una curación innovadora que funcione con energía y conciencia.
 
-They might revolutionize yoga or meditation, create sound or light technologies for awakening, develop new understandings of consciousness that bridge science and spirituality, or channel entirely new spiritual practices.
+Podrían revolucionar el yoga o la meditación, crear tecnologías de luz o sonido para el despertar, desarrollar nuevas comprensiones de la conciencia que unen la ciencia y la espiritualidad, o canalizar prácticas espirituales completamente nuevas.
 
-The key is that their innovations make enlightenment more accessible, make mystical experience available to all, dissolve barriers between seekers and divine.`,
+La clave es que sus innovaciones hacen que la iluminación sea más accesible, hacen que la experiencia mística esté disponible para todos y disuelven las barreras entre los buscadores y lo divino.`,
         
-        rebellion: `Their rebellion is against spiritual dogma, religious hierarchies that claim to mediate divine, and materialistic denial of spirit. They refuse to accept that awakening requires traditional paths or that some are more spiritual than others.
+        rebellion: `Su rebelión es contra el dogma espiritual, las jerarquías religiosas que afirman mediar en la negación divina y materialista del espíritu. Se niegan a aceptar que el despertar requiera caminos tradicionales o que algunos sean más espirituales que otros.
 
-But their rebellion awakens. They don't just reject religion - they access direct experience and teach it. They don't just fight materialism - they demonstrate that spirit is real through innovative methods.
+Pero su rebelión despierta. No sólo rechazan la religión: acceden a la experiencia directa y la enseñan. No sólo luchan contra el materialismo, sino que demuestran que el espíritu es real mediante métodos innovadores.
 
-The most powerful expression is revolutionizing spirituality so completely that direct divine experience becomes everyone's birthright, accessible through innovative practices rather than traditional gatekeeping.`,
+La expresión más poderosa es revolucionar la espiritualidad tan completamente que la experiencia divina directa se convierte en un derecho de nacimiento de todos, accesible a través de prácticas innovadoras en lugar de la vigilancia tradicional.`,
         
-        freedom: `Freedom for them is spiritual and boundless. They need freedom to explore consciousness without limits, to practice spirituality unconventionally, to merge with divine in their unique way.
+        freedom: `La libertad para ellos es espiritual e ilimitada. Necesitan libertad para explorar la conciencia sin límites, practicar la espiritualidad de manera no convencional, fusionarse con lo divino a su manera única.
 
-Their freedom quest may involve creating new spiritual practices, combining traditions in innovative ways, or developing methods that free seekers from dependence on teachers or traditions.
+Su búsqueda de libertad puede implicar la creación de nuevas prácticas espirituales, la combinación de tradiciones de maneras innovadoras o el desarrollo de métodos que liberen a quienes buscan de la dependencia de maestros o tradiciones.
 
-The challenge is that boundarylessness can lead to lack of grounding. Learning to embody revolutionary spirituality while staying functional in material world is their journey.`,
+El desafío es que la falta de límites puede llevar a la falta de fundamento. Su viaje es aprender a encarnar la espiritualidad revolucionaria mientras se mantienen funcionales en el mundo material.`,
         
-        genius: `Their genius is in channeling spiritual innovation, in receiving breakthrough understanding of consciousness, in seeing how to make mystical accessible. They download spiritual technologies.
+        genius: `Su genio está en canalizar la innovación espiritual, en recibir una comprensión revolucionaria de la conciencia, en ver cómo hacer accesible lo místico. Descargan tecnologías espirituales.
 
-They have revolutionary instinct about awakening - knowing what methods will work for modern consciousness, when humanity is ready for new spiritual understanding, how to bridge traditions with innovation.
+Tienen un instinto revolucionario sobre el despertar: saben qué métodos funcionarán para la conciencia moderna, cuándo la humanidad estará lista para una nueva comprensión espiritual, cómo unir las tradiciones con la innovación.
 
-Their insights often come through meditation, dreams, artistic creation, or altered states - they access revolutionary spiritual understanding when boundaries dissolve.`,
+Sus conocimientos a menudo provienen de la meditación, los sueños, la creación artística o estados alterados; acceden a una comprensión espiritual revolucionaria cuando las fronteras se disuelven.`,
         
-        generational: `As generational influence, Uranus in Pisces marks periods of spiritual revolution, mystical renaissance, artistic transformation, and mass awakening through innovative methods.
+        generational: `Como influencia generacional, Urano en Piscis marca períodos de revolución espiritual, renacimiento místico, transformación artística y despertar masivo a través de métodos innovadores.
 
-On personal level, it creates a generation who will revolutionize spirituality, who make awakening accessible, who bridge ancient wisdom with modern innovation.`,
+A nivel personal, crea una generación que revolucionará la espiritualidad, que hará accesible el despertar, que unirá la sabiduría antigua con la innovación moderna.`,
         
-        relationships: `In relationships, they need partners who share their spiritual seeking, who can handle boundaryless love, who want connection that transcends normal limits while staying grounded.
+        relationships: `En las relaciones, necesitan socios que compartan su búsqueda espiritual, que puedan manejar el amor sin límites, que quieran una conexión que trascienda los límites normales mientras se mantienen firmes.
 
-The growth edge is learning that love includes boundaries, that transcendent connection requires embodied presence, that revolutionary spirituality includes commitment to one person.
+La ventaja del crecimiento es aprender que el amor incluye límites, que la conexión trascendente requiere una presencia encarnada, que la espiritualidad revolucionaria incluye el compromiso con una persona.
 
-They may pioneer spiritual partnerships, relationships as mutual awakening practice, or entirely new forms of connection that are both deeply intimate and cosmically expansive.`,
+Pueden ser pioneros en asociaciones espirituales, relaciones como práctica de despertar mutuo o formas de conexión completamente nuevas que son a la vez profundamente íntimas y cósmicamente expansivas.`,
         
-        lifeWork: `Their life work involves revolutionizing spirituality and healing - innovative meditation teaching, creating consciousness technologies, artistic-spiritual fusion, or any field making awakening accessible.
+        lifeWork: `El trabajo de su vida implica revolucionar la espiritualidad y la curación: enseñanza innovadora de meditación, creación de tecnologías de conciencia, fusión artístico-espiritual o cualquier campo que haga accesible el despertar.
 
-They're here to show that enlightenment doesn't require traditional paths, that divine is accessible now through innovative means, that spirituality can evolve to meet modern consciousness.
+Están aquí para mostrar que la iluminación no requiere caminos tradicionales, que ahora se puede acceder a lo divino a través de medios innovadores, que la espiritualidad puede evolucionar para adaptarse a la conciencia moderna.
 
-The most fulfilling path is one where they're constantly channeling new spiritual understanding and creating practices that help others awaken.`,
+El camino más satisfactorio es aquel en el que constantemente canalizan nueva comprensión espiritual y crean prácticas que ayudan a otros a despertar.`,
         
-        shadowWork: `The shadow is spiritual bypassing, escapism disguised as transcendence, or such boundary dissolution that they can't function. They may use spirituality to avoid embodiment.
+        shadowWork: `La sombra es un desvío espiritual, un escapismo disfrazado de trascendencia o tal disolución de límites que no pueden funcionar. Pueden usar la espiritualidad para evitar la encarnación.
 
-There can be difficulty with grounding, boundaries, or discernment - believing everything is divine while missing that embodiment matters, that boundaries serve.
+Puede haber dificultades con la conexión a tierra, los límites o el discernimiento: creer que todo es divino y al mismo tiempo perder de vista que la encarnación importa, que los límites sirven.
 
-The deeper shadow is using spiritual revolution as excuse for not showing up in material world, channeling insights without living them, teaching awakening while being dysfunctional.`,
+La sombra más profunda es usar la revolución espiritual como excusa para no aparecer en el mundo material, canalizar ideas sin vivirlas, enseñar el despertar siendo disfuncionales.`,
         
-        spiritualMeaning: `Spiritually, Uranus in Pisces represents souls who incarnated to revolutionize human connection to divine, to show that awakening can happen suddenly and be accessible to all.
+        spiritualMeaning: `Espiritualmente, Urano en Piscis representa almas que encarnaron para revolucionar la conexión humana con lo divino, para mostrar que el despertar puede ocurrir repentinamente y ser accesible para todos.
 
-Their spiritual gift is demonstrating that enlightenment doesn't require decades of traditional practice, that innovation serves awakening, that divine is available now through revolutionary methods.
+Su don espiritual demuestra que la iluminación no requiere décadas de práctica tradicional, que la innovación sirve para despertar, que lo divino está disponible ahora a través de métodos revolucionarios.
 
-The ultimate expression is the spiritual revolutionary whose innovations make mystical experience so accessible that mass awakening becomes possible, whose practices dissolve separation for all who try them.`,
+La máxima expresión es el revolucionario espiritual cuyas innovaciones hacen que la experiencia mística sea tan accesible que el despertar masivo se vuelve posible, cuyas prácticas disuelven la separación para todos los que las prueban.`,
         
-        affirmation: "I revolutionize spiritual awakening. My innovations make divine accessible. I dissolve boundaries between human and holy. My practices serve collective enlightenment."
+        affirmation: "Revoluciono el despertar espiritual. Mis innovaciones hacen que lo divino sea accesible. Disuelvo los límites entre lo humano y lo santo. Mis prácticas sirven a la iluminación colectiva."
     }
 };
 
 var DEEP_NEPTUNE_READINGS = {
     Aries: {
-        title: "Neptune in Aries - Spiritual Warrior",
-        archetype: "The Divine Action",
-        hook: "With Neptune in Aries, this soul dissolves boundaries around action and leadership. They are here to spiritualize initiative, to make courage compassionate, to bring divine inspiration to pioneering.",
+        title: "Neptuno en Aries - Guerrero Espiritual",
+        archetype: "La acción divina",
+        hook: "Con Neptuno en Aries, esta alma disuelve los límites en torno a la acción y el liderazgo. Están aquí para espiritualizar la iniciativa, hacer que el coraje sea compasivo y llevar inspiración divina a los pioneros.",
         
-        dreamVision: `Neptune in Aries dreams of spiritual warriorhood - action taken in service of the divine, leadership that uplifts all beings, courage infused with compassion. They envision a world where everyone is empowered.
+        dreamVision: `Neptuno en Aries sueña con una actitud guerrera espiritual: acción emprendida al servicio de lo divino, liderazgo que eleva a todos los seres, coraje infundido con compasión. Imaginan un mundo donde todos tengan poder.
 
-Their visions often involve collective action for spiritual purposes - spiritual activism, compassionate leadership movements, or inspired initiatives that serve universal love.
+Sus visiones a menudo implican acción colectiva con propósitos espirituales: activismo espiritual, movimientos de liderazgo compasivo o iniciativas inspiradas que sirven al amor universal.
 
-The gift is capacity to inspire action not from ego but from divine connection, to lead not for personal glory but for spiritual evolution.`,
+El don es la capacidad de inspirar acción no desde el ego sino desde la conexión divina, para guiar no hacia la gloria personal sino hacia la evolución espiritual.`,
         
-        dissolution: `Neptune dissolves the boundaries of ego in action. These souls may struggle with taking personal credit, knowing when action is theirs versus divine inspiration working through them.
+        dissolution: `Neptuno disuelve los límites del ego en acción. Estas almas pueden tener dificultades para atribuirse el mérito personal, sabiendo cuándo la acción es suya y cuándo la inspiración divina actúa a través de ellas.
 
-They may also dissolve traditional concepts of leadership, creating more fluid, inspired, spiritual forms of being first and initiating. Hierarchical authority feels false.
+También pueden disolver los conceptos tradicionales de liderazgo, creando formas más fluidas, inspiradas y espirituales de ser el primero y el iniciador. La autoridad jerárquica se siente falsa.
 
-The challenge is not dissolving so completely that they can't act at all - learning that divine inspiration requires embodied action, that spiritual vision needs human warriorhood to manifest.`,
+El desafío no es disolverse tan completamente que no puedan actuar en absoluto: aprender que la inspiración divina requiere acción encarnada, que la visión espiritual necesita la fortaleza humana para manifestarse.`,
         
-        spiritualGift: `Their spiritual gift is inspired action - the capacity to move when spirit calls, to lead from divine connection, to be spiritual pioneers. They channel universal creative force into immediate manifestation.
+        spiritualGift: `Su don espiritual es la acción inspirada: la capacidad de moverse cuando el espíritu los llama, de liderar desde una conexión divina, de ser pioneros espirituales. Canalizan la fuerza creativa universal hacia una manifestación inmediata.
 
-They teach that action can be prayer, that courage can be devotion, that leadership can be service to the divine. They spiritualize the warrior archetype.
+Enseñan que la acción puede ser oración, que el valor puede ser devoción, que el liderazgo puede ser servicio a lo divino. Espiritualizan el arquetipo del guerrero.
 
-The most powerful expression is the mystic warrior who acts from such deep spiritual connection that their every move serves awakening, whose courage inspires divine remembrance in all who witness it.`,
+La expresión más poderosa es la del guerrero místico que actúa desde una conexión espiritual tan profunda que cada uno de sus movimientos sirve para el despertar, cuyo coraje inspira un recuerdo divino en todos los que lo presencian.`,
         
-        illusion: `The illusion is believing they are the source of action rather than channel for divine will. Or conversely, believing so completely in divine action that their human will disappears.
+        illusion: `La ilusión es creer que son la fuente de la acción y no el canal de la voluntad divina. O por el contrario, creer tan completamente en la acción divina que su voluntad humana desaparece.
 
-They may also fall into spiritual bypassing of healthy anger and boundaries, believing compassion means never asserting or protecting. Learning that spiritual warriorhood includes fierce love is crucial.
+También pueden caer en eludir espiritualmente la ira y los límites saludables, creyendo que la compasión significa nunca afirmar ni proteger. Es crucial aprender que la guerrera espiritual incluye un amor feroz.
 
-The shadow is also passive waiting for divine instruction when divine will is already flowing - missing that they ARE the divine in action.`,
+La sombra también espera pasivamente la instrucción divina cuando la voluntad divina ya está fluyendo, sin saber que SON lo divino en acción.`,
         
-        compassion: `Their compassion is active and immediate. When they see suffering, they move to address it. Their empathy triggers not just feeling but doing.
+        compassion: `Su compasión es activa e inmediata. Cuando ven sufrimiento, actúan para abordarlo. Su empatía desencadena no sólo sentimientos sino también acciones.
 
-They have capacity to hold both strength and tenderness, to be fierce protectors whose ferocity comes from love. They demonstrate that compassion can be warrior energy.
+Tienen capacidad de contener fuerza y ​​ternura, de ser feroces protectores cuya ferocidad proviene del amor. Demuestran que la compasión puede ser energía guerrera.
 
-The growth edge is learning that sometimes compassion means boundaries, that helping everyone immediately can deplete them, that spiritual action requires sustainable energy.`,
+La ventaja del crecimiento es aprender que a veces la compasión significa límites, que ayudar a todos de inmediato puede agotarlos, que la acción espiritual requiere energía sostenible.`,
         
-        creativity: `Their creativity is spontaneous and inspired. Art, music, movement - all flow through them when they surrender to divine creativity. They create in the moment, channeling rather than planning.
+        creativity: `Su creatividad es espontánea e inspirada. Arte, música, movimiento: todo fluye a través de ellos cuando se entregan a la creatividad divina. Crean en el momento, canalizando en lugar de planificando.
 
-They may pioneer new forms of spiritual practice that are active and immediate - ecstatic dance, walking meditation, martial arts as spiritual path, or inspired action as art form.
+Pueden ser pioneros en nuevas formas de práctica espiritual que sean activas e inmediatas: danza extática, meditación caminando, artes marciales como camino espiritual o acción inspirada como forma de arte.
 
-The key is trusting what flows through rather than trying to control creative expression. Their art is prayer in motion.`,
+La clave es confiar en lo que fluye en lugar de intentar controlar la expresión creativa. Su arte es la oración en movimiento.`,
         
-        generational: `As generational influence (Neptune spends ~14 years per sign), Neptune in Aries marks periods when spirituality becomes active, when mysticism meets warriorhood, when divine inspiration flows through pioneering ventures.
+        generational: `Como influencia generacional (Neptuno pasa ~14 años por signo), Neptuno en Aries marca períodos en los que la espiritualidad se vuelve activa, cuando el misticismo se encuentra con la guerrera, cuando la inspiración divina fluye a través de empresas pioneras.
 
-On personal level, it creates souls who feel called to spiritual activism, inspired leadership, compassionate courage - those who will fight for universal love.`,
+A nivel personal, crea almas que se sienten llamadas al activismo espiritual, al liderazgo inspirado y al coraje compasivo: aquellas que lucharán por el amor universal.`,
         
-        healingPath: `Their healing path is through sacred action - moving meditation, yoga, martial arts, or any practice that integrates spiritual connection with physical expression. Stillness alone doesn't serve them.
+        healingPath: `Su camino de curación es a través de la acción sagrada: meditación en movimiento, yoga, artes marciales o cualquier práctica que integre la conexión espiritual con la expresión física. La quietud por sí sola no les sirve.
 
-They heal by doing what inspires them, by following divine impulses to act, by allowing spirit to move through their body. Action is their meditation.
+Se curan haciendo lo que les inspira, siguiendo los impulsos divinos para actuar, permitiendo que el espíritu se mueva a través de su cuerpo. La acción es su meditación.
 
-The most healing practice is learning to discern divine inspiration from ego impulse, then courageously acting on true spiritual guidance.`,
+La práctica más curativa es aprender a discernir la inspiración divina del impulso del ego y luego actuar con valentía siguiendo una verdadera guía espiritual.`,
         
-        spiritualLesson: `The spiritual lesson is that divine will requires human action to manifest. Spirit needs warriors. The universe moves through those brave enough to act while surrendered to something greater.
+        spiritualLesson: `La lección espiritual es que la voluntad divina requiere la acción humana para manifestarse. El espíritu necesita guerreros. El universo se mueve a través de aquellos lo suficientemente valientes como para actuar mientras se entregan a algo más grande.
 
-They're learning that being first, being courageous, being a leader can all be spiritual service when done from connection to divine source. Action itself can be enlightenment.`,
+Están aprendiendo que ser el primero, ser valiente y ser un líder puede ser un servicio espiritual cuando se hace desde la conexión con la fuente divina. La acción en sí misma puede ser iluminación.`,
         
-        affirmation: "I am divine action. Spirit moves through my courage. My leadership serves universal love. I am spiritual warrior, acting from infinite compassion."
+        affirmation: "Soy acción divina. El espíritu se mueve a través de mi coraje. Mi liderazgo sirve al amor universal. Soy un guerrero espiritual y actúo desde una compasión infinita."
     },
     
     // Remaining Neptune signs with comprehensive structure
     
     Taurus: {
-        title: "Neptune in Taurus - Material Mysticism",
-        archetype: "The Sacred Earth",
-        hook: "With Neptune in Taurus, this soul dissolves boundaries between material and spiritual. They are here to show that earth is sacred, that body is temple, that abundance is divine.",
+        title: "Neptuno en Tauro - Misticismo Material",
+        archetype: "La Tierra Sagrada",
+        hook: "Con Neptuno en Tauro, esta alma disuelve las fronteras entre lo material y lo espiritual. Están aquí para mostrar que la tierra es sagrada, que el cuerpo es templo, que la abundancia es divina.",
         
-        dreamVision: `Neptune in Taurus dreams of earth as paradise, of abundance flowing to all, of matter itself recognized as divine expression. They envision a world where everyone has enough, where beauty is accessible, where the physical world is honored as sacred.
+        dreamVision: `Neptuno en Tauro sueña con la Tierra como un paraíso, con la abundancia fluyendo hacia todos, con la materia misma reconocida como expresión divina. Imaginan un mundo donde todos tengan suficiente, donde la belleza sea accesible, donde el mundo físico sea honrado como sagrado.
 
-Their visions often involve sustainable abundance, gardens of Eden, communities living in harmony with earth. They see potential for heaven on earth, not as escape from material but as honoring it.
+Sus visiones a menudo implican abundancia sostenible, jardines del Edén y comunidades que viven en armonía con la tierra. Ven el potencial para el cielo en la tierra, no como un escape de lo material sino como un modo de honrarlo.
 
-The gift is capacity to inspire others to see divinity in matter, to create abundance systems infused with spiritual awareness, to make mysticism practical and grounded.`,
+El don es la capacidad de inspirar a otros a ver la divinidad en la materia, crear sistemas de abundancia infundidos con conciencia espiritual, hacer que el misticismo sea práctico y fundamentado.`,
         
-        dissolution: `Neptune dissolves materialistic values and attachment to possessions. These souls may struggle with money, having difficulty with practical financial management while having abundance consciousness.
+        dissolution: `Neptuno disuelve los valores materialistas y el apego a las posesiones. Estas almas pueden tener dificultades con el dinero, tener dificultades con la gestión financiera práctica y al mismo tiempo tener conciencia de abundancia.
 
-They also dissolve boundaries between body and spirit, experiencing physical sensations as spiritual, seeing earth as living divine being rather than dead matter.
+También disuelven los límites entre el cuerpo y el espíritu, experimentan las sensaciones físicas como espirituales y ven la tierra como un ser divino vivo en lugar de materia muerta.
 
-The challenge is not dissolving so completely that they can't function materially - learning that honoring matter includes practical management of resources.`,
+El desafío no es disolverse tan completamente que no puedan funcionar materialmente: aprender que honrar la materia incluye la gestión práctica de los recursos.`,
         
-        spiritualGift: `Their spiritual gift is experiencing divine through physical senses - finding God in taste, touch, smell, sound, sight. They make spirituality embodied and accessible.
+        spiritualGift: `Su don espiritual es experimentar lo divino a través de los sentidos físicos: encontrar a Dios en el gusto, el tacto, el olfato, el oído y la vista. Hacen que la espiritualidad sea encarnada y accesible.
 
-They teach that meditation can be eating mindfully, that prayer can be gardening, that worship can be creating beauty. They demonstrate that body is not obstacle to enlightenment but vehicle for it.
+Enseñan que la meditación puede ser comer con atención, que la oración puede ser jardinería, que la adoración puede ser crear belleza. Demuestran que el cuerpo no es un obstáculo para la iluminación sino un vehículo para ella.
 
-The most powerful expression is the grounded mystic who accesses transcendent states through earth connection, whose spirituality is sensual and abundant.`,
+La expresión más poderosa es la del místico arraigado que accede a estados trascendentes a través de la conexión con la tierra, cuya espiritualidad es sensual y abundante.`,
         
-        illusion: `The illusion is spiritual materialism - accumulating crystals, organic products, or beautiful things as spiritual practice while missing the actual spirituality. Or conversely, denying material needs as "unspiritual."
+        illusion: `La ilusión es el materialismo espiritual: acumular cristales, productos orgánicos o cosas hermosas como práctica espiritual sin perder la espiritualidad real. O por el contrario, negar las necesidades materiales por considerarlas "no espirituales".
 
-They may also fall into believing abundance means having everything without effort, missing that divine abundance includes wise stewardship and practical action.
+También pueden caer en la creencia de que la abundancia significa tenerlo todo sin esfuerzo, perdiendo de vista que la abundancia divina incluye una mayordomía sabia y acción práctica.
 
-The shadow is also addiction to pleasure disguised as spirituality, using "honoring the body" as excuse for indulgence rather than genuine sacred relationship with matter.`,
+La sombra es también una adicción al placer disfrazada de espiritualidad, utilizando "honrar el cuerpo" como excusa para la indulgencia en lugar de una genuina relación sagrada con la materia.`,
         
-        compassion: `Their compassion is grounded and practical. When they see suffering, they don't just pray - they provide food, shelter, physical comfort. Their empathy is embodied.
+        compassion: `Su compasión está fundamentada y es práctica. Cuando ven sufrimiento, no sólo rezan: les brindan alimento, refugio y consuelo físico. Su empatía está encarnada.
 
-They have capacity to see divinity in all beings and all matter, treating earth with reverence, honoring resources, seeing abundance as meant to be shared.
+Tienen la capacidad de ver la divinidad en todos los seres y en toda la materia, tratando la tierra con reverencia, honrando los recursos y viendo la abundancia como algo que debe ser compartido.
 
-The growth edge is learning that compassion includes boundaries, that giving everything away doesn't serve if it depletes you, that sustainable abundance requires wisdom.`,
+La ventaja del crecimiento es aprender que la compasión incluye límites, que regalar todo no sirve si te agota, que la abundancia sostenible requiere sabiduría.`,
         
-        creativity: `Their creativity is sensual and material. They create beauty from earth materials - pottery, gardening, cooking, working with natural materials to make art that's both beautiful and functional.
+        creativity: `Su creatividad es sensual y material. Crean belleza a partir de materiales terrestres: cerámica, jardinería, cocina, trabajando con materiales naturales para crear arte que sea a la vez hermoso y funcional.
 
-They may pioneer sustainable art, create from recycled materials, make gardens that are living art, or develop crafts that honor earth while producing beauty.
+Pueden ser pioneros en el arte sostenible, crear a partir de materiales reciclados, crear jardines que sean arte vivo o desarrollar artesanías que honren la tierra y al mismo tiempo produzcan belleza.
 
-The key is that their art connects people to earth, to body, to divine in matter. Their creativity makes spirituality tangible.`,
+La clave es que su arte conecta a las personas con la tierra, con el cuerpo, con lo divino en la materia. Su creatividad hace tangible la espiritualidad.`,
         
-        generational: `As generational influence, Neptune in Taurus marks periods when spirituality becomes grounded, when earth consciousness rises, when relationship with resources and nature transforms.
+        generational: `Como influencia generacional, Neptuno en Tauro marca períodos en los que la espiritualidad se arraiga, cuando la conciencia de la tierra se eleva, cuando la relación con los recursos y la naturaleza se transforma.
 
-On personal level, it creates souls who will ground spirituality in matter, who show that abundance and spirituality aren't separate, who heal collective relationship with earth.`,
+A nivel personal, crea almas que fundamentarán la espiritualidad en la materia, que mostrarán que la abundancia y la espiritualidad no están separadas, que sanarán la relación colectiva con la tierra.`,
         
-        healingPath: `Their healing path is through body and earth - yoga, massage, gardening, working with plants, spending time in nature. Purely mental or ethereal practices don't serve them.
+        healingPath: `Su camino de curación pasa por el cuerpo y la tierra: yoga, masajes, jardinería, trabajo con plantas, pasar tiempo en la naturaleza. Las prácticas puramente mentales o etéreas no les sirven.
 
-They heal by connecting to physical world with reverence, by treating body as temple, by working with earth. Matter is their meditation.
+Curan conectándose con el mundo físico con reverencia, tratando el cuerpo como templo, trabajando con la tierra. La materia es su meditación.
 
-The most healing practice is learning to experience every physical sensation as communication from divine, every interaction with matter as sacred.`,
+La práctica más curativa es aprender a experimentar cada sensación física como comunicación divina, cada interacción con la materia como sagrada.`,
         
-        spiritualLesson: `The spiritual lesson is that matter and spirit are one. There is no separation between physical and divine - earth IS God's body, your body IS temple.
+        spiritualLesson: `La lección espiritual es que la materia y el espíritu son uno. No hay separación entre lo físico y lo divino: la tierra ES el cuerpo de Dios, tu cuerpo ES el templo.
 
-They're learning that enlightenment doesn't require escaping physical world but fully inhabiting it with awareness, that abundance is spiritual when shared and honored.
+Están aprendiendo que la iluminación no requiere escapar del mundo físico sino habitarlo plenamente con conciencia, que la abundancia es espiritual cuando se comparte y se honra.
 
-Ultimately, this placement is about embodying spirituality, making mysticism practical, proving that heaven is here in physical form when we have eyes to see it.`,
+En última instancia, esta ubicación trata de encarnar la espiritualidad, hacer que el misticismo sea práctico y demostrar que el cielo está aquí en forma física cuando tenemos ojos para verlo.`,
         
-        affirmation: "I experience divine through my senses. Earth is sacred temple. My body is holy. Abundance flows through me to bless all beings. Matter and spirit are one."
+        affirmation: "Experimento lo divino a través de mis sentidos. La Tierra es un templo sagrado. Mi cuerpo es santo. La abundancia fluye a través de mí para bendecir a todos los seres. La materia y el espíritu son uno."
     },
     
     Gemini: {
-        title: "Neptune in Gemini - Divine Communication",
-        archetype: "The Inspired Messenger",
-        hook: "With Neptune in Gemini, this soul dissolves boundaries in communication and thinking. They are here to spiritualize how humanity thinks, connects minds, and shares truth.",
+        title: "Neptuno en Géminis - Comunicación Divina",
+        archetype: "El mensajero inspirado",
+        hook: "Con Neptuno en Géminis, esta alma disuelve las fronteras en la comunicación y el pensamiento. Están aquí para espiritualizar cómo piensa la humanidad, conecta mentes y comparte la verdad.",
         
-        dreamVision: `Neptune in Gemini dreams of universal understanding - minds connected telepathically, communication that transcends words, ideas flowing freely across all boundaries of language and culture.
+        dreamVision: `Neptuno en Géminis sueña con una comprensión universal: mentes conectadas telepáticamente, comunicación que trasciende las palabras, ideas que fluyen libremente a través de todas las fronteras del idioma y la cultura.
 
-Their visions often involve breakthrough communication that serves awakening, information flowing with divine inspiration, or collective mind awakening to unified consciousness.
+Sus visiones a menudo implican una comunicación innovadora que sirve para el despertar, la información que fluye con inspiración divina o el despertar colectivo de la mente a la conciencia unificada.
 
-The gift is capacity to communicate spiritual truths accessibly, to dissolve mental barriers, to make complex divine understanding comprehensible through inspired words.`,
+El don es la capacidad de comunicar verdades espirituales de manera accesible, de disolver barreras mentales, de hacer comprensible la comprensión divina compleja a través de palabras inspiradas.`,
         
-        dissolution: `Neptune dissolves rigid thinking and communication barriers. These souls may struggle with linear logic, experiencing reality as interconnected web of meaning rather than separate facts.
+        dissolution: `Neptuno disuelve las rígidas barreras de pensamiento y comunicación. Estas almas pueden luchar con la lógica lineal, experimentando la realidad como una red interconectada de significados en lugar de hechos separados.
 
-They also dissolve boundaries between conscious and unconscious mind, receiving insights through dreams, intuition, or sudden downloads rather than logical deduction.
+También disuelven los límites entre la mente consciente y la inconsciente, recibiendo ideas a través de sueños, intuición o descargas repentinas en lugar de deducciones lógicas.
 
-The challenge is not dissolving so completely that they can't think clearly - learning that divine inspiration requires mental grounding to become communicable.`,
+El desafío no es disolverse tan completamente que no puedan pensar con claridad: aprender que la inspiración divina requiere una base mental para volverse comunicable.`,
         
-        spiritualGift: `Their spiritual gift is inspired communication - channeling wisdom through writing, speaking, or teaching that comes from beyond individual mind. They make mystical understanding accessible through words.
+        spiritualGift: `Su don espiritual es la comunicación inspirada: canalizar la sabiduría a través de la escritura, el habla o la enseñanza que proviene de más allá de la mente individual. Hacen accesible la comprensión mística a través de las palabras.
 
-They teach that thinking can be meditation, that communication can be prayer, that sharing ideas can serve collective awakening. They spiritualize the mental realm.
+Enseñan que pensar puede ser meditación, que la comunicación puede ser oración, que compartir ideas puede servir al despertar colectivo. Espiritualizan el reino mental.
 
-The most powerful expression is the inspired teacher whose words trigger awakening because they're channeling divine wisdom through accessible communication.`,
+La expresión más poderosa es la del maestro inspirado cuyas palabras provocan el despertar porque canalizan la sabiduría divina a través de una comunicación accesible.`,
         
-        illusion: `The illusion is believing everything they think is divine truth, or conversely, distrusting all thought as illusion. They may confuse imagination with intuition, wishful thinking with vision.
+        illusion: `La ilusión es creer que todo lo que piensan es verdad divina, o por el contrario, desconfiar de todo pensamiento como ilusión. Pueden confundir la imaginación con la intuición, las ilusiones con la visión.
 
-They may also fall into spiritual bypassing of critical thinking, accepting all ideas as equally valid, or spreading misinformation while believing it's spiritual truth.
+También pueden caer en eludir espiritualmente el pensamiento crítico, aceptar todas las ideas como igualmente válidas o difundir información errónea creyendo que es una verdad espiritual.
 
-The shadow is also deception - lying to self and others while believing they're channeling truth, using spiritual language to manipulate, or gaslighting disguised as higher understanding.`,
+La sombra también es un engaño: se miente a uno mismo y a los demás mientras cree que está canalizando la verdad, usa el lenguaje espiritual para manipular o se disfraza de una comprensión superior.`,
         
-        compassion: `Their compassion is mental and communicative. When they encounter suffering, they listen deeply, communicate understanding, help others reframe their experience through inspired perspective.
+        compassion: `Su compasión es mental y comunicativa. Cuando se encuentran con el sufrimiento, escuchan profundamente, comunican comprensión y ayudan a otros a replantear su experiencia a través de una perspectiva inspirada.
 
-They have capacity to truly hear others, to communicate in ways that dissolve mental isolation, to share ideas that heal consciousness. Their empathy is through understanding.
+Tienen la capacidad de escuchar verdaderamente a los demás, de comunicarse de manera que disuelvan el aislamiento mental, de compartir ideas que sanen la conciencia. Su empatía se logra a través de la comprensión.
 
-The growth edge is learning that compassion includes silence, that sometimes listening serves better than spiritual reframing, that not every pain needs reinterpretation.`,
+La ventaja del crecimiento es aprender que la compasión incluye el silencio, que a veces escuchar es mejor que un replanteamiento espiritual, que no todo dolor necesita reinterpretación.`,
         
-        creativity: `Their creativity is through words, ideas, and connections. They create through inspired writing, channel wisdom through speaking, make art from concepts and communication.
+        creativity: `Su creatividad es a través de palabras, ideas y conexiones. Crean a través de escrituras inspiradas, canalizan la sabiduría a través del habla, hacen arte a partir de conceptos y comunicación.
 
-They may pioneer spiritual writing that reaches masses, create inspired journalism, develop communication that awakens consciousness, or channel entirely new frameworks for understanding.
+Pueden ser pioneros en la escritura espiritual que llegue a las masas, crear un periodismo inspirado, desarrollar una comunicación que despierte la conciencia o canalizar marcos de comprensión completamente nuevos.
 
-The key is that their art serves awakening through making divine understanding accessible, through dissolving mental barriers through beautiful communication.`,
+La clave es que su arte sirve para despertar al hacer accesible la comprensión divina, al disolver las barreras mentales a través de una hermosa comunicación.`,
         
-        generational: `As generational influence, Neptune in Gemini marks periods when thinking becomes more intuitive, when communication technologies enable new connections, when collective mind opens to inspiration.
+        generational: `Como influencia generacional, Neptuno en Géminis marca períodos en los que el pensamiento se vuelve más intuitivo, en los que las tecnologías de la comunicación permiten nuevas conexiones, en los que la mente colectiva se abre a la inspiración.
 
-On personal level, it creates souls who will spiritualize thinking and communication, who show that minds can connect beyond words, who channel wisdom for collective.`,
+A nivel personal, crea almas que espiritualizarán el pensamiento y la comunicación, que mostrarán que las mentes pueden conectarse más allá de las palabras, que canalizarán la sabiduría para el colectivo.`,
         
-        healingPath: `Their healing path is through sacred communication - journaling, speaking truth, inspired writing, or meditation that involves words and ideas. Pure silence doesn't serve them as well.
+        healingPath: `Su camino de curación es a través de la comunicación sagrada: llevar un diario, decir la verdad, escribir inspirados o meditación que involucre palabras e ideas. El puro silencio tampoco les sirve.
 
-They heal by expressing what's moving through them, by communicating their experience, by writing or speaking as spiritual practice. Communication is their meditation.
+Se curan expresando lo que se mueve a través de ellos, comunicando su experiencia, escribiendo o hablando como práctica espiritual. La comunicación es su meditación.
 
-The most healing practice is learning to discern divine inspiration from mental confusion, then expressing true inspiration through clear communication.`,
+La práctica más sanadora es aprender a discernir la inspiración divina de la confusión mental y luego expresar la verdadera inspiración a través de una comunicación clara.`,
         
-        spiritualLesson: `The spiritual lesson is that thinking can be spiritual practice when mind becomes clear channel for divine wisdom. Thoughts are not obstacles - unclear thinking is.
+        spiritualLesson: `La lección espiritual es que el pensamiento puede ser una práctica espiritual cuando la mente se convierte en un canal claro para la sabiduría divina. Los pensamientos no son obstáculos, el pensamiento confuso sí lo es.
 
-They're learning that communication can serve awakening, that sharing truth is spiritual service, that mental connection can be as sacred as heart connection.`,
+Están aprendiendo que la comunicación puede servir para el despertar, que compartir la verdad es un servicio espiritual, que la conexión mental puede ser tan sagrada como la conexión del corazón.`,
         
-        affirmation: "Divine wisdom flows through my words. My communication serves awakening. I think with spirit and speak with grace. My ideas dissolve separation and reveal truth."
+        affirmation: "La sabiduría divina fluye a través de mis palabras. Mi comunicación sirve para despertar. Pienso con espíritu y hablo con gracia. Mis ideas disuelven la separación y revelan la verdad."
     },
     
     Cancer: {
-        title: "Neptune in Cancer - Universal Mother",
-        archetype: "The Oceanic Nurturer",
-        hook: "With Neptune in Cancer, this soul dissolves boundaries of belonging and family. They are here to spiritualize nurturing, to show that everyone belongs to universal family, to mother with divine compassion.",
+        title: "Neptuno en Cáncer - Madre Universal",
+        archetype: "El criador oceánico",
+        hook: "Con Neptuno en Cáncer, esta alma disuelve los límites de pertenencia y familia. Están aquí para espiritualizar la crianza, para mostrar que todos pertenecen a la familia universal, a ser madres con compasión divina.",
         
-        dreamVision: `Neptune in Cancer dreams of universal belonging - a world where everyone is family, where nurturing flows to all beings, where home is earth itself and all are welcomed.
+        dreamVision: `Neptuno en Cáncer sueña con una pertenencia universal: un mundo donde todos somos familia, donde el cuidado fluye hacia todos los seres, donde el hogar es la tierra misma y todos son bienvenidos.
 
-Their visions often involve healing family wounds collectively, creating communities that nurture like ideal families never did, or experiencing earth as living mother who cares for all.
+Sus visiones a menudo implican sanar las heridas familiares de manera colectiva, crear comunidades que se nutran como nunca lo hicieron las familias ideales, o experimentar la Tierra como una madre viva que se preocupa por todos.
 
-The gift is capacity to make everyone feel they belong, to nurture without condition, to create emotional safety that transcends biological family into spiritual family of all beings.`,
+El don es la capacidad de hacer que todos sientan que pertenecen, de nutrir sin condiciones, de crear seguridad emocional que trascienda la familia biológica y se convierta en una familia espiritual de todos los seres.`,
         
-        dissolution: `Neptune dissolves family boundaries and personal emotional walls. These souls may struggle with knowing where their feelings end and others begin, experiencing emotions collectively.
+        dissolution: `Neptuno disuelve los límites familiares y los muros emocionales personales. Estas almas pueden tener dificultades para saber dónde terminan sus sentimientos y comienzan los demás, experimentando emociones colectivamente.
 
-They also dissolve distinction between biological and chosen family, between personal nurturing and universal care. All beings become their children, all needs become their responsibility.
+También disuelven la distinción entre familia biológica y elegida, entre crianza personal y cuidado universal. Todos los seres se convierten en sus hijos, todas las necesidades se convierten en su responsabilidad.
 
-The challenge is not dissolving so completely that they lose their own center - learning that universal love requires maintaining some boundaries to avoid codependent enmeshment.`,
+El desafío no es disolverse tan completamente como para perder su propio centro: aprender que el amor universal requiere mantener algunos límites para evitar el enredo codependiente.`,
         
-        spiritualGift: `Their spiritual gift is channeling divine mother energy - unconditional love, infinite nurturing capacity, compassion that embraces all suffering. They embody universal maternal care.
+        spiritualGift: `Su don espiritual es canalizar la energía divina de la madre: amor incondicional, capacidad infinita de crianza, compasión que abarca todo sufrimiento. Representan la atención materna universal.
 
-They teach that all family wounds can heal through spiritual understanding, that everyone deserves belonging, that nurturing is divine act. They spiritualize motherhood beyond biology.
+Enseñan que todas las heridas familiares pueden sanar a través de la comprensión espiritual, que todos merecen pertenecer, que cuidar es un acto divino. Espiritualizan la maternidad más allá de la biología.
 
-The most powerful expression is someone who mothers so compassionately, so universally, that all who meet them feel loved, welcomed, held by something vaster than human care.`,
+La expresión más poderosa es alguien que es madre de manera tan compasiva y tan universal, que todos los que la conocen se sienten amados, bienvenidos y sostenidos por algo más vasto que el cuidado humano.`,
         
-        illusion: `The illusion is believing they must save everyone, or conversely, that all emotional need is manipulation. They may confuse codependency with compassion, enmeshment with love.
+        illusion: `La ilusión es creer que deben salvar a todos, o por el contrario, que toda necesidad emocional es manipulación. Pueden confundir la codependencia con la compasión, el enredo con el amor.
 
-They may also fall into spiritual bypassing of healthy boundaries, believing saying no isn't compassionate, or sacrificing self completely in name of universal mothering.
+También pueden caer en eludir espiritualmente los límites saludables, creyendo que decir no no es compasivo o sacrificarse por completo en nombre de la maternidad universal.
 
-The shadow is also martyrdom - suffering to care for others while resenting it, using victimhood to control, or manipulating through appearing to need rescue.`,
+La sombra también es martirio: sufrir para cuidar de los demás mientras se resiente, utilizar el victimismo para controlar o manipular pareciendo necesitar rescate.`,
         
-        compassion: `Their compassion is oceanic and emotional. They feel others' pain as their own, nurture instinctively, create emotional safety wherever they go. Their empathy is boundless.
+        compassion: `Su compasión es oceánica y emocional. Sienten el dolor de los demás como propio, lo nutren instintivamente y crean seguridad emocional dondequiera que vayan. Su empatía es ilimitada.
 
-They have capacity to hold space for deepest grief, to make wounded feel safe, to provide emotional nourishment that heals. Their presence itself is nurturing.
+Tienen la capacidad de dar cabida al dolor más profundo, de hacer que los heridos se sientan seguros y de proporcionar alimento emocional que sane. Su presencia en sí misma es enriquecedora.
 
-The growth edge is learning that compassion includes letting others have their own pain, that rescuing prevents growth, that true nurturing sometimes means boundaries.`,
+La ventaja del crecimiento es aprender que la compasión incluye dejar que otros tengan su propio dolor, que rescatar impide el crecimiento, que la verdadera crianza a veces significa límites.`,
         
-        creativity: `Their creativity channels universal mother - art about belonging, home, family, and emotional healing. They create spaces, physical or artistic, where people feel safe to be vulnerable.
+        creativity: `Su creatividad canaliza la madre universal: el arte sobre la pertenencia, el hogar, la familia y la curación emocional. Crean espacios, físicos o artísticos, donde las personas se sienten seguras de ser vulnerables.
 
-They may pioneer healing environments, create art that soothes collective emotional wounds, develop therapeutic communities, or make music/art that feels like coming home.
+Pueden ser pioneros en entornos curativos, crear arte que alivie heridas emocionales colectivas, desarrollar comunidades terapéuticas o hacer música/arte que se sienta como en casa.
 
-The key is that their creativity serves collective emotional healing, dissolves isolation through making people feel they belong, nurtures through beauty.`,
+La clave es que su creatividad sirve para la curación emocional colectiva, disuelve el aislamiento al hacer que las personas sientan que pertenecen y nutre a través de la belleza.`,
         
-        generational: `As generational influence, Neptune in Cancer marks periods when family structures dissolve and reform, when collective emotional healing becomes possible, when universal belonging consciousness emerges.
+        generational: `Como influencia generacional, Neptuno en Cáncer marca períodos en los que las estructuras familiares se disuelven y reforman, cuando la curación emocional colectiva se vuelve posible, cuando emerge la conciencia de pertenencia universal.
 
-On personal level, it creates souls who will heal collective family wounds, who show that belonging transcends biology, who nurture humanity toward wholeness.`,
+A nivel personal, crea almas que sanarán heridas familiares colectivas, que muestran que la pertenencia trasciende la biología, que nutren a la humanidad hacia la plenitud.`,
         
-        healingPath: `Their healing path is through emotional expression and sacred nurturing - therapy, creating safe spaces, ocean connection, mothering as meditation. Detachment doesn't serve them.
+        healingPath: `Su camino de curación es a través de la expresión emocional y la crianza sagrada: terapia, creación de espacios seguros, conexión con el océano, maternidad como meditación. El desapego no les sirve.
 
-They heal by feeling fully, by nurturing self with same compassion they give others, by connecting to divine mother through nature, water, or spiritual practice.
+Se curan sintiéndose plenamente, nutriéndose con la misma compasión que dan a los demás, conectándose con la madre divina a través de la naturaleza, el agua o la práctica espiritual.
 
-The most healing practice is learning to mother themselves first, to fill their own cup before giving, to maintain boundaries while staying openhearted.`,
+La práctica más curativa es aprender a ser madres de ellos mismos primero, a llenar su propia taza antes de dar, a mantener los límites sin dejar de tener el corazón abierto.`,
         
-        spiritualLesson: `The spiritual lesson is that divine is the ultimate mother, that all beings belong to universal family, that emotional wounds heal through spiritual love.
+        spiritualLesson: `La lección espiritual es que lo divino es la madre suprema, que todos los seres pertenecen a la familia universal, que las heridas emocionales sanan a través del amor espiritual.
 
-They're learning that true nurturing includes boundaries, that you can love all beings without sacrificing yourself, that spiritual mothering is sustainable when grounded.`,
+Están aprendiendo que la verdadera crianza incluye límites, que puedes amar a todos los seres sin sacrificarte, que la maternidad espiritual es sostenible cuando estás arraigada.`,
         
-        affirmation: "I nurture with divine compassion. All beings are my family. My care dissolves isolation. I mother from overflowing cup, sustaining myself while loving all."
+        affirmation: "Lo alimento con compasión divina. Todos los seres son mi familia. Mi cuidado disuelve el aislamiento. Soy madre desde copa rebosante, sosteniéndome amando a todos."
     },
     
     Leo: {
-        title: "Neptune in Leo - Divine Play",
-        archetype: "The Mystic Creator",
-        hook: "With Neptune in Leo, this soul dissolves boundaries around creativity and self-expression. They are here to spiritualize art, to show that creative force is divine force, to play as spiritual practice.",
+        title: "Neptuno en Leo - Juego Divino",
+        archetype: "El creador místico",
+        hook: "Con Neptuno en Leo, esta alma disuelve los límites en torno a la creatividad y la autoexpresión. Están aquí para espiritualizar el arte, para mostrar que la fuerza creativa es fuerza divina, para jugar como práctica espiritual.",
         
-        dreamVision: `Neptune in Leo dreams of everyone shining their divine light - a world where all beings express their unique creativity, where art serves awakening, where joy is recognized as sacred.
+        dreamVision: `Neptuno en Leo sueña con que todos brillen con su luz divina: un mundo donde todos los seres expresan su creatividad única, donde el arte sirve para despertar, donde la alegría se reconoce como sagrada.
 
-Their visions often involve collective creative awakening, humanity expressing divinity through infinite unique forms, or art becoming primary spiritual practice.
+Sus visiones a menudo implican un despertar creativo colectivo, la humanidad expresando la divinidad a través de infinitas formas únicas o el arte convirtiéndose en una práctica espiritual primaria.
 
-The gift is capacity to channel divine creativity, to inspire others to create from spiritual connection, to demonstrate that authentic expression is sacred act.`,
+El don es la capacidad de canalizar la creatividad divina, de inspirar a otros a crear desde una conexión espiritual, de demostrar que la expresión auténtica es un acto sagrado.`,
         
-        dissolution: `Neptune dissolves ego boundaries in creative expression. These souls may struggle with taking credit, knowing where their creativity ends and divine inspiration begins.
+        dissolution: `Neptuno disuelve los límites del ego en la expresión creativa. Estas almas pueden tener dificultades para atribuirse el mérito, sabiendo dónde termina su creatividad y comienza la inspiración divina.
 
-They also dissolve separation between creator and creation, between artist and art, between individual expression and universal creative force flowing through.
+También disuelven la separación entre creador y creación, entre artista y arte, entre expresión individual y fuerza creativa universal que fluye a través de ellos.
 
-The challenge is not dissolving so completely that they can't create at all - learning that divine creativity requires individual uniqueness to manifest in form.`,
+El desafío no es disolverse tan completamente que no puedan crear nada: aprender que la creatividad divina requiere que la singularidad individual se manifieste en forma.`,
         
-        spiritualGift: `Their spiritual gift is channeling divine through creative expression - making art that awakens, performing from such authentic truth that it triggers recognition, creating beauty that reminds people of their divinity.
+        spiritualGift: `Su don espiritual es canalizar lo divino a través de la expresión creativa: hacer arte que despierte, actuar a partir de una verdad tan auténtica que genere reconocimiento, crear belleza que recuerde a las personas su divinidad.
 
-They teach that creativity is spiritual practice, that play is prayer, that expressing your unique light serves universal awakening. They spiritualize the creative process.
+Enseñan que la creatividad es práctica espiritual, que el juego es oración, que expresar tu luz única sirve para el despertar universal. Espiritualizan el proceso creativo.
 
-The most powerful expression is the mystic artist whose creations transport people into transcendent states, whose authentic expression awakens others to their own divine creativity.`,
+La expresión más poderosa es la del artista místico cuyas creaciones transportan a las personas a estados trascendentes, cuya expresión auténtica despierta a otros a su propia creatividad divina.`,
         
-        illusion: `The illusion is believing they're special (spiritual narcissism) or conversely that their unique expression doesn't matter. They may confuse ego inflation with spiritual confidence.
+        illusion: `La ilusión es creer que son especiales (narcisismo espiritual) o, por el contrario, que su expresión única no importa. Pueden confundir la inflación del ego con la confianza espiritual.
 
-They may also fall into spiritual bypassing of healthy ego development, believing uniqueness is illusion, or performing "humility" while secretly craving recognition.
+También pueden caer en eludir espiritualmente el desarrollo saludable del ego, creer que la unicidad es una ilusión o realizar "humildad" mientras secretamente anhelan reconocimiento.
 
-The shadow is also using spirituality as performance, creating personas of enlightenment rather than being authentic, or manipulating others through spiritual charisma.`,
+La sombra también utiliza la espiritualidad como actuación, creando personajes iluminados en lugar de ser auténticos, o manipulando a otros a través del carisma espiritual.`,
         
-        compassion: `Their compassion is celebratory and creative. When they encounter suffering, they help others reconnect to their creative fire, remind them of their light, inspire them to express through art.
+        compassion: `Su compasión es celebratoria y creativa. Cuando se encuentran con el sufrimiento, ayudan a otros a reconectarse con su fuego creativo, les recuerdan su luz y los inspiran a expresarse a través del arte.
 
-They have capacity to see divine uniqueness in everyone, to celebrate all forms of authentic expression, to make people feel special without comparison.
+Tienen capacidad de ver la singularidad divina en todos, de celebrar todas las formas de expresión auténtica, de hacer que las personas se sientan especiales sin comparación.
 
-The growth edge is learning that compassion includes witnessing pain without immediately trying to brighten it, that sometimes people need darkness honored before light.`,
+La ventaja del crecimiento es aprender que la compasión incluye ser testigo del dolor sin intentar inmediatamente iluminarlo, que a veces las personas necesitan que se honre la oscuridad antes que la luz.`,
         
-        creativity: `Their creativity channels divine play - art for pure joy, creation as devotion, expressing beauty because it's holy. They make transcendent art that serves awakening.
+        creativity: `Su creatividad canaliza el juego divino: el arte para la alegría pura, la creación como devoción, la expresión de la belleza porque es sagrada. Hacen arte trascendente que sirve al despertar.
 
-They may pioneer spiritual performance art, create music that induces mystical states, develop creative practices as meditation, or make visual art that dissolves viewers into oneness.
+Pueden ser pioneros en artes escénicas espirituales, crear música que induzca estados místicos, desarrollar prácticas creativas como la meditación o crear arte visual que disuelva a los espectadores en una unidad.
 
-The key is that their art isn't about them - it's divine expressing through unique form. Their creativity serves collective remembering of divinity.`,
+La clave es que su arte no se trata de ellos: es una expresión divina a través de una forma única. Su creatividad sirve al recuerdo colectivo de la divinidad.`,
         
-        generational: `As generational influence, Neptune in Leo marks periods when creativity becomes spiritual practice, when art transforms consciousness, when individual expression is recognized as divine.
+        generational: `Como influencia generacional, Neptuno en Leo marca períodos en los que la creatividad se convierte en práctica espiritual, cuando el arte transforma la conciencia, cuando la expresión individual se reconoce como divina.
 
-On personal level, it creates souls who will spiritualize creativity, who show that authentic expression serves awakening, who make art into collective spiritual practice.`,
+A nivel personal, crea almas que espiritualizarán la creatividad, que mostrarán que la expresión auténtica sirve al despertar, que harán del arte una práctica espiritual colectiva.`,
         
-        healingPath: `Their healing path is through creative expression and joyful play - making art as meditation, performing from authentic self, creating beauty as spiritual practice. Serious spiritual work alone doesn't serve them.
+        healingPath: `Su camino de curación es a través de la expresión creativa y el juego alegre: hacer arte como meditación, actuar desde un yo auténtico, crear belleza como práctica espiritual. El trabajo espiritual serio por sí solo no les sirve.
 
-They heal by expressing what moves through them creatively, by playing with full presence, by allowing divine to create through them. Art is their prayer.
+Sanan expresando lo que se mueve a través de ellos de manera creativa, jugando con presencia plena, permitiendo que lo divino cree a través de ellos. El arte es su oración.
 
-The most healing practice is learning to create without ego attachment, to express purely for joy of divine flowing through, to play as meditation.`,
+La práctica más sanadora es aprender a crear sin apego al ego, a expresarse únicamente por el gozo del flujo divino, a jugar como meditación.`,
         
-        spiritualLesson: `The spiritual lesson is that creative force IS divine force, that your unique expression serves universal awakening, that play can be deepest spiritual practice.
+        spiritualLesson: `La lección espiritual es que la fuerza creativa ES fuerza divina, que tu expresión única sirve al despertar universal, que el juego puede ser la práctica espiritual más profunda.
 
-They're learning that ego doesn't need to die - it needs to become transparent vessel for divine, that authentic self-expression is how divinity becomes individual.`,
+Están aprendiendo que el ego no necesita morir: necesita convertirse en un recipiente transparente para lo divino, que la auténtica autoexpresión es la forma en que la divinidad se vuelve individual.`,
         
-        affirmation: "Divine creates through me. My unique light serves universal awakening. I express authentically as sacred act. My creativity is prayer, my joy is devotion."
+        affirmation: "Divino crea a través de mí. Mi luz única sirve al despertar universal. Lo expreso auténticamente como acto sagrado. Mi creatividad es la oración, mi alegría es la devoción."
     },
     
     Virgo: {
-        title: "Neptune in Virgo - Sacred Service",
-        archetype: "The Mystic Healer",
-        hook: "With Neptune in Virgo, this soul dissolves boundaries between helper and helped, between work and worship. They are here to spiritualize service, to show that daily devotion is path to divine.",
+        title: "Neptuno en Virgo - Servicio Sagrado",
+        archetype: "El sanador místico",
+        hook: "Con Neptuno en Virgo, esta alma disuelve las fronteras entre ayudante y ayudado, entre trabajo y adoración. Están aquí para espiritualizar el servicio, para mostrar que la devoción diaria es el camino hacia lo divino.",
         
-        dreamVision: `Neptune in Virgo dreams of work as worship - a world where everyone serves with devotion, where healing is sacred art, where daily routines become meditation, where perfection is understood as divine already present.
+        dreamVision: `Neptuno en Virgo sueña con el trabajo como adoración: un mundo donde todos sirvan con devoción, donde la curación sea un arte sagrado, donde las rutinas diarias se conviertan en meditación, donde la perfección se entienda como algo divino ya presente.
 
-Their visions often involve collective healing, healthcare transformed into sacred service, or everyone discovering that their work can be spiritual practice.
+Sus visiones a menudo implican curación colectiva, atención médica transformada en servicio sagrado o que todos descubran que su trabajo puede ser una práctica espiritual.
 
-The gift is capacity to serve from spiritual connection, to heal through channeling divine grace, to make ordinary tasks into extraordinary devotion.`,
+El don es la capacidad de servir desde la conexión espiritual, de sanar canalizando la gracia divina, de convertir las tareas ordinarias en una devoción extraordinaria.`,
         
-        dissolution: `Neptune dissolves perfectionism and critical judgment. These souls may struggle with discernment, seeing everything as equally sacred or being unable to organize because all seems chaotic and perfect simultaneously.
+        dissolution: `Neptuno disuelve el perfeccionismo y el juicio crítico. Estas almas pueden tener dificultades con el discernimiento, ver todo como igualmente sagrado o ser incapaces de organizarse porque todo parece caótico y perfecto al mismo tiempo.
 
-They also dissolve boundaries between service and sacrifice, between helping and martyrdom. Knowing when to serve and when to rest becomes challenge.
+También disuelven las fronteras entre servicio y sacrificio, entre ayuda y martirio. Saber cuándo servir y cuándo descansar se convierte en un desafío.
 
-The difficulty is not dissolving so completely that practical life falls apart - learning that serving divine requires maintaining health, systems, and discrimination.`,
+La dificultad no es disolverse tan completamente que la vida práctica se desmorone: aprender que servir a lo divino requiere mantener la salud, los sistemas y la discriminación.`,
         
-        spiritualGift: `Their spiritual gift is channeling divine through service and healing - making every act of care into prayer, serving from such pure devotion that their presence itself heals.
+        spiritualGift: `Su don espiritual es canalizar lo divino a través del servicio y la curación, convirtiendo cada acto de cuidado en oración, sirviendo con una devoción tan pura que su presencia misma sana.
 
-They teach that work can be worship, that daily routines are spiritual practice, that serving others serves divine. They spiritualize the mundane.
+Enseñan que el trabajo puede ser adoración, que las rutinas diarias son prácticas espirituales, que servir a los demás sirve a lo divino. Espiritualizan lo mundano.
 
-The most powerful expression is the mystic healer whose service is so infused with grace that people feel touched by divine through their practical care.`,
+La expresión más poderosa es la del sanador místico cuyo servicio está tan impregnado de gracia que las personas se sienten tocadas por lo divino a través de su cuidado práctico.`,
         
-        illusion: `The illusion is believing sacrifice equals spirituality, or conversely that spiritual people don't need to serve practically. They may confuse martyrdom with devotion.
+        illusion: `La ilusión es creer que el sacrificio es igual a la espiritualidad o, por el contrario, que las personas espirituales no necesitan servir en la práctica. Quizás confundan martirio con devoción.
 
-They may also fall into spiritual bypassing of health needs, believing illness is illusion, or neglecting practical care in pursuit of transcendence.
+También pueden caer en eludir espiritualmente las necesidades de salud, creer que la enfermedad es una ilusión o descuidar los cuidados prácticos en pos de la trascendencia.
 
-The shadow is also using service to avoid intimacy, hiding behind helpful persona while emotionally unavailable, or manipulating through appearing selfless.`,
+La sombra también utiliza el servicio para evitar la intimidad, escondiéndose detrás de una persona servicial mientras no está emocionalmente disponible, o manipulando pareciendo desinteresada.`,
         
-        compassion: `Their compassion is practical and devoted. When they encounter suffering, they serve - providing tangible help, offering skilled care, creating systems that address needs.
+        compassion: `Su compasión es práctica y devota. Cuando se enfrentan al sufrimiento, prestan servicios: brindan ayuda tangible, ofrecen atención especializada y crean sistemas que abordan las necesidades.
 
-They have capacity for infinite patience in service, for attending to details with love, for making people feel cared for through precise attention.
+Tienen capacidad de paciencia infinita en el servicio, de atender los detalles con amor, de hacer que las personas se sientan cuidadas mediante una atención precisa.
 
-The growth edge is learning that compassion includes letting others serve them, that receiving is also sacred, that martyrdom doesn't serve anyone.`,
+La ventaja del crecimiento es aprender que la compasión incluye dejar que los demás le sirvan, que recibir también es sagrado, que el martirio no sirve a nadie.`,
         
-        creativity: `Their creativity channels divine through craft - making art that serves, creating beauty in functional objects, developing practices that are both beautiful and useful.
+        creativity: `Su creatividad canaliza lo divino a través de la artesanía: hacer arte que sirva, crear belleza en objetos funcionales, desarrollar prácticas que sean a la vez hermosas y útiles.
 
-They may pioneer healing modalities that are artistic, create sacred craftsmanship, develop daily rituals as living art, or make functional objects into vessels of grace.
+Pueden ser pioneros en modalidades de curación que sean artísticas, crear artesanías sagradas, desarrollar rituales diarios como arte vivo o convertir objetos funcionales en vasos de gracia.
 
-The key is that their creativity serves practical purposes while connecting to divine - beauty that heals, art that functions, craft that elevates daily life.`,
+La clave es que su creatividad tiene propósitos prácticos mientras se conecta con lo divino: la belleza que cura, el arte que funciona, la artesanía que eleva la vida diaria.`,
         
-        generational: `As generational influence, Neptune in Virgo marks periods when healthcare transforms spiritually, when work becomes recognized as spiritual practice, when service is understood as devotion.
+        generational: `Como influencia generacional, Neptuno en Virgo marca períodos en los que la atención médica se transforma espiritualmente, cuando el trabajo se reconoce como práctica espiritual, cuando el servicio se entiende como devoción.
 
-On personal level, it creates souls who will spiritualize daily life and service, who show that enlightenment includes body and practical care, who heal collectively.`,
+A nivel personal, crea almas que espiritualizarán la vida diaria y el servicio, que mostrarán que la iluminación incluye el cuerpo y el cuidado práctico, que sanarán colectivamente.`,
         
-        healingPath: `Their healing path is through sacred routine and devoted service - yoga, creating daily rituals, working with hands, serving others as meditation. Formless spirituality alone doesn't ground them.
+        healingPath: `Su camino de curación es a través de una rutina sagrada y un servicio devoto: yoga, creación de rituales diarios, trabajo con las manos y servicio a los demás como meditación. La espiritualidad informe por sí sola no los fundamenta.
 
-They heal by making every task a prayer, by working with body and earth, by serving from devotion. Daily practice is their enlightenment.
+Curan haciendo de cada tarea una oración, trabajando con el cuerpo y la tierra, sirviendo desde la devoción. La práctica diaria es su iluminación.
 
-The most healing practice is learning to serve from fullness rather than depletion, to maintain health while helping others, to see self-care as sacred duty.`,
+La práctica más sanadora es aprender a servir desde la plenitud y no desde el agotamiento, a mantener la salud mientras ayudamos a los demás, a ver el cuidado personal como un deber sagrado.`,
         
-        spiritualLesson: `The spiritual lesson is that there is no separation between spiritual and mundane - every act can be worship, every service can be devotion, daily life is the practice.
+        spiritualLesson: `La lección espiritual es que no hay separación entre lo espiritual y lo mundano: cada acto puede ser adoración, cada servicio puede ser devoción, la vida diaria es la práctica.
 
-They're learning that body matters, that practical care is sacred, that enlightenment includes maintaining health and systems, not transcending them.`,
+Están aprendiendo que el cuerpo importa, que el cuidado práctico es sagrado, que la iluminación incluye mantener la salud y los sistemas, no trascenderlos.`,
         
-        affirmation: "My service is sacred devotion. Every task is prayer. I heal through channeling grace. My daily routines connect me to divine in all practical things."
+        affirmation: "Mi servicio es la devoción sagrada. Cada tarea es oración. Sano canalizando la gracia. Mis rutinas diarias me conectan con lo divino en todas las cosas prácticas."
     },
     
     Libra: {
-        title: "Neptune in Libra - Divine Union",
-        archetype: "The Sacred Partnership",
-        hook: "With Neptune in Libra, this soul dissolves boundaries in partnership. They are here to spiritualize relationship, to show that love is divine force, to experience union as path to enlightenment.",
+        title: "Neptuno en Libra - Unión Divina",
+        archetype: "La asociación sagrada",
+        hook: "Con Neptuno en Libra, esta alma disuelve los límites en la asociación. Están aquí para espiritualizar la relación, para mostrar que el amor es fuerza divina, para experimentar la unión como camino hacia la iluminación.",
         
-        dreamVision: `Neptune in Libra dreams of divine love pervading all relationships - partnerships as spiritual practice, universal harmony, every interaction infused with grace, love recognized as face of God.
+        dreamVision: `Neptuno en Libra sueña con el amor divino que impregna todas las relaciones: las asociaciones como práctica espiritual, la armonía universal, cada interacción infundida con gracia, el amor reconocido como el rostro de Dios.
 
-Their visions often involve collective awakening through relationship, humanity learning to love unconditionally, or partnerships becoming vehicles for mutual enlightenment.
+Sus visiones a menudo implican un despertar colectivo a través de las relaciones, que la humanidad aprenda a amar incondicionalmente o que las asociaciones se conviertan en vehículos para la iluminación mutua.
 
-The gift is capacity to love from spiritual connection, to see divine in every being, to create relationships that serve both individuals' awakening.`,
+El don es capacidad de amar desde la conexión espiritual, de ver lo divino en cada ser, de crear relaciones que sirvan al despertar de ambos individuos.`,
         
-        dissolution: `Neptune dissolves boundaries in relationship. These souls may struggle with knowing where they end and partner begins, losing self in love, or experiencing all relationships as mystical union.
+        dissolution: `Neptuno disuelve los límites en las relaciones. Estas almas pueden tener dificultades para saber dónde terminan y dónde comienza su pareja, perderse en el amor o experimentar todas las relaciones como una unión mística.
 
-They also dissolve distinction between romantic love, friendship, and universal love. All connection feels sacred, all relating becomes spiritual practice.
+También disuelven la distinción entre amor romántico, amistad y amor universal. Toda conexión se siente sagrada, toda relación se convierte en práctica espiritual.
 
-The challenge is not dissolving so completely that codependency results - learning that true union honors two distinct individuals choosing connection.`,
+El desafío no es disolverse tan completamente como para que resulte la codependencia: aprender que la verdadera unión honra a dos individuos distintos que eligen la conexión.`,
         
-        spiritualGift: `Their spiritual gift is channeling divine love through partnership - loving so purely that both people feel touched by grace, relating from such spiritual awareness that connection itself awakens.
+        spiritualGift: `Su don espiritual es canalizar el amor divino a través de la asociación: amar de manera tan pura que ambas personas se sientan tocadas por la gracia, relacionándose desde tal conciencia espiritual que la conexión misma despierta.
 
-They teach that relationship can be meditation, that partnership serves awakening, that love is how divine becomes personal. They spiritualize relating.
+Enseñan que la relación puede ser meditación, que la asociación sirve para despertar, que el amor es la forma en que lo divino se vuelve personal. Espiritualizan la relación.
 
-The most powerful expression is the sacred partner whose love is so unconditional, so spiritually grounded, that being with them feels like experiencing divine love directly.`,
+La expresión más poderosa es la pareja sagrada cuyo amor es tan incondicional, tan espiritualmente arraigado, que estar con él es como experimentar el amor divino directamente.`,
         
-        illusion: `The illusion is believing romantic love will bring enlightenment, or conversely that spiritual people don't need human partnership. They may confuse fantasy with divine vision.
+        illusion: `La ilusión es creer que el amor romántico traerá la iluminación o, por el contrario, que las personas espirituales no necesitan la colaboración humana. Pueden confundir la fantasía con la visión divina.
 
-They may also fall into spiritual bypassing of relationship work, believing love should be effortless, or sacrificing all boundaries in name of spiritual union.
+También pueden caer en eludir espiritualmente el trabajo de las relaciones, creer que el amor debe realizarse sin esfuerzo o sacrificar todos los límites en nombre de la unión espiritual.
 
-The shadow is also using spirituality to avoid commitment, projecting divine onto partners who can't fulfill it, or manipulating through appearing unconditionally loving.`,
+La sombra también utiliza la espiritualidad para evitar el compromiso, proyectando lo divino en parejas que no pueden cumplirlo o manipulando pareciendo incondicionalmente amorosos.`,
         
-        compassion: `Their compassion is relational and inclusive. They love all beings, see beauty in everyone, create harmony wherever they go. Their empathy dissolves judgment.
+        compassion: `Su compasión es relacional e inclusiva. Aman a todos los seres, ven la belleza en todos, crean armonía dondequiera que vayan. Su empatía disuelve el juicio.
 
-They have capacity for truly unconditional love, for seeing divine in even difficult people, for relating with grace that uplifts all involved.
+Tienen capacidad para un amor verdaderamente incondicional, para ver lo divino incluso en personas difíciles, para relacionarse con una gracia que eleva a todos los involucrados.
 
-The growth edge is learning that compassion includes boundaries, that loving all beings doesn't mean intimate with everyone, that discernment serves love.`,
+La ventaja del crecimiento es aprender que la compasión incluye límites, que amar a todos los seres no significa tener intimidad con todos, que el discernimiento sirve al amor.`,
         
-        creativity: `Their creativity channels divine through beauty and relationship - making art about love, creating harmonious environments, developing aesthetic that connects people to grace.
+        creativity: `Su creatividad canaliza lo divino a través de la belleza y las relaciones: hacen arte sobre el amor, crean ambientes armoniosos y desarrollan una estética que conecta a las personas con la gracia.
 
-They may pioneer relationship as art form, create spaces of transcendent beauty, develop practices that beautify both inner and outer worlds, or make music/art that dissolves into love.
+Pueden ser pioneros en las relaciones como forma de arte, crear espacios de belleza trascendente, desarrollar prácticas que embellezcan tanto el mundo interior como el exterior, o crear música/arte que se disuelva en el amor.
 
-The key is that their creativity serves collective awakening to love, makes beauty accessible, reminds people that divine expresses as harmony.`,
+La clave es que su creatividad sirve para el despertar colectivo al amor, hace accesible la belleza y recuerda a las personas que lo divino se expresa como armonía.`,
         
-        generational: `As generational influence, Neptune in Libra marks periods when partnership transforms spiritually, when art becomes more mystical, when collective understanding of love deepens.
+        generational: `Como influencia generacional, Neptuno en Libra marca períodos en los que la asociación se transforma espiritualmente, cuando el arte se vuelve más místico y cuando la comprensión colectiva del amor se profundiza.
 
-On personal level, it creates souls who will spiritualize relationship and beauty, who show that love is spiritual practice, who awaken collective heart.`,
+A nivel personal, crea almas que espiritualizarán las relaciones y la belleza, que mostrarán que el amor es práctica espiritual, que despertarán el corazón colectivo.`,
         
-        healingPath: `Their healing path is through sacred partnership and aesthetic practice - conscious relationship, creating beauty, experiencing art as meditation. Solitary practice alone doesn't complete them.
+        healingPath: `Su camino de curación es a través de una asociación sagrada y una práctica estética: una relación consciente, la creación de belleza y la experiencia del arte como meditación. La práctica solitaria por sí sola no los completa.
 
-They heal through connecting deeply with others, through surrounding self with beauty, through practicing unconditional love. Relationship is their prayer.
+Se curan al conectarse profundamente con los demás, al rodearse de belleza y al practicar el amor incondicional. La relación es su oración.
 
-The most healing practice is learning to maintain self while merging, to love without losing boundaries, to experience divine through partnership while staying whole.`,
+La práctica más sanadora es aprender a mantenerse uno mismo mientras nos fusionamos, a amar sin perder los límites, a experimentar lo divino a través de la asociación mientras nos mantenemos completos.`,
         
-        spiritualLesson: `The spiritual lesson is that love is the divine expressing through relationship, that union requires two whole individuals, that partnership can be path to enlightenment.
+        spiritualLesson: `La lección espiritual es que el amor es lo divino que se expresa a través de la relación, que la unión requiere dos individuos completos, que la asociación puede ser el camino hacia la iluminación.
 
-They're learning that spiritual love includes boundaries, that true union honors both people, that relating consciously is sacred work.`,
+Están aprendiendo que el amor espiritual incluye límites, que la verdadera unión honra a ambas personas, que relacionarse conscientemente es un trabajo sagrado.`,
         
-        affirmation: "Divine love flows through my relationships. I see God in all beings. My partnerships serve mutual awakening. I love unconditionally while honoring boundaries."
+        affirmation: "El amor divino fluye a través de mis relaciones. Veo a Dios en todos los seres. Mis asociaciones sirven para el despertar mutuo. Amo incondicionalmente respetando los límites."
     },
     
     Scorpio: {
-        title: "Neptune in Scorpio - Mystical Transformation",
-        archetype: "The Divine Death",
-        hook: "With Neptune in Scorpio, this soul dissolves through death and rebirth. They are here to spiritualize transformation, to show that ego death leads to divine, to find God in shadow.",
+        title: "Neptuno en Escorpio - Transformación Mística",
+        archetype: "La muerte divina",
+        hook: "Con Neptuno en Escorpio, esta alma se disuelve mediante la muerte y el renacimiento. Están aquí para espiritualizar la transformación, para mostrar que la muerte del ego conduce a lo divino, para encontrar a Dios en la sombra.",
         
-        dreamVision: `Neptune in Scorpio dreams of collective shadow healing - humanity facing darkness together and transforming, death recognized as sacred doorway, sexuality as spiritual practice, power as divine force.
+        dreamVision: `Neptuno en Escorpio sueña con la curación colectiva de las sombras: la humanidad enfrenta la oscuridad junta y se transforma, la muerte es reconocida como una puerta sagrada, la sexualidad como práctica espiritual, el poder como fuerza divina.
 
-Their visions often involve mass awakening through crisis, collective transformation of trauma, or humanity discovering that facing shadow leads to enlightenment.
+Sus visiones a menudo implican un despertar masivo a través de una crisis, una transformación colectiva del trauma o el descubrimiento de la humanidad de que enfrentar las sombras conduce a la iluminación.
 
-The gift is capacity to transform through complete ego dissolution, to heal deepest wounds spiritually, to guide others through death and rebirth with grace.`,
+El don es la capacidad de transformar a través de la completa disolución del ego, de sanar espiritualmente las heridas más profundas, de guiar a otros a través de la muerte y el renacimiento con gracia.`,
         
-        dissolution: `Neptune dissolves fear of death, taboos, and ego boundaries through intense transformation. These souls may experience ego death repeatedly, each time dissolving more completely into divine.
+        dissolution: `Neptuno disuelve el miedo a la muerte, los tabúes y los límites del ego mediante una intensa transformación. Estas almas pueden experimentar la muerte del ego repetidamente, disolviéndose cada vez más completamente en lo divino.
 
-They also dissolve boundaries between light and dark, seeing divinity in shadow, finding God in what others fear. All intensity becomes spiritual.
+También disuelven los límites entre la luz y la oscuridad, ven la divinidad en las sombras y encuentran a Dios en lo que otros temen. Toda intensidad se vuelve espiritual.
 
-The challenge is not dissolving into addiction or escape - learning that spiritual transformation requires staying present through the death, not numbing it.`,
+El desafío no es disolverse en la adicción o el escape: aprender que la transformación espiritual requiere permanecer presente a través de la muerte, no adormecerla.`,
         
-        spiritualGift: `Their spiritual gift is channeling divine through intensity and transformation - healing trauma spiritually, guiding others through ego death, making shadow work into spiritual practice.
+        spiritualGift: `Su don espiritual es canalizar lo divino a través de la intensidad y la transformación: sanar el trauma espiritualmente, guiar a otros a través de la muerte del ego, convertir el trabajo de las sombras en práctica espiritual.
 
-They teach that darkness integrated becomes light, that death is doorway to divine, that facing shadow is sacred work. They spiritualize depth.
+Enseñan que la oscuridad integrada se convierte en luz, que la muerte es la puerta a lo divino, que enfrentarse a la sombra es un trabajo sagrado. Espiritualizan la profundidad.
 
-The most powerful expression is the mystic healer who has died and been reborn so many times they can guide others through transformation with complete compassion and wisdom.`,
+La expresión más poderosa es la del sanador místico que ha muerto y renacido tantas veces que puede guiar a otros a través de la transformación con total compasión y sabiduría.`,
         
-        illusion: `The illusion is believing suffering is enlightenment, or conversely that spiritual people don't experience darkness. They may confuse addiction with spiritual seeking, escapism with transcendence.
+        illusion: `La ilusión es creer que el sufrimiento es iluminación o, por el contrario, que las personas espirituales no experimentan la oscuridad. Pueden confundir la adicción con la búsqueda espiritual, el escapismo con la trascendencia.
 
-They may also fall into spiritual bypassing of trauma work, believing wounds are illusion, or using mysticism to avoid facing actual abuse or pain.
+También pueden caer en eludir espiritualmente el trabajo traumatológico, creer que las heridas son una ilusión o utilizar el misticismo para evitar enfrentarse al abuso o al dolor real.
 
-The shadow is also manipulation through spiritualizing power, using depth work to control, or claiming transformation while remaining stuck in patterns.`,
+La sombra también es manipulación a través del poder espiritualizador, usando un trabajo profundo para controlar o reclamando transformación mientras permanece atrapado en patrones.`,
         
-        compassion: `Their compassion is for deepest darkness. They can hold space for trauma, shame, addiction, abuse - nothing human is foreign to them. Their empathy embraces shadow.
+        compassion: `Su compasión es por la oscuridad más profunda. Pueden dejar espacio para el trauma, la vergüenza, la adicción, el abuso; nada humano les es ajeno. Su empatía abarca la sombra.
 
-They have capacity to love people through their worst, to see divine even in destruction, to witness pain without turning away.
+Tienen capacidad de amar a las personas en sus peores momentos, de ver lo divino incluso en la destrucción, de presenciar el dolor sin apartarse.
 
-The growth edge is learning that compassion includes boundaries with destructive people, that loving doesn't mean allowing abuse, that witnessing doesn't require merging with trauma.`,
+La ventaja del crecimiento es aprender que la compasión incluye límites con las personas destructivas, que amar no significa permitir el abuso, que ser testigo no requiere fusionarse con el trauma.`,
         
-        creativity: `Their creativity channels divine through depth - making art from shadow, creating beauty from pain, developing practices that transform trauma into transcendence.
+        creativity: `Su creatividad canaliza lo divino a través de la profundidad: haciendo arte a partir de las sombras, creando belleza a partir del dolor, desarrollando prácticas que transforman el trauma en trascendencia.
 
-They may pioneer trauma-healing through art, create music that facilitates ego death, develop shadow work as sacred practice, or make visual art that confronts darkness with love.
+Pueden ser pioneros en la curación de traumas a través del arte, crear música que facilite la muerte del ego, desarrollar el trabajo con las sombras como práctica sagrada o crear arte visual que enfrente la oscuridad con amor.
 
-The key is that their creativity serves collective shadow integration, makes transformation accessible, shows that facing darkness leads to light.`,
+La clave es que su creatividad sirve a la integración colectiva de las sombras, hace accesible la transformación y muestra que enfrentar la oscuridad conduce a la luz.`,
         
-        generational: `As generational influence, Neptune in Scorpio marks periods when collective unconscious surfaces, when sexuality transforms spiritually, when psychological healing becomes mystical practice.
+        generational: `Como influencia generacional, Neptuno en Escorpio marca períodos en los que el inconsciente colectivo aflora, cuando la sexualidad se transforma espiritualmente, cuando la curación psicológica se convierte en una práctica mística.
 
-On personal level, it creates souls who will heal collective trauma, who show that shadow work is spiritual path, who guide humanity through necessary ego death.`,
+A nivel personal, crea almas que sanarán el trauma colectivo, que muestran que el trabajo de las sombras es un camino espiritual, que guían a la humanidad a través de la necesaria muerte del ego.`,
         
-        healingPath: `Their healing path is through sacred transformation and depth work - therapy as spiritual practice, shadow integration, sexual healing, working with death consciously.
+        healingPath: `Su camino de curación es a través de la transformación sagrada y el trabajo profundo: la terapia como práctica espiritual, la integración de las sombras, la curación sexual y el trabajo consciente con la muerte.
 
-They heal by facing darkness completely, by allowing ego to die repeatedly, by finding divine in depths. Transformation is their meditation.
+Se curan enfrentándose completamente a la oscuridad, permitiendo que el ego muera repetidamente, encontrando lo divino en las profundidades. La transformación es su meditación.
 
-The most healing practice is learning to die to ego without escaping into numbness, to face shadow while staying spiritually connected, to transform through presence not dissociation.`,
+La práctica más sanadora es aprender a morir al ego sin escapar al entumecimiento, a enfrentar las sombras mientras permanecemos conectados espiritualmente, a transformarnos a través de la presencia y no de la disociación.`,
         
-        spiritualLesson: `The spiritual lesson is that death is doorway to divine, that shadow integrated reveals light, that transformation requires complete surrender including letting ego die.
+        spiritualLesson: `La lección espiritual es que la muerte es la puerta a lo divino, que la sombra integrada revela la luz, que la transformación requiere una entrega total, incluido dejar morir al ego.
 
-They're learning that spiritual depth work requires discernment, that not all intensity is enlightenment, that true transformation happens through conscious presence in darkness.`,
+Están aprendiendo que el trabajo profundo espiritual requiere discernimiento, que no toda intensidad es iluminación, que la verdadera transformación ocurre a través de la presencia consciente en la oscuridad.`,
         
-        affirmation: "I dissolve into divine through transformation. My shadow work is sacred. I die to ego and am reborn in grace. Darkness integrated becomes my light."
+        affirmation: "Me disuelvo en lo divino a través de la transformación. Mi trabajo en la sombra es sagrado. Muero al ego y renazco en la gracia. La oscuridad integrada se convierte en mi luz."
     },
     
     Sagittarius: {
-        title: "Neptune in Sagittarius - Universal Truth",
-        archetype: "The Cosmic Wanderer",
-        hook: "With Neptune in Sagittarius, this soul dissolves boundaries of belief to access universal truth. They are here to spiritualize seeking, to show that all paths lead home, to make wisdom accessible to all.",
+        title: "Neptuno en Sagitario - Verdad Universal",
+        archetype: "El vagabundo cósmico",
+        hook: "Con Neptuno en Sagitario, esta alma disuelve los límites de las creencias para acceder a la verdad universal. Están aquí para espiritualizar la búsqueda, para mostrar que todos los caminos conducen a casa, para hacer que la sabiduría sea accesible a todos.",
         
-        dreamVision: `Neptune in Sagittarius dreams of universal wisdom available to everyone - all spiritual paths recognized as valid, truth transcending dogma, collective awakening to meaning that unifies rather than divides.
+        dreamVision: `Neptuno en Sagitario sueña con una sabiduría universal disponible para todos: todos los caminos espirituales reconocidos como válidos, una verdad que trasciende los dogmas, un despertar colectivo al significado que unifica en lugar de dividir.
 
-Their visions often involve global spiritual renaissance, humanity discovering common truths beneath diverse traditions, or education transformed into spiritual practice.
+Sus visiones a menudo implican un renacimiento espiritual global, que la humanidad descubra verdades comunes bajo diversas tradiciones o que la educación se transforme en práctica espiritual.
 
-The gift is capacity to see universal patterns in all wisdom traditions, to teach in ways that inspire rather than indoctrinate, to seek truth with devotional openness.`,
+El don es la capacidad de ver patrones universales en todas las tradiciones de sabiduría, de enseñar de maneras que inspiren en lugar de adoctrinar, de buscar la verdad con apertura devocional.`,
         
-        dissolution: `Neptune dissolves dogmatic belief and rigid philosophy. These souls may struggle with committing to any single path, experiencing all truths as equally valid, or losing discrimination in spiritual relativism.
+        dissolution: `Neptuno disuelve las creencias dogmáticas y la filosofía rígida. Estas almas pueden tener dificultades para comprometerse con un solo camino, experimentar todas las verdades como igualmente válidas o perder la discriminación en el relativismo espiritual.
 
-They also dissolve boundaries between religions, seeing divinity expressed through infinite cultural forms. All seeking becomes one journey home.
+También disuelven las fronteras entre religiones, viendo la divinidad expresada a través de infinitas formas culturales. Toda búsqueda se convierte en un viaje a casa.
 
-The challenge is not dissolving into believing nothing - learning that universal truth requires direct experience, not just philosophical openness.`,
+El desafío no es disolverse en no creer nada: aprender que la verdad universal requiere experiencia directa, no sólo apertura filosófica.`,
         
-        spiritualGift: `Their spiritual gift is channeling divine wisdom that transcends tradition - teaching truths that resonate across all paths, inspiring genuine seeking, making enlightenment feel accessible.
+        spiritualGift: `Su don espiritual es canalizar la sabiduría divina que trasciende la tradición: enseñar verdades que resuenan en todos los caminos, inspirar una búsqueda genuina y hacer que la iluminación sea accesible.
 
-They teach that truth is experiential not believed, that all genuine paths serve awakening, that seeking itself is sacred. They spiritualize the quest for meaning.
+Enseñan que la verdad es experiencial, no creída, que todos los caminos genuinos sirven para despertar, que la búsqueda en sí misma es sagrada. Espiritualizan la búsqueda de significado.
 
-The most powerful expression is the inspired teacher whose wisdom draws from universal source, whose teaching serves all seekers regardless of tradition.`,
+La expresión más poderosa es la del maestro inspirado cuya sabiduría proviene de una fuente universal, cuya enseñanza sirve a todos los buscadores independientemente de la tradición.`,
         
-        illusion: `The illusion is believing all paths are equal (spiritual bypassing of discernment), or conversely that their vision is the only truth. They may confuse wishful thinking with spiritual insight.
+        illusion: `La ilusión es creer que todos los caminos son iguales (evitación espiritual del discernimiento), o por el contrario, que su visión es la única verdad. Pueden confundir las ilusiones con la percepción espiritual.
 
-They may also fall into spiritual bypassing of commitment, believing freedom means never choosing a path, or using "openness" to avoid depth in any single practice.
+También pueden caer en eludir el compromiso espiritual, creer que la libertad significa no elegir nunca un camino o utilizar la "apertura" para evitar la profundidad en una sola práctica.
 
-The shadow is also false guru syndrome - claiming enlightenment without embodiment, teaching wisdom they haven't lived, or using spirituality to manipulate seekers.`,
+La sombra también es el síndrome del falso gurú: afirmar la iluminación sin encarnación, enseñar sabiduría que no han vivido o utilizar la espiritualidad para manipular a los buscadores.`,
         
-        compassion: `Their compassion is universal and philosophical. They hold space for all beliefs, see truth in every path, help people find meaning in their suffering through expansive perspective.
+        compassion: `Su compasión es universal y filosófica. Mantienen espacio para todas las creencias, ven la verdad en cada camino, ayudan a las personas a encontrar significado a su sufrimiento a través de una perspectiva expansiva.
 
-They have capacity to inspire hope, to remind people that life has meaning, to connect individual experience to universal patterns that comfort.
+Tienen la capacidad de inspirar esperanza, recordar a las personas que la vida tiene significado, conectar la experiencia individual con patrones universales que reconfortan.
 
-The growth edge is learning that compassion includes helping people face hard truths, that not all beliefs serve awakening, that sometimes clarity requires discrimination.`,
+La ventaja del crecimiento es aprender que la compasión incluye ayudar a las personas a enfrentar verdades duras, que no todas las creencias sirven para despertar, que a veces la claridad requiere discriminación.`,
         
-        creativity: `Their creativity channels divine through teaching, writing, and meaning-making - creating art that inspires, writing wisdom that awakens, developing practices that serve seeking.
+        creativity: `Su creatividad canaliza lo divino a través de la enseñanza, la escritura y la creación de significado: creando arte que inspira, escribiendo sabiduría que despierta, desarrollando prácticas que sirven a la búsqueda.
 
-They may pioneer spiritual writing that reaches masses, create inspired teaching methods, develop synthesis of global wisdom, or make art that connects people to meaning.
+Pueden ser pioneros en la escritura espiritual que llegue a las masas, crear métodos de enseñanza inspirados, desarrollar una síntesis de sabiduría global o crear arte que conecte a las personas con el significado.
 
-The key is that their creativity serves collective awakening through making truth accessible, through inspiring genuine seeking, through showing that meaning is available.`,
+La clave es que su creatividad sirve al despertar colectivo al hacer accesible la verdad, al inspirar una búsqueda genuina, al mostrar que el significado está disponible.`,
         
-        generational: `As generational influence, Neptune in Sagittarius marks periods when spirituality globalizes, when wisdom traditions merge, when collective seeking intensifies, when meaning-making transforms.
+        generational: `Como influencia generacional, Neptuno en Sagitario marca períodos en los que la espiritualidad se globaliza, cuando las tradiciones de sabiduría se fusionan, cuando la búsqueda colectiva se intensifica, cuando la creación de significado se transforma.
 
-On personal level, it creates souls who will spiritualize seeking and teaching, who show that truth transcends tradition, who inspire global awakening.`,
+A nivel personal, crea almas que espiritualizarán la búsqueda y la enseñanza, que mostrarán que la verdad trasciende la tradición, que inspirarán el despertar global.`,
         
-        healingPath: `Their healing path is through sacred seeking and meaningful exploration - studying diverse wisdom, traveling as pilgrimage, teaching as meditation. Staying still doesn't serve them.
+        healingPath: `Su camino de curación pasa por la búsqueda sagrada y la exploración significativa: estudiando la sabiduría diversa, viajando como peregrinación, enseñando como meditación. Quedarse quietos no les sirve.
 
-They heal by seeking truth everywhere, by finding meaning in experience, by connecting to something vaster. Questing is their prayer.
+Se curan buscando la verdad en todas partes, encontrando significado en la experiencia, conectándose con algo más vasto. La búsqueda es su oración.
 
-The most healing practice is learning to ground insights through living them, to seek with discernment, to find universal truth through direct experience not just belief.`,
+La práctica más sanadora es aprender a fundamentar las ideas viviéndolas, a buscar con discernimiento, a encontrar la verdad universal a través de la experiencia directa, no solo de la creencia.`,
         
-        spiritualLesson: `The spiritual lesson is that all genuine paths lead to same truth, that seeking with openness reveals divine, that wisdom is universal but expressions are diverse.
+        spiritualLesson: `La lección espiritual es que todos los caminos genuinos conducen a la misma verdad, que buscar con apertura revela lo divino, que la sabiduría es universal pero las expresiones son diversas.
 
-They're learning that spiritual seeking requires eventually arriving, that openness needs grounding in practice, that universal truth is experienced not just philosophized.`,
+Están aprendiendo que la búsqueda espiritual requiere llegar eventualmente, que la apertura necesita basarse en la práctica, que la verdad universal se experimenta y no sólo se filosofa.`,
         
-        affirmation: "Universal wisdom flows through me. I seek truth in all traditions. My teaching inspires genuine awakening. All paths are honored, one truth is known."
+        affirmation: "La sabiduría universal fluye a través de mí. Busco la verdad en todas las tradiciones. Mi enseñanza inspira un despertar genuino. Todos los caminos son honrados, se conoce una verdad."
     },
     
     Capricorn: {
-        title: "Neptune in Capricorn - Sacred Structure",
-        archetype: "The Mystic Builder",
-        hook: "With Neptune in Capricorn, this soul dissolves material ambition to build for divine. They are here to spiritualize authority, to show that leadership can be sacred service, that structures can serve awakening.",
+        title: "Neptuno en Capricornio - Estructura Sagrada",
+        archetype: "El constructor místico",
+        hook: "Con Neptuno en Capricornio, esta alma disuelve la ambición material para construir lo divino. Están aquí para espiritualizar la autoridad, para mostrar que el liderazgo puede ser un servicio sagrado, que las estructuras pueden servir para el despertar.",
         
-        dreamVision: `Neptune in Capricorn dreams of enlightened governance - leaders who serve spiritually, institutions that honor divine, material success aligned with spiritual integrity, structures that elevate consciousness.
+        dreamVision: `Neptuno en Capricornio sueña con un gobierno iluminado: líderes que sirven espiritualmente, instituciones que honran el éxito divino, material alineado con la integridad espiritual, estructuras que elevan la conciencia.
 
-Their visions often involve transforming corrupt systems into sacred service, collective awakening to responsibility as spiritual practice, or humanity building heaven on earth through conscious organization.
+Sus visiones a menudo implican transformar sistemas corruptos en servicio sagrado, un despertar colectivo a la responsabilidad como práctica espiritual o que la humanidad construya el cielo en la tierra a través de una organización consciente.
 
-The gift is capacity to manifest spiritual vision in material world, to lead from divine connection, to build structures that serve both practical needs and collective evolution.`,
+El don es la capacidad de manifestar una visión espiritual en el mundo material, liderar desde la conexión divina, construir estructuras que sirvan tanto a las necesidades prácticas como a la evolución colectiva.`,
         
-        dissolution: `Neptune dissolves ego ambition and corrupt authority. These souls may struggle with worldly achievement, feeling called to serve but confused about form, or experiencing authority as inherently spiritual.
+        dissolution: `Neptuno disuelve la ambición del ego y la autoridad corrupta. Estas almas pueden tener dificultades con los logros mundanos, sentirse llamadas a servir pero confundidas acerca de la forma, o experimentar la autoridad como algo inherentemente espiritual.
 
-They also dissolve boundaries between spiritual and material success, seeing no separation between enlightenment and effective leadership, between divine will and worldly accomplishment.
+También disuelven los límites entre el éxito espiritual y el material, al no ver separación entre la iluminación y el liderazgo efectivo, entre la voluntad divina y los logros mundanos.
 
-The challenge is not dissolving into impracticality - learning that spiritual vision requires grounded manifestation, that divine authority includes material responsibility.`,
+El desafío no es disolverse en lo impracticable: aprender que la visión espiritual requiere una manifestación fundamentada, que la autoridad divina incluye la responsabilidad material.`,
         
-        spiritualGift: `Their spiritual gift is channeling divine through material achievement - building organizations that serve awakening, leading from spiritual integrity, creating lasting structures that elevate collective.
+        spiritualGift: `Su don espiritual es canalizar lo divino a través de los logros materiales: construir organizaciones que sirvan al despertar, liderar desde la integridad espiritual y crear estructuras duraderas que eleven lo colectivo.
 
-They teach that success can be spiritual, that leadership is sacred responsibility, that material world is where spirit proves itself. They spiritualize worldly accomplishment.
+Enseñan que el éxito puede ser espiritual, que el liderazgo es una responsabilidad sagrada, que el mundo material es donde el espíritu demuestra su valía. Espiritualizan los logros mundanos.
 
-The most powerful expression is the enlightened leader whose material achievements serve collective evolution, whose structures create space for spiritual growth.`,
+La expresión más poderosa es la del líder iluminado cuyos logros materiales sirven a la evolución colectiva, cuyas estructuras crean espacio para el crecimiento espiritual.`,
         
-        illusion: `The illusion is believing material success is spiritual achievement, or conversely that spiritual people must be poor/powerless. They may confuse ego ambition with divine calling.
+        illusion: `La ilusión es creer que el éxito material es un logro espiritual o, por el contrario, que las personas espirituales deben ser pobres o impotentes. Pueden confundir la ambición del ego con el llamado divino.
 
-They may also fall into spiritual bypassing of responsibility, believing enlightened people transcend practical needs, or using spirituality to avoid actual building and leading.
+También pueden caer en eludir la responsabilidad espiritual, creer que las personas iluminadas trascienden las necesidades prácticas o utilizar la espiritualidad para evitar la construcción y el liderazgo reales.
 
-The shadow is also spiritual authoritarianism - claiming divine authority to control, building religious organizations that serve ego, or manipulating through appearing spiritually powerful.`,
+La sombra también es autoritarismo espiritual: reclamar autoridad divina para controlar, construir organizaciones religiosas que sirvan al ego o manipular aparentando ser espiritualmente poderosos.`,
         
-        compassion: `Their compassion is structured and responsible. They help people through creating systems that serve, through modeling integrity, through leading in ways that uplift.
+        compassion: `Su compasión es estructurada y responsable. Ayudan a las personas mediante la creación de sistemas que sirvan, modelando la integridad y liderando de manera edificante.
 
-They have capacity for compassionate authority, for creating structure that supports growth, for holding people accountable with love.
+Tienen capacidad para ejercer una autoridad compasiva, para crear estructuras que apoyen el crecimiento, para responsabilizar a las personas con amor.
 
-The growth edge is learning that compassion includes flexibility, that not all structure serves, that sometimes dissolving organization allows more growth than building it.`,
+La ventaja del crecimiento es aprender que la compasión incluye flexibilidad, que no toda estructura sirve, que a veces disolver una organización permite más crecimiento que construirla.`,
         
-        creativity: `Their creativity channels divine through form and structure - creating sacred architecture, building organizations as art, developing disciplines as creative practice.
+        creativity: `Su creatividad canaliza lo divino a través de la forma y la estructura: creando arquitectura sagrada, construyendo organizaciones como arte, desarrollando disciplinas como práctica creativa.
 
-They may pioneer spiritual businesses, create institutions that serve awakening, develop leadership models that honor divine, or build lasting structures of transcendent beauty.
+Pueden ser pioneros en negocios espirituales, crear instituciones que sirvan al despertar, desarrollar modelos de liderazgo que honren lo divino o construir estructuras duraderas de belleza trascendente.
 
-The key is that their creativity manifests spirituality materially, makes enlightenment structural, builds containers for collective evolution.`,
+La clave es que su creatividad manifiesta materialmente la espiritualidad, hace que la iluminación sea estructural, construye contenedores para la evolución colectiva.`,
         
-        generational: `As generational influence, Neptune in Capricorn marks periods when institutions spiritualize, when leadership transforms toward service, when material structures align with divine purpose.
+        generational: `Como influencia generacional, Neptuno en Capricornio marca períodos en los que las instituciones se espiritualizan, cuando el liderazgo se transforma hacia el servicio, cuando las estructuras materiales se alinean con el propósito divino.
 
-On personal level, it creates souls who will build enlightened systems, who show that worldly power can serve spiritually, who manifest heaven on earth.`,
+A nivel personal, crea almas que construirán sistemas iluminados, que mostrarán que el poder mundano puede servir espiritualmente, que manifestarán el cielo en la tierra.`,
         
-        healingPath: `Their healing path is through sacred discipline and responsible service - meditation practice sustained over time, building spiritual structures, leading with integrity as practice.
+        healingPath: `Su camino de curación es a través de la disciplina sagrada y el servicio responsable: práctica de meditación sostenida en el tiempo, construcción de estructuras espirituales y liderazgo con integridad como práctica.
 
-They heal by honoring commitments, by building steadily toward vision, by manifesting spiritually. Discipline is their devotion.
+Sanan al honrar los compromisos, al construir constantemente hacia la visión, al manifestarse espiritualmente. La disciplina es su devoción.
 
-The most healing practice is learning to build without ego attachment, to lead from surrender to divine will, to create structures that serve collective while releasing personal credit.`,
+La práctica más sanadora es aprender a construir sin apego al ego, a liderar desde la rendición a la voluntad divina, a crear estructuras que sirvan al colectivo y al mismo tiempo liberen crédito personal.`,
         
-        spiritualLesson: `The spiritual lesson is that material and spiritual aren't separate, that manifesting divine vision requires worldly skill, that enlightened leadership is spiritual service.
+        spiritualLesson: `La lección espiritual es que lo material y lo espiritual no están separados, que manifestar la visión divina requiere habilidad mundana, que el liderazgo iluminado es servicio espiritual.
 
-They're learning that spiritual integrity includes responsibility, that building for divine requires practical discipline, that true authority serves rather than dominates.`,
+Están aprendiendo que la integridad espiritual incluye responsabilidad, que construir para lo divino requiere disciplina práctica, que la verdadera autoridad sirve en lugar de dominar.`,
         
-        affirmation: "I build sacred structures in material world. My leadership serves divine purpose. Success and spirituality align through my integrity. I manifest enlightenment."
+        affirmation: "Construyo estructuras sagradas en el mundo material. Mi liderazgo sirve a un propósito divino. El éxito y la espiritualidad se alinean a través de mi integridad. Manifiesto la iluminación."
     },
     
     Aquarius: {
-        title: "Neptune in Aquarius - Universal Vision",
-        archetype: "The Collective Dream",
-        hook: "With Neptune in Aquarius, this soul dissolves all separation to experience humanity as one organism. They are here to channel future spiritual evolution, to show that we are all connected, to dream collective awakening.",
+        title: "Neptuno en Acuario - Visión Universal",
+        archetype: "El sueño colectivo",
+        hook: "Con Neptuno en Acuario, esta alma disuelve toda separación para experimentar a la humanidad como un solo organismo. Están aquí para canalizar la evolución espiritual futura, para mostrar que todos estamos conectados, para soñar con un despertar colectivo.",
         
-        dreamVision: `Neptune in Aquarius dreams of universal awakening - all minds connected, humanity functioning as single conscious organism, technology and spirituality merged, future where separation is recognized as illusion.
+        dreamVision: `Neptuno en Acuario sueña con el despertar universal: todas las mentes conectadas, la humanidad funcionando como un solo organismo consciente, la tecnología y la espiritualidad fusionadas, un futuro donde la separación se reconoce como una ilusión.
 
-Their visions often involve quantum leaps in collective consciousness, humanity evolving into next stage through shared awakening, or technologies that enable telepathic unity.
+Sus visiones a menudo implican saltos cuánticos en la conciencia colectiva, la humanidad evolucionando hacia la siguiente etapa a través de un despertar compartido o tecnologías que permiten la unidad telepática.
 
-The gift is capacity to access collective mind, to channel visions of human potential, to serve as bridge between current and enlightened humanity.`,
+El don es la capacidad de acceder a la mente colectiva, de canalizar visiones del potencial humano, de servir de puente entre la humanidad actual y la iluminada.`,
         
-        dissolution: `Neptune dissolves all boundaries between beings. These souls may struggle with individual identity, experiencing themselves as part of collective field, or channeling collective consciousness directly.
+        dissolution: `Neptuno disuelve todas las fronteras entre los seres. Estas almas pueden luchar con la identidad individual, experimentarse a sí mismas como parte de un campo colectivo o canalizar la conciencia colectiva directamente.
 
-They also dissolve separation between individual and humanity, between personal growth and collective evolution. All awakening is collective, all service is to whole.
+También disuelven la separación entre el individuo y la humanidad, entre el crecimiento personal y la evolución colectiva. Todo despertar es colectivo, todo servicio es al todo.
 
-The challenge is not dissolving so completely they can't function individually - learning that serving collective requires maintaining enough self to be effective vessel.`,
+El desafío no es disolverse tan completamente que no puedan funcionar individualmente: aprender que servir a un colectivo requiere mantenerse lo suficiente como para ser un recipiente eficaz.`,
         
-        spiritualGift: `Their spiritual gift is channeling collective evolution - accessing visions of human future, downloading innovations that serve all, tuning into what collective is ready to become.
+        spiritualGift: `Su don espiritual es canalizar la evolución colectiva: acceder a visiones del futuro humano, descargar innovaciones que sirvan a todos, sintonizarnos con lo que el colectivo está listo para convertirse.
 
-They teach that we are one organism awakening to itself, that individual enlightenment serves collective, that separation is illusion to be dissolved. They spiritualize collective consciousness.
+Enseñan que somos un organismo que despierta a sí mismo, que la iluminación individual sirve a la colectiva, que la separación es una ilusión que debe disolverse. Espiritualizan la conciencia colectiva.
 
-The most powerful expression is the visionary whose channeled insights catalyze collective evolution, whose service to humanity comes from experiencing oneness directly.`,
+La expresión más poderosa es la del visionario cuyas ideas canalizadas catalizan la evolución colectiva, cuyo servicio a la humanidad proviene de experimentar la unidad directamente.`,
         
-        illusion: `The illusion is believing individual doesn't matter (spiritual bypassing of personal responsibility), or conversely that their vision should control collective. They may confuse detachment with enlightenment.
+        illusion: `La ilusión es creer que lo individual no importa (evitando espiritualmente la responsabilidad personal) o, por el contrario, que su visión debe controlar lo colectivo. Pueden confundir el desapego con la iluminación.
 
-They may also fall into spiritual bypassing of emotion and intimacy, believing evolved people transcend personal needs, or using collective service to avoid genuine relationship.
+También pueden caer en eludir espiritualmente las emociones y la intimidad, creyendo que las personas evolucionadas trascienden las necesidades personales o utilizando el servicio colectivo para evitar una relación genuina.
 
-The shadow is also utopian delusion - channeling futures that can't manifest, using spiritual vision to escape present, or manipulating through appearing to serve collective good.`,
+La sombra también es una ilusión utópica: canaliza futuros que no pueden manifestarse, usa la visión espiritual para escapar del presente o manipula aparentando servir al bien colectivo.`,
         
-        compassion: `Their compassion is universal and impersonal. They love humanity, care for collective, serve the whole. Their empathy extends to all beings equally.
+        compassion: `Su compasión es universal e impersonal. Aman a la humanidad, se preocupan por lo colectivo, sirven al todo. Su empatía se extiende a todos los seres por igual.
 
-They have capacity to see how individual suffering reflects collective wounds, to hold space for mass transformation, to envision healing for entire species.
+Tienen la capacidad de ver cómo el sufrimiento individual refleja las heridas colectivas, de dejar espacio para una transformación masiva y de imaginar la curación de especies enteras.
 
-The growth edge is learning that universal compassion includes individuals, that loving humanity requires loving actual humans, that collective service manifests through personal care.`,
+La ventaja del crecimiento es aprender que la compasión universal incluye a los individuos, que amar a la humanidad requiere amar a los seres humanos reales, que el servicio colectivo se manifiesta a través del cuidado personal.`,
         
-        creativity: `Their creativity channels collective future - making art that awakens masses, creating technologies that connect minds, developing innovations that serve human evolution.
+        creativity: `Su creatividad canaliza el futuro colectivo: creando arte que despierta a las masas, creando tecnologías que conectan mentes y desarrollando innovaciones que sirven a la evolución humana.
 
-They may pioneer collective art projects, create technologies for consciousness expansion, develop social innovations, or make visual/musical art that connects people to oneness.
+Pueden ser pioneros en proyectos de arte colectivo, crear tecnologías para la expansión de la conciencia, desarrollar innovaciones sociales o crear arte visual/musical que conecte a las personas con la unidad.
 
-The key is that their creativity serves collective awakening, makes future visible, shows humanity what we can become together.`,
+La clave es que su creatividad sirve al despertar colectivo, hace visible el futuro y muestra a la humanidad en lo que podemos llegar a ser juntos.`,
         
-        generational: `As generational influence, Neptune in Aquarius marks periods of maximum collective spiritual awakening potential, when humanity glimpses unity, when technology and spirituality merge.
+        generational: `Como influencia generacional, Neptuno en Acuario marca períodos de máximo potencial de despertar espiritual colectivo, cuando la humanidad vislumbra la unidad, cuando la tecnología y la espiritualidad se fusionan.
 
-On personal level, it creates souls who will channel collective evolution, who show that we are one, who serve as bridges to enlightened future.`,
+A nivel personal, crea almas que canalizarán la evolución colectiva, que mostrarán que somos uno, que servirán como puentes hacia un futuro iluminado.`,
         
-        healingPath: `Their healing path is through collective practice and humanitarian service - group meditation, serving movements, connecting to collective field as spiritual practice.
+        healingPath: `Su camino de curación es a través de la práctica colectiva y el servicio humanitario: meditación grupal, movimientos de servicio, conexión con el campo colectivo como práctica espiritual.
 
-They heal by contributing to collective evolution, by experiencing oneness directly, by serving whole. Connection is their prayer.
+Curan contribuyendo a la evolución colectiva, experimentando la unidad directamente, sirviendo al todo. La conexión es su oración.
 
-The most healing practice is learning to stay embodied while accessing collective consciousness, to serve humanity through grounded action, to make visions practical.`,
+La práctica más sanadora es aprender a permanecer encarnado mientras se accede a la conciencia colectiva, a servir a la humanidad a través de la acción fundamentada y a hacer que las visiones sean prácticas.`,
         
-        spiritualLesson: `The spiritual lesson is that we are one organism awakening to itself, that individual enlightenment serves collective evolution, that future is created through collective consciousness choosing to evolve.
+        spiritualLesson: `La lección espiritual es que somos un organismo que despierta a sí mismo, que la iluminación individual sirve a la evolución colectiva, que el futuro se crea a través de la conciencia colectiva que elige evolucionar.
 
-They're learning that serving collective requires individual wholeness, that universal vision needs grounding in present, that loving humanity includes loving yourself.`,
+Están aprendiendo que servir al colectivo requiere integridad individual, que la visión universal necesita estar basada en el presente, que amar a la humanidad incluye amarse a uno mismo.`,
         
-        affirmation: "I channel collective evolution. We are one organism awakening. My service to humanity flows from experienced unity. Future and present merge through me."
+        affirmation: "Canalizo la evolución colectiva. Somos un organismo que está despertando. Mi servicio a la humanidad fluye de la unidad experimentada. El futuro y el presente se fusionan a través de mí."
     },
     
     Pisces: {
-        title: "Neptune in Pisces - Pure Transcendence",
-        archetype: "The Ocean of God",
-        hook: "With Neptune in Pisces, this soul embodies pure spirituality - Neptune in its home. They are here for complete ego dissolution into divine ocean, to show that we are God experiencing itself.",
+        title: "Neptuno en Piscis - Trascendencia pura",
+        archetype: "El océano de Dios",
+        hook: "Con Neptuno en Piscis, esta alma encarna la espiritualidad pura: Neptuno en su hogar. Están aquí para la completa disolución del ego en el océano divino, para mostrar que somos Dios experimentándose a sí mismo.",
         
-        dreamVision: `Neptune in Pisces dreams of total enlightenment - all beings recognizing they are divine, all separation dissolved, ocean of consciousness flowing through infinite forms, complete return to source while embodied.
+        dreamVision: `Neptuno en Piscis sueña con la iluminación total: todos los seres reconocen que son divinos, toda separación se disuelve, un océano de conciencia fluye a través de infinitas formas, un retorno completo a la fuente mientras están encarnados.
 
-Their visions often involve mass mystical awakening, humanity remembering its divinity, or complete dissolution of illusion revealing only love remains.
+Sus visiones a menudo implican un despertar místico masivo, la humanidad recordando su divinidad o la disolución completa de la ilusión que revela que solo queda el amor.
 
-The gift is capacity for pure transcendence, direct divine experience, complete surrender to what is, channeling grace so purely that their presence itself awakens.`,
+El don es capacidad de pura trascendencia, de experiencia divina directa, de entrega total a lo que es, canalizando la gracia de manera tan pura que su propia presencia despierta.`,
         
-        dissolution: `Neptune in Pisces dissolves everything - ego, boundaries, separation, identity, form itself. These souls may struggle to stay embodied, to function practically, to maintain any sense of separate self.
+        dissolution: `Neptuno en Piscis lo disuelve todo: el ego, los límites, la separación, la identidad, la forma misma. Estas almas pueden tener dificultades para permanecer encarnadas, para funcionar de manera práctica, para mantener cualquier sentido de un yo separado.
 
-This is maximum Neptune expression - complete boundarylessness, total mysticism, pure channel for divine. All distinctions disappear into oceanic unity.
+Ésta es la expresión máxima de Neptuno: completa ilimitación, misticismo total, canal puro para lo divino. Todas las distinciones desaparecen en la unidad oceánica.
 
-The challenge is staying incarnated - learning that enlightenment includes embodiment, that complete dissolution serves when grounded enough to function, that you can be ocean and wave simultaneously.`,
+El desafío es permanecer encarnado: aprender que la iluminación incluye la encarnación, que la disolución completa sirve cuando estás lo suficientemente conectado a tierra para funcionar, que puedes ser océano y ola simultáneamente.`,
         
-        spiritualGift: `Their spiritual gift is being pure channel for divine grace - offering healing through presence alone, awakening others through their surrendered being, demonstrating that you are not drop in ocean but ocean in drop.
+        spiritualGift: `Su don espiritual es ser un canal puro para la gracia divina: ofrecer curación solo a través de la presencia, despertar a otros a través de su ser rendido, demostrando que no eres una gota en el océano sino un océano en una gota.
 
-They teach that separation is complete illusion, that you are already enlightened, that practice is remembering not becoming. They are spirituality itself.
+Enseñan que la separación es una completa ilusión, que ya estás iluminado, que la práctica es recordar, no llegar a ser. Son la espiritualidad misma.
 
-The most powerful expression is the embodied mystic who has dissolved so completely into divine that they function as pure grace, whose very existence serves collective awakening.`,
+La expresión más poderosa es la del místico encarnado que se ha disuelto tan completamente en lo divino que funciona como pura gracia, cuya existencia misma sirve al despertar colectivo.`,
         
-        illusion: `The illusion is believing they need to escape embodiment to be enlightened, or conversely that spiritual people function normally. They may confuse dissociation with transcendence, escapism with enlightenment.
+        illusion: `La ilusión es creer que necesitan escapar de la encarnación para ser iluminados o, por el contrario, que las personas espirituales funcionan normalmente. Pueden confundir la disociación con la trascendencia, el escapismo con la iluminación.
 
-They may also fall into spiritual bypassing of all practical needs, believing form is illusion so doesn't matter, or using transcendence to avoid healing actual wounds.
+También pueden caer en eludir espiritualmente todas las necesidades prácticas, creer que la forma es una ilusión, por lo que no importa, o utilizar la trascendencia para evitar curar heridas reales.
 
-The shadow is also addiction and escapism - using substances or fantasy to artificially induce dissolution, claiming enlightenment while being dysfunctional, or manipulating through appearing divinely surrendered.`,
+La sombra también es adicción y escapismo: usar sustancias o fantasía para inducir artificialmente la disolución, reclamar la iluminación siendo disfuncional o manipular pareciendo divinamente rendido.`,
         
-        compassion: `Their compassion is infinite and unconditional. They are compassion itself - boundaryless love, complete acceptance, dissolving all judgment into grace.
+        compassion: `Su compasión es infinita e incondicional. Son la compasión misma: amor sin límites, aceptación completa, que disuelve todo juicio en gracia.
 
-They have capacity to love everyone and everything equally, to see only divine in all forms, to hold space for all suffering without being overwhelmed because they know it's all God.
+Tienen capacidad de amar a todos y a todo por igual, de ver sólo lo divino en todas las formas, de dar espacio a todo sufrimiento sin sentirse abrumados porque saben que todo es Dios.
 
-The growth edge is learning that infinite compassion requires boundaries to avoid being depleted, that loving all beings includes taking care of this body, that martyrdom doesn't serve.`,
+La ventaja del crecimiento es aprender que la compasión infinita requiere límites para evitar agotarse, que amar a todos los seres incluye cuidar este cuerpo, que el martirio no sirve.`,
         
-        creativity: `Their creativity channels pure divine - making art that transports directly into transcendence, creating beauty that dissolves viewer into source, expressing ineffable through form.
+        creativity: `Su creatividad canaliza pura divinidad: crea arte que transporta directamente a la trascendencia, crea belleza que disuelve al espectador en la fuente y expresa lo inefable a través de la forma.
 
-They may pioneer transcendent music, create visual art that induces mystical states, develop poetry that captures enlightenment, or express through movement what cannot be said.
+Pueden ser pioneros en música trascendente, crear arte visual que induzca estados místicos, desarrollar poesía que capture la iluminación o expresar a través del movimiento lo que no se puede decir.
 
-The key is that their creativity serves complete awakening - not just understanding but direct experience of divine, dissolution of observer into art itself.`,
+La clave es que su creatividad sirve para un despertar completo: no sólo para la comprensión sino para la experiencia directa de lo divino, la disolución del observador en el arte mismo.`,
         
-        generational: `As generational influence, Neptune in Pisces marks periods of maximum spiritual awakening potential, when mysticism surges, when collective consciousness touches transcendence, when divine reveals itself.
+        generational: `Como influencia generacional, Neptuno en Piscis marca períodos de máximo potencial de despertar espiritual, cuando surge el misticismo, cuando la conciencia colectiva toca la trascendencia, cuando lo divino se revela.
 
-On personal level, it creates souls who will show that complete enlightenment is possible, who demonstrate that we are divine, who serve as pure channels for grace.`,
+A nivel personal, crea almas que mostrarán que la iluminación completa es posible, que demostrarán que somos divinos, que servirán como canales puros para la gracia.`,
         
-        healingPath: `Their healing path is through complete surrender and mystical practice - meditation unto dissolution, oceanic experiences, art as transcendence, allowing grace to live through them.
+        healingPath: `Su camino de curación pasa por la entrega total y la práctica mística: meditación hasta la disolución, experiencias oceánicas, el arte como trascendencia, permitiendo que la gracia viva a través de ellas.
 
-They heal by surrendering completely, by releasing all control, by dissolving into divine and allowing form to be moved by grace. Surrender is their constant state.
+Curan entregándose por completo, liberando todo control, disolviéndose en lo divino y permitiendo que la forma sea movida por la gracia. La rendición es su estado constante.
 
-The most healing practice is learning to embody transcendence, to function while completely surrendered, to be both human and divine simultaneously without choosing one.`,
+La práctica más sanadora es aprender a encarnar la trascendencia, a funcionar completamente entregado, a ser humano y divino simultáneamente sin elegir uno.`,
         
-        spiritualLesson: `The spiritual lesson is that you ARE the divine - not becoming, not approaching, but already completely. All spiritual seeking is God seeking itself.
+        spiritualLesson: `La lección espiritual es que ERES lo divino: no llegas a serlo, no te acercas, sino que ya lo eres por completo. Toda búsqueda espiritual es Dios buscándose a sí mismo.
 
-They're learning that enlightenment includes embodiment, that complete dissolution serves when grounded in functioning form, that being ocean doesn't mean abandoning the wave.
+Están aprendiendo que la iluminación incluye la encarnación, que la disolución completa sirve cuando se basa en una forma funcional, que ser océano no significa abandonar la ola.
 
-The ultimate expression is someone so completely dissolved into divine that they are pure grace flowing through human form - enlightenment embodied, ocean playing as wave while knowing it's ocean.`,
+La máxima expresión es alguien tan completamente disuelto en lo divino que es pura gracia que fluye a través de la forma humana: la iluminación encarnada, el océano jugando como una ola sabiendo que es un océano.`,
         
-        affirmation: "I am ocean of divine consciousness. All separation is illusion. I dissolve completely while staying embodied. I am God experiencing God. Only love remains."
+        affirmation: "Soy un océano de conciencia divina. Toda separación es una ilusión. Me disuelvo completamente mientras permanezco encarnado. Soy Dios experimentando a Dios. Sólo queda el amor."
     }
 };
 
 var DEEP_PLUTO_READINGS = {
     Aries: {
-        title: "Pluto in Aries - Power Reclaimed",
-        archetype: "The Death and Rebirth of Self",
-        hook: "With Pluto in Aries, this soul transforms through discovering authentic power and releasing false identities. They are here to die and be reborn repeatedly, each time more truly themselves.",
+        title: "Plutón en Aries - Poder recuperado",
+        archetype: "La muerte y el renacimiento del yo",
+        hook: "Con Plutón en Aries, esta alma se transforma al descubrir el poder auténtico y liberar identidades falsas. Están aquí para morir y renacer repetidamente, cada vez más verdaderamente ellos mismos.",
         
-        transformation: `Pluto in Aries transforms the very concept of self. These souls experience death and rebirth of identity, sometimes many times in one lifetime. Each crisis strips away false self and reveals true essence.
+        transformation: `Plutón en Aries transforma el concepto mismo de uno mismo. Estas almas experimentan la muerte y el renacimiento de la identidad, a veces muchas veces en una vida. Cada crisis despoja al falso yo y revela la verdadera esencia.
 
-They transform through claiming power, through discovering what they're truly capable of when pushed to limits, through learning that they can survive anything.
+Se transforman al reclamar poder, al descubrir de qué son realmente capaces cuando se los empuja al límite, al aprender que pueden sobrevivir a cualquier cosa.
 
-Their gift is capacity to reinvent themselves completely, to rise from ashes stronger, to transform weakness into unprecedented strength. They are phoenixes.`,
+Su don es la capacidad de reinventarse por completo, de resurgir de las cenizas más fuertes, de transformar la debilidad en una fuerza sin precedentes. Son fénix.`,
         
-        power: `Their power is personal and immediate. They have capacity for immense will, tremendous courage, and ability to accomplish what seems impossible through sheer determined force.
+        power: `Su poder es personal e inmediato. Tienen una capacidad de voluntad inmensa, un coraje tremendo y la capacidad de lograr lo que parece imposible mediante pura fuerza decidida.
 
-But they must learn difference between authentic power (self-mastery) and false power (domination). Their journey involves discovering real strength versus compensatory aggression.
+Pero deben aprender la diferencia entre el poder auténtico (autodominio) y el poder falso (dominación). Su viaje implica descubrir la fuerza real frente a la agresión compensatoria.
 
-The most powerful expression is someone who has faced their own powerlessness completely and transformed it into compassionate strength - power that uplifts rather than dominates.`,
+La expresión más poderosa es la de alguien que ha enfrentado completamente su propia impotencia y la ha transformado en fuerza compasiva: poder que eleva en lugar de dominar.`,
         
-        shadow: `Their shadow is rage, violence, and domination. When they feel powerless, they may become tyrants. When wounded, they may wound others. The Mars-Pluto combination can be explosive.
+        shadow: `Su sombra es la rabia, la violencia y la dominación. Cuando se sienten impotentes, pueden convertirse en tiranos. Cuando son heridos, pueden herir a otros. La combinación Marte-Plutón puede ser explosiva.
 
-They have capacity for destruction - of themselves and others. Learning to channel plutonic intensity constructively rather than destructively is life work.
+Tienen capacidad de destrucción, de sí mismos y de los demás. Aprender a canalizar la intensidad plutónica de manera constructiva y no destructiva es un trabajo de vida.
 
-The deeper shadow is hidden powerlessness - appearing strong while feeling weak inside, dominating others to avoid own vulnerability, creating crises to feel in control.`,
+La sombra más profunda es la impotencia oculta: parecer fuerte mientras nos sentimos débiles por dentro, dominar a los demás para evitar la propia vulnerabilidad, crear crisis para sentirnos en control.`,
         
-        obsession: `They can become obsessed with strength, achievement, being first, or proving themselves. The drive to be powerful can consume everything else.
+        obsession: `Pueden obsesionarse con la fuerza, los logros, ser los primeros o demostrar su valía. El impulso de ser poderoso puede consumir todo lo demás.
 
-Or they obsess about their wounds, their powerlessness, revenge against those who hurt them. The intensity doesn't have middle ground until they learn balance.
+O se obsesionan con sus heridas, su impotencia, la venganza contra quienes les hicieron daño. La intensidad no tiene término medio hasta que aprenden el equilibrio.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where they need to die and be reborn.`,
+La clave es reconocer la obsesión como un signo de transformación que intenta ocurrir: donde están obsesionados es donde necesitan morir y renacer.`,
         
-        crisis: `Crisis is their catalyst. Each emergency, each threat to survival, each moment of powerlessness becomes opportunity for transformation. They need pressure to reveal their power.
+        crisis: `La crisis es su catalizador. Cada emergencia, cada amenaza a la supervivencia, cada momento de impotencia se convierte en una oportunidad de transformación. Necesitan presión para revelar su poder.
 
-They may unconsciously create crises to force their own evolution. Learning to transform without trauma becomes mature expression of this placement.
+Pueden crear crisis inconscientemente para forzar su propia evolución. Aprender a transformarse sin trauma se convierte en una expresión madura de esta colocación.
 
-The gift is that in any crisis, they have access to reserves of strength others don't. When everything is on the line, they discover they're capable of anything.`,
+El regalo es que, en cualquier crisis, tienen acceso a reservas de fuerza que otros no tienen. Cuando todo está en juego, descubren que son capaces de cualquier cosa.`,
         
-        rebirth: `Each rebirth makes them more authentic. False identities burn away in successive crises until what remains is indestructible essence. They become increasingly real.
+        rebirth: `Cada renacimiento los hace más auténticos. Las identidades falsas se queman en crisis sucesivas hasta que lo que queda es una esencia indestructible. Se vuelven cada vez más reales.
 
-The phoenix process can be exhausting - they may wish they could just be stable. But their soul chose transformation through identity death and rebirth.
+El proceso del Fénix puede ser agotador: es posible que deseen simplemente estar estables. Pero su alma eligió la transformación a través de la muerte y el renacimiento de la identidad.
 
-The mature expression is someone who has died and been reborn so many times they no longer fear change, who is so deeply themselves that nothing external can threaten them.`,
+La expresión madura es alguien que ha muerto y renacido tantas veces que ya no teme al cambio, que es tan profundamente él mismo que nada externo puede amenazarlo.`,
         
-        generational: `As generational influence (Pluto spends ~20 years per sign), Pluto in Aries marks periods of massive transformation in individual power, leadership, warfare, and human will.
+        generational: `Como influencia generacional (Plutón pasa ~20 años por signo), Plutón en Aries marca períodos de transformación masiva en el poder individual, el liderazgo, la guerra y la voluntad humana.
 
-On personal level, it creates souls who will transform humanity's relationship with power, leadership, and individualism - often through their own intense journey of death and rebirth.`,
+A nivel personal, crea almas que transformarán la relación de la humanidad con el poder, el liderazgo y el individualismo, a menudo a través de su propio intenso viaje de muerte y renacimiento.`,
         
-        relationships: `In relationships, they need partners who can handle intensity, who aren't threatened by their power, who can witness their transformation without trying to stop it.
+        relationships: `En las relaciones, necesitan socios que puedan manejar la intensidad, que no se sientan amenazados por su poder, que puedan presenciar su transformación sin intentar detenerla.
 
-Power struggles can be constant until they learn that true intimacy requires vulnerability, that real power means not needing to dominate.
+Las luchas de poder pueden ser constantes hasta que aprenden que la verdadera intimidad requiere vulnerabilidad, que el poder real significa no necesitar dominar.
 
-The evolved expression is bringing transformative intensity to relationship - creating partnerships so honest, so deep, so real that both people are constantly being reborn through the connection.`,
+La expresión evolucionada aporta intensidad transformadora a la relación, creando asociaciones tan honestas, tan profundas y tan reales que ambas personas renacen constantemente a través de la conexión.`,
         
-        lifeWork: `Their life work involves transformation of self and potentially transforming others through their example. Crisis intervention, extreme environments, psychology, or leadership in intense fields serves them.
+        lifeWork: `El trabajo de su vida implica la transformación de uno mismo y, potencialmente, la transformación de otros a través de su ejemplo. Les sirve la intervención en crisis, los entornos extremos, la psicología o el liderazgo en campos intensos.
 
-They're here to demonstrate that human will is more powerful than circumstances, that you can overcome anything, that rebirth from seeming death is possible.
+Están aquí para demostrar que la voluntad humana es más poderosa que las circunstancias, que se puede superar cualquier cosa, que es posible renacer de una aparente muerte.
 
-The most fulfilling path is one where they're constantly being challenged to discover new depths of power, where their intensity serves others' transformation.`,
+El camino más satisfactorio es aquel en el que se les desafía constantemente a descubrir nuevas profundidades de poder, en el que su intensidad sirve a la transformación de los demás.`,
         
-        shadowIntegration: `Shadow work is essential and ongoing. They must face their capacity for destruction, their hunger for power, their rage at powerlessness. Denying shadow makes it dangerous.
+        shadowIntegration: `El trabajo paralelo es esencial y continuo. Deben afrontar su capacidad de destrucción, su hambre de poder, su rabia ante la impotencia. Negar la sombra lo hace peligroso.
 
-The work is befriending the destroyer, understanding that death serves rebirth, that acknowledging their power (including its dark expressions) allows conscious choice.
+La obra es hacerse amigo del destructor, entendiendo que la muerte sirve para el renacimiento, que reconocer su poder (incluidas sus expresiones oscuras) permite una elección consciente.
 
-Integration means becoming someone who has such intimate relationship with their shadow that it becomes ally rather than enemy - the warrior who knows their dark side and consciously chooses light.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su sombra que se convierte en aliado en lugar de enemigo: el guerrero que conoce su lado oscuro y elige conscientemente la luz.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Aries represents souls who incarnated to transform human understanding of power and self. They're here to show that authentic power comes from within, that identity is fluid, that death is gateway to rebirth.
+        spiritualMeaning: `Espiritualmente, Plutón en Aries representa almas que encarnaron para transformar la comprensión humana del poder y del yo. Están aquí para mostrar que el poder auténtico viene del interior, que la identidad es fluida, que la muerte es la puerta de entrada al renacimiento.
 
-Their spiritual gift is demonstrating that you can lose everything and not only survive but become stronger. They teach that true self is indestructible.
+Su don espiritual es demostrar que puedes perderlo todo y no sólo sobrevivir sino volverte más fuerte. Enseñan que el verdadero yo es indestructible.
 
-The ultimate expression is the spiritual warrior who has died and been reborn so many times they embody eternal phoenix - showing humanity that transformation is our true nature.`,
+La máxima expresión es el guerrero espiritual que ha muerto y renacido tantas veces que encarna el fénix eterno, mostrándole a la humanidad que la transformación es nuestra verdadera naturaleza.`,
         
-        affirmation: "I embrace my power fully. I die and am reborn with each breath. My strength comes from facing my shadow. I transform myself and inspire transformation in others."
+        affirmation: "Acepto mi poder plenamente. Muero y renazco con cada respiro. Mi fuerza proviene de enfrentar mi sombra. Me transformo e inspiro transformación en los demás."
     },
     
     // Remaining Pluto signs with comprehensive transformative structure
     
     Taurus: {
-        title: "Pluto in Taurus - Wealth Transformation",
-        archetype: "The Resource Phoenix",
-        hook: "With Pluto in Taurus, this soul transforms through death and rebirth of value systems, relationship with resources, and connection to earth. They are here to revolutionize what we value and how we relate to material world.",
+        title: "Plutón en Tauro - Transformación de la riqueza",
+        archetype: "El fénix de recursos",
+        hook: "Con Plutón en Tauro, esta alma se transforma mediante la muerte y el renacimiento de los sistemas de valores, la relación con los recursos y la conexión con la tierra. Están aquí para revolucionar lo que valoramos y cómo nos relacionamos con el mundo material.",
         
-        transformation: `Pluto in Taurus creates total transformation of material security and value systems. These souls experience complete upheaval in finances, resources, or relationship with earth - sometimes multiple times.
+        transformation: `Plutón en Tauro crea una transformación total de la seguridad material y los sistemas de valores. Estas almas experimentan una completa agitación en las finanzas, los recursos o la relación con la tierra, a veces varias veces.
 
-They transform through losing what they valued materially, then discovering new forms of abundance. Through facing resource scarcity or environmental crisis, then rebirthing relationship with earth.
+Se transforman al perder lo que valoraban materialmente y luego descubren nuevas formas de abundancia. Al enfrentar la escasez de recursos o la crisis ambiental, luego renacer la relación con la tierra.
 
-Their gift is capacity to completely reinvent economic systems, to transform devastated land into abundance, to rise from financial ruin with new understanding of true wealth. They are phoenixes of the material realm.`,
+Su don es la capacidad de reinventar completamente los sistemas económicos, de transformar las tierras devastadas en abundancia, de salir de la ruina financiera con una nueva comprensión de la verdadera riqueza. Son fénix del reino material.`,
         
-        power: `Their power is in relationship with resources and earth. They have capacity to create immense wealth, to transform barren land fertile, to turn nothing into abundance through sheer determined transformation.
+        power: `Su poder está en relación con los recursos y la tierra. Tienen la capacidad de crear inmensas riquezas, de transformar tierras áridas en fértiles, de convertir la nada en abundancia mediante una transformación pura y decidida.
 
-But they must learn difference between authentic wealth (connection to earth, sustainable abundance) and false power (hoarding, material control). Their journey involves discovering real security versus compensatory accumulation.
+Pero deben aprender la diferencia entre riqueza auténtica (conexión con la tierra, abundancia sostenible) y poder falso (acaparamiento, control material). Su viaje implica descubrir la seguridad real frente a la acumulación compensatoria.
 
-The most powerful expression is someone who has lost everything materially and transformed it into understanding that true wealth is in relationship with earth, in sustainable systems, in shared abundance.`,
+La expresión más poderosa es la de alguien que lo ha perdido todo materialmente y lo ha transformado en la comprensión de que la verdadera riqueza está en la relación con la tierra, en sistemas sostenibles, en la abundancia compartida.`,
         
-        shadow: `Their shadow is greed, hoarding, and destructive relationship with matter. When they feel insecure, they may accumulate compulsively. When wounded around resources, they may wound earth or others through exploitation.
+        shadow: `Su sombra es la codicia, el acaparamiento y la relación destructiva con la materia. Cuando se sienten inseguros, pueden acumular compulsivamente. Cuando se sienten heridos en torno a los recursos, pueden herir la tierra o a otros mediante la explotación.
 
-They have capacity for environmental destruction or economic manipulation. Learning to channel plutonic intensity toward sustainable abundance rather than extraction is life work.
+Tienen capacidad de destrucción ambiental o manipulación económica. Aprender a canalizar la intensidad plutónica hacia la abundancia sostenible en lugar de la extracción es un trabajo de vida.
 
-The deeper shadow is hidden scarcity - appearing abundant while feeling desperately insecure inside, controlling resources to avoid vulnerability, creating financial crises to feel powerful.`,
+La sombra más profunda es la escasez oculta: parecer abundante mientras nos sentimos desesperadamente inseguros por dentro, controlando los recursos para evitar la vulnerabilidad, creando crisis financieras para sentirnos poderosos.`,
         
-        obsession: `They can become obsessed with wealth, security, physical comfort, or control of resources. The drive to never be without can consume everything else.
+        obsession: `Pueden obsesionarse con la riqueza, la seguridad, la comodidad física o el control de los recursos. El impulso de no estar nunca sin puede consumir todo lo demás.
 
-Or they obsess about earth, sustainability, or preventing environmental collapse. The intensity doesn't have middle ground until they learn balance.
+O se obsesionan con la tierra, la sostenibilidad o la prevención del colapso ambiental. La intensidad no tiene término medio hasta que aprenden el equilibrio.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where old value system needs to die and new one be born.`,
+La clave es reconocer la obsesión como un signo de transformación que está tratando de ocurrir: donde están obsesionados es donde el viejo sistema de valores necesita morir y nacer uno nuevo.`,
         
-        crisis: `Crisis around resources or earth is their catalyst. Financial collapse, environmental disaster, loss of possessions, or earth changes become opportunities for transformation. They need material pressure to reveal their power.
+        crisis: `La crisis en torno a los recursos o la tierra es su catalizador. El colapso financiero, el desastre ambiental, la pérdida de posesiones o los cambios terrestres se convierten en oportunidades de transformación. Necesitan presión material para revelar su poder.
 
-They may unconsciously create resource crises to force evolution of their value system. Learning to transform without trauma becomes mature expression.
+Pueden crear inconscientemente crisis de recursos para forzar la evolución de su sistema de valores. Aprender a transformarse sin trauma se convierte en una expresión madura.
 
-The gift is that in any resource crisis, they have capacity to rebuild from nothing, to create abundance where others see only devastation. When everything is lost, they discover they can create wealth from scratch.`,
+El regalo es que, en cualquier crisis de recursos, tienen la capacidad de reconstruir desde la nada, de crear abundancia donde otros sólo ven devastación. Cuando todo se pierde, descubren que pueden crear riqueza desde cero.`,
         
-        rebirth: `Each rebirth makes their relationship with matter more conscious. False values burn away in successive crises until what remains is authentic understanding of abundance as sustainable, shared, sacred.
+        rebirth: `Cada renacimiento hace más consciente su relación con la materia. Los valores falsos se queman en crisis sucesivas hasta que lo que queda es una comprensión auténtica de la abundancia como sostenible, compartida y sagrada.
 
-The phoenix process around resources can be exhausting - they may wish they could just be stable financially. But their soul chose transformation through material death and rebirth.
+El proceso del fénix en torno a los recursos puede ser agotador: es posible que deseen poder ser estables financieramente. Pero su alma eligió la transformación a través de la muerte y el renacimiento materiales.
 
-The mature expression is someone who has lost and rebuilt wealth so many times they no longer fear material insecurity, who is so deeply connected to earth as source that external resources don't define them.`,
+La expresión madura es alguien que ha perdido y reconstruido riqueza tantas veces que ya no teme a la inseguridad material, que está tan profundamente conectado con la tierra como fuente que los recursos externos no lo definen.`,
         
-        generational: `As generational influence, Pluto in Taurus marks periods of massive economic transformation, environmental crisis, and complete overhaul of value systems and relationship with earth.
+        generational: `Como influencia generacional, Plutón en Tauro marca períodos de transformación económica masiva, crisis ambiental y revisión completa de los sistemas de valores y las relaciones con la Tierra.
 
-On personal level, it creates souls who will transform humanity's relationship with resources, earth, and material security - often through their own intense journey of material death and rebirth.`,
+A nivel personal, crea almas que transformarán la relación de la humanidad con los recursos, la tierra y la seguridad material, a menudo a través de su propio intenso viaje de muerte y renacimiento material.`,
         
-        relationships: `In relationships, they need partners who don't define love through material security, who can handle financial transformation, who share their values about earth and sustainability.
+        relationships: `En las relaciones, necesitan socios que no definan el amor a través de la seguridad material, que puedan manejar la transformación financiera, que compartan sus valores sobre la tierra y la sostenibilidad.
 
-Power struggles around money and resources can be constant until they learn that true intimacy includes shared resources and that real security comes from commitment, not control.
+Las luchas de poder en torno al dinero y los recursos pueden ser constantes hasta que aprenden que la verdadera intimidad incluye recursos compartidos y que la seguridad real proviene del compromiso, no del control.
 
-The evolved expression is bringing transformative intensity to creating sustainable abundance together - partnerships that weather financial storms and emerge stronger.`,
+La expresión evolucionada es aportar intensidad transformadora para crear juntos abundancia sostenible: asociaciones que resisten las tormentas financieras y emergen más fuertes.`,
         
-        lifeWork: `Their life work involves transformation of resources - sustainable economics, environmental restoration, financial crisis management, or revolutionary relationship with earth.
+        lifeWork: `El trabajo de su vida implica la transformación de recursos: economía sostenible, restauración ambiental, gestión de crisis financieras o relación revolucionaria con la tierra.
 
-They're here to demonstrate that value systems can transform, that devastated earth can be healed, that wealth can be recreated after loss.
+Están aquí para demostrar que los sistemas de valores pueden transformarse, que la tierra devastada puede sanarse, que la riqueza puede recrearse después de una pérdida.
 
-The most fulfilling path is one where they're transforming broken economic or environmental systems, where their intensity serves regeneration of earth and resources.`,
+El camino más satisfactorio es aquel en el que están transformando sistemas económicos o ambientales rotos, donde su intensidad sirve para la regeneración de la tierra y los recursos.`,
         
-        shadowIntegration: `Shadow work around greed, hoarding, and fear of scarcity is essential. They must face their capacity to harm earth or exploit others in pursuit of security. Denying shadow makes it dangerous.
+        shadowIntegration: `El trabajo en la sombra en torno a la codicia, el acaparamiento y el miedo a la escasez es esencial. Deben afrontar su capacidad de dañar la Tierra o explotar a otros en pos de la seguridad. Negar la sombra lo hace peligroso.
 
-The work is befriending their hunger for resources, understanding that scarcity wounds drive it, that acknowledging their material fears allows conscious choice.
+El trabajo es hacerse amigo de su hambre de recursos, entendiendo que las heridas de la escasez la impulsan, que reconocer sus miedos materiales les permite elegir conscientemente.
 
-Integration means becoming someone who has such intimate relationship with their scarcity shadow that it becomes ally - the builder who knows their dark side and consciously chooses sustainable abundance.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su sombra de escasez que se convierte en un aliado: el constructor que conoce su lado oscuro y elige conscientemente la abundancia sostenible.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Taurus represents souls who incarnated to transform human relationship with matter and earth. They're here to show that security comes from connection to earth, not control of resources.
+        spiritualMeaning: `Espiritualmente, Plutón en Tauro representa las almas que encarnaron para transformar la relación humana con la materia y la tierra. Están aquí para demostrar que la seguridad proviene de la conexión a la tierra, no del control de los recursos.
 
-Their spiritual gift is demonstrating that you can lose all material possessions and not only survive but discover true wealth in relationship with earth itself.
+Su don espiritual demuestra que se pueden perder todas las posesiones materiales y no sólo sobrevivir sino descubrir la verdadera riqueza en relación con la tierra misma.
 
-The ultimate expression is the material mystic who has died and been reborn through resource transformation so many times they embody earth as source - showing humanity that real abundance is sustainable, shared, and sacred.`,
+La máxima expresión es el místico material que ha muerto y renacido a través de la transformación de recursos tantas veces que encarna la tierra como fuente, mostrando a la humanidad que la abundancia real es sostenible, compartida y sagrada.`,
         
-        affirmation: "I transform my relationship with resources and earth. True wealth flows through connection, not control. I die to false values and am reborn in sustainable abundance. I am phoenix of material realm."
+        affirmation: "Transformo mi relación con los recursos y la tierra. La verdadera riqueza fluye a través de la conexión, no del control. Muero a valores falsos y renazco en abundancia sostenible. Soy el fénix del reino material."
     },
     
     Gemini: {
-        title: "Pluto in Gemini - Mind Transformation",
-        archetype: "The Death of Lies",
-        hook: "With Pluto in Gemini, this soul transforms through death and rebirth of mental structures, communication patterns, and belief in surface reality. They are here to uncover hidden truths and speak what others fear to say.",
+        title: "Plutón en Géminis - Transformación mental",
+        archetype: "La muerte de las mentiras",
+        hook: "Con Plutón en Géminis, esta alma se transforma mediante la muerte y el renacimiento de estructuras mentales, patrones de comunicación y creencia en la realidad superficial. Están aquí para descubrir verdades ocultas y decir lo que otros temen decir.",
         
-        transformation: `Pluto in Gemini creates total transformation of thinking, communication, and mental structures. These souls experience complete breakdown of how they think, communicate, or perceive reality - sometimes through trauma that shatters their worldview.
+        transformation: `Plutón en Géminis crea una transformación total del pensamiento, la comunicación y las estructuras mentales. Estas almas experimentan un colapso total en su forma de pensar, comunicarse o percibir la realidad, a veces a través de un trauma que destroza su visión del mundo.
 
-They transform through discovering hidden information, uncovering lies, or having their entire mental framework destroyed and rebuilt. Through crisis that forces new ways of thinking.
+Se transforman descubriendo información oculta, descubriendo mentiras o destruyendo y reconstruyendo todo su marco mental. A través de una crisis que obliga a nuevas formas de pensar.
 
-Their gift is capacity to see through all lies, to communicate uncomfortable truths, to transform communication from superficial to profound. They are truth excavators who won't stop until they reach bedrock reality.`,
+Su don es la capacidad de ver más allá de todas las mentiras, de comunicar verdades incómodas, de transformar la comunicación de superficial a profunda. Son excavadores de la verdad que no pararán hasta llegar a la realidad fundamental.`,
         
-        power: `Their power is through words, information, and uncovering truth. They have capacity to wield language as weapon or healing, to destroy with truth or transform with it.
+        power: `Su poder reside en las palabras, la información y en descubrir la verdad. Tienen capacidad de esgrimir el lenguaje como arma o sanación, para destruir con la verdad o transformar con ella.
 
-But they must learn difference between truth-telling that serves (exposing corruption) and truth-telling that destroys (using honesty as cruelty). Their journey involves discovering communication as power versus manipulation.
+Pero deben aprender la diferencia entre decir la verdad que sirve (exponiendo la corrupción) y decir la verdad que destruye (usar la honestidad como crueldad). Su viaje implica descubrir la comunicación como poder frente a manipulación.
 
-The most powerful expression is someone who has faced their own capacity for lies and manipulation, transformed it, and now wields truth with both precision and compassion.`,
+La expresión más poderosa es la de alguien que ha enfrentado su propia capacidad de mentiras y manipulación, la ha transformado y ahora maneja la verdad con precisión y compasión.`,
         
-        shadow: `Their shadow is manipulation through words, propaganda, lies disguised as truth. When they feel powerless, they may control through information. When wounded, they may wound others with words.
+        shadow: `Su sombra es la manipulación a través de palabras, propaganda, mentiras disfrazadas de verdad. Cuando se sienten impotentes, pueden controlar a través de la información. Cuando son heridos, pueden herir a otros con palabras.
 
-They have capacity for psychological manipulation, gaslighting, or weaponizing communication. Learning to channel plutonic intensity toward honest communication rather than control is essential.
+Tienen capacidad de manipulación psicológica, iluminación con gas o convertir la comunicación en un arma. Es esencial aprender a canalizar la intensidad plutónica hacia una comunicación honesta en lugar de hacia el control.
 
-The deeper shadow is hidden dishonesty - appearing truthful while lying, using "brutal honesty" to manipulate, creating information crises to feel powerful.`,
+La sombra más profunda es la deshonestidad oculta: parecer sincero mientras miente, utilizar la "honestidad brutal" para manipular, crear crisis de información para sentirse poderoso.`,
         
-        obsession: `They can become obsessed with truth, hidden information, conspiracy theories, or uncovering what's concealed. The drive to know what's really happening can consume everything.
+        obsession: `Pueden obsesionarse con la verdad, la información oculta, las teorías de conspiración o descubrir lo que está oculto. El impulso de saber qué está pasando realmente puede consumirlo todo.
 
-Or they obsess about being heard, having their voice matter, or controlling narratives. The intensity around communication doesn't have middle ground until they learn balance.
+O se obsesionan con ser escuchados, que su voz importe o controlar las narrativas. La intensidad en torno a la comunicación no tiene término medio hasta que aprenden el equilibrio.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed with information is where old mental structures need to die.`,
+La clave es reconocer la obsesión como un signo de transformación que intenta ocurrir: donde están obsesionados con la información es donde las viejas estructuras mentales necesitan morir.`,
         
-        crisis: `Crisis around communication, information, or siblings/close connections is their catalyst. Having worldview shattered, discovering truth that destroys previous beliefs, or communication breakdown becomes opportunity for transformation.
+        crisis: `Las crisis en torno a la comunicación, la información o los hermanos/conexiones cercanas son su catalizador. Tener una visión del mundo destrozada, descubrir una verdad que destruye creencias previas o una interrupción de la comunicación se convierte en una oportunidad para la transformación.
 
-They may unconsciously create information crises to force mental evolution. Learning to transform thinking without traumatic truth-bombs becomes mature expression.
+Pueden crear inconscientemente crisis de información para forzar la evolución mental. Aprender a transformar el pensamiento sin bombas de verdad traumáticas se convierte en una expresión madura.
 
-The gift is that when everyone's lying, they can see truth. When information systems fail, they can rebuild communication from authentic foundation.`,
+El regalo es que cuando todos mienten, pueden ver la verdad. Cuando los sistemas de información fallan, pueden reconstruir la comunicación a partir de una base auténtica.`,
         
-        rebirth: `Each rebirth makes their communication more authentic. False narratives burn away in successive crises until what remains is capacity to speak truth even when it's uncomfortable.
+        rebirth: `Cada renacimiento hace que su comunicación sea más auténtica. Las narrativas falsas se queman en crisis sucesivas hasta que lo que queda es la capacidad de decir la verdad incluso cuando resulta incómoda.
 
-The phoenix process around thinking can be exhausting - they may wish they could just believe surface stories. But their soul chose transformation through mental death and rebirth.
+El proceso del fénix en torno al pensamiento puede ser agotador: es posible que deseen poder creer en historias superficiales. Pero su alma eligió la transformación mediante la muerte mental y el renacimiento.
 
-The mature expression is someone who has had their mind destroyed and rebuilt so many times they can hold multiple truths, who communicates with power because they've faced their own capacity for lies.`,
+La expresión madura es alguien a quien le han destruido y reconstruido su mente tantas veces que puede contener múltiples verdades, que se comunica con poder porque ha enfrentado su propia capacidad de mentir.`,
         
-        generational: `As generational influence, Pluto in Gemini marks periods of information revolution, transformation of communication, propaganda wars, and complete overhaul of how truth is determined.
+        generational: `Como influencia generacional, Plutón en Géminis marca períodos de revolución de la información, transformación de la comunicación, guerras de propaganda y revisión completa de cómo se determina la verdad.
 
-On personal level, it creates souls who will transform how humanity thinks, communicates, and relates to truth - often through their own intense journey of mental death and rebirth.`,
+A nivel personal, crea almas que transformarán la forma en que la humanidad piensa, se comunica y se relaciona con la verdad, a menudo a través de su propio intenso viaje de muerte mental y renacimiento.`,
         
-        relationships: `In relationships, they need partners who can handle intense truth-telling, who won't shy from deep conversations, who can witness their mental transformation without trying to stop it.
+        relationships: `En las relaciones, necesitan socios que puedan manejar intensamente decir la verdad, que no rehuyan conversaciones profundas, que puedan presenciar su transformación mental sin intentar detenerla.
 
-Power struggles through words can be constant until they learn that intimacy requires gentle truth alongside brutal honesty, that not everything needs to be said.
+Las luchas de poder a través de las palabras pueden ser constantes hasta que aprenden que la intimidad requiere una verdad amable junto con una honestidad brutal, que no es necesario decir todo.
 
-The evolved expression is bringing transformative communication to relationship - partnerships where both people can speak full truth and grow through it.`,
+La expresión evolucionada trae comunicación transformadora a la relación: asociaciones donde ambas personas pueden decir toda la verdad y crecer a través de ella.`,
         
-        lifeWork: `Their life work involves transformation through words - investigative journalism, psychology, research, writing that exposes truth, or communication that transforms consciousness.
+        lifeWork: `El trabajo de su vida implica transformación a través de las palabras: periodismo de investigación, psicología, investigación, escritura que expone la verdad o comunicación que transforma la conciencia.
 
-They're here to demonstrate that truth can set free, that communication can heal or destroy, that mental structures can and must transform.
+Están aquí para demostrar que la verdad puede liberar, que la comunicación puede curar o destruir, que las estructuras mentales pueden y deben transformar.
 
-The most fulfilling path is one where they're uncovering hidden truth, transforming how people think, using communication to serve collective awakening.`,
+El camino más satisfactorio es aquel en el que descubren verdades ocultas, transforman la forma de pensar de las personas y utilizan la comunicación al servicio del despertar colectivo.`,
         
-        shadowIntegration: `Shadow work around manipulation, lies, and power through information is essential. They must face their capacity to manipulate through words, to control through information. Denying shadow makes it dangerous.
+        shadowIntegration: `El trabajo en la sombra en torno a la manipulación, las mentiras y el poder a través de la información es esencial. Deben afrontar su capacidad de manipular a través de las palabras, de controlar a través de la información. Negar la sombra lo hace peligroso.
 
-The work is befriending their manipulative capacity, understanding that powerlessness wounds drive it, that acknowledging their shadow allows conscious choice.
+La obra es amigarse con su capacidad manipuladora, entendiendo que las heridas de impotencia la impulsan, que reconocer su sombra permite una elección consciente.
 
-Integration means becoming someone who has such intimate relationship with their lying shadow that they become fierce truth-teller - the communicator who knows their dark side and consciously chooses honesty.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su sombra mentirosa que se convierte en un feroz narrador de la verdad, el comunicador que conoce su lado oscuro y elige conscientemente la honestidad.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Gemini represents souls who incarnated to transform collective thinking and communication. They're here to show that truth is power, that lies eventually destroy, that mental structures must die to be reborn.
+        spiritualMeaning: `Espiritualmente, Plutón en Géminis representa almas que encarnaron para transformar el pensamiento y la comunicación colectivos. Están aquí para mostrar que la verdad es poder, que las mentiras eventualmente destruyen, que las estructuras mentales deben morir para renacer.
 
-Their spiritual gift is demonstrating that you can have your entire worldview destroyed and not only survive but think more clearly afterward.
+Su don espiritual está demostrando que puedes destruir toda tu visión del mundo y no sólo sobrevivir sino pensar más claramente después.
 
-The ultimate expression is the truth-speaker who has died and been reborn through mental transformation so many times they embody living truth - showing humanity that honest communication transforms reality.`,
+La máxima expresión es el hablante de la verdad que ha muerto y renacido a través de una transformación mental tantas veces que encarna la verdad viva, mostrando a la humanidad que la comunicación honesta transforma la realidad.`,
         
-        affirmation: "I speak transformative truth. My words heal and awaken. I die to lies and am reborn in authentic communication. I am death of illusion and rebirth of clarity."
+        affirmation: "Hablo verdad transformadora. Mis palabras sanan y despiertan. Muero a la mentira y renazco en la comunicación auténtica. Soy muerte de ilusión y renacimiento de claridad."
     },
     
     Cancer: {
-        title: "Pluto in Cancer - Emotional Transformation",
-        archetype: "The Family Phoenix",
-        hook: "With Pluto in Cancer, this soul transforms through death and rebirth of emotional life and family. They are here to heal ancestral wounds, to revolutionize belonging, to phoenix from emotional devastation.",
+        title: "Plutón en Cáncer - Transformación Emocional",
+        archetype: "La familia Fénix",
+        hook: "Con Plutón en Cáncer, esta alma se transforma mediante la muerte y el renacimiento de la vida emocional y familiar. Están aquí para sanar heridas ancestrales, para revolucionar la pertenencia, para avenir de la devastación emocional.",
         
-        transformation: `Pluto in Cancer creates total transformation of emotional patterns and family structures. These souls experience complete upheaval in family, home, or emotional security - sometimes through family trauma, loss, or radical changes in belonging.
+        transformation: `Plutón en Cáncer crea una transformación total de los patrones emocionales y las estructuras familiares. Estas almas experimentan una completa agitación en la familia, el hogar o la seguridad emocional, a veces a través de traumas familiares, pérdidas o cambios radicales en la pertenencia.
 
-They transform through facing family wounds deeply, through losing and rebuilding emotional safety, through discovering that true belonging comes from within.
+Se transforman al enfrentar profundamente las heridas familiares, al perder y reconstruir la seguridad emocional, al descubrir que la verdadera pertenencia proviene de adentro.
 
-Their gift is capacity to heal generations of family trauma, to create new forms of belonging from ashes of broken families, to rise from emotional devastation with capacity to nurture self and others powerfully.`,
+Su don es la capacidad de sanar generaciones de traumas familiares, de crear nuevas formas de pertenencia a partir de las cenizas de familias rotas, de levantarse de la devastación emocional con capacidad de nutrirse poderosamente a sí mismos y a los demás.`,
         
-        power: `Their power is emotional and nurturing. They have immense capacity to feel deeply, to create genuine emotional safety, to mother/nurture in ways that transform people.
+        power: `Su poder es emocional y enriquecedor. Tienen una inmensa capacidad para sentir profundamente, para crear una seguridad emocional genuina, para ser madres/crianzas de maneras que transformen a las personas.
 
-But they must learn difference between authentic emotional power (creating safety through presence) and false power (emotional manipulation, using vulnerability to control). Their journey involves discovering real nurturing versus codependent enmeshment.
+Pero deben aprender la diferencia entre el poder emocional auténtico (crear seguridad a través de la presencia) y el poder falso (manipulación emocional, usar la vulnerabilidad para controlar). Su viaje implica descubrir la verdadera crianza frente al enredo codependiente.
 
-The most powerful expression is someone who has faced complete family breakdown and transformed it into capacity to create belonging so genuine it heals others' family wounds.`,
+La expresión más poderosa es la de alguien que ha enfrentado una ruptura familiar total y la ha transformado en una capacidad de crear una pertenencia tan genuina que cura las heridas familiares de los demás.`,
         
-        shadow: `Their shadow is emotional manipulation, smothering others, or using needs to control. When they feel unsafe, they may cling desperately. When wounded around family, they may wound others through withholding nurturing or giving with strings attached.
+        shadow: `Su sombra es la manipulación emocional, asfixiar a los demás o utilizar las necesidades para controlar. Cuando se sienten inseguros, es posible que se aferren desesperadamente. Cuando se sienten heridos en torno a la familia, pueden herir a otros al negarles cuidados o dar con condiciones.
 
-They have capacity for destructive emotional intensity - rage from family wounds, passive aggression, or creating emotional crises to feel in control.
+Tienen capacidad para una intensidad emocional destructiva: rabia por heridas familiares, agresión pasiva o creación de crisis emocionales para sentir que tienen el control.
 
-The deeper shadow is hidden neediness - appearing nurturing while desperately needing to be needed, mothering others to avoid own vulnerability, or creating dependency in name of care.`,
+La sombra más profunda es la necesidad oculta: parecer cariñoso mientras se necesita desesperadamente ser necesitado, cuidar a otros para evitar su propia vulnerabilidad o crear dependencia en nombre del cuidado.`,
         
-        obsession: `They can become obsessed with family, home, safety, or emotional security. The drive to never feel unsafe again can consume all else.
+        obsession: `Pueden obsesionarse con la familia, el hogar, la seguridad o la seguridad emocional. El impulso de no volver a sentirse inseguro nunca más puede consumir todo lo demás.
 
-Or they obsess about their wounds, their family trauma, how they were hurt. The emotional intensity doesn't have middle ground until they learn balance.
+O se obsesionan con sus heridas, su trauma familiar, cómo fueron heridos. La intensidad emocional no tiene término medio hasta que aprenden el equilibrio.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where old family patterns need to die and new belonging be born.`,
+La clave es reconocer la obsesión como un signo de transformación que está tratando de ocurrir: donde están obsesionados es donde los viejos patrones familiares deben morir y nacer una nueva pertenencia.`,
         
-        crisis: `Crisis around family, home, or emotional security is their catalyst. Family breakdown, loss of home, emotional devastation become opportunities for transformation. They need emotional upheaval to access their depth.
+        crisis: `Las crisis en torno a la familia, el hogar o la seguridad emocional son su catalizador. La ruptura familiar, la pérdida del hogar y la devastación emocional se convierten en oportunidades de transformación. Necesitan agitación emocional para acceder a su profundidad.
 
-They may unconsciously create family crises to force evolution of their emotional patterns. Learning to transform without trauma becomes mature expression.
+Pueden crear inconscientemente crisis familiares para forzar la evolución de sus patrones emocionales. Aprender a transformarse sin trauma se convierte en una expresión madura.
 
-The gift is that in any family crisis, they have capacity to hold space emotionally, to create safety in chaos, to nurture through complete breakdown. When everything falls apart emotionally, they discover they can hold it all.`,
+El regalo es que en cualquier crisis familiar, tienen la capacidad de mantener un espacio emocional, de crear seguridad en el caos, de cuidar a través de una ruptura total. Cuando todo se desmorona emocionalmente, descubren que pueden aguantarlo todo.`,
         
-        rebirth: `Each rebirth makes their emotional capacity more genuine. False belonging burns away in successive crises until what remains is capacity to feel deeply without being destroyed, to nurture without losing self.
+        rebirth: `Cada renacimiento hace que su capacidad emocional sea más genuina. La falsa pertenencia se quema en crisis sucesivas hasta que lo que queda es la capacidad de sentir profundamente sin ser destruido, de nutrirse sin perderse.
 
-The phoenix process around family can be excruciating - they may wish they could just have normal family. But their soul chose transformation through emotional death and rebirth.
+El proceso del fénix en torno a la familia puede ser insoportable: es posible que deseen tener una familia normal. Pero su alma eligió la transformación a través de la muerte emocional y el renacimiento.
 
-The mature expression is someone who has lost and rebuilt belonging so many times they no longer fear emotional abandonment, who is so deeply home in themselves that they create family wherever they go.`,
+La expresión madura es alguien que ha perdido y reconstruido su pertenencia tantas veces que ya no teme el abandono emocional, que está tan profundamente en su hogar que crea una familia dondequiera que vaya.`,
         
-        generational: `As generational influence, Pluto in Cancer marks periods of family structure transformation, women's roles changing radically, emotional expression transforming, security systems disrupted.
+        generational: `Como influencia generacional, Plutón en Cáncer marca períodos de transformación de la estructura familiar, cambios radicales en los roles de las mujeres, transformación de la expresión emocional y perturbación de los sistemas de seguridad.
 
-On personal level, it creates souls who will transform collective relationship with family and emotion, who heal ancestral trauma, who show that belonging can be rebuilt from nothing.`,
+A nivel personal, crea almas que transformarán la relación colectiva con la familia y las emociones, que sanarán traumas ancestrales, que mostrarán que la pertenencia se puede reconstruir a partir de la nada.`,
         
-        relationships: `In relationships, they need partners who can handle emotional intensity, who won't abandon during transformation, who want depth of intimacy that includes facing family wounds together.
+        relationships: `En las relaciones, necesitan socios que puedan manejar la intensidad emocional, que no abandonen durante la transformación, que quieran una intimidad profunda que incluya enfrentar juntos las heridas familiares.
 
-Power struggles around safety and dependency can be constant until they learn that true intimacy requires both people maintaining emotional sovereignty while connecting deeply.
+Las luchas de poder en torno a la seguridad y la dependencia pueden ser constantes hasta que aprenden que la verdadera intimidad requiere que ambas personas mantengan la soberanía emocional mientras se conectan profundamente.
 
-The evolved expression is bringing transformative emotional depth to partnership - creating intimacy so safe both people can face their family wounds and heal.`,
+La expresión evolucionada aporta una profundidad emocional transformadora a la asociación, creando una intimidad tan segura que ambas personas puedan enfrentar sus heridas familiares y sanar.`,
         
-        lifeWork: `Their life work involves emotional transformation - family therapy, creating intentional communities, healing ancestral trauma, or any field transforming how we create belonging and emotional security.
+        lifeWork: `El trabajo de su vida implica transformación emocional: terapia familiar, creación de comunidades intencionales, curación de traumas ancestrales o cualquier campo que transforme la forma en que creamos pertenencia y seguridad emocional.
 
-They're here to demonstrate that family wounds can heal, that emotional devastation can transform into capacity to create profound safety, that belonging can be rebuilt after complete loss.
+Están aquí para demostrar que las heridas familiares pueden sanar, que la devastación emocional puede transformarse en capacidad para crear una seguridad profunda, que la pertenencia puede reconstruirse después de una pérdida total.
 
-The most fulfilling path is one where they're helping others heal family trauma, creating new forms of belonging, using their emotional transformation to serve collective healing.`,
+El camino más satisfactorio es aquel en el que ayudan a otros a sanar el trauma familiar, creando nuevas formas de pertenencia y utilizando su transformación emocional al servicio de la curación colectiva.`,
         
-        shadowIntegration: `Shadow work around emotional manipulation, neediness, and family wounds is essential. They must face their capacity to smother, control through vulnerability, or manipulate through appearing wounded.
+        shadowIntegration: `El trabajo en la sombra en torno a la manipulación emocional, la necesidad y las heridas familiares es esencial. Deben afrontar su capacidad de sofocar, controlar a través de la vulnerabilidad o manipular pareciendo heridos.
 
-The work is befriending their emotional intensity, understanding that trauma drove it, that acknowledging their shadow allows conscious choice about how to nurture.
+El trabajo se trata de hacerse amigo de su intensidad emocional, entendiendo que el trauma la impulsó, que reconocer su sombra permite elegir conscientemente cómo cuidar.
 
-Integration means becoming someone who has such intimate relationship with their neediness that it becomes capacity for genuine care - the nurturer who knows their dark side and consciously chooses healthy relating.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su necesidad que se convierte en capacidad de cuidado genuino: el cuidador que conoce su lado oscuro y elige conscientemente una relación saludable.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Cancer represents souls who incarnated to heal collective family wounds, to show that emotional devastation can transform into profound capacity to nurture, that belonging is internal.
+        spiritualMeaning: `Espiritualmente, Plutón en Cáncer representa almas que encarnaron para sanar heridas familiares colectivas, para mostrar que la devastación emocional puede transformarse en una profunda capacidad de nutrir, que la pertenencia es interna.
 
-Their spiritual gift is demonstrating that you can lose all family and discover you are home, that emotional death reveals you can create safety from within.
+Su don espiritual demuestra que puedes perder a toda tu familia y descubrir que estás en casa, que la muerte emocional revela que puedes crear seguridad desde dentro.
 
-The ultimate expression is the emotional phoenix who has died and been reborn through family trauma so many times they embody unconditional belonging - showing humanity that true family is spiritual, that home is wherever you are when you've claimed emotional sovereignty.`,
+La máxima expresión es el fénix emocional que ha muerto y renacido a través de un trauma familiar tantas veces que encarna una pertenencia incondicional, mostrando a la humanidad que la verdadera familia es espiritual, que el hogar está dondequiera que estés cuando has reclamado soberanía emocional.`,
         
-        affirmation: "I transform through emotional death and rebirth. My family wounds become capacity to create profound belonging. I am home within myself and nurture from overflow."
+        affirmation: "Me transformo a través de la muerte y el renacimiento emocional. Mis heridas familiares se convierten en capacidad de crear una pertenencia profunda. Estoy en casa dentro de mí y me alimento del desbordamiento."
     },
     
     Leo: {
-        title: "Pluto in Leo - Creative Transformation",
-        archetype: "The Death of Ego",
-        hook: "With Pluto in Leo, this soul transforms through death and rebirth of identity and creative expression. They are here to discover authentic self beyond ego, to revolutionize leadership, to phoenix from narcissistic wounds into genuine radiance.",
+        title: "Plutón en Leo - Transformación creativa",
+        archetype: "La muerte del ego",
+        hook: "Con Plutón en Leo, esta alma se transforma mediante la muerte y el renacimiento de la identidad y la expresión creativa. Están aquí para descubrir el yo auténtico más allá del ego, para revolucionar el liderazgo, para pasar de las heridas narcisistas a un resplandor genuino.",
         
-        transformation: `Pluto in Leo creates total transformation of ego, identity, and creative expression. These souls experience complete death of who they thought they were - sometimes through humiliation, creative destruction, or having their ego completely shattered.
+        transformation: `Plutón en Leo crea una transformación total del ego, la identidad y la expresión creativa. Estas almas experimentan la muerte completa de quienes pensaban que eran, a veces a través de la humillación, la destrucción creativa o la destrucción total de su ego.
 
-They transform through facing narcissistic wounds deeply, through losing external validation and discovering internal worth, through having creativity destroyed and rebuilt from authentic source.
+Se transforman al enfrentar profundamente las heridas narcisistas, al perder la validación externa y al descubrir el valor interno, al destruir y reconstruir la creatividad a partir de una fuente auténtica.
 
-Their gift is capacity to lead from true power rather than ego need, to create from genuine inspiration rather than seeking recognition, to rise from ego death shining more authentically than ever.`,
+Su don es la capacidad de liderar desde el verdadero poder en lugar de la necesidad del ego, de crear a partir de una inspiración genuina en lugar de buscar reconocimiento, de surgir de la muerte del ego brillando más auténticamente que nunca.`,
         
-        power: `Their power is creative and expressive. They have tremendous capacity for leadership, authentic self-expression, creative force that can inspire masses.
+        power: `Su poder es creativo y expresivo. Tienen una enorme capacidad de liderazgo, una auténtica autoexpresión y una fuerza creativa que puede inspirar a las masas.
 
-But they must learn difference between authentic power (leading from service, creating from inspiration) and false power (tyranny, narcissism, demanding worship). Their journey involves discovering real creativity versus performing for applause.
+Pero deben aprender la diferencia entre el poder auténtico (liderar desde el servicio, crear desde la inspiración) y el poder falso (tiranía, narcisismo, exigir adoración). Su viaje implica descubrir la creatividad real en lugar de actuar para recibir aplausos.
 
-The most powerful expression is someone who has had their ego completely destroyed and rebuilt into authentic creative force that serves others - leader who inspires rather than dominates.`,
+La expresión más poderosa es la de alguien cuyo ego ha sido completamente destruido y reconstruido en una auténtica fuerza creativa que sirve a los demás: un líder que inspira en lugar de dominar.`,
         
-        shadow: `Their shadow is narcissism, tyranny, and destructive pride. When they feel powerless, they may become grandiose. When wounded around recognition, they may demand constant praise or destroy others who shine.
+        shadow: `Su sombra es el narcisismo, la tiranía y el orgullo destructivo. Cuando se sienten impotentes, pueden volverse grandiosos. Cuando se sienten heridos por el reconocimiento, pueden exigir elogios constantes o destruir a otros que brillan.
 
-They have capacity for destructive ego - crushing others to feel superior, hoarding spotlight, or creating dramas where they're center of attention regardless of cost.
+Tienen capacidad para tener un ego destructivo: aplastar a los demás para que se sientan superiores, acaparar la atención o crear dramas en los que son el centro de atención sin importar el costo.
 
-The deeper shadow is hidden worthlessness - appearing confident while feeling empty inside, performing greatness to avoid facing ordinariness, demanding recognition to compensate for deep belief they're nothing.`,
+La sombra más profunda es la inutilidad oculta: parecer confiado mientras se siente vacío por dentro, actuar con grandeza para evitar enfrentarse a lo ordinario, exigir reconocimiento para compensar la profunda creencia de que no son nada.`,
         
-        obsession: `They can become obsessed with recognition, creative expression, being special, or proving their worth. The drive to be seen as great can consume everything.
+        obsession: `Pueden obsesionarse con el reconocimiento, la expresión creativa, ser especiales o demostrar su valía. El impulso de ser visto como grandioso puede consumirlo todo.
 
-Or they obsess about their creative wounds, times they were unseen or humiliated. The intensity around identity doesn't have middle ground until they learn balance.
+O se obsesionan con sus heridas creativas, las ocasiones en las que no fueron vistos o fueron humillados. La intensidad en torno a la identidad no tiene término medio hasta que aprenden el equilibrio.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where ego identity needs to die so authentic self can emerge.`,
+La clave es reconocer la obsesión como un signo de transformación que está tratando de ocurrir: donde están obsesionados es donde la identidad del ego necesita morir para que pueda emerger el yo auténtico.`,
         
-        crisis: `Crisis around identity, creative expression, or recognition is their catalyst. Public humiliation, creative failure, or loss of status become opportunities for transformation. They need ego death to access authentic power.
+        crisis: `Las crisis en torno a la identidad, la expresión creativa o el reconocimiento son su catalizador. La humillación pública, el fracaso creativo o la pérdida de estatus se convierten en oportunidades de transformación. Necesitan la muerte del ego para acceder al poder auténtico.
 
-They may unconsciously create identity crises to force evolution beyond ego. Learning to transform without needing to be destroyed becomes mature expression.
+Pueden crear inconscientemente crisis de identidad para forzar la evolución más allá del ego. Aprender a transformarse sin necesidad de ser destruido se convierte en una expresión madura.
 
-The gift is that in any crisis of self, they have capacity to rebuild identity from authentic core. When ego completely shatters, they discover who they really are beneath performance.`,
+El regalo es que en cualquier crisis de uno mismo, tienen la capacidad de reconstruir la identidad desde un núcleo auténtico. Cuando el ego se hace añicos por completo, descubren quiénes son realmente bajo el desempeño.`,
         
-        rebirth: `Each rebirth makes their self-expression more authentic. False identity burns away in successive humiliations until what remains is genuine creative force that doesn't need external validation.
+        rebirth: `Cada renacimiento hace que su autoexpresión sea más auténtica. La falsa identidad se quema en sucesivas humillaciones hasta que lo que queda es una fuerza creativa genuina que no necesita validación externa.
 
-The phoenix process of ego death can be agonizing - they may wish they could just be special without transformation. But their soul chose to discover true self beyond ego.
+El proceso fénix de la muerte del ego puede ser agonizante: es posible que deseen ser especiales sin transformación. Pero su alma eligió descubrir el verdadero yo más allá del ego.
 
-The mature expression is someone who has died to ego so many times they shine from authentic essence, who is so genuinely themselves that recognition becomes irrelevant.`,
+La expresión madura es alguien que ha muerto al ego tantas veces que brilla desde esencia auténtica, que es tan genuinamente él mismo que el reconocimiento se vuelve irrelevante.`,
         
-        generational: `As generational influence, Pluto in Leo marks periods of leadership transformation, creative revolution, ego structures dying, and collective identity crisis forcing authenticity.
+        generational: `Como influencia generacional, Plutón en Leo marca períodos de transformación del liderazgo, revolución creativa, muerte de las estructuras del ego y crisis de identidad colectiva que obligan a la autenticidad.
 
-On personal level, it creates souls who will transform collective relationship with ego and creativity, who show that real power comes from authentic self-expression, not performance.`,
+A nivel personal, crea almas que transformarán la relación colectiva con el ego y la creatividad, que muestran que el verdadero poder proviene de la auténtica autoexpresión, no de la actuación.`,
         
-        relationships: `In relationships, they need partners who see their authentic self not their performance, who aren't threatened by their light but also won't worship them, who want mutual shining.
+        relationships: `En las relaciones, necesitan socios que vean su yo auténtico, no su desempeño, que no se sientan amenazados por su luz pero que tampoco los adoren, que quieran brillar mutuamente.
 
-Power struggles around attention and admiration can be constant until they learn that true intimacy means both people being seen, that love isn't about one person being special.
+Las luchas de poder en torno a la atención y la admiración pueden ser constantes hasta que aprenden que la verdadera intimidad significa que ambas personas sean vistas, que el amor no se trata de que una persona sea especial.
 
-The evolved expression is bringing transformative authenticity to relationship - partnerships where both people support each other's genuine self-expression without competition.`,
+La expresión evolucionada aporta autenticidad transformadora a la relación: asociaciones en las que ambas personas apoyan mutuamente la autoexpresión genuina sin competencia.`,
         
-        lifeWork: `Their life work involves transformative creativity and leadership - revolutionary art, authentic leadership that transforms systems, entertainment that awakens rather than just dazzles.
+        lifeWork: `El trabajo de su vida implica creatividad y liderazgo transformadores: arte revolucionario, liderazgo auténtico que transforma sistemas, entretenimiento que despierta en lugar de simplemente deslumbrar.
 
-They're here to demonstrate that creative power comes from authentic expression not ego need, that leadership serves others rather than feeding self, that you can shine brightly while uplifting others.
+Están aquí para demostrar que el poder creativo proviene de la expresión auténtica, no de la necesidad del ego, que el liderazgo sirve a los demás en lugar de alimentarse a uno mismo, que se puede brillar intensamente mientras se anima a los demás.
 
-The most fulfilling path is one where they're creating and leading from such authenticity that others are inspired to discover their own genuine expression.`,
+El camino más satisfactorio es aquel en el que crean y lideran desde tal autenticidad que otros se sienten inspirados a descubrir su propia expresión genuina.`,
         
-        shadowIntegration: `Shadow work around narcissism, need for recognition, and ego wounds is essential. They must face their capacity for tyranny, for destroying others to feel special, for demanding worship.
+        shadowIntegration: `El trabajo en la sombra en torno al narcisismo, la necesidad de reconocimiento y las heridas del ego es esencial. Deben afrontar su capacidad de tiranía, de destruir a otros para sentirse especiales, de exigir adoración.
 
-The work is befriending their ego while not being run by it, understanding that wounds created the narcissism, that acknowledging shadow allows choosing authentic expression.
+La obra es hacerse amiga de su ego sin dejarse llevar por él, entendiendo que las heridas crearon el narcisismo, que reconocer la sombra permite elegir la expresión auténtica.
 
-Integration means becoming someone who has such intimate relationship with their ego that it becomes transparent vessel - the leader who knows their grandiosity and consciously chooses humble service that happens to shine brilliantly.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su ego que se convierte en un recipiente transparente: el líder que conoce su grandiosidad y elige conscientemente un servicio humilde que brilla brillantemente.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Leo represents souls who incarnated to show that ego death reveals authentic self, that true creativity channels divine rather than seeking recognition, that real leadership serves collective.
+        spiritualMeaning: `Espiritualmente, Plutón en Leo representa almas que encarnaron para mostrar que la muerte del ego revela el yo auténtico, que la verdadera creatividad canaliza lo divino en lugar de buscar el reconocimiento, que el verdadero liderazgo sirve al colectivo.
 
-Their spiritual gift is demonstrating that you can be completely destroyed publicly and discover you're more than image, that losing all recognition reveals your genuine light.
+Su don espiritual es demostrar que puedes ser completamente destruido públicamente y descubrir que eres más que una imagen, que perder todo reconocimiento revela tu luz genuina.
 
-The ultimate expression is the authentic creator who has died to ego so many times they embody pure creative force - showing humanity that real power is authentic self-expression that serves rather than seeks, that shines from being rather than performing.`,
+La máxima expresión es el creador auténtico que ha muerto al ego tantas veces que encarna la fuerza creativa pura, mostrando a la humanidad que el poder real es una auténtica autoexpresión que sirve en lugar de buscar, que brilla por ser en lugar de actuar.`,
         
-        affirmation: "I transform through ego death. My authentic expression serves others. I shine from genuine self beyond need for recognition. My creative power is channeled divinity."
+        affirmation: "Me transformo a través de la muerte del ego. Mi expresión auténtica sirve a los demás. Brillo desde mi ser genuino más allá de la necesidad de reconocimiento. Mi poder creativo es la divinidad canalizada."
     },
     
     Virgo: {
-        title: "Pluto in Virgo - Service Transformation",
-        archetype: "The Death of Criticism",
-        hook: "With Pluto in Virgo, this soul transforms through death and rebirth of service, health, and daily life. They are here to revolutionize wellness, to transform perfectionism into genuine skill, to phoenix from health crises into embodied wisdom.",
+        title: "Plutón en Virgo - Transformación del servicio",
+        archetype: "La muerte de la crítica",
+        hook: "Con Plutón en Virgo, esta alma se transforma mediante la muerte y el renacimiento del servicio, la salud y la vida diaria. Están aquí para revolucionar el bienestar, para transformar el perfeccionismo en una habilidad genuina, para convertir las crisis de salud en sabiduría encarnada.",
         
-        transformation: `Pluto in Virgo creates total transformation of health systems, service, and relationship with the body. These souls experience complete upheaval in health, work, or daily routines - sometimes through illness, work crisis, or breakdown of systems they relied on.
+        transformation: `Plutón en Virgo crea una transformación total de los sistemas de salud, el servicio y la relación con el cuerpo. Estas almas experimentan un completo trastorno en su salud, trabajo o rutinas diarias, a veces a través de enfermedades, crisis laborales o fallas de los sistemas en los que confiaban.
 
-They transform through facing health shadows deeply, through losing and rebuilding relationship with body, through discovering that true service comes from wholeness not perfectionism.
+Se transforman al enfrentar profundamente las sombras de la salud, al perder y reconstruir la relación con el cuerpo, al descubrir que el verdadero servicio proviene de la plenitud, no del perfeccionismo.
 
-Their gift is capacity to completely revolutionize health practices, to transform broken systems into functional ones, to rise from health devastation with deep embodied wisdom.`,
+Su don es la capacidad de revolucionar completamente las prácticas de salud, de transformar sistemas rotos en sistemas funcionales, de superar la devastación de la salud con una profunda sabiduría encarnada.`,
         
-        power: `Their power is through skill, analysis, and healing capacity. They have immense ability to see what's wrong and fix it, to serve with precision, to master practical arts.
+        power: `Su poder radica en la habilidad, el análisis y la capacidad curativa. Tienen una inmensa capacidad para ver lo que está mal y arreglarlo, para servir con precisión y dominar las artes prácticas.
 
-But they must learn difference between authentic power (skillful service from wholeness) and false power (perfectionism, criticism as control). Their journey involves discovering genuine healing versus compulsive fixing.
+Pero deben aprender la diferencia entre el poder auténtico (servicio hábil desde la integridad) y el poder falso (perfeccionismo, crítica como control). Su viaje implica descubrir una curación genuina frente a una reparación compulsiva.
 
-The most powerful expression is someone who has faced their own brokenness completely and transformed it into capacity to serve others' healing with profound skill and compassion.`,
+La expresión más poderosa es la de alguien que ha enfrentado completamente su propio quebrantamiento y lo ha transformado en capacidad de servir a la curación de otros con profunda habilidad y compasión.`,
         
-        shadow: `Their shadow is perfectionism, harsh criticism, and health obsession. When they feel inadequate, they may become hypercritical. When wounded around being useful, they may drive themselves to breakdown or tear others down for imperfection.
+        shadow: `Su sombra es el perfeccionismo, las duras críticas y la obsesión por la salud. Cuando se sienten inadecuados, pueden volverse hipercríticos. Cuando se sienten heridos por ser útiles, pueden llegar a derrumbarse o derribar a otros por su imperfección.
 
-They have capacity for destructive analysis - seeing only flaws, dismantling others with criticism, or creating health crises through impossible standards.
+Tienen capacidad de análisis destructivo: ven sólo defectos, desmantelan a otros con críticas o crean crisis de salud mediante estándares imposibles.
 
-The deeper shadow is hidden inadequacy - appearing competent while feeling fundamentally flawed inside, serving others to prove worth, or creating crises to feel needed.`,
+La sombra más profunda es la insuficiencia oculta: parecer competente mientras nos sentimos fundamentalmente defectuosos por dentro, servir a los demás para demostrar nuestra valía o crear crisis para sentirnos necesarios.`,
         
-        obsession: `They can become obsessed with health, purity, perfection, or fixing everything. The drive to make everything right can consume all else.
+        obsession: `Pueden obsesionarse con la salud, la pureza, la perfección o arreglarlo todo. El impulso de hacer todo bien puede consumir todo lo demás.
 
-Or they obsess about illness, what's wrong, how things could be better. The analytical intensity doesn't have middle ground until they learn acceptance.
+O se obsesionan con la enfermedad, lo que está mal y cómo podrían mejorar las cosas. La intensidad analítica no tiene término medio hasta que aprenden a aceptar.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where perfectionism needs to die so genuine service can emerge.`,
+La clave es reconocer la obsesión como una señal de que la transformación está tratando de ocurrir: donde están obsesionados es donde el perfeccionismo necesita morir para que pueda surgir un servicio genuino.`,
         
-        crisis: `Crisis around health, work, or daily function is their catalyst. Illness, burnout, or system breakdown become opportunities for transformation. They need practical collapse to rebuild wisely.
+        crisis: `Las crisis relacionadas con la salud, el trabajo o el funcionamiento diario son su catalizador. La enfermedad, el agotamiento o el colapso del sistema se convierten en oportunidades de transformación. Necesitan un colapso práctico para reconstruir sabiamente.
 
-They may unconsciously create health crises to force transformation of how they live, work, and serve. Learning to transform without breakdown becomes mature expression.
+Pueden crear inconscientemente crisis de salud para forzar la transformación de su forma de vivir, trabajar y servir. Aprender a transformarse sin quebrarse se convierte en una expresión madura.
 
-The gift is that in any health or work crisis, they have capacity to analyze deeply and create solutions. When systems fail, they discover how to rebuild them better.`,
+El regalo es que ante cualquier crisis de salud o laboral, tengan capacidad de analizar profundamente y crear soluciones. Cuando los sistemas fallan, descubren cómo reconstruirlos mejor.`,
         
-        rebirth: `Each rebirth makes their service more genuine. False standards burn away in successive health crises until what remains is embodied wisdom, skillful service from self-acceptance.
+        rebirth: `Cada renacimiento hace que su servicio sea más genuino. Los falsos estándares se queman en sucesivas crisis de salud hasta que lo que queda es sabiduría encarnada, servicio hábil desde la autoaceptación.
 
-The phoenix process through illness can be devastating - they may wish they could just be healthy. But their soul chose transformation through body's wisdom.
+El proceso del fénix a través de la enfermedad puede ser devastador: es posible que deseen estar sanos. Pero su alma eligió la transformación a través de la sabiduría del cuerpo.
 
-The mature expression is someone who has been broken down by perfectionism and rebuilt into compassionate healer who serves from acceptance rather than fixing from criticism.`,
+La expresión madura es alguien que ha sido destrozado por el perfeccionismo y reconstruido en un sanador compasivo que sirve desde la aceptación en lugar de corregir mediante la crítica.`,
         
-        generational: `As generational influence, Pluto in Virgo marks periods of healthcare revolution, work structure transformation, wellness understanding completely overhauling, environmental health crisis.
+        generational: `Como influencia generacional, Plutón en Virgo marca períodos de revolución en la atención médica, transformación de la estructura laboral, revisión total de la comprensión del bienestar y crisis de salud ambiental.
 
-On personal level, it creates souls who will transform collective relationship with health and service, who revolutionize medicine, who show that healing includes body-mind-spirit.`,
+A nivel personal, crea almas que transformarán la relación colectiva con la salud y el servicio, que revolucionarán la medicina, que mostrarán que la curación incluye cuerpo-mente-espíritu.`,
         
-        relationships: `In relationships, they need partners who don't expect perfection, who can handle their health focus, who want mutual support in wellness and service rather than criticism.
+        relationships: `En las relaciones, necesitan socios que no esperen la perfección, que puedan manejar su enfoque de salud, que quieran apoyo mutuo en bienestar y servicio en lugar de críticas.
 
-Power struggles around standards and criticism can be constant until they learn that intimacy requires accepting imperfection, that love includes bodies that break.
+Las luchas de poder en torno a estándares y críticas pueden ser constantes hasta que aprenden que la intimidad requiere aceptar la imperfección, que el amor incluye cuerpos que se rompen.
 
-The evolved expression is bringing transformative wellness focus to partnership - creating relationships where both people support each other's healing journey with compassion.`,
+La expresión evolucionada aporta un enfoque de bienestar transformador a la asociación, creando relaciones en las que ambas personas se apoyan mutuamente en su viaje de curación con compasión.`,
         
-        lifeWork: `Their life work involves transforming healthcare and service systems - revolutionary medicine, innovative wellness, creating functional systems from broken ones, or deep skill in practical healing.
+        lifeWork: `El trabajo de su vida implica transformar los sistemas de servicios y atención médica: medicina revolucionaria, bienestar innovador, creación de sistemas funcionales a partir de sistemas rotos o una profunda habilidad en la curación práctica.
 
-They're here to demonstrate that health can transform completely, that service comes from wholeness, that work can be both skillful and sustainable, that perfection isn't the goal - functionality is.
+Están aquí para demostrar que la salud puede transformarse por completo, que el servicio proviene de la plenitud, que el trabajo puede ser a la vez hábil y sostenible, que la perfección no es el objetivo, sino la funcionalidad.
 
-The most fulfilling path is one where they're transforming broken health or work systems through their hard-won wisdom about what genuinely heals and serves.`,
+El camino más satisfactorio es aquel en el que están transformando sistemas de salud o de trabajo quebrantados a través de su sabiduría, obtenida con tanto esfuerzo, sobre lo que realmente cura y sirve.`,
         
-        shadowIntegration: `Shadow work around perfectionism, criticism, and fear of inadequacy is essential. They must face their capacity to tear down through analysis, to damage health through impossible standards.
+        shadowIntegration: `Es esencial trabajar en la sombra en torno al perfeccionismo, la crítica y el miedo a la insuficiencia. Deben afrontar su capacidad de derribar mediante el análisis, de dañar la salud mediante estándares imposibles.
 
-The work is befriending their critical voice while not being controlled by it, understanding that wounds created perfectionism, that acknowledging shadow allows choosing compassionate service.
+El trabajo es hacerse amigo de su voz crítica sin dejarse controlar por ella, entendiendo que las heridas crean perfeccionismo, que reconocer la sombra permite optar por el servicio compasivo.
 
-Integration means becoming someone who has such intimate relationship with their inadequacy that it becomes capacity for skillful help - the healer who knows their imperfection and serves anyway.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su insuficiencia que se convierte en capacidad de ayuda hábil: el sanador que conoce su imperfección y sirve de todos modos.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Virgo represents souls who incarnated to show that body is sacred temple, that daily life is spiritual practice, that service is path to divine when done from wholeness.
+        spiritualMeaning: `Espiritualmente, Plutón en Virgo representa las almas que encarnaron para mostrar que el cuerpo es un templo sagrado, que la vida diaria es una práctica espiritual, que el servicio es un camino hacia lo divino cuando se realiza desde la plenitud.
 
-Their spiritual gift is demonstrating that you can be completely broken health-wise and rebuild with wisdom, that accepting imperfection is enlightenment, that embodied presence is holiness.
+Su don espiritual está demostrando que puedes estar completamente quebrantado en términos de salud y reconstruir con sabiduría, que aceptar la imperfección es iluminación, que la presencia encarnada es santidad.
 
-The ultimate expression is the embodied healer who has died to perfectionism so many times they serve from profound acceptance - showing humanity that true wellness includes our brokenness, that genuine service comes from compassionate presence with what is.`,
+La máxima expresión es el sanador encarnado que ha muerto al perfeccionismo tantas veces que sirve desde una profunda aceptación, mostrando a la humanidad que el verdadero bienestar incluye nuestro quebrantamiento, que el servicio genuino proviene de la presencia compasiva con lo que es.`,
         
-        affirmation: "I transform through body's wisdom. My service comes from wholeness not perfection. I heal by accepting what is while skillfully supporting change. My embodiment is sacred."
+        affirmation: "Me transformo a través de la sabiduría del cuerpo. Mi servicio proviene de la integridad, no de la perfección. Me curo aceptando lo que es mientras apoyo hábilmente el cambio. Mi encarnación es sagrada."
     },
     
     Libra: {
-        title: "Pluto in Libra - Relationship Transformation",
-        archetype: "The Partnership Phoenix",
-        hook: "With Pluto in Libra, this soul transforms through death and rebirth of relationships. They are here to revolutionize partnership, to transform justice systems, to phoenix from relationship devastation into authentic relating.",
+        title: "Plutón en Libra - Transformación de relaciones",
+        archetype: "La Asociación Fénix",
+        hook: "Con Plutón en Libra, esta alma se transforma mediante la muerte y el renacimiento de las relaciones. Están aquí para revolucionar las asociaciones, transformar los sistemas de justicia, hacer que las relaciones pasen de la devastación de las relaciones a una relación auténtica.",
         
-        transformation: `Pluto in Libra creates total transformation of relationship patterns and justice systems. These souls experience complete upheaval in partnerships - sometimes through betrayal, divorce, or relationships that completely destroy and rebuild their understanding of love.
+        transformation: `Plutón en Libra crea una transformación total de los patrones de relación y los sistemas de justicia. Estas almas experimentan una completa agitación en sus parejas, a veces a través de traición, divorcio o relaciones que destruyen y reconstruyen por completo su comprensión del amor.
 
-They transform through facing relationship shadows deeply, through losing partnerships and discovering self, through confronting power dynamics until they emerge with capacity for genuine equality.
+Se transforman al enfrentar profundamente las sombras de las relaciones, al perder las asociaciones y al descubrirse a sí mismos, al enfrentar las dinámicas de poder hasta que emergen con capacidad para una igualdad genuina.
 
-Their gift is capacity to create truly balanced relationships after experiencing extreme imbalance, to build justice from having experienced profound injustice, to rise from relationship ashes relating authentically.`,
+Su don es la capacidad de crear relaciones verdaderamente equilibradas después de haber experimentado un desequilibrio extremo, de construir justicia a partir de haber experimentado una injusticia profunda, de resurgir de las cenizas de una relación relacionándose auténticamente.`,
         
-        power: `Their power is relational and diplomatic. They have immense capacity for partnership, for creating harmony, for understanding complex social dynamics and creating fairness.
+        power: `Su poder es relacional y diplomático. Tienen una inmensa capacidad de asociación, de crear armonía, de comprender dinámicas sociales complejas y de crear justicia.
 
-But they must learn difference between authentic power (relating from equality) and false power (manipulation through niceness, control through being needed, passive-aggressive warfare disguised as harmony).
+Pero deben aprender la diferencia entre el poder auténtico (relacionado desde la igualdad) y el poder falso (manipulación a través de la amabilidad, control a través del ser necesitado, guerra pasivo-agresiva disfrazada de armonía).
 
-The most powerful expression is someone who has been completely destroyed by relationship imbalance and transformed it into capacity to create partnerships of genuine mutual empowerment.`,
+La expresión más poderosa es la de alguien que ha sido completamente destruido por el desequilibrio en las relaciones y lo ha transformado en capacidad para crear asociaciones de genuino empoderamiento mutuo.`,
         
-        shadow: `Their shadow is relationship manipulation, codependency disguised as love, and using partnership to avoid self. When they feel alone, they may become whoever partners want. When wounded by relationship, they may punish through withdrawal or passive aggression.
+        shadow: `Su sombra es la manipulación de las relaciones, la codependencia disfrazada de amor y el uso de la asociación para evitarse a sí mismo. Cuando se sienten solos, pueden convertirse en quienes quieran ser socios. Cuando son heridos por la relación, pueden castigar mediante el retraimiento o la agresión pasiva.
 
-They have capacity for destructive relating - using "fairness" to manipulate, creating relationship crises to avoid facing self, or staying in toxic partnerships from fear of being alone.
+Tienen capacidad para relaciones destructivas: utilizan la "justicia" para manipular, crean crisis en las relaciones para evitar enfrentarse a sí mismos o permanecen en asociaciones tóxicas por miedo a estar solos.
 
-The deeper shadow is hidden neediness - appearing independent while desperately needing partner to feel complete, relating from emptiness not wholeness, or avoiding intimacy by constantly partnering but never actually connecting deeply.`,
+La sombra más profunda es la necesidad oculta: parecer independiente mientras se necesita desesperadamente una pareja para sentirse completo, relacionarse desde el vacío y no desde la plenitud, o evitar la intimidad asociándose constantemente pero nunca conectando profundamente.`,
         
-        obsession: `They can become obsessed with partnership, finding "the one," or making relationship perfect. The drive to never be alone can consume everything.
+        obsession: `Pueden obsesionarse con la asociación, encontrar "al indicado" o hacer que la relación sea perfecta. El impulso de no estar nunca solo puede consumirlo todo.
 
-Or they obsess about relationship wounds, betrayals, how partners failed them. The relationship intensity doesn't have middle ground until they learn to be whole alone.
+O se obsesionan con las heridas de las relaciones, las traiciones y cómo les fallaron las parejas. La intensidad de la relación no tiene término medio hasta que aprenden a estar solos.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where codependency needs to die so authentic partnership can emerge.`,
+La clave es reconocer la obsesión como una señal de que la transformación está tratando de ocurrir: donde están obsesionados es donde la codependencia debe morir para que pueda surgir una asociación auténtica.`,
         
-        crisis: `Crisis in partnership is their catalyst. Betrayal, divorce, relationship breakdown become opportunities for transformation. They need relationship death to discover they are whole alone.
+        crisis: `La crisis en las asociaciones es su catalizador. La traición, el divorcio y la ruptura de relaciones se convierten en oportunidades de transformación. Necesitan la muerte de su relación para descubrir que están completamente solos.
 
-They may unconsciously create relationship crises to force evolution beyond codependency. Learning to transform without needing partner to leave becomes mature expression.
+Pueden crear inconscientemente crisis en las relaciones para forzar la evolución más allá de la codependencia. Aprender a transformarse sin necesidad de que la pareja se vaya se convierte en una expresión madura.
 
-The gift is that in any relationship crisis, they have capacity to see power dynamics clearly and choose differently. When partnership fails completely, they discover they can stand alone and then choose connection from wholeness.`,
+El regalo es que en cualquier crisis de relación, tienen la capacidad de ver claramente las dinámicas de poder y elegir de manera diferente. Cuando la asociación fracasa por completo, descubren que pueden mantenerse solos y luego elegir la conexión de la totalidad.`,
         
-        rebirth: `Each rebirth makes their relating more authentic. False partnership patterns burn away in successive relationship deaths until what remains is capacity to partner from wholeness rather than need.
+        rebirth: `Cada renacimiento hace que su relación sea más auténtica. Los falsos patrones de asociación se desvanecen en sucesivas muertes de relaciones hasta que lo que queda es la capacidad de asociarse desde la totalidad y no desde la necesidad.
 
-The phoenix process through relationships can be heartbreaking - they may wish they could just have stable love. But their soul chose transformation through partnership death and rebirth.
+El proceso del fénix a través de las relaciones puede ser desgarrador: es posible que deseen tener un amor estable. Pero su alma eligió la transformación a través de la muerte y el renacimiento en sociedad.
 
-The mature expression is someone who has lost and rebuilt partnership so many times they no longer fear being alone, who is so complete in themselves they choose relationship rather than need it.`,
+La expresión madura es alguien que ha perdido y reconstruido una relación tantas veces que ya no teme estar solo, que es tan completo en sí mismo que elige la relación en lugar de necesitarla.`,
         
-        generational: `As generational influence, Pluto in Libra marks periods of relationship structure transformation, marriage revolutionizing, justice system overhaul, partnership models dying and being reborn.
+        generational: `Como influencia generacional, Plutón en Libra marca períodos de transformación de la estructura de las relaciones, revolucionar el matrimonio, revisión del sistema de justicia, modelos de asociación que mueren y renacen.
 
-On personal level, it creates souls who will transform collective relationship patterns, who show that partnership can be equal, who revolutionize how we relate and create justice.`,
+A nivel personal, crea almas que transformarán los patrones de relación colectiva, que mostrarán que la asociación puede ser igualitaria, que revolucionarán la forma en que nos relacionamos y creamos justicia.`,
         
-        relationships: `In relationships, they need partners who want transformation, who can handle intense relating, who desire genuine equality not traditional roles or codependent fusion.
+        relationships: `En las relaciones, necesitan socios que quieran transformación, que puedan manejar relaciones intensas, que deseen una igualdad genuina, no roles tradicionales o una fusión codependiente.
 
-Power struggles are constant until they learn that intimacy requires both people maintaining wholeness, that true partnership is two complete people choosing connection.
+Las luchas de poder son constantes hasta que aprenden que la intimidad requiere que ambas personas mantengan la totalidad, que la verdadera asociación son dos personas completas que eligen la conexión.
 
-The evolved expression is bringing transformative depth to relating - partnerships that face power dynamics honestly, that transform both people through commitment to authentic connection.`,
+La expresión evolucionada aporta una profundidad transformadora a la relación: asociaciones que enfrentan las dinámicas de poder con honestidad, que transforman a ambas personas a través del compromiso con una conexión auténtica.`,
         
-        lifeWork: `Their life work involves transforming relationships and justice - innovative partnership counseling, creating new legal frameworks for equality, mediation that addresses power dynamics, or social justice work.
+        lifeWork: `El trabajo de su vida implica transformar las relaciones y la justicia: asesoramiento de asociaciones innovadoras, creación de nuevos marcos legales para la igualdad, mediación que aborde las dinámicas de poder o trabajo de justicia social.
 
-They're here to demonstrate that relationships can transform completely, that partnership can be equal, that justice is possible when power dynamics are faced honestly.
+Están aquí para demostrar que las relaciones pueden transformarse por completo, que la asociación puede ser igualitaria, que la justicia es posible cuando las dinámicas de poder se enfrentan con honestidad.
 
-The most fulfilling path is one where they're helping others transform toxic relating into authentic partnership, creating systems of fairness, using their relationship wisdom to serve collective.`,
+El camino más satisfactorio es aquel en el que ayudan a otros a transformar las relaciones tóxicas en asociaciones auténticas, creando sistemas de justicia y utilizando la sabiduría de sus relaciones para servir al colectivo.`,
         
-        shadowIntegration: `Shadow work around codependency, manipulation, and fear of being alone is essential. They must face their capacity to lose self in partnership, to control through appearing to compromise, to avoid intimacy through constant relating.
+        shadowIntegration: `El trabajo en la sombra en torno a la codependencia, la manipulación y el miedo a estar solo es esencial. Deben afrontar su capacidad de perderse en la asociación, de controlar aparentando compromiso, de evitar la intimidad mediante la relación constante.
 
-The work is befriending their neediness while building wholeness, understanding that wounds created codependency, that acknowledging shadow allows choosing authentic partnership from completeness.
+El trabajo es hacerse amigo de sus necesidades mientras se construye la plenitud, entendiendo que las heridas crearon codependencia, que reconocer la sombra permite elegir la asociación auténtica desde la plenitud.
 
-Integration means becoming someone who has such intimate relationship with their fear of being alone that it becomes capacity for genuine partnership - the lover who knows their neediness and consciously chooses connection from wholeness.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su miedo a estar solo que se convierte en capacidad para una asociación genuina: el amante que conoce su necesidad y elige conscientemente la conexión de la plenitud.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Libra represents souls who incarnated to show that relationship can be spiritual practice, that partnership transforms both people, that true love requires facing power dynamics honestly.
+        spiritualMeaning: `Espiritualmente, Plutón en Libra representa almas que encarnaron para mostrar que la relación puede ser una práctica espiritual, que la asociación transforma a ambas personas, que el amor verdadero requiere enfrentar las dinámicas de poder con honestidad.
 
-Their spiritual gift is demonstrating that you can lose all partnerships and discover you are whole, that relationship death reveals you are complete alone and then partnership becomes choice not need.
+Su don espiritual es demostrar que puedes perder todas las asociaciones y descubrir que estás completo, que la muerte de la relación revela que estás completo solo y luego la asociación se convierte en una elección, no en una necesidad.
 
-The ultimate expression is the relationship transformer who has died to codependency so many times they embody authentic relating - showing humanity that real partnership is two whole people choosing to grow together, that love based on completeness transforms more deeply than love based on need.`,
+La máxima expresión es el transformador de relaciones que ha muerto a causa de la codependencia tantas veces que encarna una relación auténtica, mostrando a la humanidad que la verdadera asociación son dos personas enteras que eligen crecer juntas, que el amor basado en la plenitud transforma más profundamente que el amor basado en la necesidad.`,
         
-        affirmation: "I transform through relationship death and rebirth. My partnerships emerge from wholeness not need. I face power dynamics honestly. My relating transforms me and my partners."
+        affirmation: "Me transformo a través de la muerte y el renacimiento de las relaciones. Mis asociaciones surgen de la totalidad, no de la necesidad. Me enfrento honestamente a la dinámica de poder. Mi relación me transforma a mí y a mis socios."
     },
     
     Scorpio: {
-        title: "Pluto in Scorpio - Ultimate Transformation",
-        archetype: "The Death Master",
-        hook: "With Pluto in Scorpio, this soul embodies pure transformative power - Pluto in its home sign. They are here for the deepest death and rebirth, to master the shadow realms, to transform humanity's relationship with power, sexuality, and the hidden dimensions of existence.",
+        title: "Plutón en Escorpio - Transformación definitiva",
+        archetype: "El maestro de la muerte",
+        hook: "Con Plutón en Escorpio, esta alma encarna puro poder transformador: Plutón en su signo natal. Están aquí para la muerte y el renacimiento más profundos, para dominar los reinos de las sombras, para transformar la relación de la humanidad con el poder, la sexualidad y las dimensiones ocultas de la existencia.",
         
-        transformation: `Pluto in Scorpio creates the ultimate transformer - someone who experiences death and rebirth at the most profound levels, repeatedly throughout life. This is Pluto fully expressed, transformation as a way of being rather than an occasional experience.
+        transformation: `Plutón en Escorpio crea el transformador supremo: alguien que experimenta la muerte y el renacimiento en los niveles más profundos, repetidamente a lo largo de la vida. Éste es Plutón plenamente expresado, la transformación como una forma de ser más que una experiencia ocasional.
 
-These souls may experience complete ego annihilation multiple times, each destruction more total than the last, each rebirth revealing deeper layers of authentic power. Nothing is off-limits in their transformation process.
+Estas almas pueden experimentar la aniquilación completa del ego varias veces, cada destrucción más total que la anterior y cada renacimiento revelando capas más profundas de poder auténtico. Nada está prohibido en su proceso de transformación.
 
-Their gift is capacity to face absolutely anything - the darkest shadow, the most taboo truth, the complete dissolution of self - and not only survive but emerge with power that comes from having nothing left to fear. They are phoenixes who have mastered the fire.`,
+Su don es la capacidad de afrontar absolutamente cualquier cosa (la sombra más oscura, la verdad más tabú, la completa disolución del yo) y no sólo sobrevivir sino emerger con el poder que proviene de no tener nada que temer. Son fénix que han dominado el fuego.`,
         
-        power: `Their power is immense and primal. They have access to depths of will, intensity, and transformative force that others cannot comprehend. This is raw, elemental power - the force that destroys and creates worlds.
+        power: `Su poder es inmenso y primordial. Tienen acceso a profundidades de voluntad, intensidad y fuerza transformadora que otros no pueden comprender. Este es poder elemental y puro: la fuerza que destruye y crea mundos.
 
-But they must learn the ultimate lesson about power: that true power is not over others but over self, that the deepest strength comes from complete surrender, that mastery of shadow means integration not domination.
+Pero deben aprender la lección fundamental sobre el poder: que el verdadero poder no está sobre los demás sino sobre uno mismo, que la fuerza más profunda proviene de la rendición total, que el dominio de la sombra significa integración, no dominación.
 
-The most powerful expression is someone who has faced their own capacity for destruction so completely that they no longer fear it - and therefore no longer need to use it. They hold power like a sleeping volcano: immense potential, conscious restraint.`,
+La expresión más poderosa es la de alguien que se ha enfrentado tan completamente a su propia capacidad de destrucción que ya no le teme y, por tanto, ya no necesita utilizarla. Tienen poder como un volcán dormido: potencial inmenso, moderación consciente.`,
         
-        shadow: `Their shadow is the shadow itself - they have intimate relationship with humanity's darkest impulses: destruction, obsession, manipulation, the will to power at any cost. When unconscious, they can become what they were meant to transform.
+        shadow: `Su sombra es la sombra misma: tienen una relación íntima con los impulsos más oscuros de la humanidad: la destrucción, la obsesión, la manipulación, la voluntad de poder a cualquier precio. Cuando están inconscientes, pueden convertirse en lo que debían transformar.
 
-They have capacity for profound destructiveness - psychological manipulation at masterful levels, sexual power used to control, or complete self-destruction through addiction, obsession, or suicidal transformation.
+Tienen capacidad para una profunda destructividad: manipulación psicológica a niveles magistrales, poder sexual utilizado para controlar o autodestrucción completa a través de la adicción, la obsesión o la transformación suicida.
 
-The deeper shadow is becoming so identified with darkness that they forget they're also light, using their understanding of shadow to justify shadow behavior, or becoming so intense that all relationships become power struggles and all intimacy becomes merger or combat.`,
+La sombra más profunda se está identificando tanto con la oscuridad que olvidan que también son luz, usando su comprensión de la sombra para justificar el comportamiento de la sombra, o volviéndose tan intensa que todas las relaciones se convierten en luchas de poder y toda intimidad se convierte en fusión o combate.`,
         
-        obsession: `Obsession is their natural state until transformed. They may become consumed by power, control, sexual conquest, revenge, or transformation itself. The intensity has no middle setting - everything becomes life-or-death.
+        obsession: `La obsesión es su estado natural hasta que se transforman. Pueden ser consumidos por el poder, el control, la conquista sexual, la venganza o la transformación misma. La intensidad no tiene punto medio: todo se vuelve de vida o muerte.
 
-Or they obsess about their wounds, the abuses they've suffered or witnessed, the corruption they see everywhere. They may become obsessed with exposing hidden evil or accumulating hidden power.
+O se obsesionan con sus heridas, los abusos que han sufrido o presenciado, la corrupción que ven por todas partes. Pueden obsesionarse con exponer el mal oculto o acumular poder oculto.
 
-The key is recognizing that obsession is misdirected transformative energy. Where they're obsessed is where they're being called to die more completely, to release attachment, to discover they can let go of anything and survive.`,
+La clave es reconocer que la obsesión es energía transformadora mal dirigida. Donde están obsesionados es donde están siendo llamados a morir de manera más completa, a liberarse del apego, a descubrir que pueden dejar cualquier cosa y sobrevivir.`,
         
-        crisis: `Crisis is home. They don't just experience crisis - they generate it, attract it, or unconsciously create it because intensity is where they feel most alive. Survival situations, near-death experiences, complete breakdowns become opportunities for their deepest work.
+        crisis: `La crisis está en casa. No sólo experimentan crisis: las generan, las atraen o las crean inconscientemente porque es en la intensidad donde se sienten más vivos. Situaciones de supervivencia, experiencias cercanas a la muerte, crisis totales se convierten en oportunidades para su trabajo más profundo.
 
-They may unconsciously orchestrate their own destruction repeatedly, pushing until everything falls apart, because the phoenix process is their soul's chosen path of evolution.
+Es posible que inconscientemente orquesten su propia destrucción repetidamente, empujando hasta que todo se desmorone, porque el proceso del fénix es el camino de evolución elegido por su alma.
 
-The gift is that in any crisis, they remain calm where others panic. When everything is falling apart, they finally feel like themselves. They have capacity to function in conditions that would destroy others, to find clarity in chaos, to lead through apocalypse.`,
+El regalo es que en cualquier crisis, mantienen la calma mientras otros entran en pánico. Cuando todo se desmorona, finalmente se sienten ellos mismos. Tienen capacidad para funcionar en condiciones que destruirían a otros, para encontrar claridad en el caos, para liderar a través del apocalipsis.`,
         
-        rebirth: `Each rebirth is more complete than the last. They don't just change - they become entirely new beings, sometimes unrecognizable from who they were before. Old self completely dies; new self emerges with no sentimentality about what was lost.
+        rebirth: `Cada renacimiento es más completo que el anterior. No sólo cambian: se convierten en seres completamente nuevos, a veces irreconocibles de quienes eran antes. El viejo yo muere por completo; Un nuevo yo emerge sin sentimentalismo por lo que se perdió.
 
-The phoenix process for them is not metaphor but lived reality. They may experience literal near-death experiences, symbolic deaths through loss of everything, or psychological deaths through complete ego dissolution.
+Para ellos, el proceso del fénix no es una metáfora sino una realidad vivida. Pueden experimentar experiencias literalmente cercanas a la muerte, muertes simbólicas por la pérdida de todo o muertes psicológicas por la completa disolución del ego.
 
-The mature expression is someone who has died so many times that death has become ally rather than enemy. They no longer fear transformation because they've discovered that what remains after each death is more essentially themselves than what was lost.`,
+La expresión madura es la de alguien que ha muerto tantas veces que la muerte se ha convertido en aliada en lugar de enemiga. Ya no temen la transformación porque han descubierto que lo que queda después de cada muerte es más esencialmente ellos mismos que lo que se perdió.`,
         
-        generational: `As generational influence, Pluto in Scorpio (approximately 1983-1995) marks a generation born during Pluto's transit through its home sign - maximum transformative intensity. This generation witnessed and will catalyze the death of old power structures, sexual revolutions, psychological depths explored, shadow of humanity confronted.
+        generational: `Como influencia generacional, Plutón en Escorpio (aproximadamente 1983-1995) marca una generación nacida durante el tránsito de Plutón a través de su signo natal: máxima intensidad transformadora. Esta generación fue testigo y catalizará la muerte de viejas estructuras de poder, las revoluciones sexuales, la exploración de profundidades psicológicas y la sombra de la humanidad confrontada.
 
-On personal level, this generation carries collective shadow work. They're here to transform humanity's relationship with power, death, sexuality, and hidden truths. Many experienced or witnessed abuse, addiction, or intensity from early childhood - preparation for their transformative mission.`,
+A nivel personal, esta generación lleva a cabo un trabajo colectivo de sombra. Están aquí para transformar la relación de la humanidad con el poder, la muerte, la sexualidad y las verdades ocultas. Muchos experimentaron o fueron testigos de abuso, adicción o intensidad desde la primera infancia: preparación para su misión transformadora.`,
         
-        relationships: `In relationships, they experience soul-level intensity or nothing. Casual relating feels pointless; they want merger, transformation, power dynamics that strip both people to essence. Love and war blend; intimacy becomes initiation.
+        relationships: `En las relaciones, experimentan intensidad a nivel del alma o nada. Las relaciones casuales parecen inútiles; Quieren fusión, transformación, dinámicas de poder que despojen a ambas personas de su esencia. El amor y la guerra se mezclan; la intimidad se convierte en iniciación.
 
-Power struggles can dominate until they learn that true intimacy requires vulnerability, that the deepest power exchange is mutual surrender, that intensity can be generative rather than destructive.
+Las luchas de poder pueden dominar hasta que aprenden que la verdadera intimidad requiere vulnerabilidad, que el intercambio de poder más profundo es la rendición mutua, que la intensidad puede ser generativa en lugar de destructiva.
 
-The evolved expression is bringing transformative intensity to partnership in ways that serve both people's evolution - creating relationships so deep, so honest, so transformative that both people repeatedly die and are reborn through the connection.`,
+La expresión evolucionada aporta intensidad transformadora a la asociación de maneras que sirven a la evolución de ambas personas: creando relaciones tan profundas, tan honestas y tan transformadoras que ambas personas mueren y renacen repetidamente a través de la conexión.`,
         
-        lifeWork: `Their life work involves the deepest transformation - depth psychology, trauma healing, working with death and dying, addiction recovery, shadow integration, sacred sexuality, power dynamics, or any field that requires going where others fear.
+        lifeWork: `El trabajo de su vida implica la transformación más profunda: psicología profunda, curación de traumas, trabajo con la muerte y los moribundos, recuperación de adicciones, integración de las sombras, sexualidad sagrada, dinámicas de poder o cualquier campo que requiera ir a donde otros temen.
 
-They're here to be shamans, psychologists, healers of the deepest wounds, transformers of the most entrenched patterns. They can work with what others cannot face because they've faced it in themselves.
+Están aquí para ser chamanes, psicólogos, sanadores de las heridas más profundas, transformadores de los patrones más arraigados. Pueden trabajar con lo que otros no pueden enfrentar porque ellos mismos lo han enfrentado.
 
-The most fulfilling path is one where their intensity serves others' transformation, where their intimate knowledge of shadow becomes medicine, where their capacity to survive anything becomes guidance for those in crisis.`,
+El camino más satisfactorio es aquel en el que su intensidad sirve a la transformación de los demás, donde su conocimiento íntimo de la sombra se convierte en medicina, donde su capacidad de sobrevivir a cualquier cosa se convierte en guía para quienes están en crisis.`,
         
-        shadowIntegration: `Shadow work isn't optional for them - it's their life purpose. They must develop intimate relationship with their own destructive capacity, their hunger for power, their sexual intensity, their fascination with death. Denying shadow makes it dangerous; integrating it makes it medicine.
+        shadowIntegration: `El trabajo en la sombra no es opcional para ellos: es el propósito de su vida. Deben desarrollar una relación íntima con su propia capacidad destructiva, su hambre de poder, su intensidad sexual, su fascinación por la muerte. Negar la sombra la hace peligrosa; integrarlo lo convierte en medicina.
 
-The work is becoming so familiar with darkness that light and dark no longer seem separate, that they can move through shadow realms while remaining conscious, that their power becomes healing force rather than destructive one.
+La obra se está familiarizando tanto con la oscuridad que la luz y la oscuridad ya no parecen separadas, que pueden moverse a través de reinos de sombras mientras permanecen conscientes, que su poder se convierte en una fuerza curativa en lugar de una fuerza destructiva.
 
-Integration means becoming someone who has such intimate relationship with death that they become master of life - the healer who has been wounded, the guide who has been lost, the transformer who has been destroyed and remade countless times.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con la muerte que se convierte en dueño de la vida: el sanador que ha sido herido, el guía que se ha perdido, el transformador que ha sido destruido y rehecho innumerables veces.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Scorpio represents souls who incarnated for the ultimate transformation - to face death completely and discover what lies beyond, to integrate collective shadow, to show humanity that what we fear most is doorway to power.
+        spiritualMeaning: `Espiritualmente, Plutón en Escorpio representa almas que encarnaron para la transformación definitiva: enfrentar la muerte por completo y descubrir lo que hay más allá, integrar la sombra colectiva, mostrar a la humanidad que lo que más tememos es la puerta al poder.
 
-Their spiritual gift is demonstrating that nothing needs to be hidden, that shadow fully faced becomes light, that death is not end but transformation, that power surrendered to higher purpose becomes blessing rather than curse.
+Su don espiritual demuestra que no es necesario ocultar nada, que la sombra que se enfrenta plenamente se convierte en luz, que la muerte no es un fin sino una transformación, que el poder entregado a un propósito superior se convierte en una bendición en lugar de una maldición.
 
-The ultimate expression is the death master who has died and been reborn so completely they embody resurrection - showing humanity that we can face anything, that no darkness is beyond transformation, that the deepest descent leads to the highest ascent.`,
+La máxima expresión es el maestro de la muerte que ha muerto y ha renacido de manera tan completa que encarna la resurrección, mostrando a la humanidad que podemos enfrentar cualquier cosa, que ninguna oscuridad está más allá de la transformación, que el descenso más profundo conduce al ascenso más alto.`,
         
-        affirmation: "I am transformation itself. I die and am reborn with mastery. My shadow fully integrated becomes my greatest gift. I face what others fear and emerge with power that heals. Death is my ally, rebirth is my nature."
+        affirmation: "Soy la transformación misma. Muero y renazco con maestría. Mi sombra totalmente integrada se convierte en mi mayor regalo. Enfrento lo que otros temen y emerjo con un poder que cura. La muerte es mi aliada, el renacimiento es mi naturaleza."
     },
     
     Sagittarius: {
-        title: "Pluto in Sagittarius - Truth Transformation",
-        archetype: "The Belief Phoenix",
-        hook: "With Pluto in Sagittarius, this soul transforms through death and rebirth of belief systems. They are here to revolutionize philosophy, to transform spirituality, to phoenix from dogma into living truth.",
+        title: "Plutón en Sagitario - Transformación de la Verdad",
+        archetype: "El Fénix de la Creencia",
+        hook: "Con Plutón en Sagitario, esta alma se transforma mediante la muerte y el renacimiento de los sistemas de creencias. Están aquí para revolucionar la filosofía, transformar la espiritualidad, convertir el fénix del dogma en una verdad viva.",
         
-        transformation: `Pluto in Sagittarius creates total transformation of beliefs, meaning-making, and relationship with truth. These souls experience complete shattering of worldviews - sometimes through spiritual crisis, discovering beliefs were lies, or having philosophical frameworks destroyed.
+        transformation: `Plutón en Sagitario crea una transformación total de las creencias, la creación de significado y la relación con la verdad. Estas almas experimentan una completa destrucción de sus visiones del mundo, a veces a través de crisis espirituales, el descubrimiento de que las creencias eran mentiras o la destrucción de marcos filosóficos.
 
-They transform through facing how they've been deceived or deceived themselves, through losing faith and finding genuine wisdom, through discovering truth by having all belief systems die.
+Se transforman al enfrentar cómo ellos mismos han sido engañados o engañados, al perder la fe y al encontrar la sabiduría genuina, al descubrir la verdad al hacer que todos los sistemas de creencias mueran.
 
-Their gift is capacity to seek truth fearlessly after having every belief destroyed, to teach wisdom that's lived not just believed, to rise from philosophical devastation with genuine understanding.`,
+Su don es la capacidad de buscar la verdad sin miedo después de haber destruido todas las creencias, de enseñar sabiduría vivida y no sólo creída, de levantarse de la devastación filosófica con comprensión genuina.`,
         
-        power: `Their power is philosophical and inspirational. They have tremendous capacity for understanding, for teaching, for inspiring others toward truth and freedom.
+        power: `Su poder es filosófico e inspirador. Tienen una tremenda capacidad de comprensión, de enseñanza, de inspirar a otros hacia la verdad y la libertad.
 
-But they must learn difference between authentic power (wisdom earned through experience) and false power (dogmatism, claiming to know truth, using beliefs to control or judge).
+Pero deben aprender la diferencia entre el poder auténtico (sabiduría obtenida a través de la experiencia) y el poder falso (dogmatismo, afirmar conocer la verdad, usar creencias para controlar o juzgar).
 
-The most powerful expression is someone who has had all beliefs destroyed and rebuilt into living wisdom - teacher who inspires seeking rather than belief, who shares truth while honoring all paths.`,
+La expresión más poderosa es la de alguien a quien se le han destruido todas las creencias y se las ha reconstruido en sabiduría viva: un maestro que inspira la búsqueda en lugar de la creencia, que comparte la verdad mientras honra todos los caminos.`,
         
-        shadow: `Their shadow is dogmatism, religious extremism, and imposing beliefs on others. When they feel lost, they may cling to ideology fanatically. When wounded around meaning, they may judge others' paths or preach their truth as only truth.
+        shadow: `Su sombra es el dogmatismo, el extremismo religioso y la imposición de creencias a los demás. Cuando se sienten perdidos, pueden aferrarse fanáticamente a la ideología. Cuando se sienten heridos por el significado, pueden juzgar los caminos de los demás o predicar su verdad como única verdad.
 
-They have capacity for destructive belief - using religion to justify harm, forcing others to believe, or creating holy wars (literal or metaphorical).
+Tienen capacidad para tener creencias destructivas: utilizar la religión para justificar el daño, obligar a otros a creer o crear guerras santas (literales o metafóricas).
 
-The deeper shadow is hidden meaninglessness - appearing to have all answers while feeling spiritually empty, teaching beliefs to convince themselves, or searching compulsively because no truth satisfies.`,
+La sombra más profunda es la falta de sentido oculta: parecer tener todas las respuestas mientras se siente espiritualmente vacío, enseñar creencias para convencerse a sí mismo o buscar compulsivamente porque ninguna verdad satisface.`,
         
-        obsession: `They can become obsessed with finding truth, the meaning of life, being right about beliefs. The search for ultimate understanding can consume everything.
+        obsession: `Pueden obsesionarse con encontrar la verdad, el significado de la vida y tener razón en sus creencias. La búsqueda de la comprensión última puede consumirlo todo.
 
-Or they obsess about being deceived, about which beliefs are true, about proving their philosophy correct. The intensity around meaning doesn't have middle ground until they learn to live questions.
+O se obsesionan con ser engañados, con qué creencias son verdaderas, con demostrar que su filosofía es correcta. La intensidad en torno al significado no tiene término medio hasta que aprenden a vivir las preguntas.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where dogma needs to die so genuine wisdom can emerge.`,
+La clave es reconocer la obsesión como un signo de una transformación que está tratando de ocurrir: donde están obsesionados es donde el dogma debe morir para que pueda surgir la sabiduría genuina.`,
         
-        crisis: `Crisis of faith or meaning is their catalyst. Discovering spiritual teacher lied, having religious trauma, losing all sense of purpose become opportunities for transformation. They need belief death to find living truth.
+        crisis: `La crisis de fe o de significado es su catalizador. Descubrir que un maestro espiritual mintió, sufrir un trauma religioso y perder todo sentido de propósito se convierten en oportunidades de transformación. Necesitan creer en la muerte para encontrar la verdad viva.
 
-They may unconsciously create philosophical crises to force evolution beyond belief into direct knowing. Learning to transform without needing worldview destroyed becomes mature expression.
+Pueden crear inconscientemente crisis filosóficas para forzar la evolución más allá de la creencia hacia el conocimiento directo. Aprender a transformar sin necesidad de destruir la visión del mundo se convierte en una expresión madura.
 
-The gift is that in any crisis of meaning, they have capacity to seek truth deeper. When all beliefs fail, they discover wisdom through direct experience.`,
+El regalo es que en cualquier crisis de significado, tienen la capacidad de buscar la verdad más profundamente. Cuando todas las creencias fallan, descubren la sabiduría a través de la experiencia directa.`,
         
-        rebirth: `Each rebirth makes their understanding more genuine. False beliefs burn away in successive crises until what remains is lived wisdom, truth discovered through experience not adopted from others.
+        rebirth: `Cada renacimiento hace que su comprensión sea más genuina. Las falsas creencias se queman en crisis sucesivas hasta que lo que queda es sabiduría vivida, verdad descubierta a través de la experiencia y no adoptada de otros.
 
-The phoenix process through faith crisis can be disorienting - they may wish they could just believe something. But their soul chose transformation through death of belief into living truth.
+El proceso del fénix a través de la crisis de fe puede ser desorientador: es posible que deseen poder creer en algo. Pero su alma eligió la transformación mediante la muerte de la fe en la verdad viva.
 
-The mature expression is someone who has lost and rebuilt meaning so many times they no longer need to believe anything - they know truth directly through lived experience.`,
+La expresión madura es alguien que ha perdido y reconstruido significado tantas veces que ya no necesita creer nada: conoce la verdad directamente a través de la experiencia vivida.`,
         
-        generational: `As generational influence, Pluto in Sagittarius marks periods of religious transformation, philosophical revolution, education system overhaul, global understanding shifting radically.
+        generational: `Como influencia generacional, Plutón en Sagitario marca períodos de transformación religiosa, revolución filosófica, revisión del sistema educativo y cambio radical de la comprensión global.
 
-On personal level, it creates souls who will transform collective relationship with truth and belief, who revolutionize spirituality and education, who show that wisdom is lived not believed.`,
+A nivel personal, crea almas que transformarán la relación colectiva con la verdad y la creencia, que revolucionarán la espiritualidad y la educación, que mostrarán que la sabiduría se vive, no se cree.`,
         
-        relationships: `In relationships, they need partners who share their love of truth, who can handle philosophical intensity, who want to explore meaning together without needing to believe same things.
+        relationships: `En las relaciones, necesitan socios que compartan su amor por la verdad, que puedan manejar la intensidad filosófica, que quieran explorar el significado juntos sin necesidad de creer las mismas cosas.
 
-Power struggles around whose beliefs are right can be constant until they learn that intimacy includes honoring different truths, that love transcends belief.
+Las luchas de poder en torno a quién tiene las creencias correctas pueden ser constantes hasta que aprenden que la intimidad incluye honrar diferentes verdades, que el amor trasciende las creencias.
 
-The evolved expression is bringing transformative seeking to partnership - relationships where both people support each other's quest for truth without needing agreement.`,
+La expresión evolucionada trae una búsqueda transformadora a la asociación: relaciones en las que ambas personas se apoyan mutuamente en la búsqueda de la verdad sin necesidad de un acuerdo.`,
         
-        lifeWork: `Their life work involves transforming belief systems - revolutionary education, authentic spiritual teaching, philosophy that serves awakening, travel or writing that expands understanding.
+        lifeWork: `El trabajo de su vida implica transformar sistemas de creencias: educación revolucionaria, enseñanza espiritual auténtica, filosofía que sirve al despertar, viajes o escritura que amplía la comprensión.
 
-They're here to demonstrate that beliefs can die and truth can be reborn, that genuine wisdom comes from experience, that seeking serves better than believing.
+Están aquí para demostrar que las creencias pueden morir y la verdad puede renacer, que la sabiduría genuina proviene de la experiencia, que buscar es mejor que creer.
 
-The most fulfilling path is one where they're helping others transform from dogma into living truth, teaching in ways that inspire genuine seeking.`,
+El camino más satisfactorio es aquel en el que ayudan a otros a transformarse del dogma en una verdad viva, enseñándoles de manera que inspiren una búsqueda genuina.`,
         
-        shadowIntegration: `Shadow work around dogmatism, judgment, and need to be right is essential. They must face their capacity to impose beliefs, to judge others' paths, to use truth as weapon.
+        shadowIntegration: `Es esencial trabajar en la sombra en torno al dogmatismo, el juicio y la necesidad de tener razón. Deben afrontar su capacidad de imponer creencias, de juzgar el camino de los demás, de utilizar la verdad como arma.
 
-The work is befriending their need for meaning while releasing attachment to specific beliefs, understanding that meaninglessness wounded them, that acknowledging shadow allows choosing genuine seeking.
+El trabajo se trata de hacerse amigo de su necesidad de significado mientras liberan el apego a creencias específicas, entendiendo que la falta de significado los hirió, que reconocer la sombra les permite elegir una búsqueda genuina.
 
-Integration means becoming someone who has such intimate relationship with their dogmatic tendency that it becomes openness - the teacher who knows their judgment and consciously chooses humble sharing of wisdom earned.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su tendencia dogmática que se convierte en apertura: el maestro que conoce su juicio y elige conscientemente compartir humildemente la sabiduría adquirida.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Sagittarius represents souls who incarnated to transform collective relationship with truth, to show that genuine wisdom requires beliefs to die, that faith evolves.
+        spiritualMeaning: `Espiritualmente, Plutón en Sagitario representa almas que encarnaron para transformar la relación colectiva con la verdad, para mostrar que la sabiduría genuina requiere que las creencias mueran, que la fe evoluciona.
 
-Their spiritual gift is demonstrating that you can lose all meaning and find it again deeper, that destroying beliefs reveals living truth, that seeking transforms into direct knowing.
+Su don espiritual demuestra que puedes perder todo significado y encontrarlo nuevamente más profundo, que destruir creencias revela la verdad viva, que la búsqueda se transforma en conocimiento directo.
 
-The ultimate expression is the wisdom keeper who has died to dogma so many times they embody living truth - showing humanity that real understanding is experiential, that authentic spirituality evolves through transformation, that wisdom shared humbly serves better than beliefs imposed.`,
+La máxima expresión es el guardián de la sabiduría que ha muerto ante los dogmas tantas veces que encarna la verdad viva, mostrando a la humanidad que la comprensión real es experiencial, que la espiritualidad auténtica evoluciona a través de la transformación, que la sabiduría compartida con humildad sirve mejor que las creencias impuestas.`,
         
-        affirmation: "I transform through death of beliefs. My truth is lived not just believed. I seek wisdom through direct experience. My teaching inspires others to find their own truth."
+        affirmation: "Me transformo a través de la muerte de las creencias. Mi verdad se vive, no sólo se cree. Busco la sabiduría a través de la experiencia directa. Mi enseñanza inspira a otros a encontrar su propia verdad."
     },
     
     Capricorn: {
-        title: "Pluto in Capricorn - Power Structure Transformation",
-        archetype: "The System Phoenix",
-        hook: "With Pluto in Capricorn, this soul transforms through death and rebirth of power structures. They are here to revolutionize authority, to transform institutions, to phoenix from systemic collapse into enlightened governance.",
+        title: "Plutón en Capricornio - Transformación de la estructura de poder",
+        archetype: "El sistema Fénix",
+        hook: "Con Plutón en Capricornio, esta alma se transforma mediante la muerte y el renacimiento de las estructuras de poder. Están aquí para revolucionar la autoridad, transformar las instituciones, convertir el ave fénix del colapso sistémico en una gobernanza ilustrada.",
         
-        transformation: `Pluto in Capricorn creates total transformation of structures, authority, and relationship with power. These souls experience complete upheaval in career, status, or relationship with institutions - sometimes through public failure, authority abuse, or watching systems they trusted completely fail.
+        transformation: `Plutón en Capricornio crea una transformación total de las estructuras, la autoridad y la relación con el poder. Estas almas experimentan una completa agitación en su carrera, estatus o relación con las instituciones, a veces a través del fracaso público, el abuso de autoridad o la observación de que los sistemas en los que confiaban fracasan por completo.
 
-They transform through facing corruption in power, through losing status and rebuilding with integrity, through discovering that real authority is spiritual responsibility not worldly control.
+Se transforman al enfrentar la corrupción en el poder, al perder estatus y reconstruirse con integridad, al descubrir que la verdadera autoridad es responsabilidad espiritual, no control mundano.
 
-Their gift is capacity to build lasting structures after experiencing systemic collapse, to lead with integrity after witnessing abuse of power, to rise from career devastation with wisdom about what truly serves.`,
+Su don es la capacidad de construir estructuras duraderas después de experimentar un colapso sistémico, de liderar con integridad después de presenciar abuso de poder, de levantarse de la devastación profesional con sabiduría sobre lo que realmente sirve.`,
         
-        power: `Their power is organizational and executive. They have immense capacity for leadership, for building systems that last, for understanding how power structures work and transforming them.
+        power: `Su poder es organizativo y ejecutivo. Tienen una inmensa capacidad de liderazgo, de construir sistemas duraderos, de comprender cómo funcionan las estructuras de poder y transformarlas.
 
-But they must learn difference between authentic power (authority as service, systems that serve collective) and false power (tyranny, control, using position to dominate).
+Pero deben aprender la diferencia entre el poder auténtico (autoridad como servicio, sistemas que sirven al colectivo) y el poder falso (tiranía, control, uso de la posición para dominar).
 
-The most powerful expression is someone who has witnessed or experienced corrupt power completely and transformed it into capacity to lead with integrity - building institutions that genuinely serve rather than control.`,
+La expresión más poderosa es la de alguien que ha presenciado o experimentado completamente el poder corrupto y lo ha transformado en capacidad de liderar con integridad, construyendo instituciones que realmente sirvan en lugar de controlar.`,
         
-        shadow: `Their shadow is authoritarianism, ruthless ambition, and corruption. When they feel powerless, they may become tyrannical. When wounded around status, they may destroy others to rise or sacrifice everything for achievement.
+        shadow: `Su sombra es el autoritarismo, la ambición despiadada y la corrupción. Cuando se sienten impotentes, pueden volverse tiránicos. Cuando se sienten heridos por su estatus, pueden destruir a otros para ascender o sacrificarlo todo para lograr logros.
 
-They have capacity for destructive use of power - crushing those beneath them, building empires that serve ego, or using systems to control rather than serve.
+Tienen capacidad para hacer un uso destructivo del poder: aplastar a quienes están debajo de ellos, construir imperios que sirvan al ego o utilizar sistemas para controlar en lugar de servir.
 
-The deeper shadow is hidden powerlessness - appearing powerful while feeling like fraud inside, achieving to prove worth, or using authority to hide vulnerability.`,
+La sombra más profunda es la impotencia oculta: parecer poderoso mientras por dentro se siente como un fraude, lograr demostrar su valía o utilizar la autoridad para ocultar la vulnerabilidad.`,
         
-        obsession: `They can become obsessed with success, status, control, or building perfect systems. The drive to achieve and control can consume all else including relationships and health.
+        obsession: `Pueden obsesionarse con el éxito, el estatus, el control o la construcción de sistemas perfectos. El impulso de lograr y controlar puede consumir todo lo demás, incluidas las relaciones y la salud.
 
-Or they obsess about failure, corrupt authorities, or how systems are broken. The intensity around power doesn't have middle ground until they learn that real power is integrity.
+O se obsesionan con el fracaso, las autoridades corruptas o cómo fallan los sistemas. La intensidad en torno al poder no tiene término medio hasta que aprenden que el verdadero poder es integridad.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where ego-driven ambition needs to die so authentic leadership can emerge.`,
+La clave es reconocer la obsesión como señal de que la transformación está tratando de ocurrir: donde están obsesionados es donde la ambición impulsada por el ego debe morir para que pueda surgir un liderazgo auténtico.`,
         
-        crisis: `Crisis around authority, career, or institutional structures is their catalyst. Public failure, institutional collapse, witnessing corruption become opportunities for transformation. They need power structures to die to rebuild them with integrity.
+        crisis: `Las crisis en torno a la autoridad, la carrera o las estructuras institucionales son su catalizador. El fracaso público, el colapso institucional y presenciar la corrupción se convierten en oportunidades de transformación. Necesitan que las estructuras de poder mueran para reconstruirlas con integridad.
 
-They may unconsciously create career crises to force evolution beyond ego-achievement into genuine service. Learning to transform without needing public humiliation becomes mature expression.
+Pueden crear inconscientemente crisis profesionales para forzar la evolución más allá del logro del ego hacia un servicio genuino. Aprender a transformarse sin necesidad de humillación pública se convierte en una expresión madura.
 
-The gift is that in any institutional crisis, they have capacity to see what's truly broken and how to rebuild it better. When power structures fail completely, they discover how to create ones that actually serve.`,
+El regalo es que en cualquier crisis institucional, tienen la capacidad de ver qué es lo que realmente está roto y cómo reconstruirlo mejor. Cuando las estructuras de poder fallan por completo, descubren cómo crear otras que realmente sirvan.`,
         
-        rebirth: `Each rebirth makes their leadership more authentic. False ambition burns away in successive failures until what remains is genuine capacity to build structures that serve collective not ego.
+        rebirth: `Cada renacimiento hace que su liderazgo sea más auténtico. La falsa ambición se quema en fracasos sucesivos hasta que lo que queda es una capacidad genuina para construir estructuras que sirvan al colectivo, no al ego.
 
-The phoenix process through status death can be excruciating - they may wish they could just succeed without transformation. But their soul chose to learn that real power is integrity in service.
+El proceso del fénix a través de la muerte del estatus puede ser insoportable: es posible que deseen poder tener éxito sin transformación. Pero su alma decidió aprender que el verdadero poder es la integridad en el servicio.
 
-The mature expression is someone who has lost and rebuilt status so many times they no longer fear failure, whose authority comes from wisdom not position, who leads from spiritual responsibility.`,
+La expresión madura es alguien que ha perdido y reconstruido su estatus tantas veces que ya no teme al fracaso, cuya autoridad proviene de la sabiduría, no de la posición, que lidera desde la responsabilidad espiritual.`,
         
-        generational: `As generational influence, Pluto in Capricorn marks periods of institutional collapse and rebirth, government transformation, corporate structures dying, authority itself being redefined.
+        generational: `Como influencia generacional, Plutón en Capricornio marca períodos de colapso y renacimiento institucional, transformación gubernamental, muerte de estructuras corporativas y redefinición de la autoridad misma.
 
-On personal level, it creates souls who will transform collective relationship with power and authority, who rebuild institutions with integrity, who show that leadership can be enlightened service.`,
+A nivel personal, crea almas que transformarán la relación colectiva con el poder y la autoridad, que reconstruirán instituciones con integridad, que demostrarán que el liderazgo puede ser un servicio iluminado.`,
         
-        relationships: `In relationships, they need partners who don't measure love by status, who can handle career intensity, who want partnerships based on mutual respect not power dynamics.
+        relationships: `En las relaciones, necesitan socios que no midan el amor por el estatus, que puedan manejar la intensidad de su carrera, que quieran asociaciones basadas en el respeto mutuo y no en dinámicas de poder.
 
-Power struggles around authority and achievement can be constant until they learn that intimacy requires vulnerability not control, that love means partnership not hierarchy.
+Las luchas de poder en torno a la autoridad y los logros pueden ser constantes hasta que aprenden que la intimidad requiere vulnerabilidad, no control, que el amor significa asociación, no jerarquía.
 
-The evolved expression is bringing transformative integrity to partnership - creating relationships where both people support each other's authentic authority without competition.`,
+La expresión evolucionada aporta integridad transformadora a la asociación, creando relaciones en las que ambas personas apoyan la auténtica autoridad del otro sin competencia.`,
         
-        lifeWork: `Their life work involves transforming power structures - building new institutions, leading organizational change, creating governance systems with integrity, or any field transforming how authority functions.
+        lifeWork: `El trabajo de su vida implica transformar las estructuras de poder: construir nuevas instituciones, liderar el cambio organizacional, crear sistemas de gobernanza con integridad o cualquier campo que transforme el funcionamiento de la autoridad.
 
-They're here to demonstrate that power structures can transform completely, that authority can serve rather than dominate, that systems can be rebuilt with wisdom after corruption is purged.
+Están aquí para demostrar que las estructuras de poder pueden transformarse completamente, que la autoridad puede servir en lugar de dominar, que los sistemas pueden reconstruirse con sabiduría después de eliminar la corrupción.
 
-The most fulfilling path is one where they're rebuilding institutions with hard-won integrity, leading transformation of broken systems, demonstrating enlightened use of power.`,
+El camino más gratificante es aquel en el que están reconstruyendo instituciones con una integridad ganada con esfuerzo, liderando la transformación de sistemas rotos y demostrando un uso inteligente del poder.`,
         
-        shadowIntegration: `Shadow work around power hunger, control, and corruption is essential. They must face their capacity to abuse authority, to sacrifice everything for achievement, to use systems for personal gain.
+        shadowIntegration: `El trabajo en la sombra en torno al hambre de poder, el control y la corrupción es esencial. Deben afrontar su capacidad de abusar de la autoridad, de sacrificarlo todo para lograr logros, de utilizar sistemas para beneficio personal.
 
-The work is befriending their ambition while ensuring integrity, understanding that powerlessness wounded them, that acknowledging shadow allows choosing authentic leadership.
+El trabajo es favorecer su ambición garantizando al mismo tiempo la integridad, comprendiendo que la impotencia los hirió, que reconocer la sombra permite elegir un liderazgo auténtico.
 
-Integration means becoming someone who has such intimate relationship with their power hunger that it becomes capacity for genuine service - the leader who knows their authoritarian shadow and consciously chooses humble authority that serves collective.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su hambre de poder que se convierte en capacidad de servicio genuino: el líder que conoce su sombra autoritaria y elige conscientemente una autoridad humilde que sirve al colectivo.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Capricorn represents souls who incarnated to show that power can be sacred, that authority is spiritual responsibility, that structures should serve collective evolution not individual ego.
+        spiritualMeaning: `Espiritualmente, Plutón en Capricornio representa almas que encarnaron para mostrar que el poder puede ser sagrado, que la autoridad es responsabilidad espiritual, que las estructuras deben servir a la evolución colectiva, no al ego individual.
 
-Their spiritual gift is demonstrating that you can lose all status and discover real power is integrity, that authority based on service lasts while authority based on control eventually falls.
+Su don espiritual es demostrar que se puede perder todo estatus y descubrir que el verdadero poder es la integridad, que la autoridad basada en el servicio perdura mientras que la autoridad basada en el control eventualmente cae.
 
-The ultimate expression is the enlightened leader who has died to ego-ambition so many times they embody sacred authority - showing humanity that real power is responsibility to serve, that genuine leadership transforms systems to benefit all, that building for collective good is ultimate achievement.`,
+La máxima expresión es el líder ilustrado que ha muerto a causa de la ambición del ego tantas veces que encarna una autoridad sagrada, mostrando a la humanidad que el poder real es la responsabilidad de servir, que el liderazgo genuino transforma los sistemas para beneficiar a todos, que construir para el bien colectivo es el logro máximo.`,
         
-        affirmation: "I transform through power structures dying. My authority serves collective good. I lead with integrity not ego. My systems support evolution of all beings."
+        affirmation: "Me transformo a través de estructuras de poder que mueren. Mi autoridad sirve al bien colectivo. Lidero con integridad, no con ego. Mis sistemas apoyan la evolución de todos los seres."
     },
     
     Aquarius: {
-        title: "Pluto in Aquarius - Revolutionary Transformation",
-        archetype: "The Future Phoenix",
-        hook: "With Pluto in Aquarius, this soul transforms through death and rebirth of collective consciousness. They are here to revolutionize humanity itself, to transform social structures completely, to phoenix from collective collapse into enlightened future.",
+        title: "Plutón en Acuario - Transformación revolucionaria",
+        archetype: "El futuro fénix",
+        hook: "Con Plutón en Acuario, esta alma se transforma mediante la muerte y el renacimiento de la conciencia colectiva. Están aquí para revolucionar la humanidad misma, para transformar completamente las estructuras sociales, para convertir el ave fénix del colapso colectivo en un futuro iluminado.",
         
-        transformation: `Pluto in Aquarius creates total transformation of collective consciousness, technology, and social organization. These souls experience complete upheaval in their relationship with humanity, technology, or groups - sometimes through witnessing or participating in revolutionary change that transforms everything.
+        transformation: `Plutón en Acuario crea una transformación total de la conciencia colectiva, la tecnología y la organización social. Estas almas experimentan una completa agitación en su relación con la humanidad, la tecnología o los grupos, a veces al ser testigos o participar en cambios revolucionarios que lo transforman todo.
 
-They transform through facing how collective systems fail, through losing faith in humanity and finding it again deeper, through discovering that real change requires both breakdown of old and conscious building of new.
+Se transforman al enfrentar cómo fallan los sistemas colectivos, al perder la fe en la humanidad y encontrarla nuevamente más profundamente, al descubrir que el cambio real requiere tanto la ruptura de lo viejo como la construcción consciente de lo nuevo.
 
-Their gift is capacity to envision and build future after witnessing complete social collapse, to use technology for evolution after seeing its destructive potential, to rise from collective trauma with wisdom about what humanity can become.`,
+Su don es la capacidad de imaginar y construir el futuro después de presenciar un colapso social total, de utilizar la tecnología para la evolución después de ver su potencial destructivo, de levantarse del trauma colectivo con sabiduría sobre lo que la humanidad puede llegar a ser.`,
         
-        power: `Their power is revolutionary and technological. They have immense capacity to transform collective systems, to innovate solutions that serve masses, to catalyze social evolution.
+        power: `Su poder es revolucionario y tecnológico. Tienen una inmensa capacidad para transformar sistemas colectivos, innovar soluciones que sirvan a las masas y catalizar la evolución social.
 
-But they must learn difference between authentic power (revolution that serves collective evolution) and false power (destroying without building, using change for personal agenda, cold detachment disguised as objectivity).
+Pero deben aprender la diferencia entre el poder auténtico (la revolución que sirve a la evolución colectiva) y el poder falso (destruir sin construir, utilizar el cambio para la agenda personal, un frío desapego disfrazado de objetividad).
 
-The most powerful expression is someone who has witnessed collective systems fail completely and transformed it into capacity to build new paradigms - revolutionary who creates rather than just destroys.`,
+La expresión más poderosa es la de alguien que ha sido testigo del fracaso total de sistemas colectivos y lo ha transformado en capacidad para construir nuevos paradigmas: un revolucionario que crea en lugar de simplemente destruir.`,
         
-        shadow: `Their shadow is destructive revolution, extremism, and cold detachment. When they feel powerless to change systems, they may become extremist. When wounded by collective, they may detach completely or use technology/ideas to control rather than liberate.
+        shadow: `Su sombra es la revolución destructiva, el extremismo y el frío desapego. Cuando se sienten impotentes para cambiar los sistemas, pueden volverse extremistas. Cuando son heridos por lo colectivo, pueden separarse por completo o usar tecnología/ideas para controlar en lugar de liberar.
 
-They have capacity for destructive idealism - tearing down functional systems in pursuit of utopia, sacrificing individuals for collective ideal, or using revolution to serve ego not evolution.
+Tienen capacidad para el idealismo destructivo: derribar sistemas funcionales en pos de la utopía, sacrificar individuos por ideales colectivos o utilizar la revolución para servir al ego y no a la evolución.
 
-The deeper shadow is hidden alienation - appearing connected to collective while feeling profoundly alone, serving humanity to avoid intimacy, or using futurism to escape present.`,
+La sombra más profunda es la alienación oculta: aparecer conectado con lo colectivo mientras se siente profundamente solo, servir a la humanidad para evitar la intimidad o utilizar el futurismo para escapar del presente.`,
         
-        obsession: `They can become obsessed with revolution, fixing society, building perfect future, or technological solutions. The drive to transform collective can consume all else.
+        obsession: `Pueden obsesionarse con la revolución, arreglar la sociedad, construir un futuro perfecto o soluciones tecnológicas. El impulso de transformar lo colectivo puede consumir todo lo demás.
 
-Or they obsess about what's wrong with humanity, corrupt systems, or how change isn't happening fast enough. The revolutionary intensity doesn't have middle ground until they learn that evolution includes current reality.
+O se obsesionan con lo que está mal en la humanidad, los sistemas corruptos o cómo el cambio no se está produciendo lo suficientemente rápido. La intensidad revolucionaria no tiene término medio hasta que aprenden que la evolución incluye la realidad actual.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where destructive revolution needs to die so conscious evolution can emerge.`,
+La clave es reconocer la obsesión como un signo de transformación que intenta ocurrir: donde están obsesionados es donde la revolución destructiva necesita morir para que pueda surgir la evolución consciente.`,
         
-        crisis: `Crisis in collective systems or social structures is their catalyst. Witnessing social collapse, technological disaster, or revolutionary upheaval become opportunities for transformation. They need to see old systems die to build new ones consciously.
+        crisis: `La crisis en los sistemas colectivos o las estructuras sociales es su catalizador. Ser testigo del colapso social, el desastre tecnológico o la agitación revolucionaria se convierte en oportunidades de transformación. Necesitan ver morir los viejos sistemas para construir conscientemente otros nuevos.
 
-They may unconsciously participate in creating social crises to force collective evolution. Learning to transform without requiring destruction becomes mature expression.
+Pueden participar inconscientemente en la creación de crisis sociales para forzar la evolución colectiva. Aprender a transformarse sin necesidad de destrucción se convierte en una expresión madura.
 
-The gift is that in any collective crisis, they have capacity to envision what comes next and help build it. When social systems fail completely, they discover how to create ones that serve conscious evolution.`,
+El regalo es que, en cualquier crisis colectiva, tienen la capacidad de imaginar lo que vendrá después y ayudar a construirlo. Cuando los sistemas sociales fallan por completo, descubren cómo crear otros que sirvan a la evolución consciente.`,
         
-        rebirth: `Each rebirth makes their revolution more conscious. Destructive idealism burns away in successive crises until what remains is genuine capacity to build future that serves all, not just ideals.
+        rebirth: `Cada renacimiento hace que su revolución sea más consciente. El idealismo destructivo se desvanece en crisis sucesivas hasta que lo que queda es una capacidad genuina para construir un futuro que sirva a todos, no sólo a los ideales.
 
-The phoenix process through collective transformation can be devastating - they may wish humanity would just evolve. But their soul chose to participate in conscious evolution through crisis and rebirth.
+El proceso del Fénix a través de la transformación colectiva puede ser devastador: es posible que deseen que la humanidad simplemente evolucione. Pero su alma eligió participar en la evolución consciente a través de crisis y renacimiento.
 
-The mature expression is someone who has witnessed and participated in revolution so many times they understand that real change requires both breaking what's broken and consciously building what serves - evolutionary rather than just revolutionary.`,
+La expresión madura es alguien que ha sido testigo y participado en la revolución tantas veces que entiende que el cambio real requiere romper lo que está roto y construir conscientemente lo que sirve: evolutivo en lugar de simplemente revolucionario.`,
         
-        generational: `As generational influence, Pluto in Aquarius marks periods of maximum collective transformation, technological revolution, social structures completely reorganizing, humanity making quantum evolutionary leaps.
+        generational: `Como influencia generacional, Plutón en Acuario marca períodos de máxima transformación colectiva, revolución tecnológica, estructuras sociales que se reorganizan por completo y la humanidad da saltos evolutivos cuánticos.
 
-On personal level, it creates souls who will transform humanity itself, who bridge current and future consciousness, who build new paradigms after old ones die.`,
+A nivel personal, crea almas que transformarán a la humanidad misma, que unirán la conciencia actual y futura, que construirán nuevos paradigmas después de que los viejos mueran.`,
         
-        relationships: `In relationships, they need partners who share their revolutionary vision, who can handle intensity of caring about collective while staying intimate, who want to build future together.
+        relationships: `En las relaciones, necesitan socios que compartan su visión revolucionaria, que puedan manejar la intensidad del interés colectivo sin dejar de ser íntimos, que quieran construir un futuro juntos.
 
-Power struggles around collective versus individual needs can be constant until they learn that intimacy is part of evolution, that personal love serves revolutionary change, that partnership can be both intimate and visionary.
+Las luchas de poder en torno a las necesidades colectivas versus las individuales pueden ser constantes hasta que aprenden que la intimidad es parte de la evolución, que el amor personal sirve al cambio revolucionario, que la asociación puede ser a la vez íntima y visionaria.
 
-The evolved expression is bringing transformative revolutionary consciousness to partnership - relationships focused on building future while maintaining genuine emotional connection.`,
+La expresión evolucionada está aportando una conciencia revolucionaria transformadora a la asociación: relaciones centradas en construir el futuro manteniendo al mismo tiempo una conexión emocional genuina.`,
         
-        lifeWork: `Their life work involves transforming collective consciousness - revolutionary technology, building new social systems, catalyzing mass awakening, or any field where they're helping humanity evolve.
+        lifeWork: `El trabajo de su vida implica transformar la conciencia colectiva: tecnología revolucionaria, construir nuevos sistemas sociales, catalizar el despertar masivo o cualquier campo en el que estén ayudando a la humanidad a evolucionar.
 
-They're here to demonstrate that collective consciousness can transform, that humanity can evolve consciously, that technology can serve awakening, that new paradigms emerge from death of old.
+Están aquí para demostrar que la conciencia colectiva puede transformar, que la humanidad puede evolucionar conscientemente, que la tecnología puede servir para el despertar, que nuevos paradigmas emergen de la muerte de los viejos.
 
-The most fulfilling path is one where they're actively building future, transforming social systems, using their revolutionary intensity to serve conscious collective evolution.`,
+El camino más satisfactorio es aquel en el que construyen activamente el futuro, transforman los sistemas sociales y utilizan su intensidad revolucionaria al servicio de la evolución colectiva consciente.`,
         
-        shadowIntegration: `Shadow work around extremism, detachment, and destructive revolution is essential. They must face their capacity to destroy without building, to sacrifice people for ideals, to detach from humanity while claiming to serve it.
+        shadowIntegration: `El trabajo en la sombra en torno al extremismo, el desapego y la revolución destructiva es esencial. Deben afrontar su capacidad de destruir sin construir, de sacrificar personas por ideales, de separarse de la humanidad mientras afirman servirla.
 
-The work is befriending their revolutionary impulse while ensuring it serves evolution not just destruction, understanding that alienation wounded them, that acknowledging shadow allows choosing conscious change.
+La obra se hace amiga de su impulso revolucionario y al mismo tiempo garantiza que sirva a la evolución y no solo a la destrucción, entendiendo que la alienación los hirió, que reconocer la sombra les permite elegir un cambio consciente.
 
-Integration means becoming someone who has such intimate relationship with their destructive revolutionary shadow that it becomes capacity for conscious evolution - the change-maker who knows their extremism and consciously chooses building future that serves all.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su destructiva sombra revolucionaria que se convierte en capacidad de evolución consciente: el agente de cambio que conoce su extremismo y elige conscientemente construir un futuro que sirva a todos.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Aquarius represents souls who incarnated to catalyze collective evolution, to show that humanity can consciously choose next stage of development, that technology and spirituality can merge.
+        spiritualMeaning: `Espiritualmente, Plutón en Acuario representa almas que encarnaron para catalizar la evolución colectiva, para mostrar que la humanidad puede elegir conscientemente la siguiente etapa de desarrollo, que la tecnología y la espiritualidad pueden fusionarse.
 
-Their spiritual gift is demonstrating that collective consciousness can die and be reborn more evolved, that human revolution serves divine plan, that we can consciously create our future.
+Su don espiritual está demostrando que la conciencia colectiva puede morir y renacer más evolucionada, que la revolución humana sirve al plan divino, que podemos crear conscientemente nuestro futuro.
 
-The ultimate expression is the conscious revolutionary who has died to destructive idealism so many times they embody evolutionary wisdom - showing humanity that real transformation serves all beings, that conscious collective evolution is possible, that future is built through wisdom not just destroyed through revolution.`,
+La máxima expresión es el revolucionario consciente que ha muerto ante el idealismo destructivo tantas veces que encarna la sabiduría evolutiva, mostrando a la humanidad que la transformación real sirve a todos los seres, que la evolución colectiva consciente es posible, que el futuro se construye a través de la sabiduría y no sólo se destruye mediante la revolución.`,
         
-        affirmation: "I transform collective consciousness. My revolution serves conscious evolution. I build future from wisdom not just destroy from ideals. Humanity awakens through our collective transformation."
+        affirmation: "Transformo la conciencia colectiva. Mi revolución sirve a la evolución consciente. Construyo el futuro a partir de la sabiduría, no sólo lo destruyo a partir de ideales. La humanidad despierta a través de nuestra transformación colectiva."
     },
     
     Pisces: {
-        title: "Pluto in Pisces - Spiritual Transformation",
-        archetype: "The Divine Death",
-        hook: "With Pluto in Pisces, this soul transforms through complete ego dissolution into divine. They are here for ultimate spiritual death and rebirth, to show that surrendering self reveals God, to phoenix from spiritual devastation into enlightenment.",
+        title: "Plutón en Piscis - Transformación Espiritual",
+        archetype: "La muerte divina",
+        hook: "Con Plutón en Piscis, esta alma se transforma en divina mediante la completa disolución del ego. Están aquí para la muerte y el renacimiento espiritual definitivo, para mostrar que la rendición del yo revela a Dios, el ave fénix de la devastación espiritual a la iluminación.",
         
-        transformation: `Pluto in Pisces creates total transformation of spiritual identity and relationship with divine. These souls experience complete ego death through spiritual crisis - sometimes through spiritual emergence/emergency, addiction bottom, or dissolution so complete they don't know who they are.
+        transformation: `Plutón en Piscis crea una transformación total de la identidad espiritual y la relación con lo divino. Estas almas experimentan la muerte completa del ego a través de una crisis espiritual, a veces a través de un surgimiento/emergencia espiritual, un fondo de adicción o una disolución tan completa que no saben quiénes son.
 
-They transform through surrendering absolutely, through losing all boundaries and discovering divine, through dying to separate self and being reborn as expression of universal consciousness.
+Se transforman entregándose absolutamente, perdiendo todos los límites y descubriendo lo divino, muriendo para separarse del yo y renaciendo como expresión de la conciencia universal.
 
-Their gift is capacity to guide others through ego death into enlightenment, to make spiritual transformation accessible through their own journey, to rise from complete dissolution embodying grace.`,
+Su don es la capacidad de guiar a otros a través de la muerte del ego hacia la iluminación, de hacer accesible la transformación espiritual a través de su propio viaje, de elevarse desde la disolución completa que encarna la gracia.`,
         
-        power: `Their power is spiritual and transcendent. They have tremendous capacity for surrender, for channeling divine grace, for healing through complete acceptance of what is.
+        power: `Su poder es espiritual y trascendente. Tienen una tremenda capacidad de entrega, de canalizar la gracia divina, de sanar mediante la aceptación completa de lo que es.
 
-But they must learn difference between authentic power (surrender to divine that includes embodiment) and false power (spiritual bypassing, escapism disguised as transcendence, victimhood as identity).
+Pero deben aprender la diferencia entre el poder auténtico (la rendición a lo divino que incluye la encarnación) y el poder falso (elevación espiritual, escapismo disfrazado de trascendencia, victimismo como identidad).
 
-The most powerful expression is someone who has dissolved completely into divine and consciously re-embodied - mystic who has died to ego and lives as grace while functioning in world.`,
+La expresión más poderosa es alguien que se ha disuelto completamente en lo divino y conscientemente reencarnado: un místico que ha muerto al ego y vive como gracia mientras funciona en el mundo.`,
         
-        shadow: `Their shadow is escapism, addiction, and spiritual bypassing. When they feel overwhelmed, they may escape into fantasy, substances, or false transcendence. When wounded, they may use spirituality to avoid healing actual trauma.
+        shadow: `Su sombra es el escapismo, la adicción y el desvío espiritual. Cuando se sienten abrumados, pueden escapar hacia la fantasía, las sustancias o la falsa trascendencia. Cuando están heridos, pueden utilizar la espiritualidad para evitar curar el trauma real.
 
-They have capacity for destructive dissolution - losing themselves in addiction, martyrdom, or victimhood. Using "surrender" to avoid responsibility. Claiming enlightenment while being dysfunctional.
+Tienen capacidad de disolución destructiva: perderse en la adicción, el martirio o el victimismo. Usar la "rendición" para eludir la responsabilidad. Reclamar la iluminación siendo disfuncional.
 
-The deeper shadow is hidden ego - appearing egoless while ego disguises as surrender, using spirituality to avoid intimacy, or claiming to be divine while running from human wounds.`,
+La sombra más profunda es el ego oculto: que aparece sin ego mientras el ego se disfraza de rendición, usa la espiritualidad para evitar la intimidad o afirma ser divino mientras huye de las heridas humanas.`,
         
-        obsession: `They can become obsessed with enlightenment, spiritual experiences, or complete ego dissolution. The drive to transcend can consume all else.
+        obsession: `Pueden obsesionarse con la iluminación, las experiencias espirituales o la completa disolución del ego. El impulso de trascender puede consumir todo lo demás.
 
-Or they obsess about their suffering, their victimhood, or spiritual wounds. The intensity around transcendence doesn't have middle ground until they learn that enlightenment includes embodiment.
+O se obsesionan con su sufrimiento, su victimismo o sus heridas espirituales. La intensidad en torno a la trascendencia no tiene término medio hasta que aprenden que la iluminación incluye la encarnación.
 
-The key is recognizing obsession as sign of transformation trying to happen - where they're obsessed is where false surrender needs to die so genuine embodiment of divine can emerge.`,
+La clave es reconocer la obsesión como un signo de transformación que intenta ocurrir: donde están obsesionados es donde la falsa rendición necesita morir para que pueda emerger la encarnación genuina de lo divino.`,
         
-        crisis: `Crisis of spiritual emergency or complete dissolution is their catalyst. Addiction bottom, spiritual crisis, or ego death through suffering become opportunities for transformation. They need to completely dissolve to discover they are divine.
+        crisis: `La crisis de emergencia espiritual o disolución completa es su catalizador. El fondo de la adicción, la crisis espiritual o la muerte del ego a través del sufrimiento se convierten en oportunidades de transformación. Necesitan disolverse por completo para descubrir que son divinos.
 
-They may unconsciously create spiritual crises to force absolute surrender. Learning to transform without requiring devastation becomes mature expression.
+Pueden crear inconscientemente crisis espirituales para forzar la rendición absoluta. Aprender a transformarse sin necesidad de devastación se convierte en una expresión madura.
 
-The gift is that in any spiritual crisis, they have capacity to surrender completely and discover divine. When ego dies totally, they realize they are ocean of consciousness temporarily playing as wave.`,
+El regalo es que en cualquier crisis espiritual, tienen capacidad de entregarse por completo y descubrir lo divino. Cuando el ego muere por completo, se dan cuenta de que son un océano de conciencia que actúa temporalmente como una ola.`,
         
-        rebirth: `Each rebirth makes their spirituality more embodied. False transcendence burns away in successive crises until what remains is genuine enlightenment - knowing they are divine while fully human.
+        rebirth: `Cada renacimiento encarna más su espiritualidad. La falsa trascendencia se quema en crisis sucesivas hasta que lo que queda es una iluminación genuina: saber que son divinos y al mismo tiempo plenamente humanos.
 
-The phoenix process through spiritual death can be agonizing - they may wish they could just be spiritual without suffering. But their soul chose complete ego dissolution to know God directly.
+El proceso del fénix a través de la muerte espiritual puede ser agonizante: es posible que deseen poder ser simplemente espirituales sin sufrir. Pero su alma eligió la completa disolución del ego para conocer a Dios directamente.
 
-The mature expression is someone who has dissolved into divine so many times they live as conscious embodiment of grace - enlightened while human, transcendent while present, divine while vulnerable.`,
+La expresión madura es alguien que se ha disuelto en lo divino tantas veces que vive como encarnación consciente de la gracia: iluminado a la vez que humano, trascendente a la vez que presente, divino a la vez que vulnerable.`,
         
-        generational: `As generational influence, Pluto in Pisces marks periods of maximum spiritual transformation, collective spiritual crisis, mass awakening through suffering, or dissolution of spiritual boundaries.
+        generational: `Como influencia generacional, Plutón en Piscis marca períodos de máxima transformación espiritual, crisis espiritual colectiva, despertar masivo a través del sufrimiento o disolución de fronteras espirituales.
 
-On personal level, it creates souls who will guide collective spiritual transformation, who show that enlightenment is possible through complete surrender, who embody awakening.`,
+A nivel personal, crea almas que guiarán la transformación espiritual colectiva, que mostrarán que la iluminación es posible a través de la entrega total, que encarnan el despertar.`,
         
-        relationships: `In relationships, they need partners who can handle spiritual intensity, who won't abandon during ego death, who want soul-level connection that includes genuine intimacy not just spiritual merging.
+        relationships: `En las relaciones, necesitan socios que puedan manejar la intensidad espiritual, que no los abandonen durante la muerte del ego, que quieran una conexión a nivel del alma que incluya una intimidad genuina y no solo una fusión espiritual.
 
-Power struggles around boundaries and merger can be constant until they learn that intimacy requires both dissolution and individuality, that love includes being two separate people choosing connection.
+Las luchas de poder en torno a los límites y la fusión pueden ser constantes hasta que aprenden que la intimidad requiere tanto disolución como individualidad, que el amor incluye ser dos personas separadas que eligen la conexión.
 
-The evolved expression is bringing complete spiritual presence to partnership - relationships where both people support each other's enlightenment while maintaining healthy boundaries.`,
+La expresión evolucionada aporta una presencia espiritual completa a la asociación: relaciones en las que ambas personas se apoyan mutuamente en la iluminación mientras mantienen límites saludables.`,
         
-        lifeWork: `Their life work involves spiritual transformation and healing - guiding others through ego death, addiction recovery with spiritual depth, creating healing modalities, or any field where they help souls surrender into divine.
+        lifeWork: `El trabajo de su vida implica transformación y curación espiritual: guiar a otros a través de la muerte del ego, la recuperación de adicciones con profundidad espiritual, crear modalidades de curación o cualquier campo en el que ayuden a las almas a entregarse a lo divino.
 
-They're here to demonstrate that complete ego death leads to enlightenment, that suffering can be doorway to divine, that surrendering everything reveals you are everything.
+Están aquí para demostrar que la muerte total del ego conduce a la iluminación, que el sufrimiento puede ser la puerta a lo divino, que entregarlo todo revela que lo eres todo.
 
-The most fulfilling path is one where they're helping others through spiritual transformation, using their own ego death to guide others, embodying enlightenment while serving.`,
+El camino más satisfactorio es aquel en el que ayudan a otros a través de la transformación espiritual, utilizando la muerte de su propio ego para guiar a los demás, encarnando la iluminación mientras sirven.`,
         
-        shadowIntegration: `Shadow work around escapism, victimhood, and spiritual bypassing is essential. They must face their capacity to use spirituality to avoid life, to claim enlightenment while being wounded, to escape rather than transcend.
+        shadowIntegration: `El trabajo en la sombra en torno al escapismo, el victimismo y la evasión espiritual es esencial. Deben afrontar su capacidad de utilizar la espiritualidad para evitar la vida, reclamar la iluminación mientras están heridos, escapar en lugar de trascender.
 
-The work is befriending their need to dissolve while maintaining embodiment, understanding that overwhelming pain created escapism, that acknowledging shadow allows genuine spiritual integration.
+El trabajo se hace amigo de su necesidad de disolverse mientras mantienen la encarnación, entendiendo que el dolor abrumador creó escapismo, que reconocer la sombra permite una integración espiritual genuina.
 
-Integration means becoming someone who has such intimate relationship with their escapist shadow that it becomes capacity for genuine surrender - the mystic who knows their bypassing tendency and consciously chooses embodied enlightenment.`,
+Integración significa convertirse en alguien que tiene una relación tan íntima con su sombra escapista que se convierte en capacidad de entrega genuina: el místico que conoce su tendencia a eludir y elige conscientemente la iluminación encarnada.`,
         
-        spiritualMeaning: `Spiritually, Pluto in Pisces represents souls who incarnated for ultimate ego death, to show that complete surrender reveals you are divine, that spiritual transformation requires total dissolution and conscious re-embodiment.
+        spiritualMeaning: `Espiritualmente, Plutón en Piscis representa almas que encarnaron para la muerte definitiva del ego, para mostrar que la entrega total revela que eres divino, que la transformación espiritual requiere disolución total y reencarnación consciente.
 
-Their spiritual gift is demonstrating that you can die completely to separate self and discover you are God, that enlightenment is possible through absolute surrender, that being ocean and wave simultaneously is the path.
+Su don espiritual es demostrar que puedes morir completamente para separarte del yo y descubrir que eres Dios, que la iluminación es posible a través de la entrega absoluta, que ser océano y ola simultáneamente es el camino.
 
-The ultimate expression is the embodied mystic who has dissolved into divine so completely and consciously re-embodied so many times they live as pure grace - showing humanity that enlightenment isn't escape from human but complete acceptance of divine and human as one, that ultimate transformation is recognizing you were always already divine playing as temporary form.`,
+La máxima expresión es el místico encarnado que se ha disuelto en lo divino de manera tan completa y conscientemente reencarnado tantas veces que vive como pura gracia, mostrando a la humanidad que la iluminación no es escapar de lo humano sino la completa aceptación de lo divino y lo humano como uno solo, que la transformación definitiva es reconocer que siempre fuiste divino actuando como una forma temporal.`,
         
-        affirmation: "I die to separate self and am reborn as divine. My complete surrender reveals I am God. I embody enlightenment while fully human. I am ocean playing as wave."
+        affirmation: "Muero para separarme del yo y renazco como divino. Mi entrega completa revela que soy Dios. Encarno la iluminación siendo plenamente humano. Soy el océano jugando como ola."
     }
 };
 

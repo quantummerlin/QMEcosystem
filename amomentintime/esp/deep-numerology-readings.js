@@ -11,375 +11,375 @@
 
 var DEEP_LIFE_PATH_READINGS = {
     1: {
-        title: "The Pioneer Spirit",
-        hook: "This soul arrived with the blueprint of the trailblazer—here to forge paths that didn't exist before and light the way for others to follow.",
+        title: "El espíritu pionero",
+        hook: "Esta alma llegó con el modelo del pionero: aquí para forjar caminos que antes no existían e iluminar el camino a seguir para otros.",
         
-        coreIdentity: "Life Path 1 carries the energy of pure beginning. This isn't just someone who leads; they're someone who creates the very concept of where to go. Their identity is forged through originality and the courage to stand alone when necessary. They came into this world asking 'Why not?' when everyone else asked 'Why?'",
+        coreIdentity: "Life Path 1 lleva la energía del comienzo puro. No se trata simplemente de alguien que lidera; son alguien que crea el concepto mismo de dónde ir. Su identidad se forja a través de la originalidad y el coraje de estar solos cuando es necesario. Vinieron a este mundo preguntando '¿Por qué no?' cuando todos los demás preguntaron '¿Por qué?'",
         
-        lifeForce: "Their vital energy is self-generating and autonomous. While others draw energy from connection, the Life Path 1 generates power from within—from vision, from action, from the simple act of moving forward. They regenerate through accomplishment and the thrill of new challenges. Stagnation is their kryptonite.",
+        lifeForce: "Su energía vital es autogeneradora y autónoma. Mientras que otros obtienen energía de la conexión, Life Path 1 genera poder desde dentro: desde la visión, desde la acción, desde el simple acto de avanzar. Se regeneran a través de los logros y la emoción de nuevos desafíos. El estancamiento es su kriptonita.",
         
-        creativeExpression: "They create through initiation—starting movements, launching ventures, being the first to try. Their art is the art of originality. Even when doing something others have done, they find their own angle, their own approach. They cannot copy; they can only originate.",
+        creativeExpression: "Crean a través de la iniciación: inician movimientos, lanzan empresas, son los primeros en intentarlo. Su arte es el arte de la originalidad. Incluso cuando hacen algo que otros han hecho, encuentran su propio ángulo, su propio enfoque. No pueden copiar; sólo pueden originarse.",
         
-        soulLesson: "The core lesson is learning that independence and isolation are not the same thing. True leadership means bringing others along, not just charging ahead alone. The mature 1 discovers that asking for help isn't weakness—it's wisdom that allows them to go further.",
+        soulLesson: "La lección central es aprender que independencia y aislamiento no son lo mismo. El verdadero liderazgo significa atraer a otros, no simplemente avanzar solo. El 1 maduro descubre que pedir ayuda no es debilidad, es sabiduría que le permite llegar más lejos.",
         
-        shadow: "When unbalanced, Life Path 1 becomes aggressive, domineering, or stubbornly isolated. They may push away the very allies they need. The shadow side demands to be first at any cost, mistakes pride for confidence, and confuses loneliness with independence.",
+        shadow: "Cuando está desequilibrado, el Camino de Vida 1 se vuelve agresivo, dominante o obstinadamente aislado. Es posible que alejen a los aliados que necesitan. El lado oscuro exige ser el primero a cualquier precio, confunde orgullo con confianza y confunde soledad con independencia.",
         
-        relationships: "In love and friendship, they need partners who have their own strong identity. They don't want followers in romance—they want equals who can match their fire. They struggle with clingy dynamics but thrive with independent, confident partners. Their greatest relationship lesson is learning to create space for another's leadership too.",
+        relationships: "En el amor y la amistad, necesitan parejas que tengan una identidad propia y fuerte. No quieren seguidores en el romance; quieren iguales que puedan igualar su fuego. Luchan con dinámicas pegajosas, pero prosperan con socios independientes y seguros. Su mayor lección sobre las relaciones es aprender a crear también un espacio para el liderazgo de otra persona.",
         
-        career: "They excel as entrepreneurs, innovators, executives, and any role that requires vision and decisive action. They struggle in positions where they must follow without input or where creativity is stifled. Their best work happens when they have autonomy and a worthy challenge.",
+        career: "Se destacan como emprendedores, innovadores, ejecutivos y en cualquier rol que requiera visión y acción decisiva. Luchan en posiciones donde deben seguir sin participación o donde la creatividad está sofocada. Su mejor trabajo ocurre cuando tienen autonomía y un desafío digno.",
         
-        money: "Their relationship with money is self-made. They trust their ability to generate wealth through their own efforts. They may struggle with inherited wealth or feeling dependent on others financially. Money represents freedom and capability to them.",
+        money: "Su relación con el dinero es algo que ellos mismos hicieron. Confían en su capacidad para generar riqueza mediante su propio esfuerzo. Es posible que tengan dificultades con la riqueza heredada o se sientan dependientes financieramente de otros. El dinero representa libertad y capacidad para ellos.",
         
-        health: "Their physical constitution is often robust but vulnerable to burnout. They push hard and sometimes ignore their body's signals. Head-related issues, stress conditions, and exhaustion from overwork are common patterns. They need to learn that rest isn't laziness.",
+        health: "Su constitución física suele ser robusta pero vulnerable al agotamiento. Empujan con fuerza y, a veces, ignoran las señales de su cuerpo. Los problemas relacionados con la cabeza, las condiciones de estrés y el agotamiento por exceso de trabajo son patrones comunes. Necesitan aprender que descansar no es pereza.",
         
-        spiritualPath: "Their spiritual journey is about discovering that the ultimate pioneer work is internal—exploring the uncharted territories of their own consciousness. They often struggle with surrender to a higher power, preferring self-reliance. Their breakthrough comes when they realize that true power includes receptivity.",
+        spiritualPath: "Su viaje espiritual consiste en descubrir que el trabajo pionero definitivo es interno: explorar los territorios inexplorados de su propia conciencia. A menudo luchan por rendirse a un poder superior y prefieren la autosuficiencia. Su gran avance se produce cuando se dan cuenta de que el verdadero poder incluye la receptividad.",
         
-        parentGuidance: "For parents of a Life Path 1 child: Give them appropriate leadership opportunities early. Let them make decisions (age-appropriate ones). Don't break their spirit with too much criticism or control—redirect their energy toward constructive goals. Teach them that asking for help is a sign of wisdom, not weakness. Celebrate their originality.",
+        parentGuidance: "Para los padres de un niño de Life Path 1: Bríndeles oportunidades de liderazgo adecuadas desde el principio. Permítales tomar decisiones (apropiadas para su edad). No rompas su espíritu con demasiadas críticas o control; redirige su energía hacia metas constructivas. Enséñeles que pedir ayuda es una señal de sabiduría, no de debilidad. Celebre su originalidad.",
         
-        growthEdge: "Their evolution involves moving from 'me first' to 'me leading us.' The immature 1 is a loner; the mature 1 is a visionary who empowers others. Their greatest growth comes when they use their pioneering energy in service of something larger than personal achievement.",
+        growthEdge: "Su evolución implica pasar del "yo primero" al "yo guiándonos". El inmaduro 1 es un solitario; el maduro 1 es un visionario que empodera a los demás. Su mayor crecimiento se produce cuando utilizan su energía pionera al servicio de algo más grande que el logro personal.",
         
-        affirmation: "I am a pioneer. My originality is my gift to the world. I lead not by pushing others aside, but by showing what's possible."
+        affirmation: "Soy un pionero. Mi originalidad es mi regalo al mundo. Lidero no haciendo a los demás a un lado, sino mostrando lo que es posible."
     },
     
     2: {
-        title: "The Sacred Partner",
-        hook: "This soul arrived with the gift of seeing both sides—a natural bridge-builder who understands that the space between people is sacred ground.",
+        title: "El compañero sagrado",
+        hook: "Esta alma llegó con el don de ver ambos lados: un constructor de puentes natural que entiende que el espacio entre las personas es un terreno sagrado.",
         
-        coreIdentity: "Life Path 2 carries the energy of partnership and balance. Their identity is discovered through relationship—not dependency, but the profound understanding that self-knowledge comes through the mirror of the other. They're here to master the art of togetherness while remaining whole.",
+        coreIdentity: "Life Path 2 transmite la energía de la asociación y el equilibrio. Su identidad se descubre a través de la relación, no de la dependencia, sino de la profunda comprensión de que el autoconocimiento llega a través del espejo del otro. Están aquí para dominar el arte de la unión sin dejar de ser completos.",
         
-        lifeForce: "Their vital energy is receptive and relational. They charge through meaningful connection, harmony in their environment, and the feeling of being truly understood. Discord drains them; peace restores them. Their power lies not in dominating but in harmonizing.",
+        lifeForce: "Su energía vital es receptiva y relacional. Se cargan a través de una conexión significativa, la armonía en su entorno y la sensación de ser verdaderamente comprendidos. La discordia los agota; la paz los restaura. Su poder no reside en dominar sino en armonizar.",
         
-        creativeExpression: "They create through collaboration and synthesis. Their art often emerges from combining different elements, mediating between styles, or creating beauty that serves connection. They're the ones who make groups work, who blend sounds into harmony, who smooth rough edges.",
+        creativeExpression: "Crean a través de la colaboración y la síntesis. Su arte a menudo surge de la combinación de diferentes elementos, mediando entre estilos o creando una belleza que sirve para la conexión. Ellos son los que hacen que los grupos funcionen, los que mezclan los sonidos en armonía, los que suavizan las asperezas.",
         
-        soulLesson: "The core lesson is learning to maintain their identity while in deep partnership. They must discover that being there for others and being there for themselves are not mutually exclusive. The mature 2 gives without losing themselves.",
+        soulLesson: "La lección principal es aprender a mantener su identidad mientras mantienen una asociación profunda. Deben descubrir que estar ahí para los demás y estar ahí para ellos mismos no son mutuamente excluyentes. Los 2 maduros dan sin perderse.",
         
-        shadow: "When unbalanced, Life Path 2 becomes codependent, resentful, or passive-aggressive. They may lose themselves in others' needs or become manipulative through perceived helplessness. The shadow side sacrifices authentic self to keep the peace, then builds silent resentment.",
+        shadow: "Cuando está desequilibrado, Life Path 2 se vuelve codependiente, resentido o pasivo-agresivo. Pueden perderse en las necesidades de los demás o volverse manipuladores debido a la percepción de impotencia. El lado oscuro sacrifica el yo auténtico para mantener la paz y luego genera un resentimiento silencioso.",
         
-        relationships: "In love and friendship, they thrive as devoted partners and deeply loyal friends. They notice details others miss, remember what matters to people, and create environments where others feel seen. Their challenge is choosing partners who reciprocate their care rather than exploit it.",
+        relationships: "En el amor y la amistad, prosperan como socios devotos y amigos profundamente leales. Se dan cuenta de los detalles que otros pasan por alto, recuerdan lo que les importa a las personas y crean entornos donde los demás se sienten vistos. Su desafío es elegir socios que correspondan a sus cuidados en lugar de explotarlos.",
         
-        career: "They excel as mediators, counselors, diplomats, collaborators, and any role requiring sensitivity to others. They struggle in cutthroat competitive environments or positions requiring aggressive self-promotion. Their best work happens in supportive team environments or helping professions.",
+        career: "Se destacan como mediadores, consejeros, diplomáticos, colaboradores y cualquier rol que requiera sensibilidad hacia los demás. Luchan en entornos competitivos despiadados o en puestos que requieren una autopromoción agresiva. Su mejor trabajo ocurre en entornos de equipo de apoyo o en profesiones de ayuda.",
         
-        money: "Their relationship with money often involves partnership—sharing resources, joint finances, or careers that serve others' needs. They may struggle with advocating for their own financial worth. Learning to receive as gracefully as they give is part of their money lesson.",
+        money: "Su relación con el dinero a menudo implica asociación: compartir recursos, finanzas conjuntas o carreras que satisfagan las necesidades de los demás. Es posible que les cueste defender su propio valor financiero. Aprender a recibir con tanta gracia como dan es parte de su lección sobre el dinero.",
         
-        health: "Their physical constitution is sensitive to their emotional environment. Stress from relationship discord manifests physically. They may have sensitive nervous systems and need peaceful surroundings to thrive. Digestive issues and stress-related conditions are common patterns.",
+        health: "Su constitución física es sensible a su entorno emocional. El estrés causado por la discordia en las relaciones se manifiesta físicamente. Es posible que tengan sistemas nerviosos sensibles y necesiten un entorno tranquilo para prosperar. Los problemas digestivos y las condiciones relacionadas con el estrés son patrones comunes.",
         
-        spiritualPath: "Their spiritual journey is about discovering that they are already whole—partnership enhances but doesn't complete them. They often struggle with boundaries between self and other, self and divine. Their breakthrough comes when they realize that loving themselves is not selfish but necessary.",
+        spiritualPath: "Su viaje espiritual consiste en descubrir que ya están completos: la asociación los mejora pero no los completa. A menudo luchan con los límites entre uno mismo y los demás, entre uno mismo y lo divino. Su avance se produce cuando se dan cuenta de que amarse a sí mismos no es egoísta sino necesario.",
         
-        parentGuidance: "For parents of a Life Path 2 child: Create harmony at home—they absorb discord deeply. Teach them their feelings matter as much as others'. Don't exploit their helpful nature or take their cooperation for granted. Help them practice saying no without guilt. Celebrate their sensitivity as strength.",
+        parentGuidance: "Para padres de un niño con Life Path 2: Cree armonía en el hogar: ellos absorben profundamente la discordia. Enséñeles que sus sentimientos importan tanto como los de los demás. No explotes su naturaleza servicial ni des por sentada su cooperación. Ayúdelos a practicar cómo decir no sin sentirse culpable. Celebre su sensibilidad como fuerza.",
         
-        growthEdge: "Their evolution involves moving from 'I need you to be okay' to 'I want to share with you from my fullness.' The immature 2 is a pleaser; the mature 2 is a partner. Their greatest growth comes when they bring their whole self to relationships, not just their accommodating self.",
+        growthEdge: "Su evolución implica pasar del 'necesito que estés bien' al 'quiero compartir contigo desde mi plenitud'. El inmaduro 2 es un complaciente; el maduro 2 es socio. Su mayor crecimiento se produce cuando aportan todo su yo a las relaciones, no sólo su yo complaciente.",
         
-        affirmation: "I am whole unto myself. My gift of harmony comes from my center, not from sacrificing it. I can be deeply connected and deeply myself."
+        affirmation: "Soy completo conmigo mismo. Mi don de armonía proviene de mi centro, no de sacrificarlo. Puedo estar profundamente conectado y profundamente yo mismo."
     },
     
     3: {
-        title: "The Creative Alchemist",
-        hook: "This soul arrived with a direct line to joy—a creative frequency that transmutes the ordinary into the magical through the sheer power of self-expression.",
+        title: "El alquimista creativo",
+        hook: "Esta alma llegó con una línea directa hacia la alegría: una frecuencia creativa que transmuta lo ordinario en mágico a través del puro poder de la autoexpresión.",
         
-        coreIdentity: "Life Path 3 carries the energy of creative self-expression and authentic joy. Their identity is forged through creating, communicating, and bringing beauty into the world. They're here to remind humanity that life is meant to be enjoyed, not just endured.",
+        coreIdentity: "Life Path 3 lleva la energía de la autoexpresión creativa y la auténtica alegría. Su identidad se forja creando, comunicando y trayendo belleza al mundo. Están aquí para recordarle a la humanidad que la vida debe disfrutarse, no sólo soportarse.",
         
-        lifeForce: "Their vital energy is sparkly, communicative, and socially charged. They regenerate through creative expression, laughter, and connection with others who appreciate their light. Suppression of their creative voice is literally life-draining for them.",
+        lifeForce: "Su energía vital es brillante, comunicativa y socialmente cargada. Se regeneran a través de la expresión creativa, la risa y la conexión con otras personas que aprecian su luz. La supresión de su voz creativa les agota literalmente la vida.",
         
-        creativeExpression: "They are natural artists in the broadest sense—creating through words, images, music, performance, or simply the art of conversation and connection. Their gift is making the invisible visible, giving form to feeling, and helping others see beauty they might have missed.",
+        creativeExpression: "Son artistas naturales en el sentido más amplio: crean a través de palabras, imágenes, música, interpretación o simplemente el arte de la conversación y la conexión. Su don es hacer visible lo invisible, dar forma a los sentimientos y ayudar a otros a ver la belleza que quizás se hayan perdido.",
         
-        soulLesson: "The core lesson is learning to take their creative gifts seriously and develop discipline without losing joy. They must discover that depth and lightness can coexist. The mature 3 knows when to play and when to focus.",
+        soulLesson: "La lección principal es aprender a tomar en serio sus dones creativos y desarrollar la disciplina sin perder la alegría. Deben descubrir que la profundidad y la ligereza pueden coexistir. El 3 maduro sabe cuándo jugar y cuándo concentrarse.",
         
-        shadow: "When unbalanced, Life Path 3 becomes scattered, superficial, or uses humor to avoid depth. They may struggle with commitment, become gossipy, or waste their considerable gifts on trivial pursuits. The shadow side fears that going deep will kill the fun.",
+        shadow: "Cuando está desequilibrado, Life Path 3 se vuelve disperso, superficial o usa el humor para evitar la profundidad. Pueden tener dificultades con el compromiso, volverse chismosos o desperdiciar sus considerables dones en actividades triviales. El lado oscuro teme que profundizar acabe con la diversión.",
         
-        relationships: "In love and friendship, they bring joy, creativity, and aliveness to connections. They need partners who appreciate their need for expression and don't try to dim their light. They struggle with heavy, critical, or overly serious dynamics. Fun and laughter are relationship necessities, not luxuries.",
+        relationships: "En el amor y la amistad, aportan alegría, creatividad y vitalidad a las conexiones. Necesitan socios que aprecien su necesidad de expresión y no intenten atenuar su luz. Luchan con dinámicas pesadas, críticas o demasiado serias. La diversión y la risa son necesidades de una relación, no lujos.",
         
-        career: "They excel in creative fields, communication, entertainment, teaching, and any role that allows self-expression. They struggle in monotonous, restrictive, or purely analytical roles. Their best work happens when they can inject creativity and personality into what they do.",
+        career: "Se destacan en campos creativos, comunicación, entretenimiento, enseñanza y cualquier rol que permita la autoexpresión. Luchan en roles monótonos, restrictivos o puramente analíticos. Su mejor trabajo ocurre cuando pueden inyectar creatividad y personalidad en lo que hacen.",
         
-        money: "Their relationship with money often fluctuates with their creative output and emotional state. They may have feast-or-famine patterns. Learning to create stable structures for their abundance (while maintaining creative flow) is part of their money lesson.",
+        money: "Su relación con el dinero a menudo fluctúa según su producción creativa y su estado emocional. Es posible que tengan patrones de fiesta o hambruna. Aprender a crear estructuras estables para su abundancia (mientras se mantiene el flujo creativo) es parte de su lección sobre el dinero.",
         
-        health: "Their physical constitution is connected to their throat and expression. Unexpressed creativity can manifest as throat issues, thyroid problems, or depression that looks like 'nothing specific.' They need creative outlets as much as they need food.",
+        health: "Su constitución física está relacionada con su garganta y expresión. La creatividad no expresada puede manifestarse como problemas de garganta, problemas de tiroides o depresión que parece "nada específico". Necesitan salidas creativas tanto como alimentos.",
         
-        spiritualPath: "Their spiritual journey is about discovering that joy is not frivolous—it's a pathway to the divine. They often struggle with taking spiritual practice 'seriously enough,' not realizing that their playful approach is valid. Their breakthrough comes when they trust that their joy serves the whole.",
+        spiritualPath: "Su viaje espiritual consiste en descubrir que la alegría no es frívola: es un camino hacia lo divino. A menudo les cuesta tomar la práctica espiritual "bastante en serio", sin darse cuenta de que su enfoque lúdico es válido. Su avance se produce cuando confían en que su alegría sirve al todo.",
         
-        parentGuidance: "For parents of a Life Path 3 child: Provide endless creative outlets and appreciate their expressions. Don't dismiss their feelings as 'just dramatic.' Help them develop focus without crushing their joy. Teach them that sometimes the fun comes after the work. Celebrate their bright spirit.",
+        parentGuidance: "Para padres de un niño con Life Path 3: brinde infinitas salidas creativas y aprecie sus expresiones. No descarte sus sentimientos como "simplemente dramáticos". Ayúdelos a desarrollar la concentración sin aplastar su alegría. Enséñeles que a veces la diversión viene después del trabajo. Celebre su espíritu brillante.",
         
-        growthEdge: "Their evolution involves moving from scattered expression to focused creation. The immature 3 starts many things; the mature 3 completes works of lasting beauty. Their greatest growth comes when they apply their considerable gifts with discipline and depth.",
+        growthEdge: "Su evolución implica pasar de una expresión dispersa a una creación enfocada. El 3 inmaduro empieza muchas cosas; El maduro 3 completa obras de belleza duradera. Su mayor crecimiento se produce cuando aplican sus considerables dones con disciplina y profundidad.",
         
-        affirmation: "My joy is my gift. My creativity is my purpose. I bring light not by being frivolous, but by being authentically expressive."
+        affirmation: "Mi alegría es mi regalo. Mi creatividad es mi propósito. Traigo luz no siendo frívolo, sino siendo auténticamente expresivo."
     },
     
     4: {
-        title: "The Foundation Builder",
-        hook: "This soul arrived as a master architect of reality—here to build the stable structures upon which dreams can safely rest.",
+        title: "El constructor de cimientos",
+        hook: "Esta alma llegó como un maestro arquitecto de la realidad, aquí para construir las estructuras estables sobre las cuales los sueños puedan descansar con seguridad.",
         
-        coreIdentity: "Life Path 4 carries the energy of the builder and the architect. Their identity is forged through creating order from chaos, structure from vision, and reliability in an unpredictable world. They're the ones who make things work and make them last.",
+        coreIdentity: "Life Path 4 lleva la energía del constructor y del arquitecto. Su identidad se forja creando orden a partir del caos, estructura a partir de la visión y confiabilidad en un mundo impredecible. Ellos son los que hacen que las cosas funcionen y duren.",
         
-        lifeForce: "Their vital energy is steady, grounded, and regenerates through productive work and tangible accomplishment. They feel alive when building, organizing, and seeing concrete results. Chaos and instability drain them; order and progress restore them.",
+        lifeForce: "Su energía vital es estable, arraigada y se regenera a través del trabajo productivo y logros tangibles. Se sienten vivos al construir, organizarse y ver resultados concretos. El caos y la inestabilidad los agotan; el orden y el progreso los restablecen.",
         
-        creativeExpression: "They create through patience, craft, and attention to detail. Their art is often practical—beautiful things that also work, systems that run smoothly, structures that stand the test of time. They find beauty in functionality and elegance in efficiency.",
+        creativeExpression: "Crean con paciencia, artesanía y atención al detalle. Su arte es a menudo práctico: cosas hermosas que también funcionan, sistemas que funcionan sin problemas, estructuras que resisten el paso del tiempo. Encuentran la belleza en la funcionalidad y la elegancia en la eficiencia.",
         
-        soulLesson: "The core lesson is learning that life itself is not a structure to be controlled. They must discover flexibility within stability, spontaneity within routine. The mature 4 builds strong foundations that can sway without breaking.",
+        soulLesson: "La lección central es aprender que la vida en sí misma no es una estructura que deba controlarse. Deben descubrir la flexibilidad dentro de la estabilidad, la espontaneidad dentro de la rutina. El 4 maduro construye cimientos sólidos que pueden balancearse sin romperse.",
         
-        shadow: "When unbalanced, Life Path 4 becomes rigid, workaholistic, or so focused on security that they miss life itself. They may become controlling, pessimistic, or trapped in routines that no longer serve. The shadow side confuses rigidity with strength.",
+        shadow: "Cuando están desequilibrados, Life Path 4 se vuelve rígido, adicto al trabajo o tan centrado en la seguridad que pierden la vida misma. Pueden volverse controladores, pesimistas o quedar atrapados en rutinas que ya no sirven. El lado oscuro confunde rigidez con fuerza.",
         
-        relationships: "In love and friendship, they are rock-solid reliable—the ones who show up, consistently, through good times and bad. They need partners who appreciate their steadiness and don't mistake their reliability for being boring. Trust and commitment are paramount.",
+        relationships: "En el amor y la amistad, son personas sólidamente confiables: aquellos que se presentan, consistentemente, en los buenos y en los malos momentos. Necesitan socios que aprecien su estabilidad y no confundan su confiabilidad con algo aburrido. La confianza y el compromiso son primordiales.",
         
-        career: "They excel in construction, engineering, management, finance, and any role requiring systematic thinking and follow-through. They struggle in chaotic environments or roles requiring constant improvisation. Their best work happens when they can build something of lasting value.",
+        career: "Se destacan en construcción, ingeniería, administración, finanzas y cualquier función que requiera pensamiento y seguimiento sistemáticos. Luchan en entornos caóticos o roles que requieren una improvisación constante. Su mejor trabajo ocurre cuando pueden construir algo de valor duradero.",
         
-        money: "Their relationship with money is methodical. They're natural savers, budget-makers, and long-term planners. They may struggle with spending on 'non-essentials' or taking financial risks. Security is not just preference—it's a deep need.",
+        money: "Su relación con el dinero es metódica. Son ahorradores naturales, formuladores de presupuestos y planificadores a largo plazo. Es posible que tengan dificultades para gastar en artículos "no esenciales" o asumir riesgos financieros. La seguridad no es sólo una preferencia: es una necesidad profunda.",
         
-        health: "Their physical constitution is often robust but vulnerable to stiffness—in body and mind. Skeletal issues, joint problems, and stress from overwork are common patterns. They need to remember that the body, like a building, needs flexibility to withstand life's earthquakes.",
+        health: "Su constitución física es a menudo robusta pero vulnerable a la rigidez, tanto en cuerpo como en mente. Los problemas esqueléticos, los problemas articulares y el estrés por exceso de trabajo son patrones comunes. Necesitan recordar que el cuerpo, como un edificio, necesita flexibilidad para resistir los terremotos de la vida.",
         
-        spiritualPath: "Their spiritual journey is about discovering that the greatest foundation is internal, not external. They often struggle with trusting the unseen or surrendering to forces beyond their control. Their breakthrough comes when they realize that spiritual practice is the ultimate foundation.",
+        spiritualPath: "Su viaje espiritual consiste en descubrir que el fundamento más importante es interno, no externo. A menudo les cuesta confiar en lo invisible o rendirse a fuerzas que escapan a su control. Su avance se produce cuando se dan cuenta de que la práctica espiritual es la base fundamental.",
         
-        parentGuidance: "For parents of a Life Path 4 child: Provide clear structure and consistent routines. Don't constantly change the rules or plans. Let them finish projects and celebrate their persistence. Introduce them to the joy of spontaneity gently. Show them that feelings can't be organized away.",
+        parentGuidance: "Para padres de un niño con Life Path 4: proporcione una estructura clara y rutinas consistentes. No cambies constantemente las reglas o los planes. Déjelos terminar proyectos y celebrar su perseverancia. Presénteles suavemente el gozo de la espontaneidad. Muéstreles que los sentimientos no se pueden organizar.",
         
-        growthEdge: "Their evolution involves moving from building walls to building bridges. The immature 4 creates rigid structures; the mature 4 creates flexible frameworks that support growth. Their greatest evolution comes when they hold their structures lightly.",
+        growthEdge: "Su evolución pasa por pasar de la construcción de muros a la construcción de puentes. El 4 inmaduro crea estructuras rígidas; Los 4 maduros crean marcos flexibles que apoyan el crecimiento. Su mayor evolución se produce cuando mantienen sus estructuras a la ligera.",
         
-        affirmation: "I am a builder of foundations. My stability is a gift, not a limitation. I create structures that serve life, not confine it."
+        affirmation: "Soy un constructor de cimientos. Mi estabilidad es un regalo, no una limitación. Creo estructuras que sirven a la vida, no la confinan."
     },
     
     5: {
-        title: "The Freedom Dancer",
-        hook: "This soul arrived with adventure encoded in their DNA—here to taste every flavor of human experience and show others that life is meant to be lived fully.",
+        title: "El bailarín de la libertad",
+        hook: "Esta alma llegó con la aventura codificada en su ADN: aquí para probar cada sabor de la experiencia humana y mostrar a los demás que la vida debe vivirse plenamente.",
         
-        coreIdentity: "Life Path 5 carries the energy of freedom, change, and sensory experience. Their identity is forged through movement, variety, and the direct experience of life in all its forms. They're here to remind humanity that the soul needs adventure as much as security.",
+        coreIdentity: "Life Path 5 lleva la energía de la libertad, el cambio y la experiencia sensorial. Su identidad se forja a través del movimiento, la variedad y la experiencia directa de la vida en todas sus formas. Están aquí para recordarle a la humanidad que el alma necesita tanto aventura como seguridad.",
         
-        lifeForce: "Their vital energy is dynamic, curious, and fed by new experiences. They regenerate through change, travel, and sensory stimulation. Monotony is their kryptonite; variety is their life force. They feel most alive at the edge of the familiar.",
+        lifeForce: "Su energía vital es dinámica, curiosa y se alimenta de nuevas experiencias. Se regeneran a través del cambio, los viajes y la estimulación sensorial. La monotonía es su kriptonita; la variedad es su fuerza vital. Se sienten más vivos al borde de lo familiar.",
         
-        creativeExpression: "They create through experience and communication about experience. Their art often involves storytelling, travel writing, teaching through demonstration, or creating experiences for others. They translate adventures into wisdom others can use.",
+        creativeExpression: "Crean a través de la experiencia y la comunicación sobre la experiencia. Su arte a menudo implica contar historias, escribir sobre viajes, enseñar mediante demostraciones o crear experiencias para otros. Traducen las aventuras en sabiduría que otros pueden utilizar.",
         
-        soulLesson: "The core lesson is learning that true freedom is internal, not just external. They must discover that running from commitment is its own prison. The mature 5 knows that depth requires staying, and freedom includes the freedom to choose constraints.",
+        soulLesson: "La lección central es aprender que la verdadera libertad es interna, no sólo externa. Deben descubrir que huir del compromiso es su propia prisión. El 5 maduro sabe que la profundidad requiere permanecer, y la libertad incluye la libertad de elegir limitaciones.",
         
-        shadow: "When unbalanced, Life Path 5 becomes restless, addictive, or constantly running from intimacy. They may use change to avoid the discomfort of going deep. The shadow side mistakes movement for progress and sensation for experience.",
+        shadow: "Cuando está desequilibrado, Life Path 5 se vuelve inquieto, adictivo o huye constantemente de la intimidad. Es posible que utilicen el cambio para evitar la incomodidad de profundizar. El lado oscuro confunde el movimiento con el progreso y la sensación con la experiencia.",
         
-        relationships: "In love and friendship, they bring excitement, openness, and a willingness to try new things together. They need partners who have their own adventures and don't try to clip their wings. They struggle with possessive or routinized dynamics.",
+        relationships: "En el amor y la amistad, aportan entusiasmo, apertura y voluntad de probar cosas nuevas juntos. Necesitan socios que tengan sus propias aventuras y no intenten cortarles las alas. Luchan con dinámicas posesivas o rutinarias.",
         
-        career: "They excel in travel, sales, marketing, teaching, writing, and any role involving variety and communication. They struggle in highly repetitive roles or positions with rigid schedules. Their best work happens when each day brings something new.",
+        career: "Se destacan en viajes, ventas, marketing, enseñanza, redacción y cualquier función que implique variedad y comunicación. Luchan en roles o puestos muy repetitivos con horarios rígidos. Su mejor trabajo ocurre cuando cada día trae algo nuevo.",
         
-        money: "Their relationship with money can be feast-or-famine. They may spend impulsively on experiences or swing between abundance and scarcity. Learning to create freedom through financial stability (rather than seeing it as constraint) is part of their money lesson.",
+        money: "Su relación con el dinero puede ser de banquete o de hambruna. Pueden gastar impulsivamente en experiencias o oscilar entre la abundancia y la escasez. Aprender a crear libertad a través de la estabilidad financiera (en lugar de verla como una restricción) es parte de su lección sobre el dinero.",
         
-        health: "Their physical constitution needs movement and variety. They may struggle with addictive patterns or nervous system overstimulation. Moderation is their health lesson—learning that the body needs some routine even if the soul craves constant change.",
+        health: "Su constitución física necesita movimiento y variedad. Pueden luchar contra patrones adictivos o sobreestimulación del sistema nervioso. La moderación es su lección de salud: aprender que el cuerpo necesita cierta rutina incluso si el alma anhela un cambio constante.",
         
-        spiritualPath: "Their spiritual journey is about discovering that the ultimate adventure is consciousness itself. They often struggle with meditation (too still) or commitment to one path (too limiting). Their breakthrough comes when they realize that infinite variety exists in a single moment of presence.",
+        spiritualPath: "Su viaje espiritual consiste en descubrir que la aventura definitiva es la conciencia misma. A menudo tienen dificultades con la meditación (demasiado quietas) o con el compromiso con un camino (demasiado limitante). Su avance se produce cuando se dan cuenta de que existe una variedad infinita en un solo momento de presencia.",
         
-        parentGuidance: "For parents of a Life Path 5 child: Provide variety within safe structures. Expect questions about everything and answer them. Let them explore, taste, touch, and experience. Teach responsibility through natural consequences rather than rigid rules. Show them that commitment opens doors, it doesn't close them.",
+        parentGuidance: "Para padres de un niño de Life Path 5: Proporcione variedad dentro de estructuras seguras. Espere preguntas sobre todo y respóndalas. Permítales explorar, saborear, tocar y experimentar. Enseñar responsabilidad a través de consecuencias naturales en lugar de reglas rígidas. Muéstreles que el compromiso abre puertas, no las cierra.",
         
-        growthEdge: "Their evolution involves moving from surface variety to depth within experience. The immature 5 collects experiences; the mature 5 deeply inhabits them. Their greatest growth comes when they discover that staying can be the greatest adventure.",
+        growthEdge: "Su evolución implica pasar de la variedad superficial a la profundidad de la experiencia. El 5 inmaduro colecciona experiencias; el 5 maduro los habita profundamente. Su mayor crecimiento llega cuando descubren que quedarse puede ser la mayor aventura.",
         
-        affirmation: "My freedom is internal. Every moment contains infinity. I am free to choose commitment as much as I am free to choose change."
+        affirmation: "Mi libertad es interna. Cada momento contiene infinito. Soy libre de elegir el compromiso tanto como soy libre de elegir el cambio."
     },
     
     6: {
-        title: "The Heart of Service",
-        hook: "This soul arrived with love as their operating system—here to create beauty, harmony, and healing wherever responsibility calls.",
+        title: "El corazón del servicio",
+        hook: "Esta alma llegó con el amor como sistema operativo, aquí para crear belleza, armonía y curación dondequiera que la responsabilidad la llame.",
         
-        coreIdentity: "Life Path 6 carries the energy of love, responsibility, and service. Their identity is forged through caring for others, creating harmony, and making things beautiful. They're here to demonstrate that love expressed as responsibility is one of the highest forms of service.",
+        coreIdentity: "Life Path 6 lleva la energía del amor, la responsabilidad y el servicio. Su identidad se forja cuidando a los demás, creando armonía y haciendo las cosas bellas. Están aquí para demostrar que el amor expresado como responsabilidad es una de las formas más elevadas de servicio.",
         
-        lifeForce: "Their vital energy flows through giving, creating beauty, and being needed by those they love. They regenerate through harmony in their environment and appreciation from those they serve. Discord drains them; gratitude fills them.",
+        lifeForce: "Su energía vital fluye a través de dar, crear belleza y ser necesitados por aquellos a quienes aman. Se regeneran a través de la armonía en su entorno y el aprecio de aquellos a quienes sirven. La discordia los agota; la gratitud los llena.",
         
-        creativeExpression: "They create through nurturing—whether that's a home, a garden, a family, a community, or artistic works that feel like home. Their art has warmth; their creations feel cared for. They beautify wherever they are.",
+        creativeExpression: "Crean a través del cuidado, ya sea un hogar, un jardín, una familia, una comunidad u obras artísticas que los hacen sentir como en casa. Su arte tiene calidez; sus creaciones se sienten cuidadas. Embellecen dondequiera que estén.",
         
-        soulLesson: "The core lesson is learning that self-care is not selfish and that they cannot give from an empty cup. They must discover that martyrdom serves no one. The mature 6 gives from abundance, not depletion.",
+        soulLesson: "La lección central es aprender que el cuidado personal no es egoísta y que no se puede dar con un vaso vacío. Deben descubrir que el martirio no sirve a nadie. El 6 maduro da desde la abundancia, no desde el agotamiento.",
         
-        shadow: "When unbalanced, Life Path 6 becomes codependent, martyred, or controlling through caretaking. They may use 'helping' to avoid their own growth or become resentful when their sacrifices aren't appreciated. The shadow side confuses self-worth with being needed.",
+        shadow: "Cuando está desequilibrado, Life Path 6 se vuelve codependiente, mártir o controlador a través del cuidado. Pueden recurrir a la "ayuda" para evitar su propio crecimiento o resentirse cuando sus sacrificios no son apreciados. El lado oscuro confunde la autoestima con ser necesario.",
         
-        relationships: "In love and friendship, they are devoted, nurturing, and often the glue that holds everything together. They need partners who appreciate their giving nature and reciprocate care. They struggle when their love becomes obligation rather than choice.",
+        relationships: "En el amor y la amistad, son devotos, cariñosos y, a menudo, son el pegamento que mantiene todo unido. Necesitan socios que aprecien su naturaleza generosa y su atención recíproca. Luchan cuando su amor se convierte en obligación en lugar de elección.",
         
-        career: "They excel in healing professions, teaching, counseling, design, hospitality, and any role involving nurturing or beautifying. They struggle in competitive, impersonal, or harsh environments. Their best work happens when service and beauty combine.",
+        career: "Se destacan en profesiones curativas, enseñanza, asesoramiento, diseño, hospitalidad y cualquier función que implique cuidar o embellecer. Luchan en entornos competitivos, impersonales o hostiles. Su mejor trabajo ocurre cuando se combinan servicio y belleza.",
         
-        money: "Their relationship with money often involves providing for others. They may struggle with spending on themselves or asking for what they're worth. Learning that abundance flows to those who value themselves is part of their money lesson.",
+        money: "Su relación con el dinero a menudo implica ayudar a los demás. Es posible que les cueste gastar en sí mismos o pedir lo que valen. Aprender que la abundancia fluye hacia quienes se valoran a sí mismos es parte de su lección sobre el dinero.",
         
-        health: "Their physical constitution is connected to their heart—literally and metaphorically. Heart issues, adrenal fatigue from over-giving, and stress from family dynamics are common patterns. They need to learn that saying no is healthcare.",
+        health: "Su constitución física está conectada a su corazón, literal y metafóricamente. Los problemas cardíacos, la fatiga suprarrenal por dar demasiado y el estrés por la dinámica familiar son patrones comunes. Necesitan aprender que decir no es atención médica.",
         
-        spiritualPath: "Their spiritual journey is about discovering that the love they give so freely to others must include themselves. They often struggle with self-love, equating it with selfishness. Their breakthrough comes when they realize that honoring themselves honors the love they serve.",
+        spiritualPath: "Su viaje espiritual consiste en descubrir que el amor que dan tan libremente a los demás debe incluirlos a ellos mismos. A menudo luchan con el amor propio, equiparándolo con el egoísmo. Su avance se produce cuando se dan cuenta de que honrarse a sí mismos honra el amor al que sirven.",
         
-        parentGuidance: "For parents of a Life Path 6 child: Teach them that their worth isn't measured by what they do for others. Help them receive as well as give. Don't burden them with too much responsibility too young. Show them that beautiful environments support but don't create inner peace.",
+        parentGuidance: "Para padres de un niño con Life Path 6: enséñeles que su valor no se mide por lo que hacen por los demás. Ayúdalos a recibir y a dar. No los cargues con demasiadas responsabilidades siendo demasiado jóvenes. Muéstreles que los entornos hermosos apoyan pero no crean la paz interior.",
         
-        growthEdge: "Their evolution involves moving from dutiful service to joyful giving. The immature 6 gives to be valued; the mature 6 gives from overflow. Their greatest growth comes when they serve themselves with the same devotion they show others.",
+        growthEdge: "Su evolución implica pasar del servicio diligente al dar con alegría. El 6 inmaduro da para ser valorado; el maduro 6 da desborde. Su mayor crecimiento se produce cuando se sirven a sí mismos con la misma devoción que muestran a los demás.",
         
-        affirmation: "I am worthy of the love I give. My care for myself is not selfish; it's the source of my service. I give from abundance, not obligation."
+        affirmation: "Soy digno del amor que doy. Mi cuidado por mí mismo no es egoísta; es la fuente de mi servicio. Doy por abundancia, no por obligación."
     },
     
     7: {
-        title: "The Seeker of Truth",
-        hook: "This soul arrived with questions that can't be Googled—here to dive beneath the surface of life and surface with wisdom for us all.",
+        title: "El buscador de la verdad",
+        hook: "Esta alma llegó con preguntas que no se pueden buscar en Google: aquí para sumergirse bajo la superficie de la vida y emerger con sabiduría para todos nosotros.",
         
-        coreIdentity: "Life Path 7 carries the energy of the seeker, the analyst, and the mystic. Their identity is forged through understanding—not surface knowledge, but deep comprehension of how things really work. They're here to go deep where others skim.",
+        coreIdentity: "Life Path 7 lleva la energía del buscador, del analista y del místico. Su identidad se forja a través de la comprensión, no del conocimiento superficial, sino de la comprensión profunda de cómo funcionan realmente las cosas. Están aquí para profundizar donde otros apenas llegan.",
         
-        lifeForce: "Their vital energy flows through solitude, study, and contemplation. They regenerate through time alone and meaningful conversations that go beyond small talk. Superficiality drains them; depth restores them. They are nourished by mystery.",
+        lifeForce: "Su energía vital fluye a través de la soledad, el estudio y la contemplación. Se regeneran a través del tiempo a solas y de conversaciones significativas que van más allá de una pequeña charla. La superficialidad los agota; la profundidad los restaura. Se nutren del misterio.",
         
-        creativeExpression: "They create through analysis, research, and spiritual insight. Their art often involves revealing hidden patterns, speaking truths others haven't seen, or creating works that reward deep attention. Quality over quantity, always.",
+        creativeExpression: "Crean a través del análisis, la investigación y la percepción espiritual. Su arte a menudo implica revelar patrones ocultos, decir verdades que otros no han visto o crear obras que recompensen una atención profunda. Calidad sobre cantidad, siempre.",
         
-        soulLesson: "The core lesson is learning to trust life even when it can't be understood. They must discover that not everything can be analyzed—some truths can only be lived. The mature 7 balances knowing with trusting.",
+        soulLesson: "La lección central es aprender a confiar en la vida incluso cuando no se puede entender. Deben descubrir que no todo se puede analizar: algunas verdades sólo se pueden vivir. El 7 maduro equilibra el conocimiento con la confianza.",
         
-        shadow: "When unbalanced, Life Path 7 becomes isolated, distrustful, or intellectually arrogant. They may retreat into their mind to avoid emotional intimacy or use skepticism as a wall. The shadow side fears vulnerability more than ignorance.",
+        shadow: "Cuando está desequilibrado, Life Path 7 se vuelve aislado, desconfiado o intelectualmente arrogante. Pueden retirarse a su mente para evitar la intimidad emocional o utilizar el escepticismo como muro. El lado oscuro teme más la vulnerabilidad que la ignorancia.",
         
-        relationships: "In love and friendship, they offer depth, loyalty, and intellectual companionship. They need partners who respect their need for solitude and don't demand constant togetherness. They struggle with those who need constant reassurance or who avoid depth.",
+        relationships: "En el amor y la amistad, ofrecen profundidad, lealtad y compañerismo intelectual. Necesitan socios que respeten su necesidad de soledad y no exijan una unión constante. Luchan con aquellos que necesitan tranquilidad constante o que evitan la profundidad.",
         
-        career: "They excel in research, analysis, technology, healing arts, psychology, and any role requiring deep thought. They struggle in positions requiring constant social interaction or where superficial appearances matter more than substance. Their best work happens in solitude or with a few trusted colleagues.",
+        career: "Se destacan en investigación, análisis, tecnología, artes curativas, psicología y cualquier función que requiera una reflexión profunda. Luchan en posiciones que requieren una interacción social constante o donde las apariencias superficiales importan más que la sustancia. Su mejor trabajo ocurre en soledad o con unos pocos colegas de confianza.",
         
-        money: "Their relationship with money is often secondary to their relationship with meaning. They may need to learn that financial stability supports rather than threatens their search for truth. Quality investments over get-rich-quick schemes.",
+        money: "Su relación con el dinero suele ser secundaria a su relación con el significado. Quizás necesiten aprender que la estabilidad financiera respalda, en lugar de amenazar, su búsqueda de la verdad. Inversiones de calidad en lugar de planes de enriquecimiento rápido.",
         
-        health: "Their physical constitution is connected to their nervous system. They may be sensitive to stimuli others don't notice. Depression from isolation, anxiety from overthinking, and stress from lack of alone time are common patterns. They need peace as much as they need food.",
+        health: "Su constitución física está conectada a su sistema nervioso. Pueden ser sensibles a estímulos que otros no notan. La depresión por el aislamiento, la ansiedad por pensar demasiado y el estrés por la falta de tiempo a solas son patrones comunes. Necesitan la paz tanto como necesitan comida.",
         
-        spiritualPath: "Their spiritual journey is their life journey. They are natural seekers, often exploring multiple traditions or going beyond religion entirely to direct experience. Their breakthrough comes when they realize that presence is the deepest knowing.",
+        spiritualPath: "Su viaje espiritual es el viaje de su vida. Son buscadores naturales, que a menudo exploran múltiples tradiciones o van más allá de la religión para llegar a la experiencia directa. Su avance se produce cuando se dan cuenta de que la presencia es el conocimiento más profundo.",
         
-        parentGuidance: "For parents of a Life Path 7 child: Respect their need for solitude—it's not rejection. Answer their 'why' questions honestly, even when difficult. Don't force group activities or constant socializing. Provide books, nature, and space to think. Show them that feelings are data too.",
+        parentGuidance: "Para los padres de un niño con Life Path 7: respeten su necesidad de soledad; no es rechazo. Responda sus preguntas de "por qué" con honestidad, incluso cuando sea difícil. No fuerces las actividades grupales ni la socialización constante. Proporcione libros, naturaleza y espacio para pensar. Muéstreles que los sentimientos también son datos.",
         
-        growthEdge: "Their evolution involves moving from isolated seeking to shared wisdom. The immature 7 hoards knowledge; the mature 7 becomes a teacher. Their greatest growth comes when they trust enough to open their heart alongside their mind.",
+        growthEdge: "Su evolución implica pasar de la búsqueda aislada a la sabiduría compartida. El 7 inmaduro atesora el conocimiento; el 7 maduro se convierte en maestro. Su mayor crecimiento se produce cuando confían lo suficiente como para abrir su corazón junto con su mente.",
         
-        affirmation: "My depth is my gift. Truth reveals itself to those who seek with humility. I can know deeply and love deeply too."
+        affirmation: "Mi profundidad es mi regalo. La verdad se revela a quienes la buscan con humildad. Puedo conocer profundamente y amar profundamente también."
     },
     
     8: {
-        title: "The Power Alchemist",
-        hook: "This soul arrived with the blueprint for abundance—here to master the material world and show that power used wisely serves everyone.",
+        title: "El alquimista del poder",
+        hook: "Esta alma llegó con el modelo de la abundancia: aquí para dominar el mundo material y demostrar que el poder usado sabiamente sirve a todos.",
         
-        coreIdentity: "Life Path 8 carries the energy of manifestation, authority, and abundance. Their identity is forged through achievement and mastery of the material realm. They're here to demonstrate that power, properly wielded, is a form of service.",
+        coreIdentity: "Life Path 8 lleva la energía de la manifestación, la autoridad y la abundancia. Su identidad se forja a través del logro y el dominio del reino material. Están aquí para demostrar que el poder, ejercido adecuadamente, es una forma de servicio.",
         
-        lifeForce: "Their vital energy flows through accomplishment, recognition, and tangible results. They regenerate through challenge, achievement, and exercising their competence. Powerlessness drains them; effective action restores them.",
+        lifeForce: "Su energía vital fluye a través de logros, reconocimiento y resultados tangibles. Se regeneran a través del desafío, el logro y el ejercicio de su competencia. La impotencia los agota; una acción eficaz los restaura.",
         
-        creativeExpression: "They create through organization, strategy, and turning vision into reality. Their art is often the art of business, leadership, or any large-scale manifestation. They think big and have the follow-through to match.",
+        creativeExpression: "Crean a través de la organización, la estrategia y convirtiendo la visión en realidad. Su arte es a menudo el arte de los negocios, el liderazgo o cualquier manifestación a gran escala. Piensan en grande y tienen el seguimiento a la altura.",
         
-        soulLesson: "The core lesson is learning that true power is inner, not outer. They must discover that influence flows from integrity, not just position. The mature 8 leads by example and uses power to elevate others.",
+        soulLesson: "La lección central es aprender que el verdadero poder es interno, no externo. Deben descubrir que la influencia fluye de la integridad, no sólo de la posición. El 8 maduro predica con el ejemplo y usa el poder para elevar a los demás.",
         
-        shadow: "When unbalanced, Life Path 8 becomes domineering, materialistic, or ruthless in pursuit of success. They may become workaholic, neglect relationships for achievement, or use money as control. The shadow side fears powerlessness more than loneliness.",
+        shadow: "Cuando está desequilibrado, Life Path 8 se vuelve dominante, materialista o despiadado en la búsqueda del éxito. Pueden volverse adictos al trabajo, descuidar las relaciones para lograr logros o utilizar el dinero como control. El lado oscuro teme más la impotencia que la soledad.",
         
-        relationships: "In love and friendship, they offer stability, protection, and the ability to create security. They need partners who have their own authority and aren't intimidated by success. They struggle with those who seek to diminish them or who lack ambition.",
+        relationships: "En el amor y la amistad, ofrecen estabilidad, protección y la capacidad de crear seguridad. Necesitan socios que tengan su propia autoridad y que no se dejen intimidar por el éxito. Luchan con quienes buscan menospreciarlos o carecen de ambición.",
         
-        career: "They excel in business, finance, law, management, and any role involving large-scale organization or financial mastery. They struggle in powerless positions or environments where competence isn't valued. Their best work happens when they can build something significant.",
+        career: "Se destacan en negocios, finanzas, derecho, administración y cualquier función que implique organización a gran escala o dominio financiero. Luchan en posiciones impotentes o en entornos donde no se valora la competencia. Su mejor trabajo ocurre cuando pueden construir algo significativo.",
         
-        money: "Their relationship with money is a primary life arena. They often face major financial lessons—sometimes extreme abundance, sometimes significant loss—designed to teach them that they are not their bank balance. Money is a tool, not an identity.",
+        money: "Su relación con el dinero es un ámbito primordial en la vida. A menudo se enfrentan a importantes lecciones financieras (a veces abundancia extrema, a veces pérdidas significativas) diseñadas para enseñarles que ellos no son su saldo bancario. El dinero es una herramienta, no una identidad.",
         
-        health: "Their physical constitution may be affected by stress from responsibility and the constant drive to achieve. Blood pressure, heart issues, and stress-related conditions are common patterns. They need to learn that rest isn't wasted time.",
+        health: "Su constitución física puede verse afectada por el estrés causado por la responsabilidad y el impulso constante por lograr logros. La presión arterial, los problemas cardíacos y las afecciones relacionadas con el estrés son patrones comunes. Necesitan aprender que el descanso no es tiempo perdido.",
         
-        spiritualPath: "Their spiritual journey is about discovering that the material and spiritual are not separate. They often struggle with thinking spirituality is for 'non-practical' people. Their breakthrough comes when they realize that conscious business is spiritual practice.",
+        spiritualPath: "Su viaje espiritual consiste en descubrir que lo material y lo espiritual no están separados. A menudo les cuesta pensar que la espiritualidad es para personas "no prácticas". Su avance se produce cuando se dan cuenta de que el negocio consciente es práctica espiritual.",
         
-        parentGuidance: "For parents of a Life Path 8 child: Give them appropriate responsibility and celebrate their achievements. Teach them about money and power early—they'll encounter it. Show them that failure is feedback, not identity. Help them understand that people aren't pawns. Model integrity in all things.",
+        parentGuidance: "Para padres de un niño con Life Path 8: deles la responsabilidad adecuada y celebre sus logros. Enséñeles sobre el dinero y el poder desde el principio: lo encontrarán. Muéstreles que el fracaso es retroalimentación, no identidad. Ayúdelos a comprender que las personas no son peones. Modele la integridad en todas las cosas.",
         
-        growthEdge: "Their evolution involves moving from power over to power with. The immature 8 accumulates; the mature 8 distributes wisely. Their greatest growth comes when they use their considerable manifestation abilities in service of something larger than personal success.",
+        growthEdge: "Su evolución implica pasar del poder sobre al poder con. El 8 inmaduro se acumula; el 8 maduro distribuye sabiamente. Su mayor crecimiento se produce cuando utilizan sus considerables habilidades de manifestación al servicio de algo más grande que el éxito personal.",
         
-        affirmation: "My power is a responsibility. Abundance flows through me, not just to me. I build for the benefit of all."
+        affirmation: "Mi poder es una responsabilidad. La abundancia fluye a través de mí, no sólo hacia mí. Construyo para el beneficio de todos."
     },
     
     9: {
-        title: "The Universal Humanitarian",
-        hook: "This soul arrived at the end of a great cycle—here to synthesize all that has been learned and give it back to humanity with wisdom and compassion.",
+        title: "El humanitario universal",
+        hook: "Esta alma llegó al final de un gran ciclo: aquí para sintetizar todo lo aprendido y devolvérselo a la humanidad con sabiduría y compasión.",
         
-        coreIdentity: "Life Path 9 carries the energy of completion, wisdom, and universal love. Their identity is forged through service to humanity and the integration of life's lessons. They're here to give back what many lifetimes have taught them.",
+        coreIdentity: "Life Path 9 lleva la energía de la plenitud, la sabiduría y el amor universal. Su identidad se forja a través del servicio a la humanidad y la integración de las lecciones de la vida. Están aquí para devolver lo que les han enseñado muchas vidas.",
         
-        lifeForce: "Their vital energy flows through giving, teaching, and working for causes larger than themselves. They regenerate through making a difference and feeling connected to humanity's evolution. Selfishness in others drains them; compassion restores them.",
+        lifeForce: "Su energía vital fluye a través de dar, enseñar y trabajar por causas más importantes que ellos mismos. Se regeneran marcando la diferencia y sintiéndose conectados con la evolución de la humanidad. El egoísmo de los demás los agota; la compasión los restaura.",
         
-        creativeExpression: "They create through synthesis and humanitarian vision. Their art often carries a message, serves a cause, or brings together diverse elements into unified expression. They are natural teachers who lead by example.",
+        creativeExpression: "Crean a través de la síntesis y la visión humanitaria. Su arte a menudo transmite un mensaje, sirve a una causa o reúne diversos elementos en una expresión unificada. Son maestros naturales que predican con el ejemplo.",
         
-        soulLesson: "The core lesson is learning to release—attachments, resentments, and the past itself. They must discover that letting go is not loss but liberation. The mature 9 holds everything lightly while caring deeply.",
+        soulLesson: "La lección central es aprender a liberar: apegos, resentimientos y el pasado mismo. Deben descubrir que dejar ir no es una pérdida sino una liberación. El 9 maduro toma todo a la ligera mientras se preocupa profundamente.",
         
-        shadow: "When unbalanced, Life Path 9 becomes resentful, martyred, or so focused on the big picture they neglect personal relationships. They may struggle with endings, hold grudges, or become emotionally distant. The shadow side gives to avoid receiving.",
+        shadow: "Cuando está desequilibrado, Life Path 9 se vuelve resentido, mártir o tan concentrado en el panorama general que descuida las relaciones personales. Es posible que tengan dificultades con los finales, guarden rencor o se vuelvan emocionalmente distantes. El lado oscuro da para evitar recibir.",
         
-        relationships: "In love and friendship, they offer wisdom, acceptance, and non-judgmental presence. They need partners who have their own mission and understand their need to serve beyond the relationship. They struggle with those who demand they shrink their world to only personal concerns.",
+        relationships: "En el amor y la amistad, ofrecen sabiduría, aceptación y presencia sin prejuicios. Necesitan socios que tengan su propia misión y comprendan su necesidad de servir más allá de la relación. Luchan con aquellos que exigen que reduzcan su mundo a preocupaciones personales.",
         
-        career: "They excel in humanitarian work, counseling, the arts, teaching, healing, and any role serving the greater good. They struggle in purely profit-driven or competitive environments. Their best work happens when personal success and service to others align.",
+        career: "Se destacan en el trabajo humanitario, el asesoramiento, las artes, la enseñanza, la curación y cualquier función que sirva al bien común. Luchan en entornos competitivos o puramente impulsados ​​por las ganancias. Su mejor trabajo ocurre cuando el éxito personal y el servicio a los demás se alinean.",
         
-        money: "Their relationship with money often involves letting it flow through rather than hoarding. They may struggle with keeping money or be unconcerned with personal accumulation. Learning that self-sufficiency enables greater giving is part of their money lesson.",
+        money: "Su relación con el dinero a menudo implica dejarlo fluir en lugar de acumularlo. Pueden tener dificultades para conservar el dinero o no preocuparse por la acumulación personal. Aprender que la autosuficiencia permite dar más es parte de su lección sobre el dinero.",
         
-        health: "Their physical constitution may be affected by carrying others' pain or the weight of global suffering. Emotional exhaustion, immune issues from over-giving, and depression from world events are common patterns. They need to learn selective compassion—caring without absorbing.",
+        health: "Su constitución física puede verse afectada por cargar con el dolor de otros o el peso del sufrimiento global. El agotamiento emocional, los problemas inmunológicos por dar demasiado y la depresión por los acontecimientos mundiales son patrones comunes. Necesitan aprender a tener compasión selectiva: cuidar sin absorber.",
         
-        spiritualPath: "Their spiritual journey often feels like a culmination of many journeys. They may have natural past-life awareness or profound spiritual gifts. Their breakthrough comes when they realize that the deepest service is living their truth, not just working for causes.",
+        spiritualPath: "Su viaje espiritual a menudo se siente como la culminación de muchos viajes. Pueden tener conciencia natural de vidas pasadas o profundos dones espirituales. Su gran avance se produce cuando se dan cuenta de que el servicio más profundo es vivir su verdad, no sólo trabajar por causas.",
         
-        parentGuidance: "For parents of a Life Path 9 child: You have an old soul in a young body. Respect their natural wisdom while still providing structure. Help them understand that saying yes to everything means saying no to their own needs. Teach them that they don't have to fix everyone. Show them that their personal happiness matters too.",
+        parentGuidance: "Para padres de un niño de Life Path 9: Tienes un alma vieja en un cuerpo joven. Respete su sabiduría natural sin dejar de proporcionar estructura. Ayúdelos a comprender que decir sí a todo significa decir no a sus propias necesidades. Enséñeles que no tienen que arreglar a todos. Muéstreles que su felicidad personal también importa.",
         
-        growthEdge: "Their evolution involves moving from personal sacrifice to sustainable service. The immature 9 burns out from trying to save everyone; the mature 9 serves from a full cup. Their greatest growth comes when they include themselves in their circle of compassion.",
+        growthEdge: "Su evolución implica pasar del sacrificio personal al servicio sostenible. El 9 inmaduro se agota al intentar salvar a todos; el maduro 9 sirve de una taza llena. Su mayor crecimiento se produce cuando se incluyen a sí mismos en su círculo de compasión.",
         
-        affirmation: "I release all that is complete. My compassion includes myself. I serve best when I am whole."
+        affirmation: "Libero todo lo que está completo. Mi compasión me incluye a mí mismo. Sirvo mejor cuando estoy completo."
     },
     
     11: {
-        title: "The Illuminating Messenger",
-        hook: "This soul arrived on a Master Number frequency—a direct channel to inspiration, here to bring higher vision down to earth.",
+        title: "El mensajero iluminador",
+        hook: "Esta alma llegó a una frecuencia de Número Maestro: un canal directo a la inspiración, aquí para traer una visión superior a la tierra.",
         
-        coreIdentity: "Life Path 11 carries the energy of intuition, inspiration, and spiritual messenger. Their identity is forged through their connection to higher frequencies and their ability to translate spiritual insight for others. They're here to illuminate paths others cannot yet see.",
+        coreIdentity: "Life Path 11 lleva la energía de la intuición, la inspiración y el mensajero espiritual. Su identidad se forja a través de su conexión con frecuencias superiores y su capacidad de traducir conocimientos espirituales para los demás. Están aquí para iluminar caminos que otros aún no pueden ver.",
         
-        lifeForce: "Their vital energy is electric, intuitive, and regenerates through creative inspiration and meaningful connection. They are super-charged—running at a higher voltage than most. This is both their gift and their challenge.",
+        lifeForce: "Su energía vital es eléctrica, intuitiva y se regenera a través de la inspiración creativa y la conexión significativa. Están supercargados y funcionan a un voltaje más alto que la mayoría. Este es a la vez su regalo y su desafío.",
         
-        creativeExpression: "They create through inspiration—sometimes not knowing where their ideas come from. Their art has a channeled quality; their best work feels like it came through them rather than from them. They often work in media that reaches many.",
+        creativeExpression: "Crean a través de la inspiración, a veces sin saber de dónde vienen sus ideas. Su arte tiene una cualidad canalizada; Parece que su mejor trabajo surgió a través de ellos y no de ellos. Suelen trabajar en medios que llegan a muchos.",
         
-        soulLesson: "The core lesson is learning to ground their high vibration without dimming it. They must discover that their sensitivity is their gift, not their curse. The mature 11 channels inspiration into practical service without burning out.",
+        soulLesson: "La lección central es aprender a conectar su alta vibración sin atenuarla. Deben descubrir que su sensibilidad es su don, no su maldición. Los 11 maduros canalizan la inspiración hacia un servicio práctico sin agotarse.",
         
-        shadow: "When unbalanced, Life Path 11 becomes anxious, paralyzed by their own potential, or loses themselves in escapism. They may struggle with nervous system overload or swing between feeling special and feeling like a fraud. The shadow side cannot handle its own voltage.",
+        shadow: "Cuando está desequilibrado, Life Path 11 se vuelve ansioso, paralizado por su propio potencial o se pierde en el escapismo. Pueden luchar contra la sobrecarga del sistema nervioso o oscilar entre sentirse especiales y sentirse como un fraude. El lado oscuro no puede manejar su propio voltaje.",
         
-        relationships: "In love and friendship, they offer deep intuitive understanding and inspired connection. They need partners who believe in their gifts and can handle their intensity. They struggle with those who are purely practical or who dismiss the intuitive realm.",
+        relationships: "En el amor y la amistad, ofrecen una profunda comprensión intuitiva y una conexión inspirada. Necesitan socios que crean en sus dones y puedan manejar su intensidad. Luchan con aquellos que son puramente prácticos o que descartan el ámbito intuitivo.",
         
-        career: "They excel in creative fields, healing arts, counseling, spiritual teaching, and any role requiring inspiration. They struggle in mundane, purely logical, or spiritually empty environments. Their best work happens when they're plugged into something larger than themselves.",
+        career: "Se destacan en campos creativos, artes curativas, asesoramiento, enseñanza espiritual y cualquier función que requiera inspiración. Luchan en ambientes mundanos, puramente lógicos o espiritualmente vacíos. Su mejor trabajo ocurre cuando están conectados a algo más grande que ellos mismos.",
         
-        money: "Their relationship with money can be erratic—their high vibration sometimes struggles with practical matters. They may need to learn that financial stability supports rather than threatens their spiritual work. Grounding practices help with money too.",
+        money: "Su relación con el dinero puede ser errática; su alta vibración a veces tiene problemas con cuestiones prácticas. Quizás necesiten aprender que la estabilidad financiera apoya, en lugar de amenazar, su trabajo espiritual. Las prácticas de conexión a tierra también ayudan con el dinero.",
         
-        health: "Their physical constitution is extremely sensitive. They may be affected by environments, foods, and energies others don't notice. Nervous system issues, sensitivity conditions, and stress from carrying high voltage are common. They need regular grounding and alone time.",
+        health: "Su constitución física es extremadamente sensible. Pueden verse afectados por ambientes, alimentos y energías que otros no notan. Son comunes los problemas del sistema nervioso, las condiciones de sensibilidad y el estrés por transportar alto voltaje. Necesitan conexión a tierra con regularidad y tiempo a solas.",
         
-        spiritualPath: "Their spiritual journey is not optional—it's central to their life mission. They often have direct access to spiritual realms that others only read about. Their breakthrough comes when they accept their gifts rather than alternating between hiding them and showing off.",
+        spiritualPath: "Su viaje espiritual no es opcional: es fundamental para la misión de su vida. A menudo tienen acceso directo a reinos espirituales sobre los que otros sólo leen. Su avance se produce cuando aceptan sus regalos en lugar de alternar entre ocultarlos y alardear.",
         
-        parentGuidance: "For parents of a Life Path 11 child: You have a highly sensitive, intuitive child who may seem from another planet at times. Believe their intuitions. Provide calm environments. Don't pressure them to be 'normal.' Help them develop grounding practices. Show them that their sensitivity is a superpower, not a weakness.",
+        parentGuidance: "Para padres de un niño de Life Path 11: Tienes un niño muy sensible e intuitivo que a veces puede parecer de otro planeta. Cree en sus intuiciones. Proporcionar ambientes tranquilos. No los presione para que sean "normales". Ayúdelos a desarrollar prácticas de puesta a tierra. Muéstreles que su sensibilidad es un superpoder, no una debilidad.",
         
-        growthEdge: "Their evolution involves moving from inspired receiver to grounded transmitter. The immature 11 channels chaos; the mature 11 brings heavenly wisdom to earth in usable form. Their greatest growth comes when they accept both their gifts and their humanity.",
+        growthEdge: "Su evolución implica pasar del receptor inspirado al transmisor conectado a tierra. Los 11 inmaduros canalizan el caos; el 11 maduro trae la sabiduría celestial a la tierra en forma utilizable. Su mayor crecimiento se produce cuando aceptan tanto sus dones como su humanidad.",
         
-        affirmation: "I am a bridge between worlds. My sensitivity is my gift. I channel light into form for the benefit of all."
+        affirmation: "Soy un puente entre mundos. Mi sensibilidad es mi regalo. Canalizo la luz en forma para el beneficio de todos."
     },
     
     22: {
-        title: "The Master Architect",
-        hook: "This soul arrived as a Master Builder—here to construct foundations that will serve humanity for generations to come.",
+        title: "El maestro arquitecto",
+        hook: "Esta alma llegó como un Maestro Constructor, aquí para construir los cimientos que servirán a la humanidad para las generaciones venideras.",
         
-        coreIdentity: "Life Path 22 carries the energy of the master builder—combining the intuition of 11 with the manifestation power of 4. Their identity is forged through creating structures of lasting benefit. They're here to build things that change the world.",
+        coreIdentity: "Life Path 22 lleva la energía del maestro constructor, combinando la intuición de 11 con el poder de manifestación de 4. Su identidad se forja mediante la creación de estructuras de beneficio duradero. Están aquí para construir cosas que cambien el mundo.",
         
-        lifeForce: "Their vital energy flows through purposeful creation and seeing large-scale visions become reality. They regenerate through meaningful work that leaves lasting impact. Small thinking drains them; legacy-building restores them.",
+        lifeForce: "Su energía vital fluye a través de la creación con propósito y de ver cómo las visiones a gran escala se hacen realidad. Se regeneran a través de un trabajo significativo que deja un impacto duradero. El pensamiento pequeño los agota; la construcción de legados los restaura.",
         
-        creativeExpression: "They create through vision and systematic implementation. Their art is often infrastructural—organizations, systems, movements, or works that create frameworks for others to build upon. They think in decades and centuries.",
+        creativeExpression: "Crean a través de la visión y la implementación sistemática. Su arte es a menudo infraestructural: organizaciones, sistemas, movimientos u obras que crean marcos sobre los que otros pueden construir. Piensan en décadas y siglos.",
         
-        soulLesson: "The core lesson is learning to handle enormous potential without becoming paralyzed or arrogant. They must discover that great power requires great surrender. The mature 22 builds in service to the plan, not the ego.",
+        soulLesson: "La lección central es aprender a manejar un enorme potencial sin paralizarse ni volverse arrogante. Deben descubrir que un gran poder requiere una gran rendición. El 22 maduro construye al servicio del plan, no del ego.",
         
-        shadow: "When unbalanced, Life Path 22 becomes overwhelmed by their own potential, controlling, or ruthlessly efficient at the expense of humanity. They may become workaholics, lose touch with personal relationships, or manipulate for 'the greater good.' The shadow side builds empires but forgets why.",
+        shadow: "Cuando está desequilibrado, Life Path 22 se vuelve abrumado por su propio potencial, controlador o despiadadamente eficiente a expensas de la humanidad. Pueden volverse adictos al trabajo, perder el contacto con las relaciones personales o manipular para "el bien común". El lado oscuro construye imperios pero olvida por qué.",
         
-        relationships: "In love and friendship, they offer vision, stability, and the capacity to create security on a grand scale. They need partners who share their vision or at least understand their mission. They struggle with those who think small or who demand they abandon their work for personal comfort.",
+        relationships: "En el amor y la amistad, ofrecen visión, estabilidad y la capacidad de crear seguridad a gran escala. Necesitan socios que compartan su visión o al menos comprendan su misión. Luchan con quienes piensan en pequeño o exigen que abandonen su trabajo por comodidad personal.",
         
-        career: "They excel in architecture, engineering, politics, organization building, and any role requiring large-scale manifestation. They struggle in positions without scope or where they cannot implement their vision. Their best work happens when they can build something of lasting significance.",
+        career: "Se destacan en arquitectura, ingeniería, política, creación de organizaciones y cualquier función que requiera una manifestación a gran escala. Luchan en posiciones sin alcance o donde no pueden implementar su visión. Su mejor trabajo ocurre cuando pueden construir algo de importancia duradera.",
         
-        money: "Their relationship with money often involves large amounts—either managing significant resources or building systems that generate wealth. They may need to learn that even master builders need rest and that money should serve vision, not the reverse.",
+        money: "Su relación con el dinero a menudo involucra grandes cantidades, ya sea administrando recursos importantes o construyendo sistemas que generan riqueza. Quizás necesiten aprender que incluso los maestros constructores necesitan descansar y que el dinero debe servir a la visión, y no al revés.",
         
-        health: "Their physical constitution may be strained by the enormous drive they carry. Stress from responsibility, exhaustion from overwork, and health issues from neglecting their body while focusing on their mission are common patterns. They need to build health into their systems.",
+        health: "Su constitución física puede verse afectada por el enorme impulso que llevan. El estrés por la responsabilidad, el agotamiento por el exceso de trabajo y los problemas de salud por descuidar su cuerpo mientras se concentran en su misión son patrones comunes. Necesitan incorporar la salud a sus sistemas.",
         
-        spiritualPath: "Their spiritual journey involves discovering that they are instruments of a larger plan—not the planners themselves. They often struggle with surrender and may try to build their way to enlightenment. Their breakthrough comes when they realize that the greatest architecture is internal.",
+        spiritualPath: "Su viaje espiritual implica descubrir que son instrumentos de un plan más amplio, no los planificadores mismos. A menudo luchan con la rendición y pueden intentar construir su camino hacia la iluminación. Su avance llega cuando se dan cuenta de que la mejor arquitectura es interna.",
         
-        parentGuidance: "For parents of a Life Path 22 child: You have a potential world-builder who may show remarkable vision even young. Give them scope to plan and build. Teach them that means matter as much as ends. Help them stay connected to people, not just projects. Show them that rest isn't lazy—it's essential.",
+        parentGuidance: "Para padres de un niño de Life Path 22: Ustedes tienen un potencial constructor de mundos que puede mostrar una visión notable incluso desde pequeños. Deles margen para planificar y construir. Enséñeles que los medios importan tanto como los fines. Ayúdelos a mantenerse conectados con las personas, no solo con los proyectos. Muéstreles que descansar no es cosa de pereza: es esencial.",
         
-        growthEdge: "Their evolution involves moving from building for legacy to building for love. The immature 22 builds monuments to themselves; the mature 22 builds homes for humanity's evolution. Their greatest growth comes when they hold their vision lightly and remain teachable.",
+        growthEdge: "Su evolución implica pasar de construir por legado a construir por amor. Los 22 inmaduros se construyen monumentos a sí mismos; el maduro 22 construye hogares para la evolución de la humanidad. Su mayor crecimiento se produce cuando mantienen su visión a la ligera y siguen siendo enseñables.",
         
-        affirmation: "I build in service to the whole. My vision is given, not owned. I am an instrument of creation, humbled by the privilege."
+        affirmation: "Construyo en servicio al todo. Mi visión es dada, no poseída. Soy un instrumento de creación, humillado por el privilegio."
     },
     
     33: {
-        title: "The Master Healer",
-        hook: "This soul arrived on the highest Master Number frequency—a living channel of unconditional love, here to heal humanity through presence alone.",
+        title: "El maestro sanador",
+        hook: "Esta alma llegó a la frecuencia más alta del Número Maestro: un canal vivo de amor incondicional, aquí para sanar a la humanidad solo a través de la presencia.",
         
-        coreIdentity: "Life Path 33 carries the energy of the master healer and teacher—combining all the wisdom of the previous numbers into selfless service. Their identity is forged through being a living example of love in action. They're here to heal by being.",
+        coreIdentity: "Life Path 33 lleva la energía del maestro sanador y maestro, combinando toda la sabiduría de los números anteriores en un servicio desinteresado. Su identidad se forja al ser un ejemplo vivo de amor en acción. Están aquí para sanar siendo.",
         
-        lifeForce: "Their vital energy flows through service, healing, and the upliftment of others. They regenerate through giving that comes from genuine abundance. They are living transmitters of love—when balanced, just being near them heals.",
+        lifeForce: "Su energía vital fluye a través del servicio, la curación y la elevación de los demás. Se regeneran mediante el dar que proviene de la abundancia genuina. Son transmisores vivientes de amor; cuando están equilibrados, el solo hecho de estar cerca de ellos sana.",
         
-        creativeExpression: "They create through transformation and healing. Their art heals those who experience it. Their teaching transforms. Their very presence shifts energy. They don't do healing work—they are healing work.",
+        creativeExpression: "Crean a través de la transformación y la curación. Su arte cura a quienes lo experimentan. Su enseñanza se transforma. Su sola presencia cambia la energía. No hacen un trabajo de curación: son un trabajo de curación.",
         
-        soulLesson: "The core lesson is learning to embody their extraordinary capacity without becoming martyred or losing themselves. They must discover that healing themselves is not selfish—it's essential for healing others. The mature 33 serves from overflow, not depletion.",
+        soulLesson: "La lección central es aprender a encarnar su extraordinaria capacidad sin convertirse en mártires ni perderse. Deben descubrir que curarse a sí mismos no es egoísta: es esencial para sanar a otros. El maduro 33 sirve por desborde, no por agotamiento.",
         
-        shadow: "When unbalanced, Life Path 33 becomes martyred, emotionally manipulative through caretaking, or paralyzed by the weight of their potential. They may burn out from trying to save everyone or lose their identity in service. The shadow side gives until there's nothing left.",
+        shadow: "Cuando está desequilibrado, Life Path 33 se vuelve mártir, emocionalmente manipulador a través del cuidado o paralizado por el peso de su potencial. Es posible que se agoten al intentar salvar a todos o que pierdan su identidad en el servicio. El lado oscuro cede hasta que no queda nada.",
         
-        relationships: "In love and friendship, they offer unconditional acceptance and transformative love. They need partners who match their capacity for deep love and who don't exploit their giving nature. They struggle with those who only take or who don't understand their mission.",
+        relationships: "En el amor y la amistad, ofrecen aceptación incondicional y amor transformador. Necesitan parejas que coincidan con su capacidad de amar profundamente y que no exploten su naturaleza generosa. Luchan con aquellos que sólo aceptan o no entienden su misión.",
         
-        career: "They excel in healing professions, spiritual teaching, counseling, and any role where they can serve humanity's evolution. They struggle in harsh, competitive, or spiritually empty environments. Their best work is often simply being present with those who need healing.",
+        career: "Se destacan en profesiones curativas, enseñanza espiritual, asesoramiento y cualquier función en la que puedan servir a la evolución de la humanidad. Luchan en ambientes duros, competitivos o espiritualmente vacíos. Su mejor trabajo a menudo es simplemente estar presente con aquellos que necesitan curación.",
         
-        money: "Their relationship with money is often secondary to their mission. They may need to learn that financial stability supports their service. Allowing themselves to receive is part of their money lesson—they're usually better at giving.",
+        money: "Su relación con el dinero suele ser secundaria a su misión. Es posible que necesiten aprender que la estabilidad financiera respalda su servicio. Permitirse recibir es parte de su lección sobre el dinero: por lo general, son mejores dando.",
         
-        health: "Their physical constitution may be challenged by the enormous love they process. They may take on others' pain, deplete their own energy in service, or forget they have a body while focused on spirit. Maintaining their own well-being is essential—and often their hardest lesson.",
+        health: "Su constitución física puede verse desafiada por el enorme amor que procesan. Pueden asumir el dolor de los demás, agotar su propia energía en el servicio u olvidar que tienen un cuerpo mientras se concentran en el espíritu. Mantener su propio bienestar es esencial y, a menudo, su lección más difícil.",
         
-        spiritualPath: "Their spiritual journey is about becoming a clear channel for divine love without losing their humanity. They often struggle with thinking they need to be perfect to serve. Their breakthrough comes when they realize their humanity, including their wounds, is part of their medicine.",
+        spiritualPath: "Su viaje espiritual consiste en convertirse en un canal claro para el amor divino sin perder su humanidad. A menudo les cuesta pensar que necesitan ser perfectos para servir. Su avance se produce cuando se dan cuenta de que su humanidad, incluidas sus heridas, es parte de su medicina.",
         
-        parentGuidance: "For parents of a Life Path 33 child: You have a potentially extraordinary healer who may feel the weight of the world young. Protect them from taking on too much too soon. Show them that their own needs matter. Don't put them on a pedestal—they need to be human too. Teach them that self-love is not selfish.",
+        parentGuidance: "Para padres de un niño de Life Path 33: Tienes un sanador potencialmente extraordinario que puede sentir el peso del mundo cuando eres joven. Protéjalos para que no asuman demasiadas cosas demasiado pronto. Muéstreles que sus propias necesidades importan. No los pongas en un pedestal; ellos también deben ser humanos. Enséñeles que el amor propio no es egoísta.",
         
-        growthEdge: "Their evolution involves moving from sacrificial service to sovereign service. The immature 33 burns out as a martyr; the mature 33 heals from an inexhaustible source. Their greatest growth comes when they receive as gracefully as they give.",
+        growthEdge: "Su evolución implica pasar del servicio sacrificial al servicio soberano. El inmaduro 33 se quema como un mártir; el maduro 33 sana de una fuente inagotable. Su mayor crecimiento se produce cuando reciben con tanta gracia como dan.",
         
-        affirmation: "I am a channel of love. My cup fills itself. I heal by being healed, serve by being served, love by being loved."
+        affirmation: "Soy un canal de amor. Mi copa se llena sola. Curo siendo curado, sirvo siendo servido, amo siendo amado."
     }
 };
 
@@ -389,148 +389,148 @@ var DEEP_LIFE_PATH_READINGS = {
 
 var DEEP_DESTINY_READINGS = {
     1: {
-        title: "The Destined Leader",
-        hook: "This soul's life path leads inexorably toward leadership, innovation, and the courage to stand alone when necessary.",
-        coreIdentity: "Destiny Number 1 marks a soul whose life experiences will continuously shape them into a leader and pioneer. Whether they initially seek it or not, circumstances will repeatedly place them at the front, asking them to make decisions, chart new courses, and inspire others to follow.",
-        lifePurpose: "Their purpose is to develop unshakeable self-confidence and the ability to initiate. Life will strip away dependency on others' approval until they learn to trust their own vision. They're here to start things—movements, companies, conversations, changes.",
-        challenges: "The journey includes learning to balance independence with collaboration. They may face situations where they're forced to stand alone, sometimes painfully. Pride and ego will be tested repeatedly until they learn that true leadership is service, not status.",
-        gifts: "They bring originality, courage, and the ability to see possibilities where others see dead ends. Their gift is the spark that ignites action in others. When they believe in something, that belief becomes contagious.",
-        relationships: "Partnerships will teach them about balancing autonomy with intimacy. They attract people who need their strength, but must learn to also receive. Their destiny includes learning that asking for help is wisdom, not weakness.",
-        career: "Professional life will push them toward positions of leadership or entrepreneurship. Even in supporting roles, they'll be drawn to innovate. Their career destiny often involves being first at something—first in their field, first in their family, first to try.",
-        spiritualPath: "Their spiritual journey involves discovering that the deepest leadership is self-mastery. They're learning to lead themselves before leading others, to follow their own inner compass even when it contradicts external expectations.",
-        affirmation: "I am meant to lead. My courage opens doors for others. I trust my vision and take bold action."
+        title: "El líder destinado",
+        hook: "El camino de la vida de esta alma conduce inexorablemente hacia el liderazgo, la innovación y el coraje de permanecer solo cuando sea necesario.",
+        coreIdentity: "El destino número 1 marca un alma cuyas experiencias de vida la convertirán continuamente en un líder y pionero. Ya sea que lo busquen inicialmente o no, las circunstancias los colocarán repetidamente al frente, pidiéndoles que tomen decisiones, tracen nuevos rumbos e inspiren a otros a seguirlos.",
+        lifePurpose: "Su propósito es desarrollar una confianza inquebrantable en uno mismo y la capacidad de iniciar. La vida les quitará la dependencia de la aprobación de los demás hasta que aprendan a confiar en su propia visión. Están aquí para iniciar cosas: movimientos, empresas, conversaciones, cambios.",
+        challenges: "El viaje incluye aprender a equilibrar la independencia con la colaboración. Es posible que se enfrenten a situaciones en las que se vean obligados a permanecer solos, a veces de forma dolorosa. El orgullo y el ego serán puestos a prueba repetidamente hasta que aprendan que el verdadero liderazgo es servicio, no estatus.",
+        gifts: "Aportan originalidad, coraje y la capacidad de ver posibilidades donde otros ven callejones sin salida. Su don es la chispa que enciende la acción en los demás. Cuando creen en algo, esa creencia se vuelve contagiosa.",
+        relationships: "Las asociaciones les enseñarán a equilibrar la autonomía con la intimidad. Atraen a personas que necesitan su fuerza, pero que deben aprender a recibir también. Su destino incluye aprender que pedir ayuda es sabiduría, no debilidad.",
+        career: "La vida profesional los empujará hacia posiciones de liderazgo o emprendimiento. Incluso en papeles secundarios, se sentirán atraídos por la innovación. Su destino profesional a menudo implica ser el primero en algo: el primero en su campo, el primero en su familia, el primero en intentarlo.",
+        spiritualPath: "Su viaje espiritual implica descubrir que el liderazgo más profundo es el autodominio. Están aprendiendo a guiarse a sí mismos antes de liderar a otros, a seguir su propia brújula interior incluso cuando contradice las expectativas externas.",
+        affirmation: "Estoy destinado a liderar. Mi coraje abre puertas a los demás. Confío en mi visión y tomo medidas audaces."
     },
     2: {
-        title: "The Destined Peacemaker",
-        hook: "This soul's life path leads toward mastery of relationships, diplomacy, and the profound power of genuine partnership.",
-        coreIdentity: "Destiny Number 2 marks a soul whose life will teach them the sacred art of cooperation and the strength found in sensitivity. They're being shaped into a master of relationships—someone who can bring opposing forces into harmony.",
-        lifePurpose: "Their purpose is to develop deep emotional intelligence and the ability to create peace. Life will present them with conflicts to resolve, partnerships to navigate, and situations requiring the wisdom of seeing both sides. They're here to connect people.",
-        challenges: "The journey includes learning to maintain their identity while deeply connecting with others. They may struggle with codependency, people-pleasing, or losing themselves in relationships. Their challenge is finding the balance between giving and receiving.",
-        gifts: "They bring intuition, tact, and the ability to make others feel truly seen and heard. Their gift is creating spaces where people can be vulnerable. Their sensitivity is their superpower, not their weakness.",
-        relationships: "Partnership is central to their destiny. They learn about themselves through others. Their relationships will be their greatest teachers, showing them where they end and others begin, and how to love without losing themselves.",
-        career: "Professional life will draw them to roles requiring mediation, support, or partnership. They excel behind the scenes, making others shine. Their career destiny often involves being the essential partner, the trusted confidant, the one who holds things together.",
-        spiritualPath: "Their spiritual journey involves discovering that peace begins within. They're learning that they can't create external harmony from internal chaos, and that their sensitivity to others must include sensitivity to themselves.",
-        affirmation: "I am meant to connect. My sensitivity is sacred. I create harmony by being at peace within myself."
+        title: "El pacificador destinado",
+        hook: "El camino de la vida de esta alma conduce hacia el dominio de las relaciones, la diplomacia y el profundo poder de la asociación genuina.",
+        coreIdentity: "El destino número 2 marca un alma cuya vida les enseñará el arte sagrado de la cooperación y la fuerza que se encuentra en la sensibilidad. Se les está transformando en un maestro de las relaciones, alguien que puede armonizar fuerzas opuestas.",
+        lifePurpose: "Su propósito es desarrollar una inteligencia emocional profunda y la capacidad de crear paz. La vida les presentará conflictos que resolver, asociaciones que navegar y situaciones que requerirán la sabiduría de ver ambos lados. Están aquí para conectar a las personas.",
+        challenges: "El viaje incluye aprender a mantener su identidad mientras se conecta profundamente con los demás. Pueden luchar contra la codependencia, complacer a las personas o perderse en las relaciones. Su desafío es encontrar el equilibrio entre dar y recibir.",
+        gifts: "Aportan intuición, tacto y la capacidad de hacer que los demás se sientan realmente vistos y escuchados. Su don es crear espacios donde las personas puedan ser vulnerables. Su sensibilidad es su superpoder, no su debilidad.",
+        relationships: "La asociación es fundamental para su destino. Aprenden sobre sí mismos a través de los demás. Sus relaciones serán sus mayores maestros, mostrándoles dónde terminan ellos y comienzan los demás, y cómo amar sin perderse a sí mismos.",
+        career: "La vida profesional los llevará a desempeñar funciones que requieran mediación, apoyo o colaboración. Destacan detrás de escena, haciendo brillar a los demás. Su destino profesional a menudo implica ser el socio esencial, el confidente de confianza, el que mantiene todo unido.",
+        spiritualPath: "Su viaje espiritual implica descubrir que la paz comienza en el interior. Están aprendiendo que no pueden crear armonía externa a partir del caos interno y que su sensibilidad hacia los demás debe incluir la sensibilidad hacia ellos mismos.",
+        affirmation: "Estoy destinado a conectarme. Mi sensibilidad es sagrada. Creo armonía estando en paz dentro de mí mismo."
     },
     3: {
-        title: "The Destined Creator",
-        hook: "This soul's life path leads toward self-expression, creative mastery, and the joy of bringing beauty into the world.",
-        coreIdentity: "Destiny Number 3 marks a soul whose life will continuously draw forth their creative gifts and demand authentic self-expression. They're being shaped into a communicator, artist, or entertainer—someone who brings light and inspiration to others.",
-        lifePurpose: "Their purpose is to develop their creative voice and the courage to share it. Life will present them with opportunities (and sometimes force situations) requiring them to express themselves, create, and inspire. They're here to remind humanity that life is meant to be enjoyed.",
-        challenges: "The journey includes learning to take their gifts seriously without losing their joy. They may struggle with scattered energy, superficiality, or using charm to avoid depth. Their challenge is combining creativity with discipline.",
-        gifts: "They bring optimism, creativity, and the ability to make anything more interesting. Their gift is seeing beauty and potential where others see mundane reality. Their presence brightens rooms.",
-        relationships: "Their destiny involves learning that deep connection requires vulnerability, not just entertainment. They attract people who love their light but must find partners who also appreciate their shadows. Authentic intimacy is part of their growth.",
-        career: "Professional life will draw them to creative fields, communication, teaching, or any role where they can express their unique perspective. Their career destiny often involves reaching many people with their message or art.",
-        spiritualPath: "Their spiritual journey involves discovering that creativity is a sacred act—a form of channeling something larger than themselves. They're learning that their joy is not frivolous but essential medicine for a weary world.",
-        affirmation: "I am meant to create. My self-expression heals others. I share my gifts generously and joyfully."
+        title: "El Creador Destinado",
+        hook: "El camino de la vida de esta alma conduce hacia la autoexpresión, el dominio creativo y la alegría de traer belleza al mundo.",
+        coreIdentity: "El destino número 3 marca un alma cuya vida atraerá continuamente sus dones creativos y exigirá una auténtica autoexpresión. Se les está transformando en comunicadores, artistas o animadores, alguien que aporta luz e inspiración a los demás.",
+        lifePurpose: "Su propósito es desarrollar su voz creativa y el coraje de compartirla. La vida les presentará oportunidades (y a veces situaciones forzadas) que les exigirán expresarse, crear e inspirar. Están aquí para recordarle a la humanidad que la vida debe disfrutarse.",
+        challenges: "El viaje incluye aprender a tomar en serio sus dones sin perder la alegría. Pueden tener problemas con la energía dispersa, la superficialidad o usar el encanto para evitar la profundidad. Su desafío es combinar la creatividad con la disciplina.",
+        gifts: "Aportan optimismo, creatividad y la capacidad de hacer cualquier cosa más interesante. Su don es ver la belleza y el potencial donde otros ven la realidad mundana. Su presencia ilumina las habitaciones.",
+        relationships: "Su destino implica aprender que una conexión profunda requiere vulnerabilidad, no sólo entretenimiento. Atraen a personas que aman su luz pero deben encontrar socios que también aprecien sus sombras. La intimidad auténtica es parte de su crecimiento.",
+        career: "La vida profesional los atraerá hacia campos creativos, la comunicación, la enseñanza o cualquier rol donde puedan expresar su perspectiva única. Su destino profesional a menudo implica llegar a muchas personas con su mensaje o arte.",
+        spiritualPath: "Su viaje espiritual implica descubrir que la creatividad es un acto sagrado, una forma de canalizar algo más grande que ellos mismos. Están aprendiendo que su alegría no es una frívola sino una medicina esencial para un mundo cansado.",
+        affirmation: "Estoy destinado a crear. Mi autoexpresión sana a los demás. Comparto mis dones con generosidad y alegría."
     },
     4: {
-        title: "The Destined Builder",
-        hook: "This soul's life path leads toward creating lasting foundations, mastering practical skills, and the profound satisfaction of building something that endures.",
-        coreIdentity: "Destiny Number 4 marks a soul whose life will teach them the value of hard work, patience, and building step by step. They're being shaped into a master builder—someone who creates structures that last, whether physical, organizational, or relational.",
-        lifePurpose: "Their purpose is to develop discipline, reliability, and the ability to turn dreams into reality through sustained effort. Life will present them with situations requiring patience, planning, and the willingness to do things the right way, even when it takes longer.",
-        challenges: "The journey includes learning flexibility within structure. They may struggle with rigidity, workaholism, or missing the forest for the trees. Their challenge is finding the balance between diligence and obsession, between stability and stagnation.",
-        gifts: "They bring dependability, practical wisdom, and the ability to create order from chaos. Their gift is seeing how things fit together and building systems that work. People trust them because they follow through.",
-        relationships: "Their destiny involves learning that love requires consistency, not just passion. They attract people who need their stability but must avoid becoming rigid or controlling. Emotional availability is part of their growth.",
-        career: "Professional life will draw them to roles requiring organization, management, or skilled craftsmanship. Their career destiny often involves building something—a business, a body of work, an institution—that outlasts them.",
-        spiritualPath: "Their spiritual journey involves discovering that the sacred lives in the ordinary, that enlightenment can be found in daily practice and patient work. They're learning that commitment itself is a spiritual path.",
-        affirmation: "I am meant to build. My patience creates lasting value. I trust the process and honor each step."
+        title: "El constructor destinado",
+        hook: "El camino de la vida de esta alma conduce a la creación de cimientos duraderos, el dominio de habilidades prácticas y la profunda satisfacción de construir algo que perdure.",
+        coreIdentity: "El destino número 4 marca un alma cuya vida les enseñará el valor del trabajo duro, la paciencia y la construcción paso a paso. Se les está transformando en un maestro constructor: alguien que crea estructuras duraderas, ya sean físicas, organizativas o relacionales.",
+        lifePurpose: "Su propósito es desarrollar disciplina, confiabilidad y la capacidad de convertir los sueños en realidad mediante un esfuerzo sostenido. La vida les presentará situaciones que requerirán paciencia, planificación y voluntad de hacer las cosas de la manera correcta, incluso cuando lleve más tiempo.",
+        challenges: "El viaje incluye el aprendizaje de la flexibilidad dentro de la estructura. Pueden luchar contra la rigidez, la adicción al trabajo o extrañar el bosque por los árboles. Su desafío es encontrar el equilibrio entre diligencia y obsesión, entre estabilidad y estancamiento.",
+        gifts: "Aportan confiabilidad, sabiduría práctica y la capacidad de crear orden a partir del caos. Su don es ver cómo encajan las cosas y construir sistemas que funcionen. La gente confía en ellos porque cumplen con sus promesas.",
+        relationships: "Su destino pasa por aprender que el amor requiere coherencia, no sólo pasión. Atraen a personas que necesitan su estabilidad pero que deben evitar volverse rígidas o controladoras. La disponibilidad emocional es parte de su crecimiento.",
+        career: "La vida profesional los atraerá a roles que requieren organización, gestión o habilidad. Su destino profesional a menudo implica construir algo (un negocio, un conjunto de trabajos, una institución) que los sobreviva.",
+        spiritualPath: "Su viaje espiritual implica descubrir que lo sagrado vive en lo ordinario, que la iluminación se puede encontrar en la práctica diaria y el trabajo paciente. Están aprendiendo que el compromiso en sí es un camino espiritual.",
+        affirmation: "Estoy destinado a construir. Mi paciencia crea un valor duradero. Confío en el proceso y honro cada paso."
     },
     5: {
-        title: "The Destined Adventurer",
-        hook: "This soul's life path leads toward freedom, diverse experience, and the wisdom that comes only from living fully.",
-        coreIdentity: "Destiny Number 5 marks a soul whose life will be filled with change, variety, and experiences that expand their understanding of what's possible. They're being shaped into a freedom-seeker—someone who lives fully and helps others break free from limiting patterns.",
-        lifePurpose: "Their purpose is to develop adaptability and the courage to embrace the unknown. Life will repeatedly offer them choices between security and adventure, routine and growth. They're here to demonstrate that change is not just survivable but essential.",
-        challenges: "The journey includes learning to find freedom within commitment. They may struggle with restlessness, excess, or fear of being trapped. Their challenge is distinguishing between liberating change and avoidance of necessary depth.",
-        gifts: "They bring adaptability, charisma, and the ability to make even difficult transitions feel like adventures. Their gift is helping others embrace change gracefully. Their enthusiasm for life is contagious.",
-        relationships: "Their destiny involves learning that freedom and love are not opposites. They attract exciting partners but must find those who can match their need for growth without requiring constant novelty. Deep commitment that allows breathing room is their goal.",
-        career: "Professional life will draw them to varied careers, travel, or any role that offers freedom and change. Their career destiny often involves multiple chapters, each teaching something different. Variety is not instability—it's their curriculum.",
-        spiritualPath: "Their spiritual journey involves discovering that the greatest freedom is internal. They're learning that running toward experiences and running away from themselves are different things, and that stillness can be as liberating as movement.",
-        affirmation: "I am meant to experience life fully. My adaptability is a gift. I am free because I choose to be."
+        title: "El aventurero destinado",
+        hook: "El camino de la vida de esta alma conduce hacia la libertad, la experiencia diversa y la sabiduría que sólo proviene de vivir plenamente.",
+        coreIdentity: "El destino número 5 marca un alma cuya vida estará llena de cambios, variedad y experiencias que ampliarán su comprensión de lo que es posible. Se les está transformando en buscadores de libertad, alguien que vive plenamente y ayuda a otros a liberarse de patrones limitantes.",
+        lifePurpose: "Su propósito es desarrollar la adaptabilidad y el coraje para abrazar lo desconocido. La vida les ofrecerá repetidamente opciones entre seguridad y aventura, rutina y crecimiento. Están aquí para demostrar que el cambio no sólo es algo que se puede sobrevivir sino que es esencial.",
+        challenges: "El viaje incluye aprender a encontrar la libertad dentro del compromiso. Pueden luchar contra la inquietud, el exceso o el miedo a quedar atrapados. Su desafío es distinguir entre un cambio liberador y evitar la profundidad necesaria.",
+        gifts: "Aportan adaptabilidad, carisma y la capacidad de hacer que incluso las transiciones difíciles parezcan aventuras. Su don es ayudar a otros a aceptar el cambio con gracia. Su entusiasmo por la vida es contagioso.",
+        relationships: "Su destino pasa por aprender que la libertad y el amor no son opuestos. Atraen socios interesantes, pero deben encontrar aquellos que puedan satisfacer su necesidad de crecimiento sin necesidad de novedades constantes. Su objetivo es un compromiso profundo que permita un respiro.",
+        career: "La vida profesional los atraerá a carreras variadas, viajes o cualquier rol que ofrezca libertad y cambio. Su destino profesional a menudo implica varios capítulos, cada uno de los cuales enseña algo diferente. La variedad no es inestabilidad: es su plan de estudios.",
+        spiritualPath: "Su viaje espiritual implica descubrir que la mayor libertad es interna. Están aprendiendo que correr hacia experiencias y huir de sí mismos son cosas diferentes, y que la quietud puede ser tan liberadora como el movimiento.",
+        affirmation: "Estoy destinado a experimentar la vida plenamente. Mi adaptabilidad es un regalo. Soy libre porque elijo serlo."
     },
     6: {
-        title: "The Destined Nurturer",
-        hook: "This soul's life path leads toward love, responsibility, and the profound purpose of creating harmony in home and community.",
-        coreIdentity: "Destiny Number 6 marks a soul whose life will center around love, family, and service to others. They're being shaped into a nurturer—someone who takes responsibility for the wellbeing of those around them and creates beauty wherever they go.",
-        lifePurpose: "Their purpose is to develop unconditional love and the ability to serve without martyrdom. Life will present them with people who need care, situations requiring responsibility, and opportunities to create harmony. They're here to demonstrate love in action.",
-        challenges: "The journey includes learning to care for themselves while caring for others. They may struggle with control disguised as care, perfectionism, or taking on too much. Their challenge is loving without smothering, helping without enabling.",
-        gifts: "They bring warmth, aesthetic sense, and the ability to make any space feel like home. Their gift is seeing the potential in people and nurturing it. Their love creates safety for others to grow.",
-        relationships: "Family and close relationships are central to their destiny. They learn about love through giving it. Their challenge is allowing others to care for them, too. Receiving is as important as giving.",
-        career: "Professional life will draw them to healing, teaching, design, or any role that involves nurturing or beautifying. Their career destiny often involves service that feels personally meaningful—work that matters to their heart.",
-        spiritualPath: "Their spiritual journey involves discovering that they cannot give what they don't have, that self-love is not selfish but essential to genuine service. They're learning that their worth is not dependent on being needed.",
-        affirmation: "I am meant to love and nurture. My care creates sanctuary. I am worthy of the love I give to others."
+        title: "El cuidador destinado",
+        hook: "El camino de vida de esta alma conduce hacia el amor, la responsabilidad y el profundo propósito de crear armonía en el hogar y la comunidad.",
+        coreIdentity: "El destino número 6 marca un alma cuya vida se centrará en el amor, la familia y el servicio a los demás. Se les está formando como cuidadores, alguien que asume la responsabilidad del bienestar de quienes los rodean y crea belleza dondequiera que vaya.",
+        lifePurpose: "Su propósito es desarrollar el amor incondicional y la capacidad de servir sin martirio. La vida les presentará personas que necesitan cuidados, situaciones que requerirán responsabilidad y oportunidades para crear armonía. Están aquí para demostrar el amor en acción.",
+        challenges: "El viaje incluye aprender a cuidar de sí mismos mientras cuidan de los demás. Es posible que tengan dificultades para controlar el control disfrazado de cuidado, perfeccionismo o asumir demasiadas responsabilidades. Su desafío es amar sin asfixiar, ayudar sin permitir.",
+        gifts: "Aportan calidez, sentido estético y la capacidad de hacer que cualquier espacio se sienta como en casa. Su don es ver el potencial de las personas y nutrirlo. Su amor crea seguridad para que otros crezcan.",
+        relationships: "La familia y las relaciones cercanas son fundamentales para su destino. Aprenden sobre el amor dándolo. Su desafío es permitir que otros también los cuiden. Recibir es tan importante como dar.",
+        career: "La vida profesional los atraerá hacia la curación, la enseñanza, el diseño o cualquier función que implique cuidar o embellecer. Su destino profesional a menudo implica un servicio que les parezca personalmente significativo, un trabajo que les importe de corazón.",
+        spiritualPath: "Su viaje espiritual implica descubrir que no pueden dar lo que no tienen, que el amor propio no es egoísta sino esencial para un servicio genuino. Están aprendiendo que su valor no depende de que los necesiten.",
+        affirmation: "Estoy destinado a amar y nutrir. Mi cuidado crea santuario. Soy digno del amor que doy a los demás."
     },
     7: {
-        title: "The Destined Seeker",
-        hook: "This soul's life path leads toward wisdom, inner truth, and the profound journey of understanding what lies beneath the surface of reality.",
-        coreIdentity: "Destiny Number 7 marks a soul whose life will draw them into deep questioning, research, and the search for truth. They're being shaped into a seeker—someone who won't settle for surface answers and who helps others think more deeply.",
-        lifePurpose: "Their purpose is to develop wisdom and the ability to find truth. Life will present them with mysteries, unanswered questions, and situations that require looking beyond the obvious. They're here to understand and to share their understanding.",
-        challenges: "The journey includes learning to balance thinking with feeling, solitude with connection. They may struggle with isolation, overthinking, or intellectual arrogance. Their challenge is sharing their wisdom without alienating others.",
-        gifts: "They bring insight, analytical ability, and the patience to find answers others miss. Their gift is seeing patterns and meanings invisible to surface thinkers. Their depth makes them trusted advisors.",
-        relationships: "Their destiny involves learning that connection doesn't diminish their inner world. They attract people who appreciate their depth but must allow themselves to be truly known. Intellectual intimacy must include emotional intimacy.",
-        career: "Professional life will draw them to research, analysis, spirituality, or any field requiring deep expertise. Their career destiny often involves specialization—knowing more about less until they become an authority.",
-        spiritualPath: "Their spiritual journey is central to their destiny. They're here to go beyond belief to direct experience, beyond knowledge to wisdom. Every life lesson points them toward the ultimate questions.",
-        affirmation: "I am meant to understand. My depth is valuable. I trust my inner knowing and share my wisdom graciously."
+        title: "El buscador destinado",
+        hook: "El camino de la vida de esta alma conduce hacia la sabiduría, la verdad interior y el viaje profundo de comprensión de lo que se encuentra debajo de la superficie de la realidad.",
+        coreIdentity: "El destino número 7 marca un alma cuya vida la llevará a un profundo cuestionamiento, investigación y búsqueda de la verdad. Se les está transformando en buscadores, alguien que no se conforma con respuestas superficiales y que ayuda a otros a pensar más profundamente.",
+        lifePurpose: "Su propósito es desarrollar la sabiduría y la capacidad de encontrar la verdad. La vida les presentará misterios, preguntas sin respuesta y situaciones que requerirán mirar más allá de lo obvio. Están aquí para comprender y compartir su comprensión.",
+        challenges: "El viaje incluye aprender a equilibrar el pensamiento con el sentimiento, la soledad con la conexión. Pueden luchar contra el aislamiento, el pensamiento excesivo o la arrogancia intelectual. Su desafío es compartir su sabiduría sin alienar a los demás.",
+        gifts: "Aportan perspicacia, capacidad analítica y paciencia para encontrar respuestas que otros pasan por alto. Su don es ver patrones y significados invisibles para los pensadores superficiales. Su profundidad los convierte en asesores confiables.",
+        relationships: "Su destino pasa por aprender que la conexión no disminuye su mundo interior. Atraen a personas que aprecian su profundidad pero que deben dejarse conocer verdaderamente. La intimidad intelectual debe incluir intimidad emocional.",
+        career: "La vida profesional los atraerá hacia la investigación, el análisis, la espiritualidad o cualquier campo que requiera una profunda experiencia. Su destino profesional a menudo implica especialización: saber más sobre menos hasta convertirse en una autoridad.",
+        spiritualPath: "Su viaje espiritual es fundamental para su destino. Están aquí para ir más allá de la creencia a la experiencia directa, más allá del conocimiento a la sabiduría. Cada lección de vida les dirige hacia las preguntas fundamentales.",
+        affirmation: "Estoy destinado a entender. Mi profundidad es valiosa. Confío en mi conocimiento interior y comparto mi sabiduría con gracia."
     },
     8: {
-        title: "The Destined Achiever",
-        hook: "This soul's life path leads toward mastery of the material world, the responsible use of power, and the creation of abundance that serves many.",
-        coreIdentity: "Destiny Number 8 marks a soul whose life will teach them about power, money, and achievement. They're being shaped into someone who can manifest abundantly and use resources wisely—understanding that power is meant to be circulated, not hoarded.",
-        lifePurpose: "Their purpose is to develop mastery over material reality and learn the spiritual lessons of power. Life will present them with opportunities to gain and lose, to lead and serve, to accumulate and release. They're here to demonstrate that abundance is a flow.",
-        challenges: "The journey includes learning that net worth is not self-worth. They may struggle with workaholism, materialism, or the misuse of power. Their challenge is achieving without becoming attached, leading without dominating.",
-        gifts: "They bring vision, executive ability, and the power to make things happen in the physical world. Their gift is seeing potential for growth and organizing resources to realize it. Their confidence inspires others.",
-        relationships: "Their destiny involves learning that love cannot be earned through achievement. They attract ambitious partners but must find those who love them beyond their success. Vulnerability is their growth edge.",
-        career: "Professional life will draw them to business, leadership, finance, or any role with significant responsibility. Their career destiny often involves positions of influence—using power to create positive change at scale.",
-        spiritualPath: "Their spiritual journey involves discovering that abundance is a state of consciousness, not an account balance. They're learning to hold power lightly, to achieve without attachment, and to see material success as a tool for service.",
-        affirmation: "I am meant for abundance. Power flows through me responsibly. My success serves something larger than myself."
+        title: "El triunfador destinado",
+        hook: "El camino de la vida de esta alma conduce hacia el dominio del mundo material, el uso responsable del poder y la creación de abundancia que sirva a muchos.",
+        coreIdentity: "El destino número 8 marca un alma cuya vida les enseñará sobre el poder, el dinero y los logros. Se les está transformando en alguien que puede manifestarse en abundancia y utilizar los recursos sabiamente, entendiendo que el poder debe circular, no acapararse.",
+        lifePurpose: "Su propósito es desarrollar el dominio sobre la realidad material y aprender las lecciones espirituales del poder. La vida les presentará oportunidades para ganar y perder, liderar y servir, acumular y liberar. Están aquí para demostrar que la abundancia es un flujo.",
+        challenges: "El viaje incluye aprender que el patrimonio neto no es el valor propio. Pueden luchar contra la adicción al trabajo, el materialismo o el mal uso del poder. Su desafío es lograr sin apegarse, liderar sin dominar.",
+        gifts: "Aportan visión, capacidad ejecutiva y el poder de hacer que sucedan cosas en el mundo físico. Su don es ver el potencial de crecimiento y organizar recursos para realizarlo. Su confianza inspira a otros.",
+        relationships: "Su destino implica aprender que el amor no se puede ganar mediante logros. Atraen socios ambiciosos, pero deben encontrar quienes los amen más allá de su éxito. La vulnerabilidad es su ventaja de crecimiento.",
+        career: "La vida profesional los atraerá hacia los negocios, el liderazgo, las finanzas o cualquier puesto que implique una responsabilidad significativa. Su destino profesional a menudo implica posiciones de influencia: utilizar el poder para crear cambios positivos a escala.",
+        spiritualPath: "Su viaje espiritual implica descubrir que la abundancia es un estado de conciencia, no un saldo de cuenta. Están aprendiendo a mantener el poder a la ligera, a lograr logros sin apegos y a ver el éxito material como una herramienta para el servicio.",
+        affirmation: "Estoy destinado a la abundancia. El poder fluye a través de mí de manera responsable. Mi éxito sirve a algo más grande que yo."
     },
     9: {
-        title: "The Destined Humanitarian",
-        hook: "This soul's life path leads toward universal love, completion, and the wisdom of one who has seen much and learned to give freely.",
-        coreIdentity: "Destiny Number 9 marks a soul whose life will teach them about letting go, universal compassion, and service to humanity. They're being shaped into a humanitarian—someone who sees beyond personal concerns to the needs of the whole.",
-        lifePurpose: "Their purpose is to develop unconditional love and the wisdom of non-attachment. Life will present them with situations requiring them to let go, to forgive, and to see the bigger picture. They're here to close cycles and heal old patterns.",
-        challenges: "The journey includes learning healthy detachment without becoming cold. They may struggle with loss, martyrdom, or holding onto what needs to be released. Their challenge is giving freely without becoming drained.",
-        gifts: "They bring wisdom, compassion, and the ability to see the highest potential in any situation. Their gift is helping others complete their own cycles and move forward. Their presence reminds people what really matters.",
-        relationships: "Their destiny involves learning that love means releasing, not possessing. They attract people who need their wisdom but must avoid becoming everyone's teacher. Equal partnerships require them to also be the student.",
-        career: "Professional life will draw them to service, healing, arts, or any role with humanitarian impact. Their career destiny often involves reaching many people or addressing universal human needs.",
-        spiritualPath: "Their spiritual journey is about completing whatever their soul needs to complete in this lifetime. They're learning that endings are not failures, that letting go is not loss, and that the most powerful service is selfless.",
-        affirmation: "I am meant to serve the whole. My love is universal. I release freely, knowing that love returns multiplied."
+        title: "El humanitario destinado",
+        hook: "El camino de la vida de esta alma conduce hacia el amor universal, la plenitud y la sabiduría de quien ha visto mucho y ha aprendido a dar libremente.",
+        coreIdentity: "El destino número 9 marca un alma cuya vida les enseñará sobre el abandono, la compasión universal y el servicio a la humanidad. Se les está formando como personas humanitarias, alguien que ve más allá de las preocupaciones personales y ve las necesidades del conjunto.",
+        lifePurpose: "Su propósito es desarrollar el amor incondicional y la sabiduría del desapego. La vida les presentará situaciones que les exigirán dejarse llevar, perdonar y ver el panorama más amplio. Están aquí para cerrar ciclos y sanar viejos patrones.",
+        challenges: "El viaje incluye aprender a tener un desapego saludable sin volverse frío. Pueden luchar contra la pérdida, el martirio o aferrarse a lo que necesitan ser liberados. Su desafío es dar libremente sin agotarse.",
+        gifts: "Aportan sabiduría, compasión y la capacidad de ver el máximo potencial en cualquier situación. Su don es ayudar a otros a completar sus propios ciclos y seguir adelante. Su presencia recuerda a la gente lo que realmente importa.",
+        relationships: "Su destino implica aprender que amar significa liberar, no poseer. Atraen a personas que necesitan su sabiduría pero deben evitar convertirse en maestros de todos. Las asociaciones iguales requieren que ellos también sean estudiantes.",
+        career: "La vida profesional los atraerá hacia el servicio, la curación, las artes o cualquier función con impacto humanitario. Su destino profesional a menudo implica llegar a muchas personas o abordar necesidades humanas universales.",
+        spiritualPath: "Su viaje espiritual consiste en completar todo lo que su alma necesita completar en esta vida. Están aprendiendo que los finales no son fracasos, que dejar ir no es una pérdida y que el servicio más poderoso es el desinteresado.",
+        affirmation: "Estoy destinado a servir al todo. Mi amor es universal. Libero libremente, sabiendo que el amor regresa multiplicado."
     },
     11: {
-        title: "The Destined Illuminator",
-        hook: "This soul's life path leads toward spiritual illumination, inspired vision, and the profound responsibility of channeling higher wisdom into earthly form.",
-        coreIdentity: "Destiny Number 11 is a Master Number marking a soul whose life will call them to operate on two planes simultaneously—the practical and the spiritual. They're being shaped into an illuminator—someone who brings light to darkness and inspiration to the ordinary.",
-        lifePurpose: "Their purpose is to develop their intuitive abilities and the courage to share their vision. Life will present them with moments of profound insight and the challenge of translating inspiration into reality. They're here to light the way.",
-        challenges: "The journey includes learning to ground their visions practically. They may struggle with nervous tension, impracticality, or feeling caught between worlds. Their challenge is being both inspired and grounded, visionary and realistic.",
-        gifts: "They bring inspiration, psychic sensitivity, and the ability to see possibilities others can't imagine. Their gift is receiving and transmitting guidance from higher sources. Their very presence uplifts.",
-        relationships: "Their destiny involves finding partners who understand their spiritual nature without requiring them to be constantly 'on.' They need grounding relationships that honor their sensitivity while keeping them connected to earth.",
-        career: "Professional life will draw them to inspirational work—teaching, spiritual practice, arts, or any role that allows them to channel vision. Their career destiny involves awakening something in others.",
-        spiritualPath: "Their spiritual journey is their destiny. They're here to integrate spirit and matter, to live inspired without losing their humanity. Every life experience is spiritual curriculum.",
-        affirmation: "I am a channel for light. My sensitivity is my gift. I illuminate paths while walking my own."
+        title: "El iluminador destinado",
+        hook: "El camino de la vida de esta alma conduce hacia la iluminación espiritual, la visión inspirada y la profunda responsabilidad de canalizar la sabiduría superior en forma terrenal.",
+        coreIdentity: "El Número de Destino 11 es un Número Maestro que marca un alma cuya vida la llamará a operar en dos planos simultáneamente: el práctico y el espiritual. Están siendo transformados en un iluminador, alguien que trae luz a la oscuridad e inspiración a lo ordinario.",
+        lifePurpose: "Su propósito es desarrollar sus habilidades intuitivas y el coraje de compartir su visión. La vida les presentará momentos de profunda percepción y el desafío de traducir la inspiración en realidad. Están aquí para iluminar el camino.",
+        challenges: "El viaje incluye aprender a fundamentar sus visiones de manera práctica. Pueden luchar contra la tensión nerviosa, la impracticabilidad o sentirse atrapados entre mundos. Su desafío es ser inspirados y fundamentados, visionarios y realistas.",
+        gifts: "Aportan inspiración, sensibilidad psíquica y la capacidad de ver posibilidades que otros no pueden imaginar. Su don es recibir y transmitir orientación de fuentes superiores. Su sola presencia eleva.",
+        relationships: "Su destino implica encontrar socios que comprendan su naturaleza espiritual sin exigirles que estén constantemente "activos". Necesitan relaciones sólidas que honren su sensibilidad y al mismo tiempo los mantengan conectados con la tierra.",
+        career: "La vida profesional los atraerá hacia trabajos inspiradores: enseñanza, práctica espiritual, artes o cualquier rol que les permita canalizar la visión. Su destino profesional pasa por despertar algo en los demás.",
+        spiritualPath: "Su viaje espiritual es su destino. Están aquí para integrar espíritu y materia, para vivir inspirados sin perder su humanidad. Cada experiencia de vida es un plan de estudios espiritual.",
+        affirmation: "Soy un canal de luz. Mi sensibilidad es mi regalo. Ilumino caminos mientras camino por los míos."
     },
     22: {
-        title: "The Destined Master Builder",
-        hook: "This soul's life path leads toward building structures that serve humanity, turning the highest visions into lasting material reality.",
-        coreIdentity: "Destiny Number 22 is a Master Number marking a soul whose life will demand that they build something significant that outlasts them. They're being shaped into a master builder—someone who can hold vast vision while managing practical details.",
-        lifePurpose: "Their purpose is to ground inspiration in form at the largest scale. Life will present them with opportunities to create lasting institutions, systems, or works. They're here to build for generations, not just for themselves.",
-        challenges: "The journey includes learning to handle enormous pressure without breaking. They may struggle with feeling the weight of their potential, with building empires at the cost of personal life, or with impatience at the slow pace of real creation.",
-        gifts: "They bring vision, organizational genius, and the ability to manifest the impossible. Their gift is seeing how to build what others only dream of. Their practical idealism changes the physical world.",
-        relationships: "Their destiny involves finding partners who understand their mission without becoming secondary to it. They need relationships that support their work while reminding them they're human. Balance is essential and often challenging.",
-        career: "Professional life will draw them to large-scale projects, leadership, or any role where they can create lasting impact. Their career destiny involves building something that serves many.",
-        spiritualPath: "Their spiritual journey is about learning that they are instruments, not sources. They're discovering that the greatest builders are those who serve the vision, not their ego. Humility at this level is profound.",
-        affirmation: "I build for humanity. My vision takes material form. I am an instrument for lasting good."
+        title: "El maestro constructor destinado",
+        hook: "El camino de vida de esta alma conduce a la construcción de estructuras que sirvan a la humanidad, convirtiendo las visiones más elevadas en realidad material duradera.",
+        coreIdentity: "El número de destino 22 es un número maestro que marca un alma cuya vida exigirá que construyan algo significativo que les sobreviva. Se les está transformando en un maestro constructor, alguien que puede tener una visión amplia mientras gestiona los detalles prácticos.",
+        lifePurpose: "Su propósito es fundamentar la inspiración en la forma a mayor escala. La vida les presentará oportunidades para crear instituciones, sistemas u obras duraderas. Están aquí para construir durante generaciones, no sólo para ellos mismos.",
+        challenges: "El viaje incluye aprender a manejar una presión enorme sin romperse. Puede que les cueste sentir el peso de su potencial, construir imperios a costa de su vida personal o impaciencia ante el lento ritmo de la creación real.",
+        gifts: "Aportan visión, genio organizativo y la capacidad de manifestar lo imposible. Su don es ver cómo construir lo que otros sólo sueñan. Su idealismo práctico cambia el mundo físico.",
+        relationships: "Su destino pasa por encontrar socios que comprendan su misión sin quedar secundarios ante ella. Necesitan relaciones que apoyen su trabajo y al mismo tiempo les recuerden que son humanos. El equilibrio es esencial y, a menudo, desafiante.",
+        career: "La vida profesional los atraerá hacia proyectos de gran escala, liderazgo o cualquier función en la que puedan crear un impacto duradero. Su destino profesional implica construir algo que sirva a muchos.",
+        spiritualPath: "Su viaje espiritual consiste en aprender que son instrumentos, no fuentes. Están descubriendo que los mejores constructores son aquellos que sirven a la visión, no a su ego. La humildad a este nivel es profunda.",
+        affirmation: "Construyo para la humanidad. Mi visión toma forma material. Soy un instrumento para el bien duradero."
     },
     33: {
-        title: "The Destined Master Healer",
-        hook: "This soul's life path leads toward the highest expression of love in service—healing through presence, teaching through being.",
-        coreIdentity: "Destiny Number 33 is the highest Master Number, marking a soul whose life will call them to embody unconditional love in action. They're being shaped into a master healer and teacher—someone whose very presence transforms.",
-        lifePurpose: "Their purpose is to become love itself and serve humanity at the highest level. Life will present them with opportunities to heal, teach, and uplift—often through personal suffering that becomes medicine for others.",
-        challenges: "The journey includes learning to serve without depleting, to give without martyrdom. They may struggle with taking on others' pain, with sacrificing themselves, or with the overwhelming weight of their calling.",
-        gifts: "They bring healing presence, transformative love, and the ability to see the divine in everyone. Their gift is making others feel unconditionally accepted. Their love heals without them trying.",
-        relationships: "Their destiny involves learning to receive as gracefully as they give. They attract those who need healing but must find partners who can also hold them. Mutual nurturing is essential.",
-        career: "Professional life will draw them to healing, spiritual teaching, or any role where they can serve humanity's evolution. Their career destiny is often their spiritual path made manifest.",
-        spiritualPath: "Their spiritual journey is about becoming a clear channel for divine love while remaining human. They're learning that their wounds are part of their medicine, and that perfect love includes loving themselves.",
-        affirmation: "I am love in human form. My healing serves the whole. I give and receive in perfect balance."
+        title: "El maestro sanador destinado",
+        hook: "El camino de la vida de esta alma conduce hacia la expresión más elevada del amor en el servicio: la curación a través de la presencia, la enseñanza a través del ser.",
+        coreIdentity: "El número de destino 33 es el número maestro más alto y marca un alma cuya vida la llamará a encarnar el amor incondicional en acción. Están siendo moldeados para convertirse en un maestro sanador y maestro, alguien cuya sola presencia transforma.",
+        lifePurpose: "Su propósito es convertirse en el amor mismo y servir a la humanidad al más alto nivel. La vida les presentará oportunidades para sanar, enseñar y elevarse, a menudo a través del sufrimiento personal que se convierte en medicina para los demás.",
+        challenges: "El camino incluye aprender a servir sin agotar, a dar sin martirio. Es posible que les cueste asumir el dolor de los demás, sacrificarse o soportar el peso abrumador de su vocación.",
+        gifts: "Aportan presencia sanadora, amor transformador y la capacidad de ver lo divino en todos. Su don es hacer que los demás se sientan aceptados incondicionalmente. Su amor sana sin que ellos lo intenten.",
+        relationships: "Su destino implica aprender a recibir con tanta gracia como dan. Atraen a quienes necesitan curación, pero deben encontrar socios que también puedan retenerlos. El cuidado mutuo es esencial.",
+        career: "La vida profesional los atraerá hacia la curación, la enseñanza espiritual o cualquier función en la que puedan servir a la evolución de la humanidad. Su destino profesional es a menudo su camino espiritual manifestado.",
+        spiritualPath: "Su viaje espiritual consiste en convertirse en un canal claro para el amor divino sin dejar de ser humanos. Están aprendiendo que sus heridas son parte de su medicina y que el amor perfecto incluye amarse a sí mismos.",
+        affirmation: "Soy amor en forma humana. Mi curación sirve al todo. Doy y recibo en perfecto equilibrio."
     }
 };
 
@@ -540,148 +540,148 @@ var DEEP_DESTINY_READINGS = {
 
 var DEEP_SOUL_URGE_READINGS = {
     1: {
-        title: "The Soul That Craves Sovereignty",
-        hook: "At the deepest level, this soul yearns to be utterly, authentically, unapologetically themselves—beholden to no one.",
-        coreDesire: "Soul Urge 1 harbors a profound need for independence and originality. Beneath everything they do lives a burning desire to be first, to be unique, to carve their own path. This isn't ego—it's a soul-level recognition that they have something original to contribute that can only come through them.",
-        innerWorld: "Their inner landscape is marked by a constant question: 'What do I truly want?' They feel most alive when making autonomous decisions, when their work bears their unique stamp, when no one else's fingerprints are on their creation. Conformity feels like spiritual death.",
-        hiddenFears: "Their deepest fear is being ordinary, being swallowed by the crowd, becoming invisible in a sea of sameness. They may never voice this, but the terror of being just another face drives much of their ambition. Being dependent on others feels humiliating at a soul level.",
-        fulfillment: "They find soul-deep satisfaction when they pioneer something new, when they lead by example, when their unique contribution is recognized. The moment of 'I did this my way, and it worked' is nectar for their spirit.",
-        relationships: "In love, they need a partner who celebrates their independence rather than feeling threatened by it. They want to be chosen, not needed. Clingy love suffocates their soul; spacious love lets it breathe.",
-        shadowManifestation: "When their soul urge is denied, they become aggressive, domineering, or isolate completely. Unmet, this need can turn into ruthless competition or bitter loneliness. They must learn that seeking independence is healthy; punishing others for existing isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that true independence includes the freedom to connect. The highest expression of their soul urge is leadership that empowers others' independence too.",
-        affirmation: "I am free to be completely myself. My uniqueness is my gift to the world. I lead by being, not by dominating."
+        title: "El alma que anhela la soberanía",
+        hook: "En el nivel más profundo, esta alma anhela ser absoluta, auténtica y sin remordimientos, sin estar en deuda con nadie.",
+        coreDesire: "Soul Urge 1 alberga una profunda necesidad de independencia y originalidad. Detrás de todo lo que hacen vive un deseo ardiente de ser los primeros, de ser únicos, de labrarse su propio camino. Esto no es ego, es un reconocimiento a nivel del alma de que tienen algo original que aportar y que sólo puede surgir a través de ellos.",
+        innerWorld: "Su paisaje interior está marcado por una pregunta constante: "¿Qué es lo que realmente quiero?" Se sienten más vivos cuando toman decisiones autónomas, cuando su trabajo lleva su sello único, cuando no hay huellas dactilares de nadie más en su creación. La conformidad se siente como una muerte espiritual.",
+        hiddenFears: "Su miedo más profundo es ser ordinarios, ser tragados por la multitud, volverse invisibles en un mar de uniformidad. Puede que nunca expresen esto, pero el terror de ser una cara más impulsa gran parte de su ambición. Depender de los demás resulta humillante a nivel del alma.",
+        fulfillment: "Encuentran una satisfacción profunda cuando son pioneros en algo nuevo, cuando predican con el ejemplo, cuando se reconoce su contribución única. El momento de "Hice esto a mi manera y funcionó" es néctar para su espíritu.",
+        relationships: "En el amor, necesitan una pareja que celebre su independencia en lugar de sentirse amenazada por ella. Quieren ser elegidos, no necesarios. El amor pegajoso asfixia su alma; el amor espacioso lo deja respirar.",
+        shadowManifestation: "Cuando se niega el impulso de su alma, se vuelven agresivos, dominantes o se aíslan por completo. Si no se satisface, esta necesidad puede convertirse en una competencia despiadada o en una amarga soledad. Deben aprender que buscar la independencia es saludable; castigar a otros por existir no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce al aprender que la verdadera independencia incluye la libertad de conectarse. La expresión más elevada del impulso de su alma es un liderazgo que también potencia la independencia de los demás.",
+        affirmation: "Soy libre de ser completamente yo mismo. Mi singularidad es mi regalo al mundo. Lidero siendo, no dominando."
     },
     2: {
-        title: "The Soul That Craves Union",
-        hook: "At the deepest level, this soul yearns for true partnership—to be fully seen, deeply understood, and lovingly met by another.",
-        coreDesire: "Soul Urge 2 harbors a profound need for connection, harmony, and being truly known. Beneath everything they do lives an ache for partnership—not codependency, but the sacred meeting of two whole beings who choose each other.",
-        innerWorld: "Their inner landscape is exquisitely attuned to the emotional atmospheres around them. They feel others' feelings, sometimes before those people feel them themselves. They dream of relationships where masks are unnecessary, where they can rest in complete acceptance.",
-        hiddenFears: "Their deepest fear is being alone, abandoned, or never truly understood. They may never voice this, but the terror of isolation colors many of their choices. Being in discord with loved ones feels physically painful.",
-        fulfillment: "They find soul-deep satisfaction when they're in harmonious partnership, when they feel genuinely seen and appreciated, when they've successfully bridged understanding between people. Being the reason two others reconcile fills their cup.",
-        relationships: "In love, they need someone who truly sees them—not just their supportive role, but their full self. They want to be loved for who they are, not just for what they provide. Being taken for granted wounds them deeply.",
-        shadowManifestation: "When their soul urge is denied, they become manipulative, resentful, or completely self-abandoning. Unmet, this need can turn into passive-aggressive control or martyr syndrome. They must learn that wanting connection is healthy; losing themselves to get it isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that they are already whole. The highest expression of their soul urge is partnership that enhances rather than completes them.",
-        affirmation: "I am worthy of the love I crave. My sensitivity is sacred. I can be deeply connected and fully myself."
+        title: "El alma que anhela la unión",
+        hook: "En el nivel más profundo, esta alma anhela una verdadera asociación: ser vista plenamente, comprendida profundamente y recibida con amor por otra persona.",
+        coreDesire: "Soul Urge 2 alberga una profunda necesidad de conexión, armonía y ser verdaderamente conocido. Detrás de todo lo que hacen vive un anhelo por la asociación: no la codependencia, sino el encuentro sagrado de dos seres completos que se eligen mutuamente.",
+        innerWorld: "Su paisaje interior está exquisitamente en sintonía con las atmósferas emocionales que los rodean. Sienten los sentimientos de los demás, a veces antes de que esas personas los sientan ellos mismos. Sueñan con relaciones donde las máscaras son innecesarias, donde pueden descansar en completa aceptación.",
+        hiddenFears: "Su miedo más profundo es estar solos, abandonados o nunca ser comprendidos realmente. Puede que nunca expresen esto, pero el terror al aislamiento influye en muchas de sus decisiones. Estar en desacuerdo con los seres queridos resulta físicamente doloroso.",
+        fulfillment: "Encuentran una satisfacción profunda cuando mantienen una relación armoniosa, cuando se sienten genuinamente vistos y apreciados, cuando han logrado tender un puente de entendimiento entre las personas. Ser el motivo por el que otros dos se reconcilian llena su copa.",
+        relationships: "En el amor, necesitan a alguien que realmente los vea, no sólo su papel de apoyo, sino su ser completo. Quieren ser amados por quienes son, no sólo por lo que brindan. Que se les dé por sentado los hiere profundamente.",
+        shadowManifestation: "Cuando se niega el impulso de su alma, se vuelven manipuladores, resentidos o completamente abandonados. Si no se satisface, esta necesidad puede convertirse en control pasivo-agresivo o síndrome de mártir. Deben aprender que querer conectarse es saludable; perderse para conseguirlo no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce al aprender que ya están completos. La expresión más elevada del impulso de su alma es una asociación que los mejora en lugar de completarlos.",
+        affirmation: "Soy digno del amor que anhelo. Mi sensibilidad es sagrada. Puedo estar profundamente conectado y ser plenamente yo mismo."
     },
     3: {
-        title: "The Soul That Craves Expression",
-        hook: "At the deepest level, this soul yearns to be heard, seen, and celebrated—to give form to the creativity that burns inside them.",
-        coreDesire: "Soul Urge 3 harbors a profound need to express their unique perspective and bring joy to others. Beneath everything they do lives a fire that demands creative outlet—art, words, music, laughter, whatever form allows their inner world to become visible.",
-        innerWorld: "Their inner landscape is vivid, colorful, and constantly generating. Ideas, images, stories, and songs play through their mind continuously. They feel most alive when this inner richness finds its way into the world where others can experience it.",
-        hiddenFears: "Their deepest fear is being silenced, ignored, or seen as frivolous. They may never voice this, but the terror of having no audience, no one to appreciate their creations, drives much of their social behavior. Being told they're 'too much' cuts to the bone.",
-        fulfillment: "They find soul-deep satisfaction when they make someone laugh, when their creation moves someone, when their presence brightens a room. The moment of 'I made that, and it mattered to someone' is their deepest joy.",
-        relationships: "In love, they need someone who delights in their expressiveness rather than trying to tone them down. They want a partner who is also their audience, their admirer, their creative companion. Criticism without appreciation devastates them.",
-        shadowManifestation: "When their soul urge is denied, they become scattered, superficial, or use humor to deflect from depth. Unmet, this need can turn into attention-seeking drama or bitter cynicism. They must learn that wanting to express is healthy; performing instead of living isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that their creativity serves something larger than their ego. The highest expression of their soul urge is art that heals and joy that uplifts.",
-        affirmation: "My creative voice deserves to be heard. My joy is medicine for the world. I express myself freely and generously."
+        title: "El alma que anhela expresión",
+        hook: "En el nivel más profundo, esta alma anhela ser escuchada, vista y celebrada, para dar forma a la creatividad que arde en su interior.",
+        coreDesire: "Soul Urge 3 alberga una profunda necesidad de expresar su perspectiva única y llevar alegría a los demás. Debajo de todo lo que hacen vive un fuego que exige una salida creativa: arte, palabras, música, risas, cualquier forma que permita que su mundo interior se vuelva visible.",
+        innerWorld: "Su paisaje interior es vívido, colorido y en constante generación. Ideas, imágenes, historias y canciones pasan por su mente continuamente. Se sienten más vivos cuando esta riqueza interior encuentra su camino hacia el mundo donde otros pueden experimentarla.",
+        hiddenFears: "Su temor más profundo es ser silenciados, ignorados o vistos como frívolos. Puede que nunca expresen esto, pero el terror de no tener audiencia, nadie que aprecie sus creaciones, impulsa gran parte de su comportamiento social. Que les digan que son "demasiado" es un corte hasta el hueso.",
+        fulfillment: "Encuentran una satisfacción profunda cuando hacen reír a alguien, cuando su creación conmueve a alguien, cuando su presencia ilumina una habitación. El momento de "yo hice eso y a alguien le importó" es su alegría más profunda.",
+        relationships: "En el amor, necesitan a alguien que se deleite con su expresividad en lugar de tratar de bajarles el tono. Quieren un socio que sea también su público, su admirador, su compañero creativo. La crítica sin aprecio los devasta.",
+        shadowManifestation: "Cuando se les niega el impulso del alma, se vuelven dispersos, superficiales o utilizan el humor para desviarse de la profundidad. Si no se satisface, esta necesidad puede convertirse en un drama que busca atención o en un amargo cinismo. Deben aprender que querer expresarse es saludable; actuar en lugar de vivir no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce al aprender que su creatividad sirve a algo más grande que su ego. La expresión más elevada del impulso de su alma es el arte que cura y la alegría que eleva.",
+        affirmation: "Mi voz creativa merece ser escuchada. Mi alegría es medicina para el mundo. Me expreso libre y generosamente."
     },
     4: {
-        title: "The Soul That Craves Foundation",
-        hook: "At the deepest level, this soul yearns for security, stability, and the profound satisfaction of building something that lasts.",
-        coreDesire: "Soul Urge 4 harbors a profound need for order, reliability, and tangible accomplishment. Beneath everything they do lives a drive to create stability—to know the ground beneath them is solid, that their work matters, that something endures because they were here.",
-        innerWorld: "Their inner landscape is structured, practical, and constantly assessing what's solid and what's not. They feel most at peace when their environment is orderly, their responsibilities are met, and their efforts produce visible results.",
-        hiddenFears: "Their deepest fear is chaos, instability, or having their carefully built structures collapse. They may never voice this, but the terror of groundlessness drives their sometimes obsessive need for control. Being unable to complete what they start feels like personal failure.",
-        fulfillment: "They find soul-deep satisfaction when they finish what they began, when their systems work smoothly, when they can look at something solid and know they built it. The moment of 'this works, and it's built to last' fills their soul.",
-        relationships: "In love, they need someone who values commitment and follows through on promises. They want reliability, not just romance. Partners who are unpredictable or flaky make them feel unsafe at a soul level.",
-        shadowManifestation: "When their soul urge is denied, they become rigid, workaholic, or controlling. Unmet, this need can turn into obsessive perfectionism or chronic anxiety. They must learn that wanting stability is healthy; resisting all change isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that true security is internal. The highest expression of their soul urge is building structures that serve life's natural flow rather than resisting it.",
-        affirmation: "I create lasting value. My commitment is a strength. I am secure within myself, whatever external circumstances may be."
+        title: "Fundación El alma que anhela",
+        hook: "En el nivel más profundo, esta alma anhela seguridad, estabilidad y la profunda satisfacción de construir algo que dure.",
+        coreDesire: "Soul Urge 4 alberga una profunda necesidad de orden, confiabilidad y logros tangibles. Detrás de todo lo que hacen hay un impulso para crear estabilidad: saber que el suelo debajo de ellos es sólido, que su trabajo importa, que algo perdura porque estuvieron aquí.",
+        innerWorld: "Su paisaje interior es estructurado, práctico y evalúa constantemente qué es sólido y qué no. Se sienten más en paz cuando su entorno está ordenado, se cumplen sus responsabilidades y sus esfuerzos producen resultados visibles.",
+        hiddenFears: "Su miedo más profundo es el caos, la inestabilidad o el colapso de sus estructuras cuidadosamente construidas. Puede que nunca expresen esto, pero el terror a la falta de fundamento impulsa su a veces obsesiva necesidad de control. No poder completar lo que empiezan se siente como un fracaso personal.",
+        fulfillment: "Encuentran una satisfacción profunda cuando terminan lo que comenzaron, cuando sus sistemas funcionan sin problemas, cuando pueden mirar algo sólido y saber que lo construyeron. El momento de "esto funciona y está hecho para durar" les llena el alma.",
+        relationships: "En el amor, necesitan a alguien que valore el compromiso y cumpla sus promesas. Quieren confiabilidad, no sólo romance. Las parejas impredecibles o inestables les hacen sentir inseguros a nivel del alma.",
+        shadowManifestation: "Cuando se les niega el impulso del alma, se vuelven rígidos, adictos al trabajo o controladores. Si no se satisface, esta necesidad puede convertirse en perfeccionismo obsesivo o ansiedad crónica. Deben aprender que desear estabilidad es saludable; resistirse a todo cambio no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce al aprender que la verdadera seguridad es interna. La expresión más elevada del impulso de su alma es construir estructuras que sirvan al flujo natural de la vida en lugar de resistirlo.",
+        affirmation: "Creo valor duradero. Mi compromiso es una fortaleza. Estoy seguro dentro de mí mismo, cualesquiera que sean las circunstancias externas."
     },
     5: {
-        title: "The Soul That Craves Freedom",
-        hook: "At the deepest level, this soul yearns for liberation—to experience everything, be confined by nothing, and live without limitation.",
-        coreDesire: "Soul Urge 5 harbors a profound need for freedom, variety, and the full experience of being alive. Beneath everything they do lives a wild spirit that cannot tolerate cages—even golden ones. They need to feel that life is an adventure with endless possibilities.",
-        innerWorld: "Their inner landscape is restless, curious, and always reaching toward the next horizon. They feel most alive when something new is happening, when routine is broken, when they don't know exactly what comes next but trust it will be interesting.",
-        hiddenFears: "Their deepest fear is being trapped, stuck, or missing out on life's experiences. They may never voice this, but the terror of confinement drives their sometimes chaotic need for change. Boredom feels like a slow death to their soul.",
-        fulfillment: "They find soul-deep satisfaction when they're in motion, when they've just discovered something new, when they're living a story worth telling. The moment of 'I'm free, and anything is possible' is their nectar.",
-        relationships: "In love, they need someone who won't try to cage them. They want a partner who is also their adventure companion, who can match their pace without trying to slow them down. Possessive love makes them run.",
-        shadowManifestation: "When their soul urge is denied, they become reckless, commitment-phobic, or addicted to sensation. Unmet, this need can turn into escapism or chronic irresponsibility. They must learn that wanting freedom is healthy; running from everything isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that the ultimate freedom is internal—independent of circumstances. The highest expression of their soul urge is the freedom to commit by choice.",
-        affirmation: "I am free. My love of life is a gift. I can be both liberated and connected, adventurous and grounded."
+        title: "El alma que anhela la libertad",
+        hook: "En el nivel más profundo, esta alma anhela la liberación: experimentarlo todo, no estar limitada por nada y vivir sin limitaciones.",
+        coreDesire: "Soul Urge 5 alberga una profunda necesidad de libertad, variedad y la experiencia completa de estar vivo. Debajo de todo lo que hacen vive un espíritu salvaje que no puede tolerar las jaulas, ni siquiera las doradas. Necesitan sentir que la vida es una aventura con infinitas posibilidades.",
+        innerWorld: "Su paisaje interior es inquieto, curioso y siempre apunta hacia el siguiente horizonte. Se sienten más vivos cuando sucede algo nuevo, cuando se rompe la rutina, cuando no saben exactamente qué viene después pero confían en que será interesante.",
+        hiddenFears: "Su miedo más profundo es quedar atrapados, estancados o perderse las experiencias de la vida. Puede que nunca expresen esto, pero el terror del encierro impulsa su a veces caótica necesidad de cambio. El aburrimiento se siente como una muerte lenta para su alma.",
+        fulfillment: "Encuentran una satisfacción profunda cuando están en movimiento, cuando acaban de descubrir algo nuevo, cuando viven una historia que vale la pena contar. El momento de "soy libre y todo es posible" es su néctar.",
+        relationships: "En el amor, necesitan a alguien que no intente enjaularlos. Quieren un compañero que también sea su compañero de aventuras, que pueda seguir su ritmo sin intentar frenarlos. El amor posesivo los hace correr.",
+        shadowManifestation: "Cuando se les niega el impulso del alma, se vuelven imprudentes, fóbicos al compromiso o adictos a las sensaciones. Si no se satisface, esta necesidad puede convertirse en escapismo o irresponsabilidad crónica. Deben aprender que querer la libertad es saludable; huir de todo no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce al aprender que la libertad suprema es interna, independiente de las circunstancias. La expresión más elevada del impulso de su alma es la libertad de comprometerse por elección.",
+        affirmation: "Soy libre. Mi amor por la vida es un regalo. Puedo ser a la vez liberado y conectado, aventurero y conectado con los pies en la tierra."
     },
     6: {
-        title: "The Soul That Craves Harmony",
-        hook: "At the deepest level, this soul yearns for love, beauty, and the profound purpose of caring for those they hold dear.",
-        coreDesire: "Soul Urge 6 harbors a profound need to love and be loved, to create beauty, and to know that those in their care are thriving. Beneath everything they do lives a nurturer who measures their worth by the wellbeing of their loved ones.",
-        innerWorld: "Their inner landscape is warm, aesthetic, and constantly attuned to what others need. They feel most at peace when their home is beautiful, their loved ones are happy, and harmony prevails in their relationships.",
-        hiddenFears: "Their deepest fear is being unlovable, failing those who depend on them, or living in ugliness and discord. They may never voice this, but the terror of being needed by no one drives much of their caretaking. Imperfection feels like personal failure.",
-        fulfillment: "They find soul-deep satisfaction when their loved ones flourish, when they've created beauty, when harmony prevails because of their efforts. The moment of 'everyone is happy, and I helped make it so' fills their heart completely.",
-        relationships: "In love, they need to be truly appreciated, not just depended upon. They want a partner who loves them for themselves, not just for what they provide. Being taken for granted devastates their soul.",
-        shadowManifestation: "When their soul urge is denied, they become controlling, martyred, or obsessed with perfection. Unmet, this need can turn into smothering love or resentful servitude. They must learn that wanting to nurture is healthy; enabling isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that their worth isn't dependent on others' happiness. The highest expression of their soul urge is love that empowers rather than controls.",
-        affirmation: "I am lovable exactly as I am. My nurturing is a gift, not an obligation. I care for myself as tenderly as I care for others."
+        title: "El alma que anhela la armonía",
+        hook: "En el nivel más profundo, esta alma anhela el amor, la belleza y el propósito profundo de cuidar a sus seres queridos.",
+        coreDesire: "Soul Urge 6 alberga una profunda necesidad de amar y ser amado, de crear belleza y de saber que quienes están a su cuidado están prosperando. Detrás de todo lo que hacen vive un cuidador que mide su valor por el bienestar de sus seres queridos.",
+        innerWorld: "Su paisaje interior es cálido, estético y está constantemente en sintonía con las necesidades de los demás. Se sienten más en paz cuando su hogar es hermoso, sus seres queridos están felices y prevalece la armonía en sus relaciones.",
+        hiddenFears: "Su temor más profundo es no ser dignos de ser amados, fallarles a quienes dependen de ellos o vivir en la fealdad y la discordia. Puede que nunca expresen esto, pero el terror de no ser necesitados por nadie impulsa gran parte de su cuidado. La imperfección se siente como un fracaso personal.",
+        fulfillment: "Encuentran una satisfacción profunda cuando sus seres queridos florecen, cuando han creado belleza, cuando la armonía prevalece gracias a sus esfuerzos. El momento de 'todos están felices y yo ayudé a que así fuera' les llena el corazón por completo.",
+        relationships: "En el amor, necesitan ser verdaderamente apreciados, no sólo depender de ellos. Quieren una pareja que los ame por sí mismos, no solo por lo que brindan. Que se les dé por sentado les devasta el alma.",
+        shadowManifestation: "Cuando se les niega el impulso del alma, se vuelven controladores, mártires u obsesionados con la perfección. Si no se satisface, esta necesidad puede convertirse en un amor sofocante o una servidumbre resentida. Deben aprender que querer nutrir es saludable; habilitar no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce al aprender que su valor no depende de la felicidad de los demás. La expresión más elevada del impulso de su alma es el amor que empodera en lugar de controlar.",
+        affirmation: "Soy adorable exactamente como soy. Mi crianza es un regalo, no una obligación. Me cuido a mí mismo con tanta ternura como cuido a los demás."
     },
     7: {
-        title: "The Soul That Craves Understanding",
-        hook: "At the deepest level, this soul yearns to know—to penetrate surface appearances and discover what is really true.",
-        coreDesire: "Soul Urge 7 harbors a profound need for truth, wisdom, and genuine understanding. Beneath everything they do lives a seeker who cannot rest until they understand why things are the way they are. Surface answers are insults to their soul.",
-        innerWorld: "Their inner landscape is vast, quiet, and constantly contemplating. They feel most at peace when they have time to think deeply, when they've just understood something that was previously mysterious, when they're in communion with the ineffable.",
-        hiddenFears: "Their deepest fear is being fooled, living in illusion, or never understanding. They may never voice this, but the terror of superficiality drives their sometimes obsessive pursuit of knowledge. Being misunderstood feels painfully lonely.",
-        fulfillment: "They find soul-deep satisfaction when they've penetrated a mystery, when their understanding deepens, when they have space for solitary contemplation. The moment of 'I finally understand' is pure bliss for them.",
-        relationships: "In love, they need intellectual and spiritual intimacy. They want a partner who respects their need for solitude and depth, who can engage in meaningful conversation, who doesn't require constant social activity. Shallow relationships feel empty.",
-        shadowManifestation: "When their soul urge is denied, they become isolated, paranoid, or intellectually arrogant. Unmet, this need can turn into withdrawal from life or cynical detachment. They must learn that wanting understanding is healthy; disconnecting from feelings isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that the mind is a tool, not the destination. The highest expression of their soul urge is wisdom that serves both understanding and connection.",
-        affirmation: "My search for truth is sacred. My depth is a gift. I can know deeply and love fully at the same time."
+        title: "El alma que anhela comprensión",
+        hook: "En el nivel más profundo, esta alma anhela saber, penetrar las apariencias superficiales y descubrir lo que es realmente cierto.",
+        coreDesire: "Soul Urge 7 alberga una profunda necesidad de verdad, sabiduría y comprensión genuina. Debajo de todo lo que hacen vive un buscador que no puede descansar hasta comprender por qué las cosas son como son. Las respuestas superficiales son insultos para su alma.",
+        innerWorld: "Su paisaje interior es vasto, tranquilo y en constante contemplación. Se sienten más en paz cuando tienen tiempo para pensar profundamente, cuando acaban de comprender algo que antes era misterioso, cuando están en comunión con lo inefable.",
+        hiddenFears: "Su miedo más profundo es ser engañados, vivir en la ilusión o no comprender nunca. Puede que nunca expresen esto, pero el terror a la superficialidad impulsa su búsqueda a veces obsesiva del conocimiento. Ser incomprendido te hace sentir dolorosamente solo.",
+        fulfillment: "Encuentran una satisfacción profunda cuando han penetrado un misterio, cuando su comprensión se profundiza, cuando tienen espacio para la contemplación solitaria. El momento de "finalmente entiendo" es pura felicidad para ellos.",
+        relationships: "En el amor, necesitan intimidad intelectual y espiritual. Quieren una pareja que respete su necesidad de soledad y profundidad, que pueda entablar una conversación significativa y que no requiera una actividad social constante. Las relaciones superficiales se sienten vacías.",
+        shadowManifestation: "Cuando se les niega el impulso de su alma, se vuelven aislados, paranoicos o intelectualmente arrogantes. Si no se satisface, esta necesidad puede convertirse en un aislamiento de la vida o en un desapego cínico. Deben aprender que querer comprensión es saludable; desconectarse de los sentimientos no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce al aprender que la mente es una herramienta, no el destino. La expresión más elevada del impulso de su alma es la sabiduría que sirve tanto para la comprensión como para la conexión.",
+        affirmation: "Mi búsqueda de la verdad es sagrada. Mi profundidad es un regalo. Puedo conocer profundamente y amar plenamente al mismo tiempo."
     },
     8: {
-        title: "The Soul That Craves Mastery",
-        hook: "At the deepest level, this soul yearns for power—not over others, but the mastery to create real impact in the material world.",
-        coreDesire: "Soul Urge 8 harbors a profound need for accomplishment, abundance, and the ability to make things happen. Beneath everything they do lives a drive to master the material plane—to turn vision into reality at scale, to prove that spirit can move matter.",
-        innerWorld: "Their inner landscape is ambitious, strategic, and constantly calculating how to achieve more. They feel most alive when they're building empires, creating abundance, or exercising power responsibly. Small thinking bores them.",
-        hiddenFears: "Their deepest fear is powerlessness, poverty, or being controlled by others. They may never voice this, but the terror of having no resources or influence drives their sometimes relentless ambition. Being financially dependent feels humiliating.",
-        fulfillment: "They find soul-deep satisfaction when they've achieved something significant, when their power creates positive change, when abundance flows through them to others. The moment of 'I made this happen' resonates deeply.",
-        relationships: "In love, they need someone who respects their ambition and matches their strength. They want an equal, not a dependent. Partners who feel threatened by their power or try to diminish them won't last.",
-        shadowManifestation: "When their soul urge is denied, they become ruthless, materialistic, or power-hungry. Unmet, this need can turn into workaholism or believing net worth equals self-worth. They must learn that wanting to achieve is healthy; sacrificing everything for it isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that true power is service, that abundance is for circulation, that achievement is not the measure of worth. The highest expression of their soul urge is power wielded with wisdom and love.",
-        affirmation: "My power is meant for good. Abundance flows through me to others. I achieve in alignment with my values."
+        title: "El alma que anhela el dominio",
+        hook: "En el nivel más profundo, esta alma anhela poder, no sobre los demás, sino la maestría para crear un impacto real en el mundo material.",
+        coreDesire: "Soul Urge 8 alberga una profunda necesidad de logros, abundancia y la capacidad de hacer que las cosas sucedan. Detrás de todo lo que hacen se esconde un impulso por dominar el plano material: convertir la visión en realidad a escala, demostrar que el espíritu puede mover la materia.",
+        innerWorld: "Su paisaje interior es ambicioso, estratégico y calcula constantemente cómo lograr más. Se sienten más vivos cuando construyen imperios, crean abundancia o ejercen el poder de manera responsable. Los pensamientos pequeños les aburren.",
+        hiddenFears: "Su miedo más profundo es la impotencia, la pobreza o ser controlados por otros. Puede que nunca expresen esto, pero el terror de no tener recursos o influencia impulsa su ambición a veces implacable. Ser económicamente dependiente resulta humillante.",
+        fulfillment: "Encuentran una satisfacción profunda cuando han logrado algo significativo, cuando su poder crea un cambio positivo, cuando la abundancia fluye a través de ellos hacia los demás. El momento de "Yo hice que esto sucediera" resuena profundamente.",
+        relationships: "En el amor, necesitan a alguien que respete su ambición y esté a la altura de sus fuerzas. Quieren un igual, no un dependiente. Los socios que se sienten amenazados por su poder o intentan disminuirlo no durarán.",
+        shadowManifestation: "Cuando se niega el impulso de su alma, se vuelven despiadados, materialistas o hambrientos de poder. Si no se satisface, esta necesidad puede convertirse en adicción al trabajo o en creer que el patrimonio neto es igual a la autoestima. Deben aprender que querer lograr algo es saludable; sacrificar todo por ello no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce a través del aprendizaje de que el verdadero poder es el servicio, que la abundancia es para la circulación, que los logros no son la medida del valor. La expresión más elevada del impulso de su alma es el poder ejercido con sabiduría y amor.",
+        affirmation: "Mi poder está destinado al bien. La abundancia fluye a través de mí hacia los demás. Lo logro en alineación con mis valores."
     },
     9: {
-        title: "The Soul That Craves Transcendence",
-        hook: "At the deepest level, this soul yearns to transcend the personal—to love universally and live for something larger than themselves.",
-        coreDesire: "Soul Urge 9 harbors a profound need for meaning, completion, and universal love. Beneath everything they do lives a soul that has seen much, released much, and knows that the personal is ultimately an illusion. They yearn to merge with something greater.",
-        innerWorld: "Their inner landscape is vast, compassionate, and tinged with a knowing sadness. They feel most at peace when they're serving a cause larger than themselves, when they're expressing unconditional love, when they're closing cycles and completing patterns.",
-        hiddenFears: "Their deepest fear is meaninglessness, holding on when they should release, or living a small, self-centered life. They may never voice this, but the terror of being trapped in ego drives their sometimes sacrificial generosity. Attachments feel like spiritual regression.",
-        fulfillment: "They find soul-deep satisfaction when they've truly helped someone, when they've forgiven what seemed unforgivable, when they've served without needing recognition. The moment of 'I made a difference' fills them more than any personal achievement.",
-        relationships: "In love, they need someone who understands their humanitarian nature without feeling neglected. They want a partner who shares their values, who won't try to make them small, who understands that their love extends beyond the personal.",
-        shadowManifestation: "When their soul urge is denied, they become martyred, ungrounded, or bitter about how little the world gives back. Unmet, this need can turn into depletion or holier-than-thou judgment. They must learn that wanting to serve is healthy; abandoning themselves isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that they too deserve love and that receiving is also giving. The highest expression of their soul urge is love that includes themselves in its embrace.",
-        affirmation: "My love serves the world. I give freely without losing myself. I receive graciously, knowing this too is generosity."
+        title: "El alma que anhela la trascendencia",
+        hook: "En el nivel más profundo, esta alma anhela trascender lo personal: amar universalmente y vivir para algo más grande que ellos mismos.",
+        coreDesire: "Soul Urge 9 alberga una profunda necesidad de significado, plenitud y amor universal. Debajo de todo lo que hacen vive un alma que ha visto mucho, liberado mucho y sabe que lo personal es, en última instancia, una ilusión. Anhelan fusionarse con algo más grande.",
+        innerWorld: "Su paisaje interior es vasto, compasivo y teñido de una tristeza consciente. Se sienten más en paz cuando sirven a una causa más grande que ellos mismos, cuando expresan amor incondicional, cuando cierran ciclos y completan patrones.",
+        hiddenFears: "Su miedo más profundo es la falta de sentido, aferrarse a cuándo deberían liberarse o vivir una vida pequeña y egocéntrica. Puede que nunca expresen esto, pero el terror de verse atrapados en el ego impulsa su generosidad a veces sacrificial. Los apegos se sienten como una regresión espiritual.",
+        fulfillment: "Encuentran una satisfacción profunda cuando realmente han ayudado a alguien, cuando han perdonado lo que parecía imperdonable, cuando han servido sin necesidad de reconocimiento. El momento de 'hice una diferencia' los llena más que cualquier logro personal.",
+        relationships: "En el amor, necesitan a alguien que comprenda su naturaleza humanitaria sin sentirse abandonado. Quieren una pareja que comparta sus valores, que no intente hacerlos pequeños, que entienda que su amor se extiende más allá de lo personal.",
+        shadowManifestation: "Cuando se niega el impulso de su alma, se vuelven mártires, desarraigados o amargados por lo poco que el mundo les devuelve. Si no se satisface, esta necesidad puede convertirse en agotamiento o en un juicio más santo que tú. Deben aprender que querer servir es saludable; abandonarse a sí mismos no lo es.",
+        spiritualGrowth: "Su evolución espiritual pasa por aprender que ellos también merecen amor y que recibir es también dar. La expresión más elevada del impulso de su alma es el amor que los incluye a ellos mismos en su abrazo.",
+        affirmation: "Mi amor sirve al mundo. Doy libremente sin perderme. Recibo amablemente, sabiendo que esto también es generosidad."
     },
     11: {
-        title: "The Soul That Craves Illumination",
-        hook: "At the deepest level, this soul yearns to channel light—to receive inspiration from above and bring it to earth.",
-        coreDesire: "Soul Urge 11 harbors a profound need for spiritual connection and the ability to inspire others. Beneath everything they do lives a mystic who sees beyond the veil, who receives visions, who knows they're here to illuminate something. Ordinary life without spiritual meaning feels like exile.",
-        innerWorld: "Their inner landscape is electric, visionary, and constantly receiving. They feel most alive when inspiration flows through them, when they sense guidance from higher sources, when their intuition is crystal clear.",
-        hiddenFears: "Their deepest fear is being ordinary, missing their spiritual purpose, or having their visions dismissed as fantasy. They may never voice this, but the terror of being 'just human' drives their sometimes frantic spiritual seeking. Being spiritually bypassed or shut down is agony.",
-        fulfillment: "They find soul-deep satisfaction when they've helped someone awaken, when their vision has become reality, when they're acting as a clear channel for inspiration. The moment of 'I received something true, and it helped' is their deepest joy.",
-        relationships: "In love, they need someone who honors their spiritual nature without expecting them to be perfect. They want a partner who can be both witness and anchor, who isn't intimidated by their intensity.",
-        shadowManifestation: "When their soul urge is denied, they become anxious, ungrounded, or spiritually superior. Unmet, this need can turn into messiah complexes or nervous collapse. They must learn that wanting to inspire is healthy; becoming untethered from earth isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning to be both divine and human, inspired and practical, visionary and grounded. The highest expression of their soul urge is illumination that serves without ego.",
-        affirmation: "I am a channel for light. My visions are valid. I can be both spiritually alive and fully grounded."
+        title: "El alma que anhela la iluminación",
+        hook: "En el nivel más profundo, esta alma anhela canalizar la luz, recibir inspiración desde arriba y traerla a la tierra.",
+        coreDesire: "Soul Urge 11 alberga una profunda necesidad de conexión espiritual y la capacidad de inspirar a otros. Debajo de todo lo que hacen vive un místico que ve más allá del velo, que recibe visiones, que sabe que está aquí para iluminar algo. La vida ordinaria sin significado espiritual se siente como un exilio.",
+        innerWorld: "Su paisaje interior es eléctrico, visionario y receptor constante. Se sienten más vivos cuando la inspiración fluye a través de ellos, cuando sienten la guía de fuentes superiores, cuando su intuición es clara como el cristal.",
+        hiddenFears: "Su miedo más profundo es ser ordinario, perder su propósito espiritual o que sus visiones sean descartadas como fantasía. Puede que nunca expresen esto, pero el terror de ser "simplemente humanos" impulsa su búsqueda espiritual, a veces frenética. Ser ignorado o cerrado espiritualmente es una agonía.",
+        fulfillment: "Encuentran una satisfacción profunda cuando han ayudado a alguien a despertar, cuando su visión se ha hecho realidad, cuando actúan como un canal claro de inspiración. El momento en el que "recibí algo verdadero y me ayudó" es su alegría más profunda.",
+        relationships: "En el amor, necesitan a alguien que honre su naturaleza espiritual sin esperar que sean perfectos. Quieren una pareja que pueda ser a la vez testigo y ancla, que no se sienta intimidada por su intensidad.",
+        shadowManifestation: "Cuando se niega el impulso de su alma, se vuelven ansiosos, desarraigados o espiritualmente superiores. Si no se satisface, esta necesidad puede convertirse en complejos mesiánicos o colapso nervioso. Deben aprender que querer inspirar es saludable; liberarse de la tierra no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce a través del aprendizaje de ser a la vez divino y humano, inspirado y práctico, visionario y fundamentado. La expresión más elevada del impulso de su alma es la iluminación que sirve sin ego.",
+        affirmation: "Soy un canal de luz. Mis visiones son válidas. Puedo estar espiritualmente vivo y plenamente arraigado."
     },
     22: {
-        title: "The Soul That Craves Manifestation",
-        hook: "At the deepest level, this soul yearns to build their visions into reality—to leave the world transformed by what they've created.",
-        coreDesire: "Soul Urge 22 harbors a profound need to manifest the impossible, to turn the highest visions into lasting material form. Beneath everything they do lives a master builder who sees what could be and cannot rest until it exists. Small projects feel like a waste of their potential.",
-        innerWorld: "Their inner landscape is vast, pressurized, and constantly holding complexity. They feel most alive when they're building something significant, when vision and practicality merge, when they see their dreams taking physical form.",
-        hiddenFears: "Their deepest fear is failing to realize their potential, building things that don't last, or being crushed by the weight of their own vision. They may never voice this, but the terror of unfulfilled purpose drives their sometimes superhuman effort. Being ordinary feels like betrayal of something sacred.",
-        fulfillment: "They find soul-deep satisfaction when their creations serve many, when vision has become structure, when something impossible now exists because they built it. The moment of 'I made this real' resonates with destiny.",
-        relationships: "In love, they need someone who understands the weight of their calling without competing with it. They want a partner who is supportive yet independent, who can handle their intensity without being consumed by it.",
-        shadowManifestation: "When their soul urge is denied, they become workaholics, control freaks, or collapse under impossible standards. Unmet, this need can turn into burnout or using others as tools for building. They must learn that wanting to build is healthy; sacrificing humanity for it isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that they are instruments, not sources—that the greatest buildings are built with love, not just will. The highest expression of their soul urge is creation that serves the whole.",
-        affirmation: "I build for the future. My visions become reality. I create with love, for the good of all."
+        title: "El alma que anhela manifestación",
+        hook: "En el nivel más profundo, esta alma anhela convertir sus visiones en realidad: dejar el mundo transformado por lo que han creado.",
+        coreDesire: "Soul Urge 22 alberga una profunda necesidad de manifestar lo imposible, de convertir las visiones más elevadas en forma material duradera. Debajo de todo lo que hacen vive un maestro de obras que ve lo que podría ser y no puede descansar hasta que exista. Los proyectos pequeños se sienten como un desperdicio de su potencial.",
+        innerWorld: "Su paisaje interior es vasto, presurizado y en constante complejidad. Se sienten más vivos cuando están construyendo algo significativo, cuando la visión y la practicidad se fusionan, cuando ven que sus sueños toman forma física.",
+        hiddenFears: "Su miedo más profundo es no poder realizar su potencial, construir cosas que no duren o ser aplastados por el peso de su propia visión. Puede que nunca expresen esto, pero el terror al propósito incumplido impulsa su esfuerzo a veces sobrehumano. Ser ordinario se siente como una traición a algo sagrado.",
+        fulfillment: "Encuentran una satisfacción profunda cuando sus creaciones sirven a muchos, cuando la visión se ha convertido en estructura, cuando ahora existe algo imposible porque ellos lo construyeron. El momento de 'Hice esto real' resuena con el destino.",
+        relationships: "En el amor, necesitan a alguien que comprenda el peso de su vocación sin competir con ella. Quieren una pareja que los apoye pero que sea independiente, que pueda manejar su intensidad sin ser consumido por ella.",
+        shadowManifestation: "Cuando se les niega el impulso del alma, se vuelven adictos al trabajo, fanáticos del control o colapsan bajo estándares imposibles. Si no se satisface, esta necesidad puede convertirse en agotamiento o en utilizar a otros como herramientas para construir. Deben aprender que querer construir es saludable; sacrificar a la humanidad porque no lo es.",
+        spiritualGrowth: "Su evolución espiritual se produce al aprender que son instrumentos, no fuentes, que los edificios más grandes se construyen con amor, no sólo con voluntad. La expresión más elevada del impulso de su alma es la creación que sirve al todo.",
+        affirmation: "Construyo para el futuro. Mis visiones se hacen realidad. Creo con amor, para el bien de todos."
     },
     33: {
-        title: "The Soul That Craves Healing",
-        hook: "At the deepest level, this soul yearns to heal through love—to be a living channel of unconditional acceptance for all beings.",
-        coreDesire: "Soul Urge 33 harbors a profound need to embody love so purely that their very presence heals. Beneath everything they do lives a master healer who knows that love is the ultimate medicine. Anything less than unconditional love feels like spiritual failure.",
-        innerWorld: "Their inner landscape is vast, compassionate, and constantly feeling others' pain. They feel most alive when they're serving, when healing happens through them, when love flows without obstruction.",
-        hiddenFears: "Their deepest fear is being unable to heal everyone, failing those who need them, or discovering their love isn't enough. They may never voice this, but the terror of being a false healer drives their sometimes martyred service. Their own pain feels unimportant compared to others'.",
-        fulfillment: "They find soul-deep satisfaction when healing occurs, when their presence alone comforts, when love has been transmitted purely. The moment of 'my love made a difference' is their highest joy.",
-        relationships: "In love, they need someone who can also hold them, who doesn't only need their healing but also gives it. They want a partner who reminds them they're human, who loves them when they have nothing to give.",
-        shadowManifestation: "When their soul urge is denied, they become martyred, depleted, or collapse under the weight of being needed. Unmet, this need can turn into savior complexes or spiritual bypassing of their own wounds. They must learn that wanting to heal is healthy; ignoring their own needs isn't.",
-        spiritualGrowth: "Their spiritual evolution comes through learning that self-love is not selfish, that they must be healed to heal, that receiving is also giving. The highest expression of their soul urge is love that begins with themselves.",
-        affirmation: "I am love incarnate. My presence heals. I include myself in my circle of compassion."
+        title: "El alma que anhela curación",
+        hook: "En el nivel más profundo, esta alma anhela sanar a través del amor: ser un canal vivo de aceptación incondicional para todos los seres.",
+        coreDesire: "Soul Urge 33 alberga una profunda necesidad de encarnar el amor de manera tan pura que su sola presencia sane. Detrás de todo lo que hacen vive un maestro sanador que sabe que el amor es la medicina definitiva. Cualquier cosa que no sea amor incondicional se siente como un fracaso espiritual.",
+        innerWorld: "Su paisaje interior es vasto, compasivo y siente constantemente el dolor de los demás. Se sienten más vivos cuando sirven, cuando la sanación ocurre a través de ellos, cuando el amor fluye sin obstrucciones.",
+        hiddenFears: "Su miedo más profundo es no poder curar a todos, fallarles a quienes los necesitan o descubrir que su amor no es suficiente. Puede que nunca expresen esto, pero el terror de ser un falso sanador impulsa su servicio, a veces martirizado. Su propio dolor no parece importante comparado con el de los demás.",
+        fulfillment: "Encuentran una satisfacción profunda cuando se produce la curación, cuando su sola presencia consuela, cuando el amor se ha transmitido puramente. El momento de 'mi amor marcó la diferencia' es su mayor alegría.",
+        relationships: "En el amor, necesitan a alguien que también pueda sostenerlos, que no sólo necesite su curación sino que también se la dé. Quieren una pareja que les recuerde que son humanos, que los ame cuando no tienen nada que dar.",
+        shadowManifestation: "Cuando se les niega el impulso de su alma, se vuelven mártires, se agotan o colapsan bajo el peso de ser necesitados. Si no se satisface, esta necesidad puede convertirse en complejos de salvación o en un desvío espiritual de sus propias heridas. Deben aprender que querer sanar es saludable; ignorar sus propias necesidades no lo es.",
+        spiritualGrowth: "Su evolución espiritual pasa por aprender que el amor propio no es egoísta, que hay que curarse para sanar, que recibir es también dar. La expresión más elevada del impulso de su alma es el amor que comienza con ellos mismos.",
+        affirmation: "Soy el amor encarnado. Mi presencia sana. Me incluyo en mi círculo de compasión."
     }
 };
 
@@ -691,148 +691,148 @@ var DEEP_SOUL_URGE_READINGS = {
 
 var DEEP_PERSONALITY_NUMBER_READINGS = {
     1: {
-        title: "The Appearance of Leadership",
-        hook: "They walk into a room and others unconsciously make space—there's an unmistakable energy of someone who belongs in charge.",
-        firstImpression: "Personality Number 1 projects an aura of confidence, independence, and leadership. Before they've said a word, others sense someone self-reliant, perhaps formidable, certainly not someone to be dismissed. There's a sharpness about them—mental, physical, or both.",
+        title: "La apariencia del liderazgo",
+        hook: "Entran en una habitación y otros inconscientemente hacen espacio; hay una energía inconfundible de alguien que está a cargo.",
+        firstImpression: "La personalidad número 1 proyecta un aura de confianza, independencia y liderazgo. Antes de haber dicho una palabra, otros perciben a alguien autosuficiente, tal vez formidable, ciertamente no alguien a quien despreciar. Hay una agudeza en ellos: mental, física o ambas.",
         style: "Their appearance tends toward bold, decisive choices rather than blending in. Even if their clothing is simple, there's something distinctive about how they carry it. They look like someone who knows what they want, whether or not this is true inside.",
-        socialPresence: "In groups, they naturally take charge or stand apart. They're not wallflowers—even their silence has presence. People look to them when decisions need making, when direction is needed, when someone has to go first.",
-        projectedStrengths: "They appear strong, capable, original, and potentially intimidating to those who prefer to follow. Their projected confidence inspires trust in their abilities, sometimes before they've proven anything.",
-        projectedChallenges: "They may come across as unapproachable, arrogant, or cold—even when their inner world is quite different. People might not realize they want connection because their exterior seems so self-sufficient.",
-        perception: "Others see them as ambitious, direct, and natural leaders. They're often given responsibility early, promoted first, and expected to have answers. The pressure of this projection can be exhausting when they feel vulnerable inside.",
-        integration: "The growth path involves learning to soften without losing presence, to show vulnerability without sacrificing strength. When they let their humanity show through their capable exterior, they become leaders people love, not just respect.",
-        affirmation: "I lead with both strength and heart. My confidence makes room for vulnerability. I am approachable as well as admired."
+        socialPresence: "En grupos, naturalmente toman el mando o se mantienen al margen. No son alhelíes; incluso su silencio tiene presencia. La gente recurre a ellos cuando es necesario tomar decisiones, cuando se necesita dirección, cuando alguien tiene que ir primero.",
+        projectedStrengths: "Parecen fuertes, capaces, originales y potencialmente intimidantes para quienes prefieren seguirlos. Su confianza proyectada inspira confianza en sus habilidades, a veces antes de haber demostrado algo.",
+        projectedChallenges: "Pueden parecer inaccesibles, arrogantes o fríos, incluso cuando su mundo interior es bastante diferente. Es posible que las personas no se den cuenta de que quieren conectarse porque su exterior parece muy autosuficiente.",
+        perception: "Otros los ven como líderes ambiciosos, directos y naturales. A menudo se les asigna responsabilidad desde el principio, se les asciende primero y se espera que tengan respuestas. La presión de esta proyección puede resultar agotadora cuando se sienten vulnerables por dentro.",
+        integration: "El camino del crecimiento pasa por aprender a suavizarse sin perder presencia, a mostrar vulnerabilidad sin sacrificar la fuerza. Cuando dejan que su humanidad se muestre a través de su exterior capaz, se convierten en líderes que la gente ama, no sólo respeta.",
+        affirmation: "Lidero con fuerza y ​​corazón. Mi confianza deja espacio para la vulnerabilidad. Soy accesible y admirado."
     },
     2: {
-        title: "The Appearance of Harmony",
-        hook: "They seem to smooth the air around them—there's something about their presence that makes others feel safe enough to soften.",
-        firstImpression: "Personality Number 2 projects an aura of gentleness, receptivity, and approachability. Before they've said a word, others sense someone who will listen, who won't judge, who makes space for feelings. There's a softness that invites confidence.",
+        title: "La apariencia de la armonía",
+        hook: "Parecen suavizar el aire a su alrededor; hay algo en su presencia que hace que los demás se sientan lo suficientemente seguros como para suavizarlo.",
+        firstImpression: "La personalidad número 2 proyecta un aura de gentileza, receptividad y accesibilidad. Antes de decir una palabra, los demás sienten que hay alguien que los escucha, que no juzga, que deja espacio a los sentimientos. Hay una suavidad que invita a la confianza.",
         style: "Their appearance tends toward harmony—colors that blend, nothing jarring, an aesthetic that soothes. They look like someone who values peace, who considers others, who wouldn't dream of making a scene.",
-        socialPresence: "In groups, they're the ones people talk to when they need to be heard. They don't dominate but they're essential. The room feels more civil when they're there. People behave better in their presence.",
-        projectedStrengths: "They appear kind, diplomatic, and emotionally intelligent. Their projected gentleness makes people feel safe. They seem like natural mediators, the ones who could help any conflict resolve.",
-        projectedChallenges: "They may come across as passive, pushover, or without strong opinions—even when their inner world has very clear preferences. People might underestimate their strength because their exterior is so accommodating.",
-        perception: "Others see them as sweet, supportive, and easy to be around. They're often expected to smooth things over, to yield, to put others first. The assumption that they don't have needs can be invisibly exhausting.",
-        integration: "The growth path involves learning to show their strength without losing their softness. When they reveal that the gentle exterior protects clear boundaries and real power, they become fully seen.",
-        affirmation: "My kindness includes being kind to myself. My gentleness is paired with strength. I can be soft and powerful simultaneously."
+        socialPresence: "En los grupos, son con quienes la gente habla cuando necesita ser escuchada. No dominan pero son esenciales. La habitación se siente más civilizada cuando están allí. La gente se comporta mejor en su presencia.",
+        projectedStrengths: "Parecen amables, diplomáticos y emocionalmente inteligentes. Su gentileza proyectada hace que las personas se sientan seguras. Parecen mediadores naturales, los que podrían ayudar a resolver cualquier conflicto.",
+        projectedChallenges: "Pueden parecer pasivos, fáciles de convencer o sin opiniones firmes, incluso cuando su mundo interior tiene preferencias muy claras. La gente podría subestimar su fuerza porque su exterior es muy complaciente.",
+        perception: "Otros los ven como personas dulces, solidarias y fáciles de tratar. A menudo se espera de ellos que arreglen las cosas, que cedan y que pongan a los demás en primer lugar. La suposición de que no tienen necesidades puede resultar invisiblemente agotadora.",
+        integration: "El camino del crecimiento pasa por aprender a mostrar su fuerza sin perder su suavidad. Cuando revelan que el exterior amable protege límites claros y poder real, se vuelven plenamente visibles.",
+        affirmation: "Mi bondad incluye ser amable conmigo mismo. Mi gentileza se combina con la fuerza. Puedo ser suave y poderoso al mismo tiempo."
     },
     3: {
-        title: "The Appearance of Joy",
-        hook: "They light up the room without trying—there's something sparkly about them that makes life seem more fun.",
-        firstImpression: "Personality Number 3 projects an aura of brightness, creativity, and social ease. Before they've said a word, others sense someone fun, expressive, and interesting. There's a colorfulness to them—literal or energetic—that draws attention.",
+        title: "La aparición de la alegría",
+        hook: "Iluminan la habitación sin proponérselo; hay algo brillante en ellos que hace que la vida parezca más divertida.",
+        firstImpression: "La personalidad número 3 proyecta un aura de brillo, creatividad y tranquilidad social. Antes de decir una palabra, los demás sienten que alguien es divertido, expresivo e interesante. Hay un colorido en ellos, literal o enérgico, que llama la atención.",
         style: "Their appearance tends toward the expressive—creative combinations, playful touches, something that reflects personality. They look like someone with things to say and ways to say them that others haven't thought of.",
-        socialPresence: "In groups, they're often the entertainers, the ones keeping energy high. They make conversations livelier and gatherings more memorable. People want them at their parties.",
-        projectedStrengths: "They appear creative, charming, and socially gifted. Their projected warmth makes people feel special when attention lands on them. They seem like they could talk to anyone about anything.",
-        projectedChallenges: "They may come across as superficial, scattered, or not serious—even when their inner world has considerable depth. People might not share heavy things with them, assuming they're only for light occasions.",
-        perception: "Others see them as fun, talented, and probably popular. They're often expected to be 'on,' to entertain, to make things pleasant. The assumption that they don't have dark days can be isolating.",
-        integration: "The growth path involves revealing depth without losing brightness. When they show that the sparkle contains substance, they become multidimensional rather than merely entertaining.",
-        affirmation: "My brightness includes all colors, even shadow. My joy is real and so is my depth. I am entertaining and substantial."
+        socialPresence: "En los grupos, suelen ser ellos los que animan, los que mantienen alta la energía. Hacen que las conversaciones sean más animadas y las reuniones más memorables. La gente los quiere en sus fiestas.",
+        projectedStrengths: "Parecen creativos, encantadores y socialmente dotados. Su calidez proyectada hace que las personas se sientan especiales cuando la atención cae sobre ellos. Parece que podrían hablar con cualquiera sobre cualquier tema.",
+        projectedChallenges: "Pueden parecer superficiales, dispersos o poco serios, incluso cuando su mundo interior tiene una profundidad considerable. Es posible que la gente no comparta cosas pesadas con ellos, suponiendo que sean sólo para ocasiones ligeras.",
+        perception: "Otros los ven como divertidos, talentosos y probablemente populares. A menudo se espera que estén activos, que entretengan y que hagan las cosas agradables. La suposición de que no tienen días oscuros puede resultar aislante.",
+        integration: "El camino del crecimiento pasa por revelar profundidad sin perder luminosidad. Cuando muestran que el brillo contiene sustancia, se vuelven multidimensionales en lugar de meramente entretenidos.",
+        affirmation: "Mi brillo incluye todos los colores, incluso las sombras. Mi alegría es real y también lo es mi profundidad. Soy entretenido y sustancial."
     },
     4: {
-        title: "The Appearance of Reliability",
-        hook: "They look like someone you could trust with your life—there's a solidity to them that feels like bedrock.",
-        firstImpression: "Personality Number 4 projects an aura of stability, competence, and trustworthiness. Before they've said a word, others sense someone reliable, possibly conservative, definitely not flaky. There's a groundedness that inspires confidence.",
+        title: "La apariencia de confiabilidad",
+        hook: "Parecen alguien en quien puedes confiar tu vida; hay una solidez en ellos que se siente como una base de roca.",
+        firstImpression: "La personalidad número 4 proyecta un aura de estabilidad, competencia y confiabilidad. Antes de haber dicho una palabra, los demás perciben a alguien confiable, posiblemente conservador, definitivamente no excéntrico. Hay una base que inspira confianza.",
         style: "Their appearance tends toward the practical and well-made—quality over flashiness, classic over trendy. They look like someone who plans ahead, who doesn't take shortcuts, who means what they say.",
-        socialPresence: "In groups, they're the steady presence others lean on. They might not be the life of the party, but they're the one you'd call in a crisis. People trust them with responsibilities.",
-        projectedStrengths: "They appear dependable, hardworking, and honest. Their projected solidity makes people feel safe entrusting them with important things. They seem incapable of flakiness or irresponsibility.",
-        projectedChallenges: "They may come across as boring, rigid, or lacking spontaneity—even when their inner world longs for adventure. People might not invite them to crazy ideas, assuming they wouldn't be interested.",
-        perception: "Others see them as the responsible one, the adult in the room, the one who always follows through. They're often expected to be the practical one. The assumption that they don't need fun can become a prison.",
-        integration: "The growth path involves revealing playfulness without losing reliability. When they show that the stable exterior contains unexpected depths and desires, they become complete.",
-        affirmation: "I am both reliable and surprising. My stability includes flexibility. I can be grounded and adventurous at once."
+        socialPresence: "En grupos, son la presencia constante en la que se apoyan los demás. Puede que no sean el alma de la fiesta, pero son a quienes llamarías en una crisis. La gente les confía responsabilidades.",
+        projectedStrengths: "Parecen confiables, trabajadores y honestos. Su solidez proyectada hace que las personas se sientan seguras al confiarles cosas importantes. Parecen incapaces de descamación o irresponsabilidad.",
+        projectedChallenges: "Pueden parecer aburridos, rígidos o carentes de espontaneidad, incluso cuando su mundo interior anhela la aventura. Es posible que la gente no los invite a ideas locas, asumiendo que no estarían interesados.",
+        perception: "Otros los ven como el responsable, el adulto en la sala, el que siempre cumple. A menudo se espera que sean los más prácticos. La suposición de que no necesitan diversión puede convertirse en una prisión.",
+        integration: "El camino del crecimiento pasa por revelar alegría sin perder fiabilidad. Cuando muestran que el exterior estable contiene profundidades y deseos inesperados, se vuelven completos.",
+        affirmation: "Soy confiable y sorprendente. Mi estabilidad incluye flexibilidad. Puedo ser castigado y aventurero al mismo tiempo."
     },
     5: {
-        title: "The Appearance of Freedom",
-        hook: "They look like they just came from somewhere interesting and are heading somewhere more interesting—freedom follows them like a scent.",
-        firstImpression: "Personality Number 5 projects an aura of adventure, magnetism, and aliveness. Before they've said a word, others sense someone exciting, perhaps unpredictable, definitely not boring. There's an electricity about them that promises something will happen.",
+        title: "La apariencia de la libertad",
+        hook: "Parece que acaban de venir de un lugar interesante y se dirigen a otro aún más interesante: la libertad los sigue como un olor.",
+        firstImpression: "La personalidad número 5 proyecta un aura de aventura, magnetismo y vitalidad. Antes de haber dicho una palabra, los demás sienten que alguien es excitante, tal vez impredecible, pero definitivamente no aburrido. Hay una electricidad en ellos que promete que algo sucederá.",
         style: "Their appearance tends toward the eclectic, worldly, or currently fashionable in an individual way. They look like someone who's been places and done things, who doesn't follow rules blindly, who has stories to tell.",
-        socialPresence: "In groups, they're often the catalysts—the ones who suggest the adventure, who know about the new place, who make things happen. Energy increases when they walk in.",
-        projectedStrengths: "They appear confident, adaptable, and magnetically attractive. Their projected dynamism makes life seem more exciting. They seem capable of handling anything that comes.",
-        projectedChallenges: "They may come across as unreliable, commitment-phobic, or reckless—even when their inner world craves stability. People might not trust them with serious matters, assuming they'll get bored and move on.",
-        perception: "Others see them as exciting, spontaneous, and probably a little dangerous. They're often expected to be the wild one. The assumption that they don't want depth can keep intimacy at bay.",
-        integration: "The growth path involves revealing constancy without losing dynamism. When they show that the adventurous exterior can also be deeply committed, they become trustworthy as well as exciting.",
-        affirmation: "My freedom includes the freedom to commit. My dynamism is compatible with depth. I am exciting and reliable."
+        socialPresence: "En los grupos, suelen ser los catalizadores: los que sugieren la aventura, los que conocen el nuevo lugar y los que hacen que las cosas sucedan. La energía aumenta cuando entran.",
+        projectedStrengths: "Parecen seguros, adaptables y magnéticamente atractivos. Su dinamismo proyectado hace que la vida parezca más emocionante. Parecen capaces de manejar cualquier cosa que venga.",
+        projectedChallenges: "Pueden parecer poco confiables, fóbicos al compromiso o imprudentes, incluso cuando su mundo interior anhela estabilidad. Es posible que la gente no les confíe asuntos serios, asumiendo que se aburrirán y seguirán adelante.",
+        perception: "Otros los ven como excitantes, espontáneos y probablemente un poco peligrosos. A menudo se espera que sean los salvajes. La suposición de que no quieren profundidad puede mantener a raya la intimidad.",
+        integration: "La senda del crecimiento pasa por revelar constancia sin perder dinamismo. Cuando demuestran que el exterior aventurero también puede implicar un profundo compromiso, se vuelven dignos de confianza y apasionantes.",
+        affirmation: "Mi libertad incluye la libertad de comprometerse. Mi dinamismo es compatible con la profundidad. Soy emocionante y confiable."
     },
     6: {
-        title: "The Appearance of Care",
-        hook: "They look like someone who would take care of you—there's a warmth radiating from them that feels like home.",
-        firstImpression: "Personality Number 6 projects an aura of warmth, responsibility, and aesthetic sensitivity. Before they've said a word, others sense someone who cares, who notices details, who would make sure everyone is comfortable. There's a nurturing quality that draws people in.",
+        title: "La apariencia del cuidado",
+        hook: "Parecen alguien que cuidaría de ti; irradian una calidez que te hace sentir como en casa.",
+        firstImpression: "La personalidad número 6 proyecta un aura de calidez, responsabilidad y sensibilidad estética. Antes de decir una palabra, los demás sienten que alguien se preocupa, que nota los detalles, que se asegurará de que todos estén cómodos. Hay una cualidad enriquecedora que atrae a la gente.",
         style: "Their appearance tends toward the harmonious and often beautiful—they look put-together in a way that seems effortless. They look like someone who creates beauty, who values home and family, who takes their responsibilities seriously.",
-        socialPresence: "In groups, they're often the hosts—even when it's not their space. They make sure everyone has what they need, that no one is left out, that the environment is pleasant.",
-        projectedStrengths: "They appear loving, responsible, and aesthetically gifted. Their projected care makes people feel valued and looked after. They seem like natural parents, even if they have no children.",
-        projectedChallenges: "They may come across as controlling, martyr-like, or smothering—even when their inner world simply wants to help. People might resist their care, assuming it comes with strings attached.",
-        perception: "Others see them as the caretaker, the responsible one, the one who always puts family first. They're often expected to give without receiving. The assumption that they don't have needs can be quietly devastating.",
-        integration: "The growth path involves receiving as gracefully as they give. When they show that the caring exterior also needs care, they become fully human to others.",
-        affirmation: "I deserve the love I give others. My care extends to myself. I can nurture and be nurtured."
+        socialPresence: "En grupos, suelen ser los anfitriones, incluso cuando no es su espacio. Se aseguran de que todos tengan lo que necesitan, que nadie se quede fuera, que el ambiente sea agradable.",
+        projectedStrengths: "Parecen cariñosos, responsables y estéticamente dotados. Su atención proyectada hace que las personas se sientan valoradas y cuidadas. Parecen padres naturales, incluso si no tienen hijos.",
+        projectedChallenges: "Pueden parecer controladores, mártires o asfixiantes, incluso cuando su mundo interior simplemente quiere ayudar. Las personas podrían resistirse a recibir atención, asumiendo que viene con condiciones.",
+        perception: "Otros los ven como el cuidador, el responsable, el que siempre antepone a la familia. A menudo se espera que den sin recibir. La suposición de que no tienen necesidades puede resultar silenciosamente devastadora.",
+        integration: "El camino del crecimiento implica recibir con tanta gracia como se da. Cuando demuestran que el exterior afectuoso también necesita cuidados, se vuelven plenamente humanos para los demás.",
+        affirmation: "Merezco el amor que doy a los demás. Mi cuidado se extiende a mí mismo. Puedo nutrir y ser nutrido."
     },
     7: {
-        title: "The Appearance of Wisdom",
-        hook: "They have the air of someone who knows things—there's a depth behind their eyes that suggests access to mysteries.",
-        firstImpression: "Personality Number 7 projects an aura of intelligence, depth, and perhaps mysteriousness. Before they've said a word, others sense someone thoughtful, possibly reserved, definitely not superficial. There's a quality of knowing that intrigues and sometimes intimidates.",
+        title: "La aparición de la sabiduría",
+        hook: "Tienen el aire de alguien que sabe cosas: hay una profundidad detrás de sus ojos que sugiere acceso a los misterios.",
+        firstImpression: "La personalidad número 7 proyecta un aura de inteligencia, profundidad y quizás misterio. Antes de haber dicho una palabra, los demás perciben a alguien reflexivo, posiblemente reservado, definitivamente no superficial. Hay una cualidad en el conocimiento que intriga y a veces intimida.",
         style: "Their appearance tends toward the understated and individual—not trying to impress, but unmistakably distinct. They look like someone who reads, who thinks, who has interior worlds to explore.",
-        socialPresence: "In groups, they're often observers—watching, analyzing, only speaking when they have something meaningful to add. When they do speak, people tend to listen.",
-        projectedStrengths: "They appear intelligent, perceptive, and spiritually aware. Their projected depth makes people assume they understand things others don't. They seem like good people to ask about important questions.",
-        projectedChallenges: "They may come across as cold, aloof, or superior—even when their inner world yearns for connection. People might not approach them casually, assuming they want to be left alone.",
-        perception: "Others see them as the wise one, the thinker, the one who has everything figured out. They're often expected to have answers. The assumption that they don't need casual connection can be lonely.",
-        integration: "The growth path involves revealing warmth without losing depth. When they show that the wise exterior also loves and needs, they become approachable as well as admired.",
-        affirmation: "My wisdom includes emotional warmth. My depth makes room for lightness. I am thoughtful and connected."
+        socialPresence: "En grupos, a menudo son observadores: observan, analizan y sólo hablan cuando tienen algo significativo que agregar. Cuando hablan, la gente tiende a escuchar.",
+        projectedStrengths: "Parecen inteligentes, perceptivos y espiritualmente conscientes. Su profundidad proyectada hace que las personas asuman que entienden cosas que otros no entienden. Parecen buenas personas para hacer preguntas importantes.",
+        projectedChallenges: "Pueden parecer fríos, distantes o superiores, incluso cuando su mundo interior anhela la conexión. Es posible que las personas no se acerquen a ellos con indiferencia, asumiendo que quieren que los dejen en paz.",
+        perception: "Otros los ven como el sabio, el pensador, el que lo tiene todo resuelto. A menudo se espera que tengan respuestas. La suposición de que no necesitan una conexión casual puede resultar solitaria.",
+        integration: "El camino del crecimiento pasa por revelar calidez sin perder profundidad. Cuando demuestran que el exterior sabio también ama y necesita, se vuelven accesibles y admirados.",
+        affirmation: "Mi sabiduría incluye calidez emocional. Mi profundidad deja espacio a la ligereza. Soy reflexivo y conectado."
     },
     8: {
-        title: "The Appearance of Power",
-        hook: "They look like someone who gets things done—there's an authority about them that makes obstacles seem optional.",
-        firstImpression: "Personality Number 8 projects an aura of power, confidence, and capability. Before they've said a word, others sense someone successful, possibly formidable, definitely not to be underestimated. There's an energy of achievement that commands respect.",
+        title: "La apariencia del poder",
+        hook: "Parece alguien que hace las cosas; hay una autoridad en ellos que hace que los obstáculos parezcan opcionales.",
+        firstImpression: "La personalidad número 8 proyecta un aura de poder, confianza y capacidad. Antes de decir una palabra, los demás perciben a alguien exitoso, posiblemente formidable, que definitivamente no debe ser subestimado. Hay una energía de logro que inspira respeto.",
         style: "Their appearance tends toward quality and often luxury—they look successful, put-together, like winners. They carry themselves like someone who belongs at the table where decisions are made.",
-        socialPresence: "In groups, they're often perceived as the most powerful person present—whether or not this is true. People naturally defer to them or position themselves relative to them.",
-        projectedStrengths: "They appear ambitious, competent, and materially successful. Their projected power makes people assume they can handle anything. They seem like good people to have on your side.",
-        projectedChallenges: "They may come across as intimidating, materialistic, or coldly ambitious—even when their inner world values much more than success. People might not show them vulnerability, assuming they'd judge it as weakness.",
-        perception: "Others see them as the successful one, the leader, the one who has it together. They're often expected to achieve. The assumption that they don't struggle can be isolating when they do.",
-        integration: "The growth path involves revealing vulnerability without losing power. When they show that the capable exterior also has moments of doubt, they become human as well as impressive.",
-        affirmation: "My power includes the power to be vulnerable. My strength allows for softness. I am successful and human."
+        socialPresence: "En grupos, a menudo se les percibe como la persona más poderosa presente, sea cierto o no. La gente naturalmente los respeta o se posiciona en relación con ellos.",
+        projectedStrengths: "Parecen ambiciosos, competentes y materialmente exitosos. Su poder proyectado hace que la gente asuma que pueden manejar cualquier cosa. Parecen buenas personas para tener a tu lado.",
+        projectedChallenges: "Pueden parecer intimidantes, materialistas o fríamente ambiciosos, incluso cuando su mundo interior valora mucho más que el éxito. Es posible que las personas no les muestren su vulnerabilidad, asumiendo que la juzgarían como debilidad.",
+        perception: "Otros lo ven como el exitoso, el líder, el que tiene todo bajo control. A menudo se espera que lo logren. La suposición de que no luchan puede resultar aislante cuando lo hacen.",
+        integration: "El camino del crecimiento pasa por revelar la vulnerabilidad sin perder poder. Cuando demuestran que el exterior capaz también tiene momentos de duda, se vuelven humanos además de impresionantes.",
+        affirmation: "Mi poder incluye el poder de ser vulnerable. Mi fuerza permite la suavidad. Soy exitoso y humano."
     },
     9: {
-        title: "The Appearance of Wisdom",
-        hook: "They look like someone who's seen the world—there's a worldliness and compassion that suggests someone evolved beyond pettiness.",
-        firstImpression: "Personality Number 9 projects an aura of wisdom, sophistication, and humanitarian concern. Before they've said a word, others sense someone who's seen much, who cares about big things, who's moved beyond small concerns. There's a quality of completion about them.",
+        title: "La aparición de la sabiduría",
+        hook: "Parecen alguien que ha visto el mundo: hay una mundanalidad y una compasión que sugieren que alguien evolucionó más allá de la mezquindad.",
+        firstImpression: "La personalidad número 9 proyecta un aura de sabiduría, sofisticación y preocupación humanitaria. Antes de decir una palabra, los demás perciben a alguien que ha visto mucho, que se preocupa por las cosas grandes, que ha ido más allá de las pequeñas preocupaciones. Hay una cualidad de finalización en ellos.",
         style: "Their appearance often has artistic or international flair—they look cultured, well-traveled, perhaps bohemian or classic in an elevated way. They look like someone with broad horizons and refined taste.",
-        socialPresence: "In groups, they often serve as advisors or elder figures—regardless of age. People share problems with them, expecting wisdom. They seem to belong everywhere and nowhere specific.",
-        projectedStrengths: "They appear wise, compassionate, and spiritually advanced. Their projected elevation makes people assume they've figured out what matters. They seem above petty concerns.",
-        projectedChallenges: "They may come across as detached, holier-than-thou, or impersonal—even when their inner world feels deeply. People might not share light, silly things with them, assuming they're too evolved for fun.",
-        perception: "Others see them as the wise one, the humanitarian, the one who lives for higher purposes. They're often expected to be above ordinary concerns. The assumption that they don't have human needs can be lonely.",
-        integration: "The growth path involves revealing groundedness without losing elevation. When they show that the evolved exterior also has simple needs and joys, they become complete.",
-        affirmation: "My wisdom includes earthly joy. My evolution embraces my humanity. I am both spiritual and grounded."
+        socialPresence: "En grupos, a menudo actúan como asesores o figuras mayores, independientemente de su edad. La gente comparte sus problemas con ellos, esperando sabiduría. Parecen pertenecer a todas partes y a ninguna específica.",
+        projectedStrengths: "Parecen sabios, compasivos y espiritualmente avanzados. Su elevación proyectada hace que la gente asuma que han descubierto lo que importa. Parecen estar por encima de preocupaciones insignificantes.",
+        projectedChallenges: "Pueden parecer distantes, más santos que tú o impersonales, incluso cuando su mundo interior se siente profundamente. Es posible que las personas no compartan cosas ligeras y tontas con ellos, asumiendo que están demasiado evolucionados para divertirse.",
+        perception: "Otros los ven como el sabio, el humanitario, el que vive para propósitos más elevados. A menudo se espera que estén por encima de las preocupaciones ordinarias. La suposición de que no tienen necesidades humanas puede resultar solitaria.",
+        integration: "El camino del crecimiento implica revelar la base sin perder elevación. Cuando muestran que el exterior evolucionado también tiene necesidades y alegrías simples, se vuelven completos.",
+        affirmation: "Mi sabiduría incluye el gozo terrenal. Mi evolución abraza mi humanidad. Soy espiritual y arraigado."
     },
     11: {
-        title: "The Appearance of Inspiration",
-        hook: "There's something almost luminous about them—a quality that makes others sense they're in the presence of something special.",
-        firstImpression: "Personality Number 11 projects an aura of inspiration, sensitivity, and heightened presence. Before they've said a word, others sense someone tuned to different frequencies, perhaps spiritual, definitely unusual. There's an otherworldly quality that's hard to ignore.",
+        title: "La aparición de la inspiración",
+        hook: "Hay algo casi luminoso en ellos, una cualidad que hace que los demás sientan que están en presencia de algo especial.",
+        firstImpression: "La personalidad número 11 proyecta un aura de inspiración, sensibilidad y mayor presencia. Antes de haber dicho una palabra, otros sienten que alguien está sintonizado en diferentes frecuencias, tal vez espirituales, definitivamente inusuales. Hay una cualidad de otro mundo que es difícil de ignorar.",
         style: "Their appearance often reflects their inner intensity—eyes that seem to see more, presence that fills space unexpectedly, style that expresses something beyond fashion. They look like someone with access to something invisible.",
-        socialPresence: "In groups, they often stand out without trying—there's something magnetic that draws attention. People either feel deeply drawn or somehow uncomfortable. Neutrality seems impossible around them.",
-        projectedStrengths: "They appear inspired, intuitive, and spiritually connected. Their projected intensity makes people expect wisdom or insight. They seem like channels for something larger than personal concerns.",
-        projectedChallenges: "They may come across as too intense, spacey, or not fully present—even when their inner world is working hard to stay grounded. People might not trust them with practical matters, assuming they're too otherworldly.",
-        perception: "Others see them as the visionary, the intuitive one, the one with special gifts. They're often expected to inspire. The assumption that they don't need practical support can leave them ungrounded.",
-        integration: "The growth path involves demonstrating groundedness without losing inspiration. When they show that the visionary exterior also handles earthly matters, they become trusted as well as admired.",
-        affirmation: "My inspiration is grounded in reality. My sensitivity includes practical wisdom. I am visionary and dependable."
+        socialPresence: "En grupos, a menudo destacan sin proponérselo: hay algo magnético que llama la atención. La gente se siente profundamente atraída o de algún modo incómoda. La neutralidad parece imposible a su alrededor.",
+        projectedStrengths: "Parecen inspirados, intuitivos y espiritualmente conectados. Su intensidad proyectada hace que la gente espere sabiduría o perspicacia. Parecen canales para algo más grande que las preocupaciones personales.",
+        projectedChallenges: "Pueden parecer demasiado intensos, distraídos o no completamente presentes, incluso cuando su mundo interior está trabajando duro para mantenerse firme. Es posible que la gente no les confíe asuntos prácticos, asumiendo que son demasiado de otro mundo.",
+        perception: "Otros los ven como el visionario, el intuitivo, el que tiene dones especiales. A menudo se espera que inspiren. La suposición de que no necesitan apoyo práctico puede dejarlos sin fundamento.",
+        integration: "El camino del crecimiento implica demostrar firmeza sin perder la inspiración. Cuando muestran que el exterior visionario también se ocupa de los asuntos terrenales, se vuelven confiables y admirados.",
+        affirmation: "Mi inspiración se basa en la realidad. Mi sensibilidad incluye sabiduría práctica. Soy visionario y confiable."
     },
     22: {
-        title: "The Appearance of Mastery",
-        hook: "They look like someone who could build an empire—there's a scope to their presence that suggests vast capability.",
-        firstImpression: "Personality Number 22 projects an aura of immense capability, vision, and potential impact. Before they've said a word, others sense someone operating on a larger scale, thinking about bigger things, capable of more than average. There's a weight to their presence that's hard to dismiss.",
+        title: "La apariencia del dominio",
+        hook: "Parecen alguien que podría construir un imperio; su presencia tiene un alcance que sugiere una gran capacidad.",
+        firstImpression: "La personalidad número 22 proyecta un aura de inmensa capacidad, visión e impacto potencial. Antes de haber dicho una palabra, otros sienten que alguien opera a mayor escala, que piensa en cosas más grandes, que es capaz de hacer más que el promedio. Hay un peso en su presencia que es difícil de ignorar.",
         style: "Their appearance tends to suggest both vision and practicality—they look like leaders who can also roll up their sleeves. They carry an air of someone who builds, who manifests, who makes the impossible real.",
-        socialPresence: "In groups, they're often seen as the most capable person present—the one who could actually make things happen. People naturally assume they're in charge or should be.",
-        projectedStrengths: "They appear visionary yet practical, capable of thinking big and executing flawlessly. Their projected mastery makes people expect extraordinary results. They seem like the person to call when something impossible needs doing.",
-        projectedChallenges: "They may come across as intimidating, workaholic, or too intense for ordinary interaction—even when their inner world craves simple connection. People might not approach them casually, assuming they're too busy for normal friendship.",
-        perception: "Others see them as the master builder, the one who could change the world if they wanted to. They're often expected to accomplish great things. The weight of this expectation can be crushing.",
-        integration: "The growth path involves revealing humanity without losing capability. When they show that the master builder also has ordinary needs and playfulness, they become loved as well as respected.",
-        affirmation: "My greatness includes being human. My capability makes room for rest. I am masterful and tender."
+        socialPresence: "En grupos, a menudo se les considera la persona más capaz de los presentes: la que realmente podría hacer que las cosas sucedan. La gente naturalmente asume que están a cargo o que deberían estarlo.",
+        projectedStrengths: "Parecen visionarios pero prácticos, capaces de pensar en grande y ejecutar sin problemas. Su dominio proyectado hace que la gente espere resultados extraordinarios. Parecen la persona a quien llamar cuando es necesario hacer algo imposible.",
+        projectedChallenges: "Pueden parecer intimidantes, adictos al trabajo o demasiado intensos para una interacción ordinaria, incluso cuando su mundo interior anhela una conexión simple. Es posible que las personas no se acerquen a ellos de manera casual, asumiendo que están demasiado ocupados para una amistad normal.",
+        perception: "Otros los ven como el maestro de obras, el que podría cambiar el mundo si así lo quisieran. A menudo se espera que logren grandes cosas. El peso de esta expectativa puede ser aplastante.",
+        integration: "El camino del crecimiento pasa por revelar la humanidad sin perder capacidad. Cuando demuestran que el maestro constructor también tiene necesidades ordinarias y alegría, se vuelven amados y respetados.",
+        affirmation: "Mi grandeza incluye ser humano. Mi capacidad deja espacio para el descanso. Soy magistral y tierna."
     },
     33: {
-        title: "The Appearance of Unconditional Love",
-        hook: "They seem to glow with compassion—there's something about them that makes others feel accepted before a word is spoken.",
-        firstImpression: "Personality Number 33 projects an aura of profound love, healing presence, and spiritual elevation. Before they've said a word, others sense someone safe, accepting, perhaps even holy. There's a quality of unconditional welcome that's both comforting and humbling.",
+        title: "La aparición del amor incondicional",
+        hook: "Parecen brillar con compasión; hay algo en ellos que hace que los demás se sientan aceptados antes de pronunciar una palabra.",
+        firstImpression: "La personalidad número 33 proyecta un aura de amor profundo, presencia sanadora y elevación espiritual. Antes de haber dicho una palabra, otros sienten que alguien está seguro, que los acepta, tal vez incluso que es santo. Hay una cualidad de bienvenida incondicional que es a la vez reconfortante y humillante.",
         style: "Their appearance often reflects their inner warmth—soft, nurturing colors and textures, or a simplicity that suggests focus on what really matters. They look like someone who would hold your hand through anything.",
-        socialPresence: "In groups, they often become the heart—the one everyone feels safe opening up to. Their presence seems to give others permission to be vulnerable, to be themselves.",
-        projectedStrengths: "They appear loving beyond ordinary bounds, capable of accepting anything, spiritually advanced in the deepest sense. Their projected unconditional love makes people feel healed just by being near them.",
-        projectedChallenges: "They may come across as too saintly, potentially naive, or too good to be true—even when their inner world struggles like everyone else. People might not share their pettiness, assuming they'd be disappointed.",
-        perception: "Others see them as the healer, the spiritual parent, the embodiment of love. They're often expected to be perfect. The weight of being put on a pedestal can be suffocating.",
-        integration: "The growth path involves revealing their humanity without losing their love. When they show that the saint also has shadow, they become approachable as well as revered.",
-        affirmation: "My love includes my imperfections. My healing extends to myself. I am divine and human."
+        socialPresence: "En grupos, a menudo se convierten en el corazón, aquel al que todos se sienten seguros abriéndose. Su presencia parece dar permiso a los demás para ser vulnerables, para ser ellos mismos.",
+        projectedStrengths: "Parecen amar más allá de los límites ordinarios, capaces de aceptar cualquier cosa, espiritualmente avanzados en el sentido más profundo. Su amor incondicional proyectado hace que las personas se sientan sanadas con solo estar cerca de ellos.",
+        projectedChallenges: "Pueden parecer demasiado santos, potencialmente ingenuos o demasiado buenos para ser verdad, incluso cuando su mundo interior lucha como el de todos los demás. Es posible que la gente no comparta su mezquindad, asumiendo que se sentirán decepcionadas.",
+        perception: "Otros los ven como el sanador, el padre espiritual, la encarnación del amor. A menudo se espera que sean perfectos. El peso de estar colocado sobre un pedestal puede resultar asfixiante.",
+        integration: "El camino del crecimiento implica revelar su humanidad sin perder su amor. Cuando muestran que el santo también tiene sombra, se vuelven accesibles y reverenciados.",
+        affirmation: "Mi amor incluye mis imperfecciones. Mi curación se extiende a mí mismo. Soy divina y humana."
     }
 };
 
@@ -842,283 +842,283 @@ var DEEP_PERSONALITY_NUMBER_READINGS = {
 
 var DEEP_BIRTHDAY_NUMBER_READINGS = {
     1: {
-        title: "Born on the 1st - The Natural Leader",
-        gift: "You entered this world with an innate leadership quality. The 1st vibration gives you independence, originality, and the courage to stand alone when necessary.",
-        talent: "Your special gift is pioneering—you see opportunities others miss and have the courage to act first. You're naturally innovative and don't need consensus to move forward.",
-        expression: "You express this gift through initiative and self-reliance. You thrive when you can make independent decisions and forge your own path.",
-        challenge: "Learning to balance your strong independence with collaboration. You may struggle with asking for help or working in overly structured environments.",
-        activation: "This gift activates when you trust your own vision and take the lead on projects that matter to you. Start things—you're here to be first.",
-        affirmation: "I was born to lead. My independent spirit opens new paths."
+        title: "Nacido el día 1 - El líder natural",
+        gift: "Entraste a este mundo con una cualidad de liderazgo innata. La primera vibración te brinda independencia, originalidad y el coraje de estar solo cuando sea necesario.",
+        talent: "Tu don especial es el de ser pionero: ves oportunidades que otros pierden y tienes el coraje de actuar primero. Eres naturalmente innovador y no necesitas consenso para avanzar.",
+        expression: "Expresas este don a través de la iniciativa y la autosuficiencia. Prosperas cuando puedes tomar decisiones independientes y forjar tu propio camino.",
+        challenge: "Aprender a equilibrar su fuerte independencia con la colaboración. Es posible que tenga dificultades para pedir ayuda o trabajar en entornos demasiado estructurados.",
+        activation: "Este don se activa cuando confías en tu propia visión y tomas la iniciativa en proyectos que te importan. Empiece las cosas: usted está aquí para ser el primero.",
+        affirmation: "Nací para liderar. Mi espíritu independiente abre nuevos caminos."
     },
     2: {
-        title: "Born on the 2nd - The Natural Peacemaker",
-        gift: "You entered this world with exceptional sensitivity and diplomatic skills. The 2nd vibration gives you the ability to see both sides and create harmony.",
-        talent: "Your special gift is mediation—you can bridge differences and help people understand each other. Your intuition about others is remarkably accurate.",
-        expression: "You express this gift through cooperation and attention to emotional nuance. You thrive in partnerships and collaborative environments.",
-        challenge: "Learning to maintain your identity while being deeply connected to others. You may struggle with codependency or being overly affected by discord.",
-        activation: "This gift activates when you use your sensitivity to create peace without losing yourself. Partner, don't disappear.",
-        affirmation: "I was born to connect. My sensitivity builds bridges between hearts."
+        title: "Nacido el día 2 - El pacificador natural",
+        gift: "Entraste en este mundo con una sensibilidad y unas dotes diplomáticas excepcionales. La segunda vibración te da la capacidad de ver ambos lados y crear armonía.",
+        talent: "Su don especial es la mediación: puede salvar diferencias y ayudar a las personas a entenderse entre sí. Tu intuición sobre los demás es notablemente precisa.",
+        expression: "Expresas este don a través de la cooperación y la atención a los matices emocionales. Prosperas en asociaciones y entornos colaborativos.",
+        challenge: "Aprender a mantener su identidad mientras está profundamente conectado con los demás. Es posible que tengas problemas con la codependencia o que te afecte demasiado la discordia.",
+        activation: "Este don se activa cuando utilizas tu sensibilidad para crear paz sin perderte. Socio, no desaparezcas.",
+        affirmation: "Nací para conectarme. Mi sensibilidad tiende puentes entre los corazones."
     },
     3: {
-        title: "Born on the 3rd - The Natural Communicator",
-        gift: "You entered this world with creative expression bubbling inside you. The 3rd vibration gives you natural charisma and the ability to inspire through words and art.",
-        talent: "Your special gift is communication—whether through speaking, writing, art, or performance. You make life more beautiful and interesting wherever you go.",
-        expression: "You express this gift through creativity and social interaction. You thrive when you can create, perform, or share your unique perspective.",
-        challenge: "Learning to channel your scattered energy into focused creation. You may struggle with completing projects or taking yourself seriously.",
-        activation: "This gift activates when you commit to your creative voice and share it generously. The world needs your joy.",
-        affirmation: "I was born to create and inspire. My expression brings light to others."
+        title: "Nacido el día 3 - El comunicador natural",
+        gift: "Entraste a este mundo con una expresión creativa burbujeando en tu interior. La tercera vibración te brinda carisma natural y la capacidad de inspirar a través de las palabras y el arte.",
+        talent: "Su don especial es la comunicación, ya sea a través del habla, la escritura, el arte o la actuación. Haces la vida más bella e interesante dondequiera que vayas.",
+        expression: "Expresas este don a través de la creatividad y la interacción social. Prosperas cuando puedes crear, interpretar o compartir tu perspectiva única.",
+        challenge: "Aprender a canalizar tu energía dispersa hacia una creación enfocada. Es posible que tenga dificultades para completar proyectos o tomarse a sí mismo en serio.",
+        activation: "Este regalo se activa cuando te comprometes con tu voz creativa y la compartes generosamente. El mundo necesita tu alegría.",
+        affirmation: "Nací para crear e inspirar. Mi expresión trae luz a los demás."
     },
     4: {
-        title: "Born on the 4th - The Natural Builder",
-        gift: "You entered this world with practical wisdom and the ability to create lasting structures. The 4th vibration gives you discipline, reliability, and organizational genius.",
-        talent: "Your special gift is building—turning visions into concrete reality through patient, systematic work. You create foundations others can depend on.",
-        expression: "You express this gift through practical application and step-by-step progress. You thrive in roles requiring organization and follow-through.",
-        challenge: "Learning flexibility within your love of structure. You may struggle with change or seeing the forest for the trees.",
-        activation: "This gift activates when you apply your practical skills to meaningful projects. Build something that lasts.",
-        affirmation: "I was born to build. My steady work creates real and lasting value."
+        title: "Nacido el día 4 - El Constructor Natural",
+        gift: "Entraste a este mundo con sabiduría práctica y la capacidad de crear estructuras duraderas. La cuarta vibración te brinda disciplina, confiabilidad y genio organizacional.",
+        talent: "Su don especial es la construcción: convertir las visiones en realidades concretas mediante un trabajo paciente y sistemático. Creas bases en las que otros pueden confiar.",
+        expression: "Expresas este don a través de la aplicación práctica y el progreso paso a paso. Prosperas en roles que requieren organización y seguimiento.",
+        challenge: "Aprender flexibilidad dentro de su amor por la estructura. Es posible que tenga dificultades con el cambio o con ver el bosque en busca de árboles.",
+        activation: "Este don se activa cuando aplicas tus habilidades prácticas a proyectos significativos. Construya algo que dure.",
+        affirmation: "Nací para construir. Mi trabajo constante crea valor real y duradero."
     },
     5: {
-        title: "Born on the 5th - The Natural Explorer",
-        gift: "You entered this world craving freedom and experience. The 5th vibration gives you adaptability, charisma, and the ability to thrive in change.",
-        talent: "Your special gift is versatility—you can adapt to any situation and help others embrace change gracefully. Your enthusiasm for life is contagious.",
-        expression: "You express this gift through variety and movement. You thrive when life offers new experiences, travel, and freedom to explore.",
-        challenge: "Learning to commit deeply without feeling trapped. You may struggle with routine or following through on long-term projects.",
-        activation: "This gift activates when you channel your love of freedom into purposeful exploration. Adventure with intention.",
-        affirmation: "I was born for freedom and experience. My adaptability is my strength."
+        title: "Nacido el día 5 - El Explorador Natural",
+        gift: "Entraste a este mundo ansiando libertad y experiencia. La quinta vibración te brinda adaptabilidad, carisma y la capacidad de prosperar en el cambio.",
+        talent: "Tu don especial es la versatilidad: puedes adaptarte a cualquier situación y ayudar a otros a aceptar el cambio con gracia. Tu entusiasmo por la vida es contagioso.",
+        expression: "Expresas este don a través de la variedad y el movimiento. Prosperas cuando la vida te ofrece nuevas experiencias, viajes y libertad para explorar.",
+        challenge: "Aprender a comprometerse profundamente sin sentirse atrapado. Es posible que tenga dificultades con la rutina o con el seguimiento de proyectos a largo plazo.",
+        activation: "Este don se activa cuando canalizas tu amor por la libertad hacia una exploración decidida. Aventura con intención.",
+        affirmation: "Nací para la libertad y la experiencia. Mi adaptabilidad es mi fuerza."
     },
     6: {
-        title: "Born on the 6th - The Natural Nurturer",
-        gift: "You entered this world with a deep capacity for love and responsibility. The 6th vibration gives you warmth, aesthetic sense, and the desire to care for others.",
-        talent: "Your special gift is nurturing—creating beauty and harmony while ensuring everyone is cared for. You make any space feel like home.",
-        expression: "You express this gift through service and beautification. You thrive when you can care for others and create harmonious environments.",
-        challenge: "Learning to receive as well as give. You may struggle with martyrdom or controlling through caretaking.",
-        activation: "This gift activates when you nurture without depleting yourself. Love yourself as you love others.",
-        affirmation: "I was born to love and nurture. My care heals and my presence creates home."
+        title: "Nacido el día 6 - El cuidador natural",
+        gift: "Entraste a este mundo con una profunda capacidad de amor y responsabilidad. La sexta vibración te brinda calidez, sentido estético y el deseo de cuidar a los demás.",
+        talent: "Su don especial es la crianza: crear belleza y armonía y, al mismo tiempo, garantizar que todos sean cuidados. Haces que cualquier espacio se sienta como en casa.",
+        expression: "Expresas este don a través del servicio y el embellecimiento. Prosperas cuando puedes cuidar de los demás y crear ambientes armoniosos.",
+        challenge: "Aprender a recibir además de dar. Es posible que tenga que luchar contra el martirio o el control a través del cuidado.",
+        activation: "Este don se activa cuando te nutres sin agotarte. Ámate a ti mismo como amas a los demás.",
+        affirmation: "Nací para amar y nutrir. Mi cuidado sana y mi presencia crea hogar."
     },
     7: {
-        title: "Born on the 7th - The Natural Seeker",
-        gift: "You entered this world with a philosophical mind and spiritual depth. The 7th vibration gives you analytical ability and the need to understand what's beneath the surface.",
-        talent: "Your special gift is wisdom—you can penetrate mysteries and understand what others overlook. Your depth is a gift to shallow times.",
-        expression: "You express this gift through research, contemplation, and spiritual practice. You thrive when you have time to think deeply and be alone.",
-        challenge: "Learning to share your insights without isolating. You may struggle with feeling understood or getting too lost in thought.",
-        activation: "This gift activates when you balance solitude with connection. Wisdom is meant to be shared.",
-        affirmation: "I was born to seek truth. My depth reveals what others cannot see."
+        title: "Nacido el día 7 - El buscador natural",
+        gift: "Entraste a este mundo con una mente filosófica y profundidad espiritual. La séptima vibración te brinda capacidad analítica y la necesidad de comprender lo que hay debajo de la superficie.",
+        talent: "Tu don especial es la sabiduría: puedes penetrar los misterios y comprender lo que otros pasan por alto. Tu profundidad es un regalo para los tiempos superficiales.",
+        expression: "Expresas este don a través de la investigación, la contemplación y la práctica espiritual. Prosperas cuando tienes tiempo para pensar profundamente y estar solo.",
+        challenge: "Aprender a compartir sus conocimientos sin aislarse. Es posible que tenga dificultades para sentirse comprendido o perderse demasiado en sus pensamientos.",
+        activation: "Este regalo se activa cuando equilibras la soledad con la conexión. La sabiduría debe ser compartida.",
+        affirmation: "Nací para buscar la verdad. Mi profundidad revela lo que otros no pueden ver."
     },
     8: {
-        title: "Born on the 8th - The Natural Achiever",
-        gift: "You entered this world with executive ability and material mastery. The 8th vibration gives you power, ambition, and the ability to manifest in the physical world.",
-        talent: "Your special gift is manifestation—turning vision into reality at scale. You understand money, power, and how to make things happen.",
-        expression: "You express this gift through leadership and achievement. You thrive in positions of authority and when building substantial success.",
-        challenge: "Learning that power is for service, not just accumulation. You may struggle with workaholism or measuring worth by achievement.",
-        activation: "This gift activates when you use your power wisely and generously. Build empires that serve.",
-        affirmation: "I was born for abundance and power. My success serves something greater."
+        title: "Nacido el día 8 - El triunfador natural",
+        gift: "Entraste a este mundo con capacidad ejecutiva y dominio material. La octava vibración te brinda poder, ambición y la capacidad de manifestarte en el mundo físico.",
+        talent: "Su don especial es la manifestación: convertir la visión en realidad a escala. Entiendes el dinero, el poder y cómo hacer que las cosas sucedan.",
+        expression: "Expresas este don a través del liderazgo y los logros. Prosperas en posiciones de autoridad y cuando logras un éxito sustancial.",
+        challenge: "Aprender que el poder es para el servicio, no sólo para la acumulación. Es posible que tenga problemas con la adicción al trabajo o con medir el valor según los logros.",
+        activation: "Este don se activa cuando usas tu poder de manera sabia y generosa. Construye imperios que sirvan.",
+        affirmation: "Nací para la abundancia y el poder. Mi éxito sirve para algo mayor."
     },
     9: {
-        title: "Born on the 9th - The Natural Humanitarian",
-        gift: "You entered this world with wisdom and universal compassion. The 9th vibration gives you the ability to see the bigger picture and serve humanity.",
-        talent: "Your special gift is completion and release—you help others finish cycles and move forward. Your compassion knows no boundaries.",
-        expression: "You express this gift through service and artistic expression. You thrive when working for causes larger than yourself.",
-        challenge: "Learning healthy detachment without coldness. You may struggle with letting go or becoming everyone's savior.",
-        activation: "This gift activates when you serve without martyrdom. Your love includes yourself.",
-        affirmation: "I was born to serve humanity. My compassion heals the world."
+        title: "Nacido el día 9 - El Humanitario Natural",
+        gift: "Entraste a este mundo con sabiduría y compasión universal. La novena vibración te brinda la capacidad de ver el panorama más amplio y servir a la humanidad.",
+        talent: "Tu don especial es la realización y la liberación: ayudas a otros a terminar ciclos y seguir adelante. Tu compasión no conoce límites.",
+        expression: "Expresas este don a través del servicio y la expresión artística. Prosperas cuando trabajas por causas más importantes que tú mismo.",
+        challenge: "Aprender un sano desapego sin frialdad. Es posible que tengas dificultades para dejarlo ir o para convertirte en el salvador de todos.",
+        activation: "Este don se activa cuando sirves sin martirio. Tu amor te incluye a ti mismo.",
+        affirmation: "Nací para servir a la humanidad. Mi compasión sana al mundo."
     },
     10: {
-        title: "Born on the 10th - The Independent Innovator",
-        gift: "You entered this world with double leadership energy (1+0=1). You have powerful independence combined with the potential of new beginnings.",
-        talent: "Your special gift is starting fresh and leading with renewed vision. You can reinvent yourself and help others do the same.",
-        expression: "You express this gift through bold initiatives and original thinking. You're not just a leader—you're a pioneer of new paradigms.",
-        challenge: "Learning that your independence doesn't mean loneliness. Even revolutionaries need allies.",
-        activation: "This gift activates when you lead with both courage and wisdom. Pioneer with purpose.",
-        affirmation: "I was born to innovate and lead. My fresh vision creates new possibilities."
+        title: "Nacido el día 10 - El innovador independiente",
+        gift: "Entraste a este mundo con doble energía de liderazgo (1+0=1). Tienes una poderosa independencia combinada con el potencial de nuevos comienzos.",
+        talent: "Su don especial es comenzar de nuevo y liderar con una visión renovada. Puedes reinventarte y ayudar a otros a hacer lo mismo.",
+        expression: "Expresas este don a través de iniciativas audaces y pensamientos originales. No eres sólo un líder: eres un pionero de nuevos paradigmas.",
+        challenge: "Aprender que tu independencia no significa soledad. Incluso los revolucionarios necesitan aliados.",
+        activation: "Este don se activa cuando lideras con coraje y sabiduría. Pionero con propósito.",
+        affirmation: "Nací para innovar y liderar. Mi nueva visión crea nuevas posibilidades."
     },
     11: {
-        title: "Born on the 11th - The Spiritual Messenger",
-        gift: "You entered this world with Master Number 11—a double dose of intuition and inspiration. You're here to illuminate and inspire.",
-        talent: "Your special gift is channeling inspiration from higher sources. You receive visions and insights that can awaken others.",
-        expression: "You express this gift through teaching, healing, or creative work that uplifts. You're a natural spiritual messenger.",
-        challenge: "Learning to ground your visions practically. You may struggle with nervous energy or feeling too sensitive for this world.",
-        activation: "This gift activates when you trust your intuition completely and share your light without fear.",
-        affirmation: "I was born to inspire. My light illuminates paths for others."
+        title: "Nacido el día 11 - El Mensajero Espiritual",
+        gift: "Entraste a este mundo con el Maestro Número 11: una doble dosis de intuición e inspiración. Estás aquí para iluminar e inspirar.",
+        talent: "Tu don especial es canalizar la inspiración de fuentes superiores. Recibes visiones y conocimientos que pueden despertar a otros.",
+        expression: "Expresas este don a través de la enseñanza, la curación o el trabajo creativo que eleva. Eres un mensajero espiritual natural.",
+        challenge: "Aprender a fundamentar tus visiones de manera práctica. Puede que tengas problemas con la energía nerviosa o te sientas demasiado sensible para este mundo.",
+        activation: "Este don se activa cuando confías completamente en tu intuición y compartes tu luz sin miedo.",
+        affirmation: "Nací para inspirar. Mi luz ilumina caminos para los demás."
     },
     12: {
-        title: "Born on the 12th - The Creative Expresser",
-        gift: "You entered this world with the combined gifts of independence (1), cooperation (2), and creativity (3). You're a bridge between vision and expression.",
-        talent: "Your special gift is creative communication—you can take innovative ideas and express them in ways that connect with people emotionally.",
-        expression: "You express this gift through art, writing, speaking, or any medium that combines originality with emotional resonance.",
-        challenge: "Learning to focus your diverse talents. You may struggle with scattered energy or not taking your gifts seriously enough.",
-        activation: "This gift activates when you commit to a creative path and develop your unique voice.",
-        affirmation: "I was born to create and communicate. My voice carries light and truth."
+        title: "Nacido el día 12 - The Creative Expresser",
+        gift: "Entraste a este mundo con los dones combinados de independencia (1), cooperación (2) y creatividad (3). Eres un puente entre la visión y la expresión.",
+        talent: "Su don especial es la comunicación creativa: puede tomar ideas innovadoras y expresarlas de manera que conecten emocionalmente con las personas.",
+        expression: "Expresas este don a través del arte, la escritura, el habla o cualquier medio que combine originalidad con resonancia emocional.",
+        challenge: "Aprender a enfocar sus diversos talentos. Es posible que tengas problemas con la energía dispersa o por no tomar tus dones lo suficientemente en serio.",
+        activation: "Este don se activa cuando te comprometes con un camino creativo y desarrollas tu voz única.",
+        affirmation: "Nací para crear y comunicar. Mi voz lleva luz y verdad."
     },
     13: {
-        title: "Born on the 13th - The Transformative Builder",
-        gift: "You entered this world with the power of transformation (1+3=4). You rebuild what's broken and create new structures from ruins.",
-        talent: "Your special gift is practical transformation—you can take what isn't working and systematically rebuild it into something solid.",
-        expression: "You express this gift through hard work, perseverance, and the willingness to do what others won't. You're a phoenix in human form.",
-        challenge: "Learning that transformation doesn't require suffering. Sometimes the path can be easier than you make it.",
-        activation: "This gift activates when you apply your incredible work ethic to meaningful transformation, not just endless hustle.",
-        affirmation: "I was born to transform and rebuild. My persistence creates lasting change."
+        title: "Nacido el día 13 - El Constructor Transformador",
+        gift: "Entraste a este mundo con el poder de la transformación (1+3=4). Reconstruyes lo que está roto y creas nuevas estructuras a partir de las ruinas.",
+        talent: "Tu don especial es la transformación práctica: puedes tomar lo que no funciona y reconstruirlo sistemáticamente para convertirlo en algo sólido.",
+        expression: "Expresas este don a través del trabajo duro, la perseverancia y la voluntad de hacer lo que otros no hacen. Eres un fénix en forma humana.",
+        challenge: "Aprender que la transformación no requiere sufrimiento. A veces el camino puede ser más fácil de lo que uno lo hace.",
+        activation: "Este don se activa cuando aplicas tu increíble ética de trabajo a una transformación significativa, no solo a un ajetreo interminable.",
+        affirmation: "Nací para transformar y reconstruir. Mi persistencia crea un cambio duradero."
     },
     14: {
-        title: "Born on the 14th - The Adventurous Creator",
-        gift: "You entered this world with creative freedom (1+4=5). You need both stability and change, structure and adventure.",
-        talent: "Your special gift is constructive freedom—you can build systems that allow for flexibility and create structures that enable adventure.",
-        expression: "You express this gift through varied pursuits that have practical application. You're the organized adventurer, the methodical explorer.",
-        challenge: "Learning to balance your need for security with your craving for change. You may struggle with feeling torn between stability and freedom.",
-        activation: "This gift activates when you create a life with reliable foundations that support constant growth and change.",
-        affirmation: "I was born for structured adventure. I build the life that sets me free."
+        title: "Nacido el día 14 - El creador aventurero",
+        gift: "Entraste a este mundo con libertad creativa (1+4=5). Necesitas estabilidad y cambio, estructura y aventura.",
+        talent: "Tu don especial es la libertad constructiva: puedes construir sistemas que permitan flexibilidad y crear estructuras que permitan la aventura.",
+        expression: "Expresas este don a través de actividades variadas que tienen aplicación práctica. Eres el aventurero organizado, el explorador metódico.",
+        challenge: "Aprender a equilibrar su necesidad de seguridad con su ansia de cambio. Es posible que tenga dificultades para sentirse dividido entre la estabilidad y la libertad.",
+        activation: "Este don se activa cuando creas una vida con cimientos confiables que respaldan el crecimiento y el cambio constantes.",
+        affirmation: "Nací para la aventura estructurada. Construyo la vida que me hace libre."
     },
     15: {
-        title: "Born on the 15th - The Loving Teacher",
-        gift: "You entered this world with nurturing creativity (1+5=6). You teach through love and heal through beauty and expression.",
-        talent: "Your special gift is loving communication—you can express care in creative ways and help others feel seen and valued through your words and art.",
-        expression: "You express this gift through teaching, counseling, or any creative work that serves others' wellbeing.",
-        challenge: "Learning to set boundaries in your giving. You may struggle with over-responsibility or creative people-pleasing.",
-        activation: "This gift activates when you combine your creativity with service in ways that don't deplete you.",
-        affirmation: "I was born to nurture through creativity. My loving expression heals hearts."
+        title: "Nacido el día 15 - El Maestro Amoroso",
+        gift: "Entraste a este mundo con una creatividad enriquecedora (1+5=6). Enseñas a través del amor y sanas a través de la belleza y la expresión.",
+        talent: "Tu don especial es la comunicación amorosa: puedes expresar tu cariño de manera creativa y ayudar a los demás a sentirse vistos y valorados a través de tus palabras y tu arte.",
+        expression: "Expresas este don a través de la enseñanza, el asesoramiento o cualquier trabajo creativo que sirva al bienestar de los demás.",
+        challenge: "Aprender a establecer límites en sus donaciones. Es posible que tenga problemas con el exceso de responsabilidad o con complacer a las personas creativas.",
+        activation: "Este don se activa cuando combinas tu creatividad con el servicio de maneras que no te agoten.",
+        affirmation: "Nací para nutrirme a través de la creatividad. Mi expresión amorosa sana los corazones."
     },
     16: {
-        title: "Born on the 16th - The Spiritual Analyst",
-        gift: "You entered this world with deep intuitive wisdom (1+6=7). You combine spiritual insight with analytical precision.",
-        talent: "Your special gift is spiritual understanding—you can analyze both physical reality and metaphysical truth with equal skill.",
-        expression: "You express this gift through research, writing, or spiritual teaching that bridges the mystical and the practical.",
-        challenge: "Learning to balance solitude with connection. You may struggle with perfectionism or overthinking emotional matters.",
-        activation: "This gift activates when you trust both your mind and your intuition equally. Logic and mysticism are one.",
-        affirmation: "I was born to understand deeply. My wisdom bridges heaven and earth."
+        title: "Nacido el día 16 - El Analista Espiritual",
+        gift: "Entraste a este mundo con profunda sabiduría intuitiva (1+6=7). Combinas visión espiritual con precisión analítica.",
+        talent: "Tu don especial es la comprensión espiritual: puedes analizar tanto la realidad física como la verdad metafísica con igual habilidad.",
+        expression: "Expresas este don a través de la investigación, la escritura o la enseñanza espiritual que une lo místico y lo práctico.",
+        challenge: "Aprender a equilibrar la soledad con la conexión. Es posible que tenga dificultades con el perfeccionismo o con pensar demasiado en asuntos emocionales.",
+        activation: "Este don se activa cuando confías por igual tanto en tu mente como en tu intuición. La lógica y el misticismo son uno.",
+        affirmation: "Nací para comprender profundamente. Mi sabiduría une el cielo y la tierra."
     },
     17: {
-        title: "Born on the 17th - The Manifesting Mystic",
-        gift: "You entered this world with material mastery combined with spiritual wisdom (1+7=8). You can manifest spiritual vision into physical form.",
-        talent: "Your special gift is grounded mysticism—you understand both the spiritual laws and how to apply them practically for material success.",
-        expression: "You express this gift through building spiritual businesses, creating abundance with integrity, or leading with both power and wisdom.",
-        challenge: "Learning to balance material ambition with spiritual values. You may struggle with choosing between money and meaning.",
-        activation: "This gift activates when you realize that true power serves spirit and true spirituality isn't afraid of material success.",
-        affirmation: "I was born to manifest with wisdom. My power serves the highest good."
+        title: "Nacido el día 17 - El Místico Manifestante",
+        gift: "Entraste a este mundo con dominio material combinado con sabiduría espiritual (1+7=8). Puedes manifestar la visión espiritual en forma física.",
+        talent: "Tu don especial es el misticismo fundamentado: comprendes tanto las leyes espirituales como cómo aplicarlas en la práctica para lograr el éxito material.",
+        expression: "Usted expresa este don construyendo negocios espirituales, creando abundancia con integridad o liderando con poder y sabiduría.",
+        challenge: "Aprender a equilibrar la ambición material con los valores espirituales. Es posible que tenga dificultades para elegir entre dinero y significado.",
+        activation: "Este don se activa cuando te das cuenta de que el verdadero poder sirve al espíritu y que la verdadera espiritualidad no teme al éxito material.",
+        affirmation: "Nací para manifestarme con sabiduría. Mi poder sirve al bien supremo."
     },
     18: {
-        title: "Born on the 18th - The Compassionate Leader",
-        gift: "You entered this world with humanitarian leadership (1+8=9). You lead through service and achieve through compassion.",
-        talent: "Your special gift is influential compassion—you can create change at scale while keeping your heart open to all beings.",
-        expression: "You express this gift through leadership roles in service organizations, humanitarian work, or any position where power meets compassion.",
-        challenge: "Learning that you can't save everyone. You may struggle with taking on the world's pain or burnout from over-giving.",
-        activation: "This gift activates when you use your considerable power and influence for the highest good of all.",
-        affirmation: "I was born to lead with love. My power serves humanity's evolution."
+        title: "Nacido el día 18 - El líder compasivo",
+        gift: "Entraste a este mundo con liderazgo humanitario (1+8=9). Lideras a través del servicio y logras a través de la compasión.",
+        talent: "Tu don especial es la compasión influyente: puedes crear cambios a escala mientras mantienes tu corazón abierto a todos los seres.",
+        expression: "Usted expresa este don a través de roles de liderazgo en organizaciones de servicio, trabajo humanitario o cualquier puesto donde el poder se encuentre con la compasión.",
+        challenge: "Aprender que no puedes salvar a todos. Es posible que le cueste asumir el dolor del mundo o el agotamiento por dar demasiado.",
+        activation: "Este don se activa cuando utilizas tu considerable poder e influencia para el mayor bien de todos.",
+        affirmation: "Nací para liderar con amor. Mi poder sirve a la evolución de la humanidad."
     },
     19: {
-        title: "Born on the 19th - The Complete Innovator",
-        gift: "You entered this world with powerful independence doubled (1+9=10=1). You're here to start completely new paradigms.",
-        talent: "Your special gift is radical originality—you don't just lead, you completely reinvent what leadership means. You end old eras and begin new ones.",
-        expression: "You express this gift through revolutionary work that challenges existing structures and creates entirely new ways of being.",
-        challenge: "Learning that even revolutionaries need support. You may struggle with extreme independence or feeling like no one understands.",
-        activation: "This gift activates when you embrace your role as a paradigm-shifter and find others who share your vision.",
-        affirmation: "I was born to revolutionize. My vision creates new worlds."
+        title: "Nacido el día 19: el innovador total",
+        gift: "Entraste a este mundo con una poderosa independencia duplicada (1+9=10=1). Estás aquí para iniciar paradigmas completamente nuevos.",
+        talent: "Tu don especial es la originalidad radical: no sólo lideras, sino que reinventas por completo lo que significa liderazgo. Terminas viejas eras y comienzas otras nuevas.",
+        expression: "Expresas este don a través de un trabajo revolucionario que desafía las estructuras existentes y crea formas de ser completamente nuevas.",
+        challenge: "Aprender que incluso los revolucionarios necesitan apoyo. Es posible que tenga dificultades con una independencia extrema o sienta que nadie lo entiende.",
+        activation: "Este don se activa cuando aceptas tu papel como cambiador de paradigmas y encuentras a otras personas que comparten tu visión.",
+        affirmation: "Nací para revolucionar. Mi visión crea nuevos mundos."
     },
     20: {
-        title: "Born on the 20th - The Intuitive Partner",
-        gift: "You entered this world with doubled sensitivity (2+0=2). You're exquisitely attuned to emotional and spiritual currents.",
-        talent: "Your special gift is profound empathy—you feel what others feel and can create deep soul connections. Your intuition is remarkably accurate.",
-        expression: "You express this gift through counseling, healing work, or any role where emotional intelligence and partnership are central.",
-        challenge: "Learning to distinguish between your feelings and others'. You may struggle with emotional overwhelm or losing your identity in relationships.",
-        activation: "This gift activates when you honor your sensitivity as sacred and use it to heal without absorbing others' pain.",
-        affirmation: "I was born to feel deeply and connect truly. My sensitivity is my superpower."
+        title: "Nacido el día 20 - El socio intuitivo",
+        gift: "Entraste a este mundo con doble sensibilidad (2+0=2). Estás exquisitamente en sintonía con las corrientes emocionales y espirituales.",
+        talent: "Tu don especial es la profunda empatía: sientes lo que otros sienten y puedes crear conexiones profundas en el alma. Tu intuición es notablemente precisa.",
+        expression: "Expresas este don a través del asesoramiento, el trabajo de curación o cualquier rol donde la inteligencia emocional y la colaboración sean fundamentales.",
+        challenge: "Aprender a distinguir entre tus sentimientos y los de los demás. Es posible que tenga que luchar contra el abrumador emocional o la pérdida de su identidad en las relaciones.",
+        activation: "Este don se activa cuando honras tu sensibilidad como sagrada y la usas para sanar sin absorber el dolor de los demás.",
+        affirmation: "Nací para sentir profundamente y conectarme verdaderamente. Mi sensibilidad es mi superpoder."
     },
     21: {
-        title: "Born on the 21st - The Joyful Creator",
-        gift: "You entered this world with optimistic creativity (2+1=3). You combine emotional intelligence with expressive talent.",
-        talent: "Your special gift is emotional artistry—you can create work that touches hearts and express feelings in ways that heal and inspire.",
-        expression: "You express this gift through any creative medium that allows emotional expression—music, art, writing, performance, or design.",
-        challenge: "Learning to channel your emotional sensitivity into focused creative work. You may struggle with scattered energy or emotional volatility.",
-        activation: "This gift activates when you use your creativity to process and share emotional truth, not just entertain.",
-        affirmation: "I was born to create from the heart. My art heals emotional wounds."
+        title: "Nacido el día 21 - El Creador Gozoso",
+        gift: "Entraste a este mundo con creatividad optimista (2+1=3). Combinas inteligencia emocional con talento expresivo.",
+        talent: "Tu don especial es el arte emocional: puedes crear trabajos que toquen corazones y expresen sentimientos de maneras que sanen e inspiren.",
+        expression: "Expresas este don a través de cualquier medio creativo que permita la expresión emocional: música, arte, escritura, interpretación o diseño.",
+        challenge: "Aprender a canalizar su sensibilidad emocional hacia un trabajo creativo enfocado. Es posible que tenga problemas con la energía dispersa o la volatilidad emocional.",
+        activation: "Este don se activa cuando usas tu creatividad para procesar y compartir la verdad emocional, no solo para entretener.",
+        affirmation: "Nací para crear desde el corazón. Mi arte cura heridas emocionales."
     },
     22: {
-        title: "Born on the 22nd - The Master Builder",
-        gift: "You entered this world with Master Number 22—the highest manifestation energy. You're here to build something that serves generations.",
-        talent: "Your special gift is visionary construction—you can see grand visions and have the practical ability to actually build them in the physical world.",
-        expression: "You express this gift through large-scale projects, institutions, or systems that have lasting impact and serve many people.",
-        challenge: "Learning to handle the pressure of your own potential without breaking. You may struggle with the weight of what you came to do.",
-        activation: "This gift activates when you accept your role as a master builder and commit to your legacy work.",
-        affirmation: "I was born to build for humanity. My work serves generations to come."
+        title: "Nacido el día 22 - El Maestro Constructor",
+        gift: "Entraste a este mundo con el Maestro Número 22: la energía de manifestación más elevada. Estás aquí para construir algo que sirva a generaciones.",
+        talent: "Tu don especial es la construcción visionaria: puedes tener grandes visiones y tener la capacidad práctica de construirlas en el mundo físico.",
+        expression: "Expresas este don a través de proyectos, instituciones o sistemas a gran escala que tienen un impacto duradero y sirven a muchas personas.",
+        challenge: "Aprender a manejar la presión de tu propio potencial sin romperte. Puede que tengas dificultades con el peso de lo que viniste a hacer.",
+        activation: "Este regalo se activa cuando aceptas tu rol como maestro constructor y te comprometes con tu legado de trabajo.",
+        affirmation: "Nací para construir para la humanidad. Mi trabajo sirve a las generaciones venideras."
     },
     23: {
-        title: "Born on the 23rd - The Dynamic Communicator",
-        gift: "You entered this world with expressive freedom (2+3=5). You need to communicate freely and express yourself in diverse ways.",
-        talent: "Your special gift is versatile expression—you can adapt your communication style to any audience and make complex ideas accessible and engaging.",
-        expression: "You express this gift through teaching, speaking, writing, or media work that reaches diverse audiences with emotional intelligence.",
-        challenge: "Learning to commit to a message without needing to please everyone. You may struggle with saying what you really think.",
-        activation: "This gift activates when you use your communication gifts with authenticity, not just to entertain or placate.",
-        affirmation: "I was born to communicate truth with grace. My words create understanding."
+        title: "Nacido el día 23 - El comunicador dinámico",
+        gift: "Entraste a este mundo con libertad expresiva (2+3=5). Necesitas comunicarte libremente y expresarte de diversas maneras.",
+        talent: "Su don especial es la expresión versátil: puede adaptar su estilo de comunicación a cualquier audiencia y hacer que las ideas complejas sean accesibles y atractivas.",
+        expression: "Usted expresa este don a través de la enseñanza, el habla, la escritura o el trabajo en los medios que llega a audiencias diversas con inteligencia emocional.",
+        challenge: "Aprender a comprometerse con un mensaje sin necesidad de complacer a todos. Es posible que le cueste decir lo que realmente piensa.",
+        activation: "Este don se activa cuando utilizas tus dones comunicativos con autenticidad, no sólo para entretener o aplacar.",
+        affirmation: "Nací para comunicar la verdad con gracia. Mis palabras crean comprensión."
     },
     24: {
-        title: "Born on the 24th - The Caring Organizer",
-        gift: "You entered this world with nurturing practicality (2+4=6). You care for others through creating systems and structures that support wellbeing.",
-        talent: "Your special gift is systematic care—you can organize family life, create sustainable support systems, and build beautiful, functional environments.",
-        expression: "You express this gift through home management, healthcare, education, or any field where caring meets practical organization.",
-        challenge: "Learning that perfection isn't required for love. You may struggle with control disguised as care or excessive worry.",
-        activation: "This gift activates when you build sustainable systems of care that don't require your constant presence.",
-        affirmation: "I was born to nurture with wisdom. My organized love creates lasting security."
+        title: "Nacido el día 24 - The Caring Organizer",
+        gift: "Entraste a este mundo con una practicidad enriquecedora (2+4=6). Te preocupas por los demás mediante la creación de sistemas y estructuras que apoyen el bienestar.",
+        talent: "Su don especial es el cuidado sistemático: puede organizar la vida familiar, crear sistemas de apoyo sostenibles y construir entornos hermosos y funcionales.",
+        expression: "Usted expresa este don a través de la administración del hogar, la atención médica, la educación o cualquier campo donde el cuidado se une a la organización práctica.",
+        challenge: "Aprender que la perfección no es necesaria para el amor. Es posible que tenga dificultades para controlar el control disfrazado de cuidado o preocupación excesiva.",
+        activation: "Este don se activa cuando construyes sistemas de atención sostenibles que no requieren tu presencia constante.",
+        affirmation: "Nací para nutrir con sabiduría. Mi amor organizado crea una seguridad duradera."
     },
     25: {
-        title: "Born on the 25th - The Wise Adventurer",
-        gift: "You entered this world with seeking freedom (2+5=7). You need both deep understanding and diverse experience.",
-        talent: "Your special gift is philosophical exploration—you seek truth through experience and gain wisdom through adventure, not just books.",
-        expression: "You express this gift through travel, teaching, writing, or spiritual work that combines intellectual depth with real-world experience.",
-        challenge: "Learning to balance your need for solitude with your love of variety. You may struggle with restlessness or intellectual escapism.",
-        activation: "This gift activates when you pursue wisdom through both inner exploration and outer adventure.",
-        affirmation: "I was born to seek truth everywhere. My wisdom comes from living fully."
+        title: "Nacido el día 25 - El sabio aventurero",
+        gift: "Entraste a este mundo buscando libertad (2+5=7). Necesita tanto una comprensión profunda como una experiencia diversa.",
+        talent: "Tu don especial es la exploración filosófica: buscas la verdad a través de la experiencia y adquieres sabiduría a través de la aventura, no sólo de los libros.",
+        expression: "Este don se expresa a través de viajes, enseñanza, escritura o trabajo espiritual que combina la profundidad intelectual con la experiencia del mundo real.",
+        challenge: "Aprender a equilibrar su necesidad de soledad con su amor por la variedad. Es posible que tenga dificultades con la inquietud o el escapismo intelectual.",
+        activation: "Este don se activa cuando buscas la sabiduría tanto a través de la exploración interior como de la aventura exterior.",
+        affirmation: "Nací para buscar la verdad en todas partes. Mi sabiduría proviene de vivir plenamente."
     },
     26: {
-        title: "Born on the 26th - The Powerful Nurturer",
-        gift: "You entered this world with ambitious caring (2+6=8). You want to care for others at scale and create security through achievement.",
-        talent: "Your special gift is influential nurturing—you can build systems, businesses, or organizations that care for many people effectively.",
-        expression: "You express this gift through leadership in healthcare, education, family business, or any enterprise that serves wellbeing.",
-        challenge: "Learning that caring doesn't mean controlling. You may struggle with providing for others while neglecting yourself.",
-        activation: "This gift activates when you build structures of care without losing your own needs in the process.",
-        affirmation: "I was born to nurture with power. My care creates lasting impact."
+        title: "Nacido el día 26 - El Poderoso Criador",
+        gift: "Entraste a este mundo con un cariño ambicioso (2+6=8). Quiere cuidar de los demás a gran escala y crear seguridad a través de los logros.",
+        talent: "Su don especial es la crianza influyente: puede crear sistemas, empresas u organizaciones que atiendan a muchas personas de manera eficaz.",
+        expression: "Usted expresa este don a través del liderazgo en atención médica, educación, empresas familiares o cualquier empresa que sirva al bienestar.",
+        challenge: "Aprender que cuidar no significa controlar. Es posible que tenga dificultades para mantener a los demás mientras se descuida a sí mismo.",
+        activation: "Este don se activa cuando construyes estructuras de cuidado sin perder tus propias necesidades en el proceso.",
+        affirmation: "Nací para nutrirme con poder. Mi cuidado crea un impacto duradero."
     },
     27: {
-        title: "Born on the 27th - The Compassionate Mystic",
-        gift: "You entered this world with humanitarian wisdom (2+7=9). You combine deep spiritual understanding with universal compassion.",
-        talent: "Your special gift is spiritual service—you can access profound wisdom and share it in ways that heal and awaken others.",
-        expression: "You express this gift through healing, spiritual teaching, counseling, or any work that serves humanity's evolution.",
-        challenge: "Learning to stay grounded while accessing higher wisdom. You may struggle with being too otherworldly or taking on others' karma.",
-        activation: "This gift activates when you anchor your spiritual gifts in service without losing yourself.",
-        affirmation: "I was born to heal with wisdom. My compassion knows no bounds."
+        title: "Nacido el día 27 - El Místico Compasivo",
+        gift: "Entraste a este mundo con sabiduría humanitaria (2+7=9). Combinas una profunda comprensión espiritual con la compasión universal.",
+        talent: "Tu don especial es el servicio espiritual: puedes acceder a una sabiduría profunda y compartirla de manera que sane y despierte a otros.",
+        expression: "Expresas este regalo a través de sanación, enseñanza espiritual, asesoramiento o cualquier trabajo que sirva a la evolución de la humanidad.",
+        challenge: "Aprender a mantenerse firme mientras accede a una sabiduría superior. Es posible que tengas dificultades para ser demasiado de otro mundo o para asumir el karma de los demás.",
+        activation: "Este don se activa cuando anclas tus dones espirituales en el servicio sin perderte.",
+        affirmation: "Nací para sanar con sabiduría. Mi compasión no conoce límites."
     },
     28: {
-        title: "Born on the 28th - The Empowered Creator",
-        gift: "You entered this world with creative independence (2+8=10=1). You express yourself powerfully and create with authority.",
-        talent: "Your special gift is authoritative creativity—you can lead creative projects, build artistic enterprises, or express yourself with confidence and power.",
-        expression: "You express this gift through creative leadership, artistic direction, or building platforms that showcase creative talent.",
-        challenge: "Learning to collaborate without losing your vision. You may struggle with needing too much control over creative output.",
-        activation: "This gift activates when you own your creative power and use it to elevate others' voices too.",
-        affirmation: "I was born to create with power. My vision manifests boldly."
+        title: "Nacido el día 28 - El Creador Empoderado",
+        gift: "Entraste a este mundo con independencia creativa (2+8=10=1). Te expresas poderosamente y creas con autoridad.",
+        talent: "Tu don especial es la creatividad autoritaria: puedes liderar proyectos creativos, crear empresas artísticas o expresarte con confianza y poder.",
+        expression: "Este don se expresa a través del liderazgo creativo, la dirección artística o la construcción de plataformas que muestren el talento creativo.",
+        challenge: "Aprender a colaborar sin perder la visión. Es posible que tenga dificultades para necesitar demasiado control sobre la producción creativa.",
+        activation: "Este don se activa cuando eres dueño de tu poder creativo y lo utilizas para elevar también las voces de los demás.",
+        affirmation: "Nací para crear con poder. Mi visión se manifiesta con valentía."
     },
     29: {
-        title: "Born on the 29th - The Master Intuitive",
-        gift: "You entered this world with Master Number 11 energy (2+9=11). You have powerful intuition combined with universal compassion.",
-        talent: "Your special gift is inspired service—you receive spiritual guidance and use it to serve humanity's highest good.",
-        expression: "You express this gift through spiritual teaching, healing, or creative work that awakens and inspires collective consciousness.",
-        challenge: "Learning to ground your powerful intuition. You may struggle with overwhelm from being so open or difficulty functioning in mundane reality.",
-        activation: "This gift activates when you trust your visions completely and share them courageously in service of all.",
-        affirmation: "I was born to channel light. My intuition serves humanity's awakening."
+        title: "Nacido el día 29 - El Maestro Intuitivo",
+        gift: "Entraste a este mundo con la energía Maestro Número 11 (2+9=11). Tienes una intuición poderosa combinada con compasión universal.",
+        talent: "Tu don especial es el servicio inspirado: recibes guía espiritual y la utilizas para servir al mayor bien de la humanidad.",
+        expression: "Expresas este don a través de la enseñanza espiritual, la curación o el trabajo creativo que despierta e inspira la conciencia colectiva.",
+        challenge: "Aprendiendo a fundamentar tu poderosa intuición. Es posible que tenga dificultades para sentirse abrumado por ser tan abierto o tener dificultades para funcionar en la realidad mundana.",
+        activation: "Este don se activa cuando confías completamente en tus visiones y las compartes con valentía al servicio de todos.",
+        affirmation: "Nací para canalizar la luz. Mi intuición sirve al despertar de la humanidad."
     },
     30: {
-        title: "Born on the 30th - The Expressive Communicator",
-        gift: "You entered this world with pure creative expression (3+0=3). Your creativity is your purpose and your joy.",
-        talent: "Your special gift is joyful creation—you naturally uplift others through your words, art, presence, or creative spirit.",
-        expression: "You express this gift through any creative medium that allows pure self-expression and brings joy to others.",
-        challenge: "Learning to take your gifts seriously. You may struggle with scattered focus or undervaluing your creative contributions.",
-        activation: "This gift activates when you commit fully to your creative path and share your joy without holding back.",
-        affirmation: "I was born to create joy. My expression is medicine for weary souls."
+        title: "Nacido el día 30 - El comunicador expresivo",
+        gift: "Entraste a este mundo con pura expresión creativa (3+0=3). Tu creatividad es tu propósito y tu alegría.",
+        talent: "Tu don especial es la creación gozosa: naturalmente elevas a los demás a través de tus palabras, arte, presencia o espíritu creativo.",
+        expression: "Expresas este don a través de cualquier medio creativo que permita la autoexpresión pura y brinde alegría a los demás.",
+        challenge: "Aprender a tomar en serio tus dones. Es posible que tenga dificultades para concentrarse de manera dispersa o para subestimar sus contribuciones creativas.",
+        activation: "Este regalo se activa cuando te comprometes plenamente con tu camino creativo y compartes tu alegría sin reprimirte.",
+        affirmation: "Nací para crear alegría. Mi expresión es medicina para almas cansadas."
     },
     31: {
-        title: "Born on the 31st - The Practical Creator",
-        gift: "You entered this world with grounded creativity (3+1=4). You can manifest creative visions into tangible, lasting form.",
-        talent: "Your special gift is sustainable artistry—you combine creative talent with practical application, building creative work that endures.",
-        expression: "You express this gift through creative businesses, applied arts, or any field where imagination meets discipline and produces real results.",
-        challenge: "Learning to balance creative freedom with necessary structure. You may struggle with feeling torn between artistic flow and practical demands.",
-        activation: "This gift activates when you build systems that support your creativity rather than stifle it.",
-        affirmation: "I was born to create with discipline. My art is both beautiful and built to last."
+        title: "Nacido el día 31 - El Creador Práctico",
+        gift: "Entraste a este mundo con una creatividad sólida (3+1=4). Puedes manifestar visiones creativas en forma tangible y duradera.",
+        talent: "Tu don especial es el arte sostenible: combinas el talento creativo con la aplicación práctica, creando un trabajo creativo que perdura.",
+        expression: "Expresas este don a través de negocios creativos, artes aplicadas o cualquier campo donde la imaginación se une a la disciplina y produce resultados reales.",
+        challenge: "Aprender a equilibrar la libertad creativa con la estructura necesaria. Es posible que tenga dificultades para sentirse dividido entre el flujo artístico y las exigencias prácticas.",
+        activation: "Este don se activa cuando construyes sistemas que apoyan tu creatividad en lugar de sofocarla.",
+        affirmation: "Nací para crear con disciplina. Mi arte es hermoso y está hecho para durar."
     }
 };
 
@@ -1128,112 +1128,112 @@ var DEEP_BIRTHDAY_NUMBER_READINGS = {
 
 var DEEP_PERSONAL_YEAR_READINGS = {
     1: {
-        title: "Personal Year 1 - The Year of New Beginnings",
+        title: "Año personal 1: el año de los nuevos comienzos",
         theme: "This is your fresh start year—a time to plant seeds, initiate projects, and step into a new chapter of your life with courage and independence.",
-        energy: "The energy of this year is pioneering, independent, and action-oriented. You'll feel a strong pull to start something new, whether it's a project, relationship, career path, or personal transformation. This is not a year for maintaining the status quo—it's a year for bold moves.",
-        opportunities: "Opportunities arrive through initiative and courage. Start that business. Make that big change. Take the lead on a project. Assert your independence. Begin the thing you've been thinking about. The universe rewards decisive action this year.",
-        challenges: "The challenges include impatience, isolation, and the temptation to rush without planning. You may feel lonely as you forge ahead, or frustrated when others don't move at your pace. Learning to balance independence with collaboration is key.",
-        relationships: "In relationships, you may feel more independent or even selfish this year. New relationships begun now often have a karmic, destiny quality. Existing relationships need you to maintain your identity while staying connected.",
-        career: "Career-wise, this is THE year for new beginnings—starting a business, launching a product, taking a leadership role, or changing fields entirely. Your professional confidence is high. Use it.",
-        spiritual: "Spiritually, you're learning about self-reliance and the courage to walk your unique path. This year teaches you that you have everything you need within you to begin again.",
-        advice: "Do the thing you're afraid to do. Start before you're ready. Take the lead. Be bold. This year will not come again for 9 years—make it count.",
-        affirmation: "I courageously begin. This is my year to lead and initiate."
+        energy: "La energía de este año es pionera, independiente y orientada a la acción. Sentirás un fuerte impulso para comenzar algo nuevo, ya sea un proyecto, una relación, una carrera profesional o una transformación personal. Este no es un año para mantener el status quo; es un año para tomar medidas audaces.",
+        opportunities: "Las oportunidades llegan a través de la iniciativa y el coraje. Inicia ese negocio. Haz ese gran cambio. Tomar la iniciativa en un proyecto. Afirma tu independencia. Comienza lo que has estado pensando. El universo recompensa la acción decisiva este año.",
+        challenges: "Los desafíos incluyen la impaciencia, el aislamiento y la tentación de apresurarse sin planificación. Es posible que se sienta solo a medida que avanza o frustrado cuando otros no avanzan a su ritmo. Aprender a equilibrar la independencia con la colaboración es clave.",
+        relationships: "En las relaciones, es posible que este año te sientas más independiente o incluso egoísta. Las nuevas relaciones iniciadas ahora a menudo tienen una cualidad kármica y de destino. Las relaciones existentes necesitan que usted mantenga su identidad mientras permanece conectado.",
+        career: "En cuanto a la carrera profesional, este es EL año para nuevos comienzos: iniciar un negocio, lanzar un producto, asumir un rol de liderazgo o cambiar de campo por completo. Tu confianza profesional es alta. Úselo.",
+        spiritual: "Espiritualmente, estás aprendiendo sobre la autosuficiencia y el coraje para recorrer tu camino único. Este año te enseña que tienes todo lo que necesitas dentro de ti para comenzar de nuevo.",
+        advice: "Haz lo que tienes miedo de hacer. Comience antes de que esté listo. Tomar la cabeza. Sea audaz. Este año no volverá hasta dentro de 9 años: haz que cuente.",
+        affirmation: "Empiezo con valentía. Este es mi año para liderar e iniciar."
     },
     2: {
-        title: "Personal Year 2 - The Year of Partnerships",
+        title: "Año personal 2: el año de las asociaciones",
         theme: "This is your cooperation year—a time to build relationships, practice patience, and let things develop at their own pace.",
-        energy: "The energy of this year is receptive, cooperative, and relationship-focused. After last year's bold initiatives, this year asks you to slow down, nurture connections, and pay attention to details. Partnership and diplomacy are your superpowers now.",
-        opportunities: "Opportunities arrive through collaboration and patience. Partnership opportunities appear—in business, romance, or friendship. Projects begun last year need careful tending. Your ability to listen and cooperate opens doors.",
-        challenges: "The challenges include impatience with slow progress, codependency, and hypersensitivity. You may feel like nothing is happening or that you're too dependent on others. Trust the process—seeds planted last year are germinating underground.",
-        relationships: "In relationships, this is a powerful year for deepening bonds and for significant relationships to enter your life. You're more emotionally available and intuitive about others' needs. Meaningful partnerships form now.",
-        career: "Career-wise, this is a year for teamwork, support roles, and behind-the-scenes work. You advance through collaboration, not solo achievement. Build alliances. Be the essential partner.",
-        spiritual: "Spiritually, you're learning about receptivity, divine timing, and the power of the pause. This year teaches you that doing nothing is sometimes doing everything.",
-        advice: "Be patient. Nurture what you started. Build relationships. Pay attention to details. Trust that things are developing even when you can't see progress. This is germination time.",
-        affirmation: "I trust divine timing. My patience and cooperation create lasting bonds."
+        energy: "La energía de este año es receptiva, cooperativa y centrada en las relaciones. Después de las audaces iniciativas del año pasado, este año les pide que disminuyan la velocidad, fomenten las conexiones y presten atención a los detalles. La asociación y la diplomacia son ahora tus superpoderes.",
+        opportunities: "Las oportunidades llegan gracias a la colaboración y la paciencia. Aparecen oportunidades de asociación: en los negocios, el romance o la amistad. Los proyectos iniciados el año pasado necesitan una atención cuidadosa. Tu capacidad de escuchar y cooperar abre puertas.",
+        challenges: "Los desafíos incluyen la impaciencia por el lento progreso, la codependencia y la hipersensibilidad. Es posible que sienta que no pasa nada o que depende demasiado de los demás. Confíe en el proceso: las semillas plantadas el año pasado están germinando bajo tierra.",
+        relationships: "En las relaciones, este es un año poderoso para profundizar los vínculos y para que relaciones importantes entren en tu vida. Estás más disponible emocionalmente e intuitivo sobre las necesidades de los demás. Ahora se forman asociaciones significativas.",
+        career: "En cuanto a la carrera, este es un año para el trabajo en equipo, roles de apoyo y trabajo detrás de escena. Avanzas a través de la colaboración, no del logro en solitario. Construir alianzas. Sea el socio esencial.",
+        spiritual: "Espiritualmente, estás aprendiendo sobre la receptividad, el momento divino y el poder de la pausa. Este año te enseña que no hacer nada a veces es hacerlo todo.",
+        advice: "Ser paciente. Nutre lo que empezaste. Construya relaciones. Presta atención a los detalles. Confía en que las cosas se están desarrollando incluso cuando no puedas ver el progreso. Este es el momento de la germinación.",
+        affirmation: "Confío en el momento divino. Mi paciencia y cooperación crean vínculos duraderos."
     },
     3: {
-        title: "Personal Year 3 - The Year of Creative Expression",
+        title: "Año personal 3: el año de la expresión creativa",
         theme: "This is your expression year—a time to create, communicate, play, and let your unique voice be heard.",
-        energy: "The energy of this year is creative, social, and expressive. You'll feel lighter, more optimistic, and creatively inspired. This is the year to share your gifts, enjoy life, and express yourself authentically.",
-        opportunities: "Opportunities arrive through creativity and communication. Creative projects flourish. Social invitations increase. Your voice finds its audience. This is THE year to share your art, write that book, start that channel, or express yourself publicly.",
-        challenges: "The challenges include scattered energy, superficiality, and creative blocks born from self-judgment. You may start many things without finishing them, or use socializing to avoid deeper work. Focus is your friend.",
-        relationships: "In relationships, this is a fun, light year. You're more charming and socially active. Romance has a playful quality. You attract people through your creative expression and joy.",
-        career: "Career-wise, this is excellent for creative fields, communication roles, teaching, marketing, or any work requiring self-expression. You shine when speaking, presenting, or showcasing your talents.",
-        spiritual: "Spiritually, you're learning that joy is sacred and that your creative expression is a spiritual act. This year teaches you that your unique voice matters.",
-        advice: "Create. Express. Play. Don't worry so much about perfection—just share. Take that creative risk. Your joy is medicine for others. Let yourself be seen.",
-        affirmation: "I express my authentic self with joy. My creativity flows freely and abundantly."
+        energy: "La energía de este año es creativa, social y expresiva. Te sentirás más ligero, más optimista e inspirado creativamente. Este es el año para compartir tus dones, disfrutar la vida y expresarte auténticamente.",
+        opportunities: "Las oportunidades llegan a través de la creatividad y la comunicación. Los proyectos creativos florecen. Aumentan las invitaciones sociales. Tu voz encuentra su audiencia. Este es EL año para compartir tu arte, escribir ese libro, iniciar ese canal o expresarte públicamente.",
+        challenges: "Los desafíos incluyen energía dispersa, superficialidad y bloqueos creativos nacidos del autocrítico. Puede que empieces muchas cosas sin terminarlas, o que utilices la socialización para evitar un trabajo más profundo. El enfoque es tu amigo.",
+        relationships: "En las relaciones, este es un año luz divertido. Eres más encantador y socialmente activo. El romance tiene una cualidad lúdica. Atraes gente a través de tu expresión creativa y alegría.",
+        career: "En cuanto a la carrera, esto es excelente para campos creativos, roles de comunicación, enseñanza, marketing o cualquier trabajo que requiera autoexpresión. Brillas al hablar, presentar o mostrar tus talentos.",
+        spiritual: "Espiritualmente, estás aprendiendo que la alegría es sagrada y que tu expresión creativa es un acto espiritual. Este año te enseña que tu voz única importa.",
+        advice: "Crear. Expresar. Jugar. No te preocupes tanto por la perfección, solo comparte. Toma ese riesgo creativo. Tu alegría es medicina para los demás. Déjate ver.",
+        affirmation: "Expreso mi yo auténtico con alegría. Mi creatividad fluye libre y abundantemente."
     },
     4: {
-        title: "Personal Year 4 - The Year of Building Foundations",
+        title: "Año personal 4: el año de construir los cimientos",
         theme: "This is your foundation year—a time to work hard, create structure, and build something that will last.",
-        energy: "The energy of this year is practical, disciplined, and work-focused. After last year's creative expansion, this year asks you to get serious, organize, and put in the effort. This is not a glamorous year, but it's essential.",
-        opportunities: "Opportunities arrive through hard work and practical application. Real estate, home projects, career advancement through diligence, and creating systems all favor you now. Your perseverance pays off.",
-        challenges: "The challenges include overwork, rigidity, and missing the forest for the trees. You may feel burdened by responsibility or frustrated by slow progress. Remember: you're building a foundation, and foundations take time.",
-        relationships: "In relationships, this is a year to create stability and commitment. Relationships either deepen through shared responsibility or reveal themselves as unstable. You need partners who are reliable.",
-        career: "Career-wise, this is a year of solid progress through consistent effort. Promotions come through proving your reliability. Building your business brick by brick. Establishing your reputation.",
-        spiritual: "Spiritually, you're learning that the sacred lives in the ordinary, that enlightenment can be found in daily practice. This year teaches you that commitment itself is a spiritual path.",
-        advice: "Do the work. Build the foundation. Stay disciplined. Don't cut corners. What you build this year will support you for years to come. Trust the process, even when it's unglamorous.",
-        affirmation: "I build lasting value through patient, consistent effort. My foundation is solid."
+        energy: "La energía de este año es práctica, disciplinada y centrada en el trabajo. Después de la expansión creativa del año pasado, este año te pide que te tomes en serio, te organices y te esfuerces. Este no es un año glamoroso, pero es esencial.",
+        opportunities: "Las oportunidades llegan a través del trabajo duro y la aplicación práctica. Los bienes raíces, los proyectos de viviendas, el avance profesional a través de la diligencia y la creación de sistemas le favorecen ahora. Tu perseverancia vale la pena.",
+        challenges: "Los desafíos incluyen exceso de trabajo, rigidez y perder el bosque por los árboles. Es posible que se sienta agobiado por la responsabilidad o frustrado por el lento progreso. Recuerde: está construyendo una base y la base lleva tiempo.",
+        relationships: "En las relaciones, este es un año para crear estabilidad y compromiso. Las relaciones se profundizan a través de la responsabilidad compartida o se revelan inestables. Necesita socios que sean fiables.",
+        career: "En cuanto a mi carrera profesional, este es un año de progreso sólido a través de un esfuerzo constante. Los ascensos se obtienen al demostrar su confiabilidad. Construyendo tu negocio ladrillo a ladrillo. Estableciendo su reputación.",
+        spiritual: "Espiritualmente, estás aprendiendo que lo sagrado vive en lo ordinario, que la iluminación se puede encontrar en la práctica diaria. Este año te enseña que el compromiso en sí es un camino espiritual.",
+        advice: "Haz el trabajo. Construye los cimientos. Manténgase disciplinado. No tomes atajos. Lo que construyas este año te respaldará en los años venideros. Confíe en el proceso, incluso cuando no sea glamoroso.",
+        affirmation: "Construyo valor duradero a través de un esfuerzo paciente y constante. Mi base es sólida."
     },
     5: {
-        title: "Personal Year 5 - The Year of Freedom and Change",
+        title: "Año personal 5: el año de la libertad y el cambio",
         theme: "This is your freedom year—a time for adventure, change, and embracing the unexpected.",
-        energy: "The energy of this year is dynamic, unpredictable, and liberating. After last year's hard work, this year brings movement, variety, and change. Expect the unexpected. Life speeds up.",
-        opportunities: "Opportunities arrive through change and new experiences. Travel, relocation, career changes, new people, learning opportunities, and adventures of all kinds. Say yes to what's new and different.",
-        challenges: "The challenges include restlessness, irresponsibility, and change addiction. You may struggle with commitment or make impulsive decisions. Not all change is progress—discern between liberating change and running away.",
-        relationships: "In relationships, this can be a year of new romantic adventures or freedom struggles in existing partnerships. You need breathing room. Relationships that are too confining may end; flexible ones can thrive.",
-        career: "Career-wise, this year favors variety, travel, sales, marketing, consulting, or any work with flexibility and change. You may change jobs or roles. Entrepreneurial ventures that offer freedom are favored.",
-        spiritual: "Spiritually, you're learning that the only constant is change and that freedom is an inner state. This year teaches you to embrace uncertainty with faith.",
-        advice: "Embrace change. Take calculated risks. Travel. Learn something new. Meet new people. But don't burn down your entire life on a whim. Freedom works best with a foundation (which you built last year).",
-        affirmation: "I embrace change with grace and courage. Freedom is my birthright."
+        energy: "La energía de este año es dinámica, impredecible y liberadora. Después del arduo trabajo del año pasado, este año trae movimiento, variedad y cambio. Espere lo inesperado. La vida se acelera.",
+        opportunities: "Las oportunidades llegan a través del cambio y de nuevas experiencias. Viajes, reubicación, cambios de carrera, gente nueva, oportunidades de aprendizaje y aventuras de todo tipo. Di sí a lo nuevo y diferente.",
+        challenges: "Los desafíos incluyen inquietud, irresponsabilidad y adicción al cambio. Es posible que tenga dificultades con el compromiso o tome decisiones impulsivas. No todo cambio es progreso: discierna entre el cambio liberador y la huida.",
+        relationships: "En las relaciones, este puede ser un año de nuevas aventuras románticas o luchas por la libertad en las parejas existentes. Necesitas espacio para respirar. Las relaciones que son demasiado restrictivas pueden terminar; los flexibles pueden prosperar.",
+        career: "En cuanto a la carrera, este año favorece la variedad, los viajes, las ventas, el marketing, la consultoría o cualquier trabajo con flexibilidad y cambio. Puede cambiar de trabajo o de rol. Se favorecen las iniciativas empresariales que ofrecen libertad.",
+        spiritual: "Espiritualmente, estás aprendiendo que la única constante es el cambio y que la libertad es un estado interior. Este año te enseña a abrazar la incertidumbre con fe.",
+        advice: "Abraza el cambio. Tome riesgos calculados. Viajar. Aprende algo nuevo. Conoce gente nueva. Pero no quemes toda tu vida por capricho. La libertad funciona mejor con una base (que usted construyó el año pasado).",
+        affirmation: "Acepto el cambio con gracia y coraje. La libertad es mi derecho de nacimiento."
     },
     6: {
-        title: "Personal Year 6 - The Year of Love and Responsibility",
+        title: "Año Personal 6 - El Año del Amor y la Responsabilidad",
         theme: "This is your love year—a time to nurture relationships, take responsibility, and create beauty and harmony in your life.",
-        energy: "The energy of this year is nurturing, responsible, and heart-centered. After last year's adventures, this year asks you to come home—literally and figuratively. Family, home, and close relationships take center stage.",
-        opportunities: "Opportunities arrive through service and relationships. Marriage, commitment, family expansion, home purchases, creative projects that serve others, healing work, and beautification all flourish now.",
-        challenges: "The challenges include over-responsibility, martyrdom, and controlling through caretaking. You may sacrifice too much or become resentful about obligations. Learning to serve without depleting yourself is key.",
-        relationships: "In relationships, this is THE year for commitment, marriage, or deepening family bonds. You're more nurturing and available. Single people often meet significant partners. This is a love-focused year.",
-        career: "Career-wise, this year favors service professions—teaching, healing, counseling, design, or any work that helps others. You advance through being helpful and creating harmony.",
-        spiritual: "Spiritually, you're learning that love is action, that service is sacred, and that your worth isn't dependent on being needed. This year teaches you unconditional love—including self-love.",
-        advice: "Love deeply. Take responsibility. Create beauty. Serve others. But don't forget to fill your own cup. The best nurturers are those who also nurture themselves.",
-        affirmation: "I love and serve from a full heart. My care creates harmony and healing."
+        energy: "La energía de este año es enriquecedora, responsable y centrada en el corazón. Después de las aventuras del año pasado, este año te pide que regreses a casa, literal y figurativamente. La familia, el hogar y las relaciones cercanas toman protagonismo.",
+        opportunities: "Las oportunidades llegan a través del servicio y las relaciones. El matrimonio, el compromiso, la expansión familiar, la compra de viviendas, los proyectos creativos que sirven a los demás, el trabajo de curación y el embellecimiento florecen ahora.",
+        challenges: "Los desafíos incluyen el exceso de responsabilidad, el martirio y el control a través del cuidado. Es posible que sacrifique demasiado o se sienta resentido por sus obligaciones. Aprender a servir sin agotarse es clave.",
+        relationships: "En las relaciones, este es EL año del compromiso, el matrimonio o la profundización de los vínculos familiares. Eres más cariñoso y disponible. Las personas solteras suelen conocer parejas importantes. Este es un año centrado en el amor.",
+        career: "En cuanto a las carreras, este año favorece las profesiones de servicio: enseñanza, curación, asesoramiento, diseño o cualquier trabajo que ayude a otros. Avanzas siendo útil y creando armonía.",
+        spiritual: "Espiritualmente, estás aprendiendo que el amor es acción, que el servicio es sagrado y que tu valor no depende de que te necesiten. Este año te enseña el amor incondicional, incluido el amor propio.",
+        advice: "Ama profundamente. Asume la responsabilidad. Crea belleza. Servir a los demás. Pero no olvides llenar tu propia taza. Los mejores cuidadores son aquellos que también se cuidan a sí mismos.",
+        affirmation: "Amo y sirvo de todo corazón. Mi cuidado crea armonía y curación."
     },
     7: {
-        title: "Personal Year 7 - The Year of Spiritual Growth",
+        title: "Año Personal 7 - El Año del Crecimiento Espiritual",
         theme: "This is your wisdom year—a time to go inward, seek truth, and deepen your spiritual understanding.",
-        energy: "The energy of this year is introspective, spiritual, and contemplative. After last year's relationship focus, this year asks you to retreat, reflect, and go deep. This is your hermit year.",
-        opportunities: "Opportunities arrive through study, spiritual practice, and inner work. Education, research, writing, spiritual retreats, therapy, and solo pursuits all flourish. Your intuition is heightened.",
-        challenges: "The challenges include isolation, overthinking, and spiritual bypassing. You may withdraw too much or get lost in analysis. Balance solitude with connection. Not everything can be understood intellectually.",
-        relationships: "In relationships, you may need more alone time or feel less socially available. This can strain partnerships that don't understand your need for solitude. It's not a high-energy year for new relationships.",
-        career: "Career-wise, this year favors research, analysis, writing, spiritual work, consulting, or any role requiring deep expertise. You may take time off for study or sabbatical. Quality over quantity.",
-        spiritual: "Spiritually, this is YOUR year. Deep meditation, spiritual study, mystical experiences, and profound insights are all possible. You're being prepared for something. Trust the inner journey.",
-        advice: "Go inward. Study. Meditate. Trust your intuition. Take time alone without guilt. This is preparation time—you're gathering wisdom and strength for what's coming. Honor the pause.",
-        affirmation: "I trust my inner wisdom. My solitude deepens my understanding and power."
+        energy: "La energía de este año es introspectiva, espiritual y contemplativa. Después del enfoque en las relaciones del año pasado, este año te pide que te retires, reflexiones y profundices. Este es tu año ermitaño.",
+        opportunities: "Las oportunidades llegan a través del estudio, la práctica espiritual y el trabajo interior. Florecen la educación, la investigación, la escritura, los retiros espirituales, la terapia y las actividades en solitario. Tu intuición se intensifica.",
+        challenges: "Los desafíos incluyen el aislamiento, el pensamiento excesivo y la evasión espiritual. Puede retirar demasiado o perderse en el análisis. Equilibra la soledad con la conexión. No todo se puede entender intelectualmente.",
+        relationships: "En las relaciones, es posible que necesite más tiempo a solas o que se sienta menos disponible socialmente. Esto puede tensar las asociaciones que no comprenden su necesidad de soledad. No es un año de mucha energía para nuevas relaciones.",
+        career: "En cuanto a la carrera, este año favorece la investigación, el análisis, la escritura, el trabajo espiritual, la consultoría o cualquier rol que requiera una profunda experiencia. Puedes tomarte un tiempo libre para estudiar o tomarte un año sabático. Calidad sobre cantidad.",
+        spiritual: "Espiritualmente, este es TU año. Es posible la meditación profunda, el estudio espiritual, las experiencias místicas y las percepciones profundas. Estás siendo preparado para algo. Confía en el viaje interior.",
+        advice: "Ve hacia adentro. Estudiar. Meditar. Confía en tu intuición. Tómate un tiempo a solas sin sentirte culpable. Este es el momento de preparación: estás reuniendo sabiduría y fuerza para lo que viene. Honra la pausa.",
+        affirmation: "Confío en mi sabiduría interior. Mi soledad profundiza mi comprensión y poder."
     },
     8: {
-        title: "Personal Year 8 - The Year of Power and Abundance",
+        title: "Año Personal 8 - El Año del Poder y la Abundancia",
         theme: "This is your power year—a time to step into authority, manifest abundance, and reap what you've sown.",
-        energy: "The energy of this year is powerful, ambitious, and results-oriented. After last year's inner preparation, this year brings external achievement. Your personal power is at its peak. Use it wisely.",
-        opportunities: "Opportunities arrive through leadership and manifestation. Business success, financial gains, promotions, recognition, and material abundance all favor you now. What you've built over the past 7 years bears fruit.",
-        challenges: "The challenges include workaholism, materialism, and misuse of power. You may become so focused on achievement that you neglect relationships or health. True power serves something larger than ego.",
-        relationships: "In relationships, you may attract powerful partners or power struggles. You need equals who respect your ambition. Watch for a tendency to dominate or let work consume your personal life.",
-        career: "Career-wise, this is THE year for advancement, raises, promotions, starting businesses, or achieving significant professional milestones. Your executive abilities are at their peak. Lead.",
-        spiritual: "Spiritually, you're learning that abundance is a flow, that power is for service, and that material success and spiritual growth aren't opposites. This year teaches you sacred success.",
-        advice: "Step into your power. Lead. Build. Achieve. But remember that true abundance includes all areas of life—not just money. Use your power wisely and generously.",
-        affirmation: "I claim my power and create abundant success. My achievements serve the highest good."
+        energy: "La energía de este año es poderosa, ambiciosa y orientada a resultados. Después de la preparación interna del año pasado, este año trae consigo logros externos. Tu poder personal está en su punto máximo. Úselo sabiamente.",
+        opportunities: "Las oportunidades llegan a través del liderazgo y la manifestación. El éxito empresarial, las ganancias financieras, los ascensos, el reconocimiento y la abundancia material le favorecen ahora. Lo que has construido durante los últimos 7 años da frutos.",
+        challenges: "Los desafíos incluyen la adicción al trabajo, el materialismo y el abuso del poder. Es posible que se concentre tanto en los logros que descuide las relaciones o la salud. El verdadero poder sirve a algo más grande que el ego.",
+        relationships: "En las relaciones, puede atraer socios poderosos o luchas de poder. Necesitas iguales que respeten tu ambición. Esté atento a una tendencia a dominar o dejar que el trabajo consuma su vida personal.",
+        career: "En cuanto a la carrera, este es EL año para avances, aumentos, promociones, iniciar negocios o lograr hitos profesionales importantes. Tus habilidades ejecutivas están en su punto máximo. Dirigir.",
+        spiritual: "Espiritualmente, estás aprendiendo que la abundancia es un fluir, que el poder es para el servicio y que el éxito material y el crecimiento espiritual no son opuestos. Este año te enseña el éxito sagrado.",
+        advice: "Entra en tu poder. Dirigir. Construir. Lograr. Pero recuerda que la verdadera abundancia incluye todas las áreas de la vida, no sólo el dinero. Usa tu poder sabia y generosamente.",
+        affirmation: "Reclamo mi poder y creo abundante éxito. Mis logros sirven al bien mayor."
     },
     9: {
-        title: "Personal Year 9 - The Year of Completion",
+        title: "Año personal 9: el año de finalización",
         theme: "This is your completion year—a time to release, forgive, let go, and prepare for a new 9-year cycle beginning next year.",
-        energy: "The energy of this year is releasing, compassionate, and transitional. This is the ending of a 9-year cycle. What needs to complete will complete. What needs to go will go. Clear space for new beginnings.",
-        opportunities: "Opportunities arrive through letting go and service. Humanitarian work, artistic expression, teaching, healing, closure on long-standing issues, forgiveness, and spiritual deepening all favor you now.",
-        challenges: "The challenges include holding on when you should release, drama about endings, or premature new beginnings. This is not the year to start major new ventures—it's the year to finish and release. Patience.",
-        relationships: "In relationships, this can be a year of completions—relationships that have run their course may end. Or you may complete old patterns within relationships. Forgiveness is key. Let go with love.",
-        career: "Career-wise, you may complete major projects, leave a job, or retire. This is not the year to start new ventures (wait for next year's Personal Year 1). Finish what you started. Close loops.",
-        spiritual: "Spiritually, this is a powerful year for forgiveness, release, and preparation. You're clearing karma, completing soul lessons, and preparing for rebirth. Trust the endings—they're making space for magic.",
-        advice: "Let go. Forgive. Complete. Don't cling to what's ending. Don't start major new things yet. This is the inhale before the exhale. Clear space. Grieve what's passing. Trust what's coming.",
-        affirmation: "I release with love and gratitude. Endings create space for new beginnings."
+        energy: "La energía de este año es liberadora, compasiva y transicional. Este es el final de un ciclo de 9 años. Lo que hay que completar se completará. Lo que tiene que desaparecer, desaparecerá. Espacio libre para nuevos comienzos.",
+        opportunities: "Las oportunidades llegan mediante el abandono y el servicio. El trabajo humanitario, la expresión artística, la enseñanza, la sanación, el cierre de problemas de larga data, el perdón y la profundización espiritual te favorecen ahora.",
+        challenges: "Los desafíos incluyen aferrarse a cuándo deberías lanzar, drama sobre los finales o nuevos comienzos prematuros. Este no es el año para iniciar grandes proyectos nuevos; es el año para terminarlos y lanzarlos. Paciencia.",
+        relationships: "En las relaciones, este puede ser un año de culminaciones: las relaciones que han seguido su curso pueden terminar. O puedes completar viejos patrones dentro de las relaciones. El perdón es clave. Déjate llevar con amor.",
+        career: "En cuanto a su carrera, puede completar proyectos importantes, dejar un trabajo o jubilarse. Este no es el año para iniciar nuevos emprendimientos (espere hasta el Año Personal 1 del próximo año). Termina lo que empezaste. Cerrar bucles.",
+        spiritual: "Espiritualmente, este es un año poderoso para el perdón, la liberación y la preparación. Estás limpiando karma, completando lecciones del alma y preparándote para el renacimiento. Confía en los finales: están dejando espacio para la magia.",
+        advice: "Déjalo ir. Perdonar. Completo. No te aferres a lo que está terminando. No empieces cosas nuevas importantes todavía. Esta es la inhalación antes de la exhalación. Espacio libre. Llora lo que está pasando. Confía en lo que viene.",
+        affirmation: "Libero con amor y gratitud. Los finales crean espacio para nuevos comienzos."
     }
 };
 
@@ -1243,172 +1243,172 @@ var DEEP_PERSONAL_YEAR_READINGS = {
 
 var DEEP_MATURITY_READINGS = {
     1: {
-        title: "The Elder Pioneer",
-        essence: "Leadership and Independence in Later Life",
-        reading: `Maturity Number 1 reveals that as life progresses, this soul will increasingly embody the pioneer archetype. The second half of life calls for greater independence, original thinking, and the courage to lead rather than follow.
+        title: "El anciano pionero",
+        essence: "Liderazgo e independencia en la vejez",
+        reading: `La madurez número 1 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo pionero. La segunda mitad de la vida exige mayor independencia, pensamiento original y coraje para liderar en lugar de seguir.
 
-<strong>The Emerging Pattern:</strong> Whether or not they were natural leaders in youth, later years will demand they step into greater self-reliance and initiative. The universe is grooming them for a role that requires standing alone—not in loneliness, but in the strength of authentic individuality.
+<strong>El patrón emergente:</strong> Independientemente de si fueron líderes naturales en su juventud o no, los años posteriores exigirán que den un paso hacia una mayor autosuficiencia e iniciativa. El universo los está preparando para un papel que requiere estar solos, no en soledad, sino en la fuerza de una auténtica individualidad.
 
-<strong>Later Life Themes:</strong> Expect increasing desire for independence and self-direction. There may be projects, businesses, or creative endeavors that are purely their own. Leadership roles may emerge, or they may simply become someone others look to for direction. The urge to start something new—even in later years—will be strong.
+<strong>Temas de la vida posterior:</strong> Espere un deseo creciente de independencia y autodirección. Puede haber proyectos, negocios o esfuerzos creativos que sean puramente suyos. Pueden surgir roles de liderazgo o simplemente convertirse en alguien a quien otros buscan en busca de dirección. La necesidad de empezar algo nuevo, incluso en años posteriores, será fuerte.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize everything they've learned into original wisdom that is uniquely theirs. They're not meant to repeat what others have done; they're meant to forge new paths even as the world expects them to settle down.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen todo lo que han aprendido en una sabiduría original que es exclusivamente suya. No están destinados a repetir lo que otros han hecho; están destinados a forjar nuevos caminos incluso cuando el mundo espera que se establezcan.
 
-<strong>The Gift:</strong> The later years can bring remarkable creative vitality, the courage to be authentically themselves without apology, and the satisfaction of seeing their pioneering efforts bear fruit.`,
-        keywords: ["Independence", "Leadership", "Self-Direction", "Original Path"]
+<strong>El regalo:</strong> Los últimos años pueden traer una notable vitalidad creativa, el coraje de ser auténticamente ellos mismos sin disculparse y la satisfacción de ver que sus esfuerzos pioneros dan frutos.`,
+        keywords: ["Independencia", "Liderazgo", "Autodirección", "Camino original"]
     },
     2: {
-        title: "The Elder Diplomat",
-        essence: "Partnership and Harmony in Later Life",
-        reading: `Maturity Number 2 reveals that as life progresses, this soul will increasingly embody the peacemaker archetype. The second half of life calls for deeper partnership, refined diplomacy, and the subtle power of cooperation.
+        title: "El anciano diplomático",
+        essence: "Asociación y armonía en la vida posterior",
+        reading: `La madurez número 2 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo del pacificador. La segunda mitad de la vida exige una colaboración más profunda, una diplomacia refinada y el poder sutil de la cooperación.
 
-<strong>The Emerging Pattern:</strong> Later years will emphasize relationships over solo achievement. The soul is being prepared for a role that involves partnership, mediation, or the delicate art of bringing people together. Personal success becomes less important than harmony.
+<strong>El patrón emergente:</strong> Los años posteriores darán más importancia a las relaciones que a los logros en solitario. El alma se está preparando para un papel que implica asociación, mediación o el delicado arte de unir a las personas. El éxito personal se vuelve menos importante que la armonía.
 
-<strong>Later Life Themes:</strong> Expect relationships to take center stage—deepening partnerships, new connections, or roles that involve supporting others. There may be involvement in community, counseling, or any work requiring sensitivity to others' needs. The ability to listen and hold space for others becomes a superpower.
+<strong>Temas de la vida posterior:</strong> Espere que las relaciones ocupen un lugar central: asociaciones más profundas, nuevas conexiones o roles que impliquen apoyar a otros. Puede haber participación en la comunidad, asesoramiento o cualquier trabajo que requiera sensibilidad hacia las necesidades de los demás. La capacidad de escuchar y mantener espacio para los demás se convierte en un superpoder.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize their life experiences into relationship wisdom. They're meant to become masters of the gentle arts—patience, tact, cooperation, and the ability to create peace without forcing it.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen sus experiencias de vida en sabiduría en las relaciones. Están destinados a convertirse en maestros de las artes amables: paciencia, tacto, cooperación y la capacidad de crear paz sin forzarla.
 
-<strong>The Gift:</strong> The later years can bring profoundly satisfying partnerships, the peace that comes from genuine harmony, and the joy of seeing connections they've nurtured flourish.`,
-        keywords: ["Partnership", "Diplomacy", "Harmony", "Patience"]
+<strong>El regalo:</strong> Los últimos años pueden traer asociaciones profundamente satisfactorias, la paz que proviene de la armonía genuina y la alegría de ver florecer las conexiones que han nutrido.`,
+        keywords: ["Asociación", "Diplomacia", "Armonía", "Paciencia"]
     },
     3: {
-        title: "The Elder Artist",
-        essence: "Creative Expression in Later Life",
-        reading: `Maturity Number 3 reveals that as life progresses, this soul will increasingly embody the creative archetype. The second half of life calls for joyful self-expression, artistic endeavors, and the wisdom that comes through play.
+        title: "El artista mayor",
+        essence: "Expresión creativa en la vejez",
+        reading: `La madurez número 3 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo creativo. La segunda mitad de la vida exige una autoexpresión alegre, esfuerzos artísticos y la sabiduría que se obtiene a través del juego.
 
-<strong>The Emerging Pattern:</strong> Later years will demand creative expression—not as hobby but as necessity. The universe is preparing them for a role that involves communicating, inspiring, or bringing joy through whatever medium calls. Suppressed creativity will insist on emerging.
+<strong>El patrón emergente:</strong> Los años posteriores exigirán expresión creativa, no como pasatiempo sino como necesidad. El universo los está preparando para un papel que implica comunicar, inspirar o brindar alegría a través de cualquier medio que los llame. La creatividad reprimida insistirá en emerger.
 
-<strong>Later Life Themes:</strong> Expect increasing desire to create, express, and communicate. There may be writing, art, teaching, or any form of sharing their unique perspective. Social connection becomes vital—not superficial networking but genuine, joyful engagement. The inner child wants to play.
+<strong>Temas de la vida posterior:</strong> Espere un deseo cada vez mayor de crear, expresar y comunicar. Puede haber escritura, arte, enseñanza o cualquier forma de compartir su perspectiva única. La conexión social se vuelve vital: no una creación de redes superficial, sino un compromiso genuino y alegre. El niño interior quiere jugar.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into creative wisdom that inspires others. They're meant to become living examples that joy is not frivolous but essential.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen las experiencias de la vida en sabiduría creativa que inspire a otros. Están destinados a convertirse en ejemplos vivos de que la alegría no es frívola sino esencial.
 
-<strong>The Gift:</strong> The later years can bring remarkable creative flowering, renewed playfulness, and the satisfaction of touching others through authentic self-expression.`,
-        keywords: ["Creativity", "Expression", "Joy", "Communication"]
+<strong>El regalo:</strong> Los últimos años pueden traer un notable florecimiento creativo, una alegría renovada y la satisfacción de tocar a los demás a través de una auténtica autoexpresión.`,
+        keywords: ["Creatividad", "Expresión", "Alegría", "Comunicación"]
     },
     4: {
-        title: "The Elder Builder",
-        essence: "Foundation and Legacy in Later Life",
-        reading: `Maturity Number 4 reveals that as life progresses, this soul will increasingly embody the builder archetype. The second half of life calls for creating lasting structures—whether physical, organizational, or conceptual.
+        title: "El viejo constructor",
+        essence: "Fundación y legado en la vida posterior",
+        reading: `La madurez número 4 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo del constructor. La segunda mitad de la vida exige la creación de estructuras duraderas, ya sean físicas, organizativas o conceptuales.
 
-<strong>The Emerging Pattern:</strong> Later years will emphasize building something that lasts beyond the current moment. The soul is being prepared for a role that involves creating stability for others, establishing systems, or leaving practical legacy. Random creativity matters less than purposeful construction.
+<strong>El patrón emergente:</strong> Los años posteriores se centrarán en construir algo que dure más allá del momento actual. El alma se está preparando para un papel que implica crear estabilidad para los demás, establecer sistemas o dejar un legado práctico. La creatividad aleatoria importa menos que la construcción decidida.
 
-<strong>Later Life Themes:</strong> Expect increasing focus on what endures. There may be property, business structures, organizations, or any framework that will outlast individual effort. Practicality becomes a virtue, not a limitation. The satisfaction comes from knowing the work matters.
+<strong>Temas de la vida posterior:</strong> Espere centrarse cada vez más en lo que perdura. Puede haber propiedades, estructuras empresariales, organizaciones o cualquier marco que dure más que el esfuerzo individual. La practicidad se convierte en una virtud, no en una limitación. La satisfacción proviene de saber que el trabajo importa.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into practical wisdom that creates lasting value. They're meant to become someone whose contributions stand the test of time.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen las experiencias de la vida en sabiduría práctica que cree valor duradero. Están destinados a convertirse en alguien cuyas contribuciones resistan la prueba del tiempo.
 
-<strong>The Gift:</strong> The later years can bring the deep satisfaction of seeing lasting results, the respect that comes from reliability, and the security of knowing their efforts built something real.`,
-        keywords: ["Building", "Structure", "Stability", "Legacy"]
+<strong>El regalo:</strong> Los últimos años pueden traer la profunda satisfacción de ver resultados duraderos, el respeto que proviene de la confiabilidad y la seguridad de saber que sus esfuerzos construyeron algo real.`,
+        keywords: ["Edificio", "Estructura", "Estabilidad", "Legado"]
     },
     5: {
-        title: "The Elder Adventurer",
-        essence: "Freedom and Experience in Later Life",
-        reading: `Maturity Number 5 reveals that as life progresses, this soul will increasingly embody the adventurer archetype. The second half of life calls for more freedom, not less—for embracing change and refusing to become rigid.
+        title: "El anciano aventurero",
+        essence: "Libertad y experiencia en la vida posterior",
+        reading: `La madurez número 5 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo del aventurero. La segunda mitad de la vida exige más libertad, no menos: aceptar el cambio y negarse a volverse rígido.
 
-<strong>The Emerging Pattern:</strong> Later years will demand variety, adventure, and the courage to keep evolving. The soul is being prepared for a role that involves teaching others about adaptability, demonstrating that growth doesn't stop, and modeling vibrant engagement with life at any age.
+<strong>El patrón emergente:</strong> Los años posteriores exigirán variedad, aventura y el coraje de seguir evolucionando. El alma se está preparando para un papel que implica enseñar a otros sobre la adaptabilidad, demostrar que el crecimiento no se detiene y modelar un compromiso vibrante con la vida a cualquier edad.
 
-<strong>Later Life Themes:</strong> Expect increasing restlessness with routine and growing desire for new experiences. There may be travel, new learning, changed circumstances, or simply a refusal to settle into expected patterns. The spirit stays young through continuous movement.
+<strong>Temas de la vida posterior:</strong> Espere una creciente inquietud con la rutina y un creciente deseo de nuevas experiencias. Puede haber viajes, nuevos aprendizajes, cambios de circunstancias o simplemente una negativa a adaptarse a los patrones esperados. El espíritu se mantiene joven mediante el movimiento continuo.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into the wisdom of flexibility. They're meant to become living proof that change is not the enemy but the essence of life.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen las experiencias de la vida en la sabiduría de la flexibilidad. Están destinados a convertirse en una prueba viviente de que el cambio no es el enemigo sino la esencia de la vida.
 
-<strong>The Gift:</strong> The later years can bring remarkable vitality through change, the freedom of releasing what no longer serves, and the excitement of discovering that life's adventures never truly end.`,
-        keywords: ["Freedom", "Adventure", "Change", "Vitality"]
+<strong>El regalo:</strong> Los últimos años pueden traer una vitalidad notable a través del cambio, la libertad de liberar lo que ya no sirve y la emoción de descubrir que las aventuras de la vida nunca terminan realmente.`,
+        keywords: ["Libertad", "Aventura", "Cambiar", "Vitalidad"]
     },
     6: {
-        title: "The Elder Nurturer",
-        essence: "Love and Service in Later Life",
-        reading: `Maturity Number 6 reveals that as life progresses, this soul will increasingly embody the nurturer archetype. The second half of life calls for deepening love, family connection, and service to those who need care.
+        title: "El cuidador de ancianos",
+        essence: "Amor y servicio en la vida posterior",
+        reading: `La madurez número 6 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo del cuidador. La segunda mitad de la vida exige un amor más profundo, una conexión familiar y un servicio a quienes necesitan atención.
 
-<strong>The Emerging Pattern:</strong> Later years will emphasize love and responsibility—not as burden but as purpose. The soul is being prepared for a role that involves nurturing family, community, or those in need. The heart expands to hold more, not less.
+<strong>El patrón emergente:</strong> Los años posteriores enfatizarán el amor y la responsabilidad, no como una carga sino como un propósito. El alma se está preparando para un papel que implica cuidar de la familia, la comunidad o los necesitados. El corazón se expande para contener más, no menos.
 
-<strong>Later Life Themes:</strong> Expect family to take center stage—grandchildren, extended family, chosen family. There may be caregiving roles, community involvement, or any work that allows the expression of nurturing love. Home becomes increasingly important as sanctuary.
+<strong>Temas de la vida posterior:</strong> Espere que la familia ocupe un lugar central: nietos, familia extendida, familia elegida. Puede haber roles de cuidado, participación comunitaria o cualquier trabajo que permita la expresión de un amor cariñoso. El hogar se vuelve cada vez más importante como santuario.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into the wisdom of unconditional love. They're meant to become a living heart—someone whose presence is healing, whose home is haven.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen las experiencias de la vida en la sabiduría del amor incondicional. Están destinados a convertirse en un corazón vivo, alguien cuya presencia es sanadora, cuyo hogar es un refugio.
 
-<strong>The Gift:</strong> The later years can bring the profound satisfaction of deep family bonds, the love that comes from nurturing others, and the peace of knowing they've made a difference through care.`,
-        keywords: ["Love", "Nurturing", "Family", "Service"]
+<strong>El regalo:</strong> Los últimos años pueden traer la profunda satisfacción de los vínculos familiares profundos, el amor que surge de cuidar a los demás y la paz de saber que han marcado una diferencia a través del cuidado.`,
+        keywords: ["Amar", "Criando", "Familia", "Servicio"]
     },
     7: {
-        title: "The Elder Sage",
-        essence: "Wisdom and Contemplation in Later Life",
-        reading: `Maturity Number 7 reveals that as life progresses, this soul will increasingly embody the sage archetype. The second half of life calls for depth over breadth, wisdom over knowledge, and the peace that comes from inner knowing.
+        title: "El sabio mayor",
+        essence: "Sabiduría y contemplación en la vejez",
+        reading: `La madurez número 7 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo del sabio. La segunda mitad de la vida exige profundidad sobre amplitud, sabiduría sobre conocimiento y la paz que proviene del conocimiento interior.
 
-<strong>The Emerging Pattern:</strong> Later years will demand more solitude and contemplation—not isolation, but meaningful retreat. The soul is being prepared for a role that involves sharing hard-won wisdom, going deep rather than wide, and finding truth through reflection.
+<strong>El patrón emergente:</strong> Los años posteriores exigirán más soledad y contemplación, no aislamiento, sino un retiro significativo. El alma se está preparando para un papel que implica compartir la sabiduría adquirida con tanto esfuerzo, profundizar en lugar de ampliar y encontrar la verdad a través de la reflexión.
 
-<strong>Later Life Themes:</strong> Expect increasing desire for quiet time, spiritual practice, and meaningful inquiry. There may be writing, teaching, or simply becoming someone others seek for wisdom. The superficial becomes intolerable; only the real satisfies.
+<strong>Temas de la vida posterior:</strong> Espere un deseo cada vez mayor de tener momentos de tranquilidad, práctica espiritual e indagación significativa. Puede ser escribir, enseñar o simplemente convertirse en alguien que otros buscan en busca de sabiduría. Lo superficial se vuelve intolerable; sólo lo real satisface.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into spiritual wisdom. They're meant to become someone whose insight comes from depth, whose presence conveys peace, whose understanding reaches beyond the obvious.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen las experiencias de la vida en sabiduría espiritual. Están destinados a convertirse en alguien cuya visión provenga de lo profundo, cuya presencia transmita paz, cuya comprensión vaya más allá de lo obvio.
 
-<strong>The Gift:</strong> The later years can bring profound spiritual deepening, the respect that comes from genuine wisdom, and the peace of knowing the answers that matter have been found.`,
-        keywords: ["Wisdom", "Contemplation", "Spirituality", "Insight"]
+<strong>El regalo:</strong> Los últimos años pueden traer una profunda profundización espiritual, el respeto que proviene de la sabiduría genuina y la paz de saber que se han encontrado las respuestas importantes.`,
+        keywords: ["Sabiduría", "Contemplación", "Espiritualidad", "Conocimiento"]
     },
     8: {
-        title: "The Elder Manifestor",
-        essence: "Power and Abundance in Later Life",
-        reading: `Maturity Number 8 reveals that as life progresses, this soul will increasingly embody the manifestor archetype. The second half of life calls for stepping into authentic power, creating abundance, and leaving material legacy.
+        title: "El anciano manifestador",
+        essence: "Poder y abundancia en la vida posterior",
+        reading: `La madurez número 8 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo manifestador. La segunda mitad de la vida exige acceder al poder auténtico, crear abundancia y dejar un legado material.
 
-<strong>The Emerging Pattern:</strong> Later years will emphasize achievement, authority, and material mastery. The soul is being prepared for a role that involves building wealth (in all senses), leading with power, and demonstrating that success and spirituality can coexist.
+<strong>El patrón emergente:</strong> Los años posteriores enfatizarán los logros, la autoridad y el dominio material. El alma se está preparando para un papel que implica generar riqueza (en todos los sentidos), liderar con poder y demostrar que el éxito y la espiritualidad pueden coexistir.
 
-<strong>Later Life Themes:</strong> Expect increasing opportunities for financial growth, leadership positions, and material achievement—even after traditional "retirement" age. There may be businesses, investments, or any endeavor requiring executive ability. The desire to leave something substantial is strong.
+<strong>Temas de la vida posterior:</strong> Espere mayores oportunidades de crecimiento financiero, posiciones de liderazgo y logros materiales, incluso después de la edad tradicional de "jubilación". Puede haber negocios, inversiones o cualquier emprendimiento que requiera capacidad ejecutiva. El deseo de dejar algo sustancial es fuerte.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into empowered wisdom. They're meant to become someone who demonstrates that power well-used is a gift to the world.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen las experiencias de la vida en sabiduría empoderada. Están destinados a convertirse en alguien que demuestre que el poder bien utilizado es un regalo para el mundo.
 
-<strong>The Gift:</strong> The later years can bring remarkable material success, the satisfaction of building something substantial, and the respect that comes from demonstrated achievement.`,
-        keywords: ["Power", "Achievement", "Abundance", "Legacy"]
+<strong>El regalo:</strong> Los últimos años pueden traer un éxito material notable, la satisfacción de construir algo sustancial y el respeto que surge de los logros demostrados.`,
+        keywords: ["Fuerza", "Logro", "Abundancia", "Legado"]
     },
     9: {
-        title: "The Elder Humanitarian",
-        essence: "Compassion and Completion in Later Life",
-        reading: `Maturity Number 9 reveals that as life progresses, this soul will increasingly embody the humanitarian archetype. The second half of life calls for expanding compassion, releasing what's finished, and serving something larger than self.
+        title: "El anciano humanitario",
+        essence: "Compasión y realización en la vejez",
+        reading: `La madurez número 9 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo humanitario. La segunda mitad de la vida exige expandir la compasión, liberar lo que está terminado y servir a algo más grande que uno mismo.
 
-<strong>The Emerging Pattern:</strong> Later years will demand letting go and giving back. The soul is being prepared for a role that involves completion of major life chapters, compassionate service, and wisdom that encompasses the full human experience.
+<strong>El patrón emergente:</strong> Los años posteriores exigirán dejar ir y retribuir. El alma se está preparando para un papel que implica completar capítulos importantes de la vida, servicio compasivo y sabiduría que abarca toda la experiencia humana.
 
-<strong>Later Life Themes:</strong> Expect increasing concern for the world beyond personal sphere—humanitarian causes, artistic legacy, or any work that serves the collective. There may be release of old attachments, forgiveness of old wounds, and the peace that comes from completing cycles.
+<strong>Temas de la vida posterior:</strong> Espere una preocupación cada vez mayor por el mundo más allá de la esfera personal: causas humanitarias, legado artístico o cualquier trabajo que sirva al colectivo. Puede haber liberación de viejos apegos, perdón de viejas heridas y la paz que proviene de completar ciclos.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize all life experiences into universal wisdom. They're meant to become someone whose compassion is boundless, whose forgiveness is complete, whose vision includes all humanity.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen todas las experiencias de la vida en sabiduría universal. Están destinados a convertirse en alguien cuya compasión sea ilimitada, cuyo perdón sea completo y cuya visión incluya a toda la humanidad.
 
-<strong>The Gift:</strong> The later years can bring profound peace through completion, the satisfaction of giving back, and the transcendent joy of knowing that life's deepest lessons have been learned.`,
-        keywords: ["Compassion", "Completion", "Service", "Wisdom"]
+<strong>El regalo:</strong> Los últimos años pueden traer una paz profunda a través de la realización, la satisfacción de retribuir y la alegría trascendente de saber que se han aprendido las lecciones más profundas de la vida.`,
+        keywords: ["Compasión", "Terminación", "Servicio", "Sabiduría"]
     },
     11: {
-        title: "The Elder Visionary",
-        essence: "Inspiration and Illumination in Later Life",
-        reading: `Maturity Number 11 reveals that as life progresses, this soul will increasingly embody the master visionary archetype. The second half of life calls for channeling higher inspiration, illuminating paths for others, and embracing the responsibility of spiritual insight.
+        title: "El anciano visionario",
+        essence: "Inspiración e iluminación en la vida posterior",
+        reading: `La madurez número 11 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo maestro visionario. La segunda mitad de la vida exige canalizar una inspiración superior, iluminar caminos para los demás y aceptar la responsabilidad de la percepción espiritual.
 
-<strong>The Emerging Pattern:</strong> Later years will intensify spiritual sensitivity and visionary capacity. The soul is being prepared for a role that involves inspiring others, receiving and sharing higher truths, and demonstrating that the invisible world is as real as the visible.
+<strong>El patrón emergente:</strong> Los años posteriores intensificarán la sensibilidad espiritual y la capacidad visionaria. El alma se está preparando para un papel que implica inspirar a otros, recibir y compartir verdades superiores y demostrar que el mundo invisible es tan real como el visible.
 
-<strong>Later Life Themes:</strong> Expect increasing psychic or intuitive experiences, growing ability to inspire others, and perhaps a public role in spiritual teaching. There may be moments of profound illumination that demand to be shared. The ordinary becomes insufficient.
+<strong>Temas de la vida posterior:</strong> Espere experiencias psíquicas o intuitivas cada vez mayores, una capacidad cada vez mayor para inspirar a otros y tal vez un papel público en la enseñanza espiritual. Puede haber momentos de profunda iluminación que exijan ser compartidos. Lo ordinario se vuelve insuficiente.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into spiritual illumination. They're meant to become a channel for higher truth—someone whose presence inspires, whose insights illuminate.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen las experiencias de la vida en iluminación espiritual. Están destinados a convertirse en un canal para una verdad superior: alguien cuya presencia inspira, cuyos conocimientos iluminan.
 
-<strong>The Gift:</strong> The later years can bring remarkable spiritual awakening, the joy of inspiring others toward their own awakening, and the peace of being a clear channel for truth.`,
-        keywords: ["Vision", "Inspiration", "Illumination", "Spiritual Teaching"]
+<strong>El regalo:</strong> Los últimos años pueden traer un notable despertar espiritual, la alegría de inspirar a otros hacia su propio despertar y la paz de ser un canal claro para la verdad.`,
+        keywords: ["Visión", "Inspiración", "Iluminación", "Enseñanza espiritual"]
     },
     22: {
-        title: "The Elder Master Builder",
-        essence: "Manifesting Vision in Later Life",
-        reading: `Maturity Number 22 reveals that as life progresses, this soul will increasingly embody the master builder archetype. The second half of life calls for manifesting large-scale vision into practical reality, leaving substantial legacy, and demonstrating that dreams can be built into form.
+        title: "El viejo maestro constructor",
+        essence: "Manifestación de la visión en la vejez",
+        reading: `La madurez número 22 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo del maestro constructor. La segunda mitad de la vida exige manifestar una visión a gran escala en una realidad práctica, dejar un legado sustancial y demostrar que los sueños pueden convertirse en forma.
 
-<strong>The Emerging Pattern:</strong> Later years will bring opportunities to build on a grand scale—not ego projects but contributions that serve many. The soul is being prepared for a role that involves turning visionary ideas into practical structures that outlast individual effort.
+<strong>El patrón emergente:</strong> Los años posteriores traerán oportunidades para construir a gran escala, no proyectos para el ego, sino contribuciones que sirvan a muchos. El alma se está preparando para un papel que implica convertir ideas visionarias en estructuras prácticas que duren más que el esfuerzo individual.
 
-<strong>Later Life Themes:</strong> Expect large-scale projects, community-serving enterprises, or any endeavor that builds lasting benefit for many. There may be philanthropic efforts, organizational building, or any work that marries vision with practical achievement. The scope expands.
+<strong>Temas de la vida posterior:</strong> Espere proyectos a gran escala, empresas de servicio a la comunidad o cualquier esfuerzo que genere beneficios duraderos para muchos. Puede haber esfuerzos filantrópicos, desarrollo organizacional o cualquier trabajo que combine la visión con el logro práctico. El alcance se amplía.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into masterful creation. They're meant to become someone whose vision manifests in practical form, whose building serves the collective, whose legacy is both spiritual and substantial.
+<strong>La integración:</strong> Este número de madurez les pide que sinteticen las experiencias de la vida en una creación magistral. Están destinados a convertirse en alguien cuya visión se manifieste en forma práctica, cuyo edificio sirva al colectivo, cuyo legado sea tanto espiritual como sustancial.
 
-<strong>The Gift:</strong> The later years can bring the profound satisfaction of seeing grand visions realized, the respect that comes from building something that serves many, and the peace of knowing the dream became real.`,
-        keywords: ["Master Building", "Large Vision", "Practical Manifestation", "Lasting Legacy"]
+<strong>El regalo:</strong> Los últimos años pueden traer la profunda satisfacción de ver grandes visiones realizadas, el respeto que surge al construir algo que sirve a muchos y la paz de saber que el sueño se hizo realidad.`,
+        keywords: ["Edificio Maestro", "Gran visión", "Manifestación práctica", "Legado duradero"]
     },
     33: {
-        title: "The Elder Master Teacher",
-        essence: "Healing Love in Later Life",
-        reading: `Maturity Number 33 reveals that as life progresses, this soul will increasingly embody the master teacher/healer archetype. The second half of life calls for expressing unconditional love in action, healing through presence, and teaching through being.
+        title: "El gran maestro mayor",
+        essence: "Amor curativo en la vida posterior",
+        reading: `La madurez número 33 revela que a medida que la vida avanza, esta alma encarnará cada vez más el arquetipo del gran maestro/sanador. La segunda mitad de la vida exige expresar el amor incondicional en acción, sanar a través de la presencia y enseñar a través del ser.
 
-<strong>The Emerging Pattern:</strong> Later years will bring expanded capacity to love, teach, and heal. The soul is being prepared for a role that involves being love in action—not perfect love, but authentic, transforming love that heals those it touches.
+<strong>El patrón emergente:</strong> Los años posteriores traerán una mayor capacidad para amar, enseñar y sanar. El alma se está preparando para un papel que implica ser amor en acción: no un amor perfecto, sino un amor auténtico y transformador que sana a quienes toca.
 
-<strong>Later Life Themes:</strong> Expect deepening capacity for unconditional love, possible teaching or healing roles, and the kind of presence that transforms others simply by being near. There may be spiritual leadership, healing work, or simply becoming someone whose love is palpable.
+<strong>Temas de la vida posterior:</strong> Espere una capacidad cada vez más profunda para el amor incondicional, posibles roles de enseñanza o sanación y el tipo de presencia que transforma a los demás simplemente por estar cerca. Puede haber liderazgo espiritual, trabajo de sanación o simplemente convertirse en alguien cuyo amor sea palpable.
 
-<strong>The Integration:</strong> This Maturity Number asks them to synthesize life experiences into the highest expression of love. They're meant to become living examples of love's healing power.
+<strong>La Integración:</strong> Este Número de Madurez les pide que sinteticen las experiencias de la vida en la más alta expresión de amor. Están destinados a convertirse en ejemplos vivos del poder curativo del amor.
 
-<strong>The Gift:</strong> The later years can bring the profound joy of being a healing presence, the satisfaction of seeing love transform lives, and the peace of embodying what they came here to share.`,
-        keywords: ["Master Teaching", "Healing Love", "Unconditional Love", "Transformation"]
+<strong>El regalo:</strong> Los últimos años pueden traer la profunda alegría de ser una presencia sanadora, la satisfacción de ver el amor transformar vidas y la paz de encarnar lo que vinieron a compartir aquí.`,
+        keywords: ["Maestría en Enseñanza", "Amor curativo", "Amor incondicional", "Transformación"]
     }
 };
 

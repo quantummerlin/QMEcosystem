@@ -5,637 +5,637 @@
 
 var DEEP_CHINESE_ZODIAC_READINGS = {
     Rat: {
-        title: "Year of the Rat",
-        archetype: "The Clever Survivor",
-        hook: "Born in the Year of the Rat, this soul carries the energy of the clever survivor - the first animal in the zodiac cycle, representing new beginnings, initiative, and the intelligence to thrive in any circumstance. Rats are the opportunists of the zodiac, finding openings where others see walls.",
-        coreNature: `The Rat embodies the archetype of the resourceful pioneer. There's a natural intelligence that goes beyond book learning - it's street-smart, adaptive, and always aware of opportunities. Rats have an uncanny ability to be in the right place at the right time, not through luck but through sharp observation and quick thinking.
+        title: "año de la rata",
+        archetype: "El superviviente inteligente",
+        hook: "Nacida en el Año de la Rata, esta alma lleva la energía del superviviente inteligente: el primer animal del ciclo zodiacal, que representa nuevos comienzos, iniciativa y la inteligencia para prosperar en cualquier circunstancia. Las ratas son las oportunistas del zodíaco y encuentran aberturas donde otros ven paredes.",
+        coreNature: `La Rata encarna el arquetipo del pionero ingenioso. Existe una inteligencia natural que va más allá del aprendizaje de los libros: es inteligente, adaptable y siempre está al tanto de las oportunidades. Las ratas tienen una extraña habilidad para estar en el lugar correcto en el momento correcto, no por suerte sino mediante una observación aguda y un pensamiento rápido.
 
-This is a soul who understands survival at its deepest level. Not just physical survival, but thriving in competitive environments, navigating complex social situations, and building security through wit and charm. The Rat's mind is always working, always planning, always several steps ahead.`,
+Ésta es un alma que comprende la supervivencia en su nivel más profundo. No sólo la supervivencia física, sino también prosperar en entornos competitivos, afrontar situaciones sociales complejas y generar seguridad a través del ingenio y el encanto. La mente de la Rata siempre está trabajando, siempre planificando, siempre varios pasos por delante.`,
         
-        strengths: `Rats possess remarkable intelligence and adaptability. Their minds work quickly, spotting patterns and opportunities that others miss entirely. This quick thinking is paired with genuine charm - Rats know how to work a room, how to make connections, how to open doors through personal magnetism.
+        strengths: `Las ratas poseen una inteligencia y adaptabilidad notables. Sus mentes trabajan rápidamente, detectando patrones y oportunidades que otros pasan por alto por completo. Esta rapidez de pensamiento se combina con un encanto genuino: las ratas saben cómo manejar una habitación, cómo hacer conexiones y cómo abrir puertas a través del magnetismo personal.
 
-There's a natural business acumen here. Rats understand value, whether it's in relationships, opportunities, or literal finances. They're excellent at accumulating resources and even better at using those resources strategically. Their survival instincts are impeccable.
+Aquí hay una visión natural para los negocios. Las ratas entienden el valor, ya sea en las relaciones, las oportunidades o las finanzas literales. Son excelentes para acumular recursos e incluso mejores para utilizarlos estratégicamente. Sus instintos de supervivencia son impecables.
 
-Socially, Rats are engaging and witty. They have stories to tell, connections to make, and a way of making themselves indispensable. Their loyalty to their chosen circle is fierce, and they'll use all their considerable cleverness to protect and advance their people.`,
+Socialmente, las Ratas son atractivas e ingeniosas. Tienen historias que contar, conexiones que establecer y una forma de hacerse indispensables. Su lealtad al círculo elegido es feroz y utilizarán toda su considerable inteligencia para proteger y hacer avanzar a su gente.`,
         
-        shadows: `The shadow side of Rat energy can manifest as opportunism that crosses into manipulation. That sharp mind that spots opportunities can also calculate how to exploit situations or people. There's a risk of being too transactional, seeing everything in terms of advantage gained or lost.
+        shadows: `El lado oscuro de la energía de la Rata puede manifestarse como oportunismo que se convierte en manipulación. Esa mente aguda que detecta oportunidades también puede calcular cómo explotar situaciones o personas. Existe el riesgo de ser demasiado transaccional y ver todo en términos de ventajas ganadas o perdidas.
 
-Restlessness plagues many Rats. The same quick mind that's such an asset can also create constant dissatisfaction, always looking for the next thing, the better deal, the greener grass. This can prevent them from fully appreciating what they have.
+La inquietud atormenta a muchas Ratas. La misma mente rápida que es una gran ventaja también puede crear una insatisfacción constante, siempre buscando lo siguiente, el mejor trato, el pasto más verde. Esto puede impedirles apreciar plenamente lo que tienen.
 
-Criticism can be an issue - Rats see flaws as quickly as they see opportunities. This can make them harsh judges of others and themselves. The survival instinct that serves them so well can also manifest as anxiety or hoarding behavior, unable to ever feel truly secure.`,
+Las críticas pueden ser un problema: las ratas ven los defectos tan rápidamente como las oportunidades. Esto puede convertirlos en jueces severos de los demás y de ellos mismos. El instinto de supervivencia que les sirve tan bien también puede manifestarse como ansiedad o comportamiento de acaparamiento, incapaces de sentirse realmente seguros.`,
         
-        relationships: `In relationships, Rats are devoted to their inner circle while maintaining a wide social network. They understand that relationships are resources, but for those they truly care about, the generosity is genuine. Rats are excellent providers and protectors, using all their cleverness to benefit their loved ones.
+        relationships: `En las relaciones, las Ratas se dedican a su círculo íntimo y al mismo tiempo mantienen una amplia red social. Entienden que las relaciones son recursos, pero para aquellos que realmente les importan, la generosidad es genuina. Las ratas son excelentes proveedoras y protectoras, y utilizan toda su astucia para beneficiar a sus seres queridos.
 
-Romance with a Rat is never boring. They bring wit, spontaneity, and a kind of playful intelligence to partnerships. They need partners who can keep up mentally and who appreciate cleverness. Loyalty is extremely important - betray a Rat and that sharp mind becomes focused on revenge or cutting you out completely.
+El romance con una rata nunca es aburrido. Aportan ingenio, espontaneidad y una especie de inteligencia lúdica a las asociaciones. Necesitan socios que puedan mantenerse mentalmente al día y que aprecien la inteligencia. La lealtad es extremadamente importante: traiciona a una Rata y esa mente aguda se centrará en la venganza o en eliminarte por completo.
 
-Family is central to most Rats. They're often the ones who keep everyone connected, who remember important occasions, who build and maintain the family network. They want to leave a legacy and provide security for future generations.`,
+La familia es fundamental para la mayoría de las Ratas. A menudo son ellos quienes mantienen a todos conectados, quienes recuerdan ocasiones importantes, quienes construyen y mantienen la red familiar. Quieren dejar un legado y brindar seguridad a las generaciones futuras.`,
         
-        career: `Rats excel in business, sales, and any field where quick thinking and social intelligence matter. They're natural entrepreneurs, always spotting gaps in the market or ways to improve existing systems. Their combination of charm and shrewdness makes them formidable negotiators.
+        career: `Las ratas sobresalen en los negocios, las ventas y en cualquier campo donde el pensamiento rápido y la inteligencia social sean importantes. Son emprendedores natos, siempre detectan brechas en el mercado o formas de mejorar los sistemas existentes. Su combinación de encanto y astucia los convierte en negociadores formidables.
 
-Fields like finance, real estate, law, or consulting appeal to the Rat's strategic mind. They're also excellent in roles that require networking or relationship building. Their ability to spot talent and build teams makes them effective leaders, though their quick pace can frustrate slower colleagues.
+Campos como las finanzas, el sector inmobiliario, el derecho o la consultoría atraen la mente estratégica de la Rata. También son excelentes en roles que requieren networking o construcción de relaciones. Su capacidad para detectar talentos y formar equipos los convierte en líderes eficaces, aunque su ritmo rápido puede frustrar a sus colegas más lentos.
 
-The key career challenge for Rats is staying engaged. They need variety, challenge, and opportunities to use their cleverness. Routine or bureaucracy can be soul-crushing. They need roles where quick thinking and adaptability are assets.`,
+El desafío profesional clave para Rats es mantenerse comprometido. Necesitan variedad, desafíos y oportunidades para utilizar su inteligencia. La rutina o la burocracia pueden ser desgarradoras. Necesitan roles en los que el pensamiento rápido y la adaptabilidad sean activos.`,
         
-        spiritualPath: `The spiritual journey for Rats often involves learning to trust in abundance rather than operating from scarcity. Despite their skill at accumulating resources, many Rats secretly fear there won't be enough. Spiritual growth comes from releasing this fear and trusting in the flow.
+        spiritualPath: `El viaje espiritual de las Ratas a menudo implica aprender a confiar en la abundancia en lugar de operar desde la escasez. A pesar de su habilidad para acumular recursos, muchas Ratas temen en secreto que no habrá suficientes. El crecimiento espiritual proviene de liberar este miedo y confiar en la corriente.
 
-Learning to value stillness and presence is another key lesson. The Rat's quick mind is always racing ahead, but wisdom often comes in moments of quiet. Meditation, contemplation, or any practice that slows the mental chatter can be transformative.
+Aprender a valorar la quietud y la presencia es otra lección clave. La mente rápida de la Rata siempre está avanzando, pero la sabiduría a menudo llega en momentos de tranquilidad. La meditación, la contemplación o cualquier práctica que ralentice el parloteo mental puede ser transformadora.
 
-There's also a lesson around discernment versus criticism. The Rat's sharp eye can be used for judgment or for compassionate understanding. Spiritual maturity involves using that intelligence to see the bigger picture, not just the flaws and opportunities.`,
+También hay una lección sobre el discernimiento versus la crítica. El ojo agudo de la Rata puede usarse para juzgar o para comprender con compasión. La madurez espiritual implica utilizar esa inteligencia para ver el panorama más amplio, no sólo los defectos y las oportunidades.`,
         
-        lifeCycles: `Rat years are times of new beginnings and opportunities. The energy supports initiative, strategic thinking, and building foundations for future success. It's a year to be alert, to network, to spot openings and act on them quickly.
+        lifeCycles: `Los años de las ratas son tiempos de nuevos comienzos y oportunidades. La energía respalda la iniciativa, el pensamiento estratégico y la construcción de bases para el éxito futuro. Es un año para estar alerta, establecer contactos, detectar oportunidades y actuar en consecuencia rápidamente.
 
-For those born in Rat years, the 12-year zodiac cycle brings particular intensity. Every 12 years, when the Rat returns, there's an opportunity for renewal and reinvention. These are powerful years for setting new directions.`,
+Para aquellos nacidos en los años de la Rata, el ciclo zodiacal de 12 años aporta una intensidad particular. Cada 12 años, cuando la Rata regresa, hay una oportunidad de renovación y reinvención. Estos son años poderosos para establecer nuevas direcciones.`,
         
-        compatibility: `Rats find natural harmony with Dragons and Monkeys - together they form a triangle of intelligence and ambition. Dragon provides the vision and confidence, Monkey the creativity and wit, and Rat the strategy and resourcefulness.
+        compatibility: `Las ratas encuentran una armonía natural con los dragones y los monos: juntos forman un triángulo de inteligencia y ambición. Dragon proporciona la visión y la confianza, Monkey la creatividad y el ingenio, y Rat la estrategia y el ingenio.
 
-Oxen can be good partners for Rats - the Ox provides stability and patience while the Rat brings adaptability and social skills. Pigs share the Rat's love of good living and can provide warmth and trust.
+Los bueyes pueden ser buenos compañeros para las ratas: el buey proporciona estabilidad y paciencia, mientras que la rata aporta adaptabilidad y habilidades sociales. Los cerdos comparten el amor de la Rata por el buen vivir y pueden brindar calidez y confianza.
 
-Challenging matches include Horses (too independent and impulsive for the strategic Rat) and Roosters (too critical and rigid). Rabbits might seem too passive or indecisive for the quick-moving Rat.`,
+Las partidas desafiantes incluyen Caballos (demasiado independientes e impulsivos para la estratégica Rata) y Gallos (demasiado críticos y rígidos). Los conejos pueden parecer demasiado pasivos o indecisos para la rápida Rata.`,
         
-        affirmation: "I trust in my intelligence and resourcefulness. Opportunities flow to me naturally, and I have everything I need. My quick mind is a gift I use with wisdom and compassion."
+        affirmation: "Confío en mi inteligencia e ingenio. Las oportunidades fluyen hacia mí de forma natural y tengo todo lo que necesito. Mi mente rápida es un don que uso con sabiduría y compasión."
     },
 
     Ox: {
-        title: "Year of the Ox",
-        archetype: "The Steadfast Builder",
-        hook: "Born in the Year of the Ox, this soul carries the energy of the steadfast builder - patient, reliable, and possessed of quiet strength that moves mountains through consistent effort. The Ox represents the power of dedication and the rewards that come to those who work diligently.",
-        coreNature: `The Ox embodies the archetype of the patient builder. This is strength that doesn't need to announce itself, power that comes from determination rather than flash. Oxen understand that great things are built slowly, brick by brick, day by day.
+        title: "Año del Buey",
+        archetype: "El constructor firme",
+        hook: "Nacida en el Año del Buey, esta alma lleva la energía del firme constructor: paciente, confiable y poseedor de una fuerza silenciosa que mueve montañas a través de un esfuerzo constante. El Buey representa el poder de la dedicación y las recompensas que reciben quienes trabajan diligentemente.",
+        coreNature: `El Buey encarna el arquetipo del constructor paciente. Esta es una fuerza que no necesita anunciarse, un poder que proviene de la determinación más que de un destello. Los bueyes entienden que las grandes cosas se construyen lentamente, ladrillo a ladrillo, día a día.
 
-There's an inner stability that's almost unshakeable. Where others might be swayed by trends or temporary setbacks, the Ox plods forward, focused on the long-term goal. This isn't stubbornness (though it can manifest that way) - it's profound faith in the value of sustained effort.
+Hay una estabilidad interior que es casi inquebrantable. Mientras que otros pueden dejarse llevar por tendencias o reveses temporales, el Buey avanza pesadamente, centrado en el objetivo a largo plazo. Esto no es terquedad (aunque puede manifestarse de esa manera): es una fe profunda en el valor del esfuerzo sostenido.
 
-The Ox soul came here to demonstrate the power of responsibility. They're the ones who show up, who do what needs to be done regardless of recognition or praise. Their work ethic isn't performative; it's simply how they operate in the world.`,
+El alma del Buey vino aquí para demostrar el poder de la responsabilidad. Ellos son los que aparecen, los que hacen lo que hay que hacer sin importar el reconocimiento o el elogio. Su ética de trabajo no es performativa; así es simplemente cómo operan en el mundo.`,
         
-        strengths: `Oxen possess remarkable reliability and determination. When they commit to something, they see it through. This makes them invaluable in any situation requiring sustained effort or dependability. Their word means something; promises made are promises kept.
+        strengths: `Los bueyes poseen una confiabilidad y determinación notables. Cuando se comprometen con algo, lo logran. Esto los hace invaluables en cualquier situación que requiera esfuerzo sostenido o confiabilidad. Su palabra significa algo; Las promesas hechas son promesas cumplidas.
 
-There's a physical and mental strength here that's impressive. Oxen can carry heavy loads - whether literal or metaphorical - without complaint. They have endurance that outlasts flashier competitors. While others burn out, the Ox keeps going.
+Aquí hay una fuerza física y mental que es impresionante. Los bueyes pueden transportar cargas pesadas, ya sean literales o metafóricas, sin quejarse. Tienen una resistencia que dura más que sus competidores más llamativos. Mientras otros se agotan, el Buey sigue adelante.
 
-Practically speaking, Oxen are often skilled with their hands and have a natural understanding of how things work. They're methodical problem-solvers who prefer proven methods over untested innovations. Their patience allows them to master complex skills that require sustained practice.`,
+En la práctica, los bueyes suelen ser hábiles con las manos y tienen una comprensión natural de cómo funcionan las cosas. Son solucionadores de problemas metódicos que prefieren métodos probados a innovaciones no probadas. Su paciencia les permite dominar habilidades complejas que requieren una práctica sostenida.`,
         
-        shadows: `The shadow side of Ox energy manifests as rigidity and resistance to change. That same steadiness that's such a strength can become an unwillingness to adapt when adaptation is needed. Oxen can get stuck in patterns that no longer serve them, continuing simply because "that's how it's always been done."
+        shadows: `El lado oscuro de la energía del Buey se manifiesta como rigidez y resistencia al cambio. Esa misma firmeza que es una gran fortaleza puede convertirse en falta de voluntad para adaptarse cuando es necesario. Los bueyes pueden quedarse atrapados en patrones que ya no les sirven y continuar simplemente porque "así se ha hecho siempre".
 
-Stubbornness is a real issue for many Oxen. Once they've made up their mind, changing it can be nearly impossible, even in the face of compelling evidence. This can lead to missed opportunities or persistence in the wrong direction.
+La terquedad es un problema real para muchos Bueyes. Una vez que han tomado una decisión, cambiarla puede ser casi imposible, incluso frente a pruebas convincentes. Esto puede llevar a perder oportunidades o a perseverar en la dirección equivocada.
 
-Emotional expression can be challenging. Oxen feel deeply but often don't know how to articulate or share those feelings. This can lead to relationships where partners feel shut out, not realizing the depth of feeling that exists beneath the stoic exterior.`,
+La expresión emocional puede ser un desafío. Los bueyes sienten profundamente pero a menudo no saben cómo articular o compartir esos sentimientos. Esto puede llevar a relaciones en las que la pareja se siente excluida, sin darse cuenta de la profundidad del sentimiento que existe bajo el exterior estoico.`,
         
-        relationships: `In relationships, Oxen are loyal and devoted. They might not be the most demonstrative, but their commitment runs bone-deep. They show love through actions more than words - providing, protecting, doing the work that keeps life stable.
+        relationships: `En las relaciones, los Bueyes son leales y devotos. Puede que no sean los más demostrativos, pero su compromiso es profundo. Muestran amor a través de acciones más que de palabras: brindando, protegiendo y haciendo el trabajo que mantiene la vida estable.
 
-Romance with an Ox requires patience. They're not quick to trust or open up, but once they do, they're in it for the long haul. They need partners who understand that silence doesn't mean absence of feeling, and who appreciate devotion over grand romantic gestures.
+El romance con un Buey requiere paciencia. No confían ni se abren rápidamente, pero una vez que lo hacen, permanecen en esto por mucho tiempo. Necesitan socios que comprendan que el silencio no significa ausencia de sentimientos y que aprecien la devoción por encima de los grandes gestos románticos.
 
-As parents or family members, Oxen are the backbone. They're the ones who handle responsibilities, who provide stability, who can be counted on in crisis. They may struggle with emotional availability but their dedication to family welfare is absolute.`,
+Como padres o miembros de la familia, los bueyes son la columna vertebral. Son ellos quienes manejan las responsabilidades, quienes brindan estabilidad y con quienes se puede contar en caso de crisis. Puede que tengan dificultades con la disponibilidad emocional, pero su dedicación al bienestar familiar es absoluta.`,
         
-        career: `Oxen excel in careers requiring sustained effort and reliability. Agriculture, construction, craftsmanship, engineering - fields where patient work produces tangible results. They're excellent in roles requiring attention to detail and consistent quality.
+        career: `Los bueyes sobresalen en carreras que requieren esfuerzo sostenido y confiabilidad. Agricultura, construcción, artesanía, ingeniería: campos donde el trabajo paciente produce resultados tangibles. Son excelentes en roles que requieren atención al detalle y calidad constante.
 
-Management positions suit Oxen well when they can focus on systems and processes rather than constant innovation. They build solid, efficient operations. However, they may struggle in fast-paced environments requiring rapid adaptation or in roles demanding high social interaction.
+Los puestos directivos se adaptan bien a Oxen cuando pueden centrarse en sistemas y procesos en lugar de en la innovación constante. Construyen operaciones sólidas y eficientes. Sin embargo, pueden tener dificultades en entornos acelerados que requieren una rápida adaptación o en roles que exigen una alta interacción social.
 
-The key career satisfaction for Oxen comes from seeing concrete results of their efforts. They need to know their work matters and produces real value. Recognition is appreciated but not required - they'll keep working well without it.`,
+La principal satisfacción profesional de Oxen proviene de ver resultados concretos de sus esfuerzos. Necesitan saber que su trabajo es importante y produce valor real. El reconocimiento se agradece, pero no es obligatorio; seguirán trabajando bien sin él.`,
         
-        spiritualPath: `The spiritual journey for Oxen often involves learning to balance strength with flexibility. The lesson is that true strength includes the ability to bend when necessary, to adapt while maintaining core integrity. Learning when to persist and when to pivot is crucial growth.
+        spiritualPath: `El viaje espiritual de los Bueyes a menudo implica aprender a equilibrar la fuerza con la flexibilidad. La lección es que la verdadera fuerza incluye la capacidad de doblarse cuando sea necesario, de adaptarse manteniendo la integridad central. Aprender cuándo persistir y cuándo girar es un crecimiento crucial.
 
-Emotional opening is another key lesson. Oxen came here to learn that vulnerability isn't weakness. Allowing others to see their feelings, to share burdens, to be supported rather than always being the supporter - this is advanced work for Ox souls.
+La apertura emocional es otra lección clave. Los bueyes vinieron aquí para aprender que la vulnerabilidad no es debilidad. Permitir que los demás vean sus sentimientos, compartir cargas, ser apoyados en lugar de ser siempre los que los apoyan: este es un trabajo avanzado para las almas de Buey.
 
-There's also a lesson around rest and renewal. Oxen can work themselves to exhaustion, believing that their value lies in their productivity. Learning to rest without guilt, to appreciate life beyond work, is transformative spiritual work.`,
+También hay una lección sobre el descanso y la renovación. Los bueyes pueden trabajar hasta el agotamiento, creyendo que su valor reside en su productividad. Aprender a descansar sin culpa, a apreciar la vida más allá del trabajo, es un trabajo espiritual transformador.`,
         
-        lifeCycles: `Ox years are times of building and consolidation. The energy supports hard work, planning, and laying foundations. Progress may feel slow, but what's built during Ox years tends to last. It's a year for patience and sustained effort.
+        lifeCycles: `Los años del Buey son tiempos de construcción y consolidación. La energía apoya el trabajo duro, la planificación y la colocación de bases. El progreso puede parecer lento, pero lo que se construye durante los años del Buey tiende a durar. Es un año de paciencia y esfuerzo sostenido.
 
-For those born in Ox years, the 12-year zodiac cycle brings periods of intensive building. Every 12 years offers an opportunity to assess what's been built and recommit to long-term goals with renewed dedication.`,
+Para aquellos nacidos en el año Buey, el ciclo zodiacal de 12 años trae períodos de desarrollo intensivo. Cada 12 años ofrece la oportunidad de evaluar lo que se ha construido y volver a comprometerse con objetivos a largo plazo con dedicación renovada.`,
         
-        compatibility: `Oxen find natural harmony with Snakes and Roosters - together they form a triangle of dedication and precision. Snake provides depth and intuition, Rooster the standards and attention to detail, and Ox the strength and follow-through.
+        compatibility: `Los bueyes encuentran una armonía natural con las serpientes y los gallos: juntos forman un triángulo de dedicación y precisión. Snake proporciona profundidad e intuición, Rooster los estándares y atención al detalle, y Ox la fuerza y ​​el seguimiento.
 
-Rats can be good partners - the Rat's cleverness complements the Ox's steadiness. Pigs share the Ox's appreciation for material security and can bring warmth to the relationship.
+Las ratas pueden ser buenas compañeras: la inteligencia de la Rata complementa la firmeza del Buey. Los cerdos comparten el aprecio del Buey por la seguridad material y pueden aportar calidez a la relación.
 
-Challenging matches include Goats (too scattered and dependent for the self-sufficient Ox) and Horses (too restless and freedom-loving for the stability-seeking Ox). Tigers might seem too impulsive and chaotic.`,
+Las partidas desafiantes incluyen Cabras (demasiado dispersas y dependientes para el Buey autosuficiente) y Caballos (demasiado inquietos y amantes de la libertad para el Buey que busca estabilidad). Los tigres pueden parecer demasiado impulsivos y caóticos.`,
         
-        affirmation: "My steady efforts create lasting value. I honor both my strength and my softness. I am flexible within my strength, adapting wisely while maintaining my core integrity."
+        affirmation: "Mis constantes esfuerzos crean valor duradero. Honro tanto mi fuerza como mi suavidad. Soy flexible dentro de mis fuerzas, me adapto sabiamente mientras mantengo mi integridad central."
     },
 
     Tiger: {
-        title: "Year of the Tiger",
-        archetype: "The Fearless Leader",
-        hook: "Born in the Year of the Tiger, this soul carries the energy of the fearless leader - bold, charismatic, and magnetically powerful. Tigers represent raw courage, the willingness to take risks, and the kind of presence that commands attention without trying.",
-        coreNature: `The Tiger embodies the archetype of the brave warrior. This is courage personified - not the absence of fear but the willingness to act despite it. Tigers came here to demonstrate that bold action creates change and that leadership requires the courage to stand alone when necessary.
+        title: "año del tigre",
+        archetype: "El líder intrépido",
+        hook: "Nacida en el Año del Tigre, esta alma lleva la energía del líder intrépido: audaz, carismático y magnéticamente poderoso. Los tigres representan coraje puro, la voluntad de correr riesgos y el tipo de presencia que llama la atención sin intentarlo.",
+        coreNature: `El Tigre encarna el arquetipo del guerrero valiente. Esto es coraje personificado: no la ausencia de miedo sino la voluntad de actuar a pesar de él. Los Tigres vinieron aquí para demostrar que una acción audaz genera cambios y que el liderazgo requiere el coraje de permanecer solos cuando sea necesario.
 
-There's a magnetic quality to Tiger energy. When they walk into a room, people notice. This isn't performance; it's authentic power. Tigers radiate confidence and vitality. They're here to live large, take risks, and inspire others through their example.
+Hay una cualidad magnética en la energía del Tigre. Cuando entran en una habitación, la gente se da cuenta. Esto no es actuación; es auténtico poder. Los tigres irradian confianza y vitalidad. Están aquí para vivir en grande, asumir riesgos e inspirar a otros con su ejemplo.
 
-The Tiger soul understands instinctively that life is meant to be lived fully. Caution might be wise, but excessive caution kills the spirit. Tigers would rather fail spectacularly in pursuit of something great than succeed at something small and safe.`,
+El alma del Tigre comprende instintivamente que la vida debe vivirse plenamente. La precaución puede ser prudente, pero la precaución excesiva mata el espíritu. Los tigres prefieren fracasar espectacularmente en la búsqueda de algo grande que tener éxito en algo pequeño y seguro.`,
         
-        strengths: `Tigers possess natural leadership and charisma. People are drawn to their confidence and energy. They have a gift for inspiring others and rallying people to causes. Their enthusiasm is contagious and their courage authentic.
+        strengths: `Los tigres poseen liderazgo y carisma naturales. La gente se siente atraída por su confianza y energía. Tienen el don de inspirar a otros y unir a la gente a causas. Su entusiasmo es contagioso y su coraje auténtico.
 
-There's a competitive fire that drives Tigers to excellence. They're not content with mediocrity - they want to be the best, to push boundaries, to achieve remarkable things. This competitive nature, channeled well, produces extraordinary accomplishments.
+Hay un fuego competitivo que lleva a los Tigres a la excelencia. No se contentan con la mediocridad: quieren ser los mejores, superar los límites y lograr cosas extraordinarias. Este carácter competitivo, bien canalizado, produce logros extraordinarios.
 
-Tigers are also fiercely protective of those they love. Their courage extends to standing up for others, fighting injustice, and defending the vulnerable. They're noble in their way, with a strong sense of honor and fairness.`,
+Los tigres también son ferozmente protectores con sus seres queridos. Su valentía se extiende a defender a los demás, luchar contra la injusticia y defender a los vulnerables. Son nobles a su manera, con un fuerte sentido del honor y la justicia.`,
         
-        shadows: `The shadow side of Tiger energy manifests as recklessness and arrogance. That bold confidence can cross into hubris, believing they're invincible or that rules don't apply to them. This can lead to unnecessary risks or trampling others in pursuit of goals.
+        shadows: `El lado oscuro de la energía del Tigre se manifiesta como imprudencia y arrogancia. Esa confianza audaz puede convertirse en arrogancia, creer que son invencibles o que las reglas no se aplican a ellos. Esto puede conducir a riesgos innecesarios o a pisotear a otros en la consecución de objetivos.
 
-Impulsiveness is a constant challenge. Tigers act on instinct, which is sometimes brilliant but sometimes disastrous. They may leap before looking, start projects they don't finish, or make commitments their enthusiasm can't sustain.
+La impulsividad es un desafío constante. Los tigres actúan por instinto, que a veces es brillante pero a veces desastroso. Pueden saltar antes de mirar, comenzar proyectos que no terminan o asumir compromisos que su entusiasmo no puede sostener.
 
-Authority issues plague many Tigers. They resist being told what to do and may rebel against structures or rules they see as limiting. While independence is strength, excessive rebellion can create unnecessary conflict and missed opportunities.`,
+Los problemas de autoridad afectan a muchos Tigres. Se resisten a que les digan qué hacer y pueden rebelarse contra estructuras o reglas que consideran limitantes. Si bien la independencia es fortaleza, la rebelión excesiva puede crear conflictos innecesarios y oportunidades perdidas.`,
         
-        relationships: `In relationships, Tigers are passionate and intense. They love with the same fierce energy they bring to everything. Romance with a Tiger is an adventure - exciting, unpredictable, and never boring. They're generous with attention and affection when engaged.
+        relationships: `En las relaciones, los Tigres son apasionados e intensos. Aman con la misma energía feroz que aportan a todo. Romance with a Tiger es una aventura: emocionante, impredecible y nunca aburrida. Son generosos con la atención y el afecto cuando están comprometidos.
 
-However, Tigers need independence within relationships. They require partners who can handle their intensity without trying to tame it, who support their ambitions without being threatened. Jealous or controlling partners will find themselves in constant conflict.
+Sin embargo, los Tigres necesitan independencia en las relaciones. Requieren socios que puedan manejar su intensidad sin intentar domarla, que apoyen sus ambiciones sin verse amenazados. Los socios celosos o controladores se encontrarán en constante conflicto.
 
-As parents or family members, Tigers are protective and encouraging. They teach courage and independence. They may struggle with the patience required for mundane caregiving tasks but excel at inspiring and defending their people.`,
+Como padres o miembros de la familia, los Tigres son protectores y alentadores. Enseñan coraje e independencia. Puede que les cueste tener la paciencia necesaria para las tareas mundanas de cuidado, pero sobresalen a la hora de inspirar y defender a su gente.`,
         
-        career: `Tigers excel in leadership positions, entrepreneurship, and any field where courage and charisma matter. They're natural at sales, entertainment, politics, or military leadership. They need roles where they can be visible and make an impact.
+        career: `Los tigres se destacan en posiciones de liderazgo, espíritu empresarial y cualquier campo donde el coraje y el carisma sean importantes. Son naturales en las ventas, el entretenimiento, la política o el liderazgo militar. Necesitan roles en los que puedan ser visibles y generar un impacto.
 
-The corporate world can frustrate Tigers unless they're at the top. They struggle with bureaucracy and authority. They need autonomy, challenge, and opportunities to prove themselves. Routine or subordinate positions feel like cages.
+El mundo empresarial puede frustrar a los Tigres a menos que estén en la cima. Luchan con la burocracia y la autoridad. Necesitan autonomía, desafíos y oportunidades para demostrar su valía. Las posiciones rutinarias o subordinadas parecen jaulas.
 
-The key career satisfaction for Tigers comes from achievement and recognition. They need to feel they're accomplishing something significant, making their mark on the world. Impact matters more than security.`,
+La principal satisfacción profesional de los Tigres proviene de los logros y el reconocimiento. Necesitan sentir que están logrando algo significativo, dejando su huella en el mundo. El impacto importa más que la seguridad.`,
         
-        spiritualPath: `The spiritual journey for Tigers often involves learning to balance courage with wisdom. The lesson is that true strength includes knowing when not to fight, when to retreat strategically, when to conserve energy. Wisdom is knowing which battles matter.
+        spiritualPath: `El viaje espiritual de los Tigres a menudo implica aprender a equilibrar el coraje con la sabiduría. La lección es que la verdadera fuerza incluye saber cuándo no luchar, cuándo retirarse estratégicamente y cuándo conservar energía. La sabiduría es saber qué batallas importan.
 
-Patience is another crucial lesson. Tigers want everything now, but some things require slow cultivation. Learning to sustain effort over time, to work steadily toward distant goals, builds spiritual maturity.
+La paciencia es otra lección crucial. Los tigres quieren todo ahora, pero algunas cosas requieren un cultivo lento. Aprender a mantener el esfuerzo a lo largo del tiempo, a trabajar de manera constante hacia metas distantes, construye madurez espiritual.
 
-There's also a lesson around vulnerability and surrender. Tigers are so identified with strength that admitting weakness or asking for help feels impossible. Learning that these too require courage - perhaps the deepest courage - is transformative.`,
+También hay una lección sobre la vulnerabilidad y la rendición. Los tigres están tan identificados con la fuerza que admitir debilidad o pedir ayuda les parece imposible. Aprender que estos también requieren coraje -quizás el coraje más profundo- es transformador.`,
         
-        lifeCycles: `Tiger years are times of bold action and new initiatives. The energy supports courage, leadership, and taking calculated risks. It's a year when brave moves can pay off spectacularly, but impulsiveness can also backfire. The key is channeling the Tiger's courage wisely.
+        lifeCycles: `Los años del tigre son tiempos de acciones audaces y nuevas iniciativas. La energía respalda el coraje, el liderazgo y la asunción de riesgos calculados. Es un año en el que los movimientos valientes pueden dar resultados espectaculares, pero la impulsividad también puede resultar contraproducente. La clave es canalizar sabiamente el coraje del Tigre.
 
-For those born in Tiger years, the 12-year zodiac cycle brings opportunities for reinvention and fresh starts. Every 12 years offers a chance to leap into something new with renewed courage.`,
+Para aquellos nacidos en los años del Tigre, el ciclo zodiacal de 12 años brinda oportunidades para la reinvención y nuevos comienzos. Cada 12 años ofrece la oportunidad de lanzarse a algo nuevo con valor renovado.`,
         
-        compatibility: `Tigers find natural harmony with Horses and Dogs - together they form a triangle of action and loyalty. Horse provides adventure and freedom, Dog the loyalty and integrity, and Tiger the courage and leadership.
+        compatibility: `Los tigres encuentran una armonía natural con los caballos y los perros: juntos forman un triángulo de acción y lealtad. El Caballo proporciona aventura y libertad, el Perro la lealtad y la integridad y el Tigre el coraje y el liderazgo.
 
-Dragons can be interesting but competitive partners - two powerful energies that can either inspire each other or clash. Pigs can provide grounding and appreciation that Tigers need.
+Los dragones pueden ser socios interesantes pero competitivos: dos energías poderosas que pueden inspirarse mutuamente o chocar. Los cerdos pueden brindar la conexión a tierra y el aprecio que los tigres necesitan.
 
-Challenging matches include Monkeys (too tricky and indirect for the straightforward Tiger) and Snakes (too secretive and strategic versus the Tiger's bold directness). Oxen might seem too slow and conventional.`,
+Las partidas desafiantes incluyen Monos (demasiado complicados e indirectos para el sencillo Tigre) y Serpientes (demasiado reservadas y estratégicas frente a la audaz franqueza del Tigre). Los bueyes pueden parecer demasiado lentos y convencionales.`,
         
-        affirmation: "I am courageous and wise. My boldness is balanced by discernment. I lead with integrity and inspire through authentic strength. I know when to fight and when to rest."
+        affirmation: "Soy valiente y sabio. Mi audacia se equilibra con el discernimiento. Lidero con integridad e inspiro a través de una fuerza auténtica. Sé cuándo luchar y cuándo descansar."
     },
 
     Rabbit: {
-        title: "Year of the Rabbit",
-        archetype: "The Graceful Diplomat",
-        hook: "Born in the Year of the Rabbit, this soul carries the energy of the graceful diplomat - elegant, sensitive, and naturally gifted at creating harmony. Rabbits represent refinement, good fortune, and the power of gentleness in a harsh world.",
-        coreNature: `The Rabbit embodies the archetype of the peaceful mediator. This is intelligence operating through grace rather than force, power expressed through subtlety and social finesse. Rabbits understand that true strength often wears a soft face.
+        title: "año del conejo",
+        archetype: "El elegante diplomático",
+        hook: "Nacida en el Año del Conejo, esta alma lleva la energía del gracioso diplomático: elegante, sensible y naturalmente dotado para crear armonía. Los conejos representan refinamiento, buena suerte y el poder de la gentileza en un mundo duro.",
+        coreNature: `El Conejo encarna el arquetipo del mediador pacífico. Se trata de inteligencia que opera a través de la gracia más que de la fuerza, poder expresado a través de la sutileza y la delicadeza social. Los conejos entienden que la verdadera fuerza a menudo tiene una cara suave.
 
-There's an innate sensitivity that makes Rabbits highly attuned to their environment and the people around them. They pick up on subtle social cues, reading emotional undercurrents with remarkable accuracy. This makes them excellent at navigating complex social situations and avoiding unnecessary conflict.
+Existe una sensibilidad innata que hace que los Conejos estén muy en sintonía con su entorno y las personas que los rodean. Captan señales sociales sutiles y leen corrientes emocionales subyacentes con notable precisión. Esto los hace excelentes para navegar situaciones sociales complejas y evitar conflictos innecesarios.
 
-The Rabbit soul came here to demonstrate that beauty, kindness, and diplomacy are not weaknesses but sophisticated forms of strength. They're living proof that you can succeed through grace rather than aggression.`,
+El alma del Conejo vino aquí para demostrar que la belleza, la bondad y la diplomacia no son debilidades sino formas sofisticadas de fortaleza. Son la prueba viviente de que se puede triunfar mediante la gracia y no mediante la agresión.`,
         
-        strengths: `Rabbits possess exceptional social intelligence and diplomatic skills. They know how to say the right thing, how to smooth over conflicts, how to make everyone feel comfortable. This makes them valuable in any setting requiring tact and relationship management.
+        strengths: `Los conejos poseen una inteligencia social excepcional y habilidades diplomáticas. Saben cómo decir lo correcto, cómo suavizar los conflictos, cómo hacer que todos se sientan cómodos. Esto los hace valiosos en cualquier entorno que requiera tacto y gestión de relaciones.
 
-There's a natural elegance and refined taste. Rabbits appreciate beauty in all forms - art, music, design, nature. They have a gift for creating beautiful environments and often possess artistic talents themselves. Their aesthetic sense is impeccable.
+Hay una elegancia natural y un gusto refinado. Los conejos aprecian la belleza en todas sus formas: arte, música, diseño, naturaleza. Tienen el don de crear entornos hermosos y, a menudo, ellos mismos poseen talentos artísticos. Su sentido estético es impecable.
 
-Compassion and empathy are genuine strengths. Rabbits truly care about others' well-being and will work to ensure everyone is comfortable and cared for. Their kindness isn't strategic; it's sincere. This creates deep loyalty in relationships.`,
+La compasión y la empatía son fortalezas genuinas. Los conejos realmente se preocupan por el bienestar de los demás y trabajarán para garantizar que todos estén cómodos y cuidados. Su amabilidad no es estratégica; es sincero. Esto crea una profunda lealtad en las relaciones.`,
         
-        shadows: `The shadow side of Rabbit energy manifests as excessive conflict avoidance. That diplomatic nature can become people-pleasing, agreeing to things they don't want to avoid confrontation. This can lead to resentment and loss of authenticity.
+        shadows: `El lado oscuro de la energía del Conejo se manifiesta como una evitación excesiva del conflicto. Esa naturaleza diplomática puede resultar en complacer a la gente, aceptando cosas que no quieren evitar la confrontación. Esto puede provocar resentimiento y pérdida de autenticidad.
 
-Over-sensitivity is a real challenge. Rabbits can be easily hurt by criticism or harsh environments. What others brush off can wound them deeply. This can lead to withdrawal or anxiety in situations requiring thick skin.
+La hipersensibilidad es un verdadero desafío. Los conejos pueden resultar heridos fácilmente por las críticas o los entornos hostiles. Lo que otros ignoran puede herirlos profundamente. Esto puede provocar retraimiento o ansiedad en situaciones que requieren piel dura.
 
-Indecision plagues many Rabbits. Their ability to see all sides of a situation can make it hard to choose. Fear of making the wrong decision can lead to paralysis or relying too heavily on others to decide for them.`,
+La indecisión afecta a muchos Conejos. Su capacidad para ver todos los lados de una situación puede dificultar la elección. El miedo a tomar una decisión equivocada puede llevar a la parálisis o a depender demasiado de otros para que decidan por ellos.`,
         
-        relationships: `In relationships, Rabbits are devoted and romantic. They create beautiful, harmonious partnerships and will work hard to maintain peace. They're attentive to their partner's needs and feelings, often anticipating them before they're expressed.
+        relationships: `En las relaciones, los Conejos son devotos y románticos. Crean asociaciones hermosas y armoniosas y trabajarán duro para mantener la paz. Están atentos a las necesidades y sentimientos de su pareja y, a menudo, se anticipan a ellos antes de expresarlos.
 
-Romance with a Rabbit is gentle and refined. They appreciate beauty, sentiment, and emotional connection. They need partners who are kind, who provide security, and who appreciate their sensitive nature. Harsh or aggressive partners are deeply incompatible.
+El romance con un Conejo es gentil y refinado. Aprecian la belleza, el sentimiento y la conexión emocional. Necesitan socios que sean amables, que les brinden seguridad y que aprecien su naturaleza sensible. Las parejas duras o agresivas son profundamente incompatibles.
 
-As parents or family members, Rabbits are nurturing and protective. They create warm, beautiful homes and prioritize their family's emotional well-being. They may struggle with necessary discipline, preferring to avoid conflict even when boundaries are needed.`,
+Como padres o miembros de la familia, los conejos son cariñosos y protectores. Crean hogares cálidos y hermosos y priorizan el bienestar emocional de su familia. Es posible que tengan dificultades con la disciplina necesaria y prefieran evitar el conflicto incluso cuando se necesitan límites.`,
         
-        career: `Rabbits excel in careers involving diplomacy, design, counseling, or the arts. They're natural at human resources, public relations, interior design, or any field where aesthetic sense and people skills matter. They create harmony in any workplace.
+        career: `Los conejos se destacan en carreras relacionadas con la diplomacia, el diseño, el asesoramiento o las artes. Son expertos en recursos humanos, relaciones públicas, diseño de interiores o cualquier campo donde el sentido estético y las habilidades interpersonales sean importantes. Crean armonía en cualquier lugar de trabajo.
 
-Highly competitive or conflict-heavy environments are draining for Rabbits. They prefer cooperative workplaces with clear expectations and respectful interactions. They can be effective leaders through their ability to build consensus and inspire loyalty.
+Los entornos altamente competitivos o llenos de conflictos son agotadores para los Conejos. Prefieren lugares de trabajo cooperativos con expectativas claras e interacciones respetuosas. Pueden ser líderes eficaces gracias a su capacidad para generar consenso e inspirar lealtad.
 
-The key career satisfaction for Rabbits comes from creating beauty or harmony and working in environments that feel safe and respectful. They need to feel their work contributes to making the world more beautiful or peaceful.`,
+La satisfacción profesional clave para los Conejos proviene de crear belleza o armonía y trabajar en entornos que los sientan seguros y respetuosos. Necesitan sentir que su trabajo contribuye a hacer el mundo más bello y más pacífico.`,
         
-        spiritualPath: `The spiritual journey for Rabbits often involves learning to balance sensitivity with resilience. The lesson is that staying open-hearted doesn't require absorbing everyone's pain or avoiding all conflict. Healthy boundaries protect sensitivity rather than harden it.
+        spiritualPath: `El viaje espiritual de los Conejos a menudo implica aprender a equilibrar la sensibilidad con la resiliencia. La lección es que mantener el corazón abierto no requiere absorber el dolor de todos ni evitar todos los conflictos. Los límites saludables protegen la sensibilidad en lugar de endurecerla.
 
-Developing confidence in their own judgment is another key lesson. Rabbits can be too dependent on others' approval or opinions. Learning to trust their own perceptions and make decisions from their center is crucial growth.
+Desarrollar confianza en su propio juicio es otra lección clave. Los conejos pueden depender demasiado de la aprobación o las opiniones de los demás. Aprender a confiar en sus propias percepciones y tomar decisiones desde su centro es un crecimiento crucial.
 
-There's also a lesson around embracing temporary discomfort for long-term growth. Rabbits naturally avoid anything unpleasant, but some of life's most important experiences require moving through difficulty. Learning to be brave in their own gentle way is transformative.`,
+También hay una lección sobre cómo aprovechar el malestar temporal para lograr un crecimiento a largo plazo. Los conejos evitan naturalmente cualquier cosa desagradable, pero algunas de las experiencias más importantes de la vida requieren superar dificultades. Aprender a ser valiente a su manera es transformador.`,
         
-        lifeCycles: `Rabbit years are times of peace, diplomacy, and gentle progress. The energy supports relationship building, artistic pursuits, and creating beauty. It's a year for harmony and refinement rather than bold action. Progress comes through cooperation and grace.
+        lifeCycles: `Los años del conejo son tiempos de paz, diplomacia y suave progreso. La energía apoya la construcción de relaciones, las actividades artísticas y la creación de belleza. Es un año de armonía y refinamiento en lugar de acciones audaces. El progreso viene a través de la cooperación y la gracia.
 
-For those born in Rabbit years, the 12-year zodiac cycle brings opportunities for renewal and finding peace. Every 12 years offers a chance to release conflict and return to their natural grace.`,
+Para aquellos nacidos en los años del Conejo, el ciclo zodiacal de 12 años brinda oportunidades para renovarse y encontrar la paz. Cada 12 años ofrece la oportunidad de liberar el conflicto y volver a su gracia natural.`,
         
-        compatibility: `Rabbits find natural harmony with Goats and Pigs - together they form a triangle of peace and creativity. Goat provides artistic vision, Pig the warmth and generosity, and Rabbit the diplomacy and grace.
+        compatibility: `Los conejos encuentran una armonía natural con las cabras y los cerdos: juntos forman un triángulo de paz y creatividad. La Cabra proporciona una visión artística, el Cerdo la calidez y la generosidad y el Conejo la diplomacia y la gracia.
 
-Dogs can be good partners, providing the security and loyalty Rabbits crave. Snakes offer interesting depth, though the Snake's intensity might sometimes overwhelm.
+Los perros pueden ser buenos compañeros, brindando la seguridad y la lealtad que los Conejos anhelan. Las serpientes ofrecen una profundidad interesante, aunque la intensidad de la serpiente a veces puede abrumar.
 
-Challenging matches include Roosters (too critical and direct for the sensitive Rabbit) and Rats (too opportunistic and strategic versus the Rabbit's sincerity). Tigers might seem too aggressive and confrontational.`,
+Las partidas desafiantes incluyen Gallos (demasiado críticos y directos para el sensible Conejo) y Ratas (demasiado oportunistas y estratégicas frente a la sinceridad del Conejo). Los tigres pueden parecer demasiado agresivos y conflictivos.`,
         
-        affirmation: "I am graceful and strong. My sensitivity is wisdom, not weakness. I create harmony while honoring my truth. I am brave in my own gentle way."
+        affirmation: "Soy elegante y fuerte. Mi sensibilidad es sabiduría, no debilidad. Creo armonía mientras honro mi verdad. Soy valiente a mi manera gentil."
     },
 
     Dragon: {
-        title: "Year of the Dragon",
-        archetype: "The Magnificent Achiever",
-        hook: "Born in the Year of the Dragon, this soul carries the energy of the mythical beast - powerful, fortunate, and seemingly destined for extraordinary things. Dragons represent the pinnacle of yang energy, the force of greatness made manifest.",
-        coreNature: `The Dragon embodies the archetype of the destined leader. This is magnitude personified - natural charisma, exceptional confidence, and an expectation of success that often becomes self-fulfilling. Dragons don't just want to succeed; they expect to excel.
+        title: "Año del dragón",
+        archetype: "El magnifico triunfador",
+        hook: "Nacida en el Año del Dragón, esta alma lleva la energía de la bestia mítica: poderosa, afortunada y aparentemente destinada a cosas extraordinarias. Los dragones representan el pináculo de la energía yang, la fuerza de la grandeza manifestada.",
+        coreNature: `El Dragón encarna el arquetipo del líder destinado. Esta es la magnitud personificada: carisma natural, confianza excepcional y una expectativa de éxito que a menudo se vuelve autocumplida. Los dragones no sólo quieren tener éxito; esperan sobresalir.
 
-There's a quality of magic around Dragon energy. They seem to attract good fortune, opportunities, and attention. This isn't purely luck - it's the result of their magnetic presence and the high expectations they carry. The universe seems to respond to their certainty.
+Hay una cualidad de magia alrededor de la energía del Dragón. Parecen atraer buena suerte, oportunidades y atención. Esto no es pura suerte, es el resultado de su presencia magnética y las altas expectativas que tienen. El universo parece responder a su certeza.
 
-The Dragon soul came here to demonstrate the power of confidence and vision. They're living proof that great expectations can create great realities, that believing in your own magnificence can actually make you magnificent.`,
+El alma del Dragón vino aquí para demostrar el poder de la confianza y la visión. Son la prueba viviente de que grandes expectativas pueden crear grandes realidades, que creer en la propia magnificencia puede hacerte realmente magnífico.`,
         
-        strengths: `Dragons possess extraordinary charisma and natural leadership. When they speak, people listen. When they have a vision, others want to follow. This magnetic quality makes them powerful forces in any field they choose to enter.
+        strengths: `Los dragones poseen un carisma extraordinario y un liderazgo natural. Cuando hablan, la gente escucha. Cuando tienen una visión, otros quieren seguirla. Esta cualidad magnética los convierte en fuerzas poderosas en cualquier campo en el que decidan ingresar.
 
-There's a genuine confidence that's compelling rather than off-putting (when balanced). Dragons believe in their abilities and potential, which gives them courage to attempt things others wouldn't dream of. This often leads to remarkable achievements.
+Hay una confianza genuina que es convincente en lugar de desagradable (cuando está equilibrada). Los dragones creen en sus habilidades y potencial, lo que les da valor para intentar cosas que otros ni soñarían. Esto a menudo conduce a logros notables.
 
-Generosity is another Dragon strength. When successful (which they often are), they're typically generous with their resources, time, and influence. They enjoy being able to help others and make grand gestures. Their leadership often includes lifting others up.`,
+La generosidad es otra fortaleza del Dragón. Cuando tienen éxito (lo cual suele ser el caso), suelen ser generosos con sus recursos, tiempo e influencia. Disfrutan de poder ayudar a los demás y hacer grandes gestos. Su liderazgo a menudo incluye animar a los demás.`,
         
-        shadows: `The shadow side of Dragon energy manifests as arrogance and entitlement. That natural confidence can cross into believing they're superior to others, that normal rules don't apply to them, or that they deserve success without effort.
+        shadows: `El lado oscuro de la energía del Dragón se manifiesta como arrogancia y derecho. Esa confianza natural puede convertirse en la creencia de que son superiores a los demás, que las reglas normales no se aplican a ellos o que merecen el éxito sin esfuerzo.
 
-Intolerance is a real issue for many Dragons. They can be impatient with weakness, incompetence, or indecision in others. Their high standards, while driving their own excellence, can make them harsh judges of people who don't match their pace or ambition.
+La intolerancia es un problema real para muchos Dragones. Pueden impacientarse ante la debilidad, la incompetencia o la indecisión de los demás. Sus altos estándares, si bien impulsan su propia excelencia, pueden convertirlos en jueces severos de las personas que no siguen su ritmo o ambición.
 
-Unrealistic expectations create problems. Dragons can dream so big that they set themselves up for disappointment, or refuse to deal with mundane necessities because they're "above" such things. Learning to balance vision with practical reality is crucial.`,
+Las expectativas poco realistas crean problemas. Los dragones pueden soñar tan en grande que se exponen a la decepción o se niegan a lidiar con las necesidades mundanas porque están "por encima" de esas cosas. Aprender a equilibrar la visión con la realidad práctica es crucial.`,
         
-        relationships: `In relationships, Dragons are passionate and generous. They love grandly, with dramatic gestures and intense commitment. Romance with a Dragon is exciting - they bring energy, adventure, and a certain glamour to partnerships.
+        relationships: `En las relaciones, los Dragones son apasionados y generosos. Aman grandiosamente, con gestos dramáticos y un compromiso intenso. Romance with a Dragon es emocionante: aportan energía, aventura y cierto glamour a las asociaciones.
 
-However, Dragons need admiration within relationships. They require partners who appreciate their magnificence and provide appropriate acknowledgment. They also need intellectual equals - Dragons get bored with partners who can't match them mentally.
+Sin embargo, los dragones necesitan admiración en las relaciones. Requieren socios que aprecien su magnificencia y brinden el reconocimiento adecuado. También necesitan iguales intelectuales: los dragones se aburren de tener compañeros que no pueden igualarlos mentalmente.
 
-As parents or family members, Dragons are proud and encouraging. They have high expectations for their loved ones but also provide opportunities and support. They may struggle with seeing their children as individuals rather than extensions of themselves.`,
+Como padres o miembros de la familia, los Dragones están orgullosos y alentadores. Tienen grandes expectativas para sus seres queridos pero también brindan oportunidades y apoyo. Es posible que les cueste ver a sus hijos como individuos y no como extensiones de ellos mismos.`,
         
-        career: `Dragons excel in high-profile leadership positions, entrepreneurship, entertainment, or any field where they can make a big impact. They're natural at positions requiring vision, charisma, and the courage to take big swings. They need to be at or near the top.
+        career: `Los dragones se destacan en posiciones de liderazgo de alto perfil, emprendimiento, entretenimiento o cualquier campo en el que puedan generar un gran impacto. Son naturales en puestos que requieren visión, carisma y el coraje para realizar grandes cambios. Deben estar en la cima o cerca de ella.
 
-Subordinate or routine positions are torture for Dragons. They need autonomy, challenge, and opportunities to shine. They're often successful in starting their own enterprises or rising quickly through organizational ranks.
+Las posiciones subordinadas o rutinarias son una tortura para los Dragones. Necesitan autonomía, desafíos y oportunidades para brillar. A menudo tienen éxito al iniciar sus propias empresas o ascender rápidamente en los rangos organizacionales.
 
-The key career satisfaction for Dragons comes from achievement, recognition, and making a significant impact. They need to feel their work matters on a large scale. Small, invisible work feels like a waste of their potential.`,
+La satisfacción profesional clave para los Dragones proviene del logro, el reconocimiento y de generar un impacto significativo. Necesitan sentir que su trabajo es importante a gran escala. El trabajo pequeño e invisible se siente como un desperdicio de su potencial.`,
         
-        spiritualPath: `The spiritual journey for Dragons often involves learning true humility - not false modesty, but genuine understanding that they're magnificent AND human. The lesson is that their worth isn't conditional on achievement or recognition.
+        spiritualPath: `El viaje espiritual de los Dragones a menudo implica aprender la verdadera humildad: no la falsa modestia, sino la comprensión genuina de que son magníficos Y humanos. La lección es que su valor no está condicionado al logro o al reconocimiento.
 
-Patience is another crucial lesson. Dragons want immediate results and can burn out or give up when success doesn't come quickly. Learning to persist through the mundane middle parts of any journey builds spiritual depth.
+La paciencia es otra lección crucial. Los dragones quieren resultados inmediatos y pueden agotarse o darse por vencidos cuando el éxito no llega rápidamente. Aprender a persistir en las partes intermedias mundanas de cualquier viaje genera profundidad espiritual.
 
-There's also a lesson around service. Dragons can get so focused on their own grand visions that they lose sight of simple ways to help others. Learning that small acts of kindness are also forms of greatness is transformative.`,
+También hay una lección sobre el servicio. Los dragones pueden concentrarse tanto en sus grandes visiones que pierden de vista formas sencillas de ayudar a los demás. Aprender que los pequeños actos de bondad también son formas de grandeza es transformador.`,
         
-        lifeCycles: `Dragon years are times of bold ambition and spectacular achievement. The energy supports big dreams, taking risks, and aiming high. It's a year when fortune favors the brave and when dramatic progress is possible. Think big during Dragon years.
+        lifeCycles: `Los años del dragón son tiempos de ambiciones audaces y logros espectaculares. La energía respalda los grandes sueños, la toma de riesgos y las aspiraciones altas. Es un año en el que la fortuna favorece a los valientes y en el que es posible lograr avances espectaculares. Piensa en grande durante los años del Dragón.
 
-For those born in Dragon years, the 12-year zodiac cycle brings opportunities for reinvention and major breakthroughs. Every 12 years offers a chance to step into greater magnificence.`,
+Para aquellos nacidos en los años del Dragón, el ciclo zodiacal de 12 años brinda oportunidades de reinvención y avances importantes. Cada 12 años ofrece la oportunidad de dar un paso hacia una mayor magnificencia.`,
         
-        compatibility: `Dragons find natural harmony with Rats and Monkeys - together they form a triangle of intelligence and ambition. Rat provides strategy, Monkey the creativity, and Dragon the vision and confidence.
+        compatibility: `Los dragones encuentran una armonía natural con las ratas y los monos: juntos forman un triángulo de inteligencia y ambición. Rat proporciona estrategia, Monkey la creatividad y Dragon la visión y la confianza.
 
-Roosters can be good partners, providing the details and standards Dragons need support with. Snakes offer interesting depth and mystery that can fascinate Dragons.
+Los gallos pueden ser buenos socios, brindando los detalles y estándares con los que los dragones necesitan apoyo. Las serpientes ofrecen una profundidad y un misterio interesantes que pueden fascinar a los dragones.
 
-Challenging matches include Dogs (too cynical and critical for the confident Dragon) and other Dragons (too much competing for the spotlight). Rabbits might seem too passive or cautious.`,
+Las partidas desafiantes incluyen Perros (demasiado cínicos y críticos para el confiado Dragón) y otros Dragones (demasiado compitiendo por ser el centro de atención). Los conejos pueden parecer demasiado pasivos o cautelosos.`,
         
-        affirmation: "I am magnificent and humble. My confidence inspires others. I achieve great things while honoring the sacredness of small things. I am both powerful and kind."
+        affirmation: "Soy magnífica y humilde. Mi confianza inspira a otros. Logro grandes cosas mientras honro el carácter sagrado de las cosas pequeñas. Soy a la vez poderoso y amable."
     },
 
     Snake: {
-        title: "Year of the Snake",
-        archetype: "The Wise Mystic",
-        hook: "Born in the Year of the Snake, this soul carries the energy of the wise sage - intuitive, elegant, and delightfully enigmatic. Snakes represent wisdom, transformation, and the power of deep understanding.",
-        coreNature: `The Snake embodies the archetype of the mystic wisdom-keeper. This is intelligence that operates in the depths - psychological, intuitive, and profoundly perceptive. Snakes see beneath surfaces, understand hidden motivations, and perceive patterns others miss entirely.
+        title: "Año de la serpiente",
+        archetype: "El sabio místico",
+        hook: "Nacida en el Año de la Serpiente, esta alma lleva la energía del sabio: intuitiva, elegante y deliciosamente enigmática. Las serpientes representan la sabiduría, la transformación y el poder de la comprensión profunda.",
+        coreNature: `La Serpiente encarna el arquetipo del místico guardián de la sabiduría. Esta es una inteligencia que opera en las profundidades: psicológica, intuitiva y profundamente perceptiva. Las serpientes ven debajo de las superficies, comprenden motivaciones ocultas y perciben patrones que otros pasan por alto por completo.
 
-There's a quality of mystery that's intrinsic to Snake energy. Even when they share information, there's a sense of depths not yet revealed. This isn't deception; it's natural privacy and the understanding that some truths can't be spoken, only experienced.
+Hay una cualidad de misterio que es intrínseca a la energía de la Serpiente. Incluso cuando comparten información, hay una sensación de profundidad que aún no se ha revelado. Esto no es un engaño; es la privacidad natural y la comprensión de que algunas verdades no se pueden decir, sólo experimentarse.
 
-The Snake soul came here to demonstrate the power of transformation and depth. They're living proof that wisdom comes from looking inward, that the greatest journey is through one's own psyche, and that true power is often quiet.`,
+El alma de la Serpiente vino aquí para demostrar el poder de la transformación y la profundidad. Son la prueba viviente de que la sabiduría proviene de mirar hacia adentro, que el mayor viaje es a través de la propia psique y que el verdadero poder suele estar en silencio.`,
         
-        strengths: `Snakes possess remarkable intuition and psychological insight. They understand people at a deep level, often knowing what someone feels or wants before it's articulated. This makes them powerful in any situation requiring psychological understanding.
+        strengths: `Las serpientes poseen una notable intuición y perspicacia psicológica. Entienden a las personas a un nivel profundo y, a menudo, saben lo que alguien siente o quiere antes de expresarlo. Esto los hace poderosos en cualquier situación que requiera comprensión psicológica.
 
-There's a natural elegance and refined taste. Snakes appreciate quality over quantity, depth over breadth. They have discriminating tastes and often possess a sophisticated aesthetic sense. Their presence has a kind of magnetic allure.
+Hay una elegancia natural y un gusto refinado. Las serpientes aprecian la calidad sobre la cantidad, la profundidad sobre la amplitud. Tienen gustos exigentes y a menudo poseen un sentido estético sofisticado. Su presencia tiene una especie de atractivo magnético.
 
-Determination is a Snake strength that's often underestimated. That calm exterior hides an iron will. Once Snakes decide on something, they pursue it with quiet, relentless focus. They're patient strategists who play the long game.`,
+La determinación es una fortaleza de la Serpiente que a menudo se subestima. Ese exterior tranquilo esconde una voluntad de hierro. Una vez que las Serpientes deciden algo, lo persiguen con concentración silenciosa e implacable. Son estrategas pacientes que juegan a largo plazo.`,
         
-        shadows: `The shadow side of Snake energy manifests as jealousy and possessiveness. Their intensity in relationships can become controlling or suspicious. The same perceptiveness that's a gift can become paranoia, seeing threats that don't exist.
+        shadows: `El lado oscuro de la energía de la Serpiente se manifiesta como celos y posesividad. Su intensidad en las relaciones puede volverse controladora o sospechosa. La misma percepción que es un don puede convertirse en paranoia al ver amenazas que no existen.
 
-Secretiveness can be excessive. While privacy is healthy, Snakes can become so hidden that authentic connection becomes impossible. They may withhold information as a form of power or protection, which creates distance in relationships.
+El secretismo puede ser excesivo. Si bien la privacidad es saludable, las serpientes pueden volverse tan ocultas que una conexión auténtica resulta imposible. Pueden retener información como una forma de poder o protección, lo que crea distancia en las relaciones.
 
-Vindictiveness is a real shadow. Snakes remember slights and can hold grudges. If betrayed or wounded, they can be coldly strategic in their revenge. Learning forgiveness and letting go is crucial spiritual work.`,
+La venganza es una sombra real. Las serpientes recuerdan los desaires y pueden guardar rencores. Si son traicionados o heridos, pueden ser fríamente estratégicos en su venganza. Aprender a perdonar y dejar ir es un trabajo espiritual crucial.`,
         
-        relationships: `In relationships, Snakes are devoted and intense. They love deeply, even if they don't always express it obviously. Romance with a Snake is transformative - they offer depth, passion, and a kind of soulful connection that's rare.
+        relationships: `En las relaciones, las Serpientes son devotas e intensas. Aman profundamente, aunque no siempre lo expresan de forma evidente. Romance with a Snake es transformador: ofrece profundidad, pasión y una especie de conexión conmovedora que es poco común.
 
-However, Snakes need absolute trust and loyalty. Betrayal is unforgivable. They require partners who can handle their intensity, respect their need for privacy, and won't be threatened by their natural magnetism.
+Sin embargo, las Serpientes necesitan absoluta confianza y lealtad. La traición es imperdonable. Requieren socios que puedan manejar su intensidad, respetar su necesidad de privacidad y que no se sientan amenazados por su magnetismo natural.
 
-As parents or family members, Snakes are protective and insightful. They understand their loved ones at deep levels and can provide profound guidance. They may struggle with being overprotective or withholding affection.`,
+Como padres o miembros de la familia, las serpientes son protectoras y perspicaces. Entienden a sus seres queridos a niveles profundos y pueden brindarles una guía profunda. Es posible que tengan dificultades para ser sobreprotectores o retener el afecto.`,
         
-        career: `Snakes excel in careers requiring deep analysis, intuition, or strategic thinking. Psychology, research, investigation, strategy consulting, or healing work all suit Snake energy. They're also natural at fields requiring sophistication like art curation or luxury goods.
+        career: `Las serpientes sobresalen en carreras que requieren un análisis profundo, intuición o pensamiento estratégico. La psicología, la investigación, la consultoría estratégica o el trabajo de curación se adaptan a la energía de la Serpiente. También son naturales en campos que requieren sofisticación, como la curación de arte o los artículos de lujo.
 
-They need work that engages their mind and allows for depth. Surface-level or purely social work feels empty. They prefer working independently or in small, trusted teams rather than large, chaotic organizations.
+Necesitan un trabajo que involucre su mente y permita profundizar. El trabajo superficial o puramente social se siente vacío. Prefieren trabajar de forma independiente o en equipos pequeños y confiables en lugar de organizaciones grandes y caóticas.
 
-The key career satisfaction for Snakes comes from mastery and depth. They want to become true experts, to understand things at profound levels. Recognition matters less than the satisfaction of deep knowledge.`,
+La principal satisfacción profesional de Snakes proviene del dominio y la profundidad. Quieren convertirse en verdaderos expertos, comprender las cosas a niveles profundos. El reconocimiento importa menos que la satisfacción de un conocimiento profundo.`,
         
-        spiritualPath: `The spiritual journey for Snakes often involves learning to balance wisdom with openness. The lesson is that being wise doesn't require being hidden, that vulnerability can coexist with depth. True wisdom sometimes means sharing, not just knowing.
+        spiritualPath: `El viaje espiritual de las Serpientes a menudo implica aprender a equilibrar la sabiduría con la apertura. La lección es que ser sabio no requiere esconderse, que la vulnerabilidad puede coexistir con la profundidad. La verdadera sabiduría a veces significa compartir, no sólo saber.
 
-Releasing jealousy and possessiveness is another key lesson. Snakes must learn that love doesn't require control, that trust is stronger than surveillance. This requires healing deep insecurities about worthiness.
+Liberar los celos y la posesividad es otra lección clave. Las serpientes deben aprender que el amor no requiere control, que la confianza es más fuerte que la vigilancia. Esto requiere sanar profundas inseguridades sobre la dignidad.
 
-There's also a lesson around transformation. Snakes understand change intellectually but may resist it emotionally. Learning to shed old skins willingly, to embrace transformation rather than cling to the familiar, is core growth work.`,
+También hay una lección sobre la transformación. Las serpientes entienden el cambio intelectualmente pero pueden resistirlo emocionalmente. Aprender a despojarnos voluntariamente de viejas pieles, a abrazar la transformación en lugar de aferrarnos a lo familiar, es un trabajo fundamental para el crecimiento.`,
         
-        lifeCycles: `Snake years are times of deep transformation and strategic planning. The energy supports inner work, developing wisdom, and moving forward with careful strategy. It's a year for depth over breadth, quality over quantity.
+        lifeCycles: `Los años de la serpiente son tiempos de profunda transformación y planificación estratégica. La energía apoya el trabajo interior, el desarrollo de la sabiduría y el avance con una estrategia cuidadosa. Es un año de profundidad sobre amplitud, calidad sobre cantidad.
 
-For those born in Snake years, the 12-year zodiac cycle brings opportunities for profound transformation. Every 12 years offers a chance to shed old skins and emerge renewed.`,
+Para aquellos nacidos en los años de la Serpiente, el ciclo zodiacal de 12 años brinda oportunidades para una transformación profunda. Cada 12 años ofrece la oportunidad de deshacerse de la piel vieja y emerger renovado.`,
         
-        compatibility: `Snakes find natural harmony with Oxen and Roosters - together they form a triangle of dedication and refinement. Ox provides stability, Rooster the standards, and Snake the depth and intuition.
+        compatibility: `Las serpientes encuentran una armonía natural con los bueyes y los gallos: juntos forman un triángulo de dedicación y refinamiento. El Buey proporciona estabilidad, el Gallo los estándares y la Serpiente la profundidad y la intuición.
 
-Dragons can be fascinating partners, providing the yang energy to balance the Snake's yin. Monkeys offer mental stimulation, though their lightheartedness might sometimes frustrate the serious Snake.
+Los dragones pueden ser compañeros fascinantes, proporcionando la energía yang para equilibrar el yin de la Serpiente. Los monos ofrecen estimulación mental, aunque su alegría a veces puede frustrar a la seria Serpiente.
 
-Challenging matches include Tigers (too bold and direct versus the strategic Snake) and Pigs (too naive and open versus the guarded Snake). Horses might seem too restless and superficial.`,
+Las partidas desafiantes incluyen Tigres (demasiado audaces y directos contra la estratégica Serpiente) y Cerdos (demasiado ingenuos y abiertos contra la cautelosa Serpiente). Los caballos pueden parecer demasiado inquietos y superficiales.`,
         
-        affirmation: "I am wise and open. My depth is strength, and my vulnerability is courage. I trust in transformation and release the need to control. I am both mysterious and authentic."
+        affirmation: "Soy sabio y abierto. Mi profundidad es fuerza y ​​mi vulnerabilidad es coraje. Confío en la transformación y libero la necesidad de controlar. Soy a la vez misteriosa y auténtica."
     },
 
     Horse: {
-        title: "Year of the Horse",
-        archetype: "The Free Spirit",
-        hook: "Born in the Year of the Horse, this soul carries the energy of the wild stallion - free-spirited, energetic, and born to run. Horses represent freedom, adventure, and the pure joy of movement and life.",
-        coreNature: `The Horse embodies the archetype of the untamed wanderer. This is freedom as a core value, energy that cannot be contained, and a spirit that wilts in captivity. Horses need room to run, both literally and metaphorically.
+        title: "Año del Caballo",
+        archetype: "El espíritu libre",
+        hook: "Nacida en el Año del Caballo, esta alma lleva la energía del semental salvaje: de espíritu libre, enérgico y nacido para correr. Los caballos representan la libertad, la aventura y la pura alegría del movimiento y la vida.",
+        coreNature: `El Caballo encarna el arquetipo del vagabundo indómito. Se trata de la libertad como valor fundamental, una energía que no se puede contener y un espíritu que se marchita en cautiverio. Los caballos necesitan espacio para correr, tanto literal como metafóricamente.
 
-There's a warmth and enthusiasm that makes Horses naturally attractive. They bring energy to any situation, enthusiasm for life that's contagious. Their optimism and vitality lift others' spirits and create exciting possibilities.
+Hay una calidez y entusiasmo que hace que los caballos sean naturalmente atractivos. Aportan energía a cualquier situación, entusiasmo por la vida que es contagioso. Su optimismo y vitalidad levantan el ánimo de los demás y crean posibilidades apasionantes.
 
-The Horse soul came here to demonstrate the importance of freedom and authenticity. They're living proof that life should be an adventure, that following your heart matters more than following rules, and that sometimes the journey truly is more important than the destination.`,
+El alma del Caballo vino aquí para demostrar la importancia de la libertad y la autenticidad. Son la prueba viviente de que la vida debe ser una aventura, que seguir el corazón es más importante que seguir las reglas y que a veces el viaje es realmente más importante que el destino.`,
         
-        strengths: `Horses possess boundless energy and enthusiasm. They approach life with genuine excitement and can inspire others with their optimism. Their vitality is remarkable - they can work hard, play hard, and still have energy left over.
+        strengths: `Los caballos poseen una energía y un entusiasmo ilimitados. Afrontan la vida con entusiasmo genuino y pueden inspirar a otros con su optimismo. Su vitalidad es notable: pueden trabajar duro, jugar duro y aún les queda energía.
 
-There's a natural warmth and friendliness. Horses are easy to like, with an open, honest manner that puts people at ease. They're genuinely interested in others and create connections easily. Their social circle is typically wide and diverse.
+Hay una calidez y amistad naturales. Es fácil agradar a los caballos, con una actitud abierta y honesta que tranquiliza a la gente. Están genuinamente interesados ​​en los demás y crean conexiones fácilmente. Su círculo social suele ser amplio y diverso.
 
-Adaptability is another Horse strength. They're comfortable with change, new situations, and unexpected developments. Their ability to go with the flow and find adventure in uncertainty serves them well in unpredictable circumstances.`,
+La adaptabilidad es otra fortaleza del caballo. Se sienten cómodos con los cambios, las situaciones nuevas y los acontecimientos inesperados. Su capacidad para dejarse llevar y encontrar aventuras en la incertidumbre les resulta muy útil en circunstancias impredecibles.`,
         
-        shadows: `The shadow side of Horse energy manifests as restlessness and commitment issues. That love of freedom can become an inability to stick with anything or anyone when the initial excitement fades. They may have a pattern of starting things enthusiastically and abandoning them when they get boring.
+        shadows: `El lado oscuro de la energía del Caballo se manifiesta como inquietud y problemas de compromiso. Ese amor por la libertad puede convertirse en una incapacidad para apegarse a algo o a alguien cuando el entusiasmo inicial se desvanece. Es posible que tengan el patrón de empezar las cosas con entusiasmo y abandonarlas cuando se vuelven aburridas.
 
-Impatience is a constant challenge. Horses want immediate results and can give up on things that require sustained effort. They may interrupt others or rush through important details in their eagerness to move forward.
+La impaciencia es un desafío constante. Los caballos quieren resultados inmediatos y pueden renunciar a cosas que requieren un esfuerzo sostenido. Es posible que interrumpan a los demás o se apresuren a repasar detalles importantes en su afán por seguir adelante.
 
-Self-centeredness can emerge. Horses can get so focused on their own needs for freedom and excitement that they neglect others' needs or fail to consider how their choices impact people who depend on them.`,
+Puede surgir el egocentrismo. Los caballos pueden concentrarse tanto en sus propias necesidades de libertad y emoción que descuidan las necesidades de los demás o no consideran cómo sus elecciones afectan a las personas que dependen de ellos.`,
         
-        relationships: `In relationships, Horses are passionate and exciting. They bring adventure, energy, and genuine warmth to partnerships. Romance with a Horse is never boring - there's always something new, some adventure planned, some excitement brewing.
+        relationships: `En las relaciones, los caballos son apasionados y excitantes. Aportan aventura, energía y calidez genuina a las asociaciones. Romance con un caballo nunca es aburrido: siempre hay algo nuevo, alguna aventura planeada, algo de emoción gestándose.
 
-However, Horses need independence within relationships. They can't tolerate controlling or jealous partners. They require space to pursue their interests and maintain their friendships. Relationships must enhance their freedom, not restrict it.
+Sin embargo, los Caballos necesitan independencia en las relaciones. No pueden tolerar parejas controladoras o celosas. Requieren espacio para perseguir sus intereses y mantener sus amistades. Las relaciones deben mejorar su libertad, no restringirla.
 
-As parents or family members, Horses are fun and encouraging. They teach independence and adventurousness. They may struggle with routine caregiving or providing steady structure, preferring to be the exciting parent rather than the responsible one.`,
+Como padres o miembros de la familia, los caballos son divertidos y alentadores. Enseñan independencia y aventurero. Es posible que tengan dificultades para brindar cuidados rutinarios o para proporcionar una estructura estable, prefiriendo ser el padre apasionante en lugar del responsable.`,
         
-        career: `Horses excel in careers involving travel, variety, or independence. Sales, tourism, athletics, entertainment, or entrepreneurship all suit Horse energy. They need roles where they can move around, meet new people, and avoid routine.
+        career: `Los caballos destacan en carreras que implican viajes, variedad o independencia. Las ventas, el turismo, el atletismo, el entretenimiento o el espíritu empresarial son todos adecuados para la energía del caballo. Necesitan roles en los que puedan moverse, conocer gente nueva y evitar la rutina.
 
-The corporate world can feel like a cage unless they're in dynamic, fast-paced roles. They struggle with bureaucracy, routine, or micro-management. They need autonomy and variety to thrive professionally.
+El mundo empresarial puede parecer una jaula a menos que ocupen roles dinámicos y acelerados. Luchan con la burocracia, la rutina o la microgestión. Necesitan autonomía y variedad para prosperar profesionalmente.
 
-The key career satisfaction for Horses comes from freedom and variety. They need to feel unconfined, to have new challenges regularly, and to have autonomy over their schedule and methods. Monotony is soul-death.`,
+La principal satisfacción profesional de los caballos proviene de la libertad y la variedad. Necesitan sentirse libres, tener nuevos desafíos con regularidad y tener autonomía sobre sus horarios y métodos. La monotonía es la muerte del alma.`,
         
-        spiritualPath: `The spiritual journey for Horses often involves learning to balance freedom with commitment. The lesson is that true freedom includes the ability to choose commitment, that running away from everything isn't actually freedom.
+        spiritualPath: `El viaje espiritual de los Caballos a menudo implica aprender a equilibrar la libertad con el compromiso. La lección es que la verdadera libertad incluye la capacidad de elegir el compromiso, que huir de todo no es en realidad libertad.
 
-Developing patience and persistence is another key lesson. Horses need to learn that some of life's best experiences require sustained effort, that not everything worth doing provides immediate gratification.
+Desarrollar la paciencia y la perseverancia es otra lección clave. Los caballos necesitan aprender que algunas de las mejores experiencias de la vida requieren un esfuerzo sostenido, que no todo lo que vale la pena hacer proporciona una gratificación inmediata.
 
-There's also a lesson around depth versus breadth. Horses can be so busy experiencing everything that they don't experience anything deeply. Learning to go deep occasionally, to stick with something past the exciting beginning, creates richness.`,
+También hay una lección sobre profundidad versus amplitud. Los caballos pueden estar tan ocupados experimentando todo que no experimentan nada profundamente. Aprender a profundizar de vez en cuando, a apegarse a algo más allá del emocionante comienzo, crea riqueza.`,
         
-        lifeCycles: `Horse years are times of movement, travel, and new adventures. The energy supports change, pursuing freedom, and trying new things. It's a year to be active, explore, and follow your enthusiasm. Progress comes through motion.
+        lifeCycles: `Los años del caballo son tiempos de movimiento, viajes y nuevas aventuras. La energía apoya el cambio, la búsqueda de la libertad y la prueba de cosas nuevas. Es un año para estar activo, explorar y seguir tu entusiasmo. El progreso llega a través del movimiento.
 
-For those born in Horse years, the 12-year zodiac cycle brings opportunities for major life changes and adventures. Every 12 years offers a chance to break free from routines and gallop in new directions.`,
+Para aquellos nacidos en los años del Caballo, el ciclo zodiacal de 12 años brinda oportunidades para grandes cambios de vida y aventuras. Cada 12 años ofrece la oportunidad de liberarse de las rutinas y galopar hacia nuevas direcciones.`,
         
-        compatibility: `Horses find natural harmony with Tigers and Dogs - together they form a triangle of action and authenticity. Tiger provides courage and excitement, Dog the loyalty and integrity, and Horse the freedom and energy.
+        compatibility: `Los caballos encuentran una armonía natural con los tigres y los perros: juntos forman un triángulo de acción y autenticidad. El Tigre proporciona coraje y emoción, el Perro la lealtad y la integridad y el Caballo la libertad y la energía.
 
-Goats can be good partners, appreciating the Horse's warmth while providing some grounding. Dragons offer the excitement and magnitude that Horses enjoy.
+Las cabras pueden ser buenas compañeras, ya que aprecian la calidez del caballo y al mismo tiempo brindan cierta conexión a tierra. Los dragones ofrecen la emoción y la magnitud que disfrutan los caballos.
 
-Challenging matches include Rats (too calculating and strategic for the spontaneous Horse) and Oxen (too slow and routine-bound versus the freedom-loving Horse). Roosters might seem too critical and demanding.`,
+Las partidas desafiantes incluyen Ratas (demasiado calculadoras y estratégicas para el Caballo espontáneo) y Bueyes (demasiado lentos y rutinarios frente al Caballo amante de la libertad). Los gallos pueden parecer demasiado críticos y exigentes.`,
         
-        affirmation: "I am free and committed. My love of adventure coexists with depth. I honor my need for space while cherishing connection. I am patient with processes that matter."
+        affirmation: "Soy libre y comprometida. Mi amor por la aventura convive con la profundidad. Honro mi necesidad de espacio mientras valoro la conexión. Soy paciente con los procesos que importan."
     },
 
     Goat: {
-        title: "Year of the Goat",
-        archetype: "The Gentle Artist",
-        hook: "Born in the Year of the Goat (or Sheep), this soul carries the energy of the gentle creator - artistic, compassionate, and naturally peaceful. Goats represent creativity, sensitivity, and the beauty found in gentleness.",
-        coreNature: `The Goat embodies the archetype of the peaceful artist. This is creativity flowing from sensitivity, beauty created from genuine feeling, and kindness as a natural expression rather than a strategy. Goats see the world through aesthetic and emotional lenses.
+        title: "año de la cabra",
+        archetype: "El artista gentil",
+        hook: "Nacida en el Año de la Cabra (u Oveja), esta alma lleva la energía del gentil creador: artístico, compasivo y naturalmente pacífico. Las cabras representan la creatividad, la sensibilidad y la belleza que se encuentra en la dulzura.",
+        coreNature: `La Cabra encarna el arquetipo del artista pacífico. Se trata de creatividad que surge de la sensibilidad, belleza creada a partir de un sentimiento genuino y bondad como expresión natural más que como estrategia. Las cabras ven el mundo a través de lentes estéticos y emocionales.
 
-There's an inherent gentleness that's both strength and vulnerability. Goats approach life with an open heart, believing in goodness and beauty. This can make them seem naive, but it's actually a sophisticated form of hope and intention.
+Hay una gentileza inherente que es a la vez fuerza y ​​vulnerabilidad. Las cabras abordan la vida con el corazón abierto, creyendo en la bondad y la belleza. Esto puede hacerles parecer ingenuos, pero en realidad es una forma sofisticada de esperanza e intención.
 
-The Goat soul came here to demonstrate that gentleness and creativity are valuable contributions to the world. They're living proof that not everyone needs to be a warrior, that beauty and compassion have their own power.`,
+El alma de la Cabra vino aquí para demostrar que la gentileza y la creatividad son contribuciones valiosas al mundo. Son la prueba viviente de que no todo el mundo necesita ser guerrero, que la belleza y la compasión tienen su propio poder.`,
         
-        strengths: `Goats possess genuine creativity and artistic sensibility. They see beauty where others see ordinariness and can create art from everyday materials. Whether in traditional arts or creative problem-solving, their imaginative gifts are real.
+        strengths: `Las cabras poseen una creatividad y una sensibilidad artística genuinas. Ven belleza donde otros ven lo ordinario y pueden crear arte a partir de materiales cotidianos. Ya sea en las artes tradicionales o en la resolución creativa de problemas, sus dotes imaginativas son reales.
 
-There's a natural kindness and empathy. Goats truly care about others' well-being and will go out of their way to help or provide comfort. This creates warm, loving relationships and makes them valued community members.
+Hay una amabilidad y empatía naturales. Las cabras realmente se preocupan por el bienestar de los demás y harán todo lo posible para ayudar o brindar consuelo. Esto crea relaciones cálidas y amorosas y los convierte en miembros valiosos de la comunidad.
 
-Peacefulness is another Goat strength. They create calm, harmonious environments wherever they go. Their presence is soothing, and they have a gift for diffusing tension and finding peaceful solutions.`,
+La tranquilidad es otra fortaleza de la Cabra. Crean ambientes tranquilos y armoniosos allá donde van. Su presencia es reconfortante y tienen el don de disipar la tensión y encontrar soluciones pacíficas.`,
         
-        shadows: `The shadow side of Goat energy manifests as excessive dependency and indecision. That gentle nature can become an inability to function independently or make decisions without extensive input and reassurance from others.
+        shadows: `El lado oscuro de la energía de la Cabra se manifiesta como una dependencia e indecisión excesivas. Esa naturaleza amable puede convertirse en una incapacidad para funcionar de forma independiente o tomar decisiones sin el aporte y la tranquilidad de los demás.
 
-Over-sensitivity creates problems. Goats can be so easily hurt that they spend excessive energy avoiding anything potentially unpleasant. This can lead to withdrawal from challenges or important confrontations.
+La excesiva sensibilidad crea problemas. Las cabras pueden lastimarse tan fácilmente que gastan demasiada energía evitando cualquier cosa potencialmente desagradable. Esto puede llevar a retirarse de desafíos o confrontaciones importantes.
 
-Pessimism can plague Goats. Despite their love of beauty, many struggle with negative thinking or worry. They can imagine all the things that might go wrong, becoming paralyzed by worst-case scenarios.`,
+El pesimismo puede afectar a las cabras. A pesar de su amor por la belleza, muchos luchan contra los pensamientos negativos o la preocupación. Pueden imaginar todas las cosas que podrían salir mal y quedar paralizados por los peores escenarios.`,
         
-        relationships: `In relationships, Goats are devoted and romantic. They create beautiful partnerships full of warmth and creativity. Romance with a Goat is gentle and nurturing - they excel at creating emotional intimacy and beauty in everyday life.
+        relationships: `En las relaciones, las Cabras son devotas y románticas. Crean hermosas asociaciones llenas de calidez y creatividad. El romance con una Cabra es gentil y cariñoso: se destacan por crear intimidad emocional y belleza en la vida cotidiana.
 
-However, Goats need security and support. They do best with strong, protective partners who can provide structure and decisiveness. They need to feel safe to fully blossom in relationships.
+Sin embargo, las cabras necesitan seguridad y apoyo. Les va mejor con socios fuertes y protectores que puedan proporcionarles estructura y decisión. Necesitan sentirse seguros para florecer plenamente en las relaciones.
 
-As parents or family members, Goats are nurturing and creative. They create warm, beautiful homes and are attentive to emotional needs. They may struggle with discipline or providing tough love when needed.`,
+Como padres o miembros de la familia, las Cabras son cariñosas y creativas. Crean hogares cálidos y hermosos y están atentos a las necesidades emocionales. Es posible que tengan dificultades con la disciplina o con brindar amor duro cuando sea necesario.`,
         
-        career: `Goats excel in creative fields, helping professions, or roles involving beauty and harmony. Art, design, counseling, nursing, education, or hospitality all suit Goat energy. They need work that feels meaningful and allows for creative expression.
+        career: `Las cabras se destacan en campos creativos, profesiones de ayuda o roles que involucran belleza y armonía. El arte, el diseño, el asesoramiento, la enfermería, la educación o la hospitalidad se adaptan a la energía de la Cabra. Necesitan un trabajo que parezca significativo y permita la expresión creativa.
 
-Highly competitive or cutthroat environments are toxic for Goats. They need supportive, collaborative workplaces with clear expectations and kind leadership. They can be very productive when they feel safe and appreciated.
+Los entornos altamente competitivos o despiadados son tóxicos para las cabras. Necesitan lugares de trabajo colaborativos y de apoyo con expectativas claras y un liderazgo amable. Pueden ser muy productivos cuando se sienten seguros y apreciados.
 
-The key career satisfaction for Goats comes from creating beauty, helping others, or working in peaceful, harmonious environments. They need to feel their work contributes something good to the world.`,
+La principal satisfacción profesional de las Cabras proviene de crear belleza, ayudar a los demás o trabajar en entornos pacíficos y armoniosos. Necesitan sentir que su trabajo aporta algo bueno al mundo.`,
         
-        spiritualPath: `The spiritual journey for Goats often involves developing confidence and independence. The lesson is that they have inner strength even if it doesn't look like conventional strength, that their gentleness comes from choice not weakness.
+        spiritualPath: `El viaje espiritual de las Cabras a menudo implica desarrollar confianza e independencia. La lección es que tienen fuerza interior incluso si no parece una fuerza convencional, que su gentileza proviene de su elección, no de su debilidad.
 
-Learning to make decisions and trust their own judgment is another key lesson. Goats must develop faith in their own perceptions and the courage to choose even when uncertain.
+Aprender a tomar decisiones y confiar en su propio criterio es otra lección clave. Las cabras deben desarrollar fe en sus propias percepciones y el coraje de elegir incluso en situaciones de incertidumbre.
 
-There's also a lesson around embracing challenges. Goats naturally avoid difficulty, but growth requires moving through discomfort. Learning that they can handle hard things, that they're more resilient than they think, is transformative.`,
+También hay una lección sobre cómo aceptar los desafíos. Las cabras naturalmente evitan las dificultades, pero el crecimiento requiere superar la incomodidad. Aprender que pueden manejar cosas difíciles, que son más resilientes de lo que creen, es transformador.`,
         
-        lifeCycles: `Goat years are times of peace, creativity, and gentle progress. The energy supports artistic pursuits, relationship building, and creating beauty. It's a year for compassion and harmony rather than competition and conflict.
+        lifeCycles: `Los años de cabra son tiempos de paz, creatividad y suave progreso. La energía apoya las actividades artísticas, la construcción de relaciones y la creación de belleza. Es un año de compasión y armonía en lugar de competencia y conflicto.
 
-For those born in Goat years, the 12-year zodiac cycle brings opportunities for creative renewal and finding peace. Every 12 years offers a chance to return to their artistic nature and release worry.`,
+Para aquellos nacidos en los años de la Cabra, el ciclo zodiacal de 12 años brinda oportunidades para la renovación creativa y la búsqueda de la paz. Cada 12 años ofrece la oportunidad de volver a su naturaleza artística y liberarse de preocupaciones.`,
         
-        compatibility: `Goats find natural harmony with Rabbits and Pigs - together they form a triangle of peace and creativity. Rabbit provides diplomacy and refinement, Pig the warmth and generosity, and Goat the artistic vision.
+        compatibility: `Las cabras encuentran una armonía natural con los conejos y los cerdos: juntos forman un triángulo de paz y creatividad. El Conejo proporciona diplomacia y refinamiento, el Cerdo calidez y generosidad y la Cabra la visión artística.
 
-Horses can be good partners, providing the energy and protection Goats need while appreciating their gentleness. Dragons might provide exciting protection though could be overwhelming.
+Los caballos pueden ser buenos compañeros, ya que brindan la energía y la protección que las cabras necesitan y al mismo tiempo aprecian su gentileza. Los dragones pueden proporcionar una protección interesante, aunque pueden resultar abrumadores.
 
-Challenging matches include Oxen (too demanding and critical for the sensitive Goat) and Dogs (too cynical and pessimistic, amplifying the Goat's own worries). Rats might seem too opportunistic and hard-edged.`,
+Los combates desafiantes incluyen Bueyes (demasiado exigentes y críticos para la sensible Cabra) y Perros (demasiado cínicos y pesimistas, lo que amplifica las propias preocupaciones de la Cabra). Las ratas pueden parecer demasiado oportunistas y duras.`,
         
-        affirmation: "I am gentle and strong. My sensitivity is wisdom. I trust my own judgment and face challenges with courage. My creativity and kindness are valuable gifts to the world."
+        affirmation: "Soy gentil y fuerte. Mi sensibilidad es sabiduría. Confío en mi propio criterio y afronto los desafíos con valentía. Mi creatividad y amabilidad son regalos valiosos para el mundo."
     },
 
     Monkey: {
-        title: "Year of the Monkey",
-        archetype: "The Clever Innovator",
-        hook: "Born in the Year of the Monkey, this soul carries the energy of the brilliant trickster - clever, curious, and endlessly inventive. Monkeys represent intelligence, wit, and the playful approach to life's problems.",
-        coreNature: `The Monkey embodies the archetype of the creative problem-solver. This is intelligence that's playful, curiosity that's insatiable, and cleverness that finds unconventional solutions. Monkeys approach life as an interesting puzzle to be solved.
+        title: "año del mono",
+        archetype: "El innovador inteligente",
+        hook: "Nacida en el Año del Mono, esta alma lleva la energía del brillante embaucador: inteligente, curioso e infinitamente inventivo. Los monos representan la inteligencia, el ingenio y el enfoque lúdico de los problemas de la vida.",
+        coreNature: `El Mono encarna el arquetipo del solucionador de problemas creativo. Esto es inteligencia juguetona, curiosidad insaciable e inteligencia que encuentra soluciones poco convencionales. Los monos abordan la vida como un interesante rompecabezas que hay que resolver.
 
-There's a quality of mischief that's intrinsic to Monkey energy. They enjoy outsmarting problems and people, finding clever shortcuts, and proving that the rules don't always apply. This isn't malicious; it's simply how their quick minds work.
+Hay una cualidad de picardía que es intrínseca a la energía del Mono. Disfrutan burlando a los problemas y a las personas, encontrando atajos inteligentes y demostrando que las reglas no siempre se aplican. Esto no es malicioso; así es simplemente como funcionan sus mentes rápidas.
 
-The Monkey soul came here to demonstrate that playfulness and intelligence go together, that not everything needs to be serious, and that sometimes the clever, unexpected solution is better than the obvious one.`,
+El alma del Mono vino aquí para demostrar que la alegría y la inteligencia van juntas, que no todo tiene que ser serio y que a veces la solución inteligente e inesperada es mejor que la obvia.`,
         
-        strengths: `Monkeys possess remarkable intelligence and creativity. Their minds work quickly, making connections others miss and seeing solutions that aren't obvious. They excel at innovation, problem-solving, and thinking outside conventional boxes.
+        strengths: `Los monos poseen una inteligencia y creatividad notables. Sus mentes trabajan rápidamente, haciendo conexiones que otros pasan por alto y viendo soluciones que no son obvias. Se destacan en innovación, resolución de problemas y pensamiento fuera de lo convencional.
 
-There's a natural charm and wit. Monkeys are entertaining, fun to be around, and socially adept. They know how to work a room, tell a story, and make people laugh. Their playfulness is endearing and creates easy connections.
+Hay un encanto natural y un ingenio. Los monos son entretenidos, divertidos y socialmente adeptos. Saben cómo manejar una habitación, contar una historia y hacer reír a la gente. Su alegría es entrañable y crea conexiones fáciles.
 
-Adaptability is another Monkey strength. They can adjust to new situations quickly, learn new skills easily, and pivot when plans change. Their versatility makes them valuable in changing environments.`,
+La adaptabilidad es otra fortaleza de Monkey. Pueden adaptarse rápidamente a nuevas situaciones, aprender nuevas habilidades fácilmente y adaptarse cuando cambian los planes. Su versatilidad los hace valiosos en entornos cambiantes.`,
         
-        shadows: `The shadow side of Monkey energy manifests as trickiness that crosses into manipulation. That clever mind can be used to deceive or take advantage. Monkeys may lie, cheat, or bend rules in ways that harm trust.
+        shadows: `El lado oscuro de la energía del Mono se manifiesta como una astucia que se convierte en manipulación. Esa mente inteligente puede usarse para engañar o aprovecharse. Los monos pueden mentir, hacer trampa o infringir las reglas de maneras que dañan la confianza.
 
-Restlessness is a constant challenge. Monkeys bore easily and may abandon projects, relationships, or commitments when the novelty wears off. Their quick minds need constant stimulation, which can prevent depth or mastery.
+La inquietud es un desafío constante. Los monos se aburren fácilmente y pueden abandonar proyectos, relaciones o compromisos cuando la novedad desaparece. Sus mentes rápidas necesitan estimulación constante, lo que puede impedir la profundidad o el dominio.
 
-Arrogance can emerge. Monkeys can become so impressed with their own cleverness that they condescend to others or take foolish risks because they think they're too smart to fail.`,
+Puede surgir la arrogancia. Los monos pueden quedar tan impresionados con su propia inteligencia que son condescendientes con los demás o toman riesgos tontos porque piensan que son demasiado inteligentes para fallar.`,
         
-        relationships: `In relationships, Monkeys are fun and stimulating. They bring playfulness, wit, and excitement to partnerships. Romance with a Monkey is never boring - there's always something interesting happening, some new idea or adventure.
+        relationships: `En las relaciones, los monos son divertidos y estimulantes. Aportan alegría, ingenio y entusiasmo a las asociaciones. Romance con un mono nunca es aburrido: siempre sucede algo interesante, alguna nueva idea o aventura.
 
-However, Monkeys can struggle with emotional depth. They may deflect serious conversations with humor or avoid vulnerability by staying in their heads. Partners need to appreciate their playfulness while also calling them into deeper connection.
+Sin embargo, los monos pueden tener dificultades con la profundidad emocional. Pueden desviar conversaciones serias con humor o evitar la vulnerabilidad permaneciendo en sus cabezas. Los socios deben apreciar su alegría y al mismo tiempo llamarlos a una conexión más profunda.
 
-As parents or family members, Monkeys are entertaining and encouraging of creativity and intelligence. They may struggle with routine or emotional processing, preferring to keep things light and fun.`,
+Como padres o miembros de la familia, los Monos son entretenidos y fomentan la creatividad y la inteligencia. Es posible que tengan dificultades con la rutina o el procesamiento emocional y prefieran mantener las cosas ligeras y divertidas.`,
         
-        career: `Monkeys excel in careers requiring innovation, quick thinking, or entertainment. Technology, entrepreneurship, consulting, entertainment, or any field rewarding creative problem-solving suits Monkey energy. They need mental challenge and variety.
+        career: `Los monos destacan en carreras que requieren innovación, rapidez de pensamiento o entretenimiento. La tecnología, el emprendimiento, la consultoría, el entretenimiento o cualquier campo que recompense la resolución creativa de problemas se adapta a la energía del Mono. Necesitan desafío mental y variedad.
 
-Routine or bureaucratic work is torture for Monkeys. They need roles where their cleverness is an asset, where they can innovate and experiment. They often succeed as entrepreneurs or in startups where agility matters.
+El trabajo rutinario o burocrático es una tortura para los Monos. Necesitan roles donde su inteligencia sea una ventaja, donde puedan innovar y experimentar. A menudo tienen éxito como emprendedores o en nuevas empresas donde la agilidad es importante.
 
-The key career satisfaction for Monkeys comes from solving interesting problems and being recognized for their cleverness. They need to feel their intelligence is appreciated and utilized.`,
+La principal satisfacción profesional de los Monos proviene de resolver problemas interesantes y ser reconocidos por su inteligencia. Necesitan sentir que su inteligencia es apreciada y utilizada.`,
         
-        spiritualPath: `The spiritual journey for Monkeys often involves learning integrity alongside intelligence. The lesson is that being clever doesn't justify being dishonest, that true wisdom includes ethics.
+        spiritualPath: `El viaje espiritual de los Monos a menudo implica aprender integridad junto con la inteligencia. La lección es que ser inteligente no justifica ser deshonesto, que la verdadera sabiduría incluye la ética.
 
-Developing depth and commitment is another key lesson. Monkeys need to learn that some of life's best experiences require staying with something past the exciting beginning, that mastery requires sustained focus.
+Desarrollar profundidad y compromiso es otra lección clave. Los monos necesitan aprender que algunas de las mejores experiencias de la vida requieren permanecer en algo más allá del emocionante comienzo, que el dominio requiere una concentración sostenida.
 
-There's also a lesson around emotional availability. Monkeys can live so much in their heads that they disconnect from their hearts. Learning to feel deeply, to be vulnerable, to connect emotionally is transformative.`,
+También hay una lección sobre la disponibilidad emocional. Los monos pueden vivir tantas cosas en sus cabezas que se desconectan de sus corazones. Aprender a sentir profundamente, a ser vulnerable y a conectarse emocionalmente es transformador.`,
         
-        lifeCycles: `Monkey years are times of innovation, clever solutions, and playful approaches. The energy supports entrepreneurship, creative problem-solving, and trying new things. It's a year to be flexible, use your intelligence, and not take everything too seriously.
+        lifeCycles: `Los años de los monos son tiempos de innovación, soluciones inteligentes y enfoques divertidos. La energía apoya el espíritu empresarial, la resolución creativa de problemas y la prueba de cosas nuevas. Es un año para ser flexible, usar tu inteligencia y no tomarte todo demasiado en serio.
 
-For those born in Monkey years, the 12-year zodiac cycle brings opportunities for reinvention and new intellectual challenges. Every 12 years offers a chance to use their cleverness in new ways.`,
+Para aquellos nacidos en los años del Mono, el ciclo zodiacal de 12 años brinda oportunidades de reinvención y nuevos desafíos intelectuales. Cada 12 años ofrece la oportunidad de utilizar su inteligencia de nuevas maneras.`,
         
-        compatibility: `Monkeys find natural harmony with Rats and Dragons - together they form a triangle of intelligence and ambition. Rat provides strategy, Dragon the vision, and Monkey the creative solutions.
+        compatibility: `Los monos encuentran una armonía natural con las Ratas y los Dragones: juntos forman un triángulo de inteligencia y ambición. Rat proporciona estrategia, Dragon la visión y Monkey las soluciones creativas.
 
-Snakes can be fascinating partners, providing depth to balance the Monkey's playfulness. Oxen might provide stability, though the Monkey's restlessness could frustrate.
+Las serpientes pueden ser compañeras fascinantes, proporcionando profundidad para equilibrar la alegría del Mono. Los bueyes podrían proporcionar estabilidad, aunque la inquietud del Mono podría frustrarlo.
 
-Challenging matches include Tigers (too straightforward and serious for the tricky Monkey) and Pigs (too sincere and trusting, making it too easy for Monkeys to manipulate). Horses might seem too scattered even for the versatile Monkey.`,
+Las partidas desafiantes incluyen Tigres (demasiado sencillos y serios para el astuto Mono) y Cerdos (demasiado sinceros y confiados, lo que hace que sea demasiado fácil de manipular para los Monos). Los caballos pueden parecer demasiado dispersos incluso para el versátil Mono.`,
         
-        affirmation: "I am clever and wise. My intelligence serves integrity. I commit deeply to what matters while maintaining my playful spirit. I am both brilliant and emotionally available."
+        affirmation: "Soy inteligente y sabio. Mi inteligencia sirve a la integridad. Me comprometo profundamente con lo que importa manteniendo mi espíritu lúdico. Soy brillante y emocionalmente disponible."
     },
 
     Rooster: {
-        title: "Year of the Rooster",
-        archetype: "The Proud Perfectionist",
-        hook: "Born in the Year of the Rooster, this soul carries the energy of the proud herald - observant, hardworking, and confidently honest. Roosters represent diligence, precision, and the courage to speak truth.",
-        coreNature: `The Rooster embodies the archetype of the diligent perfectionist. This is attention to detail personified, standards that refuse to be lowered, and the confidence to present oneself boldly. Roosters notice what others miss and aren't afraid to point it out.
+        title: "año del gallo",
+        archetype: "El orgulloso perfeccionista",
+        hook: "Nacida en el Año del Gallo, esta alma lleva la energía del orgulloso heraldo: observador, trabajador y confiadamente honesto. Los gallos representan diligencia, precisión y el coraje de decir la verdad.",
+        coreNature: `El Gallo encarna el arquetipo del perfeccionista diligente. Se trata de atención al detalle personificada, estándares que se niegan a ser rebajados y confianza para presentarse con valentía. Los gallos notan lo que los demás pasan por alto y no temen señalarlo.
 
-There's a natural pride that's both strength and challenge. Roosters take genuine pride in their appearance, their work, and their accomplishments. This drives excellence but can also create pressure and judgment.
+Hay un orgullo natural que es a la vez fuerza y ​​desafío. Los gallos se enorgullecen genuinamente de su apariencia, su trabajo y sus logros. Esto impulsa la excelencia, pero también puede generar presión y juicio.
 
-The Rooster soul came here to demonstrate the value of high standards, honest observation, and the courage to maintain excellence even when it's easier to slide into mediocrity. They're living proof that details matter.`,
+El alma del Gallo vino aquí para demostrar el valor de los altos estándares, la observación honesta y el coraje de mantener la excelencia incluso cuando es más fácil caer en la mediocridad. Son la prueba viviente de que los detalles importan.`,
         
-        strengths: `Roosters possess exceptional observational skills and attention to detail. They notice flaws, patterns, and opportunities that others completely miss. This makes them excellent at quality control, analysis, or any work requiring precision.
+        strengths: `Los gallos poseen excepcionales habilidades de observación y atención al detalle. Se dan cuenta de defectos, patrones y oportunidades que otros pasan por alto por completo. Esto los hace excelentes en control de calidad, análisis o cualquier trabajo que requiera precisión.
 
-There's genuine confidence and presence. Roosters aren't afraid to be seen, to express opinions, or to present themselves boldly. They have natural charisma when they're in their element, commanding attention through competence and confidence.
+Hay confianza y presencia genuinas. Los gallos no tienen miedo de ser vistos, de expresar opiniones ni de presentarse con valentía. Tienen un carisma natural cuando están en su elemento y llaman la atención a través de su competencia y confianza.
 
-Hardworking and reliable, Roosters take their responsibilities seriously. They show up, do excellent work, and maintain high standards consistently. Their work ethic is impressive and their results typically excellent.`,
+Trabajadores y confiables, los Gallos se toman en serio sus responsabilidades. Se presentan, hacen un trabajo excelente y mantienen altos estándares de manera constante. Su ética de trabajo es impresionante y sus resultados suelen ser excelentes.`,
         
-        shadows: `The shadow side of Rooster energy manifests as excessive criticism and perfectionism. That keen eye that spots flaws can become harsh judgment of self and others. Roosters can be impossible to please, always finding something wrong.
+        shadows: `El lado oscuro de la energía del Gallo se manifiesta como crítica excesiva y perfeccionismo. Ese ojo agudo que detecta defectos puede convertirse en un juicio severo hacia uno mismo y hacia los demás. Los gallos pueden ser imposibles de complacer y siempre encuentran algo mal.
 
-Boastfulness is a real issue. Roosters can talk too much about their accomplishments or abilities, coming across as arrogant even when they're simply proud. The line between healthy confidence and off-putting bragging can blur.
+La jactancia es un problema real. Los gallos pueden hablar demasiado sobre sus logros o habilidades, pareciendo arrogantes incluso cuando simplemente están orgullosos. La línea entre una confianza sana y una fanfarronería desagradable puede desdibujarse.
 
-Inflexibility creates problems. Roosters often believe their way is the right way and resist other approaches. They can be rigid about standards, methods, or beliefs in ways that prevent growth or collaboration.`,
+La inflexibilidad crea problemas. Los gallos a menudo creen que su camino es el correcto y se resisten a otros enfoques. Pueden ser rígidos en cuanto a estándares, métodos o creencias de manera que impidan el crecimiento o la colaboración.`,
         
-        relationships: `In relationships, Roosters are loyal and honest. They bring reliability, clear communication, and genuine commitment. Romance with a Rooster means knowing where you stand - they're direct about their feelings and expectations.
+        relationships: `En las relaciones, los Gallos son leales y honestos. Aportan confiabilidad, comunicación clara y compromiso genuino. Romance con un Gallo significa saber cuál es tu posición: son directos acerca de sus sentimientos y expectativas.
 
-However, Roosters can be critical partners. They notice flaws and may point them out more than is helpful. They need partners who can handle directness and appreciate high standards without feeling constantly criticized.
+Sin embargo, los gallos pueden ser socios fundamentales. Se dan cuenta de los defectos y pueden señalarlos más de lo que resulta útil. Necesitan socios que puedan manejar la franqueza y apreciar los altos estándares sin sentirse criticados constantemente.
 
-As parents or family members, Roosters are protective and want the best for their loved ones. They may push for excellence in ways that feel demanding. They teach discipline and the value of doing things well.`,
+Como padres o familiares, los Gallos son protectores y quieren lo mejor para sus seres queridos. Es posible que busquen la excelencia de maneras que parezcan exigentes. Enseñan disciplina y el valor de hacer las cosas bien.`,
         
-        career: `Roosters excel in careers requiring precision, presentation, or quality control. Accounting, project management, editing, design, or performing arts all suit Rooster energy. They need roles where their attention to detail and high standards are assets.
+        career: `Los gallos destacan en carreras que requieren precisión, presentación o control de calidad. La contabilidad, la gestión de proyectos, la edición, el diseño o las artes escénicas se adaptan a la energía de Rooster. Necesitan puestos en los que la atención al detalle y los altos estándares sean activos.
 
-They do well in positions with clear expectations and measurable results. They may struggle in ambiguous or constantly changing environments. They need to know what excellence looks like and be allowed to achieve it.
+Les va bien en puestos con expectativas claras y resultados mensurables. Pueden tener dificultades en entornos ambiguos o en constante cambio. Necesitan saber cómo es la excelencia y poder alcanzarla.
 
-The key career satisfaction for Roosters comes from producing high-quality work and being recognized for their excellence. They need to feel their standards are appreciated and their contributions acknowledged.`,
+La satisfacción profesional clave para los Gallos proviene de producir un trabajo de alta calidad y ser reconocidos por su excelencia. Necesitan sentir que se valoran sus normas y se reconocen sus contribuciones.`,
         
-        spiritualPath: `The spiritual journey for Roosters often involves learning compassion alongside discernment. The lesson is that seeing flaws doesn't require pointing them all out, that kindness sometimes means accepting imperfection.
+        spiritualPath: `El viaje espiritual de los Gallos a menudo implica aprender a tener compasión junto con el discernimiento. La lección es que ver los defectos no requiere señalarlos todos, que la bondad a veces significa aceptar la imperfección.
 
-Developing humility is another key lesson. Roosters need to learn that confidence doesn't require broadcasting every achievement, that quiet competence is sometimes more powerful than loud proclamation.
+Desarrollar la humildad es otra lección clave. Los gallos necesitan aprender que la confianza no requiere difundir cada logro, que la competencia silenciosa a veces es más poderosa que la proclamación en voz alta.
 
-There's also a lesson around flexibility. Roosters must learn that their way isn't the only way, that different approaches can also lead to excellence. Releasing rigid standards in favor of creative flexibility is growth.`,
+También hay una lección sobre la flexibilidad. Los gallos deben aprender que su camino no es el único, que diferentes enfoques también pueden conducir a la excelencia. Liberar estándares rígidos en favor de la flexibilidad creativa es crecimiento.`,
         
-        lifeCycles: `Rooster years are times of precision, hard work, and attention to detail. The energy supports organizing, improving systems, and raising standards. It's a year to be diligent, speak your truth, and strive for excellence.
+        lifeCycles: `Los años del gallo son tiempos de precisión, trabajo duro y atención al detalle. La energía apoya la organización, la mejora de los sistemas y la elevación de los estándares. Es un año para ser diligente, decir la verdad y esforzarse por alcanzar la excelencia.
 
-For those born in Rooster years, the 12-year zodiac cycle brings opportunities for achievement and refinement. Every 12 years offers a chance to demonstrate mastery and take pride in accomplishments.`,
+Para aquellos nacidos en los años del Gallo, el ciclo zodiacal de 12 años brinda oportunidades de logro y refinamiento. Cada 12 años ofrece la oportunidad de demostrar dominio y enorgullecerse de los logros.`,
         
-        compatibility: `Roosters find natural harmony with Snakes and Oxen - together they form a triangle of dedication and quality. Snake provides depth and strategy, Ox the reliability, and Rooster the precision and standards.
+        compatibility: `Los gallos encuentran una armonía natural con las serpientes y los bueyes: juntos forman un triángulo de dedicación y calidad. Snake proporciona profundidad y estrategia, Ox la confiabilidad y Rooster la precisión y los estándares.
 
-Dragons can be interesting partners - the Rooster provides the details and reality-checking the Dragon needs. Snakes appreciate the Rooster's honesty and share their high standards.
+Los dragones pueden ser socios interesantes: el Gallo proporciona los detalles y la verificación de la realidad que el Dragón necesita. Las serpientes aprecian la honestidad del Gallo y comparten sus altos estándares.
 
-Challenging matches include Rabbits (too sensitive for the critical Rooster) and Roosters (two critics in one relationship). Horses might seem too chaotic and undisciplined.`,
+Los partidos desafiantes incluyen Conejos (demasiado sensibles para el crítico Gallo) y Gallos (dos críticos en una relación). Los caballos pueden parecer demasiado caóticos e indisciplinados.`,
         
-        affirmation: "I am confident and compassionate. My high standards inspire rather than intimidate. I see clearly and speak kindly. I am both excellent and humble."
+        affirmation: "Tengo confianza y compasión. Mis altos estándares inspiran en lugar de intimidar. Veo claramente y hablo amablemente. Soy excelente y humilde."
     },
 
     Dog: {
-        title: "Year of the Dog",
-        archetype: "The Faithful Guardian",
-        hook: "Born in the Year of the Dog, this soul carries the energy of the loyal protector - honest, reliable, and deeply committed to justice. Dogs represent loyalty, integrity, and the kind of friendship everyone needs.",
-        coreNature: `The Dog embodies the archetype of the faithful guardian. This is loyalty made flesh, integrity as a core value, and a protective instinct that extends to all they consider their pack. Dogs are fundamentally good-hearted.
+        title: "año del perro",
+        archetype: "El fiel guardián",
+        hook: "Nacida en el Año del Perro, esta alma lleva la energía del protector leal: honesto, confiable y profundamente comprometido con la justicia. Los perros representan lealtad, integridad y el tipo de amistad que todos necesitan.",
+        coreNature: `El Perro encarna el arquetipo del fiel guardián. Esto es lealtad hecha carne, integridad como valor fundamental y un instinto protector que se extiende a todos los que consideran su manada. Los perros son fundamentalmente de buen corazón.
 
-There's an innate sense of right and wrong that guides Dogs. They have strong moral compasses and aren't comfortable compromising their values, even when it's costly. This integrity makes them trustworthy but can also create inner conflict.
+Hay un sentido innato del bien y del mal que guía a los perros. Tienen fuertes principios morales y no se sienten cómodos comprometiendo sus valores, incluso cuando resulta costoso. Esta integridad los hace dignos de confianza, pero también puede crear conflictos internos.
 
-The Dog soul came here to demonstrate the power of loyalty, the importance of standing up for what's right, and the value of being someone others can truly count on. They're living proof that honor and reliability matter.`,
+El alma del Perro vino aquí para demostrar el poder de la lealtad, la importancia de defender lo que es correcto y el valor de ser alguien con quien los demás realmente pueden contar. Son la prueba viviente de que el honor y la confiabilidad son importantes.`,
         
-        strengths: `Dogs possess unwavering loyalty and reliability. When they commit to someone or something, they're all in. This makes them invaluable friends, partners, employees, or leaders. Their word truly means something.
+        strengths: `Los perros poseen una lealtad y confiabilidad inquebrantables. Cuando se comprometen con alguien o algo, lo hacen por completo. Esto los convierte en amigos, socios, empleados o líderes invaluables. Su palabra realmente significa algo.
 
-There's genuine honesty and straightforwardness. Dogs tell the truth even when it's uncomfortable. They value authenticity and have low tolerance for deception or pretense. This creates relationships built on solid foundations.
+Hay honestidad y franqueza genuinas. Los perros dicen la verdad incluso cuando les resulta incómodo. Valoran la autenticidad y tienen poca tolerancia al engaño o la simulación. Esto crea relaciones construidas sobre bases sólidas.
 
-Protective instincts are strong. Dogs naturally stand up for the underdog, defend loved ones, and fight for justice. They're brave in defense of others even when they might be anxious in other contexts.`,
+Los instintos protectores son fuertes. Los perros naturalmente defienden a los desvalidos, defienden a sus seres queridos y luchan por la justicia. Son valientes en defensa de los demás incluso cuando podrían sentirse ansiosos en otros contextos.`,
         
-        shadows: `The shadow side of Dog energy manifests as excessive anxiety and worry. That protective instinct can become catastrophizing, imagining all the terrible things that might happen. This can create paralysis or unnecessary stress.
+        shadows: `El lado oscuro de la energía del Perro se manifiesta como ansiedad y preocupación excesivas. Ese instinto protector puede llegar a ser catastrófico, imaginando todas las cosas terribles que podrían suceder. Esto puede crear parálisis o estrés innecesario.
 
-Pessimism plagues many Dogs. They can focus so much on what might go wrong that they struggle to enjoy what's right. Their keen awareness of injustice and danger can make it hard to relax or trust.
+El pesimismo afecta a muchos perros. Pueden concentrarse tanto en lo que podría salir mal que les cuesta disfrutar de lo que está bien. Su aguda conciencia de la injusticia y el peligro puede dificultar la relajación y la confianza.
 
-Stubbornness is a real issue. Once Dogs have decided what's right, they can be inflexible. They may resist new information or perspectives that challenge their established views. Their strong values can become rigidity.`,
+La terquedad es un problema real. Una vez que los perros han decidido lo que es correcto, pueden volverse inflexibles. Pueden resistirse a nueva información o perspectivas que desafíen sus puntos de vista establecidos. Sus fuertes valores pueden convertirse en rigidez.`,
         
-        relationships: `In relationships, Dogs are devoted and protective. They bring loyalty, honesty, and genuine commitment. Romance with a Dog means having a true partner who will stand by you through difficulties and always have your back.
+        relationships: `En las relaciones, los perros son devotos y protectores. Aportan lealtad, honestidad y compromiso genuino. Romance con un perro significa tener una verdadera pareja que te apoyará en las dificultades y siempre te respaldará.
 
-However, Dogs need absolute loyalty in return. Betrayal is devastating and often unforgivable. They require partners who are equally honest and committed. Trust is everything to Dogs.
+Sin embargo, los perros necesitan absoluta lealtad a cambio. La traición es devastadora y, a menudo, imperdonable. Requieren socios que sean igualmente honestos y comprometidos. La confianza lo es todo para los perros.
 
-As parents or family members, Dogs are protective and teaching integrity. They create secure homes and instill strong values. They may struggle with being overprotective or transmitting their anxieties to their children.`,
+Como padres o miembros de la familia, los perros son protectores y enseñan integridad. Crean hogares seguros e inculcan valores sólidos. Es posible que les cueste ser sobreprotectores o transmitir sus ansiedades a sus hijos.`,
         
-        career: `Dogs excel in careers involving service, protection, or advocacy. Law enforcement, social work, law, teaching, veterinary medicine, or military service all suit Dog energy. They need work that aligns with their values and helps others.
+        career: `Los perros se destacan en carreras que implican servicio, protección o defensa. Las fuerzas del orden, el trabajo social, el derecho, la enseñanza, la medicina veterinaria o el servicio militar se adaptan a la energía del Perro. Necesitan un trabajo que se alinee con sus valores y ayude a los demás.
 
-They do well in roles with clear moral frameworks and opportunities to make a difference. They struggle in ethically ambiguous or cutthroat competitive environments. Their integrity isn't for sale.
+Se desempeñan bien en roles con marcos morales claros y oportunidades para marcar la diferencia. Luchan en entornos competitivos éticamente ambiguos o despiadados. Su integridad no está a la venta.
 
-The key career satisfaction for Dogs comes from knowing their work makes the world more just and helps protect or serve others. They need to feel their efforts matter morally, not just practically.`,
+La satisfacción profesional clave para los Perros proviene de saber que su trabajo hace que el mundo sea más justo y ayuda a proteger o servir a los demás. Necesitan sentir que sus esfuerzos importan moralmente, no sólo en la práctica.`,
         
-        spiritualPath: `The spiritual journey for Dogs often involves learning to balance vigilance with trust. The lesson is that being protective doesn't require constant anxiety, that sometimes you can let your guard down without catastrophe.
+        spiritualPath: `El viaje espiritual de los Perros a menudo implica aprender a equilibrar la vigilancia con la confianza. La lección es que ser protector no requiere ansiedad constante, que a veces puedes bajar la guardia sin sufrir una catástrofe.
 
-Developing optimism is another key lesson. Dogs need to learn to see the good alongside the bad, to trust in positive possibilities rather than always expecting the worst. This doesn't mean naivety; it means balanced perspective.
+Desarrollar optimismo es otra lección clave. Los perros necesitan aprender a ver lo bueno junto con lo malo, a confiar en las posibilidades positivas en lugar de esperar siempre lo peor. Esto no significa ingenuidad; significa perspectiva equilibrada.
 
-There's also a lesson around forgiveness. Dogs hold onto hurts and betrayals. Learning to forgive (which doesn't mean forgetting or returning to unsafe situations) frees them from carrying old pain.`,
+También hay una lección sobre el perdón. Los perros se aferran a las heridas y las traiciones. Aprender a perdonar (lo que no significa olvidar o regresar a situaciones inseguras) los libera de cargar con viejos dolores.`,
         
-        lifeCycles: `Dog years are times of loyalty, integrity, and standing up for what's right. The energy supports building genuine relationships, acting with honor, and working for justice. It's a year to be true to your values and protect what matters.
+        lifeCycles: `Los años del perro son tiempos de lealtad, integridad y defensa de lo que es correcto. La energía apoya la construcción de relaciones genuinas, actuar con honor y trabajar por la justicia. Es un año para ser fiel a tus valores y proteger lo que importa.
 
-For those born in Dog years, the 12-year zodiac cycle brings opportunities for renewed commitment and standing in integrity. Every 12 years offers a chance to recommit to core values.`,
+Para aquellos nacidos en los años del Perro, el ciclo zodiacal de 12 años brinda oportunidades para un compromiso renovado y una posición de integridad. Cada 12 años ofrece la oportunidad de volver a comprometerse con los valores fundamentales.`,
         
-        compatibility: `Dogs find natural harmony with Tigers and Horses - together they form a triangle of action and authenticity. Tiger provides courage, Horse the freedom and warmth, and Dog the loyalty and integrity.
+        compatibility: `Los perros encuentran una armonía natural con los tigres y los caballos: juntos forman un triángulo de acción y autenticidad. El Tigre proporciona coraje, el Caballo libertad y calidez y el Perro lealtad e integridad.
 
-Rabbits can be good partners, both valuing peace and kindness. Pigs share the Dog's genuine nature and can provide warmth and optimism.
+Los conejos pueden ser buenos compañeros y ambos valoran la paz y la bondad. Los cerdos comparten la naturaleza genuina del Perro y pueden brindar calidez y optimismo.
 
-Challenging matches include Dragons (too arrogant and entitled for the modest Dog) and Roosters (both critical, creating a negative spiral). Goats might amplify the Dog's worries.`,
+Las partidas desafiantes incluyen Dragones (demasiado arrogantes y autorizados para el modesto Perro) y Gallos (ambos críticos, creando una espiral negativa). Las cabras podrían amplificar las preocupaciones del Perro.`,
         
-        affirmation: "I am loyal and trusting. My vigilance protects without paralyzing. I see both the good and the challenges in life. I am both protective and peaceful."
+        affirmation: "Soy leal y confiado. Mi vigilancia protege sin paralizar. Veo tanto lo bueno como los desafíos en la vida. Soy a la vez protector y pacífico."
     },
 
     Pig: {
-        title: "Year of the Pig",
-        archetype: "The Generous Benefactor",
-        hook: "Born in the Year of the Pig, this soul carries the energy of the warm-hearted giver - generous, sincere, and genuinely kind. Pigs represent abundance, honesty, and the joy of sharing good fortune.",
-        coreNature: `The Pig embodies the archetype of the abundant benefactor. This is generosity as a natural state, sincerity without calculation, and a genuine belief in the goodness of life and people. Pigs are fundamentally optimistic and warm-hearted.
+        title: "año del cerdo",
+        archetype: "El generoso benefactor",
+        hook: "Nacida en el Año del Cerdo, esta alma lleva la energía del dador de buen corazón: generoso, sincero y genuinamente amable. Los cerdos representan abundancia, honestidad y la alegría de compartir la buena fortuna.",
+        coreNature: `El Cerdo encarna el arquetipo del benefactor abundante. Esto es generosidad como estado natural, sinceridad sin cálculo y una creencia genuina en la bondad de la vida y de las personas. Los cerdos son fundamentalmente optimistas y de buen corazón.
 
-There's an appreciation for life's pleasures that's both innocent and sophisticated. Pigs enjoy good food, beautiful things, comfortable environments, and quality experiences. This isn't shallow; it's the ability to appreciate abundance and share it.
+Hay un aprecio por los placeres de la vida que es a la vez inocente y sofisticado. Los cerdos disfrutan de la buena comida, las cosas bellas, los ambientes confortables y las experiencias de calidad. Esto no es superficial; es la capacidad de apreciar la abundancia y compartirla.
 
-The Pig soul came here to demonstrate that kindness and generosity create their own success, that sincerity is powerful, and that believing in people's goodness often brings out their best. They're living proof that what you give returns.`,
+El alma del Cerdo vino aquí para demostrar que la bondad y la generosidad crean su propio éxito, que la sinceridad es poderosa y que creer en la bondad de las personas a menudo saca lo mejor de sí. Son la prueba viviente de que lo que das regresa.`,
         
-        strengths: `Pigs possess genuine warmth and generosity. They give freely - time, resources, attention, affection. This creates deep loyalty in relationships and makes them beloved in their communities. Their giving isn't strategic; it's heartfelt.
+        strengths: `Los cerdos poseen calidez y generosidad genuinas. Dan libremente: tiempo, recursos, atención, afecto. Esto crea una profunda lealtad en las relaciones y las hace amadas en sus comunidades. Su donación no es estratégica; es sincero.
 
-There's authentic sincerity. Pigs mean what they say and say what they mean. They're uncomfortable with pretense or manipulation. This straightforward honesty, combined with their kindness, creates trustworthy relationships.
+Hay auténtica sinceridad. Los cerdos quieren decir lo que dicen y dicen lo que quieren decir. Se sienten incómodos con la simulación o la manipulación. Esta sincera honestidad, combinada con su amabilidad, crea relaciones de confianza.
 
-Diligence and hard work are Pig strengths often overlooked. When Pigs apply themselves, they work steadily and well. They're willing to do what needs to be done and can be remarkably productive when motivated.`,
+La diligencia y el trabajo duro son los puntos fuertes de los Cerdos que a menudo se pasan por alto. Cuando los Cerdos se esfuerzan, trabajan bien y de manera constante. Están dispuestos a hacer lo que hay que hacer y pueden ser notablemente productivos cuando están motivados.`,
         
-        shadows: `The shadow side of Pig energy manifests as naivety and gullibility. That belief in people's goodness can make them easy to take advantage of. Pigs may trust untrustworthy people or fail to see manipulative behavior until it's too late.
+        shadows: `El lado oscuro de la energía del Cerdo se manifiesta como ingenuidad y credulidad. Esa creencia en la bondad de las personas puede hacer que sea fácil aprovecharse de ellas. Los cerdos pueden confiar en personas poco confiables o no ver comportamientos manipuladores hasta que sea demasiado tarde.
 
-Over-indulgence is a real challenge. Pigs can struggle with excess - eating, spending, or consuming too much of anything pleasurable. Their love of abundance can cross into lack of discipline or self-control.
+El exceso de indulgencia es un verdadero desafío. Los cerdos pueden luchar contra el exceso: comer, gastar o consumir demasiado de cualquier cosa placentera. Su amor por la abundancia puede convertirse en falta de disciplina o autocontrol.
 
-Materialism can emerge. Pigs' appreciation for nice things can become too focused on acquisition and possessions as measures of success or happiness. The joy of simple abundance can morph into luxury dependence.`,
+El materialismo puede surgir. El aprecio de los cerdos por las cosas bonitas puede centrarse demasiado en las adquisiciones y posesiones como medidas de éxito o felicidad. La alegría de la simple abundancia puede transformarse en dependencia del lujo.`,
         
-        relationships: `In relationships, Pigs are devoted and generous. They bring warmth, loyalty, and genuine affection. Romance with a Pig is comfortable and abundant - they create cozy homes, plan special experiences, and make partners feel truly cared for.
+        relationships: `En las relaciones, los Cerdos son devotos y generosos. Aportan calidez, lealtad y afecto genuino. El romance con un Cerdo es cómodo y abundante: crean hogares acogedores, planifican experiencias especiales y hacen que la pareja se sienta realmente atendida.
 
-However, Pigs can be too trusting. They need partners who won't take advantage of their generosity and who will be honest. They require relationships where their kindness is appreciated and reciprocated.
+Sin embargo, los cerdos pueden ser demasiado confiados. Necesitan socios que no se aprovechen de su generosidad y que sean honestos. Requieren relaciones donde su amabilidad sea apreciada y correspondida.
 
-As parents or family members, Pigs are nurturing and indulgent. They provide well, create comfortable homes, and prioritize family happiness. They may struggle with discipline or saying no.`,
+Como padres o miembros de la familia, los cerdos son cariñosos e indulgentes. Proporcionan bienestar, crean hogares confortables y priorizan la felicidad familiar. Es posible que tengan dificultades con la disciplina o con decir no.`,
         
-        career: `Pigs excel in careers involving hospitality, caregiving, or quality. Restaurant work, hospitality management, nursing, social services, or luxury goods all suit Pig energy. They need work where their generosity and appreciation for quality are assets.
+        career: `Los cerdos destacan en carreras relacionadas con la hospitalidad, el cuidado o la calidad. El trabajo en restaurantes, la gestión hotelera, la enfermería, los servicios sociales o los artículos de lujo son adecuados para la energía del cerdo. Necesitan un trabajo en el que su generosidad y aprecio por la calidad sean activos.
 
-They do well in collaborative, friendly environments. Cutthroat competition or cold, impersonal workplaces drain them. They need to feel their work contributes to others' well-being or happiness.
+Les va bien en entornos colaborativos y amigables. La competencia despiadada o los lugares de trabajo fríos e impersonales los agotan. Necesitan sentir que su trabajo contribuye al bienestar o la felicidad de los demás.
 
-The key career satisfaction for Pigs comes from making others happy and comfortable and being appreciated for their efforts. They need warmth in work relationships and tangible results they can see.`,
+La satisfacción profesional clave para los Cerdos proviene de hacer felices y cómodos a los demás y de ser apreciados por sus esfuerzos. Necesitan calidez en las relaciones laborales y resultados tangibles que puedan ver.`,
         
-        spiritualPath: `The spiritual journey for Pigs often involves learning discernment alongside generosity. The lesson is that giving wisely is more loving than giving indiscriminately, that protecting yourself allows you to give more sustainably.
+        spiritualPath: `El viaje espiritual de los Cerdos a menudo implica aprender a discernir junto con la generosidad. La lección es que dar sabiamente es más amoroso que dar indiscriminadamente, que protegerse permite dar de manera más sostenible.
 
-Developing discipline is another key lesson. Pigs need to learn that self-control enhances rather than restricts pleasure, that delayed gratification creates richer experiences. Moderation is growth.
+Desarrollar la disciplina es otra lección clave. Los cerdos necesitan aprender que el autocontrol mejora el placer en lugar de restringirlo, y que la gratificación retrasada crea experiencias más ricas. La moderación es crecimiento.
 
-There's also a lesson around seeing shadow in self and others. Pigs can be so focused on goodness that they ignore or excuse harmful behavior. Learning to see clearly while maintaining kindness is transformative.`,
+También hay una lección sobre cómo ver sombras en uno mismo y en los demás. Los cerdos pueden estar tan concentrados en la bondad que ignoran o excusan el comportamiento dañino. Aprender a ver con claridad manteniendo la bondad es transformador.`,
         
-        lifeCycles: `Pig years are times of abundance, generosity, and enjoying life's pleasures. The energy supports creating comfort, sharing resources, and believing in goodness. It's a year to be generous, appreciate what you have, and trust in abundance.
+        lifeCycles: `Los años del cerdo son tiempos de abundancia, generosidad y disfrute de los placeres de la vida. La energía apoya la creación de comodidad, el intercambio de recursos y la creencia en la bondad. Es un año para ser generoso, valorar lo que tienes y confiar en abundancia.
 
-For those born in Pig years, the 12-year zodiac cycle brings opportunities for renewal in generosity and connecting with abundance. Every 12 years offers a chance to return to their generous nature.`,
+Para aquellos nacidos en los años del Cerdo, el ciclo zodiacal de 12 años brinda oportunidades para renovarse en generosidad y conectarse con la abundancia. Cada 12 años ofrece la oportunidad de volver a su naturaleza generosa.`,
         
-        compatibility: `Pigs find natural harmony with Rabbits and Goats - together they form a triangle of peace and creativity. Rabbit provides diplomacy, Goat the artistic vision, and Pig the warmth and abundance.
+        compatibility: `Los cerdos encuentran una armonía natural con los conejos y las cabras: juntos forman un triángulo de paz y creatividad. El Conejo proporciona diplomacia, la Cabra la visión artística y el Cerdo la calidez y la abundancia.
 
-Tigers can be good partners - the Pig appreciates the Tiger's protection while the Tiger values the Pig's warmth. Rats share appreciation for good living.
+Los tigres pueden ser buenos compañeros: el Cerdo aprecia la protección del Tigre, mientras que el Tigre valora la calidez del Cerdo. Las ratas comparten el aprecio por el buen vivir.
 
-Challenging matches include Snakes (too secretive and strategic for the open Pig) and Monkeys (too tricky, making it too easy to take advantage). Other Pigs might over-indulge together.`,
+Las partidas desafiantes incluyen Serpientes (demasiado reservadas y estratégicas para el Cerdo abierto) y Monos (demasiado complicado, por lo que es demasiado fácil aprovecharlas). Otros Cerdos podrían darse demasiados caprichos juntos.`,
         
-        affirmation: "I am generous and discerning. My kindness is wise. I enjoy abundance with discipline. I give from fullness and protect my own well-being while caring for others."
+        affirmation: "Soy generoso y exigente. Mi amabilidad es sabia. Disfruto de la abundancia con disciplina. Doy desde la plenitud y protejo mi propio bienestar mientras cuido de los demás."
     }
 };
 
@@ -646,103 +646,103 @@ Challenging matches include Snakes (too secretive and strategic for the open Pig
 
 var CHINESE_ELEMENT_INFLUENCES = {
     Wood: {
-        title: "Wood Element",
-        nature: "Growth & Creativity",
-        influence: `The Wood element infuses this soul with the energy of spring itself — new growth, fresh ideas, and a constant pull toward expansion. There's something fundamentally optimistic about Wood energy. It's the first green shoot pushing through frozen ground, the branch that bends in the storm instead of breaking.
+        title: "Elemento de madera",
+        nature: "Crecimiento y creatividad",
+        influence: `El elemento Madera infunde a esta alma la energía de la primavera misma: nuevo crecimiento, ideas frescas y un impulso constante hacia la expansión. Hay algo fundamentalmente optimista en la dendroenergía. Es el primer brote verde que atraviesa el suelo helado, la rama que se dobla en la tormenta en lugar de romperse.
 
-People shaped by Wood tend to be genuinely creative, not in a forced or performative way, but in the way a vine finds sunlight — naturally, persistently, and often from unexpected angles. They're drawn to growth in all its forms: personal development, education, building something from nothing. There's an idealism here too, a belief that things can be better, that people can evolve, that the future holds more than the past. They collaborate instinctively, understanding that a forest is stronger than a single tree. And like bamboo, they combine flexibility with surprising strength — they'll bend with circumstances rather than snap, but make no mistake about their resilience.`,
+Las personas moldeadas por la madera tienden a ser genuinamente creativas, no de manera forzada o performativa, sino de la misma forma en que una enredadera encuentra la luz del sol: de forma natural, persistente y, a menudo, desde ángulos inesperados. Se sienten atraídos por el crecimiento en todas sus formas: desarrollo personal, educación, construir algo a partir de la nada. Aquí también hay idealismo, la creencia de que las cosas pueden ser mejores, que las personas pueden evolucionar, que el futuro depara más que el pasado. Colaboran instintivamente, entendiendo que un bosque es más fuerte que un solo árbol. Y al igual que el bambú, combinan flexibilidad con una fuerza sorprendente: se doblarán según las circunstancias en lugar de romperse, pero no se equivoque en cuanto a su resiliencia.`,
         
-        gifts: "Wood element enhances creativity, ethical leadership, and the ability to envision things that don't yet exist and then actually build them. These individuals often become innovators, teachers, or leaders in fields that demand both vision and follow-through.",
+        gifts: "El elemento madera mejora la creatividad, el liderazgo ético y la capacidad de imaginar cosas que aún no existen y luego construirlas. Estas personas a menudo se convierten en innovadores, maestros o líderes en campos que exigen tanto visión como seguimiento.",
         
-        challenges: "The shadow side of Wood shows up as over-idealism — expecting too much too fast, spreading energy across too many projects, or becoming genuinely frustrated when reality doesn't match the vision. There can be a tendency to keep planting new seeds without tending what's already growing.",
+        challenges: "El lado oscuro de Wood se muestra como un exceso de idealismo: esperar demasiado y demasiado rápido, distribuir energía en demasiados proyectos o frustrarse genuinamente cuando la realidad no coincide con la visión. Puede haber una tendencia a seguir plantando nuevas semillas sin cuidar las que ya están creciendo.",
         
-        relationships: "In relationships, Wood energy shows up as investment. These aren't people who coast — they actively nurture the partnership, encourage their partner's growth, and think about where things are heading. The challenge is remembering that not every relationship needs to be a project. Sometimes just being together is enough.",
+        relationships: "En las relaciones, la dendroenergía se muestra como una inversión. Estas no son personas que se toman el tiempo: nutren activamente la asociación, alientan el crecimiento de su socio y piensan hacia dónde se dirigen las cosas. El desafío es recordar que no toda relación tiene que ser un proyecto. A veces basta con estar juntos.",
         
-        career: "Wood energy thrives in education, innovation, development, environmental work, or anything that involves building something meaningful from the ground up. They're the ones who see potential in empty lots and struggling startups alike.",
+        career: "La dendroenergía prospera en la educación, la innovación, el desarrollo, el trabajo medioambiental o cualquier cosa que implique construir algo significativo desde cero. Ellos son los que ven potencial tanto en los terrenos baldíos como en las nuevas empresas en dificultades.",
         
-        spiritualPath: "The spiritual lesson for Wood is learning when to stop growing outward and start growing inward. Not every direction needs to be explored. Sometimes the wisest growth is the kind you can't see — roots going deeper rather than branches reaching higher.",
+        spiritualPath: "La lección espiritual para Wood es aprender cuándo dejar de crecer hacia afuera y comenzar a crecer hacia adentro. No es necesario explorar todas las direcciones. A veces, el crecimiento más inteligente es el que no se puede ver: las raíces son más profundas en lugar de las ramas más altas.",
         
-        affirmation: "I grow wisely and sustainably. My expansion serves the greater good."
+        affirmation: "Crezco de forma inteligente y sostenible. Mi expansión sirve al bien común."
     },
     
     Fire: {
-        title: "Fire Element",
-        nature: "Passion & Transformation",
-        influence: `The Fire element charges this soul with summer's intensity — heat, light, and the power to transform whatever it touches. Fire people don't enter rooms, they change the temperature. There's a natural magnetism here, a warmth that draws others in and an energy that can feel almost electric.
+        title: "Elemento fuego",
+        nature: "Pasión y transformación",
+        influence: `El elemento Fuego carga esta alma con la intensidad del verano: calor, luz y el poder de transformar todo lo que toca. Los bomberos no entran en las habitaciones, cambian la temperatura. Hay un magnetismo natural aquí, una calidez que atrae a los demás y una energía que puede parecer casi eléctrica.
 
-People shaped by Fire tend to be genuinely passionate rather than merely enthusiastic. They feel things at full volume and aren't particularly interested in turning it down. They make decisions quickly, often from the gut, and they'd rather course-correct at speed than deliberate at a standstill. There's a dramatic quality to their emotional life — not drama for its own sake, but the kind of intensity that makes moments memorable. When a Fire person loves something, you know it. When they're angry, everyone in the building knows it. They're natural catalysts, the ones who walk into stagnant situations and somehow get things moving again.`,
+Las personas moldeadas por el Fuego tienden a ser genuinamente apasionadas en lugar de simplemente entusiastas. Sienten las cosas a todo volumen y no están particularmente interesados ​​en bajarlo. Toman decisiones rápidamente, a menudo instintivamente, y prefieren corregir el rumbo a gran velocidad que deliberar estando parados. Hay una cualidad dramática en su vida emocional; no drama por sí mismo, sino el tipo de intensidad que hace que los momentos sean memorables. Cuando una persona de Fuego ama algo, lo sabes. Cuando están enojados, todos en el edificio lo saben. Son catalizadores naturales, los que caminan hacia situaciones estancadas y de alguna manera hacen que las cosas vuelvan a moverse.`,
         
-        gifts: "Fire element amplifies leadership, the ability to inspire without trying too hard, and the raw power to transform stuck situations. These individuals often become leaders, performers, or the person everyone calls when something needs to change yesterday.",
+        gifts: "El elemento fuego amplifica el liderazgo, la capacidad de inspirar sin esforzarse demasiado y el poder puro para transformar situaciones estancadas. Estos individuos a menudo se convierten en líderes, artistas o la persona a la que todos llaman cuando algo necesita cambiar ayer.",
         
-        challenges: "Fire's shadow is burnout, plain and simple. That incredible intensity isn't always sustainable. There can be impulsiveness — acting before thinking, burning bridges that took years to build, or consuming resources (emotional and otherwise) faster than they can be replenished. Not every situation needs the full blaze.",
+        challenges: "La sombra del fuego es el agotamiento, simple y llanamente. Esa increíble intensidad no siempre es sostenible. Puede haber impulsividad: actuar antes de pensar, quemar puentes que tardaron años en construirse o consumir recursos (emocionales y de otro tipo) más rápido de lo que pueden reponerse. No todas las situaciones necesitan un incendio total.",
         
-        relationships: "Fire brings passion and intensity to partnerships in ways that can be both thrilling and exhausting. They love hard and fight hard. The key is finding someone who can match that energy without feeding the flames, or someone whose cooler temperament provides balance without dampening the spark entirely.",
+        relationships: "El fuego aporta pasión e intensidad a las asociaciones de maneras que pueden ser a la vez emocionantes y agotadoras. Aman mucho y luchan mucho. La clave es encontrar a alguien que pueda igualar esa energía sin alimentar las llamas, o alguien cuyo temperamento más frío proporcione equilibrio sin apagar la chispa por completo.",
         
-        career: "Fire energy excels in high-visibility leadership, performance, entrepreneurship, emergency services, or any field where charisma and decisive action matter more than careful deliberation. They're the ones who thrive under pressure that would crush others.",
+        career: "La energía del fuego sobresale en liderazgo de alta visibilidad, desempeño, espíritu empresarial, servicios de emergencia o cualquier campo donde el carisma y la acción decisiva importen más que una deliberación cuidadosa. Son ellos los que prosperan bajo una presión que aplastaría a otros.",
         
-        spiritualPath: "The spiritual journey for Fire is learning that controlled burns are more powerful than wildfires. Intensity channeled with awareness transforms. Intensity without awareness just destroys. The lesson is sustaining the flame, not just igniting it.",
+        spiritualPath: "El viaje espiritual del Fuego es aprender que las quemaduras controladas son más poderosas que los incendios forestales. La intensidad canalizada con conciencia se transforma. La intensidad sin conciencia simplemente destruye. La lección es sostener la llama, no sólo encenderla.",
         
-        affirmation: "I channel my passion wisely. My intensity transforms with purpose."
+        affirmation: "Canalizo mi pasión sabiamente. Mi intensidad se transforma con un propósito."
     },
     
     Earth: {
-        title: "Earth Element",
-        nature: "Stability & Nourishment",
-        influence: `The Earth element grounds this soul with the energy of the harvest — patient, reliable, and deeply connected to what's real and tangible. Earth people are the bedrock others build their lives on, often without fully appreciating it until the ground shakes and the Earth person is still standing.
+        title: "Elemento Tierra",
+        nature: "Estabilidad y nutrición",
+        influence: `El elemento Tierra fundamenta esta alma con la energía de la cosecha: paciente, confiable y profundamente conectada con lo que es real y tangible. La gente de la Tierra es la base sobre la que otros construyen sus vidas, a menudo sin apreciarlo completamente hasta que el suelo tiembla y la persona de la Tierra sigue en pie.
 
-People shaped by Earth tend to be practical in a way that goes beyond mere common sense — they have an instinct for what works, what lasts, and what's worth the effort. They're naturally nurturing, the ones who remember to ask if you've eaten, who show up with exactly what's needed without being asked. Patience isn't something they practice; it's how they're wired. They work steadily rather than in bursts, and the results tend to outlast everyone else's. There's a deep appreciation for physical reality here — good food, comfortable spaces, the satisfaction of holding something you built with your own hands.`,
+Las personas moldeadas por la Tierra tienden a ser prácticas de una manera que va más allá del mero sentido común: tienen un instinto para saber qué funciona, qué dura y qué vale la pena el esfuerzo. Son naturalmente cariñosos, los que recuerdan preguntarte si has comido, los que aparecen con exactamente lo que necesitas sin que te lo pidan. La paciencia no es algo que practiquen; así es como están conectados. Trabajan de manera constante en lugar de en ráfagas, y los resultados tienden a durar más que los de los demás. Aquí hay un profundo aprecio por la realidad física: buena comida, espacios cómodos, la satisfacción de sostener algo que construiste con tus propias manos.`,
         
-        gifts: "Earth element enhances dependability, the ability to turn abstract plans into concrete results, and a natural talent for making others feel safe and supported. These are the people who actually finish what they start.",
+        gifts: "El elemento Tierra mejora la confiabilidad, la capacidad de convertir planes abstractos en resultados concretos y un talento natural para hacer que los demás se sientan seguros y apoyados. Estas son las personas que realmente terminan lo que empiezan.",
         
-        challenges: "Earth's shadow shows up as stubbornness that gets mistaken for strength, resistance to change that gets called 'being realistic,' and a tendency to get so focused on material security that the soul's needs go unmet. The ground doesn't move easily, and sometimes that's exactly the problem.",
+        challenges: "La sombra de la Tierra se muestra como terquedad que se confunde con fuerza, resistencia al cambio que se llama "ser realista" y una tendencia a concentrarse tanto en la seguridad material que las necesidades del alma quedan insatisfechas. El suelo no se mueve con facilidad y, a veces, ese es exactamente el problema.",
         
-        relationships: "In relationships, Earth energy means showing up. Consistently. These aren't the partners who sweep you off your feet with grand gestures — they're the ones who are still there at 3am when life falls apart, making tea and saying very little but meaning everything. The risk is becoming so comfortable that the relationship stops growing.",
+        relationships: "En las relaciones, la energía de la Tierra significa aparecer. Consecuentemente. Estos no son los socios que te dejan boquiabierto con grandes gestos; son los que siguen ahí a las 3 de la madrugada cuando la vida se desmorona, preparando té y diciendo muy poco pero queriendo decirlo todo. El riesgo se vuelve tan cómodo que la relación deja de crecer.",
         
-        career: "Earth energy thrives in anything requiring sustained effort and tangible outcomes — healthcare, construction, agriculture, administration, cooking, or any craft where patience and precision produce something real. They build careers the way they build everything else: brick by brick.",
+        career: "La energía de la Tierra prospera en cualquier cosa que requiera un esfuerzo sostenido y resultados tangibles: atención médica, construcción, agricultura, administración, cocina o cualquier oficio donde la paciencia y la precisión produzcan algo real. Construyen carreras de la misma manera que construyen todo lo demás: ladrillo a ladrillo.",
         
-        spiritualPath: "The spiritual lesson for Earth is learning that change isn't the enemy. The ground needs to shift sometimes for new things to grow. Letting go of control, trusting the unseen, and accepting that not everything valuable can be held in your hands — these are Earth's deeper assignments.",
+        spiritualPath: "La lección espiritual para la Tierra es aprender que el cambio no es el enemigo. A veces es necesario cambiar el terreno para que crezcan cosas nuevas. Dejar ir el control, confiar en lo invisible y aceptar que no todo lo valioso puede estar en tus manos: éstas son las tareas más profundas de la Tierra.",
         
-        affirmation: "I am both stable and flexible. My grounding supports growth."
+        affirmation: "Soy estable y flexible. Mi conexión a tierra apoya el crecimiento."
     },
     
     Metal: {
-        title: "Metal Element",
-        nature: "Precision & Clarity",
-        influence: `The Metal element sharpens this soul with autumn's energy — the time of harvest, distillation, and cutting away what's no longer needed. Metal people see clearly where others see fog. They have standards, and those standards aren't negotiable.
+        title: "Elemento metálico",
+        nature: "Precisión y claridad",
+        influence: `El elemento Metal agudiza esta alma con la energía del otoño: la época de la cosecha, la destilación y la eliminación de lo que ya no se necesita. La gente de metal ve claramente donde otros ven niebla. Tienen estándares y esos estándares no son negociables.
 
-People shaped by Metal tend to be precise in everything they do, from how they communicate to how they organize their lives. There's nothing vague about them. They say what they mean, they mean what they say, and they have little patience for people who can't do the same. Quality matters to them — they'd rather have one excellent thing than ten mediocre ones. They're natural organizers, the ones who walk into chaos and somehow have it sorted before lunch. And they're discerning in a way that can look like judgment but is really just clarity — they can tell the difference between what's valuable and what's just shiny.`,
+Las personas moldeadas por el Metal tienden a ser precisas en todo lo que hacen, desde cómo se comunican hasta cómo organizan sus vidas. No hay nada vago en ellos. Dicen lo que quieren decir, quieren decir lo que dicen y tienen poca paciencia con las personas que no pueden hacer lo mismo. La calidad les importa: prefieren tener una cosa excelente que diez mediocres. Son organizadores naturales, los que se adentran en el caos y de alguna manera lo solucionan antes del almuerzo. Y están discerniendo de una manera que puede parecer un juicio pero que en realidad es solo claridad: pueden distinguir entre lo que es valioso y lo que simplemente es brillante.`,
         
-        gifts: "Metal element sharpens perception, elevates craftsmanship, and brings the kind of clarity that cuts through confusion like a blade through silk. These individuals set the standard that others aspire to, often without trying.",
+        gifts: "El elemento metálico agudiza la percepción, eleva la artesanía y aporta el tipo de claridad que atraviesa la confusión como una hoja atraviesa la seda. Estos individuos establecen el estándar al que otros aspiran, a menudo sin intentarlo.",
         
-        challenges: "Metal's shadow is rigidity dressed up as high standards. The same precision that produces excellence can also produce a person who is impossible to please — including themselves. Emotional coldness, excessive criticism, and the inability to accept 'good enough' can isolate Metal energy from the very people who admire it.",
+        challenges: "La sombra del metal es la rigidez disfrazada de altos estándares. La misma precisión que produce excelencia también puede producir una persona que es imposible de complacer, incluidos ellos mismos. La frialdad emocional, la crítica excesiva y la incapacidad de aceptar lo "suficientemente bueno" pueden aislar la energía del Metal de las mismas personas que la admiran.",
         
-        relationships: "In relationships, Metal energy brings clarity and directness. You always know where you stand. The challenge is that emotional messiness is part of love, and Metal's instinct to clean it up or cut it away can make partners feel like they're being audited rather than loved. Learning that some imperfections are features, not bugs, is Metal's relationship homework.",
+        relationships: "En las relaciones, la energía del Metal aporta claridad y franqueza. Siempre sabes dónde estás parado. El desafío es que el desorden emocional es parte del amor, y el instinto de Metal de limpiarlo o eliminarlo puede hacer que la pareja sienta que está siendo auditada en lugar de amada. Aprender que algunas imperfecciones son características, no errores, es la tarea de relaciones de Metal.",
         
-        career: "Metal energy excels in surgery, engineering, editing, law, accounting, fine craftsmanship, or any field where precision isn't optional. They produce work of exceptional quality and hold themselves and their colleagues to standards that elevate everything.",
+        career: "La energía metálica sobresale en cirugía, ingeniería, edición, derecho, contabilidad, artesanía fina o cualquier campo donde la precisión no sea opcional. Producen un trabajo de calidad excepcional y se mantienen a sí mismos y a sus colegas con estándares que lo elevan todo.",
         
-        spiritualPath: "The spiritual lesson for Metal is learning that the sharpest blade knows when to stay in its sheath. Not everything needs to be refined. Not every flaw needs fixing. The deepest wisdom Metal can reach is accepting imperfection as part of the design, not a failure of quality control.",
+        spiritualPath: "La lección espiritual para el Metal es aprender que la hoja más afilada sabe cuándo permanecer en su funda. No es necesario perfeccionar todo. No todos los defectos necesitan solución. La sabiduría más profunda que puede alcanzar el metal es aceptar la imperfección como parte del diseño, no una falla en el control de calidad.",
         
-        affirmation: "I maintain high standards while accepting imperfection. My clarity serves compassion."
+        affirmation: "Mantengo altos estándares mientras acepto la imperfección. Mi claridad sirve a la compasión."
     },
     
     Water: {
-        title: "Water Element",
-        nature: "Flow & Wisdom",
-        influence: `The Water element deepens this soul with winter's energy — still on the surface, vast underneath, and more powerful than anything that tries to stop it. Water people carry a kind of ancient knowing, as though they've been here before and remember more than they let on.
+        title: "Elemento agua",
+        nature: "Flujo y Sabiduría",
+        influence: `El elemento Agua profundiza esta alma con la energía del invierno: todavía en la superficie, vasta por debajo y más poderosa que cualquier cosa que intente detenerla. La gente del agua posee una especie de conocimiento antiguo, como si hubieran estado aquí antes y recordaran más de lo que dejaban entrever.
 
-People shaped by Water tend to be adaptable in ways that can look effortless but aren't. They read rooms the way rivers read landscapes — finding the path of least resistance while never losing their essential nature. Their intuition runs deep enough to be unsettling sometimes, picking up on currents and undercurrents that others miss entirely. They're comfortable with complexity, with ambiguity, with the spaces between certainties where most people feel lost. Emotions aren't something Water people manage — emotions are their element, their medium, the thing they navigate as naturally as breathing.`,
+Las personas moldeadas por el agua tienden a adaptarse de maneras que pueden parecer fáciles pero no lo son. Leen las habitaciones de la misma manera que los ríos leen los paisajes: encuentran el camino de menor resistencia sin perder nunca su naturaleza esencial. Su intuición es lo suficientemente profunda como para resultar inquietante a veces, captando corrientes y corrientes subterráneas que otros pasan por alto por completo. Se sienten cómodos con la complejidad, la ambigüedad, los espacios entre certezas donde la mayoría de la gente se siente perdida. Las emociones no son algo que la gente del Agua maneja: las emociones son su elemento, su medio, aquello por lo que navegan con tanta naturalidad como la respiración.`,
         
-        gifts: "Water element enhances intuition, emotional intelligence, and the ability to navigate situations that would drown less adaptable souls. These individuals often become healers, artists, counsellors, or the person everyone confides in without quite knowing why.",
+        gifts: "El elemento agua mejora la intuición, la inteligencia emocional y la capacidad de afrontar situaciones que ahogarían a las almas menos adaptables. Estos individuos a menudo se convierten en curanderos, artistas, consejeros o en la persona en la que todos confían sin saber muy bien por qué.",
         
-        challenges: "Water's shadow is losing yourself. Without boundaries, Water spreads until there's nothing left — absorbing everyone else's emotions, adapting so completely that the original self disappears, or retreating into depths where no one can follow. Fear can become the dominant current, and excessive caution can prevent the very flow that makes Water powerful.",
+        challenges: "La sombra del agua te está perdiendo. Sin límites, el Agua se esparce hasta que no queda nada: absorbe las emociones de todos los demás, se adapta tan completamente que el yo original desaparece o se retira a profundidades donde nadie puede seguirla. El miedo puede convertirse en la corriente dominante, y la precaución excesiva puede impedir el flujo que hace poderosa al Agua.",
         
-        relationships: "In relationships, Water energy connects at levels most people don't even know exist. They feel their partner's moods before words are spoken. The risk is over-merging — becoming so attuned to the other person that their own needs become invisible. Healthy Water relationships require the container of boundaries, not to restrict the flow, but to give it shape.",
+        relationships: "En las relaciones, la energía del agua se conecta a niveles que la mayoría de la gente ni siquiera sabe que existen. Sienten el estado de ánimo de su pareja antes de pronunciar las palabras. El riesgo es fusionarse demasiado: sintonizarse tanto con la otra persona que sus propias necesidades se vuelven invisibles. Las relaciones saludables con el agua requieren un contenedor de límites, no para restringir el flujo, sino para darle forma.",
         
-        career: "Water energy thrives in counselling, healing arts, creative work, diplomacy, research, or any field where reading between the lines matters more than reading the lines themselves. They excel wherever emotional intelligence is the real skill being tested.",
+        career: "La energía del agua prospera en el asesoramiento, las artes curativas, el trabajo creativo, la diplomacia, la investigación o cualquier campo donde leer entre líneas importe más que leer las líneas mismas. Destacan allí donde la inteligencia emocional es la verdadera habilidad que se pone a prueba.",
         
-        spiritualPath: "The spiritual lesson for Water is learning that depth doesn't require drowning. Boundaries aren't walls — they're riverbanks, and without them, even the mightiest river becomes a swamp. The wisdom Water seeks is already inside, waiting to be still enough to hear it.",
+        spiritualPath: "La lección espiritual para el Agua es aprender que la profundidad no requiere ahogarse. Los límites no son muros: son riberas de ríos, y sin ellos, incluso el río más caudaloso se convierte en un pantano. La sabiduría que busca el Agua ya está dentro, esperando estar lo suficientemente quieta para escucharla.",
         
-        affirmation: "I flow wisely. My depth is strength, and my boundaries are healthy."
+        affirmation: "Fluyo sabiamente. Mi profundidad es fuerza y ​​mis límites son saludables."
     }
 };
 

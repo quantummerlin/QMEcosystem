@@ -1,118 +1,118 @@
 // ============================================
-// A MOMENT IN TIME - BRAND CONFIGURATION
+// UN MOMENTO EN EL TIEMPO - CONFIGURACIÓN DE MARCA
 // ============================================
-// Universal branding for all ages
-// Copy this file to config.js to activate
+// Marca universal para todas las edades
+// Copia este archivo a config.js para activar
 // ============================================
 
 var BRAND_CONFIG = {
     // ============================================
-    // BRAND IDENTITY
+    // IDENTIDAD DE MARCA
     // ============================================
-    brandName: "A Moment in Time",
-    tagline: "Your Complete Cosmic Reading • No Sign-Up • Always Free",
-    subTagline: "At the exact moment you were born, the universe created a pattern.",
+    brandName: "Un Momento en el Tiempo",
+    tagline: "Tu Lectura Cósmica Completa • Sin Registro • Siempre Gratis",
+    subTagline: "En el momento exacto en que naciste, el universo creó un patrón.",
     
-    // Who is this reading for?
-    subjectType: "person",
-    subjectLabel: "Person",
-    subjectLabelPlural: "People",
+    // ¿Para quién es esta lectura?
+    subjectType: "persona",
+    subjectLabel: "Persona",
+    subjectLabelPlural: "Personas",
     
     // ============================================
-    // COPY & LANGUAGE
+    // TEXTO E IDIOMA
     // ============================================
     inputLabels: {
-        name: "Name",
-        namePlaceholder: "Enter name",
+        name: "Nombre",
+        namePlaceholder: "Ingresa el nombre",
         nameHelper: "",
         
-        birthDate: "Date of Birth",
+        birthDate: "Fecha de Nacimiento",
         birthDateHelper: "",
         
-        birthTime: "Time of Birth",
-        birthTimeHelper: "For accurate Rising Sign (check birth certificate)",
+        birthTime: "Hora de Nacimiento",
+        birthTimeHelper: "Para un Ascendente preciso (consulta el certificado de nacimiento)",
         
-        birthPlace: "Place of Birth",
-        birthPlacePlaceholder: "City, Country",
-        birthPlaceHelper: "Hospital location or city of birth"
+        birthPlace: "Lugar de Nacimiento",
+        birthPlacePlaceholder: "Ciudad, País",
+        birthPlaceHelper: "Ubicación del hospital o ciudad de nacimiento"
     },
     
-    ctaButton: "Generate Your Reading",
-    loadingMessage: "Capturing your moment...",
+    ctaButton: "Genera Tu Lectura",
+    loadingMessage: "Capturando tu momento...",
     
-    // Result page copy
-    resultTitle: "A Moment in Time",
-    resultSubtitle: "A Portrait of",
-    generatedBy: "Created with love by A Moment in Time",
+    // Texto de la página de resultados
+    resultTitle: "Un Momento en el Tiempo",
+    resultSubtitle: "Un Retrato de",
+    generatedBy: "Creado con amor por Un Momento en el Tiempo",
     
     // ============================================
-    // SECTION NAMES
+    // NOMBRES DE SECCIONES
     // ============================================
     sections: {
         celestial: {
-            name: "Celestial Gifts",
+            name: "Dones Celestiales",
             icon: "",
-            description: "Your planetary influences and cosmic personality"
+            description: "Tus influencias planetarias y personalidad cósmica"
         },
         numbers: {
-            name: "Karmic Numbers & Soul Codes",
+            name: "Números Kármicos y Códigos del Alma",
             icon: "",
-            description: "The numerological blueprint encoded in your birth"
+            description: "El plano numerológico codificado en tu nacimiento"
         },
         soul: {
-            name: "Soul Mission",
+            name: "Misión del Alma",
             icon: "",
-            description: "Your deeper purpose and spiritual gifts"
+            description: "Tu propósito más profundo y dones espirituales"
         },
         forecasts: {
-            name: "Current Cycles",
+            name: "Ciclos Actuales",
             icon: "",
-            description: "The energetic rhythms influencing your present moment"
+            description: "Los ritmos energéticos que influyen en tu momento presente"
         }
     },
     
     // ============================================
-    // READING TITLES
+    // TÍTULOS DE LECTURAS
     // ============================================
     readingTitles: {
-        sunSign: "Sun Sign - Core Personality",
-        moonSign: "Moon Sign - Emotional Nature",
-        risingSign: "Rising Sign - First Impressions",
-        mercurySign: "Mercury - How They'll Communicate",
-        venusSign: "Venus - How They'll Love",
-        marsSign: "Mars - Their Energy & Drive",
-        jupiterSign: "Jupiter - Their Luck & Growth",
-        saturnSign: "Saturn - Life Lessons Ahead",
-        chineseZodiac: "Chinese Zodiac Animal",
-        moonPhase: "Birth Moon Phase",
+        sunSign: "Signo Solar - Personalidad Central",
+        moonSign: "Signo Lunar - Naturaleza Emocional",
+        risingSign: "Signo Ascendente - Primeras Impresiones",
+        mercurySign: "Mercurio - Cómo Se Comunicará",
+        venusSign: "Venus - Cómo Amará",
+        marsSign: "Marte - Su Energía e Impulso",
+        jupiterSign: "Júpiter - Su Suerte y Crecimiento",
+        saturnSign: "Saturno - Lecciones de Vida",
+        chineseZodiac: "Animal del Zodíaco Chino",
+        moonPhase: "Fase Lunar de Nacimiento",
         
-        lifePath: "Life Path Number - Soul's Journey",
-        destiny: "Destiny Number - Life Purpose",
-        soulUrge: "Soul Urge - Heart's Desire",
-        personality: "Personality Number - How Others See Them",
-        birthday: "Birthday Number - Special Gifts",
-        maturity: "Maturity Number - Who They'll Become",
+        lifePath: "Número de Camino de Vida - Viaje del Alma",
+        destiny: "Número del Destino - Propósito de Vida",
+        soulUrge: "Impulso del Alma - Deseo del Corazón",
+        personality: "Número de Personalidad - Cómo Te Ven",
+        birthday: "Número de Cumpleaños - Dones Especiales",
+        maturity: "Número de Madurez - En Quién Te Convertirás",
         
-        personalYear: "Current Year Energy",
-        pinnacle: "Life Pinnacles - Major Phases",
-        challenge: "Life Challenges - Growth Areas",
+        personalYear: "Energía del Año Actual",
+        pinnacle: "Pináculos de Vida - Fases Principales",
+        challenge: "Desafíos de Vida - Áreas de Crecimiento",
         
-        northNode: "North Node - Soul's Direction",
-        southNode: "South Node - Past Life Gifts",
-        lifeLesson: "Core Life Lesson",
+        northNode: "Nodo Norte - Dirección del Alma",
+        southNode: "Nodo Sur - Dones de Vidas Pasadas",
+        lifeLesson: "Lección Central de Vida",
         
-        yearAhead: "First Year Forecast",
-        firstYear: "First Year Milestones"
+        yearAhead: "Pronóstico del Primer Año",
+        firstYear: "Hitos del Primer Año"
     },
     
     // ============================================
-    // COLORS & STYLING - Soft Baby Theme
+    // COLORES Y ESTILO
     // ============================================
     colors: {
-        primary: "#FF69B4",      // Hot pink
-        secondary: "#FFD700",    // Gold
-        accent: "#87CEEB",       // Sky blue
-        background: "#FFF5F8",   // Soft pink
+        primary: "#FF69B4",
+        secondary: "#FFD700",
+        accent: "#87CEEB",
+        background: "#FFF5F8",
         backgroundDark: "#1a0a2e",
         text: "#333333",
         textLight: "#ffffff",
@@ -121,7 +121,7 @@ var BRAND_CONFIG = {
     },
     
     // ============================================
-    // FONTS
+    // FUENTES
     // ============================================
     fonts: {
         heading: "'Playfair Display', Georgia, serif",
@@ -130,12 +130,12 @@ var BRAND_CONFIG = {
     },
     
     // ============================================
-    // THEME
+    // TEMA
     // ============================================
     theme: "light",
     
     // ============================================
-    // FEATURES
+    // FUNCIONALIDADES
     // ============================================
     features: {
         showBirthTime: true,
@@ -149,38 +149,38 @@ var BRAND_CONFIG = {
     },
     
     // ============================================
-    // SOCIAL SHARING
+    // COMPARTIR EN REDES
     // ============================================
     sharing: {
-        hashtags: ["SoulBlueprint", "BirthChart", "SoulReading", "GiftFromTheStars"],
-        defaultMessage: "I just got my reading from A Moment in Time.",
+        hashtags: ["UnMomentoEnElTiempo", "CartaNatal", "LecturaDelAlma", "RegaloDeEstrellas"],
+        defaultMessage: "Acabo de recibir mi lectura de Un Momento en el Tiempo.",
         twitterHandle: "@quantummerlin"
     },
     
     // ============================================
-    // PREMIUM FEATURES
+    // FUNCIONES PREMIUM
     // ============================================
     premium: {
         enabled: false,
         price: "$11.11",
         features: [
-            "PDF Download",
-            "No Ads",
-            "Printable Format",
-            "Yearly Updates"
+            "Descarga en PDF",
+            "Sin Anuncios",
+            "Formato Imprimible",
+            "Actualizaciones Anuales"
         ]
     },
     
     // ============================================
-    // FOOTER
+    // PIE DE PÁGINA
     // ============================================
     footer: {
-        copyright: "© 2026 A Moment in Time",
-        disclaimer: "For entertainment and reflection purposes. Every person is unique and will grow in their own beautiful way.",
+        copyright: "\u00a9 2026 Un Momento en el Tiempo",
+        disclaimer: "Con fines de entretenimiento y reflexi\u00f3n. Cada persona es \u00fanica y crecer\u00e1 a su propia y hermosa manera.",
         links: [
-            { text: "Privacy Policy", url: "/soulblueprint/privacy.html" },
-            { text: "Terms of Service", url: "/soulblueprint/terms.html" },
-            { text: "Contact", url: "/contact.html" }
+            { text: "Pol\u00edtica de Privacidad", url: "privacy.html" },
+            { text: "T\u00e9rminos de Servicio", url: "terms.html" },
+            { text: "Contacto", url: "/contact.html" }
         ]
     },
     
@@ -188,13 +188,12 @@ var BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "A Moment in Time - Your Complete Cosmic Reading",
-        description: "At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights in astrology and numerology. Free and unlimited access.",
-        keywords: "a moment in time, astrology reading, numerology reading, birth chart, life path, personalized reading"
+        title: "Un Momento en el Tiempo - Tu Lectura C\u00f3smica Completa",
+        description: "En el momento exacto en que naciste, el universo cre\u00f3 un patr\u00f3n. Obt\u00e9n m\u00e1s de 65 lecturas personalizadas de astrolog\u00eda y numerolog\u00eda. Acceso gratuito e ilimitado.",
+        keywords: "un momento en el tiempo, lectura astrol\u00f3gica, lectura numerol\u00f3gica, carta natal, camino de vida, lectura personalizada"
     }
 };
 
-// Keep BRAND_PRESETS for reference
 var BRAND_PRESETS = {
     baby: BRAND_CONFIG
 };

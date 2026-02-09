@@ -1,7 +1,7 @@
 // ============================================
-// QUICK REBRAND SCRIPT
+// SCRIPT DE CAMBIO DE MARCA RÁPIDO
 // ============================================
-// Run this in Node.js to switch brands:
+// Ejecuta esto en Node.js para cambiar de marca:
 // node rebrand.js baby
 // node rebrand.js kpop
 // node rebrand.js stranger
@@ -20,17 +20,17 @@ const selectedBrand = process.argv[2];
 
 if (!selectedBrand || !brands[selectedBrand]) {
     console.log('');
-    console.log('🎨 ULTIMATE READING SYSTEM - REBRAND TOOL');
-    console.log('=========================================');
+    console.log('🎨 SISTEMA DE LECTURA DEFINITIVO - HERRAMIENTA DE CAMBIO DE MARCA');
+    console.log('==================================================================');
     console.log('');
-    console.log('Usage: node rebrand.js [brand]');
+    console.log('Uso: node rebrand.js [marca]');
     console.log('');
-    console.log('Available brands:');
-    console.log('  baby     - Cosmic Baby Blueprint (newborn readings)');
-    console.log('  kpop     - K-pop Kosmic (idol destiny readings)');
-    console.log('  stranger - Stranger Patterns (Stranger Things theme)');
+    console.log('Marcas disponibles:');
+    console.log('  baby     - Plano Cósmico del Bebé (lecturas de recién nacidos)');
+    console.log('  kpop     - K-pop Kósmico (lecturas del destino de ídolos)');
+    console.log('  stranger - Patrones Extraños (tema de Stranger Things)');
     console.log('');
-    console.log('Example: node rebrand.js baby');
+    console.log('Ejemplo: node rebrand.js baby');
     console.log('');
     process.exit(1);
 }
@@ -43,12 +43,12 @@ try {
     fs.writeFileSync(targetFile, content);
     
     console.log('');
-    console.log('✅ REBRAND SUCCESSFUL!');
-    console.log('======================');
-    console.log(`Brand: ${selectedBrand.toUpperCase()}`);
-    console.log(`Config: ${brands[selectedBrand]} → config.js`);
+    console.log('✅ ¡CAMBIO DE MARCA EXITOSO!');
+    console.log('============================');
+    console.log(`Marca: ${selectedBrand.toUpperCase()}`);
+    console.log(`Configuración: ${brands[selectedBrand]} → config.js`);
     console.log('');
-    console.log('Open index.html in your browser to see the changes.');
+    console.log('Abre index.html en tu navegador para ver los cambios.');
     console.log('');
 } catch (error) {
     console.error('❌ Error:', error.message);
