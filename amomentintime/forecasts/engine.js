@@ -57,10 +57,19 @@ const CosmicEngine = {
       return this.reduceNumber(day);
     },
 
-    personalYear(birthMonth, birthDay, currentYear) {
+    personalYear(birthMonth, birthDay, currentYear, forecastMonth, forecastDay) {
+      // Personal Year transitions on your BIRTHDAY, not January 1st
+      // Before birthday: use previous year's calculation
+      // After birthday: use current year's calculation
+      let calcYear = currentYear;
+      if (forecastMonth !== undefined && forecastDay !== undefined) {
+        const beforeBirthday = (forecastMonth < birthMonth) || 
+          (forecastMonth === birthMonth && forecastDay < birthDay);
+        if (beforeBirthday) calcYear = currentYear - 1;
+      }
       const m = this.reduceNumber(birthMonth);
       const d = this.reduceNumber(birthDay);
-      const y = this.reduceNumber(String(currentYear).split('').reduce((a, b) => a + parseInt(b), 0));
+      const y = this.reduceNumber(String(calcYear).split('').reduce((a, b) => a + parseInt(b), 0));
       return this.reduceNumber(m + d + y);
     },
 
@@ -517,7 +526,7 @@ const CosmicEngine = {
     const personality = this.numerology.personalityNumber(name);
     const birthday = this.numerology.birthdayNumber(day);
     const maturity = this.numerology.maturityNumber(lifePath, destiny);
-    const personalYear = this.numerology.personalYear(month, day, fYear);
+    const personalYear = this.numerology.personalYear(month, day, fYear, fMonth, fDay);
     const personalMonth = this.numerology.personalMonth(personalYear, fMonth);
     const personalDay = this.numerology.personalDay(personalMonth, fDay);
     const universalDay = this.numerology.universalDay(fMonth, fDay, fYear);
@@ -564,7 +573,7 @@ const CosmicEngine = {
     const dayEnergy = this._calculateDayEnergy(personalDay, biorhythm, moonPhase, transitAspects, sunSignIdx, transits);
 
     // === TAROT ===
-    const tarotCard = this.tarot.getCardOfDay(personalDay, universalDay, bd, fd);
+    const tarotCard = this.tarot.getCardOfDay(personalDay, universalDay, bd, fd, lifePath, personalYear, moonPhase.index);
 
     // === CRYSTAL THERAPY ===
     const crystalRec = this.crystalTherapy.getRecommendation(sunSign, personalDay);
@@ -634,15 +643,37 @@ const CosmicEngine = {
       { name: 'The World', number: 21, meaning: 'Completion, integration, accomplishment, travel', reversed: 'Seeking personal closure, short-cuts, delays', element: 'Earth', emoji: '🌍' }
     ],
 
-    getCardOfDay(personalDay, universalDay, birthDate, forecastDate) {
-      // Combine personal day, universal day, and day-of-year for a unique daily card
+    getCardOfDay(personalDay, universalDay, birthDate, forecastDate, lifePath, personalYear, moonPhaseIdx) {
+      // Multi-layered cosmic card selection
+      // Layer 1: Personal Day sets the primary resonance
+      // Layer 2: Moon phase shifts the energy
+      // Layer 3: Life Path creates a personal filter
+      // Layer 4: Day-of-year ensures daily variety
       const dayOfYear = Math.floor((forecastDate - new Date(forecastDate.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
-      const seed = (personalDay * 7 + universalDay * 3 + dayOfYear) % 22;
+      const lpSeed = (lifePath || 1) % 22;
+      const pySeed = ((personalYear || 1) * 3) % 22;
+      const moonSeed = ((moonPhaseIdx || 0) * 7) % 22;
+      const daySeed = (personalDay * 11 + universalDay * 5 + dayOfYear * 3) % 22;
+      // Weighted blend: personal energy (40%), cosmic timing (35%), life theme (25%)
+      const seed = (daySeed * 8 + moonSeed * 7 + lpSeed * 3 + pySeed * 2) % 22;
       const card = this.majorArcana[seed];
-      // Determine if upright or reversed based on biorhythm-like cycle
+      
+      // Reversed determination: based on emotional biorhythm cycle + moon phase
+      // Cards are more likely reversed during waning moon and challenging personal days
       const diff = Math.floor((forecastDate - birthDate) / (1000 * 60 * 60 * 24));
-      const isReversed = (diff % 13) > 9;
-      return { ...card, isReversed, orientation: isReversed ? 'Reversed' : 'Upright' };
+      const emotionalCycle = Math.sin(2 * Math.PI * diff / 28);
+      const isWaning = (moonPhaseIdx || 0) >= 4;
+      const isReversed = emotionalCycle < -0.3 && isWaning;
+      
+      // Calculate cosmic resonance score (how strongly this card connects to you today)
+      const lpMatch = card.number === (lifePath || 0) || card.number === personalDay;
+      const moonMatch = (moonPhaseIdx <= 1 && card.number === 0) || (moonPhaseIdx === 4 && [2, 18, 19].includes(card.number));
+      const resonance = lpMatch ? 'Strong' : moonMatch ? 'Lunar' : 'Daily';
+      const resonanceDesc = lpMatch ? 'This card directly mirrors your Life Path energy — its message is deeply personal today.' :
+        moonMatch ? 'The current moon phase amplifies this card\'s lunar wisdom for you.' :
+        'The cosmos draws this card through the unique intersection of today\'s energies.';
+      
+      return { ...card, isReversed, orientation: isReversed ? 'Reversed' : 'Upright', resonance, resonanceDesc };
     }
   },
 
@@ -985,8 +1016,8 @@ const CosmicEngine = {
     const daysInMonth = new Date(fYear, fMonth, 0).getDate();
     const bd = new Date(year, month - 1, day);
 
-    // Personal Month & Year
-    const personalYear = this.numerology.personalYear(month, day, fYear);
+    // Personal Month & Year (transitions on birthday)
+    const personalYear = this.numerology.personalYear(month, day, fYear, fMonth, 1);
     const personalMonth = this.numerology.personalMonth(personalYear, fMonth);
 
     // Key days analysis
@@ -1086,9 +1117,10 @@ const CosmicEngine = {
   generateYearlyForecast(birthData, forecastYear) {
     const { name, month, day, year, birthTime } = birthData;
     const bd = new Date(year, month - 1, day);
-    const personalYear = this.numerology.personalYear(month, day, forecastYear);
-    const prevYear = this.numerology.personalYear(month, day, forecastYear - 1);
-    const nextYear = this.numerology.personalYear(month, day, forecastYear + 1);
+    // Yearly overview: personal year runs birthday to birthday
+    const personalYear = this.numerology.personalYear(month, day, forecastYear, month, day);
+    const prevYear = this.numerology.personalYear(month, day, forecastYear - 1, month, day);
+    const nextYear = this.numerology.personalYear(month, day, forecastYear + 1, month, day);
 
     // Chinese zodiac for the year
     const chineseYear = this.chineseZodiac.calculate(forecastYear);

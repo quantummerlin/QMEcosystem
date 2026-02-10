@@ -1,0 +1,18 @@
+{
+  "name": "A Moment in Time — Cosmic Forecast",
+  "short_name": "Cosmic Forecast",
+  "description": "Your complete daily cosmic forecast — numerology, astrology, tarot, biorhythm, moon phases and more.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0a0a1a",
+  "theme_color": "#0a0a1a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a0a1a' width='100' height='100' rx='20'/><text y='.88em' x='.1em' font-size='80'>✦</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0a0a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Cosmic Forecast">
+  <meta name="description" content="Your complete daily cosmic forecast — numerology, astrology, tarot, biorhythm, moon phases and more.">
+  <link rel="manifest" href="manifest.json">
   <title>A Moment in Time — Daily Cosmic Forecast</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
@@ -92,19 +98,23 @@
     <!-- ===== DAILY VIEW ===== -->
     <div class="tab-view active" id="dailyView">
       <div class="energy-overview" id="energyOverview"></div>
-      <div class="forecast-section" id="sectionTheme"></div>
-      <div class="forecast-section" id="sectionNumerology"></div>
-      <div class="forecast-section" id="sectionAstrology"></div>
-      <div class="forecast-section" id="sectionMoon"></div>
-      <div class="forecast-section" id="sectionChinese"></div>
-      <div class="forecast-section" id="sectionBiorhythm"></div>
-      <div class="forecast-section" id="sectionLove"></div>
-      <div class="forecast-section" id="sectionCareer"></div>
-      <div class="forecast-section" id="sectionHealth"></div>
-      <div class="forecast-section" id="sectionTarot"></div>
-      <div class="forecast-section" id="sectionCrystal"></div>
-      <div class="forecast-section" id="sectionSpirit"></div>
+      <div class="cosmic-card-grid" id="cosmicCardGrid"></div>
       <div class="affirmation-card" id="dailyAffirmation"></div>
+      <!-- Hidden detail sections (rendered here, shown in modal on click) -->
+      <div id="hiddenSections" style="display:none">
+        <div id="sectionTheme"></div>
+        <div id="sectionNumerology"></div>
+        <div id="sectionAstrology"></div>
+        <div id="sectionMoon"></div>
+        <div id="sectionChinese"></div>
+        <div id="sectionBiorhythm"></div>
+        <div id="sectionLove"></div>
+        <div id="sectionCareer"></div>
+        <div id="sectionHealth"></div>
+        <div id="sectionTarot"></div>
+        <div id="sectionCrystal"></div>
+        <div id="sectionSpirit"></div>
+      </div>
     </div>
 
     <!-- ===== WEEKLY VIEW ===== -->
@@ -119,6 +129,16 @@
     <!-- ===== SYNTHESIS VIEW ("Who Am I") ===== -->
     <div class="tab-view" id="synthesisView"></div>
 
+  </div>
+
+  <!-- DETAIL MODAL (slides up from bottom) -->
+  <div class="detail-modal" id="detailModal">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
   </div>
 
   <!-- FOOTER -->
@@ -164,11 +184,7 @@ function generateForecast() {
     hideLoading();
     document.getElementById('forecastContainer').classList.add('active');
     document.getElementById('inputSection').style.display = 'none';
-    // Auto-open all sections on first load
-    document.querySelectorAll('.section-body').forEach(b => b.classList.add('open'));
-    document.querySelectorAll('.section-toggle').forEach(t => t.classList.add('open'));
     document.getElementById('forecastContainer').scrollIntoView({ behavior: 'smooth' });
-    // Reset to daily tab
     switchTab('daily');
   }, 1200);
 }
@@ -184,6 +200,7 @@ function renderForecast() {
 
   renderProfile(f);
   renderEnergyOverview(f);
+  // Render detail content into hidden sections
   renderDailyTheme(f);
   renderNumerology(f);
   renderAstrology(f);
@@ -196,6 +213,8 @@ function renderForecast() {
   renderTarot(f);
   renderCrystal(f);
   renderSpirit(f);
+  // Build the at-a-glance card grid
+  renderDailyCards(f);
   renderAffirmation(f);
 }
 
@@ -655,6 +674,102 @@ function renderAffirmation(f) {
 }
 
 // ============================================
+// AT-A-GLANCE CARD GRID + MODAL SYSTEM
+// ============================================
+
+function renderDailyCards(f) {
+  const g = f.guidance;
+  const e = f.dayEnergy;
+  const ratingLabels = { excellent: '🌟 Excellent', good: '✨ Good', moderate: '☀️ Moderate', challenging: '🌊 Growth', rest: '🌙 Rest' };
+  
+  const cards = [
+    { section: 'sectionTheme', icon: g.icon, title: "Today's Theme", value: ratingLabels[g.rating] || '✦', subtitle: g.theme, accent: 'gold' },
+    { section: 'sectionNumerology', icon: '🔢', title: 'Numerology', value: `Day ${f.personalDay}`, subtitle: f.personalDayMeaning.theme, accent: 'purple' },
+    { section: 'sectionAstrology', icon: f.sunSymbol, title: 'Astrology', value: f.sunSign, subtitle: `Sun in ${f.transitSunSign}`, accent: 'blue' },
+    { section: 'sectionMoon', icon: f.moonPhase.emoji, title: 'Moon Phase', value: f.moonPhase.name, subtitle: `${f.moonPhase.illumination}% lit`, accent: 'silver' },
+    { section: 'sectionChinese', icon: f.chineseZodiac.emoji, title: 'Chinese Zodiac', value: f.chineseZodiac.animal, subtitle: `${f.chineseYearEnergy.level}`, accent: 'red' },
+    { section: 'sectionBiorhythm', icon: '〰️', title: 'Biorhythm', value: `${f.biorhythm.overall}%`, subtitle: f.biorhythm.overall >= 65 ? 'High energy' : f.biorhythm.overall >= 40 ? 'Balanced' : 'Rest phase', accent: 'green' },
+    { section: 'sectionLove', icon: '💕', title: 'Love', value: `${e.love}%`, subtitle: e.love >= 70 ? 'Hearts are open' : e.love >= 50 ? 'Steady warmth' : 'Inner focus', accent: 'rose' },
+    { section: 'sectionCareer', icon: '💼', title: 'Career', value: `${e.career}%`, subtitle: e.career >= 70 ? 'Peak performance' : e.career >= 50 ? 'Steady progress' : 'Planning mode', accent: 'orange' },
+    { section: 'sectionHealth', icon: '🌿', title: 'Health', value: `${e.health}%`, subtitle: `Physical: ${f.biorhythm.physical.percent}%`, accent: 'emerald' },
+    { section: 'sectionTarot', icon: f.tarotCard.emoji, title: 'Tarot', value: f.tarotCard.name, subtitle: `${f.tarotCard.orientation}${f.tarotCard.resonance ? ' · ' + f.tarotCard.resonance : ''}`, accent: 'purple' },
+    { section: 'sectionCrystal', icon: f.crystalRec.signCrystal.emoji, title: 'Crystal Rx', value: f.crystalRec.signCrystal.crystal, subtitle: f.crystalRec.dayCrystal.crystal, accent: 'teal' },
+    { section: 'sectionSpirit', icon: '🔮', title: 'Spirit', value: `${e.spirit}%`, subtitle: `${g.chakra} Chakra`, accent: 'indigo' }
+  ];
+
+  const grid = document.getElementById('cosmicCardGrid');
+  grid.innerHTML = cards.map((c, i) => `
+    <div class="cosmic-card cosmic-card--${c.accent}" onclick="openModal('${c.section}')" style="--i:${i}" tabindex="0" role="button" aria-label="View ${c.title} details">
+      <div class="cosmic-card__shimmer"></div>
+      <div class="cosmic-card__icon">${c.icon}</div>
+      <div class="cosmic-card__title">${c.title}</div>
+      <div class="cosmic-card__value">${c.value}</div>
+      <div class="cosmic-card__subtitle">${c.subtitle}</div>
+      <div class="cosmic-card__arrow">→</div>
+    </div>
+  `).join('');
+
+  // Stagger entrance animation
+  requestAnimationFrame(() => {
+    grid.querySelectorAll('.cosmic-card').forEach((card, i) => {
+      setTimeout(() => card.classList.add('cosmic-card--visible'), i * 80);
+    });
+  });
+}
+
+// Modal system
+function openModal(sectionId) {
+  const section = document.getElementById(sectionId);
+  const modal = document.getElementById('detailModal');
+  const body = document.getElementById('modalBody');
+  
+  if (!section) return;
+  
+  // Clone the section content into the modal
+  body.innerHTML = section.innerHTML;
+  
+  // Auto-open all section bodies and remove toggle behavior
+  body.querySelectorAll('.section-body').forEach(b => b.classList.add('open'));
+  body.querySelectorAll('.section-toggle').forEach(t => t.style.display = 'none');
+  body.querySelectorAll('.section-header').forEach(h => {
+    h.style.cursor = 'default';
+    h.onclick = null;
+    h.removeAttribute('onclick');
+  });
+  
+  // Show modal with animation
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  // Animate elements inside
+  requestAnimationFrame(() => {
+    body.querySelectorAll('.highlight-box, .stat-grid, .energy-bars, .stat-card, .lucky-grid').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = `opacity 0.4s ease ${i * 0.06}s, transform 0.4s ease ${i * 0.06}s`;
+      requestAnimationFrame(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+    });
+  });
+}
+
+function closeModal() {
+  const modal = document.getElementById('detailModal');
+  modal.classList.add('closing');
+  document.body.style.overflow = '';
+  setTimeout(() => {
+    modal.classList.remove('active', 'closing');
+    document.getElementById('modalBody').innerHTML = '';
+  }, 350);
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('detailModal').classList.contains('active')) {
+    closeModal();
+  }
+});
+
+// ============================================
 // CONTENT GENERATION HELPERS
 // ============================================
 
@@ -908,6 +1023,11 @@ function renderTarot(f) {
         <h4>${card.isReversed ? 'Reversed Meaning' : 'Upright Meaning'}</h4>
         <p>${card.isReversed ? card.reversed : card.meaning}</p>
       </div>
+      ${card.resonance ? `
+      <div class="highlight-box blue">
+        <h4>✦ ${card.resonance} Resonance</h4>
+        <p>${card.resonanceDesc}</p>
+      </div>` : ''}
       <p>${getTarotGuidance(card, f)}</p>
     </div>
   `;
