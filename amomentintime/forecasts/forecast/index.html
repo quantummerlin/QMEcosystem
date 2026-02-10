@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Moment in Time — Daily Cosmic Forecast</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+<!-- Animated Cosmic Background -->
+<div class="cosmic-bg"></div>
+<div class="shooting-star" style="top:15%"></div>
+<div class="shooting-star" style="top:35%"></div>
+<div class="shooting-star" style="top:65%"></div>
+
+<div class="loading-overlay" id="loading">
+  <div class="loading-spinner"></div>
+  <div class="loading-text">Reading the stars...</div>
+</div>
+
+<div class="app-container">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="stars-divider">· · ✦ · ·</div>
+    <h1>A Moment in Time</h1>
+    <p class="subtitle">Your Complete Daily Cosmic Forecast</p>
+  </header>
+
+  <!-- INPUT SECTION -->
+  <section class="input-section" id="inputSection">
+    <h2>✧ Enter Your Cosmic Coordinates ✧</h2>
+    <div class="input-grid">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="fullName" placeholder="Wayne Michael" value="Wayne Michael">
+      </div>
+      <div class="input-group">
+        <label>Birth Month</label>
+        <select id="birthMonth">
+          <option value="1">January</option><option value="2">February</option>
+          <option value="3">March</option><option value="4">April</option>
+          <option value="5" selected>May</option><option value="6">June</option>
+          <option value="7">July</option><option value="8">August</option>
+          <option value="9">September</option><option value="10">October</option>
+          <option value="11">November</option><option value="12">December</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label>Birth Day</label>
+        <input type="number" id="birthDay" min="1" max="31" value="3" placeholder="3">
+      </div>
+      <div class="input-group">
+        <label>Birth Year</label>
+        <input type="number" id="birthYear" min="1900" max="2025" value="1981" placeholder="1981">
+      </div>
+      <div class="input-group">
+        <label>Birth Time (optional)</label>
+        <input type="time" id="birthTime" value="13:30">
+      </div>
+    </div>
+    <button class="generate-btn" onclick="generateForecast()">✦ Reveal My Forecast ✦</button>
+  </section>
+
+  <!-- FORECAST CONTAINER -->
+  <div class="forecast-container" id="forecastContainer">
+
+    <!-- DATE NAVIGATION -->
+    <div class="date-nav">
+      <button onclick="changeDate(-1)" title="Previous day">◂</button>
+      <div class="current-date" id="currentDateDisplay" onclick="document.getElementById('datePicker').showPicker()"></div>
+      <input type="date" id="datePicker" style="position:absolute;opacity:0;pointer-events:none;" onchange="jumpToDate(this.value)">
+      <button onclick="changeDate(1)" title="Next day">▸</button>
+      <button onclick="goToToday()" title="Today" style="border-radius:8px;width:auto;padding:0 12px;font-size:0.75rem;">Today</button>
+    </div>
+
+    <!-- PROFILE BANNER -->
+    <div class="profile-banner" id="profileBanner"></div>
+
+    <!-- TIMEFRAME TABS -->
+    <div class="timeframe-tabs" id="timeframeTabs">
+      <button class="tab-btn active" data-tab="daily" onclick="switchTab('daily')">✦ Daily</button>
+      <button class="tab-btn" data-tab="weekly" onclick="switchTab('weekly')">📅 Weekly</button>
+      <button class="tab-btn" data-tab="monthly" onclick="switchTab('monthly')">🌙 Monthly</button>
+      <button class="tab-btn" data-tab="yearly" onclick="switchTab('yearly')">⭐ Yearly</button>
+      <button class="tab-btn" data-tab="synthesis" onclick="switchTab('synthesis')">🔮 Who Am I</button>
+    </div>
+
+    <!-- ===== DAILY VIEW ===== -->
+    <div class="tab-view active" id="dailyView">
+      <div class="energy-overview" id="energyOverview"></div>
+      <div class="forecast-section" id="sectionTheme"></div>
+      <div class="forecast-section" id="sectionNumerology"></div>
+      <div class="forecast-section" id="sectionAstrology"></div>
+      <div class="forecast-section" id="sectionMoon"></div>
+      <div class="forecast-section" id="sectionChinese"></div>
+      <div class="forecast-section" id="sectionBiorhythm"></div>
+      <div class="forecast-section" id="sectionLove"></div>
+      <div class="forecast-section" id="sectionCareer"></div>
+      <div class="forecast-section" id="sectionHealth"></div>
+      <div class="forecast-section" id="sectionTarot"></div>
+      <div class="forecast-section" id="sectionCrystal"></div>
+      <div class="forecast-section" id="sectionSpirit"></div>
+      <div class="affirmation-card" id="dailyAffirmation"></div>
+    </div>
+
+    <!-- ===== WEEKLY VIEW ===== -->
+    <div class="tab-view" id="weeklyView"></div>
+
+    <!-- ===== MONTHLY VIEW ===== -->
+    <div class="tab-view" id="monthlyView"></div>
+
+    <!-- ===== YEARLY VIEW ===== -->
+    <div class="tab-view" id="yearlyView"></div>
+
+    <!-- ===== SYNTHESIS VIEW ("Who Am I") ===== -->
+    <div class="tab-view" id="synthesisView"></div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <div class="footer-stars">· · ✦ · ·</div>
+    <p>A Moment in Time — Wayne Michael</p>
+    <p style="margin-top:4px;">Based on the complete cosmic portrait system by Quantum Merlin</p>
+  </footer>
+
+</div>
+
+<script src="engine.js"></script>
+<script>
+// ============================================
+// APP STATE & CONTROLLER
+// ============================================
+
+let currentForecastDate = new Date();
+let birthData = null;
+let currentForecast = null;
+
+function generateForecast() {
+  const name = document.getElementById('fullName').value.trim();
+  const month = parseInt(document.getElementById('birthMonth').value);
+  const day = parseInt(document.getElementById('birthDay').value);
+  const year = parseInt(document.getElementById('birthYear').value);
+  const time = document.getElementById('birthTime').value;
+
+  if (!name || !month || !day || !year) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  birthData = { name, month, day, year, birthTime: time };
+  currentForecastDate = new Date();
+  cachedBirthData = birthData;
+  cachedDate = currentForecastDate;
+  clearTabCache();
+  
+  showLoading();
+  setTimeout(() => {
+    renderForecast();
+    hideLoading();
+    document.getElementById('forecastContainer').classList.add('active');
+    document.getElementById('inputSection').style.display = 'none';
+    // Auto-open all sections on first load
+    document.querySelectorAll('.section-body').forEach(b => b.classList.add('open'));
+    document.querySelectorAll('.section-toggle').forEach(t => t.classList.add('open'));
+    document.getElementById('forecastContainer').scrollIntoView({ behavior: 'smooth' });
+    // Reset to daily tab
+    switchTab('daily');
+  }, 1200);
+}
+
+function renderForecast() {
+  const f = CosmicEngine.generateForecast(birthData, currentForecastDate);
+  currentForecast = f;
+
+  // Date display
+  const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('currentDateDisplay').textContent = currentForecastDate.toLocaleDateString('en-US', opts);
+  document.getElementById('datePicker').value = currentForecastDate.toISOString().split('T')[0];
+
+  renderProfile(f);
+  renderEnergyOverview(f);
+  renderDailyTheme(f);
+  renderNumerology(f);
+  renderAstrology(f);
+  renderMoonPhase(f);
+  renderChinese(f);
+  renderBiorhythm(f);
+  renderLove(f);
+  renderCareer(f);
+  renderHealth(f);
+  renderTarot(f);
+  renderCrystal(f);
+  renderSpirit(f);
+  renderAffirmation(f);
+}
+
+// ============================================
+// RENDER FUNCTIONS
+// ============================================
+
+function renderProfile(f) {
+  const el = document.getElementById('profileBanner');
+  el.innerHTML = `
+    <div class="profile-avatar">${f.sunSymbol}</div>
+    <div class="profile-info">
+      <h2>${f.name}</h2>
+      <div class="profile-tags">
+        <span class="profile-tag">☉ ${f.sunSign}</span>
+        <span class="profile-tag">LP ${f.lifePath} — ${f.lifePathMeaning.title}</span>
+        <span class="profile-tag">${f.chineseZodiac.emoji} ${f.chineseZodiac.element} ${f.chineseZodiac.animal}</span>
+        <span class="profile-tag">${f.moonPhase.emoji} ${f.moonPhase.name}</span>
+        <span class="profile-tag">Age ${f.age}</span>
+      </div>
+    </div>
+    <button onclick="editProfile()" style="position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.08);border:1px solid var(--border);color:var(--text-secondary);padding:4px 12px;border-radius:8px;font-size:0.72rem;cursor:pointer;font-family:inherit;" title="Change birth data">✎ Edit</button>
+  `;
+}
+
+function renderEnergyOverview(f) {
+  const e = f.dayEnergy;
+  const bars = [
+    { label: 'Overall', value: e.overall, color: e.overall >= 70 ? '#4ade80' : e.overall >= 50 ? '#f0c674' : '#fb7185' },
+    { label: 'Love', value: e.love, color: '#f472b6' },
+    { label: 'Career', value: e.career, color: '#fb923c' },
+    { label: 'Health', value: e.health, color: '#4ade80' },
+    { label: 'Spirit', value: e.spirit, color: '#8b5cf6' },
+    { label: 'Luck', value: e.luck, color: '#f0c674' }
+  ];
+
+  document.getElementById('energyOverview').innerHTML = `
+    <h3>✦ Daily Energy Forecast ✦</h3>
+    <div class="energy-bars">
+      ${bars.map(b => `
+        <div class="energy-bar-item">
+          <div class="energy-bar-label">
+            <span>${b.label}</span>
+            <span>${b.value}%</span>
+          </div>
+          <div class="energy-bar-track">
+            <div class="energy-bar-fill" style="width:${b.value}%;background:${b.color}"></div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderDailyTheme(f) {
+  const g = f.guidance;
+  const ratingLabels = { excellent: '🌟 Excellent Day', good: '✨ Good Day', moderate: '☀️ Moderate Day', challenging: '🌊 Growth Day', rest: '🌙 Rest Day' };
+  
+  document.getElementById('sectionTheme').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon" style="background:rgba(240,198,116,0.15);font-size:1.8rem">${g.icon}</div>
+      <div class="section-header-text">
+        <h3>Today's Cosmic Theme</h3>
+        <div class="section-subtitle">${g.theme} · <span class="timing-badge ${g.rating}">${ratingLabels[g.rating]}</span></div>
+      </div>
+      <span class="section-toggle open">▾</span>
+    </div>
+    <div class="section-body open">
+      <p style="font-size:1.02rem;line-height:1.75;margin-bottom:16px;">${g.dayNarrative || ''}</p>
+      
+      <div class="highlight-box gold">
+        <h4>🌤️ Cosmic Weather</h4>
+        <p>${g.cosmicNarrative || ''}</p>
+      </div>
+
+      <div class="highlight-box">
+        <h4>☿ Planetary Aspects</h4>
+        <p>${g.aspectNarrative || ''}</p>
+      </div>
+
+      <div class="highlight-box blue">
+        <h4>〰️ Biorhythm Insight</h4>
+        <p>${g.bioNarrative || ''}</p>
+      </div>
+
+      <p><strong>Moon Guidance:</strong> ${g.moonAdvice}</p>
+      
+      <div class="lucky-grid">
+        <div class="lucky-item">
+          <div class="lucky-icon">⏰</div>
+          <div class="lucky-value">${g.bestTime}</div>
+          <div class="lucky-label">Peak Time</div>
+        </div>
+        <div class="lucky-item">
+          <div class="lucky-icon">🎨</div>
+          <div class="lucky-value">${g.luckyColors.join(', ')}</div>
+          <div class="lucky-label">Lucky Colors</div>
+        </div>
+        <div class="lucky-item">
+          <div class="lucky-icon">🔢</div>
+          <div class="lucky-value">${g.luckyNumbers.join(', ')}</div>
+          <div class="lucky-label">Lucky Numbers</div>
+        </div>
+        <div class="lucky-item">
+          <div class="lucky-icon">${g.chakraEmoji}</div>
+          <div class="lucky-value">${g.chakra}</div>
+          <div class="lucky-label">Chakra Focus</div>
+        </div>
+      </div>
+
+      ${g.timeGuidance ? `
+      <h4 style="color:var(--text-accent);margin:18px 0 10px;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">⏳ Your Day in Three Acts</h4>
+      <div class="highlight-box green">
+        <h4>🌅 Morning</h4>
+        <p>${g.timeGuidance.morning}</p>
+      </div>
+      <div class="highlight-box gold">
+        <h4>☀️ Afternoon</h4>
+        <p>${g.timeGuidance.afternoon}</p>
+      </div>
+      <div class="highlight-box">
+        <h4>🌙 Evening</h4>
+        <p>${g.timeGuidance.evening}</p>
+      </div>
+      ` : ''}
+    </div>
+  `;
+}
+
+function renderNumerology(f) {
+  const pdm = f.personalDayMeaning;
+  document.getElementById('sectionNumerology').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-numero">🔢</div>
+      <div class="section-header-text">
+        <h3>Numerology Forecast</h3>
+        <div class="section-subtitle">Personal Day ${f.personalDay} · Personal Month ${f.personalMonth} · Personal Year ${f.personalYear}</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="highlight-box gold">
+        <h4>Personal Day ${f.personalDay} — ${pdm.theme}</h4>
+        <p>${pdm.energy}</p>
+      </div>
+      
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-icon">🛤️</div>
+          <div class="stat-value">${f.lifePath}</div>
+          <div class="stat-label">Life Path</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✨</div>
+          <div class="stat-value">${f.destiny}</div>
+          <div class="stat-label">Destiny</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💜</div>
+          <div class="stat-value">${f.soulUrge}</div>
+          <div class="stat-label">Soul Urge</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎭</div>
+          <div class="stat-value">${f.personality}</div>
+          <div class="stat-label">Personality</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎂</div>
+          <div class="stat-value">${f.birthday}</div>
+          <div class="stat-label">Birthday</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🌳</div>
+          <div class="stat-value">${f.maturity}</div>
+          <div class="stat-label">Maturity</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h4>Personal Year ${f.personalYear}</h4>
+        <p>${f.personalYearMeaning}</p>
+      </div>
+
+      <div class="highlight-box blue">
+        <h4>Current Pinnacle: ${f.currentPinnacle.num} (${f.currentPinnacle.ages})</h4>
+        <p>This pinnacle shapes the major themes and opportunities of your current life phase. The energy of ${f.currentPinnacle.num} calls for ${getPinnacleTheme(f.currentPinnacle.num)}.</p>
+      </div>
+
+      <p><strong>Universal Day Energy:</strong> ${f.universalDay} — This is the collective vibration everyone shares today. When your Personal Day (${f.personalDay}) harmonizes with the Universal Day (${f.universalDay}), synchronicities increase.</p>
+    </div>
+  `;
+}
+
+function renderAstrology(f) {
+  const aspectsHtml = f.transitAspects.length > 0 
+    ? f.transitAspects.map(a => `
+        <div class="highlight-box ${a.nature === 'flowing' || a.nature === 'harmonious' ? 'green' : a.nature === 'challenging' || a.nature === 'tension' ? 'rose' : ''}">
+          <h4>${a.symbol} Transit ${a.planet} in ${a.transitSign} ${a.type} your ${f.sunSign} Sun</h4>
+          <p>${getAspectMeaning(a.planet, a.type, a.nature, f.sunSign)}</p>
+        </div>
+      `).join('')
+    : '<p>No major transit aspects to your Sun today. A quiet cosmic day — use it for inner work and steady progress.</p>';
+
+  document.getElementById('sectionAstrology').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-astro">${f.sunSymbol}</div>
+      <div class="section-header-text">
+        <h3>Astrological Transits</h3>
+        <div class="section-subtitle">${f.sunSign} Sun · Transit Sun in ${f.transitSunSign} · Transit Moon in ${f.transitMoonSign}</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <p>As a <strong>${f.sunSign}</strong> (${f.sunElement} sign), today's planetary movements create specific energies for you. The transit Sun in <strong>${f.transitSunSign}</strong> ${getTransitSunMeaning(f.sunSign, f.transitSunSign)} while the Moon in <strong>${f.transitMoonSign}</strong> colors the emotional atmosphere.</p>
+      
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-icon">☉</div>
+          <div class="stat-value">${f.transitSunSign}</div>
+          <div class="stat-label">Transit Sun</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">☽</div>
+          <div class="stat-value">${f.transitMoonSign}</div>
+          <div class="stat-label">Transit Moon</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">☿</div>
+          <div class="stat-value">${f.transits.mercury.sign}</div>
+          <div class="stat-label">Mercury</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">♀</div>
+          <div class="stat-value">${f.transits.venus.sign}</div>
+          <div class="stat-label">Venus</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">♂</div>
+          <div class="stat-value">${f.transits.mars.sign}</div>
+          <div class="stat-label">Mars</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">♃</div>
+          <div class="stat-value">${f.transits.jupiter.sign}</div>
+          <div class="stat-label">Jupiter</div>
+        </div>
+      </div>
+
+      <h4 style="color:var(--text-accent);margin:16px 0 10px;font-family:'Cormorant Garamond',serif;font-size:1.05rem;">Today's Aspects to Your Chart</h4>
+      ${aspectsHtml}
+    </div>
+  `;
+}
+
+function renderMoonPhase(f) {
+  const mp = f.moonPhase;
+  document.getElementById('sectionMoon').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-moon">${mp.emoji}</div>
+      <div class="section-header-text">
+        <h3>Moon Phase Guidance</h3>
+        <div class="section-subtitle">${mp.name} · ${mp.illumination}% illuminated · Day ${mp.age} of lunar cycle</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <p style="font-size:2.5rem;text-align:center;margin-bottom:12px;">${mp.emoji}</p>
+      <div class="highlight-box blue">
+        <h4>${mp.name}</h4>
+        <p>${mp.energy}</p>
+      </div>
+      <p>${getMoonPhaseGuidance(mp.index, f.sunSign)}</p>
+      <p><strong>Your Birth Moon Phase:</strong> ${getBirthMoonPhaseText(mp)}</p>
+    </div>
+  `;
+}
+
+function renderChinese(f) {
+  const cz = f.chineseZodiac;
+  const cc = f.currentChinese;
+  document.getElementById('sectionChinese').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-chinese">${cz.emoji}</div>
+      <div class="section-header-text">
+        <h3>Chinese Zodiac</h3>
+        <div class="section-subtitle">${cz.element} ${cz.animal} · Current: ${cc.element} ${cc.animal} Year</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-icon">${cz.emoji}</div>
+          <div class="stat-value">${cz.animal}</div>
+          <div class="stat-label">Birth Animal</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">${cz.elementEmoji}</div>
+          <div class="stat-value">${cz.element}</div>
+          <div class="stat-label">Element</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">☯️</div>
+          <div class="stat-value">${cz.yinYang}</div>
+          <div class="stat-label">Polarity</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">${cc.emoji}</div>
+          <div class="stat-value">${cc.animal}</div>
+          <div class="stat-label">Current Year</div>
+        </div>
+      </div>
+
+      <div class="highlight-box ${f.chineseYearEnergy.level === 'Excellent' ? 'green' : f.chineseYearEnergy.level === 'Challenging' ? 'rose' : 'gold'}">
+        <h4>Year Energy: ${f.chineseYearEnergy.level}</h4>
+        <p>${f.chineseYearEnergy.desc}</p>
+      </div>
+
+      <p><strong>Strengths:</strong> ${cz.traits.strengths}</p>
+      <p><strong>Growth Areas:</strong> ${cz.traits.shadow}</p>
+      <p><strong>Best Compatibility:</strong> ${cz.compatibility.best.join(', ')}</p>
+    </div>
+  `;
+}
+
+function renderBiorhythm(f) {
+  const b = f.biorhythm;
+  const cycles = [b.physical, b.emotional, b.intellectual, b.intuitive, b.spiritual];
+  const criticals = f.criticalDays;
+  
+  document.getElementById('sectionBiorhythm').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-bio">〰️</div>
+      <div class="section-header-text">
+        <h3>Biorhythm Cycles</h3>
+        <div class="section-subtitle">Overall: ${b.overall}% · ${b.overall >= 65 ? 'High energy day' : b.overall >= 40 ? 'Balanced energy' : 'Conservation day'}</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="energy-bars">
+        ${cycles.map(c => `
+          <div class="energy-bar-item">
+            <div class="energy-bar-label">
+              <span>${c.label}</span>
+              <span style="color:${c.color}">${c.percent}%</span>
+            </div>
+            <div class="energy-bar-track">
+              <div class="energy-bar-fill" style="width:${c.percent}%;background:${c.color}"></div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      
+      ${criticals.physical || criticals.emotional || criticals.intellectual ? `
+        <div class="highlight-box rose">
+          <h4>⚡ Critical Day Alert</h4>
+          <p>${criticals.physical ? 'Physical cycle is at a critical transition point — take extra care with your body. ' : ''}${criticals.emotional ? 'Emotional cycle is crossing zero — emotions may be unpredictable. ' : ''}${criticals.intellectual ? 'Intellectual cycle is at a turning point — double-check important decisions.' : ''}</p>
+        </div>
+      ` : ''}
+      
+      <p>${getBiorhythmAdvice(b)}</p>
+    </div>
+  `;
+}
+
+function renderLove(f) {
+  const loveScore = f.dayEnergy.love;
+  document.getElementById('sectionLove').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-love">💕</div>
+      <div class="section-header-text">
+        <h3>Love & Relationships</h3>
+        <div class="section-subtitle">Love Energy: ${loveScore}% · ${loveScore >= 70 ? 'Hearts are open' : loveScore >= 50 ? 'Steady connection' : 'Inner focus day'}</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <p>${getLoveGuidance(f)}</p>
+      <div class="highlight-box rose">
+        <h4>Relationship Insight</h4>
+        <p>${getRelationshipInsight(f)}</p>
+      </div>
+    </div>
+  `;
+}
+
+function renderCareer(f) {
+  const careerScore = f.dayEnergy.career;
+  document.getElementById('sectionCareer').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-career">💼</div>
+      <div class="section-header-text">
+        <h3>Career & Purpose</h3>
+        <div class="section-subtitle">Career Energy: ${careerScore}% · ${careerScore >= 70 ? 'Peak performance' : careerScore >= 50 ? 'Steady progress' : 'Planning day'}</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <p>${getCareerGuidance(f)}</p>
+      <div class="highlight-box gold">
+        <h4>Financial Insight</h4>
+        <p>${getFinancialInsight(f)}</p>
+      </div>
+    </div>
+  `;
+}
+
+function renderHealth(f) {
+  const healthScore = f.dayEnergy.health;
+  document.getElementById('sectionHealth').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-health">🌿</div>
+      <div class="section-header-text">
+        <h3>Health & Wellness</h3>
+        <div class="section-subtitle">Vitality: ${healthScore}% · Physical Biorhythm: ${f.biorhythm.physical.percent}%</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <p>${getHealthGuidance(f)}</p>
+      <div class="highlight-box green">
+        <h4>Wellness Tip</h4>
+        <p>${getWellnessTip(f)}</p>
+      </div>
+    </div>
+  `;
+}
+
+function renderSpirit(f) {
+  const spiritScore = f.dayEnergy.spirit;
+  document.getElementById('sectionSpirit').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-spirit">🔮</div>
+      <div class="section-header-text">
+        <h3>Spiritual Guidance</h3>
+        <div class="section-subtitle">Spiritual Energy: ${spiritScore}% · ${f.guidance.chakra} Chakra Focus</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <p>${getSpiritualGuidance(f)}</p>
+      <div class="highlight-box">
+        <h4>${f.guidance.chakraEmoji} ${f.guidance.chakra} Chakra</h4>
+        <p>${getChakraGuidance(f.guidance.chakra)}</p>
+      </div>
+    </div>
+  `;
+}
+
+function renderAffirmation(f) {
+  document.getElementById('dailyAffirmation').innerHTML = `
+    <div class="aff-label">✦ Today's Affirmation ✦</div>
+    <div class="aff-text">"${f.guidance.affirmation}"</div>
+  `;
+}
+
+// ============================================
+// CONTENT GENERATION HELPERS
+// ============================================
+
+function getMoonSunBlend(sunSign, moonSign) {
+  const sunEl = CosmicEngine.astrology.getElement(CosmicEngine.astrology.getSignIndex(sunSign));
+  const moonEl = CosmicEngine.astrology.getElement(CosmicEngine.astrology.getSignIndex(moonSign));
+  if (sunEl === moonEl) return 'harmonious and unified';
+  if ((sunEl === 'Fire' && moonEl === 'Air') || (sunEl === 'Air' && moonEl === 'Fire')) return 'dynamic and stimulating';
+  if ((sunEl === 'Earth' && moonEl === 'Water') || (sunEl === 'Water' && moonEl === 'Earth')) return 'nurturing and productive';
+  if ((sunEl === 'Fire' && moonEl === 'Water') || (sunEl === 'Water' && moonEl === 'Fire')) return 'emotionally intense';
+  if ((sunEl === 'Earth' && moonEl === 'Air') || (sunEl === 'Air' && moonEl === 'Earth')) return 'practically creative';
+  return 'complex and multifaceted';
+}
+
+function getTransitSunMeaning(natal, transit) {
+  const aspect = CosmicEngine.astrology.getAspect(
+    CosmicEngine.astrology.getSignIndex(natal),
+    CosmicEngine.astrology.getSignIndex(transit)
+  );
+  if (aspect.type === 'Conjunction') return 'is in your sign — a powerful day of personal vitality and self-expression';
+  if (aspect.type === 'Trine') return `forms a flowing trine to your sign — ease, grace, and natural talent shine`;
+  if (aspect.type === 'Sextile') return `creates a supportive sextile — opportunities arise through gentle effort`;
+  if (aspect.type === 'Square') return `squares your sign — expect productive tension that drives growth`;
+  if (aspect.type === 'Opposition') return `opposes your sign — balance between self and others is the theme`;
+  return `moves through a neutral angle to your sign — steady, self-directed energy`;
+}
+
+function getAspectMeaning(planet, type, nature, sunSign) {
+  const meanings = {
+    'Sun-Conjunction': `The transit Sun illuminates your core identity. Maximum vitality and self-expression today.`,
+    'Sun-Trine': `Solar energy flows harmoniously to you. Confidence and creativity come naturally.`,
+    'Sun-Square': `The Sun challenges you to grow. Tension with authority figures possible but productive.`,
+    'Moon-Conjunction': `Emotions align with your core self. Deep self-understanding available today.`,
+    'Moon-Trine': `Emotional harmony supports your goals. Trust your feelings today.`,
+    'Moon-Square': `Inner tension between needs and wants. Honor both without forcing resolution.`,
+    'Venus-Conjunction': `Love and beauty surround you. Excellent for relationships and creative pursuits.`,
+    'Venus-Trine': `Harmonious energy for love, art, and pleasure. Enjoy beauty in all forms.`,
+    'Venus-Sextile': `Gentle opportunities in love and finance. Say yes to social invitations.`,
+    'Mars-Conjunction': `Energy and drive are amplified. Channel this power into meaningful action.`,
+    'Mars-Trine': `Physical energy flows freely. Great day for exercise, competition, or bold moves.`,
+    'Mars-Square': `Frustration may arise. Use the tension as fuel rather than fighting it.`,
+    'Jupiter-Conjunction': `Luck and expansion touch your life. Think big and say yes to opportunities.`,
+    'Jupiter-Trine': `Fortune smiles on you. Growth comes easily in areas you've been cultivating.`,
+    'Jupiter-Sextile': `Small lucky breaks appear. Stay alert for opportunities disguised as ordinary moments.`,
+    'Saturn-Conjunction': `Reality check energy. What's solid stays; what's not gets tested.`,
+    'Saturn-Trine': `Discipline pays off. Your hard work is recognized and rewarded.`,
+    'Saturn-Square': `Obstacles test your resolve. Patience and persistence are your allies.`
+  };
+  return meanings[`${planet}-${type}`] || `Transit ${planet} ${type.toLowerCase()} brings ${nature} energy to your ${sunSign} nature. ${nature === 'flowing' || nature === 'harmonious' ? 'Work with this supportive current.' : 'Navigate this growth opportunity with awareness.'}`;
+}
+
+function getPinnacleTheme(num) {
+  const themes = {
+    1: 'independence, leadership, and forging your own path',
+    2: 'partnership, patience, and diplomatic cooperation',
+    3: 'creative expression, communication, and joyful living',
+    4: 'building foundations, discipline, and hard work',
+    5: 'change, freedom, and embracing the unexpected',
+    6: 'love, family responsibility, and creating harmony',
+    7: 'inner wisdom, spiritual growth, and solitary reflection',
+    8: 'material mastery, power, and financial achievement',
+    9: 'humanitarian service, completion, and universal love',
+    11: 'spiritual illumination and inspired leadership',
+    22: 'master building and manifesting grand visions'
+  };
+  return themes[num] || themes[9];
+}
+
+function getMoonPhaseGuidance(phaseIdx, sunSign) {
+  const guidance = [
+    `The New Moon invites you to set powerful intentions. As a ${sunSign}, focus your intentions on what you want to build and grow. Write down your desires — the dark moon amplifies the power of written intention.`,
+    `The Waxing Crescent encourages first steps. Your ${sunSign} nature benefits from taking one concrete action toward your New Moon intentions today. Small steps create momentum.`,
+    `The First Quarter Moon demands action and decisions. Your ${sunSign} determination is amplified — push through obstacles and commit to your path. This is not a day for hesitation.`,
+    `The Waxing Gibbous asks for refinement and patience. Trust the process, ${sunSign}. What you've started is growing — adjust and refine rather than starting something new.`,
+    `The Full Moon illuminates everything. Emotions run high and truth is revealed. As a ${sunSign}, use this energy to celebrate what you've manifested and release what no longer serves your growth.`,
+    `The Waning Gibbous is for gratitude and sharing. Your ${sunSign} wisdom is needed — teach what you've learned, share your abundance, and express appreciation for what you have.`,
+    `The Last Quarter Moon calls for release and forgiveness. Let go of grudges, outdated beliefs, and anything cluttering your ${sunSign} path. Clear space for the new cycle approaching.`,
+    `The Waning Crescent whispers of rest and surrender. Honor your ${sunSign} need for stillness. This is the most spiritual phase — meditate, dream, and prepare for renewal.`
+  ];
+  return guidance[phaseIdx];
+}
+
+function getBirthMoonPhaseText(currentMp) {
+  const bmp = CosmicEngine.moonPhase.calculate(new Date(birthData.year, birthData.month - 1, birthData.day));
+  return bmp.emoji + ' ' + bmp.name + ' \u2014 You were born during the phase of ' + bmp.energy.toLowerCase() + '. Today\'s ' + currentMp.name + ' ' + getMoonPhaseRelation(currentMp.index) + ' your birth phase energy.';
+}
+
+function getMoonPhaseRelation(currentIdx) {
+  if (currentIdx === 7) return 'perfectly mirrors';
+  if (currentIdx === 6 || currentIdx === 0) return 'closely resonates with';
+  if (currentIdx === 4) return 'creates a powerful polarity with';
+  if (currentIdx <= 2) return 'contrasts and energizes';
+  return 'complements';
+}
+
+function getBiorhythmAdvice(b) {
+  const high = [], low = [];
+  if (b.physical.percent >= 65) high.push('physical'); else if (b.physical.percent <= 35) low.push('physical');
+  if (b.emotional.percent >= 65) high.push('emotional'); else if (b.emotional.percent <= 35) low.push('emotional');
+  if (b.intellectual.percent >= 65) high.push('intellectual'); else if (b.intellectual.percent <= 35) low.push('intellectual');
+  
+  let advice = '';
+  if (high.length > 0) advice += `Your ${high.join(' and ')} ${high.length > 1 ? 'cycles are' : 'cycle is'} running high — excellent for ${high.includes('physical') ? 'exercise and action' : ''}${high.includes('emotional') ? 'relationships and creativity' : ''}${high.includes('intellectual') ? 'study and decision-making' : ''}. `;
+  if (low.length > 0) advice += `Your ${low.join(' and ')} ${low.length > 1 ? 'cycles are' : 'cycle is'} in a rest phase — be gentle with yourself in ${low.includes('physical') ? 'physical demands' : ''}${low.includes('emotional') ? 'emotional situations' : ''}${low.includes('intellectual') ? 'complex mental tasks' : ''}.`;
+  if (!advice) advice = 'Your biorhythm cycles are in a balanced middle range today. A good day for steady, consistent effort across all areas.';
+  return advice;
+}
+
+function getLoveGuidance(f) {
+  const pd = f.personalDay > 9 ? 11 : f.personalDay;
+  const loveDays = { 2: true, 6: true, 11: true };
+  const base = loveDays[pd] 
+    ? `Personal Day ${f.personalDay} is one of the most romantic vibrations. Your heart is open and receptive. Express your feelings freely today — vulnerability is your strength.`
+    : pd === 1 ? `Personal Day 1 favors independence in love. Attract by being confidently yourself rather than adapting to others' expectations.`
+    : pd === 5 ? `Personal Day 5 brings exciting romantic energy. Spontaneous connections and unexpected encounters are favored. Be open to surprise.`
+    : pd === 7 ? `Personal Day 7 favors deep, soulful connection over surface socializing. Quality time with one person beats a crowded room.`
+    : pd === 9 ? `Personal Day 9 asks you to practice unconditional love. Release expectations and love freely. Forgiveness heals old wounds today.`
+    : `Today's energy supports steady, grounded connection. Show love through consistent presence and practical care.`;
+  
+  const moonInfluence = f.biorhythm.emotional.percent >= 60 
+    ? ' Your emotional biorhythm is high, amplifying your capacity for deep feeling and empathic connection.'
+    : f.biorhythm.emotional.percent <= 35 
+    ? ' Your emotional biorhythm is low — protect your heart and avoid heavy relationship conversations today.'
+    : '';
+  
+  return base + moonInfluence;
+}
+
+function getRelationshipInsight(f) {
+  const moonSign = f.guidance.transitMoonSign;
+  const moonEl = CosmicEngine.astrology.getElement(CosmicEngine.astrology.getSignIndex(moonSign));
+  if (moonEl === 'Fire') return `The Moon in ${moonSign} fires up passion and spontaneity in relationships. Express desire boldly. Avoid arguments that start from impatience.`;
+  if (moonEl === 'Earth') return `The Moon in ${moonSign} grounds relationships in physical reality. Show love through touch, food, and practical support. Sensuality is heightened.`;
+  if (moonEl === 'Air') return `The Moon in ${moonSign} favors communication and intellectual connection. Talk about ideas, share thoughts, and connect through conversation.`;
+  return `The Moon in ${moonSign} deepens emotional intimacy. Vulnerability creates closeness. Trust your intuition about what your partner needs.`;
+}
+
+function getCareerGuidance(f) {
+  const pd = f.personalDay > 9 ? 11 : f.personalDay;
+  const careerDays = { 1: 'launch', 4: 'build', 8: 'achieve' };
+  if (careerDays[pd]) return `Personal Day ${f.personalDay} is a power day for career. ${pd === 1 ? 'Start new projects, pitch ideas, take initiative. Your leadership energy is magnetic.' : pd === 4 ? 'Focus on building foundations. Organize, plan, and do the detailed work that creates lasting success.' : 'Step into authority. Financial decisions, negotiations, and power moves are all favored. This is your day to lead.'}`;
+  if (pd === 3) return `Personal Day 3 favors creative career expression. Brainstorm, present ideas, network socially. Your communication skills are at their peak.`;
+  if (pd === 7) return `Personal Day 7 favors research, analysis, and strategic planning. Work alone if possible. Your analytical powers are sharpened.`;
+  if (pd === 9) return `Personal Day 9 favors completing projects and humanitarian work. Finish what you've started. Service-oriented work is especially rewarding.`;
+  return `Today supports steady professional progress. Focus on quality over speed, and trust that consistent effort compounds into significant results.`;
+}
+
+function getFinancialInsight(f) {
+  const py = f.personalYear > 9 ? CosmicEngine.numerology.reduceToSingle(f.personalYear) : f.personalYear;
+  if (py === 8) return 'You are in a Personal Year 8 — the most powerful year for financial growth in the 9-year cycle. Major abundance is available. Make bold financial moves with confidence.';
+  if (py === 1) return 'Personal Year 1 is for planting financial seeds. Invest in yourself and new ventures. Returns come in years 4 and 8.';
+  if (py === 4) return 'Personal Year 4 rewards disciplined financial management. Budget, save, and build. Avoid get-rich-quick schemes.';
+  if (py === 9) return 'Personal Year 9 may bring financial endings that make way for new abundance. Release attachment to old income sources.';
+  return `Personal Year ${f.personalYear} supports ${py <= 4 ? 'building and investing' : 'harvesting and sharing'} financial energy. Trust your natural abundance instincts.`;
+}
+
+function getHealthGuidance(f) {
+  const physBio = f.biorhythm.physical.percent;
+  const base = physBio >= 65 
+    ? 'Your physical biorhythm is high — excellent for intense exercise, physical challenges, and pushing your limits. Your body is resilient today.'
+    : physBio <= 35 
+    ? 'Your physical biorhythm is in a rest phase. Gentle movement like walking, stretching, or yoga is better than intense exercise. Listen to your body\'s need for recovery.'
+    : 'Your physical energy is balanced. Moderate exercise and consistent self-care routines are ideal today.';
+  
+  const signBodyAreas = {
+    'Aries': 'head, face, and brain area',
+    'Taurus': 'throat, neck, and thyroid area',
+    'Gemini': 'lungs, arms, and nervous system',
+    'Cancer': 'chest, stomach, and digestive system',
+    'Leo': 'heart, spine, and upper back',
+    'Virgo': 'digestive system and intestines',
+    'Libra': 'kidneys, lower back, and skin',
+    'Scorpio': 'reproductive system and elimination organs',
+    'Sagittarius': 'hips, thighs, and liver',
+    'Capricorn': 'bones, joints, and knees',
+    'Aquarius': 'ankles, circulation, and nervous system',
+    'Pisces': 'feet, lymphatic system, and immune system'
+  };
+  const bodyArea = signBodyAreas[f.sunSign] || 'overall vitality';
+  return base + ` As a ${f.sunSign}, pay special attention to your ${bodyArea}. ${f.moonPhase.index >= 5 ? 'The waning moon supports detox and release — great for cleansing routines.' : 'The waxing moon supports building and nourishing — focus on nutrition and strengthening.'}`;
+}
+
+function getWellnessTip(f) {
+  const tips = {
+    1: 'Start a new health routine today. Your willpower is strong — commit to one positive change.',
+    2: 'Partner workouts or healing sessions are favored. Connection heals. Book a massage or share a healthy meal.',
+    3: 'Express yourself physically — dance, sing, or do any movement that brings joy. Laughter is medicine today.',
+    4: 'Structure your wellness. Meal prep, organize supplements, create a sleep schedule. Systems support health.',
+    5: 'Try something new — a different exercise, a new healthy recipe, an alternative healing modality.',
+    6: 'Nurture yourself as you nurture others. Self-care isn\'t selfish — it\'s essential. Focus on beauty and comfort.',
+    7: 'Solitary wellness practices shine. Meditation, journaling, nature walks alone. Your body heals in stillness.',
+    8: 'Invest in your health. Quality supplements, professional consultations, premium self-care. You\'re worth it.',
+    9: 'Release physical tension through breathwork or gentle yoga. Let go of what your body has been holding.'
+  };
+  const pd = f.personalDay > 9 ? CosmicEngine.numerology.reduceToSingle(f.personalDay) : f.personalDay;
+  return tips[pd] || tips[1];
+}
+
+function getSpiritualGuidance(f) {
+  const pd = f.personalDay > 9 ? 11 : f.personalDay;
+  const spiritDays = {
+    1: 'Today\'s spiritual energy supports new spiritual practices and bold inner exploration. Set a powerful intention for your soul\'s growth.',
+    2: 'Receptive spiritual energy today. Listen more than you speak. The divine communicates through others, through synchronicities, through quiet knowing.',
+    3: 'Creative spiritual expression is favored. Write, paint, sing, or dance your prayers. Joy is a spiritual practice.',
+    4: 'Build your spiritual foundation. Establish or recommit to daily practice. Discipline in spirituality creates freedom.',
+    5: 'Spiritual adventure calls. Explore a new tradition, read a challenging spiritual text, or meditate in a new way.',
+    6: 'Love IS your spiritual practice today. Every act of genuine care is a prayer. Service to family is service to the divine.',
+    7: 'The most spiritually powerful day in the cycle. Your intuition is razor-sharp. Meditate, seek solitude, trust inner knowing.',
+    8: 'Manifest spiritual abundance. Your prayers have power today. Visualize clearly and trust that the universe responds to your authority.',
+    9: 'Completion energy. Release spiritual attachments that limit you. Forgive. The highest spiritual act is unconditional love.',
+    11: 'Master spiritual energy. You are a channel for higher wisdom today. Pay attention to dreams, signs, and sudden knowing.'
+  };
+  return spiritDays[pd] || spiritDays[7];
+}
+
+function getChakraGuidance(chakra) {
+  const guidance = {
+    'Root': 'Ground yourself today. Walk barefoot, eat root vegetables, wear red. Your foundation needs attention — security and stability are the focus.',
+    'Sacral': 'Creative and sensual energy flows. Express emotions through art, enjoy physical pleasure mindfully, wear orange. Allow yourself to feel fully.',
+    'Solar Plexus': 'Personal power is activated. Set boundaries, make decisions confidently, wear yellow. Your willpower is strong — use it wisely.',
+    'Heart': 'Love energy is amplified. Practice compassion, forgive freely, wear green or pink. Open your heart without losing yourself.',
+    'Throat': 'Communication and truth-telling are highlighted. Speak your truth, sing, write, wear blue. Your voice carries healing power today.',
+    'Third Eye': 'Intuition is heightened. Trust your inner vision, meditate on the space between your eyebrows, wear indigo. Dreams may be prophetic.',
+    'Crown': 'Spiritual connection is strong. Meditate, pray, spend time in silence, wear white or violet. You are connected to something vast today.'
+  };
+  return guidance[chakra] || guidance['Heart'];
+}
+
+// ============================================
+// TAROT & CRYSTAL RENDERS
+// ============================================
+
+function renderTarot(f) {
+  const card = f.tarotCard;
+  document.getElementById('sectionTarot').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-tarot">${card.emoji}</div>
+      <div class="section-header-text">
+        <h3>Tarot Card of the Day</h3>
+        <div class="section-subtitle">${card.name} (${card.orientation}) · Major Arcana ${card.number}</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <div style="text-align:center;margin-bottom:16px;">
+        <div style="font-size:3.5rem;margin-bottom:8px;${card.isReversed ? 'transform:rotate(180deg);display:inline-block;' : ''}">${card.emoji}</div>
+        <h4 style="color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.4rem;">${card.name} ${card.isReversed ? '(Reversed)' : ''}</h4>
+        <p style="color:var(--text-secondary);font-size:0.85rem;">Major Arcana ${card.number} · ${card.element} Element</p>
+      </div>
+      <div class="highlight-box ${card.isReversed ? 'rose' : 'gold'}">
+        <h4>${card.isReversed ? 'Reversed Meaning' : 'Upright Meaning'}</h4>
+        <p>${card.isReversed ? card.reversed : card.meaning}</p>
+      </div>
+      <p>${getTarotGuidance(card, f)}</p>
+    </div>
+  `;
+}
+
+function getTarotGuidance(card, f) {
+  const pdNum = f.personalDay > 9 ? f.personalDay : f.personalDay;
+  const cardNum = card.number;
+  
+  // Connection between card number and personal day
+  let connection = '';
+  if (cardNum === pdNum || cardNum === pdNum % 10) {
+    connection = `There is a powerful resonance between today's card (${card.name}, #${cardNum}) and your Personal Day (${f.personalDay}). This amplifies the card's message — pay close attention to its themes today. `;
+  }
+  
+  const guidance = {
+    0: `The Fool invites you to take a leap of faith today. As a ${f.sunSign} with Life Path ${f.lifePath}, this card reminds you that every great journey begins with a single step into the unknown. Trust the universe and embrace spontaneity.`,
+    1: `The Magician tells you that you have all the tools you need right now. Your ${f.sunSign} energy combined with Personal Day ${f.personalDay} gives you the power to manifest your desires. Focus your intention and take action.`,
+    2: `The High Priestess calls you inward. Your intuition is especially strong today. As a Life Path ${f.lifePath}, trust the quiet voice within. Secrets may be revealed — pay attention to dreams and subtle signs.`,
+    3: `The Empress brings abundance and creative fertility. Nurture your projects and relationships today. Your ${f.chineseZodiac.animal} nature resonates with this card's energy of growth and beauty.`,
+    4: `The Emperor calls for structure and authority. Take charge of your day with clear boundaries and decisive action. Your Personal Year ${f.personalYear} energy aligns with building something lasting.`,
+    5: `The Hierophant suggests seeking wisdom from tradition or a mentor today. Your spiritual path as a Life Path ${f.lifePath} benefits from connecting with established teachings and sacred knowledge.`,
+    6: `The Lovers highlight relationships and important choices. Your heart is your compass today. As a ${f.sunSign}, align your decisions with your deepest values and authentic desires.`,
+    7: `The Chariot drives you forward with determination. Victory is possible through focused willpower. Your ${f.chineseZodiac.element} ${f.chineseZodiac.animal} energy gives you the strength to overcome any obstacle today.`,
+    8: `Strength reminds you that true power comes from compassion and inner courage. Gentle persistence wins today. Your ${f.sunSign} resilience is your greatest asset.`,
+    9: `The Hermit invites deep introspection. Withdraw from noise and seek your inner light. As a Life Path ${f.lifePath}, solitary reflection today brings profound wisdom.`,
+    10: `The Wheel of Fortune turns in your favor. Cycles are shifting — embrace change with optimism. Your Personal Year ${f.personalYear} is part of a larger cosmic pattern unfolding perfectly.`,
+    11: `Justice asks for fairness and truth. Make decisions based on integrity today. Karma is active — what you give returns multiplied. Your actions today have lasting consequences.`,
+    12: `The Hanged Man asks you to pause and see things differently. Surrender control and let new perspectives emerge. Sometimes the greatest progress comes from stillness.`,
+    13: `Death signals powerful transformation. Something is ending to make way for something better. As a ${f.sunSign}, embrace this transition — it leads to rebirth and renewal.`,
+    14: `Temperance calls for balance and moderation. Blend opposing forces in your life with patience. Your ${f.chineseZodiac.element} energy benefits from finding the middle path today.`,
+    15: `The Devil asks you to examine what binds you. Are there habits, fears, or attachments limiting your ${f.sunSign} potential? Today is for honest self-examination and liberation.`,
+    16: `The Tower brings sudden revelation. While it may feel disruptive, this energy clears away what was built on false foundations. Trust that what remains is authentic and strong.`,
+    17: `The Star brings hope and healing. After any recent challenges, this card promises renewal. Your Life Path ${f.lifePath} is guided by a higher purpose — trust in the cosmic plan.`,
+    18: `The Moon illuminates your subconscious. Intuition is powerful but illusions are possible. Navigate today with awareness. Your ${f.sunSign} instincts will guide you through any confusion.`,
+    19: `The Sun radiates pure joy and success. This is one of the most positive cards. Your ${f.sunSign} vitality is at its peak — share your light generously and celebrate life.`,
+    20: `Judgement calls for honest self-evaluation and rebirth. Answer your inner calling today. Your Life Path ${f.lifePath} has prepared you for this moment of awakening and transformation.`,
+    21: `The World signifies completion and wholeness. A cycle is reaching its fulfillment. As a ${f.chineseZodiac.element} ${f.chineseZodiac.animal}, celebrate how far you've come and prepare for the next magnificent chapter.`
+  };
+  
+  return connection + (guidance[cardNum] || guidance[0]);
+}
+
+function renderCrystal(f) {
+  const cr = f.crystalRec;
+  document.getElementById('sectionCrystal').innerHTML = `
+    <div class="section-header" onclick="toggleSection(this)">
+      <div class="section-icon icon-crystal">💎</div>
+      <div class="section-header-text">
+        <h3>Crystal & Color Therapy</h3>
+        <div class="section-subtitle">${cr.signCrystal.crystal} · ${cr.dayCrystal.crystal} · ${cr.signCrystal.essential} Oil</div>
+      </div>
+      <span class="section-toggle">▾</span>
+    </div>
+    <div class="section-body">
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-icon">${cr.signCrystal.emoji}</div>
+          <div class="stat-value">${cr.signCrystal.crystal}</div>
+          <div class="stat-label">${f.sunSign} Crystal</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💠</div>
+          <div class="stat-value">${cr.dayCrystal.crystal}</div>
+          <div class="stat-label">Day Crystal</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎨</div>
+          <div class="stat-value">${cr.signCrystal.color}</div>
+          <div class="stat-label">Power Colors</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🌸</div>
+          <div class="stat-value">${cr.signCrystal.essential}</div>
+          <div class="stat-label">Essential Oil</div>
+        </div>
+      </div>
+      
+      <div class="highlight-box green">
+        <h4>${cr.signCrystal.emoji} ${cr.signCrystal.crystal} — Your ${f.sunSign} Power Crystal</h4>
+        <p>As a ${f.sunSign}, ${cr.signCrystal.crystal} resonates deeply with your energy field. Hold it during meditation, carry it in your pocket, or place it on your ${f.guidance.chakra} chakra to amplify today's cosmic energies.</p>
+      </div>
+      
+      <div class="highlight-box blue">
+        <h4>💠 ${cr.dayCrystal.crystal} — Today's Crystal</h4>
+        <p>${cr.dayCrystal.purpose}. This crystal aligns with your Personal Day ${f.personalDay} energy and enhances the specific vibrations available to you today.</p>
+      </div>
+      
+      <p><strong>Color Therapy:</strong> Wearing or surrounding yourself with <strong>${cr.signCrystal.color}</strong> tones today strengthens your ${f.sunSign} energy. Combined with your lucky colors (${f.guidance.luckyColors.join(', ')}), these hues create a powerful vibrational field around you.</p>
+      
+      <p><strong>Aromatherapy:</strong> <strong>${cr.signCrystal.essential}</strong> essential oil supports your ${f.sunSign} nature. Diffuse it, apply diluted to pulse points, or add a few drops to your bath for enhanced cosmic alignment today.</p>
+    </div>
+  `;
+}
+
+// ============================================
+// NAVIGATION & UTILITIES
+// ============================================
+
+function changeDate(delta) {
+  currentForecastDate.setDate(currentForecastDate.getDate() + delta);
+  cachedDate = currentForecastDate;
+  clearTabCache();
+  renderForecast();
+}
+
+function goToToday() {
+  currentForecastDate = new Date();
+  cachedDate = currentForecastDate;
+  clearTabCache();
+  renderForecast();
+}
+
+function jumpToDate(dateStr) {
+  const parts = dateStr.split('-');
+  currentForecastDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+  renderForecast();
+}
+
+function toggleSection(header) {
+  const body = header.nextElementSibling;
+  const toggle = header.querySelector('.section-toggle');
+  body.classList.toggle('open');
+  toggle.classList.toggle('open');
+}
+
+function editProfile() {
+  document.getElementById('forecastContainer').classList.remove('active');
+  document.getElementById('inputSection').style.display = '';
+  document.getElementById('inputSection').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showLoading() { document.getElementById('loading').classList.add('active'); }
+function hideLoading() { document.getElementById('loading').classList.remove('active'); }
+
+// Auto-generate on Enter key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !document.getElementById('forecastContainer').classList.contains('active')) {
+    generateForecast();
+  }
+});
+
+// ==========================================
+// TAB SWITCHING
+// ==========================================
+let currentTab = 'daily';
+let cachedBirthData = null;
+let cachedDate = null;
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
+  const view = document.getElementById(tab + 'View');
+  if (view) view.classList.add('active');
+
+  // Date nav only for daily
+  const dateNav = document.querySelector('.date-nav');
+  if (dateNav) dateNav.style.display = tab === 'daily' ? '' : 'none';
+
+  if (!cachedBirthData) return;
+
+  if (tab === 'weekly' && !view.dataset.loaded) renderWeeklyView();
+  else if (tab === 'monthly' && !view.dataset.loaded) renderMonthlyView();
+  else if (tab === 'yearly' && !view.dataset.loaded) renderYearlyView();
+  else if (tab === 'synthesis' && !view.dataset.loaded) renderSynthesisView();
+}
+
+function clearTabCache() {
+  ['weeklyView','monthlyView','yearlyView','synthesisView'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.innerHTML = ''; el.dataset.loaded = ''; }
+  });
+}
+
+// Hook into existing renderForecast to cache birth data
+const _origRender = typeof renderForecast === 'function' ? renderForecast : null;
+
+// Patch: store birth data when forecast is generated
+const _origGenerate = typeof generateForecast === 'function' ? generateForecast : null;
+
+// We need to intercept after forecast generation to cache data
+// Let's add a MutationObserver approach instead - simpler to just cache in switchTab
+
+// ==========================================
+// WEEKLY VIEW RENDERER
+// ==========================================
+function renderWeeklyView() {
+  const view = document.getElementById('weeklyView');
+  if (!cachedBirthData) return;
+  try {
+    const w = CosmicEngine.generateWeeklyForecast(cachedBirthData, cachedDate || new Date());
+    const fmt = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    const fmtShort = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+    // Determine planetary transit summary for the week
+    const transitSigns = new Set();
+    w.days.forEach(d => { d.transitAspects.forEach(a => transitSigns.add(a.planet + ' in ' + a.transitSign)); });
+    const transitList = [...transitSigns].slice(0, 4).join(', ');
+
+    let html = `
+      <div class="weekly-header">
+        <h2>${w.weekTheme.icon} Weekly Forecast</h2>
+        <div class="week-range">${fmt(w.weekOf)} — ${fmt(w.weekEnd)}</div>
+      </div>
+      <div class="weekly-theme-card">
+        <div class="theme-icon">${w.weekTheme.icon}</div>
+        <div class="theme-name">${w.weekTheme.name}</div>
+        <div class="theme-desc">${w.weekTheme.desc}</div>
+      </div>
+      <div class="weekly-stats">
+        <div class="weekly-stat"><div class="stat-value">${w.avgEnergy}%</div><div class="stat-label">Avg Energy</div></div>
+        <div class="weekly-stat"><div class="stat-value">${w.avgLove}%</div><div class="stat-label">Love</div></div>
+        <div class="weekly-stat"><div class="stat-value">${w.avgCareer}%</div><div class="stat-label">Career</div></div>
+        <div class="weekly-stat"><div class="stat-value">${w.harmoniousAspects}/${w.tenseAspects}</div><div class="stat-label">✨/⚡ Aspects</div></div>
+      </div>
+
+      ${transitList ? `
+      <div class="highlight-box" style="margin:16px 0;">
+        <h4>🪐 Planetary Transits This Week</h4>
+        <p>Key planetary positions shaping your week: ${transitList}. ${w.harmoniousAspects > w.tenseAspects ? 'The balance of aspects this week favors harmonious flow — the cosmos is generally supportive of your efforts.' : w.tenseAspects > w.harmoniousAspects ? 'Challenging aspects outnumber harmonious ones this week, creating productive tension that drives growth and builds resilience.' : 'An equal balance of harmonious and challenging aspects creates a nuanced week that rewards awareness and adaptability.'}</p>
+      </div>` : ''}
+
+      <h3 style="color:var(--gold);font-family:var(--font-display);margin:20px 0 12px;text-align:center;">Day-by-Day Outlook</h3>
+      <div class="weekly-days">`;
+
+    w.days.forEach(d => {
+      const isPeak = w.peakDay && d.dayName === w.peakDay.dayName;
+      const isChallenge = w.challengeDay && d.dayName === w.challengeDay.dayName;
+      const cls = isPeak ? 'peak' : isChallenge ? 'challenge' : '';
+      const badge = isPeak ? ' 🌟 Peak' : isChallenge ? ' 🔻 Rest' : '';
+      const eColor = d.overallEnergy > 70 ? 'var(--green)' : d.overallEnergy > 40 ? 'var(--gold)' : 'var(--rose)';
+      // Best activity for this day
+      const pdReduced = d.personalDay > 9 ? (d.personalDay === 11 ? 11 : d.personalDay % 9 || 9) : d.personalDay;
+      const dayActivity = {1:'Launch & lead',2:'Partner & listen',3:'Create & express',4:'Build & organize',5:'Explore & adapt',6:'Love & nurture',7:'Reflect & study',8:'Negotiate & achieve',9:'Complete & release',11:'Intuit & inspire'}[pdReduced] || 'Steady progress';
+      html += `
+        <div class="week-day-card ${cls}">
+          <div class="day-label">
+            <div class="day-name">${d.dayName.substring(0,3)}</div>
+            <div class="day-date">${fmtShort(d.date)}</div>
+          </div>
+          <div class="day-info">
+            <div class="day-theme">Day ${d.personalDay} — ${d.dayTheme}${badge}</div>
+            <div class="day-details">${d.moonPhase.emoji} ${d.moonPhase.name} · ${d.tarot.name} · ${d.luckyColors}</div>
+            <div class="day-details" style="color:var(--text-accent);font-size:0.78rem;margin-top:3px;">Best for: ${dayActivity}</div>
+          </div>
+          <div class="day-energy">
+            <div class="energy-circle" style="--pct:${d.overallEnergy}; color:${eColor}">${d.overallEnergy}%</div>
+          </div>
+        </div>`;
+    });
+
+    html += `</div>
+      <h3 style="color:var(--gold);font-family:var(--font-display);margin:24px 0 12px;text-align:center;">📋 Weekly Guidance</h3>
+      <div class="weekly-advice">`;
+    w.advice.forEach(a => { html += `<div class="highlight-box" style="margin-bottom:10px;"><p>${a}</p></div>`; });
+    
+    // Weekly affirmation
+    const weekAff = w.avgEnergy > 60 ? 'This week, I harness my abundant energy to create meaningful change. Every action I take is aligned with my highest purpose.' :
+      w.avgEnergy < 40 ? 'This week, I honor my need for rest and renewal. In stillness, I find the strength that will fuel my next great leap forward.' :
+      'This week, I move with balanced intention — acting when the moment calls for action, resting when wisdom whispers to pause.';
+    html += `
+      <div class="aff-label" style="margin-top:20px;">✦ Weekly Affirmation ✦</div>
+      <div class="aff-text" style="font-size:1.05rem;padding:12px 20px;">"${weekAff}"</div>
+    </div>`;
+
+    view.innerHTML = html;
+    view.dataset.loaded = '1';
+  } catch(e) { view.innerHTML = `<p style="color:var(--rose);text-align:center;padding:40px;">Error generating weekly forecast: ${e.message}</p>`; }
+}
+
+// ==========================================
+// MONTHLY VIEW RENDERER
+// ==========================================
+function renderMonthlyView() {
+  const view = document.getElementById('monthlyView');
+  if (!cachedBirthData) return;
+  try {
+    const m = CosmicEngine.generateMonthlyForecast(cachedBirthData, cachedDate || new Date());
+
+    let html = `
+      <div class="monthly-header">
+        <h2>🌙 ${m.monthName} ${m.year}</h2>
+      </div>
+      <div class="monthly-theme-card">
+        <div class="theme-icon">${m.theme.icon}</div>
+        <div class="theme-name">${m.theme.name}</div>
+        <div class="theme-desc">${m.theme.desc}</div>
+        <div class="pm-badge">Personal Month ${m.personalMonth} · Personal Year ${m.personalYear}</div>
+      </div>
+
+      ${m.theme.bestFor ? `
+      <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+        <div class="highlight-box green" style="flex:1;min-width:200px;">
+          <h4>✨ Best For</h4>
+          <p>${m.theme.bestFor}</p>
+        </div>
+        <div class="highlight-box rose" style="flex:1;min-width:200px;">
+          <h4>⚠️ Avoid</h4>
+          <p>${m.theme.avoidThis}</p>
+        </div>
+      </div>` : ''}
+
+      ${m.theme.affirmation ? `
+      <div class="aff-label">✦ Monthly Affirmation ✦</div>
+      <div class="aff-text" style="font-size:1.02rem;padding:10px 18px;margin-bottom:20px;">"${m.theme.affirmation}"</div>
+      ` : ''}`;
+
+    // Moon events
+    if (m.moonEvents.length > 0) {
+      html += `<h3 style="color:var(--gold);font-family:var(--font-display);margin-bottom:12px;text-align:center;">Lunar Events</h3><div class="moon-events">`;
+      m.moonEvents.forEach(e => {
+        html += `<div class="moon-event"><div class="moon-emoji">${e.emoji}</div><div class="moon-name">${e.phase}</div><div class="moon-day">${m.monthName} ${e.day}</div></div>`;
+      });
+      html += `</div>`;
+    }
+
+    // Weekly energy bars
+    html += `<h3 style="color:var(--gold);font-family:var(--font-display);margin:20px 0 12px;text-align:center;">Weekly Energy Flow</h3>
+      <div class="weekly-energy-bars">`;
+    m.weeklyEnergies.forEach((e, i) => {
+      const h = Math.max(10, e);
+      html += `<div class="week-bar" style="height:${h}%"><div class="bar-value">${e}%</div><div class="bar-label">Wk ${i+1}</div></div>`;
+    });
+    html += `</div><div style="height:30px"></div>`;
+
+    // Key days
+    if (m.keyDays.length > 0) {
+      html += `<h3 style="color:var(--gold);font-family:var(--font-display);margin-bottom:12px;text-align:center;">Key Days</h3><div class="key-days-list">`;
+      const shown = m.keyDays.slice(0, 12);
+      shown.forEach(k => {
+        const cls = k.isFullMoon ? 'full-moon' : k.isNewMoon ? 'new-moon' : k.isMasterDay ? 'master' : k.isCritical ? 'critical' : '';
+        html += `<div class="key-day-item ${cls}"><div class="kd-date">${k.day}</div><div class="kd-label">${k.label} — Personal Day ${k.personalDay}</div></div>`;
+      });
+      html += `</div>`;
+    }
+
+    // Peak & challenge
+    html += `<div style="display:flex;gap:12px;margin-bottom:20px;">
+      <div class="weekly-stat" style="flex:1;border:1px solid rgba(74,222,128,0.2);border-radius:12px;">
+        <div class="stat-value" style="color:var(--green);">${m.peakDay ? m.peakDay.day : '—'}</div>
+        <div class="stat-label">Peak Day</div>
+      </div>
+      <div class="weekly-stat" style="flex:1;border:1px solid rgba(251,113,133,0.2);border-radius:12px;">
+        <div class="stat-value" style="color:var(--rose);">${m.challengeDay ? m.challengeDay.day : '—'}</div>
+        <div class="stat-label">Rest Day</div>
+      </div>
+    </div>`;
+
+    view.innerHTML = html;
+    view.dataset.loaded = '1';
+  } catch(e) { view.innerHTML = `<p style="color:var(--rose);text-align:center;padding:40px;">Error: ${e.message}</p>`; }
+}
+
+// ==========================================
+// YEARLY VIEW RENDERER
+// ==========================================
+function renderYearlyView() {
+  const view = document.getElementById('yearlyView');
+  if (!cachedBirthData) return;
+  try {
+    const yr = (cachedDate || new Date()).getFullYear();
+    const y = CosmicEngine.generateYearlyForecast(cachedBirthData, yr);
+
+    let html = `
+      <div class="yearly-header"><h2>⭐ ${y.year} Yearly Forecast</h2></div>
+      <div class="yearly-theme-card">
+        <div class="theme-icon">${y.theme.icon}</div>
+        <div class="theme-name">${y.theme.name}</div>
+        <div class="theme-desc">${y.theme.desc}</div>
+        <div class="year-focus">
+          <span class="focus-item">✦ Focus: ${y.theme.focus}</span>
+          <span class="avoid-item">⚠ Avoid: ${y.theme.avoid}</span>
+        </div>
+      </div>
+
+      ${y.theme.lifeLesson ? `
+      <div class="highlight-box gold" style="margin-bottom:16px;">
+        <h4>📖 Life Lesson of ${y.year}</h4>
+        <p>${y.theme.lifeLesson}</p>
+      </div>` : ''}
+
+      ${y.theme.spiritualGrowth ? `
+      <div class="highlight-box blue" style="margin-bottom:16px;">
+        <h4>🕊️ Spiritual Growth Theme</h4>
+        <p>${y.theme.spiritualGrowth}</p>
+      </div>` : ''}`;
+
+    // 9-year cycle indicator
+    html += `<div class="cycle-indicator">
+      <div style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-bottom:8px;">9-Year Life Cycle Position</div>
+      <div class="cycle-dots">`;
+    for (let i = 1; i <= 9; i++) {
+      const cls = i === y.cyclePosition ? 'active' : i < y.cyclePosition ? 'past' : '';
+      html += `<div class="cycle-dot ${cls}">${i}</div>`;
+    }
+    html += `</div>
+      <div style="color:var(--gold);font-size:0.85rem;margin-top:8px;">Year ${y.cyclePosition} of 9 ${y.isNewCycle ? '— 🌱 New Cycle Begins!' : ''}</div>
+    </div>`;
+
+    // Monthly energy chart
+    html += `<h3 style="color:var(--gold);font-family:var(--font-display);margin:20px 0 12px;text-align:center;">Monthly Energy Map</h3>
+      <div class="monthly-energy-chart">`;
+    y.monthlyEnergies.forEach(m => {
+      const h = Math.max(8, m.energy);
+      html += `<div class="month-bar" style="height:${h}%"><div class="m-value">${m.energy}</div><div class="m-label">${m.monthName}</div></div>`;
+    });
+    html += `</div><div style="height:30px"></div>`;
+
+    // Quarters
+    html += `<h3 style="color:var(--gold);font-family:var(--font-display);margin:20px 0 12px;text-align:center;">Quarterly Breakdown</h3>
+      <div class="quarter-cards">`;
+    y.quarters.forEach(q => {
+      html += `<div class="quarter-card">
+        <div class="q-header"><div class="q-name">${q.theme.icon} ${q.theme.name}</div><div class="q-energy">${q.energy}%</div></div>
+        <div class="q-months">${q.monthNames.join(', ')}</div>
+        <div class="q-desc">${q.theme.desc}</div>
+      </div>`;
+    });
+    html += `</div>`;
+
+    // Chinese zodiac year
+    html += `<div class="synth-card" style="margin-top:20px;">
+      <div class="synth-card-header"><div class="synth-icon">${y.chineseYear.emoji}</div><div class="synth-title">Year of the ${y.chineseYear.element} ${y.chineseYear.animal}</div></div>
+      <p>${y.yearEnergy.desc}</p>
+      <p>Your ${y.birthChinese.animal} spirit navigates this ${y.chineseYear.animal} year with <strong>${y.yearEnergy.rating}</strong> energy.</p>
+    </div>`;
+
+    // Pinnacle
+    html += `<div class="synth-card">
+      <div class="synth-card-header"><div class="synth-icon">🏔️</div><div class="synth-title">Current Pinnacle: ${y.currentPinnacle.number}</div></div>
+      <p>At age ${y.age}, you are in Pinnacle ${y.currentPinnacle.number}. This pinnacle shapes the major themes and opportunities of your current life phase.</p>
+    </div>`;
+
+    view.innerHTML = html;
+    view.dataset.loaded = '1';
+  } catch(e) { view.innerHTML = `<p style="color:var(--rose);text-align:center;padding:40px;">Error: ${e.message}</p>`; }
+}
+
+// ==========================================
+// SYNTHESIS VIEW RENDERER ("Who Am I")
+// ==========================================
+function renderSynthesisView() {
+  const view = document.getElementById('synthesisView');
+  if (!cachedBirthData) return;
+  try {
+    const s = CosmicEngine.generateSynthesis(cachedBirthData, cachedDate || new Date());
+
+    let html = `
+      <div class="synthesis-header">
+        <h2>🔮 ${s.coreIdentity.title}</h2>
+        <div class="synth-subtitle">Your Complete Cosmic Portrait — All Systems Cross-Referenced</div>
+      </div>
+
+      <!-- CORE IDENTITY -->
+      <div class="synth-card">
+        <div class="synth-card-header"><div class="synth-icon">🌟</div><div class="synth-title">Core Identity</div></div>
+        <p style="font-size:1.02rem;line-height:1.75;">${s.coreIdentity.summary}</p>
+        <div class="synth-elements">
+          <div class="synth-element"><div class="se-label">Western</div><div class="se-value">${s.coreIdentity.elements.western}</div></div>
+          <div class="synth-element"><div class="se-label">Numerology</div><div class="se-value">${s.coreIdentity.elements.numerology}</div></div>
+          <div class="synth-element"><div class="se-label">Chinese</div><div class="se-value">${s.coreIdentity.elements.chinese}</div></div>
+          <div class="synth-element"><div class="se-label">Birth Moon</div><div class="se-value">${s.coreIdentity.elements.lunar}</div></div>
+        </div>
+        <div class="highlight-box" style="margin-top:14px;">
+          <h4>🔮 Soul Essence</h4>
+          <p>${s.coreIdentity.essence}</p>
+        </div>
+      </div>
+
+      <!-- PERSONALITY MATRIX -->
+      <div class="synth-card">
+        <div class="synth-card-header"><div class="synth-icon">🎭</div><div class="synth-title">Personality Matrix</div></div>
+        <div class="highlight-box" style="margin-bottom:12px;">
+          <h4>👤 Public Self (Personality ${s.personality})</h4>
+          <p>${s.personalityMatrix.publicSelf}</p>
+        </div>
+        <div class="highlight-box blue" style="margin-bottom:12px;">
+          <h4>💜 Private Self (Soul Urge ${s.soulUrge})</h4>
+          <p>${s.personalityMatrix.privateSelf}</p>
+        </div>
+        <div class="highlight-box gold" style="margin-bottom:12px;">
+          <h4>✨ Destiny Call (Destiny ${s.destiny})</h4>
+          <p>${s.personalityMatrix.destinyCall}</p>
+        </div>
+        <div class="highlight-box green" style="margin-bottom:12px;">
+          <h4>🌳 Mature Self (Maturity ${s.maturity})</h4>
+          <p>${s.personalityMatrix.matureSelf}</p>
+        </div>
+        ${s.personalityMatrix.harmonies.map(h => `<div class="synth-harmony">${h}</div>`).join('')}
+        ${s.personalityMatrix.tensions.map(t => `<div class="synth-tension">${t}</div>`).join('')}
+      </div>
+
+      <!-- LIFE PURPOSE -->
+      <div class="synth-card">
+        <div class="synth-card-header"><div class="synth-icon">🧭</div><div class="synth-title">Life Purpose</div></div>
+        <p style="font-size:1.02rem;line-height:1.75;">${s.lifePurpose.purposeBlend}</p>
+        <div class="highlight-box gold" style="margin:14px 0;">
+          <h4>📜 Mission Statement</h4>
+          <p>${s.lifePurpose.missionStatement}</p>
+        </div>
+        <div class="highlight-box green">
+          <h4>🌅 The Maturity Promise</h4>
+          <p>${s.lifePurpose.maturityPromise}</p>
+        </div>
+      </div>
+
+      <!-- RELATIONSHIP DNA -->
+      <div class="synth-card">
+        <div class="synth-card-header"><div class="synth-icon">💕</div><div class="synth-title">Relationship DNA</div></div>
+        <p style="font-size:1.02rem;line-height:1.75;">${s.relationshipDNA.loveStyle}</p>
+        <div class="highlight-box rose" style="margin:14px 0;">
+          <h4>🧲 Attraction Pattern</h4>
+          <p>${s.relationshipDNA.attractionPattern}</p>
+        </div>
+        <div class="highlight-box" style="margin-bottom:14px;">
+          <h4>☯️ Chinese Zodiac Compatibility</h4>
+          <p>${s.relationshipDNA.chineseCompat}</p>
+        </div>
+        <div class="highlight-box blue">
+          <h4>${s.birthMoonPhase ? '🌙' : '🌙'} Lunar Love Signature</h4>
+          <p>${s.relationshipDNA.moonInfluence}</p>
+        </div>
+      </div>
+
+      <!-- CAREER BLUEPRINT -->
+      <div class="synth-card">
+        <div class="synth-card-header"><div class="synth-icon">💼</div><div class="synth-title">Career Blueprint</div></div>
+        <p style="font-size:1.02rem;line-height:1.75;">${s.careerBlueprint.careerPath}</p>
+        <div class="highlight-box gold" style="margin:14px 0;">
+          <h4>🏢 Ideal Work Environment</h4>
+          <p>${s.careerBlueprint.workStyle}</p>
+        </div>
+        <div class="highlight-box">
+          <h4>${s.chineseAnimal ? '🐉' : '☯️'} Chinese Zodiac Professional Signature</h4>
+          <p>${s.careerBlueprint.chineseWork}</p>
+        </div>
+      </div>
+
+      <!-- COSMIC WEATHER -->
+      <div class="synth-card">
+        <div class="synth-card-header"><div class="synth-icon">🌤️</div><div class="synth-title">Today's Cosmic Weather for You</div></div>
+        <p style="font-size:1.02rem;line-height:1.75;">${s.cosmicWeather.synthesis}</p>
+        ${s.cosmicWeather.planetaryWeather ? `
+        <div class="highlight-box" style="margin:14px 0;">
+          <h4>🪐 Planetary Positions</h4>
+          <p>${s.cosmicWeather.planetaryWeather}</p>
+        </div>` : ''}
+        <div class="highlight-box blue">
+          <h4>🌙 Lunar Guidance</h4>
+          <p>${s.cosmicWeather.moonGuidance}</p>
+        </div>
+      </div>
+
+      <!-- HIDDEN PATTERNS -->
+      <div class="synth-card">
+        <div class="synth-card-header"><div class="synth-icon">🔍</div><div class="synth-title">Hidden Patterns in Your Chart</div></div>
+        <p style="color:var(--text-secondary);margin-bottom:14px;font-style:italic;">These are the subtle connections between your cosmic systems — patterns that only emerge when all systems are cross-referenced together.</p>
+        ${s.hiddenPatterns.map(p => `
+          <div class="hidden-pattern">
+            <div class="hp-icon">${p.icon}</div>
+            <div><div class="hp-type">${p.type}</div><div class="hp-detail">${p.detail}</div></div>
+          </div>
+        `).join('')}
+      </div>`;
+
+    view.innerHTML = html;
+    view.dataset.loaded = '1';
+  } catch(e) { view.innerHTML = `<p style="color:var(--rose);text-align:center;padding:40px;">Error: ${e.message}</p>`; }
+}
+</script>
+
+</body>
+</html>
