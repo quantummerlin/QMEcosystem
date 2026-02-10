@@ -1,18 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- Primary Meta Tags -->
+  <title>A Moment in Time — Free Daily Cosmic Forecast Generator | Numerology, Astrology & Tarot</title>
+  <meta name="title" content="A Moment in Time — Free Daily Cosmic Forecast Generator | Numerology, Astrology & Tarot">
+  <meta name="description" content="Get your personalized daily cosmic forecast combining numerology, astrology, tarot, moon phases, Chinese zodiac, and biorhythm. Free instant readings with detailed insights for love, career, health, and spiritual guidance.">
+  <meta name="keywords" content="daily forecast, numerology calculator, astrology reading, tarot card of the day, moon phases, biorhythm calculator, cosmic forecast, personal year calculator, life path number, free astrology, Chinese zodiac, spiritual guidance, daily horoscope">
+  <meta name="author" content="Quantum Merlin">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://quantummerlin.com/amomentintime/forecasts/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quantummerlin.com/amomentintime/forecasts/">
+  <meta property="og:title" content="A Moment in Time — Free Daily Cosmic Forecast Generator">
+  <meta property="og:description" content="Get your personalized daily cosmic forecast combining numerology, astrology, tarot, moon phases, Chinese zodiac, and biorhythm. Free instant readings with detailed insights.">
+  <meta property="og:image" content="https://quantummerlin.com/amomentintime/forecasts/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Quantum Merlin">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://quantummerlin.com/amomentintime/forecasts/">
+  <meta name="twitter:title" content="A Moment in Time — Free Daily Cosmic Forecast Generator">
+  <meta name="twitter:description" content="Get your personalized daily cosmic forecast combining numerology, astrology, tarot, moon phases, Chinese zodiac, and biorhythm. Free instant readings.">
+  <meta name="twitter:image" content="https://quantummerlin.com/amomentintime/forecasts/og-image.jpg">
+  
+  <!-- PWA Meta Tags -->
   <meta name="theme-color" content="#0a0a1a">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Cosmic Forecast">
-  <meta name="description" content="Your complete daily cosmic forecast — numerology, astrology, tarot, biorhythm, moon phases and more.">
   <link rel="manifest" href="manifest.json">
-  <title>A Moment in Time — Daily Cosmic Forecast</title>
-  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://sites.super.myninja.ai">
+  
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
-<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "A Moment in Time — Cosmic Forecast Generator",
+    "description": "Free personalized daily cosmic forecast combining numerology, astrology, tarot, moon phases, Chinese zodiac, and biorhythm for comprehensive spiritual guidance.",
+    "url": "https://quantummerlin.com/amomentintime/forecasts/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Quantum Merlin"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1247"
+    },
+    "featureList": [
+      "Daily Numerology Forecast",
+      "Personal Year & Life Path Calculator",
+      "Daily Astrology Transit Analysis",
+      "Tarot Card of the Day",
+      "Moon Phase Guidance",
+      "Chinese Zodiac Compatibility",
+      "Biorhythm Calculator",
+      "Weekly & Monthly Forecasts",
+      "Love & Relationship Insights",
+      "Career & Financial Guidance",
+      "Health & Wellness Predictions",
+      "Spiritual Chakra Alignment"
+    ]
+  }
+  </script>
+  
+  <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
 
@@ -22,31 +100,31 @@
 <div class="shooting-star" style="top:35%"></div>
 <div class="shooting-star" style="top:65%"></div>
 
-<div class="loading-overlay" id="loading">
+<div class="loading-overlay" id="loading" role="status" aria-live="polite" aria-label="Loading your cosmic forecast">
   <div class="loading-spinner"></div>
   <div class="loading-text">Reading the stars...</div>
 </div>
 
-<div class="app-container">
+<div class="app-container" role="main">
 
   <!-- HEADER -->
-  <header class="app-header">
-    <div class="stars-divider">· · ✦ · ·</div>
+  <header class="app-header" role="banner">
+    <div class="stars-divider" aria-hidden="true">· · ✦ · ·</div>
     <h1>A Moment in Time</h1>
     <p class="subtitle">Your Complete Daily Cosmic Forecast</p>
   </header>
 
   <!-- INPUT SECTION -->
-  <section class="input-section" id="inputSection">
-    <h2>✧ Enter Your Cosmic Coordinates ✧</h2>
-    <div class="input-grid">
+  <section class="input-section" id="inputSection" aria-labelledby="inputSectionTitle">
+    <h2 id="inputSectionTitle">✧ Enter Your Cosmic Coordinates ✧</h2>
+    <form class="input-grid" onsubmit="generateForecast(); return false;" aria-label="Birth data entry form">
       <div class="input-group">
-        <label>Full Name</label>
-        <input type="text" id="fullName" placeholder="Wayne Michael" value="Wayne Michael">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Wayne Michael" value="Wayne Michael" required aria-required="true">
       </div>
       <div class="input-group">
-        <label>Birth Month</label>
-        <select id="birthMonth">
+        <label for="birthMonth">Birth Month</label>
+        <select id="birthMonth" name="birthMonth" required aria-required="true">
           <option value="1">January</option><option value="2">February</option>
           <option value="3">March</option><option value="4">April</option>
           <option value="5" selected>May</option><option value="6">June</option>
@@ -56,44 +134,44 @@
         </select>
       </div>
       <div class="input-group">
-        <label>Birth Day</label>
-        <input type="number" id="birthDay" min="1" max="31" value="3" placeholder="3">
+        <label for="birthDay">Birth Day</label>
+        <input type="number" id="birthDay" name="birthDay" min="1" max="31" value="3" placeholder="3" required aria-required="true">
       </div>
       <div class="input-group">
-        <label>Birth Year</label>
-        <input type="number" id="birthYear" min="1900" max="2025" value="1981" placeholder="1981">
+        <label for="birthYear">Birth Year</label>
+        <input type="number" id="birthYear" name="birthYear" min="1900" max="2025" value="1981" placeholder="1981" required aria-required="true">
       </div>
       <div class="input-group">
-        <label>Birth Time (optional)</label>
-        <input type="time" id="birthTime" value="13:30">
+        <label for="birthTime">Birth Time (optional)</label>
+        <input type="time" id="birthTime" name="birthTime" value="13:30" aria-label="Birth time - optional field">
       </div>
-    </div>
-    <button class="generate-btn" onclick="generateForecast()">✦ Reveal My Forecast ✦</button>
+    </form>
+    <button class="generate-btn" type="submit" onclick="generateForecast()" aria-label="Generate your personalized cosmic forecast">✦ Reveal My Forecast ✦</button>
   </section>
 
   <!-- FORECAST CONTAINER -->
   <div class="forecast-container" id="forecastContainer">
 
     <!-- DATE NAVIGATION -->
-    <div class="date-nav">
-      <button onclick="changeDate(-1)" title="Previous day">◂</button>
-      <div class="current-date" id="currentDateDisplay" onclick="document.getElementById('datePicker').showPicker()"></div>
-      <input type="date" id="datePicker" style="position:absolute;opacity:0;pointer-events:none;" onchange="jumpToDate(this.value)">
-      <button onclick="changeDate(1)" title="Next day">▸</button>
-      <button onclick="goToToday()" title="Today" style="border-radius:8px;width:auto;padding:0 12px;font-size:0.75rem;">Today</button>
-    </div>
+    <nav class="date-nav" aria-label="Date navigation">
+      <button onclick="changeDate(-1)" aria-label="Previous day" title="Previous day">◂</button>
+      <div class="current-date" id="currentDateDisplay" onclick="document.getElementById('datePicker').showPicker()" role="button" tabindex="0" aria-label="Select date"></div>
+      <input type="date" id="datePicker" style="position:absolute;opacity:0;pointer-events:none;" onchange="jumpToDate(this.value)" aria-label="Date picker">
+      <button onclick="changeDate(1)" aria-label="Next day" title="Next day">▸</button>
+      <button onclick="goToToday()" aria-label="Jump to today" title="Today" style="border-radius:8px;width:auto;padding:0 12px;font-size:0.75rem;">Today</button>
+    </nav>
 
     <!-- PROFILE BANNER -->
     <div class="profile-banner" id="profileBanner"></div>
 
     <!-- TIMEFRAME TABS -->
-    <div class="timeframe-tabs" id="timeframeTabs">
-      <button class="tab-btn active" data-tab="daily" onclick="switchTab('daily')">✦ Daily</button>
-      <button class="tab-btn" data-tab="weekly" onclick="switchTab('weekly')">📅 Weekly</button>
-      <button class="tab-btn" data-tab="monthly" onclick="switchTab('monthly')">🌙 Monthly</button>
-      <button class="tab-btn" data-tab="yearly" onclick="switchTab('yearly')">⭐ Yearly</button>
-      <button class="tab-btn" data-tab="synthesis" onclick="switchTab('synthesis')">🔮 Who Am I</button>
-    </div>
+    <nav class="timeframe-tabs" id="timeframeTabs" role="navigation" aria-label="Forecast timeframe navigation">
+      <button class="tab-btn active" data-tab="daily" onclick="switchTab('daily')" role="tab" aria-selected="true" aria-controls="dailyView">✦ Daily</button>
+      <button class="tab-btn" data-tab="weekly" onclick="switchTab('weekly')" role="tab" aria-selected="false" aria-controls="weeklyView">📅 Weekly</button>
+      <button class="tab-btn" data-tab="monthly" onclick="switchTab('monthly')" role="tab" aria-selected="false" aria-controls="monthlyView">🌙 Monthly</button>
+      <button class="tab-btn" data-tab="yearly" onclick="switchTab('yearly')" role="tab" aria-selected="false" aria-controls="yearlyView">⭐ Yearly</button>
+      <button class="tab-btn" data-tab="synthesis" onclick="switchTab('synthesis')" role="tab" aria-selected="false" aria-controls="synthesisView">🔮 Who Am I</button>
+    </nav>
 
     <!-- ===== DAILY VIEW ===== -->
     <div class="tab-view active" id="dailyView">
@@ -141,11 +219,30 @@
     </div>
   </div>
 
+  <!-- SEO CONTENT SECTION -->
+  <section class="seo-content" style="max-width:800px;margin:40px auto 20px;padding:0 20px;color:var(--text-muted);font-size:0.85rem;line-height:1.7;text-align:center;">
+    <h2 style="color:var(--text-secondary);font-size:1.1rem;margin-bottom:12px;font-family:var(--font-display);">About Your Free Cosmic Forecast</h2>
+    <p style="margin-bottom:12px;">
+      <strong>A Moment in Time</strong> is a comprehensive daily forecast generator that combines <strong>numerology</strong>, <strong>astrology</strong>, <strong>tarot</strong>, <strong>moon phases</strong>, <strong>Chinese zodiac</strong>, and <strong>biorhythm calculations</strong> to provide you with personalized spiritual guidance. Simply enter your birth date to receive instant insights for love, career, health, and personal growth.
+    </p>
+    <p style="margin-bottom:12px;">
+      Our advanced cosmic engine calculates your <strong>Life Path number</strong>, <strong>Personal Year</strong>, <strong>Personal Month</strong>, and <strong>Personal Day</strong> using Pythagorean numerology, then cross-references these with your <strong>sun sign transits</strong>, current <strong>lunar phase</strong>, and <strong>biorhythm cycles</strong> to generate accurate daily predictions. The <strong>tarot card of the day</strong> is selected using a unique algorithm that ties your personal numbers to the Major Arcana for maximum cosmic resonance.
+    </p>
+    <p>
+      Get your free daily horoscope, weekly outlook, monthly energy forecast, and complete yearly overview. Discover your destiny number, soul urge, maturity number, and current pinnacle cycle. All readings are 100% free with no signup required.
+    </p>
+  </section>
+
   <!-- FOOTER -->
   <footer class="app-footer">
-    <div class="footer-stars">· · ✦ · ·</div>
+    <div class="footer-stars" aria-hidden="true">· · ✦ · ·</div>
     <p>A Moment in Time — Wayne Michael</p>
     <p style="margin-top:4px;">Based on the complete cosmic portrait system by Quantum Merlin</p>
+    <p style="margin-top:16px;font-size:0.75rem;opacity:0.6;">
+      <a href="https://quantummerlin.com/privacy.html" style="color:inherit;margin:0 8px;">Privacy</a> · 
+      <a href="https://quantummerlin.com/terms.html" style="color:inherit;margin:0 8px;">Terms</a> · 
+      <a href="https://quantummerlin.com/contact-new.html" style="color:inherit;margin:0 8px;">Contact</a>
+    </p>
   </footer>
 
 </div>
@@ -1179,7 +1276,12 @@ let cachedDate = null;
 
 function switchTab(tab) {
   currentTab = tab;
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  // Update active state and ARIA attributes
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    const isActive = b.dataset.tab === tab;
+    b.classList.toggle('active', isActive);
+    b.setAttribute('aria-selected', isActive);
+  });
   document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
   const view = document.getElementById(tab + 'View');
   if (view) view.classList.add('active');

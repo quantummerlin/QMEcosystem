@@ -1,18 +1,38 @@
 {
-  "name": "A Moment in Time — Cosmic Forecast",
+  "name": "A Moment in Time — Cosmic Forecast Generator",
   "short_name": "Cosmic Forecast",
-  "description": "Your complete daily cosmic forecast — numerology, astrology, tarot, biorhythm, moon phases and more.",
+  "description": "Free personalized daily cosmic forecast combining numerology, astrology, tarot, moon phases, Chinese zodiac, and biorhythm for comprehensive spiritual guidance.",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#0a0a1a",
   "theme_color": "#0a0a1a",
   "orientation": "portrait",
+  "categories": ["lifestyle", "health", "spirituality"],
+  "lang": "en-US",
+  "dir": "ltr",
   "icons": [
     {
       "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a0a1a' width='100' height='100' rx='20'/><text y='.88em' x='.1em' font-size='80'>✦</text></svg>",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Daily Forecast",
+      "short_name": "Daily",
+      "description": "View your daily cosmic forecast",
+      "url": "./?tab=daily",
+      "icons": [{ "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>✦</text></svg>", "sizes": "any" }]
+    },
+    {
+      "name": "Weekly Forecast",
+      "short_name": "Weekly",
+      "description": "View your weekly outlook",
+      "url": "./?tab=weekly",
+      "icons": [{ "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>📅</text></svg>", "sizes": "any" }]
     }
   ]
 }

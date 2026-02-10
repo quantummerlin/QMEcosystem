@@ -450,4 +450,15 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- ═══════════════════════════════════════════════════════════════
+         A MOMENT IN TIME — COSMIC FORECAST GENERATOR
+         ═══════════════════════════════════════════════════════════════ -->
+    
+    <url>
+        <loc>https://quantummerlin.com/amomentintime/forecasts/</loc>
+        <lastmod>2026-02-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
 </urlset>
