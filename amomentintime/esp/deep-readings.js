@@ -138,7 +138,7 @@ var DEEP_MOON_READINGS = {
         relationships: "Necesitan asociación, justicia y hermosas experiencias. Se sienten incompletos sin conexión. El toma y daca equilibrado y el respeto mutuo son esenciales. Son profundamente románticos.",
         growth: "Aprender que un conflicto saludable puede profundizar las relaciones. Desarrollar una relación sólida con ellos mismos independientemente de la asociación. Decir su verdad incluso cuando pueda perturbar la paz.",
         power: "Cuando asumen plenamente su naturaleza diplomática emocional, se convierten en verdaderos pacificadores: salvan divisiones y crean una armonía genuina que incluye la verdad de todos.",
-        somatic: "They feel emotions in their sense of balance — a literal feeling of equilibrium or disturbance, sensitivity to discord in their environment. Necesitan belleza a su alrededor.",
+        somatic: "Sienten emociones en su sentido del equilibrio: una sensación literal de equilibrio o perturbación, sensibilidad a la discordia en su entorno. Necesitan belleza a su alrededor.",
         parentGuidance: "Pregunte qué quieren antes de ofrecer opciones. Enseñe que el conflicto no siempre es malo. Modelo que expresa desacuerdo con el amor. Nunca les pidas que mantengan la paz a expensas de sus necesidades.",
         affirmation: "Tu pacificación es un regalo. Tus necesidades importan. La armonía también incluye tu verdad."
     },
@@ -191,19 +191,19 @@ var DEEP_MOON_READINGS = {
         shadow: "El patrón de sombra: frialdad emocional y aislamiento. Quizás construyan muros tan altos que nadie pueda alcanzarlos. Juzgan a los demás por ser "demasiado emocionales" mientras niegan sus propias necesidades. La adicción al trabajo como evitación emocional.",
         integration: "Ayúdelos a comprender que la vulnerabilidad es fortaleza, no debilidad. Necesitar a los demás es humano, no un fracaso. Los sentimientos importan incluso cuando no tienen un propósito obvio. El juego y el descanso son productivos.",
         stress: "Bajo presión, se vuelven más controladores, más centrados en el trabajo y emocionalmente indisponibles. Pueden enterrar sus sentimientos en el logro hasta que estallan inesperadamente. Pueden volverse pesimistas o duros.",
-        misread: "People may see them as cold or uncaring when they're actually deeply feeling — they just express care through action and provision rather than emotional display. Their maturity gets labeled as lack of warmth.",
-        relationships: "They need respect and tangible evidence of love. They show caring through providing, protecting, and being reliable. They're drawn to partners they admire. Words without action mean nothing to them.",
-        growth: "Learning that receiving help isn't weakness. Permission to be vulnerable is permission to be human. Not everything has to be earned. Joy and play have value beyond productivity.",
-        power: "When they fully own their emotional executive nature, they become pillars — someone others can absolutely depend on while also allowing themselves to be supported and vulnerable.",
-        somatic: "They feel emotions in their bones, joints, and skeletal system — heaviness, responsibility, physical manifestation of emotional weight. They may carry tension in their shoulders, jaw, and spine.",
-        parentGuidance: "Let them accomplish things — it genuinely helps them feel better. Also teach that rest isn't lazy. Model being vulnerable and receiving help. Never shame their seriousness, but add joy. Tell them they're loved for who they are, not what they achieve.",
-        affirmation: "Your steadiness is a gift. You are worthy of love just for being. Rest is not weakness."
+        misread: "Las personas pueden verlos como fríos o indiferentes cuando en realidad están sintiendo profundamente; simplemente expresan cuidado a través de la acción y la provisión en lugar de una exhibición emocional. Su madurez es etiquetada como falta de calidez.",
+        relationships: "Necesitan respeto y pruebas tangibles de amor. Demuestran cariño brindando, protegiendo y siendo confiables. Se sienten atraídos por socios que admiran. Las palabras sin acción no significan nada para ellos.",
+        growth: "Aprender que recibir ayuda no es debilidad. El permiso para ser vulnerable es el permiso para ser humano. No todo hay que ganárselo. La alegría y el juego tienen valor más allá de la productividad.",
+        power: "Cuando se adueñan plenamente de su naturaleza ejecutiva emocional, se convierten en pilares: alguien en quien los demás pueden depender absolutamente y al mismo tiempo se permiten ser apoyados y vulnerables.",
+        somatic: "Sienten emociones en sus huesos, articulaciones y sistema esquelético: pesadez, responsabilidad, manifestación física de peso emocional. Pueden tener tensión en los hombros, la mandíbula y la columna.",
+        parentGuidance: "Permítales lograr cosas; eso realmente les ayuda a sentirse mejor. Enseñar también que descansar no es pereza. Modele ser vulnerable y recibir ayuda. Nunca avergüences su seriedad, pero agrega alegría. Dígales que los aman por lo que son, no por lo que logran.",
+        affirmation: "Tu estabilidad es un regalo. Eres digno de amor sólo por ser. El descanso no es debilidad."
     },
     
     "Aquarius": {
-        title: "The Emotional Innovator",
-        hook: "This soul's inner world values freedom, individuality, and progressive thinking — they need space to be authentically themselves without conforming to others' emotional expectations.",
-        coreIdentity: "The Moon in Aquarius gives this child an emotional nature that's independent, unconventional, and intellectually-focused. They observe feelings with curiosity rather than getting lost in them. Their emotional expression is unique.",
+        title: "El innovador emocional",
+        hook: "El mundo interior de esta alma valora la libertad, la individualidad y el pensamiento progresista; necesitan espacio para ser auténticamente ellos mismos sin ajustarse a las expectativas emocionales de los demás.",
+        coreIdentity: "La Luna en Acuario le da a este niño una naturaleza emocional independiente, poco convencional y centrada intelectualmente. Observan los sentimientos con curiosidad en lugar de perderse en ellos. Su expresión emocional es única.",
         external: "Otros experimentan a este niño como emocionalmente único y refrescantemente auténtico. No siguen guiones emocionales esperados. Su originalidad es liberadora para quienes valoran la verdad por encima de las convenciones.",
         behavior: "Cuando surgen sentimientos, los observan analíticamente, casi desde la distancia. Procesan las emociones entendiéndolas conceptualmente. Pueden parecer indiferentes cuando en realidad están procesando a su manera única.",
         strength: "Capacidad de amar sin posesividad. Apoyan la individualidad y la libertad de las personas. No intentan cambiar a la gente. Su amor es más liberador que restrictivo. Ayudan a otros a ver más allá de los límites.",
@@ -344,60 +344,60 @@ var DEEP_RISING_READINGS = {
         lifePath: "Su camino implica aprender a transformar en lugar de destruir, a utilizar su poder para curar en lugar de controlar, y a confiar en que la vulnerabilidad es en realidad su mayor fortaleza. Están aquí para enfrentar las profundidades de la vida, guiar a otros a través de sus propias noches oscuras, emerger renovados de cada final y mostrar que la oscuridad no dura.",
         gift: "El don de la transformación y la verdad. Demuestran que la verdad cura incluso cuando duele por primera vez, que la profundidad crea una conexión real, que los finales permiten nuevos comienzos y que el poder puede servir al amor. Su presencia cataliza el cambio.",
         challenge: "Aprender a confiar nuevamente después de la traición, liberar el resentimiento y el deseo de venganza, comprender que la vulnerabilidad es en realidad poder y reconocer que el control es una ilusión que bloquea la intimidad.",
-        parentGuidance: "Respect their privacy absolutely — they will share when ready. Never lie to them; they will know and trust will be damaged. Honor the depth and intensity of their emotional experience. Give them control over appropriate areas of their life. Teach them that trust is possible after hurt and that vulnerability with safe people creates closer connection.",
-        synthesis: "With Scorpio Rising, this child's Sun and Moon energies are filtered through a lens of intensity, depth, and transformative power. Whatever their deeper nature, the world will first experience them as perceptive and magnetically powerful. Their life lessons will often arrive through situations involving trust, power dynamics, and learning to transform pain into wisdom."
+        parentGuidance: "Respete su privacidad absolutamente: compartirán cuando estén listos. Nunca les mientas; lo sabrán y la confianza se verá dañada. Honre la profundidad y la intensidad de su experiencia emocional. Dales control sobre áreas apropiadas de su vida. Enséñeles que la confianza es posible después de un dolor y que la vulnerabilidad con personas seguras crea una conexión más estrecha.",
+        synthesis: "Con Scorpio Rising, las energías del Sol y la Luna de este niño se filtran a través de una lente de intensidad, profundidad y poder transformador. Cualquiera que sea su naturaleza más profunda, el mundo primero los experimentará como perceptivos y magnéticamente poderosos. Sus lecciones de vida a menudo llegarán a través de situaciones que involucran confianza, dinámicas de poder y aprender a transformar el dolor en sabiduría."
     },
     
     "Sagittarius": {
-        title: "The Free Spirit Arrives",
-        firstImpression: "This child enters every room with enthusiastic, expansive energy that seems ready for adventure at any moment. Their presence is optimistic and open — others feel possibilities expand when they're around. There's a questing quality from the first breath, as if they arrived seeking the meaning of life.",
-        lifeApproach: "They approach life as an endless journey of discovery where meaning is always around the next corner. New situations are met with enthusiasm, openness, and genuine excitement about what might be learned. They naturally seek growth, truth, and expansion in all forms — travel, education, philosophy, and experience. Confinement of any kind feels like suffocation. They need horizons to chase and questions to explore. Life is the grandest adventure.",
-        howOthersSee: "Others see a joyful, optimistic soul who inspires faith in possibilities and makes the future seem bright. They may seem restless, tactless, or unreliable to those who value stability, but this is actually genuine enthusiasm for life's possibilities. Their hope is contagious and their honesty refreshing. As this child grows, they'll become someone who reminds others what they're excited about.",
-        physicalExpression: "Often marked by athletic build, open and enthusiastic expressions, and restless energy that seems to need physical space. They may have expansive gestures, direct gaze, and a way of moving that seems always in motion toward something. They radiate freedom, adventure, and optimism that lifts the energy of any space.",
-        lifePath: "Their path involves learning that commitment can be an adventure too, that truth requires tact to land well, and that being present is as important as moving forward. They're here to expand horizons, teach truth, inspire faith in meaning, and remind others that life is a journey worth enjoying fully.",
-        gift: "The gift of faith and meaning. They demonstrate that meaning exists to be found, that optimism is a form of courage, that truth matters, and that adventure is essential for the soul. Their presence expands possibilities.",
-        challenge: "Learning follow-through and commitment, developing tact without sacrificing honesty, understanding that presence sometimes matters more than movement, and recognizing that depth can be as valuable as breadth.",
-        parentGuidance: "Provide adventure, travel, and new experiences — they need expansion. Feed their curiosity with big questions and philosophical discussions. Let them explore physically and intellectually. Teach them that commitment can be an adventure and that tact helps truth land. Show them that being fully present is also a form of exploration.",
-        synthesis: "With Sagittarius Rising, this child's Sun and Moon energies are filtered through a lens of expansion, truth-seeking, and optimistic adventure. Whatever their deeper nature, the world will first experience them as enthusiastic and freedom-loving. Their life lessons will often arrive through situations involving faith, learning, and balancing adventure with commitment."
+        title: "Llega el espíritu libre",
+        firstImpression: "Este niño entra en cada habitación con una energía entusiasta y expansiva que parece estar listo para la aventura en cualquier momento. Su presencia es optimista y abierta: otros sienten que las posibilidades se expanden cuando están cerca. Hay una cualidad de búsqueda desde el primer aliento, como si llegaran buscando el significado de la vida.",
+        lifeApproach: "Abordan la vida como un viaje interminable de descubrimiento donde el significado siempre está a la vuelta de la esquina. Las situaciones nuevas se enfrentan con entusiasmo, apertura y entusiasmo genuino por lo que se puede aprender. Naturalmente, buscan crecimiento, verdad y expansión en todas sus formas: viajes, educación, filosofía y experiencia. El confinamiento de cualquier tipo se siente como una asfixia. Necesitan horizontes que perseguir y preguntas que explorar. La vida es la mayor aventura.",
+        howOthersSee: "Otros ven un alma alegre y optimista que inspira fe en las posibilidades y hace que el futuro parezca brillante. Pueden parecer inquietos, faltos de tacto o poco confiables para quienes valoran la estabilidad, pero en realidad esto es un entusiasmo genuino por las posibilidades de la vida. Su esperanza es contagiosa y su honestidad refrescante. A medida que este niño crezca, se convertirá en alguien que les recuerda a los demás lo que les entusiasma.",
+        physicalExpression: "A menudo se caracteriza por una constitución atlética, expresiones abiertas y entusiastas y una energía inquieta que parece necesitar espacio físico. Pueden tener gestos expansivos, mirada directa y una forma de moverse que parece estar siempre en movimiento hacia algo. Irradian libertad, aventura y optimismo que eleva la energía de cualquier espacio.",
+        lifePath: "Su camino pasa por aprender que el compromiso también puede ser una aventura, que la verdad requiere tacto para aterrizar bien y que estar presente es tan importante como seguir adelante. Están aquí para ampliar horizontes, enseñar la verdad, inspirar fe en el significado y recordar a los demás que la vida es un viaje que vale la pena disfrutar plenamente.",
+        gift: "El don de la fe y el significado. Demuestran que el significado existe para encontrarlo, que el optimismo es una forma de coraje, que la verdad importa y que la aventura es esencial para el alma. Su presencia amplía las posibilidades.",
+        challenge: "Aprender a seguir adelante y a comprometerse, desarrollar tacto sin sacrificar la honestidad, comprender que la presencia a veces importa más que el movimiento y reconocer que la profundidad puede ser tan valiosa como la amplitud.",
+        parentGuidance: "Ofrezca aventuras, viajes y nuevas experiencias: necesitan expansión. Alimente su curiosidad con grandes preguntas y debates filosóficos. Permítales explorar física e intelectualmente. Enséñeles que el compromiso puede ser una aventura y que el tacto ayuda a que la verdad aterrice. Muéstreles que estar completamente presente también es una forma de exploración.",
+        synthesis: "Con Sagitario Ascendente, las energías del Sol y la Luna de este niño se filtran a través de una lente de expansión, búsqueda de la verdad y aventura optimista. Cualquiera que sea su naturaleza más profunda, el mundo los experimentará primero como entusiastas y amantes de la libertad. Sus lecciones de vida a menudo llegarán a través de situaciones que involucran fe, aprendizaje y equilibrio entre aventura y compromiso."
     },
     
     "Capricorn": {
-        title: "The Wise Soul Arrives",
-        firstImpression: "This child enters every room with mature, composed energy that seems older than their years. Their presence is steady and capable — others sense immediately that this is someone who can be relied upon. There's a serious, purposeful quality from the first breath, as if they arrived already knowing that life requires effort.",
-        lifeApproach: "They approach life through the lens of achievement and mastery, instinctively understanding that worthwhile things require work and patience. New situations are met with assessment of what can be built, what goals can be achieved, and what responsibilities need to be met. They naturally seek to improve their position through effort and merit. Success isn't about luck for them — it's about doing the work. They respect competence and hierarchy earned through genuine achievement.",
-        howOthersSee: "Others see a capable, responsible soul who can be counted on no matter what. They may seem too serious, old, or work-focused to those who value play, but this is actually natural maturity and a genuine desire to contribute meaningfully. Their reliability is absolute and their word is their bond. As this child grows, people will automatically look to them for leadership and competence.",
-        physicalExpression: "Often marked by strong bone structure, capable bearing, and restrained expression that suggests self-control. They may seem physically compact, grounded, and built for endurance rather than speed. They radiate competence and quiet authority even in childhood. Their body moves with purpose — they rarely waste motion.",
-        lifePath: "Their path involves learning that rest and play are also important, that receiving help isn't weakness, and that their worth isn't measured only by achievement. They're here to build lasting achievements, demonstrate integrity, show that hard work creates results, and learn that they're worthy of love just for existing.",
-        gift: "The gift of mastery and responsibility. They demonstrate that patience and effort create lasting success, that responsibility is a form of love, that integrity matters, and that some things are worth working hard for. Their competence inspires respect.",
-        challenge: "Learning to relax and play without guilt, receiving help graciously, and understanding that their worth isn't measured only by achievement — they are worthy of love simply for being, not just for doing.",
-        parentGuidance: "Provide achievable goals and celebrate their accomplishments — they need to feel effective. Give them real responsibilities that let them contribute meaningfully. Show them that love isn't conditional on achievement. Teach them that rest and play are productive too. Model work-life balance. Let them be children even when they seem to prefer being adults.",
-        synthesis: "With Capricorn Rising, this child's Sun and Moon energies are filtered through a lens of responsibility, achievement, and patient mastery. Whatever their deeper nature, the world will first experience them as capable and mature. Their life lessons will often arrive through situations involving authority, achievement, and learning that their worth is inherent, not earned."
+        title: "Llega el alma sabia",
+        firstImpression: "Este niño entra en cada habitación con una energía madura y serena que parece mayor que sus años. Su presencia es constante y capaz; los demás sienten inmediatamente que se trata de alguien en quien se puede confiar. Hay una cualidad seria y decidida desde el primer aliento, como si ya hubieran llegado sabiendo que la vida requiere esfuerzo.",
+        lifeApproach: "Enfrentan la vida a través de la lente del logro y la maestría, entendiendo instintivamente que las cosas que valen la pena requieren trabajo y paciencia. Las situaciones nuevas se enfrentan con una evaluación de lo que se puede construir, qué objetivos se pueden lograr y qué responsabilidades se deben cumplir. Naturalmente buscan mejorar su posición mediante el esfuerzo y el mérito. Para ellos, el éxito no se trata de suerte, sino de hacer el trabajo. Respetan la competencia y la jerarquía obtenidas a través de logros genuinos.",
+        howOthersSee: "Otros ven un alma capaz y responsable con la que se puede contar pase lo que pase. Pueden parecer demasiado serios, viejos o centrados en el trabajo para quienes valoran el juego, pero en realidad esto es madurez natural y un deseo genuino de contribuir de manera significativa. Su fiabilidad es absoluta y su palabra es su vínculo. A medida que este niño crezca, la gente automáticamente buscará en él liderazgo y competencia.",
+        physicalExpression: "A menudo se caracteriza por una estructura ósea fuerte, porte capaz y expresión contenida que sugiere autocontrol. Pueden parecer físicamente compactos, firmes y construidos para la resistencia más que para la velocidad. Irradian competencia y autoridad silenciosa incluso en la infancia. Su cuerpo se mueve con un propósito; rara vez desperdician movimiento.",
+        lifePath: "Su camino pasa por aprender que el descanso y el juego también son importantes, que recibir ayuda no es debilidad y que su valor no se mide sólo por los logros. Están aquí para lograr logros duraderos, demostrar integridad, demostrar que el trabajo duro genera resultados y aprender que son dignos de amor sólo por existir.",
+        gift: "El don del dominio y la responsabilidad. Demuestran que la paciencia y el esfuerzo crean un éxito duradero, que la responsabilidad es una forma de amor, que la integridad importa y que vale la pena trabajar duro por algunas cosas. Su competencia inspira respeto.",
+        challenge: "Aprender a relajarse y jugar sin culpa, recibir ayuda con cortesía y comprender que su valor no se mide sólo por los logros: son dignos de amor simplemente por ser, no solo por hacer.",
+        parentGuidance: "Proporcione metas alcanzables y celebre sus logros; deben sentirse efectivos. Deles responsabilidades reales que les permitan contribuir de manera significativa. Muéstreles que el amor no está condicionado al logro. Enséñeles que el descanso y el juego también son productivos. Modelar el equilibrio entre la vida personal y laboral. Que sean niños incluso cuando parezcan preferir ser adultos.",
+        synthesis: "Con Capricornio Rising, las energías del Sol y la Luna de este niño se filtran a través de una lente de responsabilidad, logro y dominio paciente. Cualquiera que sea su naturaleza más profunda, el mundo primero los experimentará como capaces y maduros. Sus lecciones de vida a menudo llegarán a través de situaciones que involucran autoridad, logros y el aprendizaje de que su valor es inherente, no ganado."
     },
     
     "Aquarius": {
-        title: "The Original Soul Arrives",
-        firstImpression: "This child enters every room with unique, independent energy that seems comfortable being different. Their presence is refreshing — others sense this is someone who won't follow the crowd. There's an unconventional, innovative quality from the first breath, as if they arrived from a future others haven't imagined.",
-        lifeApproach: "They approach life through the lens of individuality and progress, instinctively questioning conventional ways and seeking better alternatives. New situations are met with fresh perspective unbound by 'how things have always been done.' They naturally seek authenticity and innovation, and they're drawn to what's unique, progressive, or ahead of its time. They think in terms of collective benefit, not just personal gain. Conformity feels like betrayal of self.",
-        howOthersSee: "Others see a unique, independent soul who doesn't follow crowds and brings fresh perspectives. They may seem detached, strange, or rebellious to those who value convention, but this is actually genuine originality and a refusal to be anyone but themselves. Their authenticity inspires others to question their own conformity. As this child grows, they'll become someone who shows others what's possible.",
-        physicalExpression: "Often marked by unusual features that set them apart, unique style choices that express their individuality, and an electric presence that seems to spark ideas. They may seem somehow ahead of their time in how they carry themselves. They radiate innovation, independence, and a quality that's hard to categorize — because they refuse to be categorized.",
-        lifePath: "Their path involves learning that connection doesn't require conformity, that emotional intimacy doesn't compromise independence, and that some conventional wisdom became conventional because it works. They're here to bring fresh perspectives, serve the collective evolution, and show that being different is a gift to be celebrated.",
-        gift: "The gift of innovation and authenticity. They demonstrate that progress requires someone willing to be first, that authenticity is essential, that the collective matters, and that being different benefits everyone. Their uniqueness opens doors.",
-        challenge: "Learning emotional intimacy without feeling trapped, allowing others genuinely close, and understanding that some conventional approaches became conventional because they work — discernment, not blanket rejection.",
-        parentGuidance: "Celebrate their uniqueness and never try to normalize them. Let them question authority, including yours — and explain your reasoning. Connect them with their 'tribe' of like-minded souls. Teach them that emotional closeness doesn't require giving up independence. Show them that they can be intimately connected with people while still being authentically themselves.",
-        synthesis: "With Aquarius Rising, this child's Sun and Moon energies are filtered through a lens of innovation, authenticity, and progressive thinking. Whatever their deeper nature, the world will first experience them as unique and independent. Their life lessons will often arrive through situations involving belonging, contribution, and learning to balance individuality with intimate connection."
+        title: "Llega el alma original",
+        firstImpression: "Este niño entra en cada habitación con una energía única e independiente que parece cómoda siendo diferente. Su presencia es reconfortante: otros sienten que se trata de alguien que no seguirá a la multitud. Hay una cualidad innovadora y poco convencional desde el primer aliento, como si vinieran de un futuro que otros no habían imaginado.",
+        lifeApproach: "Enfrentan la vida a través de la lente de la individualidad y el progreso, cuestionando instintivamente las formas convencionales y buscando mejores alternativas. Las situaciones nuevas se enfrentan con una perspectiva nueva y libre de "cómo se han hecho siempre las cosas". Naturalmente buscan autenticidad e innovación, y se sienten atraídos por lo que es único, progresista o adelantado a su tiempo. Piensan en términos de beneficio colectivo, no sólo de ganancia personal. La conformidad se siente como una traición a uno mismo.",
+        howOthersSee: "Otros ven un alma única e independiente que no sigue a las multitudes y aporta nuevas perspectivas. Pueden parecer indiferentes, extraños o rebeldes a quienes valoran las convenciones, pero en realidad esto es originalidad genuina y una negativa a ser alguien más que ellos mismos. Su autenticidad inspira a otros a cuestionar su propia conformidad. A medida que este niño crezca, se convertirá en alguien que muestra a los demás lo que es posible.",
+        physicalExpression: "A menudo se caracterizan por características inusuales que los distinguen, elecciones de estilo únicas que expresan su individualidad y una presencia eléctrica que parece generar ideas. Pueden parecer de alguna manera adelantados a su tiempo en su forma de comportarse. Irradian innovación, independencia y una cualidad que es difícil de categorizar, porque se niegan a ser categorizados.",
+        lifePath: "Su camino implica aprender que la conexión no requiere conformidad, que la intimidad emocional no compromete la independencia y que cierta sabiduría convencional se volvió convencional porque funciona. Están aquí para aportar nuevas perspectivas, servir a la evolución colectiva y mostrar que ser diferente es un regalo que debe celebrarse.",
+        gift: "El regalo de la innovación y la autenticidad. Demuestran que el progreso requiere de alguien dispuesto a ser el primero, que la autenticidad es esencial, que lo colectivo importa y que ser diferente beneficia a todos. Su singularidad abre puertas.",
+        challenge: "Aprender intimidad emocional sin sentirse atrapado, permitir que los demás se acerquen genuinamente y comprender que algunos enfoques convencionales se volvieron convencionales porque funcionan: discernimiento, no rechazo generalizado.",
+        parentGuidance: "Celebre su singularidad y nunca intente normalizarlos. Permítales cuestionar la autoridad, incluida la suya, y explique su razonamiento. Conéctelos con su 'tribu' de almas con ideas afines. Enséñeles que la cercanía emocional no requiere renunciar a la independencia. Muéstreles que pueden estar íntimamente conectados con las personas sin dejar de ser auténticamente ellos mismos.",
+        synthesis: "Con Aquarius Rising, las energías del Sol y la Luna de este niño se filtran a través de una lente de innovación, autenticidad y pensamiento progresivo. Cualquiera que sea su naturaleza más profunda, el mundo primero los experimentará como únicos e independientes. Sus lecciones de vida a menudo llegarán a través de situaciones que involucran pertenencia, contribución y aprendizaje para equilibrar la individualidad con la conexión íntima."
     },
     
     "Pisces": {
-        title: "The Mystic Soul Arrives",
-        firstImpression: "This child enters every room with gentle, intuitive energy that seems connected to something beyond the visible. Their presence is soft and fluid — others sense this is someone who perceives what most people miss. There's a dreamy, compassionate quality from the first breath, as if they arrived still remembering where they came from.",
-        lifeApproach: "They approach life through the lens of feeling, intuition, and spiritual connection, sensing undercurrents others are blind to. New situations are met with sensitivity to emotional and energetic atmosphere rather than logical assessment. They naturally seek transcendence, connection, and meaning beyond the material. Boundaries between self and other, between real and imagined, are fluid for them. They live partly in worlds others can't see.",
-        howOthersSee: "Others see a gentle, compassionate soul who seems connected to deeper realms and understands without being told. They may seem spacey, impractical, or out of touch to those who value concrete reality, but this is actually perceiving dimensions others miss. Their sensitivity is a gift that creates profound connection. As this child grows, people will come to them when they need to be truly understood.",
-        physicalExpression: "Often marked by soft features, large or dreamy eyes that seem to see inward as much as outward, and fluid movements that flow rather than stride. They may seem somewhat otherworldly, as if not quite fully inhabiting the physical realm. They radiate compassion, spiritual awareness, and a gentleness that can feel healing to others.",
-        lifePath: "Their path involves learning to stay grounded while remaining open, to set boundaries while staying compassionate, and to function in practical reality while honoring their connection to the transcendent. They're here to bring compassion, artistic vision, and spiritual awareness to a world that desperately needs these gifts.",
-        gift: "The gift of compassion and transcendence. They demonstrate that we are all connected, that love requires no boundaries, that imagination is a doorway to the divine, and that sensitivity is strength. Their presence heals.",
-        challenge: "Learning that boundaries protect their gift rather than limit their love, staying present in reality while honoring imagination, and understanding that their needs matter as much as the suffering souls they're drawn to help.",
-        parentGuidance: "Protect them from emotional and sensory overwhelm — they absorb everything. Honor their sensitivity and imagination as gifts. Create space for dreams, fantasy, and creative play. Teach them gentle boundaries that protect without closing their hearts. Never shame their otherworldly qualities. Help them stay grounded in their bodies. Limit exposure to violence, harsh media, and stressed environments.",
-        synthesis: "With Pisces Rising, this child's Sun and Moon energies are filtered through a lens of sensitivity, compassion, and spiritual awareness. Whatever their deeper nature, the world will first experience them as gentle and intuitive. Their life lessons will often arrive through situations involving boundaries, service, and learning to be compassionate without losing themselves."
+        title: "Llega el alma mística",
+        firstImpression: "Este niño entra en cada habitación con una energía suave e intuitiva que parece conectada a algo más allá de lo visible. Su presencia es suave y fluida; otros sienten que se trata de alguien que percibe lo que la mayoría de la gente pasa por alto. Hay una cualidad soñadora y compasiva desde el primer aliento, como si llegaran todavía recordando de dónde vinieron.",
+        lifeApproach: "Abordan la vida a través de la lente del sentimiento, la intuición y la conexión espiritual, sintiendo corrientes subterráneas que otros no ven. Las situaciones nuevas se enfrentan con sensibilidad a la atmósfera emocional y energética en lugar de una evaluación lógica. Naturalmente buscan trascendencia, conexión y significado más allá de lo material. Los límites entre uno mismo y los demás, entre lo real y lo imaginado, son fluidos para ellos. Viven en parte en mundos que otros no pueden ver.",
+        howOthersSee: "Otros ven un alma gentil y compasiva que parece conectada a reinos más profundos y comprende sin que se lo digan. Pueden parecer vagas, poco prácticas o fuera de contacto para quienes valoran la realidad concreta, pero en realidad se trata de percibir dimensiones que otros pasan por alto. Su sensibilidad es un don que crea una conexión profunda. A medida que este niño crezca, la gente acudirá a él cuando necesite que lo comprendan verdaderamente.",
+        physicalExpression: "A menudo se caracteriza por rasgos suaves, ojos grandes o soñadores que parecen ver tanto hacia adentro como hacia afuera, y movimientos fluidos que fluyen en lugar de caminar. Pueden parecer algo de otro mundo, como si no habitaran completamente el reino físico. Irradian compasión, conciencia espiritual y una gentileza que puede resultar curativa para los demás.",
+        lifePath: "Su camino implica aprender a mantenerse firmes sin dejar de estar abiertos, a establecer límites sin dejar de ser compasivos y a funcionar en la realidad práctica respetando su conexión con lo trascendente. Están aquí para traer compasión, visión artística y conciencia espiritual a un mundo que necesita desesperadamente estos dones.",
+        gift: "El don de la compasión y la trascendencia. Demuestran que todos estamos conectados, que el amor no requiere límites, que la imaginación es una puerta a lo divino y que la sensibilidad es fuerza. Su presencia cura.",
+        challenge: "Aprender que los límites protegen su don en lugar de limitar su amor, permanecer presentes en la realidad mientras honran la imaginación y comprender que sus necesidades importan tanto como las almas que sufren a las que se sienten atraídos a ayudar.",
+        parentGuidance: "Protégelos del agobio emocional y sensorial: lo absorben todo. Honra su sensibilidad e imaginación como regalos. Crea espacio para los sueños, la fantasía y el juego creativo. Enséñales límites suaves que protejan sin cerrar sus corazones. Nunca avergüences sus cualidades de otro mundo. Ayúdalos a mantenerse firmes en sus cuerpos. Limite la exposición a la violencia, los medios hostiles y los entornos estresados.",
+        synthesis: "Con Piscis Rising, las energías del Sol y la Luna de este niño se filtran a través de una lente de sensibilidad, compasión y conciencia espiritual. Cualquiera que sea su naturaleza más profunda, el mundo los experimentará primero como amables e intuitivos. Sus lecciones de vida a menudo llegarán a través de situaciones que involucran límites, servicio y aprender a ser compasivos sin perderse a sí mismos."
     }
 };
 
@@ -407,195 +407,195 @@ var DEEP_RISING_READINGS = {
 
 var DEEP_SUN_READINGS = {
     "Aries": {
-        title: "The Pioneer Spirit",
-        hook: "This soul arrived with fire in their veins, here to break new ground and lead the way into unexplored territory.",
-        coreIdentity: "The Sun in Aries marks a soul born to initiate, pioneer, and lead. This isn't learned behavior — it's coded into their very essence. They're here to start things, to go first, to show others what courage looks like. Their identity is forged in action, not contemplation.",
-        lifeForce: "Their vital energy is fierce, direct, and combustible. They regenerate through challenge and conquest. Stagnation is their kryptonite — they need something to strive toward to feel alive.",
-        creativeExpression: "They create through bold, impulsive action. Their art is the art of beginnings. Every project they start carries the electric charge of possibility. They may not always finish, but their ability to ignite is unmatched.",
-        egoPattern: "Their ego needs to be first, to win, to prove their courage. They may struggle when forced into supporting roles or when their independence is constrained. Their identity is tied to personal achievement.",
-        fatherWound: "The paternal theme often involves learning about healthy aggression and self-assertion. The father may have been absent, competitive, or a model of independence. Healing comes through owning their right to exist and take up space.",
-        leadership: "Natural born leaders who lead from the front. They inspire through action rather than words. Their leadership style is 'follow me' not 'go ahead of me'. They're at their best in crisis situations requiring decisive action.",
-        lifeLesson: "Learning that true strength includes patience. Discovering that some victories require strategy, not just force. Understanding that independence doesn't mean isolation.",
-        shadow: "Unchecked aggression, selfishness, inability to cooperate, burning out from constant pushing. May alienate others through competitive behavior or dismissiveness of slower processes.",
-        integration: "The mature Aries Sun learns that fire can warm as well as burn. They become warriors for others, not just themselves — champions of causes bigger than personal glory.",
-        parentGuidance: "Provide safe outlets for their competitive nature. Never try to break their spirit — redirect it. Let them lead appropriate tasks. Teach them that asking for help is also brave. Channel their energy into physical activity.",
-        affirmation: "I am here to light the way. My courage is my gift to the world."
+        title: "El espíritu pionero",
+        hook: "Esta alma llegó con fuego en las venas, aquí para abrir nuevos caminos y abrir el camino hacia territorios inexplorados.",
+        coreIdentity: "El Sol en Aries marca un alma nacida para iniciar, ser pionera y liderar. Esto no es un comportamiento aprendido: está codificado en su esencia misma. Están aquí para empezar las cosas, para ir primero, para mostrar a los demás cómo es el coraje. Su identidad se forja en la acción, no en la contemplación.",
+        lifeForce: "Su energía vital es feroz, directa y combustible. Se regeneran a través del desafío y la conquista. El estancamiento es su kriptonita: necesitan algo por lo que esforzarse para sentirse vivos.",
+        creativeExpression: "Crean mediante acciones audaces e impulsivas. Su arte es el arte de los comienzos. Cada proyecto que inician lleva la carga eléctrica de la posibilidad. Puede que no siempre terminen, pero su capacidad para encenderse es inigualable.",
+        egoPattern: "Su ego necesita ser lo primero, para ganar, para demostrar su valentía. Pueden tener dificultades cuando se les obliga a desempeñar papeles secundarios o cuando su independencia se ve limitada. Su identidad está ligada a la realización personal.",
+        fatherWound: "El tema paterno a menudo implica aprender sobre la agresión y la autoafirmación saludables. El padre puede haber estado ausente, ser competitivo o ser un modelo de independencia. La curación se logra al reconocer su derecho a existir y ocupar espacio.",
+        leadership: "Líderes natos que lideran desde el frente. Inspiran a través de acciones más que de palabras. Su estilo de liderazgo es "sígueme", no "adelante". Están en su mejor momento en situaciones de crisis que requieren una acción decisiva.",
+        lifeLesson: "Aprender que la verdadera fuerza incluye la paciencia. Descubrir que algunas victorias requieren estrategia, no sólo fuerza. Entender que independencia no significa aislamiento.",
+        shadow: "Agresión desenfrenada, egoísmo, incapacidad para cooperar, agotamiento por los constantes empujones. Puede alienar a otros a través de un comportamiento competitivo o desdeñando procesos más lentos.",
+        integration: "El Sol maduro de Aries aprende que el fuego puede calentar tanto como quemar. Se convierten en guerreros de los demás, no sólo de ellos mismos: campeones de causas más importantes que la gloria personal.",
+        parentGuidance: "Proporcionar salidas seguras para su carácter competitivo. Nunca intentes quebrantar su espíritu: redirigelo. Permítales liderar las tareas apropiadas. Enséñales que pedir ayuda también es valiente. Canalizar su energía hacia la actividad física.",
+        affirmation: "Estoy aquí para iluminar el camino. Mi coraje es mi regalo para el mundo."
     },
     
     "Taurus": {
-        title: "The Earth Keeper",
-        hook: "This soul arrived to teach the world about beauty, stability, and the sacred value of the material realm.",
-        coreIdentity: "The Sun in Taurus marks a soul born to build, sustain, and appreciate. Their identity is rooted in the physical world — what they can touch, taste, see, and create. They're here to demonstrate that the material world is spiritual too.",
-        lifeForce: "Their vital energy is steady, enduring, and regenerative. They have remarkable stamina when they believe in something. Their power lies in persistence — they simply outlast obstacles others couldn't endure.",
-        creativeExpression: "They create through patience and attention to craft. Their art has substance — you can feel its weight and quality. They make beautiful things that last. Their creativity is sensual and grounded.",
-        egoPattern: "Their ego needs security, recognition for their reliability, and appreciation for what they build. They struggle when resources are threatened or when change happens too fast. Their identity is tied to what they possess and produce.",
-        fatherWound: "The paternal theme often involves lessons about provision, security, and self-worth. The father may have emphasized material success or conversely been unreliable. Healing comes through developing unshakeable self-value.",
-        leadership: "They lead through steady example and reliable presence. Their leadership style is patient and persistent. They create stability for others to build upon. They're at their best building long-term projects.",
-        lifeLesson: "Learning that change is not the enemy of security. Discovering that their worth isn't defined by possessions. Understanding that letting go sometimes creates more than holding on.",
-        shadow: "Possessiveness, materialism, stubbornness to the point of self-harm, resistance to necessary change. May sacrifice growth for comfort.",
-        integration: "The mature Taurus Sun learns that true security is internal. They become stewards of beauty and providers of stability — building things that nourish generations.",
-        parentGuidance: "Provide consistent routines and physical comfort. Give them ownership of meaningful possessions. Never force sudden changes — give warning. Let them move at their pace. Show them that love is constant even when circumstances change.",
-        affirmation: "I am here to create lasting beauty. My steadiness is my gift to the world."
+        title: "El guardián de la tierra",
+        hook: "Esta alma llegó para enseñar al mundo sobre la belleza, la estabilidad y el valor sagrado del reino material.",
+        coreIdentity: "El Sol en Tauro marca un alma nacida para construir, sostener y apreciar. Su identidad tiene sus raíces en el mundo físico: lo que pueden tocar, saborear, ver y crear. Están aquí para demostrar que el mundo material también es espiritual.",
+        lifeForce: "Su energía vital es constante, duradera y regenerativa. Tienen una resistencia notable cuando creen en algo. Su poder reside en la perseverancia: simplemente superan los obstáculos que otros no pudieron soportar.",
+        creativeExpression: "Crean con paciencia y atención a la artesanía. Su arte tiene sustancia: puedes sentir su peso y calidad. Hacen cosas hermosas que duran. Su creatividad es sensual y fundamentada.",
+        egoPattern: "Su ego necesita seguridad, reconocimiento por su confiabilidad y aprecio por lo que construyen. Luchan cuando los recursos se ven amenazados o cuando el cambio ocurre demasiado rápido. Su identidad está ligada a lo que poseen y producen.",
+        fatherWound: "El tema paternal a menudo implica lecciones sobre provisión, seguridad y autoestima. Es posible que el padre haya enfatizado el éxito material o, por el contrario, haya sido poco confiable. La curación se logra mediante el desarrollo de una autoestima inquebrantable.",
+        leadership: "Lideran con un ejemplo constante y una presencia confiable. Su estilo de liderazgo es paciente y persistente. Crean estabilidad para que otros puedan aprovecharla. Están en su mejor momento construyendo proyectos a largo plazo.",
+        lifeLesson: "Aprender que el cambio no es enemigo de la seguridad. Descubrir que su valor no se define por las posesiones. Comprender que dejar ir a veces crea más que aguantar.",
+        shadow: "Posesividad, materialismo, terquedad hasta el punto de autolesionarse, resistencia al cambio necesario. Puede sacrificar el crecimiento por la comodidad.",
+        integration: "El Sol maduro de Tauro aprende que la verdadera seguridad es interna. Se convierten en administradores de la belleza y proveedores de estabilidad, construyendo cosas que nutren a generaciones.",
+        parentGuidance: "Proporcione rutinas consistentes y comodidad física. Dales propiedad de posesiones significativas. Nunca fuerces cambios repentinos: avisa. Déjalos moverse a su ritmo. Muéstrales que el amor es constante incluso cuando las circunstancias cambian.",
+        affirmation: "Estoy aquí para crear belleza duradera. Mi estabilidad es mi regalo para el mundo."
     },
     
     "Gemini": {
-        title: "The Divine Messenger",
-        hook: "This soul arrived to connect ideas, people, and possibilities — a bridge between worlds of thought.",
-        coreIdentity: "The Sun in Gemini marks a soul born to communicate, learn, and connect. Their identity is forged through the exchange of ideas. They're here to gather, synthesize, and share information — messengers of the cosmic conversation.",
-        lifeForce: "Their vital energy is quick, curious, and electrical. They regenerate through learning and conversation. Mental stimulation is their fuel — boredom is their true enemy. Their power lies in adaptability.",
-        creativeExpression: "They create through words, ideas, and connections. Their art often involves communication — writing, speaking, teaching, connecting. They synthesize disparate ideas into new combinations.",
-        egoPattern: "Their ego needs to be seen as clever, interesting, and knowledgeable. They struggle when bored or when forced into monotony. Their identity is tied to their intellect and versatility.",
-        fatherWound: "The paternal theme often involves communication and mental connection. The father may have been intellectually engaged or conversely unavailable for genuine dialogue. Healing comes through trusting their own voice.",
-        leadership: "They lead through ideas and communication. Their leadership style is collaborative and adaptable. They connect people and facilitate dialogue. They're at their best brainstorming and problem-solving.",
-        lifeLesson: "Learning that depth is as valuable as breadth. Discovering that some truths cannot be spoken, only felt. Understanding that presence sometimes serves better than clever words.",
-        shadow: "Superficiality, inconsistency, manipulation through words, scattered energy that never settles. May avoid emotional depth through constant mental activity.",
-        integration: "The mature Gemini Sun learns that true communication includes listening. They become teachers and bridges — connecting people and ideas in service of greater understanding.",
-        parentGuidance: "Provide constant mental stimulation and variety. Answer their endless questions. Give them books, puzzles, and conversation. Let them explore multiple interests. Teach them to finish what they start and that feelings matter too.",
-        affirmation: "I am here to connect and communicate. My curiosity is my gift to the world."
+        title: "El Mensajero Divino",
+        hook: "Esta alma llegó para conectar ideas, personas y posibilidades: un puente entre mundos de pensamiento.",
+        coreIdentity: "El Sol en Géminis marca un alma nacida para comunicarse, aprender y conectarse. Su identidad se forja a través del intercambio de ideas. Están aquí para recopilar, sintetizar y compartir información: mensajeros de la conversación cósmica.",
+        lifeForce: "Su energía vital es rápida, curiosa y eléctrica. Se regeneran a través del aprendizaje y la conversación. La estimulación mental es su combustible; el aburrimiento es su verdadero enemigo. Su poder reside en la adaptabilidad.",
+        creativeExpression: "Crean a través de palabras, ideas y conexiones. Su arte a menudo implica comunicación: escribir, hablar, enseñar, conectarse. Sintetizan ideas dispares en nuevas combinaciones.",
+        egoPattern: "Su ego debe ser visto como inteligente, interesante y conocedor. Luchan cuando se aburren o cuando se ven obligados a la monotonía. Su identidad está ligada a su intelecto y versatilidad.",
+        fatherWound: "El tema paterno a menudo implica comunicación y conexión mental. Es posible que el padre haya estado intelectualmente comprometido o, por el contrario, no esté disponible para un diálogo genuino. La curación se logra confiando en su propia voz.",
+        leadership: "Lideran a través de ideas y comunicación. Su estilo de liderazgo es colaborativo y adaptable. Conectan a las personas y facilitan el diálogo. Están en su mejor momento de intercambio de ideas y resolución de problemas.",
+        lifeLesson: "Aprender que la profundidad es tan valiosa como la amplitud. Descubrir que algunas verdades no se pueden decir, sólo sentir. Comprender que la presencia a veces es mejor que las palabras inteligentes.",
+        shadow: "Superficialidad, inconsistencia, manipulación a través de palabras, energía dispersa que nunca se asienta. Puede evitar la profundidad emocional mediante una actividad mental constante.",
+        integration: "El Géminis Sol maduro aprende que la verdadera comunicación incluye escuchar. Se convierten en maestros y puentes que conectan personas e ideas al servicio de una mayor comprensión.",
+        parentGuidance: "Proporcione estimulación mental constante y variedad. Responde a sus infinitas preguntas. Deles libros, rompecabezas y conversación. Permítales explorar múltiples intereses. Enséñales a terminar lo que empiezan y que los sentimientos también importan.",
+        affirmation: "Estoy aquí para conectarme y comunicarme. Mi curiosidad es mi regalo al mundo."
     },
     
     "Cancer": {
-        title: "The Sacred Nurturer",
-        hook: "This soul arrived to teach the world about unconditional love, emotional depth, and the power of belonging.",
-        coreIdentity: "The Sun in Cancer marks a soul born to nurture, protect, and create belonging. Their identity is deeply tied to family, home, and emotional connections. They're here to demonstrate that caring is a form of strength.",
-        lifeForce: "Their vital energy flows like water — with tides and cycles. They regenerate through emotional connection and time in their sanctuary. Their power lies in their capacity for deep caring and emotional intelligence.",
-        creativeExpression: "They create through nurturing — whether children, gardens, homes, or creative works that feel like home. Their art has emotional depth and often carries themes of memory, family, and belonging.",
-        egoPattern: "Their ego needs to be needed, to provide care, to belong. They struggle when rejected by family or when their nurturing is refused. Their identity is tied to their emotional connections and caretaking role.",
-        fatherWound: "The paternal theme often involves issues of protection and emotional safety. The father may have been protective or conversely emotionally unavailable. Healing comes through becoming their own source of security.",
-        leadership: "They lead through caregiving and emotional intelligence. Their leadership style is protective and nurturing. They create family wherever they go. They're at their best creating safe spaces for others.",
-        lifeLesson: "Learning that they can't control others' happiness. Discovering that their needs matter as much as others'. Understanding that letting children (of all kinds) go is also love.",
-        shadow: "Emotional manipulation, smothering, inability to release the past, using guilt as control. May sacrifice their identity to caretaking roles.",
-        integration: "The mature Cancer Sun learns that the safest place is within themselves. They become sources of unconditional love — nurturing without attachment, caring without losing themselves.",
-        parentGuidance: "Create a stable, loving home environment. Honor their sensitivity as strength. Give them 'loveys' and comfort objects. Show them their feelings matter. Teach them that home is always with them, not just a place.",
-        affirmation: "I am here to love and nurture. My caring heart is my gift to the world."
+        title: "El nutridor sagrado",
+        hook: "Esta alma llegó para enseñarle al mundo sobre el amor incondicional, la profundidad emocional y el poder de pertenecer.",
+        coreIdentity: "El Sol en Cáncer marca un alma nacida para nutrir, proteger y crear pertenencia. Su identidad está profundamente ligada a la familia, el hogar y las conexiones emocionales. Están aquí para demostrar que el cariño es una forma de fortaleza.",
+        lifeForce: "Su energía vital fluye como el agua, con mareas y ciclos. Se regeneran a través de la conexión emocional y el tiempo en su santuario. Su poder reside en su capacidad para un profundo cuidado y una inteligencia emocional.",
+        creativeExpression: "Crean a través del cuidado, ya sean niños, jardines, hogares u obras creativas que los hacen sentir como en casa. Su arte tiene profundidad emocional y a menudo conlleva temas de memoria, familia y pertenencia.",
+        egoPattern: "Su ego necesita ser necesario, brindar atención, pertenecer. Luchan cuando la familia los rechaza o cuando se les niega su crianza. Su identidad está ligada a sus conexiones emocionales y su función de cuidado.",
+        fatherWound: "El tema paterno suele implicar cuestiones de protección y seguridad emocional. Es posible que el padre haya sido protector o, por el contrario, emocionalmente indisponible. La curación se produce al convertirse en su propia fuente de seguridad.",
+        leadership: "Lideran a través del cuidado y la inteligencia emocional. Su estilo de liderazgo es protector y enriquecedor. Crean familia dondequiera que vayan. Están en su mejor momento creando espacios seguros para los demás.",
+        lifeLesson: "Aprender que no pueden controlar la felicidad de los demás. Descubrir que sus necesidades importan tanto como las de los demás. Entender que dejar ir a los niños (de todo tipo) también es amor.",
+        shadow: "Manipulación emocional, asfixia, incapacidad para liberar el pasado, utilizar la culpa como control. Pueden sacrificar su identidad por funciones de cuidado.",
+        integration: "El Sol maduro en Cáncer aprende que el lugar más seguro es dentro de sí mismo. Se convierten en fuentes de amor incondicional: cuidados sin apego, cuidados sin perderse.",
+        parentGuidance: "Cree un ambiente hogareño estable y amoroso. Honra su sensibilidad como fuerza. Deles "amores" y objetos reconfortantes. Muéstreles que sus sentimientos importan. Enséñeles que el hogar está siempre con ellos, no sólo un lugar.",
+        affirmation: "Estoy aquí para amar y nutrir. Mi corazón bondadoso es mi regalo para el mundo."
     },
     
     "Leo": {
-        title: "The Divine Radiance",
-        hook: "This soul arrived to remind the world about joy, creative self-expression, and the power of a generous heart.",
-        coreIdentity: "The Sun in Leo is in its home sign — this is a soul who radiates like the sun itself. Their identity is forged through creative self-expression and the experience of being truly seen. They're here to shine and give others permission to shine too.",
-        lifeForce: "Their vital energy is radiant, generous, and warming. They regenerate through creative expression and genuine appreciation. Recognition isn't vanity for them — it's how they know their light is reaching others.",
-        creativeExpression: "They create with bold vision and dramatic flair. Their art demands to be noticed — big, colorful, heartfelt. They often excel in performance and any form of creative expression that puts them center stage.",
-        egoPattern: "Their ego needs to be admired, celebrated, and recognized as special. They struggle with invisibility or criticism of their creative expression. Their identity is tied to their ability to shine and be appreciated.",
-        fatherWound: "The paternal theme often involves learning about healthy ego and self-worth. The father may have been a source of admiration or conversely competitive or dismissive. Healing comes through internal validation of their worth.",
-        leadership: "They lead through inspiration and example. Their leadership style is generous and charismatic. They rule by making others feel special too. They're at their best leading creative ventures and celebration.",
-        lifeLesson: "Learning that their worth doesn't depend on applause. Discovering that supporting others' spotlight can be as fulfilling as their own. Understanding that humility enhances rather than diminishes their light.",
-        shadow: "Ego-driven behavior, attention-seeking at others' expense, inability to admit weakness, wounded pride that attacks rather than heals. May demand loyalty without earning it.",
-        integration: "The mature Leo Sun learns that true radiance illuminates everyone around them. They become sources of warmth and encouragement — their light lifting others rather than overshadowing them.",
-        parentGuidance: "Celebrate their achievements with genuine enthusiasm. Give them creative outlets and audiences. Let them lead and perform. Teach them that others' shine doesn't diminish their own. Show them that love is unconditional, not earned through performance.",
-        affirmation: "I am here to shine and celebrate life. My warm heart is my gift to the world."
+        title: "El resplandor divino",
+        hook: "Esta alma llegó para recordarle al mundo la alegría, la autoexpresión creativa y el poder de un corazón generoso.",
+        coreIdentity: "El Sol en Leo está en su signo natal; esta es un alma que irradia como el sol mismo. Su identidad se forja a través de la autoexpresión creativa y la experiencia de ser verdaderamente visto. Están aquí para brillar y dar permiso a otros para brillar también.",
+        lifeForce: "Su energía vital es radiante, generosa y cálida. Se regeneran a través de la expresión creativa y el aprecio genuino. El reconocimiento no es vanidad para ellos: es la manera de saber que su luz llega a los demás.",
+        creativeExpression: "Crean con una visión audaz y un estilo dramático. Su arte exige llamar la atención: grande, colorido y sincero. A menudo destacan en su actuación y en cualquier forma de expresión creativa que los ponga en el centro del escenario.",
+        egoPattern: "Su ego necesita ser admirado, celebrado y reconocido como especial. Luchan contra la invisibilidad o la crítica de su expresión creativa. Su identidad está ligada a su capacidad de brillar y ser apreciado.",
+        fatherWound: "El tema paterno a menudo implica aprender sobre el ego saludable y la autoestima. El padre puede haber sido motivo de admiración o, por el contrario, competitivo o desdeñoso. La curación se produce a través de la validación interna de su valor.",
+        leadership: "Lideran a través de la inspiración y el ejemplo. Su estilo de liderazgo es generoso y carismático. Gobiernan haciendo que los demás también se sientan especiales. Están en su mejor momento liderando empresas creativas y celebraciones.",
+        lifeLesson: "Aprender que su valor no depende del aplauso. Descubrir que apoyar la atención de los demás puede ser tan gratificante como el propio. Comprender que la humildad realza su luz en lugar de disminuirla.",
+        shadow: "Comportamiento impulsado por el ego, búsqueda de atención a expensas de los demás, incapacidad para admitir debilidad, orgullo herido que ataca en lugar de curar. Puede exigir lealtad sin ganársela.",
+        integration: "El Leo Sol maduro aprende que el verdadero resplandor ilumina a todos los que lo rodean. Se convierten en fuentes de calidez y aliento: su luz eleva a los demás en lugar de eclipsarlos.",
+        parentGuidance: "Celebre sus logros con entusiasmo genuino. Bríndeles salidas y audiencias creativas. Déjelos liderar y actuar. Enséñeles que el brillo de los demás no disminuye el suyo propio. Muéstreles que el amor es incondicional y no se gana mediante el desempeño.",
+        affirmation: "Estoy aquí para brillar y celebrar la vida. Mi cálido corazón es mi regalo para el mundo."
     },
     
     "Virgo": {
-        title: "The Sacred Improver",
-        hook: "This soul arrived to demonstrate that devotion to improvement and service is itself a spiritual path.",
-        coreIdentity: "The Sun in Virgo marks a soul born to analyze, improve, and serve. Their identity is forged through useful work and attention to detail. They're here to demonstrate that the divine lives in the details.",
-        lifeForce: "Their vital energy flows through productive work and helpful service. They regenerate through organized activity and the satisfaction of a job well done. Their power lies in their discernment and dedication.",
-        creativeExpression: "They create through craft and refinement. Their art is often practical — beautiful things that also work perfectly. They excel at editing, refining, and bringing visions to practical completion.",
-        egoPattern: "Their ego needs to be seen as competent, helpful, and precise. They struggle when their work is criticized or when they feel useless. Their identity is tied to their ability to improve and assist.",
-        fatherWound: "The paternal theme often involves high expectations and critical feedback. The father may have been exacting or taught that love must be earned through perfection. Healing comes through self-compassion and accepting imperfection.",
-        leadership: "They lead through competence and attention to quality. Their leadership style is focused on improvement and efficiency. They make systems better. They're at their best solving problems and refining processes.",
-        lifeLesson: "Learning that imperfection is part of being human. Discovering that they are worthy without being useful. Understanding that rest and play are also productive for the soul.",
-        shadow: "Perfectionism, self-criticism, criticism of others, workaholism that avoids emotional life, martyred service. May use busyness to avoid feelings.",
-        integration: "The mature Virgo Sun learns that some messes are sacred. They become devoted servants of improvement — knowing when to refine and when to accept things as they are.",
-        parentGuidance: "Praise effort, not just results. Assign them meaningful tasks and responsibilities. Teach them that mistakes are learning opportunities, not failures. Show them that they are loved for who they are, not what they do. Model self-compassion.",
-        affirmation: "I am here to serve and improve with love. My devotion to excellence is my gift to the world."
+        title: "El mejorador sagrado",
+        hook: "Esta alma llegó para demostrar que la devoción por la superación y el servicio es en sí misma un camino espiritual.",
+        coreIdentity: "El Sol en Virgo marca un alma nacida para analizar, mejorar y servir. Su identidad se forja a través del trabajo útil y la atención al detalle. Están aquí para demostrar que lo divino vive en los detalles.",
+        lifeForce: "Su energía vital fluye a través del trabajo productivo y el servicio servicial. Se regeneran mediante la actividad organizada y la satisfacción del trabajo bien hecho. Su poder reside en su discernimiento y dedicación.",
+        creativeExpression: "Crean a través de la artesanía y el refinamiento. Su arte suele ser práctico: cosas hermosas que también funcionan perfectamente. Se destacan en la edición, el refinamiento y la realización práctica de visiones.",
+        egoPattern: "Su ego debe ser visto como competente, servicial y preciso. Luchan cuando se critica su trabajo o cuando se sienten inútiles. Su identidad está ligada a su capacidad de mejorar y ayudar.",
+        fatherWound: "El tema paterno a menudo implica altas expectativas y comentarios críticos. Es posible que el padre haya sido exigente o haya enseñado que el amor debe ganarse mediante la perfección. La curación se produce a través de la autocompasión y la aceptación de la imperfección.",
+        leadership: "Lideran a través de la competencia y la atención a la calidad. Su estilo de liderazgo está enfocado a la mejora y la eficiencia. Mejoran los sistemas. Están en su mejor momento resolviendo problemas y refinando procesos.",
+        lifeLesson: "Aprender que la imperfección es parte del ser humano. Descubrir que son dignos sin ser útiles. Entender que el descanso y el juego también son productivos para el alma.",
+        shadow: "Perfeccionismo, autocrítica, crítica a los demás, adicción al trabajo que evita la vida emocional, servicio martirizado. Puede utilizar el estar ocupado para evitar sentimientos.",
+        integration: "El Sol maduro de Virgo aprende que algunos líos son sagrados. Se convierten en devotos servidores de la mejora, sabiendo cuándo refinar y cuándo aceptar las cosas tal como son.",
+        parentGuidance: "Elogie el esfuerzo, no sólo los resultados. Asígnales tareas y responsabilidades significativas. Enséñeles que los errores son oportunidades de aprendizaje, no fracasos. Muéstreles que son amados por lo que son, no por lo que hacen. Modele la autocompasión.",
+        affirmation: "Estoy aquí para servir y mejorar con amor. Mi devoción por la excelencia es mi regalo al mundo."
     },
     
     "Libra": {
-        title: "The Harmony Keeper",
-        hook: "This soul arrived to remind the world about beauty, justice, and the art of relationship.",
-        coreIdentity: "The Sun in Libra marks a soul born to create harmony, beauty, and balance. Their identity is deeply relational — they understand themselves through connection with others. They're here to demonstrate that we are all connected.",
-        lifeForce: "Their vital energy flows through partnership and aesthetic appreciation. They regenerate through beauty, balanced relationships, and harmony. Their power lies in their ability to see all sides and create peace.",
-        creativeExpression: "They create through relationship and aesthetic vision. Their art often involves collaboration and always carries beauty. They have natural taste and design sensibility.",
-        egoPattern: "Their ego needs to be seen as fair, beautiful, and good at relationships. They struggle with conflict and isolation. Their identity is tied to their partnerships and their ability to create harmony.",
-        fatherWound: "The paternal theme often involves learning about fairness and self-worth in relationships. The father may have emphasized peace-keeping or conversely created discord. Healing comes through valuing their own needs as highly as others'.",
-        leadership: "They lead through diplomacy and fairness. Their leadership style is collaborative and consensus-building. They create win-win solutions. They're at their best mediating and bringing people together.",
-        lifeLesson: "Learning that conflict isn't always bad. Discovering that their needs matter as much as others'. Understanding that sometimes taking a stand is more beautiful than keeping peace.",
-        shadow: "Indecision, people-pleasing, losing identity in relationships, avoiding necessary conflict. May sacrifice authenticity for approval.",
-        integration: "The mature Libra Sun learns that true harmony includes themselves. They become artists of relationship — creating beauty and justice while honoring their own truth.",
-        parentGuidance: "Give them beautiful environments and harmonious home life. Teach them that their opinion matters even if it causes disagreement. Let them practice negotiating and making choices. Show them that love survives conflict.",
-        affirmation: "I am here to create beauty and harmony. My sense of fairness is my gift to the world."
+        title: "El guardián de la armonía",
+        hook: "Esta alma llegó para recordarle al mundo la belleza, la justicia y el arte de las relaciones.",
+        coreIdentity: "El Sol en Libra marca un alma nacida para crear armonía, belleza y equilibrio. Su identidad es profundamente relacional: se comprenden a sí mismos a través de la conexión con los demás. Están aquí para demostrar que todos estamos conectados.",
+        lifeForce: "Su energía vital fluye a través de la asociación y la apreciación estética. Se regeneran a través de la belleza, las relaciones equilibradas y la armonía. Su poder reside en su capacidad para ver todos los lados y crear paz.",
+        creativeExpression: "Crean a través de la relación y la visión estética. Su arte a menudo implica colaboración y siempre conlleva belleza. Tienen gusto natural y sensibilidad de diseño.",
+        egoPattern: "Su ego debe ser visto como justo, hermoso y bueno en las relaciones. Luchan contra el conflicto y el aislamiento. Su identidad está ligada a sus asociaciones y a su capacidad para crear armonía.",
+        fatherWound: "El tema paternal a menudo implica aprender sobre la justicia y la autoestima en las relaciones. Es posible que el padre haya enfatizado el mantenimiento de la paz o, por el contrario, haya creado discordia. La curación se logra valorando las propias necesidades tanto como las de los demás.",
+        leadership: "Lideran a través de la diplomacia y la justicia. Su estilo de liderazgo es colaborativo y de creación de consenso. Crean soluciones beneficiosas para todos. Están en su mejor momento mediando y uniendo a las personas.",
+        lifeLesson: "Aprender que el conflicto no siempre es malo. Descubrir que sus necesidades importan tanto como las de los demás. Entender que a veces tomar una posición es más hermoso que mantener la paz.",
+        shadow: "Indecisión, agradar a las personas, perder identidad en las relaciones, evitar conflictos necesarios. Puede sacrificar la autenticidad por la aprobación.",
+        integration: "El Sol maduro de Libra aprende que la verdadera armonía los incluye a ellos mismos. Se convierten en artistas de las relaciones, creando belleza y justicia mientras honran su propia verdad.",
+        parentGuidance: "Bríndeles hermosos ambientes y una vida hogareña armoniosa. Enséñeles que su opinión importa incluso si genera desacuerdo. Permítales practicar la negociación y la toma de decisiones. Muéstreles que el amor sobrevive al conflicto.",
+        affirmation: "Estoy aquí para crear belleza y armonía. Mi sentido de la justicia es mi regalo para el mundo."
     },
     
     "Scorpio": {
-        title: "The Soul Transformer",
-        hook: "This soul arrived to plumb the depths, transform shadow into gold, and show the world that death always leads to rebirth.",
-        coreIdentity: "The Sun in Scorpio marks a soul born to transform, probe, and regenerate. Their identity is forged in the depths — through crisis, passion, and profound change. They're here to demonstrate that facing darkness creates light.",
-        lifeForce: "Their vital energy is intense, deep, and regenerative. They regenerate through transformation itself — endings and new beginnings. Their power lies in their ability to face what others fear.",
-        creativeExpression: "They create through transformation and intensity. Their art often deals with taboo subjects, depth psychology, or the hidden. They're drawn to mystery and have natural investigative ability.",
-        egoPattern: "Their ego needs to be seen as powerful, perceptive, and impenetrable. They struggle when their secrets are exposed or when they feel powerless. Their identity is tied to their intensity and insight.",
-        fatherWound: "The paternal theme often involves power, control, and hidden dynamics. The father may have been powerful or absent, trustworthy or betraying. Healing comes through reclaiming personal power without control dramas.",
-        leadership: "They lead through intensity and strategic depth. Their leadership style is transformative and powerful. They aren't afraid of necessary destruction for rebirth. They're at their best leading through crisis and transformation.",
-        lifeLesson: "Learning that vulnerability is actually power. Discovering that trust can be rebuilt after betrayal. Understanding that control is an illusion and surrender brings true strength.",
-        shadow: "Control, manipulation, vengeance, paranoia, using intimacy as weapon. May destroy rather than transform out of fear of being destroyed first.",
-        integration: "The mature Scorpio Sun learns that the greatest power is the power to transform themselves. They become healers of the hidden — bringing light to shadow in service of wholeness.",
-        parentGuidance: "Respect their privacy and intensity. Never lie to them — they will know. Honor their emotional depth. Give them control over appropriate areas. Teach them that trust is possible and that vulnerability with safe people brings closer connection.",
-        affirmation: "I am here to transform and regenerate. My depth and intensity are my gift to the world."
+        title: "El transformador del alma",
+        hook: "Esta alma llegó para sondear las profundidades, transformar la sombra en oro y mostrarle al mundo que la muerte siempre conduce al renacimiento.",
+        coreIdentity: "El Sol en Escorpio marca un alma nacida para transformar, sondear y regenerar. Su identidad se forja en lo más profundo: a través de crisis, pasión y cambios profundos. Están aquí para demostrar que enfrentar la oscuridad crea luz.",
+        lifeForce: "Su energía vital es intensa, profunda y regenerativa. Se regeneran a través de la transformación misma: finales y nuevos comienzos. Su poder reside en su capacidad para afrontar lo que otros temen.",
+        creativeExpression: "Crean a través de la transformación y la intensidad. Su arte a menudo trata temas tabú, psicología profunda o lo oculto. Se sienten atraídos por el misterio y tienen una capacidad de investigación natural.",
+        egoPattern: "Su ego debe ser visto como poderoso, perceptivo e impenetrable. Luchan cuando sus secretos quedan expuestos o cuando se sienten impotentes. Su identidad está ligada a su intensidad y perspicacia.",
+        fatherWound: "El tema paterno a menudo implica poder, control y dinámicas ocultas. El padre puede haber sido poderoso o ausente, digno de confianza o traicionador. La curación se logra recuperando el poder personal sin dramas de control.",
+        leadership: "Lideran a través de intensidad y profundidad estratégica. Su estilo de liderazgo es transformador y poderoso. No temen la destrucción necesaria para renacer. Están en su mejor momento liderando a través de crisis y transformación.",
+        lifeLesson: "Aprender que la vulnerabilidad es en realidad poder. Descubrir que la confianza se puede reconstruir después de una traición. Comprender que el control es una ilusión y que la rendición trae verdadera fuerza.",
+        shadow: "Control, manipulación, venganza, paranoia, uso de la intimidad como arma. Puede destruir en lugar de transformar por miedo a ser destruido primero.",
+        integration: "El Sol maduro de Escorpio aprende que el mayor poder es el poder de transformarse. Se convierten en sanadores de lo oculto, llevando luz a las sombras al servicio de la plenitud.",
+        parentGuidance: "Respete su privacidad e intensidad. Nunca les mientas, ellos lo sabrán. Honra su profundidad emocional. Dales control sobre las áreas apropiadas. Enséñeles que la confianza es posible y que la vulnerabilidad con personas seguras genera una conexión más estrecha.",
+        affirmation: "Estoy aquí para transformar y regenerar. Mi profundidad e intensidad son mi regalo al mundo."
     },
     
     "Sagittarius": {
-        title: "The Truth Seeker",
-        hook: "This soul arrived to explore the far horizons, discover meaning, and share the optimism that comes from a life of adventure.",
-        coreIdentity: "The Sun in Sagittarius marks a soul born to seek, explore, and inspire. Their identity is forged through quest — for truth, meaning, and experience. They're here to demonstrate that life is a grand adventure.",
-        lifeForce: "Their vital energy is expansive, optimistic, and restless. They regenerate through travel, learning, and philosophical exploration. Their power lies in their unshakeable faith that meaning exists.",
-        creativeExpression: "They create through exploration and teaching. Their art often involves travel, philosophy, or expanding perspectives. They're natural storytellers and teachers who inspire through enthusiasm.",
-        egoPattern: "Their ego needs to be seen as wise, adventurous, and free. They struggle with confinement and routine. Their identity is tied to their quest for meaning and their freedom to explore.",
-        fatherWound: "The paternal theme often involves issues of truth, wisdom, and freedom. The father may have been inspiring and philosophical or conversely restrictive and dogmatic. Healing comes through finding their own truth.",
-        leadership: "They lead through inspiration and vision. Their leadership style is enthusiastic and growth-oriented. They point toward the horizon. They're at their best inspiring others toward expansion.",
-        lifeLesson: "Learning that some truths are beyond words. Discovering that presence is sometimes better than pursuit. Understanding that commitment can be its own adventure.",
-        shadow: "Restlessness, tactlessness, over-promising, escaping through constant movement. May avoid depth through perpetual seeking.",
-        integration: "The mature Sagittarius Sun learns that the greatest journey is within. They become teachers and visionaries — sharing wisdom gained from both outer and inner travels.",
-        parentGuidance: "Provide adventure and exploration. Feed their curiosity with books, travel, and new experiences. Let them ask big questions. Teach them that tact matters without crushing their honest nature. Show them that being present is also an adventure.",
-        affirmation: "I am here to seek truth and inspire adventure. My optimism is my gift to the world."
+        title: "El buscador de la verdad",
+        hook: "Esta alma llegó para explorar horizontes lejanos, descubrir significado y compartir el optimismo que surge de una vida de aventuras.",
+        coreIdentity: "El Sol en Sagitario marca un alma nacida para buscar, explorar e inspirar. Su identidad se forja a través de la búsqueda de la verdad, el significado y la experiencia. Están aquí para demostrar que la vida es una gran aventura.",
+        lifeForce: "Su energía vital es expansiva, optimista e inquieta. Se regeneran a través de viajes, aprendizaje y exploración filosófica. Su poder reside en su fe inquebrantable en que el significado existe.",
+        creativeExpression: "Crean a través de la exploración y la enseñanza. Su arte a menudo implica viajes, filosofía o perspectivas en expansión. Son narradores natos y profesores que inspiran mediante el entusiasmo.",
+        egoPattern: "Su ego debe ser visto como sabio, aventurero y libre. Luchan con el encierro y la rutina. Su identidad está ligada a su búsqueda de significado y a su libertad para explorar.",
+        fatherWound: "El tema paternal a menudo involucra cuestiones de verdad, sabiduría y libertad. El padre puede haber sido inspirador y filosófico o, por el contrario, restrictivo y dogmático. La curación llega al encontrar su propia verdad.",
+        leadership: "Lideran a través de la inspiración y la visión. Su estilo de liderazgo es entusiasta y orientado al crecimiento. Apuntan hacia el horizonte. Están en su mejor momento inspirando a otros hacia la expansión.",
+        lifeLesson: "Aprender que algunas verdades están más allá de las palabras. Descubrir esa presencia a veces es mejor que la persecución. Comprender ese compromiso puede ser su propia aventura.",
+        shadow: "Inquietud, falta de tacto, demasiadas promesas, escapar mediante el movimiento constante. Puede evitar la profundidad mediante la búsqueda perpetua.",
+        integration: "El Sol maduro de Sagitario aprende que el mayor viaje está en el interior. Se convierten en maestros y visionarios, compartiendo la sabiduría adquirida en viajes tanto externos como internos.",
+        parentGuidance: "Proporcionar aventura y exploración. Alimente su curiosidad con libros, viajes y nuevas experiencias. Permítales hacer grandes preguntas. Enséñeles que el tacto importa sin aplastar su naturaleza honesta. Muéstrales que estar presente también es una aventura.",
+        affirmation: "Estoy aquí para buscar la verdad e inspirar aventuras. Mi optimismo es mi regalo al mundo."
     },
     
     "Capricorn": {
-        title: "The Master Builder",
-        hook: "This soul arrived to demonstrate what patient effort can achieve — building structures that will stand long after they're gone.",
-        coreIdentity: "The Sun in Capricorn marks a soul born to achieve, build, and master. Their identity is forged through accomplishment and earned respect. They're here to demonstrate that discipline creates lasting results.",
-        lifeForce: "Their vital energy flows through purposeful work and achievement. They regenerate through progress toward meaningful goals. Their power lies in their persistence and ability to delay gratification.",
-        creativeExpression: "They create through discipline and long-term vision. Their art often has traditional elements and built-to-last quality. They excel at creating systems and structures.",
-        egoPattern: "Their ego needs to be seen as capable, successful, and respected. They struggle with failure and lack of recognition for their efforts. Their identity is tied to their achievements and status.",
-        fatherWound: "The paternal theme often involves authority, expectations, and earned love. The father may have been successful but emotionally distant, or may have burdened them with responsibility too young. Healing comes through internal validation.",
-        leadership: "They lead through competence and example. Their leadership style is authoritative and results-oriented. They create lasting institutions. They're at their best building organizations and achieving long-term goals.",
-        lifeLesson: "Learning that their worth isn't measured by achievement alone. Discovering that vulnerability doesn't undermine authority. Understanding that play and rest are also productive.",
-        shadow: "Workaholism, coldness, using status to avoid intimacy, pessimism, treating life as only duty. May sacrifice joy for security.",
-        integration: "The mature Capricorn Sun learns that true mastery includes mastering rest. They become wise builders — creating structures that support human flourishing, not just achievement.",
-        parentGuidance: "Provide them with achievable goals and celebrate their accomplishments. Give them real responsibilities. Show them that love isn't earned through success. Teach them that play and rest are as important as work. Model work-life balance.",
-        affirmation: "I am here to build and achieve with integrity. My dedication is my gift to the world."
+        title: "El maestro constructor",
+        hook: "Esta alma llegó para demostrar lo que se puede lograr con el esfuerzo paciente: construir estructuras que perdurarán mucho tiempo después de su desaparición.",
+        coreIdentity: "El Sol en Capricornio marca un alma nacida para lograr, construir y dominar. Su identidad se forja a través de los logros y el respeto ganado. Están aquí para demostrar que la disciplina genera resultados duraderos.",
+        lifeForce: "Su energía vital fluye a través del trabajo y los logros con propósito. Se regeneran a través del progreso hacia metas significativas. Su poder reside en su persistencia y capacidad para retrasar la gratificación.",
+        creativeExpression: "Crean a través de la disciplina y la visión a largo plazo. Su arte a menudo tiene elementos tradicionales y una calidad construida para durar. Se destacan en la creación de sistemas y estructuras.",
+        egoPattern: "Su ego debe ser visto como capaz, exitoso y respetado. Luchan contra el fracaso y la falta de reconocimiento de sus esfuerzos. Su identidad está ligada a sus logros y estatus.",
+        fatherWound: "El tema paterno suele implicar autoridad, expectativas y amor ganado. Es posible que el padre haya tenido éxito pero emocionalmente distante, o que los haya cargado con responsabilidades siendo demasiado jóvenes. La curación llega a través de la validación interna.",
+        leadership: "Lideran a través de la competencia y el ejemplo. Su estilo de liderazgo es autoritario y orientado a resultados. Crean instituciones duraderas. Están en su mejor momento construyendo organizaciones y logrando objetivos a largo plazo.",
+        lifeLesson: "Aprender que su valor no se mide sólo por los logros. Descubrir esa vulnerabilidad no socava la autoridad. Entender que el juego y el descanso también son productivos.",
+        shadow: "Adicción al trabajo, frialdad, utilizar el estatus para evitar la intimidad, pesimismo, tratar la vida como el único deber. Puede sacrificar la alegría por la seguridad.",
+        integration: "El Sol maduro de Capricornio aprende que el verdadero dominio incluye dominar el descanso. Se convierten en constructores sabios, creando estructuras que apoyan el florecimiento humano, no sólo los logros.",
+        parentGuidance: "Bríndeles metas alcanzables y celebre sus logros. Dales responsabilidades reales. Muéstreles que el amor no se gana con el éxito. Enséñeles que jugar y descansar son tan importantes como el trabajo. Modelar el equilibrio entre la vida personal y laboral.",
+        affirmation: "Estoy aquí para construir y lograr con integridad. Mi dedicación es mi regalo al mundo."
     },
     
     "Aquarius": {
-        title: "The Visionary Revolutionary",
-        hook: "This soul arrived to show humanity its potential — awakening the collective to what's possible when we dare to be different.",
-        coreIdentity: "The Sun in Aquarius marks a soul born to innovate, liberate, and envision. Their identity is forged through originality and contribution to the collective. They're here to demonstrate that being different is a gift.",
-        lifeForce: "Their vital energy flows through innovation and humanitarian pursuits. They regenerate through independence and connection to their tribe of fellow visionaries. Their power lies in their ability to see possibilities others miss.",
-        creativeExpression: "They create through innovation and unconventional vision. Their art often involves technology, social commentary, or experimental forms. They're ahead of their time.",
-        egoPattern: "Their ego needs to be seen as unique, progressive, and independent. They struggle with conformity and being lost in the crowd. Their identity is tied to their originality and contribution to progress.",
-        fatherWound: "The paternal theme often involves issues of belonging and individuality. The father may have been unusual himself, or conversely demanded conformity. Healing comes through embracing their unique nature without isolation.",
-        leadership: "They lead through vision and innovation. Their leadership style is egalitarian and progressive. They inspire change and create movements. They're at their best revolutionizing systems.",
-        lifeLesson: "Learning that emotional intimacy doesn't compromise independence. Discovering that sometimes tradition has wisdom. Understanding that universal love must include specific people.",
-        shadow: "Emotional detachment, contrarian rebellion, alienation, treating humanity better than humans. May use ideology to avoid intimacy.",
-        integration: "The mature Aquarius Sun learns that true freedom includes the freedom to connect deeply. They become humanitarian visionaries — changing systems while honoring individual hearts.",
-        parentGuidance: "Celebrate their uniqueness and different perspective. Let them question authority (including yours). Connect them with their 'tribe.' Teach them that emotional needs aren't a weakness. Show them that they can be close to people while still being independent.",
-        affirmation: "I am here to innovate and liberate. My unique vision is my gift to the world."
+        title: "El revolucionario visionario",
+        hook: "Esta alma llegó para mostrarle a la humanidad su potencial: despertar al colectivo a lo que es posible cuando nos atrevemos a ser diferentes.",
+        coreIdentity: "El Sol en Acuario marca un alma nacida para innovar, liberar y visualizar. Su identidad se forja a través de la originalidad y la contribución al colectivo. Están aquí para demostrar que ser diferente es un regalo.",
+        lifeForce: "Su energía vital fluye a través de la innovación y las actividades humanitarias. Se regeneran a través de la independencia y la conexión con su tribu de compañeros visionarios. Su poder reside en su capacidad de ver posibilidades que otros pasan por alto.",
+        creativeExpression: "Crean a través de la innovación y una visión poco convencional. Su arte a menudo involucra tecnología, comentarios sociales o formas experimentales. Están adelantados a su tiempo.",
+        egoPattern: "Su ego debe ser visto como único, progresista e independiente. Luchan con la conformidad y con perderse entre la multitud. Su identidad está ligada a su originalidad y contribución al progreso.",
+        fatherWound: "El tema paterno a menudo implica cuestiones de pertenencia e individualidad. El padre puede haber sido inusual o, por el contrario, exigió conformidad. La curación se logra al aceptar su naturaleza única sin aislamiento.",
+        leadership: "Lideran a través de la visión y la innovación. Su estilo de liderazgo es igualitario y progresista. Inspiran cambios y crean movimientos. Están en su mejor momento revolucionando sistemas.",
+        lifeLesson: "Aprender que la intimidad emocional no compromete la independencia. Descubrir que a veces la tradición tiene sabiduría. Entender que el amor universal debe incluir a personas específicas.",
+        shadow: "Desapego emocional, rebelión contraria, alienación, tratar a la humanidad mejor que a los humanos. Puede utilizar la ideología para evitar la intimidad.",
+        integration: "El Sol maduro de Acuario aprende que la verdadera libertad incluye la libertad de conectarse profundamente. Se convierten en visionarios humanitarios: cambian sistemas y honran los corazones individuales.",
+        parentGuidance: "Celebre su singularidad y perspectiva diferente. Permítales cuestionar la autoridad (incluida la suya). Conéctelos con su 'tribu'. Enséñeles que las necesidades emocionales no son una debilidad. Muéstreles que pueden estar cerca de las personas sin dejar de ser independientes.",
+        affirmation: "Estoy aquí para innovar y liberar. Mi visión única es mi regalo para el mundo."
     },
     
     "Pisces": {
-        title: "The Divine Channel",
-        hook: "This soul arrived to remind humanity of its connection to the infinite — dissolving the boundaries that create suffering.",
-        coreIdentity: "The Sun in Pisces marks a soul born to transcend, heal, and dream. Their identity is fluid, connected to something larger than themselves. They're here to demonstrate that we are all one consciousness.",
-        lifeForce: "Their vital energy flows from spiritual connection and creative imagination. They regenerate through solitude, art, and transcendent experiences. Their power lies in their compassion and access to the collective unconscious.",
-        creativeExpression: "They create through imagination and spiritual connection. Their art often feels channeled rather than created — music, poetry, visual art that seems to come from beyond. They're natural artists and mystics.",
-        egoPattern: "Their ego needs to be seen as special in its sensitivity and spiritual awareness. They struggle with the harsh edges of material reality. Their identity is connected to the divine but may be unclear in worldly terms.",
-        fatherWound: "The paternal theme often involves idealization, disappointment, and learning discernment. The father may have been spiritual or absent, inspiring or addictive. Healing comes through grounded connection to spirit.",
-        leadership: "They lead through compassion and vision. Their leadership style is inclusive and intuitive. They create spaces where all are welcome. They're at their best healing and inspiring through creative or spiritual work.",
-        lifeLesson: "Learning that boundaries are loving. Discovering that they must save themselves before saving others. Understanding that staying present in reality is also spiritual.",
-        shadow: "Escapism, martyrdom, addiction, victim mentality, boundary-less merger. May avoid reality through fantasy or substances.",
-        integration: "The mature Pisces Sun learns that grounded compassion serves better than ungrounded idealism. They become conscious channels — bringing divine energy into practical healing.",
-        parentGuidance: "Honor their sensitivity and imagination. Create space for dreams and fantasy play. Teach them that reality and fantasy are both valuable. Help them develop gentle boundaries. Show them that they can stay connected while still protecting themselves.",
-        affirmation: "I am here to heal and dream. My compassion and imagination are my gift to the world."
+        title: "El canal divino",
+        hook: "Esta alma llegó para recordarle a la humanidad su conexión con el infinito: disolviendo los límites que crean sufrimiento.",
+        coreIdentity: "El Sol en Piscis marca un alma nacida para trascender, sanar y soñar. Su identidad es fluida y está conectada a algo más grande que ellos mismos. Están aquí para demostrar que todos somos una sola conciencia.",
+        lifeForce: "Su energía vital fluye de la conexión espiritual y la imaginación creativa. Se regeneran a través de la soledad, el arte y las experiencias trascendentes. Su poder reside en su compasión y acceso al inconsciente colectivo.",
+        creativeExpression: "Crean a través de la imaginación y la conexión espiritual. Su arte a menudo parece canalizado en lugar de creado: música, poesía, arte visual que parece venir del más allá. Son artistas y místicos naturales.",
+        egoPattern: "Su ego debe ser visto como especial en su sensibilidad y conciencia espiritual. Luchan con las duras aristas de la realidad material. Su identidad está conectada con lo divino, pero puede no estar clara en términos mundanos.",
+        fatherWound: "El tema paterno a menudo implica idealización, desilusión y aprendizaje de discernimiento. El padre puede haber sido espiritual o ausente, inspirador o adictivo. La curación se produce a través de una conexión a tierra con el espíritu.",
+        leadership: "Lideran a través de la compasión y la visión. Su estilo de liderazgo es inclusivo e intuitivo. Crean espacios donde todos son bienvenidos. Se encuentran en su mejor momento curativos e inspiradores a través del trabajo creativo o espiritual.",
+        lifeLesson: "Aprender que los límites son amorosos. Descubriendo que deben salvarse a sí mismos antes de salvar a otros. Entender que permanecer presente en la realidad también es espiritual.",
+        shadow: "Escapismo, martirio, adicción, mentalidad de víctima, fusión sin límites. Puede evitar la realidad a través de fantasías o sustancias.",
+        integration: "El Sol maduro de Piscis aprende que la compasión fundamentada sirve mejor que el idealismo infundado. Se convierten en canales conscientes que llevan la energía divina a la curación práctica.",
+        parentGuidance: "Honra su sensibilidad e imaginación. Crea espacio para los sueños y el juego de fantasía. Enséñeles que tanto la realidad como la fantasía son valiosas. Ayúdelos a desarrollar límites suaves. Muéstreles que pueden permanecer conectados sin dejar de protegerse.",
+        affirmation: "Estoy aquí para sanar y soñar. Mi compasión e imaginación son mi regalo para el mundo."
     }
 };
 
@@ -604,53 +604,53 @@ var DEEP_SUN_READINGS = {
 // ============================================
 
 var COSMIC_WRAPUP_TEMPLATES = {
-    introduction: `This soul arrived on ${'{DATE}'} at ${'{TIME}'} with a cosmic blueprint that has never existed before and will never exist again. Every planetary position, every aspect, every house cusp aligned in this unique moment to create ${'{NAME}'}.
+    introduction: `Esta alma llegó a ${'{DATE}'} a ${'{TIME}'} con un modelo cósmico que nunca antes había existido y nunca volverá a existir. Cada posición planetaria, cada aspecto, cada cúspide de casa alineada en este momento único para crear ${'{NAME}'}.
 
-What follows is not prediction — it's recognition. This reading doesn't tell ${'{NAME}'} who to become; it reveals who they already are. The stars don't control destiny — they illuminate the unique gifts, challenges, and potentials this soul carries.`,
+Lo que sigue no es una predicción: es reconocimiento. Esta lectura no le dice a ${'{NAME}'} en quién convertirse; revela quiénes son ya. Las estrellas no controlan el destino: iluminan los dones, desafíos y potenciales únicos que conlleva esta alma.`,
 
-    synthesis: `✨ THE CORE ESSENCE
+    synthesis: `✨ LA ESENCIA CENTRAL
 
-At the center of this cosmic design is a ${'{SUN_SIGN}'} Sun — ${'{SUN_BRIEF}'}. This is the light ${'{NAME}'} is here to shine, the hero's journey they're here to walk.
+En el centro de este diseño cósmico hay un Sol ${'{SUN_SIGN}'} — ${'{SUN_BRIEF}'}. Esta es la luz que ${'{NAME}'} está aquí para brillar, el viaje del héroe que están aquí para recorrer.
 
-But the Sun is only the visible surface. Beneath it flows a ${'{MOON_SIGN}'} Moon — ${'{MOON_BRIEF}'}. This is their emotional home base, the way they need to be loved, the inner sanctuary they'll return to throughout life.
+Pero el Sol es sólo la superficie visible. Debajo fluye una Luna ${'{MOON_SIGN}'} — ${'{MOON_BRIEF}'}. Esta es su base emocional, la forma en que necesitan ser amados, el santuario interior al que regresarán durante toda la vida.
 
-And the world will first see them through their ${'{RISING_SIGN}'} Rising — ${'{RISING_BRIEF}'}. This is their costume for this life's play, the character they're learning to embody.
+Y el mundo los verá por primera vez a través de su ${'{RISING_SIGN}'} Rising — ${'{RISING_BRIEF}'}. Éste es su disfraz para la obra de esta vida, el personaje que están aprendiendo a encarnar.
 
-Life Path ${'{LIFE_PATH}'} weaves through everything: ${'{LIFE_PATH_BRIEF}'}. This is the numerological current that will carry them toward their destiny.`,
+Life Path ${'{LIFE_PATH}'} lo atraviesa todo: ${'{LIFE_PATH_BRIEF}'}. Ésta es la corriente numerológica que los llevará hacia su destino.`,
 
-    parenting: `💫 FOR THE PARENTS AND GUIDES
+    parenting: `💫PARA LOS PADRES Y GUÍAS
 
-This child chose YOU. Whether by cosmic design or beautiful accident, you are the ones entrusted with nurturing this unique soul. Here's what they need:
+Este niño te eligió a TI. Ya sea por diseño cósmico o por un hermoso accidente, a ustedes se les ha confiado la tarea de nutrir esta alma única. Esto es lo que necesitan:
 
-${'{NAME}'} needs ${'{CORE_NEEDS}'}.
+${'{NAME}'} necesita ${'{CORE_NEEDS}'}.
 
-They will thrive when ${'{THRIVE_CONDITIONS}'}.
+Prosperarán cuando ${'{THRIVE_CONDITIONS}'}.
 
-They may struggle when ${'{STRUGGLE_CONDITIONS}'}.
+Pueden tener dificultades cuando ${'{STRUGGLE_CONDITIONS}'}.
 
-The greatest gift you can give them is ${'{GREATEST_GIFT}'}.
+El mejor regalo que puedes darles es ${'{GREATEST_GIFT}'}.
 
-Remember: Your job isn't to fix or change them — it's to create the conditions where their unique nature can unfold. Water the seed that's already there; don't try to make an oak tree into a rose.`,
+Recuerde: su trabajo no es arreglarlos o cambiarlos, sino crear las condiciones donde pueda desarrollarse su naturaleza única. Riega la semilla que ya está allí; No intentes convertir un roble en una rosa.`,
 
-    blessing: `🌟 THE FINAL BLESSING
+    blessing: `🌟 LA BENDICIÓN FINAL
 
-To ${'{NAME}'}, on the day your cosmic blueprint became flesh:
+Para ${'{NAME}'}, el día en que tu modelo cósmico se hizo carne:
 
-You are not an accident. You are not random. The universe conspired for billions of years to create this exact moment — these exact parents, this exact time, this exact place, this exact soul.
+No eres un accidente. No eres aleatorio. El universo conspiró durante miles de millones de años para crear este momento exacto: estos padres exactos, este tiempo exacto, este lugar exacto, esta alma exacta.
 
-You carry within you codes and gifts that the world needs. Not the world as it wishes you would be, but the specific world that needs exactly what you came to offer.
+Llevas dentro de ti códigos y dones que el mundo necesita. No el mundo como desearía que fueras, sino el mundo específico que necesita exactamente lo que viniste a ofrecer.
 
-There will be challenges — your chart shows them clearly. But challenges are just invitations to grow into more of who you already are. Every hard aspect is a diamond in the rough. Every square and opposition is strength waiting to be forged.
+Habrá desafíos; su gráfico los muestra claramente. Pero los desafíos son sólo invitaciones a convertirte en lo que ya eres. Cada aspecto difícil es un diamante en bruto. Cada cuadro y oposición es una fuerza esperando ser forjada.
 
-Trust your cosmic blueprint. When in doubt, return to your core essence:
-• Shine like your ${'{SUN_SIGN}'} Sun
-• Feel like your ${'{MOON_SIGN}'} Moon  
-• Enter the world like your ${'{RISING_SIGN}'} Rising
-• Walk the path of your Life Path ${'{LIFE_PATH}'}
+Confía en tu modelo cósmico. En caso de duda, regresa a tu esencia central:
+• Brilla como tu sol ${'{SUN_SIGN}'}
+• Siéntete como tu Luna ${'{MOON_SIGN}'}  
+• Entra al mundo como tu ${'{RISING_SIGN}'} Rising
+• Recorre el camino de tu Camino de Vida ${'{LIFE_PATH}'}
 
-You are complete. You are enough. You are exactly what the universe ordered.
+Estás completo. Eres suficiente. Eres exactamente lo que ordenó el universo.
 
-Welcome to Earth, little star. We've been waiting for you.
+Bienvenida a la Tierra, pequeña estrella. Te estábamos esperando.
 
 ✨🌙⭐`
 };
@@ -661,307 +661,307 @@ Welcome to Earth, little star. We've been waiting for you.
 
 var DEEP_MOON_PHASE_READINGS = {
     "New Moon": {
-        title: "The Seed Carrier",
+        title: "El portador de semillas",
         icon: "🌑",
-        hook: "Born in darkness, carrying the light of what's to come — this soul arrived at the most potent moment of potential, when everything is possible because nothing has yet begun.",
+        hook: "Nacida en la oscuridad, llevando la luz de lo que está por venir, esta alma llegó en el momento de potencial más potente, cuando todo es posible porque nada ha comenzado todavía.",
         
-        coreNature: `The New Moon phase represents the moment just before dawn — the darkest point that precedes new light. A child born during this phase carries the energy of pure potential. They are beginners, initiators, and seed-planters by nature.
+        coreNature: `La fase de Luna Nueva representa el momento justo antes del amanecer, el punto más oscuro que precede a la nueva luz. Un niño nacido durante esta fase lleva la energía del potencial puro. Son principiantes, iniciadores y sembradores de semillas por naturaleza.
         
-This is the soul who came to start things. Not necessarily to finish them — that's a different gift — but to perceive what wants to be born and give it the first spark of life. They may not know where something is going, but they feel when it's time for something new.`,
+Esta es el alma que vino a empezar las cosas. No necesariamente terminarlos -ese es un don diferente- sino percibir lo que quiere nacer y darle la primera chispa de vida. Puede que no sepan hacia dónde va algo, pero sienten cuándo es el momento de hacer algo nuevo.`,
         
-        lifePath: `This soul often experiences life as a series of fresh starts. They may change direction more than others, not from indecision but from their natural attunement to cycles of renewal. When something completes (or stagnates), they feel the pull toward the next beginning.
+        lifePath: `Esta alma a menudo experimenta la vida como una serie de nuevos comienzos. Es posible que cambien de dirección más que otros, no por indecisión sino por su sintonía natural con los ciclos de renovación. Cuando algo se completa (o se estanca), sienten el impulso hacia el siguiente comienzo.
 
-Throughout their life, they'll be the one who senses when the old way has run its course, when it's time to plant new seeds, when a situation needs fresh energy. Others may not understand why they're always starting over — but they're following their lunar programming.`,
+A lo largo de su vida, será él quien sienta cuándo lo antiguo ha seguido su curso, cuándo es el momento de plantar nuevas semillas, cuándo una situación necesita energía fresca. Es posible que otros no entiendan por qué siempre empiezan de nuevo, pero siguen su programación lunar.`,
         
-        innerWorld: `Internally, New Moon souls have a rich, hidden life that others rarely see. Like the dark moon itself, their light isn't visible from the outside. They process deeply in the darkness before bringing anything into form.
+        innerWorld: `Internamente, las almas de Luna Nueva tienen una vida rica y oculta que otros rara vez ven. Al igual que la propia luna oscura, su luz no es visible desde el exterior. Procesan profundamente en la oscuridad antes de darle forma a cualquier cosa.
 
-They may seem mysterious or private, even to themselves. Their ideas and feelings often need to incubate before they can be expressed. Forcing premature expression feels violating — they need to trust their own timing.`,
+Pueden parecer misteriosos o privados, incluso para ellos mismos. A menudo es necesario incubar sus ideas y sentimientos antes de poder expresarlos. Forzar una expresión prematura resulta violatorio: necesitan confiar en su propio tiempo.`,
         
-        gifts: ["Perceiving new possibilities before others", "Initiating projects and movements", "Comfort with uncertainty and the unknown", "Natural attunement to timing and cycles", "Ability to start fresh without baggage", "Pioneering spirit and original vision"],
+        gifts: ["Percibir nuevas posibilidades antes que los demás.", "Iniciando proyectos y movimientos", "Comodidad con la incertidumbre y lo desconocido.", "Sintonía natural con el tiempo y los ciclos.", "Posibilidad de empezar de nuevo sin equipaje", "Espíritu pionero y visión original"],
         
-        shadows: ["Difficulty with follow-through and completion", "Feeling perpetually at the starting line", "Self-doubt about unrealized potential", "Frustration when others can't see their vision", "Starting too many things at once", "Fear of being 'seen' before ready"],
+        shadows: ["Dificultad para seguir y completar", "Sentirse perpetuamente en la línea de salida", "Dudas sobre el potencial no realizado", "Frustración cuando otros no pueden ver su visión.", "Empezar demasiadas cosas a la vez", "Miedo a ser 'visto' antes de estar listo"],
         
-        relationships: `In relationships, New Moon souls bring freshness and possibility. They help others see new directions and untapped potential. However, they may struggle with the 'maintenance' phase of relationships — they're energized by new beginnings but can feel stuck in established patterns.
+        relationships: `En las relaciones, las almas de Luna Nueva aportan frescura y posibilidades. Ayudan a otros a ver nuevas direcciones y potencial sin explotar. Sin embargo, pueden tener dificultades con la fase de "mantenimiento" de las relaciones: los nuevos comienzos les dan energía, pero pueden sentirse estancados en patrones establecidos.
 
-They need partners who appreciate their need for renewal and don't interpret their desire for freshness as dissatisfaction. They're not trying to escape; they're trying to bring new life into what exists.`,
+Necesitan socios que aprecien su necesidad de renovación y no interpreten su deseo de frescura como insatisfacción. No están tratando de escapar; están tratando de traer nueva vida a lo que existe.`,
         
-        spiritualPath: `Spiritually, these souls understand that creation happens in the void. They're comfortable with mystery and the unknown in ways others find unsettling. They may be drawn to practices involving intention-setting, manifestation, or working with potential rather than form.
+        spiritualPath: `Espiritualmente, estas almas entienden que la creación ocurre en el vacío. Se sienten cómodos con el misterio y lo desconocido en formas que otros encuentran inquietantes. Es posible que se sientan atraídos por prácticas que implican establecer intenciones, manifestar o trabajar con el potencial en lugar de la forma.
 
-Their spiritual gift is the ability to access what doesn't exist yet — to sense what's trying to be born. They're natural manifesters, not because they control reality, but because they're aligned with creation's earliest impulses.`,
+Su don espiritual es la capacidad de acceder a lo que aún no existe: sentir lo que está intentando nacer. Son manifestadores naturales, no porque controlen la realidad, sino porque están alineados con los primeros impulsos de la creación.`,
         
-        parentGuidance: `This child may take longer to 'show' themselves than others — and that's okay. Their light is developing in the dark, like a seed underground. Don't rush them to produce visible results.
+        parentGuidance: `Este niño puede tardar más en "mostrarse" que otros, y eso está bien. Su luz se desarrolla en la oscuridad, como una semilla bajo tierra. No los apresure para producir resultados visibles.
 
-Support their many beginnings without demanding completion on everything. Some seeds they plant will grow; others are practice. Help them learn the difference without shaming their exploratory nature.
+Apoye sus muchos comienzos sin exigir la finalización de todo. Algunas semillas que planten crecerán; otros son práctica. Ayúdelos a aprender la diferencia sin avergonzar su naturaleza exploratoria.
 
-They may seem uncertain or unclear about who they are — this is part of their nature, not a problem to fix. Their identity crystallizes through trying things, not through planning.`,
+Pueden parecer inseguros o poco claros acerca de quiénes son; esto es parte de su naturaleza, no un problema que deban solucionar. Su identidad cristaliza probando cosas, no planificando.`,
         
-        affirmation: "Your potential is not a failure — it's a gift. What you sense wanting to be born is real. You are allowed to begin again, and again, and again."
+        affirmation: "Tu potencial no es un fracaso, es un regalo. Lo que sientes al querer nacer es real. Se le permite comenzar una y otra vez."
     },
     
     "Waxing Crescent": {
-        title: "The Brave Seedling",
+        title: "La plántula valiente",
         icon: "🌒",
-        hook: "Born with the first sliver of light breaking through darkness — this soul arrived knowing that faith and forward movement matter more than certainty.",
+        hook: "Nacida con el primer rayo de luz atravesando la oscuridad, esta alma llegó sabiendo que la fe y el avance importan más que la certeza.",
         
-        coreNature: `The Waxing Crescent represents the moment a seed breaks through soil into light — that first brave push against resistance. A child born during this phase carries the energy of determined emergence. They are faith-walkers, pushing forward despite uncertainty.
+        coreNature: `La Media Luna Creciente representa el momento en que una semilla emerge del suelo hacia la luz: ese primer valiente empujón contra la resistencia. Un niño nacido durante esta fase lleva la energía de un surgimiento determinado. Son caminantes de fe que siguen adelante a pesar de la incertidumbre.
 
-This is the soul who knows that action creates clarity. They don't wait until they're sure; they move forward and figure it out along the way. Their courage isn't the absence of fear — it's the decision to act anyway.`,
+Ésta es el alma que sabe que la acción crea claridad. No esperan hasta estar seguros; avanzan y lo descubren en el camino. Su coraje no es la ausencia de miedo: es la decisión de actuar de todos modos.`,
         
-        lifePath: `This soul often experiences life as an ongoing journey into the unknown, supported by faith rather than evidence. They're the ones who take the first step when no path is visible, who say yes before they know how.
+        lifePath: `Esta alma a menudo experimenta la vida como un viaje continuo hacia lo desconocido, respaldado por la fe más que por la evidencia. Son ellos los que dan el primer paso cuando no se ve ningún camino, los que dicen sí antes de saber cómo.
 
-Throughout life, they'll encounter situations requiring them to move forward without guarantees. What others see as reckless, they experience as necessary — they know that waiting for certainty means waiting forever.`,
+A lo largo de la vida se encontrarán con situaciones que les obligarán a seguir adelante sin garantías. Lo que otros ven como imprudente, ellos lo experimentan como necesario: saben que esperar por tener certeza significa esperar por siempre.`,
         
-        innerWorld: `Internally, Waxing Crescent souls have a quiet fire of determination burning beneath the surface. They experience both the pull of momentum and the weight of self-doubt. The key to their nature is learning that doubt doesn't have to stop movement.
+        innerWorld: `Internamente, las almas de la Media Luna Creciente tienen un fuego silencioso de determinación ardiendo debajo de la superficie. Experimentan tanto la atracción del impulso como el peso de la duda. La clave de su naturaleza es aprender que la duda no tiene por qué detener el movimiento.
 
-They often wrestle with faith — in themselves, in life, in their path. This wrestling is their work. They're here to prove (to themselves most of all) that moving forward matters even when you're not sure.`,
+A menudo luchan con la fe: en sí mismos, en la vida, en su camino. Esta lucha es su trabajo. Están aquí para demostrar (sobre todo a sí mismos) que seguir adelante es importante incluso cuando no estás seguro.`,
         
-        gifts: ["Courage to act without certainty", "Faith in forward momentum", "Persistence through early difficulties", "Ability to inspire others to begin", "Natural entrepreneurial spirit", "Comfort with incremental progress"],
+        gifts: ["Coraje para actuar sin certeza", "Fe en el impulso hacia adelante", "Persistencia a través de las primeras dificultades.", "Capacidad de inspirar a otros a comenzar.", "Espíritu emprendedor natural", "Comodidad con el progreso incremental"],
         
-        shadows: ["Impatience with slow growth", "Frustration when effort doesn't show results yet", "Comparing their beginning to others' middles", "Wavering faith when things get hard", "Difficulty tolerating the vulnerability of early stages"],
+        shadows: ["Impaciencia ante el lento crecimiento", "Frustración cuando el esfuerzo aún no da resultados.", "Comparar su comienzo con el desarrollo de otros", "Fe vacilante cuando las cosas se ponen difíciles", "Dificultad para tolerar la vulnerabilidad de las primeras etapas."],
         
-        relationships: `In relationships, Waxing Crescent souls bring enthusiasm and forward energy. They help others get started and push through initial resistance. They're natural encouragers who believe in people's potential.
+        relationships: `En las relaciones, las almas de la Media Luna Creciente aportan entusiasmo y energía. Ayudan a otros a empezar y superar la resistencia inicial. Son animadores naturales que creen en el potencial de las personas.
 
-However, they may grow impatient when relationships hit predictable rough patches. They need to learn that relationship growth, like all growth, includes plateaus and hard seasons.`,
+Sin embargo, pueden impacientarse cuando las relaciones atraviesan momentos difíciles predecibles. Necesitan aprender que el crecimiento de una relación, como todo crecimiento, incluye estancamientos y temporadas difíciles.`,
         
-        spiritualPath: `Spiritually, these souls understand faith as a verb rather than a noun. They know that belief is demonstrated through action, not just affirmed through words. They may be drawn to practices that combine intention with movement — walking meditation, active prayer, embodied spirituality.
+        spiritualPath: `Espiritualmente, estas almas entienden la fe como un verbo más que como un sustantivo. Saben que la creencia se demuestra mediante la acción, no sólo se afirma mediante palabras. Es posible que se sientan atraídos por prácticas que combinan la intención con el movimiento: meditación caminando, oración activa, espiritualidad encarnada.
 
-Their spiritual gift is the courage to act on spiritual guidance before it fully makes sense. They trust the divine through forward movement.`,
+Su don espiritual es el coraje de actuar según la guía espiritual antes de que tenga pleno sentido. Confían en lo divino a través del movimiento hacia adelante.`,
         
-        parentGuidance: `This child needs their efforts celebrated before results appear. The bravery is in the beginning, not the completion. Help them see that starting is its own achievement.
+        parentGuidance: `Este niño necesita que se celebren sus esfuerzos antes de que aparezcan los resultados. La valentía está en el principio, no en la finalización. Ayúdales a ver que empezar es un logro en sí mismo.
 
-Don't compare their progress to others who are further along in their journeys. Celebrate their increments. When they get frustrated with slow growth, remind them that seeds don't become trees overnight.
+No compare su progreso con el de otros que están más avanzados en su viaje. Celebre sus incrementos. Cuando se sientan frustrados por el lento crecimiento, recuérdeles que las semillas no se convierten en árboles de la noche a la mañana.
 
-Support their determination while teaching healthy patience. They're learning that faith isn't just believing good things will happen — it's continuing to act while waiting.`,
+Apoye su determinación mientras les enseña una paciencia saludable. Están aprendiendo que la fe no es sólo creer que sucederán cosas buenas: es continuar actuando mientras se espera.`,
         
-        affirmation: "Your movement matters even before you see results. Faith is the courage to keep going. Every step forward is a victory."
+        affirmation: "Tu movimiento importa incluso antes de que veas los resultados. La fe es el coraje para seguir adelante. Cada paso adelante es una victoria."
     },
     
     "First Quarter": {
-        title: "The Crisis Navigator",
+        title: "El navegador de crisis",
         icon: "🌓",
-        hook: "Born at the critical turning point — this soul arrived knowing that growth requires friction, that decisions must be made, and that sometimes you have to break through to break free.",
+        hook: "Nacida en el punto de inflexión crítico: esta alma llegó sabiendo que el crecimiento requiere fricción, que se deben tomar decisiones y que a veces hay que abrirse paso para liberarse.",
         
-        coreNature: `The First Quarter Moon represents a crisis point — when the growing moon reaches exactly half-illumination and must push through resistance to continue growing. A child born during this phase carries the energy of decisive action. They are breakthrough artists, crisis navigators, and change-makers.
+        coreNature: `El primer cuarto de luna representa un punto de crisis: cuando la luna en crecimiento alcanza exactamente la mitad de su iluminación y debe superar la resistencia para seguir creciendo. Un niño nacido durante esta fase lleva la energía de la acción decisiva. Son artistas innovadores, navegantes de crisis y agentes de cambio.
 
-This is the soul who thrives when things get challenging. They're not thrown by obstacles — they're energized by them. When others see problems, they see puzzles to solve.`,
+Esta es el alma que prospera cuando las cosas se ponen desafiantes. No se dejan vencer por los obstáculos, sino que ellos les dan energía. Cuando otros ven problemas, ven acertijos que resolver.`,
         
-        lifePath: `This soul often experiences life as a series of challenges requiring action. They seem to attract situations demanding decisions, confrontations, and breakthroughs. This isn't bad luck — it's their purpose activating.
+        lifePath: `Esta alma a menudo experimenta la vida como una serie de desafíos que requieren acción. Parecen atraer situaciones que exigen decisiones, confrontaciones y avances. Esto no es mala suerte: es la activación de su propósito.
 
-Throughout life, they'll be the one who takes action when everyone else is frozen. They're built for crisis, not because they create drama, but because they can navigate it when it arrives.`,
+A lo largo de la vida, será él quien actúe cuando todos los demás estén congelados. Están hechos para afrontar las crisis, no porque creen drama, sino porque pueden afrontarlas cuando llegan.`,
         
-        innerWorld: `Internally, First Quarter souls have an urgent sense that something needs to happen. They may feel restless in situations of prolonged stability. They're not comfortable with complacency — something in them pushes toward action and resolution.
+        innerWorld: `Internamente, las almas del Primer Cuarto tienen una sensación urgente de que es necesario que suceda algo. Pueden sentirse inquietos en situaciones de estabilidad prolongada. No se sienten cómodos con la complacencia: algo en ellos los empuja hacia la acción y la resolución.
 
-They often experience inner tension between different parts of themselves or competing desires. This tension is their fuel — it creates the pressure that produces diamonds.`,
+A menudo experimentan tensión interna entre diferentes partes de sí mismos o deseos en competencia. Esta tensión es su combustible: crea la presión que produce los diamantes.`,
         
-        gifts: ["Decisiveness under pressure", "Ability to take necessary action", "Natural crisis management", "Courage to confront issues head-on", "Skill at breaking through obstacles", "Energized by challenges that drain others"],
+        gifts: ["Decisión bajo presión", "Capacidad para tomar las medidas necesarias.", "Gestión de crisis naturales", "Coraje para afrontar los problemas de frente", "Habilidad para superar obstáculos.", "Energizado por los desafíos que agotan a los demás."],
         
-        shadows: ["Creating conflict when bored", "Difficulty with peace and stability", "Impulsive decisions that could have waited", "Confrontational approach when gentleness would work", "Viewing everything as a battle to win", "Exhausting themselves and others with intensity"],
+        shadows: ["Crear conflicto cuando estás aburrido", "Dificultad con la paz y la estabilidad.", "Decisiones impulsivas que podrían haber esperado", "Enfoque de confrontación cuando la gentileza funcionaría", "Ver todo como una batalla por ganar", "Agotarse a sí mismos y a los demás con intensidad."],
         
-        relationships: `In relationships, First Quarter souls bring decisiveness and the courage to address issues directly. They don't let things fester — they'd rather have an uncomfortable conversation now than let resentment build.
+        relationships: `En las relaciones, las almas del Primer Cuarto aportan decisión y coraje para abordar los problemas directamente. No dejan que las cosas se agraven; prefieren tener una conversación incómoda ahora que dejar que se acumule el resentimiento.
 
-However, they may struggle with the peaceful phases of relationships, unconsciously creating conflict to feel engaged. They need to learn that growth doesn't always require crisis.`,
+Sin embargo, pueden tener dificultades con las fases pacíficas de las relaciones, creando inconscientemente conflictos para sentirse comprometidos. Necesitan aprender que el crecimiento no siempre requiere crisis.`,
         
-        spiritualPath: `Spiritually, these souls understand that transformation requires tension. They know that real change involves breaking through, not sliding smoothly. They may be drawn to challenging spiritual practices — fasting, intense meditation, transformative experiences.
+        spiritualPath: `Espiritualmente, estas almas entienden que la transformación requiere tensión. Saben que el verdadero cambio implica avanzar, no deslizarse suavemente. Es posible que se sientan atraídos por prácticas espirituales desafiantes: ayuno, meditación intensa, experiencias transformadoras.
 
-Their spiritual gift is the courage to face their shadows directly. While others avoid inner darkness, they're willing to confront it.`,
+Su don espiritual es el coraje de enfrentar sus sombras directamente. Mientras que otros evitan la oscuridad interior, están dispuestos a afrontarla.`,
         
-        parentGuidance: `This child needs appropriate challenges — without them, they'll create their own, and those may be less constructive. Channel their need for action into sports, competitions, problem-solving, or projects with clear obstacles.
+        parentGuidance: `Este niño necesita desafíos apropiados; sin ellos, creará los suyos propios y pueden ser menos constructivos. Canalice su necesidad de acción hacia deportes, competiciones, resolución de problemas o proyectos con obstáculos claros.
 
-Don't smooth their path completely. They grow through friction. When they're facing challenges, resist the urge to rescue them immediately. Let them experience the victory of breakthrough.
+No allane su camino por completo. Crecen por fricción. Cuando enfrenten desafíos, resista la tentación de rescatarlos de inmediato. Permítales experimentar la victoria del avance.
 
-Help them learn that not everything is a battle. Sometimes the brave choice is to rest, to wait, to let things unfold without forcing.`,
+Ayúdalos a aprender que no todo es una batalla. A veces la decisión valiente es descansar, esperar, dejar que las cosas se desarrollen sin forzar.`,
         
-        affirmation: "Your courage transforms obstacles into opportunities. Your willingness to act when others freeze is a gift. You are built for breakthrough."
+        affirmation: "Tu coraje transforma los obstáculos en oportunidades. Tu voluntad de actuar cuando otros se congelan es un regalo. Estás hecho para avanzar."
     },
     
     "Waxing Gibbous": {
-        title: "The Refiner",
+        title: "El refinador",
         icon: "🌔",
-        hook: "Born in the final push before fullness — this soul arrived knowing that details matter, that excellence requires adjustment, and that almost-there is its own beautiful state.",
+        hook: "Nacida en el empujón final antes de la plenitud, esta alma llegó sabiendo que los detalles importan, que la excelencia requiere ajustes y que casi ahí existe su propio estado hermoso.",
         
-        coreNature: `The Waxing Gibbous Moon represents the phase of refinement — when the moon is nearly full and final adjustments are being made. A child born during this phase carries the energy of perfection and preparation. They are refiners, analysts, and devotees of excellence.
+        coreNature: `La Luna Gibosa Creciente representa la fase de refinamiento, cuando la luna está casi llena y se están realizando los ajustes finales. Un niño nacido durante esta fase lleva la energía de la perfección y la preparación. Son refinadores, analistas y devotos de la excelencia.
 
-This is the soul who notices what others miss. They see the gap between good and great, between almost and done. Their eye for improvement isn't criticism — it's devotion to potential fully realized.`,
+Ésta es el alma que nota lo que otros pasan por alto. Ven la brecha entre lo bueno y lo grandioso, entre lo casi hecho y lo hecho. Su ojo para mejorar no es la crítica: es la devoción al potencial plenamente realizado.`,
         
-        lifePath: `This soul often experiences life as a process of continuous improvement. They're naturally drawn to refining, analyzing, and perfecting. Whatever they touch, they want to make better.
+        lifePath: `Esta alma a menudo experimenta la vida como un proceso de mejora continua. Se sienten naturalmente atraídos por refinar, analizar y perfeccionar. Todo lo que tocan, quieren mejorarlo.
 
-Throughout life, they'll be the one who takes things from 90% to 100%, who polishes what others leave rough, who asks "how can this be better?" Their work often involves improving existing systems rather than creating from scratch.`,
+A lo largo de la vida será él quien lleve las cosas del 90% al 100%, quien pula lo que otros dejan áspero, quien pregunte "¿cómo se puede mejorar esto?". Su trabajo a menudo implica mejorar los sistemas existentes en lugar de crearlos desde cero.`,
         
-        innerWorld: `Internally, Waxing Gibbous souls experience a constant sense of almost. There's always something more to adjust, to improve, to refine. This can create anxiety when they can't accept good enough, or it can fuel genuine excellence.
+        innerWorld: `Internamente, las almas menguantes experimentan una sensación constante de casi. Siempre hay algo más que ajustar, mejorar, refinar. Esto puede generar ansiedad cuando no pueden aceptar lo suficientemente bueno, o puede impulsar la excelencia genuina.
 
-They may struggle with the feeling that nothing is ever quite ready — including themselves. Learning to balance improvement with acceptance is their core work.`,
+Es posible que tengan que luchar con la sensación de que nunca nada está listo, incluidos ellos mismos. Aprender a equilibrar la mejora con la aceptación es su trabajo principal.`,
         
-        gifts: ["Eye for detail and improvement", "Analytical and critical thinking", "Dedication to excellence", "Patience with refinement processes", "Ability to prepare for important moments", "Natural quality control"],
+        gifts: ["Ojo al detalle y la mejora.", "Pensamiento analítico y crítico.", "Dedicación a la excelencia", "Paciencia con los procesos de refinamiento.", "Capacidad para prepararse para momentos importantes.", "Control de calidad natural"],
         
-        shadows: ["Perfectionism that prevents completion", "Analysis paralysis", "Never feeling ready or good enough", "Criticism of self and others", "Inability to enjoy imperfect present", "Anxiety about details others don't notice"],
+        shadows: ["Perfeccionismo que impide completar", "Parálisis del análisis", "Nunca sentirse preparado o lo suficientemente bien", "Crítica a uno mismo y a los demás.", "Incapacidad para disfrutar del presente imperfecto.", "Ansiedad por detalles que otros no notan"],
         
-        relationships: `In relationships, Waxing Gibbous souls bring attention and care. They notice the details of what others need. They remember preferences, they prepare thoughtfully, they show love through attention.
+        relationships: `En las relaciones, las almas gibones crecientes atraen atención y cuidado. Se dan cuenta de los detalles de lo que otros necesitan. Recuerdan preferencias, se preparan cuidadosamente, muestran amor a través de la atención.
 
-However, they may struggle with accepting imperfect partners and imperfect love. They need to learn that love isn't about perfection — it's about presence with what is.`,
+Sin embargo, pueden tener dificultades para aceptar parejas imperfectas y un amor imperfecto. Necesitan aprender que el amor no se trata de perfección, sino de presencia con lo que es.`,
         
-        spiritualPath: `Spiritually, these souls understand that the path of mastery requires endless refinement. They're drawn to practices with clear measures of progress — structured meditation paths, detailed spiritual practices, systems with levels of advancement.
+        spiritualPath: `Espiritualmente, estas almas entienden que el camino de la maestría requiere un refinamiento sin fin. Se sienten atraídos por prácticas con medidas claras de progreso: caminos de meditación estructurados, prácticas espirituales detalladas, sistemas con niveles de avance.
 
-Their spiritual gift is the patience to work on themselves continuously without needing dramatic breakthroughs. They trust gradual improvement.`,
+Su don espiritual es la paciencia para trabajar en sí mismos continuamente sin necesidad de avances dramáticos. Confían en la mejora gradual.`,
         
-        parentGuidance: `This child needs their efforts acknowledged, not just their results. The refinement process is their gift — help them value it even when perfection isn't achieved.
+        parentGuidance: `Este niño necesita que se reconozcan sus esfuerzos, no sólo sus resultados. El proceso de refinamiento es su regalo; ayúdelos a valorarlo incluso cuando no se alcance la perfección.
 
-Watch for perfectionism becoming paralysis. Sometimes they need permission to release something that's good enough, even if it isn't perfect. Help them distinguish between details that matter and details that are just anxiety.
+Esté atento a que el perfeccionismo se convierta en parálisis. A veces necesitan permiso para publicar algo que es lo suficientemente bueno, incluso si no es perfecto. Ayúdelos a distinguir entre los detalles que importan y los detalles que son sólo ansiedad.
 
-Don't dismiss their high standards as unnecessary. Their attention to quality is real and valuable. But do help them find peace with imperfection when appropriate.`,
+No descarte sus altos estándares como innecesarios. Su atención a la calidad es real y valiosa. Pero ayúdelos a encontrar la paz con la imperfección cuando sea apropiado.`,
         
-        affirmation: "Your attention to detail is a gift, not a burden. Excellence is worth pursuing. AND you are already enough, exactly as you are."
+        affirmation: "Su atención al detalle es un regalo, no una carga. Vale la pena perseguir la excelencia. Y ya eres suficiente, exactamente como eres."
     },
     
     "Full Moon": {
-        title: "The Illuminated One",
+        title: "El Iluminado",
         icon: "🌕",
-        hook: "Born at the peak of lunar light — this soul arrived to be seen, to feel fully, and to experience life at maximum intensity.",
+        hook: "Nacida en la cima de la luz lunar, esta alma llegó para ser vista, para sentir plenamente y para experimentar la vida en máxima intensidad.",
         
-        coreNature: `The Full Moon represents the moment of complete illumination — when the moon receives and reflects maximum light. A child born during this phase carries the energy of fullness, intensity, and visibility. They are meant to be seen, to shine, and to experience life without holding back.
+        coreNature: `La Luna Llena representa el momento de iluminación completa, cuando la luna recibe y refleja la máxima luz. Un niño nacido durante esta fase lleva la energía de la plenitud, la intensidad y la visibilidad. Están destinados a ser vistos, brillar y experimentar la vida sin reprimirse.
 
-This is the soul who lives at full volume. Their emotions are big, their presence is noticeable, their life tends toward significant moments. They weren't built for quiet corners — they were built to reflect light.`,
+Ésta es el alma que vive a todo volumen. Sus emociones son grandes, su presencia se nota, su vida tiende a momentos significativos. No fueron construidos para rincones tranquilos, sino para reflejar la luz.`,
         
-        lifePath: `This soul often experiences life as a series of culminations and revelations. They seem to be present for significant moments — climaxes, completions, revelations. Things that were building come to fruition around them.
+        lifePath: `Esta alma a menudo experimenta la vida como una serie de culminaciones y revelaciones. Parecen estar presentes en momentos significativos: clímax, culminaciones, revelaciones. Las cosas que se estaban construyendo se hacen realidad a su alrededor.
 
-Throughout life, they'll experience heightened emotions and significant events. What others experience as normal life, they experience at higher intensity. This isn't drama — it's their lunar frequency.`,
+A lo largo de la vida, experimentarán emociones intensas y acontecimientos importantes. Lo que otros experimentan como vida normal, ellos lo experimentan con mayor intensidad. Esto no es un drama, es su frecuencia lunar.`,
         
-        innerWorld: `Internally, Full Moon souls experience emotions at full blast. They don't have the filter that dampens feeling for others. Everything registers deeply, intensely, completely.
+        innerWorld: `Internamente, las almas de Luna Llena experimentan emociones a todo trapo. No tienen el filtro que amortigua los sentimientos hacia los demás. Todo se registra profunda, intensa y completamente.
 
-This can be overwhelming — they may need to learn to dim their internal volume to function. But their emotional depth is also their greatest gift. They feel what others only glimpse.`,
+Esto puede resultar abrumador: es posible que necesiten aprender a atenuar su volumen interno para funcionar. Pero su profundidad emocional es también su mayor don. Sienten lo que otros sólo vislumbran.`,
         
-        gifts: ["Emotional depth and authenticity", "Natural presence and magnetism", "Ability to complete and fulfill", "Capacity for peak experiences", "Power to illuminate situations", "Gift of being fully present"],
+        gifts: ["Profundidad emocional y autenticidad.", "Presencia natural y magnetismo.", "Capacidad para completar y cumplir", "Capacidad para experiencias cumbre", "Poder para iluminar situaciones.", "Don de estar plenamente presente"],
         
-        shadows: ["Emotional overwhelm", "Need for external validation", "Difficulty with subtlety", "All-or-nothing patterns", "Drama when life feels too quiet", "Exhaustion from intensity"],
+        shadows: ["abrumador emocional", "Necesidad de validación externa", "Dificultad con la sutileza", "Patrones de todo o nada", "Drama cuando la vida se siente demasiado tranquila", "Agotamiento por la intensidad"],
         
-        relationships: `In relationships, Full Moon souls bring intensity, presence, and deep feeling. They love fully, not cautiously. Their partners experience being truly seen and fully loved.
+        relationships: `En las relaciones, las almas de Luna Llena aportan intensidad, presencia y sentimiento profundo. Aman plenamente, no con cautela. Sus parejas experimentan ser verdaderamente vistas y amadas plenamente.
 
-However, they may struggle with the mundane phases of relationships. They need to learn that love isn't always at fever pitch — sometimes it's quiet companionship.`,
+Sin embargo, pueden tener dificultades con las fases mundanas de las relaciones. Necesitan aprender que el amor no siempre es un punto álgido: a veces es un compañerismo tranquilo.`,
         
-        spiritualPath: `Spiritually, these souls understand that illumination means nothing stays hidden. They're drawn to practices that reveal truth — shadow work, therapy, confession, radical honesty.
+        spiritualPath: `Espiritualmente, estas almas entienden que la iluminación significa que nada permanece oculto. Se sienten atraídos por prácticas que revelan la verdad: trabajo en la sombra, terapia, confesión, honestidad radical.
 
-Their spiritual gift is the courage to be fully seen. While others hide parts of themselves, Full Moon souls are here to demonstrate that wholeness includes the parts we usually shadow.`,
+Su don espiritual es el coraje de ser vistos plenamente. Mientras que otros ocultan partes de sí mismos, las almas de Luna Llena están aquí para demostrar que la totalidad incluye las partes que normalmente sombreamos.`,
         
-        parentGuidance: `This child needs plenty of outlets for their intensity. They'll feel everything bigger than other kids — don't tell them they're "too much." They're exactly the right amount for their lunar phase.
+        parentGuidance: `Este niño necesita muchas salidas para su intensidad. Sentirán que todo es más grande que otros niños; no les digas que son "demasiado". Son exactamente la cantidad adecuada para su fase lunar.
 
-Help them develop emotional regulation tools because they need them more than most. But don't try to dim their light — help them learn to work with it.
+Ayúdalos a desarrollar herramientas de regulación emocional porque las necesitan más que la mayoría. Pero no intentes atenuar su luz; ayúdalos a aprender a trabajar con ella.
 
-They need to be seen and acknowledged more than other children might. This isn't ego — it's their nature. Visibility is part of how they process their identity.`,
+Necesitan ser vistos y reconocidos más que otros niños. Esto no es ego, es su naturaleza. La visibilidad es parte de cómo procesan su identidad.`,
         
-        affirmation: "Your intensity is not too much — it's exactly right. You are allowed to shine at full power. Your feelings are meant to be felt fully."
+        affirmation: "Tu intensidad no es demasiada, es exactamente la correcta. Se te permite brillar a máxima potencia. Tus sentimientos deben sentirse plenamente."
     },
     
     "Waning Gibbous": {
-        title: "The Wisdom Sharer",
+        title: "El que comparte la sabiduría",
         icon: "🌖",
-        hook: "Born as the light begins to soften — this soul arrived knowing that wisdom is meant to be shared, that gratitude completes experience, and that the real gift is in the giving.",
+        hook: "Nacida cuando la luz comienza a suavizarse: esta alma llegó sabiendo que la sabiduría debe compartirse, que la gratitud completa la experiencia y que el verdadero regalo está en dar.",
         
-        coreNature: `The Waning Gibbous Moon represents the phase of sharing and gratitude — when the full moon begins to decrease and its light is distributed. A child born during this phase carries the energy of teaching and generosity. They are wisdom-sharers, mentors, and gratitude practitioners.
+        coreNature: `La Luna Gibosa Menguante representa la fase de compartir y gratitud, cuando la luna llena comienza a disminuir y su luz se distribuye. Un niño nacido durante esta fase lleva la energía de la enseñanza y la generosidad. Son personas que comparten sabiduría, mentoras y practicantes de la gratitud.
 
-This is the soul who processes their experiences by sharing them. They learn something, then immediately want to pass it on. Their understanding completes itself in the giving.`,
+Esta es el alma que procesa sus experiencias compartiéndolas. Aprenden algo e inmediatamente quieren transmitirlo. Su comprensión se completa en el dar.`,
         
-        lifePath: `This soul often experiences life as an ongoing education meant to be shared. Every experience becomes a lesson, every lesson becomes a gift for others. They're natural teachers in whatever form that takes.
+        lifePath: `Esta alma a menudo experimenta la vida como una educación continua destinada a ser compartida. Cada experiencia se convierte en una lección, cada lección se convierte en un regalo para los demás. Son maestros naturales en cualquier forma que adopte.
 
-Throughout life, they'll find themselves in positions of sharing knowledge — formally or informally. They may mentor, teach, write, or simply be the friend everyone comes to for wisdom.`,
+A lo largo de su vida, se encontrarán en posiciones de compartir conocimientos, formal o informalmente. Pueden ser mentores, enseñar, escribir o simplemente ser el amigo al que todos acuden en busca de sabiduría.`,
         
-        innerWorld: `Internally, Waning Gibbous souls process experiences by making meaning of them. They're constantly asking "what did I learn from this? What can I share from this?" Nothing is wasted — everything becomes curriculum.
+        innerWorld: `Internamente, las almas menguantes procesan las experiencias dándoles significado. Constantemente preguntan "¿qué aprendí de esto? ¿Qué puedo compartir de esto?" Nada se desperdicia: todo se convierte en plan de estudios.
 
-They may struggle with experiences that don't yield obvious lessons. Learning to simply be with experience, without extracting meaning for others, is part of their growth.`,
+Es posible que tengan dificultades con experiencias que no les dejan lecciones obvias. Aprender a estar simplemente con la experiencia, sin extraer significado para los demás, es parte de su crecimiento.`,
         
-        gifts: ["Natural teaching ability", "Gift for sharing wisdom", "Capacity for gratitude", "Generosity of spirit", "Ability to make meaning", "Skill at distilling experience into lessons"],
+        gifts: ["Capacidad de enseñanza natural.", "Regalo por compartir sabiduría.", "Capacidad de gratitud", "Generosidad de espíritu", "Capacidad de dar significado", "Habilidad para convertir la experiencia en lecciones."],
         
-        shadows: ["Over-giving and depletion", "Difficulty receiving from others", "Turning everything into a lesson (even when not wanted)", "Preachy or know-it-all tendencies", "Using teaching to avoid feeling", "Not enough silence to simply be"],
+        shadows: ["Sobredar y agotarse", "Dificultad para recibir de los demás.", "Convertir todo en una lección (incluso cuando no se quiera)", "Tendencias sermoneadoras o sabelotodo", "Usar la enseñanza para evitar sentir", "No hay suficiente silencio para simplemente estar"],
         
-        relationships: `In relationships, Waning Gibbous souls bring wisdom, generosity, and support. They help their partners grow and learn. They're patient teachers who celebrate others' development.
+        relationships: `En las relaciones, las almas menguantes aportan sabiduría, generosidad y apoyo. Ayudan a sus socios a crecer y aprender. Son profesores pacientes que celebran el desarrollo de los demás.
 
-However, they may struggle with equal partnerships — always being the one with answers can create imbalance. They need to learn to receive as much as they give.`,
+Sin embargo, pueden tener dificultades con asociaciones igualitarias: ser siempre el que tiene las respuestas puede crear desequilibrio. Necesitan aprender a recibir tanto como dan.`,
         
-        spiritualPath: `Spiritually, these souls understand that wisdom completes itself in sharing. They're drawn to spiritual paths that involve teaching, service, or transmission — lineages where knowledge is passed down.
+        spiritualPath: `Espiritualmente, estas almas entienden que la sabiduría se completa al compartir. Se sienten atraídos por caminos espirituales que implican enseñanza, servicio o transmisión: linajes donde se transmite el conocimiento.
 
-Their spiritual gift is the ability to receive something and pass it on without distortion. They're natural vessels for wisdom transmission.`,
+Su don espiritual es la capacidad de recibir algo y transmitirlo sin distorsión. Son vasos naturales para la transmisión de sabiduría.`,
         
-        parentGuidance: `This child will want to share what they learn almost immediately — let them teach you, teach siblings, teach anyone who'll listen. Their processing is in the sharing.
+        parentGuidance: `Este niño querrá compartir lo que aprende casi de inmediato: déjelo que le enseñe a usted, a sus hermanos y a cualquiera que quiera escucharlo. Su procesamiento está en el compartir.
 
-Help them develop boundaries around giving. Not everyone wants their lessons, and they need to learn to offer wisdom rather than impose it.
+Ayúdelos a desarrollar límites en torno a las donaciones. No todos quieren recibir lecciones y necesitan aprender a ofrecer sabiduría en lugar de imponerla.
 
-Make sure they're receiving as much as giving. They may deplete themselves in generosity. Model receiving for them so they learn that's part of the cycle too.`,
+Asegúrese de que reciban tanto como den. Es posible que se agoten en generosidad. Modele la recepción para ellos para que aprendan que eso también es parte del ciclo.`,
         
-        affirmation: "Your wisdom is meant to be shared. Your generosity is a gift. AND you are allowed to receive as much as you give."
+        affirmation: "Tu sabiduría está destinada a ser compartida. Tu generosidad es un regalo. Y puedes recibir tanto como das."
     },
     
     "Last Quarter": {
-        title: "The Sacred Releaser",
+        title: "El liberador sagrado",
         icon: "🌗",
-        hook: "Born at the second crisis point — this soul arrived knowing that letting go takes as much courage as holding on, and that some endings are actually liberations.",
+        hook: "Nacida en el segundo punto de crisis: esta alma llegó sabiendo que dejar ir requiere tanto coraje como aguantar, y que algunos finales son en realidad liberaciones.",
         
-        coreNature: `The Last Quarter Moon represents the moment of release crisis — when the waning moon reaches exactly half-illumination and must surrender to continue its cycle. A child born during this phase carries the energy of conscious release. They are transition guides, ending-honorers, and liberation artists.
+        coreNature: `El último cuarto de luna representa el momento de la crisis de liberación, cuando la luna menguante alcanza exactamente la media iluminación y debe rendirse para continuar su ciclo. Un niño nacido durante esta fase lleva la energía de la liberación consciente. Son guías de transición, honradores del final y artistas de la liberación.
 
-This is the soul who knows how to let go. When others cling, they release. When others fight endings, they midwife them. Their courage is in the surrender.`,
+Ésta es el alma que sabe dejarse ir. Cuando otros se aferran, ellos se liberan. Cuando otros luchan contra los finales, los parten. Su coraje está en la rendición.`,
         
-        lifePath: `This soul often experiences life as a series of necessary endings and releases. They may seem to outgrow things faster than others — relationships, phases, identities. This isn't fickleness; it's their nature activating.
+        lifePath: `Esta alma a menudo experimenta la vida como una serie de finales y liberaciones necesarias. Puede parecer que superan las cosas más rápido que otros: relaciones, fases, identidades. Esto no es inconstancia; es su naturaleza activadora.
 
-Throughout life, they'll be the one who can let go when others can't. They may help others through transitions, goodbyes, and endings. Their presence makes release bearable.`,
+A lo largo de la vida, será él quien podrá dejarse ir cuando otros no puedan. Pueden ayudar a otros en las transiciones, las despedidas y los finales. Su presencia hace que la liberación sea soportable.`,
         
-        innerWorld: `Internally, Last Quarter souls experience a pull toward simplification. They feel what needs to go, what's weighing them down, what's complete even if not finished. This can feel like constant loss, or it can feel like liberation.
+        innerWorld: `Internamente, las almas del último cuarto experimentan una atracción hacia la simplificación. Sienten lo que debe desaparecer, lo que les pesa, lo que está completo aunque no esté terminado. Esto puede parecer una pérdida constante o una liberación.
 
-They may struggle with attachment, not because they don't love but because they feel endings more acutely. Learning to hold things loosely while still loving deeply is their work.`,
+Es posible que tengan dificultades con el apego, no porque no amen sino porque sienten las terminaciones con mayor intensidad. Aprender a mantener las cosas sin apretar y al mismo tiempo amar profundamente es su trabajo.`,
         
-        gifts: ["Courage to let go", "Skill with transitions and endings", "Wisdom about what truly matters", "Ability to release gracefully", "Natural grief processing", "Gift of making space for new"],
+        gifts: ["Coraje para dejar ir", "Habilidad con transiciones y finales.", "Sabiduría sobre lo que realmente importa", "Capacidad para liberar con gracia", "Procesamiento natural del duelo", "Regalo de hacer espacio para lo nuevo."],
         
-        shadows: ["Letting go of things too quickly", "Difficulty with attachment and commitment", "Crisis orientation like First Quarter", "Depression around endings", "Feeling like everything is always ending", "Fear of starting because ending is inevitable"],
+        shadows: ["Dejar ir las cosas demasiado rápido", "Dificultad con el apego y el compromiso.", "Orientación a la crisis como el primer trimestre", "Depresión en torno a los finales", "Sentir que todo siempre termina", "Miedo a empezar porque el final es inevitable"],
         
-        relationships: `In relationships, Last Quarter souls bring wisdom about impermanence and the courage to address what's not working. They won't hold on to dead relationships out of fear.
+        relationships: `En las relaciones, las almas del último cuarto aportan sabiduría sobre la impermanencia y el coraje para abordar lo que no funciona. No se aferrarán a relaciones muertas por miedo.
 
-However, they may let go too easily, or their awareness of impermanence may prevent them from fully committing. They need to learn that knowing something will end doesn't mean they can't invest fully.`,
+Sin embargo, es posible que se dejen llevar con demasiada facilidad o que su conciencia de la impermanencia les impida comprometerse por completo. Necesitan aprender que saber que algo terminará no significa que no puedan invertir plenamente.`,
         
-        spiritualPath: `Spiritually, these souls understand non-attachment as a practice rather than a philosophy. They're drawn to teachings about impermanence, letting go, death and rebirth.
+        spiritualPath: `Espiritualmente, estas almas entienden el desapego como una práctica más que como una filosofía. Se sienten atraídos por las enseñanzas sobre la impermanencia, el abandono, la muerte y el renacimiento.
 
-Their spiritual gift is the ability to release what others cling to desperately. They can model healthy endings and conscious transition.`,
+Su don espiritual es la capacidad de liberar aquello a lo que otros se aferran desesperadamente. Pueden modelar finales saludables y transiciones conscientes.`,
         
-        parentGuidance: `This child will experience endings more intensely and may need help grieving transitions that others barely notice. What seems small might feel significant to them.
+        parentGuidance: `Este niño experimentará los finales con mayor intensidad y es posible que necesite ayuda para afrontar las transiciones que otros apenas notan. Lo que parece pequeño puede parecerles significativo.
 
-Don't push them to 'get over' endings quickly — they process endings deeply, and that's okay. But do help them not become identified with loss.
+No los presiones para que "superen" los finales rápidamente; ellos procesan los finales profundamente y eso está bien. Pero ayúdelos a no identificarse con la pérdida.
 
-Help them see that their ability to let go is a gift, not a curse. Many people suffer because they can't release. This child has the courage to.`,
+Ayúdelos a ver que su capacidad de dejarse llevar es un regalo, no una maldición. Mucha gente sufre porque no puede liberarse. Este niño tiene el coraje de hacerlo.`,
         
-        affirmation: "Your courage to let go is rare and precious. Endings are not failures — they are completions. You make space for new life by releasing the old."
+        affirmation: "Tu coraje para dejar ir es raro y precioso. Los finales no son fracasos, son culminaciones. Haces espacio para una nueva vida liberando la vieja."
     },
     
     "Waning Crescent": {
-        title: "The Sacred Stillness",
+        title: "La sagrada quietud",
         icon: "🌘",
-        hook: "Born in the quiet before renewal — this soul arrived knowing that rest is not laziness, that endings prepare beginnings, and that some of the most important work happens in stillness.",
+        hook: "Nacida en la tranquilidad antes de la renovación, esta alma llegó sabiendo que el descanso no es pereza, que los finales preparan los comienzos y que algunos de los trabajos más importantes ocurren en la quietud.",
         
-        coreNature: `The Waning Crescent Moon represents the phase of surrender and spiritual preparation — when the moon is barely visible and returning to darkness for renewal. A child born during this phase carries the energy of sacred completion. They are rest practitioners, cycle-enders, and preparation specialists.
+        coreNature: `La Luna Creciente Menguante representa la fase de entrega y preparación espiritual, cuando la luna apenas es visible y regresa a la oscuridad para renovarse. Un niño nacido durante esta fase lleva la energía de la realización sagrada. Son practicantes del descanso, ciclistas y especialistas en preparación.
 
-This is the soul who understands the value of pause. They know that creation follows rest, that death precedes rebirth, that the void is not empty but full of potential.`,
+Ésta es el alma que comprende el valor de la pausa. Saben que la creación sigue al descanso, que la muerte precede al renacimiento, que el vacío no está vacío sino lleno de potencial.`,
         
-        lifePath: `This soul often experiences life as a series of completions and preparations. They're naturally drawn to endings, closures, and the quiet work that happens before new things begin.
+        lifePath: `Esta alma a menudo experimenta la vida como una serie de realizaciones y preparaciones. Se sienten naturalmente atraídos por los finales, los cierres y el trabajo silencioso que ocurre antes de que comiencen cosas nuevas.
 
-Throughout life, they'll be the one who knows when it's time to rest rather than push. They may resist a culture that values constant productivity — and they're right to. Someone has to model healthy pause.`,
+A lo largo de la vida, será él quien sepa cuándo es el momento de descansar en lugar de esforzarse. Es posible que se resistan a una cultura que valora la productividad constante, y tienen razón. Alguien tiene que modelar una pausa saludable.`,
         
-        innerWorld: `Internally, Waning Crescent souls experience a pull toward silence, rest, and inner work. Their energy is naturally lower than action-oriented phases, which can feel like a problem in a world that values doing.
+        innerWorld: `Internamente, las almas de la Media Luna Menguante experimentan una atracción hacia el silencio, el descanso y el trabajo interior. Su energía es naturalmente menor que la de las fases orientadas a la acción, lo que puede parecer un problema en un mundo que valora el hacer.
 
-They may struggle with feeling 'lazy' or 'unproductive' when they're actually completing necessary spiritual work. Learning to trust their need for stillness is essential.`,
+Es posible que les cueste sentirse "perezosos" o "improductivos" cuando en realidad están completando el trabajo espiritual necesario. Aprender a confiar en su necesidad de quietud es esencial.`,
         
-        gifts: ["Deep intuition and inner knowing", "Spiritual sensitivity", "Ability to complete cycles gracefully", "Natural capacity for rest and renewal", "Wisdom about the importance of pause", "Connection to the liminal and mysterious"],
+        gifts: ["Intuición profunda y conocimiento interior.", "Sensibilidad espiritual", "Capacidad para completar ciclos con gracia.", "Capacidad natural de descanso y renovación.", "Sabiduría sobre la importancia de la pausa", "Conexión con lo liminal y misterioso."],
         
-        shadows: ["Low energy and withdrawal", "Difficulty initiating new things", "Escapism and avoidance", "Depression or melancholy", "Feeling 'done' before their time", "Isolation disguised as introspection"],
+        shadows: ["Baja energía y abstinencia.", "Dificultad para iniciar cosas nuevas.", "Escapismo y evitación", "Depresión o melancolía", "Sentirse "terminado" antes de tiempo", "Aislamiento disfrazado de introspección"],
         
-        relationships: `In relationships, Waning Crescent souls bring depth, intuition, and spiritual sensitivity. They sense things about their partners that aren't spoken. They provide a calm presence that soothes agitation.
+        relationships: `En las relaciones, las almas de la Media Luna Menguante aportan profundidad, intuición y sensibilidad espiritual. Sienten cosas sobre sus parejas que no se dicen. Proporcionan una presencia tranquila que alivia la agitación.
 
-However, they may withdraw when they need energy they don't have. They need partners who understand their need for solitude and don't interpret it as rejection.`,
+Sin embargo, pueden retirarse cuando necesitan energía que no tienen. Necesitan socios que comprendan su necesidad de soledad y no la interpreten como rechazo.`,
         
-        spiritualPath: `Spiritually, these souls have a natural advantage — they're already oriented toward inner experience. They're drawn to contemplative practices, mysticism, and paths that value being over doing.
+        spiritualPath: `Espiritualmente, estas almas tienen una ventaja natural: ya están orientadas hacia la experiencia interior. Se sienten atraídos por las prácticas contemplativas, el misticismo y los caminos que valoran el ser más que el hacer.
 
-Their spiritual gift is access to the liminal — the space between worlds, between phases, between identities. They can navigate the void that terrifies others.`,
+Su don espiritual es el acceso a lo liminal: el espacio entre mundos, entre fases, entre identidades. Pueden navegar por el vacío que aterroriza a los demás.`,
         
-        parentGuidance: `This child genuinely needs more rest and quiet time than others. This is not laziness — it's their nature. Protect their need for solitude without making them feel weird for needing it.
+        parentGuidance: `Este niño realmente necesita más descanso y tiempo de tranquilidad que los demás. Esto no es pereza, es su naturaleza. Protege su necesidad de soledad sin que se sientan raros por necesitarla.
 
-Help them find ways to engage with the world that don't require constant high energy. They may thrive in supportive roles, behind-the-scenes work, or fields that value depth over speed.
+Ayúdelos a encontrar formas de interactuar con el mundo que no requieran mucha energía constante. Pueden prosperar en roles de apoyo, trabajo detrás de escena o campos que valoran la profundidad sobre la velocidad.
 
-Watch for withdrawal becoming isolation, or rest becoming avoidance. There's a line between healthy pause and unhealthy hiding — help them find it.`,
+Esté atento a que la abstinencia se convierta en aislamiento o que el descanso se convierta en evitación. Hay una línea entre una pausa saludable y un escondite no saludable: ayúdelos a encontrarla.`,
         
-        affirmation: "Your stillness is not laziness — it's wisdom. Rest is sacred work. You are preparing for something new, even when you can't see it yet."
+        affirmation: "Tu quietud no es pereza, es sabiduría. El descanso es un trabajo sagrado. Te estás preparando para algo nuevo, incluso cuando aún no puedes verlo."
     }
 };
 

@@ -451,6 +451,179 @@
     </url>
     
     <!-- ═══════════════════════════════════════════════════════════════
+         MICRO-TOOL APPS
+         ═══════════════════════════════════════════════════════════════ -->
+    
+    <url>
+        <loc>https://quantummerlin.com/trust-radar</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/hidden-strengths-revealer</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/identity-split-detector</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/power-avoidance-pattern</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/compatibility</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/angel-number-calculator</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/quantum-sigil-generator</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/quantum-sigil-gallery</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/widgets</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/quantum-forum</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/reading-generator</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- ═══════════════════════════════════════════════════════════════
+         LEGAL PAGES (ROOT)
+         ═══════════════════════════════════════════════════════════════ -->
+    
+    <url>
+        <loc>https://quantummerlin.com/privacy</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/terms</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/disclaimer</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- ═══════════════════════════════════════════════════════════════
+         SUBFOLDER APPS — INDEX PAGES
+         ═══════════════════════════════════════════════════════════════ -->
+    
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/lifestrategy/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/ultimate/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/qrcodes-science/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/classic/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/classic/tools_index.html</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/Expand/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/kpop/</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://quantummerlin.com/kpop/tools_index.html</loc>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- ═══════════════════════════════════════════════════════════════
          A MOMENT IN TIME — COSMIC FORECAST GENERATOR
          ═══════════════════════════════════════════════════════════════ -->
     

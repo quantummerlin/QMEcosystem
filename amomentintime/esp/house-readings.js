@@ -67,7 +67,7 @@ Cree un ambiente hogareño estable y cálido. El tiempo y las tradiciones famili
             keywords: ["Creatividad", "Alegría", "Autoexpresión", "Jugar"],
             reading: `El Sol en la Quinta Casa crea un artista natural y un espíritu creativo. La esencia misma de este niño es alegre, juguetona y expresiva. Están aquí para recordarnos a todos que no nos tomemos la vida demasiado en serio y que la creatividad es esencial para el ser humano.
 
-Desde el principio, es probable que muestren talentos artísticos o talento dramático. Necesitan salidas creativas como necesitan aire, ya sea arte, música, danza, teatro o juegos imaginativos. Su personalidad brilla más cuando crean o actúan. Life is their stage.
+Desde el principio, es probable que muestren talentos artísticos o talento dramático. Necesitan salidas creativas como necesitan aire, ya sea arte, música, danza, teatro o juegos imaginativos. Su personalidad brilla más cuando crean o actúan. La vida es su escenario.
 
 A medida que crezcan, les atraerán carreras en las artes, el entretenimiento o cualquier campo que permita la autoexpresión creativa. Tienen el don de traer alegría y belleza al mundo. Los niños y el amor romántico también serán temas importantes en la vida.
 
