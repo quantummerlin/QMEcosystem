@@ -78,7 +78,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style id="dynamic-styles">
         /* Base styles - will be customized by config */
@@ -4149,70 +4149,596 @@
         .loading-overlay.active .loading-text {
             animation: loadPulse 2s ease-in-out infinite;
         }
+
+        /* ============================================ */
+        /* 💜 K-POP KOSMIC ANIMATIONS & EFFECTS 💜     */
+        /* ============================================ */
+
+        /* --- Floating Particles Container --- */
+        .kpop-particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .kpop-particle {
+            position: absolute;
+            font-size: 1.2rem;
+            opacity: 0;
+            animation: kpopFloat linear infinite;
+            filter: drop-shadow(0 0 6px rgba(255,105,180,0.5));
+        }
+
+        @keyframes kpopFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.6; }
+            100% {
+                transform: translateY(-10vh) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* --- Neon Glow Text Effect --- */
+        @keyframes neonPulse {
+            0%, 100% {
+                text-shadow: 
+                    0 0 7px rgba(255,105,180,0.6),
+                    0 0 20px rgba(255,105,180,0.4),
+                    0 0 40px rgba(168,85,247,0.3);
+            }
+            50% {
+                text-shadow: 
+                    0 0 10px rgba(255,105,180,0.9),
+                    0 0 30px rgba(255,105,180,0.6),
+                    0 0 60px rgba(168,85,247,0.5),
+                    0 0 80px rgba(0,255,255,0.2);
+            }
+        }
+
+        .dark-theme h1,
+        .dark-theme .results-header h1 {
+            animation: neonPulse 3s ease-in-out infinite;
+        }
+
+        /* --- Lightstick Glow Border --- */
+        @keyframes lightstickGlow {
+            0%, 100% {
+                box-shadow: 
+                    0 0 15px rgba(255,105,180,0.3),
+                    0 0 30px rgba(168,85,247,0.15),
+                    inset 0 0 15px rgba(255,105,180,0.05);
+            }
+            50% {
+                box-shadow: 
+                    0 0 25px rgba(255,105,180,0.5),
+                    0 0 50px rgba(168,85,247,0.25),
+                    0 0 80px rgba(0,255,255,0.1),
+                    inset 0 0 25px rgba(255,105,180,0.08);
+            }
+        }
+
+        .dark-theme .reading-card {
+            animation: lightstickGlow 4s ease-in-out infinite;
+            border: 1px solid rgba(255,105,180,0.2);
+            background: linear-gradient(145deg, rgba(168,85,247,0.06), rgba(255,105,180,0.04), rgba(0,255,255,0.02));
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dark-theme .reading-card:hover {
+            border-color: rgba(255,105,180,0.4);
+            transform: translateY(-4px);
+            box-shadow: 
+                0 0 30px rgba(255,105,180,0.4),
+                0 0 60px rgba(168,85,247,0.2),
+                0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        /* --- Photocard Style for Cosmic Snapshot --- */
+        .dark-theme .cosmic-snapshot {
+            background: linear-gradient(135deg, rgba(168,85,247,0.12), rgba(255,105,180,0.08));
+            border: 2px solid rgba(255,105,180,0.25);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-theme .cosmic-snapshot::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                rgba(255,105,180,0.1) 60deg,
+                transparent 120deg,
+                rgba(168,85,247,0.1) 180deg,
+                transparent 240deg,
+                rgba(0,255,255,0.08) 300deg,
+                transparent 360deg
+            );
+            animation: holographicSpin 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes holographicSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .dark-theme .big-three-item {
+            background: linear-gradient(145deg, rgba(168,85,247,0.15), rgba(255,105,180,0.1));
+            border: 1px solid rgba(255,105,180,0.2);
+            border-radius: 16px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .dark-theme .big-three-item:hover {
+            transform: scale(1.05) rotate(-1deg);
+            border-color: rgba(255,105,180,0.5);
+            box-shadow: 0 0 30px rgba(255,105,180,0.3);
+        }
+
+        /* --- Stage Entrance Animation for Results --- */
+        @keyframes stageEntrance {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+                filter: blur(4px);
+            }
+            60% {
+                filter: blur(0);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        .results-section .reading-card {
+            animation: stageEntrance 0.6s ease-out both;
+        }
+
+        .results-section .reading-card:nth-child(1) { animation-delay: 0.1s; }
+        .results-section .reading-card:nth-child(2) { animation-delay: 0.2s; }
+        .results-section .reading-card:nth-child(3) { animation-delay: 0.3s; }
+        .results-section .reading-card:nth-child(4) { animation-delay: 0.4s; }
+        .results-section .reading-card:nth-child(5) { animation-delay: 0.5s; }
+
+        /* --- Purple Ocean Wave Background --- */
+        @keyframes purpleOcean {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .dark-theme .results-header {
+            background: linear-gradient(270deg, 
+                rgba(168,85,247,0.15), 
+                rgba(255,105,180,0.1), 
+                rgba(0,255,255,0.05), 
+                rgba(168,85,247,0.15));
+            background-size: 400% 400%;
+            animation: purpleOcean 10s ease infinite;
+            border-bottom: 2px solid rgba(255,105,180,0.15);
+        }
+
+        /* --- Concert Spotlight Loading Screen --- */
+        .dark-theme .loading-overlay {
+            background: radial-gradient(ellipse at 50% 30%, 
+                rgba(168,85,247,0.3) 0%, 
+                rgba(15,5,32,0.95) 50%, 
+                rgba(8,2,16,0.98) 100%);
+        }
+
+        @keyframes stageLights {
+            0% { background-position: 0% 0%; }
+            25% { background-position: 100% 0%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        .dark-theme .loading-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255,105,180,0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 30%, rgba(168,85,247,0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(0,255,255,0.08) 0%, transparent 40%);
+            background-size: 200% 200%;
+            animation: stageLights 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .dark-theme .loading-spinner {
+            border-color: rgba(168,85,247,0.2);
+            border-top-color: #FF69B4;
+            filter: drop-shadow(0 0 10px rgba(255,105,180,0.5));
+        }
+
+        .dark-theme .loading-text {
+            color: #f0e6ff;
+            text-shadow: 0 0 15px rgba(255,105,180,0.5);
+        }
+
+        .dark-theme .loading-progress-bar {
+            background: linear-gradient(90deg, #FF69B4, #A855F7, #00FFFF, #FF69B4);
+            background-size: 200% 100%;
+            animation: shimmerBar 2s linear infinite;
+        }
+
+        @keyframes shimmerBar {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+        /* --- Album Concept Card Section Headers --- */
+        .dark-theme .section-header {
+            background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(255,105,180,0.06));
+            border: 1px solid rgba(255,105,180,0.15);
+            border-radius: 16px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-theme .section-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,105,180,0.08), transparent);
+            animation: albumShine 4s ease-in-out infinite;
+        }
+
+        @keyframes albumShine {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        /* --- Star Burst on Submit Button --- */
+        .dark-theme .submit-btn {
+            background: linear-gradient(135deg, #FF69B4, #A855F7);
+            border: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 16px 32px;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .dark-theme .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .dark-theme .submit-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 0 20px rgba(255,105,180,0.5),
+                0 0 40px rgba(168,85,247,0.3),
+                0 0 60px rgba(0,255,255,0.15);
+        }
+
+        .dark-theme .submit-btn:hover::before {
+            opacity: 1;
+            animation: starBurst 0.6s ease-out;
+        }
+
+        @keyframes starBurst {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+
+        /* --- Welcome Modal K-Pop Theme --- */
+        .dark-theme .welcome-content {
+            background: linear-gradient(145deg, #1a0a2e, #0f0520);
+            border: 1px solid rgba(255,105,180,0.2);
+        }
+
+        .dark-theme .welcome-header {
+            background: linear-gradient(135deg, 
+                rgba(255,105,180,0.3), 
+                rgba(168,85,247,0.3), 
+                rgba(0,255,255,0.15));
+        }
+
+        .dark-theme .welcome-header h2 {
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255,105,180,0.5);
+        }
+
+        .dark-theme .welcome-header p {
+            color: rgba(240,230,255,0.9);
+        }
+
+        .dark-theme .welcome-step h3 {
+            color: #FF69B4;
+            text-shadow: 0 0 10px rgba(255,105,180,0.3);
+        }
+
+        .dark-theme .welcome-step p {
+            color: rgba(240,230,255,0.85);
+        }
+
+        .dark-theme .welcome-highlight {
+            background: linear-gradient(135deg, rgba(168,85,247,0.12), rgba(255,105,180,0.08));
+            border-left: 4px solid #FF69B4;
+        }
+
+        .dark-theme .welcome-highlight p {
+            color: rgba(240,230,255,0.9);
+        }
+
+        .dark-theme .welcome-footer {
+            background: rgba(15,5,32,0.9);
+            border-top: 1px solid rgba(255,105,180,0.15);
+        }
+
+        .dark-theme .welcome-nav-btn.primary {
+            background: linear-gradient(135deg, #FF69B4, #A855F7);
+            box-shadow: 0 0 15px rgba(255,105,180,0.3);
+        }
+
+        .dark-theme .welcome-nav-btn.secondary {
+            background: rgba(168,85,247,0.15);
+            color: rgba(240,230,255,0.8);
+            border: 1px solid rgba(255,105,180,0.2);
+        }
+
+        .dark-theme .welcome-dot.active {
+            background: #FF69B4;
+            box-shadow: 0 0 8px rgba(255,105,180,0.5);
+        }
+
+        .dark-theme .welcome-dot {
+            background: rgba(168,85,247,0.3);
+        }
+
+        /* --- K-Pop Theme Button Overrides --- */
+        .dark-theme .theme-preview-btn.pink {
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            box-shadow: 0 0 15px rgba(255,105,180,0.3);
+        }
+
+        .dark-theme .theme-preview-btn.purple {
+            background: linear-gradient(135deg, #A855F7, #7C3AED);
+            box-shadow: 0 0 15px rgba(168,85,247,0.3);
+        }
+
+        .dark-theme .theme-preview-btn.blue {
+            background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+            box-shadow: 0 0 15px rgba(59,130,246,0.3);
+        }
+
+        .dark-theme .theme-preview-btn:hover {
+            box-shadow: 0 0 25px rgba(255,105,180,0.5);
+        }
+
+        /* --- Input Form K-Pop Styling --- */
+        .dark-theme .input-form input,
+        .dark-theme .input-form select {
+            background: rgba(168,85,247,0.08);
+            border: 1px solid rgba(255,105,180,0.2);
+            color: #f0e6ff;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .dark-theme .input-form input:focus {
+            border-color: #FF69B4;
+            box-shadow: 0 0 15px rgba(255,105,180,0.25);
+            outline: none;
+        }
+
+        .dark-theme .input-form label {
+            color: #FF69B4;
+            font-weight: 600;
+        }
+
+        .dark-theme .helper-text {
+            color: rgba(240,230,255,0.5);
+        }
+
+        /* --- Completion Celebration K-Pop --- */
+        .dark-theme .completion-celebration {
+            background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(255,105,180,0.1));
+            border: 2px solid rgba(255,105,180,0.3);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-theme .completion-celebration::before {
+            content: '💜🎤✨🫰💫🌟';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            letter-spacing: 10px;
+            animation: celebFloat 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255,105,180,0.5));
+        }
+
+        @keyframes celebFloat {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-8px); }
+        }
+
+        /* --- Opening Letter K-Pop Styling --- */
+        .dark-theme .opening-letter {
+            background: linear-gradient(145deg, rgba(168,85,247,0.08), rgba(255,105,180,0.05));
+            border: 1px solid rgba(255,105,180,0.15);
+            border-radius: 20px;
+        }
+
+        .dark-theme .opening-letter-header {
+            background: linear-gradient(135deg, rgba(255,105,180,0.15), rgba(168,85,247,0.1));
+            border-bottom: 1px solid rgba(255,105,180,0.15);
+        }
+
+        .dark-theme .opening-letter-header h1 {
+            text-shadow: 0 0 20px rgba(255,105,180,0.4);
+        }
+
+        /* --- My Readings K-Pop Dashboard --- */
+        .dark-theme .my-readings-section {
+            background: linear-gradient(145deg, rgba(168,85,247,0.06), rgba(255,105,180,0.04));
+            border: 1px solid rgba(255,105,180,0.15);
+            border-radius: 16px;
+        }
+
+        /* --- Header K-Pop Styling --- */
+        .dark-theme .header h1 {
+            font-family: 'Black Han Sans', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .dark-theme .tagline {
+            color: rgba(240,230,255,0.8);
+        }
+
+        .dark-theme .sub-tagline {
+            color: rgba(240,230,255,0.6);
+        }
+
+        /* --- Progress Bar K-Pop Colors --- */
+        .dark-theme .progress-fill,
+        .dark-theme .hero-progress-fill {
+            background: linear-gradient(90deg, #FF69B4, #A855F7, #00FFFF);
+        }
+
+        /* --- Scrollbar K-Pop Theme --- */
+        .dark-theme::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .dark-theme::-webkit-scrollbar-track {
+            background: rgba(15,5,32,0.8);
+        }
+
+        .dark-theme::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FF69B4, #A855F7);
+            border-radius: 4px;
+        }
+
+        /* --- Reduced Motion Safety --- */
+        @media (prefers-reduced-motion: reduce) {
+            .kpop-particle,
+            .dark-theme h1,
+            .dark-theme .results-header h1,
+            .dark-theme .reading-card,
+            .dark-theme .cosmic-snapshot::before,
+            .dark-theme .section-header::after,
+            .dark-theme .loading-overlay::before,
+            .dark-theme .completion-celebration::before {
+                animation: none !important;
+            }
+            .results-section .reading-card {
+                animation: none !important;
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- K-Pop Floating Particles -->
+    <div class="kpop-particles" id="kpopParticles"></div>
+
     <!-- Welcome Modal -->
     <div class="welcome-modal" id="welcomeModal" style="display: none;">
         <div class="welcome-content">
             <div class="welcome-header">
-                <h2>Welcome to Your Reading</h2>
-                <p>A moment in time, captured forever</p>
+                <h2>Welcome to K-pop Kosmic 💜</h2>
+                <p>Your idol destiny is about to be revealed… 🫰</p>
             </div>
             
             <div class="welcome-body">
                 <!-- Step 1: Introduction -->
                 <div class="welcome-step active" data-step="1">
-                    <h3>How This Works</h3>
-                    <p>Enter a birth date and time, and we'll reveal the cosmic patterns that were written in the stars at that exact moment.</p>
-                    <p>You'll receive <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom—a complete soul blueprint.</p>
+                    <h3>🎤 How This Works, Stan</h3>
+                    <p>Enter your birth details and we'll reveal the cosmic idol blueprint that was written in the stars the moment you debuted into this world.</p>
+                    <p>You'll receive <strong>65+ personalized readings</strong> — your stage presence, debut concept, trainee arc, comeback energy, and so much more. Think of it as your cosmic audition results! 💜</p>
                     <div class="welcome-highlight">
-                        <p>"At the exact moment you were born, the universe created a unique pattern just for you."</p>
+                        <p>"At the exact moment you were born, the universe dropped your debut single — and we're about to play it back for you." 🎵</p>
                     </div>
                 </div>
                 
                 <!-- Step 2: Theme Selection -->
                 <div class="welcome-step" data-step="2">
-                    <h3>Choose Your Voice</h3>
-                    <p>This choice shapes how your reading speaks to you:</p>
+                    <h3>🎨 Choose Your Concept</h3>
+                    <p>Every idol has a concept. Choose the energy that fits your vibe:</p>
                     <div class="theme-preview-btns">
-                        <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
-                        <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
-                        <button class="theme-preview-btn blue" onclick="selectWelcomeTheme('boy')">Blue</button>
+                        <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Girl Group 🩷</button>
+                        <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">K-Pop 💜</button>
+                        <button class="theme-preview-btn blue" onclick="selectWelcomeTheme('boy')">Boy Group 💙</button>
                     </div>
                     <div class="theme-descriptions">
-                        <p><strong>Pink</strong> — Feminine energy. Softer, nurturing language.</p>
-                        <p><strong>Purple</strong> — Neutral energy. Balanced, universal tone.</p>
-                        <p><strong>Blue</strong> — Masculine energy. Direct, grounded language.</p>
+                        <p><strong>Girl Group</strong> — Soft, powerful feminine energy. Think BLACKPINK meets cosmic destiny. 🩷</p>
+                        <p><strong>K-Pop</strong> — Universal idol energy. Balanced and versatile. 💜</p>
+                        <p><strong>Boy Group</strong> — Bold, grounded masculine energy. Think BTS meets the universe. 💙</p>
                     </div>
-                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 15px;">You can change this anytime from the bar at the top</p>
+                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 15px;">You can switch concepts anytime from the bar at the top 🔄</p>
                 </div>
                 
                 <!-- Step 3: How to Read -->
                 <div class="welcome-step" data-step="3">
-                    <h3>No Pressure to Read Everything</h3>
-                    <p>This is a <strong>substantial amount of information</strong>—think of it as an instruction manual for understanding a soul, not something to rush through.</p>
-                    <p>Take your time. Come back to different sections when they feel relevant. Some insights might click immediately; others may make sense months from now.</p>
+                    <h3>📖 No Rush — This Is Your Album</h3>
+                    <p>This reading is like a full album, not a single track. <strong>65+ tracks of cosmic insight</strong> — take your time with each one.</p>
+                    <p>Some tracks will hit immediately. Others are slow burns that reveal their meaning over time. Come back whenever you need guidance — your album is always here. 💜</p>
                     <div class="welcome-highlight">
-                        <p>"Use this as a reference guide, not a test to complete."</p>
+                        <p>"Treat this like your favorite album — revisit it, discover new details, let it grow with you." 🎵</p>
                     </div>
                     <div class="saved-readings-note">
-                        <p><strong>Your readings are automatically saved.</strong></p>
-                        <p>Click "New Reading" anytime and you'll find all your saved profiles at the bottom of the page. Create readings for friends, family, or yourself—they'll all be there waiting.</p>
+                        <p><strong>Your readings auto-save like a playlist. 📚</strong></p>
+                        <p>Create readings for your bias, your bestie, your whole group — they'll all be waiting in your library.</p>
                     </div>
                 </div>
                 
                 <!-- Step 4: Accuracy Note -->
                 <div class="welcome-step" data-step="4">
-                    <h3>A Gentle Note on Accuracy</h3>
-                    <p>Perhaps <strong>70% will feel uncannily accurate</strong>. The rest? The stars and numbers capture your absolute potential—they cannot know your traumas, circumstances, or the choices you've made along the way.</p>
-                    <p>If something doesn't resonate, it might be unlived potential waiting to be discovered. Or simply not your path.</p>
+                    <h3>🌟 A Note on Accuracy</h3>
+                    <p>About <strong>70% will feel like a personal fancam</strong> — eerily accurate and just for you. The rest? The stars capture your full potential, not your whole story.</p>
+                    <p>If something doesn't hit, maybe it's your unreleased track — hidden potential waiting for the right comeback. Or maybe it's just not your concept. Either way, 화이팅! 💪</p>
                     <div class="welcome-highlight">
-                        <p>"Maybe, just maybe, this is the reading that sets you on the path to who you were always meant to be."</p>
+                        <p>"Maybe this is the reading that reveals the idol you were always meant to be." ✨</p>
                     </div>
                     <div class="privacy-note">
                         <span class="icon lock-icon"></span>
-                        <p><strong>Your data stays with you.</strong> Everything is stored locally on your device. We never see, collect, or share your birth information.</p>
+                        <p><strong>Your data stays on your device.</strong> We never see, collect, or share your birth details. Your privacy is more protected than a sasaeng-proof dorm. 🔒</p>
                     </div>
                 </div>
             </div>
@@ -4343,14 +4869,14 @@
             <!-- Opening Letter -->
             <div class="opening-letter">
                 <div class="opening-letter-header">
-                    <h1>Your Complete Moment in Time</h1>
+                    <h1>Your Complete Idol Blueprint 💜</h1>
                     <p class="reading-subtitle">Reading for <strong id="openingName">...</strong></p>
                 </div>
                 <div class="opening-letter-body" id="openingLetterBody">
-                    <p>At the exact moment you were born, the cosmos arranged itself in a pattern that has never existed before and will never exist again.</p>
-                    <p>This reading captures that unique configuration — not as a prediction of who you must become, but as a map of the gifts, challenges, and potentials encoded in your birth moment.</p>
-                    <p>Take your time exploring each section. Some insights will resonate immediately; others may reveal their meaning over years. This is your cosmic blueprint — a lifelong companion, not a daily forecast.</p>
-                    <p class="opening-note">If any birth details are incorrect, tap "New Reading" to regenerate with accurate information.</p>
+                    <p>At the exact moment you were born, the universe composed a debut single that has never been performed before and will never be performed again. 🎵</p>
+                    <p>This reading decodes that cosmic composition — your stage presence, your hidden B-sides, your comeback energy, and the trainee arc that shaped your soul. Think of it as your official cosmic evaluation from the universe's entertainment agency. 💜</p>
+                    <p>Take your time exploring each track on this album. Some insights will hit like your favorite song on first listen; others are slow burns that reveal their magic over months. This is your idol blueprint — a lifelong guide, not a quick fan-edit. 화이팅! ✨</p>
+                    <p class="opening-note">If any birth details are wrong, tap "New Reading" to re-audition with the right info. 🎤</p>
                 </div>
                 <div class="hero-progress">
                     <div class="hero-progress-track">
@@ -4363,27 +4889,27 @@
             <!-- Cosmic Snapshot - Big Three -->
             <div class="cosmic-snapshot" id="cosmicSnapshot">
                 <div class="cosmic-snapshot-header">
-                    <h2>Your Cosmic Snapshot</h2>
-                    <p>The Big Three — your core celestial identity</p>
+                    <h2>Your Idol Snapshot 🫰</h2>
+                    <p>The Big Three — your core idol identity 💜</p>
                 </div>
                 <div class="big-three-grid">
                     <div class="big-three-item">
                         <span class="planet-icon"></span>
                         <div class="planet-name">Sun Sign</div>
                         <div class="sign-name" id="bigThreeSun">—</div>
-                        <div class="sign-desc">Core Identity</div>
+                        <div class="sign-desc">Main Vocal Energy ☀️</div>
                     </div>
                     <div class="big-three-item">
                         <span class="planet-icon"></span>
                         <div class="planet-name">Moon Sign</div>
                         <div class="sign-name" id="bigThreeMoon">—</div>
-                        <div class="sign-desc">Emotional Self</div>
+                        <div class="sign-desc">Hidden B-Side 🌙</div>
                     </div>
                     <div class="big-three-item">
                         <span class="planet-icon"></span>
                         <div class="planet-name">Rising Sign</div>
                         <div class="sign-name" id="bigThreeRising">—</div>
-                        <div class="sign-desc">First Impression</div>
+                        <div class="sign-desc">Stage Presence ⭐</div>
                     </div>
                 </div>
             </div>
@@ -4396,8 +4922,8 @@
             <!-- Completion Celebration -->
             <div class="completion-celebration">
                 <div class="celebration-icon"></div>
-                <h3>Reading Complete!</h3>
-                <p>You've explored all the cosmic insights for this moment in time.</p>
+                <h3>All-Kill! Reading Complete! 🏆💜</h3>
+                <p>You've explored all the cosmic insights in your idol blueprint. 화이팅! ✨</p>
             </div>
             
             <!-- Reading Summary & Closing -->
@@ -4412,20 +4938,20 @@
                         <span class="coming-soon-icon">✨</span>
                         <span class="coming-soon-text">Coming Soon</span>
                     </div>
-                    <h3>Gift This Reading</h3>
-                    <p>Create a beautiful, ad-free version to share with loved ones or print as a keepsake.</p>
+                    <h3>Gift This Reading 🎁💜</h3>
+                    <p>Create a beautiful, ad-free idol blueprint to share with your bias group or print as a keepsake photocard.</p>
                     <div class="gifted-by-field disabled">
                         <label for="giftedByInput">Gifted by: <span class="optional-badge">Optional</span></label>
-                        <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100" disabled>
-                        <p class="helper-text">Add your name to personalize this gift</p>
+                        <input type="text" id="giftedByInput" placeholder="e.g., Your Stan Name, Bestie..." maxlength="100" disabled>
+                        <p class="helper-text">Add your name to personalize this gift 🫰</p>
                     </div>
                     <button class="gift-btn disabled" disabled>Create Gift Version</button>
                 </div>
                 
                 <div class="coffee-box">
-                    <h3>Did This Reading Bring You Joy?</h3>
-                    <p>You now have <strong>unlimited access</strong> to cosmic readings — probably worth a coffee, right?</p>
-                    <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener" class="coffee-btn">Buy Me a Coffee</a>
+                    <h3>Did This Reading Give You Feels? 💜</h3>
+                    <p>You now have <strong>unlimited access</strong> to idol blueprint readings — probably worth a boba, right? 🧋</p>
+                    <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener" class="coffee-btn">Buy Me a Boba 🧋</a>
                 </div>
             </div>
             
@@ -4880,13 +5406,16 @@
             
             // Cycling loading messages
             const loadingMessages = [
-                'Mapping the stars at your moment of birth…',
-                'Calculating planetary positions…',
-                'Reading the numerology of your name…',
-                'Discovering hidden patterns…',
-                'Weaving your cosmic blueprint…',
-                'Aligning the houses…',
-                'Revealing your soul\'s story…'
+                'Scanning the stars for your debut date… 🌟',
+                'Calculating your lightstick frequency… 💜',
+                'Mapping your idol archetype constellation… ✨',
+                'Analyzing your bias-wrecker potential… 🫰',
+                'Decoding your comeback concept… 🎤',
+                'Reading your trainee evaluation report… 💪',
+                'Aligning your stage presence with the cosmos… 🔥',
+                'Your fanchant is being written in the stars… 💫',
+                'Checking your all-kill probability… 🏆',
+                'Loading your concert ocean colors… 🌊💜'
             ];
             let msgIndex = 0;
             loadingText.textContent = loadingMessages[0];
@@ -9535,6 +10064,55 @@ Growth doesn't come from eliminating this tension — it comes from using it con
         // INITIALIZE
         // ============================================
         
+        // ============================================
+        // 💜 K-POP FLOATING PARTICLES SYSTEM
+        // ============================================
+        function initKpopParticles() {
+            const container = document.getElementById('kpopParticles');
+            if (!container) return;
+            
+            // Respect reduced motion preference
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            
+            const emojis = ['💜', '🫰', '✨', '🌟', '💫', '🎤', '🎵', '💗', '⭐', '🦋', '🔮', '💎', '🩷', '🎶'];
+            const maxParticles = 15;
+            
+            function createParticle() {
+                if (container.children.length >= maxParticles) return;
+                
+                const particle = document.createElement('span');
+                particle.className = 'kpop-particle';
+                particle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                
+                const size = 0.8 + Math.random() * 1.2;
+                const left = Math.random() * 100;
+                const duration = 8 + Math.random() * 12;
+                const delay = Math.random() * 5;
+                
+                particle.style.cssText = `
+                    left: ${left}%;
+                    font-size: ${size}rem;
+                    animation-duration: ${duration}s;
+                    animation-delay: ${delay}s;
+                `;
+                
+                container.appendChild(particle);
+                
+                // Remove particle after animation completes
+                setTimeout(() => {
+                    if (particle.parentNode) particle.remove();
+                }, (duration + delay) * 1000);
+            }
+            
+            // Create initial batch
+            for (let i = 0; i < 8; i++) {
+                setTimeout(createParticle, i * 600);
+            }
+            
+            // Continuously spawn particles
+            setInterval(createParticle, 2000);
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Always scroll to top on page load/refresh
             window.scrollTo(0, 0);
@@ -9542,6 +10120,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
             applyBrandConfig();
             initColorMode();
             removeAdSlots();
+            initKpopParticles();
             
             // Restore saved gender theme or default to girl
             const savedGender = localStorage.getItem('kpop-kosmic-gender') || 'girl';
