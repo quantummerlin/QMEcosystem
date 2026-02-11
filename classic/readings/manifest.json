@@ -1,0 +1,21 @@
+{
+  "name": "Quantum Merlin — Soul Blueprint",
+  "short_name": "QM Blueprint",
+  "description": "65+ personalized cosmic readings from your birth data",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0d0221",
+  "theme_color": "#bf5af2",
+  "icons": [
+    {
+      "src": "/classic/RetroMerlin.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/classic/RetroMerlin.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

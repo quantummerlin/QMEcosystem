@@ -1,0 +1,21 @@
+{
+  "name": "K-Pop Kosmic — Idol Blueprint",
+  "short_name": "K-Pop Kosmic",
+  "description": "Discover your K-Pop idol destiny with 65+ cosmic readings",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1a0a2e",
+  "theme_color": "#FF69B4",
+  "icons": [
+    {
+      "src": "/kpop/kpop.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/kpop/kpop.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

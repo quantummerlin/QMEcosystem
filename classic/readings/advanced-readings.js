@@ -1,0 +1,2323 @@
+// ============================================
+// ADVANCED READINGS - Part of Fortune & Transits
+// ============================================
+
+// ============================================
+// PART OF FORTUNE BY SIGN
+// ============================================
+
+var PART_OF_FORTUNE_READINGS = {
+    Aries: {
+        title: "Part of Fortune in Aries - Joy Through Action",
+        keywords: ["Initiative", "Courage", "Independence", "Leadership"],
+        reading: `With the Part of Fortune in Aries, this child finds their greatest joy and natural success through independence, courage, and taking initiative. Their luck flows when they're being bold, starting new things, and leading rather than following.
+
+Fortune favors them when they trust their instincts and act quickly. They have a natural ability to be in the right place at the right time when they're being authentic and assertive. Success comes through pioneering spirit and willingness to go first.
+
+Encourage them to start projects, take healthy risks, and develop leadership skills. Their fortune point is activated through physical activity, competitive sports, and situations where they can be first or best. They're learning that their courage itself is a form of luck.
+
+The universe rewards their boldness. When they're hesitant or overly cautious, fortune seems to elude them. When they leap with confidence, doors open magically. Help them trust this inner knowing that action creates opportunity.`,
+        guidance: "Fortune flows through courage and initiative. Encourage bold action and leadership."
+    },
+    
+    Taurus: {
+        title: "Part of Fortune in Taurus - Joy Through Stability",
+        keywords: ["Security", "Beauty", "Resources", "Patience"],
+        reading: `The Part of Fortune in Taurus brings luck through building, creating beauty, and establishing security. This child's greatest joy comes from tangible results, material comfort, and the slow, steady accumulation of valuable things - whether money, skills, or beautiful objects.
+
+Fortune favors them in matters of finance, nature, art, and anything requiring patience and persistence. They have a natural ability to attract resources and make things grow. Their "green thumb" applies to money, gardens, and creative projects alike.
+
+Encourage investment in quality over quantity, connection with nature, and development of artistic talents. Their fortune point activates through singing, cooking, gardening, or working with their hands. Beauty and comfort aren't luxuries for them - they're pathways to success.
+
+The universe rewards their patience and appreciation for the physical world. Rushing rarely brings them luck, but steady, sensual engagement with life opens doors. Help them trust that slow growth is real growth and that what they build will last.`,
+        guidance: "Fortune flows through patience, beauty, and building lasting value. Encourage slow, steady growth."
+    },
+    
+    Gemini: {
+        title: "Part of Fortune in Gemini - Joy Through Connection",
+        keywords: ["Communication", "Curiosity", "Versatility", "Learning"],
+        reading: `With Part of Fortune in Gemini, this child's luck flows through communication, learning, and making connections. Their greatest joy and success come from talking, writing, teaching, and endlessly curious exploration of ideas and people.
+
+Fortune favors them when they're networking, asking questions, reading widely, and sharing information. They seem to "just happen" to meet the right people, find the right book, or hear exactly what they need when they're in a state of open curiosity and communication.
+
+Encourage writing, speaking, studying multiple subjects, and maintaining diverse friendships. Their fortune point activates through social media, blogging, teaching younger children, or any activity involving words and ideas. Siblings and neighbors may also be sources of opportunity.
+
+The universe rewards their mental agility and social grace. When they're isolated or stuck in one perspective, luck seems to dry up. When they're connecting, conversing, and learning, synchronicities multiply. Help them see that their curiosity itself is a magnet for good fortune.`,
+        guidance: "Fortune flows through communication and curiosity. Encourage wide learning and connection."
+    },
+    
+    Cancer: {
+        title: "Part of Fortune in Cancer - Joy Through Nurturing",
+        keywords: ["Family", "Emotions", "Home", "Care"],
+        reading: `The Part of Fortune in Cancer brings luck through family, home, and emotional connection. This child finds their greatest joy and success through nurturing others, creating safe spaces, and honoring their feelings and intuition.
+
+Fortune favors them in domestic matters, family businesses, caregiving roles, and any situation where emotional intelligence matters. They have natural luck with real estate, cooking, childcare, and creating homes that feel like sanctuaries. Their intuition about people and timing is often remarkably accurate.
+
+Encourage cooking, decorating their space, caring for younger siblings or pets, and expressing emotions healthily. Their fortune point activates through family gatherings, creating cozy environments, and trusting gut feelings. What feels right usually is right for them.
+
+The universe rewards their emotional authenticity and nurturing nature. When they suppress feelings or ignore family needs, luck wanes. When they create emotional safety for themselves and others, opportunities flow. Help them trust that caring is a strength and that home is their power base.`,
+        guidance: "Fortune flows through nurturing and emotional authenticity. Home and family are power sources."
+    },
+    
+    Leo: {
+        title: "Part of Fortune in Leo - Joy Through Expression",
+        keywords: ["Creativity", "Performance", "Joy", "Generosity"],
+        reading: `With Part of Fortune in Leo, this child's luck flows through creative self-expression, performance, and generous sharing of their gifts. Their greatest joy and success come from being seen, celebrated, and allowed to shine authentically.
+
+Fortune favors them on stage, in creative pursuits, in romance, and anywhere they can express their unique personality boldly. They have natural luck in entertainment, arts, working with children, and any field where charisma matters. When they're having fun and being generous, opportunities appear magically.
+
+Encourage drama, art, music, dance, and any form of creative performance. Their fortune point activates through praise, celebration, and situations where they can be the star. This isn't vanity - it's their actual success pathway. Let them shine.
+
+The universe rewards their authentic joy and creative courage. When they dim their light to fit in, luck disappears. When they shine unapologetically and share their joy generously, doors open everywhere. Help them understand that their happiness itself creates fortune for themselves and others.`,
+        guidance: "Fortune flows through authentic self-expression and creative joy. Let them shine brightly."
+    },
+    
+    Virgo: {
+        title: "Part of Fortune in Virgo - Joy Through Service",
+        keywords: ["Precision", "Service", "Health", "Improvement"],
+        reading: `The Part of Fortune in Virgo brings luck through service, attention to detail, and practical improvement of whatever they touch. This child finds greatest joy and success through being useful, creating order, and perfecting their skills.
+
+Fortune favors them in health fields, service industries, crafts requiring precision, and any role where quality matters more than quantity. They have natural luck when they're organized, helpful, and focused on making things better. Their eye for detail is actually a form of fortune-seeing.
+
+Encourage organization systems, helping with household tasks, caring for pets, and developing specialized skills. Their fortune point activates through routine, healthy habits, and opportunities to be genuinely useful. Perfectionism can block them, but excellence opens doors.
+
+The universe rewards their dedication to improvement and service. When they're critical without being constructive, luck stalls. When they apply their skills helpfully and humbly, opportunities multiply. Help them see that being of service is how they serve their own fortune.`,
+        guidance: "Fortune flows through skillful service and attention to detail. Excellence over perfection."
+    },
+    
+    Libra: {
+        title: "Part of Fortune in Libra - Joy Through Partnership",
+        keywords: ["Balance", "Relationships", "Beauty", "Harmony"],
+        reading: `With Part of Fortune in Libra, this child's luck flows through relationships, collaboration, and creating beauty and harmony. Their greatest success comes not from solo efforts but through partnership and balanced exchange.
+
+Fortune favors them in the arts, law, counseling, design, and any field requiring diplomacy or aesthetic sense. They have natural luck in love and friendship - the right people tend to appear at the right time. Their fortune multiplies when shared with others.
+
+Encourage collaborative projects, artistic pursuits, conflict resolution skills, and appreciation of beauty. Their fortune point activates through partnerships, social events, and situations requiring fairness and balance. They literally need others to access their full luck potential.
+
+The universe rewards their commitment to harmony and justice. When they're alone too much or being unfair, luck fades. When they're creating beauty and building balanced relationships, synchronicities abound. Help them understand that partnership isn't weakness - it's their power source.`,
+        guidance: "Fortune flows through partnership and creating harmony. Collaboration is key to success."
+    },
+    
+    Scorpio: {
+        title: "Part of Fortune in Scorpio - Joy Through Depth",
+        keywords: ["Transformation", "Intensity", "Power", "Truth"],
+        reading: `The Part of Fortune in Scorpio brings luck through depth, transformation, and fearless engagement with life's mysteries. This child finds greatest joy and success through intense focus, emotional honesty, and willingness to transform.
+
+Fortune favors them in psychology, research, healing, managing resources, and any field requiring depth and courage. They have natural luck with other people's money, shared resources, and situations requiring profound trust. Crisis often reveals their fortune - they're lucky in transformation.
+
+Encourage deep interests, research skills, emotional honesty, and exploration of life's mysteries (age-appropriately). Their fortune point activates through profound connections, transformative experiences, and situations requiring real courage. Superficiality blocks their luck.
+
+The universe rewards their emotional courage and commitment to truth. When they're shallow or dishonest, fortune eludes them. When they go deep and embrace transformation, powerful synchronicities occur. Help them trust that intensity is their gift and depth is their path to success.`,
+        guidance: "Fortune flows through depth and transformation. Encourage emotional courage and profound engagement."
+    },
+    
+    Sagittarius: {
+        title: "Part of Fortune in Sagittarius - Joy Through Expansion",
+        keywords: ["Adventure", "Wisdom", "Freedom", "Faith"],
+        reading: `With Part of Fortune in Sagittarius, this child's luck flows through exploration, learning, and expansion beyond the familiar. Their greatest success comes through optimism, adventure, and commitment to growth and truth.
+
+Fortune favors them in travel, education, publishing, teaching, and anything involving different cultures or philosophies. They have remarkable luck when they're traveling, learning, or sharing wisdom. Opportunities often come from far away or through educational pursuits.
+
+Encourage reading widely, travel when possible, learning languages, and exposure to different cultures and beliefs. Their fortune point activates through expansion - physical, mental, or spiritual. Staying small and safe actually blocks their luck.
+
+The universe rewards their faith and willingness to explore. When they're pessimistic or narrow-minded, luck disappears. When they're optimistic and open to adventure, amazing opportunities appear. Help them trust that their wanderlust and wonder are actually fortune-finding tools.`,
+        guidance: "Fortune flows through adventure and expansion. Encourage broad learning and optimistic faith."
+    },
+    
+    Capricorn: {
+        title: "Part of Fortune in Capricorn - Joy Through Achievement",
+        keywords: ["Ambition", "Structure", "Mastery", "Recognition"],
+        reading: `The Part of Fortune in Capricorn brings luck through ambition, achievement, and building lasting structures. This child finds greatest joy and success through goals, hard work, and earning recognition through genuine accomplishment.
+
+Fortune favors them in business, leadership, traditional fields, and any arena requiring patience and strategic planning. They have natural luck with authority figures, career advancement, and public success. Time is their ally - their fortune grows as they mature.
+
+Encourage goal-setting, responsibility, skill mastery, and engagement with authority figures who can mentor them. Their fortune point activates through achievement, public recognition, and situations requiring maturity beyond their years. Early responsibility builds later luck.
+
+The universe rewards their discipline and long-term vision. When they're lazy or seeking shortcuts, luck fades. When they're working steadily toward meaningful goals, doors open at the highest levels. Help them trust that their ambition is healthy and their achievements will compound.`,
+        guidance: "Fortune flows through disciplined achievement. Set goals and reward steady progress."
+    },
+    
+    Aquarius: {
+        title: "Part of Fortune in Aquarius - Joy Through Innovation",
+        keywords: ["Innovation", "Community", "Freedom", "Vision"],
+        reading: `With Part of Fortune in Aquarius, this child's luck flows through innovation, friendship, and working toward collective visions. Their greatest success comes through being different, embracing technology, and contributing to community.
+
+Fortune favors them in technology, humanitarian work, group endeavors, and anything ahead of its time. They have natural luck through friendships and group affiliations - the right crowd attracts the right opportunities. Their uniqueness is actually their fortune magnet.
+
+Encourage diverse friendships, technological skills, humanitarian interests, and expression of their unique perspectives. Their fortune point activates through groups, innovative projects, and situations where being different is valued. Conformity blocks their luck.
+
+The universe rewards their authenticity and commitment to collective good. When they're trying to fit in or being selfish, fortune disappears. When they're embracing their weird and working for community betterment, synchronicities explode. Help them trust that different equals lucky for them.`,
+        guidance: "Fortune flows through innovation and community. Celebrate their uniqueness and social conscience."
+    },
+    
+    Pisces: {
+        title: "Part of Fortune in Pisces - Joy Through Compassion",
+        keywords: ["Intuition", "Compassion", "Creativity", "Spirituality"],
+        reading: `The Part of Fortune in Pisces brings luck through compassion, imagination, and spiritual connection. This child finds greatest joy and success through helping others, creative expression, and trusting their powerful intuition.
+
+Fortune favors them in the arts, healing, spiritual work, and any field requiring empathy and imagination. They have natural luck when following intuitive hunches - their dreams and feelings often guide them to the right place at the right time. Their sensitivity is actually psychic fortune-telling.
+
+Encourage creative arts, compassionate service, spiritual exploration, and trust in their intuition. Their fortune point activates through music, art, time near water, meditation, and situations requiring faith over logic. Their imagination literally creates their luck.
+
+The universe rewards their compassion and faith. When they're cynical or hardhearted, luck vanishes. When they're open, compassionate, and following their dreams, miracles occur regularly. Help them understand that their sensitivity is a superpower and their kindness creates their fortune.`,
+        guidance: "Fortune flows through compassion and imagination. Trust their intuition and creative visions."
+    }
+};
+
+// ============================================
+// CURRENT TRANSITS READINGS (2026)
+// ============================================
+
+var TRANSIT_READINGS = {
+    saturn: {
+        title: "Saturn's Lessons - Building Foundations",
+        currentSign: "Pisces",
+        keywords: ["Discipline", "Boundaries", "Structure", "Maturity"],
+        reading: `Saturn, the planet of structure and responsibility, is currently teaching collective lessons about boundaries in spiritual and emotional realms. For this little one, Saturn's influence means learning healthy boundaries, developing emotional resilience, and understanding that structure supports rather than restricts dreams.
+
+As they grow during this Saturn cycle (2023-2026), they're learning that compassion needs boundaries, that dreams need plans, and that spiritual truths require practical application. These early years are teaching them to balance imagination with reality.
+
+Parents can support this by providing consistent routines while honoring emotions, setting clear boundaries with empathy, and showing that discipline creates the freedom to dream bigger. The structures you build now become the containers for their future visions.`,
+        guidance: "Provide loving structure. Boundaries are gifts that create safety for dreams."
+    },
+    
+    pluto: {
+        title: "Pluto's Transformation - Collective Evolution",
+        currentSign: "Aquarius",
+        keywords: ["Transformation", "Power", "Rebirth", "Evolution"],
+        reading: `Pluto in Aquarius (2024-2044) marks a 20-year period of profound transformation in technology, community, and human connection. This child is being born into a generation that will revolutionize how humanity relates and shares power.
+
+They're part of a collective mission to transform society's structures, democratize power, and create new forms of community. Their generation will question everything about how we organize ourselves and will rebuild from the ground up with innovation and equality.
+
+These early years plant seeds for their future role in collective transformation. Encourage their natural rebellion, innovation, and concern for fairness. They're not just learning to adapt to the future - they're the generation creating it.`,
+        guidance: "Honor their innovative spirit. They're here to help transform the world."
+    },
+    
+    jupiter: {
+        title: "Jupiter's Blessings - Current Growth",
+        currentSign: "Gemini",
+        keywords: ["Growth", "Expansion", "Opportunities", "Optimism"],
+        reading: `Jupiter in Gemini brings expansion through communication, learning, and connection. Currently, growth opportunities come through exposure to diverse ideas, early education, and building communication skills.
+
+This is an excellent time for language development, introducing books and stories, and encouraging curiosity about everything. Jupiter's blessing in Gemini means that learning comes easily and joyfully right now - every question is an opportunity.
+
+Watch for natural talents in communication emerging. This Jupiter transit suggests they may be especially curious, verbal, or interested in learning during this period. Feed that curiosity generously - it's Jupiter's gift opening their mind.`,
+        guidance: "Feed their curiosity. Books, conversation, and diverse experiences bring growth now."
+    }
+};
+
+// Export for use
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { 
+        PART_OF_FORTUNE_READINGS, 
+        TRANSIT_READINGS,
+        HOUSE_STELLIUM_READINGS,
+        WEALTH_BLUEPRINT_READINGS,
+        CHAKRA_BLUEPRINT_READINGS,
+        ARCHETYPE_SYNTHESIS_READINGS,
+        RARITY_CALCULATIONS,
+        TIMING_READINGS,
+        LOCATION_READINGS,
+        HEALTH_BLUEPRINT_READINGS,
+        TEACHING_STYLE_READINGS,
+        PHILOSOPHICAL_FRAMEWORK_READINGS,
+        analyzeHouseConcentration,
+        analyzeWealthBlueprint,
+        analyzeArchetypes,
+        analyzeTripleNumbers,
+        analyzeHealthBlueprint,
+        analyzeTeachingStyle,
+        analyzePhilosophicalFramework,
+        analyzeBirthLocation,
+        analyzeCareerSynthesis,
+        analyzeIdealPartner,
+        analyzeChartTensions
+    };
+}
+
+// ============================================
+// HOUSE STELLIUM READINGS (3+ planets in same house)
+// ============================================
+
+var HOUSE_STELLIUM_READINGS = {
+    1: {
+        title: "1st House Concentration - The Radiant Self",
+        rarity: "Rare (~1 in 50 charts)",
+        keywords: ["Self-Expression", "Identity", "Personal Power", "Visibility"],
+        archetype: "The Authentic Beacon",
+        reading: `An extraordinary concentration of planets in the 1st House creates a soul whose very presence commands attention. This is not mere ego - it's a cosmic mandate to be visible, authentic, and to lead by example.
+
+With multiple celestial bodies illuminating the house of self, this person's identity is multi-faceted and powerful. They're not just "one thing" - they're a kaleidoscope of energies, all expressed through their personal presence.
+
+This concentration creates someone who MUST be themselves fully to feel alive. Suppressing any part of their complex identity creates deep frustration. They're here to demonstrate authentic self-expression.`,
+        superpower: "The ability to inspire others simply by being themselves - their presence teaches authenticity.",
+        shadow: "Can become overly self-focused or feel the weight of constant visibility.",
+        integration: "Learning to be both central and gracious, visible yet inclusive of others."
+    },
+    2: {
+        title: "2nd House Concentration - The Wealth Architect",
+        rarity: "Uncommon (~1 in 60 charts)",
+        keywords: ["Resources", "Values", "Abundance", "Self-Worth", "Material Mastery"],
+        archetype: "The Value Translator",
+        reading: `An extraordinary concentration of planets in the 2nd House creates a soul with a profound, multi-layered relationship to value, resources, and material reality. This is the chart of someone born to understand and master the material plane at the deepest level.
+
+This concentration indicates strong "Wealth DNA" - an innate understanding of how value flows, accumulates, and multiplies. They intuitively grasp that money is energy, and they know how to work with that energy. In practical terms, they often show early financial awareness - knowing instinctively what something is worth, negotiating naturally, or finding ways to monetize skills others overlook.
+
+WHAT THIS LOOKS LIKE IN DAILY LIFE:
+• They may collect, curate, or invest - drawn to building tangible reserves of any kind
+• Career choices often revolve around value creation: finance, real estate, art dealing, luxury goods, resource management
+• They notice price discrepancies, undervalued assets, and untapped markets before others do
+• Their sense of personal security is directly tied to what they've built with their own hands
+
+THE LIBRA DIMENSION (If stellium is in Libra): When this 2nd House concentration falls in Libra, wealth-building becomes relational and aesthetic. They earn through partnerships, beauty, mediation, or creating harmony. Their financial instinct is refined rather than aggressive - they attract resources through charm, fairness, and an eye for balance. Joint ventures and collaborative business models suit them better than solo enterprises.
+
+THE SELF-WORTH CONNECTION: Multiple planets here create someone whose self-worth is intimately connected to what they can build, earn, and provide. This isn't shallow materialism - it's the soul's way of proving its capacity to manifest in the physical world. The lesson is learning that they ARE valuable, not just what they produce.`,
+        superpower: "The ability to see and create value where others see nothing - they're natural wealth builders who can turn any skill, idea, or connection into a tangible resource.",
+        shadow: "May tie self-worth too closely to material success, become overly attached to possessions, or feel worthless during financial downturns. Can hoard resources from fear rather than building from vision.",
+        integration: "Understanding that true security comes from within, while still honoring their gift for material creation. The goal is building wealth that serves their values, not values that serve their wealth.",
+        practicalAdvice: [
+            "Track your financial instincts - start a journal of hunches about investments or purchases, and note which ones prove correct",
+            "Create multiple income streams rather than depending on one source - your chart supports diversified value creation",
+            "Separate self-worth from net worth through daily practices that affirm your inherent value",
+            "Use your natural eye for value to help others - financial advising, curating, or teaching resource management"
+        ]
+    },
+    3: {
+        title: "3rd House Concentration - The Master Communicator",
+        rarity: "Uncommon (~1 in 55 charts)",
+        keywords: ["Communication", "Learning", "Connections", "Information", "Mental Agility"],
+        archetype: "The Bridge Builder",
+        reading: `An extraordinary concentration of planets in the 3rd House creates a soul whose life revolves around communication, learning, and connecting ideas and people. Their mind is their primary instrument.
+
+This is the chart of natural teachers, writers, speakers, and networkers. Multiple planets here create someone who processes everything through language and logic, constantly learning and sharing.
+
+Siblings, neighbors, and early education play significant roles in their development. Their local community becomes their stage for expression.`,
+        superpower: "The ability to translate complex ideas into accessible forms and connect disparate people and concepts.",
+        shadow: "May become scattered, superficial, or anxious from constant mental activity.",
+        integration: "Learning to go deep as well as wide, finding quality over quantity in connections."
+    },
+    4: {
+        title: "4th House Concentration - The Root Creator",
+        rarity: "Uncommon (~1 in 55 charts)",
+        keywords: ["Home", "Family", "Roots", "Emotional Foundation", "Ancestry"],
+        archetype: "The Sanctuary Builder",
+        reading: `An extraordinary concentration of planets in the 4th House creates a soul whose power base is home, family, and emotional foundation. Their roots run impossibly deep.
+
+This is someone whose family karma, ancestry, and early home environment carry enormous weight. Multiple planets here suggest that family themes dominate the life journey.
+
+They're here to create sanctuaries - not just physical homes, but emotional safe spaces where others can heal and grow.`,
+        superpower: "The ability to create belonging wherever they go and to hold space for others' emotional healing.",
+        shadow: "May become overly attached to family, struggle to leave home, or get trapped in family dynamics.",
+        integration: "Building a strong internal home that allows them to be rooted yet free."
+    },
+    5: {
+        title: "5th House Concentration - The Creative Supernova",
+        rarity: "Uncommon (~1 in 60 charts)",
+        keywords: ["Creativity", "Joy", "Self-Expression", "Romance", "Children"],
+        archetype: "The Radiant Creator",
+        reading: `An extraordinary concentration of planets in the 5th House creates a soul whose very purpose is creative expression, joy, and celebration of life. They're here to PLAY on the cosmic stage.
+
+This is the chart of artists, performers, lovers of life, and those who bring light to darkness. Multiple planets here demand expression - creative energy builds up and must be released.
+
+Children, romance, and creative projects are major life themes. They may have complex relationships with their own children or inner child work.`,
+        superpower: "The ability to create joy and beauty that transforms darkness into light.",
+        shadow: "May become attention-seeking, dramatic, or treat life as a perpetual performance.",
+        integration: "Learning that the deepest creativity comes from authentic expression, not applause."
+    },
+    6: {
+        title: "6th House Concentration - The Sacred Servant",
+        rarity: "Uncommon (~1 in 65 charts)",
+        keywords: ["Service", "Health", "Work", "Improvement", "Daily Rituals"],
+        archetype: "The Practical Healer",
+        reading: `An extraordinary concentration of planets in the 6th House creates a soul whose life path is centered on service, health, and the sacred nature of daily work. They find meaning through being useful.
+
+This is the chart of natural healers, skilled craftspeople, and those who improve everything they touch. Multiple planets here create someone whose identity is bound up with competence and helpfulness.
+
+Health - physical, mental, and environmental - is a major life theme. Their own well-being teaches them lessons they'll use to help others.`,
+        superpower: "The ability to see what needs fixing and systematically make it better.",
+        shadow: "May become perfectionistic, workaholic, or critical of self and others.",
+        integration: "Learning that some things don't need fixing, and that rest is also sacred."
+    },
+    7: {
+        title: "7th House Concentration - The Partnership Soul",
+        rarity: "Uncommon (~1 in 60 charts)",
+        keywords: ["Partnership", "Relationships", "Others", "Balance", "Justice"],
+        archetype: "The Sacred Partner",
+        reading: `An extraordinary concentration of planets in the 7th House creates a soul who discovers themselves primarily through relationship with others. "I am" becomes "we are."
+
+This is the chart of someone whose life lessons come through partnerships - romantic, business, and all forms of significant one-on-one relating. Multiple planets here create complex relationship karma.
+
+They may attract intense partners who mirror hidden aspects of themselves. Relationship is their spiritual path.`,
+        superpower: "The ability to see through others' eyes and create deep partnership harmony.",
+        shadow: "May lose themselves in relationships or define themselves entirely through partners.",
+        integration: "Building a strong sense of self that can fully meet another without losing identity."
+    },
+    8: {
+        title: "8th House Concentration - The Depth Navigator",
+        rarity: "Rare (~1 in 70 charts)",
+        keywords: ["Transformation", "Shared Resources", "Psychology", "Death/Rebirth", "Intimacy"],
+        archetype: "The Shadow Alchemist",
+        reading: `An extraordinary concentration of planets in the 8th House creates a soul destined for profound transformation and intimate understanding of life's mysteries. They live in the depths.
+
+This is the chart of psychologists, healers, researchers of hidden things, and those who face death (literal or metaphorical) as part of their path. Multiple planets here create someone who cannot do shallow.
+
+Shared resources, inheritances, and other people's money may be significant themes. They're drawn to understand what others fear to look at.`,
+        superpower: "The ability to transform darkness into light and heal through witnessing deep truth.",
+        shadow: "May become controlling, obsessive, or lost in the underworld of intense emotions.",
+        integration: "Learning when to surface and how to bring the gifts of depth into everyday light."
+    },
+    9: {
+        title: "9th House Concentration - The Wisdom Seeker",
+        rarity: "Very Rare (~1 in 80 charts)",
+        keywords: ["Philosophy", "Higher Learning", "Travel", "Truth", "Expansion"],
+        archetype: "The Eternal Explorer",
+        paradox: "The Immovable Visionary - craving adventure while needing stability",
+        reading: `An extraordinary concentration of planets in the 9th House creates a soul whose life purpose is the pursuit and sharing of wisdom. They're born philosophers, travelers, and seekers of meaning.
+
+This concentration is EXTREMELY RARE - having 3+ planets, let alone 5 personal planets here represents perhaps 1 in 15,000 or rarer births. This marks someone with an unusual cosmic mandate for expanding consciousness.
+
+Higher education, travel, publishing, teaching, and spiritual quest are major life themes. They process life by seeking its deeper meaning and sharing what they discover.
+
+THE VISIONARY PARADOX: When combined with grounded signs like Taurus, this creates the "Immovable Visionary" - someone who dreams of distant horizons while needing deep roots. This isn't a contradiction but their unique gift: they can bring visionary ideas into practical reality.`,
+        superpower: "The ability to see life's bigger patterns and share wisdom that expands others' horizons.",
+        shadow: "May become preachy, restless, over-confident, or addicted to seeking without finding.",
+        integration: "Learning that the infinite can be found in the immediate, that depth is also expansion."
+    },
+    10: {
+        title: "10th House Concentration - The Legacy Builder",
+        rarity: "Uncommon (~1 in 55 charts)",
+        keywords: ["Career", "Public Life", "Achievement", "Authority", "Legacy"],
+        archetype: "The Destined Leader",
+        reading: `An extraordinary concentration of planets in the 10th House creates a soul destined for public recognition and worldly achievement. Their light is meant to shine in the world.
+
+This is the chart of natural leaders, executives, and those whose work becomes their legacy. Multiple planets here create complex relationship with authority, status, and public image.
+
+Career isn't just a job - it's a calling. Their reputation and what they build in the world carries enormous weight in their development.`,
+        superpower: "The ability to build lasting structures and inspire through achievement and leadership.",
+        shadow: "May become workaholic, status-obsessed, or lose private life to public demands.",
+        integration: "Building a legacy that includes love and inner fulfillment, not just external achievement."
+    },
+    11: {
+        title: "11th House Concentration - The Future Architect",
+        rarity: "Uncommon (~1 in 60 charts)",
+        keywords: ["Community", "Future", "Innovation", "Friendship", "Humanitarian"],
+        archetype: "The Collective Visionary",
+        reading: `An extraordinary concentration of planets in the 11th House creates a soul whose life purpose unfolds through community, friendship, and vision for collective future. They're here to build new paradigms.
+
+This is the chart of humanitarians, innovators, community builders, and those who think generations ahead. Multiple planets here create someone whose identity is bound up with their tribes and causes.
+
+Friendship isn't casual - it's central to their path. They find themselves through groups and working toward shared dreams.`,
+        superpower: "The ability to envision better futures and inspire collective action toward them.",
+        shadow: "May become detached, rebellious for its own sake, or lose individual identity in groups.",
+        integration: "Balancing individual needs with collective vision, being both unique and unified."
+    },
+    12: {
+        title: "12th House Concentration - The Mystic Soul",
+        rarity: "Rare (~1 in 70 charts)",
+        keywords: ["Spirituality", "Dreams", "Hidden Realms", "Sacrifice", "Transcendence"],
+        archetype: "The Sacred Dreamer",
+        reading: `An extraordinary concentration of planets in the 12th House creates a soul with unusual access to spiritual dimensions, dreams, and the collective unconscious. They live between worlds.
+
+This is the chart of mystics, artists, healers of the soul, and those who sacrifice for higher purposes. Multiple planets here create someone who may feel they don't fully belong in ordinary reality.
+
+Their gifts often work behind the scenes or through subtle channels. They absorb collective energy and must learn psychic hygiene.`,
+        superpower: "The ability to access spiritual wisdom and bring healing from transcendent dimensions.",
+        shadow: "May escape into fantasy, become victimized, or lose themselves in others' energy.",
+        integration: "Staying grounded while honoring their connection to unseen realms."
+    }
+};
+
+// ============================================
+// WEALTH BLUEPRINT READINGS
+// ============================================
+
+var WEALTH_BLUEPRINT_READINGS = {
+    secondHouseStellium: {
+        title: "Wealth DNA Activation",
+        keywords: ["Financial Intelligence", "Value Creation", "Resource Mastery"],
+        reading: `With a stellium in the 2nd House, this soul carries potent "Wealth DNA" - an innate understanding of how value flows in the material world. This isn't just about money; it's about recognizing, creating, and multiplying worth in all its forms.
+
+THE VALUE TRANSLATOR SUPERPOWER: This placement grants the ability to see value where others don't and to translate intangible assets into tangible resources. They understand instinctively that money is energy, and they know how to move that energy.
+
+WEALTH INDICATORS PRESENT:
+• Natural understanding of resource accumulation
+• Instinct for timing in financial matters  
+• Ability to build sustainable value over time
+• Talent for recognizing undervalued assets
+
+The combination creates someone who can turn ideas into income, skills into services, and vision into value. Their relationship with money is complex - it's not just a tool but a teaching.`,
+        guidance: "Trust your financial instincts. You were born understanding value. The key is aligning wealth-building with your deeper values."
+    },
+    
+    jupiterSaturn2ndHouse: {
+        title: "The Master Builder's Fortune",
+        keywords: ["Disciplined Expansion", "Structured Wealth", "Legacy Building"],
+        reading: `Jupiter and Saturn together in the 2nd House create a powerful wealth combination - the expansion of Jupiter meeting the structure of Saturn in the house of resources.
+
+This is the signature of those who build lasting wealth through disciplined growth. Not get-rich-quick energy, but build-rich-forever energy. The key is patience married to vision.
+
+Jupiter expands what Saturn structures. Saturn grounds what Jupiter envisions. Together in the 2nd House, they create someone capable of building significant material legacy.
+
+WEALTH BLUEPRINT: Start with structure (Saturn), then expand (Jupiter). Build foundations before growing. Your wealth will be steady and lasting rather than volatile.`,
+        timing: "Major wealth opportunities often come during Saturn returns or Jupiter transits to natal positions."
+    },
+    
+    pluto2ndHouse: {
+        title: "Transformative Wealth",
+        keywords: ["Financial Transformation", "Power Through Resources", "Phoenix Finances"],
+        reading: `Pluto in the 2nd House brings intense, transformative energy to matters of money and possessions. This is not comfortable wealth - it's powerful, sometimes volatile, and always transforming.
+
+This placement often indicates that relationship with money will go through profound changes - possibly complete financial "deaths and rebirths." Old relationships with value must die for new ones to emerge.
+
+POWER DYNAMICS: There may be complex power dynamics around shared resources, inheritances, or issues of financial control. The soul lesson involves learning healthy relationship with financial power.
+
+PHOENIX ENERGY: After any financial setback, this placement grants remarkable ability to rise again, often to greater heights than before.`,
+        shadow: "Watch for using money as power over others, or allowing others' money to control you."
+    },
+    
+    taurus2ndHouse: {
+        title: "The Natural Abundance Field",
+        keywords: ["Organic Wealth", "Sensory Value", "Grounded Prosperity"],
+        reading: `Taurus energy in the 2nd House is the sign in its natural home - a double emphasis on material mastery, security, and the ability to attract resources.
+
+This creates a natural "abundance field" around the person. They don't just attract money - they attract comfort, beauty, good food, and all forms of sensory wealth.
+
+ACCUMULATION TALENT: There's a natural gift for steady accumulation. Like the bull grazing in the pasture, wealth builds slowly but surely through consistent effort and patience.
+
+VALUE CREATION: Their greatest financial gift is understanding what has lasting value. They're rarely seduced by flash-in-the-pan investments or get-rich-quick schemes.`,
+        guidance: "Your wealth grows best when you can touch it, see it, feel it. Tangible assets speak to you more than abstract investments."
+    }
+};
+
+// ============================================
+// CHAKRA BLUEPRINT READINGS
+// ============================================
+
+var CHAKRA_BLUEPRINT_READINGS = {
+    taurusThroat: {
+        title: "Throat Chakra Blueprint",
+        chakra: "5th Chakra - Vishuddha",
+        bodyArea: "Throat, neck, thyroid, jaw, mouth, ears",
+        keywords: ["Expression", "Voice", "Truth", "Communication", "Singing"],
+        reading: `Taurus rules the throat, and with significant Taurus placements, the 5th Chakra (Throat) becomes a central point of power and potential challenge.
+
+THE THROAT CHAKRA MANDATE: This soul is here to find their voice - literally and figuratively. Self-expression isn't optional; it's essential for their well-being. When they speak their truth, their whole system aligns.
+
+PHYSICAL MANIFESTATIONS: The throat area may be especially sensitive. They might experience:
+• Throat/thyroid issues when suppressing truth
+• Neck tension when feeling unheard
+• Strong singing or speaking voice when aligned
+• Sensitivity to what they consume (food, words, media)
+
+THE TAURUS VOICE: Their voice carries weight and authority, even if soft. When they speak, people listen - not because they're loud, but because their words carry the density of earth.
+
+CREATIVE EXPRESSION: There's often natural talent for singing, speaking, voice work, or any form of communication that uses the physical voice.`,
+        healingPractices: [
+            "Singing, humming, or toning practices",
+            "Speaking truth even when uncomfortable",
+            "Throat chakra meditations with blue light",
+            "Neck and shoulder bodywork",
+            "Writing and journaling to express unspeakables"
+        ],
+        affirmation: "My voice matters. My truth heals. I speak with the steady power of earth."
+    },
+    
+    chakraBySign: {
+        Aries: { chakra: "3rd - Solar Plexus", area: "Stomach, will, personal power" },
+        Taurus: { chakra: "5th - Throat", area: "Voice, expression, truth" },
+        Gemini: { chakra: "5th - Throat", area: "Communication, arms, hands" },
+        Cancer: { chakra: "4th - Heart", area: "Chest, nurturing, emotional center" },
+        Leo: { chakra: "4th - Heart", area: "Heart, courage, love expression" },
+        Virgo: { chakra: "3rd - Solar Plexus", area: "Digestive system, analysis" },
+        Libra: { chakra: "4th - Heart", area: "Balance, harmony, relationships" },
+        Scorpio: { chakra: "2nd - Sacral", area: "Transformation, intimacy, power" },
+        Sagittarius: { chakra: "3rd - Solar Plexus", area: "Expansion, belief, liver/hips" },
+        Capricorn: { chakra: "1st - Root", area: "Bones, structure, foundation" },
+        Aquarius: { chakra: "6th - Third Eye", area: "Vision, innovation, nervous system" },
+        Pisces: { chakra: "7th - Crown", area: "Spirituality, feet, immune system" }
+    }
+};
+
+// ============================================
+// ARCHETYPE SYNTHESIS READINGS
+// ============================================
+
+var ARCHETYPE_SYNTHESIS_READINGS = {
+    wealthyMonk: {
+        title: "The Wealthy Monk",
+        triggers: ["Taurus stellium", "2nd house emphasis", "spiritual indicators"],
+        reading: `When profound Taurus/2nd House energy meets spiritual depth, it creates the "Wealthy Monk" archetype - someone who understands that material and spiritual wealth are not opposites but partners.
+
+This is the soul who knows that money is a form of energy, that abundance is a spiritual law, and that one can be both materially successful and spiritually evolved.
+
+THE WEALTHY MONK PATH:
+• Values both silence and prosperity
+• Finds meditation in practical tasks
+• Creates beauty as spiritual practice
+• Understands resources as responsibility
+• Builds wealth to fund purpose
+
+This archetype rejects the false choice between spirit and matter. They're here to demonstrate that you can have both - that enlightenment doesn't require poverty, and that wealth can serve awakening.`,
+        archetype: "Sacred Materialism"
+    },
+    
+    sensoryMystic: {
+        title: "The Sensory Mystic",
+        triggers: ["Taurus Moon", "Taurus with Neptune/12th house"],
+        reading: `When Taurus' sensory nature meets spiritual sensitivity, it creates the "Sensory Mystic" - someone who finds the divine through physical experience, not in escape from it.
+
+This is the soul who tastes God in good food, feels the sacred in silk on skin, hears angels in beautiful music. Their mysticism is embodied, not ethereal.
+
+THE SENSORY MYSTIC PATH:
+• Spiritual experiences through the body
+• Nature as primary temple
+• Pleasure as path to divine
+• Grounded intuition and practical magic
+• Healing through touch and presence
+
+This archetype collapses the mind/body split. They know that spirit isn't "up there" but "right here" - in the weight of a warm cup, the smell of earth after rain, the comfort of a strong embrace.`,
+        practiceGuidance: "Your spiritual path is through your senses, not around them. Honor the body as temple."
+    },
+    
+    sacredHedonism: {
+        title: "Sacred Hedonism",
+        triggers: ["5th house emphasis", "Venus strong", "Taurus emphasis"],
+        reading: `"Sacred Hedonism" emerges when someone discovers that pleasure, when conscious, is a spiritual path. This isn't indulgence without awareness - it's deep presence to joy.
+
+THE PHILOSOPHY:
+The body is not the obstacle to spirit - it's the gateway. Pleasure is not distraction from enlightenment - it can be enlightenment itself. Joy is not the opposite of depth - it can be depth itself.
+
+SACRED HEDONISM PRACTICES:
+• Eating as meditation (slow, present, grateful)
+• Touch as prayer (conscious, loving, healing)
+• Beauty as devotion (creating and surrounding self with it)
+• Comfort as spiritual practice (caring for the body-temple)
+• Joy as service (your happiness lifts others)
+
+This philosophy says: why would God create a world of beauty if we weren't meant to enjoy it? The sin isn't pleasure - it's unconscious consumption. When pleasure is awake, it's worship.`,
+        shadow: "Without consciousness, this becomes mere indulgence. The 'sacred' must remain active."
+    },
+    
+    embodiedTeacher: {
+        title: "The Embodied Teacher",
+        triggers: ["9th house emphasis", "Taurus emphasis", "Mercury strong"],
+        reading: `When teaching energy (9th House) meets embodied wisdom (Taurus), it creates "The Embodied Teacher" - someone who teaches not just through ideas but through demonstration.
+
+THE EMBODIED TEACHER PATH:
+They don't just tell - they show. They don't just theorize - they practice. They don't just know - they live what they teach.
+
+TEACHING STYLE:
+• Learns best through direct experience
+• Teaches best through practical demonstration
+• Values "walking the talk" above all
+• Distrusts purely intellectual knowledge
+• Seeks to make abstract wisdom practical
+
+Others learn from this person not just from their words but from their presence, their steadiness, their living example. Their life IS their teaching.`,
+        optimalEnvironment: "Hands-on learning environments, apprenticeship models, nature classrooms, experiential education."
+    },
+    
+    completionSpecialist: {
+        title: "The Completion Specialist",
+        triggers: ["Waning Crescent Moon", "Life Path 9", "12th house"],
+        reading: `When Waning Crescent Moon energy (the final phase before new) meets Life Path 9 (the completing number), it creates "The Completion Specialist" - a soul whose gift is finishing what others start and releasing what's complete.
+
+This is the old soul energy of someone who has done this before, many times. They carry the wisdom of endings, the grace of letting go, the understanding that death makes room for birth.
+
+THE COMPLETION SPECIALIST PATH:
+• Natural talent for finishing projects
+• Ability to gracefully close chapters
+• Wisdom about when things are "done"
+• Skill in helping others release
+• Understanding that endings are beginnings
+
+In a world obsessed with starting new things, this soul is gifted at completing. They know that nothing new can be born until the old is properly released.`,
+        lifeWork: "Hospice work, editing, therapy focused on closure, estate management, helping with transitions of all kinds."
+    },
+    
+    aestheticAuthority: {
+        title: "Aesthetic Authority",
+        triggers: ["Venus strong", "Taurus/Libra emphasis", "2nd/7th house"],
+        reading: `When strong Venus energy combines with Taurus/Libra placements, it creates "Aesthetic Authority" - someone whose taste and eye for beauty carries natural credibility.
+
+This person doesn't just appreciate beauty - they define it. Their sense of what looks good, sounds good, feels good becomes influential. Others naturally defer to their aesthetic judgment.
+
+AESTHETIC AUTHORITY DOMAINS:
+• Personal style and appearance
+• Environment and space design
+• Quality assessment in all things
+• Cultural taste-making
+• Beauty industry of all kinds
+
+This isn't vanity - it's a real gift. In a world often ugly or chaotic, this soul brings order through beauty, healing through aesthetics, meaning through form.`,
+        brandImplication: "Your personal brand should emphasize taste, quality, beauty, and refined judgment."
+    },
+    
+    immovableVisionary: {
+        title: "The Immovable Visionary",
+        triggers: ["Taurus emphasis", "9th house emphasis", "Sagittarius influence"],
+        reading: `The "Immovable Visionary" emerges when the stability of Taurus meets the expansive vision of the 9th House - someone who dreams of distant horizons while needing deep roots.
+
+THE PARADOX:
+This isn't a contradiction but a unique gift. They can bring visionary ideas into practical reality. While others dream without building, or build without dreaming, this soul does both.
+
+THE IMMOVABLE VISIONARY PATH:
+• Anchored enough to sustain big visions
+• Visionary enough to transform stable foundations
+• Patient enough to wait for dreams to manifest
+• Grounded enough to make philosophy practical
+• Adventurous enough to keep roots from becoming prisons
+
+This is the philosopher-farmer, the dreaming builder, the traveler who always comes home. Their gift is making the impossible seem inevitable through steady, patient work.`,
+        challenge: "May feel torn between comfort and adventure. The resolution: create adventures FROM your stable base."
+    }
+};
+
+// ============================================
+// STATISTICAL RARITY CONTEXT
+// ============================================
+
+var RARITY_CALCULATIONS = {
+    // Calculate approximate rarity of stellium configurations
+    calculateStelliumRarity: function(stellium) {
+        if (!stellium) return null;
+        
+        const base = 1/12; // Base chance of any planet in any sign
+        
+        if (stellium.count >= 5) {
+            // 5+ planets in one sign is extremely rare
+            return {
+                odds: "1 in 10,000-15,000",
+                description: "Extremely Rare - Cosmic Mandate Configuration",
+                significance: "This concentration is so unusual that it represents a specific cosmic purpose."
+            };
+        } else if (stellium.count === 4) {
+            return {
+                odds: "1 in 500-1,000",
+                description: "Very Rare - Power Focus Configuration",
+                significance: "Strong concentration suggesting major life themes in this area."
+            };
+        } else if (stellium.count === 3) {
+            return {
+                odds: "1 in 50-100",
+                description: "Uncommon - Significant Emphasis",
+                significance: "Notable concentration creating particular strengths here."
+            };
+        }
+        return null;
+    },
+    
+    // Calculate rarity of Sun-Moon same sign
+    sunMoonSameSign: {
+        odds: "1 in 144",
+        description: "Having both luminaries in the same sign creates unusual emotional-identity coherence",
+        significance: "When Sun and Moon share a sign, there's powerful alignment between conscious will and emotional needs."
+    },
+    
+    // House concentration rarity
+    houseConcentrationRarity: function(count, house) {
+        const descriptions = {
+            9: "9th House concentration of personal planets is exceptionally rare, indicating a philosophical/expansive life purpose",
+            2: "2nd House concentration indicates strong wealth/value themes",
+            8: "8th House concentration suggests deep transformation as life path"
+        };
+        
+        if (count >= 5) {
+            return {
+                odds: "1 in 15,000+",
+                description: descriptions[house] || "Exceptional concentration in this life area",
+                significance: "This represents an almost unprecedented focus of cosmic energy."
+            };
+        } else if (count >= 3) {
+            return {
+                odds: "1 in 200-500",
+                description: descriptions[house] || "Significant concentration in this life area",
+                significance: "This represents strong cosmic emphasis in this area."
+            };
+        }
+        return null;
+    }
+};
+
+// ============================================
+// TIMING GRANULARITY READINGS
+// ============================================
+
+var TIMING_READINGS = {
+    personalYearDetailed: {
+        1: {
+            theme: "New Beginnings & Independence",
+            powerMonths: [1, 4, 10], // January, April, October
+            dailyPowerTime: "Morning (6am-10am) - Initiative energy peaks",
+            seasonalPattern: "Spring brings strongest activation",
+            ageResonance: "Particularly powerful if age reduces to 1"
+        },
+        2: {
+            theme: "Partnership & Patience",
+            powerMonths: [2, 6, 11],
+            dailyPowerTime: "Evening (4pm-8pm) - Receptive energy peaks",
+            seasonalPattern: "Autumn brings balance",
+            ageResonance: "Particularly powerful if age reduces to 2"
+        },
+        3: {
+            theme: "Creativity & Expression",
+            powerMonths: [3, 7, 12],
+            dailyPowerTime: "Midday (10am-2pm) - Creative energy peaks",
+            seasonalPattern: "Summer brings expansion",
+            ageResonance: "Particularly powerful if age reduces to 3"
+        },
+        4: {
+            theme: "Building & Foundation",
+            powerMonths: [1, 4, 8],
+            dailyPowerTime: "Early morning (4am-8am) - Structure energy peaks",
+            seasonalPattern: "Winter brings consolidation",
+            ageResonance: "Particularly powerful if age reduces to 4"
+        },
+        5: {
+            theme: "Change & Freedom",
+            powerMonths: [5, 9, 11],
+            dailyPowerTime: "Afternoon (2pm-6pm) - Dynamic energy peaks",
+            seasonalPattern: "Transitional seasons (spring/fall) bring movement",
+            ageResonance: "Particularly powerful if age reduces to 5"
+        },
+        6: {
+            theme: "Love & Responsibility",
+            powerMonths: [2, 6, 9],
+            dailyPowerTime: "Evening (6pm-10pm) - Heart energy peaks",
+            seasonalPattern: "Summer brings love, autumn brings responsibility",
+            ageResonance: "Particularly powerful if age reduces to 6"
+        },
+        7: {
+            theme: "Introspection & Wisdom",
+            powerMonths: [3, 7, 10],
+            dailyPowerTime: "Night (10pm-2am) - Intuitive energy peaks",
+            seasonalPattern: "Winter brings depth",
+            ageResonance: "Particularly powerful if age reduces to 7"
+        },
+        8: {
+            theme: "Power & Achievement",
+            powerMonths: [1, 5, 8],
+            dailyPowerTime: "Morning (8am-12pm) - Achievement energy peaks",
+            seasonalPattern: "Spring and Summer bring harvest",
+            ageResonance: "Particularly powerful if age reduces to 8"
+        },
+        9: {
+            theme: "Completion & Release",
+            powerMonths: [4, 9, 12],
+            dailyPowerTime: "Late evening (8pm-midnight) - Release energy peaks",
+            seasonalPattern: "Autumn brings natural letting go",
+            ageResonance: "Particularly powerful if age reduces to 9"
+        }
+    },
+    
+    tripleNumberSignificance: {
+        title: "Triple Number Activation",
+        reading: `When a number appears three times in a numerological profile (birthday, soul urge, pinnacle, etc.), it creates "Triple Activation" - an amplification of that number's energy that cannot be ignored.
+
+This isn't coincidence; it's cosmic emphasis. The universe is saying "pay attention to this energy" three times over.
+
+TRIPLE 3 SIGNIFICANCE (if applicable):
+When 3 appears as Birthday Number, Soul Urge Number, and current Pinnacle, it creates a "Creative Mandate" - expression, communication, and joy are not optional but essential to fulfillment.
+
+TRIPLE NUMBER EFFECTS:
+• The energy becomes impossible to suppress
+• Life repeatedly brings themes of this number
+• Mastering this number becomes core life work
+• The gifts of this number are amplified
+• The challenges of this number must be faced`
+    }
+};
+
+// ============================================
+// HEALTH CONNECTION READINGS
+// ============================================
+
+var HEALTH_BLUEPRINT_READINGS = {
+    taurus: {
+        title: "Taurus Health Blueprint",
+        keywords: ["Throat", "Thyroid", "Voice", "Neck", "Metabolism"],
+        bodyRuler: "Throat, neck, thyroid, voice",
+        vulnerabilities: `With Taurus emphasis, health awareness focuses on:
+
+THROAT & VOICE:
+• The throat chakra is your power center - protect it
+• Thyroid function may need monitoring throughout life
+• Voice strain from unexpressed emotions or overuse
+• Neck tension holds accumulated stress
+
+METABOLIC CONSIDERATIONS:
+• Naturally slower metabolism - this is feature, not bug
+• Steady energy preferred over quick bursts
+• May need longer recovery time after illness
+• Weight responds to stress and emotional states
+
+THE HEALTH-WEALTH CONNECTION:
+This is crucial for Taurus emphasis: Your financial and physical health are mysteriously linked. When one suffers, the other often follows. Financial stress shows up in throat/neck issues. Physical neglect impacts earning capacity.
+
+WELLNESS APPROACH:
+• Slow, sensory self-care (massage, aromatherapy, quality food)
+• Regular routine over intense sporadic efforts
+• Voice work, singing, or vocal expression as therapy
+• Connection to nature for grounding and healing`,
+        guidance: "Your body is your first wealth. Treat it as the valuable asset it is.",
+        affirmation: "I honor my body's wisdom and natural rhythms."
+    },
+    
+    moonTaurus: {
+        title: "Taurus Moon Health Patterns",
+        emphasis: "Emotional health through physical comfort",
+        reading: `With Moon in Taurus, emotional wellbeing is deeply tied to physical comfort:
+
+• Stress manifests physically more than mentally
+• Comfort eating is a real pattern to watch
+• Need for physical security affects sleep quality
+• Sensory deprivation causes emotional distress
+• Touch and physical affection are essential for emotional health
+
+HEALING MODALITIES:
+• Massage and bodywork
+• Aromatherapy and essential oils
+• Nature immersion
+• Quality sleep environment
+• Comfort objects and familiar surroundings`
+    }
+};
+
+// ============================================
+// TEACHING STYLE READINGS
+// ============================================
+
+var TEACHING_STYLE_READINGS = {
+    embodiedTeacher: {
+        title: "The Embodied Teacher Method",
+        subtitle: "Teaching Through Being, Not Just Knowing",
+        keywords: ["Demonstration", "Presence", "Practical Wisdom", "Patience"],
+        reading: `With 9th House emphasis combined with Taurus energy, you teach through embodiment rather than abstraction:
+
+YOUR TEACHING STYLE:
+• You demonstrate before you explain
+• Your presence teaches as much as your words
+• Patience with slow learners (you understand depth takes time)
+• Practical applications over theoretical frameworks
+• Students feel safe and grounded in your presence
+
+HOW YOU LEARN BEST:
+• Hands-on experience over lectures
+• Taking your time to truly absorb information
+• Physical environment matters (comfort aids learning)
+• Learning through all senses, not just reading
+• Repetition and practice until mastery is embodied
+
+OPTIMAL LEARNING ENVIRONMENTS:
+• Comfortable, beautiful spaces
+• Unhurried pace with time for integration
+• Nature settings or natural elements present
+• Quality over quantity of information
+• Teacher who respects your process
+
+WHAT YOU'RE HERE TO TEACH:
+• That wisdom must be lived, not just known
+• That slow and steady creates lasting change
+• That the body holds intelligence
+• That material and spiritual aren't separate
+• That patience is a superpower`,
+        superpower: "Making complex spiritual concepts feel tangible and achievable",
+        shadow: "May become frustrated with students who want quick fixes"
+    },
+    
+    ninthHouseTeacher: {
+        title: "9th House Teaching Gifts",
+        keywords: ["Philosophy", "Higher Learning", "Publishing", "Travel"],
+        reading: `Strong 9th House energy indicates natural gifts in:
+
+• Higher education and advanced learning
+• Publishing, broadcasting, sharing ideas widely
+• Cross-cultural communication and bridging worlds
+• Making philosophical concepts accessible
+• Inspiring others toward growth and expansion
+
+CAREER EXPRESSIONS:
+• Professor, lecturer, workshop leader
+• Author, blogger, content creator
+• Travel guide or cultural bridge
+• Life coach or philosophical counselor
+• Religious/spiritual teacher`
+    }
+};
+
+// ============================================
+// PHILOSOPHICAL FRAMEWORK READINGS
+// ============================================
+
+var PHILOSOPHICAL_FRAMEWORK_READINGS = {
+    taurus9thHouse: {
+        title: "Grounded Philosophy",
+        subtitle: "Where Material Meets Meaning",
+        keywords: ["Practical Wisdom", "Embodied Belief", "Value Philosophy"],
+        reading: `The combination of Taurus energy with 9th House emphasis creates a unique philosophical framework:
+
+YOUR BELIEF SYSTEM:
+You're not interested in philosophy that can't be lived. Abstract ideas must pass through the filter of "But does it WORK?" Your spirituality is earthy, practical, sensory.
+
+CORE PHILOSOPHICAL TENSIONS:
+• Material vs. Spiritual (you're here to prove they're the same)
+• Possession vs. Detachment (you find the middle way)
+• Pleasure vs. Asceticism (sacred hedonism is your path)
+• Tradition vs. Innovation (you honor both)
+
+HOW BELIEFS BECOME REALITY:
+For you, a belief isn't real until it changes behavior. You don't just think abundance - you create it. You don't just believe in self-worth - you demonstrate it through choices.
+
+THE VALUE PHILOSOPHY:
+Everything is an energy exchange. You intuitively understand:
+• Money as crystallized life force
+• Possessions as materialized values
+• Time as the ultimate currency
+• Quality as a spiritual practice
+
+SPIRITUAL BUT PRACTICAL:
+Your path isn't about renouncing the world but sanctifying it. Every purchase is a vote for values. Every possession is a relationship. Every financial decision is a spiritual choice.`,
+        keyInsight: "You prove your beliefs by how you spend your money and time.",
+        integration: "Your philosophical task is to make the material sacred without making the sacred material."
+    },
+    
+    wealthPhilosophy: {
+        title: "Philosophy of Wealth",
+        keywords: ["Abundance", "Value", "Exchange", "Stewardship"],
+        reading: `Your unique philosophical perspective on wealth:
+
+WEALTH AS ENERGY:
+• Money is neither good nor evil - it's amplified intention
+• Abundance flows toward those who feel worthy of it
+• Scarcity thinking creates scarcity reality
+• Generosity and abundance are the same energy
+
+YOUR WEALTH BELIEFS:
+• Quality matters more than quantity
+• Lasting value over quick gains
+• Building wealth is a form of self-respect
+• Financial freedom enables life purpose
+
+THE GIVING-RECEIVING BALANCE:
+With Taurus-9th House energy, you understand that wealth must flow. Hoarding creates stagnation. Excessive giving depletes. The art is in the rhythm - receiving with grace, giving with intention, building with purpose.`
+    }
+};
+
+// ============================================
+// BIRTH LOCATION SIGNIFICANCE
+// ============================================
+
+var LOCATION_READINGS = {
+    abuDhabi: {
+        title: "Abu Dhabi Birth Signature",
+        coordinates: "24.4539° N, 54.3773° E",
+        significance: `Being born in Abu Dhabi carries specific energetic signatures:
+
+GEOGRAPHIC ENERGY:
+• Desert meets sea - fire and water elements in constant dialogue
+• Ancient crossroads of civilizations and trade routes
+• Modern prosperity built on ancient resources
+• Meeting point of East and West influences
+
+ASTROLOGICAL IMPLICATIONS:
+• Specific rising sign calculations based on this latitude
+• Unique house system configurations for this location
+• Solar and lunar angles specific to this geography
+
+SOUL LEVEL MEANING:
+Choosing to be born in Abu Dhabi suggests themes of:
+• Bridging worlds and cultures
+• Material prosperity with spiritual roots
+• Modern innovation honoring tradition
+• Building lasting structures from resources`,
+        guidance: "Your birth location chose YOU. The energy of this place is part of your cosmic blueprint."
+    }
+};
+
+// ============================================
+// SYNTHESIS FUNCTIONS
+// ============================================
+
+function analyzeHouseConcentration(planetHouses) {
+    if (!planetHouses) return null;
+    
+    const houseCounts = {};
+    const houseDetails = {};
+    
+    // Count planets in each house
+    for (const [planet, house] of Object.entries(planetHouses)) {
+        if (house) {
+            houseCounts[house] = (houseCounts[house] || 0) + 1;
+            if (!houseDetails[house]) houseDetails[house] = [];
+            houseDetails[house].push(planet);
+        }
+    }
+    
+    // Find stelliums (3+ planets in same house)
+    const houseStelliums = [];
+    for (const [house, count] of Object.entries(houseCounts)) {
+        if (count >= 3) {
+            const houseNum = parseInt(house);
+            houseStelliums.push({
+                house: houseNum,
+                count: count,
+                planets: houseDetails[house],
+                reading: HOUSE_STELLIUM_READINGS[houseNum] || null,
+                rarity: RARITY_CALCULATIONS.houseConcentrationRarity(count, houseNum)
+            });
+        }
+    }
+    
+    return houseStelliums.length > 0 ? houseStelliums : null;
+}
+
+function analyzeWealthBlueprint(readings) {
+    if (!readings) return null;
+    
+    const wealthIndicators = [];
+    
+    // Check for 2nd house stellium
+    if (readings.astrology && readings.astrology.planetHouses) {
+        const house2Planets = [];
+        for (const [planet, house] of Object.entries(readings.astrology.planetHouses)) {
+            if (house === 2) house2Planets.push(planet);
+        }
+        
+        if (house2Planets.length >= 2) {
+            wealthIndicators.push({
+                type: 'secondHouseEmphasis',
+                planets: house2Planets,
+                significance: 'Strong wealth potential through resource mastery'
+            });
+        }
+        
+        // Check for Jupiter-Saturn in 2nd
+        if (house2Planets.includes('Jupiter') && house2Planets.includes('Saturn')) {
+            wealthIndicators.push({
+                type: 'jupiterSaturn2ndHouse',
+                reading: WEALTH_BLUEPRINT_READINGS.jupiterSaturn2ndHouse
+            });
+        }
+        
+        // Check for Pluto in 2nd
+        if (house2Planets.includes('Pluto')) {
+            wealthIndicators.push({
+                type: 'pluto2ndHouse',
+                reading: WEALTH_BLUEPRINT_READINGS.pluto2ndHouse
+            });
+        }
+    }
+    
+    // Check for Taurus emphasis
+    if (readings.astrology && readings.astrology.stelliums) {
+        const taurusStellium = readings.astrology.stelliums.find(s => s.sign === 'Taurus');
+        if (taurusStellium) {
+            wealthIndicators.push({
+                type: 'taurusWealth',
+                reading: WEALTH_BLUEPRINT_READINGS.taurus2ndHouse
+            });
+        }
+    }
+    
+    return wealthIndicators.length > 0 ? wealthIndicators : null;
+}
+
+function analyzeArchetypes(readings) {
+    if (!readings) return [];
+    
+    const archetypes = [];
+    
+    // Check for Wealthy Monk
+    const hasTaurusStellium = readings.astrology?.stelliums?.some(s => s.sign === 'Taurus');
+    const has2ndHouseEmphasis = Object.values(readings.astrology?.planetHouses || {}).filter(h => h === 2).length >= 2;
+    
+    if (hasTaurusStellium || has2ndHouseEmphasis) {
+        archetypes.push(ARCHETYPE_SYNTHESIS_READINGS.wealthyMonk);
+    }
+    
+    // Check for Sensory Mystic
+    if (readings.astrology?.moonSign?.name === 'Taurus') {
+        archetypes.push(ARCHETYPE_SYNTHESIS_READINGS.sensoryMystic);
+    }
+    
+    // Check for Completion Specialist
+    if (readings.lunar?.phase?.name === 'Waning Crescent' && readings.numerology?.lifePath === 9) {
+        archetypes.push(ARCHETYPE_SYNTHESIS_READINGS.completionSpecialist);
+    }
+    
+    // Check for Embodied Teacher
+    const has9thHouseEmphasis = Object.values(readings.astrology?.planetHouses || {}).filter(h => h === 9).length >= 3;
+    if (has9thHouseEmphasis && hasTaurusStellium) {
+        archetypes.push(ARCHETYPE_SYNTHESIS_READINGS.embodiedTeacher);
+    }
+    
+    // Check for Immovable Visionary
+    if (hasTaurusStellium && has9thHouseEmphasis) {
+        archetypes.push(ARCHETYPE_SYNTHESIS_READINGS.immovableVisionary);
+    }
+    
+    return archetypes;
+}
+
+function analyzeTripleNumbers(readings) {
+    if (!readings?.numerology) return null;
+    
+    const numbers = [
+        readings.numerology.birthday,
+        readings.numerology.soulUrge,
+        readings.numerology.pinnacles?.first,
+        readings.numerology.pinnacles?.second,
+        readings.numerology.destiny,
+        readings.numerology.lifePath
+    ].filter(n => n);
+    
+    const counts = {};
+    numbers.forEach(n => {
+        counts[n] = (counts[n] || 0) + 1;
+    });
+    
+    for (const [num, count] of Object.entries(counts)) {
+        if (count >= 3) {
+            return {
+                number: parseInt(num),
+                occurrences: count,
+                significance: `Triple ${num} activation - this energy is a cosmic mandate`,
+                reading: TIMING_READINGS.tripleNumberSignificance.reading
+            };
+        }
+    }
+    
+    return null;
+}
+
+function analyzeSunMoonConjunction(readings) {
+    if (!readings?.astrology) return null;
+    
+    const sunSign = readings.astrology.sunSign?.name;
+    const moonSign = readings.astrology.moonSign?.name;
+    
+    if (sunSign && moonSign && sunSign === moonSign) {
+        return {
+            ...RARITY_CALCULATIONS.sunMoonSameSign,
+            sign: sunSign,
+            synthesis: `Sun and Moon both in ${sunSign} creates powerful internal coherence - identity and emotion are unified.`
+        };
+    }
+    return null;
+}
+
+function analyzeHealthBlueprint(readings) {
+    if (!readings?.astrology) return null;
+    
+    const healthIndicators = [];
+    
+    // Check for Taurus emphasis (Sun, Moon, Stellium)
+    const sunSign = readings.astrology.sunSign?.name;
+    const moonSign = readings.astrology.moonSign?.name;
+    const hasTaurusStellium = readings.astrology.stelliums?.some(s => s.sign === 'Taurus');
+    
+    if (sunSign === 'Taurus' || hasTaurusStellium) {
+        healthIndicators.push({
+            type: 'taurusHealth',
+            reading: HEALTH_BLUEPRINT_READINGS.taurus
+        });
+    }
+    
+    if (moonSign === 'Taurus') {
+        healthIndicators.push({
+            type: 'moonTaurusHealth',
+            reading: HEALTH_BLUEPRINT_READINGS.moonTaurus
+        });
+    }
+    
+    return healthIndicators.length > 0 ? healthIndicators : null;
+}
+
+function analyzeTeachingStyle(readings) {
+    if (!readings?.astrology) return null;
+    
+    const teachingIndicators = [];
+    
+    // Check for 9th House emphasis
+    const planetHouses = readings.astrology.planetHouses || {};
+    const house9Planets = Object.entries(planetHouses).filter(([p, h]) => h === 9).map(([p]) => p);
+    
+    if (house9Planets.length >= 2) {
+        teachingIndicators.push({
+            type: 'ninthHouseTeacher',
+            planets: house9Planets,
+            reading: TEACHING_STYLE_READINGS.ninthHouseTeacher
+        });
+    }
+    
+    // Check for Embodied Teacher (9th House + Taurus)
+    const hasTaurusEmphasis = readings.astrology.sunSign?.name === 'Taurus' ||
+                              readings.astrology.moonSign?.name === 'Taurus' ||
+                              readings.astrology.stelliums?.some(s => s.sign === 'Taurus');
+    
+    if (house9Planets.length >= 2 && hasTaurusEmphasis) {
+        teachingIndicators.push({
+            type: 'embodiedTeacher',
+            reading: TEACHING_STYLE_READINGS.embodiedTeacher
+        });
+    }
+    
+    return teachingIndicators.length > 0 ? teachingIndicators : null;
+}
+
+function analyzePhilosophicalFramework(readings) {
+    if (!readings?.astrology) return null;
+    
+    const philosophyIndicators = [];
+    
+    // Check for 9th House + Taurus combination
+    const planetHouses = readings.astrology.planetHouses || {};
+    const house9Planets = Object.entries(planetHouses).filter(([p, h]) => h === 9).map(([p]) => p);
+    const hasTaurusEmphasis = readings.astrology.sunSign?.name === 'Taurus' ||
+                              readings.astrology.moonSign?.name === 'Taurus' ||
+                              readings.astrology.stelliums?.some(s => s.sign === 'Taurus');
+    
+    if (house9Planets.length >= 2 && hasTaurusEmphasis) {
+        philosophyIndicators.push({
+            type: 'taurus9thHouse',
+            reading: PHILOSOPHICAL_FRAMEWORK_READINGS.taurus9thHouse
+        });
+    }
+    
+    // Check for 2nd House emphasis (wealth philosophy)
+    const house2Planets = Object.entries(planetHouses).filter(([p, h]) => h === 2).map(([p]) => p);
+    if (house2Planets.length >= 2 || hasTaurusEmphasis) {
+        philosophyIndicators.push({
+            type: 'wealthPhilosophy',
+            reading: PHILOSOPHICAL_FRAMEWORK_READINGS.wealthPhilosophy
+        });
+    }
+    
+    return philosophyIndicators.length > 0 ? philosophyIndicators : null;
+}
+
+function analyzeBirthLocation(birthPlace) {
+    if (!birthPlace) return null;
+    
+    const place = birthPlace.toLowerCase().trim();
+    
+    // Check for Abu Dhabi variations
+    if (place.includes('abu dhabi') || place.includes('abudhabi') || place === 'uae' || place.includes('united arab emirates')) {
+        return LOCATION_READINGS.abuDhabi;
+    }
+    
+    // Can be extended for other locations
+    return null;
+}
+
+// ============================================
+// STELLIUM INTEGRATION ANALYSIS
+// Cross-references multiple house stelliums
+// ============================================
+
+var STELLIUM_INTEGRATION_READINGS = {
+    "9-2": {
+        title: "The Philosophical Wealth Builder",
+        subtitle: "9th House + 2nd House Stellium Synthesis",
+        keywords: ["Wisdom-Wealth Bridge", "Teaching for Profit", "Philosophical Abundance", "Value Through Vision"],
+        reading: `This is one of the most powerful stellium combinations for creating meaningful wealth. The 9th House (philosophy, higher learning, expansion) feeds directly into the 2nd House (resources, value, material mastery), creating someone who can literally profit from their wisdom.
+
+THE PHILOSOPHY-TO-PROFIT PIPELINE:
+The 9th House stellium generates big-picture thinking, visionary beliefs, and a hunger for truth. The 2nd House stellium translates those visions into tangible value. This isn't someone who just thinks about abundance - they build it from their beliefs.
+
+HOW THIS PLAYS OUT IN REAL LIFE:
+• They may earn through teaching, publishing, consulting, or sharing specialized knowledge
+• Travel and cross-cultural experiences become sources of income or business ideas
+• Their philosophical stance directly shapes their financial decisions (e.g., ethical investing, conscious capitalism)
+• Higher education or spiritual study often leads to their most profitable ventures
+• They see money as a vehicle for spreading their message, not just personal comfort
+
+THE VIRTUOUS CYCLE:
+The more they learn and expand (9th House), the more they earn (2nd House). The more resources they accumulate (2nd House), the more they can invest in growth, travel, and education (9th House). This self-reinforcing cycle can create both deep wisdom and significant material abundance.
+
+POTENTIAL TENSION:
+The 9th House wants to give knowledge freely. The 2nd House wants fair compensation for value. The integration challenge is pricing their wisdom appropriately - neither giving it all away nor hoarding it behind paywalls.`,
+        guidance: "Your greatest wealth comes from what you know and believe. Build businesses, careers, or investments that align with your philosophical vision. The money follows the meaning.",
+        practicalSteps: [
+            "Create a course, book, or coaching program that packages your unique philosophical insights",
+            "Invest in experiences and education that expand your worldview - these ARE your wealth-building tools",
+            "Seek international or cross-cultural business opportunities where your broad perspective gives you an edge",
+            "Price your wisdom fairly - undercharging dishonors both your knowledge and others' capacity to value it"
+        ]
+    },
+    "1-7": {
+        title: "The Self-Through-Partnership Dynamo",
+        subtitle: "1st House + 7th House Stellium Synthesis",
+        keywords: ["Identity Partnership", "Self-Other Balance", "Relational Power"],
+        reading: `The axis of Self (1st House) and Other (7th House) is fully activated. This creates someone whose personal identity is profoundly shaped by their relationships, and whose relationships are profoundly shaped by their personal power. The challenge is maintaining individuality within deep partnership.`,
+        guidance: "You grow most when in relationship, but must never lose yourself in one."
+    },
+    "4-10": {
+        title: "The Private Foundation Builder",
+        subtitle: "4th House + 10th House Stellium Synthesis",
+        keywords: ["Home-Career Balance", "Legacy Foundation", "Public-Private Integration"],
+        reading: `The axis of Home (4th House) and Career (10th House) is fully activated. This creates someone who builds their public legacy on the foundation of their private world. Family business, working from home, or careers in real estate, hospitality, or family services are natural expressions.`,
+        guidance: "Your career and home life are meant to reinforce each other, not compete."
+    },
+    "2-8": {
+        title: "The Transformational Financier",
+        subtitle: "2nd House + 8th House Stellium Synthesis",
+        keywords: ["Wealth Alchemy", "Financial Transformation", "Shared Resources"],
+        reading: `The axis of Personal Resources (2nd House) and Shared Resources (8th House) is fully activated. This creates exceptional financial instinct spanning personal wealth AND other people's money. Investment banking, insurance, estate planning, or any field involving financial transformation is natural territory.`,
+        guidance: "You understand both sides of the wealth equation - what you earn and what you inherit, invest, or transform."
+    },
+    "5-11": {
+        title: "The Creative Community Catalyst",
+        subtitle: "5th House + 11th House Stellium Synthesis",
+        keywords: ["Creative Networking", "Joyful Community", "Innovation Through Play"],
+        reading: `The axis of Personal Creativity (5th House) and Collective Vision (11th House) is fully activated. This creates someone who channels personal creative expression into group movements, community projects, or social innovation. Their joy and play become catalysts for collective change.`,
+        guidance: "Your creativity is amplified through community. Share your creative gifts with groups who share your vision."
+    },
+    "3-9": {
+        title: "The Knowledge Transmitter",
+        subtitle: "3rd House + 9th House Stellium Synthesis",
+        keywords: ["Communication Mastery", "Local-Global Bridge", "Teaching Power"],
+        reading: `The axis of Local Communication (3rd House) and Higher Knowledge (9th House) is fully activated. This creates a born teacher, writer, or media personality who can take complex ideas and make them accessible. They bridge academia and everyday understanding.`,
+        guidance: "You're meant to translate big ideas into practical language. Teaching, writing, and media are your natural platforms."
+    },
+    "6-12": {
+        title: "The Sacred Healer",
+        subtitle: "6th House + 12th House Stellium Synthesis",
+        keywords: ["Holistic Healing", "Service Through Surrender", "Body-Spirit Bridge"],
+        reading: `The axis of Daily Health (6th House) and Spiritual Dissolution (12th House) is fully activated. This creates someone drawn to healing arts that bridge body and spirit - holistic medicine, energy work, therapeutic practices that address root spiritual causes of physical symptoms.`,
+        guidance: "Your healing gift combines practical skill with spiritual sensitivity. Honor both."
+    }
+};
+
+function analyzeStelliumIntegration(readings) {
+    if (!readings?.astrology?.planetHouses) return null;
+    
+    const planetHouses = readings.astrology.planetHouses;
+    const houseCounts = {};
+    
+    for (const [planet, house] of Object.entries(planetHouses)) {
+        if (house) {
+            houseCounts[house] = (houseCounts[house] || 0) + 1;
+        }
+    }
+    
+    // Find houses with 3+ planets (stelliums)
+    const stelliumHouses = Object.entries(houseCounts)
+        .filter(([h, count]) => count >= 3)
+        .map(([h]) => parseInt(h))
+        .sort((a, b) => a - b);
+    
+    if (stelliumHouses.length < 2) return null;
+    
+    const integrations = [];
+    
+    // Check all pairs of stellium houses
+    for (let i = 0; i < stelliumHouses.length; i++) {
+        for (let j = i + 1; j < stelliumHouses.length; j++) {
+            const h1 = stelliumHouses[i];
+            const h2 = stelliumHouses[j];
+            const key = `${h1}-${h2}`;
+            const reverseKey = `${h2}-${h1}`;
+            
+            if (STELLIUM_INTEGRATION_READINGS[key]) {
+                integrations.push(STELLIUM_INTEGRATION_READINGS[key]);
+            } else if (STELLIUM_INTEGRATION_READINGS[reverseKey]) {
+                integrations.push(STELLIUM_INTEGRATION_READINGS[reverseKey]);
+            } else {
+                // Generate dynamic integration for unlisted pairs
+                integrations.push({
+                    title: `House ${h1} + House ${h2} Resonance`,
+                    subtitle: `Dual Stellium Integration`,
+                    keywords: ["Multi-Focus Power", "Life Theme Integration", "Complex Purpose"],
+                    reading: `Having stelliums in both the ${h1}th and ${h2}th Houses creates a unique dual focus in life. The energies of these two life areas are both amplified, creating someone with extraordinary capacity in both domains. The key to fulfillment is finding ways to make these areas reinforce rather than compete with each other.`,
+                    guidance: `Look for careers, relationships, or projects that engage both your House ${h1} and House ${h2} strengths simultaneously.`
+                });
+            }
+        }
+    }
+    
+    return integrations.length > 0 ? integrations : null;
+}
+
+// ============================================
+// AGE-SPECIFIC TIMELINE
+// ============================================
+
+var LIFE_PHASE_READINGS = {
+    earlyChildhood: {
+        title: "Foundation Years (Ages 0-7)",
+        description: "The Imprint Phase",
+        reading: `The first seven years are the most psychologically formative period in any life. During this phase, the Moon sign is the dominant influence — the child is essentially living through their Moon, absorbing emotional patterns that will run beneath every decision they make for the rest of their life.
+
+Everything experienced during this time becomes the emotional operating system. How safety feels, what love looks like, whether the world is trustworthy or threatening — these aren't learned intellectually but absorbed cellularly. The 4th House energy shapes the literal and emotional home environment that creates this foundation.
+
+This is when attachment patterns form. A child who feels consistently seen and soothed develops secure attachment that becomes the template for every future relationship. A child whose needs are inconsistently met develops adaptive strategies — people-pleasing, withdrawal, hypervigilance — that are brilliantly intelligent survival responses but can become limiting patterns in adulthood.
+
+The IC (Imum Coeli) and any planets in the 4th House are actively shaping reality during this phase. Whatever sign sits on the IC describes the emotional atmosphere being absorbed. Whatever planets occupy the 4th House describe the specific energies present in the home environment — for better and for more complicated.`
+    },
+    middleChildhood: {
+        title: "Mercury Years (Ages 7-14)",
+        description: "The Learning Phase",
+        reading: `Between seven and fourteen, Mercury takes the lead. The mind awakens properly — not just absorbing anymore, but actively processing, questioning, categorising, and forming opinions about the world. This is when intellectual identity crystallises: am I smart? Am I good with words? Do my thoughts matter?
+
+The Mercury sign and 3rd House become the dominant influences during this phase. How information is processed, how communication develops, and how the child relates to siblings, schoolmates, and their immediate environment all take shape now. Learning style solidifies — whether they're visual, verbal, kinetic, or intuitive learners becomes clear.
+
+Social awareness explodes. The child moves from the family-centred world of early childhood into the peer-centred world of school and neighbourhood. They begin to understand that other families operate differently, that there are rules beyond home, and that they need to find their place in a social hierarchy they didn't create.
+
+This is also when the inner voice takes shape. The way adults speak to this child during these years literally becomes their internal monologue. Encouragement becomes self-encouragement. Criticism becomes self-criticism. The 3rd House placements describe not just how they communicate with others, but how they'll communicate with themselves for the rest of their life.`
+    },
+    adolescence: {
+        title: "Venus Awakening (Ages 14-21)",
+        description: "The Values Phase",
+        reading: `Adolescence marks the activation of Venus energy — the awakening of values, aesthetics, relationships, and the burning question of self-worth. This isn't just about romantic crushes, though those certainly arrive. It's a fundamental reckoning with what matters, what's beautiful, and what the self is worth.
+
+The Venus sign and the 2nd and 7th House themes become primary influences. Values that may have been inherited from family are now questioned, tested, and either claimed or rejected. The teenager isn't being difficult — they're doing the essential developmental work of deciding what they actually believe versus what they were told to believe.
+
+Relationships become the primary classroom. First loves, first heartbreaks, and first experiences of genuine peer intimacy teach lessons no parent or teacher can convey. The 7th House Descendant begins activating — the kind of person they're drawn to, the relationship patterns they'll carry into adulthood, all start forming through these early experiences.
+
+Self-worth is the hidden battleground of this phase. The 2nd House themes of value — both material and personal — become intensely relevant. How they feel about their body, their abilities, their worthiness of love and success are being shaped in real time. The messages they receive about their value during this phase echo for decades. This is when the foundation for their adult relationship with money, beauty, and self-esteem is laid.`
+    },
+    youngAdult: {
+        title: "Solar Activation (Ages 21-30)",
+        description: "The Identity Phase",
+        reading: `The twenties are when the Sun sign truly comes online. Before this, identity was largely a reflection of family, peers, and circumstance. Now it becomes a conscious project — who am I, really? What do I actually want? The Sun sign's energy, which may have been dormant or muted, begins demanding authentic expression.
+
+This is the decade of experimentation and false starts that aren't actually false — every career tried, relationship entered, and identity tested teaches something essential. The Sun sign's needs become increasingly non-negotiable. A Leo Sun who spent their teens being quiet starts needing the spotlight. A Capricorn Sun who drifted through school suddenly develops fierce ambition.
+
+The Midheaven (10th House) begins asserting itself professionally. Career direction, public identity, and the question of legacy start mattering in ways they didn't before. The choices made during this phase — what to study, where to work, who to commit to — are the first truly self-authored decisions.
+
+The late twenties bring the approach of the first Saturn Return, which creates increasing pressure to get serious. What felt like infinite options in the early twenties starts narrowing as reality demands commitment. This isn't loss of freedom — it's the development of focus. The Saturn Return at 27-30 will crystallise everything this decade has been building toward.`
+    },
+    saturn1: {
+        title: "First Saturn Return (Ages 27-30)",
+        description: "The Reality Check",
+        reading: `The first Saturn Return is arguably the most significant astrological transit of young adulthood. Saturn returns to the exact position it occupied at birth, and everything that isn't authentically yours gets tested. Relationships that were based on convenience rather than genuine compatibility crack. Careers chosen to please parents rather than serve purpose become unbearable. The self-image built on others' expectations rather than inner truth starts collapsing.
+
+This isn't punishment — it's liberation disguised as crisis. Saturn removes what's false so that what's real can be built properly. The structures that survive the Saturn Return become the genuine foundation for the next thirty years. The ones that crumble needed to crumble, even when it doesn't feel that way in the moment.
+
+The Saturn sign in the natal chart describes the specific nature of this test. Saturn in Aries tests independence and courage. Saturn in Cancer tests emotional authenticity. Saturn in Capricorn tests whether the ambition is genuine or performative. Whatever Saturn touches in the birth chart is where the most demanding — and ultimately most rewarding — restructuring happens.
+
+Many of life's most defining decisions are made during or immediately after the first Saturn Return: marriage or divorce, career commitment or radical change, having children, moving countries, starting businesses. These decisions carry weight because they're made with adult awareness rather than youthful optimism. What's chosen now is chosen with eyes open.`
+    },
+    earlyMiddle: {
+        title: "Mars Mastery (Ages 30-40)",
+        description: "The Building Phase",
+        reading: `The thirties are the action decade — Mars energy is at its peak productive capacity. The identity questions of the twenties have (mostly) been answered, the Saturn Return has cleared the false starts, and now it's time to build. Career advancement, family creation, reputation establishment, and the serious work of becoming who you're meant to be all accelerate.
+
+The Midheaven and 10th House become central to daily life. Professional identity isn't just forming — it's being tested and proved in the real world. The difference between the twenties and thirties is that the thirties demand results, not just potential. Mars provides the drive, ambition, and competitive energy needed to claim a place in the world.
+
+This decade often brings the greatest physical vitality combined with the greatest external pressure. There are mortgages, children, career demands, ageing parents — the responsibilities multiply while the energy to handle them is at its peak. The Mars sign describes how this energy is channelled: Mars in earth signs builds methodically, Mars in fire signs charges forward aggressively, Mars in air signs strategises and networks, Mars in water signs navigates intuitively.
+
+The danger of this decade is losing the inner life to external demands. The building is necessary, but if the soul's deeper needs — creativity, spirituality, emotional intimacy — are sacrificed entirely for productivity, the Pluto Square at 36-40 will deliver a forceful reminder that the inner world cannot be indefinitely postponed.`
+    },
+    plutoSquare: {
+        title: "Pluto Square (Ages 36-40)",
+        description: "The Power Reckoning",
+        reading: `Transiting Pluto squares natal Pluto between approximately 36 and 40, triggering a confrontation with power, desire, and everything that's been buried. This is the transit that asks: what have you been afraid to want? What power have you given away? What truth have you been avoiding because facing it would change everything?
+
+This transit often manifests as a period of intense internal pressure. Repressed desires surface with volcanic force. The person who spent their thirties being responsible suddenly feels a desperate need for authenticity that transcends duty. It might look like a crisis to outsiders, but internally it feels like finally waking up.
+
+Pluto's house position in the natal chart determines where this reckoning plays out. Pluto in Libra (a common generation) experiences it through relationships — the partnership dynamics that worked in the twenties and thirties may suddenly feel intolerable. Pluto in Scorpio faces the reckoning through identity itself — who they've been pretending to be versus who they actually are.
+
+The gift of the Pluto Square is reclaimed power. Whatever was surrendered — to parents, partners, employers, social expectations — can now be consciously reclaimed. This doesn't have to be destructive. The healthiest version of this transit involves honest self-examination, therapeutic work, and the courage to make changes that serve the authentic self even when they're inconvenient for the constructed one.`
+    },
+    lateMiddle: {
+        title: "Jupiter Expansion (Ages 40-50)",
+        description: "The Wisdom Phase",
+        reading: `The forties bring Jupiter energy to the forefront — the drive to find meaning, to expand beyond the structures built in the previous decade, and to ask bigger questions than "how do I succeed?" The question becomes "what does success actually mean?" The 9th House themes of philosophy, higher learning, travel, and spiritual exploration activate with new urgency.
+
+Many people experience a genuine vocational shift during this decade. The career that was built in the thirties may feel hollow without meaning. The desire to teach, to mentor, to share accumulated wisdom with others becomes increasingly strong. Jupiter says: you've learned enough to have something genuine to offer. Now share it.
+
+This is often when spiritual life deepens significantly. Religious or philosophical frameworks that were inherited or rejected in youth may be revisited with mature eyes. The question isn't whether to believe, but what genuinely resonates now that enough life has been lived to test ideas against experience. Some find faith; others find philosophy; many find a personal synthesis that doesn't fit any existing category.
+
+Travel and cross-cultural experience, if not already pursued, become magnetically attractive during this phase. The world feels both larger and more accessible. The desire to understand how other people live, what other cultures value, and where one's own perspective fits in the grand human tapestry fuels genuine expansion of consciousness.`
+    },
+    uranus: {
+        title: "Uranus Opposition (Ages 40-44)",
+        description: "The Liberation Crisis",
+        reading: `The Uranus Opposition is what popular culture calls the "midlife crisis" — but it's far more purposeful than that dismissive label suggests. Transiting Uranus opposes natal Uranus, creating an electrical charge that demands liberation from every role, habit, and identity that has become a cage rather than a choice.
+
+The form this takes depends entirely on what's been suppressed. For someone who's lived authentically, the Uranus Opposition might feel like an exciting acceleration — new opportunities, creative breakthroughs, sudden clarity about what comes next. For someone who's been living a borrowed life — the career their parents wanted, the relationship that looked right but felt wrong, the image that pleased everyone but themselves — it can feel like an earthquake.
+
+The Uranus sign in the natal chart describes the generational quality of this awakening. Uranus in Leo demands creative authenticity. Uranus in Virgo demands liberation from perfectionism and duty. Uranus in Libra demands relationship truth. The house position personalises it further — Uranus in the 10th faces career liberation; Uranus in the 4th faces domestic revolution.
+
+The healthiest response to the Uranus Opposition is to make the changes consciously rather than waiting for them to happen chaotically. The energy is going to create change regardless — the choice is between riding the wave and being crashed by it. This is the time to ask: if I had no obligations, no reputation to protect, no one to please — what would I do? The answer to that question contains the seed of the next chapter.`
+    },
+    chiron: {
+        title: "Chiron Return (Ages 49-51)",
+        description: "The Healing Threshold",
+        reading: `Chiron returns to its birth position around age 50, bringing the deepest wound to the surface one final time — not to reopen it, but to transform it into medicine. This is the transit that turns the wounded into the healer, the broken into the beautifully mended, the person who suffered into the one who understands suffering.
+
+The Chiron sign and house in the natal chart describe the specific nature of this wound and where it manifests. Chiron in Aries carries wounds around identity and the right to exist. Chiron in the 7th House carries wounds around partnership and betrayal. Whatever the specifics, the Chiron Return asks: can you finally accept this wound not as damage but as wisdom?
+
+Many people experience a health wake-up call during this transit — not necessarily serious illness, but a clear signal from the body that something needs attention. The body becomes the messenger for what the psyche has been avoiding. This is often the catalyst for genuine lifestyle change, therapeutic breakthrough, or spiritual deepening.
+
+The gift of the Chiron Return is profound empathy born from personal experience. Having lived with a wound for fifty years, there's a depth of understanding available that no amount of training can replicate. Many people discover their true vocation as healers, mentors, or guides during or after this transit — not because they've transcended their wound, but because they've learned to live with it gracefully enough to help others do the same.`
+    },
+    saturn2: {
+        title: "Second Saturn Return (Ages 56-60)",
+        description: "The Elder Threshold",
+        reading: `The second Saturn Return is the gateway to genuine elderhood. Where the first Saturn Return asked "who are you, really?" the second asks "what have you built, and what will you leave behind?" This is the transit of legacy — evaluating not just what was accomplished, but whether it mattered.
+
+The structures built after the first Saturn Return — the career, the family, the reputation, the home — are all evaluated with unflinching honesty. Some hold up beautifully. Others reveal themselves as hollow. There's still time to rebuild what needs rebuilding, but the awareness that time is finite adds urgency that wasn't there before.
+
+Retirement, if it's on the horizon, forces confrontation with identity beyond productivity. For someone whose entire sense of self was built around their career, this transition can feel like death. For someone who maintained inner life alongside professional life, it can feel like liberation. The Saturn sign describes how this threshold is experienced — Saturn in earth signs may struggle to release professional identity; Saturn in water signs may struggle with the emotional weight of time passing.
+
+The second Saturn Return often brings a settling into authenticity that the first Return only initiated. By sixty, most people have learned — sometimes painfully — that pretending is exhausting and ultimately pointless. The gift is permission to finally be exactly who you are, without apology, performance, or compromise. The elder who emerges from this transit has earned the right to speak truth and the wisdom to do it kindly.`
+    },
+    elder: {
+        title: "Elder Wisdom (Ages 60+)",
+        description: "The Harvest Phase",
+        reading: `The elder years belong to the outer planets — Neptune, Pluto, and the transpersonal forces that operate beyond individual will. The ego concerns that dominated earlier decades gradually dissolve, replaced by questions that are simultaneously simpler and more profound: what matters? What was this all for? What continues after me?
+
+Spiritual depth increases naturally during this phase, whether or not it's pursued consciously. The veils between the personal and the universal thin. Dreams become more vivid, intuition sharper, and the sense of connection to something larger than the individual self grows stronger. Neptune's influence softens the boundaries that kept the ego feeling separate.
+
+The desire to pass on wisdom becomes central. This isn't ego-driven teaching — it's the natural impulse of someone who's learned enough to know what matters and what doesn't. Mentoring younger people, whether formally or through simple presence and availability, becomes one of the most fulfilling activities available. The elder has something no younger person can have: perspective earned through decades of living.
+
+Legacy takes its final form during this phase. Not just material legacy — though wills and inheritances matter — but the intangible legacy of how they made people feel, what they stood for, and whether they lived with integrity. The harvest isn't about what was accumulated but about what was genuinely given. The richest elders, in the truest sense, are those who gave more than they kept.`
+    }
+};
+
+function generateAgeTimeline(readings, birthDate) {
+    if (!readings || !birthDate) return null;
+    
+    const birth = new Date(birthDate);
+    const now = new Date();
+    const currentAge = Math.floor((now - birth) / (365.25 * 24 * 60 * 60 * 1000));
+    
+    const timeline = [];
+    const phases = [
+        { key: 'earlyChildhood', startAge: 0, endAge: 7 },
+        { key: 'middleChildhood', startAge: 7, endAge: 14 },
+        { key: 'adolescence', startAge: 14, endAge: 21 },
+        { key: 'youngAdult', startAge: 21, endAge: 27 },
+        { key: 'saturn1', startAge: 27, endAge: 30 },
+        { key: 'earlyMiddle', startAge: 30, endAge: 36 },
+        { key: 'plutoSquare', startAge: 36, endAge: 40 },
+        { key: 'lateMiddle', startAge: 40, endAge: 44 },
+        { key: 'uranus', startAge: 40, endAge: 44 },
+        { key: 'chiron', startAge: 49, endAge: 51 },
+        { key: 'saturn2', startAge: 56, endAge: 60 },
+        { key: 'elder', startAge: 60, endAge: 100 }
+    ];
+    
+    phases.forEach(phase => {
+        const data = LIFE_PHASE_READINGS[phase.key];
+        if (!data) return;
+        
+        let status = 'future';
+        if (currentAge >= phase.endAge) status = 'completed';
+        else if (currentAge >= phase.startAge) status = 'current';
+        
+        // Add Personal Year context for current phase
+        let personalYearNote = '';
+        if (status === 'current' && readings.numerology?.personalYear) {
+            personalYearNote = `Currently in Personal Year ${readings.numerology.personalYear}, adding its specific energy to this life phase.`;
+        }
+        
+        // Add sign-specific context
+        let signContext = '';
+        if (phase.key === 'earlyChildhood' && readings.astrology?.moonSign) {
+            signContext = `With Moon in ${readings.astrology.moonSign.name}, the emotional foundation is shaped by ${readings.astrology.moonSign.name} qualities — this is the emotional operating system running beneath everything.`;
+        } else if (phase.key === 'middleChildhood' && readings.astrology?.mercury) {
+            const mercName = readings.astrology.mercury.name || readings.astrology.mercury;
+            signContext = `With Mercury in ${mercName}, the learning style and inner voice developing during this phase carry ${mercName}'s qualities — shaping how information is processed and how they talk to themselves for life.`;
+        } else if (phase.key === 'adolescence' && readings.astrology?.venus) {
+            const venusName = readings.astrology.venus.name || readings.astrology.venus;
+            signContext = `With Venus in ${venusName}, values and relationship patterns take on ${venusName}'s qualities — first loves and early self-worth lessons are filtered through this energy.`;
+        } else if (phase.key === 'youngAdult' && readings.astrology?.sunSign) {
+            signContext = `With Sun in ${readings.astrology.sunSign.name}, identity crystallises around ${readings.astrology.sunSign.name} themes — the authentic self that emerges during this decade carries this sign's unmistakable imprint.`;
+        } else if (phase.key === 'saturn1' && readings.astrology?.saturn) {
+            const saturnName = readings.astrology.saturn.name || readings.astrology.saturn;
+            signContext = `With natal Saturn in ${saturnName}, this return specifically tests ${saturnName}-related themes — the accountability demanded is focused through this sign's lens.`;
+        } else if (phase.key === 'earlyMiddle' && readings.astrology?.mars) {
+            const marsName = readings.astrology.mars.name || readings.astrology.mars;
+            signContext = `With Mars in ${marsName}, the building energy of this decade is channelled through ${marsName}'s style — this is how ambition, drive, and competitive energy express themselves.`;
+        } else if (phase.key === 'lateMiddle' && readings.astrology?.jupiter) {
+            const jupName = readings.astrology.jupiter.name || readings.astrology.jupiter;
+            signContext = `With Jupiter in ${jupName}, the search for meaning and expansion during this phase is coloured by ${jupName} themes — wisdom and growth arrive through this sign's particular lens.`;
+        } else if (phase.key === 'elder' && readings.astrology?.neptune) {
+            const nepName = readings.astrology.neptune.name || readings.astrology.neptune;
+            signContext = `With Neptune in ${nepName}, the spiritual deepening of the elder years carries ${nepName}'s generational quality — the dissolution of ego boundaries follows this sign's path.`;
+        }
+        
+        timeline.push({
+            ...data,
+            startAge: phase.startAge,
+            endAge: phase.endAge,
+            status,
+            personalYearNote,
+            signContext,
+            startYear: birth.getFullYear() + phase.startAge,
+            endYear: birth.getFullYear() + phase.endAge
+        });
+    });
+    
+    return timeline;
+}
+
+// ============================================
+// VERTEX ACTIVATION TIMING
+// ============================================
+
+var VERTEX_ACTIVATION_READINGS = {
+    timing: {
+        title: "When Destiny Knocks",
+        reading: `The Vertex is called the "electric axis" of the chart - it activates suddenly and unmistakably when fated people, events, or opportunities enter your life. Unlike slower planetary progressions, Vertex activations feel like lightning strikes of destiny.
+
+WHEN TO EXPECT VERTEX ACTIVATION:
+• When transiting planets (especially Jupiter, Saturn, Uranus, Neptune, or Pluto) conjunct or oppose the natal Vertex
+• During eclipses that fall near the Vertex degree
+• When another person's planets conjunct your Vertex (this is the "fated meeting" signature)
+• During progressed Moon or progressed Sun aspects to the natal Vertex
+
+HOW YOU'LL KNOW IT'S HAPPENING:
+Vertex activations feel different from regular transits. There's an uncanny quality - a sense that you were "meant" to be in a certain place at a certain time. People who enter your life during Vertex transits often feel instantly significant, as if you've known them before.
+
+THE RECOGNITION FACTOR:
+Events triggered by Vertex transits have a quality of "recognition" rather than surprise. Even if they're unexpected, something deep inside says "of course" rather than "what?" This is the mark of destined encounters versus random ones.`
+    },
+    bySign: {
+        Aries: "Vertex activations bring bold new people or situations that demand courage. Fated meetings often happen through competitive environments, physical activities, or crisis situations.",
+        Taurus: "Vertex activations come through beauty, finances, or sensory experiences. Fated meetings often happen in gardens, galleries, restaurants, or through shared appreciation of beauty.",
+        Gemini: "Vertex activations arrive through words, ideas, or communication. Fated meetings often happen through writing, teaching, social media, or chance conversations.",
+        Cancer: "Vertex activations come through family events, emotional vulnerability, or nurturing situations. Fated meetings often happen at home, through family, or in caregiving contexts.",
+        Leo: "Vertex activations arrive through creative expression, performance, or children. Fated meetings often happen on stage, through art, or in situations requiring courage and visibility.",
+        Virgo: "Vertex activations come through health events, work situations, or service opportunities. Fated meetings often happen in workplaces, health settings, or through shared daily routines.",
+        Libra: "Vertex activations arrive through partnerships, legal matters, or aesthetic experiences. Fated meetings often happen through introductions, art events, or situations requiring balance and mediation.",
+        Scorpio: "Vertex activations come through crisis, intimacy, or transformation. Fated meetings often happen during intense emotional experiences, shared vulnerability, or financial entanglements.",
+        Sagittarius: "Vertex activations arrive through travel, education, or cross-cultural encounters. Fated meetings often happen abroad, in universities, or through philosophical/spiritual communities.",
+        Capricorn: "Vertex activations come through career milestones, authority figures, or responsibility. Fated meetings often happen in professional settings, through mentors, or during ambitious endeavors.",
+        Aquarius: "Vertex activations arrive through groups, technology, or humanitarian causes. Fated meetings often happen at social gatherings, through online connections, or in activist communities.",
+        Pisces: "Vertex activations come through spiritual experiences, artistic inspiration, or compassionate service. Fated meetings often happen in retreat settings, through music/art, or during moments of surrender."
+    }
+};
+
+function analyzeVertexActivation(readings) {
+    if (!readings?.astrology?.vertex) return null;
+    
+    const vertex = readings.astrology.vertex;
+    const vertexSign = vertex.name || vertex;
+    
+    const result = {
+        title: VERTEX_ACTIVATION_READINGS.timing.title,
+        generalReading: VERTEX_ACTIVATION_READINGS.timing.reading,
+        signSpecific: VERTEX_ACTIVATION_READINGS.bySign[vertexSign] || null,
+        vertexSign: vertexSign
+    };
+    
+    return result;
+}
+
+// ============================================
+// RELATIONSHIP COMPATIBILITY EXPANSION
+// ============================================
+
+var RELATIONSHIP_STYLE_READINGS = {
+    venusDescendant: {
+        title: "Love Language Blueprint",
+        subtitle: "Venus + 7th House Synthesis",
+        reading: `Understanding love style requires looking at both Venus (how you love) and the 7th House/Descendant (who you attract and what you need in partnership).`
+    },
+    byVenusSign: {
+        Aries: {
+            loveStyle: "Love is an action verb for Venus in Aries. They don't wait to feel ready — they dive in headfirst with a courage that can take people's breath away. Affection is shown through initiative: planning the date, making the first move, fighting for the relationship when it matters. They want to be someone's hero and they need a partner who can match their directness without flinching.",
+            attractionPattern: "They're drawn to people who have their own fire — independence, confidence, and a willingness to push back rather than simply agree. Nothing kills attraction faster than passivity or game-playing. They want honest, uncomplicated desire — someone who says what they mean and means what they say.",
+            conflictStyle: "Arguments are direct and hot but usually short-lived. They'd rather fight openly than let resentment build. The danger is saying things in anger they can't take back. They need a partner who can handle heat without crumbling, and who doesn't hold grudges because they don't.",
+            attachment: "Passionate and freedom-loving. They commit deeply but need space to remain themselves within the relationship. Possessiveness from either side feels suffocating. The ideal is two independent people choosing each other daily, not two dependent people clinging."
+        },
+        Taurus: {
+            loveStyle: "Venus in Taurus loves through the senses and through steadfast presence. They show up, consistently, without drama or fanfare. Love is the home-cooked meal, the thoughtful gift, the hand held during difficult moments. They build love like they build everything — slowly, thoroughly, and with the intention that it last forever.",
+            attractionPattern: "They're drawn to stability, physical beauty, and people who feel like home. Reliability is genuinely attractive to them. They want someone who keeps promises, who smells good, who creates comfort. Chaos, unpredictability, and emotional games are deeply unattractive — they want to know what they're getting.",
+            conflictStyle: "Slow to anger but formidable once pushed past their limit. They'll absorb a lot before reacting, which means by the time they're upset, it's serious. They need time to process feelings and shouldn't be pushed for immediate resolution. Patience from a partner during conflict is essential.",
+            attachment: "Deeply loyal and possessive in the most protective sense. Once committed, they're in it for the long haul and expect the same in return. Breaking trust is almost unforgivable. They need physical touch, quality time, and the assurance that what they've built together is safe."
+        },
+        Gemini: {
+            loveStyle: "Venus in Gemini loves through conversation, curiosity, and keeping things interesting. They need mental stimulation as much as emotional connection — a boring relationship is a dead relationship to them. They show affection through clever texts, inside jokes, asking real questions, and being genuinely interested in their partner's inner world.",
+            attractionPattern: "They're drawn to wit, intelligence, and social ease. Someone who can hold their own in conversation, introduce new ideas, and make them laugh will always get their attention. They need variety — not necessarily in partners, but in experiences within a partnership. Routine and predictability feel like slow death.",
+            conflictStyle: "They'll talk through problems — sometimes too much, sometimes from their head rather than their heart. They may intellectualise emotions rather than feeling them, or use humour to deflect from real issues. They need a partner who can say 'I hear you thinking, but what are you feeling?'",
+            attachment: "Light and spacious but genuinely caring. They need freedom to socialise, explore ideas, and maintain their own identity. A partner who tries to be their entire world will find themselves losing them. The paradox is that giving them space is what makes them want to stay close."
+        },
+        Cancer: {
+            loveStyle: "Venus in Cancer loves with everything they have. They nurture, they remember, they create emotional worlds so warm that partners never want to leave. Love is shown through care-taking — remembering preferences, anticipating needs, creating safe spaces where vulnerability isn't just accepted but cherished. When they love you, they carry your whole emotional history in their heart.",
+            attractionPattern: "They're drawn to emotional availability, family orientation, and people who feel safe. Someone who opens up genuinely, who values home and closeness, who doesn't treat vulnerability as weakness. They can sense emotional walls from across a room and they're not interested in climbing them unless the person behind them is willing to come out.",
+            conflictStyle: "Indirect and protective. They may withdraw, go quiet, or use passive signals rather than stating what's wrong directly. Harsh criticism cuts deeply and stays with them. They need gentleness in conflict — the message matters, but how it's delivered matters more. A partner who can be honest without being cruel is essential.",
+            attachment: "Deep, devoted, and sometimes anxious. They give everything to relationships and need reassurance that the investment is mutual. Emotional availability from their partner isn't optional — it's the foundation. They remember every kindness and every slight, so consistency in how they're treated shapes everything."
+        },
+        Leo: {
+            loveStyle: "Venus in Leo loves generously, dramatically, and with their whole chest. When they're in, they're all in — grand gestures, unwavering loyalty, and a warmth that makes their partner feel like the most important person alive. They want romance to feel like a story worth telling. Love should be celebrated, not hidden or downplayed.",
+            attractionPattern: "They're drawn to confidence, creativity, and people who know how to appreciate them. Admiration isn't vanity for Venus in Leo — it's the love language. They need to feel seen, desired, and chosen. A partner who is enthusiastic about them, who isn't afraid to express it, who makes them feel special. Indifference is the ultimate rejection.",
+            conflictStyle: "Pride can be a barrier. They struggle to admit fault and may become dramatic when hurt. They need their dignity respected even during disagreements. The worst thing a partner can do is humiliate them. Arguments work best when both sides acknowledge the other's value first, then address the problem.",
+            attachment: "Loyal, warm, and needing reciprocal enthusiasm. They give generously and expect generosity in return — not materially, but emotionally. A partner who takes them for granted slowly extinguishes their fire. They need regular, genuine appreciation to keep their heart open and their love flowing."
+        },
+        Virgo: {
+            loveStyle: "Venus in Virgo loves through acts of service and quiet, steady devotion. They notice what needs doing and they do it — not for recognition, but because love means making someone's life easier and better. They remember how their partner takes their tea, they notice when something's wrong before it's mentioned, they fix things. Love is practical and expressed through consistency rather than grand gestures.",
+            attractionPattern: "They're drawn to intelligence, competence, and genuine goodness. Someone who takes care of themselves, who has integrity, who pays attention to the details of life. Flashiness without substance repels them. They want a real person, not a performance. Health-consciousness and self-improvement are genuinely attractive to them.",
+            conflictStyle: "They can become critical under stress, pointing out flaws in their partner's logic or behaviour with surgical precision. This comes from anxiety, not cruelty, but it can feel harsh. They need a partner who understands that their criticism is often displaced worry, and who can gently redirect them toward expressing the feeling underneath.",
+            attachment: "Devoted and anxious in equal measure. They worry about the relationship the way they worry about everything — thoroughly. They need partners who are consistent and who don't create unnecessary drama. Reliability is deeply reassuring to them. They love through service and need their service acknowledged, not expected."
+        },
+        Libra: {
+            loveStyle: "Venus in Libra is in its home sign, creating someone for whom partnership is art. They create beautiful relationships the way others create beautiful homes — with intention, balance, and genuine care for how things feel. They're attentive to their partner's experience, making sure both people feel valued, heard, and considered. Romance isn't an accessory to the relationship; it's the atmosphere they naturally create.",
+            attractionPattern: "They're drawn to refinement, fairness, and people who carry themselves with grace. Someone who can hold a conversation, who treats people well, who appreciates beauty in all its forms. Rudeness, selfishness, and aggressive energy are deeply off-putting. They want a partner who makes the world a more pleasant place simply by being in it.",
+            conflictStyle: "They avoid it, sometimes to their own detriment. They'll accommodate, compromise, and absorb discomfort before admitting something is wrong. When they finally do address conflict, it comes out measured and diplomatic — but the suppressed feelings underneath may be far more intense than their words suggest. They need a partner who creates safety for honest disagreement.",
+            attachment: "Partnership-oriented to their core. They feel most themselves when part of a meaningful couple. This isn't codependency — it's genuine fulfilment through shared life. They need equality, reciprocity, and the sense that both people are contributing to the relationship's beauty. Imbalance, where one person gives more than the other, slowly erodes them."
+        },
+        Scorpio: {
+            loveStyle: "Venus in Scorpio loves with an intensity that can be overwhelming for those who aren't ready for it. This is all-or-nothing love — they don't do casual, they don't do surface, and they don't do pretend. When they choose someone, they choose them completely and expect the same in return. Love means full emotional transparency, deep loyalty, and the willingness to face the darkest parts of each other together.",
+            attractionPattern: "They're drawn to depth, mystery, and emotional courage. Someone who has layers, who isn't afraid of their own shadow, who can handle intensity without running. Superficiality is invisible to them — they can't be attracted to a surface. They want to know who someone really is, underneath everything, and they're patient enough to wait for that truth.",
+            conflictStyle: "Intense and sometimes punishing. They feel betrayal deeply and may respond with withdrawal, testing, or the cold shoulder. Forgiveness is hard-won. They need a partner who understands that their intensity comes from how deeply they care, and who can stay present during emotional storms without escalating or abandoning.",
+            attachment: "Fiercely loyal and deeply possessive. Once bonded, the connection is almost unbreakable — and they expect it to be exclusive and total. Trust, once broken, is nearly impossible to rebuild. They need a partner who understands that their jealousy is really fear of loss, and who proves their loyalty through actions, not just words."
+        },
+        Sagittarius: {
+            loveStyle: "Venus in Sagittarius loves through adventure, honesty, and the shared pursuit of meaning. They want a relationship that expands both people — that makes life bigger, not smaller. Affection is shown through planning trips together, sharing philosophies, laughing until it hurts, and always being genuinely honest, even when it's uncomfortable.",
+            attractionPattern: "They're drawn to optimism, independence, and open-mindedness. Someone who has their own adventures, their own beliefs, their own life that they're excited about. A partner who wants to grow together rather than settle into routine. Possessiveness, pessimism, and narrow thinking are deeply unattractive. They want a companion for the journey, not a jailer.",
+            conflictStyle: "Blunt and sometimes tactless. They believe honesty is always better than diplomacy, which can feel brutal to more sensitive partners. They may also avoid conflict by leaving — physically or emotionally — rather than staying to work through discomfort. They need a partner who can handle direct truth and who can also teach them that delivery matters.",
+            attachment: "Freedom-loving but capable of deep commitment when it doesn't feel like a cage. They need space to grow, explore, and be themselves. The partner who says 'go have your adventure and tell me everything when you come home' wins their heart permanently. Trying to pin them down achieves the opposite of the intended result."
+        },
+        Capricorn: {
+            loveStyle: "Venus in Capricorn loves through commitment, provision, and building something that lasts. They may not say 'I love you' easily, but they show it through loyalty, hard work, and the steady creation of a shared future. Love is proven over time, not declared in a moment. They take partnership as seriously as they take their career — perhaps more so.",
+            attractionPattern: "They're drawn to ambition, maturity, and people who have their life together. Someone who takes responsibility, who has goals, who doesn't play games. They respect accomplishment and competence. A potential partner who is unreliable, immature, or aimless holds no appeal regardless of other qualities. They want someone they can build an empire with.",
+            conflictStyle: "Controlled and sometimes emotionally withheld. They may shut down rather than express hurt, or address relationship issues with the same pragmatism they'd bring to a business problem. They need a partner who can draw out their feelings gently and who doesn't interpret their emotional reserve as lack of caring.",
+            attachment: "Loyal, committed, and quietly devoted. Once they've chosen someone, they're remarkably consistent. But they need to feel respected — taken for granted or treated disrespectfully, and they'll quietly build walls that become permanent. Status and how the relationship appears to others does matter to them, even if they'd deny it."
+        },
+        Aquarius: {
+            loveStyle: "Venus in Aquarius loves through intellectual connection, shared ideals, and respecting each other's individuality. They show affection by being genuinely interested in what makes their partner unique, by supporting their independence, and by building a partnership that doesn't follow anyone else's rules. Friendship is the foundation of their romance — without it, attraction alone isn't enough.",
+            attractionPattern: "They're drawn to uniqueness, intelligence, and people who think for themselves. Someone who challenges norms, who has interesting ideas, who doesn't need external validation to feel secure. Conformity and emotional neediness are unattractive. They want a partner who is their best friend first — someone they'd choose to talk to even without romantic interest.",
+            conflictStyle: "Detached and analytical. They may intellectualise emotions rather than feeling them, or retreat into cool distance when things get too heated. They struggle with the messy, irrational parts of human emotion. They need a partner who can say 'come back to your body and feel this' without judgement.",
+            attachment: "Independent and somewhat unconventional in how they show love. They need significant personal space and time for their own interests. A partner who interprets this as lack of love will always feel insecure. But when they choose someone, the commitment is genuine — it just looks different from the traditional model."
+        },
+        Pisces: {
+            loveStyle: "Venus in Pisces loves with boundless compassion, imagination, and a kind of spiritual devotion that sees the best in people even when they can't see it themselves. They create magic in relationships — romantic gestures that feel like poetry, emotional attunement so deep it borders on telepathic, and a willingness to sacrifice that can be either beautiful or self-destructive depending on the partner.",
+            attractionPattern: "They're drawn to sensitivity, creativity, and spiritual depth. Someone who feels things deeply, who has an inner world rich enough to explore endlessly, who isn't afraid of the mystical side of life. Harshness, cynicism, and emotional brutality repel them. They want a soul connection — anything less feels like settling.",
+            conflictStyle: "Avoidant and absorptive. They may take on their partner's emotions as their own, making it hard to distinguish whose feelings are whose. They tend to sacrifice their own needs to keep the peace, then feel resentful when that sacrifice isn't noticed. They need a partner who actively asks what they need, because they rarely volunteer it.",
+            attachment: "Deeply devoted and sometimes boundary-less. They can lose themselves in love, merging so completely with a partner that they forget who they are alone. They need a partner who actively encourages their individuality and who doesn't take advantage of their giving nature. When healthy, their love is the most unconditional in the zodiac."
+        }
+    }
+};
+
+function analyzeRelationshipStyle(readings) {
+    if (!readings?.astrology) return null;
+    
+    const venus = readings.astrology.venus;
+    const venusSign = venus?.name || venus;
+    const descendant = readings.astrology.descendant;
+    const descendantSign = descendant?.name || descendant;
+    const mars = readings.astrology.mars;
+    const marsSign = mars?.name || mars;
+    const moon = readings.astrology.moonSign;
+    const moonSign = moon?.name || moon;
+    
+    const result = {
+        title: "Relationship Style Blueprint",
+        sections: []
+    };
+    
+    // Venus love style - expanded with all four dimensions
+    if (venusSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign]) {
+        const venusData = RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign];
+        let venusContent = venusData.loveStyle;
+        venusContent += `\n\n${venusData.attractionPattern}`;
+        if (venusData.conflictStyle) {
+            venusContent += `\n\n<strong>In Conflict:</strong> ${venusData.conflictStyle}`;
+        }
+        if (venusData.attachment) {
+            venusContent += `\n\n<strong>Attachment Style:</strong> ${venusData.attachment}`;
+        }
+        result.sections.push({
+            subtitle: `Venus in ${venusSign} - How They Love`,
+            content: venusContent
+        });
+    }
+    
+    // Mars desire style - now with its own unique content
+    if (marsSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[marsSign]) {
+        const marsData = RELATIONSHIP_STYLE_READINGS.byVenusSign[marsSign];
+        const marsContent = `Mars reveals what ignites desire and how pursuit works in relationships. With Mars in ${marsSign}, attraction is physical and instinctive — the chemistry either sparks or it doesn't, and no amount of logic changes it.\n\n${marsData.loveStyle.replace(/Shows love/gi, 'Pursues connection').replace(/love is/gi, 'desire is').replace(/They show affection/gi, 'They pursue')}\n\n<strong>What Sparks Chemistry:</strong> ${marsData.attractionPattern.replace(/They're drawn/gi, 'Physical chemistry ignites with')}`;
+        result.sections.push({
+            subtitle: `Mars in ${marsSign} - Desire & Chemistry`,
+            content: marsContent
+        });
+    }
+    
+    // Moon emotional needs in relationship
+    if (moonSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[moonSign]) {
+        const moonData = RELATIONSHIP_STYLE_READINGS.byVenusSign[moonSign];
+        const moonContent = `The Moon reveals what's needed for emotional safety in relationships — the non-negotiable needs that, if unmet, make no amount of attraction or compatibility enough.\n\nWith Moon in ${moonSign}, emotional security comes through ${moonData.attachment || moonData.loveStyle}\n\n<strong>When Emotionally Triggered:</strong> ${moonData.conflictStyle || 'Emotional reactions follow the patterns of ' + moonSign + ' energy — requiring understanding rather than logic from a partner.'}`;
+        result.sections.push({
+            subtitle: `Moon in ${moonSign} - Emotional Needs in Love`,
+            content: moonContent
+        });
+    }
+    
+    // Venus-Mars dynamic (if different signs)
+    if (venusSign && marsSign && venusSign !== marsSign) {
+        const venusElement = { Aries: 'Fire', Taurus: 'Earth', Gemini: 'Air', Cancer: 'Water', Leo: 'Fire', Virgo: 'Earth', Libra: 'Air', Scorpio: 'Water', Sagittarius: 'Fire', Capricorn: 'Earth', Aquarius: 'Air', Pisces: 'Water' };
+        const vEl = venusElement[venusSign];
+        const mEl = venusElement[marsSign];
+        
+        let dynamicContent = `Venus in ${venusSign} and Mars in ${marsSign} create a distinctive internal relationship dynamic — what they want in love (Venus) and how they pursue it (Mars) operate differently.\n\n`;
+        
+        if (vEl === mEl) {
+            dynamicContent += `Both Venus and Mars are in ${vEl} signs, creating consistency between desire and pursuit. What they want and how they go after it are aligned, making their romantic energy straightforward and coherent. Partners know where they stand.`;
+        } else if ((vEl === 'Fire' && mEl === 'Air') || (vEl === 'Air' && mEl === 'Fire') || (vEl === 'Earth' && mEl === 'Water') || (vEl === 'Water' && mEl === 'Earth')) {
+            dynamicContent += `${vEl} Venus and ${mEl} Mars are compatible elements, creating a natural flow between what they desire and how they pursue it. There's an ease to their romantic style — what they want and how they go after it support each other. This makes their approach to relationships feel authentic and integrated.`;
+        } else {
+            dynamicContent += `${vEl} Venus and ${mEl} Mars create an internal tension between what they want and how they pursue it. They may attract one type of person but pursue another, or send mixed signals because their heart and their drive don't speak the same language. Understanding this internal complexity helps partners navigate what might otherwise feel confusing.`;
+        }
+        
+        result.sections.push({
+            subtitle: `Venus-Mars Dynamic - Heart vs Drive`,
+            content: dynamicContent
+        });
+    }
+    
+    // Descendant - who you attract
+    if (descendantSign) {
+        const descData = SIGN_PARTNER_QUALITIES ? SIGN_PARTNER_QUALITIES[descendantSign] : null;
+        let descContent = `The Descendant in ${descendantSign} reveals the qualities most naturally attracted into this life through partnership. These aren't just preferences — they're the qualities the soul is learning to integrate, often by encountering them in others first.\n\n`;
+        
+        if (descData) {
+            descContent += `Partners who embody ${descData.qualities} are magnetically drawn in. The ideal partnership lifestyle involves ${descData.lifestyle}.\n\n`;
+            descContent += `<strong>The Growth Edge:</strong> ${descData.warning} The lesson isn't to avoid these partners — it's to develop discernment about when these qualities serve growth and when they don't.`;
+        } else {
+            descContent += `Partners who embody ${descendantSign} qualities are most fulfilling. What's drawn to them reflects the underdeveloped parts of themselves seeking expression through relationship.`;
+        }
+        
+        result.sections.push({
+            subtitle: `Descendant in ${descendantSign} - Who You Attract`,
+            content: descContent
+        });
+    }
+    
+    return result.sections.length > 0 ? result : null;
+}
+
+// ============================================
+// CAREER SYNTHESIS ENGINE
+// Generates specific career path suggestions based
+// on house stelliums, sign emphasis, and key placements
+// ============================================
+
+var HOUSE_CAREER_THEMES = {
+    1: { domain: "Personal Branding & Leadership", paths: ["Life coach or personal development speaker", "Fitness trainer or image consultant", "Solo entrepreneur or startup founder", "YouTube creator, influencer, or personal brand builder", "Sports athlete or competitive performer"], verb: "leading by personal example", specific: "They thrive when THEY are the product — their presence, story, or expertise. Self-employment, content creation, and any role where personal magnetism drives success." },
+    2: { domain: "Finance & Value Creation", paths: ["Financial planner or wealth management advisor", "Real estate investor or property developer", "Art dealer, antiques appraiser, or luxury curator", "Accountant, banker, or investment analyst", "Chef, sommelier, or artisan food producer"], verb: "building and managing resources", specific: "Careers that involve building tangible value, evaluating worth, and creating beautiful or valuable things from raw materials." },
+    3: { domain: "Communication & Media", paths: ["Journalist, editor, or news correspondent", "Social media strategist or content marketer", "Podcast host, radio presenter, or broadcaster", "Copywriter, technical writer, or translator", "Primary school teacher or tutor"], verb: "communicating and connecting ideas", specific: "They excel wherever information must be gathered, synthesised, and communicated clearly — media, education, marketing, and digital content." },
+    4: { domain: "Home & Family Services", paths: ["Interior designer or home stager", "Real estate agent or property manager", "Family therapist or child psychologist", "Hotel manager or Airbnb host", "Baker, caterer, or family restaurant owner"], verb: "creating safe, nurturing spaces", specific: "Careers rooted in creating comfort, nurturing others, and building spaces where people feel at home and cared for." },
+    5: { domain: "Creative Arts & Entertainment", paths: ["Actor, musician, or performing artist", "Film director, screenwriter, or content creator", "Children's book author or youth programme director", "Game designer or creative director", "Event planner or entertainment promoter"], verb: "creative expression and inspiring joy", specific: "They need a stage — literal or metaphorical. Any career where creativity, performance, and the ability to bring joy is valued." },
+    6: { domain: "Health & Service Industries", paths: ["Nurse, paramedic, or occupational therapist", "Nutritionist, dietitian, or wellness coach", "Veterinarian or animal behaviourist", "Data analyst or quality assurance engineer", "Office manager, executive assistant, or operations lead"], verb: "improving systems and serving others", specific: "Careers where meticulous attention to detail, service orientation, and the drive to improve processes create tangible results." },
+    7: { domain: "Partnership & Mediation", paths: ["Lawyer, mediator, or arbitrator", "Marriage and couples therapist", "Diplomat, public relations director, or lobbyist", "Business development manager or partnership broker", "Wedding planner or relationship coach"], verb: "creating harmony between people", specific: "They excel in roles that require balancing competing interests, building alliances, and creating win-win outcomes between parties." },
+    8: { domain: "Transformation & Shared Resources", paths: ["Psychologist, depth therapist, or trauma counsellor", "Insurance underwriter, estate planner, or forensic accountant", "Detective, criminal profiler, or investigative journalist", "Surgeon, oncologist, or hospice worker", "Debt restructuring specialist or crisis manager"], verb: "facilitating deep transformation", specific: "Careers involving life-and-death stakes, other people's resources, hidden information, and the courage to face what others avoid." },
+    9: { domain: "Education & Expansion", paths: ["University professor or academic researcher", "Travel guide, cultural consultant, or study-abroad coordinator", "Publisher, literary agent, or thought leadership author", "Philosopher, theologian, or interfaith minister", "International development worker or foreign correspondent"], verb: "expanding horizons and sharing wisdom", specific: "They thrive in careers that combine learning, teaching, travel, and the communication of ideas that change how people see the world." },
+    10: { domain: "Executive Leadership & Legacy", paths: ["CEO, managing director, or C-suite executive", "Politician, city councillor, or government administrator", "Architect, urban planner, or civil engineer", "Executive coach or organisational consultant", "Judge, magistrate, or senior civil servant"], verb: "building lasting public achievement", specific: "They're built for positions of authority and public responsibility — careers where reputation, discipline, and long-term impact matter." },
+    11: { domain: "Technology & Humanitarian Work", paths: ["Software engineer, UX designer, or AI researcher", "Nonprofit director or social enterprise founder", "Community organiser or political campaign strategist", "Environmental scientist or sustainability consultant", "Network engineer or open-source developer"], verb: "innovating for collective benefit", specific: "Careers at the intersection of technology, community, and social progress — building systems that serve the many, not just the few." },
+    12: { domain: "Spirituality & Behind-the-Scenes", paths: ["Psychotherapist, hypnotherapist, or dream analyst", "Chaplain, spiritual director, or retreat facilitator", "Film editor, music producer, or ghostwriter", "Medical researcher or pharmaceutical scientist", "Archivist, librarian, or museum conservator"], verb: "working with unseen dimensions", specific: "Careers that operate behind the scenes, in solitude, or at the boundary between the visible and invisible — healing, research, and creative production done in private." }
+};
+
+var SIGN_CAREER_FLAVORS = {
+    Aries: { style: "pioneering and competitive", modifier: "in fast-paced, first-to-market environments" },
+    Taurus: { style: "patient and quality-focused", modifier: "emphasizing craftsmanship, beauty, and lasting value" },
+    Gemini: { style: "versatile and communicative", modifier: "involving multiple projects, networking, and information exchange" },
+    Cancer: { style: "nurturing and intuitive", modifier: "centered on care, family needs, and emotional connection" },
+    Leo: { style: "creative and charismatic", modifier: "with visibility, performance, and inspiring leadership" },
+    Virgo: { style: "meticulous and service-oriented", modifier: "with attention to detail, efficiency, and practical improvement" },
+    Libra: { style: "collaborative and aesthetic", modifier: "through partnerships, beauty, and balanced approaches" },
+    Scorpio: { style: "intense and investigative", modifier: "involving depth, research, and transformative impact" },
+    Sagittarius: { style: "adventurous and philosophical", modifier: "with travel, teaching, and big-picture thinking" },
+    Capricorn: { style: "disciplined and ambitious", modifier: "building authority, structure, and long-term legacy" },
+    Aquarius: { style: "innovative and humanitarian", modifier: "using technology, community, and unconventional methods" },
+    Pisces: { style: "imaginative and compassionate", modifier: "through artistic vision, healing, and spiritual service" }
+};
+
+function analyzeCareerSynthesis(readings) {
+    if (!readings?.astrology) return null;
+
+    const planetHouses = readings.astrology.planetHouses || {};
+    const sunSign = readings.astrology.sunSign?.name;
+    const mcSign = readings.astrology.midheaven?.name || readings.astrology.mc?.name;
+
+    // Count planets per house
+    const houseCounts = {};
+    const houseDetails = {};
+    for (const [planet, house] of Object.entries(planetHouses)) {
+        if (house) {
+            houseCounts[house] = (houseCounts[house] || 0) + 1;
+            if (!houseDetails[house]) houseDetails[house] = [];
+            houseDetails[house].push(planet);
+        }
+    }
+
+    // Get house stelliums (3+) and strong houses (2+)
+    const stelliumHouses = [];
+    const strongHouses = [];
+    for (const [h, count] of Object.entries(houseCounts)) {
+        const hNum = parseInt(h);
+        if (count >= 3) stelliumHouses.push(hNum);
+        if (count >= 2) strongHouses.push(hNum);
+    }
+
+    if (stelliumHouses.length === 0 && strongHouses.length === 0) return null;
+
+    // Determine dominant sign energy
+    const signCounts = {};
+    if (readings.astrology.stelliums) {
+        readings.astrology.stelliums.forEach(s => {
+            signCounts[s.sign] = (signCounts[s.sign] || 0) + s.count;
+        });
+    }
+    if (sunSign) signCounts[sunSign] = (signCounts[sunSign] || 0) + 2;
+    const dominantSign = Object.entries(signCounts).sort((a, b) => b[1] - a[1])[0]?.[0];
+    const signFlavor = SIGN_CAREER_FLAVORS[dominantSign] || SIGN_CAREER_FLAVORS[sunSign] || { style: "unique", modifier: "in their own distinctive way" };
+
+    const scenarios = [];
+
+    // Build career scenarios by combining house themes
+    const primaryHouses = stelliumHouses.length > 0 ? stelliumHouses : strongHouses.slice(0, 2);
+
+    primaryHouses.forEach((h, idx) => {
+        const theme = HOUSE_CAREER_THEMES[h];
+        if (!theme) return;
+        const planets = houseDetails[h] || [];
+
+        // Create primary scenario with specific job titles
+        const topPaths = theme.paths.slice(0, 3).join(', ');
+        const scenario = {
+            title: theme.paths[0],
+            domain: theme.domain,
+            why: `${planets.join(', ')} in House ${h} creates natural talent for ${theme.verb}. ${theme.specific}`,
+            signNote: `Their ${signFlavor.style} approach means this works best ${signFlavor.modifier}`,
+            examples: `Top career matches: ${topPaths}`
+        };
+        scenarios.push(scenario);
+    });
+
+    // Cross-pollinate: if 2+ stellium houses, create combo career
+    if (primaryHouses.length >= 2) {
+        const h1 = HOUSE_CAREER_THEMES[primaryHouses[0]];
+        const h2 = HOUSE_CAREER_THEMES[primaryHouses[1]];
+        if (h1 && h2) {
+            // Generate specific cross-domain career suggestions
+            const comboPaths = [];
+            if (h1.paths[1] && h2.paths[0]) comboPaths.push(`${h1.paths[1]} meets ${h2.paths[0]}`);
+            scenarios.push({
+                title: `${h1.domain} × ${h2.domain} Fusion`,
+                domain: "Cross-Domain Innovation",
+                why: `The rare combination of House ${primaryHouses[0]} (${h1.verb}) and House ${primaryHouses[1]} (${h2.verb}) creates a unique career sweet spot that few people can fill`,
+                signNote: `Best expressed ${signFlavor.modifier}`,
+                examples: comboPaths.length > 0 ? `Think: ${comboPaths[0]}` : ''
+            });
+        }
+    }
+
+    // Add MC-based scenario if available
+    if (mcSign && SIGN_CAREER_FLAVORS[mcSign]) {
+        const mcFlavor = SIGN_CAREER_FLAVORS[mcSign];
+        scenarios.push({
+            title: `${mcSign} Midheaven Path`,
+            domain: "Public Reputation & Calling",
+            why: `With ${mcSign} at the Midheaven, the public role is ${mcFlavor.style}`,
+            signNote: `Career fulfilment comes ${mcFlavor.modifier}`
+        });
+    }
+
+    return {
+        title: "Career Path Scenarios",
+        subtitle: "Real-world paths aligned with this chart",
+        dominantSign: dominantSign,
+        signFlavor: signFlavor,
+        scenarios: scenarios,
+        primaryHouses: primaryHouses,
+        summary: stelliumHouses.length > 0
+            ? `With stellium energy concentrated in House${stelliumHouses.length > 1 ? 's' : ''} ${stelliumHouses.join(' & ')}, career fulfilment comes through ${stelliumHouses.map(h => HOUSE_CAREER_THEMES[h]?.verb || 'focused purpose').join(' combined with ')}. The ${signFlavor.style} nature means this works best ${signFlavor.modifier}.`
+            : `Strong planetary focus in House${strongHouses.slice(0, 2).length > 1 ? 's' : ''} ${strongHouses.slice(0, 2).join(' & ')} points toward ${strongHouses.slice(0, 2).map(h => HOUSE_CAREER_THEMES[h]?.verb || 'focused purpose').join(' and ')}.`
+    };
+}
+
+// ============================================
+// IDEAL PARTNER PROFILE GENERATOR
+// Builds a dynamic partner profile from Descendant,
+// Venus, Mars, Moon, and 7th House placements
+// ============================================
+
+var SIGN_PARTNER_QUALITIES = {
+    Aries: { qualities: "bold, independent, energetic, courageous", lifestyle: "active, adventurous, spontaneous", warning: "Can be too impulsive or competitive; may clash with need for calm" },
+    Taurus: { qualities: "stable, sensual, patient, reliable", lifestyle: "comfort-loving, nature-connected, routine-oriented", warning: "Can be too stubborn or possessive; may resist necessary change" },
+    Gemini: { qualities: "witty, curious, adaptable, communicative", lifestyle: "socially active, intellectually stimulating, variety-seeking", warning: "Can be too scattered or non-committal; may struggle with emotional depth" },
+    Cancer: { qualities: "nurturing, emotionally deep, protective, intuitive", lifestyle: "home-centered, family-focused, emotionally available", warning: "Can be too clingy or moody; may take things too personally" },
+    Leo: { qualities: "warm, generous, creative, confident", lifestyle: "expressive, socially magnetic, celebration-oriented", warning: "Can be too attention-seeking or dramatic; may need constant validation" },
+    Virgo: { qualities: "thoughtful, detail-oriented, helpful, health-conscious", lifestyle: "organized, wellness-focused, self-improving", warning: "Can be too critical or perfectionistic; may overthink emotions" },
+    Libra: { qualities: "charming, fair-minded, romantic, harmonious", lifestyle: "beauty-appreciating, socially graceful, partnership-oriented", warning: "Can be too indecisive or conflict-avoidant; may suppress true feelings for peace" },
+    Scorpio: { qualities: "intense, loyal, perceptive, emotionally brave", lifestyle: "deeply private, transformation-seeking, all-or-nothing", warning: "Can be too controlling or secretive; may test loyalty to extremes" },
+    Sagittarius: { qualities: "adventurous, optimistic, honest, philosophical", lifestyle: "travel-loving, growth-seeking, freedom-valuing", warning: "Can be too restless or blunt; may struggle with routine or emotional nuance" },
+    Capricorn: { qualities: "ambitious, responsible, disciplined, provider-type", lifestyle: "goal-oriented, structured, tradition-respecting", warning: "Can be too rigid or emotionally guarded; may prioritize work over connection" },
+    Aquarius: { qualities: "unique, intellectual, humanitarian, independent", lifestyle: "unconventional, community-minded, future-focused", warning: "Can be too detached or emotionally distant; may intellectualize feelings" },
+    Pisces: { qualities: "compassionate, creative, spiritual, empathetic", lifestyle: "artistic, intuition-led, spiritually open", warning: "Can be too escapist or boundary-less; may idealize partners unrealistically" }
+};
+
+var SIGN_COMPLEMENTS = {
+    Aries: "Libra", Taurus: "Scorpio", Gemini: "Sagittarius", Cancer: "Capricorn",
+    Leo: "Aquarius", Virgo: "Pisces", Libra: "Aries", Scorpio: "Taurus",
+    Sagittarius: "Gemini", Capricorn: "Cancer", Aquarius: "Leo", Pisces: "Virgo"
+};
+
+var ELEMENT_MAP = {
+    Aries: "Fire", Taurus: "Earth", Gemini: "Air", Cancer: "Water",
+    Leo: "Fire", Virgo: "Earth", Libra: "Air", Scorpio: "Water",
+    Sagittarius: "Fire", Capricorn: "Earth", Aquarius: "Air", Pisces: "Water"
+};
+
+function analyzeIdealPartner(readings) {
+    if (!readings?.astrology) return null;
+
+    const descendantSign = readings.astrology.descendant?.name;
+    const venusSign = readings.astrology.venus?.name;
+    const marsSign = readings.astrology.mars?.name;
+    const moonSign = readings.astrology.moonSign?.name;
+    const sunSign = readings.astrology.sunSign?.name;
+    const risingSign = readings.astrology.risingSign?.name;
+
+    if (!descendantSign && !venusSign) return null;
+
+    const result = { sections: [] };
+
+    // 1. Core partner profile from Descendant
+    if (descendantSign && SIGN_PARTNER_QUALITIES[descendantSign]) {
+        const descData = SIGN_PARTNER_QUALITIES[descendantSign];
+        result.sections.push({
+            title: `${descendantSign} Descendant - Who You Attract`,
+            content: `The 7th House cusp in ${descendantSign} reveals the qualities most needed in a life partner. You naturally attract and are drawn to people who are ${descData.qualities}. An ideal partner's lifestyle is ${descData.lifestyle}. This reflects qualities that complement your own ${risingSign || sunSign || ''} energy - what you admire in others is often what you're learning to integrate in yourself.`
+        });
+    }
+
+    // 2. Emotional security needs from Moon
+    if (moonSign && SIGN_PARTNER_QUALITIES[moonSign]) {
+        const moonData = SIGN_PARTNER_QUALITIES[moonSign];
+        result.sections.push({
+            title: `Moon in ${moonSign} - Emotional Security Needs`,
+            content: `For emotional safety in partnership, the Moon in ${moonSign} needs a partner who is ${moonData.qualities}. The ideal home life together is ${moonData.lifestyle}. Without this emotional foundation, no amount of attraction will sustain the relationship long-term.`
+        });
+    }
+
+    // 3. Venus love language
+    if (venusSign && RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign]) {
+        const venusData = RELATIONSHIP_STYLE_READINGS.byVenusSign[venusSign];
+        result.sections.push({
+            title: `Venus in ${venusSign} - Love Language`,
+            content: `Venus shows how love is given and received. ${venusData.loveStyle} Attraction pattern: ${venusData.attractionPattern}`
+        });
+    }
+
+    // 4. Mars chemistry
+    if (marsSign && SIGN_PARTNER_QUALITIES[marsSign]) {
+        const marsData = SIGN_PARTNER_QUALITIES[marsSign];
+        result.sections.push({
+            title: `Mars in ${marsSign} - Chemistry & Pursuit`,
+            content: `Mars reveals what ignites passion and how pursuit works. With Mars in ${marsSign}, chemistry sparks with someone who is ${marsData.qualities}. The pursuit style is ${marsData.lifestyle}. Physical and energetic compatibility flows best when these qualities are present.`
+        });
+    }
+
+    // 5. Vivid Composite Partner Persona
+    const keySignals = [descendantSign, moonSign, venusSign].filter(Boolean);
+    const elements = keySignals.map(s => ELEMENT_MAP[s]).filter(Boolean);
+    const elementCounts = {};
+    elements.forEach(e => elementCounts[e] = (elementCounts[e] || 0) + 1);
+    const dominantElement = Object.entries(elementCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'balanced';
+
+    const idealQualities = keySignals
+        .map(s => SIGN_PARTNER_QUALITIES[s]?.qualities)
+        .filter(Boolean)
+        .join(', ')
+        .split(', ');
+    const uniqueQualities = [...new Set(idealQualities)].slice(0, 6);
+
+    // Build a vivid persona paragraph
+    const ELEMENT_VIBES = {
+        Fire: { energy: "warm and dynamic", date: "an adventurous day out — hiking, live music, or spontaneous road trips", home: "lively and full of laughter, with plenty of passion and directness" },
+        Earth: { energy: "grounded and steady", date: "a beautifully cooked meal, a walk in nature, or a quiet evening at home", home: "comfortable and stable, with sensory pleasures — good food, soft fabrics, peaceful routines" },
+        Air: { energy: "intellectually stimulating and socially engaging", date: "a thought-provoking conversation over coffee, a gallery opening, or a lively debate", home: "buzzing with ideas, books everywhere, and plenty of freedom for both partners" },
+        Water: { energy: "emotionally deep and intuitively connected", date: "a quiet evening sharing feelings, a sunset walk by water, or a meaningful creative experience", home: "emotionally safe, deeply intimate, and rich with unspoken understanding" }
+    };
+
+    const vibe = ELEMENT_VIBES[dominantElement] || ELEMENT_VIBES.Water;
+    const descLifestyle = descendantSign ? SIGN_PARTNER_QUALITIES[descendantSign]?.lifestyle : '';
+    const moonLifestyle = moonSign ? SIGN_PARTNER_QUALITIES[moonSign]?.lifestyle?.split(',')[0] : '';
+
+    let personaContent = `<strong>Picture this person:</strong> Someone whose energy is ${vibe.energy}. They walk into a room and you notice something ${uniqueQualities.slice(0, 2).join(' and ')} about them immediately. A perfect date looks like ${vibe.date}. At home together, life feels ${vibe.home}.\n\n`;
+
+    personaContent += `They embody a blend of ${uniqueQualities.join(', ')} — qualities that ${descendantSign ? `your ${descendantSign} Descendant is specifically coded to attract` : 'your chart naturally draws in'}. `;
+
+    if (descendantSign) {
+        personaContent += `A partner with ${descendantSign} Sun or Rising would strongly activate this magnetic pull. `;
+    }
+    if (moonSign) {
+        personaContent += `Emotionally, a ${moonSign} Moon or ${SIGN_COMPLEMENTS[moonSign] || 'compatible'} Moon provides the deepest feeling of coming home. `;
+    }
+
+    personaContent += `\n\nThe relationship thrives when both partners honour each other's need for ${keySignals.map(s => SIGN_PARTNER_QUALITIES[s]?.lifestyle?.split(',')[0]).filter(Boolean).join(', ')}. `;
+    personaContent += `This isn't about finding a perfect person — it's about recognising the qualities your soul is specifically wired to grow alongside.`;
+
+    result.sections.push({
+        title: "Your Ideal Partner — A Portrait",
+        content: personaContent
+    });
+
+    // 6. Red flags
+    const redFlagSigns = [];
+    if (moonSign) {
+        const moonElement = ELEMENT_MAP[moonSign];
+        const clashElements = { Fire: 'Water', Water: 'Fire', Earth: 'Air', Air: 'Earth' };
+        const clashElement = clashElements[moonElement];
+        if (clashElement) {
+            const clashSigns = Object.entries(ELEMENT_MAP).filter(([s, e]) => e === clashElement).map(([s]) => s);
+            redFlagSigns.push(...clashSigns.slice(0, 2));
+        }
+    }
+    if (redFlagSigns.length > 0) {
+        result.sections.push({
+            title: "Compatibility Challenges",
+            content: `Partners with strong ${redFlagSigns.join(' or ')} energy may create friction - not because these signs are inherently incompatible, but because their core needs can clash with the emotional security patterns here. These partnerships require extra conscious effort to bridge elemental differences. The key is understanding each other's emotional language rather than assuming one way is "right."`
+        });
+    }
+
+    return result;
+}
+
+// ============================================
+// CHART TENSION RESOLVER
+// Detects opposing chart energies and generates
+// rhythm-based integration guidance
+// ============================================
+
+var ENERGY_AXES = {
+    "stability-adventure": {
+        title: "The Stability-Adventure Paradox",
+        signs: { stability: ["Taurus", "Cancer", "Virgo", "Capricorn"], adventure: ["Sagittarius", "Aries", "Gemini", "Aquarius"] },
+        houses: { stability: [2, 4, 6], adventure: [3, 9, 11] },
+        resolution: {
+            daily: "Morning: Stable routine, grounding practices. Midday: Expansive work, creative exploration. Evening: Return to comfort, familiar spaces.",
+            weekly: "Weekdays: Steady, focused work and building. Weekends: Exploration, learning, new experiences.",
+            yearly: "Most of the year: Deep, consistent work building foundations. A few months: Travel, study, horizon-expanding adventures.",
+            life: "Build a secure base, then launch adventures FROM that base. Return to integrate what was learned. Expand the base with new wisdom. Repeat.",
+            integration: "This soul isn't choosing between stability and adventure - they're creating a life where stability ENABLES adventure, and adventure ENRICHES stability. The home base is the launchpad, not the prison."
+        }
+    },
+    "independence-partnership": {
+        title: "The Independence-Partnership Paradox",
+        signs: { independence: ["Aries", "Aquarius", "Sagittarius"], partnership: ["Libra", "Cancer", "Pisces"] },
+        houses: { independence: [1, 11], partnership: [7, 4, 8] },
+        resolution: {
+            daily: "Solo time for independent projects. Shared time for connection and collaboration. Neither dominates the whole day.",
+            weekly: "Dedicated alone time for personal pursuits. Dedicated together time for deep relating. Both are non-negotiable.",
+            yearly: "Periods of intense togetherness balanced with periods of personal adventure or solo projects.",
+            life: "Partnerships that celebrate individuality. Independence that makes space for deep connection. Choosing partners who want a teammate, not a clone.",
+            integration: "This soul needs partnerships that enhance rather than diminish their independence. They bring the most to relationships when they're also fulfilled individually."
+        }
+    },
+    "emotion-logic": {
+        title: "The Heart-Mind Paradox",
+        signs: { emotion: ["Cancer", "Pisces", "Scorpio"], logic: ["Virgo", "Gemini", "Aquarius", "Capricorn"] },
+        houses: { emotion: [4, 8, 12], logic: [3, 6, 10] },
+        resolution: {
+            daily: "Start decisions with intuition (what does this feel like?), then validate with logic (does this make sense?). Neither alone gives the full picture.",
+            weekly: "Allow emotional processing time without demanding rational explanations. Allow analytical time without demanding feelings.",
+            yearly: "Creative, intuitive seasons alternate with structured, practical seasons. Both are productive in different ways.",
+            life: "The greatest breakthroughs come when heart and mind agree. Develop BOTH emotional intelligence and analytical skill - they're complementary, not competing.",
+            integration: "This soul has access to both deep feeling and sharp thinking. The gift is becoming bilingual - fluent in both the language of emotion and the language of reason."
+        }
+    },
+    "visibility-privacy": {
+        title: "The Spotlight-Sanctuary Paradox",
+        signs: { visibility: ["Leo", "Aries", "Sagittarius"], privacy: ["Scorpio", "Cancer", "Pisces", "Virgo"] },
+        houses: { visibility: [1, 5, 10], privacy: [4, 8, 12] },
+        resolution: {
+            daily: "Public-facing work during peak energy hours. Private restoration during quiet hours. Respect the natural rhythm.",
+            weekly: "Days for being 'on' and visible. Days for retreat and restoration. Don't let either dominate the entire week.",
+            yearly: "Seasons of visibility, launching, and public engagement. Seasons of retreat, reflection, and creative incubation.",
+            life: "Build a public life that's authentic enough to sustain, and a private life that's rich enough to nourish. The stage needs a backstage.",
+            integration: "This soul shines brightest when they've had enough darkness to recharge. Their public power comes FROM their private depth."
+        }
+    },
+    "structure-freedom": {
+        title: "The Structure-Freedom Paradox",
+        signs: { structure: ["Capricorn", "Virgo", "Taurus"], freedom: ["Aquarius", "Sagittarius", "Aries", "Gemini"] },
+        houses: { structure: [6, 10], freedom: [5, 9, 11] },
+        resolution: {
+            daily: "Structured morning routine provides the container for afternoon creative freedom. The structure CREATES freedom.",
+            weekly: "Disciplined work blocks earn free exploration blocks. Neither works without the other.",
+            yearly: "Goal-setting and discipline in career. Spontaneous adventure in personal life. Both feed each other.",
+            life: "Build structures that serve your freedom, not prisons that limit it. Rules and routines should be chosen, not imposed.",
+            integration: "This soul discovers that structure and freedom aren't opposites - structure is the skeleton that lets the body of freedom dance."
+        }
+    },
+    "material-spiritual": {
+        title: "The Material-Spiritual Paradox",
+        signs: { material: ["Taurus", "Virgo", "Capricorn"], spiritual: ["Pisces", "Sagittarius", "Scorpio"] },
+        houses: { material: [2, 6, 10], spiritual: [9, 12, 8] },
+        resolution: {
+            daily: "Ground spiritual insights into practical action. Let practical work become a meditation. Neither realm is 'higher' than the other.",
+            weekly: "Material world engagement (work, money, body) balanced with spiritual practices (meditation, reflection, nature).",
+            yearly: "Periods of worldly ambition fuelled by periods of spiritual renewal. Neither is sustainable alone.",
+            life: "The goal isn't choosing between wealth and wisdom - it's making wisdom profitable and wealth meaningful. Become the bridge between heaven and earth.",
+            integration: "This soul's unique gift is bringing spiritual depth into material reality. They make the sacred practical and the practical sacred."
+        }
+    }
+};
+
+function analyzeChartTensions(readings) {
+    if (!readings?.astrology) return null;
+
+    const tensions = [];
+    const planetHouses = readings.astrology.planetHouses || {};
+
+    // Collect all active signs in the chart
+    const chartSigns = [];
+    if (readings.astrology.sunSign?.name) chartSigns.push(readings.astrology.sunSign.name);
+    if (readings.astrology.moonSign?.name) chartSigns.push(readings.astrology.moonSign.name);
+    if (readings.astrology.risingSign?.name) chartSigns.push(readings.astrology.risingSign.name);
+    if (readings.astrology.venus?.name) chartSigns.push(readings.astrology.venus.name);
+    if (readings.astrology.mars?.name) chartSigns.push(readings.astrology.mars.name);
+    if (readings.astrology.mercury?.name) chartSigns.push(readings.astrology.mercury.name);
+    if (readings.astrology.jupiter?.name) chartSigns.push(readings.astrology.jupiter.name);
+    if (readings.astrology.saturn?.name) chartSigns.push(readings.astrology.saturn.name);
+
+    // Collect active houses
+    const activeHouses = Object.values(planetHouses).filter(Boolean).map(Number);
+
+    // Check each axis for tension
+    for (const [axisKey, axis] of Object.entries(ENERGY_AXES)) {
+        const [pole1Name, pole2Name] = axisKey.split('-');
+        const pole1Signs = axis.signs[pole1Name] || [];
+        const pole2Signs = axis.signs[pole2Name] || [];
+        const pole1Houses = axis.houses[pole1Name] || [];
+        const pole2Houses = axis.houses[pole2Name] || [];
+
+        // Count how many chart placements fall on each side
+        let pole1Score = 0;
+        let pole2Score = 0;
+
+        chartSigns.forEach(sign => {
+            if (pole1Signs.includes(sign)) pole1Score++;
+            if (pole2Signs.includes(sign)) pole2Score++;
+        });
+
+        activeHouses.forEach(h => {
+            if (pole1Houses.includes(h)) pole1Score += 0.5;
+            if (pole2Houses.includes(h)) pole2Score += 0.5;
+        });
+
+        // Only flag tension if BOTH sides have significant presence (2+)
+        if (pole1Score >= 2 && pole2Score >= 2) {
+            tensions.push({
+                title: axis.title,
+                pole1: { name: pole1Name, score: pole1Score },
+                pole2: { name: pole2Name, score: pole2Score },
+                resolution: axis.resolution,
+                strength: Math.min(pole1Score, pole2Score) // higher = more intense tension
+            });
+        }
+    }
+
+    // Sort by tension strength (most intense first)
+    tensions.sort((a, b) => b.strength - a.strength);
+
+    return tensions.length > 0 ? tensions : null;
+}

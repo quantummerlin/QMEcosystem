@@ -12,6 +12,7 @@ const path = require('path');
 
 const brands = {
     baby: 'config-baby.js',
+    classic: 'config-classic.js',
     kpop: 'config-kpop.js',
     stranger: 'config-stranger.js'
 };
@@ -27,6 +28,7 @@ if (!selectedBrand || !brands[selectedBrand]) {
     console.log('');
     console.log('Available brands:');
     console.log('  baby     - Cosmic Baby Blueprint (newborn readings)');
+    console.log('  classic  - Quantum Merlin Classic (soul blueprint)');
     console.log('  kpop     - K-pop Kosmic (idol destiny readings)');
     console.log('  stranger - Stranger Patterns (Stranger Things theme)');
     console.log('');
