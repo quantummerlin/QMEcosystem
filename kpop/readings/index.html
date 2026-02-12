@@ -84,71 +84,71 @@
         /* Base styles - will be customized by config */
         :root {
             --primary: #FF69B4;
-            --secondary: #FFD700;
-            --accent: #00CED1;
-            --background: #FFF5F8;
-            --background-dark: #1a0a2e;
-            --text: #2d1b4e;
+            --secondary: #A855F7;
+            --accent: #00FFFF;
+            --background: #0f0520;
+            --background-dark: #080210;
+            --text: #f0e6ff;
             --text-light: #ffffff;
-            --card-bg: #ffffff;
-            --card-border: #FFE4EC;
-            --font-heading: 'Playfair Display', Georgia, serif;
-            --font-body: 'Inter', 'Segoe UI', sans-serif;
+            --card-bg: rgba(168,85,247,0.08);
+            --card-border: rgba(255,105,180,0.25);
+            --font-heading: 'Black Han Sans', 'Noto Sans KR', 'Impact', sans-serif;
+            --font-body: 'Noto Sans KR', 'Inter', 'Segoe UI', sans-serif;
         }
         
         /* Pink Theme (default for girl) */
         body.theme-girl {
             --primary: #FF69B4;
-            --secondary: #FFB6C1;
-            --accent: #FF1493;
-            --background: #FFF0F5;
-            --card-border: #FFE4EC;
+            --secondary: #FF1493;
+            --accent: #FF69B4;
+            --background: #0f0520;
+            --card-border: rgba(255,105,180,0.3);
         }
 
-        /* Purple Theme */
+        /* Purple Theme (K-Pop Default) */
         body.theme-purple {
-            --primary: #D8B5FF;
-            --secondary: #B19CD9;
-            --accent: #9B59B6;
-            --background: #F8F0FF;
-            --card-border: #E6D5F7;
+            --primary: #A855F7;
+            --secondary: #7C3AED;
+            --accent: #C084FC;
+            --background: #0f0520;
+            --card-border: rgba(168,85,247,0.3);
         }
         
-        /* Blue Theme (for boy) */
+        /* Blue Theme (Boy Group) */
         body.theme-boy {
-            --primary: #6BA3D6;
-            --secondary: #87CEEB;
-            --accent: #4169E1;
-            --background: #F0F8FF;
-            --card-border: #B0E0E6;
+            --primary: #3B82F6;
+            --secondary: #1D4ED8;
+            --accent: #60A5FA;
+            --background: #050a20;
+            --card-border: rgba(59,130,246,0.3);
         }
         
-        /* Dark Mode Theme Combinations */
+        /* Dark Mode Theme Combinations (K-Pop is ALWAYS dark) */
         body.dark-theme.theme-girl {
-            --background: #1a0a1e;
+            --background: #0f0520;
             --text: #ffd6e8;
-            --card-bg: #2d1a2e;
-            --card-border: #4a2a4e;
+            --card-bg: rgba(255,105,180,0.06);
+            --card-border: rgba(255,105,180,0.25);
             --primary: #FF69B4;
-            --secondary: #FFB6C1;
+            --secondary: #FF1493;
         }
         
         body.dark-theme.theme-purple {
-            --background: #1a0a2e;
+            --background: #0f0520;
             --text: #e6d5f7;
-            --card-bg: #2d1a4e;
-            --card-border: #4a2a6e;
-            --primary: #D8B5FF;
-            --secondary: #B19CD9;
+            --card-bg: rgba(168,85,247,0.06);
+            --card-border: rgba(168,85,247,0.25);
+            --primary: #A855F7;
+            --secondary: #7C3AED;
         }
         
         body.dark-theme.theme-boy {
-            --background: #0a1a2e;
+            --background: #050a20;
             --text: #d6e8ff;
-            --card-bg: #1a2d4e;
-            --card-border: #2a4a6e;
-            --primary: #6BA3D6;
-            --secondary: #87CEEB;
+            --card-bg: rgba(59,130,246,0.06);
+            --card-border: rgba(59,130,246,0.25);
+            --primary: #3B82F6;
+            --secondary: #1D4ED8;
         }
         
         body.dark-theme {
@@ -2114,7 +2114,7 @@
             color: var(--primary);
         }
         
-        /* A Moment in Time Summary */
+        /* K-Pop Kosmic Idol Blueprint Summary */
         .cosmic-blueprint-summary {
             background: linear-gradient(135deg, rgba(103,58,183,0.08) 0%, rgba(255,105,180,0.08) 100%);
             border-top: 5px solid linear-gradient(90deg, var(--primary), var(--secondary));
@@ -4598,6 +4598,11 @@
             50% { transform: translateX(-50%) translateY(-8px); }
         }
 
+        @keyframes confettiFall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
         /* --- Opening Letter K-Pop Styling --- */
         .dark-theme .opening-letter {
             background: linear-gradient(145deg, rgba(168,85,247,0.08), rgba(255,105,180,0.05));
@@ -4655,6 +4660,300 @@
             border-radius: 4px;
         }
 
+        /* --- K-Pop Hero Logo & Image --- */
+        .kpop-hero-logo {
+            text-align: center;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .kpop-logo-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,105,180,0.5);
+            box-shadow: 
+                0 0 20px rgba(255,105,180,0.4),
+                0 0 40px rgba(168,85,247,0.2),
+                0 0 60px rgba(0,255,255,0.1);
+            animation: logoGlow 3s ease-in-out infinite alternate;
+            object-fit: cover;
+        }
+
+        @keyframes logoGlow {
+            0% {
+                box-shadow: 
+                    0 0 20px rgba(255,105,180,0.4),
+                    0 0 40px rgba(168,85,247,0.2);
+                border-color: rgba(255,105,180,0.5);
+            }
+            100% {
+                box-shadow: 
+                    0 0 30px rgba(255,105,180,0.6),
+                    0 0 60px rgba(168,85,247,0.3),
+                    0 0 80px rgba(0,255,255,0.15);
+                border-color: rgba(168,85,247,0.6);
+            }
+        }
+
+        .kpop-korean-sub {
+            text-align: center;
+            font-size: 0.95rem;
+            color: rgba(240,230,255,0.6);
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* Results page logo */
+        .kpop-results-logo {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .kpop-results-logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,105,180,0.4);
+            box-shadow: 0 0 20px rgba(255,105,180,0.3);
+            object-fit: cover;
+        }
+
+        /* --- Canvas Starfield Background --- */
+        #kpop-starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* --- Stage Lights Body Effect --- */
+        body.dark-theme {
+            background: var(--background);
+            position: relative;
+        }
+
+        body.dark-theme::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 15% 30%, rgba(255,105,180,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 85% 25%, rgba(168,85,247,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 90%, rgba(0,255,255,0.04) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+            animation: stageLightsDrift 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes stageLightsDrift {
+            0% {
+                background: 
+                    radial-gradient(ellipse at 15% 30%, rgba(255,105,180,0.08) 0%, transparent 50%),
+                    radial-gradient(ellipse at 85% 25%, rgba(168,85,247,0.08) 0%, transparent 50%),
+                    radial-gradient(ellipse at 50% 90%, rgba(0,255,255,0.04) 0%, transparent 50%);
+            }
+            100% {
+                background: 
+                    radial-gradient(ellipse at 25% 50%, rgba(168,85,247,0.08) 0%, transparent 50%),
+                    radial-gradient(ellipse at 75% 40%, rgba(255,105,180,0.08) 0%, transparent 50%),
+                    radial-gradient(ellipse at 50% 10%, rgba(0,255,255,0.05) 0%, transparent 50%);
+            }
+        }
+
+        /* Ensure all content is above starfield */
+        .input-section,
+        .results-section,
+        .welcome-modal,
+        .loading-overlay,
+        .theme-bar,
+        .kpop-particles {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- K-Pop Lightstick Loading --- */
+        .loading-lightstick {
+            margin-bottom: 24px;
+            animation: lightstickSway 2s ease-in-out infinite;
+        }
+
+        .lightstick-svg {
+            filter: drop-shadow(0 0 20px rgba(255,105,180,0.6));
+        }
+
+        .lightstick-aura {
+            animation: lightstickPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes lightstickSway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        @keyframes lightstickPulse {
+            0%, 100% { 
+                opacity: 0.6;
+                r: 35;
+            }
+            50% { 
+                opacity: 1;
+                r: 42;
+            }
+        }
+
+        /* --- Holographic Card Shimmer (from kosmickpop design system) --- */
+        .dark-theme .reading-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 80%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,105,180,0.04),
+                rgba(168,85,247,0.06),
+                rgba(0,255,255,0.04),
+                transparent
+            );
+            transform: skewX(-15deg);
+            animation: holoShimmer 6s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .dark-theme .reading-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes holoShimmer {
+            0% { left: -150%; }
+            50% { left: 150%; }
+            100% { left: 150%; }
+        }
+
+        /* --- Theme Bar K-Pop Styling --- */
+        .dark-theme .theme-bar {
+            background: rgba(15,5,32,0.9);
+            border-bottom: 1px solid rgba(255,105,180,0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .dark-theme .theme-bar-btn {
+            color: rgba(240,230,255,0.7);
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .dark-theme .theme-bar-btn:hover,
+        .dark-theme .theme-bar-btn.active {
+            color: var(--primary);
+            text-shadow: 0 0 10px currentColor;
+        }
+
+        /* --- Subject Name & Birth Info Fix for Dark Theme --- */
+        .dark-theme .subject-name {
+            color: var(--primary) !important;
+            text-shadow: 0 0 10px currentColor;
+            font-size: 1.4rem;
+        }
+
+        .dark-theme .birth-info {
+            color: rgba(240,230,255,0.7) !important;
+        }
+
+        /* --- Input Section Stage Background --- */
+        .dark-theme .input-section {
+            background: transparent;
+        }
+
+        .dark-theme .input-section .header {
+            padding-top: 30px;
+        }
+
+        .dark-theme .input-section .header h1 {
+            font-family: 'Black Han Sans', sans-serif;
+            font-size: 2.8rem;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #FF69B4, #A855F7, #00FFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 0 15px rgba(255,105,180,0.4));
+        }
+
+        /* --- Footer K-Pop Styling --- */
+        .dark-theme .footer-links {
+            border-top: 1px solid rgba(255,105,180,0.1);
+            padding-top: 16px;
+            margin-top: 24px;
+        }
+
+        .dark-theme .footer-links a {
+            color: rgba(240,230,255,0.5);
+            transition: color 0.3s ease;
+        }
+
+        .dark-theme .footer-links a:hover {
+            color: #FF69B4;
+            text-shadow: 0 0 8px rgba(255,105,180,0.4);
+        }
+
+        .dark-theme .footer-links span {
+            color: rgba(240,230,255,0.2);
+        }
+
+        /* --- Reading Card Content Top Border Accent --- */
+        .dark-theme .reading-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+            border-radius: 3px 3px 0 0;
+            opacity: 0.6;
+        }
+
+        /* --- K-Pop TOC Styling --- */
+        .dark-theme .toc-item {
+            border-left: 3px solid rgba(255,105,180,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .dark-theme .toc-item:hover {
+            border-left-color: #FF69B4;
+            background: rgba(255,105,180,0.05);
+        }
+
+        /* --- Mobile Responsiveness for K-Pop elements --- */
+        @media (max-width: 600px) {
+            .kpop-logo-img {
+                width: 90px;
+                height: 90px;
+            }
+            .dark-theme .input-section .header h1 {
+                font-size: 2rem;
+            }
+            .kpop-korean-sub {
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+            }
+            .kpop-results-logo-img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
         /* --- Reduced Motion Safety --- */
         @media (prefers-reduced-motion: reduce) {
             .kpop-particle,
@@ -4664,12 +4963,21 @@
             .dark-theme .cosmic-snapshot::before,
             .dark-theme .section-header::after,
             .dark-theme .loading-overlay::before,
-            .dark-theme .completion-celebration::before {
+            .dark-theme .completion-celebration::before,
+            .kpop-logo-img,
+            .loading-lightstick,
+            .lightstick-aura,
+            .dark-theme .reading-card::before,
+            body.dark-theme::before,
+            #kpop-starfield {
                 animation: none !important;
             }
             .results-section .reading-card {
                 animation: none !important;
                 opacity: 1;
+            }
+            #kpop-starfield {
+                display: none !important;
             }
         }
     </style>
@@ -4759,20 +5067,40 @@
     <!-- Theme Bar -->
     <div class="theme-bar" id="themeBar">
         <button class="theme-bar-btn" data-theme="girl" onclick="setGender('girl')">
-            Pink
+            Girl Group 🩷
         </button>
         <button class="theme-bar-btn" data-theme="purple" onclick="setGender('purple')">
-            Purple
+            K-Pop 💜
         </button>
         <button class="theme-bar-btn" data-theme="boy" onclick="setGender('boy')">
-            Blue
+            Boy Group 💙
         </button>
     </div>
     
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-spinner"></div>
-        <div class="loading-text" id="loadingText">Discovering the soul's story...</div>
+        <div class="loading-lightstick">
+            <svg viewBox="0 0 80 200" width="60" height="150" class="lightstick-svg">
+                <defs>
+                    <radialGradient id="lightstickGlow" cx="50%" cy="30%" r="50%">
+                        <stop offset="0%" stop-color="#FF69B4" stop-opacity="0.9"/>
+                        <stop offset="50%" stop-color="#A855F7" stop-opacity="0.5"/>
+                        <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="stickGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#e0e0e0"/>
+                        <stop offset="100%" stop-color="#999"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="40" cy="40" r="38" fill="url(#lightstickGlow)" class="lightstick-aura"/>
+                <circle cx="40" cy="40" r="22" fill="rgba(168,85,247,0.15)" stroke="#FF69B4" stroke-width="2"/>
+                <text x="40" y="48" text-anchor="middle" font-size="22" fill="#fff" filter="drop-shadow(0 0 8px rgba(255,105,180,0.8))">💜</text>
+                <rect x="37" y="65" width="6" height="110" rx="3" fill="url(#stickGrad)"/>
+                <rect x="35" y="62" width="10" height="8" rx="2" fill="#ccc"/>
+            </svg>
+        </div>
+        <div class="loading-spinner" style="display:none"></div>
+        <div class="loading-text" id="loadingText">Calculating your idol blueprint… 🎤💜</div>
         <div class="loading-progress">
             <div class="loading-progress-bar" id="loadingProgressBar"></div>
         </div>
@@ -4781,9 +5109,13 @@
     <!-- Input Section -->
     <section class="input-section" id="inputSection">
         <header class="header">
-            <h1 id="brandName">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
-            <p class="tagline" id="tagline">Your Complete Cosmic Reading • No Sign-Up • Always Free</p>
-            <p class="sub-tagline" id="subTagline">At the exact moment you were born, the universe created a pattern.</p>
+            <div class="kpop-hero-logo">
+                <img src="/kpop/kpop.jpg" alt="K-Pop Kosmic" class="kpop-logo-img" width="120" height="120">
+            </div>
+            <h1 id="brandName">K-pop Kosmic<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
+            <p class="kpop-korean-sub">아이돌 운명 💜 11:11 Make a Wish</p>
+            <p class="tagline" id="tagline">Your Idol Destiny Awaits, Stan 💜</p>
+            <p class="sub-tagline" id="subTagline">65+ Readings • Your Complete Idol Blueprint • No Sign-Up • Always Free • 화이팅! ✨</p>
         </header>
         
         <div class="container">
@@ -4820,7 +5152,7 @@
             <!-- My Readings Dashboard (below Generate button) -->
             <div class="my-readings-section" id="myReadingsSection" style="display: none;">
                 <div class="my-readings-header">
-                    <h2>📚 My Readings <span class="reading-count" id="readingCount">0</span></h2>
+                    <h2>� My Idol Blueprints <span class="reading-count" id="readingCount">0</span></h2>
                 </div>
                 <div class="readings-list" id="readingsList">
                     <!-- Populated by JavaScript -->
@@ -4828,15 +5160,13 @@
             </div>
             
             <div class="footer-links" aria-label="Legal links">
-                <a href="/soulblueprint/about.html" target="_blank">About</a>
+                <a href="/kpop/tools_index.html">🎤 All K-Pop Tools</a>
                 <span>•</span>
-                <a href="/soulblueprint/privacy.html" target="_blank">Privacy Policy</a>
+                <a href="/kpop/privacy.html" target="_blank">Privacy Policy</a>
                 <span>•</span>
-                <a href="/soulblueprint/terms.html" target="_blank">Terms of Service</a>
+                <a href="/kpop/terms.html" target="_blank">Terms of Service</a>
                 <span>•</span>
-                <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
-                <span>•</span>
-                <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
+                <a href="/kpop/disclaimer.html" target="_blank">Disclaimer</a>
             </div>
         </div>
     </section>
@@ -4844,9 +5174,12 @@
     <!-- Results Section -->
     <section class="results-section" id="resultsSection">
         <div class="results-header">
-            <h1 id="resultTitle">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
-            <p class="subject-name" id="subjectName" style="color: #2d1b4e !important;"></p>
-            <p class="birth-info" id="birthInfo" style="color: #3d2b5e !important;"></p>
+            <div class="kpop-results-logo">
+                <img src="/kpop/kpop.jpg" alt="K-Pop Kosmic" class="kpop-results-logo-img" width="80" height="80">
+            </div>
+            <h1 id="resultTitle">Your Idol Blueprint 💜<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
+            <p class="subject-name" id="subjectName"></p>
+            <p class="birth-info" id="birthInfo"></p>
             <div class="action-buttons">
                 <button class="action-btn" onclick="startNewReading()">New Reading</button>
             </div>
@@ -4856,7 +5189,7 @@
             <!-- Sticky Progress Header -->
             <div class="sticky-progress-header">
                 <div class="sticky-progress-info">
-                    <span class="reading-for">Reading for <strong id="stickyName">...</strong></span>
+                    <span class="reading-for">Idol Blueprint for <strong id="stickyName">...</strong> 💜</span>
                 </div>
                 <div class="sticky-progress-bar">
                     <div class="progress-track">
@@ -4964,13 +5297,13 @@
                     <button class="new-reading-btn" onclick="startNewReading()">Generate Another Reading</button>
                 </div>
                 <div class="footer-links">
-                    <a href="/soulblueprint/about.html" target="_blank">About</a>
+                    <a href="/kpop/tools_index.html">🎤 All K-Pop Tools</a>
                     <span>•</span>
-                    <a href="/soulblueprint/privacy.html" target="_blank">Privacy Policy</a>
+                    <a href="/kpop/privacy.html" target="_blank">Privacy Policy</a>
                     <span>•</span>
-                    <a href="/soulblueprint/terms.html" target="_blank">Terms of Service</a>
+                    <a href="/kpop/terms.html" target="_blank">Terms of Service</a>
                     <span>•</span>
-                    <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
+                    <a href="/kpop/disclaimer.html" target="_blank">Disclaimer</a>
                     <span>•</span>
                     <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
                 </div>
@@ -5282,10 +5615,8 @@
         function applyBrandConfig() {
             const config = BRAND_CONFIG;
             
-            // Apply theme
-            if (config.theme === 'dark' || config.theme === 'cosmic') {
-                document.body.classList.add('dark-theme');
-            }
+            // K-Pop is ALWAYS dark theme
+            document.body.classList.add('dark-theme');
             
             // Apply colors (will be overridden by gender selection)
             const root = document.documentElement;
@@ -5312,7 +5643,7 @@
             document.getElementById('nameInput').placeholder = config.inputLabels.namePlaceholder;
             document.getElementById('nameHelper').textContent = config.inputLabels.nameHelper;
             
-            document.getElementById('birthDateLabel').textContent = config.inputLabels.birthDate;
+            document.getElementById('birthDateLabel').innerHTML = config.inputLabels.birthDate;
             document.getElementById('birthDateHelper').textContent = config.inputLabels.birthDateHelper;
             
             document.getElementById('birthTimeLabel').innerHTML = config.inputLabels.birthTime + ' <span class="optional-badge">Optional</span>';
@@ -5325,8 +5656,12 @@
             document.getElementById('submitBtn').textContent = config.ctaButton;
             document.getElementById('loadingText').textContent = config.loadingMessage;
             
-            // Apply result page text
-            document.getElementById('resultTitle').textContent = config.resultTitle;
+            // Apply result page text  
+            const resultEl = document.getElementById('resultTitle');
+            const resultDots = resultEl.querySelector('.title-dots');
+            resultEl.textContent = config.resultTitle;
+            if (resultDots) resultEl.appendChild(resultDots);
+            
             document.getElementById('generatedBy').textContent = config.generatedBy;
             document.getElementById('disclaimer').textContent = config.footer.disclaimer;
             
@@ -5342,6 +5677,11 @@
             }
             if (!config.features.showBirthPlace) {
                 document.getElementById('birthPlaceGroup').style.display = 'none';
+            }
+
+            // Apply K-Pop loading messages if available
+            if (config.loadingMessages) {
+                window.KPOP_LOADING_MESSAGES = config.loadingMessages;
             }
         }
 
@@ -5404,8 +5744,8 @@
             progressBar.style.width = '0%';
             overlay.classList.add('active');
             
-            // Cycling loading messages
-            const loadingMessages = [
+            // Use K-Pop loading messages from config
+            const loadingMessages = window.KPOP_LOADING_MESSAGES || [
                 'Scanning the stars for your debut date… 🌟',
                 'Calculating your lightstick frequency… 💜',
                 'Mapping your idol archetype constellation… ✨',
@@ -5596,7 +5936,7 @@
             const celestialSection = createSection('celestial', config.sections.celestial);
             
             // ============================================
-            // A MOMENT IN TIME SUMMARY - Planetary Overview
+            // K-POP KOSMIC SUMMARY - Planetary Overview
             // ============================================
             const sunSign = readings.astrology.sunSign;
             const moonSign = readings.astrology.moonSign;
@@ -9559,14 +9899,14 @@ Growth doesn't come from eliminating this tension — it comes from using it con
             
             if (navigator.share) {
                 navigator.share({
-                    title: `A Moment in Time for ${name}`,
+                    title: `K-Pop Kosmic Idol Blueprint for ${name} 💜`,
                     text: text,
                     url: window.location.href
                 });
             } else {
                 // Fallback to clipboard
                 navigator.clipboard.writeText(text + ' ' + window.location.href);
-                alert('Link copied to clipboard!');
+                alert('Link copied! 💜 Share it with your stans!');
             }
         }
         
@@ -9769,14 +10109,14 @@ Growth doesn't come from eliminating this tension — it comes from using it con
         }
         
         function shareVia(method, url, name) {
-            const text = `I created a special Moment in Time reading for ${name}! Check out their cosmic blueprint:`;
+            const text = `I just revealed ${name}'s idol destiny on K-Pop Kosmic! 💜🎤 Check out their idol blueprint:`;
             
             switch(method) {
                 case 'whatsapp':
                     window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
                     break;
                 case 'email':
-                    window.open(`mailto:?subject=A Moment in Time for ${name}&body=${encodeURIComponent(text + '\n\n' + url)}`, '_blank');
+                    window.open(`mailto:?subject=K-Pop Kosmic Idol Blueprint for ${name} 💜&body=${encodeURIComponent(text + '\n\n' + url)}`, '_blank');
                     break;
                 case 'sms':
                     window.open(`sms:?body=${encodeURIComponent(text + ' ' + url)}`, '_blank');
@@ -9784,7 +10124,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 case 'native':
                     if (navigator.share) {
                         navigator.share({
-                            title: `A Moment in Time for ${name}`,
+                            title: `K-Pop Kosmic Idol Blueprint for ${name} 💜`,
                             text: text,
                             url: url
                         });
@@ -9872,7 +10212,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Moment in Time for ${userData.name} - A Gift from the Stars</title>
+    <title>K-Pop Kosmic Idol Blueprint for ${userData.name} 💜</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -10006,8 +10346,8 @@ Growth doesn't come from eliminating this tension — it comes from using it con
 </head>
 <body>
     <div class="gift-header">
-        <h1>A Moment in Time for ${userData.name}</h1>
-        <p class="subtitle">Your Celestial Design Revealed</p>
+        <h1>K-Pop Kosmic Idol Blueprint for ${userData.name} 💜</h1>
+        <p class="subtitle">Your Idol Destiny Revealed 🫰</p>
         <p class="birth-info">Born ${new Date(userData.birthDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}${userData.birthTime ? ' at ' + userData.birthTime : ''}${userData.birthPlace ? ' in ' + userData.birthPlace : ''}</p>
     </div>
     
@@ -10023,8 +10363,8 @@ Growth doesn't come from eliminating this tension — it comes from using it con
     
     <div class="gift-footer">
         <p class="love">Made with love</p>
-        <p>Generated by A Moment in Time by Quantum Merlin</p>
-        <p>quantummerlin.com/soulblueprint</p>
+        <p>Generated by K-Pop Kosmic 💜 11:11 Make a Wish</p>
+        <p>quantummerlin.com/kpop/readings</p>
     </div>
 </body>
 </html>`;
@@ -10034,7 +10374,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `${userData.name.replace(/[^a-z0-9]/gi, '-')}-soul-blueprint-${selectedGiftColor}.html`;
+            a.download = `${userData.name.replace(/[^a-z0-9]/gi, '-')}-idol-blueprint-kpop-kosmic.html`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -10064,6 +10404,70 @@ Growth doesn't come from eliminating this tension — it comes from using it con
         // INITIALIZE
         // ============================================
         
+        // ============================================
+        // 💜 K-POP CANVAS STARFIELD (from kosmickpop)
+        // ============================================
+        function createKPopStarField() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            
+            const canvas = document.createElement('canvas');
+            canvas.id = 'kpop-starfield';
+            document.body.insertBefore(canvas, document.body.firstChild);
+            
+            const ctx = canvas.getContext('2d');
+            let stars = [];
+            const numStars = 150;
+            
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            
+            function createStars() {
+                stars = [];
+                for (let i = 0; i < numStars; i++) {
+                    stars.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        radius: Math.random() * 1.8 + 0.2,
+                        opacity: Math.random(),
+                        speed: Math.random() * 0.3 + 0.05,
+                        color: ['#FF69B4', '#A855F7', '#00FFFF', '#FFD700', '#C084FC', '#FF1493'][Math.floor(Math.random() * 6)]
+                    });
+                }
+            }
+            
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                stars.forEach(star => {
+                    ctx.beginPath();
+                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = star.color;
+                    ctx.globalAlpha = 0.3 + Math.sin(Date.now() * 0.001 + star.x * 0.01) * 0.4;
+                    ctx.fill();
+                    
+                    star.y -= star.speed;
+                    if (star.y < -5) {
+                        star.y = canvas.height + 5;
+                        star.x = Math.random() * canvas.width;
+                    }
+                });
+                
+                ctx.globalAlpha = 1;
+                requestAnimationFrame(animate);
+            }
+            
+            resizeCanvas();
+            createStars();
+            animate();
+            
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                createStars();
+            });
+        }
+
         // ============================================
         // 💜 K-POP FLOATING PARTICLES SYSTEM
         // ============================================
@@ -10113,6 +10517,31 @@ Growth doesn't come from eliminating this tension — it comes from using it con
             setInterval(createParticle, 2000);
         }
 
+        // ============================================
+        // 💜 K-POP CONFETTI BURST (for celebrations)
+        // ============================================
+        function kpopConfetti() {
+            const colors = ['#FF69B4', '#A855F7', '#00FFFF', '#FFD700', '#FF1493', '#C084FC'];
+            const emojis = ['💜', '✨', '🫰', '⭐', '🎤', '💫'];
+            
+            for (let i = 0; i < 50; i++) {
+                const conf = document.createElement('div');
+                const isEmoji = Math.random() > 0.6;
+                conf.textContent = isEmoji ? emojis[Math.floor(Math.random() * emojis.length)] : '';
+                conf.style.cssText = `
+                    position: fixed;
+                    ${isEmoji ? 'font-size: 1.2rem;' : `width: 8px; height: 8px; background: ${colors[Math.floor(Math.random() * colors.length)]}; border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};`}
+                    left: ${Math.random() * 100}vw;
+                    top: -10px;
+                    animation: confettiFall ${2.5 + Math.random() * 2}s linear forwards;
+                    z-index: 10001;
+                    pointer-events: none;
+                `;
+                document.body.appendChild(conf);
+                setTimeout(() => conf.remove(), 5000);
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Always scroll to top on page load/refresh
             window.scrollTo(0, 0);
@@ -10120,6 +10549,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
             applyBrandConfig();
             initColorMode();
             removeAdSlots();
+            createKPopStarField();
             initKpopParticles();
             
             // Restore saved gender theme or default to girl
