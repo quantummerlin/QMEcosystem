@@ -127,7 +127,7 @@ function showExportInstructions(name) {
     modal.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(26,10,46,0.92);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);padding:20px;';
     modal.innerHTML = `
         <div style="background:linear-gradient(135deg,#2d1b4e,#1a0a2e);border:2px solid rgba(255,215,0,0.3);border-radius:20px;padding:35px;max-width:420px;text-align:center;color:#e8d5ff;font-family:'Inter',sans-serif;">
-            <div style="font-size:2.5rem;margin-bottom:12px;">📖✨</div>
+            <div style="font-size:2.5rem;margin-bottom:12px;"></div>
             <h2 style="color:#ffd700;font-size:1.4rem;margin-bottom:12px;font-family:'Playfair Display',serif;">Book File Created!</h2>
             <p style="margin-bottom:18px;line-height:1.6;font-size:0.95rem;">
                 <strong style="color:#ffd700;">${name}</strong>'s A5 paperback book has been downloaded.

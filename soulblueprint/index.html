@@ -4296,7 +4296,7 @@
             <!-- My Readings Dashboard (below Generate button) -->
             <div class="my-readings-section" id="myReadingsSection" style="display: none;">
                 <div class="my-readings-header">
-                    <h2>📚 My Readings <span class="reading-count" id="readingCount">0</span></h2>
+                    <h2>My Readings <span class="reading-count" id="readingCount">0</span></h2>
                 </div>
                 <div class="readings-list" id="readingsList">
                     <!-- Populated by JavaScript -->
@@ -4411,7 +4411,7 @@
             <div class="gift-support-section">
                 <div class="gift-box">
                     <div class="coming-soon-banner">
-                        <span class="coming-soon-icon">✨</span>
+                        <span class="coming-soon-icon"></span>
                         <span class="coming-soon-text">Coming Soon</span>
                     </div>
                     <h3>Gift This Reading</h3>
@@ -4637,7 +4637,7 @@
                             </div>
                             <span class="saved-reading-progress-text" style="color: ${cardTheme.primary}">${progressPercent}%</span>
                         </div>
-                        <button class="saved-reading-delete" onclick="event.stopPropagation(); confirmDeleteReading('${reading.id}', '${(reading.userData.name || 'this reading').replace(/'/g, "\\'")}')" title="Delete reading">🗑️</button>
+                        <button class="saved-reading-delete" onclick="event.stopPropagation(); confirmDeleteReading('${reading.id}', '${(reading.userData.name || 'this reading').replace(/'/g, "\\'")}')" title="Delete reading">&times;</button>
                     </div>
                 `;
             }).join('');
@@ -4883,15 +4883,20 @@
             progressBar.style.width = '0%';
             overlay.classList.add('active');
             
-            // Cycling loading messages
+            // Cycling loading messages — premium, deliberate pacing
             const loadingMessages = [
                 'Mapping the stars at your moment of birth…',
-                'Calculating planetary positions…',
-                'Reading the numerology of your name…',
-                'Discovering hidden patterns…',
-                'Weaving your cosmic blueprint…',
-                'Aligning the houses…',
-                'Revealing your soul\'s story…'
+                'Calculating planetary positions across the zodiac…',
+                'Analyzing the angles between celestial bodies…',
+                'Reading the numerology encoded in your name…',
+                'Cross-referencing house placements…',
+                'Discovering hidden patterns in your chart…',
+                'Synthesizing elemental and modal signatures…',
+                'Weaving your cosmic blueprint together…',
+                'Aligning the houses with planetary rulers…',
+                'Interpreting karmic indicators and life cycles…',
+                'Compiling your complete soul portrait…',
+                'Finalizing your personalized reading…'
             ];
             let msgIndex = 0;
             loadingText.textContent = loadingMessages[0];
@@ -4901,20 +4906,20 @@
                 setTimeout(() => {
                     loadingText.textContent = loadingMessages[msgIndex];
                     loadingText.style.opacity = '1';
-                }, 300);
-            }, 2200);
+                }, 400);
+            }, 2800);
             
-            // Smooth progress curve (fast start, slows near end)
+            // Smooth progress curve (deliberate pacing — slows near end for anticipation)
             let progress = 0;
             const progressInterval = setInterval(() => {
                 const remaining = 90 - progress;
-                progress += remaining * 0.08 + 0.5;
+                progress += remaining * 0.04 + 0.3;
                 if (progress > 90) progress = 90;
                 progressBar.style.width = progress + '%';
-            }, 150);
+            }, 200);
             
-            // Small delay for effect
-            await new Promise(resolve => setTimeout(resolve, 1800));
+            // Extended generation pause for perceived value
+            await new Promise(resolve => setTimeout(resolve, 6000));
             
             try {
                 // Calculate all readings
@@ -4925,12 +4930,12 @@
                 clearInterval(messageInterval);
                 loadingText.style.opacity = '0';
                 setTimeout(() => {
-                    loadingText.textContent = 'Your reading is ready ✨';
+                    loadingText.textContent = 'Your reading is ready';
                     loadingText.style.opacity = '1';
-                }, 200);
+                }, 300);
                 progressBar.style.width = '100%';
                 
-                await new Promise(resolve => setTimeout(resolve, 600));
+                await new Promise(resolve => setTimeout(resolve, 1200));
                 
                 // Hide loading
                 overlay.classList.remove('active');
@@ -6189,7 +6194,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (houseConcentrations && houseConcentrations.length > 0) {
                     const houseConcentrationHeader = document.createElement('div');
                     houseConcentrationHeader.className = 'section-divider';
-                    houseConcentrationHeader.innerHTML = '<h3>🎯 House Concentrations</h3><p>Extraordinary focus of energy in specific life areas</p>';
+                    houseConcentrationHeader.innerHTML = '<h3>House Concentrations</h3><p>Extraordinary focus of energy in specific life areas</p>';
                     celestialSection.appendChild(houseConcentrationHeader);
                     
                     houseConcentrations.forEach(concentration => {
@@ -6283,7 +6288,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (wealthIndicators && wealthIndicators.length > 0) {
                     const wealthHeader = document.createElement('div');
                     wealthHeader.className = 'section-divider';
-                    wealthHeader.innerHTML = '<h3>💰 Wealth Blueprint</h3><p>Natural relationship with resources, value, and material success</p>';
+                    wealthHeader.innerHTML = '<h3>Wealth Blueprint</h3><p>Natural relationship with resources, value, and material success</p>';
                     celestialSection.appendChild(wealthHeader);
                     
                     wealthIndicators.forEach(indicator => {
@@ -6318,7 +6323,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (archetypes && archetypes.length > 0) {
                     const archetypeHeader = document.createElement('div');
                     archetypeHeader.className = 'section-divider';
-                    archetypeHeader.innerHTML = '<h3>✨ Unique Archetypes</h3><p>Special patterns revealed by your specific chart combination</p>';
+                    archetypeHeader.innerHTML = '<h3>Unique Archetypes</h3><p>Special patterns revealed by your specific chart combination</p>';
                     celestialSection.appendChild(archetypeHeader);
                     
                     archetypes.forEach(archetype => {
@@ -6357,7 +6362,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (taurusStellium && CHAKRA_BLUEPRINT_READINGS.taurusThroat) {
                     const chakraHeader = document.createElement('div');
                     chakraHeader.className = 'section-divider';
-                    chakraHeader.innerHTML = '<h3>🔵 Chakra Blueprint</h3><p>Energy center activation based on your placements</p>';
+                    chakraHeader.innerHTML = '<h3>Chakra Blueprint</h3><p>Energy center activation based on your placements</p>';
                     celestialSection.appendChild(chakraHeader);
                     
                     const chakra = CHAKRA_BLUEPRINT_READINGS.taurusThroat;
@@ -6394,7 +6399,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (sunMoonSame) {
                     const rarityHeader = document.createElement('div');
                     rarityHeader.className = 'section-divider';
-                    rarityHeader.innerHTML = '<h3>🌟 Statistical Rarity</h3><p>Unusual patterns that make this chart unique</p>';
+                    rarityHeader.innerHTML = '<h3>Statistical Rarity</h3><p>Unusual patterns that make this chart unique</p>';
                     celestialSection.appendChild(rarityHeader);
                     
                     celestialSection.appendChild(createReadingCard(
@@ -6417,7 +6422,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (healthIndicators && healthIndicators.length > 0) {
                     const healthHeader = document.createElement('div');
                     healthHeader.className = 'section-divider';
-                    healthHeader.innerHTML = '<h3>💚 Health Blueprint</h3><p>Body-mind connections based on celestial patterns</p>';
+                    healthHeader.innerHTML = '<h3>Health Blueprint</h3><p>Body-mind connections based on celestial patterns</p>';
                     celestialSection.appendChild(healthHeader);
                     
                     healthIndicators.forEach(indicator => {
@@ -6457,7 +6462,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (teachingIndicators && teachingIndicators.length > 0) {
                     const teachingHeader = document.createElement('div');
                     teachingHeader.className = 'section-divider';
-                    teachingHeader.innerHTML = '<h3>📚 Teaching & Learning Style</h3><p>How you learn best and share wisdom with others</p>';
+                    teachingHeader.innerHTML = '<h3>Teaching & Learning Style</h3><p>How you learn best and share wisdom with others</p>';
                     celestialSection.appendChild(teachingHeader);
                     
                     teachingIndicators.forEach(indicator => {
@@ -6492,7 +6497,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (philosophyIndicators && philosophyIndicators.length > 0) {
                     const philosophyHeader = document.createElement('div');
                     philosophyHeader.className = 'section-divider';
-                    philosophyHeader.innerHTML = '<h3>🔮 Philosophical Framework</h3><p>The belief system encoded in your cosmic design</p>';
+                    philosophyHeader.innerHTML = '<h3>Philosophical Framework</h3><p>The belief system encoded in your cosmic design</p>';
                     celestialSection.appendChild(philosophyHeader);
                     
                     philosophyIndicators.forEach(indicator => {
@@ -6527,7 +6532,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (locationReading) {
                     const locationHeader = document.createElement('div');
                     locationHeader.className = 'section-divider';
-                    locationHeader.innerHTML = '<h3>📍 Birth Location Significance</h3><p>The energy of where you chose to be born</p>';
+                    locationHeader.innerHTML = '<h3>Birth Location Significance</h3><p>The energy of where you chose to be born</p>';
                     celestialSection.appendChild(locationHeader);
                     
                     let locationContent = locationReading.significance.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>');
@@ -6555,7 +6560,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (careerSynthesis && careerSynthesis.scenarios.length > 0) {
                     const careerHeader = document.createElement('div');
                     careerHeader.className = 'section-divider';
-                    careerHeader.innerHTML = '<h3>💼 Career Path Scenarios</h3><p>Real-world career paths aligned with this unique chart</p>';
+                    careerHeader.innerHTML = '<h3>Career Path Scenarios</h3><p>Real-world career paths aligned with this unique chart</p>';
                     celestialSection.appendChild(careerHeader);
                     
                     let careerContent = `<p>${careerSynthesis.summary}</p>`;
@@ -6588,7 +6593,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 if (partnerProfile && partnerProfile.sections.length > 0) {
                     const partnerHeader = document.createElement('div');
                     partnerHeader.className = 'section-divider';
-                    partnerHeader.innerHTML = '<h3>💕 Ideal Partner Profile</h3><p>The relationship blueprint encoded in your chart</p>';
+                    partnerHeader.innerHTML = '<h3>Ideal Partner Profile</h3><p>The relationship blueprint encoded in your chart</p>';
                     celestialSection.appendChild(partnerHeader);
                     
                     let partnerContent = '';
@@ -7001,10 +7006,10 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     
                     personalYearContent += `
 <div class="calc-methodology">
-<p><strong>📊 Calculation Method:</strong></p>
+<p><strong>Calculation Method:</strong></p>
 <p><em>${personalYearDetails.calculation.formula}</em></p>
 <p class="calc-note">Personal Year = Birth Month + Birth Day + Current Year (each reduced)</p>
-<p><strong>🗓 Your Cycle Period:</strong> ${cycleStart} through ${cycleEnd}</p>
+<p><strong>Your Cycle Period:</strong> ${cycleStart} through ${cycleEnd}</p>
 <p class="calc-note">Personal Year cycles run from birthday to birthday, not January to January. This year's energy began on your last birthday and shifts on your next one.</p>
 </div>`;
                 }
@@ -7059,7 +7064,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 // Add calculation methodology even for basic reading
                 if (personalYearDetails) {
                     basicContent = `<div class="calc-methodology">
-<p><strong>📊 Calculation:</strong> <em>${personalYearDetails.calculation.formula}</em></p>
+<p><strong>Calculation:</strong> <em>${personalYearDetails.calculation.formula}</em></p>
 </div>` + basicContent;
                 }
                 
@@ -7736,7 +7741,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (idComp && idComp.reading) {
                         const idWrapper = document.createElement('div');
                         idWrapper.className = 'reading-section';
-                        const idSection = createCustomSection('identity-compression', '🔥', 'Identity Compression', 'Your entire chart distilled into a single operating style — the mode you default to when everything else is stripped away');
+                        const idSection = createCustomSection('identity-compression', '', 'Identity Compression', 'Your entire chart distilled into a single operating style — the mode you default to when everything else is stripped away');
                         
                         // Primary Style
                         const pr = idComp.reading;
@@ -7765,7 +7770,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         // Element & Modality Balance
                         const eb = idComp.elementBalance;
                         const mb = idComp.modalityBalance;
-                        const balanceText = `<div class="blueprint-grid" style="margin-top:0.5em"><div class="blueprint-category"><h4>Element Balance</h4><div class="blueprint-items"><div class="blueprint-item">🔥 Fire: ${eb.Fire.toFixed(1)}</div><div class="blueprint-item">🌍 Earth: ${eb.Earth.toFixed(1)}</div><div class="blueprint-item">💨 Air: ${eb.Air.toFixed(1)}</div><div class="blueprint-item">💧 Water: ${eb.Water.toFixed(1)}</div></div></div><div class="blueprint-category"><h4>Modality Balance</h4><div class="blueprint-items"><div class="blueprint-item">⚡ Cardinal: ${mb.Cardinal.toFixed(1)}</div><div class="blueprint-item">🏔️ Fixed: ${mb.Fixed.toFixed(1)}</div><div class="blueprint-item">🌊 Mutable: ${mb.Mutable.toFixed(1)}</div></div></div></div>`;
+                        const balanceText = `<div class="blueprint-grid" style="margin-top:0.5em"><div class="blueprint-category"><h4>Element Balance</h4><div class="blueprint-items"><div class="blueprint-item">Fire: ${eb.Fire.toFixed(1)}</div><div class="blueprint-item">Earth: ${eb.Earth.toFixed(1)}</div><div class="blueprint-item">Air: ${eb.Air.toFixed(1)}</div><div class="blueprint-item">Water: ${eb.Water.toFixed(1)}</div></div></div><div class="blueprint-category"><h4>Modality Balance</h4><div class="blueprint-items"><div class="blueprint-item">Cardinal: ${mb.Cardinal.toFixed(1)}</div><div class="blueprint-item">Fixed: ${mb.Fixed.toFixed(1)}</div><div class="blueprint-item">Mutable: ${mb.Mutable.toFixed(1)}</div></div></div></div>`;
                         idSection.appendChild(createReadingCard(
                             'Elemental & Modal Signature',
                             'The raw energetic makeup of your chart',
@@ -7784,7 +7789,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (archRole && archRole.reading) {
                         const archWrapper = document.createElement('div');
                         archWrapper.className = 'reading-section';
-                        const archSection = createCustomSection('archetypal-role', '🧩', 'Archetypal Role', 'When all your cosmic data overlaps, you naturally cluster into one of six fundamental roles');
+                        const archSection = createCustomSection('archetypal-role', '', 'Archetypal Role', 'When all your cosmic data overlaps, you naturally cluster into one of six fundamental roles');
                         
                         const ar = archRole.reading;
                         archSection.appendChild(createReadingCard(
@@ -7817,7 +7822,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (cogTend) {
                         const cogWrapper = document.createElement('div');
                         cogWrapper.className = 'reading-section';
-                        const cogSection = createCustomSection('cognitive-tendencies', '🧠', 'Cognitive Tendencies', 'How you think, decide, and process the world — derived from your Mercury, Mars, Saturn, and life path');
+                        const cogSection = createCustomSection('cognitive-tendencies', '', 'Cognitive Tendencies', 'How you think, decide, and process the world — derived from your Mercury, Mars, Saturn, and life path');
                         
                         // Build each tendency as a card
                         const tendencyOrder = [
@@ -7872,7 +7877,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (nameAnalysis) {
                         const nameWrapper = document.createElement('div');
                         nameWrapper.className = 'reading-section';
-                        const nameSection = createCustomSection('name-analysis', '🧬', 'Name Analysis', 'The phonetic, linguistic, and energetic signature encoded in your name');
+                        const nameSection = createCustomSection('name-analysis', '', 'Name Analysis', 'The phonetic, linguistic, and energetic signature encoded in your name');
                         
                         // Cornerstone
                         nameSection.appendChild(createReadingCard(
@@ -7911,12 +7916,12 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         const barHTML = function(label, score, emoji) {
                             return `<div style="margin:0.4em 0"><strong>${emoji} ${label}:</strong> <span style="display:inline-block;width:${Math.min(score,100)}%;max-width:200px;height:8px;background:linear-gradient(90deg,var(--accent-color,#FFD700),var(--primary-color,#FF69B4));border-radius:4px;vertical-align:middle"></span> <strong>${score}/100</strong></div>`;
                         };
-                        const phoneticHTML = barHTML('Dominance', ph.dominance, '⚔️') +
-                            barHTML('Warmth', ph.warmth, '🤝') +
-                            barHTML('Authority', ph.authority, '👑') +
-                            barHTML('Approachability', ph.approachability, '😊') +
-                            barHTML('Memorability', ph.memorability, '💡') +
-                            barHTML('Brand Strength', ph.brandStrength, '🏷️');
+                        const phoneticHTML = barHTML('Dominance', ph.dominance, '') +
+                            barHTML('Warmth', ph.warmth, '') +
+                            barHTML('Authority', ph.authority, '') +
+                            barHTML('Approachability', ph.approachability, '') +
+                            barHTML('Memorability', ph.memorability, '') +
+                            barHTML('Brand Strength', ph.brandStrength, '');
                         
                         nameSection.appendChild(createReadingCard(
                             'Phonetic Impact Profile',
@@ -7948,7 +7953,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (bioTiming) {
                         const bioWrapper = document.createElement('div');
                         bioWrapper.className = 'reading-section';
-                        const bioSection = createCustomSection('biological-timing', '⏳', 'Biological Timing & Saturn Return', 'Where you are in the universal lifecycle — and what the data says about what comes next');
+                        const bioSection = createCustomSection('biological-timing', '', 'Biological Timing & Saturn Return', 'Where you are in the universal lifecycle — and what the data says about what comes next');
                         
                         // Saturn Return card
                         if (bioTiming.saturnReturn.reading) {
@@ -7989,7 +7994,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (probWindows) {
                         const probWrapper = document.createElement('div');
                         probWrapper.className = 'reading-section';
-                        const probSection = createCustomSection('probability-windows', '🧭', 'Life Pattern Probability Windows', 'Statistical models estimate when you are most likely to experience major life events — not prophecy, but pattern likelihood');
+                        const probSection = createCustomSection('probability-windows', '', 'Life Pattern Probability Windows', 'Statistical models estimate when you are most likely to experience major life events — not prophecy, but pattern likelihood');
                         
                         // Personal year context card
                         if (probWindows.personalYearContext) {
@@ -8009,18 +8014,18 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                             
                             // Chart-based personalization (unique to this person's chart)
                             if (cat.chartInsight) {
-                                windowText += '<strong>📊 Your Chart Profile:</strong>\n' + cat.chartInsight + '\n\n';
+                                windowText += '<strong>Your Chart Profile:</strong>\n' + cat.chartInsight + '\n\n';
                             }
                             
                             if (cat.active.length > 0) {
-                                windowText += '<strong style="color:var(--primary-color,#FF69B4)">⚡ ACTIVE NOW:</strong>\n';
+                                windowText += '<strong style="color:var(--primary-color,#FF69B4)">ACTIVE NOW:</strong>\n';
                                 cat.active.forEach(w => {
                                     windowText += `• <strong>Age ${w.age}</strong> (${w.probability}) — ${w.reason}\n`;
                                 });
                                 windowText += '\n';
                             }
                             if (cat.upcoming.length > 0) {
-                                windowText += '<strong>📅 Upcoming Windows:</strong>\n';
+                                windowText += '<strong>Upcoming Windows:</strong>\n';
                                 cat.upcoming.forEach(w => {
                                     windowText += `• <strong>Age ${w.age}</strong> (~${w.yearsUntil} years away, ${w.probability}) — ${w.reason}\n`;
                                 });
@@ -8038,7 +8043,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                             
                             probSection.appendChild(createReadingCard(
                                 cat.icon + ' ' + cat.title,
-                                cat.active.length > 0 ? '⚡ Window Active Now' : (cat.upcoming.length > 0 ? '~' + cat.upcoming[0].yearsUntil + ' years until next window' : 'Past peak windows'),
+                                cat.active.length > 0 ? 'Window Active Now' : (cat.upcoming.length > 0 ? '~' + cat.upcoming[0].yearsUntil + ' years until next window' : 'Past peak windows'),
                                 statusKeywords,
                                 windowText,
                                 [],
@@ -8055,7 +8060,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (locStrategy && locStrategy.hasMC) {
                         const locWrapper = document.createElement('div');
                         locWrapper.className = 'reading-section';
-                        const locSection = createCustomSection('location-strategy', '🌍', 'Location Strategy', 'Where on Earth your chart suggests the strongest alignment for career, relationships, lifestyle, and growth');
+                        const locSection = createCustomSection('location-strategy', '', 'Location Strategy', 'Where on Earth your chart suggests the strongest alignment for career, relationships, lifestyle, and growth');
                         
                         Object.entries(locStrategy.zones).forEach(([key, zone]) => {
                             if (zone.data) {
@@ -8074,7 +8079,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         
                         if (locStrategy.powerAlignment) {
                             locSection.appendChild(createReadingCard(
-                                '⚡ Career-Identity Power Alignment',
+                                'Career-Identity Power Alignment',
                                 'Your career and identity axes share an element',
                                 ['Rare Alignment', 'Amplified Impact'],
                                 locStrategy.powerAlignment,
@@ -8085,7 +8090,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         
                         if (locStrategy.driveAlignment) {
                             locSection.appendChild(createReadingCard(
-                                '⚡ Drive-Career Alignment',
+                                'Drive-Career Alignment',
                                 'Your competitive energy naturally fuels your career path',
                                 ['Mars-MC Alignment', 'Amplified Drive'],
                                 locStrategy.driveAlignment,
@@ -8096,7 +8101,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         
                         if (locStrategy.rootAlignment) {
                             locSection.appendChild(createReadingCard(
-                                '⚡ Emotional-Home Alignment',
+                                'Emotional-Home Alignment',
                                 'Your heart and your roots want the same thing',
                                 ['Moon-IC Alignment', 'Deep Belonging'],
                                 locStrategy.rootAlignment,
@@ -8415,10 +8420,10 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             card.className = 'reading-card birth-time-required';
             card.innerHTML = `
                 <div class="birth-time-message">
-                    <span class="birth-time-icon">🕐</span>
+                    <span class="birth-time-icon"></span>
                     <h4>Birth Time Required</h4>
                     <p>${description || `To unlock ${sectionName}, we need the exact birth time. This allows us to calculate precise house positions and angles that reveal where these energies express in life.`}</p>
-                    <p class="birth-time-tip">💡 <strong>Tip:</strong> Check the birth certificate, hospital records, or ask family members for the birth time. Even an approximate time helps!</p>
+                    <p class="birth-time-tip"><strong>Tip:</strong> Check the birth certificate, hospital records, or ask family members for the birth time. Even an approximate time helps!</p>
                 </div>
             `;
             return card;
@@ -9595,7 +9600,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             dialog.innerHTML = `
                 <div class="gift-dialog-overlay">
                     <div class="gift-dialog">
-                        <h2>✨ Gift Created!</h2>
+                        <h2>Gift Created!</h2>
                         <p>Your ad-free reading for <strong>${recipientName}</strong> is ready to share!</p>
                         
                         <div class="share-url-box">
@@ -9619,7 +9624,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         </div>
                         
                         <p class="expiry-note">
-                            📅 This link expires on ${expiryDate}<br>
+                            This link expires on ${expiryDate}<br>
                             <small>Recipients can save to homescreen for permanent offline access</small>
                         </p>
                         

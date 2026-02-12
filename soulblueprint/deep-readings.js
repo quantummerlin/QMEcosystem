@@ -608,7 +608,7 @@ var COSMIC_WRAPUP_TEMPLATES = {
 
 What follows is not prediction — it's recognition. This reading doesn't tell ${'{NAME}'} who to become; it reveals who they already are. The stars don't control destiny — they illuminate the unique gifts, challenges, and potentials this soul carries.`,
 
-    synthesis: `✨ THE CORE ESSENCE
+    synthesis: `THE CORE ESSENCE
 
 At the center of this cosmic design is a ${'{SUN_SIGN}'} Sun — ${'{SUN_BRIEF}'}. This is the light ${'{NAME}'} is here to shine, the hero's journey they're here to walk.
 
@@ -618,7 +618,7 @@ And the world will first see them through their ${'{RISING_SIGN}'} Rising — ${
 
 Life Path ${'{LIFE_PATH}'} weaves through everything: ${'{LIFE_PATH_BRIEF}'}. This is the numerological current that will carry them toward their destiny.`,
 
-    parenting: `💫 FOR THE PARENTS AND GUIDES
+    parenting: `FOR THE PARENTS AND GUIDES
 
 This child chose YOU. Whether by cosmic design or beautiful accident, you are the ones entrusted with nurturing this unique soul. Here's what they need:
 
@@ -632,7 +632,7 @@ The greatest gift you can give them is ${'{GREATEST_GIFT}'}.
 
 Remember: Your job isn't to fix or change them — it's to create the conditions where their unique nature can unfold. Water the seed that's already there; don't try to make an oak tree into a rose.`,
 
-    blessing: `🌟 THE FINAL BLESSING
+    blessing: `THE FINAL BLESSING
 
 To ${'{NAME}'}, on the day your cosmic blueprint became flesh:
 
@@ -650,9 +650,7 @@ Trust your cosmic blueprint. When in doubt, return to your core essence:
 
 You are complete. You are enough. You are exactly what the universe ordered.
 
-Welcome to Earth, little star. We've been waiting for you.
-
-✨🌙⭐`
+Welcome to Earth, little star. We've been waiting for you.`
 };
 
 // ============================================
@@ -662,7 +660,7 @@ Welcome to Earth, little star. We've been waiting for you.
 var DEEP_MOON_PHASE_READINGS = {
     "New Moon": {
         title: "The Seed Carrier",
-        icon: "🌑",
+        icon: "",
         hook: "Born in darkness, carrying the light of what's to come — this soul arrived at the most potent moment of potential, when everything is possible because nothing has yet begun.",
         
         coreNature: `The New Moon phase represents the moment just before dawn — the darkest point that precedes new light. A child born during this phase carries the energy of pure potential. They are beginners, initiators, and seed-planters by nature.
@@ -700,7 +698,7 @@ They may seem uncertain or unclear about who they are — this is part of their 
     
     "Waxing Crescent": {
         title: "The Brave Seedling",
-        icon: "🌒",
+        icon: "",
         hook: "Born with the first sliver of light breaking through darkness — this soul arrived knowing that faith and forward movement matter more than certainty.",
         
         coreNature: `The Waxing Crescent represents the moment a seed breaks through soil into light — that first brave push against resistance. A child born during this phase carries the energy of determined emergence. They are faith-walkers, pushing forward despite uncertainty.
@@ -738,7 +736,7 @@ Support their determination while teaching healthy patience. They're learning th
     
     "First Quarter": {
         title: "The Crisis Navigator",
-        icon: "🌓",
+        icon: "",
         hook: "Born at the critical turning point — this soul arrived knowing that growth requires friction, that decisions must be made, and that sometimes you have to break through to break free.",
         
         coreNature: `The First Quarter Moon represents a crisis point — when the growing moon reaches exactly half-illumination and must push through resistance to continue growing. A child born during this phase carries the energy of decisive action. They are breakthrough artists, crisis navigators, and change-makers.
@@ -776,7 +774,7 @@ Help them learn that not everything is a battle. Sometimes the brave choice is t
     
     "Waxing Gibbous": {
         title: "The Refiner",
-        icon: "🌔",
+        icon: "",
         hook: "Born in the final push before fullness — this soul arrived knowing that details matter, that excellence requires adjustment, and that almost-there is its own beautiful state.",
         
         coreNature: `The Waxing Gibbous Moon represents the phase of refinement — when the moon is nearly full and final adjustments are being made. A child born during this phase carries the energy of perfection and preparation. They are refiners, analysts, and devotees of excellence.
@@ -814,7 +812,7 @@ Don't dismiss their high standards as unnecessary. Their attention to quality is
     
     "Full Moon": {
         title: "The Illuminated One",
-        icon: "🌕",
+        icon: "",
         hook: "Born at the peak of lunar light — this soul arrived to be seen, to feel fully, and to experience life at maximum intensity.",
         
         coreNature: `The Full Moon represents the moment of complete illumination — when the moon receives and reflects maximum light. A child born during this phase carries the energy of fullness, intensity, and visibility. They are meant to be seen, to shine, and to experience life without holding back.
@@ -852,7 +850,7 @@ They need to be seen and acknowledged more than other children might. This isn't
     
     "Waning Gibbous": {
         title: "The Wisdom Sharer",
-        icon: "🌖",
+        icon: "",
         hook: "Born as the light begins to soften — this soul arrived knowing that wisdom is meant to be shared, that gratitude completes experience, and that the real gift is in the giving.",
         
         coreNature: `The Waning Gibbous Moon represents the phase of sharing and gratitude — when the full moon begins to decrease and its light is distributed. A child born during this phase carries the energy of teaching and generosity. They are wisdom-sharers, mentors, and gratitude practitioners.
@@ -890,7 +888,7 @@ Make sure they're receiving as much as giving. They may deplete themselves in ge
     
     "Last Quarter": {
         title: "The Sacred Releaser",
-        icon: "🌗",
+        icon: "",
         hook: "Born at the second crisis point — this soul arrived knowing that letting go takes as much courage as holding on, and that some endings are actually liberations.",
         
         coreNature: `The Last Quarter Moon represents the moment of release crisis — when the waning moon reaches exactly half-illumination and must surrender to continue its cycle. A child born during this phase carries the energy of conscious release. They are transition guides, ending-honorers, and liberation artists.
@@ -928,7 +926,7 @@ Help them see that their ability to let go is a gift, not a curse. Many people s
     
     "Waning Crescent": {
         title: "The Sacred Stillness",
-        icon: "🌘",
+        icon: "",
         hook: "Born in the quiet before renewal — this soul arrived knowing that rest is not laziness, that endings prepare beginnings, and that some of the most important work happens in stillness.",
         
         coreNature: `The Waning Crescent Moon represents the phase of surrender and spiritual preparation — when the moon is barely visible and returning to darkness for renewal. A child born during this phase carries the energy of sacred completion. They are rest practitioners, cycle-enders, and preparation specialists.

@@ -711,7 +711,7 @@ In relationships, Pigs are devoted and generous. They need partners who apprecia
 
 var MOON_PHASE_READINGS = {
     'New Moon': {
-        icon: '🌑',
+        icon: '',
         keywords: ["New Beginnings", "Potential", "Introspection", "Planting Seeds"],
         summary: "Born at the start of a new cycle, full of potential.",
         reading: `Born under the New Moon, this soul arrived at the beginning of a lunar cycle - a time of new beginnings, fresh starts, and unlimited potential. The New Moon represents the seed before it sprouts, full of possibility but not yet visible.
@@ -726,7 +726,7 @@ In life, these individuals often experience a sense of starting fresh, of being 
     },
     
     'Waxing Crescent': {
-        icon: '🌒',
+        icon: '',
         keywords: ["Growth", "Intention", "Determination", "Faith"],
         summary: "Born in a time of emerging growth and determination.",
         reading: `Born under the Waxing Crescent Moon, this soul arrived during a time of emerging growth - when the first sliver of light appears after the darkness. This phase represents intention, determination, and the courage to move forward despite uncertainty.
@@ -741,7 +741,7 @@ In life, these individuals often experience a sense of building momentum, of thi
     },
     
     'First Quarter': {
-        icon: '🌓',
+        icon: '',
         keywords: ["Action", "Decision", "Challenge", "Commitment"],
         summary: "Born at a time of decisive action and commitment.",
         reading: `Born under the First Quarter Moon, this soul arrived at a critical turning point - when the moon is half-illuminated and decisions must be made. This phase represents action, challenge, and the commitment to move forward.
@@ -756,7 +756,7 @@ In life, these individuals often experience pivotal moments that require them to
     },
     
     'Waxing Gibbous': {
-        icon: '🌔',
+        icon: '',
         keywords: ["Refinement", "Analysis", "Adjustment", "Preparation"],
         summary: "Born in a time of refinement and preparation.",
         reading: `Born under the Waxing Gibbous Moon, this soul arrived during a time of refinement - when the moon is almost full and final adjustments are being made. This phase represents analysis, improvement, and preparation for culmination.
@@ -771,7 +771,7 @@ In life, these individuals often experience a sense of almost-there, of being on
     },
     
     'Full Moon': {
-        icon: '🌕',
+        icon: '',
         keywords: ["Illumination", "Fulfillment", "Clarity", "Culmination"],
         summary: "Born at the peak of the lunar cycle, fully illuminated.",
         reading: `Born under the Full Moon, this soul arrived at the peak of the lunar cycle - when the moon is fully illuminated and everything is revealed. This phase represents fulfillment, clarity, and the culmination of efforts.
@@ -786,7 +786,7 @@ In life, these individuals often experience heightened emotions and significant 
     },
     
     'Waning Gibbous': {
-        icon: '🌖',
+        icon: '',
         keywords: ["Sharing", "Teaching", "Gratitude", "Distribution"],
         summary: "Born in a time of sharing wisdom and gratitude.",
         reading: `Born under the Waning Gibbous Moon, this soul arrived during a time of sharing - when the full moon begins to decrease and its light is distributed. This phase represents teaching, gratitude, and the sharing of wisdom.
@@ -801,7 +801,7 @@ In life, these individuals often experience a sense of having something valuable
     },
     
     'Last Quarter': {
-        icon: '🌗',
+        icon: '',
         keywords: ["Release", "Reflection", "Transition", "Letting Go"],
         summary: "Born at a time of release and transition.",
         reading: `Born under the Last Quarter Moon, this soul arrived at another critical turning point - when the moon is half-illuminated again but now decreasing. This phase represents release, reflection, and the courage to let go.
@@ -816,7 +816,7 @@ In life, these individuals often experience significant transitions and may serv
     },
     
     'Waning Crescent': {
-        icon: '🌘',
+        icon: '',
         keywords: ["Rest", "Surrender", "Completion", "Preparation"],
         summary: "Born in a time of rest and spiritual preparation.",
         reading: `Born under the Waning Crescent Moon, this soul arrived during the final phase of the lunar cycle - when the moon is barely visible and preparing for renewal. This phase represents rest, surrender, and spiritual preparation.
@@ -2294,7 +2294,7 @@ However, this projection may sometimes seem overwhelming or intimidating. Learni
 var STELLIUM_READINGS = {
     Aries: {
         title: "The Warrior Concentration",
-        symbol: "🔥",
+        symbol: "",
         reading: `With multiple planets concentrated in Aries, this soul carries an extraordinary amount of pioneering fire energy. This stellium creates a powerful drive to initiate, lead, and break new ground.
 
 This concentration amplifies courage, independence, and the instinct to act decisively. Life will repeatedly call this person to step forward as a leader, even when it feels uncomfortable. They were born to start things - movements, businesses, conversations that others fear to begin.
@@ -2305,7 +2305,7 @@ This stellium gifts an almost warrior-like spirit. When properly channeled, it c
     },
     Taurus: {
         title: "The Abundance Concentration",
-        symbol: "🌿",
+        symbol: "",
         reading: `With multiple planets concentrated in Taurus, this soul carries an extraordinary amount of earth-stabilizing energy. This stellium creates a powerful drive toward security, beauty, and material mastery.
 
 This concentration amplifies determination, sensuality, and the ability to build lasting value. Life will repeatedly call this person to create things of enduring worth - whether physical possessions, businesses, or relationships built to last.
@@ -2316,7 +2316,7 @@ This stellium gifts an almost magnetic relationship with abundance. When properl
     },
     Gemini: {
         title: "The Messenger Concentration",
-        symbol: "💨",
+        symbol: "",
         reading: `With multiple planets concentrated in Gemini, this soul carries an extraordinary amount of mental air energy. This stellium creates a powerful drive to communicate, learn, and connect ideas and people.
 
 This concentration amplifies curiosity, versatility, and the ability to see multiple perspectives simultaneously. Life will repeatedly call this person to serve as a bridge between different worlds, translating complex ideas into accessible forms.
@@ -2327,7 +2327,7 @@ This stellium gifts an almost supernatural ability with words and ideas. When pr
     },
     Cancer: {
         title: "The Nurturer Concentration",
-        symbol: "🌙",
+        symbol: "",
         reading: `With multiple planets concentrated in Cancer, this soul carries an extraordinary amount of lunar emotional energy. This stellium creates a powerful drive to nurture, protect, and create emotional security.
 
 This concentration amplifies intuition, empathy, and the ability to create sacred spaces of belonging. Life will repeatedly call this person to serve as a caretaker, whether of people, places, traditions, or memories.
@@ -2338,7 +2338,7 @@ This stellium gifts an almost psychic level of emotional intelligence. When prop
     },
     Leo: {
         title: "The Radiance Concentration",
-        symbol: "☀️",
+        symbol: "",
         reading: `With multiple planets concentrated in Leo, this soul carries an extraordinary amount of solar creative energy. This stellium creates a powerful drive to shine, create, and inspire through personal expression.
 
 This concentration amplifies charisma, creativity, and the natural ability to lead through magnetic presence. Life will repeatedly call this person to step into the spotlight, whether they seek it or not.
@@ -2349,7 +2349,7 @@ This stellium gifts an almost royal quality of presence and creative power. When
     },
     Virgo: {
         title: "The Analyst Concentration",
-        symbol: "🌾",
+        symbol: "",
         reading: `With multiple planets concentrated in Virgo, this soul carries an extraordinary amount of earth-refining energy. This stellium creates a powerful drive to analyze, improve, and perfect.
 
 This concentration amplifies discernment, skill-building, and the ability to see how things can be made better. Life will repeatedly call this person to serve through practical expertise and attention to detail.
@@ -2360,7 +2360,7 @@ This stellium gifts an almost supernatural attention to detail and capacity for 
     },
     Libra: {
         title: "The Harmonizer Concentration",
-        symbol: "⚖️",
+        symbol: "",
         reading: `With multiple planets concentrated in Libra, this soul carries an extraordinary amount of air-balancing energy. This stellium creates a powerful drive toward beauty, partnership, and justice.
 
 This concentration amplifies diplomacy, aesthetic sense, and the ability to bring opposing forces into harmony. Life will repeatedly call this person to serve as a mediator, beautifier, or advocate for fairness.
@@ -2371,7 +2371,7 @@ This stellium gifts an almost magical ability to create beauty and harmony in an
     },
     Scorpio: {
         title: "The Transformer Concentration",
-        symbol: "🦂",
+        symbol: "",
         reading: `With multiple planets concentrated in Scorpio, this soul carries an extraordinary amount of water-transforming energy. This stellium creates a powerful drive toward depth, truth, and complete transformation.
 
 This concentration amplifies intensity, psychological insight, and the ability to navigate the darkest territories of human experience. Life will repeatedly call this person to serve as a healer, investigator, or agent of profound change.
@@ -2382,7 +2382,7 @@ This stellium gifts an almost supernatural ability to see beneath surfaces and f
     },
     Sagittarius: {
         title: "The Explorer Concentration",
-        symbol: "🏹",
+        symbol: "",
         reading: `With multiple planets concentrated in Sagittarius, this soul carries an extraordinary amount of fire-expanding energy. This stellium creates a powerful drive toward adventure, wisdom, and the expansion of horizons.
 
 This concentration amplifies optimism, philosophical thinking, and the need for freedom and meaning. Life will repeatedly call this person to serve as a teacher, adventurer, or seeker of truth.
@@ -2393,7 +2393,7 @@ This stellium gifts an almost prophetic ability to inspire hope and illuminate m
     },
     Capricorn: {
         title: "The Achiever Concentration",
-        symbol: "🏔️",
+        symbol: "",
         reading: `With multiple planets concentrated in Capricorn, this soul carries an extraordinary amount of earth-building energy. This stellium creates a powerful drive toward achievement, mastery, and lasting legacy.
 
 This concentration amplifies ambition, discipline, and the ability to play the long game. Life will repeatedly call this person to build structures - whether businesses, institutions, or other works meant to stand the test of time.
@@ -2404,7 +2404,7 @@ This stellium gifts an almost ancient sense of wisdom and capability. When prope
     },
     Aquarius: {
         title: "The Visionary Concentration",
-        symbol: "⚡",
+        symbol: "",
         reading: `With multiple planets concentrated in Aquarius, this soul carries an extraordinary amount of air-innovating energy. This stellium creates a powerful drive toward originality, community, and revolutionary change.
 
 This concentration amplifies uniqueness, humanitarian thinking, and the ability to envision futures that others cannot yet see. Life will repeatedly call this person to serve as an innovator, activist, or voice for collective progress.
@@ -2415,7 +2415,7 @@ This stellium gifts an almost prophetic ability to see coming trends and innovat
     },
     Pisces: {
         title: "The Mystic Concentration",
-        symbol: "🌊",
+        symbol: "",
         reading: `With multiple planets concentrated in Pisces, this soul carries an extraordinary amount of water-dissolving energy. This stellium creates a powerful drive toward transcendence, compassion, and spiritual connection.
 
 This concentration amplifies intuition, creativity, and the ability to sense what lies beyond ordinary perception. Life will repeatedly call this person to serve as an artist, healer, or spiritual guide.

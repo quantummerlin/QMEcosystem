@@ -37,8 +37,8 @@ const BRAND_CONFIG = {
         birthPlaceHelper: "Where your idol journey began"
     },
     
-    ctaButton: "✨ Reveal My Idol Destiny",
-    loadingMessage: "Calculating your idol blueprint... 🎤",
+    ctaButton: "Reveal My Idol Destiny",
+    loadingMessage: "Calculating your idol blueprint...",
     
     // Result page copy
     resultTitle: "Complete Idol Blueprint",
@@ -51,27 +51,27 @@ const BRAND_CONFIG = {
     sections: {
         celestial: {
             name: "Celestial Positions",
-            icon: "🌟",
+            icon: "",
             description: "Your planetary influences and idol archetype energy"
         },
         numbers: {
             name: "Trainee Numbers",
-            icon: "🔢",
+            icon: "",
             description: "The numerological blueprint of your idol journey"
         },
         soul: {
             name: "Debut Mission",
-            icon: "✨",
+            icon: "",
             description: "Your deeper purpose and unique idol gifts"
         },
         forecasts: {
             name: "Comeback Seasons",
-            icon: "🎤",
+            icon: "",
             description: "What the cosmos has in store for your career"
         },
         cycles: {
             name: "Era Cycles",
-            icon: "💫",
+            icon: "",
             description: "Key phases in your idol evolution"
         }
     },
@@ -158,7 +158,7 @@ const BRAND_CONFIG = {
     // ============================================
     sharing: {
         hashtags: ["KpopKosmic", "IdolDestiny", "KpopNumerology", "StanLife", "1111"],
-        defaultMessage: "I just discovered my idol destiny! 🎤✨ My archetype is...",
+        defaultMessage: "I just discovered my idol destiny! My archetype is...",
         twitterHandle: "@kpopkosmic"
     },
     
@@ -181,7 +181,7 @@ const BRAND_CONFIG = {
     // ============================================
     footer: {
         copyright: "© 2025 K-pop Kosmic (11:11)",
-        disclaimer: "For entertainment purposes only. Not affiliated with any K-pop agency or artist. Stan responsibly! 💜",
+        disclaimer: "For entertainment purposes only. Not affiliated with any K-pop agency or artist. Stan responsibly!",
         links: [
             { text: "Privacy Policy", url: "/privacy.html" },
             { text: "Terms of Service", url: "/terms.html" },

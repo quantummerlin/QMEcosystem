@@ -37,7 +37,7 @@ const BRAND_CONFIG = {
         birthPlaceHelper: "Hospital location or city of birth"
     },
     
-    ctaButton: "✨ Generate My Baby's Cosmic Blueprint",
+    ctaButton: "Generate My Baby's Cosmic Blueprint",
     loadingMessage: "Calculating your baby's cosmic blueprint...",
     
     // Result page copy
@@ -51,27 +51,27 @@ const BRAND_CONFIG = {
     sections: {
         celestial: {
             name: "Celestial Gifts",
-            icon: "🌟",
+            icon: "",
             description: "Your baby's planetary influences and cosmic personality"
         },
         numbers: {
             name: "Sacred Numbers",
-            icon: "🔢",
+            icon: "",
             description: "The numerological blueprint of your child's life path"
         },
         soul: {
             name: "Soul Mission",
-            icon: "✨",
+            icon: "",
             description: "Your baby's deeper purpose and spiritual gifts"
         },
         forecasts: {
             name: "Life Seasons",
-            icon: "🌈",
+            icon: "",
             description: "What the cosmos has in store for your little one"
         },
         cycles: {
             name: "Growth Cycles",
-            icon: "🌱",
+            icon: "",
             description: "Key developmental phases and timing"
         }
     },
@@ -158,7 +158,7 @@ const BRAND_CONFIG = {
     // ============================================
     sharing: {
         hashtags: ["CosmicBaby", "BabyReading", "NewbornAstrology", "BabyNumerology"],
-        defaultMessage: "I just discovered my baby's complete cosmic blueprint! 🌟👶",
+        defaultMessage: "I just discovered my baby's complete cosmic blueprint!",
         twitterHandle: "@cosmicbaby"
     },
     

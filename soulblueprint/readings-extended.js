@@ -1482,7 +1482,7 @@ The 12th House rules spirituality, the unconscious, dreams, isolation, transcend
 var SYNTHESIS_READINGS = {
     career: {
         title: "Career Path Synthesis",
-        icon: "💼",
+        icon: "",
         description: "Your complete career blueprint based on your cosmic profile",
         generate: function(chartData) {
             // chartData has flat properties: sunSign, moonSign, marsSign, saturnSign, midheaven, destiny, name, etc.
@@ -1512,7 +1512,7 @@ Career Synthesis: Combining these influences, the ideal career path involves ${s
     
     spiritual: {
         title: "Spiritual Path Synthesis",
-        icon: "🔮",
+        icon: "",
         description: "Your soul's spiritual journey and growth path",
         generate: function(chartData) {
             const northNode = chartData.northNode || 'Aries';
@@ -1540,7 +1540,7 @@ Soul Gifts to Develop: The unique spiritual gifts waiting to unfold include ${ge
     
     shadow: {
         title: "Shadow Work Synthesis",
-        icon: "🌑",
+        icon: "",
         description: "Understanding and integrating the hidden self",
         generate: function(chartData) {
             const saturnSign = chartData.saturnSign;
@@ -1568,7 +1568,7 @@ Support for Integration: Parents and caregivers can support shadow integration b
     
     money: {
         title: "Money Blueprint Synthesis",
-        icon: "💰",
+        icon: "",
         description: "Your relationship with abundance and resources",
         generate: function(chartData) {
             const venus = chartData.venusSign;
@@ -1597,7 +1597,7 @@ Path to Prosperity: Financial success flows when they ${getMoneySuccess(jupiter,
     
     health: {
         title: "Wellness & Vitality Synthesis",
-        icon: "💚",
+        icon: "",
         description: "The body-mind connection and path to optimal wellbeing",
         generate: function(chartData) {
             const sunSign = chartData.sunSign;
@@ -1628,7 +1628,7 @@ Self-Care Priorities: The most essential self-care practices for this chart incl
     
     communication: {
         title: "Communication Style Synthesis",
-        icon: "💬",
+        icon: "",
         description: "How this soul expresses, learns, and connects through language",
         generate: function(chartData) {
             const mercury = chartData.mercurySign;

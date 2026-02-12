@@ -13,7 +13,7 @@ const BOOK_TEMPLATES = [
         id: 'cosmic-classic',
         name: 'Cosmic Classic',
         desc: 'Deep purple & gold — the original signature design',
-        icon: '✨',
+        icon: '',
         colors: ['#1a0a2e', '#2d1b4e', '#ffd700'],
         builtin: true
     },
@@ -21,70 +21,70 @@ const BOOK_TEMPLATES = [
         id: 'art-deco',
         name: 'Art Deco',
         desc: 'Geometric elegance with gold & black lines',
-        icon: '🎭',
+        icon: '',
         colors: ['#1a2744', '#c9a84c', '#faf6f0']
     },
     {
         id: 'botanical',
         name: 'Botanical',
         desc: 'Natural beauty with sage green watercolors',
-        icon: '🌿',
+        icon: '',
         colors: ['#2d4a3e', '#87a878', '#f5f0e8']
     },
     {
         id: 'celestial-watercolor',
         name: 'Celestial Watercolor',
         desc: 'Soft blues & lilacs — dreamy painted skies',
-        icon: '🎨',
+        icon: '',
         colors: ['#3a4a6b', '#8fa4c8', '#f8f4ff']
     },
     {
         id: 'cosmic-rainbow',
         name: 'Cosmic Rainbow',
         desc: 'Vibrant rainbow gradients on deep space',
-        icon: '🌈',
+        icon: '',
         colors: ['#0f0a1a', '#e94560', '#00d2ff']
     },
     {
         id: 'dark-celestial',
         name: 'Dark Celestial',
         desc: 'Midnight blues & silver — stargazer\'s edition',
-        icon: '🌌',
+        icon: '',
         colors: ['#0a0e1a', '#1a2744', '#c0c8e0']
     },
     {
         id: 'fairy-tale',
         name: 'Fairy Tale',
         desc: 'Enchanted forest — mossy greens & gold leaf',
-        icon: '🧚',
+        icon: '',
         colors: ['#2a1810', '#6b8f5e', '#ffeaa7']
     },
     {
         id: 'heart-bears',
         name: 'Heart Bears',
         desc: 'Sweet pinks & lavender — perfect for little ones',
-        icon: '🧸',
+        icon: '',
         colors: ['#FFB6C1', '#D8BFD8', '#fffbfe']
     },
     {
         id: 'minimalist',
         name: 'Minimalist',
         desc: 'Clean & modern — black, white & touches of blue',
-        icon: '◻️',
+        icon: '',
         colors: ['#1a1a1a', '#4a90d9', '#ffffff']
     },
     {
         id: 'mystical-tarot',
         name: 'Mystical Tarot',
         desc: 'Deep jewel tones — amethyst, ruby & emerald',
-        icon: '🔮',
+        icon: '',
         colors: ['#1a0a2e', '#8B5CF6', '#F59E0B']
     },
     {
         id: 'vintage-storybook',
         name: 'Vintage Storybook',
         desc: 'Warm sepia tones — aged parchment & ink',
-        icon: '📜',
+        icon: '',
         colors: ['#2c1810', '#8b4513', '#f5e6d0']
     }
 ];
@@ -614,7 +614,7 @@ function showTemplatePicker() {
 
         <!-- Header -->
         <div style="text-align:center;margin-bottom:20px;">
-            <div style="font-size:1.6rem;margin-bottom:6px;">📖✨</div>
+            <div style="font-size:1.6rem;margin-bottom:6px;"></div>
             <h2 style="color:#ffd700;font-size:1.25rem;font-family:'Playfair Display','Georgia',serif;margin:0 0 6px;">Choose Your Book Design</h2>
             <p style="font-size:0.82rem;opacity:0.65;margin:0;">Select a theme and paper size for ${_escHtml(userData.name)}'s cosmic book</p>
         </div>
@@ -647,7 +647,7 @@ function showTemplatePicker() {
         <!-- Generate Button -->
         <div style="text-align:center;">
             <button id="generateBookBtn" onclick="generateBook()" style="background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;border:none;padding:14px 40px;border-radius:30px;font-size:1.05rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(255,215,0,0.3);letter-spacing:0.02em;">
-                ✨ Generate Book
+                Generate Book
             </button>
             <p style="font-size:0.72rem;opacity:0.45;margin-top:10px;">Downloads an HTML file — open in Chrome → Print → Save as PDF</p>
         </div>
@@ -754,7 +754,7 @@ async function generateBook() {
     } finally {
         if (btn) {
             btn.disabled = false;
-            btn.textContent = '✨ Generate Book';
+            btn.textContent = 'Generate Book';
         }
     }
 }
@@ -987,7 +987,7 @@ function showExportInstructions(name, theme, size) {
     modal.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(26,10,46,0.92);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);padding:20px;';
     modal.innerHTML = `
         <div style="background:linear-gradient(135deg,#2d1b4e,#1a0a2e);border:2px solid rgba(255,215,0,0.3);border-radius:20px;padding:35px;max-width:420px;text-align:center;color:#e8d5ff;font-family:'Inter',sans-serif;">
-            <div style="font-size:2.5rem;margin-bottom:12px;">📖✨</div>
+            <div style="font-size:2.5rem;margin-bottom:12px;"></div>
             <h2 style="color:#ffd700;font-size:1.4rem;margin-bottom:12px;font-family:'Playfair Display',serif;">Book Created!</h2>
             <p style="margin-bottom:14px;line-height:1.6;font-size:0.95rem;">
                 <strong style="color:#ffd700;">${_escHtml(name)}</strong>'s ${size} book has been downloaded

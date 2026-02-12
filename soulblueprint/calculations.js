@@ -256,14 +256,14 @@ const CHINESE_ZODIAC = [
 ];
 
 const MOON_PHASES = [
-    { name: 'New Moon', icon: '🌑', range: [0, 1.85], illumination: '0-2%' },
-    { name: 'Waxing Crescent', icon: '🌒', range: [1.85, 7.38], illumination: '2-49%' },
-    { name: 'First Quarter', icon: '🌓', range: [7.38, 11.07], illumination: '50%' },
-    { name: 'Waxing Gibbous', icon: '🌔', range: [11.07, 14.77], illumination: '51-99%' },
-    { name: 'Full Moon', icon: '🌕', range: [14.77, 18.46], illumination: '100%' },
-    { name: 'Waning Gibbous', icon: '🌖', range: [18.46, 22.15], illumination: '99-51%' },
-    { name: 'Last Quarter', icon: '🌗', range: [22.15, 25.84], illumination: '50%' },
-    { name: 'Waning Crescent', icon: '🌘', range: [25.84, 30], illumination: '49-2%' }
+    { name: 'New Moon', icon: '', range: [0, 1.85], illumination: '0-2%' },
+    { name: 'Waxing Crescent', icon: '', range: [1.85, 7.38], illumination: '2-49%' },
+    { name: 'First Quarter', icon: '', range: [7.38, 11.07], illumination: '50%' },
+    { name: 'Waxing Gibbous', icon: '', range: [11.07, 14.77], illumination: '51-99%' },
+    { name: 'Full Moon', icon: '', range: [14.77, 18.46], illumination: '100%' },
+    { name: 'Waning Gibbous', icon: '', range: [18.46, 22.15], illumination: '99-51%' },
+    { name: 'Last Quarter', icon: '', range: [22.15, 25.84], illumination: '50%' },
+    { name: 'Waning Crescent', icon: '', range: [25.84, 30], illumination: '49-2%' }
 ];
 
 // ============================================
@@ -1270,28 +1270,28 @@ function calculateAngularHouses(houses, risingSign, midheaven) {
             sign: houses[0].sign,
             name: 'Ascendant',
             theme: 'Self & Identity',
-            symbol: '⬆️'
+            symbol: ''
         },
         fourth: {
             house: 4,
             sign: houses[3].sign,
             name: 'Imum Coeli (IC)',
             theme: 'Home & Roots',
-            symbol: '🏠'
+            symbol: ''
         },
         seventh: {
             house: 7,
             sign: houses[6].sign,
             name: 'Descendant',
             theme: 'Partnerships & Others',
-            symbol: '💑'
+            symbol: ''
         },
         tenth: {
             house: 10,
             sign: houses[9].sign,
             name: 'Midheaven (MC)',
             theme: 'Career & Public Life',
-            symbol: '⭐'
+            symbol: ''
         }
     };
 }
@@ -1325,7 +1325,7 @@ function calculateStelliums(planets) {
     const stelliums = [];
     for (const [sign, count] of Object.entries(signCounts)) {
         if (count >= 3) {
-            const signData = ZODIAC_SIGNS.find(s => s.name === sign) || { element: 'Unknown', symbol: '✨' };
+            const signData = ZODIAC_SIGNS.find(s => s.name === sign) || { element: 'Unknown', symbol: '' };
             stelliums.push({
                 sign: sign,
                 symbol: signData.symbol,

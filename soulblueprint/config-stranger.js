@@ -37,7 +37,7 @@ const BRAND_CONFIG = {
         birthPlaceHelper: "Where your story began"
     },
     
-    ctaButton: "🔮 Open the Gate",
+    ctaButton: "Open the Gate",
     loadingMessage: "Accessing the Upside Down...",
     
     // Result page copy
@@ -51,27 +51,27 @@ const BRAND_CONFIG = {
     sections: {
         celestial: {
             name: "Celestial Anomalies",
-            icon: "🔮",
+            icon: "",
             description: "Your planetary influences from beyond the gate"
         },
         numbers: {
             name: "Hidden Numbers",
-            icon: "011",
+            icon: "",
             description: "The numerological patterns in your dimensional code"
         },
         soul: {
             name: "Psychic Mission",
-            icon: "⚡",
+            icon: "",
             description: "Your deeper purpose and supernatural gifts"
         },
         forecasts: {
             name: "Dimensional Portals",
-            icon: "🌀",
+            icon: "",
             description: "What the Upside Down reveals about your future"
         },
         cycles: {
             name: "Temporal Shifts",
-            icon: "⏳",
+            icon: "",
             description: "Key phases in your dimensional journey"
         }
     },
@@ -158,7 +158,7 @@ const BRAND_CONFIG = {
     // ============================================
     sharing: {
         hashtags: ["StrangerPatterns", "UpsideDown", "StrangerThings", "Hawkins"],
-        defaultMessage: "I just discovered my dimensional profile! 🔮 The Upside Down revealed...",
+        defaultMessage: "I just discovered my dimensional profile! The Upside Down revealed...",
         twitterHandle: "@strangerpattern"
     },
     
@@ -181,7 +181,7 @@ const BRAND_CONFIG = {
     // ============================================
     footer: {
         copyright: "© 2025 Stranger Patterns",
-        disclaimer: "For entertainment purposes only. Not affiliated with Netflix or Stranger Things. Friends don't lie! 🧇",
+        disclaimer: "For entertainment purposes only. Not affiliated with Netflix or Stranger Things. Friends don't lie!",
         links: [
             { text: "Privacy Policy", url: "/privacy.html" },
             { text: "Terms of Service", url: "/terms.html" },

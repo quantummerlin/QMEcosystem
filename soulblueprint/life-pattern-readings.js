@@ -404,7 +404,7 @@ function calculateIdentityCompression(readings) {
 const PROBABILITY_WINDOWS = {
     careerShift: {
         title: "Career Shift Probability",
-        icon: "💼",
+        icon: "",
         highWindows: [
             { age: "27–31", reason: "Saturn Return restructuring — highest probability of career pivot", probability: "Very High" },
             { age: "37–40", reason: "Saturn square — midcycle career audit, many pivot to leadership or independence", probability: "High" },
@@ -414,7 +414,7 @@ const PROBABILITY_WINDOWS = {
     },
     marriage: {
         title: "Partnership Formation Probability",
-        icon: "💍",
+        icon: "",
         highWindows: [
             { age: "25–30", reason: "Jupiter return (~24) plus Saturn maturation — readiness for genuine commitment", probability: "Very High" },
             { age: "35–38", reason: "Post first Saturn Return stability — many form partnerships from authentic choice", probability: "High" },
@@ -423,7 +423,7 @@ const PROBABILITY_WINDOWS = {
     },
     entrepreneurship: {
         title: "Entrepreneurial Success Window",
-        icon: "🚀",
+        icon: "",
         highWindows: [
             { age: "31–36", reason: "Post Saturn Return foundations + peak energy + growing expertise. Research shows average successful founder age is 45, but momentum starts here.", probability: "High" },
             { age: "38–45", reason: "Peak statistical window — Harvard/MIT research shows highest entrepreneurial success rates. Maximum intersection of expertise, network, and capital.", probability: "Very High" },
@@ -432,7 +432,7 @@ const PROBABILITY_WINDOWS = {
     },
     relocation: {
         title: "Relocation Probability",
-        icon: "🌍",
+        icon: "",
         highWindows: [
             { age: "18–24", reason: "Education and early career — highest geographic mobility in lifetime", probability: "Very High" },
             { age: "28–32", reason: "Saturn Return — many relocate to align environment with authentic identity", probability: "High" },
@@ -442,7 +442,7 @@ const PROBABILITY_WINDOWS = {
     },
     reinvention: {
         title: "Psychological Reinvention",
-        icon: "🔄",
+        icon: "",
         highWindows: [
             { age: "28–30", reason: "First Saturn Return — the original identity audit. Who you were at 25 and who you are at 31 are often different people.", probability: "Very High" },
             { age: "38–42", reason: "Pluto square + Neptune square — deep unconscious material surfaces demanding integration", probability: "High" },
@@ -452,7 +452,7 @@ const PROBABILITY_WINDOWS = {
     },
     financialExpansion: {
         title: "Financial Expansion Windows",
-        icon: "💰",
+        icon: "",
         highWindows: [
             { age: "33–42", reason: "Peak earning growth rate — compound skills + expanding network + maximum energy", probability: "Very High" },
             { age: "48–55", reason: "Peak absolute earnings for most professions — authority + expertise + positioning", probability: "High" },
@@ -461,7 +461,7 @@ const PROBABILITY_WINDOWS = {
     },
     burnout: {
         title: "Burnout Risk Windows",
-        icon: "🔥",
+        icon: "",
         highWindows: [
             { age: "26–29", reason: "Pre-Saturn Return intensity — trying to 'make it' before the deadline you feel but can't name", probability: "High" },
             { age: "34–38", reason: "Post-Saturn ambition acceleration — overcommitment during the building years", probability: "High" },

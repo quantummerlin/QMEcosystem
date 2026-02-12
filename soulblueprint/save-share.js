@@ -133,7 +133,7 @@ function generateGiftReading() {
         }
         
         .gift-cover::before {
-            content: '✨';
+            content: '';
             position: absolute;
             top: 20px;
             left: 20px;
@@ -142,7 +142,7 @@ function generateGiftReading() {
         }
         
         .gift-cover::after {
-            content: '✨';
+            content: '';
             position: absolute;
             bottom: 20px;
             right: 20px;
@@ -275,11 +275,11 @@ function generateGiftReading() {
         }
         
         .save-instructions h3::before {
-            content: '💫 ';
+            content: '';
         }
         
         .save-instructions h3::after {
-            content: ' 💫';
+            content: '';
         }
         
         .save-steps {
@@ -479,7 +479,7 @@ function generateGiftReading() {
     <div class="gift-wrapper">
         <!-- Gift Cover -->
         <div class="gift-cover">
-            <div class="gift-ribbon">🎁</div>
+            <div class="gift-ribbon"></div>
             <h1 class="gift-title">A Moment in Time</h1>
             <p class="gift-subtitle">A Cosmic Gift Reading</p>
             <div class="gift-for">
@@ -491,7 +491,7 @@ function generateGiftReading() {
         <!-- Gift Letter -->
         <div class="gift-letter">
             <div class="letter-header">
-                <h2>✨ A Letter For You ✨</h2>
+                <h2>A Letter For You</h2>
                 <p class="letter-date">${today}</p>
             </div>
             <div class="letter-body">
@@ -509,7 +509,7 @@ function generateGiftReading() {
             </div>
             <div class="letter-closing">
                 With cosmic love and wonder,
-                <div class="signature">✨ Quantum Merlin ✨</div>
+                <div class="signature">Quantum Merlin</div>
             </div>
         </div>
         
@@ -518,22 +518,22 @@ function generateGiftReading() {
             <h3>How to Keep This Gift Forever</h3>
             <div class="save-steps">
                 <div class="save-step">
-                    <div class="step-icon">💾</div>
+                    <div class="step-icon"></div>
                     <h4>Save This File</h4>
                     <p>This is a complete HTML file. Save it to your computer, phone, or cloud storage to access anytime — even offline!</p>
                 </div>
                 <div class="save-step">
-                    <div class="step-icon">🖨️</div>
+                    <div class="step-icon"></div>
                     <h4>Print It</h4>
                     <p>Press Ctrl+P (or Cmd+P on Mac) to print this reading. It's designed to look beautiful on paper.</p>
                 </div>
                 <div class="save-step">
-                    <div class="step-icon">📱</div>
+                    <div class="step-icon"></div>
                     <h4>Open Anytime</h4>
                     <p>Double-click this file anytime to open it in any web browser — no internet required!</p>
                 </div>
                 <div class="save-step">
-                    <div class="step-icon">🎁</div>
+                    <div class="step-icon"></div>
                     <h4>Share the Gift</h4>
                     <p>Send this file to friends and family so they can read your cosmic blueprint too!</p>
                 </div>
@@ -542,11 +542,11 @@ function generateGiftReading() {
         
         <!-- Birth Details -->
         <div class="birth-banner">
-            <h3>✨ Cosmic Coordinates ✨</h3>
+            <h3>Cosmic Coordinates</h3>
             <div class="birth-details">
-                <span>📅 ${birthDate}</span>
-                <span>🕐 ${birthTime}</span>
-                <span>📍 ${birthPlace}</span>
+                <span>${birthDate}</span>
+                <span>${birthTime}</span>
+                <span>${birthPlace}</span>
             </div>
         </div>
         
@@ -559,7 +559,7 @@ function generateGiftReading() {
         <div class="gift-footer">
             <p>"You are made of starstuff."</p>
             <p>— Carl Sagan</p>
-            <p class="brand">✨ Quantum Merlin Soul Blueprint ✨</p>
+            <p class="brand">Quantum Merlin Soul Blueprint</p>
             <p style="color: #666; font-size: 0.9rem; margin-top: 20px;">Generated ${today} at quantummerlin.com</p>
         </div>
     </div>
@@ -588,16 +588,16 @@ function showGiftConfirmation(name) {
     modal.className = 'gift-modal';
     modal.innerHTML = `
         <div class="gift-modal-content">
-            <div class="gift-modal-icon">🎁</div>
+            <div class="gift-modal-icon"></div>
             <h2>Gift Created!</h2>
             <p>A beautiful gift reading for <strong>${name}</strong> has been downloaded.</p>
             <div class="gift-modal-tips">
-                <p>📁 Find it in your Downloads folder</p>
-                <p>📧 Email it to someone special</p>
-                <p>🖨️ Print it as a keepsake</p>
-                <p>💾 Save it forever — works offline!</p>
+                <p>Find it in your Downloads folder</p>
+                <p>Email it to someone special</p>
+                <p>Print it as a keepsake</p>
+                <p>Save it forever — works offline!</p>
             </div>
-            <button onclick="this.parentElement.parentElement.remove()" class="gift-modal-close">✨ Got it! ✨</button>
+            <button onclick="this.parentElement.parentElement.remove()" class="gift-modal-close">Got it!</button>
         </div>
     `;
     
