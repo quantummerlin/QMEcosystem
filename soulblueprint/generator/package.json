@@ -1,0 +1,28 @@
+{
+  "name": "moment-in-time-pdf-generator",
+  "version": "1.0.0",
+  "description": "Generate beautiful PDF books from A Moment in Time astrology reading HTML files",
+  "main": "generate.js",
+  "bin": {
+    "moment-in-time": "./generate.js"
+  },
+  "scripts": {
+    "generate": "node generate.js",
+    "parse": "node parser.js",
+    "test": "node generate.js --help"
+  },
+  "keywords": [
+    "pdf",
+    "generator",
+    "astrology",
+    "book",
+    "html-to-pdf"
+  ],
+  "author": "Quantum Merlin",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer": "^22.0.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}

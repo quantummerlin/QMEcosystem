@@ -2714,11 +2714,11 @@ var COSMIC_WRAPUP = {
 ${deepSun ? deepSun.hook : getSunSummary(sunSign)}
 This is ${name}'s life force—the energy they're here to radiate into the world. Every ${sunSign} Sun is born with a mission: ${deepSun ? deepSun.lifeLesson : 'to shine their unique light'}. Their greatest power lies in ${deepSun ? deepSun.creativeExpression : 'expressing their authentic self'}.
 
-${deepSun ? `The ${sunSign} Sun needs: ` + deepSun.parentGuidance : ''}
+${(typeof shouldShowParentGuidance !== 'function' || shouldShowParentGuidance()) && deepSun ? `The ${sunSign} Sun needs: ` + deepSun.parentGuidance : ''}
 
 THE MOON IN ${moonSign.toUpperCase()}: The Inner Sanctuary  
 ${deepMoon ? deepMoon.hook : getMoonSummary(moonSign)}
-This is ${name}'s emotional operating system—how they process feelings, what makes them feel safe, and how they'll need to be comforted. When ${name} cries, they're speaking in ${moonSign} Moon language. ${deepMoon ? deepMoon.parentGuidance : ''}
+This is ${name}'s emotional operating system—how they process feelings, what makes them feel safe, and how they'll need to be comforted. When ${name} cries, they're speaking in ${moonSign} Moon language. ${(typeof shouldShowParentGuidance !== 'function' || shouldShowParentGuidance()) && deepMoon ? deepMoon.parentGuidance : ''}
 
 ${risingSign !== 'Unknown' ? `${risingSign.toUpperCase()} RISING: The Outer Expression` : 'THE ASCENDANT'}
 ${risingSign !== 'Unknown' ? (deepRising ? deepRising.firstImpression : getRisingSummary(risingSign)) : 'Unknown at birth—requires birth time.'}

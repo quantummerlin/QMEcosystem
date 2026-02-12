@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}} — {{name}}</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+@page { size: A5; margin: 14mm 12mm 16mm 12mm; }
+@media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .no-print { display: none !important; } .page { page-break-after: always; box-shadow: none; margin: 0; } .page:last-child { page-break-after: avoid; } }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Nunito', sans-serif; font-size: 9.5pt; line-height: 1.7; color: #3a3050; background: #e8e0f0; }
+.page { width: 148mm; min-height: 210mm; background: #fefcff; margin: 10mm auto; padding: 14mm 12mm 16mm 12mm; position: relative; box-shadow: 0 4px 24px rgba(100,70,150,0.1); overflow: hidden; }
+
+:root { --indigo: #4a3a7a; --indigo-light: #7a68b0; --violet: #9a7cc0; --rose: #d4789a; --peach: #e8a080; --sky: #7ab0d4; --teal: #60b0a8; --text: #3a3050; --text-light: #6a5a80; --cream: #fefcff; --wash: rgba(154,124,192,0.06); --border: rgba(74,58,122,0.15); }
+
+.watercolor-wash { position: absolute; border-radius: 50%; filter: blur(20mm); pointer-events: none; opacity: 0.08; }
+.wash-1 { top: -20mm; right: -15mm; width: 80mm; height: 80mm; background: var(--violet); }
+.wash-2 { bottom: -15mm; left: -10mm; width: 60mm; height: 60mm; background: var(--rose); }
+.wash-3 { top: 40%; right: -20mm; width: 50mm; height: 50mm; background: var(--sky); }
+
+h1 { font-family: 'Marcellus', serif; font-weight: 400; font-size: 24pt; color: var(--indigo); text-align: center; letter-spacing: 0.04em; }
+h2 { font-family: 'Marcellus', serif; font-weight: 400; font-size: 15pt; color: var(--indigo); text-align: center; margin: 0 0 3mm; }
+h3 { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 8pt; color: var(--violet); text-transform: uppercase; letter-spacing: 0.12em; }
+
+.cover { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 210mm; background: linear-gradient(160deg, #f0e8ff 0%, #ffe8f0 30%, #e8f0ff 60%, #f0fff8 100%); padding: 20mm 15mm; position: relative; }
+.cover::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 20%, rgba(154,124,192,0.2) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(212,120,154,0.15) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(122,176,212,0.1) 0%, transparent 60%); pointer-events: none; }
+.cover h1 { font-size: 26pt; margin-bottom: 2mm; position: relative; z-index: 1; }
+.cover .subtitle { font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--violet); margin: 2mm 0 10mm; position: relative; z-index: 1; }
+.cover .cover-name { font-family: 'Marcellus', serif; font-size: 18pt; color: var(--indigo); margin: 0 0 5mm; position: relative; z-index: 1; }
+.cover .cover-details { font-size: 8pt; color: var(--text-light); line-height: 1.8; position: relative; z-index: 1; }
+.cover .cover-brand { position: absolute; bottom: 14mm; left: 0; right: 0; font-size: 7pt; color: var(--violet); letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.5; }
+.cover .moon-icon { position: relative; z-index: 1; font-size: 36pt; margin: 6mm 0; opacity: 0.6; }
+
+.half-title { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.half-title h1 { font-size: 18pt; }
+.half-title .ht-name { font-style: italic; color: var(--violet); margin-top: 4mm; font-size: 10pt; }
+
+.epigraph { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; text-align: center; }
+.epigraph blockquote { font-style: italic; font-size: 11pt; color: var(--text-light); max-width: 90mm; line-height: 1.8; }
+.epigraph .attr { font-family: 'Marcellus', serif; font-size: 9pt; color: var(--violet); letter-spacing: 0.08em; margin-top: 3mm; }
+.epigraph .dedication { font-style: italic; font-size: 9pt; color: var(--text-light); margin-top: 15mm; line-height: 1.7; }
+
+.snapshot-title { font-family: 'Marcellus', serif; font-size: 14pt; color: var(--indigo); text-align: center; margin-bottom: 2mm; }
+.snap-divider { width: 30mm; height: 2pt; background: linear-gradient(90deg, var(--violet), var(--rose), var(--sky)); margin: 0 auto 4mm; border-radius: 1pt; opacity: 0.5; }
+.snap-cat { margin-bottom: 3mm; }
+.snap-cat-title { font-size: 7.5pt; font-weight: 700; color: var(--violet); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1mm; border-bottom: 0.5pt solid var(--border); padding-bottom: 0.5mm; }
+.snap-item { display: flex; justify-content: space-between; font-size: 8.5pt; padding: 0.3mm 0; }
+.snap-planet { color: var(--text-light); }
+.snap-sign { color: var(--indigo); font-weight: 700; }
+
+.toc-title { font-family: 'Marcellus', serif; font-size: 14pt; color: var(--indigo); text-align: center; margin-bottom: 2mm; }
+.toc-section { margin-bottom: 3mm; }
+.toc-section-name { font-family: 'Marcellus', serif; font-size: 10pt; color: var(--indigo); padding-bottom: 1mm; border-bottom: 0.5pt solid var(--border); }
+.toc-entry { font-size: 8pt; color: var(--text-light); padding: 0.3mm 0 0.3mm 3mm; }
+
+.chapter-opener { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; background: linear-gradient(180deg, var(--cream) 0%, rgba(240,232,255,0.5) 50%, var(--cream) 100%); }
+.chapter-num { font-size: 7pt; font-weight: 700; color: var(--violet); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 3mm; }
+.chapter-icon { font-size: 20pt; margin-bottom: 3mm; opacity: 0.6; }
+.chapter-title { font-family: 'Marcellus', serif; font-size: 18pt; color: var(--indigo); margin: 0.5em 0; }
+.chapter-desc { font-style: italic; font-size: 9pt; color: var(--text-light); max-width: 95mm; line-height: 1.5; }
+.chapter-ornament { color: var(--violet); font-size: 9pt; letter-spacing: 0.3em; margin-top: 6mm; opacity: 0.5; }
+
+.reading { margin-bottom: 4mm; page-break-inside: avoid; }
+.reading-header { padding-bottom: 1mm; border-bottom: 1.5pt solid transparent; border-image: linear-gradient(90deg, var(--violet), var(--rose), var(--sky)) 1; margin-bottom: 1.5mm; }
+.r-title { font-family: 'Marcellus', serif; font-size: 11pt; color: var(--indigo); display: block; }
+.r-value { font-size: 8pt; color: var(--violet); font-style: italic; display: block; margin-top: 0.3mm; }
+.reading-body { font-size: 9pt; line-height: 1.65; color: var(--text); text-align: justify; }
+.reading-body p { margin-bottom: 1.5mm; }
+.reading-body strong { color: var(--indigo); }
+.reading-body em { color: var(--violet); }
+.reading-body h4 { font-family: 'Marcellus', serif; font-size: 9.5pt; color: var(--indigo); margin: 2mm 0 1mm; }
+.reading-body h5 { font-size: 8pt; color: var(--violet); margin: 1.5mm 0 0.5mm; }
+
+.kw-row { display: flex; flex-wrap: wrap; gap: 1mm; margin: 1.5mm 0; }
+.kw { font-size: 6.5pt; padding: 0.3mm 2mm; border-radius: 3mm; color: white; font-weight: 600; }
+.kw:nth-child(4n+1) { background: var(--violet); }
+.kw:nth-child(4n+2) { background: var(--rose); }
+.kw:nth-child(4n+3) { background: var(--sky); }
+.kw:nth-child(4n+4) { background: var(--teal); }
+.sc-grid { margin: 1.5mm 0; }
+.sc-col h5 { font-size: 7.5pt; color: var(--violet); margin-bottom: 0.5mm; }
+.sc-col ul { list-style: none; padding: 0; }
+.sc-col li { font-size: 7.5pt; color: var(--text-light); line-height: 1.4; padding: 0.3mm 0; }
+.sc-col li::before { content: "✧ "; color: var(--violet); }
+
+.heart-divider { text-align: center; margin: 3mm 0; }
+.heart-divider::before { content: "✧ · ✧ · ✧"; color: var(--violet); font-size: 7pt; letter-spacing: 0.2em; opacity: 0.5; }
+
+.closing { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; }
+.closing-ornament { color: var(--violet); font-size: 12pt; letter-spacing: 0.3em; margin-bottom: 6mm; opacity: 0.5; }
+.closing h2 { font-family: 'Marcellus', serif; font-size: 15pt; color: var(--indigo); margin-bottom: 5mm; }
+.closing-body { font-size: 9pt; color: var(--text-light); max-width: 100mm; line-height: 1.7; }
+.closing-body p { margin-bottom: 3mm; }
+.closing-quote { font-style: italic; font-size: 10pt; color: var(--violet); margin-top: 8mm; line-height: 1.6; }
+.closing-attr { font-size: 8pt; color: var(--text-light); margin-top: 2mm; }
+
+.colophon { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.colophon-brand { font-family: 'Marcellus', serif; font-size: 11pt; color: var(--indigo); letter-spacing: 0.1em; margin-bottom: 6mm; }
+.colophon-text { font-size: 8pt; color: var(--text-light); text-align: center; line-height: 1.7; }
+.colophon-url { font-size: 7pt; color: var(--violet); margin-top: 4mm; }
+
+.print-bar { position: fixed; top: 0; left: 0; right: 0; background: linear-gradient(135deg, #f0e8ff, #ffe8f0); padding: 8px 20px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; border-bottom: 2px solid transparent; border-image: linear-gradient(90deg, var(--violet), var(--rose), var(--sky)) 1; font-family: 'Nunito', sans-serif; }
+.print-bar-title { color: var(--indigo); font-size: 0.85rem; }
+.print-btn { background: linear-gradient(135deg, var(--violet), var(--rose)); color: white; border: none; padding: 8px 20px; border-radius: 20px; font-weight: 600; font-size: 0.8rem; cursor: pointer; }
+@media print { .print-bar { display: none !important; } body { background: white; } }
+@media screen { body { padding-top: 45px; } }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()">✧ Print / Save PDF</button></div>
+<div class="page cover"><div class="moon-icon">🌙</div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="cover-brand">{{brand}}</div></div>
+<div class="page half-title"><div class="watercolor-wash wash-1"></div><h1>{{title}}</h1><div class="ht-name">{{halfTitleName}}</div></div>
+<div class="page epigraph"><div class="watercolor-wash wash-2"></div><blockquote>{{epigraphQuote}}</blockquote><div class="attr">{{epigraphAttr}}</div><div class="dedication">{{dedication}}</div></div>
+<div class="page"><div class="watercolor-wash wash-1"></div><div class="watercolor-wash wash-2"></div><h2 class="snapshot-title">Cosmic Snapshot</h2><div class="snap-divider"></div>{{snapshot}}</div>
+<div class="page"><div class="watercolor-wash wash-3"></div><h2 class="toc-title">Contents</h2><div class="snap-divider"></div>{{toc}}</div>
+{{chapters}}
+<div class="page closing"><div class="watercolor-wash wash-1"></div><div class="watercolor-wash wash-2"></div><div class="closing-ornament">✧ · · ✧ · · ✧</div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
+<div class="page colophon"><div class="colophon-brand">{{colophonBrand}}</div><div class="colophon-text">{{colophonText}}</div><div class="colophon-url">{{colophonURL}}</div></div>
+</body>
+</html>

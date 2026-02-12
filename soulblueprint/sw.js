@@ -1,5 +1,5 @@
 // A Moment in Time - Service Worker
-const CACHE_NAME = 'moment-in-time-v35';
+const CACHE_NAME = 'moment-in-time-v43';
 const ASSETS_TO_CACHE = [
     '/soulblueprint/',
     '/soulblueprint/index.html',
@@ -12,7 +12,10 @@ const ASSETS_TO_CACHE = [
     '/soulblueprint/advanced-readings.js',
     '/soulblueprint/love-blueprint.js',
     '/soulblueprint/tone-variations.js',
+    '/soulblueprint/age-language.js',
+    '/soulblueprint/life-pattern-readings.js',
     '/soulblueprint/save-share.js',
+    '/soulblueprint/book-generator.js',
     '/soulblueprint/manifest.json',
     '/soulblueprint/Amomentintime.jpg'
 ];

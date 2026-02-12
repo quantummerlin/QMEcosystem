@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}} — {{name}}</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+@page { size: A5; margin: 14mm 12mm 16mm 12mm; }
+@media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .no-print { display: none !important; } .page { page-break-after: always; box-shadow: none; margin: 0; } .page:last-child { page-break-after: avoid; } }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Raleway', sans-serif; font-size: 9.5pt; line-height: 1.7; color: #e8e0f0; background: #0a0612; }
+.page { width: 148mm; min-height: 210mm; background: #0f0a1a; margin: 10mm auto; padding: 14mm 12mm 16mm 12mm; position: relative; box-shadow: 0 4px 40px rgba(100,60,180,0.15); overflow: hidden; }
+
+:root { --gold: #d4a843; --gold-dim: #a08030; --purple: #8b6cc0; --purple-light: #b8a0e0; --blue: #4a6fa5; --text: #e8e0f0; --text-dim: #a098b0; --bg: #0f0a1a; --bg-light: #1a1228; --border: rgba(212,168,67,0.2); }
+
+.stars { position: absolute; inset: 0; background-image: radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.5), transparent), radial-gradient(1px 1px at 75% 35%, rgba(212,168,67,0.4), transparent), radial-gradient(0.5px 0.5px at 45% 60%, rgba(255,255,255,0.3), transparent), radial-gradient(1px 1px at 85% 80%, rgba(139,108,192,0.4), transparent), radial-gradient(0.5px 0.5px at 25% 75%, rgba(255,255,255,0.4), transparent), radial-gradient(1px 1px at 55% 15%, rgba(212,168,67,0.3), transparent), radial-gradient(0.5px 0.5px at 90% 50%, rgba(255,255,255,0.3), transparent), radial-gradient(1px 1px at 35% 90%, rgba(139,108,192,0.3), transparent), radial-gradient(0.5px 0.5px at 65% 45%, rgba(255,255,255,0.2), transparent), radial-gradient(1px 1px at 10% 55%, rgba(212,168,67,0.2), transparent); pointer-events: none; }
+
+h1 { font-family: 'Cinzel', serif; font-weight: 400; font-size: 22pt; color: var(--gold); text-align: center; letter-spacing: 0.1em; }
+h2 { font-family: 'Cinzel', serif; font-weight: 400; font-size: 14pt; color: var(--gold); text-align: center; margin: 0 0 3mm; letter-spacing: 0.08em; }
+h3 { font-family: 'Cinzel', serif; font-weight: 500; font-size: 10pt; color: var(--purple-light); letter-spacing: 0.05em; }
+
+.cover { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 210mm; background: radial-gradient(ellipse at 50% 40%, #1a1030 0%, #0f0a1a 50%, #080510 100%); padding: 20mm 15mm; position: relative; }
+.cover::before { content: ""; position: absolute; inset: 8mm; border: 0.5pt solid var(--border); pointer-events: none; }
+.cover::after { content: ""; position: absolute; inset: 10mm; border: 0.25pt solid rgba(139,108,192,0.15); pointer-events: none; }
+.cover h1 { font-size: 26pt; margin-bottom: 2mm; position: relative; z-index: 1; text-shadow: 0 0 30px rgba(212,168,67,0.3); }
+.cover .subtitle { font-family: 'Raleway', sans-serif; font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple-light); margin: 2mm 0 12mm; position: relative; z-index: 1; }
+.cover .cover-name { font-family: 'Cinzel', serif; font-size: 18pt; color: #fff; font-weight: 400; letter-spacing: 0.08em; margin: 0 0 6mm; position: relative; z-index: 1; text-shadow: 0 0 20px rgba(255,255,255,0.15); }
+.cover .cover-details { font-size: 8pt; color: var(--text-dim); line-height: 1.8; position: relative; z-index: 1; }
+.cover .cover-brand { position: absolute; bottom: 14mm; left: 0; right: 0; font-family: 'Cinzel', serif; font-size: 7pt; color: rgba(212,168,67,0.4); letter-spacing: 0.25em; text-transform: uppercase; }
+.cover .ornament { position: relative; z-index: 1; color: rgba(212,168,67,0.5); font-size: 10pt; letter-spacing: 0.4em; margin: 4mm 0; }
+
+.half-title { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.half-title h1 { font-size: 18pt; }
+.half-title .ht-name { font-style: italic; color: var(--purple-light); margin-top: 4mm; font-size: 10pt; }
+
+.epigraph { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; text-align: center; }
+.epigraph blockquote { font-style: italic; font-size: 10.5pt; color: var(--text-dim); max-width: 90mm; line-height: 1.8; }
+.epigraph .attr { font-family: 'Cinzel', serif; font-size: 8pt; color: var(--gold-dim); letter-spacing: 0.1em; margin-top: 3mm; }
+.epigraph .dedication { font-style: italic; font-size: 9pt; color: var(--text-dim); margin-top: 15mm; line-height: 1.7; }
+
+.snapshot-title { font-family: 'Cinzel', serif; font-size: 12pt; color: var(--gold); text-align: center; letter-spacing: 0.1em; margin-bottom: 2mm; }
+.snap-divider { width: 30mm; height: 0.5pt; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 4mm; }
+.snap-cat { margin-bottom: 3mm; }
+.snap-cat-title { font-family: 'Cinzel', serif; font-size: 7.5pt; color: var(--gold-dim); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1mm; border-bottom: 0.25pt solid var(--border); padding-bottom: 0.5mm; }
+.snap-item { display: flex; justify-content: space-between; font-size: 8.5pt; padding: 0.3mm 0; }
+.snap-planet { color: var(--text-dim); }
+.snap-sign { color: var(--gold); font-weight: 600; font-family: 'Cinzel', serif; font-size: 8pt; }
+
+.toc-title { font-family: 'Cinzel', serif; font-size: 12pt; color: var(--gold); text-align: center; letter-spacing: 0.1em; margin-bottom: 2mm; }
+.toc-section { margin-bottom: 3mm; }
+.toc-section-name { font-family: 'Cinzel', serif; font-size: 9.5pt; color: var(--gold); padding-bottom: 1mm; border-bottom: 0.25pt solid var(--border); }
+.toc-entry { font-size: 8pt; color: var(--text-dim); padding: 0.3mm 0 0.3mm 3mm; }
+
+.chapter-opener { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; background: radial-gradient(ellipse at 50% 50%, var(--bg-light) 0%, var(--bg) 100%); }
+.chapter-num { font-family: 'Cinzel', serif; font-size: 7pt; color: var(--gold-dim); letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 3mm; }
+.chapter-icon { font-size: 20pt; margin-bottom: 3mm; opacity: 0.7; }
+.chapter-title { font-family: 'Cinzel', serif; font-size: 18pt; font-weight: 400; color: var(--gold); letter-spacing: 0.06em; margin: 0.5em 0; text-shadow: 0 0 20px rgba(212,168,67,0.2); }
+.chapter-desc { font-style: italic; font-size: 9pt; color: var(--text-dim); max-width: 95mm; line-height: 1.5; }
+.chapter-ornament { color: rgba(212,168,67,0.4); font-size: 9pt; letter-spacing: 0.3em; margin-top: 6mm; }
+
+.reading { margin-bottom: 4mm; page-break-inside: avoid; }
+.reading-header { display: flex; align-items: baseline; gap: 2mm; padding-bottom: 1mm; border-bottom: 0.3pt solid var(--border); margin-bottom: 1.5mm; }
+.r-title { font-family: 'Cinzel', serif; font-size: 10pt; color: var(--gold); flex: 1; }
+.r-value { font-size: 8pt; color: var(--purple-light); font-style: italic; }
+.reading-body { font-size: 9pt; line-height: 1.65; color: var(--text); text-align: justify; }
+.reading-body p { margin-bottom: 1.5mm; }
+.reading-body strong { color: var(--gold); }
+.reading-body em { color: var(--purple-light); }
+.reading-body h4 { font-family: 'Cinzel', serif; font-size: 8.5pt; color: var(--gold-dim); margin: 2mm 0 1mm; letter-spacing: 0.03em; }
+.reading-body h5 { font-size: 8pt; color: var(--purple-light); margin: 1.5mm 0 0.5mm; }
+
+.kw-row { display: flex; flex-wrap: wrap; gap: 1mm; margin: 1.5mm 0; }
+.kw { font-size: 6.5pt; padding: 0.3mm 2mm; border: 0.3pt solid var(--border); color: var(--gold-dim); background: rgba(212,168,67,0.05); }
+.sc-grid { margin: 1.5mm 0; }
+.sc-col h5 { font-size: 7.5pt; color: var(--purple-light); margin-bottom: 0.5mm; }
+.sc-col ul { list-style: none; padding: 0; }
+.sc-col li { font-size: 7.5pt; color: var(--text-dim); line-height: 1.4; padding: 0.3mm 0; }
+
+.heart-divider { text-align: center; margin: 3mm 0; color: rgba(212,168,67,0.3); font-size: 8pt; letter-spacing: 0.4em; }
+
+.closing { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; }
+.closing-ornament { color: var(--gold-dim); font-size: 10pt; letter-spacing: 0.3em; margin-bottom: 6mm; }
+.closing h2 { font-family: 'Cinzel', serif; font-size: 14pt; color: var(--gold); margin-bottom: 5mm; }
+.closing-body { font-size: 9pt; color: var(--text-dim); max-width: 100mm; line-height: 1.7; }
+.closing-body p { margin-bottom: 3mm; }
+.closing-quote { font-style: italic; font-size: 10pt; color: var(--purple-light); margin-top: 8mm; line-height: 1.6; }
+.closing-attr { font-size: 8pt; color: var(--text-dim); margin-top: 2mm; }
+
+.colophon { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.colophon-brand { font-family: 'Cinzel', serif; font-size: 10pt; color: var(--gold-dim); letter-spacing: 0.2em; margin-bottom: 6mm; }
+.colophon-text { font-size: 8pt; color: var(--text-dim); text-align: center; line-height: 1.7; }
+.colophon-url { font-size: 7pt; color: var(--gold-dim); margin-top: 4mm; }
+
+.print-bar { position: fixed; top: 0; left: 0; right: 0; background: linear-gradient(135deg, #0f0a1a, #1a1228); padding: 8px 20px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; border-bottom: 1px solid var(--border); font-family: 'Raleway', sans-serif; }
+.print-bar-title { color: var(--gold); font-size: 0.85rem; }
+.print-btn { background: linear-gradient(135deg, var(--gold), var(--gold-dim)); color: #0f0a1a; border: none; padding: 8px 20px; font-weight: 600; font-size: 0.8rem; cursor: pointer; }
+@media print { .print-bar { display: none !important; } body { background: #0f0a1a; } }
+@media screen { body { padding-top: 45px; } }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()">✦ Print / Save PDF</button></div>
+<div class="page cover"><div class="stars"></div><div class="ornament">✦ · · ✦ · · ✦</div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="ornament">✦ · · ✦ · · ✦</div><div class="cover-brand">{{brand}}</div></div>
+<div class="page half-title"><div class="stars"></div><h1>{{title}}</h1><div class="ht-name">{{halfTitleName}}</div></div>
+<div class="page epigraph"><div class="stars"></div><blockquote>{{epigraphQuote}}</blockquote><div class="attr">{{epigraphAttr}}</div><div class="dedication">{{dedication}}</div></div>
+<div class="page"><div class="stars"></div><h2 class="snapshot-title">Cosmic Snapshot</h2><div class="snap-divider"></div>{{snapshot}}</div>
+<div class="page"><div class="stars"></div><h2 class="toc-title">Contents</h2><div class="snap-divider"></div>{{toc}}</div>
+{{chapters}}
+<div class="page closing"><div class="stars"></div><div class="closing-ornament">✦ · · ✦ · · ✦</div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
+<div class="page colophon"><div class="stars"></div><div class="colophon-brand">{{colophonBrand}}</div><div class="colophon-text">{{colophonText}}</div><div class="colophon-url">{{colophonURL}}</div></div>
+</body>
+</html>

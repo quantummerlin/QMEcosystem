@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}} — {{name}}</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Alegreya+SC:wght@400;500;700&display=swap');
+
+@page { size: A5; margin: 14mm 12mm 16mm 12mm; }
+@media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .no-print { display: none !important; } .page { page-break-after: always; box-shadow: none; margin: 0; } .page:last-child { page-break-after: avoid; } }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Spectral', serif; font-size: 9.5pt; line-height: 1.7; color: #2a2848; background: #d8d0e8; }
+.page { width: 148mm; min-height: 210mm; background: #fdf8ff; margin: 10mm auto; padding: 14mm 12mm 16mm 12mm; position: relative; box-shadow: 0 4px 24px rgba(80,50,130,0.12); overflow: hidden; }
+
+:root { --enchant: #5a3a8a; --enchant-light: #8a6ab8; --fairy-pink: #d4689a; --fairy-gold: #c8a040; --fairy-blue: #5a8ab8; --stardust: #e8d8f0; --moonlight: #f0e8ff; --text: #2a2848; --text-light: #5a5078; --cream: #fdf8ff; --border: rgba(90,58,138,0.15); }
+
+.sparkle { position: absolute; pointer-events: none; }
+.sparkle::before { content: "✦"; position: absolute; color: var(--fairy-gold); opacity: 0.15; font-size: 6pt; }
+.sparkle-1 { top: 15mm; right: 20mm; } .sparkle-1::before { font-size: 8pt; }
+.sparkle-2 { top: 40mm; left: 15mm; } .sparkle-2::before { font-size: 5pt; opacity: 0.1; }
+.sparkle-3 { bottom: 30mm; right: 25mm; } .sparkle-3::before { font-size: 7pt; opacity: 0.12; }
+
+h1 { font-family: 'Alegreya SC', serif; font-weight: 400; font-size: 22pt; color: var(--enchant); text-align: center; letter-spacing: 0.06em; }
+h2 { font-family: 'Alegreya SC', serif; font-weight: 400; font-size: 14pt; color: var(--enchant); text-align: center; margin: 0 0 3mm; letter-spacing: 0.04em; }
+
+.cover { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 210mm; background: linear-gradient(170deg, #1a1040 0%, #2a1858 30%, #1a1248 60%, #100a30 100%); padding: 20mm 15mm; position: relative; color: var(--stardust); }
+.cover::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 30%, rgba(200,160,64,0.1) 0%, transparent 50%), radial-gradient(circle at 20% 70%, rgba(90,58,138,0.15) 0%, transparent 40%), radial-gradient(circle at 80% 60%, rgba(212,104,154,0.1) 0%, transparent 40%); pointer-events: none; }
+.cover::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(1px 1px at 20% 15%, rgba(255,255,255,0.5), transparent), radial-gradient(1px 1px at 80% 25%, rgba(200,160,64,0.4), transparent), radial-gradient(0.5px 0.5px at 50% 10%, rgba(255,255,255,0.6), transparent), radial-gradient(1px 1px at 10% 60%, rgba(200,160,64,0.3), transparent), radial-gradient(0.5px 0.5px at 90% 70%, rgba(255,255,255,0.4), transparent), radial-gradient(1px 1px at 30% 80%, rgba(200,160,64,0.3), transparent), radial-gradient(0.5px 0.5px at 70% 50%, rgba(255,255,255,0.3), transparent), radial-gradient(1px 1px at 45% 35%, rgba(212,104,154,0.2), transparent), radial-gradient(0.5px 0.5px at 60% 90%, rgba(255,255,255,0.3), transparent); pointer-events: none; }
+.cover .fairy-ornament { position: relative; z-index: 1; font-size: 28pt; margin: 4mm 0; opacity: 0.7; }
+.cover h1 { font-size: 26pt; color: var(--fairy-gold); margin-bottom: 2mm; position: relative; z-index: 1; text-shadow: 0 0 20px rgba(200,160,64,0.3); }
+.cover .subtitle { font-family: 'Spectral', serif; font-size: 9pt; letter-spacing: 0.15em; font-style: italic; color: rgba(232,216,240,0.6); margin: 2mm 0 10mm; position: relative; z-index: 1; }
+.cover .cover-name { font-family: 'Alegreya SC', serif; font-size: 18pt; color: #fff; letter-spacing: 0.08em; margin: 0 0 5mm; position: relative; z-index: 1; text-shadow: 0 0 15px rgba(255,255,255,0.15); }
+.cover .cover-details { font-size: 8pt; color: rgba(232,216,240,0.4); line-height: 1.8; position: relative; z-index: 1; }
+.cover .cover-brand { position: absolute; bottom: 14mm; left: 0; right: 0; font-size: 7pt; color: rgba(200,160,64,0.3); letter-spacing: 0.2em; text-transform: uppercase; }
+
+.half-title { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.half-title h1 { font-size: 18pt; }
+.half-title .ht-name { font-style: italic; color: var(--enchant-light); margin-top: 4mm; font-size: 10pt; }
+
+.epigraph { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; text-align: center; }
+.epigraph blockquote { font-style: italic; font-size: 11pt; color: var(--text-light); max-width: 90mm; line-height: 1.8; }
+.epigraph .attr { font-family: 'Alegreya SC', serif; font-size: 8pt; color: var(--enchant-light); letter-spacing: 0.08em; margin-top: 3mm; }
+.epigraph .dedication { font-style: italic; font-size: 9pt; color: var(--text-light); margin-top: 15mm; line-height: 1.7; }
+
+.snapshot-title { font-family: 'Alegreya SC', serif; font-size: 13pt; color: var(--enchant); text-align: center; margin-bottom: 2mm; }
+.snap-divider { width: 30mm; height: 0.5pt; background: linear-gradient(90deg, transparent, var(--enchant-light), transparent); margin: 0 auto 4mm; }
+.snap-cat { margin-bottom: 3mm; }
+.snap-cat-title { font-family: 'Alegreya SC', serif; font-size: 7.5pt; color: var(--enchant); letter-spacing: 0.1em; margin-bottom: 1mm; border-bottom: 0.5pt solid var(--border); padding-bottom: 0.5mm; }
+.snap-item { display: flex; justify-content: space-between; font-size: 8.5pt; padding: 0.3mm 0; }
+.snap-planet { color: var(--text-light); }
+.snap-sign { color: var(--enchant); font-weight: 600; }
+
+.toc-title { font-family: 'Alegreya SC', serif; font-size: 13pt; color: var(--enchant); text-align: center; margin-bottom: 2mm; }
+.toc-section { margin-bottom: 3mm; }
+.toc-section-name { font-family: 'Alegreya SC', serif; font-size: 10pt; color: var(--enchant); padding-bottom: 1mm; border-bottom: 0.5pt solid var(--border); }
+.toc-entry { font-size: 8pt; color: var(--text-light); padding: 0.3mm 0 0.3mm 3mm; }
+
+.chapter-opener { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; background: linear-gradient(180deg, var(--cream) 0%, var(--moonlight) 50%, var(--cream) 100%); }
+.chapter-num { font-family: 'Alegreya SC', serif; font-size: 7pt; color: var(--enchant-light); letter-spacing: 0.2em; margin-bottom: 3mm; }
+.chapter-icon { font-size: 20pt; margin-bottom: 3mm; opacity: 0.6; }
+.chapter-title { font-family: 'Alegreya SC', serif; font-size: 18pt; color: var(--enchant); letter-spacing: 0.04em; margin: 0.5em 0; }
+.chapter-desc { font-style: italic; font-size: 9pt; color: var(--text-light); max-width: 95mm; line-height: 1.5; }
+.chapter-ornament { color: var(--fairy-gold); font-size: 9pt; letter-spacing: 0.3em; margin-top: 6mm; opacity: 0.4; }
+
+.reading { margin-bottom: 4mm; page-break-inside: avoid; }
+.reading-header { display: flex; align-items: baseline; gap: 2mm; padding-bottom: 1mm; border-bottom: 0.5pt solid var(--border); margin-bottom: 1.5mm; }
+.r-title { font-family: 'Alegreya SC', serif; font-size: 10.5pt; color: var(--enchant); flex: 1; }
+.r-value { font-size: 8pt; color: var(--fairy-pink); font-style: italic; font-family: 'Spectral', serif; }
+.reading-body { font-size: 9pt; line-height: 1.7; color: var(--text); text-align: justify; hyphens: auto; }
+.reading-body p { margin-bottom: 1.5mm; }
+.reading-body strong { color: var(--enchant); }
+.reading-body em { color: var(--fairy-pink); }
+.reading-body h4 { font-family: 'Alegreya SC', serif; font-size: 9pt; color: var(--enchant); margin: 2mm 0 1mm; }
+.reading-body h5 { font-size: 8pt; color: var(--enchant-light); margin: 1.5mm 0 0.5mm; }
+
+.kw-row { display: flex; flex-wrap: wrap; gap: 1mm; margin: 1.5mm 0; }
+.kw { font-size: 6.5pt; padding: 0.3mm 2mm; border: 0.5pt solid var(--stardust); border-radius: 1mm; color: var(--enchant); background: var(--moonlight); }
+.sc-grid { margin: 1.5mm 0; }
+.sc-col h5 { font-size: 7.5pt; color: var(--fairy-gold); margin-bottom: 0.5mm; }
+.sc-col ul { list-style: none; padding: 0; }
+.sc-col li { font-size: 7.5pt; color: var(--text-light); line-height: 1.4; padding: 0.3mm 0; }
+.sc-col li::before { content: "✦ "; color: var(--fairy-gold); font-size: 5pt; }
+
+.heart-divider { text-align: center; margin: 3mm 0; }
+.heart-divider::before { content: "· ✦ · ✦ ·"; color: var(--fairy-gold); font-size: 7pt; letter-spacing: 0.2em; opacity: 0.4; }
+
+.closing { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; }
+.closing-ornament { color: var(--fairy-gold); font-size: 10pt; letter-spacing: 0.3em; margin-bottom: 6mm; opacity: 0.5; }
+.closing h2 { font-family: 'Alegreya SC', serif; font-size: 14pt; color: var(--enchant); margin-bottom: 5mm; }
+.closing-body { font-size: 9pt; color: var(--text-light); max-width: 100mm; line-height: 1.7; }
+.closing-body p { margin-bottom: 3mm; }
+.closing-quote { font-style: italic; font-size: 10pt; color: var(--enchant-light); margin-top: 8mm; line-height: 1.6; }
+.closing-attr { font-size: 8pt; color: var(--text-light); margin-top: 2mm; }
+
+.colophon { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.colophon-brand { font-family: 'Alegreya SC', serif; font-size: 11pt; color: var(--enchant); letter-spacing: 0.1em; margin-bottom: 6mm; }
+.colophon-text { font-size: 8pt; color: var(--text-light); text-align: center; line-height: 1.7; }
+.colophon-url { font-size: 7pt; color: var(--enchant-light); margin-top: 4mm; }
+
+.print-bar { position: fixed; top: 0; left: 0; right: 0; background: linear-gradient(135deg, #1a1040, #2a1858); padding: 8px 20px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; border-bottom: 1px solid rgba(200,160,64,0.3); font-family: 'Spectral', serif; }
+.print-bar-title { color: var(--fairy-gold); font-size: 0.85rem; }
+.print-btn { background: linear-gradient(135deg, var(--enchant), var(--fairy-pink)); color: white; border: none; padding: 8px 20px; border-radius: 20px; font-weight: 600; font-size: 0.8rem; cursor: pointer; }
+@media print { .print-bar { display: none !important; } body { background: white; } }
+@media screen { body { padding-top: 45px; } }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()">✦ Print / Save PDF</button></div>
+<div class="page cover"><div class="fairy-ornament">✦</div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="fairy-ornament">✦</div><div class="cover-brand">{{brand}}</div></div>
+<div class="page half-title"><div class="sparkle sparkle-1"></div><div class="sparkle sparkle-2"></div><h1>{{title}}</h1><div class="ht-name">{{halfTitleName}}</div></div>
+<div class="page epigraph"><div class="sparkle sparkle-1"></div><div class="sparkle sparkle-3"></div><blockquote>{{epigraphQuote}}</blockquote><div class="attr">{{epigraphAttr}}</div><div class="dedication">{{dedication}}</div></div>
+<div class="page"><div class="sparkle sparkle-1"></div><div class="sparkle sparkle-2"></div><h2 class="snapshot-title">Cosmic Snapshot</h2><div class="snap-divider"></div>{{snapshot}}</div>
+<div class="page"><div class="sparkle sparkle-3"></div><h2 class="toc-title">Contents</h2><div class="snap-divider"></div>{{toc}}</div>
+{{chapters}}
+<div class="page closing"><div class="sparkle sparkle-1"></div><div class="sparkle sparkle-2"></div><div class="sparkle sparkle-3"></div><div class="closing-ornament">✦ · · ✦ · · ✦</div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
+<div class="page colophon"><div class="colophon-brand">{{colophonBrand}}</div><div class="colophon-text">{{colophonText}}</div><div class="colophon-url">{{colophonURL}}</div></div>
+</body>
+</html>

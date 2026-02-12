@@ -4473,7 +4473,10 @@
     <script src="readings-extended.js?v=35"></script>
     <script src="love-blueprint.js?v=35"></script>
     <script src="tone-variations.js?v=35"></script>
+    <script src="age-language.js?v=1"></script>
+    <script src="life-pattern-readings.js?v=2"></script>
     <script src="save-share.js?v=35"></script>
+    <script src="book-generator.js?v=1"></script>
     <script>
         // ============================================
         // MULTI-READING STORAGE SYSTEM
@@ -5052,6 +5055,9 @@
             const container = document.getElementById('readingsContainer');
             container.innerHTML = '';
             
+            // Gate parent-specific content — only show for baby/child/teen
+            const _showParentContent = typeof shouldShowParentGuidance !== 'function' || shouldShowParentGuidance();
+            
             // Reset section counter and load saved progress
             totalSectionCount = 0;
             loadSavedProgress();
@@ -5186,7 +5192,7 @@
 
 <em>Integration Path:</em> ${deepSun.integration}
 
-<em>Parenting Guidance:</em> ${deepSun.parentGuidance}
+${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepSun.parentGuidance : ''}
 
 <em>Affirmation:</em> "${deepSun.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                 
@@ -5244,7 +5250,7 @@
 
 <em>Physical Expression:</em> ${deepMoon.somatic}
 
-<em>Parenting Guidance:</em> ${deepMoon.parentGuidance}
+${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepMoon.parentGuidance : ''}
 
 <em>Affirmation:</em> "${deepMoon.affirmation}"`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                 
@@ -5280,17 +5286,17 @@
 
 <em>Approach to Life:</em> ${deepRising.lifeApproach}
 
-<em>How Others Perceive This Child:</em> ${deepRising.howOthersSee}
+<em>${_showParentContent ? 'How Others Perceive This Child' : 'How Others Perceive You'}:</em> ${deepRising.howOthersSee}
 
 <em>Physical Expression:</em> ${deepRising.physicalExpression}
 
 <em>Life Path Theme:</em> ${deepRising.lifePath}
 
-<em>The Gift This Child Brings:</em> ${deepRising.gift}
+<em>${_showParentContent ? 'The Gift This Child Brings' : 'Your Unique Gift'}:</em> ${deepRising.gift}
 
 <em>Growth Challenge:</em> ${deepRising.challenge}
 
-<em>Parenting Guidance:</em> ${deepRising.parentGuidance}
+${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepRising.parentGuidance : ''}
 
 <em>Synthesis:</em> ${deepRising.synthesis}`.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
                     
@@ -5370,7 +5376,7 @@
                 moonPhaseContent += `<h4>Inner World</h4>\n${deepMoonPhase.innerWorld.replace(/this soul|this child/gi, userData.name)}\n\n`;
                 moonPhaseContent += `<h4>Relationships</h4>\n${deepMoonPhase.relationships.replace(/this soul|these souls/gi, userData.name)}\n\n`;
                 moonPhaseContent += `<h4>Spiritual Path</h4>\n${deepMoonPhase.spiritualPath.replace(/this soul|these souls/gi, userData.name)}\n\n`;
-                moonPhaseContent += `<h4>Parent Guidance</h4>\n${deepMoonPhase.parentGuidance.replace(/this child/gi, userData.name)}\n\n`;
+                if (_showParentContent) { moonPhaseContent += `<h4>Parent Guidance</h4>\n${deepMoonPhase.parentGuidance.replace(/this child/gi, userData.name)}\n\n`; }
                 moonPhaseContent += `<p><strong>Affirmation:</strong> <em>"${deepMoonPhase.affirmation}"</em></p>`;
             } else if (moonPhaseReading) {
                 moonPhaseContent = moonPhaseReading.reading.replace(/this soul/gi, userData.name);
@@ -5401,8 +5407,10 @@
                 mercuryContent += `<div style="white-space: pre-line;">${deepMercury.learning}</div>`;
                 mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Shadows & Challenges</h4>`;
                 mercuryContent += `<div style="white-space: pre-line;">${deepMercury.challenges}</div>`;
-                mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
-                mercuryContent += `<div style="white-space: pre-line;">${deepMercury.parentGuidance}</div>`;
+                if (_showParentContent) {
+                    mercuryContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                    mercuryContent += `<div style="white-space: pre-line;">${deepMercury.parentGuidance}</div>`;
+                }
                 mercuryContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepMercury.affirmation}"</p>`;
             } else {
                 mercuryContent = mercuryReading ? mercuryReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mercury in ${mercurySign.name} influences communication and thinking style.`;
@@ -5431,8 +5439,10 @@
                 venusContent += `<div style="white-space: pre-line;">${deepVenus.needs}</div>`;
                 venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Shadows & Challenges</h4>`;
                 venusContent += `<div style="white-space: pre-line;">${deepVenus.challenges}</div>`;
-                venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
-                venusContent += `<div style="white-space: pre-line;">${deepVenus.parentGuidance}</div>`;
+                if (_showParentContent) {
+                    venusContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                    venusContent += `<div style="white-space: pre-line;">${deepVenus.parentGuidance}</div>`;
+                }
                 venusContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepVenus.affirmation}"</p>`;
             } else {
                 venusContent = venusReading ? venusReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Venus in ${venusSign.name} influences love and relationships.`;
@@ -5461,8 +5471,10 @@
                 marsContent += `<div style="white-space: pre-line;">${deepMars.willAndDrive}</div>`;
                 marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Shadows & Challenges</h4>`;
                 marsContent += `<div style="white-space: pre-line;">${deepMars.challenges}</div>`;
-                marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
-                marsContent += `<div style="white-space: pre-line;">${deepMars.parentGuidance}</div>`;
+                if (_showParentContent) {
+                    marsContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                    marsContent += `<div style="white-space: pre-line;">${deepMars.parentGuidance}</div>`;
+                }
                 marsContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepMars.affirmation}"</p>`;
             } else {
                 marsContent = marsReading ? marsReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Mars in ${marsSign.name} influences energy and drive.`;
@@ -5493,8 +5505,10 @@
                 jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.luck}</div>`;
                 jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Shadows & Challenges</h4>`;
                 jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.challenges}</div>`;
-                jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
-                jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.parentGuidance}</div>`;
+                if (_showParentContent) {
+                    jupiterContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                    jupiterContent += `<div style="white-space: pre-line;">${deepJupiter.parentGuidance}</div>`;
+                }
                 jupiterContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepJupiter.affirmation}"</p>`;
             } else {
                 jupiterContent = jupiterReading ? jupiterReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Jupiter in ${jupiterSign.name} influences luck and expansion.`;
@@ -5525,8 +5539,10 @@
                 saturnContent += `<div style="white-space: pre-line;">${deepSaturn.mastery}</div>`;
                 saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">Gifts When Integrated</h4>`;
                 saturnContent += `<div style="white-space: pre-line;">${deepSaturn.gifts}</div>`;
-                saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
-                saturnContent += `<div style="white-space: pre-line;">${deepSaturn.parentGuidance}</div>`;
+                if (_showParentContent) {
+                    saturnContent += `<h4 style="margin: 1.5rem 0 0.75rem; color: var(--primary-color);">For Parents</h4>`;
+                    saturnContent += `<div style="white-space: pre-line;">${deepSaturn.parentGuidance}</div>`;
+                }
                 saturnContent += `<p style="margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; font-style: italic; text-align: center; color: #fff;"><strong>Affirmation:</strong> "${deepSaturn.affirmation}"</p>`;
             } else {
                 saturnContent = saturnReading ? saturnReading.reading.replace(/this placement/gi, `This placement for ${userData.name}`) : `Saturn in ${saturnSign.name} indicates life lessons and areas of mastery.`;
@@ -6752,7 +6768,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
 
 <em>Spiritual Path:</em> ${deepLifePath.spiritualPath}
 
-<em>Parenting Guidance:</em> ${deepLifePath.parentGuidance}
+${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuidance : ''}
 
 <em>Growth Edge:</em> ${deepLifePath.growthEdge}
 
@@ -7709,8 +7725,395 @@ Growth doesn't come from eliminating this tension — it comes from using it con
             const ad6 = createAdSlot();
             if (ad6) container.appendChild(ad6);
             
+            // SECTION 10: LIFE PATTERN ANALYSIS (7 new systems)
             // ============================================
-            // SECTION 10: COSMIC WRAP-UP - The Complete Picture
+            if (typeof LIFE_PATTERN_SYSTEMS !== 'undefined') {
+                try {
+                    // --- 10A: IDENTITY COMPRESSION ---
+                    const idComp = LIFE_PATTERN_SYSTEMS.calculateIdentityCompression(readings);
+                    if (idComp && idComp.reading) {
+                        const idWrapper = document.createElement('div');
+                        idWrapper.className = 'reading-section';
+                        const idSection = createCustomSection('identity-compression', '🔥', 'Identity Compression', 'Your entire chart distilled into a single operating style — the mode you default to when everything else is stripped away');
+                        
+                        // Primary Style
+                        const pr = idComp.reading;
+                        idSection.appendChild(createReadingCard(
+                            pr.title,
+                            pr.subtitle,
+                            pr.keywords,
+                            pr.reading,
+                            pr.strengths || [],
+                            pr.challenges || []
+                        ));
+                        
+                        // Secondary Style
+                        if (idComp.isHybrid && idComp.secondaryReading) {
+                            const sr = idComp.secondaryReading;
+                            idSection.appendChild(createReadingCard(
+                                'Secondary Mode: ' + sr.title,
+                                sr.subtitle,
+                                sr.keywords,
+                                'Your chart shows a strong secondary operating mode. When your primary style isn\'t serving the situation, you instinctively shift to this one.\n\n' + sr.reading,
+                                sr.strengths || [],
+                                sr.challenges || []
+                            ));
+                        }
+                        
+                        // Element & Modality Balance
+                        const eb = idComp.elementBalance;
+                        const mb = idComp.modalityBalance;
+                        const balanceText = `<div class="blueprint-grid" style="margin-top:0.5em"><div class="blueprint-category"><h4>Element Balance</h4><div class="blueprint-items"><div class="blueprint-item">🔥 Fire: ${eb.Fire.toFixed(1)}</div><div class="blueprint-item">🌍 Earth: ${eb.Earth.toFixed(1)}</div><div class="blueprint-item">💨 Air: ${eb.Air.toFixed(1)}</div><div class="blueprint-item">💧 Water: ${eb.Water.toFixed(1)}</div></div></div><div class="blueprint-category"><h4>Modality Balance</h4><div class="blueprint-items"><div class="blueprint-item">⚡ Cardinal: ${mb.Cardinal.toFixed(1)}</div><div class="blueprint-item">🏔️ Fixed: ${mb.Fixed.toFixed(1)}</div><div class="blueprint-item">🌊 Mutable: ${mb.Mutable.toFixed(1)}</div></div></div></div>`;
+                        idSection.appendChild(createReadingCard(
+                            'Elemental & Modal Signature',
+                            'The raw energetic makeup of your chart',
+                            ['Balance', 'Elements', 'Modalities'],
+                            'Your chart\'s element and modality distribution reveals the energetic raw material underlying your operating style. Higher numbers indicate stronger influence.\n\n' + balanceText,
+                            [],
+                            []
+                        ));
+                        
+                        idWrapper.appendChild(idSection);
+                        container.appendChild(idWrapper);
+                    }
+
+                    // --- 10B: ARCHETYPAL ROLE ---
+                    const archRole = LIFE_PATTERN_SYSTEMS.calculateArchetypalRole(readings);
+                    if (archRole && archRole.reading) {
+                        const archWrapper = document.createElement('div');
+                        archWrapper.className = 'reading-section';
+                        const archSection = createCustomSection('archetypal-role', '🧩', 'Archetypal Role', 'When all your cosmic data overlaps, you naturally cluster into one of six fundamental roles');
+                        
+                        const ar = archRole.reading;
+                        archSection.appendChild(createReadingCard(
+                            'Primary Role: ' + ar.title,
+                            ar.subtitle,
+                            ar.keywords,
+                            ar.reading,
+                            ar.strengths || [],
+                            ar.challenges || []
+                        ));
+                        
+                        if (archRole.secondaryReading) {
+                            const sr2 = archRole.secondaryReading;
+                            archSection.appendChild(createReadingCard(
+                                'Shadow Role: ' + sr2.title,
+                                sr2.subtitle,
+                                ['Secondary', ...sr2.keywords.slice(0, 2)],
+                                'Your secondary archetypal role activates when your primary role is blocked, overwhelmed, or inappropriate for the situation. Think of it as your backup operating system.\n\n' + sr2.reading,
+                                sr2.strengths || [],
+                                sr2.challenges || []
+                            ));
+                        }
+                        
+                        archWrapper.appendChild(archSection);
+                        container.appendChild(archWrapper);
+                    }
+
+                    // --- 10C: COGNITIVE TENDENCIES ---
+                    const cogTend = LIFE_PATTERN_SYSTEMS.calculateCognitiveTendencies(readings);
+                    if (cogTend) {
+                        const cogWrapper = document.createElement('div');
+                        cogWrapper.className = 'reading-section';
+                        const cogSection = createCustomSection('cognitive-tendencies', '🧠', 'Cognitive Tendencies', 'How you think, decide, and process the world — derived from your Mercury, Mars, Saturn, and life path');
+                        
+                        // Build each tendency as a card
+                        const tendencyOrder = [
+                            { key: 'riskTolerance', title: 'Risk Tolerance Profile' },
+                            { key: 'authorityResponse', title: 'Authority Response Pattern' },
+                            { key: 'innovationBias', title: 'Innovation vs Optimization Bias' },
+                            { key: 'socialOrientation', title: 'Social Processing Style' },
+                            { key: 'peakDecade', title: 'Peak Performance Timing' }
+                        ];
+                        
+                        tendencyOrder.forEach(t => {
+                            const data = cogTend[t.key];
+                            if (data) {
+                                // Build intensity and source info
+                                let intensityLabel = data.intensity >= 4 ? 'Very Strong' : (data.intensity >= 2 ? 'Strong' : 'Moderate');
+                                let enrichedDesc = data.description;
+                                
+                                // Add sources if available
+                                if (data.sources && data.sources.length > 0) {
+                                    enrichedDesc += '\n\n<strong>Key Influences:</strong> ' + data.sources.join(' • ');
+                                }
+                                
+                                cogSection.appendChild(createReadingCard(
+                                    t.title,
+                                    data.label + ' (' + intensityLabel + ')',
+                                    [data.label, intensityLabel],
+                                    enrichedDesc,
+                                    [],
+                                    []
+                                ));
+                            }
+                        });
+                        
+                        // Cross-dimension synthesis card
+                        if (cogTend.synthesis) {
+                            cogSection.appendChild(createReadingCard(
+                                'Cognitive Synthesis',
+                                'How your thinking dimensions interact',
+                                ['Integration', 'Cross-Pattern', 'Meta-Profile'],
+                                'When we look at how your cognitive dimensions interact — not just each one in isolation — a more nuanced picture emerges:\n\n' + cogTend.synthesis,
+                                [],
+                                []
+                            ));
+                        }
+                        
+                        cogWrapper.appendChild(cogSection);
+                        container.appendChild(cogWrapper);
+                    }
+
+                    // --- 10D: NAME ANALYSIS ---
+                    const nameAnalysis = LIFE_PATTERN_SYSTEMS.calculateNameAnalysis(userData.name);
+                    if (nameAnalysis) {
+                        const nameWrapper = document.createElement('div');
+                        nameWrapper.className = 'reading-section';
+                        const nameSection = createCustomSection('name-analysis', '🧬', 'Name Analysis', 'The phonetic, linguistic, and energetic signature encoded in your name');
+                        
+                        // Cornerstone
+                        nameSection.appendChild(createReadingCard(
+                            'Cornerstone — The Letter ' + nameAnalysis.cornerstone.letter,
+                            nameAnalysis.cornerstone.trait,
+                            ['First Impression', 'Initiative Style', 'Opening Energy'],
+                            'The cornerstone is the first letter of your name — it shapes how you approach new situations and how others perceive you at first contact.\n\n' + nameAnalysis.cornerstone.description,
+                            [],
+                            []
+                        ));
+                        
+                        // Capstone
+                        nameSection.appendChild(createReadingCard(
+                            'Capstone — The Letter ' + nameAnalysis.capstone.letter,
+                            nameAnalysis.capstone.trait || 'How you complete what you start',
+                            ['Completion Style', 'Follow-Through', 'Closing Energy'],
+                            'The capstone is the last letter of your first name — it reveals how you finish projects, close chapters, and bring things to completion.\n\n' + nameAnalysis.capstone.reading,
+                            [],
+                            []
+                        ));
+                        
+                        // First Vowel
+                        if (nameAnalysis.firstVowel.letter) {
+                            nameSection.appendChild(createReadingCard(
+                                'First Vowel — ' + nameAnalysis.firstVowel.letter,
+                                nameAnalysis.firstVowel.trait,
+                                ['Inner Nature', 'Emotional Core', 'Hidden Self'],
+                                'The first vowel in your name reveals your inner nature — the private self that operates beneath the public personality.\n\n' + nameAnalysis.firstVowel.description,
+                                [],
+                                []
+                            ));
+                        }
+                        
+                        // Phonetic Impact Scores
+                        const ph = nameAnalysis.phonetics;
+                        const barHTML = function(label, score, emoji) {
+                            return `<div style="margin:0.4em 0"><strong>${emoji} ${label}:</strong> <span style="display:inline-block;width:${Math.min(score,100)}%;max-width:200px;height:8px;background:linear-gradient(90deg,var(--accent-color,#FFD700),var(--primary-color,#FF69B4));border-radius:4px;vertical-align:middle"></span> <strong>${score}/100</strong></div>`;
+                        };
+                        const phoneticHTML = barHTML('Dominance', ph.dominance, '⚔️') +
+                            barHTML('Warmth', ph.warmth, '🤝') +
+                            barHTML('Authority', ph.authority, '👑') +
+                            barHTML('Approachability', ph.approachability, '😊') +
+                            barHTML('Memorability', ph.memorability, '💡') +
+                            barHTML('Brand Strength', ph.brandStrength, '🏷️');
+                        
+                        nameSection.appendChild(createReadingCard(
+                            'Phonetic Impact Profile',
+                            'How your name sounds to others — before they even know you',
+                            ['Sound Psychology', 'First Impressions', 'Name Power'],
+                            'Research in phonosemantics shows that the sounds in your name create unconscious impressions. Hard consonants project authority; soft consonants project warmth; vowel ratios affect approachability. Here\'s how your name scores:\n\n' + phoneticHTML,
+                            [],
+                            []
+                        ));
+                        
+                        // Name Synthesis (cornerstone + capstone interaction)
+                        if (nameAnalysis.synthesis) {
+                            nameSection.appendChild(createReadingCard(
+                                'Name Arc: ' + nameAnalysis.cornerstone.letter + ' → ' + nameAnalysis.capstone.letter,
+                                nameAnalysis.nameProfile || 'Your Name\'s Energetic Signature',
+                                ['Start-to-Finish Arc', 'Name Psychology', nameAnalysis.nameProfile || 'Profile'],
+                                'The interaction between how your name begins (cornerstone) and how it ends (capstone) creates an arc — a sonic journey that shapes how people experience you from first contact to lasting impression.\n\n' + nameAnalysis.synthesis,
+                                [],
+                                []
+                            ));
+                        }
+                        
+                        nameWrapper.appendChild(nameSection);
+                        container.appendChild(nameWrapper);
+                    }
+
+                    // --- 10E: BIOLOGICAL TIMING ---
+                    const bioTiming = LIFE_PATTERN_SYSTEMS.calculateBiologicalTiming(readings);
+                    if (bioTiming) {
+                        const bioWrapper = document.createElement('div');
+                        bioWrapper.className = 'reading-section';
+                        const bioSection = createCustomSection('biological-timing', '⏳', 'Biological Timing & Saturn Return', 'Where you are in the universal lifecycle — and what the data says about what comes next');
+                        
+                        // Saturn Return card
+                        if (bioTiming.saturnReturn.reading) {
+                            const sr = bioTiming.saturnReturn.reading;
+                            bioSection.appendChild(createReadingCard(
+                                sr.title,
+                                'Saturn in ' + bioTiming.saturnReturn.saturnSign,
+                                sr.keywords,
+                                sr.reading + '\n\n' + bioTiming.saturnReturn.context,
+                                sr.strengths || [],
+                                sr.challenges || []
+                            ));
+                        }
+                        
+                        // Current biological phase
+                        if (bioTiming.currentPhase) {
+                            const phase = bioTiming.currentPhase;
+                            let phaseExtra = '';
+                            if (bioTiming.yearsToNextTransition) {
+                                phaseExtra = `\n\nYou are approximately ${bioTiming.yearsToNextTransition} year${bioTiming.yearsToNextTransition !== 1 ? 's' : ''} from your next major biological transition point (age ${bioTiming.nextTransitionAge}).`;
+                            }
+                            bioSection.appendChild(createReadingCard(
+                                phase.title + ' (Age ' + phase.ageRange + ')',
+                                'Your current position in the human lifecycle',
+                                phase.keywords,
+                                phase.description + phaseExtra,
+                                [],
+                                []
+                            ));
+                        }
+                        
+                        bioWrapper.appendChild(bioSection);
+                        container.appendChild(bioWrapper);
+                    }
+
+                    // --- 10F: LIFE PATTERN PROBABILITY WINDOWS ---
+                    const probWindows = LIFE_PATTERN_SYSTEMS.calculateProbabilityWindows(readings);
+                    if (probWindows) {
+                        const probWrapper = document.createElement('div');
+                        probWrapper.className = 'reading-section';
+                        const probSection = createCustomSection('probability-windows', '🧭', 'Life Pattern Probability Windows', 'Statistical models estimate when you are most likely to experience major life events — not prophecy, but pattern likelihood');
+                        
+                        // Personal year context card
+                        if (probWindows.personalYearContext) {
+                            probSection.appendChild(createReadingCard(
+                                'Current Timing Context',
+                                'Personal Year ' + readings.numerology.personalYear,
+                                ['Timing', 'Current Cycle', 'Annual Energy'],
+                                probWindows.personalYearContext,
+                                [],
+                                []
+                            ));
+                        }
+                        
+                        // Each probability category
+                        Object.entries(probWindows.windows).forEach(([key, cat]) => {
+                            let windowText = '';
+                            
+                            // Chart-based personalization (unique to this person's chart)
+                            if (cat.chartInsight) {
+                                windowText += '<strong>📊 Your Chart Profile:</strong>\n' + cat.chartInsight + '\n\n';
+                            }
+                            
+                            if (cat.active.length > 0) {
+                                windowText += '<strong style="color:var(--primary-color,#FF69B4)">⚡ ACTIVE NOW:</strong>\n';
+                                cat.active.forEach(w => {
+                                    windowText += `• <strong>Age ${w.age}</strong> (${w.probability}) — ${w.reason}\n`;
+                                });
+                                windowText += '\n';
+                            }
+                            if (cat.upcoming.length > 0) {
+                                windowText += '<strong>📅 Upcoming Windows:</strong>\n';
+                                cat.upcoming.forEach(w => {
+                                    windowText += `• <strong>Age ${w.age}</strong> (~${w.yearsUntil} years away, ${w.probability}) — ${w.reason}\n`;
+                                });
+                                windowText += '\n';
+                            }
+                            if (cat.passed.length > 0) {
+                                windowText += '<em>Past windows: ';
+                                windowText += cat.passed.map(w => `Age ${w.age}`).join(', ');
+                                windowText += '</em>\n';
+                            }
+                            if (!windowText) windowText = 'Your primary windows for this category are still approaching.';
+                            
+                            const modLabel = cat.personalModifier > 2 ? 'Amplified' : (cat.personalModifier < -2 ? 'Dampened' : 'Baseline');
+                            const statusKeywords = cat.active.length > 0 ? ['Active Window', modLabel] : (cat.upcoming.length > 0 ? ['Upcoming', modLabel] : ['Completed Cycle', modLabel]);
+                            
+                            probSection.appendChild(createReadingCard(
+                                cat.icon + ' ' + cat.title,
+                                cat.active.length > 0 ? '⚡ Window Active Now' : (cat.upcoming.length > 0 ? '~' + cat.upcoming[0].yearsUntil + ' years until next window' : 'Past peak windows'),
+                                statusKeywords,
+                                windowText,
+                                [],
+                                []
+                            ));
+                        });
+                        
+                        probWrapper.appendChild(probSection);
+                        container.appendChild(probWrapper);
+                    }
+
+                    // --- 10G: LOCATION STRATEGY ---
+                    const locStrategy = LIFE_PATTERN_SYSTEMS.calculateLocationStrategy(readings);
+                    if (locStrategy && locStrategy.hasMC) {
+                        const locWrapper = document.createElement('div');
+                        locWrapper.className = 'reading-section';
+                        const locSection = createCustomSection('location-strategy', '🌍', 'Location Strategy', 'Where on Earth your chart suggests the strongest alignment for career, relationships, lifestyle, and growth');
+                        
+                        Object.entries(locStrategy.zones).forEach(([key, zone]) => {
+                            if (zone.data) {
+                                const citiesList = zone.data.regions.join(' • ');
+                                const zoneText = zone.explanation + '\n\n<strong>Resonant Locations:</strong> ' + citiesList + '\n\n<strong>Environmental Energy:</strong> ' + zone.data.energy;
+                                locSection.appendChild(createReadingCard(
+                                    zone.title,
+                                    zone.subtitle,
+                                    [zone.sign, ...zone.data.themes.split(', ').slice(0, 3)],
+                                    zoneText,
+                                    [],
+                                    []
+                                ));
+                            }
+                        });
+                        
+                        if (locStrategy.powerAlignment) {
+                            locSection.appendChild(createReadingCard(
+                                '⚡ Career-Identity Power Alignment',
+                                'Your career and identity axes share an element',
+                                ['Rare Alignment', 'Amplified Impact'],
+                                locStrategy.powerAlignment,
+                                [],
+                                []
+                            ));
+                        }
+                        
+                        if (locStrategy.driveAlignment) {
+                            locSection.appendChild(createReadingCard(
+                                '⚡ Drive-Career Alignment',
+                                'Your competitive energy naturally fuels your career path',
+                                ['Mars-MC Alignment', 'Amplified Drive'],
+                                locStrategy.driveAlignment,
+                                [],
+                                []
+                            ));
+                        }
+                        
+                        if (locStrategy.rootAlignment) {
+                            locSection.appendChild(createReadingCard(
+                                '⚡ Emotional-Home Alignment',
+                                'Your heart and your roots want the same thing',
+                                ['Moon-IC Alignment', 'Deep Belonging'],
+                                locStrategy.rootAlignment,
+                                [],
+                                []
+                            ));
+                        }
+                        
+                        locWrapper.appendChild(locSection);
+                        container.appendChild(locWrapper);
+                    }
+
+                } catch(e) {
+                    console.warn('Life Pattern Systems error:', e);
+                }
+            }
+
+            // ============================================
+            // SECTION 11: COSMIC WRAP-UP - The Complete Picture
             // ============================================
             if (typeof COSMIC_WRAPUP !== 'undefined' && typeof COSMIC_WRAPUP.generate === 'function') {
                 const wrapupSectionWrapper = document.createElement('div');
@@ -7753,10 +8156,12 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                     []
                 ));
                 
-                // Parent guidance card
-                if (wrapup.parentGuidance) {
+                // Parent guidance card — only shown for baby/child age groups
+                const showParentCard = typeof shouldShowParentClosingCard === 'function' ? shouldShowParentClosingCard() : true;
+                if (wrapup.parentGuidance && showParentCard) {
+                    const parentLabel = typeof getParentGuidanceLabel === 'function' ? getParentGuidanceLabel() : 'Guidance for Parents & Caregivers';
                     wrapupSection.appendChild(createReadingCard(
-                        'Guidance for Parents & Caregivers',
+                        parentLabel,
                         `Nurturing ${userData.name}'s Potential`,
                         ['Parenting', 'Support', 'Understanding'],
                         wrapup.parentGuidance,
@@ -8674,6 +9079,12 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 tonedContent = applyToneVariations(content);
                 tonedStrengthsArray = strengthsArray.map(s => applyToneVariations(s));
                 tonedChallengesArray = challengesArray.map(c => applyToneVariations(c));
+            }
+            // Apply age-adaptive language transformations
+            if (typeof applyAgeLanguage === 'function') {
+                tonedContent = applyAgeLanguage(tonedContent);
+                tonedStrengthsArray = tonedStrengthsArray.map(s => applyAgeLanguage(s));
+                tonedChallengesArray = tonedChallengesArray.map(c => applyAgeLanguage(c));
             }
             
             let keywordsHtml = '';
