@@ -926,84 +926,156 @@ var VENUS_SIGN_READINGS = {
     Aries: {
         keywords: ["Passionate", "Impulsive", "Independent", "Exciting"],
         summary: "Bold, exciting love that thrives on passion and challenge.",
-        reading: `Venus in Aries loves with passion, excitement, and independence. Romance is pursued boldly, and there's an attraction to challenge and conquest. This placement indicates someone who falls in love quickly and intensely, drawn to excitement and novelty. Love language is direct action and passionate pursuit. The challenge is developing patience and nurturing long-term relationships beyond the initial excitement.`,
+        reading: `Venus in Aries loves with passion, excitement, and fierce independence. Romance is pursued boldly — there is an unmistakable attraction to challenge, conquest, and the thrill of the chase. This soul falls in love quickly and intensely, drawn to partners who spark excitement and keep things unpredictable.
+
+The love language here is direct action and passionate pursuit. Grand gestures come naturally: surprise declarations, spontaneous adventures, and the willingness to fight for what the heart wants. There is nothing subtle about this placement — when feelings strike, the whole world knows.
+
+In relationships, this soul brings contagious enthusiasm and a refusal to let love grow stale. They are fiercely loyal once committed, though they need a partner who can match their energy and keep the spark alive. Boredom is the greatest threat to this heart.
+
+The growth edge lies in developing patience and nurturing long-term intimacy beyond the initial excitement. Learning that love deepens through quiet moments — not just fireworks — transforms this passionate heart into an enduring flame.`,
         strengths: ["Passionate", "Direct in love", "Exciting partner", "Brave heart"],
         challenges: ["Impatience", "Easily bored", "Selfish in love", "Too competitive"]
     },
     Taurus: {
         keywords: ["Sensual", "Loyal", "Devoted", "Possessive"],
         summary: "Deep, sensual love that values security and pleasure.",
-        reading: `Venus in Taurus is in its home sign, creating a deeply sensual, loyal, and devoted approach to love. Romance involves the senses - good food, beautiful surroundings, physical affection. This placement indicates someone who loves deeply and consistently, valuing security and comfort in relationships. Love language is physical touch and gifts. The challenge is avoiding possessiveness and remaining open to change.`,
+        reading: `Venus in Taurus is in its home sign, creating a deeply sensual, loyal, and devoted approach to love. Romance is experienced through the senses — good food shared by candlelight, beautiful surroundings, lingering physical affection, and the slow cultivation of trust over time.
+
+This soul loves deeply and consistently, building relationships like cathedrals: stone by stone, with the intention of forever. Security and comfort are not luxuries but necessities for the heart to fully open. Once committed, their devotion is virtually unshakeable.
+
+The love language is physical touch and thoughtful gifts that show attentiveness. This placement creates someone who remembers preferences, who shows up reliably, and who expresses love through creating beauty and comfort in shared spaces. Partners feel cherished and grounded in their presence.
+
+The growth edge involves releasing possessiveness and remaining open to change within relationships. Learning that love is not ownership — and that security comes from within rather than from controlling circumstances — allows this devoted heart to love with even greater freedom and depth.`,
         strengths: ["Loyal devotion", "Sensual expression", "Stability", "Appreciation of beauty"],
         challenges: ["Possessiveness", "Stubbornness", "Materialism", "Resistance to change"]
     },
     Gemini: {
         keywords: ["Playful", "Flirtatious", "Communicative", "Variety-seeking"],
         summary: "Light, playful love that thrives on mental connection.",
-        reading: `Venus in Gemini brings a playful, curious, and communicative approach to love. Romance is intellectual, witty, and requires constant mental stimulation. This placement indicates someone who falls in love with minds and needs conversation and variety in relationships. Love language is words and shared interests. The challenge is developing emotional depth and consistency beyond surface-level connections.`,
+        reading: `Venus in Gemini brings a playful, curious, and communicative approach to love. Romance is intellectual first — sparked by a clever comment, sustained by endless conversation, and deepened through sharing ideas, books, and inside jokes that no one else understands.
+
+This soul falls in love with minds. They need a partner who can match their wit, surprise them with a new perspective, and keep the conversation flowing across years. Variety and mental stimulation are oxygen for this heart — routine and predictability feel like slow suffocation.
+
+In relationships, they bring lightness, humor, and an ability to talk through anything. They are naturally charming and socially gifted, making partners feel intellectually seen and constantly entertained. Love letters, witty texts, and shared curiosities are their currency of affection.
+
+The growth edge lies in developing emotional depth and consistency beneath the sparkling surface. Learning to stay present when conversations turn difficult — and to connect heart-to-heart, not just mind-to-mind — transforms this charming lover into a truly intimate partner.`,
         strengths: ["Charming", "Great conversationalist", "Adaptable", "Fun-loving"],
         challenges: ["Superficial", "Inconsistent", "Flighty", "Fear of depth"]
     },
     Cancer: {
         keywords: ["Nurturing", "Protective", "Emotional", "Devoted"],
         summary: "Nurturing, devoted love that creates emotional security.",
-        reading: `Venus in Cancer brings deep emotional sensitivity and nurturing devotion to love. Romance involves creating security, caring for loved ones, and building a home together. This placement indicates someone who loves with protective devotion and remembers every emotional detail. Love language is acts of care and emotional support. The challenge is not becoming clingy or letting past hurts prevent new connections.`,
+        reading: `Venus in Cancer brings deep emotional sensitivity and nurturing devotion to love. Romance means creating a sanctuary — a world where both partners feel safe enough to be completely vulnerable. This soul loves with protective instincts and remembers every emotional detail: the first song you danced to, the way you looked that particular Tuesday.
+
+The love language is acts of care and emotional attunement. Cooking favorite meals, remembering important dates, creating cozy rituals, and showing up during hard times — these are the love letters of Venus in Cancer. Home is not just a place but a feeling they create around the people they cherish.
+
+In relationships, they offer a depth of emotional loyalty that is rare and precious. They intuitively sense what their partner needs, often before the partner knows themselves. This empathic gift creates bonds of extraordinary intimacy and trust.
+
+The growth edge involves releasing clinginess and the temptation to use past hurts as armor against new love. Learning that true security comes from within — not from controlling closeness — allows this nurturing heart to love with open hands rather than a tight grip.`,
         strengths: ["Nurturing love", "Emotional depth", "Loyalty", "Protective care"],
         challenges: ["Clinginess", "Moodiness", "Fear of rejection", "Living in the past"]
     },
     Leo: {
         keywords: ["Romantic", "Generous", "Dramatic", "Loyal"],
         summary: "Grand, generous love that celebrates and adores.",
-        reading: `Venus in Leo brings warmth, romance, and dramatic flair to love. Romance is grand, generous, and requires mutual admiration. This placement indicates someone who loves with their whole heart and wants to be adored in return. Love language is praise, gifts, and quality time in the spotlight together. The challenge is sharing the stage and not requiring constant validation.`,
+        reading: `Venus in Leo brings warmth, romance, and dramatic flair to love. This is the placement of grand gestures — surprise parties, heartfelt declarations, handwritten love letters, and the kind of devotion that makes everyone in the room feel the glow. When this soul loves, they love with their entire being.
+
+Romance requires mutual admiration and celebration. This heart needs to feel special and, in return, makes their partner feel like the most important person alive. Generosity flows naturally — with time, attention, gifts, and an unwavering loyalty that stands firm through storms.
+
+In relationships, they bring infectious joy and a talent for keeping the magic alive. Date nights never stop being important. Compliments are given freely. Love is treated as something worth celebrating every single day, not just on anniversaries.
+
+The growth edge lies in learning to share the spotlight gracefully and finding security that does not depend on constant external validation. When this generous heart learns that love is not a performance but a practice, their natural radiance becomes even more magnificent.`,
         strengths: ["Generous lover", "Romantic gestures", "Loyal heart", "Warmth"],
         challenges: ["Need for attention", "Drama", "Pride", "Demanding"]
     },
     Virgo: {
         keywords: ["Devoted", "Practical", "Helpful", "Modest"],
         summary: "Devoted, practical love expressed through service.",
-        reading: `Venus in Virgo brings a devoted, practical, and helpful approach to love. Romance is shown through acts of service - fixing things, helping with problems, remembering details. This placement indicates someone who loves by being useful and appreciates partners who notice their efforts. Love language is acts of service and quality time. The challenge is not being overly critical or expecting perfection.`,
+        reading: `Venus in Virgo brings a devoted, practical, and quietly attentive approach to love. Romance is expressed through acts of service — remembering how you take your coffee, noticing when something is wrong before you say a word, fixing what is broken, and quietly making life better in a hundred small ways.
+
+This soul loves by being useful and showing up consistently. They may not make grand declarations, but their love is written in the details: the packed lunch with a note inside, the errand run without being asked, the careful attention to a partner's health and comfort. Every small act is a love letter.
+
+In relationships, they bring reliability, thoughtfulness, and a genuine desire to help their partner become their best self. They notice and appreciate effort, and they invest deeply in building something that works beautifully day after day.
+
+The growth edge involves releasing the habit of over-criticism — of self and partner alike. Learning that imperfection is not a failure but a feature of being human allows this devoted heart to express affection more freely and to receive love without feeling the need to earn it first.`,
         strengths: ["Devoted service", "Reliability", "Attention to needs", "Practical support"],
         challenges: ["Critical", "Worry about flaws", "Difficulty expressing affection", "Perfectionism"]
     },
     Libra: {
         keywords: ["Romantic", "Harmonious", "Charming", "Partnership-oriented"],
         summary: "Graceful, harmonious love that seeks true partnership.",
-        reading: `Venus in Libra is in its other home sign, creating a naturally romantic, harmonious approach to love. Romance is elegant, balanced, and focused on true partnership. This placement indicates someone who thrives in relationships and has a gift for creating harmony and beauty. Love language is quality time and words of affirmation. The challenge is maintaining individuality and not losing oneself in relationships.`,
+        reading: `Venus in Libra is in its other home sign, creating a naturally romantic, graceful, and partnership-oriented approach to love. Romance is elegant and balanced — this soul has an innate understanding of what makes relationships beautiful and seeks to create harmony in every connection.
+
+There is a gift here for seeing both sides, for compromise, and for creating spaces where love can flourish. This placement brings natural charm, social grace, and the ability to make others feel valued and seen. Beauty matters — in surroundings, in manners, and in the way love is expressed.
+
+In relationships, they thrive on genuine partnership — sharing decisions, creating aesthetic harmony, and building a life that reflects mutual values. They are skilled mediators who can smooth conflict and restore balance when things go awry. Love, for them, is an art form to be practiced daily.
+
+The growth edge involves maintaining individuality within partnership and developing the courage to face necessary conflict rather than preserving peace at any cost. When this graceful heart learns that authentic harmony includes honest disagreement, their relationships reach extraordinary depth.`,
         strengths: ["Natural romantic", "Graceful in love", "Seeks harmony", "Charming partner"],
         challenges: ["Codependency", "Indecision", "Avoids conflict", "Loses self in others"]
     },
     Scorpio: {
         keywords: ["Intense", "Passionate", "Deep", "Transformative"],
         summary: "Intense, transformative love that demands all or nothing.",
-        reading: `Venus in Scorpio brings intense, passionate, and transformative energy to love. Romance is all or nothing - deep, consuming, and life-changing. This placement indicates someone who loves with obsessive intensity and seeks profound soul connections. Love language is physical intimacy and emotional truth. The challenge is trusting partners and not using love as control.`,
+        reading: `Venus in Scorpio brings intense, passionate, and transformative energy to love. Romance is all or nothing — a deep, consuming, life-altering force that demands complete honesty and total surrender. Surface-level connections hold no interest for this soul. They crave the kind of intimacy that strips away every mask.
+
+The love language is emotional truth and physical intensity. This placement creates someone who sees through pretense instantly and is drawn to the raw, unedited version of their partner. Secrets, lies, and half-truths are dealbreakers. What they offer in return is a devotion so fierce it borders on the sacred.
+
+In relationships, they bring loyalty that runs bone-deep, an intuitive understanding of their partner's hidden wounds, and the courage to love in ways that transform both people permanently. Being loved by Venus in Scorpio is an experience that changes you at a cellular level.
+
+The growth edge involves learning to trust without needing to control, and to love without the fear that vulnerability will be weaponized. When this intensely devoted heart releases the need for power within love, their capacity for soul-deep connection becomes truly extraordinary.`,
         strengths: ["Deep devotion", "Passionate intensity", "Loyalty", "Transformative love"],
         challenges: ["Jealousy", "Possessiveness", "Control issues", "Difficulty trusting"]
     },
     Sagittarius: {
         keywords: ["Adventurous", "Free-spirited", "Optimistic", "Honest"],
         summary: "Adventurous, free-spirited love that expands horizons.",
-        reading: `Venus in Sagittarius brings adventure, optimism, and freedom to love. Romance involves exploration, travel, and expanding horizons together. This placement indicates someone who falls in love with enthusiasm but needs freedom and growth. Love language is shared adventures and honest communication. The challenge is commitment and being present rather than always seeking the next horizon.`,
+        reading: `Venus in Sagittarius brings adventure, optimism, and joyful freedom to love. Romance is an exploration — of places, philosophies, cultures, and the ever-expanding territory of what two people can experience together. This soul falls in love with enthusiasm and sees every relationship as an invitation to grow.
+
+The love language is shared adventure and radical honesty. Weekend road trips, late-night philosophical debates, spontaneous flights, and the willingness to tell the truth even when it is uncomfortable — these are the building blocks of love for this placement. A partner who expands horizons is irresistible.
+
+In relationships, they bring optimism, laughter, and a refusal to let love become small or routine. They believe in the best version of their partner and inspire growth through their own restless quest for meaning. Life with them is never boring, always expanding.
+
+The growth edge lies in learning that commitment is not a cage and that being fully present in ordinary moments is its own kind of adventure. When this free-spirited heart discovers that depth and freedom can coexist, their love becomes both vast and enduring.`,
         strengths: ["Adventurous spirit", "Optimism", "Honesty", "Growth-oriented"],
         challenges: ["Commitment issues", "Tactlessness", "Restlessness", "Avoids depth"]
     },
     Capricorn: {
         keywords: ["Committed", "Ambitious", "Reserved", "Loyal"],
         summary: "Serious, committed love that builds lasting partnerships.",
-        reading: `Venus in Capricorn brings a serious, committed, and ambitious approach to love. Romance develops slowly but builds something lasting. This placement indicates someone who takes love seriously and chooses partners carefully. Love language is acts of commitment and building together. The challenge is expressing warmth and not letting ambition overshadow emotional needs.`,
+        reading: `Venus in Capricorn brings a serious, committed, and quietly powerful approach to love. Romance develops slowly here — trust is earned through consistency, and love is proven through action rather than words. This soul does not fall easily, but when they choose someone, that choice carries the weight of permanence.
+
+The love language is acts of commitment and building together. Planning for the future, showing up during hard times, providing stability, and investing in a shared life that grows stronger with each passing year — these are the expressions of a Capricorn Venus heart. Love is demonstrated, not declared.
+
+In relationships, they bring extraordinary loyalty, practical wisdom, and the rare ability to love someone more as time passes rather than less. They are the partner you can count on absolutely — the one who stays when things get difficult and who builds something real.
+
+The growth edge involves allowing warmth and vulnerability to soften the edges of reserve. Learning that emotional expression is not weakness, and that ambition need not overshadow tenderness, transforms this steadfast heart into a partner of remarkable depth and devotion.`,
         strengths: ["Commitment", "Reliability", "Long-term vision", "Practical love"],
         challenges: ["Emotional reserve", "Too practical", "Status-conscious", "Difficulty with vulnerability"]
     },
     Aquarius: {
         keywords: ["Unconventional", "Friendly", "Independent", "Idealistic"],
         summary: "Unconventional, friendship-based love that values freedom.",
-        reading: `Venus in Aquarius brings an unconventional, friendship-based approach to love. Romance begins with intellectual connection and shared ideals. This placement indicates someone who needs space and independence even in love, and who approaches relationships as a meeting of equals. Love language is quality time and respect for individuality. The challenge is emotional intimacy and not being too detached.`,
+        reading: `Venus in Aquarius brings an unconventional, intellectually-driven, and friendship-based approach to love. Romance begins with meeting of minds and shared ideals — physical attraction alone is never enough. This soul needs a partner who respects their independence, stimulates their thinking, and shares their vision of how the world could be better.
+
+The love language is respect for individuality and intellectual connection. Deep conversations about ideas, shared causes, giving each other space to grow independently, and treating the relationship as a partnership of equals rather than a merger of identities — these are the foundations of love here.
+
+In relationships, they bring loyalty, open-mindedness, and a refreshing refusal to follow conventional scripts. They love in their own way on their own terms, and that originality creates something genuinely unique. Partners are treated as fascinating individuals rather than possessions or extensions of self.
+
+The growth edge involves developing emotional intimacy alongside intellectual connection. Learning that vulnerability is not a threat to independence — and that sometimes the heart knows things the mind cannot — allows this brilliantly original lover to experience the full spectrum of human connection.`,
         strengths: ["Open-minded", "Respects individuality", "Loyal friend-lover", "Idealistic"],
         challenges: ["Emotional detachment", "Too independent", "Unpredictable", "Difficulty with intimacy"]
     },
     Pisces: {
         keywords: ["Romantic", "Compassionate", "Intuitive", "Dreamy"],
         summary: "Romantic, compassionate love that transcends boundaries.",
-        reading: `Venus in Pisces is exalted, creating the most romantic, compassionate, and intuitive approach to love. Romance is idealized, transcendent, and seeks soul-deep connection. This placement indicates someone who loves unconditionally and sees the best in partners. Love language is emotional attunement and spiritual connection. The challenge is maintaining boundaries and not losing oneself in fantasy or unsuitable partners.`,
+        reading: `Venus in Pisces is exalted, creating the most romantic, compassionate, and intuitively connected approach to love. Romance here transcends the ordinary — this soul loves with a depth that borders on the spiritual, seeing the divine in their partner and seeking a connection that dissolves the boundary between two separate beings.
+
+The love language is emotional attunement and soulful presence. They sense what their partner feels without being told, love unconditionally, and bring a tenderness to relationships that can heal deep wounds. Music, art, shared silences, and moments of transcendent closeness are their natural territory.
+
+In relationships, they bring extraordinary empathy, creative inspiration, and the rare ability to love someone exactly as they are. They see past flaws to the soul beneath, and their acceptance has a healing quality that transforms partners. Being loved by Venus in Pisces feels like coming home to a place you have always known.
+
+The growth edge involves maintaining healthy boundaries and discernment. Learning that unconditional love does not mean accepting mistreatment — and that idealization can blind as much as it illuminates — allows this exquisitely romantic heart to find partners truly worthy of their devotion.`,
         strengths: ["Unconditional love", "Deep compassion", "Romantic soul", "Intuitive connection"],
         challenges: ["Idealization", "Boundary issues", "Escapism", "Martyr tendencies"]
     }
@@ -1013,84 +1085,156 @@ var MARS_SIGN_READINGS = {
     Aries: {
         keywords: ["Aggressive", "Direct", "Competitive", "Pioneering"],
         summary: "Pure, direct energy that takes immediate action.",
-        reading: `Mars in Aries is in its home sign, creating the most direct and powerful expression of drive and ambition. Energy is explosive, competitive, and action-oriented. This placement indicates someone who acts first and thinks later, with natural courage and leadership in conflict. Physical energy is high and needs regular outlets. The challenge is patience and not burning out or creating unnecessary conflicts.`,
+        reading: `Mars in Aries is in its home sign, creating the most direct and powerful expression of drive and ambition. Energy here is explosive, competitive, and action-oriented — this soul acts first and figures out the details later, armed with natural courage and an instinct for leadership.
+
+Physical vitality runs high and demands regular, vigorous outlets. Sports, competition, physical challenges, and anything that gets the adrenaline flowing are essential — not optional. Without constructive channels, this restless energy turns inward and becomes frustration or outward as unnecessary conflict.
+
+In pursuit of goals, this placement creates a formidable force. There is no hesitation, no second-guessing, and no waiting for permission. When something needs to happen, this soul makes it happen. They inspire others through sheer boldness and the willingness to go first into the unknown.
+
+The growth edge lies in cultivating patience and strategic thinking. Learning that not every situation requires a charge — and that sometimes the most powerful action is deliberate pause — transforms raw warrior energy into truly unstoppable leadership.`,
         strengths: ["Courage", "Quick action", "Competitive drive", "Leadership"],
         challenges: ["Aggression", "Impatience", "Recklessness", "Quick temper"]
     },
     Taurus: {
         keywords: ["Persistent", "Steady", "Sensual", "Determined"],
         summary: "Slow, steady force that builds toward goals relentlessly.",
-        reading: `Mars in Taurus brings a slow-burning, persistent, and sensual approach to action. Energy is steady rather than explosive, building toward goals with relentless determination. This placement indicates someone who is hard to start but impossible to stop once committed. Physical energy is connected to comfort and sensuality. The challenge is getting started and not becoming stuck or lazy.`,
+        reading: `Mars in Taurus brings a slow-burning, persistent, and immovable approach to action. Energy here is not explosive but relentless — building toward goals with the kind of determination that outlasts every obstacle. This soul is hard to start but absolutely impossible to stop once committed to a course.
+
+Physical energy is deeply connected to the body and the senses. Stamina is extraordinary — this placement favors endurance over speed, sustained effort over quick bursts. Working with the hands, building tangible things, and physical comfort all fuel this engine.
+
+In pursuit of goals, this is the tortoise that always beats the hare. Progress may appear slow to outsiders, but every step forward is permanent. This soul builds things that last because they refuse to cut corners or take shortcuts that compromise quality.
+
+The growth edge involves overcoming inertia and developing flexibility. Learning that adaptation is not the same as defeat — and that sometimes changing direction is the strongest move — transforms this steady powerhouse into a force that is both enduring and responsive.`,
         strengths: ["Persistence", "Endurance", "Determination", "Steady effort"],
         challenges: ["Stubbornness", "Laziness", "Slow to act", "Possessive anger"]
     },
     Gemini: {
         keywords: ["Versatile", "Quick", "Scattered", "Communicative"],
         summary: "Quick, versatile energy that fights with words and wit.",
-        reading: `Mars in Gemini brings quick, versatile, and intellectually-driven energy. Action is mental rather than physical, and conflicts are fought with words and ideas. This placement indicates someone who can juggle multiple projects and uses wit and information as weapons. Physical energy is nervous and needs variety. The challenge is focusing energy and following through on projects.`,
+        reading: `Mars in Gemini brings quick, versatile, and intellectually-driven energy to everything this soul pursues. Action is mental rather than physical — conflicts are fought with words, debates are won through wit, and goals are achieved through cleverness and strategic communication.
+
+This placement creates someone who can juggle multiple projects simultaneously, using information as their primary weapon. They are fast learners who adapt quickly, pivoting from one approach to another with a nimbleness that leaves slower competitors behind. The mind is always racing, always strategizing.
+
+Physical energy has a nervous, restless quality that needs constant variety. Routine kills motivation here. The ideal outlets combine mental and physical engagement — sports that require strategy, work that changes daily, and pursuits that never allow boredom to settle in.
+
+The growth edge involves focusing scattered energy and developing the patience to follow through on projects beyond the initial excitement. Learning that depth often yields greater rewards than breadth — and that finishing one thing well outshines starting ten things brilliantly — channels this versatile energy into truly remarkable achievements.`,
         strengths: ["Mental agility", "Verbal skills", "Versatility", "Quick thinking"],
         challenges: ["Scattered energy", "Arguing", "Nervousness", "Lack of follow-through"]
     },
     Cancer: {
         keywords: ["Protective", "Indirect", "Tenacious", "Emotional"],
         summary: "Protective energy that defends home and loved ones.",
-        reading: `Mars in Cancer brings protective, emotionally-driven energy that defends loved ones fiercely. Action is indirect, intuitive, and connected to emotional security. This placement indicates someone whose energy fluctuates with moods and who fights hardest for family and home. Physical energy is connected to emotional state. The challenge is direct confrontation and not being passive-aggressive.`,
+        reading: `Mars in Cancer brings protective, emotionally-driven energy that is quiet in ordinary times but ferocious when loved ones are threatened. This soul does not seek conflict, but their defensive instincts are among the most powerful in the zodiac — provoke the people they love, and they become an immovable wall.
+
+Action here is guided by intuition and emotion rather than logic. Energy levels fluctuate with moods, meaning motivation surges when feelings are engaged and evaporates when the heart is not invested. The most powerful fuel for this Mars is a deep emotional reason to act.
+
+In pursuit of goals, the approach is indirect but remarkably tenacious. Like water wearing away stone, this soul achieves through persistent emotional engagement rather than frontal assault. They sense the right moment to act and use emotional intelligence as their greatest strategic advantage.
+
+The growth edge involves developing comfort with direct confrontation and expressing anger cleanly rather than through passive-aggressive channels. Learning that honest conflict is healthier than suppressed resentment transforms this protective energy into a force that defends without manipulation.`,
         strengths: ["Protective instincts", "Tenacity", "Emotional drive", "Defensive strength"],
         challenges: ["Passive-aggression", "Moodiness", "Indirect anger", "Manipulation"]
     },
     Leo: {
         keywords: ["Confident", "Dramatic", "Creative", "Proud"],
         summary: "Confident, dramatic energy that seeks recognition.",
-        reading: `Mars in Leo brings confident, dramatic, and creative energy. Action is bold, often theatrical, and seeks recognition and applause. This placement indicates someone who takes pride in their efforts and wants to be admired for their actions. Physical energy is warm and needs creative outlets. The challenge is not letting pride get in the way or demanding constant attention.`,
+        reading: `Mars in Leo brings confident, dramatic, and creatively charged energy to everything this soul undertakes. Action is bold, often theatrical, and carries an inherent desire for recognition and applause. This is not mere vanity — it is the natural expression of a heart that invests genuine pride in every effort.
+
+Physical energy is warm, generous, and needs creative outlets. Performance, sports, leadership roles, and any pursuit where effort can be seen and appreciated fuel this engine. The motivation to excel is inseparable from the desire to inspire — this soul wants to lead by brilliant example.
+
+In pursuit of goals, there is a magnificent willpower and refusal to accept mediocrity. Half-hearted efforts are physically impossible here. Everything is done with flair, commitment, and an expectation that quality will be noticed. They bring others along through sheer force of enthusiasm and personal magnetism.
+
+The growth edge involves learning to sustain effort even without an audience and accepting that not every achievement requires applause. When this confident energy learns that quiet mastery is as valuable as public triumph, its natural leadership becomes truly authoritative rather than performative.`,
         strengths: ["Confidence", "Leadership", "Creative drive", "Warmth"],
         challenges: ["Pride", "Drama", "Need for attention", "Stubbornness"]
     },
     Virgo: {
         keywords: ["Precise", "Analytical", "Helpful", "Critical"],
         summary: "Precise, service-oriented energy focused on improvement.",
-        reading: `Mars in Virgo brings precise, analytical, and service-oriented energy. Action is methodical, detailed, and focused on improvement and efficiency. This placement indicates someone who works hard on details and takes pride in doing things correctly. Physical energy is nervous and needs productive outlets. The challenge is not becoming overly critical or anxious about imperfections.`,
+        reading: `Mars in Virgo brings precise, analytical, and meticulously focused energy to every pursuit. Action is methodical, detailed, and oriented toward improvement and efficiency. This soul approaches challenges with a craftsman's eye — identifying exactly what needs fixing and applying effort with surgical precision.
+
+Physical energy has a nervous, productive quality that becomes anxious without useful work. The hands need to be busy, the mind needs problems to solve, and the body needs routines that maintain health and functionality. This placement often produces dedicated athletes, skilled artisans, and tireless workers.
+
+In pursuit of goals, the approach is systematic and thorough. While others may move faster, few achieve the quality of output that this meticulous Mars produces. Every detail is considered, every process refined, and every result polished until it meets exacting internal standards.
+
+The growth edge involves releasing the grip of perfectionism and accepting that good enough is sometimes better than endlessly perfect. Learning that productivity driven by anxiety is not the same as productivity driven by purpose allows this precise energy to serve without self-destruction.`,
         strengths: ["Precision", "Hard work", "Service", "Efficiency"],
         challenges: ["Over-criticism", "Anxiety", "Perfectionism", "Nervous energy"]
     },
     Libra: {
         keywords: ["Diplomatic", "Indecisive", "Balanced", "Passive"],
         summary: "Diplomatic energy that seeks fair solutions.",
-        reading: `Mars in Libra brings diplomatic, partnership-oriented energy that seeks balanced solutions. Action often requires a partner or opponent to react against. This placement indicates someone who fights for fairness and justice but may struggle with direct confrontation. Physical energy is social and aesthetic. The challenge is taking action independently and not being paralyzed by indecision.`,
+        reading: `Mars in Libra brings diplomatic, strategically-minded energy that seeks fairness and balance in every conflict. Action here is rarely impulsive — instead, it is carefully calibrated to account for all perspectives. This soul fights for justice and beauty with the precision of a chess player thinking several moves ahead.
+
+Physical energy is social and aesthetic in nature, activated most powerfully through partnership and collaboration. Competition feels less natural than cooperation, and the most motivating goals involve creating something beautiful or correcting an injustice that offends their deep sense of fairness.
+
+In pursuit of goals, this placement brings remarkable strategic intelligence. The ability to see all sides of a situation — to anticipate objections and craft solutions that satisfy everyone — makes this soul invaluable in negotiations, collaborations, and any pursuit requiring consensus.
+
+The growth edge involves learning to take decisive independent action without needing agreement or a partner to push against. When this diplomatic energy develops the courage to act on personal conviction — even when it disrupts harmony — it becomes a truly powerful force for both justice and achievement.`,
         strengths: ["Diplomacy", "Fairness", "Strategic thinking", "Charm"],
         challenges: ["Indecision", "Passive-aggression", "Dependency", "Avoids conflict"]
     },
     Scorpio: {
         keywords: ["Intense", "Strategic", "Powerful", "Determined"],
         summary: "Intense, strategic power that never forgets.",
-        reading: `Mars in Scorpio is in its traditional home sign, creating intense, strategic, and powerful energy. Action is calculated, patient, and devastatingly effective when unleashed. This placement indicates someone with tremendous willpower and the ability to transform through crisis. Physical energy is intense and needs outlets for passion. The challenge is forgiveness and not using power destructively.`,
+        reading: `Mars in Scorpio is in its traditional home sign, creating intense, strategic, and extraordinarily powerful energy. Action is calculated, patient, and devastatingly effective when finally unleashed. This soul possesses a willpower that borders on the superhuman — once they decide on a course, nothing in the universe can divert them.
+
+Physical energy is intense and runs deep rather than burning hot on the surface. Stamina is phenomenal, fueled by emotional conviction and an almost obsessive commitment to whatever captures their focus. Crisis situations actually increase their power rather than diminishing it.
+
+In pursuit of goals, this placement is arguably the most formidable in the zodiac. Strategic patience combines with psychological insight and absolute determination to create someone who achieves the impossible through sheer force of will. They understand leverage, timing, and the transformative power of focused intention.
+
+The growth edge involves learning forgiveness and releasing the impulse to use power destructively. When this intensely powerful energy chooses transformation over retaliation — and channels its extraordinary willpower toward creation rather than control — it becomes a force that literally changes the world.`,
         strengths: ["Willpower", "Strategic mind", "Intensity", "Resilience"],
         challenges: ["Vengeful", "Obsessive", "Controlling", "Destructive"]
     },
     Sagittarius: {
         keywords: ["Adventurous", "Enthusiastic", "Restless", "Philosophical"],
         summary: "Adventurous, enthusiastic energy seeking new horizons.",
-        reading: `Mars in Sagittarius brings adventurous, enthusiastic, and expansive energy. Action is driven by ideals, adventure, and the desire for meaning. This placement indicates someone who acts on beliefs and seeks to expand horizons through action. Physical energy is athletic and needs adventure. The challenge is focus and commitment rather than constantly moving on.`,
+        reading: `Mars in Sagittarius brings adventurous, enthusiastic, and expansively optimistic energy to everything this soul pursues. Action is driven by ideals, philosophical conviction, and an insatiable hunger for new experiences. This placement creates someone who charges toward horizons with infectious enthusiasm and unshakeable faith that things will work out.
+
+Physical energy is athletic, restless, and craves adventure. Travel, outdoor activities, sports, and any pursuit that combines physical movement with mental expansion are essential. The body needs freedom and space — confinement of any kind is intolerable to this fiery Mars.
+
+In pursuit of goals, there is a magnificent scope of ambition and optimism. Where others see obstacles, this soul sees opportunities for growth. They inspire entire teams through sheer belief, and their enthusiasm makes even impossible goals feel achievable. The vision is always grand, always expansive.
+
+The growth edge involves developing focus and follow-through. Learning that commitment to a single path often achieves more than scattering energy across a dozen adventures — and that the most profound discoveries sometimes require staying in one place long enough to dig deep — transforms restless enthusiasm into purposeful mastery.`,
         strengths: ["Enthusiasm", "Adventure", "Optimism", "Idealism"],
         challenges: ["Restlessness", "Over-promising", "Tactlessness", "Scattered"]
     },
     Capricorn: {
         keywords: ["Ambitious", "Disciplined", "Strategic", "Persistent"],
         summary: "Ambitious, disciplined energy climbing toward success.",
-        reading: `Mars in Capricorn is exalted, creating the most disciplined, strategic, and achievement-oriented energy. Action is calculated for long-term success, patient but relentless. This placement indicates someone with exceptional ambition and the discipline to achieve it. Physical energy is enduring and focused on goals. The challenge is balance and not sacrificing everything for achievement.`,
+        reading: `Mars in Capricorn is exalted, creating the most disciplined, strategic, and achievement-oriented expression of energy in the zodiac. Every action is calculated for maximum long-term impact. This soul plays the long game with a patience and precision that is breathtaking to witness — they do not waste a single movement on anything that does not serve the ultimate goal.
+
+Physical energy is enduring and focused, more marathon than sprint. Stamina comes from discipline rather than adrenaline, and the body responds to structure and routine. Hard work is not a burden but a deep satisfaction — there is genuine pleasure in the grind.
+
+In pursuit of goals, this placement creates someone who climbs steadily toward the summit while others burn out or give up. Success is earned through sustained effort, strategic planning, and the willingness to delay gratification indefinitely. Authority is claimed through demonstrated competence, not empty ambition.
+
+The growth edge involves finding balance between achievement and living. Learning that rest is not laziness, that play has value, and that relationships cannot be managed like career objectives transforms this extraordinary drive into a force that builds a complete life, not just an impressive resume.`,
         strengths: ["Discipline", "Ambition", "Strategy", "Persistence"],
         challenges: ["Workaholism", "Coldness", "Ruthlessness", "Rigid"]
     },
     Aquarius: {
         keywords: ["Unconventional", "Rebellious", "Innovative", "Detached"],
         summary: "Innovative, rebellious energy fighting for change.",
-        reading: `Mars in Aquarius brings unconventional, innovative, and rebellious energy. Action is directed toward change, progress, and breaking free from limitations. This placement indicates someone who fights for causes and uses original approaches. Physical energy is erratic and needs freedom. The challenge is consistent action and not being contrary just for the sake of it.`,
+        reading: `Mars in Aquarius brings unconventional, innovative, and fiercely independent energy to every pursuit. Action is directed toward progress, revolution, and breaking free from limitations that constrain human potential. This soul fights for causes larger than self, using original approaches that no one else would consider.
+
+Physical energy has an electric, erratic quality — brilliant bursts of focused effort followed by periods of apparent disengagement. Conventional routines feel stifling. The ideal outlets involve technology, group collaboration, activism, and any pursuit where originality is an asset rather than a liability.
+
+In pursuit of goals, this placement brings a genius for innovation and a stubborn refusal to follow established paths. Problems are solved through lateral thinking and unconventional strategies. They see possibilities that others miss entirely and have the courage to pursue ideas that seem radical until they prove to be visionary.
+
+The growth edge involves channeling rebellious energy constructively and developing consistency. Learning that real change often requires working within systems as well as against them — and that being contrary for its own sake wastes precious revolutionary energy — transforms this brilliant rebel into an effective architect of genuine progress.`,
         strengths: ["Innovation", "Independence", "Humanitarian drive", "Originality"],
         challenges: ["Rebellious", "Unpredictable", "Detached", "Stubbornly contrary"]
     },
     Pisces: {
         keywords: ["Intuitive", "Passive", "Creative", "Indirect"],
         summary: "Intuitive, creative energy that flows around obstacles.",
-        reading: `Mars in Pisces brings intuitive, creative, and flowing energy that avoids direct confrontation. Action is inspired by dreams, compassion, and spiritual impulses. This placement indicates someone who acts on intuition and uses indirect approaches. Physical energy is variable and connected to emotional and spiritual states. The challenge is direct action and not escaping through fantasy.`,
+        reading: `Mars in Pisces brings intuitive, creatively-charged, and fluidly adaptive energy to everything this soul pursues. Action is guided by inspiration, compassion, and spiritual impulses rather than logic or strategy. Like water finding its path downhill, this soul achieves goals through flow and adaptation rather than force.
+
+Physical energy is variable and deeply connected to emotional and spiritual states. When inspired, there is a tireless quality to their effort. When disconnected from meaning, energy evaporates completely. The arts, healing work, spiritual practice, and compassionate service are the most powerful fuels for this Mars.
+
+In pursuit of goals, the approach is indirect but surprisingly effective. They sense currents that others miss, navigate obstacles by flowing around them, and use imagination as their primary tool. What looks like passivity is often a deep attunement to timing — waiting for the right moment to act with seemingly effortless precision.
+
+The growth edge involves developing the capacity for direct action and asserting boundaries clearly. Learning that confrontation is sometimes an act of compassion — and that saying no protects the energy needed for genuine service — transforms this intuitively gifted soul into someone who is both spiritually attuned and personally powerful.`,
         strengths: ["Intuitive action", "Creativity", "Compassion", "Adaptability"],
         challenges: ["Passivity", "Escapism", "Confusion", "Victim mentality"]
     }
@@ -1100,84 +1244,156 @@ var JUPITER_SIGN_READINGS = {
     Aries: {
         keywords: ["Pioneering", "Bold", "Independent", "Enthusiastic"],
         summary: "Luck through initiative, courage, and bold action.",
-        reading: `Jupiter in Aries expands through pioneering action, independence, and bold initiative. Growth comes through taking risks and being first. This placement indicates someone who finds opportunities through courage and action, with luck favoring the brave. Abundance comes when leading and innovating. The challenge is patience and not overextending through impulsive expansion.`,
+        reading: `Jupiter in Aries expands through pioneering action, independence, and bold initiative. Fortune favors the brave here — opportunities appear precisely when this soul summons the courage to step forward first, take the risk, and lead the charge into uncharted territory.
+
+Growth comes through initiative and the willingness to begin before conditions are perfect. This placement creates natural entrepreneurs and trailblazers who attract abundance by doing what others only talk about. The universe rewards their courage with doors that open at exactly the right moment.
+
+There is an infectious optimism here that inspires others to take action as well. This soul's enthusiasm becomes a catalyst for entire groups, creating ripple effects of positive change wherever bold moves are made. Leadership itself becomes a form of luck — the more they lead, the more fortune follows.
+
+The growth edge involves tempering enthusiasm with strategy. Learning that patience is not weakness and that calculated risks yield better returns than impulsive ones transforms this boldly fortunate placement into a truly unstoppable force for expansive achievement.`,
         strengths: ["Entrepreneurial luck", "Courage attracts opportunity", "Leadership growth", "Initiative rewarded"],
         challenges: ["Impulsive expansion", "Overconfidence", "Impatience", "Risk addiction"]
     },
     Taurus: {
         keywords: ["Prosperous", "Practical", "Sensual", "Steady"],
         summary: "Luck through patience, persistence, and material wisdom.",
-        reading: `Jupiter in Taurus expands through patience, practical wisdom, and appreciation of the physical world. Growth comes through steady effort and building something lasting. This placement indicates someone who finds opportunities through reliability and sensible investments. Abundance comes when grounded and patient. The challenge is not becoming complacent or overly focused on material security.`,
+        reading: `Jupiter in Taurus expands through patience, practical wisdom, and a deep appreciation for the abundance of the physical world. Growth comes through steady effort, sensible investments, and the understanding that true wealth is built slowly and enjoyed thoroughly.
+
+This placement creates a natural gift for attracting material abundance. Money, resources, and opportunities seem to gravitate toward this soul, not through dramatic windfalls but through the accumulated rewards of consistent effort and sound judgment. They understand that real prosperity is sustainable prosperity.
+
+There is a profound capacity to enjoy abundance here — not merely to accumulate it. Good food, beautiful surroundings, comfortable living, and the simple pleasure of a life well-built are all expressions of Jupiter in Taurus at its finest. Gratitude itself becomes a magnet for more.
+
+The growth edge involves avoiding complacency and recognizing that security can become a prison when pursued obsessively. Learning that the greatest prosperity sometimes requires releasing what is comfortable in favor of what is expansive allows this naturally abundant placement to reach its full magnificent potential.`,
         strengths: ["Financial wisdom", "Steady growth", "Sensory appreciation", "Practical abundance"],
         challenges: ["Materialism", "Overindulgence", "Complacency", "Stubborn beliefs"]
     },
     Gemini: {
         keywords: ["Curious", "Communicative", "Versatile", "Social"],
         summary: "Luck through communication, learning, and connections.",
-        reading: `Jupiter in Gemini expands through communication, learning, and making connections. Growth comes through curiosity and sharing ideas. This placement indicates someone who finds opportunities through networking, education, and versatility. Abundance comes when communicating and learning. The challenge is depth versus breadth and not scattering energies too widely.`,
+        reading: `Jupiter in Gemini expands through communication, learning, and the art of making connections. Growth comes through curiosity — every conversation, book, class, and chance encounter holds potential seeds of fortune. This soul's greatest asset is an insatiable hunger to learn and an ability to synthesize information into wisdom.
+
+Opportunities arrive through networking, education, and the willingness to share ideas generously. This placement creates gifted communicators whose words open doors — writers, teachers, salespeople, and networkers who turn casual connections into meaningful opportunities through genuine intellectual engagement.
+
+There is a remarkable mental agility here that allows this soul to see connections others miss. Ideas from one field cross-pollinate with insights from another, creating innovative approaches that attract recognition and reward. The more they learn and share, the more abundance flows.
+
+The growth edge involves choosing depth over breadth when it matters most. Learning that true wisdom sometimes requires staying with one subject long enough to master it — rather than perpetually sampling — transforms this brilliantly versatile mind into a source of genuine intellectual authority.`,
         strengths: ["Communication luck", "Learning opportunities", "Social expansion", "Versatile growth"],
         challenges: ["Scattered focus", "Superficial knowledge", "Over-promising", "Mental restlessness"]
     },
     Cancer: {
         keywords: ["Nurturing", "Protective", "Intuitive", "Domestic"],
         summary: "Luck through nurturing, family, and emotional intelligence.",
-        reading: `Jupiter in Cancer is exalted, creating great abundance through nurturing, family, and emotional wisdom. Growth comes through caring for others and creating security. This placement indicates someone who finds opportunities through emotional intelligence and family connections. Abundance comes when creating home and belonging. The challenge is not limiting growth to the familiar.`,
+        reading: `Jupiter in Cancer is exalted, creating extraordinary abundance through nurturing, family bonds, and emotional wisdom. This is one of the most fortunate placements in the zodiac — growth comes naturally through caring for others, creating emotional security, and honoring the bonds of family and home.
+
+Opportunities flow through emotional intelligence and the deep trust this soul inspires. People instinctively feel safe with them, which opens doors in both personal and professional life. Real estate, food, family businesses, and caregiving fields are particularly blessed by this placement.
+
+There is a profound capacity for creating belonging wherever this soul goes. Home is not just a physical space but an emotional experience they create — warm, welcoming, and abundant. Their generosity with emotional support returns to them multiplied in material and spiritual blessings.
+
+The growth edge involves expanding beyond the familiar without losing the security that fuels their gifts. Learning that the nurturing heart can extend its warmth far beyond family and close circles — to community, to strangers, to the world — unlocks the full exalted potential of this beautifully blessed placement.`,
         strengths: ["Family blessings", "Emotional wisdom", "Nurturing abundance", "Intuitive luck"],
         challenges: ["Over-protective", "Clinging to security", "Emotional excess", "Fear of growth"]
     },
     Leo: {
         keywords: ["Generous", "Creative", "Confident", "Dramatic"],
         summary: "Luck through creativity, generosity, and self-expression.",
-        reading: `Jupiter in Leo expands through creativity, generosity, and confident self-expression. Growth comes through sharing talents and inspiring others. This placement indicates someone who finds opportunities through creative work and natural leadership. Abundance comes when expressing authentic self. The challenge is ego inflation and not needing constant recognition.`,
+        reading: `Jupiter in Leo expands through creativity, generosity, and the courageous expression of authentic self. Fortune follows this soul like a spotlight — the more genuinely they express their unique gifts and share their talents, the more abundance and recognition flow their way.
+
+Growth comes through creative work, entertainment, leadership, and any pursuit where personal flair and warmth can shine. This placement creates people who attract opportunity through charisma and the willingness to take center stage when their gifts call for it. Confidence itself becomes a form of luck.
+
+There is a magnificent generosity here that amplifies abundance. This soul gives freely — time, energy, praise, resources — and finds that giving opens channels for even greater receiving. Their warmth inspires loyalty and creates networks of mutual support that sustain growth over a lifetime.
+
+The growth edge involves ensuring that the desire for recognition does not eclipse the authentic creative expression that attracts it. Learning that true abundance comes from the joy of creating rather than the applause of performing allows this radiantly fortunate placement to shine without burning.`,
         strengths: ["Creative abundance", "Generous luck", "Confidence attracts", "Inspiring presence"],
         challenges: ["Arrogance", "Excessive pride", "Drama", "Entitlement"]
     },
     Virgo: {
         keywords: ["Analytical", "Helpful", "Practical", "Modest"],
         summary: "Luck through service, skill, and attention to detail.",
-        reading: `Jupiter in Virgo expands through service, practical skills, and attention to detail. Growth comes through being useful and perfecting craft. This placement indicates someone who finds opportunities through competence and helping others. Abundance comes when applying skills practically. The challenge is not limiting growth through excessive criticism or perfectionism.`,
+        reading: `Jupiter in Virgo expands through service, mastery of practical skills, and meticulous attention to the details that others overlook. Growth comes through being genuinely useful — this soul attracts abundance by solving real problems with real competence, building a reputation for excellence one careful effort at a time.
+
+Opportunities arrive through demonstrated skill and the willingness to serve. Healthcare, craftsmanship, analysis, education, and any field requiring precision and dedication are particularly blessed. This placement creates experts whose knowledge is both broad and practically applicable.
+
+There is a quiet form of abundance here that compounds over time. While flashier placements may attract sudden windfalls, Jupiter in Virgo builds wealth through accumulated expertise, efficient systems, and the trust that comes from consistently excellent work. Quality is their currency.
+
+The growth edge involves releasing perfectionism that prevents the very growth Jupiter promises. Learning that expansion sometimes requires accepting imperfect action over perfect inaction — and that the big picture matters as much as the details — unlocks abundant opportunities that meticulous preparation has already earned.`,
         strengths: ["Service abundance", "Skill development", "Practical wisdom", "Health consciousness"],
         challenges: ["Over-criticism", "Perfectionism limiting growth", "Worry", "Missing big picture"]
     },
     Libra: {
         keywords: ["Diplomatic", "Artistic", "Partnership-oriented", "Fair"],
         summary: "Luck through partnerships, beauty, and harmony.",
-        reading: `Jupiter in Libra expands through partnerships, artistic pursuits, and creating harmony. Growth comes through collaboration and fair dealing. This placement indicates someone who finds opportunities through relationships and aesthetic sensibility. Abundance comes when partnering with others. The challenge is over-dependence on others for growth.`,
+        reading: `Jupiter in Libra expands through partnerships, artistic pursuits, and the creation of harmony in every sphere of life. Fortune flows most powerfully through collaboration — this soul's greatest opportunities arrive through other people, and the ability to create balanced, mutually beneficial relationships is their greatest asset.
+
+Growth comes through aesthetic sensibility, diplomatic skill, and the art of fair dealing. Law, art, design, counseling, and any field requiring the ability to bring opposing forces into harmony are particularly blessed. Beauty itself becomes a path to abundance.
+
+There is a natural gift for creating win-win situations that amplifies prosperity for everyone involved. This soul's fairness and charm open doors that force and ambition alone cannot — people want to work with them, invest in them, and support their vision because they feel genuinely valued in return.
+
+The growth edge involves learning to pursue personal goals with equal vigor. Recognizing that healthy self-interest is not selfishness — and that the best partnerships begin with two whole individuals — allows this diplomatically gifted soul to attract opportunities that serve their own growth, not just the growth of others.`,
         strengths: ["Partnership luck", "Artistic abundance", "Diplomatic growth", "Fair rewards"],
         challenges: ["Indecision", "Dependent on others", "Superficial harmony", "Avoids necessary conflict"]
     },
     Scorpio: {
         keywords: ["Transformative", "Intense", "Resourceful", "Deep"],
         summary: "Luck through transformation, depth, and shared resources.",
-        reading: `Jupiter in Scorpio expands through transformation, deep understanding, and shared resources. Growth comes through crisis, intimacy, and regeneration. This placement indicates someone who finds opportunities through psychological insight and managing others' resources. Abundance comes when embracing change. The challenge is not manipulating or using power destructively.`,
+        reading: `Jupiter in Scorpio expands through transformation, psychological depth, and the fearless exploration of what lies beneath the surface. Fortune favors this soul when they embrace change rather than resist it — their greatest opportunities emerge from crisis, endings, and the willingness to dive into the depths where others fear to go.
+
+Growth comes through managing shared resources, understanding hidden motivations, and the courage to face uncomfortable truths. Finance, psychology, research, healing, and any field requiring penetrating insight are powerfully blessed. This placement creates people who profit from transformation itself.
+
+There is a remarkable ability to regenerate and reinvent here. Where others see destruction, this soul sees raw material for something better. Every ending becomes a beginning, every loss an eventual gain, and every crisis a doorway to expanded power and understanding.
+
+The growth edge involves trusting the process of expansion without needing to control every variable. Learning that openness and generosity amplify abundance more effectively than secrecy and strategic withholding allows this deeply powerful placement to attract the extraordinary prosperity that profound transformation makes possible.`,
         strengths: ["Transformative luck", "Deep wisdom", "Resource management", "Regenerative growth"],
         challenges: ["Intensity excess", "Power manipulation", "Obsession", "Secrecy"]
     },
     Sagittarius: {
         keywords: ["Optimistic", "Adventurous", "Philosophical", "Expansive"],
         summary: "Luck through adventure, learning, and faith.",
-        reading: `Jupiter in Sagittarius is in its home sign, creating the greatest natural luck and expansion. Growth comes through adventure, higher education, and faith in life. This placement indicates someone who finds opportunities through travel, philosophy, and optimism. Abundance comes when following beliefs. The challenge is overexpansion and not following through on big promises.`,
+        reading: `Jupiter in Sagittarius is in its home sign, creating the most naturally fortunate and expansive placement in the zodiac. Luck here is almost legendary — this soul seems to land on their feet no matter the height of the fall, protected by an unshakeable faith in life's ultimate benevolence.
+
+Growth comes through adventure, higher education, philosophical exploration, and the courage to follow beliefs wherever they lead. Travel, teaching, publishing, law, and spiritual pursuits are all powerfully blessed. The bigger the dream, the more the universe conspires to support it.
+
+There is a contagious optimism here that literally creates good fortune. By believing in positive outcomes, this soul takes the bold actions that make positive outcomes possible. Their enthusiasm attracts allies, mentors, and opportunities that more cautious souls never encounter.
+
+The growth edge involves learning when expansion should pause and consolidation should begin. Recognizing that bigger is not always better — and that the deepest wisdom sometimes comes from staying rather than seeking — transforms legendary luck into sustainable prosperity built on genuine wisdom.`,
         strengths: ["Natural luck", "Optimistic growth", "Adventurous abundance", "Faith rewarded"],
         challenges: ["Overexpansion", "Over-promising", "Excess", "Reckless optimism"]
     },
     Capricorn: {
         keywords: ["Ambitious", "Disciplined", "Patient", "Structured"],
         summary: "Luck through discipline, hard work, and patience.",
-        reading: `Jupiter in Capricorn expands through discipline, structure, and patient ambition. Growth comes through hard work and playing by the rules. This placement indicates someone who finds opportunities through competence and authority. Abundance comes when building something lasting. The challenge is not limiting growth through excessive caution or pessimism.`,
+        reading: `Jupiter in Capricorn expands through discipline, structured effort, and the patience to build something that endures. Fortune here is earned rather than given — opportunities appear when this soul demonstrates competence, accepts responsibility, and commits to the long road of mastery.
+
+Growth comes through hard work, institutional knowledge, and playing by the rules long enough to understand which rules can eventually be rewritten. Business, government, management, and any field requiring demonstrated authority are blessed by this placement, though rewards arrive later rather than sooner.
+
+There is a quiet dignity to how abundance manifests here. Rather than sudden windfalls, prosperity builds through accumulated effort and earned reputation. Each achievement becomes a foundation for the next, creating a lifetime trajectory that curves steadily upward toward genuine authority and lasting success.
+
+The growth edge involves remembering that joy and spontaneity are not threats to achievement. Learning that calculated risks and occasional leaps of faith can accelerate growth beyond what grinding effort alone produces allows this disciplined soul to experience the full breadth of Jupiter's expansive blessings.`,
         strengths: ["Disciplined growth", "Earned abundance", "Authority luck", "Structured expansion"],
         challenges: ["Limited optimism", "Work before play", "Slow growth", "Status-focused"]
     },
     Aquarius: {
         keywords: ["Innovative", "Humanitarian", "Progressive", "Independent"],
         summary: "Luck through innovation, community, and progressive thinking.",
-        reading: `Jupiter in Aquarius expands through innovation, humanitarian efforts, and progressive thinking. Growth comes through originality and serving humanity. This placement indicates someone who finds opportunities through groups, technology, and breaking conventions. Abundance comes when helping the collective. The challenge is remaining grounded while pursuing ideals.`,
+        reading: `Jupiter in Aquarius expands through innovation, humanitarian vision, and the progressive thinking that sees what the world needs before the world knows it needs it. Fortune flows most powerfully when this soul serves the collective good — personal abundance becomes a natural byproduct of genuine service to humanity.
+
+Growth comes through technology, social movements, community building, and any pursuit that connects individual brilliance with collective benefit. This placement creates visionaries whose most radical ideas eventually become mainstream wisdom, attracting recognition and reward in the process.
+
+There is a gift for seeing the future here — not through mysticism but through the clear-eyed recognition of emerging patterns and unmet needs. Friendships and networks are particularly blessed, creating webs of mutual support that amplify individual efforts into movements.
+
+The growth edge involves remaining connected to personal relationships while pursuing universal ideals. Learning that individual human connections matter as much as collective progress — and that warmth does not compromise vision — allows this brilliantly progressive placement to create change that is both revolutionary and deeply human.`,
         strengths: ["Innovative luck", "Community growth", "Progressive abundance", "Humanitarian rewards"],
         challenges: ["Impractical ideals", "Too detached", "Rebel without cause", "Scattered vision"]
     },
     Pisces: {
         keywords: ["Compassionate", "Intuitive", "Spiritual", "Creative"],
         summary: "Luck through faith, compassion, and spiritual connection.",
-        reading: `Jupiter in Pisces is in its traditional home sign, creating great abundance through compassion, imagination, and spiritual faith. Growth comes through trusting intuition and helping others selflessly. This placement indicates someone who finds opportunities through creativity and spiritual connection. Abundance comes when following dreams. The challenge is discernment and not being taken advantage of.`,
+        reading: `Jupiter in Pisces is in its traditional home sign, creating profound abundance through compassion, imagination, and spiritual faith. This is the placement of miraculous fortune — the kind that arrives through synchronicity, divine timing, and the mysterious workings of a universe that rewards genuine selflessness.
+
+Growth comes through trusting intuition, helping others without expectation of return, and following creative and spiritual callings wherever they lead. The arts, healing, spiritual work, and any pursuit involving imagination and compassion are extraordinarily blessed.
+
+There is a boundless generosity here that paradoxically amplifies abundance rather than depleting it. The more this soul gives, the more they receive — not through strategic calculation but through the natural law of spiritual reciprocity. Their faith itself becomes a creative force that shapes reality.
+
+The growth edge involves developing practical discernment alongside spiritual openness. Learning that boundaries protect the generous heart — and that wise compassion is more effective than indiscriminate giving — allows this beautifully blessed placement to channel its extraordinary fortune into lasting good for both self and the world.`,
         strengths: ["Spiritual luck", "Creative abundance", "Compassionate growth", "Intuitive guidance"],
         challenges: ["Escapism", "Over-idealism", "Lack of boundaries", "Martyr tendencies"]
     }
@@ -1187,84 +1403,156 @@ var SATURN_SIGN_READINGS = {
     Aries: {
         keywords: ["Disciplined Action", "Controlled Energy", "Patient Leadership", "Earned Authority"],
         summary: "Learning discipline through patience with action and assertion.",
-        reading: `Saturn in Aries brings lessons around action, assertion, and leadership. There may be initial blocks around taking initiative or expressing anger, requiring the development of disciplined courage. This placement indicates someone learning to balance impulsiveness with patient action. Mastery comes through earning the right to lead. The reward is becoming a disciplined leader who acts with considered confidence.`,
+        reading: `Saturn in Aries brings life's deepest lessons through the territory of action, assertion, and the courage to claim space in the world. Early in life, there may be significant blocks around taking initiative — a hesitation before acting, a frustration when energy is suppressed, or experiences that made bold self-assertion feel dangerous.
+
+The developmental journey requires building disciplined courage over time. Where Mars in Aries acts impulsively, Saturn in Aries learns to act with considered precision. Every instance of earned initiative — every time this soul pushes past fear to take action — strengthens a foundation of authentic authority.
+
+The mastery that eventually emerges is extraordinary: a leader who acts from wisdom rather than impulse, who commands respect because they have earned the right to lead through sustained effort and tested courage. This is not borrowed confidence but the real thing, forged in difficulty.
+
+The ultimate reward is becoming a disciplined warrior — someone whose actions carry the weight of hard-won experience. Patience transforms raw courage into strategic power, and the leader who once struggled to act becomes the one others trust to act wisely.`,
         strengths: ["Disciplined action", "Patient courage", "Earned leadership", "Controlled assertion"],
         challenges: ["Frustrated energy", "Fear of action", "Suppressed anger", "Identity struggles"]
     },
     Taurus: {
         keywords: ["Financial Lessons", "Earned Security", "Disciplined Values", "Patient Building"],
         summary: "Learning discipline through patience with security and resources.",
-        reading: `Saturn in Taurus brings lessons around security, resources, and self-worth. There may be initial financial challenges or scarcity that teach the value of patient building. This placement indicates someone learning to develop true security through steady effort. Mastery comes through building lasting value. The reward is becoming a pillar of material and emotional stability.`,
+        reading: `Saturn in Taurus brings life's deepest lessons through the territory of security, resources, and self-worth. Early experiences may include financial scarcity, instability around material needs, or messages that created doubt about personal value. These challenges are not punishments but the raw material for extraordinary financial wisdom.
+
+The developmental journey involves learning that true security cannot be rushed or borrowed — it must be built from the ground up through patient, persistent effort. Every financial setback teaches discernment. Every period of scarcity develops resourcefulness that abundance alone could never teach.
+
+Over time, this placement produces some of the most financially astute and materially stable people in the zodiac. The fear of not having enough transforms into an unshakeable ability to create and maintain real security. Self-worth, too, shifts from external validation to an inner knowing that no circumstance can diminish.
+
+The ultimate reward is becoming a pillar of stability — someone who has built lasting value through sustained effort and who understands, from hard experience, what truly matters. Their relationship with material security becomes a source of wisdom they can share with others.`,
         strengths: ["Financial wisdom", "Steady building", "Earned security", "Patient persistence"],
         challenges: ["Financial fears", "Scarcity mentality", "Stubborn resistance", "Self-worth issues"]
     },
     Gemini: {
         keywords: ["Disciplined Mind", "Careful Communication", "Structured Learning", "Mental Focus"],
         summary: "Learning discipline through focus in thinking and communication.",
-        reading: `Saturn in Gemini brings lessons around communication, learning, and mental focus. There may be initial challenges with expression or education, requiring the development of disciplined thinking. This placement indicates someone learning to focus scattered mental energy. Mastery comes through careful study and precise communication. The reward is becoming a respected thinker and communicator.`,
+        reading: `Saturn in Gemini brings life's deepest lessons through the territory of communication, learning, and mental clarity. Early experiences may include challenges with expression — speech difficulties, educational obstacles, or environments where speaking up was discouraged. These difficulties forge a mind of exceptional precision.
+
+The developmental journey involves transforming scattered mental energy into focused intellectual power. Where unstructured Gemini energy flits from topic to topic, Saturn demands mastery. Study becomes deeper, communication more precise, and ideas more carefully considered before being shared.
+
+Over time, this placement produces remarkably clear thinkers and communicators. The early struggles with expression evolve into an ability to articulate complex ideas with unusual clarity and authority. Words are never wasted — every sentence carries weight because this soul knows the cost of careless communication.
+
+The ultimate reward is becoming a respected voice of reason — a teacher, writer, or thinker whose words carry authority precisely because they were hard-won. The mind that once struggled to focus becomes a precision instrument, and the communicator who once hesitated speaks with the confidence of genuine knowledge.`,
         strengths: ["Focused mind", "Careful speech", "Thorough learning", "Mental discipline"],
         challenges: ["Communication blocks", "Learning difficulties", "Mental anxiety", "Scattered focus"]
     },
     Cancer: {
         keywords: ["Emotional Discipline", "Family Responsibility", "Protective Boundaries", "Earned Security"],
         summary: "Learning discipline through emotional maturity and family duties.",
-        reading: `Saturn in Cancer brings lessons around emotions, family, and inner security. There may be initial emotional restrictions or family responsibilities that teach self-reliance. This placement indicates someone learning to provide their own emotional foundation. Mastery comes through becoming one's own source of security. The reward is becoming a rock of emotional stability for self and others.`,
+        reading: `Saturn in Cancer brings life's deepest lessons through the territory of emotions, family, and inner security. Early experiences may include emotional restrictions, family responsibilities beyond their years, or a home environment that required premature self-reliance. The heart learns early that safety must be built from within.
+
+The developmental journey involves creating a solid internal foundation that does not depend on external circumstances. While others may find easy comfort in family warmth, this soul must build their own emotional infrastructure — learning to be their own parent, their own safe harbor, their own source of unconditional support.
+
+Over time, this challenging placement produces people of extraordinary emotional resilience. Having built their own security from scratch, they understand emotional architecture in ways that the naturally secure never need to. Their capacity to provide genuine support to others grows directly from having learned to support themselves.
+
+The ultimate reward is becoming an unshakeable source of emotional stability for self and others. The child who had to grow up too fast becomes the adult whose emotional maturity is a gift — a rock that others can lean on precisely because it was built through real experience rather than comfortable circumstance.`,
         strengths: ["Emotional maturity", "Self-reliance", "Protective strength", "Family responsibility"],
         challenges: ["Emotional restriction", "Family burdens", "Fear of vulnerability", "Cold defense"]
     },
     Leo: {
         keywords: ["Disciplined Creativity", "Humble Leadership", "Earned Recognition", "Patient Expression"],
         summary: "Learning discipline through humility in self-expression and creativity.",
-        reading: `Saturn in Leo brings lessons around ego, creativity, and recognition. There may be initial blocks around self-expression or receiving attention, requiring the development of humble confidence. This placement indicates someone learning to shine without arrogance. Mastery comes through earning recognition through merit. The reward is becoming a respected creative authority.`,
+        reading: `Saturn in Leo brings life's deepest lessons through the territory of self-expression, creativity, and the desire for recognition. Early experiences may include blocks around creative expression, discomfort with attention, or messages that made shining feel inappropriate or unsafe. The heart yearns to express but the walls are high.
+
+The developmental journey involves learning that authentic self-expression does not require anyone's permission — but it does require the discipline of genuine craft. Superficial charm is not enough. Real creative authority must be earned through sustained effort, practice, and the humility to develop skill before demanding applause.
+
+Over time, this placement produces creators and leaders of remarkable substance. Their work carries gravitas because it was not created for attention but from genuine need to express. Recognition, when it comes, is built on solid foundations rather than flash.
+
+The ultimate reward is becoming a creative authority whose confidence is earned rather than performed. The soul who once struggled to shine becomes a light that others trust precisely because its warmth is real. Humble mastery becomes their signature, and the world recognizes depth that mere showmanship cannot achieve.`,
         strengths: ["Humble confidence", "Disciplined creativity", "Earned respect", "Mature self-expression"],
         challenges: ["Creative blocks", "Fear of spotlight", "Recognition struggles", "Ego challenges"]
     },
     Virgo: {
         keywords: ["Disciplined Service", "Perfectionist Mastery", "Health Consciousness", "Humble Work"],
         summary: "Learning discipline through service, health, and attention to detail.",
-        reading: `Saturn in Virgo brings lessons around service, health, and perfectionism. There may be initial health challenges or work burdens that teach the value of disciplined routines. This placement indicates someone learning to serve without martyrdom. Mastery comes through expert skill development. The reward is becoming a respected craftsperson and healer.`,
+        reading: `Saturn in Virgo brings life's deepest lessons through the territory of service, health, and the pursuit of perfection. Early experiences may include health challenges, heavy work responsibilities, or an environment that demanded usefulness as the price of acceptance. The body and the work ethic both carry the imprint of these formative pressures.
+
+The developmental journey involves transforming anxious perfectionism into genuine mastery. The difference is crucial — perfectionism serves fear while mastery serves excellence. Learning to apply exacting standards productively rather than destructively is the core lesson of this placement.
+
+Over time, this soul develops skills of extraordinary precision and depth. Whether in healing, craft, analysis, or service, their dedication to doing things correctly produces work of exceptional quality. Health challenges often become catalysts for developing expertise that helps others.
+
+The ultimate reward is becoming a master of their craft — someone whose skill is so refined and whose service is so reliable that excellence becomes effortless. The anxious worker transforms into the trusted expert, and the body that once signaled distress becomes an instrument of precision and resilience.`,
         strengths: ["Expert skills", "Health mastery", "Service dedication", "Detailed work"],
         challenges: ["Perfectionism anxiety", "Health worries", "Over-criticism", "Work burden"]
     },
     Libra: {
         keywords: ["Relationship Wisdom", "Commitment Mastery", "Fair Dealing", "Partnership Lessons"],
         summary: "Learning discipline through commitment and balance in relationships.",
-        reading: `Saturn in Libra is exalted, bringing mastery in relationships, justice, and balance. Lessons come through serious commitment and learning fair dealing. This placement indicates someone who takes partnerships seriously and develops relationship wisdom. Mastery comes through mature commitment. The reward is becoming a trusted partner and fair judge.`,
+        reading: `Saturn in Libra is exalted — its highest expression — bringing mastery in relationships, justice, and the art of balanced commitment. Lessons come through serious engagement with partnership: learning what fairness truly means, discovering the difference between compromise and capitulation, and building relationships that endure because they are founded on genuine equity.
+
+The developmental journey involves taking relationships seriously enough to do the difficult work they require. Surface harmony is not enough for this placement — real balance demands honest negotiation, clear boundaries, and the willingness to address injustice even when it disrupts the peace.
+
+Over time, this placement produces extraordinary partners, mediators, and judges of character. Their understanding of human dynamics runs deep because they have done the painstaking work of learning how people truly function in relationship — not the romantic ideal but the complex, rewarding reality.
+
+The ultimate reward is becoming a trusted anchor in relationships and a respected voice of fairness. The commitment that once felt heavy transforms into a source of profound stability, and the person who learned about love the hard way becomes the wisest counselor in matters of the heart.`,
         strengths: ["Relationship wisdom", "Commitment strength", "Fair judgment", "Diplomatic mastery"],
         challenges: ["Fear of loneliness", "Over-dependent", "Relationship burden", "Delayed partnership"]
     },
     Scorpio: {
         keywords: ["Emotional Mastery", "Power Discipline", "Transformation Control", "Deep Wisdom"],
         summary: "Learning discipline through emotional depth and power management.",
-        reading: `Saturn in Scorpio brings lessons around power, intimacy, and transformation. There may be intense experiences that teach emotional mastery and the responsible use of power. This placement indicates someone learning to wield influence wisely. Mastery comes through surviving transformations with integrity. The reward is becoming a wise guide through darkness.`,
+        reading: `Saturn in Scorpio brings life's deepest lessons through the territory of power, trust, intimacy, and transformation. The experiences that shape this soul are often intense — encounters with betrayal, loss, or the misuse of power that teach, at a visceral level, the responsibility that comes with wielding influence over others.
+
+The developmental journey involves learning to navigate darkness with integrity. This soul must develop the emotional discipline to face what terrifies most people — grief, rage, desire, vulnerability — without being consumed or corrupted by it. The stakes are real, and the growth is proportional.
+
+Over time, this placement produces people of remarkable psychological strength and wisdom. They understand the mechanics of power because they have been tested by it. Trust, once so difficult, is offered with extraordinary discernment. And their capacity to transform through crisis becomes a gift they can extend to others.
+
+The ultimate reward is becoming a wise guide through the underworld — someone who can hold space for darkness without fear because they have survived their own. The soul that learned about power through hard experience becomes the one others trust when everything falls apart.`,
         strengths: ["Emotional mastery", "Power wisdom", "Transformative strength", "Deep understanding"],
         challenges: ["Control issues", "Trust difficulties", "Intense fear", "Secretive burden"]
     },
     Sagittarius: {
         keywords: ["Disciplined Faith", "Practical Philosophy", "Earned Wisdom", "Grounded Beliefs"],
         summary: "Learning discipline through grounding faith and beliefs.",
-        reading: `Saturn in Sagittarius brings lessons around belief, faith, and truth. There may be challenges to optimism that teach the difference between wishful thinking and earned wisdom. This placement indicates someone learning to ground their philosophy in reality. Mastery comes through testing and proving beliefs. The reward is becoming a respected teacher and truth-seeker.`,
+        reading: `Saturn in Sagittarius brings life's deepest lessons through the territory of belief, meaning, and truth. Early experiences may challenge native optimism — encounters with harsh reality, failures of faith, or situations where easy answers prove dangerously inadequate. The resulting crisis of meaning, while painful, forges something far more valuable than borrowed belief.
+
+The developmental journey involves testing every assumption, questioning every doctrine, and building a personal philosophy that can withstand the weight of real life. Faith must be earned through experience, not inherited from authority. Truth must be verified through living, not accepted on hearsay.
+
+Over time, this placement produces thinkers of remarkable depth and integrity. Their beliefs carry authority because they have been tested and refined through direct experience. Where others offer platitudes, this soul offers hard-won wisdom that rings true because it emerged from genuine questioning.
+
+The ultimate reward is becoming a respected teacher and truth-seeker whose wisdom is grounded in reality. The soul that once lost faith discovers something far more valuable — a philosophy tested by fire and proven by life, capable of guiding others through their own dark nights with genuine authority.`,
         strengths: ["Grounded wisdom", "Practical faith", "Tested beliefs", "Earned truth"],
         challenges: ["Faith crises", "Pessimistic doubt", "Dogmatic rigidity", "Adventure fear"]
     },
     Capricorn: {
         keywords: ["Authority", "Achievement", "Discipline", "Structure"],
         summary: "Ultimate mastery through patience, discipline, and earned achievement.",
-        reading: `Saturn in Capricorn is in its home sign, creating the most powerful expression of discipline and achievement. Lessons are about taking full responsibility for one's life and building lasting success. This placement indicates someone destined for significant achievement through sustained effort. Mastery comes through total commitment to long-term goals. The reward is becoming an authority respected for genuine accomplishment.`,
+        reading: `Saturn in Capricorn is in its home sign, creating the most powerful and concentrated expression of discipline, responsibility, and the drive toward lasting achievement. This placement carries the full weight of Saturn's teaching — there are no shortcuts, no workarounds, and no substitutes for genuine effort sustained over time.
+
+The developmental journey is one of total responsibility. This soul learns early that they must earn everything through their own effort — that authority, respect, and success are not given but built, brick by painstaking brick, through years of dedicated work and unwavering commitment.
+
+Over time, this placement produces achievers of extraordinary substance. Their success is built on bedrock rather than sand, and their authority commands genuine respect because it was earned through demonstrated competence. They become the standard against which others measure professionalism and dedication.
+
+The ultimate reward is becoming a genuine authority — respected not for title or position but for the unmistakable quality of accomplishment that only sustained mastery produces. The disciplined soul who accepted full responsibility for their life creates a legacy that outlasts them.`,
         strengths: ["Natural authority", "Disciplined achievement", "Patient mastery", "Lasting success"],
         challenges: ["Excessive seriousness", "Workaholism", "Emotional coldness", "Status obsession"]
     },
     Aquarius: {
         keywords: ["Disciplined Innovation", "Responsible Freedom", "Structured Progress", "Community Commitment"],
         summary: "Learning discipline through responsible innovation and community service.",
-        reading: `Saturn in Aquarius is in its traditional home sign, bringing mastery in innovation, social structures, and progressive thinking. Lessons come through balancing individuality with community responsibility. This placement indicates someone learning to create lasting change through patient reform. Mastery comes through committed service to collective progress. The reward is becoming a respected reformer and community builder.`,
+        reading: `Saturn in Aquarius is in its traditional home sign, bringing mastery in innovation, social architecture, and the disciplined pursuit of progressive change. The lessons here involve balancing individual vision with collective responsibility — learning that lasting reform requires structure, patience, and the willingness to build systems rather than just challenge them.
+
+The developmental journey involves channeling revolutionary energy into constructive form. Raw rebellion must mature into strategic reform. Individual brilliance must learn to serve the group without losing its originality. The tension between freedom and responsibility becomes the creative friction that produces genuine innovation.
+
+Over time, this placement creates remarkable community builders and social architects. Their innovations endure because they are grounded in practical reality and genuine understanding of how groups function. They bring structure to vision and discipline to idealism, creating change that actually sticks.
+
+The ultimate reward is becoming a respected reformer whose progressive vision is matched by the practical ability to implement it. The rebel who once fought against systems learns to build better ones — creating lasting structures that serve collective evolution while honoring individual freedom.`,
         strengths: ["Disciplined innovation", "Responsible reform", "Community dedication", "Structured progress"],
         challenges: ["Detached coldness", "Rebellious rigidity", "Group burden", "Freedom fear"]
     },
     Pisces: {
         keywords: ["Spiritual Discipline", "Compassion Mastery", "Creative Structure", "Grounded Dreams"],
         summary: "Learning discipline through grounding spirituality and compassion.",
-        reading: `Saturn in Pisces brings lessons around faith, compassion, and spiritual practice. There may be challenges that teach the difference between escape and transcendence. This placement indicates someone learning to ground spiritual gifts in practical service. Mastery comes through disciplined spiritual practice. The reward is becoming a wise healer and spiritual guide.`,
+        reading: `Saturn in Pisces brings life's deepest lessons through the territory of faith, compassion, and the relationship between the material and spiritual worlds. Early experiences may include confrontations with suffering that challenge easy spirituality, or boundary difficulties that teach the hard distinction between genuine compassion and self-destructive martyrdom.
+
+The developmental journey involves grounding spiritual gifts in practical service. Mystical experience must translate into tangible help. Creative vision must find disciplined form. Compassion must develop the discernment to serve effectively rather than simply absorb others' pain.
+
+Over time, this placement produces healers and spiritual guides of remarkable depth and practical effectiveness. Their spiritual understanding is not theoretical but forged through direct experience — including the experience of suffering that initially seemed meaningless but eventually revealed profound purpose.
+
+The ultimate reward is becoming a bridge between worlds — a grounded mystic whose spiritual wisdom serves practical human needs. The soul that once struggled to find meaning in suffering discovers the ability to transform pain into healing, and the dreamer who once escaped reality learns to bring dreams into material form.`,
         strengths: ["Spiritual discipline", "Practical compassion", "Creative mastery", "Grounded intuition"],
         challenges: ["Faith dissolution", "Compassion fatigue", "Boundary confusion", "Martyrdom"]
     }
@@ -1277,102 +1565,246 @@ var SATURN_SIGN_READINGS = {
 var CHIRON_SIGN_READINGS = {
     Aries: {
         keywords: ["Identity Wound", "Leadership Healing", "Courage Recovery", "Self-Discovery"],
-        reading: `Chiron in Aries indicates a core wound around identity, self-assertion, and the right to exist and take up space. Early experiences may have challenged the sense of self or the ability to assert needs confidently. The healing journey involves reclaiming the right to be an individual and to lead. The gift that emerges is the ability to help others find their courage and authentic self-expression.`
+        reading: `Chiron in Aries indicates a core wound around identity, self-assertion, and the fundamental right to exist and take up space. Early experiences may have challenged the sense of self — messages that being bold was wrong, that individual needs did not matter, or that asserting oneself would result in rejection or punishment.
+
+This wound often manifests as a deep hesitation before taking action, a pattern of putting others first to the point of self-erasure, or an overcompensation through aggressive behavior that masks profound uncertainty about one's own worth and right to lead.
+
+The healing journey involves reclaiming the right to exist fully and unapologetically. Each act of authentic self-assertion — however small — mends this wound. Over time, the soul discovers that taking up space is not selfish but necessary, and that their unique identity is not a burden but a gift the world needs.
+
+The extraordinary gift that emerges is the ability to help others find their own courage and authentic self-expression. Having walked the painful path from self-doubt to self-knowing, this soul becomes a powerful guide for anyone struggling to claim their own identity and voice.`
     },
     Taurus: {
         keywords: ["Worth Wound", "Value Healing", "Security Recovery", "Self-Worth Journey"],
-        reading: `Chiron in Taurus indicates a core wound around self-worth, resources, and physical security. Early experiences may have created feelings of not being valuable enough or fear of not having enough. The healing journey involves developing true self-worth independent of possessions. The gift that emerges is the ability to help others recognize their inherent value.`
+        reading: `Chiron in Taurus indicates a core wound around self-worth, material security, and the deeply personal question of whether one is truly valuable. Early experiences may have created feelings of not being enough — not worthy enough of love, not deserving of abundance, or perpetually insecure about whether basic needs would be met.
+
+This wound often manifests as a complicated relationship with money and possessions — either hoarding out of scarcity fear or rejecting material needs as unspiritual. There may be a persistent sense that true comfort and security are always just out of reach, no matter how much is accumulated.
+
+The healing journey involves developing genuine self-worth that is independent of external possessions, financial status, or others' valuations. This soul must learn from within that their value is inherent — not earned through productivity, attractiveness, or usefulness. The body itself often becomes a vehicle for healing through grounding practices.
+
+The extraordinary gift that emerges is the ability to help others recognize and claim their own inherent value. Having navigated the painful territory of worthlessness, this soul becomes a powerful mirror reflecting back the genuine worth that others cannot see in themselves.`
     },
     Gemini: {
         keywords: ["Communication Wound", "Learning Healing", "Voice Recovery", "Mental Clarity"],
-        reading: `Chiron in Gemini indicates a core wound around communication, learning, and being heard. Early experiences may have challenged the ability to express thoughts or created learning difficulties. The healing journey involves finding one's authentic voice. The gift that emerges is the ability to help others communicate and learn with confidence.`
+        reading: `Chiron in Gemini indicates a core wound around communication, learning, and the ability to be heard and understood. Early experiences may have challenged the capacity to express thoughts — learning difficulties, being silenced or ridiculed for speaking up, or growing up in an environment where important things went perpetually unsaid.
+
+This wound often manifests as anxiety around self-expression, a belief that one's ideas are not valuable enough to share, or conversely, compulsive talking that masks a deep fear of not being truly heard. The relationship with learning may be complicated — marked by self-doubt despite genuine intelligence.
+
+The healing journey involves finding one's authentic voice and trusting that what one has to say matters. This may require unlearning deeply held beliefs about intellectual inadequacy and discovering that communication is not about perfection but about genuine connection and the courage to share what is real.
+
+The extraordinary gift that emerges is the ability to help others find their own voices and communicate with confidence. Having experienced the pain of silence, this soul develops an extraordinary sensitivity to what others are struggling to express — becoming a gifted teacher, writer, or communicator who gives language to the unspoken.`
     },
     Cancer: {
         keywords: ["Nurturing Wound", "Belonging Healing", "Home Recovery", "Emotional Security"],
-        reading: `Chiron in Cancer indicates a core wound around nurturing, belonging, and emotional security. Early experiences may have created feelings of not belonging or not being properly cared for. The healing journey involves creating inner security and self-nurturing. The gift that emerges is the ability to help others heal family wounds and create true belonging.`
+        reading: `Chiron in Cancer indicates a core wound around nurturing, belonging, and emotional safety. Early experiences may have created a profound sense of not truly belonging — an absent or emotionally unavailable caregiver, an unstable home, or the persistent feeling of being on the outside of warmth and family looking in.
+
+This wound often manifests as difficulty trusting that love is reliable, a tendency to over-nurture others while neglecting personal emotional needs, or a pattern of recreating the very instability that caused the original pain. Home may feel like something that exists for others but remains perpetually elusive for oneself.
+
+The healing journey involves creating inner security and learning to mother oneself with the tenderness that may have been missing in childhood. This soul must build from the inside out — constructing an emotional home within that no external circumstance can demolish. Self-nurturing is not indulgence but medicine.
+
+The extraordinary gift that emerges is the ability to help others heal family wounds and create genuine belonging. Having known the ache of emotional homelessness, this soul develops a profound capacity to create safe emotional spaces where others can finally feel they are held, seen, and welcome.`
     },
     Leo: {
         keywords: ["Recognition Wound", "Creative Healing", "Heart Recovery", "Joy Reclamation"],
-        reading: `Chiron in Leo indicates a core wound around recognition, creativity, and the right to be special. Early experiences may have suppressed self-expression or created shame around seeking attention. The healing journey involves reclaiming creative joy and the right to shine. The gift that emerges is the ability to help others express their unique gifts without shame.`
+        reading: `Chiron in Leo indicates a core wound around recognition, creative expression, and the right to be seen as special. Early experiences may have suppressed natural exuberance — being told to stop showing off, having creative efforts dismissed, or learning that seeking attention or joy was dangerous or shameful.
+
+This wound often manifests as a painful paradox: a deep need to express and be recognized alongside an equally deep terror of visibility. Creative gifts may be hidden or downplayed, and joy may feel like something that must be earned rather than freely experienced. The inner child carries bruises around play and self-expression.
+
+The healing journey involves reclaiming creative joy without requiring external validation to justify it. This soul must learn to create for the sake of creating, to shine without permission, and to understand that their unique expression is not vanity but a vital contribution that the world genuinely needs.
+
+The extraordinary gift that emerges is the ability to help others express their unique gifts without shame or apology. Having navigated the painful territory between hiding and shining, this soul becomes a powerful encourager — someone who sees the spark in others and fans it into flame with genuine celebration.`
     },
     Virgo: {
         keywords: ["Perfection Wound", "Service Healing", "Health Recovery", "Self-Acceptance"],
-        reading: `Chiron in Virgo indicates a core wound around perfection, usefulness, and health. Early experiences may have created feelings of never being good enough or anxieties around imperfection. The healing journey involves accepting imperfection as human. The gift that emerges is the ability to help others accept themselves while still growing.`
+        reading: `Chiron in Virgo indicates a core wound around perfection, usefulness, and the belief that one must earn love through flawless performance. Early experiences may have created a relentless inner critic — environments where mistakes were punished, where worthiness was tied to productivity, or where the body was a source of anxiety rather than comfort.
+
+This wound often manifests as chronic self-criticism, health anxieties, or a compulsive need to be useful in order to feel worthy of love and belonging. There may be a persistent sense that no matter how hard one tries, the effort is never quite good enough — a moving goalpost of perfection that ensures perpetual inadequacy.
+
+The healing journey involves accepting imperfection as inherently human rather than as personal failure. This soul must learn that they are worthy of love not because of what they do but because of who they are — that flaws are not problems to solve but textures that make a life beautiful and real.
+
+The extraordinary gift that emerges is the ability to help others accept themselves while still growing. Having intimately known the prison of perfectionism, this soul becomes a compassionate guide who shows others that self-improvement and self-acceptance are not opposites but partners in the journey toward wholeness.`
     },
     Libra: {
         keywords: ["Relationship Wound", "Balance Healing", "Partnership Recovery", "Harmony Seeking"],
-        reading: `Chiron in Libra indicates a core wound around relationships, fairness, and being truly seen by others. Early experiences may have created relationship patterns of losing oneself or unfair treatment. The healing journey involves finding balance between self and other. The gift that emerges is the ability to help others create healthy, balanced relationships.`
+        reading: `Chiron in Libra indicates a core wound around relationships, fairness, and the ability to be truly seen and valued by others. Early experiences may have established painful patterns — relationships where needs were systematically dismissed, environments where maintaining peace required sacrificing authenticity, or formative encounters with injustice that shattered trust in fairness.
+
+This wound often manifests as a pattern of losing oneself in relationships, attracting partners who replicate early imbalances, or avoiding intimacy altogether because the cost of connection feels too high. There may be a deep belief that true partnership — balanced, fair, and mutually nourishing — is something that happens for other people.
+
+The healing journey involves learning that healthy relationship begins with a healthy relationship with oneself. This soul must discover that they can be fully themselves within partnership — that love does not require self-abandonment, and that speaking difficult truths actually strengthens rather than destroys genuine connection.
+
+The extraordinary gift that emerges is the ability to help others create balanced, healthy relationships. Having navigated the painful landscape of codependency and self-loss, this soul becomes a wise counselor who understands both the beauty and the danger of deep connection — and how to have one without the other.`
     },
     Scorpio: {
         keywords: ["Trust Wound", "Power Healing", "Intimacy Recovery", "Transformation"],
-        reading: `Chiron in Scorpio indicates a core wound around trust, power, and deep intimacy. Early experiences may have involved betrayal, abuse, or profound loss. The healing journey involves learning to trust again and use power wisely. The gift that emerges is the ability to help others transform their deepest wounds into wisdom.`
+        reading: `Chiron in Scorpio indicates a core wound around trust, power, and the capacity for deep intimacy. Early experiences often involved encounters with the darker aspects of human nature — betrayal, abuse, profound loss, or exposure to situations where power was wielded destructively. The soul carries a deep knowledge of how much damage vulnerability can invite.
+
+This wound often manifests as difficulty trusting others with emotional or physical closeness, a need to control situations to prevent further harm, or a pattern of crisis and transformation that feels relentless. Intimacy is simultaneously craved and feared because the soul knows, from direct experience, what can happen when defenses come down.
+
+The healing journey involves learning to trust again — not naively, but with the informed wisdom that only direct experience with betrayal can teach. This soul must discover that vulnerability, chosen consciously, is not weakness but extraordinary courage, and that true power lies in the ability to transform pain rather than perpetuate it.
+
+The extraordinary gift that emerges is the ability to help others transform their deepest wounds into wisdom. Having survived the underworld and emerged intact, this soul becomes a powerful healer and guide for those facing their own darkness — offering not false comfort but genuine companionship through the fire.`
     },
     Sagittarius: {
         keywords: ["Faith Wound", "Meaning Healing", "Truth Recovery", "Belief Restoration"],
-        reading: `Chiron in Sagittarius indicates a core wound around meaning, faith, and truth. Early experiences may have shattered beliefs or created cynicism about life's meaning. The healing journey involves finding authentic personal truth. The gift that emerges is the ability to help others find meaning and restore healthy faith.`
+        reading: `Chiron in Sagittarius indicates a core wound around meaning, faith, and the search for truth. Early experiences may have shattered beliefs — religious hypocrisy, betrayal by trusted teachers, cultural displacement, or events so senseless that they demolished any comfortable framework for understanding why things happen.
+
+This wound often manifests as cynicism masking a desperate hunger for meaning, a restless searching that never quite arrives, or rigid adherence to beliefs that serve as armor against the terror of meaninglessness. Travel and education may be pursued compulsively as attempts to find the truth that will finally make everything make sense.
+
+The healing journey involves finding authentic personal truth rather than borrowing it from institutions or authorities. This soul must build their own philosophy from the ground of direct experience — accepting that some questions may never have answers, and that the search itself, conducted with honesty, is a valid form of faith.
+
+The extraordinary gift that emerges is the ability to help others find meaning and restore genuine faith. Having experienced the devastating loss of borrowed belief, this soul becomes a truthful guide who does not offer easy answers but accompanies others on the honest search for meaning that transforms despair into wisdom.`
     },
     Capricorn: {
         keywords: ["Authority Wound", "Achievement Healing", "Structure Recovery", "Self-Mastery"],
-        reading: `Chiron in Capricorn indicates a core wound around authority, achievement, and success. Early experiences may have involved harsh authority figures or feelings of failure. The healing journey involves becoming one's own healthy authority. The gift that emerges is the ability to help others achieve their goals with wisdom and integrity.`
+        reading: `Chiron in Capricorn indicates a core wound around authority, achievement, and the structures that are supposed to provide safety and order. Early experiences may have involved harsh or absent authority figures, institutional failures, or the painful discovery that working hard and following the rules does not guarantee the rewards that were promised.
+
+This wound often manifests as a complicated relationship with ambition — either relentless overachievement that never feels sufficient or a deep reluctance to claim authority for fear of becoming the very power structures that caused the original pain. Success and failure both carry disproportionate emotional weight.
+
+The healing journey involves becoming one's own healthy authority. This soul must learn to create internal structures of discipline and achievement that serve genuine growth rather than anxious compensation. The goal is not to reject ambition but to purify it — to pursue excellence from a place of wholeness rather than woundedness.
+
+The extraordinary gift that emerges is the ability to help others achieve their goals with wisdom and integrity. Having experienced both the failure and the redemption of worldly structures, this soul becomes a mentor who understands that true success is built on self-respect, not external validation.`
     },
     Aquarius: {
         keywords: ["Belonging Wound", "Individuality Healing", "Community Recovery", "Authentic Self"],
-        reading: `Chiron in Aquarius indicates a core wound around belonging, individuality, and being different. Early experiences may have created feelings of being an outsider or having to hide uniqueness. The healing journey involves embracing individuality while finding true community. The gift that emerges is the ability to help others celebrate their uniqueness.`
+        reading: `Chiron in Aquarius indicates a core wound around belonging, individuality, and the tension between fitting in and being authentically oneself. Early experiences may have created a persistent sense of being fundamentally different — an outsider who could never quite belong, whose uniqueness felt more like a curse than a gift.
+
+This wound often manifests as a painful oscillation between desperate attempts to belong and defiant rejection of group norms. There may be a belief that full acceptance requires hiding one's true nature, or conversely, that being authentic means accepting permanent isolation. Community feels simultaneously essential and unattainable.
+
+The healing journey involves discovering that true belonging does not require conformity. This soul must find or create communities that celebrate rather than merely tolerate difference — learning that their uniqueness is precisely what they have to offer, and that the right people will recognize and value exactly what makes them unusual.
+
+The extraordinary gift that emerges is the ability to help others celebrate their uniqueness and find genuine community. Having navigated the painful territory of otherness, this soul becomes a bridge-builder who creates spaces where diverse individuals can belong without sacrificing authenticity — where being different is not just accepted but essential.`
     },
     Pisces: {
         keywords: ["Spiritual Wound", "Unity Healing", "Boundary Recovery", "Divine Connection"],
-        reading: `Chiron in Pisces indicates a core wound around spirituality, boundaries, and connection to something greater. Early experiences may have involved spiritual confusion, addiction, or overwhelming sensitivity. The healing journey involves healthy spirituality and boundaries. The gift that emerges is the ability to help others find spiritual connection while staying grounded.`
+        reading: `Chiron in Pisces indicates a core wound around spirituality, boundaries, and the connection between the individual self and something greater. Early experiences may have involved spiritual confusion, overwhelming sensitivity to others' pain, exposure to addiction, or encounters that blurred the line between transcendence and dissolution.
+
+This wound often manifests as boundary difficulties — absorbing others' emotions, escaping into fantasy or substances, or feeling simultaneously drawn to and terrified of spiritual surrender. The sensitivity here is extraordinary but untrained, making the world feel overwhelmingly raw until healthy containers for that sensitivity are developed.
+
+The healing journey involves learning that spiritual connection and personal boundaries are not opposites but partners. This soul must discover how to open to the transcendent without losing themselves — how to feel everything without drowning, how to serve without being consumed, and how to trust the divine without abandoning practical reality.
+
+The extraordinary gift that emerges is the ability to help others find genuine spiritual connection while staying grounded. Having navigated the treacherous waters between dissolution and transcendence, this soul becomes a gifted healer and spiritual guide who can hold sacred space for others' journeys without losing their own center.`
     }
 };
 
 var LILITH_SIGN_READINGS = {
     Aries: {
         keywords: ["Suppressed Rage", "Hidden Warrior", "Shadow Independence", "Reclaimed Power"],
-        reading: `Black Moon Lilith in Aries represents suppressed or rejected anger, independence, and warrior energy. There may be hidden power around assertiveness that was shamed or punished. The shadow work involves reclaiming the right to be angry and to fight for oneself. The gift of integration is becoming a fierce protector who uses anger constructively.`
+        reading: `Black Moon Lilith in Aries represents the suppressed or rejected warrior within — the anger, independence, and fierce autonomy that was shamed, punished, or deemed unacceptable. Somewhere in this soul's story, asserting themselves or expressing rage was met with consequences severe enough to drive that power underground.
+
+The shadow manifestation is a complicated relationship with anger. It may explode in disproportionate bursts after long periods of suppression, or it may turn inward as self-sabotage. The drive for independence may operate unconsciously — creating conflicts that force separation rather than directly claiming the freedom that is needed.
+
+The shadow work involves learning to recognize anger as valid information rather than a character flaw. This soul must reclaim the right to fight — for themselves, for their boundaries, for what matters — without guilt or shame. Anger, when owned consciously, becomes a precision tool rather than a destructive force.
+
+The gift of integration is becoming a fierce protector who channels warrior energy constructively. Once reclaimed, this placement produces extraordinary courage — the kind that stands up for the voiceless, confronts injustice without flinching, and uses righteous anger as fuel for meaningful change.`
     },
     Taurus: {
         keywords: ["Suppressed Desire", "Hidden Sensuality", "Shadow Worth", "Reclaimed Body"],
-        reading: `Black Moon Lilith in Taurus represents suppressed or rejected sensuality, desire, and self-worth. There may be hidden power around physical pleasure or material needs that was shamed. The shadow work involves reclaiming the right to desire and enjoy. The gift of integration is becoming comfortable in one's body and unapologetically valuing oneself.`
+        reading: `Black Moon Lilith in Taurus represents the suppressed or rejected sensuality, physical desire, and unapologetic self-worth that was shamed or denied. Somewhere in this soul's story, wanting things — pleasure, beauty, abundance, physical satisfaction — was treated as evidence of moral weakness or dangerous excess.
+
+The shadow manifestation is a complicated relationship with the body and material desires. There may be cycles of deprivation and indulgence, discomfort with physical pleasure, or a persistent sense that wanting things makes one greedy or unspiritual. Self-worth may be unconsciously tied to denial rather than enjoyment.
+
+The shadow work involves reclaiming the right to want, to enjoy, and to inhabit the body fully without apology. This soul must learn that physical pleasure is not sinful, that material abundance is not shameful, and that the body's desires carry wisdom that the mind alone cannot access.
+
+The gift of integration is becoming magnificently comfortable in one's own skin — someone who models healthy embodiment and unapologetic self-valuation. Once reclaimed, this placement produces a grounded, sensual presence that gives others permission to enjoy their own physical existence without guilt.`
     },
     Gemini: {
         keywords: ["Suppressed Voice", "Hidden Truths", "Shadow Intellect", "Reclaimed Expression"],
-        reading: `Black Moon Lilith in Gemini represents suppressed or rejected communication, thoughts, and truths. There may be hidden power around saying what others don't want to hear. The shadow work involves speaking uncomfortable truths. The gift of integration is becoming a voice for what needs to be said but rarely is.`
+        reading: `Black Moon Lilith in Gemini represents the suppressed or rejected voice — the inconvenient truths, dangerous ideas, and uncomfortable observations that this soul learned to keep silent. Somewhere in the story, speaking honestly was met with punishment, dismissal, or social exile severe enough to teach that certain thoughts must never be spoken aloud.
+
+The shadow manifestation is a complicated relationship with honesty and expression. There may be compulsive truth-telling that alienates others, or its opposite — a carefully constructed persona that says only what is safe. Gossip, manipulation through information, or intellectual dishonesty may operate as shadow outlets for the suppressed voice.
+
+The shadow work involves learning to speak uncomfortable truths with both courage and compassion. This soul must reclaim the right to say what they see, think what they think, and share what they know — even when it disrupts comfortable narratives or challenges consensus.
+
+The gift of integration is becoming a voice for what needs to be said but rarely is. Once reclaimed, this placement produces extraordinary communicators who cut through pretense with laser precision — truth-tellers whose words may sting but ultimately liberate everyone they touch from the prison of denial.`
     },
     Cancer: {
         keywords: ["Suppressed Needs", "Hidden Emotions", "Shadow Mother", "Reclaimed Nurturing"],
-        reading: `Black Moon Lilith in Cancer represents suppressed or rejected emotional needs and nurturing instincts. There may be hidden power around the dark mother or complex maternal feelings. The shadow work involves acknowledging all emotions, including the uncomfortable ones. The gift of integration is authentic emotional expression and nurturing without martyrdom.`
+        reading: `Black Moon Lilith in Cancer represents the suppressed or rejected emotional needs and the darker dimensions of nurturing instinct. Somewhere in this soul's story, having needs was treated as weakness, or the full range of maternal and emotional expression — including rage, grief, and fierce protectiveness — was deemed unacceptable.
+
+The shadow manifestation is a complicated relationship with emotional vulnerability and caregiving. There may be compulsive nurturing that masks a hunger to be nurtured, emotional manipulation disguised as care, or a complete shutdown of emotional needs as a survival strategy. The inner mother carries wounds that affect all expressions of love and care.
+
+The shadow work involves acknowledging the full spectrum of emotional experience — including the uncomfortable feelings that nurturing cultures would rather suppress. This soul must allow themselves to need, to rage, to grieve without performing acceptable versions of these raw human experiences.
+
+The gift of integration is authentic emotional expression and nurturing without martyrdom. Once reclaimed, this placement produces someone who can hold space for the full catastrophe of human emotion — the dark and the light — offering genuine care that does not require the caregiver to disappear in the process.`
     },
     Leo: {
         keywords: ["Suppressed Creativity", "Hidden Ego", "Shadow Queen", "Reclaimed Spotlight"],
-        reading: `Black Moon Lilith in Leo represents suppressed or rejected creative power and need for recognition. There may be hidden power around ambition or desire for attention that was shamed. The shadow work involves reclaiming the right to shine brightly. The gift of integration is radiating authentic creative power without apology.`
+        reading: `Black Moon Lilith in Leo represents the suppressed or rejected creative power, ambition, and hunger for recognition that was shamed into hiding. Somewhere in this soul's story, the desire to shine — to be seen, celebrated, and adored — was treated as narcissism, vanity, or a threat to others' comfort.
+
+The shadow manifestation is a complicated relationship with attention and creative expression. There may be secret ambition that is never publicly owned, creative gifts that remain permanently hidden, or an oscillation between dramatic attention-seeking and complete withdrawal. The inner sovereign has been exiled from their own throne.
+
+The shadow work involves reclaiming the right to shine brightly without dimming for anyone's comfort. This soul must learn that their creative power is not arrogance — it is a force of nature that was never meant to be contained. Wanting recognition is not pathology; it is the natural response of genuine gifts seeking expression.
+
+The gift of integration is radiating authentic creative power that illuminates rather than intimidates. Once reclaimed, this placement produces a magnificent creative presence — someone who shines so unapologetically that they give everyone around them permission to claim their own light without shame.`
     },
     Virgo: {
         keywords: ["Suppressed Criticism", "Hidden Perfection", "Shadow Healer", "Reclaimed Discernment"],
-        reading: `Black Moon Lilith in Virgo represents suppressed or rejected critical ability and healing instincts. There may be hidden power around seeing flaws that others miss. The shadow work involves owning discernment without self-punishment. The gift of integration is becoming a healer who sees what needs improvement without shame.`
+        reading: `Black Moon Lilith in Virgo represents the suppressed or rejected critical faculty and the darker dimensions of the healing instinct. Somewhere in this soul's story, the ability to see flaws — in systems, in people, in oneself — was treated as destructive rather than constructive. The truth-seeing eye was forced shut.
+
+The shadow manifestation is a complicated relationship with perfectionism and service. There may be relentless self-criticism that no achievement can satisfy, compulsive helping that masks a need for control, or a talent for identifying exactly what is wrong that alienates rather than heals. The inner analyst operates in shadow, cutting where it could cure.
+
+The shadow work involves owning the full power of discernment without turning it into self-punishment. This soul must learn that seeing what is broken is the first step toward healing — that critical intelligence, when wielded with compassion rather than contempt, is one of the most valuable gifts a human can possess.
+
+The gift of integration is becoming a healer who sees clearly without destroying. Once reclaimed, this placement produces extraordinary diagnosticians of human experience — people who can identify exactly what needs attention and address it with precision and care, transforming their penetrating sight into genuine service.`
     },
     Libra: {
         keywords: ["Suppressed Conflict", "Hidden Desires", "Shadow Partner", "Reclaimed Boundaries"],
-        reading: `Black Moon Lilith in Libra represents suppressed or rejected personal desires in relationships. There may be hidden power around taking rather than always giving in partnerships. The shadow work involves acknowledging selfish needs in relationships. The gift of integration is balanced relationships where own needs matter equally.`
+        reading: `Black Moon Lilith in Libra represents the suppressed or rejected personal desires that were sacrificed on the altar of relationship harmony. Somewhere in this soul's story, having individual wants within partnership was treated as selfish, and the price of love was the systematic erasure of personal needs.
+
+The shadow manifestation is a complicated relationship with fairness and partnership. There may be a pattern of giving everything while secretly keeping score, passive-aggressive resentment that undermines the very harmony being maintained, or attraction to relationships that replay the original dynamic of self-abandonment for the sake of connection.
+
+The shadow work involves acknowledging that personal desires are not selfish but essential. This soul must learn that a relationship built on one person's systematic self-denial is not harmonious — it is a pressure cooker. Genuine partnership requires two whole people, not one whole person and one ghost of the person they used to be.
+
+The gift of integration is creating relationships where both partners' needs genuinely matter. Once reclaimed, this placement produces someone who models radical honesty within partnership — proving that real love does not require self-erasure and that the most beautiful relationships are built on the uncomfortable foundation of mutual truth.`
     },
     Scorpio: {
         keywords: ["Suppressed Power", "Hidden Darkness", "Shadow Transformer", "Reclaimed Depth"],
-        reading: `Black Moon Lilith in Scorpio represents the full depth of suppressed power, sexuality, and the taboo. There may be hidden power around death, sex, and transformation that society fears. The shadow work involves embracing the dark feminine in all her power. The gift of integration is becoming a transformer who is unafraid of darkness.`
+        reading: `Black Moon Lilith in Scorpio represents the full depth of suppressed power, raw sexuality, and engagement with the taboo. This is Lilith at her most potent — the shadow material here is not mild but oceanic in its depth and intensity. Somewhere in this soul's story, the full force of their primal power was deemed too dangerous to exist.
+
+The shadow manifestation is a complicated relationship with power, sexuality, and the darker dimensions of human experience. There may be compulsive attraction to crisis and intensity, unconscious manipulation as a survival mechanism, or a terror of one's own power so complete that it is projected onto others who then seem threatening.
+
+The shadow work involves embracing the dark feminine in all her power — not the sanitized version but the real thing. This soul must learn to face their own capacity for destruction, their own depths of desire, and their own relationship with power and death without flinching or dissociating.
+
+The gift of integration is becoming a transformer who is genuinely unafraid of darkness. Once reclaimed, this placement produces extraordinary healers, therapists, and guides who can accompany others into the underworld because they know the territory intimately — offering not rescue from the dark but companionship through it.`
     },
     Sagittarius: {
         keywords: ["Suppressed Truth", "Hidden Wildness", "Shadow Seeker", "Reclaimed Freedom"],
-        reading: `Black Moon Lilith in Sagittarius represents suppressed or rejected wild freedom and inconvenient truths. There may be hidden power around beliefs that challenge consensus. The shadow work involves speaking truth regardless of consequences. The gift of integration is becoming a truth-teller who cannot be silenced or tamed.`
+        reading: `Black Moon Lilith in Sagittarius represents the suppressed or rejected wildness, inconvenient truths, and untameable freedom that was forced into domestication. Somewhere in this soul's story, the expansive, truth-seeking, boundary-breaking spirit was caged — by dogma, by social expectation, or by beliefs that freedom was irresponsible.
+
+The shadow manifestation is a complicated relationship with truth and freedom. There may be a pattern of explosive escapes from situations that have become too confining, beliefs held with such rigid intensity that they become new prisons, or a hunger for experience so intense it becomes self-destructive rather than liberating.
+
+The shadow work involves speaking truth regardless of consequences while developing the wisdom to do so constructively. This soul must reclaim the wild, uncensored, boundary-crossing spirit without using it as a weapon or an escape hatch. Freedom must be claimed consciously rather than seized in desperate flight.
+
+The gift of integration is becoming a truth-teller and freedom-seeker who cannot be silenced or tamed. Once reclaimed, this placement produces magnificent wild spirits whose very existence challenges the comfortable lies that keep others small — people who live proof that authentic freedom and genuine responsibility can coexist.`
     },
     Capricorn: {
         keywords: ["Suppressed Ambition", "Hidden Authority", "Shadow Queen", "Reclaimed Power"],
-        reading: `Black Moon Lilith in Capricorn represents suppressed or rejected ambition and authority. There may be hidden power around worldly success that women especially were taught to hide. The shadow work involves owning ambition without shame. The gift of integration is becoming an authority figure who uses power wisely.`
+        reading: `Black Moon Lilith in Capricorn represents the suppressed or rejected ambition, authority, and worldly power that was deemed inappropriate or dangerous. Somewhere in this soul's story — and often in the collective story of their gender or culture — claiming public power, professional authority, or material success was met with punishment or shame.
+
+The shadow manifestation is a complicated relationship with success and authority. There may be relentless ambition that cannot be publicly acknowledged, self-sabotage at the threshold of achievement, or a pattern of building impressive structures only to destroy them before they are completed. Power is simultaneously craved and feared.
+
+The shadow work involves owning ambition without apology and claiming authority as a birthright rather than a transgression. This soul must learn that wanting to succeed, to lead, to build something enduring in the material world is not a character flaw — it is a legitimate expression of their full power.
+
+The gift of integration is becoming an authority figure who wields power wisely and openly. Once reclaimed, this placement produces formidable leaders whose ambition is liberated from shame — people who build structures that serve not just personal success but collective empowerment, proving that power itself is not corrupt.`
     },
     Aquarius: {
         keywords: ["Suppressed Rebellion", "Hidden Genius", "Shadow Revolutionary", "Reclaimed Originality"],
-        reading: `Black Moon Lilith in Aquarius represents suppressed or rejected revolutionary thinking and genius. There may be hidden power around ideas too radical for acceptance. The shadow work involves embracing inner rebel and visionary. The gift of integration is becoming an innovator who changes the world through radical thinking.`
+        reading: `Black Moon Lilith in Aquarius represents the suppressed or rejected revolutionary thinking, radical originality, and visionary genius that was deemed too extreme for acceptance. Somewhere in this soul's story, ideas that were genuinely ahead of their time were met with exclusion, ridicule, or the terrifying message that being truly original means being permanently alone.
+
+The shadow manifestation is a complicated relationship with belonging and originality. There may be a pattern of deliberately alienating others to maintain independence, hiding genuinely brilliant ideas behind conventional facades, or oscillating between desperate conformity and explosive rebellion. The genius operates in shadow, never fully owned.
+
+The shadow work involves embracing the inner rebel and visionary without requiring the world's approval or understanding. This soul must learn that truly original thought is inherently uncomfortable for the mainstream — and that discomfort in others is not evidence of wrongness but often evidence of genuine insight.
+
+The gift of integration is becoming an innovator who changes the world through radical thinking. Once reclaimed, this placement produces genuine visionaries whose ideas may disturb the status quo but ultimately advance human evolution — people who have the courage to think what no one else is willing to think and speak what no one else dares to say.`
     },
     Pisces: {
         keywords: ["Suppressed Intuition", "Hidden Psychic", "Shadow Mystic", "Reclaimed Spirituality"],
-        reading: `Black Moon Lilith in Pisces represents suppressed or rejected psychic abilities and spiritual gifts. There may be hidden power around mystical experiences that were dismissed or feared. The shadow work involves trusting and developing intuitive gifts. The gift of integration is becoming a mystic who bridges worlds without losing oneself.`
+        reading: `Black Moon Lilith in Pisces represents the suppressed or rejected psychic abilities, mystical experiences, and spiritual gifts that were dismissed, feared, or pathologized. Somewhere in this soul's story, their extraordinary sensitivity and connection to unseen dimensions was treated not as a gift but as a disorder — something to be medicated, prayed away, or hidden.
+
+The shadow manifestation is a complicated relationship with spiritual experience and the boundaries between self and other. There may be escapism through substances or fantasy, psychic abilities that operate chaotically without conscious direction, or a tendency to merge with others' pain in ways that are destructive rather than healing.
+
+The shadow work involves trusting and deliberately developing intuitive gifts rather than allowing them to operate from shadow. This soul must learn to distinguish between genuine spiritual sensitivity and unhealthy boundary dissolution — honoring the mystic within while maintaining the practical grounding that keeps otherworldly gifts useful rather than overwhelming.
+
+The gift of integration is becoming a mystic who bridges worlds without losing themselves. Once reclaimed, this placement produces extraordinary spiritual workers — healers, artists, and visionaries who channel transcendent wisdom into forms that serve the human world, proving that the veil between worlds is not a barrier but a doorway.`
     }
 };
 
@@ -1380,62 +1812,134 @@ var NORTH_NODE_READINGS = {
     Aries: {
         keywords: ["Independence", "Courage", "Self-Focus", "Initiative"],
         summary: "Soul growth through developing independence and self-assertion.",
-        reading: `The North Node in Aries indicates a soul journey toward independence, courage, and self-assertion. Past life patterns (South Node in Libra) involved focusing on others, seeking harmony, and avoiding conflict. This lifetime calls for developing the courage to put oneself first, take independent action, and assert individual needs. Growth comes through learning to act without seeking permission or approval, embracing healthy selfishness, and developing warrior energy.`
+        reading: `The North Node in Aries indicates a soul journey toward independence, courage, and authentic self-assertion. Past life patterns (South Node in Libra) created deep expertise in partnership, compromise, and keeping the peace — but at the cost of knowing who they are as an individual, separate from relationships.
+
+This lifetime calls for the uncomfortable but essential work of putting oneself first. The old pattern of deferring to others, seeking consensus before acting, and defining identity through partnership must give way to a new paradigm: self-reliance, bold initiative, and the courage to act on personal conviction even when it disrupts harmony.
+
+Growth comes through each moment of choosing authenticity over approval. Learning to say no, to disagree openly, to pursue personal goals without requiring everyone's permission — these are the small acts of courage that fulfill this soul's evolutionary contract. Conflict, rather than being avoided, becomes a teacher.
+
+The paradox is that developing genuine independence actually improves relationships. A soul who knows themselves fully brings far more to partnership than one who has lost themselves in it. The warrior heart this lifetime demands creates the authentic individual that others can truly love.`
     },
     Taurus: {
         keywords: ["Stability", "Self-Worth", "Simplicity", "Patience"],
         summary: "Soul growth through building stability and self-reliance.",
-        reading: `The North Node in Taurus indicates a soul journey toward stability, self-worth, and simple pleasures. Past life patterns (South Node in Scorpio) involved intensity, crisis, and depending on others' resources. This lifetime calls for developing inner security, building one's own resources, and finding peace in simplicity. Growth comes through patience, steady effort, and learning to value oneself independently.`
+        reading: `The North Node in Taurus indicates a soul journey toward stability, self-worth, and the profound wisdom of simplicity. Past life patterns (South Node in Scorpio) created deep familiarity with intensity, crisis, and transformation — but also a dependency on drama and external upheaval as the only way to feel alive.
+
+This lifetime calls for the radical act of finding peace in the ordinary. The old pattern of gravitating toward crisis, depending on others' resources, and using emotional intensity as a substitute for genuine security must give way to a new paradigm: building one's own stability, developing personal resources, and discovering that calm is not boring but profoundly nourishing.
+
+Growth comes through patience and steady effort rather than dramatic transformation. Learning to stay, to build slowly, to appreciate what is already present rather than constantly seeking the next upheaval — these are the evolutionary lessons. The body itself becomes a teacher, grounding this soul in sensory reality.
+
+The paradox is that true transformation becomes possible only from a foundation of stability. A soul who has built genuine inner security can face life's inevitable changes with equanimity rather than reactivity. The peace this lifetime demands creates the unshakeable center from which real power flows.`
     },
     Gemini: {
         keywords: ["Learning", "Communication", "Curiosity", "Flexibility"],
         summary: "Soul growth through communication and staying curious.",
-        reading: `The North Node in Gemini indicates a soul journey toward learning, communication, and mental flexibility. Past life patterns (South Node in Sagittarius) involved knowing the answers, preaching truth, and certainty. This lifetime calls for staying curious, asking questions, and being willing to learn from everyone. Growth comes through listening more than speaking, gathering information before concluding, and embracing not knowing.`
+        reading: `The North Node in Gemini indicates a soul journey toward intellectual curiosity, open communication, and the humility of perpetual learning. Past life patterns (South Node in Sagittarius) created deep expertise in philosophy, teaching, and the confident proclamation of truth — but also a tendency toward dogmatism and the assumption that one already has the answers.
+
+This lifetime calls for exchanging the podium for the student's desk. The old pattern of preaching, assuming moral authority, and treating personal beliefs as universal truth must give way to a new paradigm: asking questions, listening more than speaking, and remaining genuinely open to perspectives that challenge comfortable certainties.
+
+Growth comes through curiosity and intellectual humility. Learning to say "I don't know" is a form of courage for this soul. Gathering information before drawing conclusions, engaging with diverse viewpoints, and treating everyday conversations as sources of genuine wisdom — these are the evolutionary tasks.
+
+The paradox is that true wisdom emerges from embracing not-knowing. A soul who approaches life with beginner's mind discovers truths far more nuanced and valuable than anything dogmatic certainty could produce. The curiosity this lifetime demands creates a wiser teacher than the one who thought they already knew.`
     },
     Cancer: {
         keywords: ["Nurturing", "Emotional Security", "Home", "Vulnerability"],
         summary: "Soul growth through emotional connection and nurturing.",
-        reading: `The North Node in Cancer indicates a soul journey toward emotional security, nurturing, and creating home. Past life patterns (South Node in Capricorn) involved career focus, authority, and emotional suppression. This lifetime calls for developing emotional intelligence, creating a nurturing environment, and allowing vulnerability. Growth comes through connecting with family and feelings rather than achievement.`
+        reading: `The North Node in Cancer indicates a soul journey toward emotional depth, nurturing connection, and the creation of genuine belonging. Past life patterns (South Node in Capricorn) created mastery of achievement, public responsibility, and professional authority — but often at the cost of emotional availability, family connection, and the ability to be vulnerable.
+
+This lifetime calls for trading the boardroom for the living room. The old pattern of defining worth through accomplishment, suppressing emotions for the sake of productivity, and treating vulnerability as weakness must give way to a new paradigm: emotional intelligence, familial devotion, and the courage to need and be needed.
+
+Growth comes through allowing feelings to guide decisions alongside logic. Learning to nurture without expecting ROI, to prioritize family over career when the heart insists, and to sit with emotions rather than managing them — these are the evolutionary challenges that reshape this soul's relationship with what truly matters.
+
+The paradox is that emotional fulfillment creates a foundation for even greater achievement. A soul who is nourished by genuine love and belonging brings far more creative energy to their public work than one who is running on empty. The vulnerability this lifetime demands becomes the source of their greatest strength.`
     },
     Leo: {
         keywords: ["Self-Expression", "Creativity", "Joy", "Heart-Centered Living"],
         summary: "Soul growth through creative expression and following the heart.",
-        reading: `The North Node in Leo indicates a soul journey toward self-expression, creativity, and heart-centered living. Past life patterns (South Node in Aquarius) involved group focus, detachment, and suppressing individual needs. This lifetime calls for developing creative talents, expressing unique gifts, and following the heart. Growth comes through being seen, appreciated, and unafraid to shine individually.`
+        reading: `The North Node in Leo indicates a soul journey toward authentic self-expression, creative courage, and the willingness to be seen as a unique individual. Past life patterns (South Node in Aquarius) created expertise in group dynamics, collective thinking, and intellectual detachment — but also a tendency to hide individual brilliance behind group identity and emotional distance.
+
+This lifetime calls for stepping into the spotlight as a singular creative force. The old pattern of deferring to the group, suppressing personal desires for the collective good, and maintaining intellectual distance from emotional experience must give way to a new paradigm: personal expression, creative risk, and wholehearted engagement with life.
+
+Growth comes through each act of creative courage. Performing, creating, leading from the heart rather than the head, risking being seen in all one's individual glory — these are the evolutionary lessons. Joy itself becomes a spiritual practice, and the willingness to be dramatic and passionate replaces cool detachment.
+
+The paradox is that authentic individual expression serves the collective far more powerfully than self-effacing group participation. A soul who dares to shine inspires others to find their own light. The creative courage this lifetime demands becomes a gift not just to the individual but to everyone who witnesses it.`
     },
     Virgo: {
         keywords: ["Service", "Discernment", "Practical Skills", "Health"],
         summary: "Soul growth through practical service and self-improvement.",
-        reading: `The North Node in Virgo indicates a soul journey toward practical service, discernment, and self-improvement. Past life patterns (South Node in Pisces) involved escapism, victim mentality, and avoiding practical reality. This lifetime calls for developing useful skills, serving in concrete ways, and taking care of health. Growth comes through discrimination, routine, and humble service.`
+        reading: `The North Node in Virgo indicates a soul journey toward practical service, discernment, and the grounding of spiritual gifts in everyday usefulness. Past life patterns (South Node in Pisces) created deep spiritual sensitivity, compassion, and connection to the transcendent — but also tendencies toward escapism, victimhood, and the avoidance of practical responsibility.
+
+This lifetime calls for bringing heaven down to earth. The old pattern of floating in spiritual abstraction, playing the martyr, and avoiding the unglamorous work of daily life must give way to a new paradigm: developing concrete skills, serving in tangible ways, and treating routine as a form of devotion rather than a prison.
+
+Growth comes through discipline and discernment. Learning to distinguish between genuine intuition and wishful thinking, to show up consistently for unglamorous tasks, and to express compassion through practical help rather than mere emotional sympathy — these are the evolutionary lessons that ground this soul's gifts.
+
+The paradox is that spiritual depth becomes far more powerful when channeled through practical service. A soul who can translate transcendent vision into daily usefulness becomes a genuine healer rather than a well-meaning dreamer. The humble service this lifetime demands becomes the vessel through which real magic enters the world.`
     },
     Libra: {
         keywords: ["Partnership", "Balance", "Diplomacy", "Cooperation"],
         summary: "Soul growth through relationships and cooperation.",
-        reading: `The North Node in Libra indicates a soul journey toward partnership, balance, and cooperation. Past life patterns (South Node in Aries) involved independence, competition, and putting self first. This lifetime calls for developing relationship skills, considering others' needs, and finding balance. Growth comes through true partnership, diplomacy, and learning to compromise.`
+        reading: `The North Node in Libra indicates a soul journey toward true partnership, diplomatic skill, and the art of genuine cooperation. Past life patterns (South Node in Aries) created strong self-reliance, competitive instincts, and the ability to act independently — but also a tendency to steamroll others, avoid compromise, and mistake isolation for strength.
+
+This lifetime calls for learning the sophisticated art of relationship. The old pattern of going it alone, putting personal needs first at all costs, and treating partnership as weakness must give way to a new paradigm: genuine collaboration, active listening, and the recognition that some achievements are only possible through true partnership.
+
+Growth comes through each act of genuine compromise and cooperation. Learning to consider others' perspectives, to negotiate rather than dictate, to find solutions that serve both parties equally — these are the evolutionary challenges. Relationships become the primary classroom for soul development.
+
+The paradox is that genuine partnership amplifies individual power rather than diminishing it. A soul who learns to cooperate skillfully achieves things that no amount of solo effort could produce. The diplomatic grace this lifetime demands creates not weakness but a more sophisticated and effective form of strength.`
     },
     Scorpio: {
         keywords: ["Transformation", "Intimacy", "Shared Resources", "Depth"],
         summary: "Soul growth through deep transformation and intimacy.",
-        reading: `The North Node in Scorpio indicates a soul journey toward transformation, intimacy, and shared resources. Past life patterns (South Node in Taurus) involved security seeking, self-reliance, and resisting change. This lifetime calls for embracing transformation, developing deep intimacy, and learning to merge resources. Growth comes through crisis as catalyst and fearless self-examination.`
+        reading: `The North Node in Scorpio indicates a soul journey toward transformation, profound intimacy, and the courageous exploration of life's deeper dimensions. Past life patterns (South Node in Taurus) created expertise in stability, self-reliance, and material security — but also a resistance to change, emotional depth, and the vulnerability that true intimacy requires.
+
+This lifetime calls for releasing the grip on comfort and diving into the transformative depths. The old pattern of clinging to security, avoiding emotional exposure, and maintaining rigid control over circumstances must give way to a new paradigm: embracing change as medicine, sharing resources and vulnerability, and allowing crisis to serve as catalyst for genuine growth.
+
+Growth comes through each willingness to let go. Learning to share control, to merge resources with another, to allow old versions of self to die so new ones can be born — these are the evolutionary tasks. The soul must discover that what feels like destruction is often reconstruction.
+
+The paradox is that true security can only be found through willingness to transform. A soul who embraces impermanence discovers something far more unshakeable than material stability — the knowledge that they can survive anything and emerge stronger. The depth this lifetime demands creates an indestructible inner resilience.`
     },
     Sagittarius: {
         keywords: ["Faith", "Adventure", "Higher Learning", "Truth-Seeking"],
         summary: "Soul growth through faith, adventure, and truth-seeking.",
-        reading: `The North Node in Sagittarius indicates a soul journey toward faith, adventure, and higher truth. Past life patterns (South Node in Gemini) involved gathering information, staying local, and avoiding commitment to beliefs. This lifetime calls for developing faith, seeking wisdom, and expanding horizons. Growth comes through travel, higher education, and trusting life's meaning.`
+        reading: `The North Node in Sagittarius indicates a soul journey toward expansive faith, bold adventure, and the pursuit of higher truth. Past life patterns (South Node in Gemini) created expertise in gathering information, local networking, and intellectual versatility — but also a tendency to stay safely in the realm of facts and data without committing to deeper meaning.
+
+This lifetime calls for the leap from information to wisdom. The old pattern of collecting details without synthesizing meaning, staying busy with surface-level conversations, and avoiding the risk of committing to beliefs must give way to a new paradigm: seeking truth, expanding horizons, and trusting in life's larger purpose.
+
+Growth comes through adventure — both literal and philosophical. Travel to unfamiliar places, exposure to foreign worldviews, higher education, and the willingness to form genuine convictions — these are the evolutionary catalysts. The soul must learn that not-knowing is different from refusing to search.
+
+The paradox is that committing to a truth, even imperfectly, creates more wisdom than perpetually gathering evidence. A soul who dares to believe in something larger than data discovers that faith is not the enemy of intelligence but its highest expression. The expansive vision this lifetime demands creates the meaningful existence that information alone could never provide.`
     },
     Capricorn: {
         keywords: ["Achievement", "Responsibility", "Authority", "Mastery"],
         summary: "Soul growth through achievement and responsible authority.",
-        reading: `The North Node in Capricorn indicates a soul journey toward achievement, responsibility, and mastery. Past life patterns (South Node in Cancer) involved emotional dependency, family focus, and avoiding worldly responsibility. This lifetime calls for developing competence, building career, and becoming an authority. Growth comes through discipline, public contribution, and emotional maturity.`
+        reading: `The North Node in Capricorn indicates a soul journey toward genuine achievement, mature responsibility, and the claiming of rightful authority. Past life patterns (South Node in Cancer) created deep emotional intelligence, family devotion, and nurturing gifts — but also dependency, emotional reactivity, and the use of vulnerability as a way to avoid the demands of public life.
+
+This lifetime calls for stepping into the world as a competent, responsible authority. The old pattern of retreating into emotional safety, relying on others for security, and avoiding the exposure and accountability of public achievement must give way to a new paradigm: discipline, professional excellence, and the courage to lead.
+
+Growth comes through each act of responsible self-governance. Building career, accepting authority, developing expertise, and showing up consistently for the demands of public contribution — these are the evolutionary tasks. Emotional maturity means using feelings as fuel for achievement rather than as excuses for avoidance.
+
+The paradox is that genuine emotional security comes through mastery rather than retreat. A soul who builds real competence and earns genuine authority discovers an unshakeable confidence that dependency could never provide. The disciplined achievement this lifetime demands creates the very security that emotional clinging sought but could never grasp.`
     },
     Aquarius: {
         keywords: ["Humanitarian Service", "Innovation", "Community", "Independence"],
         summary: "Soul growth through serving humanity and honoring individuality.",
-        reading: `The North Node in Aquarius indicates a soul journey toward humanitarian service, innovation, and honoring individuality. Past life patterns (South Node in Leo) involved ego, drama, and need for personal recognition. This lifetime calls for serving the collective, embracing progressive ideas, and valuing all people equally. Growth comes through community contribution and detachment from ego needs.`
+        reading: `The North Node in Aquarius indicates a soul journey toward humanitarian service, visionary thinking, and contribution to the collective evolution of consciousness. Past life patterns (South Node in Leo) created strong creative identity, personal magnetism, and comfort with attention — but also ego attachment, drama, and the tendency to make everything about personal glory.
+
+This lifetime calls for redirecting personal gifts toward collective service. The old pattern of seeking individual recognition, requiring special treatment, and measuring worth through personal applause must give way to a new paradigm: group consciousness, progressive thinking, and service to causes larger than oneself.
+
+Growth comes through each willingness to serve the group rather than the ego. Joining movements, collaborating as equals, championing innovation that serves humanity, and finding fulfillment in collective progress rather than personal recognition — these are the evolutionary tasks that reshape this soul's understanding of what matters.
+
+The paradox is that genuine individual significance comes through service to something larger. A soul who channels their considerable personal gifts toward collective benefit achieves a far more lasting legacy than one who sought only personal glory. The humanitarian vision this lifetime demands creates an impact that transcends any individual spotlight.`
     },
     Pisces: {
         keywords: ["Spirituality", "Compassion", "Surrender", "Unity"],
         summary: "Soul growth through spiritual connection and compassionate service.",
-        reading: `The North Node in Pisces indicates a soul journey toward spirituality, compassion, and surrender to something greater. Past life patterns (South Node in Virgo) involved perfectionism, criticism, and focusing on flaws. This lifetime calls for developing faith, practicing compassion, and trusting the universe. Growth comes through meditation, artistic expression, and service without expectation.`
+        reading: `The North Node in Pisces indicates a soul journey toward spiritual surrender, unconditional compassion, and the dissolution of the illusion that separates self from the divine whole. Past life patterns (South Node in Virgo) created mastery of analysis, perfectionism, and practical service — but also an over-reliance on logic, critical judgment, and the belief that everything can be fixed through effort.
+
+This lifetime calls for the radical leap from fixing to flowing. The old pattern of analyzing every problem, criticizing every imperfection, and believing that harder work is always the answer must give way to a new paradigm: trust, surrender, compassion, and the understanding that some of life's greatest gifts arrive through letting go rather than holding on.
+
+Growth comes through faith, artistic expression, and selfless service. Learning to trust intuition over analysis, to offer compassion without requiring improvement, and to surrender control to something larger than the rational mind — these are the evolutionary tasks that soften this soul's grip and open their heart.
+
+The paradox is that surrender creates more power than control ever could. A soul who learns to trust the universe's larger plan discovers a peace and purpose that no amount of perfectionist striving could produce. The spiritual faith this lifetime demands becomes the source of a serenity that analysis alone could never find.`
     }
 };
 
