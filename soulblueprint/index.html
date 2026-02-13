@@ -4891,11 +4891,11 @@
                 'Reading the numerology encoded in your name…',
                 'Cross-referencing house placements…',
                 'Discovering hidden patterns in your chart…',
-                'Synthesizing elemental and modal signatures…',
-                'Weaving your cosmic blueprint together…',
-                'Aligning the houses with planetary rulers…',
-                'Interpreting karmic indicators and life cycles…',
-                'Compiling your complete soul portrait…',
+                'Checking how the elements in your chart balance…',
+                'Putting it all together…',
+                'Connecting the dots between your planets and houses…',
+                'Looking at your life themes and cycles…',
+                'Building your complete reading…',
                 'Finalizing your personalized reading…'
             ];
             let msgIndex = 0;
@@ -6735,7 +6735,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                     <p>Simply the day of the month you were born (${birthDay}), reduced if needed. This reveals natural talents and special gifts.</p>
                 </div>
                 
-                <p class="blueprint-footer">Each number carries unique vibrational energy that influences different aspects of your life. Scroll down to discover what each of ${userData.name}'s numbers reveals.</p>
+                <p class="blueprint-footer">Each number has unique qualities that connect to different areas of your life. Scroll down to discover what each of ${userData.name}'s numbers reveals.</p>
             `;
             
             const numExplainer = createCustomReadingCard(
@@ -7193,8 +7193,8 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 numbersSection.appendChild(createReadingCard(
                     'Karmic Debt',
                     karmicReading ? karmicReading.title : `Karmic Debt ${karmicNum}`,
-                    ['Past Life Lessons', 'Karmic Balance', 'Soul Growth'],
-                    karmicReading ? karmicReading.reading : `Karmic Debt ${karmicNum} indicates lessons carried from past lives that require attention in this lifetime.`,
+                    ['Deep Patterns', 'Karmic Balance', 'Soul Growth'],
+                    karmicReading ? karmicReading.reading : `Karmic Debt ${karmicNum} indicates deep lessons that need attention in this lifetime.`,
                     [],
                     []
                 ));
@@ -7204,7 +7204,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     'Karmic Patterns',
                     'Clear Karmic Slate',
                     ['Evolutionary Growth', 'Natural Flow', 'Forward Momentum'],
-                    `<strong>No Classic Karmic Debt Numbers Detected</strong>\n\n${userData.name}'s numerological chart shows no 13, 14, 16, or 19 patterns in the core numbers. This is significant and worth celebrating.\n\n<strong>What This Means:</strong> The absence of karmic debt numbers suggests that this soul's lessons are primarily <em>evolutionary</em> rather than <em>corrective</em>. Where karmic debt indicates specific past-life patterns requiring repair, a clear karmic slate suggests this incarnation is more focused on new growth than old resolution.\n\n<strong>The Opportunity:</strong> Without the weight of karmic debt, ${userData.name} has greater freedom to chart their own course. Energy that might otherwise go toward resolving past patterns can instead be directed toward new achievements, creative expression, and building something original.\n\n<strong>The Responsibility:</strong> A clear karmic slate is not permission for carelessness. The numerological wisdom suggests that choices made in this lifetime are being written fresh—they will form the karmic patterns of future incarnations. This is both liberating and calls for conscious living.\n\n<strong>Integration:</strong> This soul can focus fully on their Life Path lessons, Destiny calling, and Pinnacle opportunities without the undertow of unfinished business. Trust the forward momentum. The universe is not asking for repayment—it's inviting contribution.`,
+                    `<strong>No Classic Karmic Debt Numbers Detected</strong>\n\n${userData.name}'s numerological chart shows no 13, 14, 16, or 19 patterns in the core numbers. This is significant and worth celebrating.\n\n<strong>What This Means:</strong> The absence of karmic debt numbers suggests that this soul's lessons are primarily <em>evolutionary</em> rather than <em>corrective</em>. Where karmic debt indicates specific deep patterns requiring attention, a clear karmic slate suggests this lifetime is more focused on new growth than old resolution.\n\n<strong>The Opportunity:</strong> Without the weight of karmic debt, ${userData.name} has greater freedom to chart their own course. Energy that might otherwise go toward resolving old patterns can instead be directed toward new achievements, creative expression, and building something original.\n\n<strong>The Responsibility:</strong> A clear karmic slate is not permission for carelessness. The numerological wisdom suggests that choices made in this lifetime are being written fresh — they will shape what comes next. This is both liberating and calls for conscious living.\n\n<strong>Integration:</strong> This soul can focus fully on their Life Path lessons, Destiny calling, and Pinnacle opportunities without the undertow of unfinished business. Trust the forward momentum. The universe is not asking for repayment—it's inviting contribution.`,
                     [],
                     []
                 ));
@@ -7234,7 +7234,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 // Deep reading available
                 northNodeContent = `<p><em>${northNodeReading.hook}</em></p>`;
                 
-                if (northNodeReading.pastLifePatterns) northNodeContent += `<p><em>Past Life Patterns:</em><br>${northNodeReading.pastLifePatterns.replace(/this soul/gi, userData.name)}</p>`;
+                if (northNodeReading.pastLifePatterns) northNodeContent += `<p><em>Deep Patterns:</em><br>${northNodeReading.pastLifePatterns.replace(/this soul/gi, userData.name)}</p>`;
                 if (northNodeReading.oldComfortZone) northNodeContent += `<p><em>Old Comfort Zone:</em><br>${northNodeReading.oldComfortZone.replace(/this soul/gi, userData.name)}</p>`;
                 if (northNodeReading.newDirection) northNodeContent += `<p><em>New Direction:</em><br>${northNodeReading.newDirection.replace(/this soul/gi, userData.name)}</p>`;
                 if (northNodeReading.evolutionaryGoal) northNodeContent += `<p><em>Evolutionary Goal:</em><br>${northNodeReading.evolutionaryGoal.replace(/this soul/gi, userData.name)}</p>`;
@@ -7285,9 +7285,9 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 if (southNodeReading.affirmation) southNodeContent += `<p><em>Affirmation:</em><br>"${southNodeReading.affirmation}"</p>`;
             } else if (southNodeReading) {
                 // Basic reading
-                southNodeContent = southNodeReading.reading || `The South Node in ${southNodeSign} represents ${userData.name}'s past life gifts.`;
+                southNodeContent = southNodeReading.reading || `The South Node in ${southNodeSign} represents ${userData.name}'s natural gifts.`;
             } else {
-                southNodeContent = `The South Node in ${southNodeSign} represents ${userData.name}'s past life gifts and natural talents - abilities that come easily but may also represent a comfort zone to grow beyond. While these gifts should be honored, over-reliance on them can prevent the soul growth indicated by the North Node in ${northNode.name}.`;
+                southNodeContent = `The South Node in ${southNodeSign} represents ${userData.name}'s natural gifts and talents - abilities that come easily but may also represent a comfort zone to grow beyond. While these gifts should be honoured, over-reliance on them can prevent the growth indicated by the North Node in ${northNode.name}.`;
             }
             
             soulSection.appendChild(createReadingCard(
@@ -7555,7 +7555,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 );
                 nodesSection.appendChild(createBirthTimeRequiredCard(
                     'Karmic Life Areas',
-                    `The Nodes in Houses reveal which specific life areas ${userData.name}'s soul is growing toward (North Node) and what past-life gifts they bring (South Node). These house positions require precise birth time to determine which of life's 12 theaters host this karmic journey.`
+                    `The Nodes in Houses reveal which specific life areas ${userData.name}'s growth is heading toward (North Node) and what natural gifts they bring (South Node). These house positions require precise birth time to determine which of life's 12 areas host this journey.`
                 ));
                 nodesSectionWrapper.appendChild(nodesSection);
                 container.appendChild(nodesSectionWrapper);
@@ -7789,7 +7789,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (archRole && archRole.reading) {
                         const archWrapper = document.createElement('div');
                         archWrapper.className = 'reading-section';
-                        const archSection = createCustomSection('archetypal-role', '', 'Archetypal Role', 'When all your cosmic data overlaps, you naturally cluster into one of six fundamental roles');
+                        const archSection = createCustomSection('archetypal-role', '', 'Your Natural Role', 'When all your chart data overlaps, you naturally fit into one of six core roles');
                         
                         const ar = archRole.reading;
                         archSection.appendChild(createReadingCard(
@@ -7807,7 +7807,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                                 'Shadow Role: ' + sr2.title,
                                 sr2.subtitle,
                                 ['Secondary', ...sr2.keywords.slice(0, 2)],
-                                'Your secondary archetypal role activates when your primary role is blocked, overwhelmed, or inappropriate for the situation. Think of it as your backup operating system.\n\n' + sr2.reading,
+                                'Your secondary role activates when your primary role is blocked, overwhelmed, or not the right fit for the situation. Think of it as your backup operating system.\n\n' + sr2.reading,
                                 sr2.strengths || [],
                                 sr2.challenges || []
                             ));

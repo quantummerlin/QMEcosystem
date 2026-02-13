@@ -817,7 +817,7 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Aries creates a life punctuated by moments that feel like fate stepping in to light a fire. Just when they might settle into comfortable passivity, destiny sends a wake-up call that requires courage. These activations often feel uncomfortable at first—who wants to be forced into bravery? But they are precisely what the soul has scheduled for its evolution.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns of over-depending on others, waiting to be rescued, or avoiding conflict at the cost of authenticity. This lifetime's Vertex appointments are designed to break those patterns. The soul is learning that it came equipped with everything it needs to lead its own life.
+<strong>Karmic Signatures:</strong> There may be deep patterns of over-depending on others, waiting to be rescued, or avoiding conflict at the cost of authenticity. This lifetime's Vertex appointments are designed to break those patterns. The soul is learning that it came equipped with everything it needs to lead its own life.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often an immediate, visceral recognition that something important is happening. The heart races, adrenaline flows, and there's a sense of "this matters" that transcends ordinary experience. These are the moments when fate reveals its hand.
 
@@ -835,7 +835,7 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Taurus creates a life where the most transformative moments involve resources, beauty, and self-worth. Just when they think they understand their value (or lack thereof), fate sends someone or something that completely reframes the conversation. These activations teach that security is ultimately internal, not external.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around poverty and wealth, worthlessness and excess, taking and giving. This lifetime's Vertex appointments are designed to find the middle path—genuine self-worth that doesn't depend on bank accounts, authentic appreciation of beauty that doesn't become attachment.
+<strong>Karmic Signatures:</strong> There may be deep patterns around poverty and wealth, worthlessness and excess, taking and giving. This lifetime's Vertex appointments are designed to find the middle path—genuine self-worth that doesn't depend on bank accounts, authentic appreciation of beauty that doesn't become attachment.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a felt sense in the body—a grounding, a settling, or its opposite: profound ungrounding that demands they find new footing. These moments often involve sensory richness—the smell of money, the touch of beauty, the taste of abundance or scarcity.
 
@@ -849,11 +849,11 @@ var VERTEX_READINGS = {
         keywords: ["Destiny Through Learning", "Fated Connections", "Karmic Communication", "Encounter Ideas"],
         reading: `The Vertex in Gemini marks the soul as destined to encounter pivotal moments and people who awaken their intellectual gifts and communication abilities. Fate speaks through words, connections, and the exchange of ideas.
 
-<strong>The Fated Encounters:</strong> People will enter this life who bring essential information or who catalyze communication breakthroughs. A teacher who changes their worldview. A sibling relationship that teaches profound lessons. A chance conversation that redirects their entire path. A book that falls open to exactly the right page. These are not coincidences—they are destiny's way of ensuring the right information reaches the right soul at the right time.
+<strong>The Fated Encounters:</strong> People will enter this life who bring essential information or who spark communication breakthroughs. A teacher who changes their worldview. A sibling relationship that teaches profound lessons. A chance conversation that redirects their entire path. A book that falls open to exactly the right page. These are not coincidences—they are destiny's way of ensuring the right information reaches the right soul at the right time.
 
 <strong>The Activation Pattern:</strong> The Vertex in Gemini creates a life where the most transformative moments involve learning, speaking, writing, or connecting. Just when they might settle into intellectual stagnation, fate sends a messenger. These activations often come through seemingly small moments—a phrase overheard, a question asked, a connection made in passing that proves to be pivotal.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around communication—voices silenced, truth unspoken, knowledge hoarded or scattered. This lifetime's Vertex appointments are designed to find authentic expression, to become both student and teacher, to understand that ideas want to be shared.
+<strong>Karmic Signatures:</strong> There may be deep patterns around communication—voices silenced, truth unspoken, knowledge hoarded or scattered. This lifetime's Vertex appointments are designed to find authentic expression, to become both student and teacher, to understand that ideas want to be shared.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a mental quickening—thoughts accelerate, connections form, understanding dawns. There may be literal goosebumps as important information lands. The mind lights up in recognition that something significant is being communicated.
 
@@ -871,7 +871,7 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Cancer creates a life where the most transformative moments involve emotional bonding, creating home, or confronting family patterns. Just when they might armor their heart, fate sends someone or something that requires vulnerability. These activations often feel deeply personal, touching the most tender parts of the psyche.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around family—abandonment, enmeshment, the failure to nurture or be nurtured. This lifetime's Vertex appointments are designed to heal these patterns, to learn that home is a feeling that can be created anywhere, with anyone, at any time.
+<strong>Karmic Signatures:</strong> There may be deep patterns around family—abandonment, unhealthy closeness, the failure to nurture or be nurtured. This lifetime's Vertex appointments are designed to heal these patterns, to learn that home is a feeling that can be created anywhere, with anyone, at any time.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often an immediate feeling of "home"—of recognizing someone or someplace as if from a dream. The heart opens involuntarily. There may be tears that seem to come from a deeper well than the present moment warrants.
 
@@ -889,7 +889,7 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Leo creates a life where the most transformative moments involve creative expression, romantic love, or stepping into visibility. Just when they might settle for the audience rather than the stage, fate sends a catalyst that says "your turn to shine." These activations often feel dramatic—appropriate for a Leo Vertex—like scenes from a movie where everything changes.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around creative suppression, dimming one's light, or alternatively, ego inflation and misuse of attention. This lifetime's Vertex appointments are designed to find authentic expression—shining for the joy of it, not for the applause; creating because one must, not for recognition.
+<strong>Karmic Signatures:</strong> There may be deep patterns around creative suppression, dimming one's light, or alternatively, ego inflation and misuse of attention. This lifetime's Vertex appointments are designed to find authentic expression—shining for the joy of it, not for the applause; creating because one must, not for recognition.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a feeling of heart opening, of warmth spreading through the chest. There may be a sense of recognition—this is what I was born for. The colors seem brighter, the music louder, life more vivid. It feels like falling in love—with a person, a project, or life itself.
 
@@ -907,7 +907,7 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Virgo creates a life where the most transformative moments involve service, health, or the development of mastery. Just when they might drift into purposelessness, fate sends someone or something that needs their unique skills. These activations often feel practical and grounded—not dramatic, but deeply significant.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around service—martyrdom, servitude, perfectionism that paralyzed, or the failure to develop useful skills. This lifetime's Vertex appointments are designed to find sacred service—helping others without losing self, excellence without perfectionism, work as spiritual practice.
+<strong>Karmic Signatures:</strong> There may be deep patterns around service—martyrdom, servitude, perfectionism that paralyzed, or the failure to develop useful skills. This lifetime's Vertex appointments are designed to find sacred service—helping others without losing self, excellence without perfectionism, work as spiritual practice.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a sense of "rightness"—of being exactly where one should be, doing exactly what needs doing. There may be a felt sense of puzzle pieces clicking into place, of skills meeting needs in satisfying ways.
 
@@ -925,9 +925,9 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Libra creates a life where the most transformative moments involve significant one-on-one relationships. Just when they might settle into isolation or superficial relating, fate sends someone who demands authentic partnership. These activations often feel romantic in quality—even business partnerships may carry a sense of fated connection.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around relationship—isolation, enmeshment, using others or being used. This lifetime's Vertex appointments are designed to find genuine partnership—two whole people choosing to create something together, neither losing themselves nor remaining separate.
+<strong>Karmic Signatures:</strong> There may be deep patterns around relationship—isolation, losing yourself in others, using others or being used. This lifetime's Vertex appointments are designed to find genuine partnership—two whole people choosing to create something together, neither losing themselves nor remaining separate.
 
-<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often immediate recognition—"I know you" even when just meeting. Time may seem to stop or accelerate. There's a gravitational pull toward the other person that transcends ordinary attraction.
+<strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often immediate recognition—"I know you" even when just meeting. Time may seem to stop or accelerate. There's a gravitational pull toward the other person that goes beyond ordinary attraction.
 
 <strong>The Gift:</strong> Through these destined encounters, the soul develops the art of true partnership. They become someone who can be fully themselves while fully with another, who knows that relationship is a spiritual path, who can balance giving and receiving.
 
@@ -943,7 +943,7 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Scorpio creates a life where the most transformative moments involve facing darkness—their own or others'. Just when they might avoid the depths, fate sends a catalyst that demands descent. These activations often feel like initiations—ordeals that mark the before and after of a soul.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around power—its abuse, its absence, trauma unhealed, deaths unmourned. This lifetime's Vertex appointments are designed to reclaim authentic power—not over others, but over one's own depths. To transform rather than repeat.
+<strong>Karmic Signatures:</strong> There may be deep patterns around power—its abuse, its absence, trauma unhealed, deaths unmourned. This lifetime's Vertex appointments are designed to reclaim authentic power—not over others, but over one's own depths. To transform rather than repeat.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often an intensity of feeling that cannot be denied. This may manifest as obsession, fear, fascination, or all three simultaneously. The body may respond with visceral knowing—desire, repulsion, or the strange combination that signals shadow work.
 
@@ -961,7 +961,7 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Sagittarius creates a life where the most transformative moments involve expansion—geographic, philosophical, or spiritual. Just when they might settle into comfortable certainty, fate sends an adventure that expands everything they thought they knew. These activations often feel exhilarating—the call to adventure that makes the heart race.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around philosophy and religion—rigid beliefs, lost faith, wisdom hoarded or squandered. This lifetime's Vertex appointments are designed to find personal truth—not borrowed beliefs but earned wisdom, the faith that comes from experience.
+<strong>Karmic Signatures:</strong> There may be deep patterns around philosophy and religion—rigid beliefs, lost faith, wisdom hoarded or squandered. This lifetime's Vertex appointments are designed to find personal truth—not borrowed beliefs but earned wisdom, the faith that comes from experience.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a sense of expansion—of perspective widening, of possibilities multiplying. There may be a feeling of "of course!"—as if remembering something always known but forgotten. The soul recognizes truth by how it frees rather than binds.
 
@@ -979,7 +979,7 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Capricorn creates a life where the most transformative moments involve achievement, responsibility, and public standing. Just when they might avoid the hard work of mastery, fate sends a calling that demands they step up. These activations often feel heavy with significance—not the lightness of play but the weight of purpose.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around authority—its abuse, its avoidance, ambition unfulfilled or corrupted. This lifetime's Vertex appointments are designed to find healthy relationship with power—achievement that serves more than ego, authority that respects rather than oppresses.
+<strong>Karmic Signatures:</strong> There may be deep patterns around authority—its abuse, its avoidance, ambition unfulfilled or corrupted. This lifetime's Vertex appointments are designed to find healthy relationship with power—achievement that serves more than ego, authority that respects rather than oppresses.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a sense of gravity—of something important happening that will have long-term consequences. There may be a feeling of stepping into shoes that have been waiting, of accepting a mantle that was always theirs.
 
@@ -997,7 +997,7 @@ var VERTEX_READINGS = {
 
 <strong>The Activation Pattern:</strong> The Vertex in Aquarius creates a life where the most transformative moments involve community, innovation, or the embrace of authentic uniqueness. Just when they might conform to expectations, fate sends a catalyst that demands originality. These activations often feel electric—the shock of the new, the excitement of evolution.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around individuality and community—the outsider, the revolutionary, the one who couldn't fit in, or conversely, the one who lost self in group identity. This lifetime's Vertex appointments are designed to find the balance—being uniquely themselves while contributing to something larger.
+<strong>Karmic Signatures:</strong> There may be deep patterns around individuality and community—the outsider, the revolutionary, the one who couldn't fit in, or conversely, the one who lost self in group identity. This lifetime's Vertex appointments are designed to find the balance—being uniquely themselves while contributing to something larger.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a sense of the future arriving. There may be a feeling of meeting one's tribe, of encountering ideas that resonate with something deep and progressive. The soul recognizes destiny by how it frees and connects simultaneously.
 
@@ -1013,16 +1013,16 @@ var VERTEX_READINGS = {
 
 <strong>The Fated Encounters:</strong> People will enter this life who carry spiritual significance—healers, artists, mystics, or simply those whose suffering calls forth compassion. A spiritual teacher who appears at the perfect moment. An artistic experience that opens channels of awareness. A loss that breaks the heart open to universal love. These are not ordinary meetings—they are destiny's way of ensuring this soul remembers what lies beyond the material.
 
-<strong>The Activation Pattern:</strong> The Vertex in Pisces creates a life where the most transformative moments involve surrender, spirituality, or the dissolution of boundaries. Just when they might become too solid in material identity, fate sends an experience that reminds them of the ineffable. These activations often feel dreamlike—boundaries blur, synchronicities multiply, the veil thins.
+<strong>The Activation Pattern:</strong> The Vertex in Pisces creates a life where the most transformative moments involve surrender, spirituality, or the softening of boundaries. Just when they might become too fixed in material identity, fate sends an experience that reminds them of something beyond words. These activations often feel dreamlike—boundaries blur, meaningful coincidences multiply, the world feels thinner.
 
-<strong>Karmic Signatures:</strong> There may be past-life patterns around transcendence—spiritual gifts misused, martyrdom, escapism, boundary dissolution that went too far. This lifetime's Vertex appointments are designed to find healthy transcendence—spiritual connection that enriches rather than escapes, compassion with boundaries, service with self-care.
+<strong>Karmic Signatures:</strong> There may be deep patterns around spiritual seeking—gifts misused, self-sacrifice, escapism, losing yourself too completely. This lifetime's Vertex appointments are designed to find healthy spiritual connection—one that enriches rather than escapes, compassion with boundaries, service with self-care.
 
 <strong>Recognition of Destiny:</strong> When the Vertex is triggered, there's often a feeling of coming home to something larger than self. There may be tears that seem to come from an ocean of feeling, a sense of unity with all beings, or artistic inspiration that feels channeled from beyond.
 
 <strong>The Gift:</strong> Through these destined encounters, the soul develops the gift of being a bridge between worlds. They become someone who can translate spiritual experience into earthly help, whose art or healing carries something of the infinite, whose compassion is practical as well as profound.
 
-<strong>The Challenge:</strong> The temptation is to escape into transcendence (spiritual bypassing) or to wall off from spiritual experience entirely. But the Vertex in Pisces teaches that heaven and earth need each other. The challenge is learning to be in this world while connected to what transcends it.`,
-        fatedThemes: ["Spiritual awakening", "Artistic transcendence", "Healing and being healed", "Compassion calling"]
+<strong>The Challenge:</strong> The temptation is to escape into the spiritual (avoiding real life) or to shut off from spiritual experience entirely. But the Vertex in Pisces teaches that heaven and earth need each other. The challenge is learning to be fully in this world while staying connected to something larger.`,
+        fatedThemes: ["Spiritual awakening", "Art that opens the heart", "Healing and being healed", "Compassion calling"]
     }
 };
 
@@ -1035,9 +1035,9 @@ var NODES_IN_HOUSES = {
         1: {
             title: "North Node in 1st House - The Identity Awakening",
             keywords: ["Self-Discovery", "Independence", "Personal Initiative", "Authentic Identity"],
-            reading: `The North Node in the 1st House marks one of the most personal soul journeys possible: learning to exist as a distinct individual, to act from personal desire rather than obligation, and to discover that "selfish" isn't always a dirty word. This soul has spent lifetimes (South Node in 7th House) defined by relationships — merging, accommodating, compromising until the original self became almost invisible.
+            reading: `The North Node in the 1st House marks one of the most personal growth paths possible: learning to exist as a distinct individual, to act from personal desire rather than obligation, and to discover that "selfish" isn't always a dirty word. With the South Node in the 7th House, this person has always been defined by relationships — merging, accommodating, compromising until the original self became almost invisible.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 7th House reveals a soul intimately familiar with partnership. There have been lifetimes as the devoted spouse, the diplomatic mediator, the one who kept the peace at any cost. Relationship skills are second nature — reading others, anticipating needs, smoothing conflict before it begins. The problem is that all this outward attention came at the expense of knowing who they actually are when nobody else is in the room.
+<strong>The Deep Pattern:</strong> The South Node in the 7th House reveals someone deeply familiar with partnership. There is a natural gift as the devoted spouse, the diplomatic mediator, the one who keeps the peace at any cost. Relationship skills are second nature — reading others, anticipating needs, smoothing conflict before it begins. The problem is that all this outward attention came at the expense of knowing who they actually are when nobody else is in the room.
 
 There's often a subtle but persistent pattern of asking "what do you think?" before forming their own opinion, of scanning others' faces for approval before committing to a choice. Not because they lack intelligence or ability, but because the soul's default setting is oriented outward. The mirror has been held up to others for so long that turning it around feels almost transgressive.
 
@@ -1049,7 +1049,7 @@ The 1st House is the house of "I am." The soul is learning to complete that sent
 
 <strong>The Relationship Paradox:</strong> Ironically, this soul becomes a better partner by learning to be a better individual first. The South Node gifts of diplomacy and empathy don't disappear — they become more authentic when offered from a place of fullness rather than emptiness. The healthiest relationships for this placement are ones where both people maintain distinct identities.
 
-<strong>The Integration:</strong> Growth isn't about abandoning relationships or becoming selfishly isolated. It's about learning to bring a whole person to the table. The past-life gifts of cooperation and empathy become truly powerful when backed by a solid sense of self. The goal is to be someone worth partnering with, not just someone who's good at partnering.`,
+<strong>The Integration:</strong> Growth isn't about abandoning relationships or becoming selfishly isolated. It's about learning to bring a whole person to the table. The natural gifts of cooperation and empathy become truly powerful when backed by a solid sense of self. The goal is to be someone worth partnering with, not just someone who's good at partnering.`,
             growth: ["Developing authentic self-expression", "Making decisions without consensus", "Physical self-confidence"],
             resistance: ["Fear of being seen as selfish", "Discomfort with conflict", "Losing identity in relationships"]
         },
@@ -1058,7 +1058,7 @@ The 1st House is the house of "I am." The soul is learning to complete that sent
             keywords: ["Self-Worth", "Personal Resources", "Material Security", "Values Development"],
             reading: `The North Node in the 2nd House calls this soul toward a profound reckoning with worth — not theoretical worth, not spiritual worth, but the grounded, tangible kind. What do you value? What are you worth? Can you build something that's yours? These are the questions this lifetime is organized around. The South Node in the 8th House means this soul arrives already fluent in crisis, transformation, and living off shared resources. Now it's time to build something of their own.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 8th House carries memories of intensity — lives shaped by inheritance, shared finances, power dynamics, and psychological depth. This soul knows how to merge with others, how to navigate crisis, how to transform through destruction and rebirth. There may have been lifetimes as healers, therapists, occultists, or those who managed others' resources. The comfort zone is depth, intensity, and complexity.
+<strong>The Deep Pattern:</strong> The South Node in the 8th House carries a deep familiarity with intensity — a life shaped by inheritance, shared finances, power dynamics, and psychological depth. This person knows how to merge with others, how to navigate crisis, how to transform through destruction and rebirth. They may be natural healers, therapists, or those who manage others' resources. The comfort zone is depth, intensity, and complexity.
 
 The shadow of this pattern is a subtle avoidance of simplicity. If life isn't dramatic enough, something must be wrong. There can be an unconscious reliance on others' resources — financially or emotionally — a sense that everything meaningful must be shared, merged, or co-created. Building something purely personal can feel lonely or pointless.
 
@@ -1079,7 +1079,7 @@ Self-worth is the deeper lesson. Not the 8th House worth that comes from being n
             keywords: ["Learning", "Communication", "Curiosity", "Daily Connection"],
             reading: `The North Node in the 3rd House calls this soul to trade certainty for curiosity, preaching for listening, and grand truths for small conversations that actually change things. The South Node in the 9th House means this soul arrives already loaded with philosophical frameworks, spiritual convictions, and big-picture understanding. The problem is that all that wisdom means nothing if you can't communicate it in a way ordinary people can use.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 9th House speaks of lifetimes as the teacher, the preacher, the philosopher, the one who had the answers. There's an almost automatic tendency to frame everything in terms of meaning, purpose, and universal truth. This soul doesn't just experience things — they interpret them, usually from a height that makes the details hard to see.
+<strong>The Deep Pattern:</strong> The South Node in the 9th House speaks of a natural tendency toward being the teacher, the preacher, the philosopher, the one who had the answers. There's an almost automatic tendency to frame everything in terms of meaning, purpose, and universal truth. This soul doesn't just experience things — they interpret them, usually from a height that makes the details hard to see.
 
 The shadow shows up as intellectual arrogance disguised as open-mindedness. "I'm open to all perspectives" really means "I've already decided mine is the most evolved." There can be a subtle condescension toward small talk, local concerns, or practical knowledge — as though the only conversations worth having are about God, the universe, and the meaning of existence.
 
@@ -1098,9 +1098,9 @@ Writing, speaking, teaching at a practical level, journalism, podcasting, bloggi
         4: {
             title: "North Node in 4th House - The Homecoming",
             keywords: ["Emotional Security", "Home Building", "Family", "Inner Foundation"],
-            reading: `The North Node in the 4th House calls this soul home — not to a building, but to themselves. After lifetimes of climbing, achieving, and building public reputations (South Node in 10th House), this incarnation asks a deceptively simple question: can you feel at peace when no one is watching? Can you be someone who isn't defined by what they've accomplished?
+            reading: `The North Node in the 4th House calls this soul home — not to a building, but to themselves. With a deep pull toward climbing, achieving, and building public reputations (South Node in 10th House), this lifetime asks a deceptively simple question: can you feel at peace when no one is watching? Can you be someone who isn't defined by what they've accomplished?
 
-<strong>The Past Life Pattern:</strong> The South Node in the 10th House reveals a soul deeply familiar with ambition, public roles, and the weight of authority. There have been lifetimes of leadership, career building, and the relentless pursuit of respect and recognition. Achievement is second nature. These souls often display unusual maturity from a young age — the child who seems like a small adult, who understands responsibility before they understand play.
+<strong>The Deep Pattern:</strong> The South Node in the 10th House reveals someone deeply familiar with ambition, public roles, and the weight of authority. There is a natural pull toward leadership, career building, and the relentless pursuit of respect and recognition. Achievement is second nature. These souls often display unusual maturity from a young age — the child who seems like a small adult, who understands responsibility before they understand play.
 
 The shadow is a life organized around external markers of success at the expense of emotional depth. There can be a persistent feeling that rest must be earned, that downtime is wasted time, that if you aren't productive, you aren't valuable. Vulnerability feels like weakness. Needing others feels like failure.
 
@@ -1123,7 +1123,7 @@ The 4th House rules home, family, roots, and the inner emotional foundation. Gro
             keywords: ["Self-Expression", "Creativity", "Joy", "Heart-Centered Living"],
             reading: `The North Node in the 5th House calls this soul toward something it may have forgotten is allowed: personal joy. After lifetimes of collective focus, humanitarian service, and sublimating individual desires for the group good (South Node in 11th House), this incarnation hands back the permission slip to shine as an individual, to create for the pleasure of creating, and to follow the heart even when the head has a more rational plan.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 11th House reveals a soul deeply embedded in collective consciousness. There have been lifetimes of group work, social causes, and future-oriented thinking. The ability to see the big picture and work toward collective goals is instinctive. But somewhere along the way, the individual got lost in the collective. Personal desires were dismissed as selfish. Creative impulses were redirected toward "useful" outcomes. Joy was allowed only when it served the group.
+<strong>The Deep Pattern:</strong> The South Node in the 11th House reveals someone deeply embedded in collective consciousness. There is deep experience of group work, social causes, and future-oriented thinking. The ability to see the big picture and work toward collective goals is instinctive. But somewhere along the way, the individual got lost in the collective. Personal desires were dismissed as selfish. Creative impulses were redirected toward "useful" outcomes. Joy was allowed only when it served the group.
 
 The shadow shows up as difficulty knowing what YOU want — separate from what the group needs, what friends expect, or what would be best for humanity. There can be an almost allergic reaction to personal attention or creative risk-taking, a persistent sense that standing out is somehow betraying the team.
 
@@ -1144,7 +1144,7 @@ The 5th House rules creativity, romance, children, play, and self-expression. Gr
             keywords: ["Practical Service", "Daily Routine", "Health", "Skilled Improvement", "Grounded Spirituality"],
             reading: `The North Node in the 6th House marks one of the most profound spiritual journeys: learning that the divine lives in the ordinary, that enlightenment is found not in transcendence but in showing up fully for the tasks at hand. This soul has spent lifetimes (South Node in 12th House) exploring the ethereal realms—developing intuition, surrendering to the universe, perhaps even martyring themselves for higher causes. Now they are called to bring all that spiritual wisdom down to earth.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 12th House indicates a soul deeply familiar with transcendence—meditation, mysticism, isolation, institutions, perhaps monasteries or hospitals. There may have been lifetimes of sacrifice, of dissolving ego, of merging with the cosmic. While beautiful, this pattern can create difficulty engaging with practical reality. The escape hatch is always available: "I'm too sensitive for this world," or "The spiritual is more important than the mundane."
+<strong>The Deep Pattern:</strong> The South Node in the 12th House indicates someone deeply familiar with inner worlds — meditation, mysticism, isolation, institutions, perhaps monasteries or hospitals. There may be deep experience of sacrifice, of dissolving ego, of merging with the cosmic. While beautiful, this pattern can create difficulty engaging with practical reality. The escape hatch is always available: "I'm too sensitive for this world," or "The spiritual is more important than the mundane."
 
 <strong>The Growth Edge:</strong> This lifetime demands that all that spiritual development be applied in practical service. The universe is asking: "Can you be as present while filing paperwork as you were in meditation? Can you find the sacred in the routine, the divine in the details?" The 6th House North Node is learning that attending to the body, developing useful skills, and serving others in concrete ways IS the spiritual practice.
 
@@ -1163,7 +1163,7 @@ The 5th House rules creativity, romance, children, play, and self-expression. Gr
             keywords: ["Relationship", "Cooperation", "Others' Perspectives", "True Partnership"],
             reading: `The North Node in the 7th House calls this soul toward the thing it finds most terrifying: genuine dependence on another person. After lifetimes of fierce independence and self-reliance (South Node in 1st House), this incarnation asks whether you can let someone else matter as much as you do. Whether you can compromise without feeling like you're disappearing. Whether partnership might actually make you more, not less.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 1st House reveals a soul who has been fiercely, sometimes brutally, independent across many lifetimes. Self-reliance isn't just comfortable — it's identity. There have been lifetimes as the lone warrior, the solo pioneer, the one who did everything themselves because trusting others felt like a risk they couldn't afford. Initiative, courage, and personal strength are hard-wired.
+<strong>The Deep Pattern:</strong> The South Node in the 1st House reveals someone who has been fiercely, sometimes brutally, independent. Self-reliance isn't just comfortable — it's identity. There is deep experience as the lone warrior, the solo pioneer, the one who did everything themselves because trusting others felt like a risk they couldn't afford. Initiative, courage, and personal strength are hard-wired.
 
 The shadow is a life where "I don't need anyone" isn't strength but armor. Where independence becomes isolation dressed up as self-sufficiency. Where every compromise feels like capitulation and every request for help feels like failure. The soul is so practiced at being one that it struggles to become two.
 
@@ -1186,7 +1186,7 @@ The 7th House rules committed partnership, marriage, business partnerships, and 
             keywords: ["Deep Intimacy", "Shared Resources", "Transformation", "Psychological Depth"],
             reading: `The North Node in the 8th House calls this soul into the depths — of intimacy, of psychology, of shared resources, of everything that can't be controlled by holding on tighter. After lifetimes of building personal security and maintaining comfortable independence (South Node in 2nd House), this incarnation demands the terrifying surrender of letting someone else in. Really in. Past the carefully maintained walls.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 2nd House reveals a soul deeply invested in personal security, self-sufficiency, and the comfort of knowing exactly what's theirs. There have been lifetimes of building, accumulating, and protecting resources — material and emotional. Stability isn't just preferred; it's sacred. These souls often arrive with a natural talent for money, an instinctive understanding of value, and an almost physical need for things to stay as they are.
+<strong>The Deep Pattern:</strong> The South Node in the 2nd House reveals someone deeply invested in personal security, self-sufficiency, and the comfort of knowing exactly what's theirs. There is deep experience of building, accumulating, and protecting resources — material and emotional. Stability isn't just preferred; it's sacred. These souls often arrive with a natural talent for money, an instinctive understanding of value, and an almost physical need for things to stay as they are.
 
 The shadow is a life where comfort becomes a prison. Where the fear of losing what you've built prevents you from experiencing anything deeper. Where "what's mine is mine" extends to emotions, keeping the inner life as carefully guarded as the bank account. There can be a stubborn resistance to change that goes beyond preference into outright rigidity.
 
@@ -1209,7 +1209,7 @@ The 8th House rules shared resources, intimacy, psychology, death and rebirth, i
             keywords: ["Higher Learning", "Travel", "Philosophy", "Faith Development"],
             reading: `The North Node in the 9th House calls this soul out of the familiar and into the vast — away from the neighbourhood and toward the horizon, away from facts and toward meaning, away from knowing everything about something small and toward understanding something about everything. The South Node in the 3rd House means this soul arrives with a mind like quicksilver — fast, adaptable, endlessly curious — but possibly stuck in an information loop that never quite reaches wisdom.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 3rd House reveals a soul deeply familiar with communication, local knowledge, and mental agility. There have been lifetimes as writers, teachers, messengers, merchants — people who dealt in information and thrived on variety. The mind is the sharpest tool in the kit: quick to learn, quick to speak, quick to adapt.
+<strong>The Deep Pattern:</strong> The South Node in the 3rd House reveals someone deeply familiar with communication, local knowledge, and mental agility. There is deep experience as writers, teachers, messengers, merchants — people who dealt in information and thrived on variety. The mind is the sharpest tool in the kit: quick to learn, quick to speak, quick to adapt.
 
 The shadow is a mind that never stops gathering and never starts integrating. Information without meaning. Facts without philosophy. A thousand interesting conversations that never go deep enough to change anything. There can be a restless mental energy that jumps from topic to topic, a gossipy quality that mistakes talking about things for understanding them, and an unconscious avoidance of commitment to any single truth.
 
@@ -1230,7 +1230,7 @@ The 9th House rules higher education, long-distance travel, philosophy, religion
             keywords: ["Career Purpose", "Public Role", "Achievement", "Responsible Authority"],
             reading: `The North Node in the 10th House calls this soul out of the private sphere and into public life — out of the nest and up the mountain, out of emotional safety and into the exposed vulnerability of visible achievement. After lifetimes of focusing on home, family, and emotional security (South Node in 4th House), this incarnation demands that the inner strength built in private be expressed on the public stage.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 4th House reveals a soul deeply rooted in domestic life, family bonds, and the comforts of home. There have been lifetimes of nurturing, of creating sanctuary, of placing family above all else. Emotional intelligence is instinctive — they read feelings the way others read words. Home isn't just where they live; it's who they are.
+<strong>The Deep Pattern:</strong> The South Node in the 4th House reveals someone deeply rooted in domestic life, family bonds, and the comforts of home. There is deep experience of nurturing, of creating sanctuary, of placing family above all else. Emotional intelligence is instinctive — they read feelings the way others read words. Home isn't just where they live; it's who they are.
 
 The shadow is a life where the private sphere becomes a hiding place. Where "family comes first" becomes the excuse never to take professional risks. Where emotional sensitivity is used to avoid the harsher world outside the front door. There can be a persistent feeling that the world is too cold, too competitive, too unlike the warmth of home — and a subtle but powerful resistance to going out and finding a place in it anyway.
 
@@ -1251,7 +1251,7 @@ The 10th House rules career, public reputation, authority, achievement, and lega
             keywords: ["Community", "Future Vision", "Friendship", "Collective Purpose"],
             reading: `The North Node in the 11th House calls this soul out of the spotlight and into the tribe — away from personal drama and toward collective vision, away from "look at me" and toward "look what we can do together." After lifetimes of personal creative expression, romantic intensity, and centre-stage living (South Node in 5th House), this incarnation asks whether the individual flame can be used to light something bigger.
 
-<strong>The Past Life Pattern:</strong> The South Node in the 5th House reveals a soul deeply familiar with personal creativity, romance, self-expression, and the particular buzz of being noticed. There have been lifetimes as artists, performers, lovers, and those who lived from the heart with dramatic flair. Creative talent is instinctive, and there's a natural ability to captivate an audience — whether that's a theatre crowd or a dinner table.
+<strong>The Deep Pattern:</strong> The South Node in the 5th House reveals someone deeply familiar with personal creativity, romance, self-expression, and the particular buzz of being noticed. There is deep experience as artists, performers, lovers, and those who lived from the heart with dramatic flair. Creative talent is instinctive, and there's a natural ability to captivate an audience — whether that's a theatre crowd or a dinner table.
 
 The shadow is a life where everything becomes personal drama. Where every group situation is really about whether you're getting enough attention. Where creative gifts are used for ego gratification rather than genuine contribution, and where romantic intensity substitutes for the deeper connection of true friendship. There can be a childlike self-centredness that's charming in small doses but exhausting in daily life.
 
@@ -1272,7 +1272,7 @@ The 11th House rules friendship, groups, social causes, future vision, technolog
             keywords: ["Spirituality", "Surrender", "Compassion", "Transcendence"],
             reading: `The North Node in the 12th House calls this soul toward the invisible — away from to-do lists and toward surrender, away from fixing and toward faith, away from the tangible and into the territory where things can only be felt, never measured. After lifetimes of practical service, meticulous work, and devotion to usefulness (South Node in 6th House), this incarnation asks the hardest question a doer can face: can you stop doing and simply be?
 
-<strong>The Past Life Pattern:</strong> The South Node in the 6th House reveals a soul deeply identified with work, service, and practical competence. There have been lifetimes as healers, workers, servants, craftspeople — those who found identity through being useful. Skills are sharp. Work ethic is unquestionable. There's an almost physical need to be productive, to improve things, to fix what's broken.
+<strong>The Deep Pattern:</strong> The South Node in the 6th House reveals someone deeply identified with work, service, and practical competence. There is deep experience as healers, workers, servants, craftspeople — those who found identity through being useful. Skills are sharp. Work ethic is unquestionable. There's an almost physical need to be productive, to improve things, to fix what's broken.
 
 The shadow is a life where busyness becomes a spiritual bypass. Where there's always another task to complete, another problem to solve, another person to help — and the constant doing serves as protection against the terrifying stillness where God (or the void, or the truth) might actually be encountered. Perfectionism, anxiety, and chronic overwork are common manifestations.
 
@@ -2508,7 +2508,7 @@ var PROGRESSION_READINGS = {
         Pisces: {
             title: "Progressed Sun in Pisces - The Spiritual Completion",
             keywords: ['Spirituality', 'Compassion', 'Intuition', 'Transcendent Unity'],
-            reading: `The Progressed Sun entering Pisces deepens spirituality and compassion. After the individuating freedom of Aquarius comes the dissolving boundaries of Pisces—the soul is learning to merge, to surrender, to return to source.
+            reading: `The Progressed Sun entering Pisces deepens spirituality and compassion. After the independent freedom of Aquarius comes the dissolving boundaries of Pisces—the soul is learning to merge, to surrender, to return to source.
 
 <strong>The Dissolution:</strong> Boundaries that once seemed essential begin to dissolve. The soul is learning that separation is illusion, that compassion is natural, that surrender can be strength.
 

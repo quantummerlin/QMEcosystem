@@ -45,11 +45,11 @@ Integration means choosing equals and maintaining your warrior self in partnersh
 
 The gift is relationships where both people can be strong, where anger is processed healthily, where neither person has to be nice all the time.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Aries teaches that anger is sacred when it defends life and boundaries. The divine feminine includes the warrior goddess, not just the nurturing mother.
+        spiritualMeaning: `Spiritually, Lilith in Aries teaches that anger is sacred when it defends life and boundaries. Feminine power includes the warrior, not just the nurturer.
 
-Your spiritual work involves reclaiming the sacred warrior within. This is Kali energy - fierce, protective, willing to destroy what needs destroying. This isn't evil; it's necessary force.
+Your spiritual work involves reclaiming the sacred warrior within. Think of it as fierce, protective energy — willing to tear down what needs tearing down. This is not cruelty; it is necessary force.
 
-The lesson is that being nice isn't the same as being good. Sometimes goodness requires fierceness. Your Lilith teaches you when to fight and how to wield power righteously.`,
+The lesson is that being nice is not the same as being good. Sometimes goodness requires fierceness. Your Lilith teaches you when to fight and how to use your strength wisely.`,
         
         affirmation: "My anger is holy. I assert myself without apology. I fight for what matters and defend my boundaries fiercely. I am the warrior I was taught to suppress."
     },
@@ -95,9 +95,9 @@ Integration means choosing partners who encourage your pleasure and maintaining 
 
 The gift is relationships built on mutual enjoyment and material security where both people can pleasure themselves and each other without shame or control.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Taurus teaches that material life and embodied pleasure are sacred. The divine feminine includes the body, sexuality, and earthly enjoyment, not just transcendent spirit.
+        spiritualMeaning: `Spiritually, Lilith in Taurus teaches that material life and physical pleasure are sacred. Feminine power includes the body, sensuality, and earthly enjoyment, not just the spiritual.
 
-Your spiritual work involves reclaiming the sacredness of the senses. This is goddess energy - enjoying beautiful things, delighting in food, celebrating sexuality, honoring the material.
+Your spiritual work involves reclaiming the sacredness of the senses. This is powerful, grounded energy — enjoying beautiful things, delighting in food, celebrating the physical, honoring the material.
 
 The lesson is that spiritual bypass that denies the body or material life is incomplete. Your Lilith teaches embodied spirituality where pleasure is prayer.`,
         
@@ -145,7 +145,7 @@ Integration means choosing partners who want your truth and learning to communic
 
 The gift is relationships built on radical honesty where both people can say anything and truth creates closeness rather than distance.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Gemini teaches that some truths are sacred even when they're uncomfortable. The divine feminine includes the voice that speaks what must be heard, not just comforting words.
+        spiritualMeaning: `Spiritually, Lilith in Gemini teaches that some truths are sacred even when they are uncomfortable. Feminine power includes the voice that speaks what must be heard, not just comforting words.
 
 Your spiritual work involves becoming a vessel for truth. This is oracle energy - speaking what comes through you even when you don't know why it needs to be said.
 
@@ -195,7 +195,7 @@ Integration means choosing partners who don't need mothering and learning to nur
 
 The gift is relationships of mutual nurturing where both people care for each other without martyrdom, where emotional needs are met without one person being designated caregiver.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Cancer teaches that the divine feminine includes the dark mother - Kali who destroys, not just the nurturing Demeter. Not all feminine energy is soft and giving.
+        spiritualMeaning: `Spiritually, Lilith in Cancer teaches that feminine power includes the fierce protector who sets limits — not just the gentle nurturer. Not all feminine energy is soft and giving.
 
 Your spiritual work involves integrating shadow mother energies. This is accepting that you can be fierce, withholding, protective of your own energy, and still be whole.
 
@@ -245,9 +245,9 @@ Integration means choosing partners who genuinely appreciate you and learning to
 
 The gift is relationships where both people can be stars, where celebration is mutual, where neither has to hide their light for the other to shine.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Leo teaches that divine feminine includes the queen, the goddess who rules and radiates. Not all spiritual power is humble and hidden - some is gloriously visible.
+        spiritualMeaning: `Spiritually, Lilith in Leo teaches that feminine power includes the queen who rules and radiates. Not all inner strength is humble and hidden — some is gloriously visible.
 
-Your spiritual work involves reclaiming sacred pride and creative power. This is goddess energy in full regalia - unashamed, celebrated, powerful.
+Your spiritual work involves reclaiming sacred pride and creative power. This is powerful, radiant energy — unashamed, celebrated, bold.
 
 The lesson is that your light is meant to be seen. Your Lilith teaches that hiding your gifts doesn't serve the world - radiating them does.`,
         
@@ -295,7 +295,7 @@ Integration means choosing partners who appreciate your discernment and learning
 
 The gift is relationships where both people can give and receive constructive feedback, where growth is supported without perfectionism, where standards enhance rather than destroy connection.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Virgo teaches that discernment is a spiritual gift. The divine feminine includes the wise woman who sees clearly and speaks truth about what needs healing or changing.
+        spiritualMeaning: `Spiritually, Lilith in Virgo teaches that discernment is a spiritual gift. Feminine power includes the wise one who sees clearly and speaks truth about what needs healing or changing.
 
 Your spiritual work involves using analytical gifts in service. This is healer energy - seeing precisely what's wrong and knowing exactly how to fix it.
 
@@ -345,9 +345,9 @@ Integration means choosing equal partnerships and learning to maintain self whil
 
 The gift is relationships of true equality where both people are fully present, where neither accommodates at own expense, where balance is real not performed.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Libra teaches that sacrifice isn't always sacred. The divine feminine includes the goddess who says "no," who protects her own energy, who demands equality.
+        spiritualMeaning: `Spiritually, Lilith in Libra teaches that sacrifice is not always sacred. Feminine power includes the one who says "no," who protects their own energy, who demands equality.
 
-Your spiritual work involves reclaiming sacred selfishness. This is goddess energy that knows her worth and refuses to diminish it for relationship.
+Your spiritual work involves reclaiming sacred selfishness. This is powerful energy that knows its worth and refuses to shrink for the sake of a relationship.
 
 The lesson is that you can't truly love others if you abandon yourself. Your Lilith teaches that real partnership requires two whole people, not one person and one shadow.`,
         
@@ -395,9 +395,9 @@ Integration means choosing partners who can handle your intensity and learning t
 
 The gift is relationships of profound depth and transformation where both people can be fully powerful, where intensity creates growth, where darkness is accepted.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Scorpio teaches that the darkest aspects of divine feminine are sacred. The goddess of sex, death, and transformation is as holy as the gentle mother.
+        spiritualMeaning: `Spiritually, Lilith in Scorpio teaches that the darkest aspects of feminine power are sacred. The force of deep change, endings, and rebirth is as meaningful as gentleness.
 
-Your spiritual work involves becoming comfortable in darkness and teaching others to transform through it. This is full dark goddess energy - Kali, Hecate, Lilith herself.
+Your spiritual work involves becoming comfortable in darkness and helping others find strength through it. This is raw, transformative power — the kind that ancient cultures honoured through figures like Kali (the Hindu goddess of transformation) and Hecate (the Greek keeper of crossroads).
 
 The lesson is that transformation requires death of old forms and that darkness is where power lives. Your Lilith teaches the sacred nature of all that culture rejects - sex, death, power, darkness.`,
         
@@ -445,9 +445,9 @@ Integration means choosing partners who celebrate your freedom and learning to c
 
 The gift is relationships where both people are free, where commitment enhances rather than restricts autonomy, where wildness is celebrated.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Sagittarius teaches that divine feminine includes the wild woman who refuses domestication. Not all goddess energy is cultured and tame - some is gloriously wild.
+        spiritualMeaning: `Spiritually, Lilith in Sagittarius teaches that feminine power includes the wild one who refuses to be tamed. Not all inner strength is polished and restrained — some is gloriously untamed.
 
-Your spiritual work involves reclaiming spiritual freedom and independence. This is goddess energy that creates own relationship with divine, that refuses dogma, that is accountable to truth not tradition.
+Your spiritual work involves reclaiming spiritual freedom and independence. This is powerful energy that creates its own relationship with truth, that refuses dogma, that answers to honesty rather than tradition.
 
 The lesson is that some truths will make you unpopular and freedom is worth it. Your Lilith teaches that being wild and free is sacred, that truth-telling serves even when it costs.`,
         
@@ -495,9 +495,9 @@ Integration means choosing partners who celebrate your success and learning to m
 
 The gift is relationships where both people can be ambitious and successful, where power is shared, where achievement is celebrated not threatening.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Capricorn teaches that feminine can be powerful in worldly terms. The divine feminine includes queens and leaders, not just nurturers and mystics.
+        spiritualMeaning: `Spiritually, Lilith in Capricorn teaches that feminine power can be strong in worldly terms. Inner strength includes leaders and builders, not just nurturers and mystics.
 
-Your spiritual work involves reclaiming sacred ambition. This is goddess energy that rules, that has authority, that uses power for good.
+Your spiritual work involves reclaiming sacred ambition. This is powerful energy that leads, that takes authority, that uses influence for good.
 
 The lesson is that power in feminine hands can transform structures. Your Lilith teaches that ambition serves when wielded with integrity.`,
         
@@ -545,9 +545,9 @@ Integration means choosing partners who celebrate your uniqueness and learning t
 
 The gift is relationships where both people can be radically themselves, where difference is celebrated, where intimacy doesn't require conformity.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Aquarius teaches that divine feminine includes the revolutionary, the one who breaks all rules and creates new paradigms. Not all goddess energy honors tradition.
+        spiritualMeaning: `Spiritually, Lilith in Aquarius teaches that feminine power includes the revolutionary, the one who breaks all rules and creates new ways of being. Not all inner strength respects tradition.
 
-Your spiritual work involves trusting your revolutionary vision and using it to serve collective evolution. This is goddess energy that destroys outdated systems and births new possibilities.
+Your spiritual work involves trusting your revolutionary vision and using it to serve others. This is powerful energy that tears down outdated systems and creates new possibilities.
 
 The lesson is that your weird ideas might be exactly what humanity needs. Your Lilith teaches that revolutionary thinking is sacred service.`,
         
@@ -595,9 +595,9 @@ Integration means choosing partners who respect your sensitivity and learning to
 
 The gift is relationships of profound spiritual connection with healthy boundaries, where both people can be sensitive without being consumed.`,
         
-        spiritualMeaning: `Spiritually, Lilith in Pisces teaches that psychic abilities and mystical experiences are real and sacred. The divine feminine includes the mystic who sees beyond veils.
+        spiritualMeaning: `Spiritually, Lilith in Pisces teaches that psychic abilities and mystical experiences are real and sacred. Feminine power includes the intuitive who sees beyond what is visible.
 
-Your spiritual work involves developing and using your gifts skillfully. This is full mystical goddess energy - the oracle, the seer, the one who knows.
+Your spiritual work involves developing and using your gifts skillfully. This is deep intuitive power — the oracle, the seer, the one who knows.
 
 The lesson is that your sensitivity and psychic awareness serve if you learn to work with them rather than suppress or be overwhelmed by them. Your Lilith teaches grounded mysticism.`,
         

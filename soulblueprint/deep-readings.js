@@ -144,7 +144,7 @@ var DEEP_MOON_READINGS = {
     },
     
     "Scorpio": {
-        title: "The Emotional Alchemist",
+        title: "The Emotional Transformer",
         hook: "This soul feels everything at maximum intensity — their inner world is a place of profound depth, powerful feelings, and transformative emotional experiences that most people never access.",
         coreIdentity: "The Moon in Scorpio gives this child one of the most intense, powerful emotional natures. Superficial feelings don't exist for them — it's passion, obsession, soul-deep connection, or nothing at all. They feel everything at extremes.",
         external: "Others experience this child as emotionally intense and magnetically powerful. People sense their depth and may be drawn to or intimidated by their penetrating presence. They seem to see through pretense.",
@@ -156,7 +156,7 @@ var DEEP_MOON_READINGS = {
         misread: "People may see them as too intense or scary when they're actually offering depth of connection that most people are too afraid to receive. Their intensity gets labeled as 'too much.'",
         relationships: "They need complete honesty, absolute loyalty, and soul-level intimacy. Shallow relationships bore them. They want to know someone's shadow, not just their light. They offer the same profound loyalty they require.",
         growth: "Learning to trust without testing. Loving without controlling. Releasing resentment before it poisons them. Understanding that vulnerability is the greatest power of all.",
-        power: "When they fully own their emotional alchemist nature, they become transformers — helping others face and transmute their deepest wounds into gold.",
+        power: "When they fully own their emotional depth, they become transformers — helping others face and turn their deepest wounds into strengths.",
         somatic: "They feel emotions in their lower belly, solar plexus, and reproductive areas — a churning intensity, power rising from deep within. Sexual and emotional energy intertwine even in childhood as life force.",
         parentGuidance: "Never betray their trust — they don't forget. Honor their need for privacy. Let them feel deeply without trying to lighten things up. Teach healthy expression of intensity. Never dismiss their perceptions.",
         affirmation: "Your intensity is sacred. Your depths are treasures. Your power is meant for transformation, not destruction."

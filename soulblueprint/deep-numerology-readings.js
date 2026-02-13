@@ -73,8 +73,8 @@ var DEEP_LIFE_PATH_READINGS = {
     },
     
     3: {
-        title: "The Creative Alchemist",
-        hook: "This soul arrived with a direct line to joy—a creative frequency that transmutes the ordinary into the magical through the sheer power of self-expression.",
+        title: "The Creative Spark",
+        hook: "This soul arrived with a direct line to joy—a creative energy that turns the ordinary into the magical through the sheer power of self-expression.",
         
         coreIdentity: "Life Path 3 carries the energy of creative self-expression and authentic joy. Their identity is forged through creating, communicating, and bringing beauty into the world. They're here to remind humanity that life is meant to be enjoyed, not just endured.",
         
@@ -228,7 +228,7 @@ var DEEP_LIFE_PATH_READINGS = {
     },
     
     8: {
-        title: "The Power Alchemist",
+        title: "The Power Builder",
         hook: "This soul arrived with the blueprint for abundance—here to master the material world and show that power used wisely serves everyone.",
         
         coreIdentity: "Life Path 8 carries the energy of manifestation, authority, and abundance. Their identity is forged through achievement and mastery of the material realm. They're here to demonstrate that power, properly wielded, is a form of service.",

@@ -21,7 +21,7 @@ They teach others through example and encouragement. They inspire courage, activ
         
         luck: `Luck finds them when they move first. Opportunities come to those who are already in motion. Waiting for perfect conditions misses the magic.
 
-Their guardian angels reward boldness. The universe seems to support their leaps of faith, catching them when they fall and celebrating when they soar.`,
+The universe seems to reward their boldness. It supports their leaps of faith, catching them when they fall and celebrating when they soar.`,
         
         challenges: `The shadow is overconfidence and reckless expansion. They may take on too much, move too fast, or believe in their luck past the point of wisdom.
 
@@ -51,7 +51,7 @@ They remind others that the body matters, that the earth provides, that slow and
         
         luck: `Luck finds them through consistency. Opportunities come to those who show up reliably, who build reputation over time, who can be counted on.
 
-Their guardian angels bless material efforts. Investments grow, gardens flourish, physical creations succeed when they apply their patient touch.`,
+Good things tend to follow their steady effort. Investments grow, gardens flourish, physical creations succeed when they apply their patient touch.`,
         
         challenges: `The shadow is greed and over-attachment. They may grip too tightly to what they've built, or expand materially past the point of actual enjoyment.
 
@@ -81,7 +81,7 @@ They teach through explanation, translation, and making complex things accessibl
         
         luck: `Luck finds them through connections. The right information at the right time, the right person who knows the right person—their network is their lucky charm.
 
-Their guardian angels speak through synchronicity and communication. Messages, conversations, and "random" information often carry hidden gifts.`,
+Luck speaks to them through timing and connection. Messages, conversations, and seemingly random information often carry hidden gifts.`,
         
         challenges: `The shadow is scattered expansion and superficial wisdom. They may know a little about many things but master nothing. Breadth without depth becomes trivial.
 
@@ -111,7 +111,7 @@ They remind others that feelings matter, that home is essential, that care is a 
         
         luck: `Luck finds them through family and emotional connection. Opportunities come through those they love and care for. Their support network is their wealth.
 
-Their guardian angels protect home and heart. Real estate, family ventures, and emotionally meaningful projects tend to succeed.`,
+There is a quiet protection around their home and heart. Real estate, family ventures, and emotionally meaningful projects tend to succeed.`,
         
         challenges: `The shadow is smothering care and using nurturing for control. They may give too much or give with strings attached, expecting emotional return on investment.
 
@@ -141,7 +141,7 @@ They teach through inspiration and example. They show what's possible when you b
         
         luck: `Luck finds them in the spotlight. Opportunities come when they're visible, when they're performing, when they're sharing their light without reservation.
 
-Their guardian angels reward generosity and courage. What they give comes back multiplied. The universe loves a generous heart.`,
+Life tends to reward their generosity and courage. What they give comes back multiplied. The universe loves an open heart.`,
         
         challenges: `The shadow is ego-expansion and requiring constant appreciation. They may become addicted to recognition, unable to give without getting credit.
 
@@ -171,7 +171,7 @@ They remind others that the small things matter, that excellence is achievable, 
         
         luck: `Luck finds them through competence and helpfulness. Opportunities come to those who can actually deliver, who show up and do the work well.
 
-Their guardian angels reward diligence. Health often protects them; their careful approach prevents problems others encounter.`,
+Something seems to reward their careful effort. Health often protects them; their thorough approach prevents problems others run into.`,
         
         challenges: `The shadow is perfectionism that blocks expansion. They may refuse opportunities that aren't perfect, or criticize their way out of growth.
 
@@ -201,7 +201,7 @@ They teach through example and mediation. They show what's possible when people 
         
         luck: `Luck finds them through relationships. The right partnership at the right time opens doors nothing else could. Their connections are their fortune.
 
-Their guardian angels work through others. Help comes through allies; opportunities come through partnerships; grace comes through love.`,
+Help often arrives through the people around them. Opportunities come through partnerships; grace comes through connection and love.`,
         
         challenges: `The shadow is dependency and indecision. They may wait so long for the perfect partner or the fair solution that expansion stalls.
 
@@ -231,7 +231,7 @@ They remind others that depth is available, that transformation is possible, tha
         
         luck: `Luck finds them in crisis. When things fall apart, they find opportunity. Other people's endings become their beginnings.
 
-Their guardian angels work through transformation. Inheritances, deep partnerships, psychological breakthroughs—their fortune comes from the underworld.`,
+Fortune finds them through change and depth. Inheritances, deep partnerships, psychological breakthroughs—their luck comes from going where others will not.`,
         
         challenges: `The shadow is manipulation and power accumulation. They may use their depth-perception for control rather than healing.
 
@@ -261,7 +261,7 @@ They teach through inspiration and sharing. Their faith is contagious; their opt
         
         luck: `Luck follows them everywhere. They seem charmed, protected, blessed in ways that defy rational explanation. Their faith creates its own support.
 
-Their guardian angels love them visibly. Opportunities appear; help arrives; things work out in ways that confirm their optimism.`,
+The world seems to smile on them. Opportunities appear; help arrives; things work out in ways that confirm their natural optimism.`,
         
         challenges: `The shadow is overexpansion and self-righteousness. They may promise more than they deliver, take on more than they can handle, or believe their truth is the only truth.
 
@@ -291,7 +291,7 @@ They teach through example and mentorship. They show what's possible through sus
         
         luck: `Luck finds them through reputation. Opportunities come to those known for reliability, for competence, for delivering results.
 
-Their guardian angels reward patience. What they build slowly grows large; what they invest in carefully returns well.`,
+Time rewards their patience. What they build slowly grows large; what they invest in carefully returns well.`,
         
         challenges: `The shadow is cold ambition and joyless achievement. They may succeed in worldly terms while starving spiritually and emotionally.
 
@@ -321,7 +321,7 @@ They teach through sharing vision and empowering others. Their wisdom serves the
         
         luck: `Luck finds them through the collective. Groups, networks, and causes that serve humanity bring opportunities.
 
-Their guardian angels work through innovation. Technology, new approaches, and unconventional methods often bring their fortune.`,
+Luck finds them through fresh thinking. Technology, new approaches, and unconventional methods often bring their biggest breakthroughs.`,
         
         challenges: `The shadow is utopianism and emotional detachment. They may believe so strongly in the future that they neglect present realities and relationships.
 
@@ -351,7 +351,7 @@ They teach through presence and creative expression. Their wisdom flows rather t
         
         luck: `Luck finds them through faith. When they trust, when they release, when they open their heart—support appears.
 
-Their guardian angels work through synchronicity and grace. Help comes from unexpected sources; opportunities feel miraculous.`,
+Help arrives from unexpected places, and opportunities often feel almost miraculous in their timing.`,
         
         challenges: `The shadow is escapism and boundary loss. They may dissolve so completely that they lose practical function, or escape into fantasy rather than facing reality.
 

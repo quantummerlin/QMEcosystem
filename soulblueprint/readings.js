@@ -172,7 +172,7 @@ Their greatest fulfillment comes through achievements that benefit not just them
         title: "The Humanitarian",
         keywords: ["Compassion", "Wisdom", "Service", "Completion"],
         summary: "An old soul destined to serve humanity.",
-        reading: `This soul has arrived with the wisdom of many lifetimes and the mission of serving humanity. Life Path 9 indicates a destiny centered around compassion, universal love, and contributing to the greater good.
+        reading: `This person has arrived with deep wells of wisdom and the mission of serving humanity. Life Path 9 indicates a destiny centered around compassion, universal love, and contributing to the greater good.
 
 From early on, this individual will demonstrate unusual maturity and a concern for others that extends beyond their immediate circle. They seem to understand suffering and have a natural desire to alleviate it.
 
@@ -491,7 +491,7 @@ This soul is here to teach others about the power of innovation and the importan
         ruling: "Neptune",
         keywords: ["Intuition", "Compassion", "Creativity", "Spirituality"],
         summary: "Intuitive, compassionate, and deeply spiritual.",
-        reading: `Born under the sign of the Fish, this soul carries the energy of the mystic - intuitive, compassionate, and connected to realms beyond the physical. Pisces energy is about transcendence, creativity, and the dissolution of boundaries.
+        reading: `Born under the sign of the Fish, this soul carries the energy of the mystic - intuitive, compassionate, and connected to realms beyond the physical. Pisces energy is about spiritual depth, creativity, and the softening of boundaries.
 
 This placement brings natural psychic sensitivity and artistic abilities. There's a direct line to the collective unconscious, an ability to tap into universal feelings and express them through creative work.
 
@@ -1068,10 +1068,10 @@ The growth edge involves developing emotional intimacy alongside intellectual co
     },
     Pisces: {
         keywords: ["Romantic", "Compassionate", "Intuitive", "Dreamy"],
-        summary: "Romantic, compassionate love that transcends boundaries.",
-        reading: `Venus in Pisces is exalted, creating the most romantic, compassionate, and intuitively connected approach to love. Romance here transcends the ordinary — this soul loves with a depth that borders on the spiritual, seeing the divine in their partner and seeking a connection that dissolves the boundary between two separate beings.
+        summary: "Romantic, compassionate love that goes beyond boundaries.",
+        reading: `Venus in Pisces is exalted, creating the most romantic, compassionate, and intuitively connected approach to love. Romance here goes beyond the ordinary — this soul loves with a depth that borders on the spiritual, seeing the divine in their partner and seeking a connection that dissolves the boundary between two separate beings.
 
-The love language is emotional attunement and soulful presence. They sense what their partner feels without being told, love unconditionally, and bring a tenderness to relationships that can heal deep wounds. Music, art, shared silences, and moments of transcendent closeness are their natural territory.
+The love language is emotional attunement and soulful presence. They sense what their partner feels without being told, love unconditionally, and bring a tenderness to relationships that can heal deep wounds. Music, art, shared silences, and moments of deep closeness are their natural territory.
 
 In relationships, they bring extraordinary empathy, creative inspiration, and the rare ability to love someone exactly as they are. They see past flaws to the soul beneath, and their acceptance has a healing quality that transforms partners. Being loved by Venus in Pisces feels like coming home to a place you have always known.
 
@@ -1391,7 +1391,7 @@ The growth edge involves remaining connected to personal relationships while pur
 
 Growth comes through trusting intuition, helping others without expectation of return, and following creative and spiritual callings wherever they lead. The arts, healing, spiritual work, and any pursuit involving imagination and compassion are extraordinarily blessed.
 
-There is a boundless generosity here that paradoxically amplifies abundance rather than depleting it. The more this soul gives, the more they receive — not through strategic calculation but through the natural law of spiritual reciprocity. Their faith itself becomes a creative force that shapes reality.
+There is a boundless generosity here that actually amplifies abundance rather than depleting it. The more this soul gives, the more they receive — not through strategy but through a natural cycle of give and take. Their faith itself becomes a creative force that shapes reality.
 
 The growth edge involves developing practical discernment alongside spiritual openness. Learning that boundaries protect the generous heart — and that wise compassion is more effective than indiscriminate giving — allows this beautifully blessed placement to channel its extraordinary fortune into lasting good for both self and the world.`,
         strengths: ["Spiritual luck", "Creative abundance", "Compassionate growth", "Intuitive guidance"],
@@ -1675,13 +1675,13 @@ The extraordinary gift that emerges is the ability to help others celebrate thei
     },
     Pisces: {
         keywords: ["Spiritual Wound", "Unity Healing", "Boundary Recovery", "Divine Connection"],
-        reading: `Chiron in Pisces indicates a core wound around spirituality, boundaries, and the connection between the individual self and something greater. Early experiences may have involved spiritual confusion, overwhelming sensitivity to others' pain, exposure to addiction, or encounters that blurred the line between transcendence and dissolution.
+        reading: `Chiron in Pisces indicates a core wound around spirituality, boundaries, and the connection between the individual self and something greater. Early experiences may have involved spiritual confusion, overwhelming sensitivity to others' pain, exposure to addiction, or encounters that blurred the line between spiritual opening and losing oneself.
 
 This wound often manifests as boundary difficulties — absorbing others' emotions, escaping into fantasy or substances, or feeling simultaneously drawn to and terrified of spiritual surrender. The sensitivity here is extraordinary but untrained, making the world feel overwhelmingly raw until healthy containers for that sensitivity are developed.
 
-The healing journey involves learning that spiritual connection and personal boundaries are not opposites but partners. This soul must discover how to open to the transcendent without losing themselves — how to feel everything without drowning, how to serve without being consumed, and how to trust the divine without abandoning practical reality.
+The healing journey involves learning that spiritual connection and personal boundaries are not opposites but partners. This soul must discover how to open to something greater without losing themselves — how to feel everything without drowning, how to serve without being consumed, and how to trust the bigger picture without abandoning practical reality.
 
-The extraordinary gift that emerges is the ability to help others find genuine spiritual connection while staying grounded. Having navigated the treacherous waters between dissolution and transcendence, this soul becomes a gifted healer and spiritual guide who can hold sacred space for others' journeys without losing their own center.`
+The extraordinary gift that emerges is the ability to help others find genuine spiritual connection while staying grounded. Having navigated the difficult waters between losing oneself and opening up, this soul becomes a gifted healer and spiritual guide who can hold sacred space for others' journeys without losing their own center.`
     }
 };
 
@@ -1802,9 +1802,9 @@ The gift of integration is becoming an innovator who changes the world through r
 
 The shadow manifestation is a complicated relationship with spiritual experience and the boundaries between self and other. There may be escapism through substances or fantasy, psychic abilities that operate chaotically without conscious direction, or a tendency to merge with others' pain in ways that are destructive rather than healing.
 
-The shadow work involves trusting and deliberately developing intuitive gifts rather than allowing them to operate from shadow. This soul must learn to distinguish between genuine spiritual sensitivity and unhealthy boundary dissolution — honoring the mystic within while maintaining the practical grounding that keeps otherworldly gifts useful rather than overwhelming.
+The shadow work involves trusting and deliberately developing intuitive gifts rather than allowing them to operate from shadow. This soul must learn to distinguish between genuine spiritual sensitivity and unhealthy loss of boundaries — honoring the mystic within while maintaining the practical grounding that keeps otherworldly gifts useful rather than overwhelming.
 
-The gift of integration is becoming a mystic who bridges worlds without losing themselves. Once reclaimed, this placement produces extraordinary spiritual workers — healers, artists, and visionaries who channel transcendent wisdom into forms that serve the human world, proving that the veil between worlds is not a barrier but a doorway.`
+The gift of integration is becoming a mystic who bridges worlds without losing themselves. Once reclaimed, this placement produces extraordinary spiritual workers — healers, artists, and visionaries who channel deep wisdom into forms that serve the human world, proving that the boundary between worlds is not a wall but a doorway.`
     }
 };
 
@@ -1812,134 +1812,134 @@ var NORTH_NODE_READINGS = {
     Aries: {
         keywords: ["Independence", "Courage", "Self-Focus", "Initiative"],
         summary: "Soul growth through developing independence and self-assertion.",
-        reading: `The North Node in Aries indicates a soul journey toward independence, courage, and authentic self-assertion. Past life patterns (South Node in Libra) created deep expertise in partnership, compromise, and keeping the peace — but at the cost of knowing who they are as an individual, separate from relationships.
+        reading: `The North Node in Aries indicates a growth path toward independence, courage, and authentic self-assertion. Deep-rooted patterns (South Node in Libra) created deep expertise in partnership, compromise, and keeping the peace — but at the cost of knowing who they are as an individual, separate from relationships.
 
 This lifetime calls for the uncomfortable but essential work of putting oneself first. The old pattern of deferring to others, seeking consensus before acting, and defining identity through partnership must give way to a new paradigm: self-reliance, bold initiative, and the courage to act on personal conviction even when it disrupts harmony.
 
-Growth comes through each moment of choosing authenticity over approval. Learning to say no, to disagree openly, to pursue personal goals without requiring everyone's permission — these are the small acts of courage that fulfill this soul's evolutionary contract. Conflict, rather than being avoided, becomes a teacher.
+Growth comes through each moment of choosing authenticity over approval. Learning to say no, to disagree openly, to pursue personal goals without requiring everyone's permission — these are the small acts of courage that move this soul toward who they are meant to become. Conflict, rather than being avoided, becomes a teacher.
 
-The paradox is that developing genuine independence actually improves relationships. A soul who knows themselves fully brings far more to partnership than one who has lost themselves in it. The warrior heart this lifetime demands creates the authentic individual that others can truly love.`
+Here is what is interesting: developing genuine independence actually improves relationships. Someone who knows themselves fully brings far more to partnership than someone who has lost themselves in it. The brave heart this lifetime asks for creates the authentic individual that others can truly love.`
     },
     Taurus: {
         keywords: ["Stability", "Self-Worth", "Simplicity", "Patience"],
         summary: "Soul growth through building stability and self-reliance.",
-        reading: `The North Node in Taurus indicates a soul journey toward stability, self-worth, and the profound wisdom of simplicity. Past life patterns (South Node in Scorpio) created deep familiarity with intensity, crisis, and transformation — but also a dependency on drama and external upheaval as the only way to feel alive.
+        reading: `The North Node in Taurus indicates a growth path toward stability, self-worth, and the profound wisdom of simplicity. Deep-rooted patterns (South Node in Scorpio) created deep familiarity with intensity, crisis, and transformation — but also a dependency on drama and external upheaval as the only way to feel alive.
 
 This lifetime calls for the radical act of finding peace in the ordinary. The old pattern of gravitating toward crisis, depending on others' resources, and using emotional intensity as a substitute for genuine security must give way to a new paradigm: building one's own stability, developing personal resources, and discovering that calm is not boring but profoundly nourishing.
 
 Growth comes through patience and steady effort rather than dramatic transformation. Learning to stay, to build slowly, to appreciate what is already present rather than constantly seeking the next upheaval — these are the evolutionary lessons. The body itself becomes a teacher, grounding this soul in sensory reality.
 
-The paradox is that true transformation becomes possible only from a foundation of stability. A soul who has built genuine inner security can face life's inevitable changes with equanimity rather than reactivity. The peace this lifetime demands creates the unshakeable center from which real power flows.`
+What actually works is building a foundation of stability first — real transformation grows from there. Someone who has built genuine inner security can face life's inevitable changes with calm steadiness rather than panic. The peace this lifetime asks for creates the unshakeable center from which real strength flows.`
     },
     Gemini: {
         keywords: ["Learning", "Communication", "Curiosity", "Flexibility"],
         summary: "Soul growth through communication and staying curious.",
-        reading: `The North Node in Gemini indicates a soul journey toward intellectual curiosity, open communication, and the humility of perpetual learning. Past life patterns (South Node in Sagittarius) created deep expertise in philosophy, teaching, and the confident proclamation of truth — but also a tendency toward dogmatism and the assumption that one already has the answers.
+        reading: `The North Node in Gemini indicates a growth path toward intellectual curiosity, open communication, and the humility of perpetual learning. Deep-rooted patterns (South Node in Sagittarius) created deep expertise in philosophy, teaching, and the confident proclamation of truth — but also a tendency toward dogmatism and the assumption that one already has the answers.
 
 This lifetime calls for exchanging the podium for the student's desk. The old pattern of preaching, assuming moral authority, and treating personal beliefs as universal truth must give way to a new paradigm: asking questions, listening more than speaking, and remaining genuinely open to perspectives that challenge comfortable certainties.
 
 Growth comes through curiosity and intellectual humility. Learning to say "I don't know" is a form of courage for this soul. Gathering information before drawing conclusions, engaging with diverse viewpoints, and treating everyday conversations as sources of genuine wisdom — these are the evolutionary tasks.
 
-The paradox is that true wisdom emerges from embracing not-knowing. A soul who approaches life with beginner's mind discovers truths far more nuanced and valuable than anything dogmatic certainty could produce. The curiosity this lifetime demands creates a wiser teacher than the one who thought they already knew.`
+The surprising truth is that real wisdom comes from being willing to not have all the answers. Someone who stays curious and open discovers truths far richer than anything rigid certainty could produce. The curiosity this lifetime asks for creates a wiser teacher than the one who thought they already knew.`
     },
     Cancer: {
         keywords: ["Nurturing", "Emotional Security", "Home", "Vulnerability"],
         summary: "Soul growth through emotional connection and nurturing.",
-        reading: `The North Node in Cancer indicates a soul journey toward emotional depth, nurturing connection, and the creation of genuine belonging. Past life patterns (South Node in Capricorn) created mastery of achievement, public responsibility, and professional authority — but often at the cost of emotional availability, family connection, and the ability to be vulnerable.
+        reading: `The North Node in Cancer indicates a growth path toward emotional depth, nurturing connection, and the creation of genuine belonging. Deep-rooted patterns (South Node in Capricorn) created mastery of achievement, public responsibility, and professional authority — but often at the cost of emotional availability, family connection, and the ability to be vulnerable.
 
 This lifetime calls for trading the boardroom for the living room. The old pattern of defining worth through accomplishment, suppressing emotions for the sake of productivity, and treating vulnerability as weakness must give way to a new paradigm: emotional intelligence, familial devotion, and the courage to need and be needed.
 
 Growth comes through allowing feelings to guide decisions alongside logic. Learning to nurture without expecting ROI, to prioritize family over career when the heart insists, and to sit with emotions rather than managing them — these are the evolutionary challenges that reshape this soul's relationship with what truly matters.
 
-The paradox is that emotional fulfillment creates a foundation for even greater achievement. A soul who is nourished by genuine love and belonging brings far more creative energy to their public work than one who is running on empty. The vulnerability this lifetime demands becomes the source of their greatest strength.`
+What many people miss is that emotional fulfillment actually creates a foundation for even greater achievement. Someone who is nourished by genuine love and belonging brings far more creative energy to their public work than someone running on empty. The openness this lifetime asks for becomes the source of their greatest strength.`
     },
     Leo: {
         keywords: ["Self-Expression", "Creativity", "Joy", "Heart-Centered Living"],
         summary: "Soul growth through creative expression and following the heart.",
-        reading: `The North Node in Leo indicates a soul journey toward authentic self-expression, creative courage, and the willingness to be seen as a unique individual. Past life patterns (South Node in Aquarius) created expertise in group dynamics, collective thinking, and intellectual detachment — but also a tendency to hide individual brilliance behind group identity and emotional distance.
+        reading: `The North Node in Leo indicates a growth path toward authentic self-expression, creative courage, and the willingness to be seen as a unique individual. Deep-rooted patterns (South Node in Aquarius) created expertise in group dynamics, collective thinking, and intellectual detachment — but also a tendency to hide individual brilliance behind group identity and emotional distance.
 
 This lifetime calls for stepping into the spotlight as a singular creative force. The old pattern of deferring to the group, suppressing personal desires for the collective good, and maintaining intellectual distance from emotional experience must give way to a new paradigm: personal expression, creative risk, and wholehearted engagement with life.
 
 Growth comes through each act of creative courage. Performing, creating, leading from the heart rather than the head, risking being seen in all one's individual glory — these are the evolutionary lessons. Joy itself becomes a spiritual practice, and the willingness to be dramatic and passionate replaces cool detachment.
 
-The paradox is that authentic individual expression serves the collective far more powerfully than self-effacing group participation. A soul who dares to shine inspires others to find their own light. The creative courage this lifetime demands becomes a gift not just to the individual but to everyone who witnesses it.`
+Here is the thing: being genuinely yourself actually helps everyone around you more than blending in ever could. Someone who dares to shine inspires others to find their own light. The creative courage this lifetime asks for becomes a gift not just to them but to everyone who sees it.`
     },
     Virgo: {
         keywords: ["Service", "Discernment", "Practical Skills", "Health"],
         summary: "Soul growth through practical service and self-improvement.",
-        reading: `The North Node in Virgo indicates a soul journey toward practical service, discernment, and the grounding of spiritual gifts in everyday usefulness. Past life patterns (South Node in Pisces) created deep spiritual sensitivity, compassion, and connection to the transcendent — but also tendencies toward escapism, victimhood, and the avoidance of practical responsibility.
+        reading: `The North Node in Virgo indicates a growth path toward practical service, discernment, and the grounding of spiritual gifts in everyday usefulness. Deep-rooted patterns (South Node in Pisces) created deep spiritual sensitivity, compassion, and connection to something larger — but also tendencies toward escapism, victimhood, and the avoidance of practical responsibility.
 
 This lifetime calls for bringing heaven down to earth. The old pattern of floating in spiritual abstraction, playing the martyr, and avoiding the unglamorous work of daily life must give way to a new paradigm: developing concrete skills, serving in tangible ways, and treating routine as a form of devotion rather than a prison.
 
 Growth comes through discipline and discernment. Learning to distinguish between genuine intuition and wishful thinking, to show up consistently for unglamorous tasks, and to express compassion through practical help rather than mere emotional sympathy — these are the evolutionary lessons that ground this soul's gifts.
 
-The paradox is that spiritual depth becomes far more powerful when channeled through practical service. A soul who can translate transcendent vision into daily usefulness becomes a genuine healer rather than a well-meaning dreamer. The humble service this lifetime demands becomes the vessel through which real magic enters the world.`
+The surprising truth is that spiritual depth becomes far more powerful when put into practical action. Someone who can turn big-picture vision into everyday helpfulness becomes a genuine healer rather than a well-meaning dreamer. The humble service this lifetime asks for becomes the way real change enters the world.`
     },
     Libra: {
         keywords: ["Partnership", "Balance", "Diplomacy", "Cooperation"],
         summary: "Soul growth through relationships and cooperation.",
-        reading: `The North Node in Libra indicates a soul journey toward true partnership, diplomatic skill, and the art of genuine cooperation. Past life patterns (South Node in Aries) created strong self-reliance, competitive instincts, and the ability to act independently — but also a tendency to steamroll others, avoid compromise, and mistake isolation for strength.
+        reading: `The North Node in Libra indicates a growth path toward true partnership, diplomatic skill, and the art of genuine cooperation. Deep-rooted patterns (South Node in Aries) created strong self-reliance, competitive instincts, and the ability to act independently — but also a tendency to steamroll others, avoid compromise, and mistake isolation for strength.
 
 This lifetime calls for learning the sophisticated art of relationship. The old pattern of going it alone, putting personal needs first at all costs, and treating partnership as weakness must give way to a new paradigm: genuine collaboration, active listening, and the recognition that some achievements are only possible through true partnership.
 
 Growth comes through each act of genuine compromise and cooperation. Learning to consider others' perspectives, to negotiate rather than dictate, to find solutions that serve both parties equally — these are the evolutionary challenges. Relationships become the primary classroom for soul development.
 
-The paradox is that genuine partnership amplifies individual power rather than diminishing it. A soul who learns to cooperate skillfully achieves things that no amount of solo effort could produce. The diplomatic grace this lifetime demands creates not weakness but a more sophisticated and effective form of strength.`
+What many people discover is that genuine partnership actually increases individual strength rather than reducing it. Someone who learns to cooperate skillfully achieves things that no amount of solo effort could produce. The ability to work with others that this lifetime asks for creates not weakness but a deeper and more effective form of strength.`
     },
     Scorpio: {
         keywords: ["Transformation", "Intimacy", "Shared Resources", "Depth"],
         summary: "Soul growth through deep transformation and intimacy.",
-        reading: `The North Node in Scorpio indicates a soul journey toward transformation, profound intimacy, and the courageous exploration of life's deeper dimensions. Past life patterns (South Node in Taurus) created expertise in stability, self-reliance, and material security — but also a resistance to change, emotional depth, and the vulnerability that true intimacy requires.
+        reading: `The North Node in Scorpio indicates a growth path toward transformation, profound intimacy, and the courageous exploration of life's deeper dimensions. Deep-rooted patterns (South Node in Taurus) created expertise in stability, self-reliance, and material security — but also a resistance to change, emotional depth, and the vulnerability that true intimacy requires.
 
 This lifetime calls for releasing the grip on comfort and diving into the transformative depths. The old pattern of clinging to security, avoiding emotional exposure, and maintaining rigid control over circumstances must give way to a new paradigm: embracing change as medicine, sharing resources and vulnerability, and allowing crisis to serve as catalyst for genuine growth.
 
 Growth comes through each willingness to let go. Learning to share control, to merge resources with another, to allow old versions of self to die so new ones can be born — these are the evolutionary tasks. The soul must discover that what feels like destruction is often reconstruction.
 
-The paradox is that true security can only be found through willingness to transform. A soul who embraces impermanence discovers something far more unshakeable than material stability — the knowledge that they can survive anything and emerge stronger. The depth this lifetime demands creates an indestructible inner resilience.`
+What turns out to be true is that lasting security can only be found through a willingness to change. Someone who accepts that nothing stays the same discovers something far stronger than material comfort — the knowledge that they can survive anything and come out stronger. The depth this lifetime asks for creates an inner toughness that nothing can break.`
     },
     Sagittarius: {
         keywords: ["Faith", "Adventure", "Higher Learning", "Truth-Seeking"],
         summary: "Soul growth through faith, adventure, and truth-seeking.",
-        reading: `The North Node in Sagittarius indicates a soul journey toward expansive faith, bold adventure, and the pursuit of higher truth. Past life patterns (South Node in Gemini) created expertise in gathering information, local networking, and intellectual versatility — but also a tendency to stay safely in the realm of facts and data without committing to deeper meaning.
+        reading: `The North Node in Sagittarius indicates a growth path toward expansive faith, bold adventure, and the pursuit of higher truth. Deep-rooted patterns (South Node in Gemini) created expertise in gathering information, local networking, and intellectual versatility — but also a tendency to stay safely in the realm of facts and data without committing to deeper meaning.
 
 This lifetime calls for the leap from information to wisdom. The old pattern of collecting details without synthesizing meaning, staying busy with surface-level conversations, and avoiding the risk of committing to beliefs must give way to a new paradigm: seeking truth, expanding horizons, and trusting in life's larger purpose.
 
 Growth comes through adventure — both literal and philosophical. Travel to unfamiliar places, exposure to foreign worldviews, higher education, and the willingness to form genuine convictions — these are the evolutionary catalysts. The soul must learn that not-knowing is different from refusing to search.
 
-The paradox is that committing to a truth, even imperfectly, creates more wisdom than perpetually gathering evidence. A soul who dares to believe in something larger than data discovers that faith is not the enemy of intelligence but its highest expression. The expansive vision this lifetime demands creates the meaningful existence that information alone could never provide.`
+What this journey reveals is that committing to a belief, even imperfectly, creates more wisdom than endlessly gathering evidence. Someone who dares to believe in something bigger than facts alone discovers that faith and intelligence are not enemies but natural partners. The expansive vision this lifetime asks for creates the meaningful life that information alone could never build.`
     },
     Capricorn: {
         keywords: ["Achievement", "Responsibility", "Authority", "Mastery"],
         summary: "Soul growth through achievement and responsible authority.",
-        reading: `The North Node in Capricorn indicates a soul journey toward genuine achievement, mature responsibility, and the claiming of rightful authority. Past life patterns (South Node in Cancer) created deep emotional intelligence, family devotion, and nurturing gifts — but also dependency, emotional reactivity, and the use of vulnerability as a way to avoid the demands of public life.
+        reading: `The North Node in Capricorn indicates a growth path toward genuine achievement, mature responsibility, and the claiming of rightful authority. Deep-rooted patterns (South Node in Cancer) created deep emotional intelligence, family devotion, and nurturing gifts — but also dependency, emotional reactivity, and the use of vulnerability as a way to avoid the demands of public life.
 
 This lifetime calls for stepping into the world as a competent, responsible authority. The old pattern of retreating into emotional safety, relying on others for security, and avoiding the exposure and accountability of public achievement must give way to a new paradigm: discipline, professional excellence, and the courage to lead.
 
 Growth comes through each act of responsible self-governance. Building career, accepting authority, developing expertise, and showing up consistently for the demands of public contribution — these are the evolutionary tasks. Emotional maturity means using feelings as fuel for achievement rather than as excuses for avoidance.
 
-The paradox is that genuine emotional security comes through mastery rather than retreat. A soul who builds real competence and earns genuine authority discovers an unshakeable confidence that dependency could never provide. The disciplined achievement this lifetime demands creates the very security that emotional clinging sought but could never grasp.`
+What becomes clear over time is that genuine emotional security comes through mastery rather than retreat. Someone who builds real skills and earns genuine respect discovers a deep confidence that depending on others could never provide. The steady achievement this lifetime asks for creates the very security that emotional clinging always wanted but could never reach.`
     },
     Aquarius: {
         keywords: ["Humanitarian Service", "Innovation", "Community", "Independence"],
         summary: "Soul growth through serving humanity and honoring individuality.",
-        reading: `The North Node in Aquarius indicates a soul journey toward humanitarian service, visionary thinking, and contribution to the collective evolution of consciousness. Past life patterns (South Node in Leo) created strong creative identity, personal magnetism, and comfort with attention — but also ego attachment, drama, and the tendency to make everything about personal glory.
+        reading: `The North Node in Aquarius indicates a growth path toward humanitarian service, visionary thinking, and contribution to the collective evolution of consciousness. Deep-rooted patterns (South Node in Leo) created strong creative identity, personal magnetism, and comfort with attention — but also ego attachment, drama, and the tendency to make everything about personal glory.
 
 This lifetime calls for redirecting personal gifts toward collective service. The old pattern of seeking individual recognition, requiring special treatment, and measuring worth through personal applause must give way to a new paradigm: group consciousness, progressive thinking, and service to causes larger than oneself.
 
 Growth comes through each willingness to serve the group rather than the ego. Joining movements, collaborating as equals, championing innovation that serves humanity, and finding fulfillment in collective progress rather than personal recognition — these are the evolutionary tasks that reshape this soul's understanding of what matters.
 
-The paradox is that genuine individual significance comes through service to something larger. A soul who channels their considerable personal gifts toward collective benefit achieves a far more lasting legacy than one who sought only personal glory. The humanitarian vision this lifetime demands creates an impact that transcends any individual spotlight.`
+What this path reveals is that genuine personal significance comes through service to something larger. Someone who channels their considerable personal gifts toward the greater good achieves a far more lasting legacy than anyone who chased personal glory alone. The big-picture vision this lifetime asks for creates an impact that outlasts any individual spotlight.`
     },
     Pisces: {
         keywords: ["Spirituality", "Compassion", "Surrender", "Unity"],
         summary: "Soul growth through spiritual connection and compassionate service.",
-        reading: `The North Node in Pisces indicates a soul journey toward spiritual surrender, unconditional compassion, and the dissolution of the illusion that separates self from the divine whole. Past life patterns (South Node in Virgo) created mastery of analysis, perfectionism, and practical service — but also an over-reliance on logic, critical judgment, and the belief that everything can be fixed through effort.
+        reading: `The North Node in Pisces indicates a growth path toward spiritual openness, unconditional compassion, and the softening of the walls that separate self from something greater. Deep-rooted patterns (South Node in Virgo) created mastery of analysis, perfectionism, and practical service — but also an over-reliance on logic, critical judgment, and the belief that everything can be fixed through effort.
 
 This lifetime calls for the radical leap from fixing to flowing. The old pattern of analyzing every problem, criticizing every imperfection, and believing that harder work is always the answer must give way to a new paradigm: trust, surrender, compassion, and the understanding that some of life's greatest gifts arrive through letting go rather than holding on.
 
 Growth comes through faith, artistic expression, and selfless service. Learning to trust intuition over analysis, to offer compassion without requiring improvement, and to surrender control to something larger than the rational mind — these are the evolutionary tasks that soften this soul's grip and open their heart.
 
-The paradox is that surrender creates more power than control ever could. A soul who learns to trust the universe's larger plan discovers a peace and purpose that no amount of perfectionist striving could produce. The spiritual faith this lifetime demands becomes the source of a serenity that analysis alone could never find.`
+What this journey teaches is that letting go creates more strength than holding tight ever could. Someone who learns to trust in something larger than their own plan discovers a peace and purpose that no amount of perfectionist effort could produce. The faith this lifetime asks for becomes the source of a calm that overthinking alone could never find.`
     }
 };
 
@@ -2539,19 +2539,19 @@ var CHALLENGE_NUMBER_READINGS = {
 var KARMIC_DEBT_READINGS = {
     13: {
         title: "Karmic Debt 13/4",
-        reading: `Karmic Debt 13 (which reduces to 4) indicates past life misuse of work ethic or laziness at others' expense. In this life, hard work may seem to bring less reward than expected, and shortcuts don't work. The lesson is developing genuine discipline and accepting that meaningful achievement requires sustained effort. Success comes through honest, persistent work without trying to take the easy way. Once this lesson is mastered, the ability to accomplish great things through dedicated effort becomes a strength.`
+        reading: `Karmic Debt 13 (which reduces to 4) indicates deep patterns of avoiding hard work or taking shortcuts at others' expense. In this life, hard work may seem to bring less reward than expected, and shortcuts don't work. The lesson is developing genuine discipline and accepting that meaningful achievement requires sustained effort. Success comes through honest, persistent work without trying to take the easy way. Once this lesson is mastered, the ability to accomplish great things through dedicated effort becomes a strength.`
     },
     14: {
         title: "Karmic Debt 14/5",
-        reading: `Karmic Debt 14 (which reduces to 5) indicates past life abuse of freedom or overindulgence that harmed others or self. In this life, freedom may be restricted until its responsible use is learned. The lesson is developing self-control and commitment while maintaining healthy freedom. Moderation rather than excess, and commitment rather than escape, are the keys. Once mastered, the ability to enjoy life fully while remaining responsible becomes a gift.`
+        reading: `Karmic Debt 14 (which reduces to 5) indicates deep patterns of misusing freedom or overindulgence that harmed others or self. In this life, freedom may be restricted until its responsible use is learned. The lesson is developing self-control and commitment while maintaining healthy freedom. Moderation rather than excess, and commitment rather than escape, are the keys. Once mastered, the ability to enjoy life fully while remaining responsible becomes a gift.`
     },
     16: {
         title: "Karmic Debt 16/7",
-        reading: `Karmic Debt 16 (which reduces to 7) indicates past life misuse of love, ego, or spiritual gifts for personal gain. In this life, the ego may be humbled through relationship challenges or loss. The lesson is developing genuine humility and spiritual connection beyond ego needs. The fall that often comes is necessary for rebuilding on a truer foundation. Once mastered, deep spiritual wisdom and authentic self-knowledge emerge from the ashes of ego destruction.`
+        reading: `Karmic Debt 16 (which reduces to 7) indicates deep patterns of misusing love, ego, or spiritual gifts for personal gain. In this life, the ego may be humbled through relationship challenges or loss. The lesson is developing genuine humility and spiritual connection beyond ego needs. The fall that often comes is necessary for rebuilding on a truer foundation. Once mastered, deep spiritual wisdom and authentic self-knowledge emerge from the ashes of ego destruction.`
     },
     19: {
         title: "Karmic Debt 19/1",
-        reading: `Karmic Debt 19 (which reduces to 1) indicates past life abuse of power, selfishness at others' expense, or refusing to help when able. In this life, there may be difficulty receiving help or standing alone when support is needed. The lesson is learning that true independence includes interdependence, and that leadership means lifting others. Once mastered, the ability to be both self-reliant and gracefully connected to others emerges as a powerful gift.`
+        reading: `Karmic Debt 19 (which reduces to 1) indicates deep patterns of misusing power, putting self first at others' expense, or refusing to help when able. In this life, there may be difficulty receiving help or standing alone when support is needed. The lesson is learning that true independence includes interdependence, and that leadership means lifting others. Once mastered, the ability to be both self-reliant and gracefully connected to others emerges as a powerful gift.`
     }
 };
 
@@ -2963,10 +2963,10 @@ if (typeof module !== 'undefined' && module.exports) {
 var SOUTH_NODE_READINGS = {
     Aries: {
         keywords: ["Past Independence", "Warrior Energy", "Self-Focus", "Courage"],
-        summary: "Past life gifts of independence, courage, and self-assertion.",
-        reading: `The South Node in Aries indicates past life mastery of independence, courage, and self-assertion. This soul has been a warrior, a pioneer, and a leader in previous incarnations. They come into this life with natural confidence and the ability to act independently.
+        summary: "Natural gifts of independence, courage, and self-assertion.",
+        reading: `The South Node in Aries indicates natural mastery of independence, courage, and self-assertion. They are naturally a warrior, a pioneer, and a leader. They come into this life with natural confidence and the ability to act independently.
 
-These gifts include fearlessness in new ventures, the ability to stand alone when necessary, and natural leadership instincts. However, the soul's growth now requires balancing these strengths with awareness of others and cooperation.
+These gifts include fearlessness in new ventures, the ability to stand alone when necessary, and natural leadership instincts. However, the growth path now requires balancing these strengths with awareness of others and cooperation.
 
 The challenge is not falling back into purely self-focused patterns but using past courage to serve higher purposes that include others. The gift is the natural ability to initiate and lead when needed.`,
         strengths: ["Natural courage", "Independent action", "Leadership ability", "Self-confidence"],
@@ -2974,10 +2974,10 @@ The challenge is not falling back into purely self-focused patterns but using pa
     },
     Taurus: {
         keywords: ["Past Stability", "Material Mastery", "Sensual Gifts", "Patience"],
-        summary: "Past life gifts of material mastery, sensuality, and building.",
-        reading: `The South Node in Taurus indicates past life mastery of material security, sensual pleasure, and patient building. This soul has been a builder, an artist, and a steward of resources in previous incarnations. They come into this life with natural appreciation for beauty and the ability to create stability.
+        summary: "Natural gifts of material mastery, sensuality, and building.",
+        reading: `The South Node in Taurus indicates natural mastery of material security, sensual pleasure, and patient building. They are naturally a builder, an artist, and a steward of resources. They come into this life with natural appreciation for beauty and the ability to create stability.
 
-These gifts include practical wisdom, artistic sensibility, and the ability to manifest material abundance. However, the soul's growth now requires moving beyond attachment to security and comfort to embrace transformation and shared resources.
+These gifts include practical wisdom, artistic sensibility, and the ability to manifest material abundance. However, the growth path now requires moving beyond attachment to security and comfort to embrace transformation and shared resources.
 
 The challenge is not becoming stuck in materialism or resistance to change. The gift is the ability to create lasting value and appreciate life's physical pleasures.`,
         strengths: ["Material wisdom", "Artistic sensibility", "Patient building", "Sensual awareness"],
@@ -2985,10 +2985,10 @@ The challenge is not becoming stuck in materialism or resistance to change. The 
     },
     Gemini: {
         keywords: ["Past Communication", "Mental Agility", "Versatility", "Curiosity"],
-        summary: "Past life gifts of communication, learning, and mental flexibility.",
-        reading: `The South Node in Gemini indicates past life mastery of communication, learning, and mental agility. This soul has been a teacher, a writer, and a gatherer of information in previous incarnations. They come into this life with natural curiosity and the ability to connect with diverse people.
+        summary: "Natural gifts of communication, learning, and mental flexibility.",
+        reading: `The South Node in Gemini indicates natural mastery of communication, learning, and mental agility. They are naturally a teacher, a writer, and a gatherer of information. They come into this life with natural curiosity and the ability to connect with diverse people.
 
-These gifts include quick learning, verbal fluency, and the ability to see multiple perspectives. However, the soul's growth now requires moving beyond gathering information to developing wisdom and commitment to truth.
+These gifts include quick learning, verbal fluency, and the ability to see multiple perspectives. However, the growth path now requires moving beyond gathering information to developing wisdom and commitment to truth.
 
 The challenge is not becoming scattered or superficial in pursuit of variety. The gift is the ability to communicate and connect with anyone about anything.`,
         strengths: ["Quick learning", "Verbal fluency", "Versatility", "Social adaptability"],
@@ -2996,10 +2996,10 @@ The challenge is not becoming scattered or superficial in pursuit of variety. Th
     },
     Cancer: {
         keywords: ["Past Nurturing", "Emotional Depth", "Home Focus", "Protection"],
-        summary: "Past life gifts of nurturing, emotional intelligence, and creating home.",
-        reading: `The South Node in Cancer indicates past life mastery of nurturing, emotional care, and creating sanctuary. This soul has been a mother, a healer, and a protector in previous incarnations. They come into this life with natural emotional sensitivity and the ability to care for others.
+        summary: "Natural gifts of nurturing, emotional intelligence, and creating home.",
+        reading: `The South Node in Cancer indicates natural mastery of nurturing, emotional care, and creating sanctuary. They are naturally a caregiver, a healer, and a protector. They come into this life with natural emotional sensitivity and the ability to care for others.
 
-These gifts include deep empathy, intuitive understanding of needs, and the ability to create emotional safety. However, the soul's growth now requires moving beyond emotional dependency and family focus to develop public achievement and emotional maturity.
+These gifts include deep empathy, intuitive understanding of needs, and the ability to create emotional safety. However, the growth path now requires moving beyond emotional dependency and family focus to develop public achievement and emotional maturity.
 
 The challenge is not becoming overly protective or dependent on emotional security. The gift is the ability to nurture and create belonging wherever they go.`,
         strengths: ["Deep empathy", "Nurturing ability", "Emotional intelligence", "Protective instinct"],
@@ -3007,10 +3007,10 @@ The challenge is not becoming overly protective or dependent on emotional securi
     },
     Leo: {
         keywords: ["Past Creativity", "Self-Expression", "Leadership", "Generosity"],
-        summary: "Past life gifts of creativity, self-expression, and natural leadership.",
-        reading: `The South Node in Leo indicates past life mastery of creativity, self-expression, and commanding attention. This soul has been a performer, a leader, and a creator in previous incarnations. They come into this life with natural charisma and the ability to shine.
+        summary: "Natural gifts of creativity, self-expression, and natural leadership.",
+        reading: `The South Node in Leo indicates natural mastery of creativity, self-expression, and commanding attention. They are naturally a performer, a leader, and a creator. They come into this life with natural charisma and the ability to shine.
 
-These gifts include creative talent, leadership presence, and the ability to inspire others. However, the soul's growth now requires moving beyond ego needs and personal recognition to serve the collective and embrace equality.
+These gifts include creative talent, leadership presence, and the ability to inspire others. However, the growth path now requires moving beyond ego needs and personal recognition to serve the collective and embrace equality.
 
 The challenge is not becoming addicted to attention or allowing pride to block growth. The gift is the ability to express authentically and inspire through example.`,
         strengths: ["Creative talent", "Natural charisma", "Leadership presence", "Generous spirit"],
@@ -3018,10 +3018,10 @@ The challenge is not becoming addicted to attention or allowing pride to block g
     },
     Virgo: {
         keywords: ["Past Service", "Analytical Skill", "Perfection", "Health"],
-        summary: "Past life gifts of service, analysis, and practical skills.",
-        reading: `The South Node in Virgo indicates past life mastery of service, analysis, and practical perfection. This soul has been a healer, a craftsperson, and a devoted servant in previous incarnations. They come into this life with natural attention to detail and the ability to improve systems.
+        summary: "Natural gifts of service, analysis, and practical skills.",
+        reading: `The South Node in Virgo indicates natural mastery of service, analysis, and practical perfection. They are naturally a healer, a craftsperson, and a devoted helper. They come into this life with natural attention to detail and the ability to improve systems.
 
-These gifts include analytical precision, practical skills, and genuine desire to be of service. However, the soul's growth now requires moving beyond perfectionism and criticism to embrace wholeness and spiritual connection.
+These gifts include analytical precision, practical skills, and genuine desire to be of service. However, the growth path now requires moving beyond perfectionism and criticism to embrace wholeness and spiritual connection.
 
 The challenge is not becoming trapped in self-criticism or over-analysis. The gift is the ability to see what needs improvement and make it better.`,
         strengths: ["Analytical precision", "Practical skills", "Service orientation", "Health consciousness"],
@@ -3029,10 +3029,10 @@ The challenge is not becoming trapped in self-criticism or over-analysis. The gi
     },
     Libra: {
         keywords: ["Past Partnership", "Diplomacy", "Harmony", "Fairness"],
-        summary: "Past life gifts of partnership, diplomacy, and creating harmony.",
-        reading: `The South Node in Libra indicates past life mastery of partnership, diplomacy, and creating beauty. This soul has been a diplomat, an artist, and a relationship expert in previous incarnations. They come into this life with natural charm and the ability to create harmony.
+        summary: "Natural gifts of partnership, diplomacy, and creating harmony.",
+        reading: `The South Node in Libra indicates natural mastery of partnership, diplomacy, and creating beauty. They are naturally a diplomat, an artist, and a relationship expert. They come into this life with natural charm and the ability to create harmony.
 
-These gifts include diplomatic skill, aesthetic sensibility, and genuine care for fairness. However, the soul's growth now requires moving beyond people-pleasing and dependence on relationships to develop independent identity and decisive action.
+These gifts include diplomatic skill, aesthetic sensibility, and genuine care for fairness. However, the growth path now requires moving beyond people-pleasing and dependence on relationships to develop independent identity and decisive action.
 
 The challenge is not losing oneself in relationships or avoiding necessary conflict. The gift is the ability to create beauty and harmony in any situation.`,
         strengths: ["Diplomatic skill", "Aesthetic sense", "Fair-mindedness", "Partnership ability"],
@@ -3040,10 +3040,10 @@ The challenge is not losing oneself in relationships or avoiding necessary confl
     },
     Scorpio: {
         keywords: ["Past Power", "Transformation", "Depth", "Intensity"],
-        summary: "Past life gifts of power, transformation, and emotional depth.",
-        reading: `The South Node in Scorpio indicates past life mastery of power, transformation, and emotional intensity. This soul has been a healer, a mystic, and a wielder of power in previous incarnations. They come into this life with natural depth and the ability to transform.
+        summary: "Natural gifts of power, transformation, and emotional depth.",
+        reading: `The South Node in Scorpio indicates natural mastery of power, transformation, and emotional intensity. They are naturally a healer, a mystic, and a wielder of power. They come into this life with natural depth and the ability to transform.
 
-These gifts include emotional intensity, psychological insight, and the ability to navigate crisis. However, the soul's growth now requires moving beyond power struggles and emotional drama to embrace simplicity and stability.
+These gifts include emotional intensity, psychological insight, and the ability to navigate crisis. However, the growth path now requires moving beyond power struggles and emotional drama to embrace simplicity and stability.
 
 The challenge is not becoming trapped in obsession or using power destructively. The gift is the ability to transform and heal at the deepest levels.`,
         strengths: ["Emotional depth", "Psychological insight", "Transformative power", "Crisis navigation"],
@@ -3051,10 +3051,10 @@ The challenge is not becoming trapped in obsession or using power destructively.
     },
     Sagittarius: {
         keywords: ["Past Wisdom", "Adventure", "Faith", "Teaching"],
-        summary: "Past life gifts of wisdom, adventure, and spiritual seeking.",
-        reading: `The South Node in Sagittarius indicates past life mastery of wisdom, adventure, and spiritual truth. This soul has been a teacher, a philosopher, and a seeker in previous incarnations. They come into this life with natural optimism and the ability to inspire faith.
+        summary: "Natural gifts of wisdom, adventure, and spiritual seeking.",
+        reading: `The South Node in Sagittarius indicates natural mastery of wisdom, adventure, and spiritual truth. They are naturally a teacher, a philosopher, and a seeker. They come into this life with natural optimism and the ability to inspire faith.
 
-These gifts include philosophical depth, adventurous spirit, and the ability to see the big picture. However, the soul's growth now requires moving beyond dogmatic beliefs and restless seeking to develop practical skills and attention to detail.
+These gifts include philosophical depth, adventurous spirit, and the ability to see the big picture. However, the growth path now requires moving beyond dogmatic beliefs and restless seeking to develop practical skills and attention to detail.
 
 The challenge is not becoming preachy or avoiding commitment through constant movement. The gift is the ability to inspire and expand others' horizons.`,
         strengths: ["Philosophical depth", "Adventurous spirit", "Inspiring presence", "Big picture vision"],
@@ -3062,10 +3062,10 @@ The challenge is not becoming preachy or avoiding commitment through constant mo
     },
     Capricorn: {
         keywords: ["Past Achievement", "Authority", "Discipline", "Responsibility"],
-        summary: "Past life gifts of achievement, authority, and practical mastery.",
-        reading: `The South Node in Capricorn indicates past life mastery of achievement, authority, and practical success. This soul has been a leader, a builder of institutions, and an authority figure in previous incarnations. They come into this life with natural ambition and the ability to succeed.
+        summary: "Natural gifts of achievement, authority, and practical mastery.",
+        reading: `The South Node in Capricorn indicates natural mastery of achievement, authority, and practical success. They are naturally a leader, a builder of institutions, and an authority figure. They come into this life with natural ambition and the ability to succeed.
 
-These gifts include organizational skill, patience for long-term goals, and the ability to handle responsibility. However, the soul's growth now requires moving beyond career obsession and emotional suppression to develop family connections and emotional awareness.
+These gifts include organizational skill, patience for long-term goals, and the ability to handle responsibility. However, the growth path now requires moving beyond career obsession and emotional suppression to develop family connections and emotional awareness.
 
 The challenge is not becoming a workaholic or sacrificing relationships for achievement. The gift is the ability to build lasting structures and achieve meaningful goals.`,
         strengths: ["Organizational skill", "Patience", "Responsibility", "Achievement ability"],
@@ -3073,10 +3073,10 @@ The challenge is not becoming a workaholic or sacrificing relationships for achi
     },
     Aquarius: {
         keywords: ["Past Innovation", "Humanitarianism", "Independence", "Vision"],
-        summary: "Past life gifts of innovation, humanitarian service, and progressive thinking.",
-        reading: `The South Node in Aquarius indicates past life mastery of innovation, humanitarian service, and progressive ideals. This soul has been a reformer, an inventor, and a community leader in previous incarnations. They come into this life with natural originality and concern for humanity.
+        summary: "Natural gifts of innovation, humanitarian service, and progressive thinking.",
+        reading: `The South Node in Aquarius indicates natural mastery of innovation, humanitarian service, and progressive ideals. They are naturally a reformer, an inventor, and a community leader. They come into this life with natural originality and concern for humanity.
 
-These gifts include innovative thinking, humanitarian values, and the ability to envision the future. However, the soul's growth now requires moving beyond detachment and group focus to develop individual creative expression and heart-centered connection.
+These gifts include innovative thinking, humanitarian values, and the ability to envision the future. However, the growth path now requires moving beyond detachment and group focus to develop individual creative expression and heart-centered connection.
 
 The challenge is not becoming too detached or contrary for its own sake. The gift is the ability to see possibilities others miss and work for collective progress.`,
         strengths: ["Innovative thinking", "Humanitarian values", "Visionary ability", "Independence"],
@@ -3084,10 +3084,10 @@ The challenge is not becoming too detached or contrary for its own sake. The gif
     },
     Pisces: {
         keywords: ["Past Spirituality", "Compassion", "Imagination", "Unity"],
-        summary: "Past life gifts of spirituality, compassion, and artistic sensitivity.",
-        reading: `The South Node in Pisces indicates past life mastery of spirituality, compassion, and mystical connection. This soul has been a mystic, an artist, and a spiritual healer in previous incarnations. They come into this life with natural sensitivity and connection to the unseen.
+        summary: "Natural gifts of spirituality, compassion, and artistic sensitivity.",
+        reading: `The South Node in Pisces indicates natural mastery of spirituality, compassion, and mystical connection. They are naturally a mystic, an artist, and a spiritual healer. They come into this life with natural sensitivity and connection to the unseen.
 
-These gifts include profound empathy, artistic sensitivity, and spiritual awareness. However, the soul's growth now requires moving beyond escapism and boundary dissolution to develop practical skills and healthy boundaries.
+These gifts include profound empathy, artistic sensitivity, and spiritual awareness. However, the growth path now requires moving beyond escapism and boundary dissolution to develop practical skills and healthy boundaries.
 
 The challenge is not becoming lost in fantasy or victim consciousness. The gift is the ability to connect with the divine and express transcendent beauty.`,
         strengths: ["Spiritual awareness", "Artistic sensitivity", "Deep compassion", "Intuitive ability"],

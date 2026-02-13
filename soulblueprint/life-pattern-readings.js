@@ -241,7 +241,7 @@ const OPERATING_STYLES = {
         subtitle: "Question. Transform. Rebuild.",
         keywords: ["Transformation", "Intensity", "Truth-Seeking", "Evolution"],
         reading: "Your chart converges on a single operating mode: disruption. You are wired to see what isn't working, name it, and dismantle it — often before others are ready to hear it.\n\nDisruptors are not popular in the moment. They are vindicated in retrospect. Your role is to be the catalyst for necessary change — the person who asks the question everyone is avoiding, who points to the crack in the foundation before the building collapses.\n\nThe Disruptor's strength is perception. You see beneath the surface. You detect dishonesty, misalignment, and unsustainable patterns before they become crises. This makes you invaluable — and sometimes uncomfortable to be around.\n\nYour natural rhythm: long periods of observation, followed by decisive action that changes everything. The smartest Disruptors learn to time their interventions — not every truth needs to be spoken in every room.",
-        strengths: ["Sees what others miss or avoid", "Catalyzes necessary change", "Fearless in confronting dysfunction", "Creates space for authentic transformation"],
+        strengths: ["Sees what others miss or avoid", "Sparks necessary change", "Fearless in confronting dysfunction", "Creates space for authentic transformation"],
         challenges: ["May destabilize what doesn't need disrupting", "Intensity can alienate allies", "Difficulty accepting incremental progress", "The urge to rebuild can become compulsive"]
     },
     synthesizer: {
