@@ -204,3 +204,117 @@ document.addEventListener('click', function(e) {
         link.setAttribute('rel', 'noopener noreferrer');
     }
 });
+
+// ===== Back to Top Button =====
+(function() {
+    const btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.innerHTML = '↑';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.title = 'Back to top';
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', function() {
+        btn.classList.toggle('visible', window.scrollY > 400);
+    });
+
+    btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
+
+// ===== Global Reading Paste =====
+// Lets user paste their reading ONCE and all prompts auto-fill
+(function() {
+    const STORAGE_KEY = 'soulblueprint_reading';
+
+    function getSavedReading() {
+        return localStorage.getItem(STORAGE_KEY) || '';
+    }
+
+    function injectReadingWidget() {
+        // Only show on guide pages that have prompt-boxes
+        const promptBoxes = document.querySelectorAll('.prompt-box pre');
+        if (promptBoxes.length === 0) return;
+
+        // Check if any prompts have the placeholder
+        const hasPlaceholder = Array.from(promptBoxes).some(pre =>
+            pre.textContent.includes('[PASTE YOUR FULL READING HERE]') ||
+            pre.textContent.includes('[PASTE ALL READINGS]') ||
+            pre.textContent.includes('[PASTE YOUR READING')
+        );
+        if (!hasPlaceholder) return;
+
+        const saved = getSavedReading();
+        const container = document.createElement('div');
+        container.className = 'reading-paste-widget';
+        container.innerHTML = `
+            <div class="reading-paste-header">
+                <h3>📋 Paste Your Reading Once</h3>
+                <p>Paste your soul blueprint reading below and it will auto-fill into every prompt on this page.</p>
+            </div>
+            <textarea id="globalReading" placeholder="Paste your complete soul blueprint reading here... It will replace [PASTE YOUR FULL READING HERE] in every prompt below.">${saved}</textarea>
+            <div class="reading-paste-actions">
+                <button onclick="applyGlobalReading()" class="reading-paste-btn">✨ Apply to All Prompts</button>
+                <button onclick="clearGlobalReading()" class="reading-paste-btn reading-paste-btn-outline">Clear</button>
+                <span class="reading-paste-status" id="readingStatus">${saved ? '✅ Reading saved from last visit' : ''}</span>
+            </div>
+        `;
+
+        // Insert after page header or progress bar
+        const guideContent = document.querySelector('.guide-content');
+        if (guideContent) {
+            guideContent.insertBefore(container, guideContent.firstChild);
+        }
+
+        // Auto-apply if we have a saved reading
+        if (saved) {
+            setTimeout(() => applyGlobalReading(), 100);
+        }
+    }
+
+    window.applyGlobalReading = function() {
+        const reading = document.getElementById('globalReading')?.value?.trim();
+        if (!reading) {
+            showNotification('Please paste your reading first!');
+            return;
+        }
+
+        localStorage.setItem(STORAGE_KEY, reading);
+
+        document.querySelectorAll('.prompt-box pre').forEach(pre => {
+            // Store the original template if not already stored
+            if (!pre.dataset.originalTemplate) {
+                pre.dataset.originalTemplate = pre.textContent;
+            }
+            let text = pre.dataset.originalTemplate;
+            text = text.replace(/\[PASTE YOUR FULL READING HERE\]/gi, reading);
+            text = text.replace(/\[PASTE ALL READINGS\]/gi, reading);
+            text = text.replace(/\[PASTE YOUR READING(?:\(S\))?\s*HERE\]/gi, reading);
+            pre.textContent = text;
+        });
+
+        const status = document.getElementById('readingStatus');
+        if (status) status.textContent = '✅ Applied to all prompts!';
+        showNotification('Reading applied to all prompts on this page!');
+    };
+
+    window.clearGlobalReading = function() {
+        localStorage.removeItem(STORAGE_KEY);
+        const textarea = document.getElementById('globalReading');
+        if (textarea) textarea.value = '';
+
+        // Restore original templates
+        document.querySelectorAll('.prompt-box pre').forEach(pre => {
+            if (pre.dataset.originalTemplate) {
+                pre.textContent = pre.dataset.originalTemplate;
+            }
+        });
+
+        const status = document.getElementById('readingStatus');
+        if (status) status.textContent = '';
+        showNotification('Reading cleared');
+    };
+
+    document.addEventListener('DOMContentLoaded', injectReadingWidget);
+})();
