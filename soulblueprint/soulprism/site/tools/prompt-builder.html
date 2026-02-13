@@ -459,6 +459,19 @@ Tips:
         </div><!-- /builder-grid -->
     </div><!-- /container -->
 
+    <div class="container">
+        <div class="page-nav">
+            <a href="../guides/examples.html" class="page-nav-prev">
+                <span class="nav-label">← Previous</span>
+                <span class="nav-title">🦁 Leo Sun Example</span>
+            </a>
+            <a href="../index.html" class="page-nav-next">
+                <span class="nav-label">Home →</span>
+                <span class="nav-title">Landing Page</span>
+            </a>
+        </div>
+    </div>
+
     <!-- ========== FOOTER ========== -->
     <footer>
         <div class="container">
@@ -471,6 +484,9 @@ Tips:
 
     <!-- ========== TOAST ========== -->
     <div class="toast" id="toast">✓ Copied to clipboard!</div>
+
+    <!-- Shared site JS loads FIRST so the page-specific IIFE can override copyPrompt -->
+    <script src="../js/main.js"></script>
 
     <!-- ==========================================
          INLINE JS — Prompt Builder Logic
@@ -1075,7 +1091,5 @@ Here is the reading:
     })();
     </script>
 
-    <!-- Shared site JS (nav toggle, scroll animations, etc.) -->
-    <script src="../js/main.js"></script>
 </body>
 </html>
