@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Builder - Visual Soul Blueprint</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        .builder-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .builder-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        select, textarea, input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, textarea:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .premium-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ffa502);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.7em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .quick-presets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .preset-btn {
+            padding: 10px 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        .preset-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .generated-prompt {
+            background: #fff;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .generated-prompt h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .prompt-output {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .copy-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .copy-btn {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .copy-btn:active {
+            transform: translateY(0);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #28a745;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .history-section {
+            margin-top: 30px;
+        }
+
+        .history-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .history-item:hover {
+            border-left-color: #764ba2;
+            background: #f8f9fa;
+        }
+
+        .history-item .type {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .history-item .date {
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        .clear-history {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .tip-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .tip-box p {
+            color: #856404;
+            font-size: 0.9em;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 AI Prompt Builder</h1>
+            <p>Create custom prompts for transforming your soul blueprint into infinite experiences</p>
+        </header>
+
+        <main>
+            <div class="builder-container">
+                <!-- Left Column: Input -->
+                <div class="left-col">
+                    <div class="section">
+                        <h2>📝 Step 1: Select Transformation Type</h2>
+                        
+                        <div class="form-group">
+                            <label for="transformationType">Choose Your Transformation:</label>
+                            <select id="transformationType" onchange="updatePrompt()">
+                                <optgroup label="🎨 Visual Art (Free AI)">
+                                    <option value="visual-portrait">Portrait Reading</option>
+                                    <option value="visual-scene">Scene Visualization</option>
+                                    <option value="visual-abstract">Abstract Art</option>
+                                    <option value="visual-symbolic">Symbolic Representation</option>
+                                    <option value="visual-infographic">Infographic Design</option>
+                                </optgroup>
+                                
+                                <optgroup label="📊 Infographics (Free AI)">
+                                    <option value="infographic-pie">Pie Chart Visualization</option>
+                                    <option value="infographic-bar">Bar Chart Comparison</option>
+                                    <option value="infographic-timeline">Timeline Overview</option>
+                                    <option value="infographic-diagram">Process Diagram</option>
+                                    <option value="infographic-radar">Radar Chart Profile</option>
+                                </optgroup>
+                                
+                                <optgroup label="🎭 Stories & Narrative (Free AI)">
+                                    <option value="story-hero">Hero's Journey Story</option>
+                                    <option value="story-fairy">Fairy Tale Version</option>
+                                    <option value="story-myth">Mythological Tale</option>
+                                    <option value="story-future">Future Self Story</option>
+                                    <option value="story-past">Past Life Exploration</option>
+                                </optgroup>
+                                
+                                <optgroup label="💬 Language Transformations (Free AI)">
+                                    <option value="language-mystical">Mystical Voice</option>
+                                    <option value="language-clinical">Clinical/Psychological Voice</option>
+                                    <option value="language-casual">Casual Conversational</option>
+                                    <option value="language-poetic">Poetic Expression</option>
+                                    <option value="language-scientific">Scientific Analysis</option>
+                                </optgroup>
+                                
+                                <optgroup label="🛠️ Practical Applications (Free AI)">
+                                    <option value="practical-daily">Daily Routine</option>
+                                    <option value="practical-career">Career Guidance</option>
+                                    <option value="practical-relationships">Relationship Insights</option>
+                                    <option value="practical-decision">Decision Framework</option>
+                                    <option value="practical-wellness">Wellness Plan</option>
+                                </optgroup>
+                                
+                                <optgroup label="🧘 Spiritual Tools (Free AI)">
+                                    <option value="spiritual-meditation">Guided Meditation</option>
+                                    <option value="spiritual-affirmation">Affirmation Set</option>
+                                    <option value="spiritual-ritual">Personal Ritual</option>
+                                    <option value="spiritual-journal">Journal Prompts</option>
+                                </optgroup>
+                                
+                                <optgroup label="⭐ Premium Transformations <span class="premium-badge">PRO</span>">
+                                    <option value="premium-autobiography">Full-Length Autobiography</option>
+                                    <option value="premium-novel">Fiction Novel</option>
+                                    <option value="premium-children">Children's Storybook</option>
+                                    <option value="premium-poetry">Poetry Collection</option>
+                                    <option value="premium-film">Feature Film Script</option>
+                                    <option value="premium-tv">TV Series Bible</option>
+                                    <option value="premium-game">Choose-Your-Own-Adventure</option>
+                                    <option value="premium-oracle">Oracle Deck Guidebook</option>
+                                    <option value="premium-art">Museum Art Series</option>
+                                    <option value="premium-character">Character Portfolio</option>
+                                    <option value="premium-podcast">Podcast Series</option>
+                                    <option value="premium-meditation">Meditation Library</option>
+                                    <option value="premium-mythology">Personal Mythology</option>
+                                    <option value="premium-ted">TED Talk Script</option>
+                                    <option value="premium-language">Ancestral Translation</option>
+                                    <option value="premium-daily">Daily Operating System</option>
+                                    <option value="premium-career">Career Strategy Guide</option>
+                                    <option value="premium-case">Psychological Case Study</option>
+                                    <option value="premium-course">Online Course</option>
+                                    <option value="premium-songs">Song Lyrics & Album</option>
+                                    <option value="premium-play">Theater Play Script</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>📄 Step 2: Paste Your Reading(s)</h2>
+                        
+                        <div class="form-group">
+                            <label for="readingContent">Your Soul Blueprint Reading(s):</label>
+                            <textarea id="readingContent" placeholder="Paste your soul blueprint reading(s) here...
+
+Tips:
+• For simple transformations, paste 1-3 readings
+• For complex transformations (novels, films), paste as many relevant readings as possible
+• Remove any personal info you don't want shared with AI
+• Keep the original formatting for best results"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Quick Presets (for testing):</label>
+                            <div class="quick-presets">
+                                <button class="preset-btn" onclick="loadPreset('sun')">☀️ Sun Sign Reading</button>
+                                <button class="preset-btn" onclick="loadPreset('moon')">🌙 Moon Reading</button>
+                                <button class="preset-btn" onclick="loadPreset('rising')">🌅 Rising Reading</button>
+                                <button class="preset-btn" onclick="loadPreset('life-path')">🔢 Life Path</button>
+                                <button class="preset-btn" onclick="loadPreset('love')">❤️ Love Blueprint</button>
+                                <button class="preset-btn" onclick="loadPreset('career')">💼 Career Blueprint</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>⚙️ Step 3: Customize Your Prompt</h2>
+                        
+                        <div class="form-group">
+                            <label for="userName">Your Name (optional):</label>
+                            <input type="text" id="userName" placeholder="Enter your name for personalization">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customInstructions">Additional Instructions (optional):</label>
+                            <textarea id="customInstructions" style="min-height: 80px;" placeholder="Add any specific requests or preferences...
+
+Examples:
+• Make it more humorous
+• Focus on career aspects only
+• Include specific examples
+• Make it suitable for children
+• Add historical references"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stylePreference">Style/Tone Preference:</label>
+                            <select id="stylePreference">
+                                <option value="balanced">Balanced (recommended)</option>
+                                <option value="detailed">More Detailed</option>
+                                <option value="concise">More Concise</option>
+                                <option value="creative">More Creative</option>
+                                <option value="practical">More Practical</option>
+                                <option value="inspirational">More Inspirational</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Output -->
+                <div class="right-col">
+                    <div class="section">
+                        <h2>✨ Step 4: Your Custom Prompt</h2>
+                        
+                        <div class="generated-prompt">
+                            <h3>Generated Prompt</h3>
+                            <div class="prompt-output" id="promptOutput">
+                                Select a transformation type and paste your reading to generate your custom prompt...
+                            </div>
+                            
+                            <div class="copy-buttons">
+                                <button class="copy-btn" onclick="copyPrompt()">
+                                    📋 Copy to Clipboard
+                                </button>
+                                <button class="copy-btn" onclick="openChatGPT()" style="background: linear-gradient(135deg, #10a37f, #1a7f5a);">
+                                    💬 Open in ChatGPT
+                                </button>
+                                <button class="copy-btn" onclick="openGemini()" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                                    🔮 Open in Gemini
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4>💡 Pro Tip</h4>
+                            <p id="proTip">For best results, paste multiple related readings together. This helps the AI understand the bigger picture and create more coherent transformations.</p>
+                        </div>
+                    </div>
+
+                    <div class="section history-section">
+                        <h2>📜 Recent Prompts</h2>
+                        <div id="promptHistory">
+                            <p style="color: #999; font-style: italic;">No prompts generated yet...</p>
+                        </div>
+                        <button class="clear-history" onclick="clearHistory()">Clear History</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <script>
+        // Prompt templates for each transformation type
+        const promptTemplates = {
+            // Visual Art
+            'visual-portrait': `You are a visual artist. Create a portrait visualization based on this soul blueprint reading:
+
+[READING]
+
+Create a portrait that captures the essence of this reading. Include:
+- Facial features that reflect the key traits
+- Expression that embodies the core energy
+- Background elements that suggest the deeper meaning
+- Color palette that matches the emotional tone
+- Symbolic details that hint at the gifts and challenges
+
+Style: Realistic with subtle symbolic elements
+Medium: Digital painting
+Quality: High detail, museum quality
+
+Provide a detailed description for AI image generation.`,
+            
+            'visual-scene': `You are a cinematic concept artist. Create a scene visualization based on this soul blueprint reading:
+
+[READING]
+
+Visualize this reading as a cinematic scene:
+- Setting: Describe the environment
+- Action: What's happening in the scene
+- Mood: The overall emotional atmosphere
+- Lighting: Natural, dramatic, mystical, etc.
+- Color scheme: Primary and secondary colors
+- Key details: Symbolic elements to include
+- Composition: Wide shot, close-up, etc.
+
+Style: Cinematic, movie poster quality
+Provide detailed visual description for AI image generation.`,
+            
+            'visual-abstract': `You are an abstract expressionist artist. Create an abstract art piece based on this soul blueprint reading:
+
+[READING]
+
+Transform this reading into abstract art:
+- Primary shapes and forms
+- Color relationships and contrasts
+- Texture and movement suggestions
+- Emotional energy expressed through abstraction
+- Hidden meanings in the composition
+- Balance between chaos and harmony
+
+Style: Abstract expressionism, Rothko/Kandinsky inspired
+Provide detailed description for AI image generation.`,
+            
+            'visual-symbolic': `You are a symbolic artist. Create a symbolic representation based on this soul blueprint reading:
+
+[READING]
+
+Design a symbolic artwork:
+- Central symbol or motif
+- Supporting symbolic elements
+- Color symbolism
+- Geometric relationships
+- Archetypal imagery
+- Layered meanings
+
+Style: Symbolic realism, Tarot card aesthetic
+Provide detailed description for AI image generation.`,
+            
+            'visual-infographic': `You are an infographic designer. Create an infographic visualization based on this soul blueprint reading:
+
+[READING]
+
+Design an infographic that presents this information visually:
+- Main concept or theme
+- Supporting data or points
+- Visual hierarchy
+- Color scheme for clarity
+- Icons or illustrations
+- Layout structure
+
+Style: Clean, modern, informative
+Provide detailed description for AI image generation.`,
+
+
+            // Infographics
+            'infographic-pie': `You are a data visualization expert. Create a pie chart infographic based on this soul blueprint reading:
+
+[READING]
+
+Extract the key components and create a pie chart:
+- Identify 4-8 main categories or aspects
+- Assign percentages that represent their importance
+- Choose colors that relate to each category
+- Add labels and brief explanations
+- Include a legend if needed
+- Add title: "Your [Theme] Blueprint"
+
+Provide: Complete pie chart description with colors, percentages, labels, and layout.`,
+
+
+            'infographic-bar': `You are a data visualization expert. Create a bar chart infographic based on this soul blueprint reading:
+
+[READING]
+
+Extract comparative data and create a bar chart:
+- Identify 5-7 items to compare
+- Use appropriate scale/units
+- Color-code different categories
+- Add value labels
+- Include axis labels and title
+- Add trend indicators if applicable
+
+Provide: Complete bar chart description with data, colors, and layout.`,
+
+
+            'infographic-timeline': `You are a timeline designer. Create a timeline infographic based on this soul blueprint reading:
+
+[READING]
+
+Create a visual timeline:
+- Identify key phases or periods
+- Order chronologically
+- Mark significant milestones
+- Add brief descriptions for each phase
+- Use visual markers for different types of events
+- Include title and time scale
+
+Provide: Complete timeline description with phases, dates, milestones, and visual elements.`,
+
+            'infographic-diagram': `You are a process diagram designer. Create a flow diagram based on this soul blueprint reading:
+
+[READING]
+
+Create a process or system diagram:
+- Identify main components or steps
+- Show relationships and connections
+- Use arrows for flow direction
+- Add labels for each element
+- Use color coding for different types
+- Include a clear title
+
+Provide: Complete diagram description with components, connections, and layout.`,
+
+            'infographic-radar': `You are a data visualization expert. Create a radar/spider chart infographic based on this soul blueprint reading:
+
+[READING]
+
+Extract 5-8 dimensions and create a radar chart:
+- Identify key dimensions or qualities
+- Rate each on a scale of 1-10
+- Arrange in circular pattern
+- Connect points to show overall profile
+- Color different areas
+- Add labels and title
+
+Provide: Complete radar chart description with dimensions, values, colors, and layout.`,
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadHistory();
+        });
+
+        // Update prompt based on selections
+        function updatePrompt() {
+            const type = document.getElementById('transformationType').value;
+            const reading = document.getElementById('readingContent').value;
+            const userName = document.getElementById('userName').value;
+            const custom = document.getElementById('customInstructions').value;
+            const style = document.getElementById('stylePreference').value;
+            
+            let template = promptTemplates[type] || 'Select a transformation type...';
+            
+            // Replace placeholders
+            if (reading) {
+                template = template.replace('[READING]', reading);
+            }
+            
+            if (userName) {
+                template = template.replace('[NAME]', userName);
+            }
+            
+            // Add custom instructions
+            if (custom) {
+                template += '\n\nAdditional Instructions:\n' + custom;
+            }
+            
+            // Add style modifier
+            const styleModifiers = {
+                'detailed': '\n\nPlease provide extra detail and depth in your response.',
+                'concise': '\n\nPlease keep your response concise and to the point.',
+                'creative': '\n\nPlease be especially creative and imaginative in your approach.',
+                'practical': '\n\nFocus on practical, actionable content.',
+                'inspirational': '\n\nMake your response especially uplifting and inspiring.'
+            };
+            
+            if (style !== 'balanced' && styleModifiers[style]) {
+                template += styleModifiers[style];
+            }
+            
+            document.getElementById('promptOutput').textContent = template;
+            
+            // Update pro tip
+            updateProTip(type);
+        }
+
+        // Update pro tip based on transformation type
+        function updateProTip(type) {
+            const tips = {
+                'visual-portrait': 'For portraits, include multiple readings about your personality and character for a more accurate representation.',
+                'visual-scene': 'Describe the mood you want - peaceful, dramatic, mystical, etc.',
+                'visual-infographic': 'Infographics work best with readings that have clear components or categories.',
+                'story-hero': 'Include readings about your challenges and gifts for a complete hero\'s journey.',
+                'premium-autobiography': 'For autobiographies, include as many readings as possible - the more context, the better.',
+                'premium-novel': 'Include readings about conflicts, relationships, and destiny for rich novel material.'
+            };
+            
+            const tip = tips[type] || 'For best results, paste multiple related readings together. This helps the AI understand the bigger picture.';
+            document.getElementById('proTip').textContent = tip;
+        }
+
+        // Copy prompt to clipboard
+        function copyPrompt() {
+            const prompt = document.getElementById('promptOutput').textContent;
+            navigator.clipboard.writeText(prompt).then(() => {
+                showToast();
+                saveToHistory(prompt);
+            });
+        }
+
+        // Open in ChatGPT
+        function openChatGPT() {
+            const prompt = encodeURIComponent(document.getElementById('promptOutput').textContent);
+            window.open(`https://chat.openai.com/?q=${prompt}`, '_blank');
+            saveToHistory(document.getElementById('promptOutput').textContent);
+        }
+
+        // Open in Gemini
+        function openGemini() {
+            const prompt = encodeURIComponent(document.getElementById('promptOutput').textContent);
+            window.open(`https://gemini.google.com/?q=${prompt}`, '_blank');
+            saveToHistory(document.getElementById('promptOutput').textContent);
+        }
+
+        // Show toast notification
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        // Load preset reading
+        function loadPreset(preset) {
+            const presets = {
+                'sun': '☀️ SUN SIGN READING\n\nYou are a [Sun Sign], embodying the archetypal energy of [archetype]. Your core essence radiates [quality] and [quality]. You are here to [life purpose]. Your greatest gifts are [gift1], [gift2], and [gift3]. Your challenges include [challenge1] and [challenge2]. When you align with your true nature, you naturally [positive behavior].',
+                'moon': '🌙 MOON READING\n\nYour Moon in [Moon Sign] reveals your emotional nature. You process feelings through [emotional style]. Your emotional needs include [need1] and [need2]. You feel most at home when [condition]. Your emotional shadows involve [shadow aspect]. When nurtured, you express [emotional gift].',
+                'rising': '🌅 RISING SIGN READING\n\nYour Rising in [Rising Sign] is your mask to the world. People first perceive you as [perception]. Your appearance tends to reflect [quality]. You approach life with [approach]. Your first impressions are usually [impression]. The world sees your [public quality].',
+                'life-path': '🔢 LIFE PATH NUMBER READING\n\nYour Life Path Number is [number], revealing your soul\'s journey. Your life purpose involves [purpose]. You are here to [mission]. Your natural talents include [talent1] and [talent2]. Your life lessons center around [lesson]. Your destiny awaits at [destination].',
+                'love': '❤️ LOVE BLUEPRINT READING\n\nIn love, you are [love style]. You attract [type of partner]. Your relationship needs include [need1] and [need2]. Your gifts in partnership are [gift]. Your challenges in love involve [challenge]. When aligned, you create [relationship dynamic]. Your ideal partner [ideal qualities].',
+                'career': '💼 CAREER BLUEPRINT READING\n\nYour work style is [style]. You thrive in [environment]. Your career gifts include [gift1] and [gift2]. Your purpose in work involves [purpose]. You are meant to [career mission]. Success comes when you [success condition].'
+            };
+            
+            document.getElementById('readingContent').value = presets[preset] || '';
+            updatePrompt();
+        }
+
+        // Save to history
+        function saveToHistory(prompt) {
+            let history = JSON.parse(localStorage.getItem('promptHistory') || '[]');
+            const type = document.getElementById('transformationType').value;
+            const typeLabel = document.getElementById('transformationType').options[document.getElementById('transformationType').selectedIndex].text;
+            
+            history.unshift({
+                type: typeLabel,
+                typeValue: type,
+                prompt: prompt,
+                date: new Date().toLocaleString()
+            });
+            
+            // Keep only last 10
+            history = history.slice(0, 10);
+            
+            localStorage.setItem('promptHistory', JSON.stringify(history));
+            displayHistory();
+        }
+
+        // Load history
+        function loadHistory() {
+            displayHistory();
+        }
+
+        // Display history
+        function displayHistory() {
+            const history = JSON.parse(localStorage.getItem('promptHistory') || '[]');
+            const container = document.getElementById('promptHistory');
+            
+            if (history.length === 0) {
+                container.innerHTML = '<p style="color: #999; font-style: italic;">No prompts generated yet...</p>';
+                return;
+            }
+            
+            container.innerHTML = history.map((item, index) => `
+                <div class="history-item" onclick="loadFromHistory(${index})">
+                    <div class="type">${item.type}</div>
+                    <div class="date">${item.date}</div>
+                </div>
+            `).join('');
+        }
+
+        // Load from history
+        function loadFromHistory(index) {
+            const history = JSON.parse(localStorage.getItem('promptHistory') || '[]');
+            const item = history[index];
+            
+            document.getElementById('transformationType').value = item.typeValue;
+            document.getElementById('promptOutput').textContent = item.prompt;
+        }
+
+        // Clear history
+        function clearHistory() {
+            localStorage.removeItem('promptHistory');
+            displayHistory();
+        }
+
+        // Auto-update on input change
+        document.getElementById('readingContent').addEventListener('input', updatePrompt);
+        document.getElementById('userName').addEventListener('input', updatePrompt);
+        document.getElementById('customInstructions').addEventListener('input', updatePrompt);
+        document.getElementById('stylePreference').addEventListener('change', updatePrompt);
+    </script>
+</body>
+</html>
