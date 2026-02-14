@@ -285,6 +285,12 @@
             <!-- ===================== LEFT COLUMN ===================== -->
             <div class="left-col">
 
+                <!-- Reflection Guidance -->
+                <div class="step-card" style="border-left: 4px solid var(--accent-gold); background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);">
+                    <h2 style="font-size: 1.1em; color: #92400e; margin-bottom: 8px;">🔍 Before You Generate Anything</h2>
+                    <p style="color: #78350f; font-size: 0.92em; line-height: 1.6; margin-bottom: 0;">Take a moment to notice the <strong>repeating themes</strong> across your readings. Which words keep appearing? Which energies feel most familiar? The more you understand your patterns, the more powerful your transformation will be.</p>
+                </div>
+
                 <!-- Step 1 -->
                 <div class="step-card">
                     <h2><span class="step-number">1</span> Select Transformation Type</h2>
@@ -443,6 +449,30 @@ Tips:
                     <h2><span class="step-number">3</span> Customize Your Prompt</h2>
 
                     <div class="form-group">
+                        <label for="toneSetting">Voice / Tone:</label>
+                        <select id="toneSetting" class="form-control">
+                            <option value="default">Default (matches transformation type)</option>
+                            <option value="clinical">Clinical / Psychological</option>
+                            <option value="cinematic">Cinematic / Dramatic</option>
+                            <option value="therapist">Warm Therapist</option>
+                            <option value="author">Author / Literary</option>
+                            <option value="parent">Parent-Friendly / Simple</option>
+                            <option value="mystical">Mystical / Esoteric</option>
+                            <option value="humorous">Humorous / Lighthearted</option>
+                            <option value="academic">Academic / Scholarly</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="depthSetting">Depth:</label>
+                        <select id="depthSetting" class="form-control">
+                            <option value="medium">Medium (recommended)</option>
+                            <option value="short">Short — quick overview</option>
+                            <option value="deep">Deep Dive — thorough exploration</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="userName">Your Name (optional):</label>
                         <input type="text" id="userName" class="form-control" placeholder="Enter your name for personalization">
                     </div>
@@ -453,7 +483,7 @@ Tips:
                     </div>
 
                     <div class="form-group">
-                        <label for="stylePreference">Style / Tone Preference:</label>
+                        <label for="stylePreference">Style Preference:</label>
                         <select id="stylePreference" class="form-control">
                             <option value="balanced">Balanced (recommended)</option>
                             <option value="detailed">More Detailed</option>
@@ -482,6 +512,11 @@ Tips:
                             <button class="action-btn chatgpt" onclick="openChatGPT()">💬 Open in ChatGPT</button>
                             <button class="action-btn gemini" onclick="openGemini()">🔮 Open in Gemini</button>
                         </div>
+
+                        <!-- Gentle guidance before external tools -->
+                        <div style="margin-top: 16px; padding: 14px 16px; background: rgba(102,126,234,0.06); border-radius: 8px; border-left: 3px solid var(--primary-purple);">
+                            <p style="font-size: 0.88em; color: #555; line-height: 1.6; margin: 0;">💡 <strong>Tip:</strong> After generating, review the AI's output carefully. You can refine it by asking follow-up questions in the same conversation — the AI remembers context.</p>
+                        </div>
                     </div>
 
                     <div class="tip-box">
@@ -503,14 +538,27 @@ Tips:
     </div><!-- /container -->
 
     <div class="container">
+        <!-- Soft PDF monetization placeholder -->
+        <div style="text-align: center; margin: 30px 0 10px; padding: 20px; background: rgba(255,215,0,0.08); border: 1px dashed rgba(255,215,0,0.3); border-radius: 12px;">
+            <p style="font-size: 0.95em; color: #92400e; margin-bottom: 4px;">📄 Want a professionally formatted printable version of your reading?</p>
+            <p style="font-size: 0.85em; color: #a16207; opacity: 0.8;">Coming soon — beautiful PDF soul blueprints you can keep or gift.</p>
+        </div>
+
+        <!-- Loop-back: Try another reading -->
+        <div style="text-align: center; margin: 20px 0 30px; padding: 24px; background: rgba(102,126,234,0.06); border-radius: 12px;">
+            <p style="font-size: 1em; color: #555; margin-bottom: 12px;"><strong>Try another reading to compare patterns</strong></p>
+            <p style="font-size: 0.9em; color: #777; margin-bottom: 16px;">Each reading reveals different facets of your blueprint. Comparing transformations across readings can surface hidden connections.</p>
+            <a href="https://quantummerlin.com/soulblueprint" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding: 12px 28px; background: var(--gradient-primary); color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95em;">Generate Another Reading →</a>
+        </div>
+
         <div class="page-nav">
             <a href="../guides/examples.html" class="page-nav-prev">
                 <span class="nav-label">← Previous</span>
                 <span class="nav-title">🦁 Leo Sun Example</span>
             </a>
-            <a href="../index.html" class="page-nav-next">
-                <span class="nav-label">Home →</span>
-                <span class="nav-title">Landing Page</span>
+            <a href="../guides/transformations.html" class="page-nav-next">
+                <span class="nav-label">Explore more →</span>
+                <span class="nav-title">🔄 All Transformations</span>
             </a>
         </div>
     </div>
@@ -1181,6 +1229,22 @@ Here is the reading:
             'inspirational': '\n\nMake your response especially uplifting and inspiring.'
         };
 
+        const toneModifiers = {
+            'clinical':   '\n\nUse a clinical, psychological voice. Be analytical and evidence-informed. Reference personality frameworks where relevant.',
+            'cinematic':  '\n\nUse a cinematic, dramatic voice. Write as if narrating a film. Rich imagery, tension, and emotional beats.',
+            'therapist':  '\n\nUse a warm, therapeutic voice. Gentle, affirming, non-judgmental. Like a trusted counsellor speaking directly to the person.',
+            'author':     '\n\nUse a literary, authorial voice. Elegant prose, metaphor, carefully crafted sentences. Think published non-fiction.',
+            'parent':     '\n\nUse simple, clear language suitable for someone new to astrology. Avoid jargon. Warm and encouraging.',
+            'mystical':   '\n\nUse a mystical, esoteric voice. Ancient wisdom, sacred language, spiritual depth.',
+            'humorous':   '\n\nUse a lighthearted, humorous tone. Witty observations, playful language, while still being insightful.',
+            'academic':   '\n\nUse an academic, scholarly voice. Well-structured, referenced, thorough. Suitable for study or research.'
+        };
+
+        const depthModifiers = {
+            'short': '\n\nKeep the total response brief — around 200-400 words. Focus on the most essential points only.',
+            'deep':  '\n\nProvide a thorough, deep exploration. Go into significant detail. Aim for 1000-2000 words. Explore nuance, subtlety, and interconnections.'
+        };
+
         /* ------------------------------------------------------------------
            DOM REFS
            ------------------------------------------------------------------ */
@@ -1189,6 +1253,8 @@ Here is the reading:
         const $name    = document.getElementById('userName');
         const $custom  = document.getElementById('customInstructions');
         const $style   = document.getElementById('stylePreference');
+        const $tone    = document.getElementById('toneSetting');
+        const $depth   = document.getElementById('depthSetting');
         const $output  = document.getElementById('promptOutput');
         const $tip     = document.getElementById('proTip');
         const $history = document.getElementById('promptHistory');
@@ -1203,6 +1269,8 @@ Here is the reading:
             const name    = $name.value.trim();
             const custom  = $custom.value.trim();
             const style   = $style.value;
+            const tone    = $tone ? $tone.value : 'default';
+            const depth   = $depth ? $depth.value : 'medium';
 
             let prompt = templates[type] || 'Select a transformation type…';
 
@@ -1228,6 +1296,16 @@ Here is the reading:
             // Append style modifier
             if (style !== 'balanced' && styleModifiers[style]) {
                 prompt += styleModifiers[style];
+            }
+
+            // Append tone modifier
+            if (tone !== 'default' && toneModifiers[tone]) {
+                prompt += toneModifiers[tone];
+            }
+
+            // Append depth modifier
+            if (depth !== 'medium' && depthModifiers[depth]) {
+                prompt += depthModifiers[depth];
             }
 
             $output.textContent = prompt;
@@ -1347,6 +1425,8 @@ Here is the reading:
         $name.addEventListener('input', updatePrompt);
         $custom.addEventListener('input', updatePrompt);
         $style.addEventListener('change', updatePrompt);
+        if ($tone) $tone.addEventListener('change', updatePrompt);
+        if ($depth) $depth.addEventListener('change', updatePrompt);
 
         /* ------------------------------------------------------------------
            INIT
