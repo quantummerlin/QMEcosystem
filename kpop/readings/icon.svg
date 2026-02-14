@@ -1,11 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF69B4"/>
-      <stop offset="100%" style="stop-color:#FFB6C1"/>
+    <linearGradient id="kpopBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0520"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
     </linearGradient>
+    <linearGradient id="kpopPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF69B4"/>
+      <stop offset="100%" style="stop-color:#A855F7"/>
+    </linearGradient>
+    <linearGradient id="kpopCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FFFF"/>
+      <stop offset="100%" style="stop-color:#A855F7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <circle cx="256" cy="256" r="240" fill="url(#pinkGrad)"/>
-  <text x="256" y="290" font-size="180" text-anchor="middle" fill="white">👶</text>
-  <text x="256" y="420" font-size="60" text-anchor="middle" fill="white" font-family="serif">✨</text>
+  <circle cx="256" cy="256" r="250" fill="url(#kpopBg)" stroke="url(#kpopPink)" stroke-width="4"/>
+  <circle cx="120" cy="140" r="3" fill="#FF69B4" opacity="0.8"/>
+  <circle cx="390" cy="120" r="2.5" fill="#00FFFF" opacity="0.7"/>
+  <circle cx="180" cy="90" r="2" fill="#A855F7" opacity="0.6"/>
+  <circle cx="340" cy="180" r="2" fill="#FFD700" opacity="0.5"/>
+  <g filter="url(#glow)">
+    <circle cx="256" cy="180" r="55" fill="rgba(255,105,180,0.15)"/>
+    <circle cx="256" cy="180" r="40" fill="none" stroke="url(#kpopPink)" stroke-width="4"/>
+    <path d="M256 165 C248 155, 232 155, 232 170 C232 182, 256 200, 256 200 C256 200, 280 182, 280 170 C280 155, 264 155, 256 165Z" fill="url(#kpopPink)"/>
+    <rect x="250" y="222" width="12" height="120" rx="6" fill="url(#kpopCyan)" opacity="0.8"/>
+    <rect x="244" y="215" width="24" height="14" rx="4" fill="#ccc" opacity="0.6"/>
+  </g>
+  <text x="256" y="420" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="72" font-weight="bold" fill="url(#kpopPink)" letter-spacing="8">K✦K</text>
+  <text x="256" y="455" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#00FFFF" opacity="0.7" letter-spacing="6">11:11</text>
 </svg>

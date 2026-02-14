@@ -10,8 +10,8 @@
     --background-dark: #1a1a2e;
     --background-dark-alt: #16213e;
     --text-dark: #333;
-    --text-light: #e0e0e0;
-    --text-muted: #666;
+    --text-light: #f0f0f0;
+    --text-muted: #999;
     --success: #28a745;
     --warning: #ffc107;
     --error: #dc3545;
@@ -49,19 +49,19 @@ html {
 body {
     font-family: 'Georgia', serif;
     line-height: 1.6;
-    color: var(--text-dark);
+    color: var(--text-light);
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     min-height: 100vh;
 }
 
 a {
-    color: var(--primary-purple);
+    color: #8ea4f0;
     text-decoration: none;
     transition: var(--transition);
 }
 
 a:hover {
-    color: var(--secondary-purple);
+    color: #b8c8f8;
     text-decoration: underline;
 }
 
@@ -206,6 +206,7 @@ header.page-header .subtitle {
    ============================================ */
 .hero {
     background: var(--gradient-hero);
+    color: var(--text-dark);
     padding: 80px 0;
     text-align: center;
     border-radius: var(--radius-xl);
@@ -224,6 +225,14 @@ header.page-header .subtitle {
     max-width: 800px;
     margin: 0 auto 30px;
     color: #555;
+}
+
+.hero a {
+    color: var(--primary-purple);
+}
+
+.hero a:hover {
+    color: var(--secondary-purple);
 }
 
 .hero .stats {
@@ -245,7 +254,7 @@ header.page-header .subtitle {
 }
 
 .stat-item .label {
-    color: var(--text-muted);
+    color: #666;
     font-size: 1em;
 }
 
@@ -254,6 +263,7 @@ header.page-header .subtitle {
    ============================================ */
 section {
     background: #fff;
+    color: var(--text-dark);
     padding: 60px 0;
     margin: 40px 0;
     border-radius: var(--radius-xl);
@@ -269,6 +279,14 @@ section h2 {
     font-size: 2.2em;
     color: var(--primary-purple);
     margin-bottom: 40px;
+}
+
+section a {
+    color: var(--primary-purple);
+}
+
+section a:hover {
+    color: var(--secondary-purple);
 }
 
 section h2.section-title {
@@ -303,7 +321,7 @@ section p.section-intro {
 }
 
 .golden-rule p {
-    color: var(--text-dark);
+    color: #444;
     font-size: 1.1em;
 }
 
@@ -486,7 +504,7 @@ section p.section-intro {
 }
 
 .foundation-card .description {
-    color: var(--text-muted);
+    color: #666;
     font-size: 0.9em;
 }
 
@@ -524,7 +542,7 @@ section p.section-intro {
 }
 
 .color-item .meaning {
-    color: var(--text-muted);
+    color: #666;
     font-size: 0.9em;
 }
 
@@ -563,7 +581,7 @@ section p.section-intro {
 }
 
 .usage-card p {
-    color: var(--text-muted);
+    color: #666;
     font-size: 0.95em;
 }
 
@@ -591,6 +609,14 @@ section p.section-intro {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.cta a {
+    text-decoration: none;
+}
+
+.cta a:hover {
+    text-decoration: none;
 }
 
 .cta-button {
@@ -701,7 +727,7 @@ footer a:hover {
 
 footer .footer-tagline {
     font-size: 0.9em;
-    color: #999;
+    color: #bbb;
     margin-top: 15px;
 }
 
@@ -803,7 +829,7 @@ footer .footer-tagline {
 }
 
 .feature-card p {
-    color: var(--text-muted);
+    color: #666;
     font-size: 0.95em;
     line-height: 1.7;
 }
@@ -886,7 +912,7 @@ footer .footer-tagline {
 
 .progress-text {
     text-align: center;
-    color: var(--text-muted);
+    color: #bbb;
     font-size: 0.9em;
     margin-top: 5px;
     font-family: 'Arial', sans-serif;
@@ -930,7 +956,7 @@ footer .footer-tagline {
     padding: 6px 0;
     border-bottom: 1px solid #f0f0f0;
     font-size: 0.95em;
-    color: var(--text-muted);
+    color: #666;
 }
 
 .tier-card ul li:last-child {
@@ -989,7 +1015,21 @@ footer .footer-tagline {
 .guide-content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 30px;
+    background: #fff;
+    color: var(--text-dark);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.guide-content a {
+    color: var(--primary-purple);
+}
+
+.guide-content a:hover {
+    color: var(--secondary-purple);
 }
 
 .guide-content h2 {
@@ -1279,6 +1319,7 @@ footer .footer-tagline {
    ============================================ */
 .reading-paste-widget {
     background: linear-gradient(135deg, #f0f4ff 0%, #e8ecf8 100%);
+    color: var(--text-dark);
     border: 2px dashed var(--primary-purple);
     border-radius: var(--radius-lg);
     padding: 25px 30px;
@@ -1292,7 +1333,7 @@ footer .footer-tagline {
 }
 
 .reading-paste-header p {
-    color: var(--text-muted);
+    color: #666;
     font-size: 0.95em;
     margin-bottom: 15px;
 }
@@ -1378,7 +1419,7 @@ footer .footer-tagline {
     flex-direction: column;
     gap: 4px;
     padding: 15px 25px;
-    background: #fff;
+    background: var(--bg-light);
     border-radius: var(--radius-md);
     text-decoration: none;
     transition: var(--transition);
@@ -1394,7 +1435,7 @@ footer .footer-tagline {
 
 .page-nav a .nav-label {
     font-size: 0.8em;
-    color: var(--text-muted);
+    color: #888;
     font-family: 'Arial', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.5px;
