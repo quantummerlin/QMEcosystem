@@ -213,7 +213,11 @@
         body.dark-theme .theme-descriptions p,
         body.dark-theme .welcome-highlight p,
         body.dark-theme .saved-readings-note p,
-        body.dark-theme .privacy-note p {
+        body.dark-theme .privacy-note p,
+        body.dark-theme .transform-item span,
+        body.dark-theme .ai-transform-callout p,
+        body.dark-theme .ai-banner-content strong,
+        body.dark-theme .ai-banner-content p {
             color: var(--text) !important;
         }
         
@@ -3343,7 +3347,7 @@
         
         /* Print Styles */
         @media print {
-            .header, .action-buttons, .new-reading-btn, .toc, .pagination-controls, .ad-container, #action-buttons, #theme-bar, .sticky-progress-header, .mark-read-btn, .copy-reading-btn, .card-actions, .read-badge, .expand-icon {
+            .header, .action-buttons, .new-reading-btn, .toc, .pagination-controls, .ad-container, #action-buttons, #theme-bar, .sticky-progress-header, .mark-read-btn, .copy-reading-btn, .card-actions, .read-badge, .expand-icon, .ai-transform-banner, .ai-transform-callout, .ai-banner-dismiss {
                 display: none !important;
             }
             
@@ -3959,6 +3963,153 @@
             font-style: italic;
             color: #444;
         }
+
+        /* AI Transform Preview Grid (Welcome Step 5) */
+        .ai-transform-preview {
+            margin: 20px 0;
+        }
+
+        .transform-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .transform-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            padding: 12px 6px;
+            background: linear-gradient(135deg, rgba(102,126,234,0.08), rgba(118,75,162,0.08));
+            border-radius: 12px;
+            font-size: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .transform-item span {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #555;
+            text-align: center;
+        }
+
+        .transform-item:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, rgba(102,126,234,0.15), rgba(118,75,162,0.15));
+        }
+
+        /* AI Transform Callout (in opening letter) */
+        .ai-transform-callout {
+            margin-top: 16px;
+            padding: 14px 18px;
+            background: linear-gradient(135deg, rgba(102,126,234,0.08), rgba(118,75,162,0.08));
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .ai-transform-callout p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* AI Transform Banner (above readings) */
+        .ai-transform-banner {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 20px;
+            margin: 20px 0;
+            background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+            border: 1px solid rgba(102,126,234,0.2);
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .ai-banner-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .ai-banner-content {
+            flex: 1;
+        }
+
+        .ai-banner-content strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 4px;
+            color: var(--text, #333);
+        }
+
+        .ai-banner-content p {
+            margin: 0;
+            font-size: 0.88rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .ai-banner-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff !important;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            box-shadow: 0 3px 10px rgba(102,126,234,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            flex-shrink: 0;
+        }
+
+        .ai-banner-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(102,126,234,0.4);
+        }
+
+        .ai-banner-dismiss {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: #999;
+            padding: 2px 6px;
+            line-height: 1;
+        }
+
+        .ai-banner-dismiss:hover {
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .transform-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 6px;
+            }
+
+            .transform-item {
+                padding: 8px 4px;
+                font-size: 1.3rem;
+            }
+
+            .ai-transform-banner {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                padding: 16px;
+            }
+
+            .ai-banner-dismiss {
+                top: 6px;
+                right: 8px;
+            }
+        }
         
         .theme-preview-btns {
             display: flex;
@@ -4271,6 +4422,29 @@
                         <p><strong>Your data stays with you.</strong> Everything is stored locally on your device. We never see, collect, or share your birth information.</p>
                     </div>
                 </div>
+                
+                <!-- Step 5: AI Transformations -->
+                <div class="welcome-step" data-step="5">
+                    <h3>✨ Transform Your Reading Into Something Amazing</h3>
+                    <p>Your reading isn't just text — it's raw material for <strong>81+ incredible AI experiences</strong>.</p>
+                    <div class="ai-transform-preview">
+                        <div class="transform-grid">
+                            <div class="transform-item">🎨<span>Visual Art</span></div>
+                            <div class="transform-item">📖<span>Stories</span></div>
+                            <div class="transform-item">📊<span>Infographics</span></div>
+                            <div class="transform-item">🧘<span>Meditations</span></div>
+                            <div class="transform-item">🎵<span>Song Lyrics</span></div>
+                            <div class="transform-item">🎬<span>Screenplays</span></div>
+                            <div class="transform-item">📝<span>Poetry</span></div>
+                            <div class="transform-item">🎮<span>Games</span></div>
+                        </div>
+                    </div>
+                    <p>Every reading section has a <strong>📋 Copy Reading</strong> button. Copy any reading, then use our free AI Prompt Builder to turn it into personalised art, stories, guided meditations, career plans, and so much more.</p>
+                    <div class="welcome-highlight">
+                        <p>"Your cosmic blueprint becomes a living, breathing experience — not just words on a screen."</p>
+                    </div>
+                    <p style="text-align: center; font-size: 0.9rem; opacity: 0.8; margin-top: 10px;">Look for the ✨ banner after your readings are generated to get started.</p>
+                </div>
             </div>
             
             <div class="welcome-footer">
@@ -4280,6 +4454,7 @@
                     <div class="welcome-dot" data-dot="2"></div>
                     <div class="welcome-dot" data-dot="3"></div>
                     <div class="welcome-dot" data-dot="4"></div>
+                    <div class="welcome-dot" data-dot="5"></div>
                 </div>
                 <button class="welcome-nav-btn primary" id="welcomeNextBtn" onclick="welcomeNext()">Next</button>
             </div>
@@ -4410,6 +4585,9 @@
                     <p>This reading captures that unique configuration — not as a prediction of who you must become, but as a map of the gifts, challenges, and potentials encoded in your birth moment.</p>
                     <p>Take your time exploring each section. Some insights will resonate immediately; others may reveal their meaning over years. This is your cosmic blueprint — a lifelong companion, not a daily forecast.</p>
                     <p class="opening-note">If any birth details are incorrect, tap "New Reading" to regenerate with accurate information.</p>
+                    <div class="ai-transform-callout">
+                        <p>✨ <strong>New:</strong> Every reading has a <strong>📋 Copy</strong> button. Copy any reading and <a href="/soulblueprint/soulprism/site/index.html" target="_blank" style="color: inherit; text-decoration: underline;">transform it into visual art, stories, meditations & 81+ more experiences</a> using free AI tools.</p>
+                    </div>
                 </div>
                 <div class="hero-progress">
                     <div class="hero-progress-track">
@@ -4447,6 +4625,17 @@
                 </div>
             </div>
             
+            <!-- AI Transformation Banner -->
+            <div class="ai-transform-banner" id="aiTransformBanner">
+                <div class="ai-banner-icon">✨</div>
+                <div class="ai-banner-content">
+                    <strong>Turn these readings into personalised AI experiences</strong>
+                    <p>Copy any reading below, then use our Prompt Builder to create visual art, stories, infographics, meditations & 81+ more — all free.</p>
+                </div>
+                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank" class="ai-banner-btn">Open Prompt Builder →</a>
+                <button class="ai-banner-dismiss" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button>
+            </div>
+
             <!-- Reading Sections -->
             <div id="readingsContainer">
                 <!-- Populated by JavaScript -->
@@ -4457,6 +4646,11 @@
                 <div class="celebration-icon"></div>
                 <h3>Reading Complete!</h3>
                 <p>You've explored all the cosmic insights for this moment in time.</p>
+                <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1)); border-radius: 16px; border: 1px solid rgba(102,126,234,0.2);">
+                    <p style="font-size: 1.1rem; margin-bottom: 12px;">✨ <strong>What's next?</strong> Transform your readings into something extraordinary.</p>
+                    <p style="font-size: 0.95rem; opacity: 0.85; margin-bottom: 16px;">Copy any reading above and turn it into personalised visual art, stories, guided meditations, infographics, poetry, song lyrics & 81+ more experiences — all with free AI tools.</p>
+                    <a href="/soulblueprint/soulprism/site/index.html" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1rem; box-shadow: 0 3px 12px rgba(102,126,234,0.3);">Explore 81+ Transformations →</a>
+                </div>
             </div>
             
             <!-- Reading Summary & Closing -->
@@ -10144,7 +10338,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         // ============================================
         
         let welcomeCurrentStep = 1;
-        const welcomeTotalSteps = 4;
+        const welcomeTotalSteps = 5;
         
         function selectWelcomeTheme(theme) {
             // Update button states
