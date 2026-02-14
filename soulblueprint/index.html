@@ -1949,8 +1949,62 @@
             color: #FF69B4;
         }
         
+        .reading-card .card-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .reading-card .copy-reading-btn {
+            flex: 1;
+            padding: 14px;
+            background: linear-gradient(135deg, rgba(102,126,234,0.15), rgba(118,75,162,0.15));
+            border: 2px solid var(--card-border);
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .reading-card .copy-reading-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+
+        .reading-card .copy-reading-btn.copied {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            border-color: #28a745;
+        }
+
+        .copy-toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            z-index: 10000;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .copy-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
         .reading-card .mark-read-btn {
-            width: 100%;
+            flex: 1;
             padding: 14px;
             background: linear-gradient(135deg, rgba(255,182,217,0.15), rgba(182,227,255,0.15));
             border: 2px solid var(--card-border);
@@ -1960,7 +2014,7 @@
             color: var(--text);
             cursor: pointer;
             transition: all 0.2s ease;
-            margin-top: 16px;
+            margin-top: 0;
         }
         
         .reading-card .mark-read-btn:hover {
@@ -3289,7 +3343,7 @@
         
         /* Print Styles */
         @media print {
-            .header, .action-buttons, .new-reading-btn, .toc, .pagination-controls, .ad-container, #action-buttons, #theme-bar, .sticky-progress-header, .mark-read-btn, .read-badge, .expand-icon {
+            .header, .action-buttons, .new-reading-btn, .toc, .pagination-controls, .ad-container, #action-buttons, #theme-bar, .sticky-progress-header, .mark-read-btn, .copy-reading-btn, .card-actions, .read-badge, .expand-icon {
                 display: none !important;
             }
             
@@ -4314,6 +4368,9 @@
                 <span>•</span>
                 <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
             </div>
+            <div style="text-align:center;margin-top:12px;">
+                <a href="/soulblueprint/soulprism/site/index.html" style="display:inline-block;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:10px 24px;border-radius:50px;text-decoration:none;font-weight:600;font-size:0.95rem;box-shadow:0 3px 12px rgba(102,126,234,0.3);" target="_blank">✨ Transform Your Reading Into Visual Art →</a>
+            </div>
         </div>
     </section>
     
@@ -4438,6 +4495,10 @@
                 <div class="footer-actions">
                     <button class="action-btn" onclick="shareReading()">Share Reading</button>
                     <button class="new-reading-btn" onclick="startNewReading()">Generate Another Reading</button>
+                </div>
+                <div style="text-align:center;margin:16px 0;">
+                    <a href="/soulblueprint/soulprism/site/index.html" style="display:inline-block;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:12px 28px;border-radius:50px;text-decoration:none;font-weight:600;font-size:1rem;box-shadow:0 3px 12px rgba(102,126,234,0.3);" target="_blank">✨ Transform Your Reading Into Visual Art — 81+ Ways →</a>
+                    <p style="margin-top:8px;font-size:0.85rem;opacity:0.7;">Copy your readings above, then create stunning visuals, stories, infographics & more with free AI tools</p>
                 </div>
                 <div class="footer-links">
                     <a href="/soulblueprint/about.html" target="_blank">About</a>
@@ -9187,9 +9248,14 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         </div>
                         ${strengthsChallengesHtml}
                         ${enhancementsHtml}
-                        <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
-                            ${isRead ? '✓ Read' : 'Mark as Read'}
-                        </button>
+                        <div class="card-actions">
+                            <button type="button" class="copy-reading-btn" onclick="copyReadingText(event, '${cardId}')">
+                                📋 Copy Reading
+                            </button>
+                            <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
+                                ${isRead ? '✓ Read' : 'Mark as Read'}
+                            </button>
+                        </div>
                     </div>
                 </div>
             `;
@@ -9228,9 +9294,14 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 <div class="reading-card-body">
                     <div class="reading-card-content">
                         ${bodyHtml}
-                        <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
-                            ${isRead ? '✓ Read' : 'Mark as Read'}
-                        </button>
+                        <div class="card-actions">
+                            <button type="button" class="copy-reading-btn" onclick="copyReadingText(event, '${cardId}')">
+                                📋 Copy Reading
+                            </button>
+                            <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
+                                ${isRead ? '✓ Read' : 'Mark as Read'}
+                            </button>
+                        </div>
                     </div>
                 </div>
             `;
@@ -9238,6 +9309,70 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             return card;
         }
         
+        // Copy reading text to clipboard
+        function copyReadingText(event, cardId) {
+            event.stopPropagation();
+            const card = document.getElementById(cardId);
+            if (!card) return;
+            
+            // Get the reading title
+            const title = card.querySelector('h3') ? card.querySelector('h3').textContent : '';
+            const value = card.querySelector('.result-value') ? card.querySelector('.result-value').textContent : '';
+            
+            // Get the reading content text
+            const contentEl = card.querySelector('.reading-content');
+            const content = contentEl ? contentEl.innerText : '';
+            
+            // Get strengths and challenges if present
+            let extras = '';
+            const strengthsEl = card.querySelector('.strengths');
+            const challengesEl = card.querySelector('.growth-areas');
+            if (strengthsEl) extras += '\n\nStrengths:\n' + strengthsEl.innerText;
+            if (challengesEl) extras += '\n\nGrowth Areas:\n' + challengesEl.innerText;
+            
+            const fullText = (title + (value ? ' — ' + value : '') + '\n\n' + content + extras).trim();
+            
+            const btn = event.currentTarget;
+            navigator.clipboard.writeText(fullText).then(() => {
+                btn.classList.add('copied');
+                btn.textContent = '✓ Copied!';
+                showCopyToast('Reading copied to clipboard!');
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.textContent = '📋 Copy Reading';
+                }, 2000);
+            }).catch(() => {
+                // Fallback
+                const ta = document.createElement('textarea');
+                ta.value = fullText;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                btn.classList.add('copied');
+                btn.textContent = '✓ Copied!';
+                showCopyToast('Reading copied to clipboard!');
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.textContent = '📋 Copy Reading';
+                }, 2000);
+            });
+        }
+        
+        function showCopyToast(msg) {
+            let toast = document.querySelector('.copy-toast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.className = 'copy-toast';
+                document.body.appendChild(toast);
+            }
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2200);
+        }
+
         function toggleCard(headerEl) {
             const card = headerEl.closest('.reading-card');
             const isExpanded = card.classList.contains('expanded');
