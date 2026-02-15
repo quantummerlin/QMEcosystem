@@ -4681,40 +4681,11 @@
             font-weight: 600;
             color: #333;
         }
-        .expand-all-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 28px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 0.92rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin: 0 6px;
-        }
-        .expand-all-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102,126,234,0.4);
-        }
-        .expand-all-btn.secondary {
-            background: #fff;
-            color: #667eea;
-            border: 1px solid rgba(102,126,234,0.3);
-        }
-        .expand-all-btn.secondary:hover {
-            background: rgba(102,126,234,0.05);
-        }
-
         /* Dark theme overrides */
         .dark-theme .expand-all-section h3 { color: #e0e0e0; }
         .dark-theme .expand-all-section p { color: #aaa; }
         .dark-theme .expand-all-section .ea-step { background: #1e1e2e; color: #ccc; border-color: #333; }
         .dark-theme .expand-all-section .ea-step kbd { background: #2a2a3e; border-color: #444; color: #ddd; }
-        .dark-theme .expand-all-btn.secondary { background: #1e1e2e; color: #a0b4ff; border-color: rgba(102,126,234,0.3); }
         .dark-theme .playbook-card { background: #1e1e2e; border-color: rgba(102,126,234,0.3); }
         .dark-theme .playbook-card .pb-info h4 { color: #e0e0e0; }
         .dark-theme .playbook-card .pb-info p { color: #999; }
@@ -5033,22 +5004,18 @@
                 </div>
             </div>
             
-            <!-- Expand All / Full Reading Export -->
+            <!-- Full Reading Export Instructions -->
             <div class="expand-all-section" id="expandAllSection">
-                <h3>Export Your Complete Reading</h3>
-                <p>Want to feed your <strong>entire reading</strong> into an AI for stories, podcasts, or deep analysis? Expand everything, then select and copy:</p>
-                <div style="margin-bottom: 14px;">
-                    <button class="expand-all-btn" onclick="expandAllCards()">📖 Expand All Readings</button>
-                    <button class="expand-all-btn secondary" onclick="collapseAllCards()">📕 Collapse All</button>
-                </div>
+                <h3>Save Your Complete Reading as PDF</h3>
+                <p>Want to feed your <strong>entire reading</strong> into an AI for stories, podcasts, or deep analysis? Here's how:</p>
                 <div class="ea-steps">
-                    <span class="ea-step">1. Click <strong>Expand All</strong> above</span>
-                    <span class="ea-step">2. Press <kbd>Ctrl</kbd>+<kbd>A</kbd> to select all</span>
+                    <span class="ea-step">1. Open each reading section by clicking on it</span>
+                    <span class="ea-step">2. Once all sections are open, press <kbd>Ctrl</kbd>+<kbd>A</kbd> to select all</span>
                     <span class="ea-step">3. Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to copy</span>
-                    <span class="ea-step">4. Paste into Word / Google Docs</span>
-                    <span class="ea-step">5. Save as PDF or paste into AI</span>
+                    <span class="ea-step">4. Paste into Word or Google Docs</span>
+                    <span class="ea-step">5. Save as PDF or paste directly into AI</span>
                 </div>
-                <p style="font-size: 0.82rem; opacity: 0.7;">Tip: For the cleanest copy, paste into a plain text editor first, then into your word processor.</p>
+                <p style="font-size: 0.82rem; opacity: 0.7; margin-top: 12px;">Tip: For the cleanest copy, paste into a plain text editor first, then into your word processor. Or use the <strong>Copy Complete Blueprint</strong> button above for a quick one-click copy.</p>
             </div>
 
             <!-- Quick Transform Section -->
@@ -10217,21 +10184,6 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             }
         }
         
-        // Expand / Collapse all reading cards
-        function expandAllCards() {
-            document.querySelectorAll('#readingsContainer .reading-card').forEach(card => {
-                card.classList.add('expanded');
-            });
-            showCopyToast('All readings expanded — scroll to top, press Ctrl+A then Ctrl+C to copy everything');
-        }
-        
-        function collapseAllCards() {
-            document.querySelectorAll('#readingsContainer .reading-card').forEach(card => {
-                card.classList.remove('expanded');
-            });
-            showCopyToast('All readings collapsed');
-        }
-
         function buildReadingNav() {
             const navLinks = document.getElementById('readingNavLinks');
             if (!navLinks) return;
