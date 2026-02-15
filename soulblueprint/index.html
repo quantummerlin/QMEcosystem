@@ -4631,7 +4631,90 @@
             color: #667eea;
         }
 
+        /* Expand All section */
+        .expand-all-section {
+            display: none;
+            padding: 20px;
+            margin: 16px 0;
+            background: linear-gradient(135deg, rgba(102,126,234,0.04), rgba(118,75,162,0.04));
+            border-radius: 12px;
+            border: 1px solid rgba(102,126,234,0.12);
+            text-align: center;
+        }
+        .expand-all-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: #333;
+        }
+        .expand-all-section p {
+            color: #666;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        .expand-all-section .ea-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .expand-all-section .ea-step {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: #fff;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            color: #555;
+            border: 1px solid #e2e8f0;
+        }
+        .expand-all-section .ea-step kbd {
+            display: inline-block;
+            padding: 2px 7px;
+            background: #f0f0f0;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #333;
+        }
+        .expand-all-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0 6px;
+        }
+        .expand-all-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102,126,234,0.4);
+        }
+        .expand-all-btn.secondary {
+            background: #fff;
+            color: #667eea;
+            border: 1px solid rgba(102,126,234,0.3);
+        }
+        .expand-all-btn.secondary:hover {
+            background: rgba(102,126,234,0.05);
+        }
+
         /* Dark theme overrides */
+        .dark-theme .expand-all-section h3 { color: #e0e0e0; }
+        .dark-theme .expand-all-section p { color: #aaa; }
+        .dark-theme .expand-all-section .ea-step { background: #1e1e2e; color: #ccc; border-color: #333; }
+        .dark-theme .expand-all-section .ea-step kbd { background: #2a2a3e; border-color: #444; color: #ddd; }
+        .dark-theme .expand-all-btn.secondary { background: #1e1e2e; color: #a0b4ff; border-color: rgba(102,126,234,0.3); }
         .dark-theme .playbook-card { background: #1e1e2e; border-color: rgba(102,126,234,0.3); }
         .dark-theme .playbook-card .pb-info h4 { color: #e0e0e0; }
         .dark-theme .playbook-card .pb-info p { color: #999; }
@@ -4950,6 +5033,24 @@
                 </div>
             </div>
             
+            <!-- Expand All / Full Reading Export -->
+            <div class="expand-all-section" id="expandAllSection">
+                <h3>Export Your Complete Reading</h3>
+                <p>Want to feed your <strong>entire reading</strong> into an AI for stories, podcasts, or deep analysis? Expand everything, then select and copy:</p>
+                <div style="margin-bottom: 14px;">
+                    <button class="expand-all-btn" onclick="expandAllCards()">📖 Expand All Readings</button>
+                    <button class="expand-all-btn secondary" onclick="collapseAllCards()">📕 Collapse All</button>
+                </div>
+                <div class="ea-steps">
+                    <span class="ea-step">1. Click <strong>Expand All</strong> above</span>
+                    <span class="ea-step">2. Press <kbd>Ctrl</kbd>+<kbd>A</kbd> to select all</span>
+                    <span class="ea-step">3. Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to copy</span>
+                    <span class="ea-step">4. Paste into Word / Google Docs</span>
+                    <span class="ea-step">5. Save as PDF or paste into AI</span>
+                </div>
+                <p style="font-size: 0.82rem; opacity: 0.7;">Tip: For the cleanest copy, paste into a plain text editor first, then into your word processor.</p>
+            </div>
+
             <!-- Quick Transform Section -->
             <div class="quick-transform-section" id="quickTransformSection">
                 <h3>Quick Transform</h3>
@@ -8846,6 +8947,10 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             // Show quick transform section
             const qtSection = document.getElementById('quickTransformSection');
             if (qtSection) qtSection.style.display = 'block';
+            
+            // Show expand-all section
+            const eaSection = document.getElementById('expandAllSection');
+            if (eaSection) eaSection.style.display = 'block';
         }
         
         // Update section headers with reading progress (read/total format)
@@ -10112,6 +10217,21 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             }
         }
         
+        // Expand / Collapse all reading cards
+        function expandAllCards() {
+            document.querySelectorAll('#readingsContainer .reading-card').forEach(card => {
+                card.classList.add('expanded');
+            });
+            showCopyToast('All readings expanded — scroll to top, press Ctrl+A then Ctrl+C to copy everything');
+        }
+        
+        function collapseAllCards() {
+            document.querySelectorAll('#readingsContainer .reading-card').forEach(card => {
+                card.classList.remove('expanded');
+            });
+            showCopyToast('All readings collapsed');
+        }
+
         function buildReadingNav() {
             const navLinks = document.getElementById('readingNavLinks');
             if (!navLinks) return;
