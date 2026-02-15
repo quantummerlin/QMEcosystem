@@ -4356,6 +4356,308 @@
         .loading-overlay.active .loading-text {
             animation: loadPulse 2s ease-in-out infinite;
         }
+
+        /* ========== Phase 1: Blueprint Playbook Features ========== */
+        
+        /* Transform button on reading cards */
+        .transform-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .transform-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Batch copy section */
+        .batch-copy-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 16px 20px;
+            margin: 12px 0 20px;
+            background: linear-gradient(135deg, rgba(102,126,234,0.06), rgba(118,75,162,0.06));
+            border-radius: 12px;
+            border: 1px dashed rgba(102,126,234,0.2);
+        }
+        .batch-copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 18px;
+            background: #fff;
+            color: #667eea;
+            border: 1px solid rgba(102,126,234,0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .batch-copy-btn:hover {
+            background: #667eea;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+        }
+        .batch-copy-btn.master {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+        .batch-copy-btn.master:hover {
+            box-shadow: 0 6px 20px rgba(102,126,234,0.4);
+        }
+
+        /* Playbook navigation grid */
+        .playbook-navigation {
+            padding: 30px 0;
+            margin-top: 20px;
+            display: none;
+        }
+        .playbook-navigation h3 {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+            color: #333;
+        }
+        .playbook-navigation .pb-subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .playbook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .playbook-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 20px;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid rgba(102,126,234,0.15);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        .playbook-card:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102,126,234,0.15);
+        }
+        .playbook-card .pb-icon { font-size: 2rem; flex-shrink: 0; }
+        .playbook-card .pb-info h4 { font-size: 0.95rem; margin-bottom: 3px; color: #333; }
+        .playbook-card .pb-info p { font-size: 0.8rem; color: #777; margin: 0; }
+        .playbook-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(102,126,234,0.1);
+            color: #667eea;
+            margin-left: 8px;
+        }
+
+        /* Quick Transform Section */
+        .quick-transform-section {
+            display: none;
+            padding: 24px;
+            margin: 20px 0;
+            background: linear-gradient(135deg, rgba(102,126,234,0.04), rgba(118,75,162,0.04));
+            border-radius: 16px;
+            border: 1px solid rgba(102,126,234,0.12);
+        }
+        .quick-transform-section h3 {
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+            color: #333;
+        }
+        .quick-transform-section .qt-subtitle {
+            color: #777;
+            font-size: 0.88rem;
+            margin-bottom: 16px;
+        }
+        .quick-transform-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .quick-transform-btn {
+            padding: 10px 18px;
+            background: #fff;
+            color: #444;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .quick-transform-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+            background: rgba(102,126,234,0.05);
+        }
+        .quick-transform-btn.active {
+            background: #667eea;
+            color: #fff;
+            border-color: #667eea;
+        }
+        .quick-prompt-output {
+            display: none;
+            margin-top: 16px;
+            padding: 18px;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+        .quick-prompt-output pre {
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #333;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 12px;
+        }
+        .quick-prompt-copy {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.88rem;
+            transition: all 0.3s ease;
+        }
+        .quick-prompt-copy:hover {
+            box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+        }
+
+        /* Reading Nav Float */
+        .reading-nav-float {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 1000;
+            display: none;
+        }
+        .nav-toggle-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px rgba(102,126,234,0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-toggle-btn:hover {
+            transform: scale(1.1);
+        }
+        .reading-nav-panel {
+            display: none;
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            width: 280px;
+            max-height: 400px;
+            overflow-y: auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            padding: 16px;
+        }
+        .reading-nav-panel.open { display: block; }
+        .reading-nav-panel input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+        .nav-category { margin-bottom: 12px; }
+        .nav-category h4 {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999;
+            margin-bottom: 6px;
+        }
+        .nav-category a {
+            display: block;
+            padding: 6px 10px;
+            color: #444;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .nav-category a:hover {
+            background: rgba(102,126,234,0.08);
+            color: #667eea;
+        }
+
+        /* Dark theme overrides */
+        .dark-theme .playbook-card { background: #1e1e2e; border-color: rgba(102,126,234,0.3); }
+        .dark-theme .playbook-card .pb-info h4 { color: #e0e0e0; }
+        .dark-theme .playbook-card .pb-info p { color: #999; }
+        .dark-theme .batch-copy-btn { background: #1e1e2e; color: #a0b4ff; border-color: rgba(102,126,234,0.3); }
+        .dark-theme .batch-copy-btn:hover { background: #667eea; color: #fff; }
+        .dark-theme .quick-transform-btn { background: #1e1e2e; color: #ccc; border-color: #333; }
+        .dark-theme .quick-transform-btn:hover { border-color: #667eea; color: #a0b4ff; }
+        .dark-theme .quick-prompt-output { background: #1e1e2e; border-color: #333; }
+        .dark-theme .quick-prompt-output pre { color: #ddd; }
+        .dark-theme .reading-nav-panel { background: #1e1e2e; }
+        .dark-theme .reading-nav-panel input { background: #2a2a3e; color: #ddd; border-color: #444; }
+        .dark-theme .nav-category a { color: #ccc; }
+        .dark-theme .nav-category a:hover { color: #a0b4ff; background: rgba(102,126,234,0.15); }
+        .dark-theme .playbook-navigation h3 { color: #e0e0e0; }
+        .dark-theme .quick-transform-section h3 { color: #e0e0e0; }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .playbook-grid { grid-template-columns: 1fr; }
+            .batch-copy-section { flex-direction: column; }
+            .batch-copy-btn { width: 100%; justify-content: center; }
+            .quick-transform-grid { flex-direction: column; }
+            .quick-transform-btn { width: 100%; justify-content: center; }
+            .reading-nav-float { bottom: 16px; left: 16px; }
+            .reading-nav-panel { width: 260px; }
+        }
     </style>
 </head>
 <body>
@@ -4644,7 +4946,75 @@
                 <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102,126,234,0.06), rgba(118,75,162,0.06)); border-radius: 16px; border: 1px solid rgba(102,126,234,0.15);">
                     <p style="font-size: 1rem; margin-bottom: 8px;"><strong>Before you go:</strong> scroll back through and notice which readings share similar themes — those patterns are where your deepest insights live.</p>
                     <p style="font-size: 0.9rem; opacity: 0.75; margin-bottom: 14px;">When you're ready, you can copy any reading and transform it into a format that works for you — visual art, a story, a guided meditation, or dozens of other options.</p>
-                    <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank" style="display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Open Prompt Builder →</a>
+                    <a href="/soulblueprint/playbooks/" target="_blank" style="display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Explore the Blueprint Playbook Library →</a>
+                </div>
+            </div>
+            
+            <!-- Quick Transform Section -->
+            <div class="quick-transform-section" id="quickTransformSection">
+                <h3>Quick Transform</h3>
+                <p class="qt-subtitle">Select a reading above, then choose a transformation:</p>
+                <div class="quick-transform-grid">
+                    <button class="quick-transform-btn" onclick="quickTransform('portrait')">🎨 Portrait</button>
+                    <button class="quick-transform-btn" onclick="quickTransform('infographic')">📊 Infographic</button>
+                    <button class="quick-transform-btn" onclick="quickTransform('story')">📖 Story</button>
+                    <button class="quick-transform-btn" onclick="quickTransform('affirmation')">💫 Affirmations</button>
+                    <button class="quick-transform-btn" onclick="quickTransform('meditation')">🧘 Meditation</button>
+                    <button class="quick-transform-btn" onclick="quickTransform('routine')">📅 Daily Routine</button>
+                </div>
+                <div class="quick-prompt-output" id="quickPromptOutput">
+                    <pre id="quickPromptText"></pre>
+                    <button class="quick-prompt-copy" onclick="copyQuickPrompt()">📋 Copy Prompt</button>
+                </div>
+            </div>
+            
+            <!-- Playbook Navigation -->
+            <div class="playbook-navigation" id="playbookNavigation">
+                <h3>The Blueprint Playbook</h3>
+                <p class="pb-subtitle">Step-by-step guides to transform your readings into real experiences</p>
+                <div class="playbook-grid">
+                    <a href="/soulblueprint/playbooks/visual-art.html" target="_blank" class="playbook-card">
+                        <span class="pb-icon">🎨</span>
+                        <div class="pb-info">
+                            <h4>Visual Art <span class="playbook-badge">Free</span></h4>
+                            <p>Create 40-60 AI-generated images from your readings</p>
+                        </div>
+                    </a>
+                    <a href="/soulblueprint/playbooks/infographics.html" target="_blank" class="playbook-card">
+                        <span class="pb-icon">📊</span>
+                        <div class="pb-info">
+                            <h4>Infographics <span class="playbook-badge">Free</span></h4>
+                            <p>Design 15-20 data visualizations of your cosmic profile</p>
+                        </div>
+                    </a>
+                    <a href="/soulblueprint/playbooks/stories.html" target="_blank" class="playbook-card">
+                        <span class="pb-icon">📖</span>
+                        <div class="pb-info">
+                            <h4>Stories <span class="playbook-badge">Free</span></h4>
+                            <p>Transform readings into hero's journeys, myths, and fairy tales</p>
+                        </div>
+                    </a>
+                    <a href="/soulblueprint/playbooks/practical.html" target="_blank" class="playbook-card">
+                        <span class="pb-icon">🔧</span>
+                        <div class="pb-info">
+                            <h4>Practical Tools <span class="playbook-badge">Free</span></h4>
+                            <p>Daily routines, career guides, relationship insights</p>
+                        </div>
+                    </a>
+                    <a href="/soulblueprint/playbooks/spiritual.html" target="_blank" class="playbook-card">
+                        <span class="pb-icon">🧘</span>
+                        <div class="pb-info">
+                            <h4>Spiritual Tools <span class="playbook-badge">Free</span></h4>
+                            <p>Meditations, affirmations, rituals, journal prompts</p>
+                        </div>
+                    </a>
+                    <a href="/soulblueprint/playbooks/language.html" target="_blank" class="playbook-card">
+                        <span class="pb-icon">🌐</span>
+                        <div class="pb-info">
+                            <h4>Language <span class="playbook-badge">Free</span></h4>
+                            <p>Rewrite your readings in different voices and perspectives</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             
@@ -4677,6 +5047,17 @@
                 </div>
             </div>
             
+            <!-- Reading Nav Float -->
+            <div class="reading-nav-float" id="readingNavFloat">
+                <button class="nav-toggle-btn" onclick="toggleReadingNav()" title="Navigate Readings">📑</button>
+                <div class="reading-nav-panel" id="readingNavPanel">
+                    <input type="text" placeholder="Search sections..." oninput="filterReadingNav(this.value)">
+                    <div id="readingNavLinks">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
             <!-- Footer -->
             <footer class="results-footer">
                 <p class="generated-by" id="generatedBy">Generated by Quantum Merlin</p>
@@ -8444,6 +8825,27 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 updateProgressDisplay();
                 initializePagination();
             }, 100);
+            
+            // ========== Phase 1: Post-build setup ==========
+            
+            // Add master batch copy button
+            const masterBatch = document.createElement('div');
+            masterBatch.className = 'batch-copy-section';
+            masterBatch.innerHTML = '<button class="batch-copy-btn master" onclick="copyAllReadings()">📋 Copy Complete Blueprint</button>';
+            container.appendChild(masterBatch);
+            
+            // Show playbook navigation
+            const pbNav = document.getElementById('playbookNavigation');
+            if (pbNav) pbNav.style.display = 'block';
+            
+            // Show reading nav float and build nav
+            const navFloat = document.getElementById('readingNavFloat');
+            if (navFloat) navFloat.style.display = 'block';
+            buildReadingNav();
+            
+            // Show quick transform section
+            const qtSection = document.getElementById('quickTransformSection');
+            if (qtSection) qtSection.style.display = 'block';
         }
         
         // Update section headers with reading progress (read/total format)
@@ -9440,6 +9842,9 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                             <button type="button" class="copy-reading-btn" onclick="copyReadingText(event, '${cardId}')">
                                 📋 Copy Reading
                             </button>
+                            <button type="button" class="transform-btn" onclick="showTransformOptions(event, '${cardId}')">
+                                ✨ Transform This
+                            </button>
                             <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
                                 ${isRead ? '✓ Read' : 'Mark as Read'}
                             </button>
@@ -9485,6 +9890,9 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         <div class="card-actions">
                             <button type="button" class="copy-reading-btn" onclick="copyReadingText(event, '${cardId}')">
                                 📋 Copy Reading
+                            </button>
+                            <button type="button" class="transform-btn" onclick="showTransformOptions(event, '${cardId}')">
+                                ✨ Transform This
                             </button>
                             <button type="button" class="mark-read-btn ${isRead ? 'is-read' : ''}" onclick="markCardAsRead(event, '${cardId}')">
                                 ${isRead ? '✓ Read' : 'Mark as Read'}
@@ -9559,6 +9967,173 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             toast.textContent = msg;
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 2200);
+        }
+
+        // ========== Phase 1: Blueprint Playbook JS ==========
+
+        // Transform button handler — copies reading and opens prompt builder
+        function showTransformOptions(event, cardId) {
+            event.stopPropagation();
+            const card = document.getElementById(cardId);
+            if (!card) return;
+            
+            // Get reading text
+            const title = card.querySelector('h3') ? card.querySelector('h3').textContent : '';
+            const value = card.querySelector('.result-value') ? card.querySelector('.result-value').textContent : '';
+            const contentEl = card.querySelector('.reading-content');
+            const content = contentEl ? contentEl.innerText : '';
+            let extras = '';
+            const strengthsEl = card.querySelector('.strengths');
+            const challengesEl = card.querySelector('.growth-areas');
+            if (strengthsEl) extras += '\n\nStrengths:\n' + strengthsEl.innerText;
+            if (challengesEl) extras += '\n\nGrowth Areas:\n' + challengesEl.innerText;
+            
+            const fullText = (title + (value ? ' — ' + value : '') + '\n\n' + content + extras).trim();
+            
+            // Store the selected reading text for quick transform
+            window._selectedReadingText = fullText;
+            window._selectedCardId = cardId;
+            
+            // Show the quick transform section and scroll to it
+            const qtSection = document.getElementById('quickTransformSection');
+            if (qtSection) {
+                qtSection.style.display = 'block';
+                qtSection.querySelector('.qt-subtitle').textContent = 'Transforming: ' + title;
+                qtSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            
+            showCopyToast('Reading selected — choose a transformation below!');
+        }
+        
+        // Quick Transform prompt templates
+        const quickTransformTemplates = {
+            portrait: `Create a mystical portrait representing someone with these cosmic patterns. Capture the essence of the traits described below. Use warm, ethereal light as the central element. Include subtle astrological and symbolic motifs woven into the background. Style: ethereal, spiritual, rich symbolism. No text overlay.\n\nHere is the reading:\n[READING]`,
+            infographic: `You are a data visualization expert. Extract the key components from this soul blueprint reading and design an infographic.\n\nIdentify 5-8 main aspects, assign visual weights, choose meaningful colours, add clear labels. Include a title and legend.\n\nHere is the reading:\n[READING]`,
+            story: `Transform this soul blueprint reading into a hero's journey narrative. Structure as: 1) The Ordinary World, 2) Call to Adventure, 3) Trials & Allies, 4) The Transformation, 5) The Return.\n\nHere is the reading:\n[READING]`,
+            affirmation: `Create a set of 15-20 powerful affirmations based on this soul blueprint reading. Group them by theme (identity, purpose, relationships, growth). Make them present-tense, positive, and emotionally resonant.\n\nHere is the reading:\n[READING]`,
+            meditation: `Create a guided meditation based on this soul blueprint reading. Include: Opening (settling in, breath work — 2 min), Visualization (meeting the energy described — 5 min), Integration (bringing insight into the body — 5 min), Closing (gratitude and grounding — 3 min). Write it as a spoken script.\n\nHere is the reading:\n[READING]`,
+            routine: `Create a daily routine aligned with this soul blueprint reading. Include: Morning ritual (energy activation), Energy management tips for the day, Decision-making framework based on core traits, Evening reflection practice. Make it practical, actionable, and grounded.\n\nHere is the reading:\n[READING]`
+        };
+        
+        function quickTransform(type) {
+            if (!window._selectedReadingText) {
+                showCopyToast('Select a reading first by clicking "Transform This" on any card');
+                return;
+            }
+            
+            // Highlight active button
+            document.querySelectorAll('.quick-transform-btn').forEach(b => b.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            
+            const template = quickTransformTemplates[type];
+            if (!template) return;
+            
+            const prompt = template.replace('[READING]', window._selectedReadingText);
+            
+            const output = document.getElementById('quickPromptOutput');
+            const text = document.getElementById('quickPromptText');
+            if (output && text) {
+                text.textContent = prompt;
+                output.style.display = 'block';
+            }
+        }
+        
+        function copyQuickPrompt() {
+            const text = document.getElementById('quickPromptText');
+            if (!text) return;
+            
+            navigator.clipboard.writeText(text.textContent).then(() => {
+                showCopyToast('Prompt copied to clipboard! Paste it into ChatGPT, Gemini, or any AI.');
+            }).catch(() => {
+                const ta = document.createElement('textarea');
+                ta.value = text.textContent;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showCopyToast('Prompt copied to clipboard!');
+            });
+        }
+        
+        // Batch copy functions
+        function copyBatchBySelector(selector, label) {
+            const cards = document.querySelectorAll(selector + ' .reading-card');
+            if (!cards.length) {
+                showCopyToast('No readings found in this section');
+                return;
+            }
+            let allText = '';
+            cards.forEach(card => {
+                const title = card.querySelector('h3') ? card.querySelector('h3').textContent : '';
+                const value = card.querySelector('.result-value') ? card.querySelector('.result-value').textContent : '';
+                const contentEl = card.querySelector('.reading-content');
+                const content = contentEl ? contentEl.innerText : '';
+                if (content) {
+                    allText += title + (value ? ' — ' + value : '') + '\n\n' + content + '\n\n---\n\n';
+                }
+            });
+            
+            if (allText) {
+                navigator.clipboard.writeText(allText.trim()).then(() => {
+                    showCopyToast((label || 'Section') + ' copied! (' + cards.length + ' readings)');
+                });
+            }
+        }
+        
+        function copySectionReadings(sectionId) {
+            copyBatchBySelector('#' + sectionId, sectionId.replace(/-/g, ' '));
+        }
+        
+        function copyAllReadings() {
+            copyBatchBySelector('#readingsContainer', 'Complete Blueprint');
+        }
+        
+        // Reading Nav Float
+        function toggleReadingNav() {
+            const panel = document.getElementById('readingNavPanel');
+            if (panel) panel.classList.toggle('open');
+        }
+        
+        function filterReadingNav(term) {
+            const links = document.querySelectorAll('#readingNavLinks a');
+            const lower = term.toLowerCase();
+            links.forEach(link => {
+                link.style.display = link.textContent.toLowerCase().includes(lower) ? '' : 'none';
+            });
+        }
+        
+        function jumpToSection(sectionId) {
+            const el = document.getElementById(sectionId);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                toggleReadingNav();
+            }
+        }
+        
+        function buildReadingNav() {
+            const navLinks = document.getElementById('readingNavLinks');
+            if (!navLinks) return;
+            
+            const sections = document.querySelectorAll('#readingsContainer .reading-section');
+            let html = '';
+            sections.forEach(section => {
+                const heading = section.querySelector('h2');
+                if (!heading) return;
+                const sectionId = section.id || '';
+                const cards = section.querySelectorAll('.reading-card');
+                html += '<div class="nav-category">';
+                html += '<h4>' + heading.textContent + '</h4>';
+                cards.forEach(card => {
+                    const title = card.querySelector('h3');
+                    if (title) {
+                        html += '<a href="javascript:void(0)" onclick="jumpToSection(\'' + card.id + '\')">' + title.textContent + '</a>';
+                    }
+                });
+                html += '</div>';
+            });
+            navLinks.innerHTML = html;
         }
 
         function toggleCard(headerEl) {

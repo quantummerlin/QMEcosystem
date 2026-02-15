@@ -248,6 +248,153 @@
 
  /* ---------- premium badge in select ---------- */
  .premium-opt { font-weight: 600; }
+
+ /* ---------- quick actions bar ---------- */
+ .quick-actions {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ margin-bottom: 16px;
+ padding-bottom: 14px;
+ border-bottom: 1px solid var(--border-light);
+ }
+ .quick-action-btn {
+ padding: 8px 14px;
+ background: var(--bg-light);
+ color: var(--text-dark);
+ border: 1px solid var(--border-light);
+ border-radius: var(--radius-sm);
+ cursor: pointer;
+ font-size: 0.82em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ transition: var(--transition);
+ display: inline-flex;
+ align-items: center;
+ gap: 5px;
+ }
+ .quick-action-btn:hover {
+ background: var(--primary-purple);
+ color: #fff;
+ border-color: var(--primary-purple);
+ }
+
+ /* ---------- prompt variations ---------- */
+ .prompt-variations {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ margin-top: 14px;
+ padding-top: 14px;
+ border-top: 1px solid var(--border-light);
+ }
+ .prompt-variations label {
+ display: block;
+ width: 100%;
+ font-size: 0.85em;
+ font-weight: 600;
+ color: var(--text-muted);
+ margin-bottom: 2px;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ }
+ .variation-btn {
+ padding: 7px 13px;
+ background: transparent;
+ color: var(--primary-purple);
+ border: 1px solid var(--primary-purple);
+ border-radius: 50px;
+ cursor: pointer;
+ font-size: 0.8em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ transition: var(--transition);
+ }
+ .variation-btn:hover {
+ background: var(--primary-purple);
+ color: #fff;
+ }
+
+ /* ---------- history enhancements ---------- */
+ .history-controls {
+ display: flex;
+ gap: 8px;
+ margin-bottom: 12px;
+ align-items: center;
+ }
+ .history-search {
+ flex: 1;
+ padding: 8px 12px;
+ border: 1px solid var(--border-light);
+ border-radius: var(--radius-sm);
+ font-size: 0.88em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ }
+ .history-search:focus {
+ outline: none;
+ border-color: var(--primary-purple);
+ }
+ .history-filter {
+ padding: 8px 12px;
+ border: 1px solid var(--border-light);
+ border-radius: var(--radius-sm);
+ font-size: 0.85em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ cursor: pointer;
+ background: #fff;
+ }
+ .history-item {
+ position: relative;
+ }
+ .history-delete {
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ background: none;
+ border: none;
+ color: var(--text-muted);
+ cursor: pointer;
+ font-size: 1em;
+ padding: 2px 6px;
+ border-radius: 4px;
+ transition: var(--transition);
+ }
+ .history-delete:hover {
+ color: var(--error);
+ background: rgba(239, 68, 68, 0.1);
+ }
+ .history-item .h-preview {
+ font-size: 0.78em;
+ color: var(--text-muted);
+ margin-top: 4px;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ max-width: 85%;
+ }
+
+ /* ---------- saved prompts ---------- */
+ .saved-prompt-item {
+ background: #fff;
+ padding: 14px 16px;
+ border-radius: var(--radius-sm);
+ margin-bottom: 10px;
+ border-left: 4px solid var(--accent-gold);
+ cursor: pointer;
+ transition: var(--transition);
+ position: relative;
+ }
+ .saved-prompt-item:hover {
+ background: var(--bg-light);
+ border-left-color: var(--secondary-purple);
+ }
+ .saved-prompt-item .sp-name {
+ font-weight: 700;
+ color: var(--primary-purple);
+ font-family: 'Segoe UI', Arial, sans-serif;
+ }
+ .saved-prompt-item .sp-date {
+ font-size: 0.8em;
+ color: var(--text-muted);
+ margin-top: 2px;
+ }
         </style>
     </head>
     <body>
@@ -265,6 +412,7 @@
                     <li><a href="../guides/premium-transformations.html">Premium</a></li>
                     <li><a href="../guides/examples.html">Examples</a></li>
                     <li><a href="prompt-builder.html" class="active">Prompt Builder</a></li>
+                    <li><a href="/soulblueprint/playbooks/">Playbooks</a></li>
                     <li><a href="https://quantummerlin.com/soulblueprint" class="nav-cta" target="_blank" rel="noopener noreferrer">Get Your Blueprint</a></li>
                 </ul>
             </div>
@@ -317,6 +465,8 @@
                                     <option value="infographic-bubble">Category Bubble Map</option>
                                     <option value="infographic-chakra">Chakra Alignment</option>
                                     <option value="infographic-text">Text-Based Infographic</option>
+                                    <option value="infographic-wheel">Zodiac Wheel Diagram</option>
+                                    <option value="infographic-comparison">Side-by-Side Comparison</option>
                                 </optgroup>
 
                                 <optgroup label="Stories & Narrative (Free AI)">
@@ -341,6 +491,8 @@
 
                                 <optgroup label="Practical Applications (Free AI)">
                                     <option value="practical-daily">Daily Routine</option>
+                                    <option value="practical-morning">Morning Ritual</option>
+                                    <option value="practical-evening">Evening Wind-Down</option>
                                     <option value="practical-career">Career Guidance</option>
                                     <option value="practical-relationships">Relationship Insights</option>
                                     <option value="practical-decision">Decision Framework</option>
@@ -358,6 +510,7 @@
                                     <option value="spiritual-journal">Journal Prompts</option>
                                     <option value="spiritual-mantra">Mantra Creation</option>
                                     <option value="spiritual-crystal">Crystal & Gemstone Guide</option>
+                                    <option value="spiritual-chakra">Chakra Healing Plan</option>
                                 </optgroup>
 
                                 <optgroup label="Creative Expressions (Free AI)">
@@ -368,6 +521,8 @@
                                     <option value="creative-screenplay">Screenplay Scene</option>
                                     <option value="creative-character">Character Portrait</option>
                                     <option value="creative-mythology">Mythological Retelling</option>
+                                    <option value="creative-playlist">Soul Playlist</option>
+                                    <option value="creative-moodboard">Mood Board</option>
                                 </optgroup>
 
                                 <optgroup label="Multilingual & Cultural (Free AI)">
@@ -503,11 +658,33 @@
                     <div class="step-card">
                         <h2><span class="step-number">4</span> Your Custom Prompt</h2>
 
+                        <!-- Quick Actions -->
+                        <div class="quick-actions">
+                            <button class="quick-action-btn" onclick="fillExample()" title="Load a sample reading to test">📝 Fill Example</button>
+                            <button class="quick-action-btn" onclick="clearAll()" title="Clear all fields">🗑 Clear All</button>
+                            <button class="quick-action-btn" onclick="saveCurrentPrompt()" title="Save this prompt for later">💾 Save Prompt</button>
+                            <button class="quick-action-btn" onclick="toggleSavedPrompts()" title="Load a previously saved prompt">📂 Load Saved</button>
+                        </div>
+
+                        <!-- Saved Prompts Panel (hidden by default) -->
+                        <div id="savedPromptsPanel" style="display:none; margin-bottom: 16px; padding: 14px; background: var(--bg-light); border-radius: var(--radius-sm); max-height: 200px; overflow-y: auto;">
+                            <div id="savedPromptsList"><p style="color:var(--text-muted); font-style:italic; font-size: 0.88em;">No saved prompts yet.</p></div>
+                        </div>
+
                         <div class="prompt-output-wrap">
                             <h3>Generated Prompt</h3>
                             <div class="prompt-output" id="promptOutput">Select a transformation type and paste your reading to generate your custom prompt…</div>
 
-                            <div class="action-buttons">
+                            <!-- Prompt Variations -->
+                            <div class="prompt-variations">
+                                <label>Adjust Prompt:</label>
+                                <button class="variation-btn" onclick="applyVariation('detailed')">+ More Detailed</button>
+                                <button class="variation-btn" onclick="applyVariation('shorter')">- Make Shorter</button>
+                                <button class="variation-btn" onclick="applyVariation('creative')">✨ More Creative</button>
+                                <button class="variation-btn" onclick="applyVariation('practical')">🔧 More Practical</button>
+                            </div>
+
+                            <div class="action-buttons" style="margin-top: 14px;">
                                 <button class="action-btn primary" onclick="copyPrompt()">📋 Copy to Clipboard</button>
                                 <button class="action-btn chatgpt" onclick="openChatGPT()">💬 Open in ChatGPT</button>
                                 <button class="action-btn gemini" onclick="openGemini()">🔮 Open in Gemini</button>
@@ -535,6 +712,25 @@
                     <!-- History -->
                     <div class="step-card">
                         <h2>Prompt History</h2>
+
+                        <!-- History Controls -->
+                        <div class="history-controls">
+                            <input type="text" class="history-search" id="historySearch" placeholder="Search history..." oninput="filterHistory()">
+                            <select class="history-filter" id="historyFilter" onchange="filterHistory()">
+                                <option value="all">All Types</option>
+                                <option value="visual">Visual Art</option>
+                                <option value="infographic">Infographics</option>
+                                <option value="story">Stories</option>
+                                <option value="language">Language</option>
+                                <option value="practical">Practical</option>
+                                <option value="spiritual">Spiritual</option>
+                                <option value="creative">Creative</option>
+                                <option value="interactive">Interactive</option>
+                                <option value="audio">Audio</option>
+                                <option value="premium">Premium</option>
+                            </select>
+                        </div>
+
                         <div id="promptHistory">
                             <p style="color:var(--text-muted); font-style:italic;">No prompts generated yet…</p>
                         </div>
@@ -786,6 +982,34 @@ Make it practical, actionable, and grounded.
 Here is the reading:
 [READING]`,
 
+ 'practical-morning': `Create a detailed morning ritual (30-60 minutes) based on this soul blueprint reading. Include:
+- Wake-up timing aligned with your energy type
+- Physical movement (5-10 min) suited to your elemental balance
+- Breathwork or meditation technique (5 min)
+- Intention-setting practice using your core themes
+- Nourishment recommendations aligned with your energy
+- A specific affirmation drawn from the reading
+- Journaling prompt for the morning
+
+Make it practical, step-by-step, and immediately actionable.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-evening': `Create a detailed evening wind-down ritual (30-45 minutes) based on this soul blueprint reading. Include:
+- Transition practice to shift from active to receptive energy
+- Reflection exercise reviewing the day through your cosmic lens
+- Gratitude practice aligned with your soul themes
+- Body-based release technique (stretching, yoga, or bath ritual)
+- Dream-seeding visualization using themes from the reading
+- Journaling prompt for evening processing
+- Sleep environment suggestions matching your elemental nature
+
+Make it calming, restorative, and aligned with the reading's energy.
+
+Here is the reading:
+[READING]`,
+
  'practical-career': `Create a career guidance plan based on this soul blueprint reading. Include ideal roles, work environments, growth strategies, and potential pitfalls to avoid. Be specific and actionable.
 
 Here is the reading:
@@ -843,6 +1067,20 @@ Here is the reading:
 Here is the reading:
 [READING]`,
 
+ 'spiritual-chakra': `You are an energy healing practitioner. Create a comprehensive chakra healing plan based on this soul blueprint reading.
+
+For each of the 7 chakras (Root through Crown):
+1. Assess its current state based on the reading (overactive / balanced / underactive)
+2. Explain which reading themes connect to that chakra
+3. Provide a specific healing practice (meditation, yoga pose, sound, colour, food)
+4. Give a personalized affirmation for that chakra
+5. Suggest a crystal and essential oil pairing
+
+End with a full-body chakra balancing sequence (10 minutes) that integrates all the findings.
+
+Here is the reading:
+[READING]`,
+
  // ── Creative Expressions ────────────────────────────────────
  'creative-poetry': `Transform this soul blueprint reading into 3-5 free-verse poems. Each poem should capture a different facet of the reading — identity, shadow, gifts, purpose, destiny. Use vivid imagery, metaphor, and emotional resonance.
 
@@ -875,6 +1113,35 @@ Here is the reading:
 [READING]`,
 
  'creative-mythology': `Retell this soul blueprint reading as an ancient myth. Set it in a mythological world — Greek, Norse, Egyptian, or another tradition that fits the energy. Include gods, quests, magical objects, and a transformative climax.
+
+Here is the reading:
+[READING]`,
+
+ 'creative-playlist': `You are a music curator with deep knowledge of astrology and personality psychology. Create a personalized soul playlist based on this soul blueprint reading.
+
+Include:
+- 20-30 song recommendations with artist and song title
+- Group by mood/theme: Morning Energy, Deep Focus, Emotional Release, Empowerment, Evening Wind-Down
+- For each song, write one sentence explaining why it resonates with the reading
+- Include genre variety that reflects the reading's energy range
+- Add a "theme song" — the one track that captures the entire soul blueprint
+- Suggest a playlist name and cover art description
+
+Here is the reading:
+[READING]`,
+
+ 'creative-moodboard': `You are a visual designer and creative director. Create a detailed mood board concept based on this soul blueprint reading.
+
+Include:
+- Colour palette (5-7 colours with hex codes) derived from the reading's energy
+- Texture descriptions (3-4 textures that evoke the reading's themes)
+- Typography suggestions (2-3 font styles that match the personality)
+- 8-10 image descriptions for mood board panels (landscapes, objects, textures, people, abstract)
+- Key words/phrases to overlay on the board
+- Overall aesthetic name (e.g., "Volcanic Serenity", "Ancient Future")
+- Layout description showing how elements should be arranged
+
+This should be detailed enough to recreate in Canva, Pinterest, or any design tool.
 
 Here is the reading:
 [READING]`,
@@ -1003,6 +1270,33 @@ Use:
 - Include: title, 4-6 data sections, key stats, and a summary footer
 
 Provide: complete text-based infographic ready to copy-paste.`,
+
+ 'infographic-wheel': `You are a data visualization expert. Create a zodiac wheel diagram based on this soul blueprint reading.
+
+[READING]
+
+- Place the 12 houses around a circular wheel
+- Mark planetary placements in their correct houses
+- Highlight the Ascendant, Midheaven, IC, and Descendant
+- Colour-code by element (Fire=red, Earth=green, Air=yellow, Water=blue)
+- Show aspect lines connecting planets (solid=conjunction/trine, dashed=square/opposition)
+- Add a legend and title: "Your Birth Chart Wheel"
+- Include brief annotations for the most significant placements
+
+Provide: complete wheel diagram description with positions, colours, connections, and layout.`,
+
+ 'infographic-comparison': `You are a data visualization expert. Create a side-by-side comparison infographic based on this soul blueprint reading.
+
+[READING]
+
+- Identify 2 contrasting themes or energies in the reading (e.g., Sun vs Moon, conscious vs unconscious, public vs private)
+- Create two columns with matching categories
+- Use contrasting colour schemes for each side
+- Show where the two sides overlap or complement
+- Add a synthesis row at the bottom showing integration points
+- Include title: "Your Dual Nature: [Theme A] vs [Theme B]"
+
+Provide: complete comparison layout with categories, data points, colours, and synthesis.`,
 
  // ── Stories (additional) ────────────────────────────────────
  'story-character': `Transform this soul blueprint reading into a character archetype analysis. Identify the 3-5 dominant archetypes (e.g., The Healer, The Warrior, The Sage, The Lover, The Trickster) present in the reading. For each: describe the archetype, how it manifests, its gifts, its shadow, and a fictional character who shares this energy.
@@ -1151,12 +1445,15 @@ Here is the reading:
  'practical-relationships': 'Venus, 7th-house, and love-blueprint readings are key here.',
  'practical-decision': 'Mercury and Saturn readings help build the strongest decision frameworks.',
  'practical-wellness': 'Include 6th-house and Mars readings for body-aligned wellness plans.',
+ 'practical-morning': 'Combine Sun and Mars readings for the most energizing morning ritual.',
+ 'practical-evening': 'Moon and Neptune readings create the most restorative evening routines.',
  'spiritual-meditation':'Moon and Neptune readings create the most immersive meditations.',
  'spiritual-affirmation':'Sun and Jupiter readings produce the most empowering affirmations.',
  'spiritual-ritual': 'Include readings with strong elemental themes for richer rituals.',
  'spiritual-journal': 'Paste your most challenging readings — journal prompts thrive on shadow work.',
  'spiritual-mantra': 'Short, powerful readings (Sun, Moon) create the most resonant mantras.',
  'spiritual-crystal': 'Include elemental and planetary readings for the most accurate crystal matches.',
+ 'spiritual-chakra': 'Include readings about body, health, and energy for the most detailed chakra plan.',
  'creative-poetry': 'Moon and Venus readings produce the most emotionally rich poetry.',
  'creative-haiku': 'Focus on one reading at a time — haiku thrives on simplicity.',
  'creative-acrostic': 'Enter your name in the Name field for a personalized acrostic poem.',
@@ -1164,6 +1461,8 @@ Here is the reading:
  'creative-screenplay': 'Dramatic placements (Pluto, Mars, 8th house) create compelling scenes.',
  'creative-character': 'Include multiple readings to create a multi-dimensional character.',
  'creative-mythology': 'Node and Chiron readings are mythology gold — include them.',
+ 'creative-playlist': 'Include multiple readings for variety — Sun for energy, Moon for emotion, Venus for aesthetics.',
+ 'creative-moodboard': 'Works best with visually rich readings — Venus, Neptune, and 5th house are ideal.',
  'cultural-translation': 'Specify the target language in Additional Instructions for best results.',
  'cultural-adaptation': 'Specify which cultural tradition in Additional Instructions, or let AI choose.',
  'interactive-quiz': 'Include 5+ readings for enough material to create diverse questions.',
@@ -1180,6 +1479,8 @@ Here is the reading:
  'infographic-bubble': 'Paste multiple reading categories for the most comprehensive bubble map.',
  'infographic-chakra': 'Include body-related readings (Mars, 6th house) for accurate chakra mapping.',
  'infographic-text': 'Perfect for social media sharing — no design tools needed.',
+ 'infographic-wheel': 'Include full chart details with house placements for the most accurate wheel.',
+ 'infographic-comparison': 'Works best when the reading has clear contrasts — Sun vs Moon or public vs private self.',
  'story-character': 'Include shadow readings (Lilith, Chiron, Pluto) for deeper archetypes.',
  'story-autobiography': 'Paste your most personal readings for the most authentic story.',
  'practical-learning': 'Mercury and 3rd/9th house readings are most relevant for learning styles.',
@@ -1375,6 +1676,138 @@ Here is the reading:
  }
 
  /* ------------------------------------------------------------------
+ QUICK ACTIONS
+ ------------------------------------------------------------------ */
+ function fillExample() {
+ // Load a random preset to demonstrate
+ var keys = Object.keys(presets);
+ var randomKey = keys[Math.floor(Math.random() * keys.length)];
+ $reading.value = presets[randomKey];
+ updatePrompt();
+ showToast('Example loaded: ' + randomKey.replace('-', ' '));
+ }
+
+ function clearAll() {
+ $reading.value = '';
+ $name.value = '';
+ $custom.value = '';
+ $style.value = 'balanced';
+ if ($tone) $tone.value = 'default';
+ if ($depth) $depth.value = 'medium';
+ $type.selectedIndex = 0;
+ updatePrompt();
+ showToast('All fields cleared');
+ }
+
+ var SAVED_KEY = 'soulblueprint_saved_prompts';
+
+ function saveCurrentPrompt() {
+ var prompt = $output.textContent;
+ if (!prompt || prompt.indexOf('Select a transformation') === 0) {
+ showToast('Generate a prompt first');
+ return;
+ }
+ var saved = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]');
+ var opt = $type.options[$type.selectedIndex];
+ var name = window.prompt('Name this saved prompt (optional):') || opt.text;
+ saved.unshift({
+ name: name,
+ type: opt ? opt.text : $type.value,
+ typeValue: $type.value,
+ prompt: prompt,
+ reading: $reading.value,
+ tone: $tone ? $tone.value : 'default',
+ depth: $depth ? $depth.value : 'medium',
+ style: $style.value,
+ customInstructions: $custom.value,
+ userName: $name.value,
+ date: new Date().toLocaleString()
+ });
+ saved = saved.slice(0, 50);
+ localStorage.setItem(SAVED_KEY, JSON.stringify(saved));
+ showToast('Prompt saved: ' + name);
+ renderSavedPrompts();
+ }
+
+ function toggleSavedPrompts() {
+ var panel = document.getElementById('savedPromptsPanel');
+ if (panel.style.display === 'none') {
+ panel.style.display = '';
+ renderSavedPrompts();
+ } else {
+ panel.style.display = 'none';
+ }
+ }
+
+ function renderSavedPrompts() {
+ var saved = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]');
+ var list = document.getElementById('savedPromptsList');
+ if (!saved.length) {
+ list.innerHTML = '<p style="color:var(--text-muted); font-style:italic; font-size: 0.88em;">No saved prompts yet.</p>';
+ return;
+ }
+ list.innerHTML = saved.map(function (item, i) {
+ return '<div class="saved-prompt-item" onclick="loadSavedPrompt(' + i + ')">' +
+ '<button class="history-delete" onclick="event.stopPropagation(); deleteSavedPrompt(' + i + ')" title="Delete">✕</button>' +
+ '<div class="sp-name">' + escapeHTML(item.name) + '</div>' +
+ '<div class="sp-date">' + escapeHTML(item.type) + ' • ' + escapeHTML(item.date) + '</div>' +
+ '</div>';
+ }).join('');
+ }
+
+ function loadSavedPrompt(index) {
+ var saved = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]');
+ var item = saved[index];
+ if (!item) return;
+ $type.value = item.typeValue;
+ if (item.reading) $reading.value = item.reading;
+ if (item.userName) $name.value = item.userName;
+ if (item.customInstructions) $custom.value = item.customInstructions;
+ if (item.tone && $tone) $tone.value = item.tone;
+ if (item.depth && $depth) $depth.value = item.depth;
+ if (item.style) $style.value = item.style;
+ updatePrompt();
+ document.getElementById('savedPromptsPanel').style.display = 'none';
+ showToast('Loaded: ' + item.name);
+ }
+
+ function deleteSavedPrompt(index) {
+ var saved = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]');
+ saved.splice(index, 1);
+ localStorage.setItem(SAVED_KEY, JSON.stringify(saved));
+ renderSavedPrompts();
+ showToast('Saved prompt deleted');
+ }
+
+ /* ------------------------------------------------------------------
+ PROMPT VARIATIONS
+ ------------------------------------------------------------------ */
+ function applyVariation(type) {
+ var current = $output.textContent;
+ if (!current || current.indexOf('Select a transformation') === 0) {
+ showToast('Generate a prompt first');
+ return;
+ }
+ var suffix = '';
+ switch (type) {
+ case 'detailed':
+ suffix = '\n\nIMPORTANT: Please provide significantly more detail than usual. Include specific examples, deeper analysis, additional sub-sections, and thorough explanations. Aim for at least 1500-2000 words.';
+ break;
+ case 'shorter':
+ suffix = '\n\nIMPORTANT: Please keep your response concise and focused. Aim for 300-500 words maximum. Prioritize the most essential insights only. Use bullet points where possible.';
+ break;
+ case 'creative':
+ suffix = '\n\nIMPORTANT: Be exceptionally creative and imaginative. Use unexpected metaphors, poetic language, vivid imagery, and surprising connections. Push beyond conventional interpretations.';
+ break;
+ case 'practical':
+ suffix = '\n\nIMPORTANT: Focus entirely on practical, actionable takeaways. Every paragraph should include something the reader can DO. Use numbered steps, specific timelines, and measurable actions.';
+ break;
+ }
+ $output.textContent = current + suffix;
+ showToast('Variation applied: ' + type);
+ }
+
+ /* ------------------------------------------------------------------
  PRESETS
  ------------------------------------------------------------------ */
  function loadPreset(key) {
@@ -1403,18 +1836,72 @@ Here is the reading:
 
  function loadHistory() { renderHistory(); }
 
- function renderHistory() {
+ function renderHistory(searchTerm, filterType) {
  var history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+
+ // Apply filter
+ if (filterType && filterType !== 'all') {
+ history = history.filter(function (item) {
+ return item.typeValue && item.typeValue.indexOf(filterType) === 0;
+ });
+ }
+
+ // Apply search
+ if (searchTerm) {
+ var term = searchTerm.toLowerCase();
+ history = history.filter(function (item) {
+ return (item.type && item.type.toLowerCase().indexOf(term) !== -1) ||
+ (item.prompt && item.prompt.toLowerCase().indexOf(term) !== -1);
+ });
+ }
+
  if (!history.length) {
- $history.innerHTML = '<p style="color:var(--text-muted); font-style:italic;">No prompts generated yet…</p>';
+ var msg = (searchTerm || (filterType && filterType !== 'all'))
+ ? 'No matching prompts found.'
+ : 'No prompts generated yet…';
+ $history.innerHTML = '<p style="color:var(--text-muted); font-style:italic;">' + msg + '</p>';
  return;
  }
- $history.innerHTML = history.map(function (item, i) {
- return '<div class="history-item" onclick="loadFromHistory(' + i + ')">' +
+
+ // Store original indices for deletion
+ var allHistory = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+
+ $history.innerHTML = history.map(function (item) {
+ var origIdx = allHistory.indexOf(item);
+ if (origIdx === -1) {
+ // Find by date match
+ for (var k = 0; k < allHistory.length; k++) {
+ if (allHistory[k].date === item.date && allHistory[k].typeValue === item.typeValue) {
+ origIdx = k; break;
+ }
+ }
+ }
+ var preview = item.prompt ? item.prompt.substring(0, 80) + '…' : '';
+ return '<div class="history-item" onclick="loadFromHistory(' + origIdx + ')">' +
+ '<button class="history-delete" onclick="event.stopPropagation(); deleteHistoryItem(' + origIdx + ')" title="Delete">✕</button>' +
  '<div class="h-type">' + escapeHTML(item.type) + '</div>' +
  '<div class="h-date">' + escapeHTML(item.date) + '</div>' +
+ '<div class="h-preview">' + escapeHTML(preview) + '</div>' +
  '</div>';
  }).join('');
+ }
+
+ function filterHistory() {
+ var searchInput = document.getElementById('historySearch');
+ var filterSelect = document.getElementById('historyFilter');
+ var term = searchInput ? searchInput.value : '';
+ var filter = filterSelect ? filterSelect.value : 'all';
+ renderHistory(term, filter);
+ }
+
+ function deleteHistoryItem(index) {
+ var history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+ if (index >= 0 && index < history.length) {
+ history.splice(index, 1);
+ localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+ filterHistory();
+ showToast('Prompt deleted');
+ }
  }
 
  function loadFromHistory(index) {
@@ -1463,6 +1950,15 @@ Here is the reading:
  window.loadPreset = loadPreset;
  window.loadFromHistory = loadFromHistory;
  window.clearHistory = clearHistory;
+ window.fillExample = fillExample;
+ window.clearAll = clearAll;
+ window.saveCurrentPrompt = saveCurrentPrompt;
+ window.toggleSavedPrompts = toggleSavedPrompts;
+ window.loadSavedPrompt = loadSavedPrompt;
+ window.deleteSavedPrompt = deleteSavedPrompt;
+ window.applyVariation = applyVariation;
+ window.filterHistory = filterHistory;
+ window.deleteHistoryItem = deleteHistoryItem;
 
  })();
         </script>
