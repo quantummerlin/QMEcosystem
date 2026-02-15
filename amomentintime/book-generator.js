@@ -96,6 +96,48 @@ const TEMPLATE_DIVIDERS = {
     'dark-celestial': '· · ✦ · ·', 'heart-bears': '· · ♥ · ·', 'minimalist': '· · · ·'
 };
 
+// Image assets per template — loaded at generation time and embedded as base64
+const TEMPLATE_IMAGES = {
+    'cosmic-classic': {
+        cover:   { file: 'Cosmic Classic.jpg',        opacity: 0.40, blend: 'screen' },
+        divider: { file: 'Section Divider.jpg',       height: '8mm' },
+    },
+    'art-deco': {
+        divider: { file: 'Art Deco.jpg',               height: '12mm' },
+    },
+    'botanical': {
+        cover:   { file: 'Botannical.jpg',             opacity: 0.15, blend: 'multiply' },
+    },
+    'celestial-watercolor': {
+        cover:   { file: 'Celestial Watercolour.jpg',   opacity: 0.30, blend: 'soft-light' },
+    },
+    'cosmic-rainbow': {
+        cover:   { file: 'Cosmic Rainbow.jpg',          opacity: 0.50, blend: 'screen' },
+    },
+    'dark-celestial': {
+        cover:   { file: 'Dark Celestial.jpg',          opacity: 0.30, blend: 'screen' },
+        divider: { file: 'Section Divider 2.jpg',      height: '8mm' },
+    },
+    'fairy-tale': {
+        cover:   { file: 'Fairy Tale.jpg',              opacity: 0.30, blend: 'screen' },
+    },
+    'heart-bears': {
+        cover:   { file: 'Heart Bears.jpg',             opacity: 0.30, blend: 'soft-light' },
+        divider: { file: 'Heart Bears Devider.jpg',     height: '6mm' },
+    },
+    'minimalist': {
+        cover:   { file: 'Minimalist.jpg',              opacity: 0.50, blend: 'multiply' },
+    },
+    'mystical-tarot': {
+        cover:   { file: 'Mystical Tarot.jpg',          opacity: 0.25, blend: 'screen' },
+        divider: { file: 'Tarot Divider.jpg',           height: '8mm' },
+        opener:  { file: 'Tarot Opener.jpg',            opacity: 0.12, blend: 'screen' },
+    },
+    'vintage-storybook': {
+        cover:   { file: 'Vintage Storybook.jpg',       opacity: 0.20, blend: 'multiply' },
+    },
+};
+
 
 // ─── SHARED PARTIALS (identical across all themed templates) ──
 
@@ -586,6 +628,80 @@ html { font-size: 11pt !important; }
 `;
 
 
+// ─── IMAGE LOADING & INJECTION (base64 embed) ───────────────
+
+async function _loadImageB64(filename) {
+    try {
+        const r = await fetch(encodeURI(filename));
+        if (!r.ok) return null;
+        const blob = await r.blob();
+        return new Promise(res => {
+            const fr = new FileReader();
+            fr.onloadend = () => res(fr.result);
+            fr.onerror = () => res(null);
+            fr.readAsDataURL(blob);
+        });
+    } catch (_) { return null; }
+}
+
+async function _loadTemplateImages(templateId) {
+    const cfg = TEMPLATE_IMAGES[templateId];
+    if (!cfg) return {};
+    const map = {};
+    await Promise.all(Object.entries(cfg).map(async ([role, info]) => {
+        const uri = await _loadImageB64(info.file);
+        if (uri) map[role] = { ...info, uri };
+    }));
+    return map;
+}
+
+function _buildImageCSS(im, isBuiltin) {
+    let c = '\n/* ── Image Enhancements ── */\n';
+    c += '.cover{position:relative!important;overflow:hidden!important}\n';
+
+    if (im.cover) {
+        c += `.cover-img-layer{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url("${im.cover.uri}") center/cover no-repeat;
+  opacity:${im.cover.opacity||.3};
+  mix-blend-mode:${im.cover.blend||'screen'};
+}\n`;
+    }
+
+    if (im.divider) {
+        const s = isBuiltin ? '.section-sep' : '.heart-divider';
+        c += `${s}{
+  background:url("${im.divider.uri}") center/contain no-repeat!important;
+  height:${im.divider.height||'8mm'}!important;min-height:${im.divider.height||'8mm'};
+  font-size:0!important;color:transparent!important;
+  border:none!important;margin:4mm auto!important;max-width:85%;
+}
+${s}::before,${s}::after{display:none!important;content:none!important}\n`;
+    }
+
+    if (im.opener) {
+        c += `.chapter-opener{position:relative!important;overflow:hidden!important}
+.chapter-opener>*{position:relative;z-index:1}
+.chapter-opener-img{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url("${im.opener.uri}") center bottom/80% auto no-repeat;
+  opacity:${im.opener.opacity||.15};
+  mix-blend-mode:${im.opener.blend||'screen'};
+}\n`;
+    }
+
+    return c;
+}
+
+function _injectImages(html, im, isBuiltin) {
+    if (!im || !Object.keys(im).length) return html;
+    html = html.replace('</style>', _buildImageCSS(im, isBuiltin) + '</style>');
+    if (im.cover)  html = html.replace(/(<div[^>]*class="[^"]*\bcover\b[^"]*"[^>]*>)/, '$1<div class="cover-img-layer"></div>');
+    if (im.opener) html = html.replace(/(<div[^>]*class="[^"]*\bchapter-opener\b[^"]*"[^>]*>)/g, '$1<div class="chapter-opener-img"></div>');
+    return html;
+}
+
+
 // ─── TEMPLATE PICKER UI ──────────────────────────────────────
 
 let _selectedTemplate = 'cosmic-classic';
@@ -724,6 +840,15 @@ async function generateBook() {
             if (_selectedPaperSize === 'A4') {
                 html = html.replace('</style>', A4_OVERRIDE_CSS + '\n</style>');
             }
+        }
+
+        // Load & embed template images (graceful — skips any that fail to load)
+        if (btn) btn.textContent = '🎨 Embedding images...';
+        try {
+            const _imgMap = await _loadTemplateImages(_selectedTemplate);
+            html = _injectImages(html, _imgMap, _selectedTemplate === 'cosmic-classic');
+        } catch (imgErr) {
+            console.warn('Image embedding skipped:', imgErr);
         }
 
         // Download the HTML file
