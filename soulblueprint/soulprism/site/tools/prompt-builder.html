@@ -523,6 +523,13 @@
                             <h4>Pro Tip</h4>
                             <p id="proTip">For best results, paste multiple related readings together. This helps the AI understand the bigger picture and create more coherent transformations.</p>
                         </div>
+
+                        <!-- Example Output -->
+                        <div class="example-wrap" id="exampleWrap">
+                            <h3>Example Output</h3>
+                            <p class="example-label">What this transformation looks like when AI processes a Leo Sun / Scorpio Moon reading:</p>
+                            <div class="example-output" id="exampleOutput"></div>
+                        </div>
                     </div>
 
                     <!-- History -->
@@ -578,6 +585,7 @@
 
         <!-- Shared site JS loads FIRST so the page-specific IIFE can override copyPrompt -->
         <script src="../js/main.js"></script>
+        <script src="../js/examples-data.js"></script>
 
         <!-- ==========================================
         INLINE JS — Prompt Builder Logic
@@ -1259,6 +1267,8 @@ Here is the reading:
  const $tip = document.getElementById('proTip');
  const $history = document.getElementById('promptHistory');
  const $toast = document.getElementById('toast');
+ const $exampleWrap = document.getElementById('exampleWrap');
+ const $exampleOutput = document.getElementById('exampleOutput');
 
  /* ------------------------------------------------------------------
  CORE: updatePrompt
@@ -1312,6 +1322,15 @@ Here is the reading:
 
  // Update pro tip
  $tip.textContent = tips[type] || 'For best results, paste multiple related readings together. This helps the AI understand the bigger picture.';
+
+ // Update example output
+ var exampleText = window.SOUL_EXAMPLES && window.SOUL_EXAMPLES[type];
+ if (exampleText && $exampleWrap) {
+ $exampleWrap.style.display = '';
+ $exampleOutput.textContent = exampleText;
+ } else if ($exampleWrap) {
+ $exampleWrap.style.display = 'none';
+ }
  }
 
  /* ------------------------------------------------------------------
