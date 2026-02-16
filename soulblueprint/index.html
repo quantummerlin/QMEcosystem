@@ -4560,6 +4560,18 @@
         .quick-prompt-copy:hover {
             box-shadow: 0 4px 12px rgba(102,126,234,0.3);
         }
+        .quick-prompt-copy.copied {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        .qt-instruction-bar {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            text-align: center;
+        }
 
         /* Reading Nav Float */
         .reading-nav-float {
@@ -4724,77 +4736,57 @@
             </div>
             
             <div class="welcome-body">
-                <!-- Step 1: Introduction -->
+                <!-- Step 1: How it works + Theme -->
                 <div class="welcome-step active" data-step="1">
-                    <h3>How This Works</h3>
-                    <p>Enter a birth date and time, and we'll reveal the cosmic patterns that were written in the stars at that exact moment.</p>
-                    <p>You'll receive <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom—a complete soul blueprint.</p>
+                    <h3>⭐ Here's What You Get</h3>
+                    <p>Enter a name and birth date → we instantly generate <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom.</p>
                     <div class="welcome-highlight">
-                        <p>"At the exact moment you were born, the universe created a unique pattern just for you."</p>
+                        <p>It's completely free. No sign-up. Your data never leaves your device.</p>
                     </div>
-                </div>
-                
-                <!-- Step 2: Theme Selection -->
-                <div class="welcome-step" data-step="2">
-                    <h3>Choose Your Voice</h3>
-                    <p>This choice shapes how your reading speaks to you:</p>
+                    <p style="margin-top: 16px; font-weight: 600;">Pick the voice for your reading:</p>
                     <div class="theme-preview-btns">
                         <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
                         <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
                         <button class="theme-preview-btn blue" onclick="selectWelcomeTheme('boy')">Blue</button>
                     </div>
                     <div class="theme-descriptions">
-                        <p><strong>Pink</strong> — Feminine energy. Softer, nurturing language.</p>
-                        <p><strong>Purple</strong> — Neutral energy. Balanced, universal tone.</p>
-                        <p><strong>Blue</strong> — Masculine energy. Direct, grounded language.</p>
+                        <p><strong>Pink</strong> — Softer, nurturing tone</p>
+                        <p><strong>Purple</strong> — Balanced, universal tone</p>
+                        <p><strong>Blue</strong> — Direct, grounded tone</p>
                     </div>
-                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 15px;">You can change this anytime from the bar at the top</p>
+                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 10px;">You can change this anytime from the bar at the top</p>
                 </div>
                 
-                <!-- Step 3: How to Read -->
-                <div class="welcome-step" data-step="3">
-                    <h3>No Pressure to Read Everything</h3>
-                    <p>This is a <strong>substantial amount of information</strong>—think of it as an instruction manual for understanding a soul, not something to rush through.</p>
-                    <p>Take your time. Come back to different sections when they feel relevant. Some insights might click immediately; others may make sense months from now.</p>
+                <!-- Step 2: What to expect -->
+                <div class="welcome-step" data-step="2">
+                    <h3>📖 What to Expect</h3>
+                    <p>This is a <strong>deep, personal reading</strong> — not something to rush through. Think of it as a reference guide you can come back to anytime.</p>
+                    <p>About <strong>70% will feel uncannily accurate</strong>. The rest captures potential you may not have unlocked yet — or paths you chose not to take.</p>
                     <div class="welcome-highlight">
-                        <p>"Use this as a reference guide, not a test to complete."</p>
+                        <p>"Maybe this is the reading that sets you on the path to who you were always meant to be."</p>
                     </div>
                     <div class="saved-readings-note">
-                        <p><strong>Your readings are automatically saved.</strong></p>
-                        <p>Click "New Reading" anytime and you'll find all your saved profiles at the bottom of the page. Create readings for friends, family, or yourself—they'll all be there waiting.</p>
+                        <p>✅ <strong>Readings auto-save</strong> — create readings for friends, family, anyone. They'll all be waiting when you come back.</p>
                     </div>
                 </div>
                 
-                <!-- Step 4: Accuracy Note -->
-                <div class="welcome-step" data-step="4">
-                    <h3>A Gentle Note on Accuracy</h3>
-                    <p>Perhaps <strong>70% will feel uncannily accurate</strong>. The rest? The stars and numbers capture your absolute potential—they cannot know your traumas, circumstances, or the choices you've made along the way.</p>
-                    <p>If something doesn't resonate, it might be unlived potential waiting to be discovered. Or simply not your path.</p>
-                    <div class="welcome-highlight">
-                        <p>"Maybe, just maybe, this is the reading that sets you on the path to who you were always meant to be."</p>
-                    </div>
-                    <div class="privacy-note">
-                        <span class="icon lock-icon"></span>
-                        <p><strong>Your data stays with you.</strong> Everything is stored locally on your device. We never see, collect, or share your birth information.</p>
-                    </div>
-                </div>
-                
-                <!-- Step 5: AI Transformations -->
-                <div class="welcome-step" data-step="5">
-                    <h3>📋 Going Deeper With Your Reading</h3>
-                    <p>Once you've spent time with your reading, you might want to explore it in new ways. Every section has a <strong>📋 Copy Reading</strong> button.</p>
+                <!-- Step 3: AI Transformations -->
+                <div class="welcome-step" data-step="3">
+                    <h3>✨ Turn Readings Into Something Amazing</h3>
+                    <p>Every reading has a <strong>✨ Transform This</strong> button. One tap gives you a ready-made prompt — just paste it into ChatGPT or Gemini.</p>
                     <div class="ai-transform-preview">
                         <div class="transform-grid">
-                            <div class="transform-item">🎨<span>Visual Art</span></div>
+                            <div class="transform-item">🎨<span>Portraits</span></div>
                             <div class="transform-item">📖<span>Stories</span></div>
                             <div class="transform-item">📊<span>Infographics</span></div>
                             <div class="transform-item">🧘<span>Meditations</span></div>
-                            <div class="transform-item">📝<span>Poetry</span></div>
-                            <div class="transform-item">🎯<span>Career Plans</span></div>
+                            <div class="transform-item">💫<span>Affirmations</span></div>
+                            <div class="transform-item">📅<span>Routines</span></div>
                         </div>
                     </div>
-                    <p>Copy any reading, then use our <strong>Prompt Builder</strong> to create a customised prompt for free AI tools like ChatGPT or Gemini. You choose the format, tone, and depth.</p>
-                    <p style="text-align: center; font-size: 0.9rem; opacity: 0.7; margin-top: 10px;">Take your time with the reading first — the transformation tools will be there when you're ready.</p>
+                    <div class="welcome-highlight">
+                        <p>It's free, it's easy, and the results are incredible. We'll show you how after your reading.</p>
+                    </div>
                 </div>
             </div>
             
@@ -4804,8 +4796,6 @@
                     <div class="welcome-dot active" data-dot="1"></div>
                     <div class="welcome-dot" data-dot="2"></div>
                     <div class="welcome-dot" data-dot="3"></div>
-                    <div class="welcome-dot" data-dot="4"></div>
-                    <div class="welcome-dot" data-dot="5"></div>
                 </div>
                 <button class="welcome-nav-btn primary" id="welcomeNextBtn" onclick="welcomeNext()">Next</button>
             </div>
@@ -4853,7 +4843,7 @@
                 <div class="form-group">
                     <label id="birthDateLabel">Date of Birth</label>
                     <input type="date" id="birthDateInput" required>
-                    <p class="helper-text" id="birthDateHelper">Birth date for calculations</p>
+                    <p class="helper-text" id="birthDateHelper">Used for astrology & numerology calculations</p>
                 </div>
                 
                 <input type="hidden" id="genderInput" value="girl">
@@ -4867,7 +4857,7 @@
                 <div class="form-group" id="birthPlaceGroup">
                     <label id="birthPlaceLabel">Place of Birth <span class="optional-badge">Optional</span></label>
                     <input type="text" id="birthPlaceInput" placeholder="City, Country">
-                    <p class="helper-text" id="birthPlaceHelper">Location of birth</p>
+                    <p class="helper-text" id="birthPlaceHelper">Included in your reading for reference</p>
                 </div>
                 
                 <button type="submit" class="submit-btn" id="submitBtn">Generate Your Reading</button>
@@ -4895,7 +4885,7 @@
                 <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
             </div>
             <div style="text-align:center;margin-top:12px;">
-                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;font-size:0.9rem;opacity:0.7;" target="_blank">Want to transform your reading into something new? Try the Prompt Builder →</a>
+                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;font-size:0.9rem;opacity:0.85;" target="_blank">✨ Already have a reading? Create AI art, stories & more with the Prompt Builder →</a>
             </div>
         </div>
     </section>
@@ -4932,12 +4922,10 @@
                     <p class="reading-subtitle">Reading for <strong id="openingName">...</strong></p>
                 </div>
                 <div class="opening-letter-body" id="openingLetterBody">
-                    <p>At the exact moment you were born, the cosmos arranged itself in a pattern that has never existed before and will never exist again.</p>
-                    <p>This reading captures that unique configuration — not as a prediction of who you must become, but as a map of the gifts, challenges, and potentials encoded in your birth moment.</p>
-                    <p>Take your time exploring each section. Some insights will resonate immediately; others may reveal their meaning over years. This is your cosmic blueprint — a lifelong companion, not a daily forecast.</p>
-                    <p class="opening-note">If any birth details are incorrect, tap "New Reading" to regenerate with accurate information.</p>
+                    <p>At the exact moment you were born, the cosmos arranged itself in a pattern that has never existed before and will never exist again. This reading captures that unique configuration — a map of your gifts, challenges, and potential.</p>
+                    <p><strong>👇 Tap any section below to explore it.</strong> Take your time — some insights click immediately, others reveal their meaning over time.</p>
                     <div class="ai-transform-callout">
-                        <p>📋 Every reading has a <strong>Copy</strong> button. When you're ready, you can <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank" style="color: inherit; text-decoration: underline;">use the Prompt Builder</a> to transform any reading into visual art, stories, meditations and more using free AI tools.</p>
+                        <p>✨ <strong>See something you love?</strong> Hit the <strong>✨ Transform This</strong> button on any reading to turn it into AI-generated art, stories, meditations, and more — completely free with ChatGPT or Gemini.</p>
                     </div>
                 </div>
                 <div class="hero-progress">
@@ -4978,12 +4966,12 @@
             
             <!-- AI Transformation Banner -->
             <div class="ai-transform-banner" id="aiTransformBanner">
-                <div class="ai-banner-icon">📋</div>
+                <div class="ai-banner-icon">✨</div>
                 <div class="ai-banner-content">
-                    <strong>Before you leave, notice the repeating themes in your readings</strong>
-                    <p>When you're ready to go deeper, copy any reading and use the Prompt Builder to transform it into your preferred format.</p>
+                    <strong>Turn any reading into art, stories, or meditations</strong>
+                    <p>Tap <strong>✨ Transform This</strong> on any reading → pick a format → copy the prompt → paste into ChatGPT or Gemini. That's it!</p>
                 </div>
-                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank" class="ai-banner-btn">Open Prompt Builder →</a>
+                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank" class="ai-banner-btn">Advanced Prompt Builder →</a>
                 <button class="ai-banner-dismiss" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button>
             </div>
 
@@ -4995,35 +4983,27 @@
             <!-- Completion Celebration -->
             <div class="completion-celebration">
                 <div class="celebration-icon"></div>
-                <h3>Reading Complete!</h3>
+                <h3>Reading Complete! 🎉</h3>
                 <p>You've explored all the cosmic insights for this moment in time.</p>
                 <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102,126,234,0.06), rgba(118,75,162,0.06)); border-radius: 16px; border: 1px solid rgba(102,126,234,0.15);">
-                    <p style="font-size: 1rem; margin-bottom: 8px;"><strong>Before you go:</strong> scroll back through and notice which readings share similar themes — those patterns are where your deepest insights live.</p>
-                    <p style="font-size: 0.9rem; opacity: 0.75; margin-bottom: 14px;">When you're ready, you can copy any reading and transform it into a format that works for you — visual art, a story, a guided meditation, or dozens of other options.</p>
-                    <a href="/soulblueprint/playbooks/" target="_blank" style="display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.95rem;">Explore the Blueprint Playbook Library →</a>
+                    <p style="font-size: 1rem; margin-bottom: 12px;"><strong>✨ Want to do something amazing with your readings?</strong></p>
+                    <p style="font-size: 0.95rem; margin-bottom: 14px;">Tap <strong>✨ Transform This</strong> on any reading that resonated with you → pick a format → copy the prompt → paste into ChatGPT or Gemini. You'll get AI-generated art, stories, meditations, and more — all free.</p>
+                    <a href="/soulblueprint/playbooks/" target="_blank" style="display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📚 Want even more? Explore the Blueprint Playbook Library →</a>
                 </div>
             </div>
             
             <!-- Full Reading Export Instructions -->
             <div class="expand-all-section" id="expandAllSection">
-                <h3>Save Your Complete Reading as PDF</h3>
-                <p>Want to feed your <strong>entire reading</strong> into an AI for stories, podcasts, or deep analysis? Here's how:</p>
-                <div class="ea-steps">
-                    <span class="ea-step">1. Open each reading section by clicking on it</span>
-                    <span class="ea-step">2. Once all sections are open, press <kbd>Ctrl</kbd>+<kbd>A</kbd> to select all</span>
-                    <span class="ea-step">3. Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to copy</span>
-                    <span class="ea-step">4. Paste into Word or Google Docs</span>
-                    <span class="ea-step">5. Save as PDF or paste directly into AI</span>
-                </div>
-                <p style="font-size: 0.82rem; opacity: 0.7; margin-top: 12px;">Tip: For the cleanest copy, paste into a plain text editor first, then into your word processor. Or use the <strong>Copy Complete Blueprint</strong> button above for a quick one-click copy.</p>
+                <h3>📋 Want All Your Readings in One Go?</h3>
+                <p>Use the <strong>📋 Copy Complete Blueprint</strong> button above — it copies every reading at once. Then paste into ChatGPT, Gemini, or NotebookLM for deep analysis, podcasts, stories, and more.</p>
             </div>
 
             <!-- Quick Transform Section -->
             <div class="quick-transform-section" id="quickTransformSection">
-                <h3>Quick Transform</h3>
-                <p class="qt-subtitle">Select a reading above, then choose a transformation:</p>
+                <h3>✨ Transform Your Reading</h3>
+                <p class="qt-subtitle">Pick what you want to create:</p>
                 <div class="quick-transform-grid">
-                    <button class="quick-transform-btn" onclick="quickTransform('portrait')">🎨 Portrait</button>
+                    <button class="quick-transform-btn" onclick="quickTransform('portrait')">🎨 AI Portrait</button>
                     <button class="quick-transform-btn" onclick="quickTransform('infographic')">📊 Infographic</button>
                     <button class="quick-transform-btn" onclick="quickTransform('story')">📖 Story</button>
                     <button class="quick-transform-btn" onclick="quickTransform('affirmation')">💫 Affirmations</button>
@@ -5031,8 +5011,9 @@
                     <button class="quick-transform-btn" onclick="quickTransform('routine')">📅 Daily Routine</button>
                 </div>
                 <div class="quick-prompt-output" id="quickPromptOutput">
+                    <div class="qt-instruction-bar">👇 <strong>Copy this prompt</strong> and paste it into <strong>ChatGPT</strong> or <strong>Gemini</strong> (both free)</div>
                     <pre id="quickPromptText"></pre>
-                    <button class="quick-prompt-copy" onclick="copyQuickPrompt()">📋 Copy Prompt</button>
+                    <button class="quick-prompt-copy" onclick="copyQuickPrompt()">📋 Copy Prompt — Then Paste Into ChatGPT or Gemini</button>
                 </div>
             </div>
             
@@ -5581,20 +5562,14 @@
             progressBar.style.width = '0%';
             overlay.classList.add('active');
             
-            // Cycling loading messages — premium, deliberate pacing
+            // Cycling loading messages
             const loadingMessages = [
                 'Mapping the stars at your moment of birth…',
-                'Calculating planetary positions across the zodiac…',
-                'Analyzing the angles between celestial bodies…',
-                'Reading the numerology encoded in your name…',
-                'Cross-referencing house placements…',
-                'Discovering hidden patterns in your chart…',
-                'Checking how the elements in your chart balance…',
-                'Putting it all together…',
-                'Connecting the dots between your planets and houses…',
-                'Looking at your life themes and cycles…',
+                'Calculating planetary positions…',
+                'Analyzing celestial patterns…',
+                'Reading the numerology in your name…',
                 'Building your complete reading…',
-                'Finalizing your personalized reading…'
+                'Almost there…'
             ];
             let msgIndex = 0;
             loadingText.textContent = loadingMessages[0];
@@ -5617,7 +5592,7 @@
             }, 200);
             
             // Extended generation pause for perceived value
-            await new Promise(resolve => setTimeout(resolve, 6000));
+            await new Promise(resolve => setTimeout(resolve, 3500));
             
             try {
                 // Calculate all readings
@@ -10070,11 +10045,11 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             const qtSection = document.getElementById('quickTransformSection');
             if (qtSection) {
                 qtSection.style.display = 'block';
-                qtSection.querySelector('.qt-subtitle').textContent = 'Transforming: ' + title;
+                qtSection.querySelector('.qt-subtitle').textContent = '✨ "' + title + '" — pick what you want to create:';
                 qtSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
             
-            showCopyToast('Reading selected — choose a transformation below!');
+            showCopyToast('Now pick a format below ↓');
         }
         
         // Quick Transform prompt templates
@@ -10114,8 +10089,18 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             const text = document.getElementById('quickPromptText');
             if (!text) return;
             
+            const copyBtn = document.querySelector('.quick-prompt-copy');
+            
             navigator.clipboard.writeText(text.textContent).then(() => {
-                showCopyToast('Prompt copied to clipboard! Paste it into ChatGPT, Gemini, or any AI.');
+                if (copyBtn) {
+                    copyBtn.textContent = '✅ Copied! Now paste into ChatGPT or Gemini';
+                    copyBtn.classList.add('copied');
+                    setTimeout(() => {
+                        copyBtn.textContent = '📋 Copy Prompt — Then Paste Into ChatGPT or Gemini';
+                        copyBtn.classList.remove('copied');
+                    }, 4000);
+                }
+                showCopyToast('✅ Prompt copied! Open ChatGPT or Gemini and paste it in.');
             }).catch(() => {
                 const ta = document.createElement('textarea');
                 ta.value = text.textContent;
@@ -10125,7 +10110,15 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 ta.select();
                 document.execCommand('copy');
                 document.body.removeChild(ta);
-                showCopyToast('Prompt copied to clipboard!');
+                if (copyBtn) {
+                    copyBtn.textContent = '✅ Copied! Now paste into ChatGPT or Gemini';
+                    copyBtn.classList.add('copied');
+                    setTimeout(() => {
+                        copyBtn.textContent = '📋 Copy Prompt — Then Paste Into ChatGPT or Gemini';
+                        copyBtn.classList.remove('copied');
+                    }, 4000);
+                }
+                showCopyToast('✅ Prompt copied! Open ChatGPT or Gemini and paste it in.');
             });
         }
         
@@ -10979,7 +10972,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         // ============================================
         
         let welcomeCurrentStep = 1;
-        const welcomeTotalSteps = 5;
+        const welcomeTotalSteps = 3;
         
         function selectWelcomeTheme(theme) {
             // Update button states
