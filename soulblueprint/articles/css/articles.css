@@ -29,6 +29,8 @@
     --pillar-social: #00CEC9;
     --pillar-ai: #FDCB6E;
     --pillar-gifts: #E84393;
+    --pillar-beginners: #0984E3;
+    --pillar-selfdiscovery: #A29BFE;
 
     /* Layout */
     --max-width: 1200px;
@@ -187,6 +189,8 @@ strong { font-weight: 600; }
 .pillar-card[data-pillar="social"] .pillar-card-bar { background: var(--pillar-social); }
 .pillar-card[data-pillar="ai"] .pillar-card-bar { background: var(--pillar-ai); }
 .pillar-card[data-pillar="gifts"] .pillar-card-bar { background: var(--pillar-gifts); }
+.pillar-card[data-pillar="beginners"] .pillar-card-bar { background: var(--pillar-beginners); }
+.pillar-card[data-pillar="selfdiscovery"] .pillar-card-bar { background: var(--pillar-selfdiscovery); }
 
 /* ============================
    HUB: FEATURED ARTICLES
@@ -291,6 +295,8 @@ strong { font-weight: 600; }
 .article-hero[data-pillar="social"]::before { background: var(--pillar-social); }
 .article-hero[data-pillar="ai"]::before { background: var(--pillar-ai); }
 .article-hero[data-pillar="gifts"]::before { background: var(--pillar-gifts); }
+.article-hero[data-pillar="beginners"]::before { background: var(--pillar-beginners); }
+.article-hero[data-pillar="selfdiscovery"]::before { background: var(--pillar-selfdiscovery); }
 .article-hero > * { position: relative; z-index: 1; }
 
 .breadcrumbs {
@@ -311,6 +317,8 @@ strong { font-weight: 600; }
 .article-hero[data-pillar="social"] .pillar-tag { background: rgba(0,206,201,.1); color: var(--pillar-social); }
 .article-hero[data-pillar="ai"] .pillar-tag { background: rgba(253,203,110,.15); color: #e17055; }
 .article-hero[data-pillar="gifts"] .pillar-tag { background: rgba(232,67,147,.1); color: var(--pillar-gifts); }
+.article-hero[data-pillar="beginners"] .pillar-tag { background: rgba(9,132,227,.1); color: var(--pillar-beginners); }
+.article-hero[data-pillar="selfdiscovery"] .pillar-tag { background: rgba(162,155,254,.12); color: var(--pillar-selfdiscovery); }
 
 .article-hero h1 { max-width: 700px; margin: 0 auto 16px; }
 .article-meta {
