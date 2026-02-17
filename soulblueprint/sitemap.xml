@@ -32,6 +32,13 @@
         <priority>0.2</priority>
     </url>
 
+    <!-- Examples -->
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/examples/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- Playbooks -->
     <url>
         <loc>https://quantummerlin.com/soulblueprint/playbooks/</loc>

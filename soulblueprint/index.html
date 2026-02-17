@@ -579,6 +579,135 @@
             padding: 20px;
         }
         
+        /* Site Navigation */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,.06);
+            padding: 0 20px;
+        }
+        body.dark-theme .site-nav {
+            background: rgba(15,15,26,.92);
+            border-bottom-color: rgba(255,255,255,.08);
+        }
+        .site-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 52px;
+        }
+        .site-nav-brand {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .site-nav-brand:hover { opacity: .85; }
+        .site-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .site-nav-links a {
+            font-family: var(--font-body);
+            font-size: .88rem;
+            font-weight: 500;
+            color: var(--text);
+            text-decoration: none;
+            opacity: .7;
+            transition: opacity .2s;
+        }
+        body.dark-theme .site-nav-links a {
+            color: var(--text-light);
+        }
+        .site-nav-links a:hover,
+        .site-nav-links a.active {
+            opacity: 1;
+            color: var(--primary);
+        }
+        .site-nav-links .nav-cta {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff !important;
+            opacity: 1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: .82rem;
+        }
+        .site-nav-links .nav-cta:hover {
+            transform: scale(1.04);
+        }
+        @media (max-width: 600px) {
+            .site-nav-links { gap: 12px; }
+            .site-nav-links a { font-size: .8rem; }
+            .site-nav-links .nav-hide-mobile { display: none; }
+        }
+
+        /* Example reading banner */
+        .example-banner {
+            background: linear-gradient(135deg, rgba(102,126,234,.1), rgba(118,75,162,.1));
+            border: 1px solid rgba(102,126,234,.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .example-banner-icon { font-size: 1.4rem; }
+        .example-banner-text { flex: 1; font-size: .92rem; line-height: 1.5; }
+        .example-banner-text strong { color: #667eea; }
+        .example-banner-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: .85rem;
+            white-space: nowrap;
+        }
+        .example-banner-btn:hover { opacity: .9; color: #fff; }
+
+        /* Discover section in results */
+        .discover-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .discover-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            background: rgba(102,126,234,.04);
+            border: 1px solid rgba(102,126,234,.12);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all .2s;
+            font-size: .9rem;
+        }
+        .discover-link:hover {
+            background: rgba(102,126,234,.08);
+            border-color: rgba(102,126,234,.25);
+            transform: translateY(-2px);
+        }
+        .discover-link-icon { font-size: 1.3rem; }
+        body.dark-theme .discover-link { color: var(--text-light); }
+
         /* Header */
         .header {
             text-align: center;
@@ -4830,6 +4959,19 @@
         </div>
     </div>
     
+    <!-- Site Navigation -->
+    <nav class="site-nav" id="siteNav">
+        <div class="site-nav-inner">
+            <a href="/soulblueprint/" class="site-nav-brand">✨ Soul Blueprint</a>
+            <div class="site-nav-links">
+                <a href="/soulblueprint/" class="active">Generator</a>
+                <a href="/soulblueprint/examples/">Examples</a>
+                <a href="/soulblueprint/articles/">Guides</a>
+                <a href="/soulblueprint/playbooks/" class="nav-hide-mobile">Playbooks</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Input Section -->
     <section class="input-section" id="inputSection">
         <header class="header">
@@ -4880,22 +5022,24 @@
             </div>
             
             <div class="footer-links" aria-label="Legal links">
-                <a href="/soulblueprint/articles/" target="_blank">Guides</a>
+                <a href="/soulblueprint/examples/">Examples</a>
                 <span>•</span>
-                <a href="/soulblueprint/playbooks/" target="_blank">Playbooks</a>
+                <a href="/soulblueprint/articles/">Guides</a>
                 <span>•</span>
-                <a href="/soulblueprint/about.html" target="_blank">About</a>
+                <a href="/soulblueprint/playbooks/">Playbooks</a>
                 <span>•</span>
-                <a href="/soulblueprint/privacy.html" target="_blank">Privacy Policy</a>
+                <a href="/soulblueprint/about.html">About</a>
                 <span>•</span>
-                <a href="/soulblueprint/terms.html" target="_blank">Terms of Service</a>
+                <a href="/soulblueprint/privacy.html">Privacy</a>
                 <span>•</span>
-                <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
+                <a href="/soulblueprint/terms.html">Terms</a>
+                <span>•</span>
+                <a href="/soulblueprint/disclaimer.html">Disclaimer</a>
                 <span>•</span>
                 <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
             </div>
             <div style="text-align:center;margin-top:12px;">
-                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;font-size:0.9rem;opacity:0.85;" target="_blank">✨ Already have a reading? Create AI art, stories & more with the Prompt Builder →</a>
+                <a href="/soulblueprint/articles/what-is-ai-simple-guide/" style="color:#667eea;text-decoration:none;font-size:0.9rem;opacity:0.85;">🧠 New to AI? Start with our beginner's guide →</a>
             </div>
         </div>
     </section>
@@ -4985,6 +5129,15 @@
                 <button class="ai-banner-dismiss" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button>
             </div>
 
+            <!-- Example Reading Banner (shown when loaded from examples page) -->
+            <div class="example-banner" id="exampleBanner" style="display:none;">
+                <span class="example-banner-icon">👀</span>
+                <div class="example-banner-text">
+                    You're viewing an <strong>example reading</strong>. Want your own unique blueprint?
+                </div>
+                <a href="/soulblueprint/" class="example-banner-btn" onclick="startNewReading(); return false;">Generate Yours Free →</a>
+            </div>
+
             <!-- Reading Sections -->
             <div id="readingsContainer">
                 <!-- Populated by JavaScript -->
@@ -4999,6 +5152,38 @@
                     <p style="font-size: 1rem; margin-bottom: 12px;"><strong>✨ Want to do something amazing with your readings?</strong></p>
                     <p style="font-size: 0.95rem; margin-bottom: 14px;">Tap <strong>✨ Transform This</strong> on any reading that resonated with you → pick a format → copy the prompt → paste into ChatGPT or Gemini. You'll get AI-generated art, stories, meditations, and more — all free.</p>
                     <a href="/soulblueprint/playbooks/" target="_blank" style="display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📚 Want even more? Explore the Blueprint Playbook Library →</a>
+                </div>
+
+                <!-- Discover More Section -->
+                <div style="margin-top: 24px; padding: 20px; background: rgba(255,255,255,.5); border-radius: 16px; border: 1px solid rgba(102,126,234,0.1);">
+                    <p style="font-size: 1rem; margin-bottom: 4px;"><strong>📖 Go Deeper</strong></p>
+                    <p style="font-size: .9rem; color: #636e72; margin-bottom: 14px;">Free guides to understand and use your reading:</p>
+                    <div class="discover-links">
+                        <a href="/soulblueprint/articles/turn-reading-into-infographic/" class="discover-link">
+                            <span class="discover-link-icon">📊</span>
+                            <span>Turn This Into an Infographic</span>
+                        </a>
+                        <a href="/soulblueprint/articles/how-ai-reads-birth-charts/" class="discover-link">
+                            <span class="discover-link-icon">🔮</span>
+                            <span>How AI Reads Your Chart</span>
+                        </a>
+                        <a href="/soulblueprint/articles/best-ai-prompts-self-discovery/" class="discover-link">
+                            <span class="discover-link-icon">💬</span>
+                            <span>25 Self-Discovery Prompts</span>
+                        </a>
+                        <a href="/soulblueprint/articles/ai-tools-journaling-reflection/" class="discover-link">
+                            <span class="discover-link-icon">📝</span>
+                            <span>AI Journaling Guide</span>
+                        </a>
+                        <a href="/soulblueprint/examples/" class="discover-link">
+                            <span class="discover-link-icon">👥</span>
+                            <span>Browse Example Readings</span>
+                        </a>
+                        <a href="/soulblueprint/articles/" class="discover-link">
+                            <span class="discover-link-icon">📚</span>
+                            <span>All 70+ Free Guides</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             
@@ -5129,17 +5314,19 @@
                     <p style="font-size:0.9rem;opacity:0.65;">Want to explore your reading in a different format? <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;" target="_blank">Try the Prompt Builder →</a></p>
                 </div>
                 <div class="footer-links">
-                    <a href="/soulblueprint/articles/" target="_blank">Guides</a>
+                    <a href="/soulblueprint/examples/">Examples</a>
                     <span>•</span>
-                    <a href="/soulblueprint/playbooks/" target="_blank">Playbooks</a>
+                    <a href="/soulblueprint/articles/">Guides</a>
                     <span>•</span>
-                    <a href="/soulblueprint/about.html" target="_blank">About</a>
+                    <a href="/soulblueprint/playbooks/">Playbooks</a>
                     <span>•</span>
-                    <a href="/soulblueprint/privacy.html" target="_blank">Privacy Policy</a>
+                    <a href="/soulblueprint/about.html">About</a>
                     <span>•</span>
-                    <a href="/soulblueprint/terms.html" target="_blank">Terms of Service</a>
+                    <a href="/soulblueprint/privacy.html">Privacy</a>
                     <span>•</span>
-                    <a href="/soulblueprint/disclaimer.html" target="_blank">Disclaimer</a>
+                    <a href="/soulblueprint/terms.html">Terms</a>
+                    <span>•</span>
+                    <a href="/soulblueprint/disclaimer.html">Disclaimer</a>
                     <span>•</span>
                     <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
                 </div>
@@ -10944,6 +11131,42 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             
             // Render the dashboard (shows saved readings)
             renderDashboard();
+
+            // ============================================
+            // URL PARAMETER HANDLING (Example Readings)
+            // ============================================
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramName = urlParams.get('name');
+            const paramDate = urlParams.get('date');
+            const paramTime = urlParams.get('time');
+            const paramPlace = urlParams.get('place');
+            
+            if (paramName && paramDate) {
+                // Auto-fill form fields
+                document.getElementById('nameInput').value = paramName;
+                document.getElementById('birthDateInput').value = paramDate;
+                if (paramTime) document.getElementById('birthTimeInput').value = paramTime;
+                if (paramPlace) document.getElementById('birthPlaceInput').value = paramPlace;
+                
+                // Build userData and auto-generate
+                const userData = {
+                    name: paramName,
+                    birthDate: paramDate,
+                    birthTime: paramTime || null,
+                    birthPlace: paramPlace || null
+                };
+                
+                // Show example banner after generation
+                window._isExampleReading = true;
+                generateReading(userData).then(() => {
+                    const banner = document.getElementById('exampleBanner');
+                    if (banner) banner.style.display = 'flex';
+                });
+                
+                // Clean URL without reload
+                window.history.replaceState({}, '', window.location.pathname);
+                return; // Skip normal restore logic
+            }
 
             // Check for saved readings - prioritize multi-reading system
             const allReadings = getAllReadings();
