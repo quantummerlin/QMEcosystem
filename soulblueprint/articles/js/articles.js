@@ -94,9 +94,9 @@
         });
     }
 
-    // ---- Scroll Animations (fade-in-up) ----
+    // ---- Scroll Animations (fade-in-up, scale-in, slide-in-left) ----
     function initScrollAnimations() {
-        const els = document.querySelectorAll('.fade-in-up');
+        const els = document.querySelectorAll('.fade-in-up, .scale-in, .slide-in-left');
         if (!els.length) return;
         if (!('IntersectionObserver' in window)) {
             els.forEach(el => el.classList.add('visible'));
@@ -111,6 +111,67 @@
             });
         }, { threshold: 0.1 });
         els.forEach(el => io.observe(el));
+    }
+
+    // ---- Hero Stat Count-Up Animation ----
+    function initCountUp() {
+        const stats = document.querySelectorAll('.hub-hero-stat-number');
+        if (!stats.length) return;
+        let fired = false;
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !fired) {
+                    fired = true;
+                    stats.forEach(el => {
+                        const raw = el.textContent.trim();
+                        const match = raw.match(/^(\d+)/);
+                        if (match) {
+                            const target = parseInt(match[1], 10);
+                            const suffix = raw.replace(match[1], '');
+                            const duration = 1600;
+                            const start = performance.now();
+                            const step = (now) => {
+                                const progress = Math.min((now - start) / duration, 1);
+                                const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+                                el.textContent = Math.round(target * eased) + suffix;
+                                if (progress < 1) requestAnimationFrame(step);
+                            };
+                            el.textContent = '0' + suffix;
+                            requestAnimationFrame(step);
+                        }
+                    });
+                    io.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+        stats.forEach(s => io.observe(s));
+    }
+
+    // ---- Article List Stagger on Scroll ----
+    function initListStagger() {
+        const lists = document.querySelectorAll('.articles-list');
+        if (!lists.length) return;
+        if (!('IntersectionObserver' in window)) return;
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const items = entry.target.querySelectorAll('.articles-list-item');
+                    items.forEach((item, i) => {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateX(-12px)';
+                        item.style.transition = `opacity .4s ease ${i * .05}s, transform .4s ease ${i * .05}s`;
+                        requestAnimationFrame(() => {
+                            requestAnimationFrame(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateX(0)';
+                            });
+                        });
+                    });
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        lists.forEach(l => io.observe(l));
     }
 
     // ---- Smooth Scroll for Anchor Links ----
@@ -150,6 +211,8 @@
         initPromptCopy();
         initSteps();
         initScrollAnimations();
+        initCountUp();
+        initListStagger();
         initSmoothScroll();
         initTOC();
     }
