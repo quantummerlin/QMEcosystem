@@ -579,78 +579,9 @@
             padding: 20px;
         }
         
-        /* Site Navigation */
+        /* Site Navigation — hidden on generator page, people come here to generate */
         .site-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,0,0,.06);
-            padding: 0 20px;
-        }
-        body.dark-theme .site-nav {
-            background: rgba(15,15,26,.92);
-            border-bottom-color: rgba(255,255,255,.08);
-        }
-        .site-nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 52px;
-        }
-        .site-nav-brand {
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .site-nav-brand:hover { opacity: .85; }
-        .site-nav-links {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .site-nav-links a {
-            font-family: var(--font-body);
-            font-size: .88rem;
-            font-weight: 500;
-            color: var(--text);
-            text-decoration: none;
-            opacity: .7;
-            transition: opacity .2s;
-        }
-        body.dark-theme .site-nav-links a {
-            color: var(--text-light);
-        }
-        .site-nav-links a:hover,
-        .site-nav-links a.active {
-            opacity: 1;
-            color: var(--primary);
-        }
-        .site-nav-links .nav-cta {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: #fff !important;
-            opacity: 1;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: .82rem;
-        }
-        .site-nav-links .nav-cta:hover {
-            transform: scale(1.04);
-        }
-        @media (max-width: 600px) {
-            .site-nav-links { gap: 12px; }
-            .site-nav-links a { font-size: .8rem; }
-            .site-nav-links .nav-hide-mobile { display: none; }
+            display: none;
         }
 
         /* Example reading banner */
@@ -4908,77 +4839,32 @@
     </style>
 </head>
 <body>
-    <!-- Welcome Modal -->
+    <!-- Welcome Modal (single step — fast entry) -->
     <div class="welcome-modal" id="welcomeModal" style="display: none;">
         <div class="welcome-content">
             <div class="welcome-header">
-                <h2>Welcome to Your Reading</h2>
+                <h2>Your Cosmic Blueprint</h2>
                 <p>A moment in time, captured forever</p>
             </div>
             
             <div class="welcome-body">
-                <!-- Step 1: How it works + Theme -->
                 <div class="welcome-step active" data-step="1">
-                    <h3>⭐ Here's What You Get</h3>
-                    <p>Enter a name and birth date → we instantly generate <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom.</p>
+                    <p style="text-align:center; font-size:1.05rem;">Enter a name and birth date to instantly generate <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom.</p>
                     <div class="welcome-highlight">
-                        <p>It's completely free. No sign-up. Your data never leaves your device.</p>
+                        <p>Completely free. No sign-up. Your data never leaves your device. Readings auto-save for everyone you create.</p>
                     </div>
-                    <p style="margin-top: 16px; font-weight: 600;">Pick the voice for your reading:</p>
+                    <p style="margin-top: 18px; font-weight: 600; text-align:center;">Choose your reading tone:</p>
                     <div class="theme-preview-btns">
                         <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
                         <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
                         <button class="theme-preview-btn blue" onclick="selectWelcomeTheme('boy')">Blue</button>
                     </div>
-                    <div class="theme-descriptions">
-                        <p><strong>Pink</strong> — Softer, nurturing tone</p>
-                        <p><strong>Purple</strong> — Balanced, universal tone</p>
-                        <p><strong>Blue</strong> — Direct, grounded tone</p>
-                    </div>
-                    <p style="text-align: center; font-size: 0.88rem; opacity: 0.85; margin-top: 10px; color: #444;">You can change this anytime from the bar at the top</p>
-                </div>
-                
-                <!-- Step 2: What to expect -->
-                <div class="welcome-step" data-step="2">
-                    <h3>📖 What to Expect</h3>
-                    <p>This is a <strong>deep, personal reading</strong> — not something to rush through. Think of it as a reference guide you can come back to anytime.</p>
-                    <p>About <strong>70% will feel uncannily accurate</strong>. The rest captures potential you may not have unlocked yet — or paths you chose not to take.</p>
-                    <div class="welcome-highlight">
-                        <p>"Maybe this is the reading that sets you on the path to who you were always meant to be."</p>
-                    </div>
-                    <div class="saved-readings-note">
-                        <p>✅ <strong>Readings auto-save</strong> — create readings for friends, family, anyone. They'll all be waiting when you come back.</p>
-                    </div>
-                </div>
-                
-                <!-- Step 3: AI Transformations -->
-                <div class="welcome-step" data-step="3">
-                    <h3>✨ Turn Readings Into Something Amazing</h3>
-                    <p>Every reading has a <strong>✨ Transform This</strong> button. One tap gives you a ready-made prompt — just paste it into ChatGPT or Gemini.</p>
-                    <div class="ai-transform-preview">
-                        <div class="transform-grid">
-                            <div class="transform-item">🎨<span>Portraits</span></div>
-                            <div class="transform-item">📖<span>Stories</span></div>
-                            <div class="transform-item">📊<span>Infographics</span></div>
-                            <div class="transform-item">🧘<span>Meditations</span></div>
-                            <div class="transform-item">💫<span>Affirmations</span></div>
-                            <div class="transform-item">📅<span>Routines</span></div>
-                        </div>
-                    </div>
-                    <div class="welcome-highlight">
-                        <p>It's free, it's easy, and the results are incredible. We'll show you how after your reading.</p>
-                    </div>
+                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 8px;">You can change this anytime from the bar at the top</p>
                 </div>
             </div>
             
-            <div class="welcome-footer">
-                <button class="welcome-nav-btn secondary" id="welcomeBackBtn" onclick="welcomeBack()" disabled>Back</button>
-                <div class="welcome-dots">
-                    <div class="welcome-dot active" data-dot="1"></div>
-                    <div class="welcome-dot" data-dot="2"></div>
-                    <div class="welcome-dot" data-dot="3"></div>
-                </div>
-                <button class="welcome-nav-btn primary" id="welcomeNextBtn" onclick="welcomeNext()">Next</button>
+            <div class="welcome-footer" style="justify-content:center;">
+                <button class="welcome-nav-btn primary" onclick="closeWelcome()" style="padding: 14px 48px; font-size: 1.05rem;">Get Started</button>
             </div>
         </div>
     </div>
@@ -11254,70 +11140,22 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         // WELCOME MODAL FUNCTIONS
         // ============================================
         
-        let welcomeCurrentStep = 1;
-        const welcomeTotalSteps = 3;
-        
         function selectWelcomeTheme(theme) {
-            // Update button states
-            document.querySelectorAll('.theme-preview-btn').forEach(btn => {
-                btn.classList.remove('selected');
-            });
+            document.querySelectorAll('.theme-preview-btn').forEach(btn => btn.classList.remove('selected'));
             const themeClass = theme === 'girl' ? 'pink' : (theme === 'boy' ? 'blue' : 'purple');
             document.querySelector(`.theme-preview-btn.${themeClass}`).classList.add('selected');
-            
-            // Actually apply the theme
             setGender(theme);
-        }
-        
-        function welcomeNext() {
-            if (welcomeCurrentStep < welcomeTotalSteps) {
-                welcomeCurrentStep++;
-                updateWelcomeStep();
-            } else {
-                closeWelcome();
-            }
-        }
-        
-        function welcomeBack() {
-            if (welcomeCurrentStep > 1) {
-                welcomeCurrentStep--;
-                updateWelcomeStep();
-            }
-        }
-        
-        function updateWelcomeStep() {
-            // Update step visibility
-            document.querySelectorAll('.welcome-step').forEach(step => {
-                step.classList.remove('active');
-            });
-            document.querySelector(`.welcome-step[data-step="${welcomeCurrentStep}"]`).classList.add('active');
-            
-            // Scroll welcome content to top
-            const welcomeContent = document.querySelector('.welcome-content');
-            if (welcomeContent) welcomeContent.scrollTop = 0;
-            
-            // Update dots
-            document.querySelectorAll('.welcome-dot').forEach(dot => {
-                dot.classList.remove('active');
-            });
-            document.querySelector(`.welcome-dot[data-dot="${welcomeCurrentStep}"]`).classList.add('active');
-            
-            // Update buttons
-            document.getElementById('welcomeBackBtn').disabled = welcomeCurrentStep === 1;
-            document.getElementById('welcomeNextBtn').textContent = welcomeCurrentStep === welcomeTotalSteps ? 'Get Started' : 'Next';
         }
         
         function closeWelcome() {
             localStorage.setItem('sb-welcome-seen', 'true');
             const modal = document.getElementById('welcomeModal');
             modal.style.opacity = '0';
-            modal.style.transition = 'opacity 0.3s ease';
+            modal.style.transition = 'opacity 0.2s ease';
             setTimeout(() => {
                 modal.style.display = 'none';
                 modal.style.opacity = '1';
-                // Scroll page to top when welcome closes
-                window.scrollTo(0, 0);
-            }, 300);
+            }, 200);
         }
     </script>
 </body>
