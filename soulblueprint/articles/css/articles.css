@@ -78,6 +78,25 @@ strong { font-weight: 600; }
 .text-muted { color: var(--color-text-secondary); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 
+/* ---------- Global center alignment for key elements ---------- */
+.hub-hero,
+.hub-cta,
+.pillars-section h2,
+.pillars-section .section-subtitle,
+.featured-section h2,
+.how-it-works h2,
+.related-articles h2,
+.generator-cta { text-align: center; }
+
+/* Ensure all section content stays centered */
+.pillars-grid,
+.featured-grid,
+.steps-grid,
+.related-grid {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ============================
    SITE HEADER
    ============================ */
@@ -535,30 +554,141 @@ strong { font-weight: 600; }
    RESPONSIVE
    ============================ */
 @media (max-width: 768px) {
-    .hub-hero { padding: 72px 0 56px; }
-    .hub-hero-stats { gap: 24px; }
+    /* Hub hero */
+    .hub-hero { padding: 64px 0 48px; }
+    .hub-hero h1 { font-size: 1.8rem; line-height: 1.2; }
+    .hub-hero-subtitle { font-size: 1rem; padding: 0 8px; }
+    .hub-hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
     .hub-hero-stat-number { font-size: 1.5rem; }
+
+    /* Pillar grid */
+    .pillars-section { padding: 56px 0; }
+    .pillars-section h2 { font-size: 1.5rem; }
     .pillars-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .pillar-card { padding: 24px 16px; }
-    .featured-grid { grid-template-columns: 1fr; }
+    .pillar-card { padding: 20px 14px; }
+    .pillar-card-icon { margin-bottom: 8px; }
+    .pillar-card-title { font-size: .95rem; }
+
+    /* Featured articles */
+    .featured-section { padding: 0 0 56px; }
+    .featured-grid { grid-template-columns: 1fr; gap: 16px; }
+    .article-card-hero { height: 140px; }
+    .article-card-body { padding: 16px 18px 20px; }
+
+    /* Steps */
     .steps-grid { grid-template-columns: 1fr; gap: 20px; }
-    .article-hero { padding: 40px 0 32px; }
-    .article-meta { gap: 12px; }
-    .tutorial-step { padding: 20px; }
-    .prompt-box pre { padding: 16px; font-size: .82rem; }
+    .how-it-works { padding: 56px 0; }
+
+    /* Article pages */
+    .article-hero { padding: 40px 0 28px; }
+    .article-hero h1 { font-size: 1.6rem; padding: 0 8px; }
+    .article-meta { gap: 12px; font-size: .82rem; }
+    .article-body { padding: 32px 0 56px; }
+    .article-body h2 { font-size: 1.35rem; margin: 36px 0 14px; }
+    .article-body h3 { font-size: 1.1rem; }
+    .article-body p { font-size: 1rem; }
+
+    /* Tutorial steps — center headers */
+    .tutorial-step { padding: 18px 16px 16px; }
+    .tutorial-step-header { gap: 12px; }
+    .tutorial-step-header h3 { font-size: 1rem; }
+    .step-badge { width: 32px; height: 32px; font-size: .82rem; }
+
+    /* Prompt boxes */
+    .prompt-box pre { padding: 14px; font-size: .8rem; max-height: 280px; }
+    .prompt-box-header { padding: 10px 14px; }
+
+    /* Summary box */
+    .summary-box { padding: 20px; }
+
+    /* Tip/warning boxes */
+    .tip-box, .warning-box { padding: 16px 18px; font-size: .9rem; }
+
+    /* Tools grid */
     .tools-grid { grid-template-columns: 1fr; }
-    .related-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-    .site-header-nav { gap: 14px; }
+
+    /* Related articles */
+    .related-articles { padding: 48px 0; }
+    .related-grid { grid-template-columns: 1fr; gap: 14px; }
+
+    /* Generator CTA */
+    .generator-cta { padding: 48px 0; }
+    .generator-cta h2 { font-size: 1.4rem; }
+    .generator-cta p { font-size: .95rem; }
+
+    /* Footer */
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .site-footer { padding: 36px 0 24px; }
+
+    /* Hub: pillar list sections */
+    .pillar-list-section { padding: 56px 0; }
+    .pillar-list-header { flex-wrap: wrap; justify-content: center; text-align: center; }
+    .pillar-list-header h2 { font-size: 1.3rem; width: 100%; }
+    .articles-list-item { padding: 14px 16px; gap: 12px; }
+    .articles-list-item .item-title { font-size: .9rem; }
+    .articles-list-item .item-meta { display: none; }
+
+    /* Hub CTA */
+    .hub-cta { padding: 56px 0; }
+    .hub-cta h2 { font-size: 1.5rem; }
+    .hub-cta p { font-size: .95rem; }
+
+    /* Header */
+    .site-header-nav { gap: 12px; }
+    .site-header-nav a { font-size: .82rem; }
+    .header-cta { padding: 7px 14px; font-size: .8rem; }
+
+    /* Containers */
     .container, .container-narrow { padding: 0 16px; }
     .section-spacing { padding: 56px 0; }
+
+    /* Ad zones */
+    .ad-zone { margin: 28px 0; padding: 16px; }
+
+    /* Center everything in text-heavy sections */
+    .pillar-list-section .container > p { text-align: center; }
 }
+
 @media (max-width: 480px) {
-    .pillars-grid { grid-template-columns: 1fr 1fr; }
-    .hub-hero-actions { flex-direction: column; align-items: center; }
-    .hub-hero-stats { flex-direction: column; gap: 16px; }
-    .breadcrumbs { font-size: .78rem; }
+    /* Stack pillar cards to single column on very small screens */
+    .pillars-grid { grid-template-columns: 1fr; gap: 10px; }
+    .pillar-card { flex-direction: row; text-align: left; padding: 16px 18px; display: flex; align-items: center; gap: 14px; }
+    .pillar-card-icon { margin-bottom: 0; }
+    .pillar-card-bar { display: none; }
+
+    /* Hub hero stacking */
+    .hub-hero { padding: 48px 0 40px; }
+    .hub-hero h1 { font-size: 1.5rem; }
+    .hub-hero-actions { flex-direction: column; align-items: center; gap: 10px; }
+    .hub-hero-actions .btn-primary,
+    .hub-hero-actions .btn-secondary { width: 100%; max-width: 300px; justify-content: center; text-align: center; }
+    .hub-hero-stats { flex-direction: row; gap: 16px; }
+
+    /* Breadcrumbs */
+    .breadcrumbs { font-size: .76rem; justify-content: center; }
+
+    /* Nav collapse */
     .site-header-nav a:not(.header-cta) { display: none; }
+    .site-header .container { justify-content: space-between; }
+
+    /* Footer full-width */
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .footer-col a { padding: 6px 0; }
+
+    /* Article body tighter */
+    .article-hero h1 { font-size: 1.4rem; }
+    .article-body p { font-size: .95rem; }
+
+    /* Tutorial steps center on mobile */
+    .tutorial-step-header { flex-wrap: nowrap; }
+
+    /* Touch-friendly tap targets */
+    .articles-list-item { min-height: 52px; }
+    .btn-primary, .btn-secondary { min-height: 48px; padding: 12px 24px; }
+
+    /* CTA buttons full width on smallest screens */
+    .hub-cta .btn-primary { width: 100%; max-width: 300px; }
+    .generator-cta .btn-primary { width: 100%; max-width: 300px; }
 }
 
 /* ============================
