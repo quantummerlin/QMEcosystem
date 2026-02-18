@@ -3968,7 +3968,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            animation: fadeIn 0.4s ease;
+            animation: fadeIn 0.2s ease;
         }
         
         @keyframes fadeIn {
@@ -3987,11 +3987,11 @@
             flex-direction: column;
             overflow: hidden;
             box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.5s ease;
+            animation: slideUp 0.25s ease;
         }
         
         @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
+            from { transform: translateY(15px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
         
@@ -4032,7 +4032,7 @@
         
         .welcome-step.active {
             display: block;
-            animation: fadeIn 0.3s ease;
+            animation: fadeIn 0.15s ease;
         }
         
         .welcome-icon {
@@ -4839,7 +4839,7 @@
     </style>
 </head>
 <body>
-    <!-- Welcome Modal (single step — fast entry) -->
+    <!-- Welcome Modal -->
     <div class="welcome-modal" id="welcomeModal" style="display: none;">
         <div class="welcome-content">
             <div class="welcome-header">
@@ -4848,23 +4848,60 @@
             </div>
             
             <div class="welcome-body">
+                <!-- Step 1: What you get + Theme -->
                 <div class="welcome-step active" data-step="1">
-                    <p style="text-align:center; font-size:1.05rem;">Enter a name and birth date to instantly generate <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom.</p>
+                    <h3>⭐ Here's What You Get</h3>
+                    <p>Enter a name and birth date to instantly generate <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom.</p>
                     <div class="welcome-highlight">
-                        <p>Completely free. No sign-up. Your data never leaves your device. Readings auto-save for everyone you create.</p>
+                        <p>Completely free. No sign-up. Your data never leaves your device.</p>
                     </div>
-                    <p style="margin-top: 18px; font-weight: 600; text-align:center;">Choose your reading tone:</p>
+                    <p style="margin-top: 16px; font-weight: 600;">Pick the voice for your reading:</p>
                     <div class="theme-preview-btns">
                         <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
                         <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
                         <button class="theme-preview-btn blue" onclick="selectWelcomeTheme('boy')">Blue</button>
                     </div>
-                    <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 8px;">You can change this anytime from the bar at the top</p>
+                    <p style="text-align: center; font-size: 0.88rem; opacity: 0.85; margin-top: 10px; color: #444;">You can change this anytime from the bar at the top</p>
+                </div>
+                
+                <!-- Step 2: What to expect -->
+                <div class="welcome-step" data-step="2">
+                    <h3>📖 What to Expect</h3>
+                    <p>This is a <strong>deep, personal reading</strong> — not something to rush through. Think of it as a reference guide you can come back to anytime.</p>
+                    <p>About <strong>70% will feel uncannily accurate</strong>. The rest captures potential you may not have unlocked yet.</p>
+                    <div class="saved-readings-note">
+                        <p>✅ <strong>Readings auto-save</strong> — create readings for friends, family, anyone. They'll all be waiting when you come back.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3: AI Transformations -->
+                <div class="welcome-step" data-step="3">
+                    <h3>✨ Turn Readings Into Something Amazing</h3>
+                    <p>Every reading has a <strong>✨ Transform This</strong> button — one tap gives you a ready-made prompt for ChatGPT or Gemini.</p>
+                    <div class="ai-transform-preview">
+                        <div class="transform-grid">
+                            <div class="transform-item">🎨<span>Portraits</span></div>
+                            <div class="transform-item">📖<span>Stories</span></div>
+                            <div class="transform-item">📊<span>Infographics</span></div>
+                            <div class="transform-item">🧘<span>Meditations</span></div>
+                            <div class="transform-item">💫<span>Affirmations</span></div>
+                            <div class="transform-item">📅<span>Routines</span></div>
+                        </div>
+                    </div>
+                    <div class="welcome-highlight">
+                        <p>Free, easy, and the results are incredible. We'll show you how after your reading.</p>
+                    </div>
                 </div>
             </div>
             
-            <div class="welcome-footer" style="justify-content:center;">
-                <button class="welcome-nav-btn primary" onclick="closeWelcome()" style="padding: 14px 48px; font-size: 1.05rem;">Get Started</button>
+            <div class="welcome-footer">
+                <button class="welcome-nav-btn secondary" id="welcomeBackBtn" onclick="welcomeBack()" disabled>Back</button>
+                <div class="welcome-dots">
+                    <div class="welcome-dot active" data-dot="1"></div>
+                    <div class="welcome-dot" data-dot="2"></div>
+                    <div class="welcome-dot" data-dot="3"></div>
+                </div>
+                <button class="welcome-nav-btn primary" id="welcomeNextBtn" onclick="welcomeNext()">Next</button>
             </div>
         </div>
     </div>
@@ -11140,11 +11177,41 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         // WELCOME MODAL FUNCTIONS
         // ============================================
         
+        let welcomeCurrentStep = 1;
+        const welcomeTotalSteps = 3;
+        
         function selectWelcomeTheme(theme) {
             document.querySelectorAll('.theme-preview-btn').forEach(btn => btn.classList.remove('selected'));
             const themeClass = theme === 'girl' ? 'pink' : (theme === 'boy' ? 'blue' : 'purple');
             document.querySelector(`.theme-preview-btn.${themeClass}`).classList.add('selected');
             setGender(theme);
+        }
+        
+        function welcomeNext() {
+            if (welcomeCurrentStep < welcomeTotalSteps) {
+                welcomeCurrentStep++;
+                updateWelcomeStep();
+            } else {
+                closeWelcome();
+            }
+        }
+        
+        function welcomeBack() {
+            if (welcomeCurrentStep > 1) {
+                welcomeCurrentStep--;
+                updateWelcomeStep();
+            }
+        }
+        
+        function updateWelcomeStep() {
+            document.querySelectorAll('.welcome-step').forEach(s => s.classList.remove('active'));
+            document.querySelector(`.welcome-step[data-step="${welcomeCurrentStep}"]`).classList.add('active');
+            const wc = document.querySelector('.welcome-content');
+            if (wc) wc.scrollTop = 0;
+            document.querySelectorAll('.welcome-dot').forEach(d => d.classList.remove('active'));
+            document.querySelector(`.welcome-dot[data-dot="${welcomeCurrentStep}"]`).classList.add('active');
+            document.getElementById('welcomeBackBtn').disabled = welcomeCurrentStep === 1;
+            document.getElementById('welcomeNextBtn').textContent = welcomeCurrentStep === welcomeTotalSteps ? 'Get Started' : 'Next';
         }
         
         function closeWelcome() {
