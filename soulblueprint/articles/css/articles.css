@@ -692,6 +692,162 @@ strong { font-weight: 600; }
 }
 
 /* ============================
+   VISUAL SOUL BLUEPRINT SECTION
+   ============================ */
+.vsb-section {
+    padding: 64px 0 56px;
+    background: linear-gradient(180deg, var(--color-surface-alt) 0%, var(--color-bg) 100%);
+}
+.vsb-intro { text-align: center; margin-bottom: 40px; }
+.vsb-intro h2 { font-size: 1.8rem; }
+.vsb-intro em { font-style: normal; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+/* 5 Steps */
+.vsb-steps-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+    max-width: 1000px; margin: 0 auto 36px; text-align: center;
+}
+.vsb-step { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 24px 16px; }
+.vsb-step-num { font-size: 1.6rem; font-weight: 800; color: var(--color-primary); margin-bottom: 8px; }
+.vsb-step h3 { font-size: .95rem; margin-bottom: 6px; }
+.vsb-step p { font-size: .82rem; color: var(--color-text-secondary); margin: 0; line-height: 1.45; }
+
+/* Golden Rule */
+.vsb-golden-rule {
+    display: flex; gap: 16px; align-items: flex-start;
+    background: linear-gradient(135deg, rgba(243,156,18,.06), rgba(243,156,18,.12));
+    border: 1px solid rgba(243,156,18,.25); border-left: 4px solid #F39C12;
+    border-radius: var(--radius-md); padding: 24px; max-width: 800px; margin: 0 auto 40px;
+}
+.vsb-golden-rule-icon { flex-shrink: 0; color: #F39C12; margin-top: 2px; }
+.vsb-golden-rule strong { display: block; font-size: 1rem; margin-bottom: 4px; color: var(--color-text); }
+.vsb-golden-rule p { font-size: .88rem; color: var(--color-text-secondary); margin: 0; line-height: 1.5; }
+
+/* Magic Prompt Template */
+.vsb-prompt-template { max-width: 800px; margin: 0 auto 40px; text-align: center; }
+.vsb-prompt-template h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.vsb-prompt-template > p { font-size: .9rem; color: var(--color-text-secondary); margin-bottom: 16px; }
+.vsb-prompt-box {
+    position: relative; background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 24px; text-align: left;
+}
+.vsb-prompt-box code {
+    display: block; font-family: 'SF Mono', 'Fira Code', monospace; font-size: .82rem;
+    color: var(--color-text-secondary); white-space: pre-wrap; line-height: 1.6;
+}
+.vsb-copy-btn {
+    position: absolute; top: 12px; right: 12px;
+    background: var(--color-primary); color: #fff; border: none; border-radius: 6px;
+    padding: 6px 14px; font-size: .78rem; font-weight: 600; cursor: pointer; transition: background .2s;
+}
+.vsb-copy-btn:hover { background: var(--color-primary-dark, #5a4fcf); }
+
+/* Foundation Images */
+.vsb-foundations { text-align: center; margin-bottom: 40px; }
+.vsb-foundations h3 { font-size: 1.2rem; margin-bottom: 4px; }
+.vsb-foundations-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;
+    max-width: 900px; margin: 20px auto 0;
+}
+.vsb-foundation-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 20px 12px; text-align: center;
+    transition: border-color .2s, box-shadow .2s;
+}
+.vsb-foundation-card:hover { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,0,0,.04); }
+.vsb-foundation-icon { margin-bottom: 10px; }
+.vsb-foundation-card h4 { font-size: .92rem; margin-bottom: 4px; color: var(--accent); }
+.vsb-foundation-card p { font-size: .78rem; color: var(--color-text-secondary); margin: 0; line-height: 1.4; }
+
+/* Color Palette */
+.vsb-palette { text-align: center; margin-bottom: 40px; }
+.vsb-palette h3 { font-size: 1.2rem; margin-bottom: 4px; }
+.vsb-palette-grid {
+    display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+    max-width: 700px; margin: 20px auto 0;
+}
+.vsb-palette-swatch {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: 999px; padding: 8px 18px 8px 10px;
+}
+.vsb-swatch-dot { width: 24px; height: 24px; border-radius: 50%; background: var(--swatch); flex-shrink: 0; }
+.vsb-palette-swatch strong { font-size: .82rem; color: var(--color-text); }
+.vsb-palette-swatch span { font-size: .76rem; color: var(--color-text-secondary); }
+
+/* Daily Practice */
+.vsb-daily { text-align: center; margin-bottom: 40px; }
+.vsb-daily h3 { font-size: 1.2rem; margin-bottom: 20px; }
+.vsb-daily-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+    max-width: 900px; margin: 0 auto;
+}
+.vsb-daily-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 20px 16px; text-align: left;
+}
+.vsb-daily-label {
+    font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--color-primary); margin-bottom: 6px;
+}
+.vsb-daily-card h4 { font-size: .95rem; margin-bottom: 6px; }
+.vsb-daily-card p { font-size: .82rem; color: var(--color-text-secondary); margin: 0; line-height: 1.45; }
+
+/* 9 Transformation Types */
+.vsb-transformations { text-align: center; margin-bottom: 36px; }
+.vsb-transformations h3 { font-size: 1.2rem; margin-bottom: 4px; }
+.vsb-transform-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    max-width: 900px; margin: 20px auto 0;
+}
+.vsb-transform-card {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-md); padding: 20px 16px; text-align: left;
+    transition: border-color .2s, transform .15s;
+}
+.vsb-transform-card:hover { border-color: var(--color-primary); transform: translateY(-2px); }
+.vsb-transform-icon { color: var(--color-primary); margin-bottom: 10px; }
+.vsb-transform-card h4 { font-size: .95rem; margin-bottom: 6px; }
+.vsb-transform-card p { font-size: .82rem; color: var(--color-text-secondary); margin: 0; line-height: 1.45; }
+
+/* VSB CTA row */
+.vsb-cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ============================
+   VSB RESPONSIVE — Tablet
+   ============================ */
+@media (max-width: 768px) {
+    .vsb-steps-grid { grid-template-columns: repeat(3, 1fr); }
+    .vsb-foundations-grid { grid-template-columns: repeat(3, 1fr); }
+    .vsb-daily-grid { grid-template-columns: repeat(2, 1fr); }
+    .vsb-transform-grid { grid-template-columns: repeat(2, 1fr); }
+    .vsb-golden-rule { flex-direction: column; text-align: center; align-items: center; }
+}
+
+/* ============================
+   VSB RESPONSIVE — Mobile
+   ============================ */
+@media (max-width: 480px) {
+    .vsb-section { padding: 40px 0 32px; }
+    .vsb-intro h2 { font-size: 1.35rem; }
+    .vsb-steps-grid { grid-template-columns: 1fr; gap: 10px; }
+    .vsb-step { display: flex; gap: 12px; align-items: center; text-align: left; padding: 16px; }
+    .vsb-step-num { font-size: 1.2rem; flex-shrink: 0; margin-bottom: 0; }
+    .vsb-step h3 { font-size: .88rem; margin-bottom: 2px; }
+    .vsb-foundations-grid { grid-template-columns: repeat(2, 1fr); }
+    .vsb-foundations-grid > :last-child { grid-column: 1 / -1; max-width: 200px; margin: 0 auto; }
+    .vsb-daily-grid { grid-template-columns: 1fr; }
+    .vsb-transform-grid { grid-template-columns: 1fr; }
+    .vsb-palette-grid { flex-direction: column; align-items: center; }
+    .vsb-prompt-box { padding: 16px; }
+    .vsb-prompt-box code { font-size: .76rem; }
+    .vsb-copy-btn { position: static; display: block; width: 100%; margin-top: 14px; padding: 10px; }
+    .vsb-cta-row { flex-direction: column; align-items: center; }
+    .vsb-cta-row .btn-primary,
+    .vsb-cta-row .btn-secondary { width: 100%; max-width: 300px; text-align: center; }
+}
+
+/* ============================
    PRINT
    ============================ */
 @media print {
