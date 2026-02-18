@@ -380,6 +380,22 @@ strong { font-weight: 600; }
 }
 .article-meta-item { display: flex; align-items: center; gap: 6px; }
 
+/* Hero image (placed between hero and body) */
+.article-hero-img {
+    width: 100%; max-width: 720px; margin: 0 auto;
+    display: block; border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.12);
+    transform: translateY(-32px); margin-bottom: -16px;
+    position: relative; z-index: 2;
+}
+@media (max-width: 768px) {
+    .article-hero-img {
+        max-width: calc(100% - 32px);
+        border-radius: 12px;
+        transform: translateY(-20px); margin-bottom: -8px;
+    }
+}
+
 /* ============================
    ARTICLE: BODY
    ============================ */
