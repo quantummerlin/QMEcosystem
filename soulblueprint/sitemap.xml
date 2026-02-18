@@ -95,7 +95,7 @@
         <priority>0.9</priority>
     </url>
 
-    <!-- Pillar A: AI Basics -->
+    <!-- Pillar A: Getting Started (AI Basics) -->
     <url>
         <loc>https://quantummerlin.com/soulblueprint/articles/what-is-ai-simple-guide/</loc>
         <changefreq>monthly</changefreq>
@@ -147,7 +147,7 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- Pillar B: AI for Self-Discovery -->
+    <!-- Pillar B: Understand Your Reading (Self-Discovery) -->
     <url>
         <loc>https://quantummerlin.com/soulblueprint/articles/how-to-use-ai-for-self-discovery/</loc>
         <changefreq>monthly</changefreq>
@@ -199,143 +199,113 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- Pillar 1: Visual Content -->
+    <!-- Pillar C: Create Visuals -->
     <url>
         <loc>https://quantummerlin.com/soulblueprint/articles/turn-reading-into-infographic/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/convert-text-into-visual-summary/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/reading-into-slideshow/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/best-free-tools-for-slides/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/ai-mood-board-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/notebooklm-presentation-guide/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/create-ai-portrait-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/baby-gift-slideshow/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/design-quote-cards-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/self-discovery-presentation/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/create-vision-board-ai/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/canva-infographic-layout/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/canva-personality-templates/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/pinterest-ready-graphic/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/pinterest-graphics-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/extract-key-insights/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/phone-wallpaper-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/clean-personal-growth-infographic/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/color-palette-from-personality/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Pillar 2: Audio -->
+    <!-- Pillar D: Audio & Stories -->
     <url>
         <loc>https://quantummerlin.com/soulblueprint/articles/turn-reading-into-podcast/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/best-ai-voice-tools/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/create-meditation-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/guided-audio-blueprint/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/ai-affirmations-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/daily-affirmation-audio/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/create-playlist-from-signs/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/private-podcast-personality/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/write-personal-manifesto-ai/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/5-minute-self-discovery-episode/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/best-ai-voice-tools-readings/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/calm-meditation-script/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/future-self-letter-ai/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/personal-growth-audio-gift/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/create-short-story-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/personality-test-youtube-script/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/guided-journal-prompts-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/ai-voice-vs-human-voice/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/30-day-growth-plan-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Pillar 3: Social Media -->
+    <!-- Pillar E: Share & Grow -->
     <url>
         <loc>https://quantummerlin.com/soulblueprint/articles/instagram-carousel-from-reading/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/extract-30-quote-posts/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/short-form-video-scripts/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/pinterest-pin-templates/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/viral-self-discovery-posts/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/reading-into-shareable-graphics/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/repurpose-one-report-50-posts/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -345,116 +315,146 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/swipe-to-reveal-posts/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/pinterest-strategy-personality/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/batch-content-from-ai/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- Pillar 4: AI & Personality -->
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/best-free-ai-personality-tools/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/extract-30-quote-posts/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/can-ai-replace-personality-tests/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/youtube-shorts-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/how-ai-generates-reports/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/content-calendar-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/ai-vs-astrology/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/repurpose-one-reading-50-posts/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/is-ai-personality-analysis-reliable/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/viral-zodiac-content-ideas/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/ai-for-self-discovery/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/ai-captions-personality-posts/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/ai-tools-new-parents/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/how-ai-reads-emotional-patterns/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/rise-of-ai-self-discovery/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/ai-prompts-for-personal-insight/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/build-community-around-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Pillar 5: Gifts & Keepsakes -->
+    <!-- Pillar F: Go Deeper -->
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/personality-reading-baby-gift/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/shadow-work-with-ai/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/birthday-slideshow-blueprint/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/extract-archetypes-from-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/relationship-insight-presentation/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/ai-numerology-deep-dive/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/gift-self-discovery-report/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/chinese-zodiac-ai-exploration/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/personality-reading-keepsake/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/prompt-chaining-personality/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/confidence-boosting-presentation/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/ai-career-guidance-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/vision-board-from-reading/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/ai-love-language-analysis/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/print-bind-personality-report/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/compare-personality-systems-ai/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/reading-into-wedding-gift/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/ai-relationship-insights/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://quantummerlin.com/soulblueprint/articles/creative-ways-personality-blueprint/</loc>
+        <loc>https://quantummerlin.com/soulblueprint/articles/build-personal-brand-from-reading/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Pillar G: Gift & Print -->
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/reading-into-poster-gift/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/birthday-reading-gift-ideas/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/create-reading-greeting-card/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/print-on-demand-reading-products/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/baby-gift-from-reading/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/couples-compatibility-gift/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/reading-into-journal-notebook/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/zodiac-gift-guide-by-sign/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/reading-as-wedding-gift/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://quantummerlin.com/soulblueprint/articles/seasonal-gift-ideas-reading/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
