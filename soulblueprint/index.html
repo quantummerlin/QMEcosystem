@@ -1999,11 +1999,12 @@
         .reading-card-body {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease;
+            transition: max-height 0.5s ease-in-out;
         }
         
         .reading-card.expanded .reading-card-body {
-            max-height: 5000px;
+            max-height: 20000px;
+            overflow: visible;
         }
         
         .reading-card-content {
@@ -2084,6 +2085,7 @@
         
         .reading-card .card-actions {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             margin-top: 16px;
         }
@@ -2175,6 +2177,29 @@
             
             .reading-card h3 {
                 font-size: 1rem;
+            }
+
+            .reading-card .card-actions {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .reading-card .copy-reading-btn,
+            .reading-card .mark-read-btn {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+
+            .reading-card .card-actions .transform-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 12px;
+                font-size: 0.95rem;
+                border-radius: 12px;
+            }
+
+            .reading-card-content {
+                padding: 12px 16px 20px;
             }
         }
         
@@ -3666,6 +3691,27 @@
                 font-size: 0.95rem;
                 line-height: 1.7;
                 text-align: center;
+                word-break: break-word;
+                overflow-wrap: anywhere;
+            }
+
+            .reading-card-content {
+                padding: 10px 12px 16px;
+            }
+
+            .reading-card .card-actions {
+                gap: 6px;
+            }
+
+            .reading-card .copy-reading-btn,
+            .reading-card .mark-read-btn {
+                padding: 11px;
+                font-size: 0.9rem;
+            }
+
+            .reading-card .card-actions .transform-btn {
+                padding: 11px;
+                font-size: 0.9rem;
             }
             
             .reading-card .strengths-challenges {
