@@ -73,13 +73,43 @@
 
     // ---- Prompt Copy Buttons ----
     function initPromptCopy() {
+        // Make all prompt-box <pre> elements editable
+        document.querySelectorAll('.prompt-box pre').forEach(function(pre) {
+            pre.setAttribute('contenteditable', 'true');
+            pre.setAttribute('spellcheck', 'false');
+            // Add edit hint below the pre
+            if (!pre.parentElement.querySelector('.edit-hint')) {
+                var hint = document.createElement('span');
+                hint.className = 'edit-hint';
+                hint.textContent = '✏️ Click to edit before copying';
+                pre.parentElement.appendChild(hint);
+            }
+        });
+
+        // Make all vsb-prompt-box <code> elements editable
+        document.querySelectorAll('.vsb-prompt-box code').forEach(function(code) {
+            code.setAttribute('contenteditable', 'true');
+            code.setAttribute('spellcheck', 'false');
+        });
+
+        // Copy button handler for .prompt-box
         document.addEventListener('click', function(e) {
-            const btn = e.target.closest('.prompt-copy-btn');
+            var btn = e.target.closest('.prompt-copy-btn');
             if (!btn) return;
-            const box = btn.closest('.prompt-box');
+            var box = btn.closest('.prompt-box');
             if (!box) return;
-            const pre = box.querySelector('pre');
+            var pre = box.querySelector('pre');
             if (pre) copyText(pre.textContent, btn);
+        });
+
+        // Copy button handler for .vsb-copy-btn
+        document.addEventListener('click', function(e) {
+            var btn = e.target.closest('.vsb-copy-btn');
+            if (!btn) return;
+            var box = btn.closest('.vsb-prompt-box');
+            if (!box) return;
+            var code = box.querySelector('code');
+            if (code) copyText(code.textContent, btn);
         });
     }
 

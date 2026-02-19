@@ -456,6 +456,16 @@ strong { font-weight: 600; }
     font-size: .88rem; line-height: 1.7;
     font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
     max-height: 350px; overflow-y: auto;
+    cursor: text; outline: none;
+    transition: background .2s;
+}
+.prompt-box pre:focus {
+    background: rgba(255,255,255,.04);
+}
+.prompt-box .edit-hint {
+    display: block; padding: 6px 20px 0;
+    font-size: .72rem; color: #6b6f82; text-align: right;
+    font-style: italic;
 }
 
 /* ---------- Tutorial Steps ---------- */
@@ -839,6 +849,10 @@ strong { font-weight: 600; }
 .vsb-prompt-box code {
     display: block; font-family: 'SF Mono', 'Fira Code', monospace; font-size: .82rem;
     color: var(--color-text-secondary); white-space: pre-wrap; line-height: 1.6;
+    cursor: text; outline: none; transition: background .2s;
+}
+.vsb-prompt-box code:focus {
+    background: rgba(0,0,0,.03); border-radius: 6px;
 }
 .vsb-copy-btn {
     position: absolute; top: 12px; right: 12px;
