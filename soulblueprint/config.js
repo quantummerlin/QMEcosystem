@@ -10,8 +10,8 @@ var BRAND_CONFIG = {
     // BRAND IDENTITY
     // ============================================
     brandName: "A Moment in Time",
-    tagline: "Your Complete Cosmic Reading • No Sign-Up • Always Free",
-    subTagline: "At the exact moment you were born, the universe created a pattern.",
+    tagline: "Your Complete Soul Blueprint",
+    subTagline: "Zero Data Collection",
     
     // Who is this reading for?
     subjectType: "person",
