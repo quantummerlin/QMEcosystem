@@ -11,7 +11,7 @@ var BRAND_CONFIG = {
     // ============================================
     brandName: "A Moment in Time",
     tagline: "Your Complete Soul Blueprint",
-    subTagline: "Zero Data Collection",
+    subTagline: "Astrology \u2022 Numerology \u2022 Life Patterns \u2022 65+ Personalized Readings",
     
     // Who is this reading for?
     subjectType: "person",
@@ -78,20 +78,20 @@ var BRAND_CONFIG = {
         sunSign: "Sun Sign - Core Personality",
         moonSign: "Moon Sign - Emotional Nature",
         risingSign: "Rising Sign - First Impressions",
-        mercurySign: "Mercury - How They'll Communicate",
-        venusSign: "Venus - How They'll Love",
-        marsSign: "Mars - Their Energy & Drive",
-        jupiterSign: "Jupiter - Their Luck & Growth",
-        saturnSign: "Saturn - Life Lessons Ahead",
+        mercurySign: "Mercury - How You Communicate",
+        venusSign: "Venus - How You Love",
+        marsSign: "Mars - Your Energy & Drive",
+        jupiterSign: "Jupiter - Your Luck & Growth",
+        saturnSign: "Saturn - Your Life Lessons",
         chineseZodiac: "Chinese Zodiac Animal",
         moonPhase: "Birth Moon Phase",
         
         lifePath: "Life Path Number - Soul's Journey",
         destiny: "Destiny Number - Life Purpose",
         soulUrge: "Soul Urge - Heart's Desire",
-        personality: "Personality Number - How Others See Them",
-        birthday: "Birthday Number - Special Gifts",
-        maturity: "Maturity Number - Who They'll Become",
+        personality: "Personality Number - How Others See You",
+        birthday: "Birthday Number - Your Special Gifts",
+        maturity: "Maturity Number - Who You'll Become",
         
         personalYear: "Current Year Energy",
         pinnacle: "Life Pinnacles - Major Phases",
@@ -106,7 +106,7 @@ var BRAND_CONFIG = {
     },
     
     // ============================================
-    // COLORS & STYLING - Soft Baby Theme
+    // COLORS & STYLING
     // ============================================
     colors: {
         primary: "#FF69B4",      // Hot pink
@@ -189,7 +189,7 @@ var BRAND_CONFIG = {
     // ============================================
     seo: {
         title: "A Moment in Time - Your Complete Cosmic Reading",
-        description: "At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights in astrology and numerology. Free and unlimited access.",
+        description: "At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights combining astrology, numerology, and life pattern analysis.",
         keywords: "a moment in time, astrology reading, numerology reading, birth chart, life path, personalized reading"
     }
 };

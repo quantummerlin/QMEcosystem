@@ -3554,11 +3554,15 @@
             
             .action-buttons {
                 gap: 10px;
+                flex-direction: column;
+                align-items: stretch;
             }
             
             .action-btn {
-                padding: 10px 15px;
-                font-size: 0.85rem;
+                padding: 12px 20px;
+                font-size: 0.95rem;
+                width: 100%;
+                text-align: center;
             }
             
             .toc {
@@ -4849,7 +4853,7 @@
                     <div class="welcome-highlight">
                         <p>Zero data collection. Your data never leaves your device.</p>
                     </div>
-                    <p style="margin-top: 16px; font-weight: 600;">Pick the voice for your reading:</p>
+                    <p style="margin-top: 16px; font-weight: 600;">Choose your colour theme:</p>
                     <div class="theme-preview-btns">
                         <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
                         <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
@@ -4940,8 +4944,8 @@
         <header class="header">
             <h1 id="brandName">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
             <p class="tagline" id="tagline">Your Complete Soul Blueprint</p>
-            <p class="sub-tagline" id="subTagline">Zero Data Collection</p>
-            <p class="sub-tagline">Create a Reading, Then Learn How to Transform It</p>
+            <p class="sub-tagline" id="subTagline">Astrology • Numerology • Life Patterns • 65+ Personalized Readings</p>
+            <p class="sub-tagline" style="font-size:0.88rem;opacity:0.7;margin-top:4px;">Your data never leaves your device</p>
         </header>
         
         <div class="container">
@@ -4985,6 +4989,19 @@
                 </div>
             </div>
             
+            <!-- What's Inside Preview -->
+            <div style="margin-top:32px;padding:24px;background:linear-gradient(135deg,rgba(102,126,234,0.06),rgba(118,75,162,0.06));border-radius:16px;border:1px solid rgba(102,126,234,0.12);">
+                <p style="text-align:center;font-weight:700;font-size:1.05rem;margin-bottom:16px;color:#2d1b4e;">What's Inside Your Reading</p>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;text-align:center;">
+                    <div style="padding:12px 8px;background:rgba(255,255,255,0.7);border-radius:12px;"><span style="font-size:1.3rem;">☀️</span><div style="font-weight:600;font-size:0.85rem;margin-top:4px;">Celestial Gifts</div><div style="font-size:0.75rem;opacity:0.6;">10 readings</div></div>
+                    <div style="padding:12px 8px;background:rgba(255,255,255,0.7);border-radius:12px;"><span style="font-size:1.3rem;">🔢</span><div style="font-weight:600;font-size:0.85rem;margin-top:4px;">Soul Codes</div><div style="font-size:0.75rem;opacity:0.6;">8 readings</div></div>
+                    <div style="padding:12px 8px;background:rgba(255,255,255,0.7);border-radius:12px;"><span style="font-size:1.3rem;">🏠</span><div style="font-weight:600;font-size:0.85rem;margin-top:4px;">Houses & Aspects</div><div style="font-size:0.75rem;opacity:0.6;">15+ readings</div></div>
+                    <div style="padding:12px 8px;background:rgba(255,255,255,0.7);border-radius:12px;"><span style="font-size:1.3rem;">💜</span><div style="font-weight:600;font-size:0.85rem;margin-top:4px;">Love Blueprint</div><div style="font-size:0.75rem;opacity:0.6;">Venus + Mars</div></div>
+                    <div style="padding:12px 8px;background:rgba(255,255,255,0.7);border-radius:12px;"><span style="font-size:1.3rem;">🔮</span><div style="font-weight:600;font-size:0.85rem;margin-top:4px;">Life Patterns</div><div style="font-size:0.75rem;opacity:0.6;">Saturn Return</div></div>
+                    <div style="padding:12px 8px;background:rgba(255,255,255,0.7);border-radius:12px;"><span style="font-size:1.3rem;">📖</span><div style="font-weight:600;font-size:0.85rem;margin-top:4px;">Printable Book</div><div style="font-size:0.75rem;opacity:0.6;">11 templates</div></div>
+                </div>
+            </div>
+
             <div class="footer-links" aria-label="Legal links">
                 <a href="/soulblueprint/examples/">Examples</a>
                 <span>•</span>
@@ -5002,9 +5019,6 @@
                 <span>•</span>
                 <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
             </div>
-            <div style="text-align:center;margin-top:12px;">
-                <a href="/soulblueprint/articles/what-is-ai-simple-guide/" style="color:#667eea;text-decoration:none;font-size:0.9rem;opacity:0.85;">🧠 New to AI? Start with our beginner's guide →</a>
-            </div>
         </div>
     </section>
     
@@ -5012,8 +5026,8 @@
     <section class="results-section" id="resultsSection">
         <div class="results-header">
             <h1 id="resultTitle">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
-            <p class="subject-name" id="subjectName" style="color: #2d1b4e !important;"></p>
-            <p class="birth-info" id="birthInfo" style="color: #3d2b5e !important;"></p>
+            <p class="subject-name" id="subjectName"></p>
+            <p class="birth-info" id="birthInfo"></p>
             <div class="action-buttons">
                 <button class="action-btn primary" onclick="showTemplatePicker()">📖 Create Your Book</button>
                 <button class="action-btn" onclick="copyAllReadings()">📋 Copy Blueprint</button>
@@ -5085,6 +5099,11 @@
                 </div>
             </div>
             
+            <!-- Reading Guide Nudge -->
+            <div style="text-align:center;padding:16px 20px;margin:-10px 0 20px;background:linear-gradient(135deg,rgba(102,126,234,0.06),rgba(118,75,162,0.06));border-radius:14px;border:1px solid rgba(102,126,234,0.1);">
+                <p style="font-size:0.95rem;margin:0;line-height:1.5;"><strong>✨ Start here</strong> — your Big Three above is your core identity. Then explore the sections below at your own pace. There's no rush — this reading saves automatically.</p>
+            </div>
+
             <!-- AI Transformation Banner -->
             <div class="ai-transform-banner" id="aiTransformBanner">
                 <div class="ai-banner-icon">✨</div>
@@ -5251,9 +5270,9 @@
                 </div>
                 
                 <div class="coffee-box">
-                    <h3>📖 Create Your Personal Book</h3>
-                    <p>Turn your entire reading into a beautifully designed <strong>printable book</strong> — choose from 11 premium templates.</p>
-                    <button class="coffee-btn" onclick="showTemplatePicker()">📖 Design Your Book</button>
+                    <h3>📖 Create Your Printable Book</h3>
+                    <p>Turn your entire reading into a beautifully designed <strong>A5 keepsake book</strong> — choose from 11 premium templates including Art Deco, Botanical, and Celestial Watercolor.</p>
+                    <button class="coffee-btn" onclick="showTemplatePicker()">📖 Create Your Book</button>
                 </div>
             </div>
             
@@ -5297,13 +5316,13 @@
                     <span>•</span>
                     <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
                 </div>
-                <p class="disclaimer" id="disclaimer">For entertainment purposes only. Not a substitute for professional advice.</p>
+                <p class="disclaimer" id="disclaimer">Created for personal insight and reflection. Every person is unique and will grow in their own beautiful way.</p>
             </footer>
         </div>
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=50"></script>
+    <script src="config.js?v=51"></script>
     <script src="calculations.js?v=50"></script>
     <script src="readings.js?v=50"></script>
     <script src="house-readings.js?v=50"></script>
@@ -5731,12 +5750,13 @@
             overlay.classList.add('active');
             
             // Cycling loading messages
+            const userName = userData.name || 'your';
             const loadingMessages = [
-                'Mapping the stars at your moment of birth…',
-                'Calculating planetary positions…',
-                'Analyzing celestial patterns…',
-                'Reading the numerology in your name…',
-                'Building your complete reading…',
+                `Mapping the stars at ${userName}'s moment of birth…`,
+                `Calculating ${userName}'s planetary positions…`,
+                `Analyzing celestial patterns…`,
+                `Reading the numerology in ${userName}'s name…`,
+                `Building ${userName}'s complete reading…`,
                 'Almost there…'
             ];
             let msgIndex = 0;
@@ -10600,15 +10620,39 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             
             const sunSign = readings.astrology.sunSign.name;
             const moonSign = readings.astrology.moonSign.name;
+            const risingSign = readings.astrology.risingSign ? readings.astrology.risingSign.name : null;
+            const venusSign = readings.astrology.venusSign ? readings.astrology.venusSign.name : null;
+            const northNode = readings.astrology.northNode ? readings.astrology.northNode.name : null;
+            const chineseZodiac = readings.astrology.chineseZodiac ? readings.astrology.chineseZodiac.name : null;
             const lifePath = readings.numerology.lifePath;
+            const soulUrge = readings.numerology.soulUrge;
+            const sunElement = readings.astrology.sunSign.element || '';
+            const moonElement = readings.astrology.moonSign ? readings.astrology.moonSign.element : '';
+            
+            // Build a rich element summary
+            const elements = [sunElement, moonElement].filter(Boolean);
+            const uniqueElements = [...new Set(elements)];
+            const elementNote = uniqueElements.length === 1 
+                ? `a strong ${uniqueElements[0]} presence — giving them ${uniqueElements[0] === 'Fire' ? 'passion and drive' : uniqueElements[0] === 'Earth' ? 'groundedness and determination' : uniqueElements[0] === 'Air' ? 'intellect and curiosity' : 'emotional depth and intuition'}`
+                : uniqueElements.length === 2 
+                    ? `a blend of ${uniqueElements[0]} and ${uniqueElements[1]} energy — balancing ${uniqueElements[0] === 'Fire' || uniqueElements[1] === 'Fire' ? 'passion' : 'depth'} with ${uniqueElements.includes('Earth') ? 'practicality' : uniqueElements.includes('Air') ? 'curiosity' : 'intuition'}`
+                    : 'a unique elemental blend';
+            
+            const risingLine = risingSign && risingSign !== 'Unknown' ? `<p>With ${risingSign} Rising, the world sees ${userData.name} through a lens of ${risingSign} energy — a first impression that may differ beautifully from what lies beneath.</p>` : '';
+            const venusLine = venusSign ? `Venus in ${venusSign} shapes how ${userData.name} loves and what they find beautiful, ` : '';
+            const nodeLine = northNode ? `while the North Node in ${northNode} points toward the growth and lessons this lifetime is designed to bring.` : '';
+            const chineseLine = chineseZodiac ? `<p>In Chinese astrology, ${userData.name} carries the spirit of the ${chineseZodiac} — adding another dimension of ancient wisdom to this already rich portrait.</p>` : '';
             
             closingContainer.innerHTML = `
                 <div class="closing-card">
-                    <h3>${userData.name}'s Cosmic Story Continues...</h3>
-                    <p>You've just explored ${userData.name}'s complete moment in time — a unique constellation of energies that has never existed before and will never exist again in quite the same way.</p>
-                    <p>With their ${sunSign} Sun illuminating their core identity, ${moonSign} Moon nurturing their emotional world, and Life Path ${lifePath} guiding their soul's journey, ${userData.name} carries a sacred combination of gifts waiting to unfold.</p>
-                    <p>This reading is a snapshot of potential — the cosmic seeds planted at birth. How these energies blossom depends on love, nurturing, and the unique choices this soul will make.</p>
-                    <p class="closing-affirmation">"Every soul arrives with a purpose. ${userData.name}'s purpose is written in the stars."</p>
+                    <h3>${userData.name}'s Complete Portrait</h3>
+                    <p>You've just explored ${userData.name}'s complete moment in time — a unique constellation of energies that has never existed before and will never exist again.</p>
+                    <p>At their core, ${userData.name} is a <strong>${sunSign} Sun</strong> with a <strong>${moonSign} Moon</strong> — carrying ${elementNote}. Life Path <strong>${lifePath}</strong> guides the soul's journey, while Soul Urge <strong>${soulUrge}</strong> reveals the heart's deepest desire.</p>
+                    ${risingLine}
+                    <p>${venusLine}${nodeLine}</p>
+                    ${chineseLine}
+                    <p>This reading is a map of potential — the cosmic seeds planted at the moment of birth. Come back to it whenever you need guidance, clarity, or simply a reminder of who you are at your deepest level.</p>
+                    <p class="closing-affirmation">"${userData.name}'s purpose is written in the stars. This reading is the first page."</p>
                 </div>
             `;
         }
