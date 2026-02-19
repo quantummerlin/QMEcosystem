@@ -20,3 +20,134 @@
 
 /shared/*
   Cache-Control: public, max-age=300, must-revalidate
+
+# ═══════════════════════════════════════════════════════════════
+# NOINDEX — Development & internal files
+# ═══════════════════════════════════════════════════════════════
+
+/*.py
+  X-Robots-Tag: noindex, nofollow
+
+/*.ps1
+  X-Robots-Tag: noindex, nofollow
+
+/*.md
+  X-Robots-Tag: noindex, nofollow
+
+/*.txt
+  X-Robots-Tag: noindex, nofollow
+
+/*.odt
+  X-Robots-Tag: noindex, nofollow
+
+/*.pdf
+  X-Robots-Tag: noindex, nofollow
+
+/*.log
+  X-Robots-Tag: noindex, nofollow
+
+/*.json
+  X-Robots-Tag: noindex, nofollow
+
+/*.xml
+  X-Robots-Tag: noindex, nofollow
+
+/*.zip
+  X-Robots-Tag: noindex, nofollow
+
+/*.mp4
+  X-Robots-Tag: noindex, nofollow
+
+/*.mov
+  X-Robots-Tag: noindex, nofollow
+
+/wrangler.toml
+  X-Robots-Tag: noindex, nofollow
+
+/sw.js
+  X-Robots-Tag: noindex, nofollow
+
+# ═══════════════════════════════════════════════════════════════
+# NOINDEX — Backup, template, and dev HTML pages
+# ═══════════════════════════════════════════════════════════════
+
+/index-local-backup.html
+  X-Robots-Tag: noindex, nofollow
+
+/index-old-chinesezodiac-dev.html
+  X-Robots-Tag: noindex, nofollow
+
+/soulcard-old-backup.html
+  X-Robots-Tag: noindex, nofollow
+
+/FULL-READING-TEMPLATE.html
+  X-Robots-Tag: noindex, nofollow
+
+/reading-template.html
+  X-Robots-Tag: noindex, nofollow
+
+/animation.html
+  X-Robots-Tag: noindex, nofollow
+
+/generate-icons.html
+  X-Robots-Tag: noindex, nofollow
+
+/offline.html
+  X-Robots-Tag: noindex, nofollow
+
+/workshop.html
+  X-Robots-Tag: noindex, nofollow
+
+/hub.html
+  X-Robots-Tag: noindex, nofollow
+
+# ═══════════════════════════════════════════════════════════════
+# NOINDEX — Expand directory (dev environment)
+# ═══════════════════════════════════════════════════════════════
+
+/Expand/*
+  X-Robots-Tag: noindex, nofollow
+
+# ═══════════════════════════════════════════════════════════════
+# NOINDEX — Internal directories
+# ═══════════════════════════════════════════════════════════════
+
+/cloudflare/*
+  X-Robots-Tag: noindex, nofollow
+
+/Strategy%20Calender/*
+  X-Robots-Tag: noindex, nofollow
+
+/Reality%20codes/*
+  X-Robots-Tag: noindex, nofollow
+
+# ═══════════════════════════════════════════════════════════════
+# NOINDEX — Subdirectory dev/test/debug files
+# ═══════════════════════════════════════════════════════════════
+
+/classic/test-*.html
+  X-Robots-Tag: noindex, nofollow
+
+/classic/debug-*.html
+  X-Robots-Tag: noindex, nofollow
+
+/classic/advertise.html
+  X-Robots-Tag: noindex, nofollow
+
+/kpop/test-*.html
+  X-Robots-Tag: noindex, nofollow
+
+/kpop/debug-*.html
+  X-Robots-Tag: noindex, nofollow
+
+/kpop/advertise.html
+  X-Robots-Tag: noindex, nofollow
+
+/stranger/test-*.html
+  X-Robots-Tag: noindex, nofollow
+
+/stranger/debug-*.html
+  X-Robots-Tag: noindex, nofollow
+
+/stranger/advertise.html
+  X-Robots-Tag: noindex, nofollow

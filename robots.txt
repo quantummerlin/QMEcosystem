@@ -1,0 +1,122 @@
+# ═══════════════════════════════════════════════════════════════
+# Quantum Merlin — robots.txt
+# Block development files, scripts, templates, and backups
+# ═══════════════════════════════════════════════════════════════
+
+User-agent: *
+
+# Allow main content
+Allow: /
+
+# ── Block development scripts ──
+Disallow: /*.py$
+Disallow: /*.ps1$
+Disallow: /*.sh$
+
+# ── Block planning/strategy documents ──
+Disallow: /*.md$
+Disallow: /*.txt$
+Disallow: /*.odt$
+Disallow: /*.pdf$
+Disallow: /*.log$
+
+# ── Block media files that shouldn't be indexed ──
+Disallow: /*.mp4$
+Disallow: /*.mov$
+Disallow: /*.zip$
+
+# ── Block backup and old/dev files ──
+Disallow: /*-backup*
+Disallow: /*-old-*
+Disallow: /*-local-*
+Disallow: /index-local-backup.html
+Disallow: /index-old-chinesezodiac-dev.html
+Disallow: /soulcard-old-backup.html
+Disallow: /sitemap-new.xml
+
+# ── Block template files with placeholders ──
+Disallow: /FULL-READING-TEMPLATE.html
+Disallow: /reading-template.html
+Disallow: /MICROTOOL-TEMPLATE.md
+
+# ── Block utility/dev pages ──
+Disallow: /animation.html
+Disallow: /generate-icons.html
+Disallow: /offline.html
+Disallow: /brandingframe.txt
+Disallow: /branding.txt
+
+# ── Block internal directories ──
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.wrangler/
+Disallow: /node_modules/
+Disallow: /cloudflare/
+Disallow: /Genesis.QuantumMerlin/
+Disallow: /Strategy Calender/
+Disallow: /Reality codes/
+
+# ── Block the Expand directory (dev environment) ──
+Disallow: /Expand/*.md
+Disallow: /Expand/*.py
+Disallow: /Expand/*.js
+Disallow: /Expand/*.txt
+Disallow: /Expand/*.json
+Disallow: /Expand/*.zip
+Disallow: /Expand/*.exe
+Disallow: /Expand/*.odt
+Disallow: /Expand/*.pdf
+Disallow: /Expand/outputs/
+Disallow: /Expand/genesis/
+Disallow: /Expand/quantum-merlin/
+Disallow: /Expand/quantum-merlin-hub/
+Disallow: /Expand/activate
+Disallow: /Expand/activate.bat
+Disallow: /Expand/Activate.ps1
+Disallow: /Expand/deactivate.bat
+Disallow: /Expand/pip.exe
+Disallow: /Expand/pip3.exe
+Disallow: /Expand/pip3.12.exe
+Disallow: /Expand/python.exe
+Disallow: /Expand/pythonw.exe
+
+# ── Block config/build files ──
+Disallow: /wrangler.toml
+Disallow: /package.json
+Disallow: /manifest.json
+Disallow: /sw.js
+
+# ── Block test/debug/advertise pages in subdirectories ──
+Disallow: /classic/test-*
+Disallow: /classic/debug-*
+Disallow: /classic/advertise.html
+Disallow: /kpop/test-*
+Disallow: /kpop/debug-*
+Disallow: /kpop/advertise.html
+Disallow: /stranger/test-*
+Disallow: /stranger/debug-*
+Disallow: /stranger/advertise.html
+
+# ── Block subdirectory dev files ──
+Disallow: /classic/*.py
+Disallow: /classic/*.md
+Disallow: /kpop/*.py
+Disallow: /kpop/*.md
+Disallow: /stranger/*.py
+Disallow: /stranger/*.md
+Disallow: /kosmickpop/*.py
+Disallow: /kosmickpop/*.md
+Disallow: /genesis/*.py
+Disallow: /genesis/*.md
+Disallow: /soulblueprint/*.py
+Disallow: /soulblueprint/*.md
+Disallow: /amomentintime/*.md
+Disallow: /gravity/*.md
+Disallow: /gravity7/*.md
+Disallow: /ultimate/*.py
+Disallow: /ultimate/*.md
+Disallow: /lifestrategy/*.py
+Disallow: /lifestrategy/*.md
+
+# Sitemap
+Sitemap: https://quantummerlin.com/sitemap.xml

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title id="page-title">Soul Blueprint | Complete Cosmic Reading – Quantum Merlin</title>
@@ -41,11 +40,6 @@
         "url": "https://quantummerlin.com/soulblueprint/",
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Any",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
         "creator": {
             "@type": "Organization",
             "name": "Quantum Merlin",
@@ -5021,7 +5015,10 @@
             <p class="subject-name" id="subjectName" style="color: #2d1b4e !important;"></p>
             <p class="birth-info" id="birthInfo" style="color: #3d2b5e !important;"></p>
             <div class="action-buttons">
-                <button class="action-btn" onclick="startNewReading()">New Reading</button>
+                <button class="action-btn primary" onclick="showTemplatePicker()">📖 Create Your Book</button>
+                <button class="action-btn" onclick="copyAllReadings()">📋 Copy Blueprint</button>
+                <button class="action-btn" onclick="shareReading()">📤 Share</button>
+                <button class="action-btn" onclick="startNewReading()">✨ New Reading</button>
             </div>
         </div>
         
@@ -5119,9 +5116,12 @@
                 <h3>Reading Complete! 🎉</h3>
                 <p>You've explored all the cosmic insights for this moment in time.</p>
                 <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102,126,234,0.06), rgba(118,75,162,0.06)); border-radius: 16px; border: 1px solid rgba(102,126,234,0.15);">
-                    <p style="font-size: 1rem; margin-bottom: 12px;"><strong>✨ Want to do something amazing with your readings?</strong></p>
-                    <p style="font-size: 0.95rem; margin-bottom: 14px;">Tap <strong>✨ Transform This</strong> on any reading that resonated with you → pick a format → copy the prompt → paste into ChatGPT or Gemini. You'll get AI-generated art, stories, meditations, and more.</p>
-                    <a href="/soulblueprint/playbooks/" target="_blank" style="display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📚 Want even more? Explore the Blueprint Playbook Library →</a>
+                    <p style="font-size: 1rem; margin-bottom: 12px;"><strong>📖 Turn This Into a Beautiful Book</strong></p>
+                    <p style="font-size: 0.95rem; margin-bottom: 14px;">Choose from 11 premium templates and create a stunning printable book of your entire reading — perfect as a keepsake or gift.</p>
+                    <button onclick="showTemplatePicker()" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 25px; font-weight: 600; font-size: 0.95rem; cursor: pointer; margin-bottom: 12px;">📖 Create Your Book</button>
+                    <br>
+                    <p style="font-size: 0.95rem; margin-bottom: 14px;">Or tap <strong>✨ Transform This</strong> on any reading → pick a format → copy the prompt → paste into ChatGPT or Gemini for AI art, stories, meditations, and more.</p>
+                    <a href="/soulblueprint/playbooks/" target="_blank" style="display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📚 Explore the Blueprint Playbook Library →</a>
                 </div>
 
                 <!-- Discover More Section -->
@@ -5240,24 +5240,20 @@
             <!-- Gift & Support Section -->
             <div class="gift-support-section">
                 <div class="gift-box">
-                    <div class="coming-soon-banner">
-                        <span class="coming-soon-icon"></span>
-                        <span class="coming-soon-text">Coming Soon</span>
-                    </div>
-                    <h3>Gift This Reading</h3>
+                    <h3>🎁 Gift This Reading</h3>
                     <p>Create a beautiful, shareable version for loved ones or print as a keepsake.</p>
-                    <div class="gifted-by-field disabled">
+                    <div class="gifted-by-field">
                         <label for="giftedByInput">Gifted by: <span class="optional-badge">Optional</span></label>
-                        <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100" disabled>
+                        <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100">
                         <p class="helper-text">Add your name to personalize this gift</p>
                     </div>
-                    <button class="gift-btn disabled" disabled>Create Gift Version</button>
+                    <button class="gift-btn" onclick="giftReading()">Create Gift Version</button>
                 </div>
                 
                 <div class="coffee-box">
-                    <h3>Did This Reading Bring You Joy?</h3>
-                    <p>You now have <strong>unlimited access</strong> to cosmic readings — probably worth a coffee, right?</p>
-                    <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener" class="coffee-btn">Buy Me a Coffee</a>
+                    <h3>📖 Create Your Personal Book</h3>
+                    <p>Turn your entire reading into a beautifully designed <strong>printable book</strong> — choose from 11 premium templates.</p>
+                    <button class="coffee-btn" onclick="showTemplatePicker()">📖 Design Your Book</button>
                 </div>
             </div>
             
@@ -5277,7 +5273,8 @@
                 <p class="generated-by" id="generatedBy">Generated by Quantum Merlin</p>
                 <p class="timestamp" id="timestamp"></p>
                 <div class="footer-actions">
-                    <button class="action-btn" onclick="shareReading()">Share Reading</button>
+                    <button class="action-btn primary" onclick="showTemplatePicker()">📖 Create Your Book</button>
+                    <button class="action-btn" onclick="shareReading()">📤 Share Reading</button>
                     <button class="new-reading-btn" onclick="startNewReading()">Generate Another Reading</button>
                 </div>
                 <div style="text-align:center;margin:16px 0;">
@@ -5306,29 +5303,29 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=35"></script>
-    <script src="calculations.js?v=35"></script>
-    <script src="readings.js?v=35"></script>
-    <script src="house-readings.js?v=35"></script>
-    <script src="deep-house-readings.js?v=35"></script>
-    <script src="aspect-readings.js?v=35"></script>
-    <script src="advanced-readings.js?v=35"></script>
-    <script src="deep-readings.js?v=35"></script>
-    <script src="deep-planet-readings.js?v=35"></script>
-    <script src="deep-planet-readings-outer.js?v=35"></script>
-    <script src="deep-numerology-readings.js?v=35"></script>
-    <script src="deep-chinese-zodiac-readings.js?v=35"></script>
-    <script src="deep-chiron-readings.js?v=35"></script>
-    <script src="deep-lilith-readings.js?v=35"></script>
-    <script src="deep-node-readings.js?v=35"></script>
-    <script src="deep-transformative-planet-readings.js?v=35"></script>
-    <script src="readings-extended.js?v=35"></script>
-    <script src="love-blueprint.js?v=35"></script>
-    <script src="tone-variations.js?v=35"></script>
-    <script src="age-language.js?v=1"></script>
-    <script src="life-pattern-readings.js?v=2"></script>
-    <script src="save-share.js?v=35"></script>
-    <script src="book-generator.js?v=1"></script>
+    <script src="config.js?v=50"></script>
+    <script src="calculations.js?v=50"></script>
+    <script src="readings.js?v=50"></script>
+    <script src="house-readings.js?v=50"></script>
+    <script src="deep-house-readings.js?v=50"></script>
+    <script src="aspect-readings.js?v=50"></script>
+    <script src="advanced-readings.js?v=50"></script>
+    <script src="deep-readings.js?v=50"></script>
+    <script src="deep-planet-readings.js?v=50"></script>
+    <script src="deep-planet-readings-outer.js?v=50"></script>
+    <script src="deep-numerology-readings.js?v=50"></script>
+    <script src="deep-chinese-zodiac-readings.js?v=50"></script>
+    <script src="deep-chiron-readings.js?v=50"></script>
+    <script src="deep-lilith-readings.js?v=50"></script>
+    <script src="deep-node-readings.js?v=50"></script>
+    <script src="deep-transformative-planet-readings.js?v=50"></script>
+    <script src="readings-extended.js?v=50"></script>
+    <script src="love-blueprint.js?v=50"></script>
+    <script src="tone-variations.js?v=50"></script>
+    <script src="age-language.js?v=50"></script>
+    <script src="life-pattern-readings.js?v=50"></script>
+    <script src="save-share.js?v=50"></script>
+    <script src="book-generator.js?v=50"></script>
     <script>
         // ============================================
         // MULTI-READING STORAGE SYSTEM

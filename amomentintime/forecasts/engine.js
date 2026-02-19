@@ -398,6 +398,44 @@ const CosmicEngine = {
       Pig: { best: ['Tiger','Rabbit','Goat'], worst: ['Snake','Monkey'] }
     },
 
+    // Lunar New Year dates (approximate - first day of Chinese New Year)
+    // Format: { year: [month, day] } - the date when that Chinese zodiac year STARTS
+    lunarNewYearDates: {
+      2020: [1, 25],   // Rat
+      2021: [2, 12],   // Ox
+      2022: [2, 1],    // Tiger
+      2023: [1, 22],   // Rabbit
+      2024: [2, 10],   // Dragon
+      2025: [1, 29],   // Snake
+      2026: [2, 17],   // Horse (Fire Horse!)
+      2027: [2, 6],    // Goat
+      2028: [1, 26],   // Monkey
+      2029: [2, 13],   // Rooster
+      2030: [2, 3],    // Dog
+      2031: [1, 23],   // Pig
+      2032: [2, 11],   // Rat
+      2033: [1, 31],   // Ox
+      2034: [2, 19],   // Tiger
+      2035: [2, 8],    // Rabbit
+    },
+
+    // Get the Chinese zodiac year for a specific date (accounts for lunar new year)
+    getChineseYear(date) {
+      const year = date.getFullYear();
+      const month = date.getMonth() + 1;
+      const day = date.getDate();
+      
+      // Check if we have the lunar new year date for this year
+      const lny = this.lunarNewYearDates[year];
+      if (lny) {
+        // If the date is before the lunar new year, use the previous year's zodiac
+        if (month < lny[0] || (month === lny[0] && day < lny[1])) {
+          return year - 1;
+        }
+      }
+      return year;
+    },
+
     calculate(year) {
       const animalIdx = (year - 4) % 12;
       // Heavenly stem element: last digit of year determines element
@@ -417,6 +455,12 @@ const CosmicEngine = {
       };
     },
 
+    // Calculate Chinese zodiac for a specific date (uses lunar calendar)
+    calculateForDate(date) {
+      const chineseYear = this.getChineseYear(date);
+      return this.calculate(chineseYear);
+    },
+
     // Current year energy
     currentYearEnergy(currentYear, birthAnimal) {
       const currentAnimal = this.animals[(currentYear - 4) % 12];
@@ -424,6 +468,12 @@ const CosmicEngine = {
       if (compat.best.includes(currentAnimal)) return { level: 'Excellent', desc: `${currentAnimal} year harmonizes beautifully with your ${birthAnimal} energy` };
       if (compat.worst.includes(currentAnimal)) return { level: 'Challenging', desc: `${currentAnimal} year creates growth tension with your ${birthAnimal} nature` };
       return { level: 'Moderate', desc: `${currentAnimal} year brings steady, neutral energy for your ${birthAnimal} spirit` };
+    },
+
+    // Current year energy using date (accounts for lunar new year)
+    currentYearEnergyForDate(date, birthAnimal) {
+      const chineseYear = this.getChineseYear(date);
+      return this.currentYearEnergy(chineseYear, birthAnimal);
     }
   },
 
@@ -562,8 +612,8 @@ const CosmicEngine = {
 
     // === CHINESE ZODIAC ===
     const chineseZodiac = this.chineseZodiac.calculate(year);
-    const currentChinese = this.chineseZodiac.calculate(fYear);
-    const chineseYearEnergy = this.chineseZodiac.currentYearEnergy(fYear, chineseZodiac.animal);
+    const currentChinese = this.chineseZodiac.calculateForDate(fd);
+    const chineseYearEnergy = this.chineseZodiac.currentYearEnergyForDate(fd, chineseZodiac.animal);
 
     // === BIORHYTHM ===
     const biorhythm = this.biorhythm.calculate(bd, fd);
@@ -1122,10 +1172,12 @@ const CosmicEngine = {
     const prevYear = this.numerology.personalYear(month, day, forecastYear - 1, month, day);
     const nextYear = this.numerology.personalYear(month, day, forecastYear + 1, month, day);
 
-    // Chinese zodiac for the year
-    const chineseYear = this.chineseZodiac.calculate(forecastYear);
+    // Chinese zodiac for the year (use mid-year date to get correct Chinese year)
+    // This ensures we show the Chinese zodiac that covers most of this Gregorian year
+    const midYearDate = new Date(forecastYear, 6, 1); // July 1st - always after lunar new year
+    const chineseYear = this.chineseZodiac.calculateForDate(midYearDate);
     const birthChinese = this.chineseZodiac.calculate(year);
-    const yearEnergy = this.chineseZodiac.currentYearEnergy(forecastYear, birthChinese.animal);
+    const yearEnergy = this.chineseZodiac.currentYearEnergyForDate(midYearDate, birthChinese.animal);
 
     // Quarterly breakdown
     const quarters = [];

@@ -1,19 +1,19 @@
 {
-  "name": "Stranger Patterns — Dimensional Profile",
-  "short_name": "Stranger Patterns",
-  "description": "Your supernatural blueprint from the Upside Down",
+  "name": "Stranger Patterns — Cosmic Forecast",
+  "short_name": "Stranger Forecast",
+  "description": "Your supernatural cosmic forecast from the Upside Down",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#0a0515",
   "theme_color": "#8B0000",
   "icons": [
     {
-      "src": "/assets/tarot/QMTarot.png",
+      "src": "../stranger.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/assets/tarot/QMTarot.png",
+      "src": "../stranger.png",
       "sizes": "512x512",
       "type": "image/png"
     }

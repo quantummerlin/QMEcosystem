@@ -1,5 +1,21 @@
 /soulblueprint/r/*  /soulblueprint/view.html?id=:splat  200
 
+# ═══════════════════════════════════════════════════════════════
+# 301 REDIRECTS — Consolidate duplicate pages
+# ═══════════════════════════════════════════════════════════════
+
+# Old pages → new canonical versions
+/about.html  /about-new.html  301
+/contact.html  /contact-new.html  301
+
+# Fix typo URL (compatabilty → compatibility)
+/compatabilty.html  /compatibility.html  301
+
+# Block access to backup/dev files
+/index-local-backup.html  /  301
+/index-old-chinesezodiac-dev.html  /  301
+/soulcard-old-backup.html  /soulcard.html  301
+
 # Trailing slash redirects
 /amomentintime  /amomentintime/  301
 /amomentintime/esp  /amomentintime/esp/  301
