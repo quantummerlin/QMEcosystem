@@ -5245,7 +5245,7 @@
                         <span class="coming-soon-text">Coming Soon</span>
                     </div>
                     <h3>Gift This Reading</h3>
-                    <p>Create a beautiful, ad-free version to share with loved ones or print as a keepsake.</p>
+                    <p>Create a beautiful, shareable version for loved ones or print as a keepsake.</p>
                     <div class="gifted-by-field disabled">
                         <label for="giftedByInput">Gifted by: <span class="optional-badge">Optional</span></label>
                         <input type="text" id="giftedByInput" placeholder="e.g., Grandma & Grandpa, Aunt Sarah..." maxlength="100" disabled>
@@ -10617,7 +10617,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         }
         
         // ============================================
-        // GIFT READING (AD-FREE VERSION)
+        // GIFT READING (SHAREABLE VERSION)
         // ============================================
         
         let selectedGiftColor = 'purple'; // Default color
@@ -10735,7 +10735,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 <div class="gift-dialog-overlay">
                     <div class="gift-dialog">
                         <h2>Gift Created!</h2>
-                        <p>Your ad-free reading for <strong>${recipientName}</strong> is ready to share!</p>
+                        <p>Your reading for <strong>${recipientName}</strong> is ready to share!</p>
                         
                         <div class="share-url-box">
                             <input type="text" id="share-url-input" value="${shareUrl}" readonly>
@@ -10889,7 +10889,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 colors = colorSchemes.pink;
             }
             
-            // Create a clean, ad-free HTML document
+            // Create a clean, shareable HTML document
             const giftHTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11064,7 +11064,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             URL.revokeObjectURL(url);
             
             // Show success message
-            alert('Gift version created! The ad-free reading has been downloaded. You can email it or print it as a keepsake!');
+            alert('Gift version created! The reading has been downloaded. You can email it or print it as a keepsake!');
         }
         
         // ============================================
