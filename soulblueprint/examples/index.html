@@ -326,7 +326,7 @@
             <a href="/soulblueprint/examples/" style="color: var(--color-primary); font-weight: 600;">Examples</a>
             <a href="/soulblueprint/articles/">Guides</a>
             <a href="/soulblueprint/playbooks/">Playbooks</a>
-            <a href="/soulblueprint/" class="header-cta">Get Your Reading →</a>
+            <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html">Prompt Builder</a>
         </nav>
     </div>
 </header>
@@ -967,5 +967,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a0a2e;color:#e0d6f0;padding:14px 20px;font-size:0.88rem;line-height:1.5;box-shadow:0 -4px 20px rgba(0,0,0,0.3);font-family:Inter,'Segoe UI',sans-serif;">
+    <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;">
+        <p style="margin:0;flex:1;min-width:250px;">We use cookies for analytics (Google Analytics) and advertising (Google AdSense). Your reading data stays on your device. <a href="/soulblueprint/privacy.html" style="color:#D8B5FF;text-decoration:underline;">Privacy Policy</a></p>
+        <div style="display:flex;gap:10px;flex-shrink:0;">
+            <button onclick="acceptCookies()" style="padding:8px 22px;border-radius:20px;border:none;background:linear-gradient(135deg,#D8B5FF,#B19CD9);color:#1a0a2e;font-weight:600;cursor:pointer;font-size:0.88rem;">Accept</button>
+            <button onclick="declineCookies()" style="padding:8px 22px;border-radius:20px;border:1px solid rgba(216,181,255,0.4);background:transparent;color:#D8B5FF;font-weight:600;cursor:pointer;font-size:0.88rem;">Decline</button>
+        </div>
+    </div>
+</div>
+<script>
+(function(){if(!localStorage.getItem('sb-cookie-consent')){document.getElementById('cookieConsent').style.display='block';}})();
+function acceptCookies(){localStorage.setItem('sb-cookie-consent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('sb-cookie-consent','declined');document.getElementById('cookieConsent').style.display='none';window['ga-disable-G-VW4LGE7L1T']=true;}
+if(localStorage.getItem('sb-cookie-consent')==='declined'){window['ga-disable-G-VW4LGE7L1T']=true;}
+</script>
 </body>
 </html>

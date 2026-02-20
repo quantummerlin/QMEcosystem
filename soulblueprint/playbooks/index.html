@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Playbook Library - The Blueprint Playbook</title>
+    <title>Playbook Library - Soul Blueprint</title>
     <meta name="description" content="Complete instruction manuals for transforming your soul blueprint into visual art, infographics, stories, practical guidance, and more.">
     <link rel="stylesheet" href="css/playbook.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW4LGE7L1T');</script>
 </head>
 <body>
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="/soulblueprint/playbooks/" class="nav-logo">The Blueprint Playbook</a>
+            <a href="/soulblueprint/" class="nav-logo">✨ Soul Blueprint</a>
             <ul class="nav-menu">
-                <li><a href="/soulblueprint/">Get Blueprint</a></li>
+                <li><a href="/soulblueprint/">Generator</a></li>
                 <li><a href="/soulblueprint/examples/">Examples</a></li>
                 <li><a href="/soulblueprint/articles/">Guides</a></li>
-                <li><a href="/soulblueprint/playbooks/" class="active">All Playbooks</a></li>
+                <li><a href="/soulblueprint/playbooks/" class="active">Playbooks</a></li>
                 <li><a href="/soulblueprint/soulprism/site/tools/prompt-builder.html">Prompt Builder</a></li>
             </ul>
         </div>
@@ -29,6 +32,32 @@
     </header>
 
     <div class="container">
+        <!-- How It Works -->
+        <section class="how-it-works" style="margin-bottom:40px;">
+            <h2 style="text-align:center;margin-bottom:8px;">How It Works</h2>
+            <p style="text-align:center;opacity:0.8;margin-bottom:24px;">Three steps to transform any reading into something extraordinary</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:700px;margin:0 auto;">
+                <div style="text-align:center;padding:20px;background:rgba(102,126,234,0.08);border-radius:14px;">
+                    <div style="font-size:2rem;margin-bottom:8px;">1️⃣</div>
+                    <strong style="display:block;margin-bottom:4px;">Generate a Reading</strong>
+                    <p style="font-size:0.88rem;opacity:0.8;margin:0;">Enter a name &amp; birthdate in the <a href="/soulblueprint/" style="color:#667eea;">Generator</a></p>
+                </div>
+                <div style="text-align:center;padding:20px;background:rgba(102,126,234,0.08);border-radius:14px;">
+                    <div style="font-size:2rem;margin-bottom:8px;">2️⃣</div>
+                    <strong style="display:block;margin-bottom:4px;">Pick a Playbook</strong>
+                    <p style="font-size:0.88rem;opacity:0.8;margin:0;">Choose the transformation type that excites you</p>
+                </div>
+                <div style="text-align:center;padding:20px;background:rgba(102,126,234,0.08);border-radius:14px;">
+                    <div style="font-size:2rem;margin-bottom:8px;">3️⃣</div>
+                    <strong style="display:block;margin-bottom:4px;">Use the Prompt Builder</strong>
+                    <p style="font-size:0.88rem;opacity:0.8;margin:0;">Generate ready-made prompts in the <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;">Prompt Builder</a></p>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:20px;padding:14px;background:rgba(255,215,0,0.1);border-radius:12px;border-left:4px solid #ffd700;max-width:500px;margin-left:auto;margin-right:auto;">
+                <strong>🔑 Golden Rule:</strong> Keep all your AI generations in <strong>one conversation thread</strong> — the AI builds visual memory and everything becomes more cohesive.
+            </div>
+        </section>
+
         <section class="playbook-category">
             <h2>Free Playbooks</h2>
             <div class="playbook-library-grid">
@@ -155,11 +184,27 @@
 
     <footer class="playbook-footer">
         <div class="container">
-            <p>&copy; 2025 The Blueprint Playbook by Quantum Merlin. All rights reserved.</p>
+            <p>&copy; 2025 Soul Blueprint by Quantum Merlin. All rights reserved.</p>
             <p><a href="/soulblueprint/privacy.html">Privacy</a> | <a href="/soulblueprint/terms.html">Terms</a> | <a href="/soulblueprint/disclaimer.html">Disclaimer</a></p>
         </div>
     </footer>
 
     <script src="js/playbook.js"></script>
+
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a0a2e;color:#e0d6f0;padding:14px 20px;font-size:0.88rem;line-height:1.5;box-shadow:0 -4px 20px rgba(0,0,0,0.3);font-family:Inter,'Segoe UI',sans-serif;">
+    <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;">
+        <p style="margin:0;flex:1;min-width:250px;">We use cookies for analytics (Google Analytics) and advertising (Google AdSense). Your reading data stays on your device. <a href="/soulblueprint/privacy.html" style="color:#D8B5FF;text-decoration:underline;">Privacy Policy</a></p>
+        <div style="display:flex;gap:10px;flex-shrink:0;">
+            <button onclick="acceptCookies()" style="padding:8px 22px;border-radius:20px;border:none;background:linear-gradient(135deg,#D8B5FF,#B19CD9);color:#1a0a2e;font-weight:600;cursor:pointer;font-size:0.88rem;">Accept</button>
+            <button onclick="declineCookies()" style="padding:8px 22px;border-radius:20px;border:1px solid rgba(216,181,255,0.4);background:transparent;color:#D8B5FF;font-weight:600;cursor:pointer;font-size:0.88rem;">Decline</button>
+        </div>
+    </div>
+</div>
+<script>
+(function(){if(!localStorage.getItem('sb-cookie-consent')){document.getElementById('cookieConsent').style.display='block';}})();
+function acceptCookies(){localStorage.setItem('sb-cookie-consent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('sb-cookie-consent','declined');document.getElementById('cookieConsent').style.display='none';window['ga-disable-G-VW4LGE7L1T']=true;}
+if(localStorage.getItem('sb-cookie-consent')==='declined'){window['ga-disable-G-VW4LGE7L1T']=true;}
+</script>
 </body>
 </html>

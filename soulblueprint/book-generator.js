@@ -4,7 +4,96 @@
 // Generates beautiful themed HTML books from reading data.
 // 11 design templates + A4/A5 paper size support.
 // Open the downloaded HTML in Chrome → Print → Save as PDF.
+// Premium feature — $50 lifetime access via Etsy.
 // ============================================================
+
+// ─── ACCESS GATE ─────────────────────────────────────────────
+
+const SB_BOOK_ACCESS_KEY = 'sb-book-access';
+const SB_UNLOCK_CODE = 'SOUL50BOOK';
+
+// Check URL for unlock parameter on load
+(function checkUnlockParam() {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('unlock');
+    if (code === SB_UNLOCK_CODE) {
+        localStorage.setItem(SB_BOOK_ACCESS_KEY, 'lifetime');
+        if (typeof sbTrack === 'function') sbTrack('book_access_unlocked', { method: 'url_code' });
+        // Clean the URL so the code isn't visible/shareable
+        const clean = new URL(window.location);
+        clean.searchParams.delete('unlock');
+        window.history.replaceState({}, '', clean);
+    }
+})();
+
+function hasBookAccess() {
+    return localStorage.getItem(SB_BOOK_ACCESS_KEY) === 'lifetime';
+}
+
+function showUpgradeModal() {
+    if (typeof sbTrack === 'function') sbTrack('book_upgrade_shown');
+
+    const existing = document.getElementById('bookUpgradeOverlay');
+    if (existing) existing.remove();
+
+    const overlay = document.createElement('div');
+    overlay.id = 'bookUpgradeOverlay';
+    overlay.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(10,5,20,0.92);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(12px);padding:16px;overflow-y:auto;';
+
+    overlay.innerHTML = `
+    <div style="background:linear-gradient(145deg,#1e1035,#12082a);border:1.5px solid rgba(255,215,0,0.25);border-radius:24px;padding:32px 28px;max-width:520px;width:100%;color:#e8d5ff;font-family:'Inter','Segoe UI',system-ui,sans-serif;position:relative;text-align:center;">
+        <button onclick="document.getElementById('bookUpgradeOverlay').remove()" style="position:absolute;top:12px;right:16px;background:none;border:none;color:#c9a0ff;font-size:1.4rem;cursor:pointer;opacity:0.7;" aria-label="Close">&times;</button>
+
+        <div style="font-size:2.2rem;margin-bottom:12px;">📖✨</div>
+        <h2 style="color:#ffd700;font-size:1.3rem;font-family:'Playfair Display','Georgia',serif;margin:0 0 10px;">Unlock the Book Generator</h2>
+        <p style="font-size:0.92rem;line-height:1.6;opacity:0.85;margin-bottom:20px;">Turn any Soul Blueprint reading into a stunning printable keepsake book — choose from <strong>11 premium templates</strong> including Art Deco, Botanical, Celestial Watercolor, and more.</p>
+
+        <div style="background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);border-radius:16px;padding:18px;margin-bottom:20px;">
+            <div style="font-size:2rem;font-weight:700;color:#ffd700;margin-bottom:4px;">$50</div>
+            <div style="font-size:0.82rem;opacity:0.6;">One-time payment · Lifetime access · Unlimited books</div>
+        </div>
+
+        <div style="text-align:left;padding:0 8px;margin-bottom:22px;">
+            <div style="display:flex;align-items:start;gap:8px;margin-bottom:8px;font-size:0.88rem;">
+                <span style="color:#ffd700;flex-shrink:0;">✓</span>
+                <span>11 beautifully designed book templates (A4 & A5)</span>
+            </div>
+            <div style="display:flex;align-items:start;gap:8px;margin-bottom:8px;font-size:0.88rem;">
+                <span style="color:#ffd700;flex-shrink:0;">✓</span>
+                <span>Generate unlimited books for yourself, friends & family</span>
+            </div>
+            <div style="display:flex;align-items:start;gap:8px;margin-bottom:8px;font-size:0.88rem;">
+                <span style="color:#ffd700;flex-shrink:0;">✓</span>
+                <span>Perfect for birthdays, baby showers & personalised gifts</span>
+            </div>
+            <div style="display:flex;align-items:start;gap:8px;font-size:0.88rem;">
+                <span style="color:#ffd700;flex-shrink:0;">✓</span>
+                <span>Lifetime access — pay once, create forever</span>
+            </div>
+        </div>
+
+        <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('book_upgrade_clicked',{source:'modal'});" style="display:inline-block;background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;border:none;padding:14px 40px;border-radius:30px;font-size:1.05rem;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 4px 20px rgba(255,215,0,0.3);letter-spacing:0.02em;transition:all 0.2s;">
+            Get Lifetime Access →
+        </a>
+        <p style="font-size:0.72rem;opacity:0.4;margin-top:14px;">Already purchased? <a href="#" onclick="promptUnlockCode();return false;" style="color:#c9a0ff;text-decoration:underline;">Enter your access code</a></p>
+    </div>
+    `;
+
+    document.body.appendChild(overlay);
+}
+
+function promptUnlockCode() {
+    const code = prompt('Enter your access code from your Etsy purchase:');
+    if (code && code.trim() === SB_UNLOCK_CODE) {
+        localStorage.setItem(SB_BOOK_ACCESS_KEY, 'lifetime');
+        if (typeof sbTrack === 'function') sbTrack('book_access_unlocked', { method: 'manual_code' });
+        document.getElementById('bookUpgradeOverlay')?.remove();
+        alert('🎉 Book Generator unlocked! You now have lifetime access.');
+        showTemplatePicker();
+    } else if (code !== null) {
+        alert('That code doesn\'t match. Please check your Etsy purchase confirmation email.');
+    }
+}
 
 // ─── TEMPLATE CATALOGUE ─────────────────────────────────────
 
@@ -708,6 +797,12 @@ let _selectedTemplate = 'cosmic-classic';
 let _selectedPaperSize = 'A5';
 
 function showTemplatePicker() {
+    // Access gate — check if user has lifetime access
+    if (!hasBookAccess()) {
+        showUpgradeModal();
+        return;
+    }
+    if (typeof sbTrack === 'function') sbTrack('book_creation_started');
     const userData = window.lastUserData || JSON.parse(localStorage.getItem('lastReading') || '{}');
     const readings = window.lastGeneratedReadings;
     if (!userData.name || !readings) {
@@ -795,6 +890,7 @@ function selectPaperSize(size, el) {
 // ─── MAIN EXPORT ORCHESTRATOR ────────────────────────────────
 
 async function generateBook() {
+    if (typeof sbTrack === 'function') sbTrack('book_generated', { template: _selectedTemplate, paper_size: _selectedPaperSize });
     const btn = document.getElementById('generateBookBtn');
     if (btn) {
         btn.disabled = true;

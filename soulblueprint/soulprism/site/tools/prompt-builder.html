@@ -396,24 +396,23 @@
  margin-top: 2px;
  }
         </style>
-    </head>
+        <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW4LGE7L1T');</script>
+</head>
     <body>
 
         <!-- ========== NAV ========== -->
         <nav class="main-nav">
             <div class="nav-container">
-                <a href="../index.html" class="nav-logo">Soul Blueprint</a>
+                <a href="/soulblueprint/" class="nav-logo">✨ Soul Blueprint</a>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
                 <ul class="nav-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../guides/visual-blueprint.html">Visual Guide</a></li>
-                    <li><a href="../guides/quick-start.html">Quick Start</a></li>
-                    <li><a href="../guides/transformations.html">Transformations</a></li>
-                    <li><a href="../guides/premium-transformations.html">Premium</a></li>
-                    <li><a href="../guides/examples.html">Examples</a></li>
-                    <li><a href="prompt-builder.html" class="active">Prompt Builder</a></li>
+                    <li><a href="/soulblueprint/">Generator</a></li>
+                    <li><a href="/soulblueprint/examples/">Examples</a></li>
+                    <li><a href="/soulblueprint/articles/">Guides</a></li>
                     <li><a href="/soulblueprint/playbooks/">Playbooks</a></li>
-                    <li><a href="https://quantummerlin.com/soulblueprint" class="nav-cta" target="_blank" rel="noopener noreferrer">Get Your Blueprint</a></li>
+                    <li><a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" class="active">Prompt Builder</a></li>
                 </ul>
             </div>
         </nav>
@@ -1740,6 +1739,11 @@ Here is the reading:
 
  $output.textContent = prompt;
 
+ // Track prompt generation (only when a reading is actually pasted)
+ if (reading && type) {
+ if (typeof gtag === 'function') gtag('event', 'prompt_built', { transform_type: type });
+ }
+
  // Update pro tip
  $tip.textContent = tips[type] || 'For best results, paste multiple related readings together. This helps the AI understand the bigger picture.';
 
@@ -1763,6 +1767,7 @@ Here is the reading:
  }
 
  function copyPrompt() {
+ if (typeof gtag === 'function') gtag('event', 'prompt_copied', { source: 'prompt_builder' });
  var text = $output.textContent;
  navigator.clipboard.writeText(text).then(function () {
  showToast();
@@ -2082,5 +2087,20 @@ Here is the reading:
  })();
         </script>
 
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a0a2e;color:#e0d6f0;padding:14px 20px;font-size:0.88rem;line-height:1.5;box-shadow:0 -4px 20px rgba(0,0,0,0.3);font-family:Inter,'Segoe UI',sans-serif;">
+    <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;">
+        <p style="margin:0;flex:1;min-width:250px;">We use cookies for analytics (Google Analytics) and advertising (Google AdSense). Your reading data stays on your device. <a href="/soulblueprint/privacy.html" style="color:#D8B5FF;text-decoration:underline;">Privacy Policy</a></p>
+        <div style="display:flex;gap:10px;flex-shrink:0;">
+            <button onclick="acceptCookies()" style="padding:8px 22px;border-radius:20px;border:none;background:linear-gradient(135deg,#D8B5FF,#B19CD9);color:#1a0a2e;font-weight:600;cursor:pointer;font-size:0.88rem;">Accept</button>
+            <button onclick="declineCookies()" style="padding:8px 22px;border-radius:20px;border:1px solid rgba(216,181,255,0.4);background:transparent;color:#D8B5FF;font-weight:600;cursor:pointer;font-size:0.88rem;">Decline</button>
+        </div>
+    </div>
+</div>
+<script>
+(function(){if(!localStorage.getItem('sb-cookie-consent')){document.getElementById('cookieConsent').style.display='block';}})();
+function acceptCookies(){localStorage.setItem('sb-cookie-consent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('sb-cookie-consent','declined');document.getElementById('cookieConsent').style.display='none';window['ga-disable-G-VW4LGE7L1T']=true;}
+if(localStorage.getItem('sb-cookie-consent')==='declined'){window['ga-disable-G-VW4LGE7L1T']=true;}
+</script>
     </body>
 </html>

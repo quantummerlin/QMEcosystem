@@ -15,6 +15,8 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-VW4LGE7L1T');
+        // GA4 custom event helper — no PII, behavioural only
+        function sbTrack(name, params) { try { gtag('event', name, params || {}); } catch(e) {} }
     </script>
     
     <!-- PWA Meta Tags -->
@@ -573,9 +575,66 @@
             padding: 20px;
         }
         
-        /* Site Navigation — hidden on generator page, people come here to generate */
+        /* Site Navigation — always visible for unified navigation */
         .site-nav {
-            display: none;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            padding: 0 16px;
+        }
+        .site-nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 48px;
+            gap: 8px;
+        }
+        .site-nav-brand {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .site-nav-links {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+        .site-nav-links a {
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: #555;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background .15s, color .15s;
+        }
+        .site-nav-links a:hover,
+        .site-nav-links a.active {
+            background: rgba(102,126,234,0.1);
+            color: #667eea;
+        }
+        body.dark-theme .site-nav {
+            background: rgba(26,10,46,0.95);
+            border-bottom-color: rgba(255,255,255,0.08);
+        }
+        body.dark-theme .site-nav-brand { color: var(--primary); }
+        body.dark-theme .site-nav-links a { color: #aaa; }
+        body.dark-theme .site-nav-links a:hover,
+        body.dark-theme .site-nav-links a.active { background: rgba(102,126,234,0.2); color: #a0b4ff; }
+        @media (max-width: 600px) {
+            .site-nav-links a { padding: 6px 8px; font-size: 0.78rem; }
+            .site-nav-brand { font-size: 0.9rem; }
         }
 
         /* Example reading banner */
@@ -4837,72 +4896,7 @@
     </style>
 </head>
 <body>
-    <!-- Welcome Modal -->
-    <div class="welcome-modal" id="welcomeModal" style="display: none;">
-        <div class="welcome-content">
-            <div class="welcome-header">
-                <h2>Your Cosmic Blueprint</h2>
-                <p>A moment in time, captured forever</p>
-            </div>
-            
-            <div class="welcome-body">
-                <!-- Step 1: What you get + Theme -->
-                <div class="welcome-step active" data-step="1">
-                    <h3>⭐ Here's What You Get</h3>
-                    <p>Enter a name and birth date to instantly generate <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom.</p>
-                    <div class="welcome-highlight">
-                        <p>Zero data collection. Your data never leaves your device.</p>
-                    </div>
-                    <p style="margin-top: 16px; font-weight: 600;">Choose your colour theme:</p>
-                    <div class="theme-preview-btns">
-                        <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
-                        <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
-                        <button class="theme-preview-btn blue" onclick="selectWelcomeTheme('boy')">Blue</button>
-                    </div>
-                    <p style="text-align: center; font-size: 0.88rem; opacity: 0.85; margin-top: 10px; color: #444;">You can change this anytime from the bar at the top</p>
-                </div>
-                
-                <!-- Step 2: What to expect -->
-                <div class="welcome-step" data-step="2">
-                    <h3>📖 What to Expect</h3>
-                    <p>This is a <strong>deep, personal reading</strong> — not something to rush through. Think of it as a reference guide you can come back to anytime.</p>
-                    <p>About <strong>70% will feel uncannily accurate</strong>. The rest captures potential you may not have unlocked yet.</p>
-                    <div class="saved-readings-note">
-                        <p>✅ <strong>Readings auto-save</strong> — create readings for friends, family, anyone. They'll all be waiting when you come back.</p>
-                    </div>
-                </div>
-                
-                <!-- Step 3: AI Transformations -->
-                <div class="welcome-step" data-step="3">
-                    <h3>✨ Turn Readings Into Something Amazing</h3>
-                    <p>Every reading has a <strong>✨ Transform This</strong> button — one tap gives you a ready-made prompt for ChatGPT or Gemini.</p>
-                    <div class="ai-transform-preview">
-                        <div class="transform-grid">
-                            <div class="transform-item">🎨<span>Portraits</span></div>
-                            <div class="transform-item">📖<span>Stories</span></div>
-                            <div class="transform-item">📊<span>Infographics</span></div>
-                            <div class="transform-item">🧘<span>Meditations</span></div>
-                            <div class="transform-item">💫<span>Affirmations</span></div>
-                            <div class="transform-item">📅<span>Routines</span></div>
-                        </div>
-                    </div>
-                    <div class="welcome-highlight">
-                        <p>Easy to use, and the results are incredible. We'll show you how after your reading.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="welcome-footer">
-                <button class="welcome-nav-btn secondary" id="welcomeBackBtn" onclick="welcomeBack()" disabled>Back</button>
-                <div class="welcome-dots">
-                    <div class="welcome-dot active" data-dot="1"></div>
-                    <div class="welcome-dot" data-dot="2"></div>
-                    <div class="welcome-dot" data-dot="3"></div>
-                </div>
-                <button class="welcome-nav-btn primary" id="welcomeNextBtn" onclick="welcomeNext()">Next</button>
-            </div>
-        </div>
-    </div>
+    <!-- Welcome modal removed — Phase 2: users land directly on input form -->
 
     <!-- Theme Bar -->
     <div class="theme-bar" id="themeBar">
@@ -4934,7 +4928,8 @@
                 <a href="/soulblueprint/" class="active">Generator</a>
                 <a href="/soulblueprint/examples/">Examples</a>
                 <a href="/soulblueprint/articles/">Guides</a>
-                <a href="/soulblueprint/playbooks/" class="nav-hide-mobile">Playbooks</a>
+                <a href="/soulblueprint/playbooks/">Playbooks</a>
+                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html">Prompt Builder</a>
             </div>
         </div>
     </nav>
@@ -4948,6 +4943,14 @@
             <p class="sub-tagline" style="font-size:0.88rem;opacity:0.7;margin-top:4px;">Your data never leaves your device</p>
         </header>
         
+        <!-- Inline welcome tip for first-time visitors (non-blocking) -->
+        <div id="welcomeTip" style="display:none;max-width:500px;margin:0 auto 18px;padding:14px 18px;background:linear-gradient(135deg,rgba(255,105,180,0.08),rgba(135,206,235,0.08));border-radius:14px;border:1px solid rgba(255,105,180,0.15);position:relative;text-align:center;font-size:0.92rem;line-height:1.6;color:#444;">
+            <button onclick="dismissWelcomeTip()" style="position:absolute;top:6px;right:10px;background:none;border:none;font-size:1.2rem;cursor:pointer;color:#999;padding:2px 6px;" aria-label="Dismiss">&times;</button>
+            <strong style="color:#2d1b4e;">Welcome!</strong> Enter a name &amp; birthdate to generate <strong>65+ personalized readings</strong>. 
+            Readings auto-save so you can create them for friends too. 
+            After your reading, look for the <strong>✨ Transform</strong> buttons to create AI art, stories &amp; more.
+        </div>
+
         <div class="container">
             <form class="input-form" id="readingForm">
                 <div class="form-group">
@@ -5059,6 +5062,7 @@
                 <div class="opening-letter-body" id="openingLetterBody">
                     <p>At the exact moment you were born, the cosmos arranged itself in a pattern that has never existed before and will never exist again. This reading captures that unique configuration — a map of your gifts, challenges, and potential.</p>
                     <p><strong>👇 Tap any section below to explore it.</strong> Take your time — some insights click immediately, others reveal their meaning over time.</p>
+                    <p style="font-size:0.85rem;color:#636e72;margin-top:8px;">💾 <em>Your reading is saved on this device — come back anytime to continue exploring.</em></p>
                     <div class="ai-transform-callout">
                         <p>✨ <strong>See something you love?</strong> Hit the <strong>✨ Transform This</strong> button on any reading to turn it into AI-generated art, stories, meditations, and more with ChatGPT or Gemini.</p>
                     </div>
@@ -5134,13 +5138,24 @@
                 <div class="celebration-icon"></div>
                 <h3>Reading Complete! 🎉</h3>
                 <p>You've explored all the cosmic insights for this moment in time.</p>
-                <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(102,126,234,0.06), rgba(118,75,162,0.06)); border-radius: 16px; border: 1px solid rgba(102,126,234,0.15);">
+                <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(118,75,162,0.06)); border-radius: 16px; border: 1px solid rgba(255,215,0,0.2);">
                     <p style="font-size: 1rem; margin-bottom: 12px;"><strong>📖 Turn This Into a Beautiful Book</strong></p>
                     <p style="font-size: 0.95rem; margin-bottom: 14px;">Choose from 11 premium templates and create a stunning printable book of your entire reading — perfect as a keepsake or gift.</p>
-                    <button onclick="showTemplatePicker()" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 25px; font-weight: 600; font-size: 0.95rem; cursor: pointer; margin-bottom: 12px;">📖 Create Your Book</button>
+                    <button onclick="showTemplatePicker()" style="display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #ffd700, #e6ac00); color: #1a0a2e; border: none; border-radius: 25px; font-weight: 700; font-size: 0.95rem; cursor: pointer; margin-bottom: 8px;">📖 Create Your Book</button>
+                    <div style="font-size:0.78rem;opacity:0.55;margin-bottom:12px;">Premium feature · $50 lifetime access · Unlimited books</div>
                     <br>
                     <p style="font-size: 0.95rem; margin-bottom: 14px;">Or tap <strong>✨ Transform This</strong> on any reading → pick a format → copy the prompt → paste into ChatGPT or Gemini for AI art, stories, meditations, and more.</p>
-                    <a href="/soulblueprint/playbooks/" target="_blank" style="display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📚 Explore the Blueprint Playbook Library →</a>
+                    <a href="/soulblueprint/playbooks/" target="_blank" style="display: inline-block; color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.95rem;">📚 Explore the Playbook Library →</a>
+                </div>
+
+                <!-- Share the Love — Viral Loop -->
+                <div style="margin-top: 24px; padding: 20px; background: linear-gradient(135deg, rgba(102,126,234,0.08), rgba(236,72,153,0.06)); border-radius: 16px; border: 1px solid rgba(102,126,234,0.15);">
+                    <p style="font-size: 1rem; margin-bottom: 8px;"><strong>💝 Share the Magic</strong></p>
+                    <p style="font-size: 0.95rem; margin-bottom: 14px;">Know someone who'd love their own cosmic reading? It's completely free.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+                        <button onclick="startNewReading();if(typeof sbTrack==='function')sbTrack('generate_for_friend');" style="display:inline-block;padding:12px 24px;background:linear-gradient(135deg,#667eea,#764ba2);color:white;border:none;border-radius:25px;font-weight:600;font-size:0.95rem;cursor:pointer;">✨ Generate for a Friend</button>
+                        <button onclick="document.querySelector('.gift-box')?.scrollIntoView({behavior:'smooth',block:'center'});if(typeof sbTrack==='function')sbTrack('gift_cta_clicked');" style="display:inline-block;padding:12px 24px;background:transparent;color:#667eea;border:2px solid rgba(102,126,234,0.4);border-radius:25px;font-weight:600;font-size:0.95rem;cursor:pointer;">🎁 Gift This Reading</button>
+                    </div>
                 </div>
 
                 <!-- Discover More Section -->
@@ -5199,12 +5214,13 @@
                     <pre id="quickPromptText"></pre>
                     <button class="quick-prompt-copy" onclick="copyQuickPrompt()">📋 Copy Prompt — Then Paste Into ChatGPT or Gemini</button>
                 </div>
+                <p style="text-align:center;margin-top:14px;font-size:0.88rem;opacity:0.75;">Want more control? <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;font-weight:600;" target="_blank">Open the Prompt Builder →</a></p>
             </div>
             
             <!-- Playbook Navigation -->
             <div class="playbook-navigation" id="playbookNavigation">
-                <h3>The Blueprint Playbook</h3>
-                <p class="pb-subtitle">Step-by-step guides to transform your readings into real experiences</p>
+                <h3>Go Deeper with the Playbooks</h3>
+                <p class="pb-subtitle">Full step-by-step guides for each transformation type</p>
                 <div class="playbook-grid">
                     <a href="/soulblueprint/playbooks/visual-art.html" target="_blank" class="playbook-card">
                         <span class="pb-icon">🎨</span>
@@ -5249,6 +5265,21 @@
                         </div>
                     </a>
                 </div>
+                <p style="text-align:center;margin-top:14px;font-size:0.9rem;">
+                    <a href="/soulblueprint/playbooks/" style="color:#667eea;text-decoration:none;font-weight:600;">Browse All Playbooks →</a>
+                </p>
+            </div>
+            
+            <!-- Cross-Product Bridge -->
+            <div style="margin:30px 0;padding:24px;background:linear-gradient(135deg,rgba(102,126,234,0.04),rgba(118,75,162,0.04));border-radius:16px;border:1px solid rgba(102,126,234,0.1);text-align:center;">
+                <p style="font-size:1rem;margin-bottom:6px;"><strong>🌌 Explore More from Quantum Merlin</strong></p>
+                <p style="font-size:0.88rem;color:#636e72;margin-bottom:16px;">Your cosmic journey doesn't end here — discover more free tools:</p>
+                <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+                    <a href="https://quantummerlin.com/chinesezodiac/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'chinese_zodiac'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">🐉 Chinese Zodiac</a>
+                    <a href="https://quantummerlin.com/tarot/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'tarot'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">🃏 Tarot Reading</a>
+                    <a href="https://quantummerlin.com/crystals/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'crystals'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">💎 Crystal Guide</a>
+                    <a href="https://quantummerlin.com/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'hub'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">🔮 All Tools</a>
+                </div>
             </div>
             
             <!-- Reading Summary & Closing -->
@@ -5273,6 +5304,7 @@
                     <h3>📖 Create Your Printable Book</h3>
                     <p>Turn your entire reading into a beautifully designed <strong>A5 keepsake book</strong> — choose from 11 premium templates including Art Deco, Botanical, and Celestial Watercolor.</p>
                     <button class="coffee-btn" onclick="showTemplatePicker()">📖 Create Your Book</button>
+                    <p style="font-size:0.78rem;opacity:0.55;margin-top:8px;">$50 lifetime access · Unlimited books</p>
                 </div>
             </div>
             
@@ -5518,6 +5550,7 @@
         
         // Load a saved reading
         function loadSavedReading(readingId) {
+            sbTrack('saved_reading_loaded');
             const reading = getReading(readingId);
             if (!reading) {
                 alert('Reading not found');
@@ -5571,6 +5604,7 @@
         let selectedGender = 'girl';
         
         function setGender(gender) {
+            sbTrack('theme_changed', { theme: gender });
             selectedGender = gender;
             selectedGiftColor = gender;
             document.getElementById('genderInput').value = gender;
@@ -5734,6 +5768,7 @@
                 birthPlace: document.getElementById('birthPlaceInput').value.trim() || null
             };
             
+            sbTrack('reading_started', { theme: document.getElementById('genderInput').value });
             await generateReading(userData);
         });
         
@@ -5822,6 +5857,7 @@
                 
                 // Display results
                 displayResults(userData, readings);
+                sbTrack('reading_completed', { sections: totalSectionCount, theme: document.getElementById('genderInput').value });
                 
                 // Save the total section count to the reading
                 if (currentReadingId) {
@@ -5837,6 +5873,7 @@
                 overlay.classList.remove('active');
                 setTimeout(() => { progressBar.style.width = '0%'; }, 500);
                 alert('Something went wrong while generating the reading. Please try again or refresh the page.');
+                sbTrack('reading_error');
             }
         }
         
@@ -10211,6 +10248,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             event.stopPropagation();
             const card = document.getElementById(cardId);
             if (!card) return;
+            sbTrack('transform_this_clicked', { reading_card: cardId });
             
             // Get reading text
             const title = card.querySelector('h3') ? card.querySelector('h3').textContent : '';
@@ -10255,6 +10293,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 showCopyToast('Select a reading first by clicking "Transform This" on any card');
                 return;
             }
+            sbTrack('quick_transform', { transform_type: type });
             
             // Highlight active button
             document.querySelectorAll('.quick-transform-btn').forEach(b => b.classList.remove('active'));
@@ -10276,6 +10315,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         function copyQuickPrompt() {
             const text = document.getElementById('quickPromptText');
             if (!text) return;
+            sbTrack('prompt_copied', { source: 'quick_transform' });
             
             const copyBtn = document.querySelector('.quick-prompt-copy');
             
@@ -10340,6 +10380,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         }
         
         function copyAllReadings() {
+            sbTrack('copy_complete_blueprint');
             copyBatchBySelector('#readingsContainer', 'Complete Blueprint');
         }
         
@@ -10552,6 +10593,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         // ============================================
         
         function startNewReading() {
+            sbTrack('new_reading_clicked');
             // Clear current reading ID (but keep saved readings)
             currentReadingId = null;
             
@@ -10593,6 +10635,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         }
         
         function shareReading() {
+            sbTrack('share_reading');
             const config = BRAND_CONFIG;
             const name = document.getElementById('subjectName').textContent;
             const text = `${config.sharing.defaultMessage} Check out ${config.brandName}!`;
@@ -10676,6 +10719,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         // Create shareable gift link (saves to backend)
         async function giftReading() {
             if (isCreatingGift) return;
+            sbTrack('gift_reading_started');
             
             // Try multiple sources for userData
             const userData = window.lastUserData || JSON.parse(localStorage.getItem('lastReading') || '{}');
@@ -11209,63 +11253,51 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 themeColorMeta.content = gender === 'boy' ? '#6BA3D6' : '#FF69B4';
             }
             
-            // Show welcome modal for first-time visitors
+            // Show inline welcome tip for first-time visitors
             if (!localStorage.getItem('sb-welcome-seen')) {
-                document.getElementById('welcomeModal').style.display = 'flex';
+                const tip = document.getElementById('welcomeTip');
+                if (tip) tip.style.display = 'block';
             }
         });
         
-        // ============================================
-        // WELCOME MODAL FUNCTIONS
-        // ============================================
-        
-        let welcomeCurrentStep = 1;
-        const welcomeTotalSteps = 3;
-        
-        function selectWelcomeTheme(theme) {
-            document.querySelectorAll('.theme-preview-btn').forEach(btn => btn.classList.remove('selected'));
-            const themeClass = theme === 'girl' ? 'pink' : (theme === 'boy' ? 'blue' : 'purple');
-            document.querySelector(`.theme-preview-btn.${themeClass}`).classList.add('selected');
-            setGender(theme);
-        }
-        
-        function welcomeNext() {
-            if (welcomeCurrentStep < welcomeTotalSteps) {
-                welcomeCurrentStep++;
-                updateWelcomeStep();
-            } else {
-                closeWelcome();
-            }
-        }
-        
-        function welcomeBack() {
-            if (welcomeCurrentStep > 1) {
-                welcomeCurrentStep--;
-                updateWelcomeStep();
-            }
-        }
-        
-        function updateWelcomeStep() {
-            document.querySelectorAll('.welcome-step').forEach(s => s.classList.remove('active'));
-            document.querySelector(`.welcome-step[data-step="${welcomeCurrentStep}"]`).classList.add('active');
-            const wc = document.querySelector('.welcome-content');
-            if (wc) wc.scrollTop = 0;
-            document.querySelectorAll('.welcome-dot').forEach(d => d.classList.remove('active'));
-            document.querySelector(`.welcome-dot[data-dot="${welcomeCurrentStep}"]`).classList.add('active');
-            document.getElementById('welcomeBackBtn').disabled = welcomeCurrentStep === 1;
-            document.getElementById('welcomeNextBtn').textContent = welcomeCurrentStep === welcomeTotalSteps ? 'Get Started' : 'Next';
-        }
-        
-        function closeWelcome() {
+        function dismissWelcomeTip() {
+            sbTrack('welcome_tip_dismissed');
             localStorage.setItem('sb-welcome-seen', 'true');
-            const modal = document.getElementById('welcomeModal');
-            modal.style.opacity = '0';
-            modal.style.transition = 'opacity 0.2s ease';
-            setTimeout(() => {
-                modal.style.display = 'none';
-                modal.style.opacity = '1';
-            }, 200);
+            const tip = document.getElementById('welcomeTip');
+            if (tip) { tip.style.transition = 'opacity 0.2s'; tip.style.opacity = '0'; setTimeout(() => tip.remove(), 200); }
         }
+    </script>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a0a2e;color:#e0d6f0;padding:14px 20px;font-size:0.88rem;line-height:1.5;box-shadow:0 -4px 20px rgba(0,0,0,0.3);font-family:Inter,'Segoe UI',sans-serif;">
+        <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;">
+            <p style="margin:0;flex:1;min-width:250px;">We use cookies for analytics (Google Analytics) and advertising (Google AdSense). Your reading data stays on your device. <a href="/soulblueprint/privacy.html" style="color:#D8B5FF;text-decoration:underline;">Privacy Policy</a></p>
+            <div style="display:flex;gap:10px;flex-shrink:0;">
+                <button onclick="acceptCookies()" style="padding:8px 22px;border-radius:20px;border:none;background:linear-gradient(135deg,#D8B5FF,#B19CD9);color:#1a0a2e;font-weight:600;cursor:pointer;font-size:0.88rem;">Accept</button>
+                <button onclick="declineCookies()" style="padding:8px 22px;border-radius:20px;border:1px solid rgba(216,181,255,0.4);background:transparent;color:#D8B5FF;font-weight:600;cursor:pointer;font-size:0.88rem;">Decline</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function(){
+        if (!localStorage.getItem('sb-cookie-consent')) {
+            document.getElementById('cookieConsent').style.display = 'block';
+        }
+    })();
+    function acceptCookies() {
+        localStorage.setItem('sb-cookie-consent', 'accepted');
+        document.getElementById('cookieConsent').style.display = 'none';
+    }
+    function declineCookies() {
+        localStorage.setItem('sb-cookie-consent', 'declined');
+        document.getElementById('cookieConsent').style.display = 'none';
+        // Disable GA4 tracking
+        window['ga-disable-G-VW4LGE7L1T'] = true;
+    }
+    // If previously declined, disable GA4
+    if (localStorage.getItem('sb-cookie-consent') === 'declined') {
+        window['ga-disable-G-VW4LGE7L1T'] = true;
+    }
     </script>
 </body>
 </html>
