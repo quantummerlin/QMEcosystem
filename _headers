@@ -25,6 +25,10 @@
 # NOINDEX — Development & internal files
 # ═══════════════════════════════════════════════════════════════
 
+# Hidden pro generator — must not be indexed
+/soulblueprint/s/*
+  X-Robots-Tag: noindex, nofollow
+
 /*.py
   X-Robots-Tag: noindex, nofollow
 

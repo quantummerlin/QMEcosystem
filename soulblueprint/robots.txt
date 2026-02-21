@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /soulblueprint/s/
 
 Sitemap: https://quantummerlin.com/soulblueprint/sitemap.xml

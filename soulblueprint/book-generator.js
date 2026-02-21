@@ -797,8 +797,8 @@ let _selectedTemplate = 'cosmic-classic';
 let _selectedPaperSize = 'A5';
 
 function showTemplatePicker() {
-    // Access gate — check if user has lifetime access
-    if (!hasBookAccess()) {
+    // Access gate — pro users bypass, others need lifetime access
+    if (!window.SB_PRO && !hasBookAccess()) {
         showUpgradeModal();
         return;
     }
