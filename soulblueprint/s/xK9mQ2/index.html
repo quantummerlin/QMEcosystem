@@ -3376,9 +3376,8 @@
         }
         
         /* === FULFILL MODE: hide ALL generation/action controls === */
-        body.fulfill-mode .action-buttons,
-        body.fulfill-mode .new-reading-btn,
-        body.fulfill-mode .footer-actions,
+        body.fulfill-mode .action-buttons .action-btn:not([onclick*="startNewReading"]),
+        body.fulfill-mode .footer-actions .action-btn,
         body.fulfill-mode .header,
         body.fulfill-mode #submitBtn,
         body.fulfill-mode #myReadingsSection,
@@ -3389,7 +3388,10 @@
         body.fulfill-mode .completion-celebration,
         body.fulfill-mode .gift-support-section,
         body.fulfill-mode .playbook-navigation,
-        body.fulfill-mode .results-footer,
+        body.fulfill-mode .results-footer .generated-by,
+        body.fulfill-mode .results-footer .timestamp,
+        body.fulfill-mode .results-footer .footer-links,
+        body.fulfill-mode .results-footer .footer-actions + div,
         body.fulfill-mode .card-actions,
         body.fulfill-mode .transform-btn,
         body.fulfill-mode .copy-reading-btn,
@@ -3408,12 +3410,17 @@
         body.fulfill-mode #readingClosing,
         body.fulfill-mode .book-template-section,
         body.fulfill-mode .discover-links,
-        body.fulfill-mode [onclick*="startNewReading"],
         body.fulfill-mode [onclick*="showTemplatePicker"],
         body.fulfill-mode [onclick*="giftReading"],
         body.fulfill-mode [onclick*="shareReading"],
         body.fulfill-mode [onclick*="copyAllReadings"] {
             display: none !important;
+        }
+
+        @keyframes fulfillPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,215,0,0.4); }
+            50% { transform: scale(1.02); box-shadow: 0 0 20px 8px rgba(255,215,0,0.25); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,215,0,0); }
         }
 
         .fulfill-upgrade-card {
@@ -5161,7 +5168,7 @@
                 <button class="action-btn primary" onclick="showTemplatePicker()">📖 Create Your Book</button>
                 <button class="action-btn" onclick="copyAllReadings()">📋 Copy Blueprint</button>
                 <button class="action-btn" onclick="shareReading()">📤 Share</button>
-                <button class="action-btn" onclick="startNewReading()">✨ New Reading</button>
+                <button class="action-btn" onclick="startNewReading()">✨ New Moment</button>
             </div>
         </div>
         
@@ -5452,7 +5459,7 @@
                 <div class="footer-actions">
                     <button class="action-btn primary" onclick="showTemplatePicker()">📖 Create Your Book</button>
                     <button class="action-btn" onclick="shareReading()">📤 Share Reading</button>
-                    <button class="new-reading-btn" onclick="startNewReading()">Generate Another Reading</button>
+                    <button class="new-reading-btn" onclick="startNewReading()">Generate Another Moment</button>
                 </div>
                 <div style="text-align:center;margin:16px 0;">
                     <p style="font-size:0.9rem;opacity:0.65;">Want to explore your reading in a different format? <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;" target="_blank">Try the Prompt Builder →</a></p>
@@ -11506,14 +11513,13 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
             container.parentNode.insertBefore(card, container.nextSibling);
         }
 
-        // Nuclear cleanup: physically remove all action/generation elements from the DOM
+        // Cleanup: remove unwanted elements but keep New Moment buttons
         function stripFulfillElements() {
             const removeSelectors = [
-                '.action-buttons', '#action-buttons', '.card-actions',
+                '#action-buttons', '.card-actions',
                 '.transform-btn', '.copy-reading-btn', '.mark-read-btn',
                 '.read-badge', '.section-mark-read-btn',
-                '.new-reading-btn', '.new-reading-prompt',
-                '.footer-actions', '.results-footer',
+                '.new-reading-prompt',
                 '.ai-transform-banner', '.ai-transform-callout', '.ai-banner-dismiss',
                 '.sticky-progress-header', '.reading-nav-float',
                 '.quick-transform-section', '.expand-all-section',
@@ -11523,18 +11529,40 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
                 '.hero-progress', '#readingClosing',
                 '#inputSection', '#myReadingsSection',
                 '.cookie-banner', 'nav',
-                '[onclick*="startNewReading"]',
-                '[onclick*="showTemplatePicker"]',
-                '[onclick*="giftReading"]',
-                '[onclick*="shareReading"]',
-                '[onclick*="copyAllReadings"]'
+                '[onclick*="giftReading"]'
             ];
             removeSelectors.forEach(sel => {
                 document.querySelectorAll(sel).forEach(el => el.remove());
             });
-            // Override startNewReading to prevent any remaining references
-            window.startNewReading = function() { return false; };
-            window.showTemplatePicker = function() { return false; };
+            // Remove non-"New Moment" buttons from action-buttons
+            document.querySelectorAll('.action-buttons .action-btn').forEach(btn => {
+                if (!btn.getAttribute('onclick')?.includes('startNewReading')) btn.remove();
+            });
+            // Remove non-"New Moment" buttons from footer-actions
+            document.querySelectorAll('.footer-actions .action-btn').forEach(btn => btn.remove());
+            // Clean up footer: remove generated-by, timestamp, footer-links, prompt-builder text
+            document.querySelectorAll('.results-footer .generated-by, .results-footer .timestamp, .results-footer .footer-links').forEach(el => el.remove());
+            const promptDiv = document.querySelector('.results-footer .footer-actions + div');
+            if (promptDiv) promptDiv.remove();
+            // Override startNewReading to show upgrade card instead
+            window.startNewReading = function() {
+                const card = document.querySelector('.fulfill-upgrade-card');
+                if (card) {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    card.style.animation = 'none';
+                    card.offsetHeight; // force reflow
+                    card.style.animation = 'fulfillPulse 0.6s ease';
+                } else {
+                    // Card not injected yet, inject it now
+                    injectUpgradeCard();
+                    setTimeout(() => {
+                        const c = document.querySelector('.fulfill-upgrade-card');
+                        if (c) c.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
+                }
+                return false;
+            };
+            window.showTemplatePicker = function() { window.startNewReading(); return false; };
         }
 
         async function autoFulfillReading(userData) {
