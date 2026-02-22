@@ -3387,6 +3387,10 @@
         body.fulfill-mode .expand-all-section,
         body.fulfill-mode .completion-celebration,
         body.fulfill-mode .gift-support-section,
+        body.fulfill-mode .gift-box,
+        body.fulfill-mode .coffee-box,
+        body.fulfill-mode .gift-dialog-overlay,
+        body.fulfill-mode #gift-share-dialog,
         body.fulfill-mode .playbook-navigation,
         body.fulfill-mode .results-footer .generated-by,
         body.fulfill-mode .results-footer .timestamp,
@@ -11529,6 +11533,8 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
                 '.hero-progress', '#readingClosing',
                 '#inputSection', '#myReadingsSection',
                 '.cookie-banner', 'nav',
+                '.gift-box', '.coffee-box',
+                '.gift-dialog-overlay', '#gift-share-dialog',
                 '[onclick*="giftReading"]'
             ];
             removeSelectors.forEach(sel => {
@@ -11563,6 +11569,8 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
                 return false;
             };
             window.showTemplatePicker = function() { window.startNewReading(); return false; };
+            window.giftReading = function() { window.startNewReading(); return false; };
+            window.showGiftShareDialog = function() { return false; };
         }
 
         async function autoFulfillReading(userData) {
