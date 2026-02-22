@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /soulblueprint/s/
 Disallow: /soulblueprint/etsy-delivery.html
+Disallow: /soulblueprint/etsy-image-picker.html
+Disallow: /soulblueprint/ETSY_LISTING.txt
 
 Sitemap: https://quantummerlin.com/soulblueprint/sitemap.xml
