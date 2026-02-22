@@ -951,44 +951,200 @@
             font-size: 1.1rem;
         }
         
-        /* Hide interactive elements */
-        .sticky-progress-header, .mark-read-btn, .read-badge, .expand-icon,
-        .section-arrow, .reading-meter, .section-mark-read-btn, .reading-card-header {
+        /* Hide interactive elements — SHARED (non-purchased) readings only */
+        body.shared-view .sticky-progress-header, body.shared-view .mark-read-btn, body.shared-view .read-badge, body.shared-view .expand-icon,
+        body.shared-view .section-arrow, body.shared-view .reading-meter, body.shared-view .section-mark-read-btn, body.shared-view .reading-card-header {
             display: none !important;
         }
         
-        /* Ensure cards are expanded and content visible in shared view */
-        .reading-card-body {
+        /* Ensure cards are expanded in shared (non-purchased) view */
+        body.shared-view .reading-card-body {
             max-height: none !important;
             display: block !important;
         }
         
-        .reading-card-content {
+        body.shared-view .reading-card-content {
             display: block !important;
             padding: 20px 24px 24px !important;
         }
         
-        .section-content.collapsed > :not(.section-header) {
+        body.shared-view .section-content.collapsed > :not(.section-header) {
             display: block !important;
         }
         
-        /* Make reading cards look nicer without the collapsible header */
-        .reading-card {
+        /* Make reading cards look nicer without the collapsible header — shared view */
+        body.shared-view .reading-card {
             padding: 0 !important;
             margin-bottom: 20px !important;
         }
         
-        .reading-card h3 {
+        body.shared-view .reading-card h3 {
             padding: 20px 24px 0 !important;
             font-size: 1.2rem !important;
             margin-bottom: 8px !important;
         }
         
-        .reading-card .card-value,
-        .reading-card .result-value {
+        body.shared-view .reading-card .card-value,
+        body.shared-view .reading-card .result-value {
             padding: 0 24px !important;
             margin-bottom: 10px !important;
             font-size: 1.1rem !important;
+        }
+
+        /* Always hide these regardless of view type */
+        .sticky-progress-header, .reading-meter {
+            display: none !important;
+        }
+
+        /* Hide generation/creation elements in purchased view */
+        body.purchased-view .card-actions,
+        body.purchased-view .transform-btn,
+        body.purchased-view .copy-reading-btn,
+        body.purchased-view .new-reading-prompt,
+        body.purchased-view .create-invitation,
+        body.purchased-view .ai-transform-banner,
+        body.purchased-view .ai-transform-callout,
+        body.purchased-view .ai-banner-dismiss,
+        body.purchased-view .action-buttons,
+        body.purchased-view .new-reading-btn,
+        body.purchased-view .quick-transform-section,
+        body.purchased-view .completion-celebration,
+        body.purchased-view .gift-support-section,
+        body.purchased-view .footer-actions,
+        body.purchased-view .playbook-navigation,
+        body.purchased-view .example-banner,
+        body.purchased-view .expand-all-section {
+            display: none !important;
+        }
+
+        /* ============================================ */
+        /* PURCHASED READING — Interactive styles       */
+        /* ============================================ */
+        body.purchased-view .section-content.collapsed > :not(.section-header) {
+            display: none;
+        }
+
+        body.purchased-view .section-header {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        body.purchased-view .section-header:hover {
+            background: linear-gradient(135deg, rgba(255,182,217,0.15), rgba(182,227,255,0.15));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        body.purchased-view .reading-card-header {
+            display: flex !important;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s ease;
+        }
+
+        body.purchased-view .reading-card-header:hover {
+            background: rgba(0,0,0,0.02);
+        }
+
+        body.purchased-view .expand-icon,
+        body.purchased-view .section-arrow {
+            display: inline !important;
+        }
+
+        body.purchased-view .reading-card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        body.purchased-view .reading-card.expanded .reading-card-body {
+            max-height: none;
+        }
+
+        body.purchased-view .reading-card-content {
+            padding: 20px 24px 24px;
+        }
+
+        body.purchased-view .reading-card {
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        body.purchased-view .mark-read-btn,
+        body.purchased-view .read-badge {
+            display: none !important;
+        }
+
+        /* Sub-section toggle styles for purchased view */
+        body.purchased-view .sub-section.collapsed .sub-section-body {
+            display: none;
+        }
+        body.purchased-view .sub-section-header {
+            cursor: pointer;
+        }
+
+        /* Guides navigation for purchased readings */
+        .guides-navigation {
+            margin: 40px 0 30px;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 100%);
+            border-radius: 24px;
+            border: 2px solid var(--border-color);
+            text-align: center;
+        }
+
+        .guides-navigation h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .guides-navigation .guides-subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 24px;
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .guide-link {
+            display: block;
+            padding: 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .guide-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .guide-link .guide-icon {
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .guide-link .guide-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .guide-link .guide-desc {
+            font-size: 0.8rem;
+            opacity: 0.7;
         }
         
         /* Expiry notice */
@@ -1257,8 +1413,46 @@
                 <!-- Reading sections will be injected here -->
             </div>
             
-            <!-- Create Your Own Invitation -->
-            <div class="create-invitation">
+            <!-- Guides Navigation — purchased readings only -->
+            <div id="guides-navigation" class="guides-navigation" style="display: none;">
+                <h3>Transform Your Reading</h3>
+                <p class="guides-subtitle">Your reading is just the beginning. Explore 70+ free guides and 9 transformation types.</p>
+                <div class="guides-grid">
+                    <a href="/soulblueprint/articles/#visual-blueprint" class="guide-link">
+                        <span class="guide-icon">🎨</span>
+                        <div class="guide-title">Visual Soul Blueprint</div>
+                        <div class="guide-desc">Turn your reading into stunning AI art</div>
+                    </a>
+                    <a href="/soulblueprint/articles/#pillar-visual" class="guide-link">
+                        <span class="guide-icon">📊</span>
+                        <div class="guide-title">Create Infographics</div>
+                        <div class="guide-desc">Beautiful visual summaries</div>
+                    </a>
+                    <a href="/soulblueprint/articles/#pillar-audio" class="guide-link">
+                        <span class="guide-icon">🎙️</span>
+                        <div class="guide-title">Audio & Stories</div>
+                        <div class="guide-desc">Podcasts, narrations & tales</div>
+                    </a>
+                    <a href="/soulblueprint/articles/#pillar-gifts" class="guide-link">
+                        <span class="guide-icon">🎁</span>
+                        <div class="guide-title">Gift & Print Ideas</div>
+                        <div class="guide-desc">Posters, mugs, wall art & more</div>
+                    </a>
+                    <a href="/soulblueprint/articles/#pillar-selfdiscovery" class="guide-link">
+                        <span class="guide-icon">🔮</span>
+                        <div class="guide-title">Go Deeper</div>
+                        <div class="guide-desc">Shadow work, archetypes & beyond</div>
+                    </a>
+                    <a href="/soulblueprint/articles/" class="guide-link">
+                        <span class="guide-icon">📚</span>
+                        <div class="guide-title">All 70+ Guides</div>
+                        <div class="guide-desc">Browse the full collection</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Create Your Own Invitation — hidden for purchased readings -->
+            <div id="create-invitation" class="create-invitation">
                 <span class="invite-icon"></span>
                 <h3>Discover Your Own Cosmic Story</h3>
                 <p>Loved this reading? Every soul has a unique celestial design waiting to be revealed. Create personalized readings for yourself, your family, or anyone special in your life.</p>
@@ -1332,11 +1526,20 @@
             document.getElementById('loading').style.display = 'none';
             document.getElementById('reading-wrapper').style.display = 'block';
             
+            const isPurchased = reading.type === 'purchased';
+            
             // Apply color scheme (map legacy values)
             if (reading.colorScheme) {
                 const colorMap = { girl: 'pink', boy: 'blue', pink: 'pink', blue: 'blue', purple: 'purple', dark: 'dark' };
                 const mappedColor = colorMap[reading.colorScheme] || 'pink';
                 document.body.className = `color-${mappedColor}`;
+            }
+            
+            // Apply view mode class
+            if (isPurchased) {
+                document.body.classList.add('purchased-view');
+            } else {
+                document.body.classList.add('shared-view');
             }
             
             // Set header info
@@ -1354,8 +1557,8 @@
             })}${userData.birthTime ? ' at ' + userData.birthTime : ''}${userData.birthPlace ? ' in ' + userData.birthPlace : ''}`;
             document.getElementById('birth-info').textContent = birthInfo;
             
-            // Gift message
-            if (userData.giftedBy) {
+            // Gift message — skip for purchased readings
+            if (userData.giftedBy && !isPurchased) {
                 const giftMessage = document.getElementById('gift-message');
                 giftMessage.style.display = 'block';
                 document.getElementById('gift-from').textContent = `A Gift from ${userData.giftedBy}`;
@@ -1368,12 +1571,111 @@
             // Inject reading content
             document.getElementById('reading-content').innerHTML = reading.html;
             
-            // Show expiry notice
-            if (reading.expiresAt) {
-                const expiryDate = new Date(reading.expiresAt);
-                document.getElementById('expiry-notice').textContent = 
-                    `This shared reading will expire on ${expiryDate.toLocaleDateString()}. Save to homescreen for permanent offline access.`;
+            // Purchased reading: show guides nav, hide create-your-own CTA, no expiry
+            if (isPurchased) {
+                const guidesNav = document.getElementById('guides-navigation');
+                if (guidesNav) guidesNav.style.display = 'block';
+                
+                const createInvite = document.getElementById('create-invitation');
+                if (createInvite) createInvite.style.display = 'none';
+
+                // Replace footer 'Create Reading' link with upgrade CTA
+                const footerLinks = document.querySelectorAll('.footer-links a');
+                footerLinks.forEach(link => {
+                    if (link.textContent.trim() === 'Create Reading') {
+                        link.textContent = 'Get Unlimited Readings';
+                        link.href = '/soulblueprint/';
+                    }
+                });
+
+                // Hide expiry notice for purchased readings
+                const expiryEl = document.getElementById('expiry-notice');
+                if (expiryEl) expiryEl.style.display = 'none';
+                
+                // Initialize interactive toggles
+                initPurchasedInteractivity();
+            } else {
+                // Show expiry notice for shared (non-purchased) readings
+                if (reading.expiresAt) {
+                    const expiryDate = new Date(reading.expiresAt);
+                    document.getElementById('expiry-notice').textContent = 
+                        `This shared reading will expire on ${expiryDate.toLocaleDateString()}. Save to homescreen for permanent offline access.`;
+                }
             }
+        }
+        
+        // ============================================
+        // INTERACTIVITY FOR PURCHASED READINGS
+        // ============================================
+        function toggleSection(id) {
+            const section = document.getElementById('section-' + id) || document.querySelector('[data-section-id="' + id + '"]');
+            if (!section) return;
+            const isCollapsed = section.classList.contains('collapsed');
+            section.classList.toggle('collapsed');
+            const arrow = section.querySelector('.section-arrow');
+            if (arrow) arrow.textContent = isCollapsed ? '▲' : '▼';
+        }
+        
+        function toggleCard(headerEl) {
+            const card = headerEl.closest('.reading-card');
+            if (!card) return;
+            const isExpanded = card.classList.contains('expanded');
+            if (isExpanded) {
+                card.classList.remove('expanded');
+            } else {
+                card.classList.add('expanded');
+                setTimeout(() => {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        }
+        
+        function toggleSubSection(id) {
+            const sub = document.getElementById('subsection-' + id) || document.querySelector('[data-subsection-id="' + id + '"]');
+            if (!sub) return;
+            sub.classList.toggle('collapsed');
+            const arrow = sub.querySelector('.sub-section-arrow');
+            if (arrow) {
+                const isNowCollapsed = sub.classList.contains('collapsed');
+                arrow.textContent = isNowCollapsed ? '▼' : '▲';
+            }
+        }
+        
+        function initPurchasedInteractivity() {
+            // Expand the first section by default so user sees content immediately
+            const firstSection = document.querySelector('.section-content.collapsed');
+            if (firstSection) {
+                firstSection.classList.remove('collapsed');
+                const arrow = firstSection.querySelector('.section-arrow');
+                if (arrow) arrow.textContent = '▲';
+            }
+            
+            // Wire up copy/transform buttons (no-op stubs so they don't error)
+            // These onclick handlers exist in the saved HTML
+        }
+        
+        function copyReadingText(event, cardId) {
+            if (event) event.stopPropagation();
+            const card = document.getElementById(cardId);
+            if (!card) return;
+            const content = card.querySelector('.reading-content');
+            if (content) {
+                navigator.clipboard.writeText(content.textContent.trim()).then(() => {
+                    const btn = event ? event.target : null;
+                    if (btn) { btn.textContent = '✓ Copied'; setTimeout(() => btn.textContent = '📋 Copy Reading', 2000); }
+                });
+            }
+        }
+        
+        function showTransformOptions(event, cardId) {
+            if (event) event.stopPropagation();
+            // Open the guides page for transformation ideas
+            window.open('/soulblueprint/articles/#visual-blueprint', '_blank');
+        }
+        
+        function markCardAsRead(event, cardId) {
+            if (event) event.stopPropagation();
+            // No-op in shared/purchased view
         }
         
         // Update meta tags for sharing

@@ -3375,6 +3375,90 @@
             border-top: 1px solid var(--card-border);
         }
         
+        /* === FULFILL MODE: hide generation controls, show upgrade card === */
+        body.fulfill-mode .action-buttons,
+        body.fulfill-mode .new-reading-btn,
+        body.fulfill-mode .footer-actions,
+        body.fulfill-mode .header,
+        body.fulfill-mode #submitBtn,
+        body.fulfill-mode #myReadingsSection,
+        body.fulfill-mode .example-banner,
+        body.fulfill-mode .new-reading-prompt,
+        body.fulfill-mode .quick-transform-section,
+        body.fulfill-mode .expand-all-section,
+        body.fulfill-mode .completion-celebration,
+        body.fulfill-mode .gift-support-section,
+        body.fulfill-mode .playbook-navigation,
+        body.fulfill-mode .results-footer {
+            display: none !important;
+        }
+
+        .fulfill-upgrade-card {
+            margin: 30px auto;
+            max-width: 520px;
+            padding: 32px;
+            background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(118,75,162,0.08));
+            border-radius: 20px;
+            border: 1px solid rgba(255,215,0,0.25);
+            text-align: center;
+        }
+        .fulfill-upgrade-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .fulfill-upgrade-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            opacity: 0.85;
+        }
+        .fulfill-upgrade-card .upgrade-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #FFD700;
+            margin: 12px 0 4px;
+        }
+        .fulfill-upgrade-card .upgrade-subtitle {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-bottom: 20px;
+        }
+        .fulfill-upgrade-card .upgrade-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #1a0a2e;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .fulfill-upgrade-card .upgrade-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,215,0,0.3);
+        }
+        .fulfill-upgrade-card ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            margin: 16px auto;
+            max-width: 320px;
+        }
+        .fulfill-upgrade-card ul li {
+            padding: 6px 0;
+            font-size: 0.92rem;
+        }
+        .fulfill-upgrade-card ul li::before {
+            content: '✦ ';
+            color: #FFD700;
+        }
+
         /* New Reading Button */
         .new-reading-btn {
             display: inline-block;
@@ -10262,7 +10346,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
 
         // ========== Phase 1: Blueprint Playbook JS ==========
 
-        // Transform button handler — copies reading and opens prompt builder
+        // Transform button handler — opens transform options in a NEW TAB
         function showTransformOptions(event, cardId) {
             event.stopPropagation();
             const card = document.getElementById(cardId);
@@ -10282,19 +10366,93 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             
             const fullText = (title + (value ? ' — ' + value : '') + '\n\n' + content + extras).trim();
             
-            // Store the selected reading text for quick transform
-            window._selectedReadingText = fullText;
-            window._selectedCardId = cardId;
+            // Store in localStorage so the new tab can read it
+            localStorage.setItem('sb_transform_reading', fullText);
+            localStorage.setItem('sb_transform_title', title);
             
-            // Show the quick transform section and scroll to it
-            const qtSection = document.getElementById('quickTransformSection');
-            if (qtSection) {
-                qtSection.style.display = 'block';
-                qtSection.querySelector('.qt-subtitle').textContent = '✨ "' + title + '" — pick what you want to create:';
-                qtSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            // Build a self-contained HTML page and open in new tab
+            const transformHTML = `<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Transform: ${title.replace(/"/g,'&quot;')}</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Segoe UI',system-ui,sans-serif;background:linear-gradient(135deg,#0f0520 0%,#1a0a2e 50%,#0d1b3e 100%);color:#e8d5ff;min-height:100vh;padding:24px}
+.container{max-width:680px;margin:0 auto}
+h1{font-size:1.4rem;text-align:center;margin-bottom:6px;background:linear-gradient(135deg,#FFD700,#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{text-align:center;font-size:0.9rem;opacity:0.7;margin-bottom:24px}
+.format-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.format-btn{padding:14px 10px;border-radius:14px;border:1px solid rgba(255,215,0,0.2);background:rgba(255,255,255,0.04);color:#e8d5ff;font-size:0.95rem;cursor:pointer;transition:all .2s;text-align:center}
+.format-btn:hover{background:rgba(255,215,0,0.1);border-color:rgba(255,215,0,0.4);transform:translateY(-2px)}
+.format-btn.active{background:rgba(255,215,0,0.15);border-color:#FFD700;color:#FFD700}
+.prompt-output{display:none;margin-top:16px}
+.prompt-output.visible{display:block}
+.instruction{text-align:center;padding:10px;background:rgba(255,215,0,0.08);border-radius:10px;font-size:0.9rem;margin-bottom:12px}
+pre{background:rgba(255,255,255,0.04);border:1px solid rgba(255,215,0,0.15);border-radius:12px;padding:16px;white-space:pre-wrap;word-wrap:break-word;font-size:0.88rem;line-height:1.6;max-height:400px;overflow-y:auto;color:#d4c5f0;font-family:'Inter',sans-serif}
+.copy-btn{display:block;width:100%;padding:14px;border-radius:14px;border:none;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a0a2e;font-weight:700;font-size:1rem;cursor:pointer;margin-top:12px;transition:all .2s}
+.copy-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(255,215,0,0.3)}
+.copy-btn.copied{background:linear-gradient(135deg,#00c853,#69f0ae);color:#1a1a1a}
+.links{text-align:center;margin-top:20px;font-size:0.85rem;opacity:0.6}
+.links a{color:#FFD700;text-decoration:none}
+.reading-preview{margin-top:20px;padding:16px;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid rgba(255,255,255,0.06)}
+.reading-preview summary{cursor:pointer;font-size:0.9rem;opacity:0.7}
+.reading-preview pre{max-height:200px;font-size:0.8rem;margin-top:8px;border:none;background:transparent;padding:0}
+@media(max-width:500px){.format-grid{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<div class="container">
+<h1>\\u2728 Transform This Reading</h1>
+<p class="subtitle">"${title.replace(/"/g,'&quot;')}" — pick what you want to create:</p>
+<div class="format-grid">
+<button class="format-btn" onclick="pick('portrait')">\\ud83c\\udfa8 AI Portrait</button>
+<button class="format-btn" onclick="pick('infographic')">\\ud83d\\udcca Infographic</button>
+<button class="format-btn" onclick="pick('story')">\\ud83d\\udcd6 Story</button>
+<button class="format-btn" onclick="pick('affirmation')">\\ud83d\\udcab Affirmations</button>
+<button class="format-btn" onclick="pick('meditation')">\\ud83e\\uddd8 Meditation</button>
+<button class="format-btn" onclick="pick('routine')">\\ud83d\\udcc5 Daily Routine</button>
+</div>
+<div class="prompt-output" id="output">
+<div class="instruction">\\ud83d\\udc47 <strong>Copy this prompt</strong> and paste it into <strong>ChatGPT</strong> or <strong>Gemini</strong></div>
+<pre id="promptText"></pre>
+<button class="copy-btn" id="copyBtn" onclick="copyPrompt()">\\ud83d\\udccb Copy Prompt \\u2014 Then Paste Into ChatGPT or Gemini</button>
+</div>
+<details class="reading-preview"><summary>\\ud83d\\udd0d Preview source reading</summary><pre id="readingSrc"></pre></details>
+<div class="links"><a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank">Advanced Prompt Builder \\u2192</a></div>
+</div>
+<script>
+const reading = localStorage.getItem('sb_transform_reading') || '';
+document.getElementById('readingSrc').textContent = reading;
+const templates = {
+portrait: "Create a mystical portrait representing someone with these cosmic patterns. Capture the essence of the traits described below. Use warm, ethereal light as the central element. Include subtle astrological and symbolic motifs woven into the background. Style: ethereal, spiritual, rich symbolism. No text overlay.\\n\\nHere is the reading:\\n[READING]",
+infographic: "You are a data visualization expert. Extract the key components from this soul blueprint reading and design an infographic.\\n\\nIdentify 5-8 main aspects, assign visual weights, choose meaningful colours, add clear labels. Include a title and legend.\\n\\nHere is the reading:\\n[READING]",
+story: "Transform this soul blueprint reading into a hero's journey narrative. Structure as: 1) The Ordinary World, 2) Call to Adventure, 3) Trials & Allies, 4) The Transformation, 5) The Return.\\n\\nHere is the reading:\\n[READING]",
+affirmation: "Create a set of 15-20 powerful affirmations based on this soul blueprint reading. Group them by theme (identity, purpose, relationships, growth). Make them present-tense, positive, and emotionally resonant.\\n\\nHere is the reading:\\n[READING]",
+meditation: "Create a guided meditation based on this soul blueprint reading. Include: Opening (settling in, breath work \\u2014 2 min), Visualization (meeting the energy described \\u2014 5 min), Integration (bringing insight into the body \\u2014 5 min), Closing (gratitude and grounding \\u2014 3 min). Write it as a spoken script.\\n\\nHere is the reading:\\n[READING]",
+routine: "Create a daily routine aligned with this soul blueprint reading. Include: Morning ritual (energy activation), Energy management tips for the day, Decision-making framework based on core traits, Evening reflection practice. Make it practical, actionable, and grounded.\\n\\nHere is the reading:\\n[READING]"
+};
+function pick(type) {
+document.querySelectorAll('.format-btn').forEach(b => b.classList.remove('active'));
+event.currentTarget.classList.add('active');
+const prompt = templates[type].replace('[READING]', reading);
+document.getElementById('promptText').textContent = prompt;
+document.getElementById('output').classList.add('visible');
+document.getElementById('copyBtn').textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Paste Into ChatGPT or Gemini';
+document.getElementById('copyBtn').classList.remove('copied');
+}
+function copyPrompt() {
+const text = document.getElementById('promptText').textContent;
+navigator.clipboard.writeText(text).then(() => {
+const btn = document.getElementById('copyBtn');
+btn.textContent = '\\u2705 Copied! Now paste into ChatGPT or Gemini';
+btn.classList.add('copied');
+setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Paste Into ChatGPT or Gemini'; btn.classList.remove('copied'); }, 4000);
+});
+}
+</script></body></html>`;
             
-            showCopyToast('Now pick a format below ↓');
+            const blob = new Blob([transformHTML], { type: 'text/html' });
+            const blobUrl = URL.createObjectURL(blob);
+            window.open(blobUrl, '_blank');
+            
+            showCopyToast('✨ Transform tab opened — pick a format there!');
         }
         
         // Quick Transform prompt templates
@@ -11215,6 +11373,12 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             const paramTime = urlParams.get('time');
             const paramPlace = urlParams.get('place');
             
+            const isFulfill = urlParams.get('fulfill') === 'true';
+
+            if (isFulfill) {
+                document.body.classList.add('fulfill-mode');
+            }
+
             if (paramName && paramDate) {
                 // Auto-fill form fields
                 document.getElementById('nameInput').value = paramName;
@@ -11235,6 +11399,12 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 generateReading(userData).then(() => {
                     const banner = document.getElementById('exampleBanner');
                     if (banner) banner.style.display = 'flex';
+
+                    // === PURCHASED READING FULFILLMENT MODE ===
+                    if (isFulfill) {
+                        injectUpgradeCard();
+                        autoFulfillReading(userData);
+                    }
                 });
                 
                 // Clean URL without reload
@@ -11284,6 +11454,129 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             localStorage.setItem('sb-welcome-seen', 'true');
             const tip = document.getElementById('welcomeTip');
             if (tip) { tip.style.transition = 'opacity 0.2s'; tip.style.opacity = '0'; setTimeout(() => tip.remove(), 200); }
+        }
+
+        // ============================================
+        // PURCHASED READING FULFILLMENT
+        // ============================================
+        function injectUpgradeCard() {
+            // Insert upgrade card after the readings container
+            const container = document.getElementById('readingsContainer');
+            if (!container) return;
+            const card = document.createElement('div');
+            card.className = 'fulfill-upgrade-card';
+            card.innerHTML = `
+                <h3>\u2728 Unlimited Readings — Lifetime Access</h3>
+                <p>Love what you see? Generate unlimited readings for yourself, friends, family, and clients — forever.</p>
+                <div class="upgrade-price">$100</div>
+                <div class="upgrade-subtitle">One-time payment · No subscription · Unlimited forever</div>
+                <ul>
+                    <li>Unlimited readings for any person</li>
+                    <li>65+ personalised sections per reading</li>
+                    <li>Printable book templates (11 designs)</li>
+                    <li>AI transformation prompts</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="https://www.etsy.com/" class="upgrade-btn" target="_blank">Get Unlimited Access →</a>
+            `;
+            container.parentNode.insertBefore(card, container.nextSibling);
+        }
+
+        async function autoFulfillReading(userData) {
+            // Wait a moment for all rendering to complete
+            await new Promise(r => setTimeout(r, 1500));
+
+            const readingsContainer = document.getElementById('readingsContainer');
+            if (!readingsContainer || readingsContainer.children.length === 0) {
+                showFulfillResult(false, 'Reading generation failed — no content found.');
+                return;
+            }
+
+            // Clone and clean the reading HTML (same as giftReading)
+            const cleanContainer = readingsContainer.cloneNode(true);
+            cleanContainer.querySelectorAll('.ad-container, .ad-placeholder, ins.adsbygoogle, iframe, .pagination-controls, .action-buttons, #action-buttons, .card-actions, .transform-btn, .copy-reading-btn, .new-reading-prompt, .ai-transform-banner, .ai-transform-callout, .ai-banner-dismiss, .mark-read-btn, .read-badge, .section-mark-read-btn').forEach(node => node.remove());
+            const readingHtml = cleanContainer.innerHTML;
+
+            const saveData = {
+                html: readingHtml,
+                userData: {
+                    name: userData.name,
+                    birthDate: userData.birthDate,
+                    birthTime: userData.birthTime || null,
+                    birthPlace: userData.birthPlace || null
+                },
+                colorScheme: 'pink',
+                type: 'purchased',
+                permanent: true
+            };
+
+            try {
+                const API_BASE = 'https://qm-shared-readings.waynegifford1981.workers.dev';
+                const response = await fetch(`${API_BASE}/api/save-reading`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(saveData)
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Failed to save reading');
+                }
+
+                const shareUrl = result.shareUrl;
+                const deliveryMsg = buildDeliveryMessage(userData.name, shareUrl);
+                showFulfillResult(true, shareUrl, deliveryMsg);
+
+            } catch (error) {
+                console.error('Fulfill error:', error);
+                showFulfillResult(false, 'Failed to save to cloud: ' + error.message);
+            }
+        }
+
+        function buildDeliveryMessage(name, url) {
+            return `Hi! 🌟\n\nYour personalised "A Moment in Time" reading for ${name} is ready!\n\n👉 Click here to explore your reading:\n${url}\n\nWhat you'll find:\n✨ 65+ personalised readings covering astrology, numerology & life patterns\n🔮 Expandable sections — explore at your own pace\n📱 Save to your phone's homescreen for permanent offline access\n🖨️ Print or download anytime\n\nPlus 70+ free guides to transform your reading into visual art, podcasts, journals & more!\n\nThis is your permanent link — it will never expire.\n\nEnjoy your cosmic journey! ✨`;
+        }
+
+        function showFulfillResult(success, urlOrError, deliveryMsg) {
+            // Remove any existing overlay
+            const existing = document.getElementById('fulfill-overlay');
+            if (existing) existing.remove();
+
+            const overlay = document.createElement('div');
+            overlay.id = 'fulfill-overlay';
+            overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;z-index:999999;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;padding:20px;';
+
+            if (success) {
+                overlay.innerHTML = `
+                    <div style="background:#1a0a2e;border:2px solid rgba(255,215,0,0.3);border-radius:20px;padding:40px;max-width:700px;width:100%;color:#e8d5ff;font-family:Inter,sans-serif;max-height:90vh;overflow-y:auto;">
+                        <h2 style="color:#FFD700;font-family:'Playfair Display',serif;margin-bottom:16px;text-align:center;">✅ Reading Published!</h2>
+                        
+                        <label style="display:block;font-size:0.85rem;opacity:0.7;margin-bottom:6px;">Share Link:</label>
+                        <div style="display:flex;gap:8px;margin-bottom:24px;">
+                            <input type="text" id="fulfill-url" value="${urlOrError}" readonly style="flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,215,0,0.3);background:rgba(255,255,255,0.05);color:#fff;font-size:0.95rem;">
+                            <button onclick="navigator.clipboard.writeText(document.getElementById('fulfill-url').value);this.textContent='✓ Copied';setTimeout(()=>this.textContent='Copy Link',2000)" style="padding:12px 20px;border-radius:10px;border:none;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a0a2e;font-weight:700;cursor:pointer;white-space:nowrap;">Copy Link</button>
+                        </div>
+
+                        <label style="display:block;font-size:0.85rem;opacity:0.7;margin-bottom:6px;">Etsy Delivery Message:</label>
+                        <textarea id="fulfill-msg" readonly style="width:100%;height:280px;padding:16px;border-radius:10px;border:1px solid rgba(255,215,0,0.3);background:rgba(255,255,255,0.05);color:#e8d5ff;font-size:0.9rem;line-height:1.6;resize:vertical;font-family:Inter,sans-serif;">${deliveryMsg}</textarea>
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('fulfill-msg').value);this.textContent='✓ Copied';setTimeout(()=>this.textContent='Copy Message',2000)" style="margin-top:8px;padding:10px 20px;border-radius:10px;border:1px solid rgba(255,215,0,0.3);background:transparent;color:#FFD700;font-weight:600;cursor:pointer;width:100%;">Copy Message</button>
+                        
+                        <button onclick="document.getElementById('fulfill-overlay').remove()" style="margin-top:20px;padding:12px;border-radius:10px;border:none;background:rgba(255,255,255,0.1);color:#e8d5ff;font-weight:600;cursor:pointer;width:100%;">Close & View Reading Below</button>
+                    </div>
+                `;
+            } else {
+                overlay.innerHTML = `
+                    <div style="background:#1a0a2e;border:2px solid rgba(255,0,0,0.3);border-radius:20px;padding:40px;max-width:500px;width:100%;color:#e8d5ff;font-family:Inter,sans-serif;text-align:center;">
+                        <h2 style="color:#ff6b6b;font-family:'Playfair Display',serif;margin-bottom:16px;">❌ Fulfillment Failed</h2>
+                        <p style="margin-bottom:20px;">${urlOrError}</p>
+                        <p style="opacity:0.7;font-size:0.9rem;">You can still use the Gift button manually to create a share link.</p>
+                        <button onclick="document.getElementById('fulfill-overlay').remove()" style="margin-top:16px;padding:12px 30px;border-radius:10px;border:none;background:rgba(255,255,255,0.1);color:#e8d5ff;font-weight:600;cursor:pointer;">Close</button>
+                    </div>
+                `;
+            }
+
+            document.body.appendChild(overlay);
         }
     </script>
 

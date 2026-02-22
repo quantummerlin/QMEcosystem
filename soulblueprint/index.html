@@ -10584,7 +10584,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
 
         // ========== Phase 1: Blueprint Playbook JS ==========
 
-        // Transform button handler — copies reading and opens prompt builder
+        // Transform button handler — opens transform options in a NEW TAB
         function showTransformOptions(event, cardId) {
             event.stopPropagation();
             const card = document.getElementById(cardId);
@@ -10604,19 +10604,93 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             
             const fullText = (title + (value ? ' — ' + value : '') + '\n\n' + content + extras).trim();
             
-            // Store the selected reading text for quick transform
-            window._selectedReadingText = fullText;
-            window._selectedCardId = cardId;
+            // Store in localStorage so the new tab can read it
+            localStorage.setItem('sb_transform_reading', fullText);
+            localStorage.setItem('sb_transform_title', title);
             
-            // Show the quick transform section and scroll to it
-            const qtSection = document.getElementById('quickTransformSection');
-            if (qtSection) {
-                qtSection.style.display = 'block';
-                qtSection.querySelector('.qt-subtitle').textContent = '✨ "' + title + '" — pick what you want to create:';
-                qtSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            // Build a self-contained HTML page and open in new tab
+            const transformHTML = `<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Transform: ${title.replace(/"/g,'&quot;')}</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Segoe UI',system-ui,sans-serif;background:linear-gradient(135deg,#0f0520 0%,#1a0a2e 50%,#0d1b3e 100%);color:#e8d5ff;min-height:100vh;padding:24px}
+.container{max-width:680px;margin:0 auto}
+h1{font-size:1.4rem;text-align:center;margin-bottom:6px;background:linear-gradient(135deg,#FFD700,#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{text-align:center;font-size:0.9rem;opacity:0.7;margin-bottom:24px}
+.format-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.format-btn{padding:14px 10px;border-radius:14px;border:1px solid rgba(255,215,0,0.2);background:rgba(255,255,255,0.04);color:#e8d5ff;font-size:0.95rem;cursor:pointer;transition:all .2s;text-align:center}
+.format-btn:hover{background:rgba(255,215,0,0.1);border-color:rgba(255,215,0,0.4);transform:translateY(-2px)}
+.format-btn.active{background:rgba(255,215,0,0.15);border-color:#FFD700;color:#FFD700}
+.prompt-output{display:none;margin-top:16px}
+.prompt-output.visible{display:block}
+.instruction{text-align:center;padding:10px;background:rgba(255,215,0,0.08);border-radius:10px;font-size:0.9rem;margin-bottom:12px}
+pre{background:rgba(255,255,255,0.04);border:1px solid rgba(255,215,0,0.15);border-radius:12px;padding:16px;white-space:pre-wrap;word-wrap:break-word;font-size:0.88rem;line-height:1.6;max-height:400px;overflow-y:auto;color:#d4c5f0;font-family:'Inter',sans-serif}
+.copy-btn{display:block;width:100%;padding:14px;border-radius:14px;border:none;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a0a2e;font-weight:700;font-size:1rem;cursor:pointer;margin-top:12px;transition:all .2s}
+.copy-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(255,215,0,0.3)}
+.copy-btn.copied{background:linear-gradient(135deg,#00c853,#69f0ae);color:#1a1a1a}
+.links{text-align:center;margin-top:20px;font-size:0.85rem;opacity:0.6}
+.links a{color:#FFD700;text-decoration:none}
+.reading-preview{margin-top:20px;padding:16px;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid rgba(255,255,255,0.06)}
+.reading-preview summary{cursor:pointer;font-size:0.9rem;opacity:0.7}
+.reading-preview pre{max-height:200px;font-size:0.8rem;margin-top:8px;border:none;background:transparent;padding:0}
+@media(max-width:500px){.format-grid{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<div class="container">
+<h1>\\u2728 Transform This Reading</h1>
+<p class="subtitle">"${title.replace(/"/g,'&quot;')}" — pick what you want to create:</p>
+<div class="format-grid">
+<button class="format-btn" onclick="pick('portrait')">\\ud83c\\udfa8 AI Portrait</button>
+<button class="format-btn" onclick="pick('infographic')">\\ud83d\\udcca Infographic</button>
+<button class="format-btn" onclick="pick('story')">\\ud83d\\udcd6 Story</button>
+<button class="format-btn" onclick="pick('affirmation')">\\ud83d\\udcab Affirmations</button>
+<button class="format-btn" onclick="pick('meditation')">\\ud83e\\uddd8 Meditation</button>
+<button class="format-btn" onclick="pick('routine')">\\ud83d\\udcc5 Daily Routine</button>
+</div>
+<div class="prompt-output" id="output">
+<div class="instruction">\\ud83d\\udc47 <strong>Copy this prompt</strong> and paste it into <strong>ChatGPT</strong> or <strong>Gemini</strong></div>
+<pre id="promptText"></pre>
+<button class="copy-btn" id="copyBtn" onclick="copyPrompt()">\\ud83d\\udccb Copy Prompt \\u2014 Then Paste Into ChatGPT or Gemini</button>
+</div>
+<details class="reading-preview"><summary>\\ud83d\\udd0d Preview source reading</summary><pre id="readingSrc"></pre></details>
+<div class="links"><a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank">Advanced Prompt Builder \\u2192</a></div>
+</div>
+<script>
+const reading = localStorage.getItem('sb_transform_reading') || '';
+document.getElementById('readingSrc').textContent = reading;
+const templates = {
+portrait: "Create a mystical portrait representing someone with these cosmic patterns. Capture the essence of the traits described below. Use warm, ethereal light as the central element. Include subtle astrological and symbolic motifs woven into the background. Style: ethereal, spiritual, rich symbolism. No text overlay.\\n\\nHere is the reading:\\n[READING]",
+infographic: "You are a data visualization expert. Extract the key components from this soul blueprint reading and design an infographic.\\n\\nIdentify 5-8 main aspects, assign visual weights, choose meaningful colours, add clear labels. Include a title and legend.\\n\\nHere is the reading:\\n[READING]",
+story: "Transform this soul blueprint reading into a hero's journey narrative. Structure as: 1) The Ordinary World, 2) Call to Adventure, 3) Trials & Allies, 4) The Transformation, 5) The Return.\\n\\nHere is the reading:\\n[READING]",
+affirmation: "Create a set of 15-20 powerful affirmations based on this soul blueprint reading. Group them by theme (identity, purpose, relationships, growth). Make them present-tense, positive, and emotionally resonant.\\n\\nHere is the reading:\\n[READING]",
+meditation: "Create a guided meditation based on this soul blueprint reading. Include: Opening (settling in, breath work \\u2014 2 min), Visualization (meeting the energy described \\u2014 5 min), Integration (bringing insight into the body \\u2014 5 min), Closing (gratitude and grounding \\u2014 3 min). Write it as a spoken script.\\n\\nHere is the reading:\\n[READING]",
+routine: "Create a daily routine aligned with this soul blueprint reading. Include: Morning ritual (energy activation), Energy management tips for the day, Decision-making framework based on core traits, Evening reflection practice. Make it practical, actionable, and grounded.\\n\\nHere is the reading:\\n[READING]"
+};
+function pick(type) {
+document.querySelectorAll('.format-btn').forEach(b => b.classList.remove('active'));
+event.currentTarget.classList.add('active');
+const prompt = templates[type].replace('[READING]', reading);
+document.getElementById('promptText').textContent = prompt;
+document.getElementById('output').classList.add('visible');
+document.getElementById('copyBtn').textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Paste Into ChatGPT or Gemini';
+document.getElementById('copyBtn').classList.remove('copied');
+}
+function copyPrompt() {
+const text = document.getElementById('promptText').textContent;
+navigator.clipboard.writeText(text).then(() => {
+const btn = document.getElementById('copyBtn');
+btn.textContent = '\\u2705 Copied! Now paste into ChatGPT or Gemini';
+btn.classList.add('copied');
+setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Paste Into ChatGPT or Gemini'; btn.classList.remove('copied'); }, 4000);
+});
+}
+</script></body></html>`;
             
-            showCopyToast('Now pick a format below ↓');
+            const blob = new Blob([transformHTML], { type: 'text/html' });
+            const blobUrl = URL.createObjectURL(blob);
+            window.open(blobUrl, '_blank');
+            
+            showCopyToast('✨ Transform tab opened — pick a format there!');
         }
         
         // Quick Transform prompt templates

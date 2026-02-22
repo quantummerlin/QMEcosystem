@@ -20,6 +20,7 @@ These are **not prompts you fire once**. They are reusable decision-making frame
 | 6 | **Data Feedback Agent** | [data_feedback_agent.md](data_feedback_agent.md) | Define metrics, identify tracking gaps, propose A/B tests. |
 | 7 | **Trust & Compliance Guardian** | [trust_compliance_guardian.md](trust_compliance_guardian.md) | Ensure legal safety, ethical integrity, and brand longevity. |
 | 8 | **Ecosystem Orchestrator** *(advanced)* | [ecosystem_orchestrator.md](ecosystem_orchestrator.md) | Unify the multi-product empire under one strategic narrative. |
+| 9 | **Reading Fulfillment Agent** | [reading_fulfillment_agent.md](reading_fulfillment_agent.md) | Generate purchased readings, publish, and deliver to Etsy customers. |
 
 ---
 
@@ -38,6 +39,20 @@ Follow agents/conversion_architect.md and rewrite the hero section of index.html
 ```
 Follow agents/data_feedback_agent.md and define the tracking plan for Soul Blueprint.
 ```
+
+### Trigger-Based Agents
+
+Some agents activate automatically when you paste a specific format:
+
+```
+Reading For:
+Name: Luna Rivera
+DOB: 15/03/1992
+Time: 14:30
+Place: Barcelona, Spain
+```
+
+The **Reading Fulfillment Agent** recognises the `Reading For:` trigger and executes the Etsy order fulfillment workflow automatically.
 
 You can also reference two agents together for cross-functional work:
 
@@ -89,3 +104,4 @@ Do **not** activate all agents simultaneously. Use this disciplined sequence:
 - **Revenue today:** AdSense (not yet activated), manual monetization via MONETIZATION.md
 - **Ecosystem:** Part of QuantumMerlin.com — future tools include Telegram bots, breathing apps, frequency generators
 - **Stage:** Pre-revenue, feature-complete MVP, needs monetization + growth architecture
+- **Etsy Store:** $9.99 purchased readings fulfilled via Reading Fulfillment Agent → Pro generator → Cloudflare Worker → permanent share link
