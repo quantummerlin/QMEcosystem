@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /soulblueprint/s/
+Disallow: /soulblueprint/etsy-delivery.html
 
 Sitemap: https://quantummerlin.com/soulblueprint/sitemap.xml
