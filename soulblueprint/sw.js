@@ -1,5 +1,5 @@
 // A Moment in Time - Service Worker
-const CACHE_NAME = 'moment-in-time-v51';
+const CACHE_NAME = 'moment-in-time-v52';
 const ASSETS_TO_CACHE = [
     '/soulblueprint/',
     '/soulblueprint/index.html',
@@ -75,6 +75,22 @@ self.addEventListener('fetch', (event) => {
         event.respondWith(
             fetch(event.request)
                 .catch(() => caches.match('/soulblueprint/view.html'))
+        );
+        return;
+    }
+    
+    // Pro generator & view.html: always network-first (never serve stale)
+    if (url.pathname.includes('/soulblueprint/s/') || url.pathname.endsWith('/view.html')) {
+        event.respondWith(
+            fetch(event.request)
+                .then((response) => {
+                    if (response && response.status === 200) {
+                        const clone = response.clone();
+                        caches.open(CACHE_NAME).then(c => c.put(event.request, clone));
+                    }
+                    return response;
+                })
+                .catch(() => caches.match(event.request))
         );
         return;
     }

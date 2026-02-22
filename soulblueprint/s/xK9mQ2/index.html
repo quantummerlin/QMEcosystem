@@ -3375,7 +3375,7 @@
             border-top: 1px solid var(--card-border);
         }
         
-        /* === FULFILL MODE: hide generation controls, show upgrade card === */
+        /* === FULFILL MODE: hide ALL generation/action controls === */
         body.fulfill-mode .action-buttons,
         body.fulfill-mode .new-reading-btn,
         body.fulfill-mode .footer-actions,
@@ -3389,7 +3389,30 @@
         body.fulfill-mode .completion-celebration,
         body.fulfill-mode .gift-support-section,
         body.fulfill-mode .playbook-navigation,
-        body.fulfill-mode .results-footer {
+        body.fulfill-mode .results-footer,
+        body.fulfill-mode .card-actions,
+        body.fulfill-mode .transform-btn,
+        body.fulfill-mode .copy-reading-btn,
+        body.fulfill-mode .mark-read-btn,
+        body.fulfill-mode .read-badge,
+        body.fulfill-mode .section-mark-read-btn,
+        body.fulfill-mode .ai-transform-banner,
+        body.fulfill-mode .ai-transform-callout,
+        body.fulfill-mode .ai-banner-dismiss,
+        body.fulfill-mode .sticky-progress-header,
+        body.fulfill-mode .reading-nav-float,
+        body.fulfill-mode #inputSection,
+        body.fulfill-mode .cookie-banner,
+        body.fulfill-mode nav,
+        body.fulfill-mode .hero-progress,
+        body.fulfill-mode #readingClosing,
+        body.fulfill-mode .book-template-section,
+        body.fulfill-mode .discover-links,
+        body.fulfill-mode [onclick*="startNewReading"],
+        body.fulfill-mode [onclick*="showTemplatePicker"],
+        body.fulfill-mode [onclick*="giftReading"],
+        body.fulfill-mode [onclick*="shareReading"],
+        body.fulfill-mode [onclick*="copyAllReadings"] {
             display: none !important;
         }
 
@@ -11402,6 +11425,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
 
                     // === PURCHASED READING FULFILLMENT MODE ===
                     if (isFulfill) {
+                        stripFulfillElements();
                         injectUpgradeCard();
                         autoFulfillReading(userData);
                     }
@@ -11480,6 +11504,37 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
                 <a href="https://www.etsy.com/" class="upgrade-btn" target="_blank">Get Unlimited Access →</a>
             `;
             container.parentNode.insertBefore(card, container.nextSibling);
+        }
+
+        // Nuclear cleanup: physically remove all action/generation elements from the DOM
+        function stripFulfillElements() {
+            const removeSelectors = [
+                '.action-buttons', '#action-buttons', '.card-actions',
+                '.transform-btn', '.copy-reading-btn', '.mark-read-btn',
+                '.read-badge', '.section-mark-read-btn',
+                '.new-reading-btn', '.new-reading-prompt',
+                '.footer-actions', '.results-footer',
+                '.ai-transform-banner', '.ai-transform-callout', '.ai-banner-dismiss',
+                '.sticky-progress-header', '.reading-nav-float',
+                '.quick-transform-section', '.expand-all-section',
+                '.completion-celebration', '.gift-support-section',
+                '.playbook-navigation', '.example-banner',
+                '.book-template-section', '.discover-links',
+                '.hero-progress', '#readingClosing',
+                '#inputSection', '#myReadingsSection',
+                '.cookie-banner', 'nav',
+                '[onclick*="startNewReading"]',
+                '[onclick*="showTemplatePicker"]',
+                '[onclick*="giftReading"]',
+                '[onclick*="shareReading"]',
+                '[onclick*="copyAllReadings"]'
+            ];
+            removeSelectors.forEach(sel => {
+                document.querySelectorAll(sel).forEach(el => el.remove());
+            });
+            // Override startNewReading to prevent any remaining references
+            window.startNewReading = function() { return false; };
+            window.showTemplatePicker = function() { return false; };
         }
 
         async function autoFulfillReading(userData) {
