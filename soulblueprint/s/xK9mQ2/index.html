@@ -10,6 +10,27 @@
     <meta name="robots" content="noindex, nofollow">
     <script>window.SB_PRO = true;</script>
     
+    <!-- Fulfill-mode: nuke any stale service worker BEFORE it can intercept requests -->
+    <script>
+    (function() {
+        if (new URLSearchParams(window.location.search).get('fulfill') === 'true') {
+            window.__FULFILL_MODE = true;
+            if ('serviceWorker' in navigator) {
+                // Unregister all service workers immediately
+                navigator.serviceWorker.getRegistrations().then(function(regs) {
+                    regs.forEach(function(r) { r.unregister(); });
+                });
+                // Purge all caches so nothing stale remains
+                if (window.caches) {
+                    caches.keys().then(function(names) {
+                        names.forEach(function(n) { caches.delete(n); });
+                    });
+                }
+            }
+        }
+    })();
+    </script>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -5491,29 +5512,29 @@
     </section>
     
     <!-- Scripts with cache bust (absolute paths for pro sub-page) -->
-    <script src="/soulblueprint/config.js?v=51"></script>
-    <script src="/soulblueprint/calculations.js?v=50"></script>
-    <script src="/soulblueprint/readings.js?v=50"></script>
-    <script src="/soulblueprint/house-readings.js?v=50"></script>
-    <script src="/soulblueprint/deep-house-readings.js?v=50"></script>
-    <script src="/soulblueprint/aspect-readings.js?v=50"></script>
-    <script src="/soulblueprint/advanced-readings.js?v=50"></script>
-    <script src="/soulblueprint/deep-readings.js?v=50"></script>
-    <script src="/soulblueprint/deep-planet-readings.js?v=50"></script>
-    <script src="/soulblueprint/deep-planet-readings-outer.js?v=50"></script>
-    <script src="/soulblueprint/deep-numerology-readings.js?v=50"></script>
-    <script src="/soulblueprint/deep-chinese-zodiac-readings.js?v=50"></script>
-    <script src="/soulblueprint/deep-chiron-readings.js?v=50"></script>
-    <script src="/soulblueprint/deep-lilith-readings.js?v=50"></script>
-    <script src="/soulblueprint/deep-node-readings.js?v=50"></script>
-    <script src="/soulblueprint/deep-transformative-planet-readings.js?v=50"></script>
-    <script src="/soulblueprint/readings-extended.js?v=50"></script>
-    <script src="/soulblueprint/love-blueprint.js?v=50"></script>
-    <script src="/soulblueprint/tone-variations.js?v=50"></script>
-    <script src="/soulblueprint/age-language.js?v=50"></script>
-    <script src="/soulblueprint/life-pattern-readings.js?v=50"></script>
-    <script src="/soulblueprint/save-share.js?v=50"></script>
-    <script src="/soulblueprint/book-generator.js?v=50"></script>
+    <script src="/soulblueprint/config.js?v=55"></script>
+    <script src="/soulblueprint/calculations.js?v=55"></script>
+    <script src="/soulblueprint/readings.js?v=55"></script>
+    <script src="/soulblueprint/house-readings.js?v=55"></script>
+    <script src="/soulblueprint/deep-house-readings.js?v=55"></script>
+    <script src="/soulblueprint/aspect-readings.js?v=55"></script>
+    <script src="/soulblueprint/advanced-readings.js?v=55"></script>
+    <script src="/soulblueprint/deep-readings.js?v=55"></script>
+    <script src="/soulblueprint/deep-planet-readings.js?v=55"></script>
+    <script src="/soulblueprint/deep-planet-readings-outer.js?v=55"></script>
+    <script src="/soulblueprint/deep-numerology-readings.js?v=55"></script>
+    <script src="/soulblueprint/deep-chinese-zodiac-readings.js?v=55"></script>
+    <script src="/soulblueprint/deep-chiron-readings.js?v=55"></script>
+    <script src="/soulblueprint/deep-lilith-readings.js?v=55"></script>
+    <script src="/soulblueprint/deep-node-readings.js?v=55"></script>
+    <script src="/soulblueprint/deep-transformative-planet-readings.js?v=55"></script>
+    <script src="/soulblueprint/readings-extended.js?v=55"></script>
+    <script src="/soulblueprint/love-blueprint.js?v=55"></script>
+    <script src="/soulblueprint/tone-variations.js?v=55"></script>
+    <script src="/soulblueprint/age-language.js?v=55"></script>
+    <script src="/soulblueprint/life-pattern-readings.js?v=55"></script>
+    <script src="/soulblueprint/save-share.js?v=55"></script>
+    <script src="/soulblueprint/book-generator.js?v=55"></script>
     <script>
         // ============================================
         // MULTI-READING STORAGE SYSTEM
@@ -11367,9 +11388,9 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
         // SERVICE WORKER REGISTRATION
         // ============================================
         
-        if ('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator && !window.__FULFILL_MODE) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/soulblueprint/sw.js')
+                navigator.serviceWorker.register('/soulblueprint/sw.js', { updateViaCache: 'none' })
                     .then((registration) => {
                         console.log('Service Worker registered:', registration.scope);
                     })
