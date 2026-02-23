@@ -112,7 +112,8 @@ async function main() {
     const { server, port } = await startServer();
 
     // Build URL — pro page with URL params for auto-generation
-    const params = new URLSearchParams({ name: args.name, date: args.date, fulfill: 'true' });
+    // Note: NOT using fulfill=true because that adds fulfill-mode class which hides progress bar etc
+    const params = new URLSearchParams({ name: args.name, date: args.date });
     if (args.time) params.set('time', args.time);
     if (args.place) params.set('place', args.place);
     const pageUrl = `http://127.0.0.1:${port}/soulblueprint/s/xK9mQ2/index.html?${params}`;
@@ -151,50 +152,106 @@ async function main() {
         );
         console.log(`Generated: ${cardCount} cards`);
 
-        // ---- Extract content ----
-        const extracted = await page.evaluate(() => {
-            // Remove interactive elements
-            const remove = [
-                '.card-actions', '.transform-btn', '.copy-reading-btn',
+        // ---- Capture full page, clone it, clean for delivery ----
+        const fullHtml = await page.evaluate((baseUrl) => {
+            // 1. Remove elements we don't want in the delivered reading
+            const removeSelectors = [
+                '#loadingOverlay',           // loading spinner
+                '#inputSection',             // the input form
+                '#myReadingsSection',        // saved readings dashboard
+                '.cookie-banner', '.cookie-consent',
+                '.gift-box', '.coffee-box',
+                '.gift-dialog-overlay', '#gift-share-dialog',
+                '.fulfill-upgrade-card',
+                '.ad-container', '.ad-placeholder', 'ins.adsbygoogle',
+                '.card-actions',             // transform/copy per-card buttons
+                '.transform-btn', '.copy-reading-btn',
                 '.mark-read-btn', '.read-badge', '.section-mark-read-btn',
-                '.new-reading-prompt', '.ai-transform-banner', '.ai-transform-callout',
-                '.ai-banner-dismiss', '.sticky-progress-header', '.reading-nav-float',
+                '.new-reading-prompt',
+                '.ai-transform-banner', '.ai-transform-callout', '.ai-banner-dismiss',
+                '.reading-nav-float',        // floating nav
                 '.quick-transform-section', '.expand-all-section',
-                '.completion-celebration', '.gift-support-section',
+                '.completion-celebration',
+                '.gift-support-section',
                 '.playbook-navigation', '.example-banner',
                 '.book-template-section', '.discover-links',
-                '.hero-progress', '.ad-container', '.ad-placeholder',
-                'ins.adsbygoogle', '.pagination-controls',
-                '.fulfill-upgrade-card', '.gift-box', '.coffee-box',
-                '.gift-dialog-overlay', '#gift-share-dialog',
+                '.pagination-controls',
                 '[onclick*="giftReading"]',
             ];
-            remove.forEach(s => document.querySelectorAll(s).forEach(el => el.remove()));
-
-            const container = document.getElementById('readingsContainer');
-            const closing = document.getElementById('readingClosing');
-            const name = document.getElementById('subjectName')?.textContent || '';
-            const birthInfo = document.getElementById('birthInfo')?.textContent || '';
-
-            // Capture all CSS
-            const styles = [];
-            document.querySelectorAll('style').forEach(s => {
-                if (s.textContent.length > 100) styles.push(s.textContent);
+            removeSelectors.forEach(s => {
+                document.querySelectorAll(s).forEach(el => el.remove());
             });
 
-            return {
-                readingHtml: container?.innerHTML || '',
-                closingHtml: closing?.innerHTML || '',
-                name, birthInfo, styles,
-            };
-        });
+            // 2. Remove all external <script> tags (they reference local server paths)
+            document.querySelectorAll('script[src]').forEach(el => el.remove());
 
-        console.log(`Extracted: ${Math.round(extracted.readingHtml.length / 1024)}KB`);
+            // 3. Remove inline <script> blocks (we'll add our own clean one)
+            document.querySelectorAll('script:not([src])').forEach(el => el.remove());
 
-        // ---- Build & save ----
+            // 4. Remove service worker <link> and manifest
+            document.querySelectorAll('link[rel="manifest"]').forEach(el => el.remove());
+
+            // 5. Make all relative links absolute
+            document.querySelectorAll('a[href^="/"]').forEach(a => {
+                a.href = 'https://quantummerlin.com' + a.getAttribute('href');
+            });
+
+            // 6. Remove fulfill-mode class (it hides progress bar etc)
+            document.body.classList.remove('fulfill-mode');
+
+            // 7. Make results section visible
+            const results = document.getElementById('resultsSection');
+            if (results) results.style.display = '';
+
+            // 8. Update action buttons - replace "New Moment" with "New Reading" that shows upgrade
+            document.querySelectorAll('.action-btn').forEach(btn => {
+                const text = btn.textContent.trim();
+                if (text.includes('Create Your Book') || text.includes('Share')) {
+                    btn.remove();
+                }
+                if (text.includes('New Moment') || text.includes('New Reading')) {
+                    btn.setAttribute('onclick', 'showForm()');
+                    btn.textContent = '✨ New Reading';
+                }
+            });
+
+            // 9. Update nav - change Generator link to New Reading button
+            const navLinks = document.querySelector('.site-nav-links');
+            if (navLinks) {
+                // Remove "Generator" active link, add New Reading button
+                navLinks.querySelectorAll('a').forEach(a => {
+                    if (a.textContent.trim() === 'Generator') {
+                        a.remove();
+                    }
+                    a.classList.remove('active');
+                });
+                const newBtn = document.createElement('a');
+                newBtn.className = 'new-reading-nav-btn';
+                newBtn.href = 'javascript:void(0)';
+                newBtn.setAttribute('onclick', 'showForm()');
+                newBtn.textContent = '✨ New Reading';
+                navLinks.appendChild(newBtn);
+            }
+
+            // 10. Update meta robots
+            let metaRobots = document.querySelector('meta[name="robots"]');
+            if (!metaRobots) {
+                metaRobots = document.createElement('meta');
+                metaRobots.name = 'robots';
+                document.head.appendChild(metaRobots);
+            }
+            metaRobots.content = 'noindex, nofollow';
+
+            // 11. Get the full page HTML
+            return document.documentElement.outerHTML;
+        }, BASE_URL);
+
+        console.log(`Captured: ${Math.round(fullHtml.length / 1024)}KB full page`);
+
+        // ---- Post-process: inject our own script + modals, fix </script> issues ----
         const nameSlug = args.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
         const slug = `${nameSlug}-${randomSlug()}`;
-        const html = buildStandaloneHtml(extracted, slug);
+        const html = buildFinalHtml(fullHtml, args.name);
 
         const outDir = path.join(READINGS_DIR, slug);
         fs.mkdirSync(outDir, { recursive: true });
@@ -221,269 +278,203 @@ async function main() {
 }
 
 // ============================================
-// BUILD STANDALONE HTML
+// BUILD FINAL HTML — inject modals + JS into captured page
 // ============================================
-function buildStandaloneHtml(data, slug) {
-    const { readingHtml, closingHtml, name, birthInfo, styles } = data;
-    const allCss = styles.join('\n');
-    const eName = escapeHtml(name);
-    const eBirth = escapeHtml(birthInfo);
+function buildFinalHtml(capturedHtml, personName) {
+    // Additional CSS for the form/upgrade modals and nav button
+    const extraCss = `
+/* New Reading button in nav */
+.new-reading-nav-btn{padding:6px 14px!important;border-radius:20px!important;background:var(--primary)!important;color:white!important;font-weight:600!important;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s}
+.new-reading-nav-btn:hover{transform:scale(1.05);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+/* Form overlay */
+.form-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:2000;justify-content:center;align-items:center;padding:20px}
+.form-overlay.visible{display:flex}
+.form-modal{background:var(--card-bg,#fff);border-radius:20px;padding:32px;max-width:420px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;max-height:90vh;overflow-y:auto}
+.form-modal h2{font-family:var(--font-heading);text-align:center;margin:0 0 8px;font-size:1.5rem;color:var(--text)}
+.form-modal .form-subtitle{text-align:center;opacity:0.7;font-size:0.9rem;margin:0 0 24px}
+.form-modal .form-group{margin-bottom:16px}
+.form-modal label{display:block;font-weight:600;font-size:0.9rem;margin-bottom:4px;color:var(--text)}
+.form-modal input{width:100%;padding:10px 14px;border:2px solid var(--card-border,#eee);border-radius:10px;font-size:0.95rem;font-family:var(--font-body);background:var(--background);color:var(--text);box-sizing:border-box;transition:border-color .2s}
+.form-modal input:focus{outline:none;border-color:var(--primary)}
+.form-modal .optional-badge{font-size:0.75rem;opacity:0.5;font-weight:400}
+.form-modal .submit-btn{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent,var(--primary)));color:white;font-size:1.05rem;font-weight:700;cursor:pointer;margin-top:8px;transition:transform .15s,box-shadow .15s}
+.form-modal .submit-btn:hover{transform:translateY(-1px);box-shadow:0 4px 15px rgba(0,0,0,0.2)}
+.form-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text);opacity:0.5;line-height:1}
+.form-close:hover{opacity:1}
+/* Upgrade overlay */
+.upgrade-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:3000;justify-content:center;align-items:center;padding:20px}
+.upgrade-overlay.visible{display:flex}
+.upgrade-modal{background:var(--card-bg,#fff);border-radius:24px;padding:36px 28px;max-width:480px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;text-align:center}
+.upgrade-modal h2{font-family:var(--font-heading);font-size:1.6rem;margin:0 0 8px;color:var(--text)}
+.upgrade-modal .upgrade-subtitle{opacity:0.7;font-size:0.95rem;margin:0 0 28px;line-height:1.5}
+.upgrade-options{display:flex;flex-direction:column;gap:16px;margin-bottom:20px}
+.upgrade-option{border:2px solid var(--card-border,#eee);border-radius:16px;padding:20px;cursor:pointer;transition:all .2s;text-decoration:none;display:block;position:relative;color:var(--text)}
+.upgrade-option:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:0 4px 15px rgba(0,0,0,0.1)}
+.upgrade-option.featured{border-color:var(--primary);background:linear-gradient(135deg,rgba(255,105,180,0.05),rgba(255,182,193,0.08))}
+.upgrade-badge{position:absolute;top:-10px;right:16px;background:var(--primary);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:10px;text-transform:uppercase}
+.upgrade-option h3{font-family:var(--font-heading);margin:0 0 6px;font-size:1.15rem;color:var(--text)}
+.upgrade-option .price{font-size:1.4rem;font-weight:700;color:var(--primary);margin:4px 0}
+.upgrade-option .price .original{text-decoration:line-through;opacity:0.4;font-size:0.9rem;font-weight:400;margin-right:6px;color:var(--text)}
+.upgrade-option .price-note{font-size:0.8rem;opacity:0.6;margin:2px 0 0}
+.upgrade-option .features{text-align:left;margin:10px 0 0;padding:0;list-style:none;font-size:0.85rem;line-height:1.8}
+.upgrade-option .features li::before{content:"\\2713  ";color:var(--primary);font-weight:700}
+.upgrade-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text);opacity:0.5;line-height:1}
+.upgrade-close:hover{opacity:1}
+.upgrade-back{background:none;border:none;color:var(--text);opacity:0.5;font-size:0.85rem;cursor:pointer;margin-top:8px}
+.upgrade-back:hover{opacity:0.8;text-decoration:underline}
+`;
 
-    const parts = [];
-    parts.push('<!DOCTYPE html>');
-    parts.push('<html lang="en">');
-    parts.push('<head>');
-    parts.push('<meta charset="UTF-8">');
-    parts.push('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
-    parts.push('<title>A Moment in Time for ' + eName + '</title>');
-    parts.push('<meta name="robots" content="noindex, nofollow">');
-    parts.push('<meta property="og:title" content="A Moment in Time for ' + eName + '">');
-    parts.push('<meta property="og:description" content="A personalised birth moment reading">');
-    parts.push('<link rel="preconnect" href="https://fonts.googleapis.com">');
-    parts.push('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>');
-    parts.push('<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">');
-    parts.push('<style>');
-    parts.push(allCss);
+    // Form + Upgrade modals HTML
+    const modalsHtml = `
+<div class="form-overlay" id="formOverlay" onclick="if(event.target===this)hideForm()">
+  <div class="form-modal">
+    <button class="form-close" onclick="hideForm()">&times;</button>
+    <h2>Generate a New Reading</h2>
+    <p class="form-subtitle">Enter birth details to create a unique cosmic blueprint</p>
+    <form id="newReadingForm" onsubmit="return handleFormSubmit(event)">
+      <div class="form-group"><label>Name</label><input type="text" id="formName" required placeholder="Enter name"></div>
+      <div class="form-group"><label>Date of Birth</label><input type="date" id="formDate" required></div>
+      <div class="form-group"><label>Time of Birth <span class="optional-badge">Optional</span></label><input type="time" id="formTime"></div>
+      <div class="form-group"><label>Place of Birth <span class="optional-badge">Optional</span></label><input type="text" id="formPlace" placeholder="City, Country"></div>
+      <button type="submit" class="submit-btn">Generate Your Reading</button>
+    </form>
+  </div>
+</div>
+<div class="upgrade-overlay" id="upgradeOverlay" onclick="if(event.target===this)hideUpgrade()">
+  <div class="upgrade-modal">
+    <button class="upgrade-close" onclick="hideUpgrade()">&times;</button>
+    <h2>&#10024; Unlock Your Reading</h2>
+    <p class="upgrade-subtitle">Your cosmic blueprint is ready to be generated!<br>Choose your access level below.</p>
+    <div class="upgrade-options">
+      <a class="upgrade-option featured" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
+        <span class="upgrade-badge">50% OFF</span>
+        <h3>Single Reading</h3>
+        <div class="price"><span class="original">$19.99</span> $9.99</div>
+        <p class="price-note">Special introductory price</p>
+        <ul class="features">
+          <li>135+ personalised reading cards</li>
+          <li>17 cosmic sections analysed</li>
+          <li>Permanent link to revisit anytime</li>
+          <li>Beautiful shareable format</li>
+        </ul>
+      </a>
+      <a class="upgrade-option" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
+        <h3>Unlimited Readings</h3>
+        <div class="price">$77</div>
+        <p class="price-note">One-time payment &middot; lifetime access</p>
+        <ul class="features">
+          <li>Generate unlimited readings forever</li>
+          <li>All 135+ cards &amp; 17 sections</li>
+          <li>Friends, family, anyone</li>
+          <li>Future features included</li>
+        </ul>
+      </a>
+    </div>
+    <button class="upgrade-back" onclick="hideUpgrade()">Maybe later</button>
+  </div>
+</div>`;
 
-    // ---------- Standalone overrides ----------
-    parts.push('/* Standalone overrides */');
-    parts.push('body{margin:0;padding:0;font-family:var(--font-body);background:var(--background);color:var(--text)}');
-    // Hide only non-essential elements (keep theme-bar, nav, reading interactivity)
-    parts.push('#loadingOverlay,#myReadingsSection,.cookie-banner,.gift-box,.coffee-box,.sticky-progress-header,.reading-nav-float,.gift-dialog-overlay,#gift-share-dialog,.quick-transform-section,.expand-all-section,.completion-celebration,.gift-support-section,.playbook-navigation,.example-banner,.book-template-section,.discover-links,.hero-progress,.card-actions,.mark-read-btn,.read-badge,.section-mark-read-btn,.new-reading-prompt,.ai-transform-banner,.ai-transform-callout,.ai-banner-dismiss,.fulfill-upgrade-card,.ad-container,.ad-placeholder,.cookie-consent,.pagination-controls{display:none!important}');
-    parts.push('.reading-card{cursor:pointer}');
-    parts.push('.reading-card.expanded .reading-card-body{max-height:20000px;overflow:visible}');
-    parts.push('.reading-header{text-align:center;padding:40px 20px 20px;max-width:800px;margin:0 auto}');
-    parts.push('.reading-header h1{font-family:var(--font-heading);font-size:2rem;margin-bottom:8px}');
-    parts.push('.reading-header .birth-info{font-size:1rem;opacity:0.8}');
-    parts.push('.standalone-footer{text-align:center;padding:40px 20px;opacity:0.6;font-size:0.85rem}');
-    parts.push('.standalone-footer a{color:var(--primary);text-decoration:none}');
+    // JavaScript for interactivity
+    const scriptContent = `
+// Card expand/collapse
+function toggleCard(h){var c=h.closest(".reading-card");if(!c)return;c.classList.toggle("expanded");if(c.classList.contains("expanded"))setTimeout(function(){c.scrollIntoView({behavior:"smooth",block:"nearest"})},100);updateProgress()}
+function toggleSubSection(id){var e=document.getElementById("subsection-"+id);if(e)e.classList.toggle("collapsed")}
+function toggleSection(id){var s=document.getElementById("section-"+id);if(!s)return;s.classList.toggle("collapsed");var a=s.querySelector(".section-arrow");if(a)a.textContent=s.classList.contains("collapsed")?"\\u25BC":"\\u25B2"}
+function copyAllReadings(){var c=document.getElementById("readingsContainer");if(!c)return;navigator.clipboard.writeText(c.innerText).then(function(){alert("Reading copied to clipboard!")})}
+function markCardAsRead(){}
+function sbTrack(){}
+function startNewReading(){showForm()}
+function showTemplatePicker(){}
+function shareReading(){}
 
-    // ---------- Theme bar ----------
-    parts.push('.theme-bar{position:fixed;top:0;left:0;right:0;height:50px;background:linear-gradient(90deg,#FF69B4 0%,#FFB6C1 25%,#E6E6FA 50%,#87CEEB 75%,#6BA3D6 100%);display:flex;justify-content:center;align-items:center;gap:10px;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.15);transition:background 0.5s ease}');
-    parts.push('.theme-bar.theme-selected-girl{background:linear-gradient(135deg,#FF69B4 0%,#FFB6C1 100%)}');
-    parts.push('.theme-bar.theme-selected-boy{background:linear-gradient(135deg,#6BA3D6 0%,#87CEEB 100%)}');
-    parts.push('.theme-bar.theme-selected-purple{background:linear-gradient(135deg,#D8B5FF 0%,#B19CD9 100%)}');
-    parts.push('.theme-bar-btn{padding:8px 20px;border:2px solid white;border-radius:20px;background:transparent;color:white;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.3s ease}');
-    parts.push('.theme-bar-btn:hover{background:rgba(255,255,255,0.2);transform:scale(1.05)}');
-    parts.push('.theme-bar-btn.active{background:white;color:var(--primary)}');
-    parts.push('.theme-bar-btn[data-theme="boy"].active{color:#6BA3D6}');
-    parts.push('.theme-bar-btn[data-theme="purple"].active{color:#9B59B6}');
+// Form & Upgrade
+function showForm(){document.getElementById("formOverlay").classList.add("visible")}
+function hideForm(){document.getElementById("formOverlay").classList.remove("visible")}
+function showUpgrade(){document.getElementById("upgradeOverlay").classList.add("visible")}
+function hideUpgrade(){document.getElementById("upgradeOverlay").classList.remove("visible")}
+function handleFormSubmit(e){e.preventDefault();hideForm();showUpgrade();return false}
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){hideForm();hideUpgrade()}});
 
-    // ---------- Nav bar ----------
-    parts.push('.site-nav{position:sticky;top:50px;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,0.06);padding:0 16px}');
-    parts.push('.site-nav-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:48px;gap:8px}');
-    parts.push('.site-nav-brand{font-weight:700;font-size:1rem;color:var(--text);text-decoration:none;white-space:nowrap}');
-    parts.push('.site-nav-links{display:flex;gap:4px;align-items:center;flex-wrap:nowrap;overflow-x:auto}');
-    parts.push('.site-nav-links a{padding:6px 12px;border-radius:8px;font-size:0.82rem;font-weight:500;color:#555;text-decoration:none;white-space:nowrap;transition:background .15s,color .15s}');
-    parts.push('.site-nav-links a:hover,.site-nav-links a.active{background:rgba(102,126,234,0.1);color:#667eea}');
-    parts.push('.new-reading-nav-btn{padding:6px 14px!important;border-radius:20px!important;background:var(--primary)!important;color:white!important;font-weight:600!important;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s}');
-    parts.push('.new-reading-nav-btn:hover{transform:scale(1.05);box-shadow:0 2px 8px rgba(0,0,0,0.15)}');
+// Theme switching
+var root=document.documentElement.style;
+var themeMap={girl:{primary:"#FF69B4",secondary:"#FFB6C1",accent:"#FF1493",background:"#FFF0F5",border:"#FFE4EC",cardBg:"#FFFFFF",text:"#4A3347"},boy:{primary:"#6BA3D6",secondary:"#87CEEB",accent:"#4169E1",background:"#F0F8FF",border:"#B0E0E6",cardBg:"#FFFFFF",text:"#2C3E50"},purple:{primary:"#D8B5FF",secondary:"#B19CD9",accent:"#9B59B6",background:"#F8F0FF",border:"#E6D5F7",cardBg:"#FFFFFF",text:"#3D2952"}};
+function setGender(t){
+  document.body.classList.remove("theme-girl","theme-boy","theme-purple");
+  document.body.classList.add("theme-"+t);
+  var bar=document.getElementById("themeBar");
+  if(bar){bar.classList.remove("theme-selected-girl","theme-selected-boy","theme-selected-purple");bar.classList.add("theme-selected-"+t)}
+  document.querySelectorAll(".theme-bar-btn").forEach(function(b){b.classList.remove("active")});
+  var ab=document.querySelector('.theme-bar-btn[data-theme="'+t+'"]');if(ab)ab.classList.add("active");
+  var c=themeMap[t]||themeMap.girl;
+  root.setProperty("--primary",c.primary);root.setProperty("--secondary",c.secondary);
+  root.setProperty("--accent",c.accent);root.setProperty("--background",c.background);
+  root.setProperty("--card-border",c.border);root.setProperty("--card-bg",c.cardBg);root.setProperty("--text",c.text);
+}
 
-    // ---------- Form modal overlay ----------
-    parts.push('.form-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:2000;justify-content:center;align-items:center;padding:20px}');
-    parts.push('.form-overlay.visible{display:flex}');
-    parts.push('.form-modal{background:var(--card-bg,#fff);border-radius:20px;padding:32px;max-width:420px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;max-height:90vh;overflow-y:auto}');
-    parts.push('.form-modal h2{font-family:var(--font-heading);text-align:center;margin:0 0 8px;font-size:1.5rem;color:var(--text)}');
-    parts.push('.form-modal .form-subtitle{text-align:center;opacity:0.7;font-size:0.9rem;margin:0 0 24px}');
-    parts.push('.form-modal .form-group{margin-bottom:16px}');
-    parts.push('.form-modal label{display:block;font-weight:600;font-size:0.9rem;margin-bottom:4px;color:var(--text)}');
-    parts.push('.form-modal input{width:100%;padding:10px 14px;border:2px solid var(--card-border,#eee);border-radius:10px;font-size:0.95rem;font-family:var(--font-body);background:var(--background);color:var(--text);box-sizing:border-box;transition:border-color .2s}');
-    parts.push('.form-modal input:focus{outline:none;border-color:var(--primary)}');
-    parts.push('.form-modal .optional-badge{font-size:0.75rem;opacity:0.5;font-weight:400}');
-    parts.push('.form-modal .submit-btn{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent,var(--primary)));color:white;font-size:1.05rem;font-weight:700;cursor:pointer;margin-top:8px;transition:transform .15s,box-shadow .15s}');
-    parts.push('.form-modal .submit-btn:hover{transform:translateY(-1px);box-shadow:0 4px 15px rgba(0,0,0,0.2)}');
-    parts.push('.form-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text);opacity:0.5;line-height:1}');
-    parts.push('.form-close:hover{opacity:1}');
+// Progress tracking
+function updateProgress(){
+  var total=document.querySelectorAll(".reading-card").length;
+  var read=document.querySelectorAll(".reading-card.expanded").length;
+  var pct=total?Math.round(read/total*100):0;
+  // Sticky progress
+  document.querySelectorAll(".progress-fill").forEach(function(f){f.style.width=pct+"%"});
+  document.querySelectorAll(".progress-text").forEach(function(t){t.textContent=read+"/"+total+" read"});
+  // Hero progress
+  document.querySelectorAll(".hero-progress-fill").forEach(function(f){f.style.width=pct+"%"});
+  var hpt=document.getElementById("heroProgressText");
+  if(hpt)hpt.innerHTML=read+"/<span>"+total+"<\\/span> explored";
+  var ic=document.getElementById("insightsCount");if(ic)ic.textContent=total;
+  // Section counters
+  document.querySelectorAll(".section-content").forEach(function(sec){
+    var cards=sec.querySelectorAll(".reading-card");
+    var exp=sec.querySelectorAll(".reading-card.expanded");
+    var cnt=sec.querySelector(".section-reading-count");
+    if(cnt)cnt.textContent=exp.length+"/"+cards.length;
+  });
+}
+// Init progress on load
+document.addEventListener("DOMContentLoaded",function(){updateProgress()});
 
-    // ---------- Upgrade card ----------
-    parts.push('.upgrade-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:3000;justify-content:center;align-items:center;padding:20px}');
-    parts.push('.upgrade-overlay.visible{display:flex}');
-    parts.push('.upgrade-modal{background:var(--card-bg,#fff);border-radius:24px;padding:36px 28px;max-width:480px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;text-align:center}');
-    parts.push('.upgrade-modal h2{font-family:var(--font-heading);font-size:1.6rem;margin:0 0 8px;color:var(--text)}');
-    parts.push('.upgrade-modal .upgrade-subtitle{opacity:0.7;font-size:0.95rem;margin:0 0 28px;line-height:1.5}');
-    parts.push('.upgrade-options{display:flex;flex-direction:column;gap:16px;margin-bottom:20px}');
-    parts.push('.upgrade-option{border:2px solid var(--card-border,#eee);border-radius:16px;padding:20px;cursor:pointer;transition:all .2s;text-decoration:none;display:block;position:relative}');
-    parts.push('.upgrade-option:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:0 4px 15px rgba(0,0,0,0.1)}');
-    parts.push('.upgrade-option.featured{border-color:var(--primary);background:linear-gradient(135deg,rgba(255,105,180,0.05),rgba(255,182,193,0.08))}');
-    parts.push('.upgrade-badge{position:absolute;top:-10px;right:16px;background:var(--primary);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:10px;text-transform:uppercase}');
-    parts.push('.upgrade-option h3{font-family:var(--font-heading);margin:0 0 6px;font-size:1.15rem;color:var(--text)}');
-    parts.push('.upgrade-option .price{font-size:1.4rem;font-weight:700;color:var(--primary);margin:4px 0}');
-    parts.push('.upgrade-option .price .original{text-decoration:line-through;opacity:0.4;font-size:0.9rem;font-weight:400;margin-right:6px;color:var(--text)}');
-    parts.push('.upgrade-option .price-note{font-size:0.8rem;opacity:0.6;margin:2px 0 0}');
-    parts.push('.upgrade-option .features{text-align:left;margin:10px 0 0;padding:0;list-style:none;font-size:0.85rem;line-height:1.8}');
-    parts.push('.upgrade-option .features li::before{content:"✓ ";color:var(--primary);font-weight:700}');
-    parts.push('.upgrade-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text);opacity:0.5;line-height:1}');
-    parts.push('.upgrade-close:hover{opacity:1}');
-    parts.push('.upgrade-back{background:none;border:none;color:var(--text);opacity:0.5;font-size:0.85rem;cursor:pointer;margin-top:8px}');
-    parts.push('.upgrade-back:hover{opacity:0.8;text-decoration:underline}');
+// Disable service worker
+if("serviceWorker" in navigator){navigator.serviceWorker.getRegistrations().then(function(r){r.forEach(function(reg){reg.unregister()})})}
+`;
 
-    // Dark theme overrides for overlays
-    parts.push('body.dark-theme .site-nav{background:rgba(26,10,46,0.95);border-bottom-color:rgba(255,255,255,0.08)}');
-    parts.push('body.dark-theme .site-nav-brand{color:var(--primary)}');
-    parts.push('body.dark-theme .site-nav-links a{color:#aaa}');
-    parts.push('body.dark-theme .site-nav-links a:hover{background:rgba(102,126,234,0.2);color:#a0b4ff}');
-    parts.push('body.dark-theme .form-modal,body.dark-theme .upgrade-modal{background:#1a0a2e;border:1px solid rgba(255,255,255,0.1)}');
-    parts.push('@media(max-width:600px){.site-nav-links a{padding:6px 8px;font-size:0.78rem}.site-nav-brand{font-size:0.9rem}.upgrade-modal{padding:24px 18px}}');
+    let html = capturedHtml;
 
-    parts.push('</style>');
-    parts.push('</head>');
-    parts.push('<body class="theme-girl">');
-
-    // ---------- Theme bar ----------
-    parts.push('<div class="theme-bar theme-selected-girl" id="themeBar">');
-    parts.push('  <button class="theme-bar-btn active" data-theme="girl" onclick="setTheme(\'girl\')">Pink</button>');
-    parts.push('  <button class="theme-bar-btn" data-theme="purple" onclick="setTheme(\'purple\')">Purple</button>');
-    parts.push('  <button class="theme-bar-btn" data-theme="boy" onclick="setTheme(\'boy\')">Blue</button>');
-    parts.push('</div>');
-
-    // ---------- Nav bar ----------
-    parts.push('<nav class="site-nav" id="siteNav">');
-    parts.push('  <div class="site-nav-inner">');
-    parts.push('    <a href="https://quantummerlin.com/soulblueprint/" class="site-nav-brand">✨ A Moment in Time</a>');
-    parts.push('    <div class="site-nav-links">');
-    parts.push('      <a href="https://quantummerlin.com/soulblueprint/examples/">Examples</a>');
-    parts.push('      <a href="https://quantummerlin.com/soulblueprint/articles/">Guides</a>');
-    parts.push('      <a href="https://quantummerlin.com/soulblueprint/playbooks/">Playbooks</a>');
-    parts.push('      <a class="new-reading-nav-btn" onclick="showForm()" href="javascript:void(0)">✨ New Reading</a>');
-    parts.push('    </div>');
-    parts.push('  </div>');
-    parts.push('</nav>');
-
-    // ---------- Reading header ----------
-    parts.push('<div class="reading-header" style="padding-top:20px">');
-    parts.push('  <h1>A Moment in Time for ' + eName + '</h1>');
-    parts.push('  <p class="birth-info">' + eBirth + '</p>');
-    parts.push('</div>');
-
-    // ---------- Reading content ----------
-    parts.push('<div id="readingsContainer" style="max-width:800px;margin:0 auto;padding:0 16px">');
-    parts.push(readingHtml);
-    parts.push('</div>');
-    if (closingHtml) {
-        parts.push('<div id="readingClosing" style="max-width:800px;margin:0 auto;padding:0 16px">');
-        parts.push(closingHtml);
-        parts.push('</div>');
+    // Ensure it starts with doctype
+    if (!html.startsWith('<!')) {
+        html = '<!DOCTYPE html>\n<html ' + html;
+    } else if (!html.startsWith('<!DOCTYPE')) {
+        html = '<!DOCTYPE html>\n' + html;
     }
 
-    // ---------- Footer ----------
-    parts.push('<div class="standalone-footer">');
-    parts.push('  <p>Generated by <a href="https://quantummerlin.com/soulblueprint/" target="_blank">A Moment in Time</a> by Quantum Merlin</p>');
-    parts.push('</div>');
+    // Inject extra CSS before </style> (last occurrence to get the main style block)
+    const lastStyleClose = html.lastIndexOf('</style>');
+    if (lastStyleClose > -1) {
+        html = html.substring(0, lastStyleClose) + extraCss + '\n</style>' + html.substring(lastStyleClose + 8);
+    }
 
-    // ---------- Form modal ----------
-    parts.push('<div class="form-overlay" id="formOverlay" onclick="if(event.target===this)hideForm()">');
-    parts.push('  <div class="form-modal">');
-    parts.push('    <button class="form-close" onclick="hideForm()">&times;</button>');
-    parts.push('    <h2>Generate a New Reading</h2>');
-    parts.push('    <p class="form-subtitle">Enter birth details to create a unique cosmic blueprint</p>');
-    parts.push('    <form id="newReadingForm" onsubmit="return handleFormSubmit(event)">');
-    parts.push('      <div class="form-group"><label>Name</label><input type="text" id="formName" required placeholder="Enter name"></div>');
-    parts.push('      <div class="form-group"><label>Date of Birth</label><input type="date" id="formDate" required></div>');
-    parts.push('      <div class="form-group"><label>Time of Birth <span class="optional-badge">Optional</span></label><input type="time" id="formTime"></div>');
-    parts.push('      <div class="form-group"><label>Place of Birth <span class="optional-badge">Optional</span></label><input type="text" id="formPlace" placeholder="City, Country"></div>');
-    parts.push('      <button type="submit" class="submit-btn">Generate Your Reading</button>');
-    parts.push('    </form>');
-    parts.push('  </div>');
-    parts.push('</div>');
+    // Inject modals + script before </body>
+    const bodyClose = html.lastIndexOf('</body>');
+    if (bodyClose > -1) {
+        // Use array join to build the script tag safely (avoid </script> in source)
+        const scriptOpen = '<' + 'script>';
+        const scriptClose = '</' + 'script>';
+        const injection = modalsHtml + '\n' + scriptOpen + scriptContent + scriptClose + '\n';
+        html = html.substring(0, bodyClose) + injection + '</body>' + html.substring(bodyClose + 7);
+    }
 
-    // ---------- Upgrade modal ----------
-    parts.push('<div class="upgrade-overlay" id="upgradeOverlay" onclick="if(event.target===this)hideUpgrade()">');
-    parts.push('  <div class="upgrade-modal">');
-    parts.push('    <button class="upgrade-close" onclick="hideUpgrade()">&times;</button>');
-    parts.push('    <h2>✨ Unlock Your Reading</h2>');
-    parts.push('    <p class="upgrade-subtitle">Your cosmic blueprint is ready to be generated!<br>Choose your access level below.</p>');
-    parts.push('    <div class="upgrade-options">');
-    // Option 1: Single reading
-    parts.push('      <a class="upgrade-option featured" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">');
-    parts.push('        <span class="upgrade-badge">50% OFF</span>');
-    parts.push('        <h3>Single Reading</h3>');
-    parts.push('        <div class="price"><span class="original">$19.99</span> $9.99</div>');
-    parts.push('        <p class="price-note">Special introductory price</p>');
-    parts.push('        <ul class="features">');
-    parts.push('          <li>135+ personalised reading cards</li>');
-    parts.push('          <li>17 cosmic sections analysed</li>');
-    parts.push('          <li>Permanent link to revisit anytime</li>');
-    parts.push('          <li>Beautiful shareable format</li>');
-    parts.push('        </ul>');
-    parts.push('      </a>');
-    // Option 2: Unlimited
-    parts.push('      <a class="upgrade-option" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">');
-    parts.push('        <h3>Unlimited Readings</h3>');
-    parts.push('        <div class="price">$77</div>');
-    parts.push('        <p class="price-note">One-time payment &middot; lifetime access</p>');
-    parts.push('        <ul class="features">');
-    parts.push('          <li>Generate unlimited readings forever</li>');
-    parts.push('          <li>All 135+ cards &amp; 17 sections</li>');
-    parts.push('          <li>Friends, family, anyone</li>');
-    parts.push('          <li>Future features included</li>');
-    parts.push('        </ul>');
-    parts.push('      </a>');
-    parts.push('    </div>');
-    parts.push('    <button class="upgrade-back" onclick="hideUpgrade()">Maybe later</button>');
-    parts.push('  </div>');
-    parts.push('</div>');
+    // Remove any service worker registration lines
+    html = html.replace(/navigator\.serviceWorker\.register\([^)]*\)/g, '/* sw disabled */');
+    
+    // Remove Google Analytics/AdSense scripts
+    html = html.replace(/<script[^>]*google[^>]*>[\s\S]*?<\/script>/gi, '');
+    html = html.replace(/<script[^>]*gtag[^>]*>[\s\S]*?<\/script>/gi, '');
+    html = html.replace(/<script[^>]*adsense[^>]*>[\s\S]*?<\/script>/gi, '');
 
-    // ---------- JavaScript ----------
-    parts.push('<script>');
-    // Theme switching
-    parts.push('var root=document.documentElement.style;');
-    parts.push('var themeMap={girl:{primary:"#FF69B4",secondary:"#FFB6C1",accent:"#FF1493",background:"#FFF0F5",border:"#FFE4EC",cardBg:"#FFFFFF",text:"#4A3347"},boy:{primary:"#6BA3D6",secondary:"#87CEEB",accent:"#4169E1",background:"#F0F8FF",border:"#B0E0E6",cardBg:"#FFFFFF",text:"#2C3E50"},purple:{primary:"#D8B5FF",secondary:"#B19CD9",accent:"#9B59B6",background:"#F8F0FF",border:"#E6D5F7",cardBg:"#FFFFFF",text:"#3D2952"}};');
-    parts.push('function setTheme(t){');
-    parts.push('  document.body.classList.remove("theme-girl","theme-boy","theme-purple");');
-    parts.push('  document.body.classList.add("theme-"+t);');
-    parts.push('  var bar=document.getElementById("themeBar");');
-    parts.push('  bar.classList.remove("theme-selected-girl","theme-selected-boy","theme-selected-purple");');
-    parts.push('  bar.classList.add("theme-selected-"+t);');
-    parts.push('  document.querySelectorAll(".theme-bar-btn").forEach(function(b){b.classList.remove("active")});');
-    parts.push('  var ab=document.querySelector(".theme-bar-btn[data-theme=\\""+t+"\\"]");if(ab)ab.classList.add("active");');
-    parts.push('  var c=themeMap[t]||themeMap.girl;');
-    parts.push('  root.setProperty("--primary",c.primary);root.setProperty("--secondary",c.secondary);');
-    parts.push('  root.setProperty("--accent",c.accent);root.setProperty("--background",c.background);');
-    parts.push('  root.setProperty("--card-border",c.border);root.setProperty("--card-bg",c.cardBg);');
-    parts.push('  root.setProperty("--text",c.text);');
-    parts.push('}');
-
-    // Section toggle (fixed selector)
-    parts.push('function toggleSection(id){');
-    parts.push('  var s=document.getElementById("section-"+id);if(!s)return;');
-    parts.push('  s.classList.toggle("collapsed");');
-    parts.push('  var a=s.querySelector(".section-arrow");');
-    parts.push('  if(a)a.textContent=s.classList.contains("collapsed")?"▼":"▲";');
-    parts.push('}');
-
-    // Card toggle
-    parts.push('function toggleCard(h){');
-    parts.push('  var c=h.closest(".reading-card");if(!c)return;');
-    parts.push('  c.classList.toggle("expanded");');
-    parts.push('  if(c.classList.contains("expanded"))setTimeout(function(){c.scrollIntoView({behavior:"smooth",block:"nearest"})},100);');
-    parts.push('}');
-
-    // Sub-section toggle
-    parts.push('function toggleSubSection(id){var e=document.getElementById("subsection-"+id);if(e)e.classList.toggle("collapsed")}');
-
-    // Copy all readings
-    parts.push('function copyAllReadings(){var c=document.getElementById("readingsContainer");if(!c)return;var t=c.innerText;navigator.clipboard.writeText(t).then(function(){alert("Reading copied to clipboard!")}).catch(function(){})}');
-
-    // No-ops for removed features
-    parts.push('function markCardAsRead(){}');
-    parts.push('function sbTrack(){}');
-
-    // Form & upgrade modals
-    parts.push('function showForm(){document.getElementById("formOverlay").classList.add("visible")}');
-    parts.push('function hideForm(){document.getElementById("formOverlay").classList.remove("visible")}');
-    parts.push('function showUpgrade(){document.getElementById("upgradeOverlay").classList.add("visible")}');
-    parts.push('function hideUpgrade(){document.getElementById("upgradeOverlay").classList.remove("visible")}');
-    parts.push('function handleFormSubmit(e){e.preventDefault();hideForm();showUpgrade();return false}');
-
-    // Close on Escape
-    parts.push('document.addEventListener("keydown",function(e){if(e.key==="Escape"){hideForm();hideUpgrade()}});');
-
-    // Split closing tag to avoid HTML parser issue
-    parts.push('<' + '/script>');
-    parts.push('</body>');
-    parts.push('</html>');
-    return parts.join('\n');
+    return html;
 }
+
 
 main().catch(err => {
     console.error('FATAL:', err.message || err);
