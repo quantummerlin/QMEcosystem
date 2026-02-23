@@ -164,9 +164,7 @@ async function main() {
                 '.gift-dialog-overlay', '#gift-share-dialog',
                 '.fulfill-upgrade-card',
                 '.ad-container', '.ad-placeholder', 'ins.adsbygoogle',
-                '.card-actions',             // transform/copy per-card buttons
-                '.transform-btn', '.copy-reading-btn',
-                '.mark-read-btn', '.read-badge', '.section-mark-read-btn',
+                '.transform-btn', '.copy-reading-btn', // per-card transform/copy (keep card-actions container & mark-read)
                 '.new-reading-prompt',
                 '.ai-transform-banner', '.ai-transform-callout', '.ai-banner-dismiss',
                 '.reading-nav-float',        // floating nav
@@ -376,12 +374,40 @@ function buildFinalHtml(capturedHtml, personName) {
 
     // JavaScript for interactivity
     const scriptContent = `
+var readCardIds=[];
+try{readCardIds=JSON.parse(localStorage.getItem("sb-read-sections")||"[]")}catch(e){}
+
 // Card expand/collapse
-function toggleCard(h){var c=h.closest(".reading-card");if(!c)return;c.classList.toggle("expanded");if(c.classList.contains("expanded"))setTimeout(function(){c.scrollIntoView({behavior:"smooth",block:"nearest"})},100);updateProgress()}
+function toggleCard(h){var c=h.closest(".reading-card");if(!c)return;c.classList.toggle("expanded");if(c.classList.contains("expanded"))setTimeout(function(){c.scrollIntoView({behavior:"smooth",block:"nearest"})},100)}
 function toggleSubSection(id){var e=document.getElementById("subsection-"+id);if(e)e.classList.toggle("collapsed")}
 function toggleSection(id){var s=document.getElementById("section-"+id);if(!s)return;s.classList.toggle("collapsed");var a=s.querySelector(".section-arrow");if(a)a.textContent=s.classList.contains("collapsed")?"\\u25BC":"\\u25B2"}
 function copyAllReadings(){var c=document.getElementById("readingsContainer");if(!c)return;navigator.clipboard.writeText(c.innerText).then(function(){alert("Reading copied to clipboard!")})}
-function markCardAsRead(){}
+
+// Mark as read
+function markCardAsRead(event,cardId){
+  event.stopPropagation();
+  var card=document.getElementById(cardId);if(!card)return;
+  var badge=card.querySelector(".read-badge");
+  var btn=card.querySelector(".mark-read-btn");
+  var isRead=card.classList.contains("is-read");
+  if(isRead){
+    card.classList.remove("is-read");
+    if(badge){badge.classList.remove("is-read");badge.textContent=""}
+    if(btn){btn.classList.remove("is-read");btn.textContent="Mark as Read"}
+    readCardIds=readCardIds.filter(function(id){return id!==cardId});
+  }else{
+    card.classList.add("is-read");
+    if(badge){badge.classList.add("is-read");badge.textContent="\\u2713"}
+    if(btn){btn.classList.add("is-read");btn.textContent="\\u2713 Read"}
+    if(readCardIds.indexOf(cardId)===-1)readCardIds.push(cardId);
+    // Auto-collapse and scroll
+    card.classList.remove("expanded");
+    setTimeout(function(){var off=80;var top=card.getBoundingClientRect().top+window.scrollY;window.scrollTo({top:top-off,behavior:"smooth"})},100);
+  }
+  try{localStorage.setItem("sb-read-sections",JSON.stringify(readCardIds))}catch(e){}
+  updateProgress();
+}
+
 function sbTrack(){}
 function startNewReading(){showForm()}
 function showTemplatePicker(){}
@@ -411,10 +437,10 @@ function setGender(t){
   root.setProperty("--card-border",c.border);root.setProperty("--card-bg",c.cardBg);root.setProperty("--text",c.text);
 }
 
-// Progress tracking
+// Progress tracking — uses is-read (mark as read) for progress
 function updateProgress(){
   var total=document.querySelectorAll(".reading-card").length;
-  var read=document.querySelectorAll(".reading-card.expanded").length;
+  var read=document.querySelectorAll(".reading-card.is-read").length;
   var pct=total?Math.round(read/total*100):0;
   // Sticky progress
   document.querySelectorAll(".progress-fill").forEach(function(f){f.style.width=pct+"%"});
@@ -427,7 +453,7 @@ function updateProgress(){
   // Section counters
   document.querySelectorAll(".section-content").forEach(function(sec){
     var cards=sec.querySelectorAll(".reading-card");
-    var exp=sec.querySelectorAll(".reading-card.expanded");
+    var exp=sec.querySelectorAll(".reading-card.is-read");
     var cnt=sec.querySelector(".section-reading-count");
     if(cnt)cnt.textContent=exp.length+"/"+cards.length;
   });
