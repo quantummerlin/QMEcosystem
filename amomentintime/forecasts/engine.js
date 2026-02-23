@@ -611,7 +611,7 @@ const CosmicEngine = {
     const moonPhase = this.moonPhase.calculate(fd);
 
     // === CHINESE ZODIAC ===
-    const chineseZodiac = this.chineseZodiac.calculate(year);
+    const chineseZodiac = this.chineseZodiac.calculateForDate(bd);
     const currentChinese = this.chineseZodiac.calculateForDate(fd);
     const chineseYearEnergy = this.chineseZodiac.currentYearEnergyForDate(fd, chineseZodiac.animal);
 
@@ -1176,7 +1176,7 @@ const CosmicEngine = {
     // This ensures we show the Chinese zodiac that covers most of this Gregorian year
     const midYearDate = new Date(forecastYear, 6, 1); // July 1st - always after lunar new year
     const chineseYear = this.chineseZodiac.calculateForDate(midYearDate);
-    const birthChinese = this.chineseZodiac.calculate(year);
+    const birthChinese = this.chineseZodiac.calculateForDate(new Date(year, month - 1, day));
     const yearEnergy = this.chineseZodiac.currentYearEnergyForDate(midYearDate, birthChinese.animal);
 
     // Quarterly breakdown

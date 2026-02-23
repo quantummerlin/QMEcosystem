@@ -299,7 +299,22 @@ class QuantumCompatibilityCalculator {
     }
 
     getChineseZodiac(birthdate) {
-        const year = new Date(birthdate).getFullYear();
+        const d = new Date(birthdate);
+        let year = d.getFullYear();
+        const month = d.getMonth() + 1;
+        const day = d.getDate();
+        // Lunar New Year dates to determine correct Chinese zodiac year
+        const lnyDates = {
+            2020: [1,25], 2021: [2,12], 2022: [2,1],  2023: [1,22], 2024: [2,10],
+            2025: [1,29], 2026: [2,17], 2027: [2,6],  2028: [1,26], 2029: [2,13],
+            2030: [2,3],  2031: [1,23], 2032: [2,11], 2033: [1,31], 2034: [2,19],
+            2035: [2,8],  2036: [1,28], 2037: [2,15], 2038: [2,4],  2039: [1,24],
+            2040: [2,12], 2041: [2,1],  2042: [1,22], 2043: [2,10]
+        };
+        const lny = lnyDates[year];
+        if (lny && (month < lny[0] || (month === lny[0] && day < lny[1]))) {
+            year = year - 1;
+        }
         const animals = ['Rat','Ox','Tiger','Rabbit','Dragon','Snake','Horse','Goat','Monkey','Rooster','Dog','Pig'];
         return animals[(year - 1900) % 12];
     }
