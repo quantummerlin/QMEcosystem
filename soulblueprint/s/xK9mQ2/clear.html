@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>Preparing your reading...</title>
+<style>
+body { margin: 0; display: flex; align-items: center; justify-content: center; height: 100vh; background: #1a0a2e; color: #c9a6ff; font-family: system-ui; }
+.loader { text-align: center; }
+.spinner { width: 40px; height: 40px; border: 3px solid rgba(201,166,255,0.3); border-top-color: #c9a6ff; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 20px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="loader">
+    <div class="spinner"></div>
+    <p>Preparing your reading...</p>
+</div>
+<script>
+// Step 1: Nuke ALL service workers and caches
+async function clearEverything() {
+    if ('serviceWorker' in navigator) {
+        const regs = await navigator.serviceWorker.getRegistrations();
+        for (const r of regs) { await r.unregister(); }
+    }
+    if (window.caches) {
+        const names = await caches.keys();
+        for (const n of names) { await caches.delete(n); }
+    }
+}
+
+// Step 2: Redirect to the fulfill page (with cache-bust param)
+clearEverything().then(() => {
+    // Get original URL params (name, date, time, place, fulfill)
+    const params = new URLSearchParams(window.location.search);
+    // Add a cache-buster timestamp
+    params.set('_cb', Date.now());
+    // Redirect to index.html with all params
+    window.location.replace('./index.html?' + params.toString());
+}).catch(() => {
+    // Even if clearing fails, redirect anyway
+    const params = new URLSearchParams(window.location.search);
+    params.set('_cb', Date.now());
+    window.location.replace('./index.html?' + params.toString());
+});
+</script>
+</body>
+</html>
