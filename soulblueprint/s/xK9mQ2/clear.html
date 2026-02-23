@@ -14,32 +14,121 @@ body { margin: 0; display: flex; align-items: center; justify-content: center; h
     <p>Preparing your reading...</p>
 </div>
 <script>
-// Step 1: Nuke ALL service workers and caches
-async function clearEverything() {
-    if ('serviceWorker' in navigator) {
-        const regs = await navigator.serviceWorker.getRegistrations();
-        for (const r of regs) { await r.unregister(); }
-    }
-    if (window.caches) {
-        const names = await caches.keys();
-        for (const n of names) { await caches.delete(n); }
-    }
-}
+(async function() {
+    // Step 1: Nuke ALL service workers and caches
+    try {
+        if ('serviceWorker' in navigator) {
+            const regs = await navigator.serviceWorker.getRegistrations();
+            for (const r of regs) { await r.unregister(); }
+        }
+        if (window.caches) {
+            const names = await caches.keys();
+            for (const n of names) { await caches.delete(n); }
+        }
+    } catch(e) { console.log('Cache clear error:', e); }
 
-// Step 2: Redirect to the fulfill page (with cache-bust param)
-clearEverything().then(() => {
-    // Get original URL params (name, date, time, place, fulfill)
+    // Step 2: Fetch index.html fresh (bypass ALL caches)
     const params = new URLSearchParams(window.location.search);
-    // Add a cache-buster timestamp
-    params.set('_cb', Date.now());
-    // Redirect to index.html with all params
-    window.location.replace('./index.html?' + params.toString());
-}).catch(() => {
-    // Even if clearing fails, redirect anyway
-    const params = new URLSearchParams(window.location.search);
-    params.set('_cb', Date.now());
-    window.location.replace('./index.html?' + params.toString());
-});
+    params.set('fulfill', 'true');
+    const cb = Date.now();
+    let html;
+    try {
+        const resp = await fetch('./index.html?_nocache=' + cb, {
+            cache: 'no-store',
+            headers: { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' }
+        });
+        html = await resp.text();
+    } catch(e) {
+        window.location.replace('./index.html?' + params.toString());
+        return;
+    }
+
+    // Step 3: Inject EARLY overrides that run BEFORE any other script on the page
+    // This kills all gift functionality at the root
+    const earlyOverrides = `
+    <script id="fulfill-overrides">
+        // === FULFILL MODE: Kill gift functionality ===
+        window.__FULFILL_MODE = true;
+        
+        // Override every gift-related function
+        window.giftReading = function() { console.log('giftReading blocked'); return false; };
+        window.showGiftShareDialog = function() { console.log('showGiftShareDialog blocked'); return false; };
+        window.downloadGiftReading = function() { return false; };
+        window.showTemplatePicker = function() { return false; };
+        window.selectGiftColor = function() { return false; };
+        window.closeGiftDialog = function() { return false; };
+        window.downloadGiftFromDialog = function() { return false; };
+        
+        // Keep re-overriding every 100ms for 30 seconds (catches late definitions)
+        var _giftKillInterval = setInterval(function() {
+            window.giftReading = function() { return false; };
+            window.showGiftShareDialog = function() { return false; };
+            window.showTemplatePicker = function() { return false; };
+        }, 100);
+        setTimeout(function() { clearInterval(_giftKillInterval); }, 30000);
+        
+        // MutationObserver: kill any gift dialog the instant it appears in the DOM
+        var _giftObserver = new MutationObserver(function(mutations) {
+            for (var i = 0; i < mutations.length; i++) {
+                var added = mutations[i].addedNodes;
+                for (var j = 0; j < added.length; j++) {
+                    var node = added[j];
+                    if (node.nodeType === 1) {
+                        if (node.id === 'gift-share-dialog' ||
+                            (node.classList && (node.classList.contains('gift-dialog-overlay') || node.classList.contains('gift-dialog')))) {
+                            node.remove();
+                        }
+                        // Also check children
+                        var giftEls = node.querySelectorAll ? node.querySelectorAll('#gift-share-dialog, .gift-dialog-overlay, .gift-dialog') : [];
+                        for (var k = 0; k < giftEls.length; k++) { giftEls[k].remove(); }
+                    }
+                }
+            }
+        });
+        
+        // Start observing as soon as body exists
+        if (document.body) {
+            _giftObserver.observe(document.body, { childList: true, subtree: true });
+        } else {
+            document.addEventListener('DOMContentLoaded', function() {
+                _giftObserver.observe(document.body, { childList: true, subtree: true });
+                
+                // Also physically remove gift elements from the page
+                var killSelectors = '.gift-support-section, .gift-box, .coffee-box, .gift-dialog-overlay, #gift-share-dialog, .gift-dialog, [onclick*="giftReading"], [onclick*="gift_cta"]';
+                document.querySelectorAll(killSelectors).forEach(function(el) { el.remove(); });
+            });
+        }
+    <\/script>
+    
+    <style id="fulfill-nuke-css">
+        .gift-support-section, .gift-box, .coffee-box, .gift-btn,
+        .gift-dialog-overlay, .gift-dialog, #gift-share-dialog,
+        [onclick*="giftReading"], [onclick*="showGiftShareDialog"],
+        [onclick*="gift_cta"], [onclick*="showTemplatePicker"] {
+            display: none !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+            height: 0 !important;
+            overflow: hidden !important;
+            position: absolute !important;
+            left: -9999px !important;
+        }
+    </style>`;
+    
+    // Insert RIGHT after <head> so overrides run first
+    html = html.replace('<head>', '<head>' + earlyOverrides);
+    
+    // Also prevent the service worker from being registered
+    html = html.replace(
+        /navigator\.serviceWorker\.register\([^)]+\)/g,
+        'Promise.resolve(/* SW blocked in fulfill mode */)'
+    );
+
+    // Step 4: Write the modified page
+    document.open();
+    document.write(html);
+    document.close();
+})();
 </script>
 </body>
 </html>
