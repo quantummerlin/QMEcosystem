@@ -1,0 +1,99 @@
+---
+layout: qme.njk
+title: "Guides"
+subtitle: "Personal notes from the person who built Quantum Merlin"
+description: "Guides, playbooks, and origin stories from the founder of Quantum Merlin. Written from experience, not a marketing department."
+ogTitle: "Guides — Quantum Merlin"
+ogDescription: "Personal guides from the founder. How the tools were built, what the patterns mean, and where to start."
+canonical: "https://quantummerlin.com/guides/"
+---
+
+<style>
+  .guides-intro {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #d4c5e8;
+    text-align: center;
+  }
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .guide-card {
+    display: block;
+    background: rgba(45, 27, 78, 0.35);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 14px;
+    padding: 1.8rem;
+    text-decoration: none;
+    transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  }
+  .guide-card:hover {
+    border-color: rgba(255, 215, 0, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.1);
+  }
+  .guide-card .badge {
+    display: inline-block;
+    background: rgba(157, 0, 255, 0.2);
+    border: 1px solid rgba(157, 0, 255, 0.4);
+    color: #c0a0ff;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    padding: 2px 10px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  .guide-card h3 {
+    font-family: 'Cinzel', serif;
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+  .guide-card p {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #b8a8cc;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .guide-card .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #00f5ff;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+</style>
+
+<div class="guides-intro">
+  <p>These aren't blog posts. They're personal notes — how I built the tools, what surprised me about the patterns, and where I'd start if I were you. Written by me, from experience. No marketing, no fluff.</p>
+</div>
+
+<div class="guides-grid">
+
+  <a class="guide-card" href="/guides/your-first-hour/">
+    <span class="badge">Your Journey</span>
+    <h3>Your First Hour with Quantum Merlin</h3>
+    <p>Where to start, which tools to try first, and the moment the numbers stop being abstract and start being about you.</p>
+    <span class="read-more">Read guide →</span>
+  </a>
+
+  <a class="guide-card" href="/guides/why-i-made-compatibility/">
+    <span class="badge">How I Built It</span>
+    <h3>Why I Made the Compatibility Tool</h3>
+    <p>A friendship that didn't make sense on paper — until I ran the numbers and found the connection hidden in the layers nobody checks.</p>
+    <span class="read-more">Read guide →</span>
+  </a>
+
+</div>

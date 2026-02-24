@@ -28,6 +28,7 @@
 | [PILLARS.md](PILLARS.md) | All branded sites — what exists, what's unique, what's missing | Working within any specific brand, understanding tool inventory |
 | [MONETIZE.md](MONETIZE.md) | Revenue strategy, AdSense, Etsy, freemium, analytics, SEO | Payment integration, ad placement, conversion optimization |
 | [MARKETING.md](MARKETING.md) | Growth, SEO calendar, email funnels, social hooks, cross-brand discovery | Campaigns, email capture, shareable outputs, brand promotion |
+| [STORYTELLER.md](STORYTELLER.md) | Founder voice, guides, playbooks, origin stories, user journey narratives | Any user-facing written content, guides, blog posts, Etsy copy |
 | [QA.md](QA.md) | Testing, validation, consistency checks, deployment checklists | Before any commit, verifying calculations, cross-brand consistency |
 
 ---

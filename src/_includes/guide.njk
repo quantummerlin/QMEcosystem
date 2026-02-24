@@ -1,0 +1,146 @@
+{% extends "qme.njk" %}
+
+{% block extraHead %}
+  <style>
+    /* ── Guide-specific typography ──────────────────────────── */
+    .guide-content {
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.9;
+    }
+    .guide-content p {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.15rem;
+      color: #e8dff0;
+      margin-bottom: 1.5rem;
+    }
+    .guide-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #ffd700;
+      font-size: 1.6rem;
+      margin: 3rem 0 1rem;
+      letter-spacing: 1px;
+    }
+    .guide-content h3 {
+      font-family: 'Cinzel', serif;
+      color: #c0a0ff;
+      font-size: 1.25rem;
+      margin: 2rem 0 0.8rem;
+    }
+    .guide-content strong {
+      color: #ffd700;
+    }
+    .guide-content em {
+      color: #00f5ff;
+      font-style: italic;
+    }
+    .guide-content blockquote {
+      border-left: 3px solid rgba(157, 0, 255, 0.5);
+      background: rgba(157, 0, 255, 0.08);
+      padding: 1.2rem 1.5rem;
+      border-radius: 0 12px 12px 0;
+      margin: 2rem 0;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .guide-content blockquote p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .guide-content ul, .guide-content ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .guide-content li {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      color: #d4c5e8;
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+    }
+    .guide-content a {
+      color: #00f5ff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 245, 255, 0.3);
+      transition: border-color 0.2s;
+    }
+    .guide-content a:hover {
+      border-color: #00f5ff;
+    }
+    .guide-content hr {
+      border: none;
+      border-top: 1px solid rgba(255, 215, 0, 0.15);
+      margin: 3rem 0;
+    }
+    /* Callout box */
+    .guide-content .callout {
+      background: rgba(0, 245, 255, 0.06);
+      border: 1px solid rgba(0, 245, 255, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .guide-content .callout p {
+      color: #a0d8e0;
+      margin-bottom: 0.5rem;
+    }
+    .guide-content .callout p:last-child {
+      margin-bottom: 0;
+    }
+    /* Author byline */
+    .guide-byline {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    }
+    .guide-byline .author {
+      font-family: 'Cinzel', serif;
+      color: #c0a0ff;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    .guide-byline .date {
+      color: #8a7a9e;
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+    /* Guide type badge */
+    .guide-type {
+      display: inline-block;
+      background: rgba(157, 0, 255, 0.2);
+      border: 1px solid rgba(157, 0, 255, 0.4);
+      color: #c0a0ff;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      padding: 3px 12px;
+      border-radius: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    @media (max-width: 480px) {
+      .guide-content p { font-size: 1.05rem; }
+      .guide-content h2 { font-size: 1.35rem; }
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="header">
+      {% if guideType %}<span class="guide-type">{{ guideType }}</span>{% endif %}
+      <h1>{{ title }}</h1>
+      <p>{{ subtitle | default(description) }}</p>
+    </div>
+
+    <div class="guide-byline">
+      <div class="author">By Quantum Merlin</div>
+      {% if publishDate %}<div class="date">{{ publishDate }}</div>{% endif %}
+    </div>
+
+    <div class="guide-content">
+      {{ content | safe }}
+    </div>
+  </div>
+{% endblock %}

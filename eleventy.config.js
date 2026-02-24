@@ -42,7 +42,7 @@ export default function(eleventyConfig) {
   // continues to work without any passthrough copying.
   // Build is near-instant: only templated pages are processed.
   return {
-    templateFormats: ["njk"],
+    templateFormats: ["njk", "md"],
 
     dir: {
       input: "src",          // Templated pages live in src/
