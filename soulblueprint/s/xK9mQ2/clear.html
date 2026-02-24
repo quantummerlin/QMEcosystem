@@ -193,7 +193,7 @@
         parts.push('    <meta name="viewport" content="width=device-width, initial-scale=1.0">');
         parts.push('    <title>A Moment in Time for ' + name + '</title>');
         parts.push('    <meta name="robots" content="noindex, nofollow">');
-        parts.push('    <link rel="icon" href="https://quantummerlin.com/soulblueprint/Amomentintime.jpg">');
+        parts.push('    <link rel="icon" href="https://quantummerlin.com/soulblueprint/favicon.svg">');
         parts.push('    <meta property="og:title" content="A Moment in Time for ' + name + '">');
         parts.push('    <meta property="og:description" content="A personalised cosmic reading with 65+ insights covering astrology, numerology and life patterns.">');
         parts.push('    <meta property="og:image" content="https://quantummerlin.com/soulblueprint/Amomentintime.jpg">');
@@ -201,7 +201,7 @@
         parts.push('    <meta name="twitter:card" content="summary_large_image">');
         parts.push('    <meta name="twitter:title" content="A Moment in Time for ' + name + '">');
         parts.push('    <meta name="twitter:image" content="https://quantummerlin.com/soulblueprint/Amomentintime.jpg">');
-        parts.push('    <link rel="apple-touch-icon" href="https://quantummerlin.com/soulblueprint/Amomentintime.jpg">');
+        parts.push('    <link rel="apple-touch-icon" href="https://quantummerlin.com/soulblueprint/favicon.svg">');
         parts.push('    <meta name="apple-mobile-web-app-capable" content="yes">');
         parts.push('    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">');
         parts.push('    <style>');
@@ -251,7 +251,9 @@
         parts.push('        if (header && !header.getAttribute("onclick")) { toggleCard(header); }');
         parts.push('    });');
         parts.push('    <\/script>');
-        parts.push('</body>');
+        parts.push('
+<script src="/shared/js/quantum-explore.js" defer></script>
+</body>');
         parts.push('</html>');
 
         var standalone = parts.join('\n');

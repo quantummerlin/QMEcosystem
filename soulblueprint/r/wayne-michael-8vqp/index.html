@@ -33,9 +33,9 @@
     
     <!-- PWA Manifest & Icons (cache bust) -->
     
-    <link rel="apple-touch-icon" sizes="180x180" href="/soulblueprint/Amomentintime.jpg?v=1">
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="/soulblueprint/Amomentintime.jpg?v=1">
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="/soulblueprint/Amomentintime.jpg?v=1">
+    <link rel="apple-touch-icon" href="/soulblueprint/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/soulblueprint/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/soulblueprint/favicon.svg">
     
     <!-- Open Graph / Social Sharing -->
     <meta property="og:title" id="og-title" content="A Moment in Time - Your Complete Cosmic Reading">
@@ -11523,4 +11523,8 @@ document.addEventListener("DOMContentLoaded",function(){updateProgress()});
 // Disable service worker
 if("serviceWorker" in navigator){navigator.serviceWorker.getRegistrations().then(function(r){r.forEach(function(reg){reg.unregister()})})}
 </script>
+
+<script src="/shared/js/quantum-explore.js" defer></script>
+
+<script src="/shared/js/quantum-email-capture.js" defer></script>
 </body></html>
