@@ -9,21 +9,21 @@ User-agent: *
 Allow: /
 
 # ── Block development scripts ──
-Disallow: /*.py$
-Disallow: /*.ps1$
-Disallow: /*.sh$
+Disallow: /*.py
+Disallow: /*.ps1
+Disallow: /*.sh
 
 # ── Block planning/strategy documents ──
-Disallow: /*.md$
-Disallow: /*.txt$
-Disallow: /*.odt$
-Disallow: /*.pdf$
-Disallow: /*.log$
+Disallow: /*.md
+Disallow: /*.txt
+Disallow: /*.odt
+Disallow: /*.pdf
+Disallow: /*.log
 
 # ── Block media files that shouldn't be indexed ──
-Disallow: /*.mp4$
-Disallow: /*.mov$
-Disallow: /*.zip$
+Disallow: /*.mp4
+Disallow: /*.mov
+Disallow: /*.zip
 
 # ── Block backup and old/dev files ──
 Disallow: /*-backup*

@@ -6,7 +6,7 @@
  */
 
 const QRC_ANALYTICS = {
-  GA_ID: 'G-XXXXXXXXXX', // Replace with your GA4 Measurement ID
+  GA_ID: 'G-VW4LGE7L1T',
   initialized: false,
   
   /**
@@ -16,7 +16,7 @@ const QRC_ANALYTICS = {
     if (this.initialized) return;
     
     // Don't load if using placeholder ID
-    if (this.GA_ID === 'G-XXXXXXXXXX') {
+    if (this.GA_ID === 'G-XXXXXXXXXX' || !this.GA_ID) {
       console.log('[QRC Analytics] Using placeholder ID - tracking disabled');
       return;
     }
