@@ -1,5 +1,39 @@
 {% extends "qme.njk" %}
 
+{% block head %}
+  <!-- Article Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ ogTitle | default(title) }}",
+    "description": "{{ ogDescription | default(description) }}",
+    "author": {
+      "@type": "Person",
+      "name": "Quantum Merlin",
+      "url": "https://quantummerlin.com/about-new.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Quantum Merlin",
+      "url": "https://quantummerlin.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://quantummerlin.com/assets/tarot/QMTarot.png"
+      }
+    },
+    "url": "{{ canonical | default('https://quantummerlin.com' + page.url) }}",
+    "datePublished": "2026-02-25",
+    "dateModified": "2026-02-25",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ canonical | default('https://quantummerlin.com' + page.url) }}"
+    },
+    "articleSection": "{{ guideType | default('Guide') }}"
+  }
+  </script>
+{% endblock %}
+
 {% block extraHead %}
   <style>
     /* ── Guide-specific typography ──────────────────────────── */

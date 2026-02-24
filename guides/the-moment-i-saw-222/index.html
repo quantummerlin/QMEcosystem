@@ -42,183 +42,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   
-  <link rel="icon" href="/assets/tarot/QMTarot.png" type="image/png">
-  <meta name="theme-color" content="#0a0a0f">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Cormorant Garamond', serif;
-      background: radial-gradient(ellipse at center, #1a0033 0%, #0a0015 70%, #000000 100%);
-      min-height: 100vh;
-      padding: 20px;
-      color: #e0e0e0;
-    }
-    .container { max-width: 800px; width: 100%; margin: 0 auto; padding: 0 15px; }
-    .header { text-align: center; color: white; margin-bottom: 30px; }
-    .header h1 {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 2.6em; margin-bottom: 15px;
-      background: linear-gradient(135deg, #ffd700 0%, #e6ac00 50%, #aa8800 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; letter-spacing: 1px;
-    }
-    .header p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15em; opacity: 0.85; color: #c0a0ff;
-    }
-  </style>
-  
-  <style>
-    /* ── Guide-specific typography ──────────────────────────── */
-    .guide-content {
-      max-width: 720px;
-      margin: 0 auto;
-      line-height: 1.9;
-    }
-    .guide-content p {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.15rem;
-      color: #e8dff0;
-      margin-bottom: 1.5rem;
-    }
-    .guide-content h2 {
-      font-family: 'Cinzel', serif;
-      color: #ffd700;
-      font-size: 1.6rem;
-      margin: 3rem 0 1rem;
-      letter-spacing: 1px;
-    }
-    .guide-content h3 {
-      font-family: 'Cinzel', serif;
-      color: #c0a0ff;
-      font-size: 1.25rem;
-      margin: 2rem 0 0.8rem;
-    }
-    .guide-content strong {
-      color: #ffd700;
-    }
-    .guide-content em {
-      color: #00f5ff;
-      font-style: italic;
-    }
-    .guide-content blockquote {
-      border-left: 3px solid rgba(157, 0, 255, 0.5);
-      background: rgba(157, 0, 255, 0.08);
-      padding: 1.2rem 1.5rem;
-      border-radius: 0 12px 12px 0;
-      margin: 2rem 0;
-      font-style: italic;
-      color: rgba(255, 255, 255, 0.9);
-    }
-    .guide-content blockquote p {
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.9);
-    }
-    .guide-content ul, .guide-content ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .guide-content li {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.1rem;
-      color: #d4c5e8;
-      margin-bottom: 0.5rem;
-      line-height: 1.7;
-    }
-    .guide-content a {
-      color: #00f5ff;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(0, 245, 255, 0.3);
-      transition: border-color 0.2s;
-    }
-    .guide-content a:hover {
-      border-color: #00f5ff;
-    }
-    .guide-content hr {
-      border: none;
-      border-top: 1px solid rgba(255, 215, 0, 0.15);
-      margin: 3rem 0;
-    }
-    .guide-content table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.05rem;
-    }
-    .guide-content thead th {
-      background: rgba(157, 0, 255, 0.2);
-      color: #ffd700;
-      font-family: 'Cinzel', serif;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 0.7rem 0.9rem;
-      text-align: center;
-      border-bottom: 2px solid rgba(255, 215, 0, 0.25);
-    }
-    .guide-content td {
-      padding: 0.5rem 0.9rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      color: #d4c5e8;
-      text-align: center;
-    }
-    .guide-content tbody tr:hover {
-      background: rgba(255, 215, 0, 0.04);
-    }
-    /* Callout box */
-    .guide-content .callout {
-      background: rgba(0, 245, 255, 0.06);
-      border: 1px solid rgba(0, 245, 255, 0.2);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 2rem 0;
-    }
-    .guide-content .callout p {
-      color: #a0d8e0;
-      margin-bottom: 0.5rem;
-    }
-    .guide-content .callout p:last-child {
-      margin-bottom: 0;
-    }
-    /* Author byline */
-    .guide-byline {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
-    }
-    .guide-byline .author {
-      font-family: 'Cinzel', serif;
-      color: #c0a0ff;
-      font-size: 1rem;
-      letter-spacing: 1px;
-    }
-    .guide-byline .date {
-      color: #8a7a9e;
-      font-size: 0.9rem;
-      margin-top: 0.3rem;
-    }
-    /* Guide type badge */
-    .guide-type {
-      display: inline-block;
-      background: rgba(157, 0, 255, 0.2);
-      border: 1px solid rgba(157, 0, 255, 0.4);
-      color: #c0a0ff;
-      font-family: 'Cinzel', serif;
-      font-size: 0.75rem;
-      padding: 3px 12px;
-      border-radius: 20px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 0.8rem;
-    }
-    @media (max-width: 480px) {
-      .guide-content p { font-size: 1.05rem; }
-      .guide-content h2 { font-size: 1.35rem; }
-    }
-  </style>
-
+  <!-- Article Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Moment I Saw 222 Everywhere — Quantum Merlin",
+    "description": "The personal story behind the Angel Number Calculator. How seeing 222 on every clock led to a tool that decodes repeating numbers.",
+    "author": {
+      "@type": "Person",
+      "name": "Quantum Merlin",
+      "url": "https://quantummerlin.com/about-new.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Quantum Merlin",
+      "url": "https://quantummerlin.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://quantummerlin.com/assets/tarot/QMTarot.png"
+      }
+    },
+    "url": "https://quantummerlin.com/guides/the-moment-i-saw-222/",
+    "datePublished": "2026-02-25",
+    "dateModified": "2026-02-25",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://quantummerlin.com/guides/the-moment-i-saw-222/"
+    },
+    "articleSection": "How I Built It"
+  }
+  </script>
 
 </head>
 <body>
