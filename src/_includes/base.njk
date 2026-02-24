@@ -13,17 +13,17 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:title" content="{{ title }} | {{ brandName | default(site.name) }}">
-  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="{% if guideType %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ canonical | default(site.url + page.url) }}">
+  <meta property="og:title" content="{{ ogTitle | default(title + ' | ' + (brandName | default(site.name))) }}">
+  <meta property="og:description" content="{{ ogDescription | default(description) }}">
   <meta property="og:image" content="{{ ogImage | default(site.url + '/assets/tarot/QMTarot.png') }}">
   <meta property="og:site_name" content="{{ brandName | default(site.name) }}">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ title }} | {{ brandName | default(site.name) }}">
-  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:title" content="{{ ogTitle | default(title + ' | ' + (brandName | default(site.name))) }}">
+  <meta name="twitter:description" content="{{ ogDescription | default(description) }}">
 
   <!-- PWA -->
   <meta name="theme-color" content="{{ themeColor | default('#0a0a0f') }}">
