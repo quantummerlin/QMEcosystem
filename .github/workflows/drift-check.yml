@@ -1,0 +1,118 @@
+name: Drift Detection
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/calculations.js'
+      - '**/engine.js'
+      - '**/readings.js'
+  pull_request:
+    branches: [main]
+
+jobs:
+  drift-check:
+    runs-on: ubuntu-latest
+    name: Check for file drift across brands
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check calculations.js drift
+        run: |
+          echo "=== calculations.js drift check ==="
+          CANONICAL="soulblueprint/calculations.js"
+          COPIES=(
+            "ultimate/calculations.js"
+            "stranger/calculations.js"
+            "kpop/readings/calculations.js"
+            "classic/readings/calculations.js"
+            "amomentintime/calculations.js"
+            "amomentintime/pt/calculations.js"
+            "amomentintime/esp/calculations.js"
+          )
+          DRIFT=0
+          CANONICAL_HASH=$(sha256sum "$CANONICAL" | cut -d' ' -f1)
+          for copy in "${COPIES[@]}"; do
+            if [ ! -f "$copy" ]; then
+              echo "  [MISSING] $copy"
+              continue
+            fi
+            COPY_HASH=$(sha256sum "$copy" | cut -d' ' -f1)
+            if [ "$CANONICAL_HASH" != "$COPY_HASH" ]; then
+              echo "  [DRIFT] $copy"
+              echo "    canonical lines: $(wc -l < "$CANONICAL")"
+              echo "    copy lines:      $(wc -l < "$copy")"
+              DRIFT=$((DRIFT + 1))
+            else
+              echo "  [OK] $copy"
+            fi
+          done
+          if [ $DRIFT -gt 0 ]; then
+            echo ""
+            echo "::warning::calculations.js has $DRIFT drifted copies"
+          fi
+
+      - name: Check engine.js drift
+        run: |
+          echo "=== forecasts/engine.js drift check ==="
+          CANONICAL="amomentintime/forecasts/engine.js"
+          COPIES=(
+            "stranger/forecasts/engine.js"
+            "kpop/readings/forecasts/engine.js"
+            "classic/readings/forecasts/engine.js"
+          )
+          DRIFT=0
+          CANONICAL_HASH=$(sha256sum "$CANONICAL" | cut -d' ' -f1)
+          for copy in "${COPIES[@]}"; do
+            if [ ! -f "$copy" ]; then
+              echo "  [MISSING] $copy"
+              continue
+            fi
+            COPY_HASH=$(sha256sum "$copy" | cut -d' ' -f1)
+            if [ "$CANONICAL_HASH" != "$COPY_HASH" ]; then
+              echo "  [DRIFT] $copy"
+              DRIFT=$((DRIFT + 1))
+            else
+              echo "  [OK] $copy"
+            fi
+          done
+          if [ $DRIFT -gt 0 ]; then
+            echo ""
+            echo "::error::engine.js has $DRIFT drifted copies - FIX REQUIRED"
+            exit 1
+          fi
+
+      - name: Check readings.js drift
+        run: |
+          echo "=== readings.js drift check ==="
+          CANONICAL="soulblueprint/readings.js"
+          COPIES=(
+            "ultimate/readings.js"
+            "stranger/readings.js"
+            "kpop/readings/readings.js"
+            "classic/readings/readings.js"
+            "amomentintime/readings.js"
+            "amomentintime/pt/readings.js"
+            "amomentintime/esp/readings.js"
+          )
+          DRIFT=0
+          CANONICAL_HASH=$(sha256sum "$CANONICAL" | cut -d' ' -f1)
+          for copy in "${COPIES[@]}"; do
+            if [ ! -f "$copy" ]; then
+              echo "  [MISSING] $copy"
+              continue
+            fi
+            COPY_HASH=$(sha256sum "$copy" | cut -d' ' -f1)
+            if [ "$CANONICAL_HASH" != "$COPY_HASH" ]; then
+              echo "  [DRIFT] $copy"
+              DRIFT=$((DRIFT + 1))
+            else
+              echo "  [OK] $copy"
+            fi
+          done
+          if [ $DRIFT -gt 0 ]; then
+            echo ""
+            echo "::warning::readings.js has $DRIFT drifted copies"
+          fi
