@@ -1,0 +1,54 @@
+{% extends "base.njk" %}
+
+{% block head %}
+  <link rel="icon" href="/assets/tarot/QMTarot.png" type="image/png">
+  <meta name="theme-color" content="#0a0a0f">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: radial-gradient(ellipse at center, #1a0033 0%, #0a0015 70%, #000000 100%);
+      min-height: 100vh;
+      padding: 20px;
+      color: #e0e0e0;
+    }
+    .container { max-width: 800px; width: 100%; margin: 0 auto; padding: 0 15px; }
+    .header { text-align: center; color: white; margin-bottom: 30px; }
+    .header h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 2.6em; margin-bottom: 15px;
+      background: linear-gradient(135deg, #ffd700 0%, #e6ac00 50%, #aa8800 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; letter-spacing: 1px;
+    }
+    .header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15em; opacity: 0.85; color: #c0a0ff;
+    }
+  </style>
+  {% block extraHead %}{% endblock %}
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="header">
+      <h1>{{ title }}</h1>
+      <p>{{ subtitle | default(description) }}</p>
+    </div>
+
+    {{ content | safe }}
+  </div>
+
+  <!-- Footer -->
+  <footer style="margin-top:50px;padding:30px 20px;text-align:center;border-top:1px solid rgba(255,215,0,0.2);background:rgba(10,0,25,0.8);">
+    <div style="margin-bottom:15px;">
+      <a href="/terms.html" style="color:#9A8F7A;text-decoration:none;font-family:'Cinzel',serif;font-size:0.9rem;">Terms</a>
+      <span style="color:rgba(255,215,0,0.3);margin:0 10px;">|</span>
+      <a href="/privacy.html" style="color:#9A8F7A;text-decoration:none;font-family:'Cinzel',serif;font-size:0.9rem;">Privacy</a>
+      <span style="color:rgba(255,215,0,0.3);margin:0 10px;">|</span>
+      <a href="/disclaimer.html" style="color:#9A8F7A;text-decoration:none;font-family:'Cinzel',serif;font-size:0.9rem;">Disclaimer</a>
+    </div>
+    <p style="color:#6B6B6B;font-size:0.85rem;font-style:italic;margin-bottom:15px;">&copy; 2026 Quantum Merlin. All tools free forever.</p>
+    <a href="{{ site.bmac }}" target="_blank" style="display:inline-block;background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;text-decoration:none;font-family:'Cinzel',serif;font-weight:600;font-size:0.95rem;padding:10px 22px;border-radius:25px;box-shadow:0 4px 15px rgba(255,215,0,0.3);">Support Us</a>
+  </footer>
+{% endblock %}

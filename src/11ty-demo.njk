@@ -1,0 +1,43 @@
+---
+layout: qme.njk
+title: "11ty Template Demo"
+description: "Proof-of-concept page built with Eleventy templating. This page demonstrates the shared layout system."
+subtitle: "Templating Foundation — Proof of Concept"
+permalink: /11ty-demo/
+---
+
+<div class="tool-card" style="background:rgba(20,10,40,0.85);border:1px solid rgba(255,215,0,0.25);border-radius:20px;padding:35px 25px;margin-bottom:30px;">
+  <h2 style="font-family:'Cinzel',serif;color:#ffd700;margin-bottom:15px;font-size:1.4rem;">How This Page Works</h2>
+  <p style="line-height:1.7;color:#c0bdb5;margin-bottom:15px;">
+    This page is built using <strong style="color:#e8e4d9;">Eleventy (11ty)</strong> with Nunjucks templates.
+    Instead of duplicating the same boilerplate HTML across every page, it uses a shared layout that provides:
+  </p>
+  <ul style="list-style:none;padding:0;">
+    <li style="padding:8px 0;color:#c0bdb5;">&#10024; Google Analytics (GA4) — auto-injected</li>
+    <li style="padding:8px 0;color:#c0bdb5;">&#10024; AdSense — auto-injected</li>
+    <li style="padding:8px 0;color:#c0bdb5;">&#10024; Open Graph & Twitter Cards — from front matter</li>
+    <li style="padding:8px 0;color:#c0bdb5;">&#10024; Canonical URL — auto-generated</li>
+    <li style="padding:8px 0;color:#c0bdb5;">&#10024; Etsy CTA — auto-injected</li>
+    <li style="padding:8px 0;color:#c0bdb5;">&#10024; Footer with legal links — from layout</li>
+  </ul>
+</div>
+
+<div class="tool-card" style="background:rgba(20,10,40,0.85);border:1px solid rgba(191,90,242,0.25);border-radius:20px;padding:35px 25px;">
+  <h2 style="font-family:'Cinzel',serif;color:#bf5af2;margin-bottom:15px;font-size:1.4rem;">For Developers</h2>
+  <p style="line-height:1.7;color:#c0bdb5;margin-bottom:10px;">
+    To create a new page using this template system, create a <code style="color:#06b6d4;">.njk</code> file in
+    <code style="color:#06b6d4;">src/</code> with front matter:
+  </p>
+  <pre style="background:rgba(0,0,0,0.4);border:1px solid rgba(100,100,100,0.3);border-radius:12px;padding:20px;overflow-x:auto;color:#a0ffa0;font-size:0.9rem;line-height:1.5;">---
+layout: qme.njk        # or stranger.njk
+title: "My New Tool"
+description: "Tool description for SEO"
+permalink: /my-tool/
+---
+
+&lt;!-- Your tool HTML goes here --&gt;
+&lt;div class="tool-card"&gt;...&lt;/div&gt;</pre>
+  <p style="line-height:1.7;color:#c0bdb5;margin-top:15px;">
+    Build with <code style="color:#06b6d4;">npx eleventy</code> — output goes to <code style="color:#06b6d4;">_site/</code>.
+  </p>
+</div>

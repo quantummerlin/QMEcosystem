@@ -6,9 +6,12 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
   "scripts": {
-    "build": "echo 'Static site - no build needed'"
+    "build": "npx @11ty/eleventy --config=eleventy.config.js",
+    "serve": "npx @11ty/eleventy --config=eleventy.config.js --serve",
+    "build:static": "echo 'Static site - no build needed'"
   }
 }

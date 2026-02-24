@@ -1,0 +1,101 @@
+{% extends "base.njk" %}
+
+{% block head %}
+  <link rel="icon" type="image/jpeg" href="/stranger/stranger.jpg">
+  <link rel="apple-touch-icon" href="/stranger/stranger.jpg">
+  <link rel="manifest" href="/stranger/manifest.json">
+  <meta name="theme-color" content="#FF4500">
+  <link rel="stylesheet" href="/stranger/quantum-merlin-styles.css">
+  <link rel="stylesheet" href="/stranger/go-deeper.css">
+  <script src="/stranger/tool-tracker.js" defer></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: #0a0508;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 69, 0, 0.15) 0%, transparent 50%);
+      min-height: 100vh;
+      padding: 20px;
+      color: #e0e0e0;
+    }
+    .container { max-width: 800px; width: 100%; margin: 0 auto; padding: 0 15px; }
+    .header { text-align: center; color: white; margin-bottom: 30px; }
+    .header h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #FF6B35 0%, #FF4500 50%, #8B0000 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1px;
+    }
+    .header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2em;
+      opacity: 0.85;
+      color: #FF4500;
+    }
+  </style>
+  {% block extraHead %}{% endblock %}
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="header">
+      <h1>{{ title }}</h1>
+      <p>{{ subtitle | default(description) }}</p>
+    </div>
+
+    {{ content | safe }}
+  </div>
+
+  <!-- Legal Footer -->
+  <footer class="legal-footer">
+    <div class="feedback-section">
+      <p class="feedback-text">Found an issue or have a suggestion?</p>
+      <a href="mailto:fixit@quantummerlin.com?subject=Quantum%20Merlin%20Feedback" class="footer-feedback-btn">fixit@quantummerlin.com</a>
+    </div>
+    <div class="legal-links">
+      <a href="/stranger/terms.html">Terms of Service</a>
+      <span class="separator">|</span>
+      <a href="/stranger/privacy.html">Privacy Policy</a>
+      <span class="separator">|</span>
+      <a href="/stranger/disclaimer.html">Disclaimer</a>
+    </div>
+    <p class="copyright">&copy; 2026 Stranger Patterns. For entertainment purposes only.</p>
+    <div class="coffee-section">
+      <a href="{{ site.bmac }}" target="_blank" class="coffee-btn">Buy Us a Coffee</a>
+    </div>
+  </footer>
+
+  <style>
+    .legal-footer {
+      margin-top: 50px; padding: 30px 20px; text-align: center;
+      border-top: 1px solid rgba(220, 20, 60, 0.2); background: rgba(10, 10, 15, 0.8);
+    }
+    .feedback-section { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(220, 20, 60, 0.15); }
+    .feedback-text { color: #9A8F7A; font-size: 0.9rem; margin-bottom: 10px; }
+    .footer-feedback-btn {
+      display: inline-block; color: #FF4500; text-decoration: none;
+      font-family: 'Cinzel', serif; font-size: 0.95rem; padding: 10px 20px;
+      border: 1px solid rgba(255, 69, 0, 0.4); border-radius: 25px; transition: all 0.3s;
+    }
+    .footer-feedback-btn:hover { background: rgba(255, 69, 0, 0.15); border-color: #FF4500; transform: translateY(-2px); }
+    .legal-links { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px; }
+    .legal-links a { color: #9A8F7A; text-decoration: none; font-family: 'Cinzel', serif; font-size: 0.9rem; transition: color 0.3s; }
+    .legal-links a:hover { color: #FF6B35; }
+    .legal-links .separator { color: rgba(220, 20, 60, 0.4); }
+    .copyright { color: #6B6B6B; font-size: 0.85rem; font-style: italic; margin-bottom: 20px; }
+    .coffee-section { padding-top: 15px; border-top: 1px solid rgba(220, 20, 60, 0.15); }
+    .coffee-btn {
+      display: inline-block; background: linear-gradient(135deg, #FF6B35 0%, #f59e0b 100%);
+      color: #0a0a0f; text-decoration: none; font-family: 'Cinzel', serif;
+      font-weight: 600; font-size: 1rem; padding: 12px 25px; border-radius: 25px;
+      transition: all 0.3s; box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+    }
+    .coffee-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(251, 191, 36, 0.5); }
+  </style>
+{% endblock %}
