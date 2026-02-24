@@ -101,9 +101,13 @@ function escapeHtml(str) {
 async function main() {
     const args = parseArgs();
     if (!args.name || !args.date) {
-        console.error('Usage: node fulfill.js --name="Jane Doe" --date=1990-06-15 [--time=14:30] [--place="London, UK"]');
+        console.error('Usage: node fulfill.js --name="Jane Doe" --date=1990-06-15 [--time=14:30] [--place="London, UK"] [--theme=pink|blue|purple]');
         process.exit(1);
     }
+
+    // Normalize theme: accept pink/blue/purple or girl/boy/purple
+    const themeMap = { pink: 'girl', girl: 'girl', blue: 'boy', boy: 'boy', purple: 'purple', m: 'boy', f: 'girl', n: 'purple' };
+    const theme = themeMap[(args.theme || 'pink').toLowerCase()] || 'girl';
 
     const browserPath = findBrowser();
     if (!browserPath) { console.error('ERROR: No Chrome/Edge found.'); process.exit(1); }
@@ -136,7 +140,12 @@ async function main() {
 
         // Navigate and wait for all scripts
         await page.goto(pageUrl, { waitUntil: 'networkidle0', timeout: 45000 });
-        console.log('Page loaded. Waiting for reading...');
+
+        // Set theme/gender before generation starts
+        await page.evaluate((t) => {
+            if (typeof setGender === 'function') setGender(t);
+        }, theme);
+        console.log(`Page loaded (theme: ${theme}). Waiting for reading...`);
 
         // The DOMContentLoaded handler detects name/date URL params and auto-generates
         await page.waitForFunction(() => {
