@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Quantum Reality Codes</title>
-    <meta name="description" content="Get in touch with Quantum Reality Codes. We'd love to hear your feedback, suggestions, or questions about our spiritual technology tools.">
-    <meta name="keywords" content="contact quantum reality codes, support, feedback, questions">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
+    <title>Contact | Quantum Merlin</title>
+    <meta name="description" content="Get in touch with Quantum Merlin. We'd love to hear your feedback, suggestions, or questions about our spiritual technology tools.">
+    <meta name="keywords" content="contact quantum merlin, support, feedback, questions">
     <meta name="author" content="Quantum Merlin">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://quantummerlin.com/contact-new">
     
     <!-- Open Graph -->
     <meta property="og:url" content="https://quantummerlin.com/contact-new">
-    <meta property="og:title" content="Contact | Quantum Reality Codes">
+    <meta property="og:title" content="Contact | Quantum Merlin">
     <meta property="og:description" content="Get in touch with us. We'd love to hear your feedback about our spiritual technology tools.">
     <meta property="og:image" content="https://quantummerlin.com/assets/tarot/QMTarot.png">
     <meta property="og:type" content="website">
@@ -36,6 +38,15 @@
     <!-- Shared Styles -->
     <link rel="stylesheet" href="/shared/css/quantum-core.css">
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VW4LGE7L1T');
+    </script>
+
     <style>
         .contact-container {
             max-width: 900px;
@@ -402,8 +413,8 @@
     <header class="main-header">
         <div class="header-content">
             <a href="/index.html" class="logo">
-                <div class="logo-icon">QRC</div>
-                <span class="logo-text">Quantum Reality Codes</span>
+                <div class="logo-icon">QM</div>
+                <span class="logo-text">Quantum Merlin</span>
             </a>
             <div class="header-controls">
                 <a href="https://buymeacoffee.com/quantumreality" target="_blank" class="support-btn" style="background: linear-gradient(135deg, var(--neon-gold), #ff9500); color: #000; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-size: 0.9rem;">
@@ -529,7 +540,7 @@
                 </button>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        Yes! Quantum Reality Codes is a Progressive Web App (PWA). Once you've visited a page, it's cached for offline use. You can even install it on your phone's home screen for a native app experience.
+                        Yes! Quantum Merlin is a Progressive Web App (PWA). Once you've visited a page, it's cached for offline use. You can even install it on your phone's home screen for a native app experience.
                     </div>
                 </div>
             </div>
@@ -574,7 +585,7 @@
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>Quantum Reality Codes</h4>
+                    <h4>Quantum Merlin</h4>
                     <p>Bridging ancient wisdom with quantum possibilities through sacred frequencies and mystical tools.</p>
                 </div>
                 <div class="footer-section">
@@ -601,11 +612,14 @@
                         <li><a href="https://buymeacoffee.com/quantumreality" target="_blank">Buy Me a Coffee</a></li>
                         <li><a href="/about-new.html">About</a></li>
                         <li><a href="/contact-new.html">Contact</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                        <li><a href="/disclaimer.html">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Quantum Reality Codes. For entertainment and spiritual exploration.</p>
+                <p>&copy; 2026 Quantum Merlin. For entertainment and spiritual exploration.</p>
             </div>
         </div>
     </footer>
@@ -631,7 +645,7 @@
             }
         }
 
-        // Form submission
+        // Form submission via Formspree
         function handleSubmit(event) {
             event.preventDefault();
             
@@ -643,18 +657,33 @@
             submitBtn.disabled = true;
             submitBtn.textContent = '⏳ Sending...';
             
-            // Simulate form submission (replace with actual endpoint)
-            setTimeout(() => {
-                // Show success notification
-                showNotification('✨ Message sent! We\'ll get back to you soon.', 'success');
-                
-                // Reset form
-                form.reset();
-                
-                // Reset button
+            const formData = new FormData(form);
+            
+            fetch('https://formspree.io/f/xdkobqey', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showNotification('✨ Message sent! We\'ll get back to you soon.', 'success');
+                    form.reset();
+                } else {
+                    return response.json().then(data => {
+                        throw new Error(data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong');
+                    });
+                }
+            })
+            .catch(error => {
+                showNotification('❌ Failed to send. Please email us directly at hello@quantummerlin.com', 'error');
+                console.error('Form submission error:', error);
+            })
+            .finally(() => {
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;
-            }, 1500);
+            });
         }
 
         // Notification system
