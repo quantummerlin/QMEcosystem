@@ -632,13 +632,23 @@
             }, 1000);
         }
 
-        // DisplashowEnhancedReading() {
+        // Display the basic reading
+        function displayReading(card) {
+            document.getElementById('bigCardImg').src = `assets/tarot/${card.image}`;
+            document.getElementById('bigCardImg').alt = card.name;
+            document.getElementById('cardName').textContent = card.name;
+            document.getElementById('cardSubtitle').textContent = card.arcana === 'major' ? 'Major Arcana' : `${card.suit.charAt(0).toUpperCase() + card.suit.slice(1)} — Minor Arcana`;
+            document.getElementById('basicReading').innerHTML = getBasicReading(card);
+            document.getElementById('soulMessage').textContent = getSoulMessage(card);
+            document.getElementById('mysticalInsight').textContent = getMysticalInsight(card);
+        }
+
+        // Show the enhanced reading section
+        function showEnhancedReading() {
             const enhancedSection = document.getElementById('enhancedReading');
             enhancedSection.classList.add('show');
             generateEnhancedReading(selectedCard);
-            enhancedSection.scrollIntoView({ behavior: 'smooth', block: 'nearest
-            document.getElementById('soulMessage').textContent = getSoulMessage(card);
-            document.getElementById('mysticalInsight').textContent = getMysticalInsight(card);
+            enhancedSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         // Enhanced reading functions
@@ -773,8 +783,8 @@
         function resetReading() {
             document.getElementById('readingContainer').style.display = 'none';
             document.getElementById('cardSelectionPhase').style.display = 'block';
-            document.getElementById('enhancedOffer').style.display = 'block';
-            document.getElementById('enhancedReading').classList.remove('show')
+            document.getElementById('enhancedReading').classList.remove('show');
+            document.getElementById('enhancedReading').style.display = '';
             initializeCardSpread();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }

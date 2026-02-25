@@ -56,9 +56,9 @@
     </script>
     
     <!-- Swiss Ephemeris for accurate astronomical calculations -->
-    <script src="https://cdn.jsdelivr.net/npm/swisseph@2.10.3-2/dist/swisseph.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swisseph@2.10.3-2/dist/swisseph.min.js"></script>
     <!-- SunCalc for additional moon/sun calculations -->
-    <script src="https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.js"></script>
     
     <style>
         :root {
@@ -4185,11 +4185,6 @@
             </div>
         </div>
 
-        <!-- Ad Container - Top (will be replaced with AdSense) -->
-        <div class="ad-container horizontal" id="adTop">
-            <span class="ad-placeholder">[ Ad Space - 728x90 ]</span>
-        </div>
-
         <!-- Input Section -->
         <div class="input-section" id="inputSection">
             <h2>Generate Your Forecast</h2>
@@ -4281,17 +4276,12 @@
             <!-- Content will be dynamically generated -->
         </div>
 
-        <!-- Ad Container - Mid Content -->
-        <div class="ad-container horizontal" id="adMid" style="display: none;">
-            <span class="ad-placeholder">[ Ad Space - 728x90 ]</span>
-        </div>
-
         <!-- Email Capture Section -->
         <div class="email-capture" id="emailCapture">
             <h3>🔔 Get Updates</h3>
             <p class="subtitle">Join our list to hear about new tools and features</p>
             <form class="email-form" id="emailForm" action="https://formspree.io/f/mgowrolb" method="POST">
-                <input type="email" name="email" id="emailInput" placeholder="Enter your email" required>
+                <input type="email" name="email" id="emailInput" placeholder="Enter your email" required aria-label="Email address for updates">
                 <button type="submit">Subscribe</button>
             </form>
             <div class="email-benefits">
@@ -4341,11 +4331,6 @@
                     <li>Add birth time & location for maximum accuracy</li>
                 </ul>
             </div>
-        </div>
-
-        <!-- Ad Container - Mid Content -->
-        <div class="ad-container square" id="adBottom">
-            <span class="ad-placeholder">[ Ad Space - 300x250 ]</span>
         </div>
 
         <!-- Explore More Tools -->
@@ -4411,11 +4396,11 @@
         <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255, 215, 0, 0.2); margin-top: 50px;">
             <p style="color: var(--ethereal-white);">© 2026 Quantum Merlin | All Rights Reserved</p>
             <div style="margin-top: 15px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <a href="../genesis/privacy.html" style="color: var(--quantum-gold); text-decoration: none; transition: color 0.3s ease;">Privacy Policy</a>
+                <a href="/privacy.html" style="color: var(--quantum-gold); text-decoration: none; transition: color 0.3s ease;">Privacy Policy</a>
                 <span style="color: var(--quantum-gold);">•</span>
-                <a href="../genesis/terms.html" style="color: var(--quantum-gold); text-decoration: none; transition: color 0.3s ease;">Terms of Service</a>
+                <a href="/terms.html" style="color: var(--quantum-gold); text-decoration: none; transition: color 0.3s ease;">Terms of Service</a>
                 <span style="color: var(--quantum-gold);">•</span>
-                <a href="../genesis/disclaimer.html" style="color: var(--quantum-gold); text-decoration: none; transition: color 0.3s ease;">Disclaimer</a>
+                <a href="/disclaimer.html" style="color: var(--quantum-gold); text-decoration: none; transition: color 0.3s ease;">Disclaimer</a>
             </div>
             <p style="margin-top: 20px; color: var(--rose-pink); font-style: italic; font-size: 0.95rem;">
                 🧙‍♂️ The Wizard and the Rose await... 🌹
