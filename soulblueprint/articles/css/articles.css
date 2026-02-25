@@ -256,7 +256,14 @@ strong { font-weight: 600; }
 }
 .article-card-hero {
     height: 180px; display: flex; align-items: center; justify-content: center;
-    font-size: 3.5rem; position: relative;
+    font-size: 3.5rem; position: relative; overflow: hidden;
+}
+.article-card-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .3s ease;
+}
+.article-card:hover .article-card-hero img {
+    transform: scale(1.05);
 }
 .article-card-hero::after {
     content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px;
@@ -309,6 +316,12 @@ strong { font-weight: 600; }
 .articles-list-item .item-arrow { transition: transform .25s cubic-bezier(.4,0,.2,1); }
 .articles-list-item:hover {
     border-color: var(--color-primary); background: rgba(102,126,234,.03); color: inherit;
+}
+.articles-list-item:hover .item-thumb { transform: scale(1.05); }
+.articles-list-item .item-thumb {
+    width: 56px; height: 56px; border-radius: var(--radius-sm, 8px);
+    object-fit: cover; flex-shrink: 0;
+    transition: transform .25s cubic-bezier(.4,0,.2,1);
 }
 .articles-list-item .item-number {
     font-size: .8rem; font-weight: 700; color: var(--color-text-muted);
@@ -739,6 +752,7 @@ strong { font-weight: 600; }
     .pillar-list-header { flex-wrap: wrap; justify-content: center; text-align: center; }
     .pillar-list-header h2 { font-size: 1.3rem; width: 100%; }
     .articles-list-item { padding: 14px 16px; gap: 12px; }
+    .articles-list-item .item-thumb { width: 44px; height: 44px; }
     .articles-list-item .item-title { font-size: .9rem; }
     .articles-list-item .item-meta { display: none; }
 
