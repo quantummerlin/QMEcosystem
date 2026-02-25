@@ -4,15 +4,32 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
-    <title>About A Moment in Time | Cosmic Reading – Quantum Merlin</title>
-    <meta name="description" content="Learn about A Moment in Time cosmic readings. Personalized birth chart astrology and numerology insights powered by Quantum Merlin.">
+    <title>About A Moment in Time | Free Cosmic Readings – Quantum Merlin</title>
+    <meta name="description" content="The story behind A Moment in Time — why we built a completely free, unlimited cosmic reading generator. Born from a father's wonder at his daughter's birth chart.">
+    <meta name="keywords" content="a moment in time, free astrology reading, free birth chart, cosmic reading, quantum merlin, personalised astrology">
+    <meta name="author" content="Quantum Merlin">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://quantummerlin.com/amomentintime/about.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About A Moment in Time | Free Cosmic Readings">
+    <meta property="og:description" content="The story behind a completely free, unlimited cosmic reading generator. 65+ personalised insights, no sign-up, no paywall, forever.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/amomentintime/about.html">
+    <meta property="og:image" content="https://quantummerlin.com/amomentintime/Amomentintime.jpg">
+    <meta property="og:site_name" content="A Moment in Time">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About A Moment in Time | Free Cosmic Readings">
+    <meta name="twitter:description" content="Why we built a completely free cosmic reading generator — no paywall, no sign-up, forever.">
+    <meta name="twitter:image" content="https://quantummerlin.com/amomentintime/Amomentintime.jpg">
     
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/jpeg" href="Amomentintime.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="Amomentintime.jpg">
+    <meta name="theme-color" content="#c9a6ff">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
     <script>
@@ -21,22 +38,23 @@
         gtag('js', new Date());
         gtag('config', 'G-VW4LGE7L1T');
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #D8B5FF;
             --secondary: #B19CD9;
+            --accent-gold: #daa520;
+            --accent-pink: #ff6b9d;
             --background: #F8F0FF;
             --card-bg: #ffffff;
             --text: #333333;
+            --text-soft: #666666;
             --font-heading: 'Playfair Display', Georgia, serif;
             --font-body: 'Inter', 'Segoe UI', sans-serif;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: var(--font-body);
             background: var(--background);
@@ -46,66 +64,147 @@
         }
         .header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px 60px;
             background: linear-gradient(135deg, #FF69B4 0%, #D8B5FF 50%, #6BA3D6 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
         }
         .header h1 {
             font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: #1a0a2e;
             margin-bottom: 10px;
         }
-        .header p {
+        .header .tagline {
             color: #3d2b5e;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            font-style: italic;
+        }
+        .header .badge {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 20px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #2d1b4e;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
         .content-card {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 40px;
+            padding: 45px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             margin-bottom: 30px;
+            border: 1px solid rgba(216,181,255,0.15);
+        }
+        .origin-story {
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 25px;
+            margin: 30px 0;
+            color: var(--text-soft);
+            font-style: italic;
+            line-height: 2;
         }
         h2 {
             font-family: var(--font-heading);
-            color: var(--primary);
+            color: #2d1b4e;
             font-size: 1.6rem;
-            margin: 30px 0 15px;
-            padding-bottom: 10px;
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
             border-bottom: 2px solid rgba(216,181,255,0.3);
         }
-        h2:first-child {
-            margin-top: 0;
+        h2:first-child { margin-top: 0; }
+        p { margin-bottom: 16px; }
+        strong { color: #2d1b4e; }
+        .highlight {
+            background: linear-gradient(120deg, rgba(216,181,255,0.2) 0%, rgba(255,105,180,0.1) 100%);
+            padding: 25px 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid rgba(216,181,255,0.2);
         }
-        p {
-            margin-bottom: 15px;
+        .highlight p:last-child { margin-bottom: 0; }
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
         }
-        a {
-            color: var(--primary);
+        .system-tag {
+            background: rgba(216,181,255,0.15);
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            border: 1px solid rgba(216,181,255,0.2);
+        }
+        .system-tag span { font-size: 1.3rem; display: block; margin-bottom: 4px; }
+        .coffee-section {
+            text-align: center;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(216,181,255,0.15), rgba(255,105,180,0.1));
+            border-radius: 20px;
+            margin: 30px 0;
+            border: 1px solid rgba(216,181,255,0.2);
+        }
+        .coffee-section h3 {
+            font-family: var(--font-heading);
+            color: #2d1b4e;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+        .coffee-section p { color: var(--text-soft); margin-bottom: 15px; }
+        .coffee-btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: linear-gradient(135deg, #FFDD57 0%, #daa520 100%);
+            color: #2d1b4e;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(218,165,32,0.3);
+        }
+        .coffee-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(218,165,32,0.4);
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
-        }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
         .back-link {
             display: inline-block;
             margin-top: 30px;
-            padding: 12px 30px;
+            padding: 14px 35px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 30px;
             font-weight: 600;
-            transition: transform 0.3s ease;
+            font-size: 1.05rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .back-link:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             text-decoration: none;
+            box-shadow: 0 8px 25px rgba(216,181,255,0.4);
         }
         .footer {
             text-align: center;
@@ -113,62 +212,111 @@
             background: rgba(255,255,255,0.5);
             margin-top: 40px;
         }
-        .footer p {
-            color: #888;
-            font-size: 0.9rem;
-        }
+        .footer p { color: #888; font-size: 0.9rem; }
+        .footer a { color: var(--secondary); }
         @media (max-width: 600px) {
-            .header h1 {
-                font-size: 1.8rem;
-            }
-            .content-card {
-                padding: 25px;
-            }
-            h2 {
-                font-size: 1.3rem;
-            }
+            .header h1 { font-size: 2rem; }
+            .content-card { padding: 28px; }
+            h2 { font-size: 1.3rem; }
+            .systems-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
         }
     </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About A Moment in Time",
+        "description": "The story behind a completely free cosmic reading generator with 65+ personalised insights.",
+        "url": "https://quantummerlin.com/amomentintime/about.html",
+        "mainEntity": {
+            "@type": "WebApplication",
+            "name": "A Moment in Time",
+            "applicationCategory": "LifestyleApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        }
+    }
+    </script>
 </head>
 <body>
     <header class="header">
         <h1>About A Moment in Time</h1>
-        <p>Your complete cosmic reading</p>
+        <p class="tagline">At the exact moment you were born, the universe created a pattern.</p>
+        <span class="badge">Free Forever • No Sign-Up • Unlimited Readings</span>
     </header>
 
     <div class="container">
         <div class="content-card">
-            <h2>Why This Exists</h2>
-            <p>A Moment in Time is for anyone who wants an energetic picture of who they may be, what they might be capable of, and how it could coincide with their life later down the track. It is not a rulebook and it is not a prediction. It is a reflective reading designed to be revisited over time.</p>
+            <h2>The Honest Version</h2>
+            <p>When my daughter was born, I did what a lot of new parents probably do — I wanted to understand her. Not in the way the books tell you. Deeper than that.</p>
+            <p>I found myself looking at her birth chart. And honestly? Something in it made sense in a way I couldn't fully explain. The patterns, the placements, the way certain numbers kept appearing.</p>
+            <p>So I went further. I looked at astrology. Numerology. Chinese zodiac. Gematria. Frequency patterns. Nine different systems, all pointing at the same person from different angles. Like nine witnesses describing the same moment.</p>
+            
+            <div class="origin-story">
+                "I paid $350 for a professional reading once. It was good. But I kept thinking — why should this cost what a week of groceries costs? The stars don't charge admission."
+            </div>
+            
+            <p>That's why A Moment in Time exists. <strong>Every reading is free. Every reading is unlimited. There is no paywall, no 'premium tier,' no sign-up.</strong> You put in a birth date, and you get 65+ personalised insights drawn from nine ancient and modern systems.</p>
+            <p>That's it. That's the whole thing.</p>
+
+            <h2>What This Actually Does</h2>
+            <p>A Moment in Time generates a complete cosmic reading based on the exact moment someone was born. Not a generic horoscope. A reading that's different for every person, every birth time, every location.</p>
+            
+            <div class="systems-grid">
+                <div class="system-tag"><span>♈</span> Western Astrology</div>
+                <div class="system-tag"><span>🔢</span> Numerology</div>
+                <div class="system-tag"><span>🌙</span> Lunar Positioning</div>
+                <div class="system-tag"><span>🐉</span> Chinese Zodiac</div>
+                <div class="system-tag"><span>🪐</span> Planetary Alignments</div>
+                <div class="system-tag"><span>🔤</span> Gematria</div>
+                <div class="system-tag"><span>🎵</span> Frequency Patterns</div>
+                <div class="system-tag"><span>🎴</span> Tarot Archetypes</div>
+                <div class="system-tag"><span>💎</span> Reality Codes</div>
+            </div>
+
+            <p>Each system offers a different lens. Together, they create something that feels surprisingly personal. People tell us their readings feel like someone who knows them wrote it. Nobody did. The patterns did.</p>
 
             <h2>A Reading You Can Return To</h2>
-            <p>Think of it like a good book you can pick up every few years and appreciate with fresh eyes. Or, if you prefer, a movie you rewatch at a different time in life and notice new details. The story may feel different each time because you have changed.</p>
+            <p>Think of it like a good book you can pick up every few years and appreciate with fresh eyes. Or a film you rewatch at a different point in life and notice things you missed. The reading doesn't change — but you do. And what resonates shifts with you.</p>
+            <p>That's intentional. This isn't a fortune cookie or a prediction. It's a mirror made of starlight and mathematics.</p>
+
+            <h2>Why Free? Honestly?</h2>
+            <p>Because the stars don't invoice anyone. The calculations are open. The patterns belong to the universe, not to a company.</p>
+            <p>We believe cosmic insight should be accessible to everyone — whether you're a parent wondering about your newborn, a teenager trying to understand themselves, or someone going through a difficult time looking for a different perspective.</p>
+            
+            <div class="highlight">
+                <p><strong>The promise:</strong> A Moment in Time will always be free. No upgrade prompts. No premium tier. No "you've reached your limit." As many readings as you want, for as many people as you love, forever.</p>
+            </div>
 
             <h2>What You Do With It Is Yours</h2>
-            <p>If you believe in the positivity of the reading, you might use it as a foundation for a great life. If you see it as metaphor or even nonsense, that is also valid. A Moment in Time is meant to offer possibility, not certainty.</p>
-
-            <h2>Why The Stars?</h2>
-            <p>There has been an ancient obsession with the stars, constellations, and their relationships to one another, and the idea that these patterns might influence us energetically. Whether you see that as meaningful or not, it has inspired human storytelling for thousands of years. A Moment in Time is part of that tradition.</p>
+            <p>If you believe in the positivity of the reading, you might use it as a foundation for how you see yourself. If you see it as metaphor or even complete nonsense — that's also valid. We're not here to convince anyone of anything.</p>
+            <p>We're here to offer possibility, not certainty. A Moment in Time is meant to be a gift — to yourself, to someone you love, to anyone who's ever looked up at the sky and wondered.</p>
 
             <h2>Where We Are</h2>
-            <p>We are based in Melbourne, Victoria, Australia and serve readers everywhere.</p>
+            <p>Melbourne, Victoria, Australia. Serving readers everywhere, in English, Spanish, and Portuguese.</p>
+        </div>
+
+        <div class="coffee-section">
+            <h3>☕ Did This Bring You Joy?</h3>
+            <p>A Moment in Time is free because we believe it should be. But if a reading made you smile, made you think, or became a gift you're proud of — a coffee goes a long way toward keeping the servers running and the stars calculating.</p>
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener" class="coffee-btn">Buy Me a Coffee ☕</a>
         </div>
 
         <div style="text-align: center;">
-            <a href="/soulblueprint/" class="back-link">Back to A Moment in Time</a>
+            <a href="/amomentintime/" class="back-link">✨ Create a Free Reading</a>
         </div>
     </div>
 
     <footer class="footer">
         <p>© 2026 A Moment in Time by Quantum Merlin. All rights reserved.</p>
         <p style="margin-top: 10px;">
-            <a href="/soulblueprint/about.html">About</a> •
-            <a href="/soulblueprint/privacy.html">Privacy Policy</a> •
-            <a href="/soulblueprint/terms.html">Terms of Service</a> •
-            <a href="/soulblueprint/disclaimer.html">Disclaimer</a>
+            <a href="/amomentintime/about.html">About</a> •
+            <a href="/amomentintime/privacy.html">Privacy Policy</a> •
+            <a href="/amomentintime/terms.html">Terms of Service</a> •
+            <a href="/amomentintime/disclaimer.html">Disclaimer</a>
         </p>
     </footer>
-    <script src="../shared/js/quantum-etsy-cta.js" defer></script>
 
 <script src="/shared/js/quantum-explore.js" defer></script>
 </body>

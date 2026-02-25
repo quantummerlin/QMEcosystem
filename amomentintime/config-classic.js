@@ -157,8 +157,8 @@ var BRAND_CONFIG = {
     // SOCIAL SHARING
     // ============================================
     sharing: {
-        hashtags: ["QuantumMerlin", "SoulBlueprint", "CosmicReading", "NumerologyReading"],
-        defaultMessage: "I just discovered my Soul Blueprint on Quantum Merlin! ✨🔮",
+        hashtags: ["QuantumMerlin", "AMomentInTime", "CosmicReading", "NumerologyReading"],
+        defaultMessage: "I just discovered my cosmic reading on A Moment in Time! ✨🔮",
         twitterHandle: "@quantummerlin"
     },
     

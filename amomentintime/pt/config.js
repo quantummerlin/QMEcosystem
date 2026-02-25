@@ -152,7 +152,7 @@ var BRAND_CONFIG = {
     // SOCIAL SHARING
     // ============================================
     sharing: {
-        hashtags: ["SoulBlueprint", "BirthChart", "SoulReading", "GiftFromTheStars"],
+        hashtags: ["AMomentInTime", "BirthChart", "SoulReading", "GiftFromTheStars"],
         defaultMessage: "I just got my reading from A Moment in Time.",
         twitterHandle: "@quantummerlin"
     },
