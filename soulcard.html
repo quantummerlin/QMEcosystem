@@ -343,6 +343,47 @@
             background: rgba(147, 51, 234, 0.3);
             border-color: #9333ea;
         }
+        
+        /* Share Buttons */
+        .share-section {
+            text-align: center;
+            margin: 25px 0 15px;
+            padding: 20px;
+            background: rgba(147, 51, 234, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(147, 51, 234, 0.2);
+        }
+        .share-section h3 {
+            font-family: 'Cinzel', serif;
+            color: #f59e0b;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .share-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .share-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            color: #e2e8f0;
+            padding: 8px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .share-btn:hover {
+            background: linear-gradient(135deg, #9333ea, #ec4899);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(147, 51, 234, 0.3);
+        }
     </style>
 
     <!-- Structured Data -->
@@ -371,7 +412,7 @@
                 <div class="qm-logo-icon">🧙‍♂️</div>
                 <span class="qm-logo-text">Quantum Merlin</span>
             </a>
-            <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn">
                 ☕ Support
             </a>
         </div>
@@ -491,6 +532,17 @@
                 <div class="reading-section">
                     <h3 class="section-title">🌈 Integration & Action Steps</h3>
                     <div class="section-content" id="integrationSteps"></div>
+                </div>
+            </div>
+
+            <!-- Share Your Reading -->
+            <div class="share-section" id="shareSection" style="display: none;">
+                <h3>✨ Share Your Soul Card Reading</h3>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareReading('twitter')" aria-label="Share on Twitter">𝕏 Twitter</button>
+                    <button class="share-btn" onclick="shareReading('facebook')" aria-label="Share on Facebook">📘 Facebook</button>
+                    <button class="share-btn" onclick="shareReading('pinterest')" aria-label="Share on Pinterest">📌 Pinterest</button>
+                    <button class="share-btn" onclick="shareReading('copy')" aria-label="Copy share text">📋 Copy Text</button>
                 </div>
             </div>
 
@@ -641,6 +693,7 @@
             document.getElementById('basicReading').innerHTML = getBasicReading(card);
             document.getElementById('soulMessage').textContent = getSoulMessage(card);
             document.getElementById('mysticalInsight').textContent = getMysticalInsight(card);
+            document.getElementById('shareSection').style.display = 'block';
         }
 
         // Show the enhanced reading section
@@ -785,8 +838,35 @@
             document.getElementById('cardSelectionPhase').style.display = 'block';
             document.getElementById('enhancedReading').classList.remove('show');
             document.getElementById('enhancedReading').style.display = '';
+            document.getElementById('shareSection').style.display = 'none';
             initializeCardSpread();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function shareReading(platform) {
+            const cardName = document.getElementById('cardName').textContent;
+            const shareText = `🎴 My Soul Card is ${cardName}! Discover yours with Quantum Merlin's Interactive Soul Card Reading`;
+            const shareUrl = 'https://quantummerlin.com/soulcard';
+            
+            switch(platform) {
+                case 'twitter':
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
+                    break;
+                case 'facebook':
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank');
+                    break;
+                case 'pinterest':
+                    window.open(`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(shareUrl)}&description=${encodeURIComponent(shareText)}`, '_blank');
+                    break;
+                case 'copy':
+                    navigator.clipboard.writeText(`${shareText}\n${shareUrl}`).then(() => {
+                        const btn = event.target.closest('.share-btn');
+                        const orig = btn.textContent;
+                        btn.textContent = '✅ Copied!';
+                        setTimeout(() => btn.textContent = orig, 2000);
+                    });
+                    break;
+            }
         }
 
         // Initialize

@@ -1621,7 +1621,7 @@
                 <a href="/soulcard.html">🎴 Tarot</a>
                 <a href="/index.html">🏠 Hub</a>
             </nav>
-            <a href="https://www.buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn">
+            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" class="qm-coffee-btn">
                 ☕ Support
             </a>
         </div>
@@ -3530,6 +3530,23 @@
         });
     </script>
     <script src="shared/js/quantum-etsy-cta.js" defer></script>
+    <!-- Keyboard accessibility for interactive elements -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.quick-number, .context-option, [onclick]').forEach(function(el) {
+            if (el.tagName === 'DIV' && el.getAttribute('onclick') && !el.hasAttribute('tabindex')) {
+                el.setAttribute('role', 'button');
+                el.setAttribute('tabindex', '0');
+                el.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        el.click();
+                    }
+                });
+            }
+        });
+    });
+    </script>
 
 <script src="/shared/js/quantum-explore.js" defer></script>
 
