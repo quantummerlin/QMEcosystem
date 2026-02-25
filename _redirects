@@ -20,6 +20,17 @@
 /amomentintime  /amomentintime/  301
 /amomentintime/esp  /amomentintime/esp/  301
 /amomentintime/pt  /amomentintime/pt/  301
+/guides  /guides/  301
+
+# Common misspellings & old URLs
+/angel-number  /angel-number-calculator.html  301
+/angelnumber  /angel-number-calculator.html  301
+/forecast  /forecasts.html  301
+/forecasts  /forecasts.html  301
+/soul-card  /soulcard.html  301
+/birth-sigil  /birth-sigil.html  301
+/about  /about-new.html  301
+/contact  /contact-new.html  301
 
 # A Moment in Time redirects
 /amomentintime/r/*  /amomentintime/view.html?id=:splat  200
