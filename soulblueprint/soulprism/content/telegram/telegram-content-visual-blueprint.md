@@ -1,6 +1,8 @@
 # 📱 Telegram Content - Visual Soul Blueprint Campaign
 
-**Telegram Strategy:**
+**Voice:** Quantum Merlin — first person, personal. Son of a tarot reader, built A Moment in Time after his daughter was born. Found impossible patterns in charts/numbers connecting to the Bible. Shares from experience, not authority.
+
+**Telegram Strategy:****
 - Channel-focused (broadcasting to followers)
 - Long-form, detailed content
 - Community building and engagement

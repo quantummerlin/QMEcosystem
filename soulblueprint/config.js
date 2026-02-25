@@ -43,7 +43,7 @@ var BRAND_CONFIG = {
     // Result page copy
     resultTitle: "A Moment in Time",
     resultSubtitle: "A Portrait of",
-    generatedBy: "Created with love by A Moment in Time",
+    generatedBy: "Crafted by Quantum Merlin",
     
     // ============================================
     // SECTION NAMES
@@ -172,10 +172,26 @@ var BRAND_CONFIG = {
     },
     
     // ============================================
+    // FOUNDER
+    // ============================================
+    founder: {
+        name: "Quantum Merlin",
+        location: "Melbourne, Victoria, Australia",
+        bio: "Son of a tarot reader and crystal-loving self-proclaimed witch. I built A Moment in Time after paying $350 for my daughter's birth reading and realising this knowledge shouldn't be gatekept. What started as a personal project became a mission when I found profound, impossible patterns in the charts and numbers — connections that trace back to the Bible itself.",
+        storyBeats: {
+            heritage: "Grew up as the son of a tarot reader, rune caster, crystal collector, and self-proclaimed witch.",
+            catalyst: "When my daughter was born, I paid $350 for her professional reading — and it changed everything.",
+            realization: "This stuff is real. Billionaires use it. But it's gatekept behind expensive practitioners.",
+            discovery: "As I built the tools and dug deeper, I found profound, impossible patterns in the charts and numbers — connections that trace all the way back to the Bible.",
+            mission: "I had to make this accessible to everyone."
+        }
+    },
+
+    // ============================================
     // FOOTER
     // ============================================
     footer: {
-        copyright: "© 2026 A Moment in Time",
+        copyright: "© 2026 A Moment in Time by Quantum Merlin",
         disclaimer: "For entertainment and reflection purposes. Every person is unique and will grow in their own beautiful way.",
         links: [
             { text: "Privacy Policy", url: "/soulblueprint/privacy.html" },
@@ -188,9 +204,9 @@ var BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "A Moment in Time - Your Complete Cosmic Reading",
-        description: "At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights combining astrology, numerology, and life pattern analysis.",
-        keywords: "a moment in time, astrology reading, numerology reading, birth chart, life path, personalized reading"
+        title: "A Moment in Time - Your Complete Cosmic Reading | by Quantum Merlin",
+        description: "I built this after paying $350 for my daughter's birth reading and realising this knowledge shouldn't be gatekept. 65+ personalised insights combining astrology, numerology, and life pattern analysis.",
+        keywords: "quantum merlin, a moment in time, astrology reading, numerology reading, birth chart, life path, personalized reading, soul blueprint"
     }
 };
 

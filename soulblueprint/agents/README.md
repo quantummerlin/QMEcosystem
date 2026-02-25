@@ -21,6 +21,7 @@ These are **not prompts you fire once**. They are reusable decision-making frame
 | 7 | **Trust & Compliance Guardian** | [trust_compliance_guardian.md](trust_compliance_guardian.md) | Ensure legal safety, ethical integrity, and brand longevity. |
 | 8 | **Ecosystem Orchestrator** *(advanced)* | [ecosystem_orchestrator.md](ecosystem_orchestrator.md) | Unify the multi-product empire under one strategic narrative. |
 | 9 | **Reading Fulfillment Agent** | [reading_fulfillment_agent.md](reading_fulfillment_agent.md) | Generate purchased readings, publish, and deliver to Etsy customers. |
+| 10 | **Marketing Genius** | [marketing_genius.md](marketing_genius.md) | Maximise traffic, engagement, shareability, and conversion across all articles and distribution channels. |
 
 ---
 
@@ -81,8 +82,11 @@ Do **not** activate all agents simultaneously. Use this disciplined sequence:
 6. **Data Feedback Agent** — Define KPIs, implement tracking, propose first A/B tests.
 7. **Trust & Compliance Guardian** — Final audit for claims, legal exposure, and ethics.
 
+### Phase 5 — Content Marketing & Growth (Week 5+)
+8. **Marketing Genius** — Audit articles, optimise visuals, build distribution playbooks per pillar.
+
 ### Ongoing
-8. **Ecosystem Orchestrator** — Quarterly strategic review across all QuantumMerlin products.
+9. **Ecosystem Orchestrator** — Quarterly strategic review across all QuantumMerlin products.
 
 ---
 
@@ -98,6 +102,9 @@ Do **not** activate all agents simultaneously. Use this disciplined sequence:
 
 ## Project Context (for all agents)
 
+- **Creator:** Quantum Merlin (one person, not a team — all content is first-person "I")
+- **Origin:** Son of a tarot reader/rune caster/crystal-loving witch. Built A Moment in Time after paying $350 for his daughter's birth reading and realising this knowledge shouldn't be gatekept. Found profound, impossible patterns in the charts and numbers — connections tracing back to the Bible. Became a mission.
+- **Voice:** First person, personal, warm but credible. Never "we" or "our team." Always "I built," "I found," "I designed." Reference the 5 story beats (Heritage, Catalyst, Realization, Discovery, Mission) naturally across content — see agents/differentiation_strategist.md for full voice guidelines.
 - **Product:** Soul Blueprint — a 65+ reading astrology/numerology personality system
 - **Tech:** Static HTML/JS, deployable to any hosting (Vercel, Cloudflare, GitHub Pages)
 - **Brands:** Multi-brand via config swap (Baby, K-Pop, Stranger Things, default)
@@ -105,3 +112,4 @@ Do **not** activate all agents simultaneously. Use this disciplined sequence:
 - **Ecosystem:** Part of QuantumMerlin.com — future tools include Telegram bots, breathing apps, frequency generators
 - **Stage:** Pre-revenue, feature-complete MVP, needs monetization + growth architecture
 - **Etsy Store:** $9.99 purchased readings fulfilled via Reading Fulfillment Agent → Pro generator → Cloudflare Worker → permanent share link
+- **Location:** Melbourne, Victoria, Australia

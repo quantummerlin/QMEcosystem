@@ -194,7 +194,7 @@ const BRAND_CONFIG = {
     // ============================================
     seo: {
         title: "Stranger Patterns - The Upside Down Oracle | Stranger Things Numerology",
-        description: "Discover your dimensional profile with 58 personalized readings! Find your Stranger Things character match, psychic abilities, and Hawkins destiny. Free supernatural blueprint.",
+        description: "Discover your dimensional profile with 58 personalized readings! Find your Stranger Things character match, psychic abilities, and Hawkins destiny.",
         keywords: "stranger things personality, upside down oracle, hawkins numerology, stranger things astrology, eleven powers, demogorgon, stranger patterns"
     }
 };

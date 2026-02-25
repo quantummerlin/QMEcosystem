@@ -194,7 +194,7 @@ const BRAND_CONFIG = {
     // ============================================
     seo: {
         title: "K-pop Kosmic - Discover Your Idol Destiny | K-Pop Numerology & Astrology",
-        description: "Find your K-pop idol archetype with 58 personalized readings! Discover your stage presence, debut energy, and cosmic K-pop destiny. Free idol blueprint for stans.",
+        description: "Find your K-pop idol archetype with 58 personalized readings! Discover your stage presence, debut energy, and cosmic K-pop destiny.",
         keywords: "kpop numerology, kpop astrology, idol archetype, kpop personality test, stan destiny, kpop birth chart, idol energy, kpop kosmic"
     }
 };

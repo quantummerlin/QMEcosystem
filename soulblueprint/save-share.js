@@ -771,8 +771,8 @@ function formatDate(dateStr) {
 async function shareReading() {
     const userData = JSON.parse(localStorage.getItem('lastReading') || '{}');
     const shareData = {
-        title: `A Moment in Time for ${userData.name}`,
-        text: `Check out ${userData.name}'s Moment in Time reading with 65+ personalized insights!`,
+        title: `${userData.name}'s Soul Blueprint — A Moment in Time`,
+        text: `I just discovered ${userData.name}'s cosmic DNA — 65+ personalized readings from one birth moment. Built by Quantum Merlin. Try it:`,
         url: window.location.href
     };
     

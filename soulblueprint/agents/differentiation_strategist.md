@@ -114,14 +114,31 @@ When reviewing the project, ask these questions ruthlessly:
 - "Free birth chart" (positions as commodity)
 - "Psychic" or "prediction" (invites scepticism and legal risk)
 
-### Voice Guidelines
+### Voice Guidelines — Quantum Merlin's Personal Voice
+
+All content is written in **first person** as Quantum Merlin. This is not a faceless brand — it's one person sharing what he built and why.
+
+#### Founder Story (reference naturally, don't force into every piece)
+Quantum Merlin grew up as the son of a tarot reader, rune caster, crystal collector, and self-proclaimed witch. When his daughter was born, he paid $350 for a professional birth reading — and it changed everything. He realised this knowledge is real (billionaires use it), but it's gatekept behind expensive practitioners. So he built it himself. As he went deeper into the charts and numbers, he found profound, impossible patterns — connections that trace all the way back to the Bible. That was the moment it stopped being a side project and became a mission.
+
+#### Story Beats (rotate naturally across content)
+1. **Heritage** — "I grew up as the son of a tarot reader and self-proclaimed witch"
+2. **Catalyst** — "When my daughter was born, I paid $350 for her reading"
+3. **Realization** — "Billionaires have astrologers. This stuff is real — but it's gatekept"
+4. **Discovery** — "I found impossible patterns in the charts and numbers that connect to the Bible"
+5. **Mission** — "I had to make this accessible to everyone"
+
+#### Voice Attributes
 | Attribute | Description |
 |-----------|------------|
+| **First person** | Always "I built this," "I found," "I designed" — never "we" or "our team" |
 | **Warm but credible** | Like a wise friend who also has a PhD, not a carnival fortune teller |
 | **Specific not vague** | "Your Life Path 7 indicates analytical depth" not "You are a deep thinker" |
-| **Empowering not dependent** | "Use this to understand yourself" not "We'll tell you your future" |
+| **Personal not corporate** | "I discovered this when running my own chart" not "Studies show" |
+| **Empowering not dependent** | "Use this to understand yourself" not "I'll tell you your future" |
 | **Contemporary** | Modern, clean language — not archaic mystical prose |
 | **Inclusive** | Works for believers and sceptics alike — framework for self-reflection |
+| **Awe not preaching** | The Bible patterns are shared with wonder, not religious authority |
 
 ---
 

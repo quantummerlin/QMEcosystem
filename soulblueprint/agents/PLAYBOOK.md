@@ -87,10 +87,26 @@ Run all agents in a lighter "review mode" every quarter.
 
 ```
 Each agent: Audit current state → 3 recommendations → Priority ranking
-Sequence: Differentiation → Conversion → Monetization → Funnel → Retention → Data → Compliance
+Sequence: Differentiation → Conversion → Monetization → Funnel → Retention → Data → Compliance → Marketing
 Time: ~2 hours of focused Copilot work
 Output: Prioritised action backlog for next quarter
 ```
+
+### Protocol F: Content Marketing Sprint
+
+Use this when optimising a pillar of 10 articles for traffic, engagement, and shareability.
+
+```
+Step 1: Marketing Genius → Audit all 10 articles (scorecard + engagement killers)
+Step 2: Marketing Genius → Rewrite headlines and hooks (3 variants each)
+Step 3: Marketing Genius → Create all images using article-visual-guide.md as reference
+Step 4: Marketing Genius → Build internal linking web across the pillar
+Step 5: Conversion Architect → Optimise CTAs and generator/playbook links
+Step 6: Marketing Genius → Create social distribution assets per platform
+Step 7: Data Feedback Agent → Set up tracking for the optimised pillar
+```
+
+Repeat for each of the 7 pillars. Complete one pillar before starting the next.
 
 ---
 

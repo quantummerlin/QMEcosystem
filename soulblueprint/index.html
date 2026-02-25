@@ -17,6 +17,7 @@
         gtag('config', 'G-VW4LGE7L1T');
         // GA4 custom event helper — no PII, behavioural only
         function sbTrack(name, params) { try { gtag('event', name, params || {}); } catch(e) {} }
+        
     </script>
     
     <!-- PWA Meta Tags -->
@@ -43,7 +44,7 @@
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Any",
         "creator": {
-            "@type": "Organization",
+            "@type": "Person",
             "name": "Quantum Merlin",
             "url": "https://quantummerlin.com"
         }
@@ -879,7 +880,7 @@
         .submit-btn {
             width: 100%;
             padding: 18px 30px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, #FF69B4 0%, #D8B5FF 50%, #6BA3D6 100%);
             color: white;
             border: none;
             border-radius: 12px;
@@ -5014,7 +5015,7 @@
                 <span>·</span>
                 <span>4 systems (Western Astrology, Numerology, Chinese Zodiac, Life Patterns)</span>
                 <span>·</span>
-                <span>73 free guides</span>
+                <span>73 guides</span>
                 <span>·</span>
                 <span>12 example profiles</span>
                 <span>·</span>
@@ -5556,7 +5557,7 @@
             <!-- Cross-Product Bridge -->
             <div style="margin:30px 0;padding:24px;background:linear-gradient(135deg,rgba(102,126,234,0.04),rgba(118,75,162,0.04));border-radius:16px;border:1px solid rgba(102,126,234,0.1);text-align:center;">
                 <p style="font-size:1rem;margin-bottom:6px;"><strong>🌌 Explore More from Quantum Merlin</strong></p>
-                <p style="font-size:0.88rem;color:#636e72;margin-bottom:16px;">Your cosmic journey doesn't end here — discover more free tools:</p>
+                <p style="font-size:0.88rem;color:#636e72;margin-bottom:16px;">Your cosmic journey doesn't end here — discover more tools:</p>
                 <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
                     <a href="https://quantummerlin.com/chinesezodiac/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'chinese_zodiac'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">🐉 Chinese Zodiac</a>
                     <a href="https://quantummerlin.com/tarot/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'tarot'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">🃏 Tarot Reading</a>
@@ -6103,7 +6104,7 @@
                 </a>
 
                 <button onclick="document.getElementById('generatorUpgradeOverlay').remove();document.getElementById('exampleProfiles').scrollIntoView({behavior:'smooth'});" style="display:block;margin:14px auto 0;background:none;border:1px solid rgba(255,215,0,0.2);color:#c9a0ff;padding:9px 24px;border-radius:20px;font-size:0.82rem;cursor:pointer;transition:all 0.2s;opacity:0.75;">
-                    Explore 12 Free Example Readings First ↓
+                    Explore 12 Example Readings First ↓
                 </button>
             </div>
             `;
@@ -6197,6 +6198,7 @@
                 // Display results
                 displayResults(userData, readings);
                 sbTrack('reading_completed', { sections: totalSectionCount, theme: document.getElementById('genderInput').value });
+                
                 
                 // Save the total section count to the reading
                 if (currentReadingId) {
@@ -11550,9 +11552,9 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
         <p>quantummerlin.com/soulblueprint</p>
     </div>
 
-<script src="/shared/js/quantum-explore.js" defer></script>
+<script src="/shared/js/quantum-explore.js" defer><\/script>
 
-<script src="/shared/js/quantum-email-capture.js" defer></script>
+<script src="/shared/js/quantum-email-capture.js" defer><\/script>
 </body>
 </html>`;
             
