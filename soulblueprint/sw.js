@@ -1,5 +1,5 @@
 // A Moment in Time - Service Worker
-const CACHE_NAME = 'moment-in-time-v55';
+const CACHE_NAME = 'moment-in-time-v56';
 const ASSETS_TO_CACHE = [
     '/soulblueprint/',
     '/soulblueprint/index.html',
@@ -17,7 +17,10 @@ const ASSETS_TO_CACHE = [
     '/soulblueprint/save-share.js',
     '/soulblueprint/book-generator.js',
     '/soulblueprint/manifest.json',
-    '/soulblueprint/Amomentintime.jpg'
+    '/soulblueprint/icon-512.png',
+    '/soulblueprint/icon-192.png',
+    '/soulblueprint/icon-180.png',
+    '/soulblueprint/favicon.ico'
 ];
 
 // Cache for shared readings (stored separately for offline access)

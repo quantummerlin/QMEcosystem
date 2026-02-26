@@ -357,7 +357,7 @@ function buildFinalHtml(capturedHtml, personName) {
         <span class="upgrade-badge">50% OFF</span>
         <h3>Single Reading</h3>
         <div class="price"><span class="original">$19.99</span> $9.99</div>
-        <p class="price-note">Special introductory price</p>
+        <p class="price-note">Introductory offer</p>
         <ul class="features">
           <li>135+ personalised reading cards</li>
           <li>17 cosmic sections analysed</li>
@@ -366,8 +366,20 @@ function buildFinalHtml(capturedHtml, personName) {
         </ul>
       </a>
       <a class="upgrade-option" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
+        <span class="upgrade-badge">50% OFF</span>
+        <h3>2 Readings</h3>
+        <div class="price"><span class="original">$35.99</span> $17.99</div>
+        <p class="price-note">Introductory offer &middot; save even more</p>
+        <ul class="features">
+          <li>2 full personalised readings</li>
+          <li>All 135+ cards &amp; 17 sections each</li>
+          <li>Perfect for you &amp; a loved one</li>
+          <li>Permanent links to revisit anytime</li>
+        </ul>
+      </a>
+      <a class="upgrade-option" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
         <h3>Unlimited Readings</h3>
-        <div class="price">$77</div>
+        <div class="price">$99.99</div>
         <p class="price-note">One-time payment &middot; lifetime access</p>
         <ul class="features">
           <li>Generate unlimited readings forever</li>

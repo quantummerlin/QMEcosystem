@@ -14,8 +14,9 @@ Personalised Soul Blueprint Reading | 65+ Astrology Numerology Chinese Zodiac | 
 PRICE
 ────────────────────────────────────────────
 
-$20.00 (early believer — first 999 sales)
-Raise to $99.00 after 999 sales
+Tier 1: $9.99 — Single reading (intro 50% off, regular $19.99)
+Tier 2: $17.99 — 2 readings (intro 50% off, regular $35.99)
+Tier 3: $99.99 — Unlimited readings forever (generator access)
 
 
 ────────────────────────────────────────────
@@ -43,7 +44,7 @@ So I built this myself. Every calculation, every reading, every word — designe
 
 Not a generic horoscope. Your birth date, time, and place are mathematically calculated across 4 systems to produce a reading that's unique to you — down to the minute you were born.
 
-🔥 EARLY BELIEVER PRICE — $20 for my first 999 customers (regular $99)
+🔥 50% OFF INTRODUCTORY OFFER — 1 reading $9.99 (regular $19.99) · 2 for $17.99 · Unlimited $99.99
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WHAT YOU GET — INSTANT ACCESS
@@ -190,8 +191,8 @@ This is the file buyers download. It contains:
 LAUNCH CHECKLIST
 ────────────────────────────────────────────
 
-[ ] Create Etsy listing with title above
-[ ] Set price to $20.00, quantity to 999
+[ ] Create Etsy listings with title above
+[ ] Set pricing: $9.99 (1 reading), $17.99 (2 readings), $99.99 (unlimited)
 [ ] Paste description above
 [ ] Add all 13 tags
 [ ] Upload 10 listing images (use etsy-image-picker.html to sort)
