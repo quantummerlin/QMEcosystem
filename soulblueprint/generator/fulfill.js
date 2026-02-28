@@ -302,7 +302,7 @@ async function main() {
         console.log(`${deployUrl}\n`);
         console.log(`Your password: ${password}\n`);
         console.log(`What you'll find:`);
-        console.log(`- 135+ personalised readings covering astrology, numerology & life patterns`);
+        console.log(`- ${cardCount}+ personalised readings covering astrology, numerology & life patterns`);
         console.log(`- Expandable sections - explore at your own pace`);
         console.log(`- Save to your phone's homescreen for permanent offline access`);
         console.log(`- Print or download anytime\n`);
@@ -651,7 +651,7 @@ function dismissWelcome(){
         <div class="price"><span class="original">$19.99</span> $9.99</div>
         <p class="price-note">Introductory offer</p>
         <ul class="features">
-          <li>135+ personalised reading cards</li>
+          <li>${cardCount}+ personalised reading cards</li>
           <li>17 cosmic sections analysed</li>
           <li>Permanent link to revisit anytime</li>
           <li>Beautiful shareable format</li>
@@ -664,7 +664,7 @@ function dismissWelcome(){
         <p class="price-note">Introductory offer &middot; save even more</p>
         <ul class="features">
           <li>2 full personalised readings</li>
-          <li>All 135+ cards &amp; 17 sections each</li>
+          <li>All ${cardCount}+ cards &amp; 17 sections each</li>
           <li>Perfect for you &amp; a loved one</li>
           <li>Permanent links to revisit anytime</li>
         </ul>
@@ -676,7 +676,7 @@ function dismissWelcome(){
         <p class="price-note">50% off &middot; family &amp; friends</p>
         <ul class="features">
           <li>3 full personalised readings</li>
-          <li>All 135+ cards &amp; 17 sections each</li>
+          <li>All ${cardCount}+ cards &amp; 17 sections each</li>
           <li>Perfect for family or friends</li>
           <li>Permanent links to revisit anytime</li>
         </ul>
@@ -687,7 +687,7 @@ function dismissWelcome(){
         <p class="price-note">One-time payment &middot; lifetime access</p>
         <ul class="features">
           <li>Generate unlimited readings forever</li>
-          <li>All 135+ cards &amp; 17 sections</li>
+          <li>All ${cardCount}+ cards &amp; 17 sections</li>
           <li>Friends, family, anyone</li>
           <li>Future features included</li>
         </ul>
