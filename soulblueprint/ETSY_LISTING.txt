@@ -1,23 +1,31 @@
 ================================================================
   ETSY LISTING — READY TO PASTE
   Soul Blueprint by Quantum Merlin
+  Last updated: 2026-02-28 (audit revision)
 ================================================================
 
 ────────────────────────────────────────────
 LISTING TITLE (140 char max)
 ────────────────────────────────────────────
 
-Personalised Soul Blueprint Reading | 65+ Astrology Numerology Chinese Zodiac | Printable Book | Digital Gift
+Personalized Birth Chart Reading | 135+ Astrology Numerology Chinese Zodiac Readings | Printable Book | Custom Gift
+
+(137 chars — under 140 limit)
+(Previous: "Personalised Soul Blueprint Reading | 65+ Astrology Numerology Chinese Zodiac | Printable Book | Digital Gift")
 
 
 ────────────────────────────────────────────
 PRICE
 ────────────────────────────────────────────
 
-Tier 1: $9.99 — Single reading (intro 50% off, regular $19.99)
-Tier 2: $17.99 — 2 readings (intro 50% off, regular $35.99)
-Tier 3: $49.99 — 3 readings (intro 50% off, regular $99.98)
-Tier 4: $99.99 — Unlimited readings forever
+Tier 1: $12.99 — 1 reading (intro price, regular $24.99)
+Tier 2: $19.99 — 2 readings (save $6 vs buying separately)
+Tier 3: $39.99 — 5 readings (best value — $8 each)
+Tier 4: $69.99 — Unlimited readings forever
+
+(Previous pricing had broken unit economics: Tier 3 was $16.66/reading vs Tier 2 at $9.00/reading.
+ Also Tier 3 "regular" $99.98 was essentially the same as Tier 4 $99.99 — no logic.
+ New tiers: each step is cheaper per reading, with clear savings messaging.)
 
 
 ────────────────────────────────────────────
@@ -38,150 +46,126 @@ Personalisation: ON
 DESCRIPTION (paste below as-is)
 ────────────────────────────────────────────
 
- YOUR COMPLETE SOUL BLUEPRINT — 65+ Personalised Readings from Your Exact Birth Data 
+Your complete Soul Blueprint — 135+ personalised readings calculated from your exact birth date, time, and place. Not a generic horoscope. Unique to you.
 
-I grew up as the son of a tarot reader and self-proclaimed witch. When my daughter was born, I paid $350 for her professional birth reading — and it changed everything. It was beautiful, profound, and made me realise: this knowledge is real, but it's gatekept behind expensive practitioners.
+Most readings give you 10-20 insights from a single system. This gives you 135+ readings across 5 systems — Western Astrology, Numerology, Chinese Zodiac, Love Blueprint, and Life Pattern Analysis — for less than the price of a coffee per insight.
 
-So I built this myself. Every calculation, every reading, every word — designed to give you the same depth I paid hundreds for, at a fraction of the cost.
+I grew up as the son of a tarot reader. When my daughter was born, I paid $350 for her professional birth reading — and realised this knowledge shouldn't be gatekept. So I built this myself: every calculation, every reading, designed to give you the same depth at a fraction of the cost.
 
-Not a generic horoscope. Your birth date, time, and place are mathematically calculated across 4 systems to produce a reading that's unique to you — down to the minute you were born.
+✦ INTRODUCTORY OFFER
+1 reading $12.99 (regular $24.99) · 2 for $19.99 · 5 for $39.99 · Unlimited $69.99
 
- 50% OFF INTRODUCTORY OFFER — 1 reading $9.99 (regular $19.99) · 2 for $17.99 · 3 for $49.99 · Unlimited $99.99
+This is a made-to-order reading. After purchase, I'll personally create your unique Soul Blueprint and send you a private, password-protected link within 24 hours (usually much faster).
 
-⏱ PLEASE NOTE: This is a made-to-order reading. After purchase, I'll personally create your unique Soul Blueprint and send you a private link within 24 hours (usually much faster!).
+✦ SEE IT FIRST — 12 full example readings, completely free:
+quantummerlin.com/soulblueprint/examples/
 
- WANT TO SEE IT FIRST? Explore 12 full example readings for free — no purchase needed:
-→ quantummerlin.com/soulblueprint/examples/
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-HOW TO ORDER — WHAT I NEED FROM YOU
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HOW TO ORDER
 
-When you purchase, Etsy will show a "Add your personalisation" box. Please fill in the following for each person you'd like a reading for:
+When you purchase, Etsy will show an "Add your personalisation" box. Please enter:
 
-  1. Full name
-  2. Date of birth (DD/MM/YYYY)
-  3. Time of birth (if known — even approximate helps!)
-  4. Place of birth (city and country)
+1. Full name
+2. Date of birth (DD/MM/YYYY)
+3. Time of birth (if known — even approximate helps)
+4. Place of birth (city and country)
 
- Example:
-  "Jane Smith, 15/06/1990, 2:30pm, London, England"
+Example: "Jane Smith, 15/06/1990, 2:30pm, London, England"
 
-For 2+ readings, just list each person's details:
-  "1. Jane Smith, 15/06/1990, 2:30pm, London, England
-   2. Michael Smith, 03/05/1981, 1:30pm, Abu Dhabi, UAE"
+For multiple readings, list each person:
+"1. Jane Smith, 15/06/1990, 2:30pm, London, England
+ 2. Michael Smith, 03/05/1981, 1:30pm, Abu Dhabi, UAE"
 
-Don't know the birth time? No problem — I'll still create a full reading with 50+ insights. Birth time adds extra precision for Moon sign, Rising sign, and house placements. You can always message me later to update it.
+Don't know the birth time? No problem — I'll still create a full reading with 100+ insights. Birth time adds extra precision for Moon sign, Rising sign, and house placements. You can message me later to update it.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 WHAT YOU GET
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
- 65+ personalised readings covering:
- • Western Astrology (Sun, Moon, Rising, all planets, houses, aspects)
- • Numerology (Life Path, Expression, Soul Urge, and more)
- • Chinese Zodiac (Year, Inner Animal, True Element)
- • Love Blueprint & Relationship Compatibility
- • Career Patterns & Life Purpose
- • Deep Chiron, Lilith, and Node Readings
- • Transformative Planet Cycles
+▸ 135+ personalised readings covering:
+  Western Astrology (Sun, Moon, Rising, all planets, houses, aspects)
+  Numerology (Life Path, Expression, Soul Urge, and more)
+  Chinese Zodiac (Year, Inner Animal, True Element)
+  Love Blueprint and Relationship Compatibility
+  Career Patterns and Life Purpose
+  Deep Chiron, Lilith, and Node Readings
+  Transformative Planet Cycles
+  Life Pattern Analysis
 
- 11 Stunning Printable Book Templates
- • Dark Celestial, Cosmic Rainbow, Mystical Tarot, Art Deco, Botanical, and more
- • A4 and A5 sizes — ready to print or save as PDF
- • Each is a beautiful keepsake book of your full reading
+▸ Password-protected private link — only you or your gift recipient can access it.
 
- Copy, Share & Gift Features
- • Copy any reading as a beautiful card
- • Share via link with anyone
- • Perfect birthday, anniversary, or "just because" gift
+▸ Personalised welcome screen with your sun sign, birth details, and cosmic introduction. Your reading is titled "A Moment in Time for [Your Name]."
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-HOW IT WORKS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+▸ 11 stunning printable book templates (Dark Celestial, Cosmic Rainbow, Mystical Tarot, Art Deco, Botanical, and more). A4 and A5 sizes — print or save as PDF. Each is a beautiful keepsake book.
 
-1. Purchase and fill in the personalisation box with your birth details (see above for format)
-2. I personally create your unique Soul Blueprint from your exact birth data
-3. Within 24 hours, I'll send you a private link to your reading via Etsy message
-4. Open your link in any browser — phone, tablet, or computer
-5. Explore your 65+ readings, create printable books, share with loved ones
+▸ Choose your visual theme — Cosmic Purple, Baby Blue, or Baby Pink — perfect for gifts and new baby readings.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FREE BONUS — INCLUDED WITH EVERY PURCHASE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+▸ Copy, share, and gift features — copy any reading as a beautiful card, share via link, or gift to someone special.
 
- 70+ How-To Guides & Articles (FREE)
-Your reading is just the beginning. I've written over 70 step-by-step guides showing you how to take your reading further:
- • Create infographics, mood boards, and wall art from your reading
- • Build a 30-day growth plan based on your Soul Blueprint
- • Generate AI affirmations, journal prompts, and career guidance
- • Turn your reading into a podcast, social media content, or personalised gift
- • Deep dives into numerology, Chinese zodiac, relationship patterns, and more
-→ quantummerlin.com/soulblueprint/articles/
+▸ Works offline — your reading is a self-contained file. No login, no subscription, no internet needed after first visit.
 
- AI Prompt Builder (FREE)
-A powerful tool that lets you plug your reading data into expertly crafted AI prompts. Transform your Soul Blueprint into:
- • Personalised affirmation sets
- • Career guidance tailored to your cosmic profile
- • Relationship compatibility deep dives
- • Daily routines aligned with your numerology
- • And much more — dozens of prompt templates included
-→ quantummerlin.com/soulblueprint/soulprism/site/tools/prompt-builder.html
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WHAT MAKES THIS DIFFERENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-▸ Not a PDF you've seen before — this is a beautifully crafted interactive reading
-▸ 4 systems combined (most readings only cover one)
-▸ 48 astronomical calculations from your exact birth data
-▸ 100% private — your data never leaves your device
+▸ 135+ readings across 5 systems (most offer 10-20 from one system)
+▸ Interactive HTML experience — not a generic PDF
+▸ Password-protected and private — your data never leaves your device
+▸ Personalised welcome with your sun sign and cosmic introduction
+▸ 11 printable book templates — museum-quality keepsakes
 ▸ No login, no account, no subscription — just open and explore
-▸ Works on any device with a browser
-▸ Each reading is personally created and delivered by hand
-▸ 70+ free guides + AI prompt builder included
-▸ Built by one person who grew up in this world and found patterns in the numbers he can't unsee
+▸ Works on any device, even offline
+▸ Personally created and delivered by hand
+▸ 70+ free AI guide books + prompt builder included
+▸ Built by one person who grew up in this world
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-EXPLORE BEFORE YOU BUY
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Not sure yet? I get it. Here's what you can explore right now, totally free:
+FREE BONUS — INCLUDED WITH EVERY PURCHASE
 
- 12 Full Example Readings — see exactly what your Soul Blueprint looks like
-→ quantummerlin.com/soulblueprint/examples/
+▸ 70+ AI Guide Books
+Step-by-step guides showing how to take your reading further: infographics, mood boards, wall art, 30-day growth plans, AI affirmations, journal prompts, career guidance, podcasts, social media content, and more.
+quantummerlin.com/soulblueprint/articles/
 
- 70+ How-To Guides — articles on astrology, numerology, AI tools, and more
-→ quantummerlin.com/soulblueprint/articles/
+▸ AI Prompt Builder
+Plug your reading data into expertly crafted AI prompts. Generate personalised affirmations, career guidance, relationship deep dives, daily routines, and much more.
+quantummerlin.com/soulblueprint/soulprism/site/tools/prompt-builder.html
 
- AI Prompt Builder — transform any reading into actionable insights
-→ quantummerlin.com/soulblueprint/soulprism/site/tools/prompt-builder.html
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PERFECT GIFT FOR
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
- Birthdays — the most personal gift possible
- Couples — compare your readings side by side
- New parents — capture your baby's cosmic moment
- Milestones — graduation, new job, new chapter
- Holidays — unique, thoughtful, zero shipping
- Self-care — understand yourself on a deeper level
+♡ Birthdays — the most personal gift possible (titled "A Moment in Time for [Name]")
+♡ Couples — compare readings side by side with the Love Blueprint
+♡ New parents — capture your baby's cosmic moment in Baby Blue or Baby Pink
+♡ Valentine's Day — discover your Love Blueprint together
+♡ Mother's Day / Father's Day — a one-of-a-kind cosmic portrait
+♡ Baby showers — a keepsake from the stars, from day one
+♡ Milestones — graduation, new job, new chapter
+♡ Self-care — understand yourself on a deeper level
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Each gift reading opens with a personalised welcome screen just for the recipient. Password-protected, beautifully themed, zero shipping.
+
+
 DELIVERY
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
- Made-to-order — your reading is personally created from your birth data
- Delivered within 24 hours via Etsy message (usually much faster!)
- You'll receive a private link to your unique Soul Blueprint
- Open in any browser — phone, tablet, or computer
- Bookmark for permanent access — your reading is yours forever
- No software to install
+▸ Made-to-order — your reading is personally created from your birth data
+▸ Delivered within 24 hours via Etsy message (usually much faster)
+▸ You'll receive a private, password-protected link to your unique Soul Blueprint
+▸ Open in any browser — phone, tablet, or computer
+▸ Bookmark for permanent access — your reading is yours forever
+▸ Works offline after first visit — no software to install
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Not happy? Message me and I'll make it right — no questions asked.
 
-Questions, issues, or ideas? Email us at soulblueprint@quantummerlin.com or message me right here on Etsy.
+
+HOW IT WORKS
+
+1. Purchase and enter your birth details in the personalisation box
+2. I personally create your unique Soul Blueprint from your exact birth data
+3. Within 24 hours, I send you a password-protected link via Etsy message
+4. Open your link, enter your password, and explore your 135+ readings
+5. Create printable books, share with loved ones, explore your cosmic DNA
+
+Ready to discover your cosmic DNA? Add to cart, enter your birth details, and your Soul Blueprint will be in your inbox within 24 hours.
+
+Questions? Email soulblueprint@quantummerlin.com or message me on Etsy.
 
 © Quantum Merlin · quantummerlin.com
 
@@ -190,26 +174,31 @@ Questions, issues, or ideas? Email us at soulblueprint@quantummerlin.com or mess
 TAGS (13 max, comma-separated)
 ────────────────────────────────────────────
 
-1.  personalised astrology reading
-2.  birth chart reading
+1.  personalized birth chart reading
+2.  astrology reading gift
 3.  numerology reading
-4.  soul blueprint
-5.  astrology gift
-6.  birthday gift for her
-7.  printable astrology book
-8.  zodiac reading
-9.  chinese zodiac reading
-10. digital download gift
-11. astrology printable
-12. spiritual gift
-13. unique birthday gift
+4.  chinese zodiac reading
+5.  birth chart gift
+6.  personalized astrology book
+7.  unique birthday gift for her
+8.  spiritual gift for friend
+9.  zodiac birthday gift
+10. custom astrology reading
+11. digital astrology gift
+12. printable birth chart book
+13. cosmic personality reading
+
+(Previous tags: replaced "soul blueprint" (zero search volume brand term — matched via title anyway),
+ replaced "astrology printable" (overlapped with "printable astrology book"),
+ added high-value terms: "custom", "personalized", "for friend", "cosmic personality reading".
+ Switched to American spelling "personalized" for higher Etsy search volume.)
 
 
 ────────────────────────────────────────────
 MATERIALS (optional)
 ────────────────────────────────────────────
 
-Digital download, Made-to-order reading, Browser-based
+Digital download, Made-to-order reading, Browser-based, Interactive HTML
 
 
 ────────────────────────────────────────────
@@ -223,41 +212,41 @@ Digital item — no shipping required
 LISTING IMAGE ORDER (recommended)
 ────────────────────────────────────────────
 
-Slot 1:  THUMBNAIL — Hero image, product title, cosmic theme
-Slot 2:  FEATURES — "What you get" overview graphic
-Slot 3:  READING SAMPLE 1 — Screenshot of a generated reading
-Slot 4:  READING SAMPLE 2 — Different reading section
-Slot 5:  BOOK TEMPLATE 1 — Preview of a printable book
-Slot 6:  BOOK TEMPLATE 2 — Different book template
-Slot 7:  MOBILE VIEW — Phone mockup showing it works on mobile
-Slot 8:  DEVICE MOCKUP — Tablet/laptop with the tool open
-Slot 9:  SOCIAL PROOF — Review, testimonial, or stat graphic
-Slot 10: TRUST — Privacy badge or "How it works" steps
+Slot 1:  THUMBNAIL — Hero image showing "135+ Readings" + cosmic theme
+Slot 2:  FEATURES — "What you get" overview (135+ readings, 5 systems, 11 books)
+Slot 3:  WELCOME SCREEN — Screenshot of personalised welcome overlay with sun sign
+Slot 4:  READING SAMPLE 1 — Screenshot of a generated reading card
+Slot 5:  READING SAMPLE 2 — Different section (Love Blueprint or Chinese Zodiac)
+Slot 6:  BOOK TEMPLATE 1 — Preview of a printable book (Dark Celestial)
+Slot 7:  BOOK TEMPLATE 2 — Different template (Baby Pink or Baby Blue)
+Slot 8:  PASSWORD GATE — Screenshot showing the password protection screen
+Slot 9:  MOBILE VIEW — Phone mockup showing it works on mobile
+Slot 10: HOW IT WORKS — 3-step visual: Order → I create it → You explore
 
 
 ────────────────────────────────────────────
 DIGITAL FILES TO UPLOAD (one per variation)
 ────────────────────────────────────────────
 
-Tier 1 ($9.99 — 1 Reading):
+Tier 1 ($12.99 — 1 Reading):
   File: etsy-delivery-single.html
   • Confirmation page — "Your reading is being created"
   • What to expect + timeline
   • Upgrade CTA to more readings
 
-Tier 2 ($17.99 — 2 Readings):
+Tier 2 ($19.99 — 2 Readings):
   File: etsy-delivery-double.html
   • Confirmation page — "Your 2 readings are being created"
   • What to expect + timeline
   • Upgrade CTA to more readings
 
-Tier 3 ($49.99 — 3 Readings):
+Tier 3 ($39.99 — 5 Readings):
   File: etsy-delivery-triple.html
-  • Confirmation page — "Your 3 readings are being created"
+  • Confirmation page — "Your 5 readings are being created"
   • What to expect + timeline
-  • Upgrade CTA to more readings
+  • Upgrade CTA to unlimited
 
-Tier 4 ($99.99 — Unlimited):
+Tier 4 ($69.99 — Unlimited):
   File: etsy-delivery.html
   • Confirmation page — "Your readings are being created"
   • What to expect + timeline
@@ -282,7 +271,7 @@ LAUNCH CHECKLIST
 ────────────────────────────────────────────
 
 [ ] Create Etsy listing with title above
-[ ] Set pricing: $9.99 (1 reading), $17.99 (2 readings), $49.99 (3 readings), $99.99 (unlimited)
+[ ] Set pricing: $12.99 (1 reading), $19.99 (2 readings), $39.99 (5 readings), $69.99 (unlimited)
 [ ] Paste description above
 [ ] Add all 13 tags
 [ ] Upload 10 listing images (use etsy-image-picker.html to sort)
