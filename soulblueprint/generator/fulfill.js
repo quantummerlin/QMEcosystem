@@ -678,17 +678,7 @@ function dismissWelcome(){
           <li>Permanent links to revisit anytime</li>
         </ul>
       </a>
-      <a class="upgrade-option" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
-        <h3>Unlimited Readings</h3>
-        <div class="price">$69.99</div>
-        <p class="price-note">One-time payment &middot; lifetime access</p>
-        <ul class="features">
-          <li>Generate unlimited readings forever</li>
-          <li>All ${cardCount}+ cards &amp; 17 sections</li>
-          <li>11 printable book templates</li>
-          <li>Future features included</li>
-        </ul>
-      </a>
+
     </div>
     <button class="upgrade-back" onclick="hideUpgrade()">Maybe later</button>
   </div>
