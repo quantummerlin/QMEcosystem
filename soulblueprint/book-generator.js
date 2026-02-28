@@ -1,10 +1,10 @@
 // ============================================================
-// A MOMENT IN TIME — THEMED BOOK GENERATOR
+// A MOMENT IN TIME, THEMED BOOK GENERATOR
 // ============================================================
 // Generates beautiful themed HTML books from reading data.
 // 11 design templates + A4/A5 paper size support.
 // Open the downloaded HTML in Chrome → Print → Save as PDF.
-// Premium feature — included with 5-reading bundle via Etsy.
+// Premium feature, included with 5-reading bundle via Etsy.
 // ============================================================
 
 // ─── ACCESS GATE ─────────────────────────────────────────────
@@ -46,7 +46,7 @@ function showUpgradeModal() {
 
         <div style="font-size:2.2rem;margin-bottom:12px;"></div>
         <h2 style="color:#ffd700;font-size:1.3rem;font-family:'Playfair Display','Georgia',serif;margin:0 0 10px;">Unlock the Book Generator</h2>
-        <p style="font-size:0.92rem;line-height:1.6;opacity:0.85;margin-bottom:20px;">Turn any Soul Blueprint reading into a stunning printable keepsake book — choose from <strong>11 premium templates</strong> including Art Deco, Botanical, Celestial Watercolor, and more.</p>
+        <p style="font-size:0.92rem;line-height:1.6;opacity:0.85;margin-bottom:20px;">Turn any Soul Blueprint reading into a stunning printable keepsake book, choose from <strong>11 premium templates</strong> including Art Deco, Botanical, Celestial Watercolor, and more.</p>
 
         <div style="background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);border-radius:16px;padding:18px;margin-bottom:20px;">
             <div style="font-size:0.82rem;opacity:0.6;margin-bottom:4px;">Included with 5-Reading Bundle</div>
@@ -102,7 +102,7 @@ const BOOK_TEMPLATES = [
     {
         id: 'cosmic-classic',
         name: 'Cosmic Classic',
-        desc: 'Deep purple & gold — the original signature design',
+        desc: 'Deep purple & gold, the original signature design',
         icon: '',
         colors: ['#1a0a2e', '#2d1b4e', '#ffd700'],
         builtin: true
@@ -124,7 +124,7 @@ const BOOK_TEMPLATES = [
     {
         id: 'celestial-watercolor',
         name: 'Celestial Watercolor',
-        desc: 'Soft blues & lilacs — dreamy painted skies',
+        desc: 'Soft blues & lilacs, dreamy painted skies',
         icon: '',
         colors: ['#3a4a6b', '#8fa4c8', '#f8f4ff']
     },
@@ -138,42 +138,42 @@ const BOOK_TEMPLATES = [
     {
         id: 'dark-celestial',
         name: 'Dark Celestial',
-        desc: 'Midnight blues & silver — stargazer\'s edition',
+        desc: 'Midnight blues & silver, stargazer\'s edition',
         icon: '',
         colors: ['#0a0e1a', '#1a2744', '#c0c8e0']
     },
     {
         id: 'fairy-tale',
         name: 'Fairy Tale',
-        desc: 'Enchanted forest — mossy greens & gold leaf',
+        desc: 'Enchanted forest, mossy greens & gold leaf',
         icon: '',
         colors: ['#2a1810', '#6b8f5e', '#ffeaa7']
     },
     {
         id: 'heart-bears',
         name: 'Heart Bears',
-        desc: 'Sweet pinks & lavender — perfect for little ones',
+        desc: 'Sweet pinks & lavender, perfect for little ones',
         icon: '',
         colors: ['#FFB6C1', '#D8BFD8', '#fffbfe']
     },
     {
         id: 'minimalist',
         name: 'Minimalist',
-        desc: 'Clean & modern — black, white & touches of blue',
-        icon: '◻',
+        desc: 'Clean & modern, black, white & touches of blue',
+        icon: '�,�',
         colors: ['#1a1a1a', '#4a90d9', '#ffffff']
     },
     {
         id: 'mystical-tarot',
         name: 'Mystical Tarot',
-        desc: 'Deep jewel tones — amethyst, ruby & emerald',
+        desc: 'Deep jewel tones, amethyst, ruby & emerald',
         icon: '',
         colors: ['#1a0a2e', '#8B5CF6', '#F59E0B']
     },
     {
         id: 'vintage-storybook',
         name: 'Vintage Storybook',
-        desc: 'Warm sepia tones — aged parchment & ink',
+        desc: 'Warm sepia tones, aged parchment & ink',
         icon: '',
         colors: ['#2c1810', '#8b4513', '#f5e6d0']
     }
@@ -186,7 +186,7 @@ const TEMPLATE_DIVIDERS = {
     'dark-celestial': '· ·  · ·', 'heart-bears': '· ·  · ·', 'minimalist': '· · · ·'
 };
 
-// Image assets per template — loaded at generation time and embedded as base64
+// Image assets per template, loaded at generation time and embedded as base64
 const TEMPLATE_IMAGES = {
     'cosmic-classic': {
         cover:   { file: 'Cosmic Classic.jpg',        opacity: 0.40, blend: 'screen' },
@@ -336,7 +336,7 @@ class BookTemplateEngine {
         if (hasGifts || hasGrowth) {
             h += '<div class="sc-grid">';
             if (hasGifts) h += `<div class="sc-col"><h5 class="sc-gifts"> Gifts</h5><ul>${reading.gifts.map(g => `<li>${this.esc(g)}</li>`).join('')}</ul></div>`;
-            if (hasGrowth) h += `<div class="sc-col"><h5 class="sc-growth">◇ Growth Areas</h5><ul>${reading.growthAreas.map(g => `<li>${this.esc(g)}</li>`).join('')}</ul></div>`;
+            if (hasGrowth) h += `<div class="sc-col"><h5 class="sc-growth">�,� Growth Areas</h5><ul>${reading.growthAreas.map(g => `<li>${this.esc(g)}</li>`).join('')}</ul></div>`;
             h += '</div>';
         }
         h += '</div>';
@@ -450,10 +450,10 @@ function collectBookData() {
         name: name,
         details: [birthDate, userData.birthTime || '', userData.birthPlace || ''].filter(Boolean),
         brand: 'Quantum Merlin',
-        halfTitleName: `\u2014 ${name} \u2014`,
+        halfTitleName: `, ${name} ,`,
         epigraphQuote: '\u201CThe cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.\u201D',
-        epigraphAttr: '\u2014 Carl Sagan',
-        dedication: `This reading is dedicated to ${name} \u2014\na soul whose cosmic pattern has never existed before\nand will never exist again.`
+        epigraphAttr: ', Carl Sagan',
+        dedication: `This reading is dedicated to ${name},\na soul whose cosmic pattern has never existed before\nand will never exist again.`
     };
 
     // ── Cosmic Snapshot ──
@@ -528,23 +528,23 @@ function collectBookData() {
     const toc = sections.map(section => ({
         name: `${section.icon} ${section.name}`,
         entries: section.cards.map(card =>
-            card.resultValue ? `${card.title} \u2014 ${card.resultValue}` : card.title
+            card.resultValue ? `${card.title}, ${card.resultValue}` : card.title
         )
     }));
 
     // ── Closing ──
     const closing = {
         title: 'The Story Continues',
-        bodyHTML: `<p>You have just explored ${_escHtml(name)}\u2019s complete moment in time \u2014 a unique constellation of energies that has never existed before and will never exist again.</p><p>With a ${_escHtml(safe(astro.sunSign, 'name'))} Sun illuminating the core identity, a ${_escHtml(safe(astro.moonSign, 'name'))} Moon nurturing the emotional world, and Life Path ${numr.lifePath || '\u2014'} guiding the soul\u2019s journey, ${_escHtml(name)} carries a sacred combination of gifts.</p><p>Return to these pages whenever you need a reminder of who you truly are beneath all the roles you play.</p>`,
+        bodyHTML: `<p>You have just explored ${_escHtml(name)}\u2019s complete moment in time, a unique constellation of energies that has never existed before and will never exist again.</p><p>With a ${_escHtml(safe(astro.sunSign, 'name'))} Sun illuminating the core identity, a ${_escHtml(safe(astro.moonSign, 'name'))} Moon nurturing the emotional world, and Life Path ${numr.lifePath || '\u2014'} guiding the soul\u2019s journey, ${_escHtml(name)} carries a sacred combination of gifts.</p><p>Return to these pages whenever you need a reminder of who you truly are beneath all the roles you play.</p>`,
         quote: `\u201CEvery soul arrives with a purpose. ${name}\u2019s purpose is written in the stars.\u201D`,
-        quoteAttr: '\u2014 A Moment in Time'
+        quoteAttr: ', A Moment in Time'
     };
 
     // ── Colophon ──
     const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     const colophon = {
         brand: 'Quantum Merlin',
-        text: `A Moment in Time \u2014 A Complete Cosmic Portrait for ${name}\n\nGenerated on ${today}\nreadings.quantummerlin.com\n\nFor entertainment and spiritual reflection purposes.\nEvery person is unique and will grow in their own beautiful way.\n\n\u00A9 ${new Date().getFullYear()} Quantum Merlin. All rights reserved.`,
+        text: `A Moment in Time, A Complete Cosmic Portrait for ${name}\n\nGenerated on ${today}\nreadings.quantummerlin.com\n\nFor entertainment and spiritual reflection purposes.\nEvery person is unique and will grow in their own beautiful way.\n\n\u00A9 ${new Date().getFullYear()} Quantum Merlin. All rights reserved.`,
         url: 'readings.quantummerlin.com'
     };
 
@@ -633,7 +633,7 @@ function collectReadingSections() {
 // ─── QUALITY CSS (injected into all themed templates) ────────
 
 const QUALITY_CSS = `
-/* Quality enhancements — injected by book generator */
+/* Quality enhancements, injected by book generator */
 .reading { page-break-inside: avoid; break-inside: avoid; }
 .sc-col .sc-growth { color: #c62828; font-size: inherit; margin-bottom: 1mm; }
 .kw-row:empty { display: none; }
@@ -798,7 +798,7 @@ let _selectedTemplate = 'cosmic-classic';
 let _selectedPaperSize = 'A5';
 
 function showTemplatePicker() {
-    // Access gate — pro users bypass, others need lifetime access
+    // Access gate, pro users bypass, others need lifetime access
     if (!window.SB_PRO && !hasBookAccess()) {
         showUpgradeModal();
         return;
@@ -834,10 +834,10 @@ function showTemplatePicker() {
         <!-- Paper Size Toggle -->
         <div style="display:flex;justify-content:center;gap:8px;margin-bottom:20px;">
             <button class="paper-btn paper-btn-active" data-size="A5" onclick="selectPaperSize('A5',this)" style="background:rgba(255,215,0,0.15);border:1.5px solid #ffd700;color:#ffd700;padding:8px 20px;border-radius:20px;font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.2s;">
-                A5 Paperback <span style="font-size:0.7rem;opacity:0.7;display:block;">148 × 210 mm</span>
+                A5 Paperback <span style="font-size:0.7rem;opacity:0.7;display:block;">148 �, 210 mm</span>
             </button>
             <button class="paper-btn" data-size="A4" onclick="selectPaperSize('A4',this)" style="background:rgba(255,255,255,0.05);border:1.5px solid rgba(255,255,255,0.2);color:#c9a0ff;padding:8px 20px;border-radius:20px;font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.2s;">
-                A4 Full Size <span style="font-size:0.7rem;opacity:0.7;display:block;">210 × 297 mm</span>
+                A4 Full Size <span style="font-size:0.7rem;opacity:0.7;display:block;">210 �, 297 mm</span>
             </button>
         </div>
 
@@ -861,7 +861,7 @@ function showTemplatePicker() {
             <button id="generateBookBtn" onclick="generateBook()" style="background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;border:none;padding:14px 40px;border-radius:30px;font-size:1.05rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 20px rgba(255,215,0,0.3);letter-spacing:0.02em;">
                  Generate Book
             </button>
-            <p style="font-size:0.72rem;opacity:0.45;margin-top:10px;">Downloads an HTML file — open in Chrome → Print → Save as PDF</p>
+            <p style="font-size:0.72rem;opacity:0.45;margin-top:10px;">Downloads an HTML file, open in Chrome → Print → Save as PDF</p>
         </div>
     </div>
     `;
@@ -939,7 +939,7 @@ async function generateBook() {
             }
         }
 
-        // Load & embed template images (graceful — skips any that fail to load)
+        // Load & embed template images (graceful, skips any that fail to load)
         if (btn) btn.textContent = ' Embedding images...';
         try {
             const _imgMap = await _loadTemplateImages(_selectedTemplate);
@@ -1067,7 +1067,7 @@ function buildCosmicClassicHTML(bookData, paperSize) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Moment in Time \u2014 ${name}</title>
+<title>A Moment in Time, ${name}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -1181,7 +1181,7 @@ ${a4Block}
 <body>
 <div class="print-bar">
     <div>
-        <div class="print-bar-title">A Moment in Time \u2014 ${name}</div>
+        <div class="print-bar-title">A Moment in Time, ${name}</div>
         <div class="print-bar-hint">Press Ctrl+P (or \u2318+P) \u2192 Save as PDF. Paper size ${paperSize} is set automatically.</div>
     </div>
     <button class="print-btn" onclick="window.print()">\uD83D\uDDA8\uFE0F Print / Save as PDF</button>
@@ -1220,9 +1220,9 @@ function showExportInstructions(name, theme, size) {
                 1. Open the downloaded HTML file in Chrome<br>
                 2. Press <kbd style="background:rgba(255,255,255,0.15);padding:2px 6px;border-radius:4px;font-size:0.85rem;">Ctrl+P</kbd> (or <kbd style="background:rgba(255,255,255,0.15);padding:2px 6px;border-radius:4px;font-size:0.85rem;">\u2318+P</kbd> on Mac)<br>
                 3. Set Destination \u2192 <strong style="color:#c9a0ff;">Save as PDF</strong><br>
-                4. Paper size is already set to ${size} \u2014 just save!
+                4. Paper size is already set to ${size}, just save!
             </div>
-            <p style="font-size:0.8rem;opacity:0.6;margin-bottom:15px;">The file also looks beautiful on screen \u2014 you can read it directly in any browser.</p>
+            <p style="font-size:0.8rem;opacity:0.6;margin-bottom:15px;">The file also looks beautiful on screen, you can read it directly in any browser.</p>
             <button onclick="this.closest('div[style*=fixed]').remove()" style="background:linear-gradient(135deg,#ffd700,#daa520);border:none;color:#1a0a2e;padding:12px 30px;border-radius:25px;font-size:1rem;cursor:pointer;font-weight:700;">Got it!</button>
         </div>
     `;
@@ -1244,7 +1244,7 @@ function romanNumeral(n) {
     return r[n - 1] || String(n);
 }
 
-// Legacy alias — the old export-pdf.js button calls this
+// Legacy alias, the old export-pdf.js button calls this
 function exportPDFBook() {
     showTemplatePicker();
 }

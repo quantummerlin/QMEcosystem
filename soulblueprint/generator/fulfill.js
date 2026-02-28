@@ -128,7 +128,7 @@ async function main() {
     // Start local server (serves from repo root so /soulblueprint/... works)
     const { server, port } = await startServer();
 
-    // Build URL — pro page with URL params for auto-generation
+    // Build URL, pro page with URL params for auto-generation
     // Note: NOT using fulfill=true because that adds fulfill-mode class which hides progress bar etc
     const params = new URLSearchParams({ name: args.name, date: args.date });
     if (args.time) params.set('time', args.time);
@@ -321,7 +321,7 @@ async function main() {
                 execSync(`git commit -m "Reading: ${args.name}"`, { cwd: REPO_ROOT, stdio: 'pipe' });
                 console.log('  Git committed. Pushing to origin...');
                 execSync('git push origin main', { cwd: REPO_ROOT, stdio: 'pipe', timeout: 60000 });
-                console.log(`   DEPLOYED — Live at: ${deployUrl}`);
+                console.log(`   DEPLOYED, Live at: ${deployUrl}`);
             } catch (gitErr) {
                 console.error('   Git push failed:', gitErr.message.substring(0, 200));
                 console.log(`  Manual deploy:\n    cd ${REPO_ROOT}`);
@@ -343,7 +343,7 @@ async function main() {
 }
 
 // ============================================
-// BUILD FINAL HTML — inject modals + JS into captured page
+// BUILD FINAL HTML, inject modals + JS into captured page
 // ============================================
 function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthData) {
     birthData = birthData || {};
@@ -425,6 +425,9 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
 .pw-submit:hover{transform:scale(1.03)}
 .pw-error{color:#ff6b6b;font-size:0.82rem;margin:8px 0 0;min-height:1.2em}
 .pw-hint{color:#e8d5ff;opacity:0.35;font-size:0.72rem;margin-top:16px}
+.pw-book-unlock{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,215,0,0.12)}
+.pw-book-label{color:#e8d5ff;opacity:0.55;font-size:0.78rem;margin:0 0 10px}
+.pw-book-btn{background:linear-gradient(135deg,#c9a0ff,#8b5cf6)!important}
 @media(max-width:480px){.pw-card{padding:28px 20px}.pw-card h2{font-size:1.2rem}.pw-input{font-size:1rem;padding:12px}}
 /* Welcome overlay */
 .welcome-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:linear-gradient(145deg,rgba(10,5,20,0.97),rgba(26,10,46,0.98));z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding:0 16px;opacity:1;transition:opacity 0.6s ease;font-family:'Inter','Segoe UI',system-ui,sans-serif;overflow-y:auto}
@@ -500,8 +503,8 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
     const welcomeLabel = isGift ? 'A Gift Created Just For You' : 'Thank You For Your Order';
     const welcomeTitle = isGift ? 'Someone Special Created This For You' : 'Your Soul Blueprint Is Ready';
     const welcomeText = isGift
-        ? `A unique Soul Blueprint has been lovingly created from your exact birth data. Inside you\'ll find ${cardCount}+ personalised readings across astrology, numerology, Chinese zodiac, and more \u2014 all calculated to the minute you were born. Plus 70+ AI guide books and a prompt generator to explore your reading further.`
-        : `Your unique Soul Blueprint has been personally created from your exact birth data. Inside you\'ll find ${cardCount}+ personalised readings across astrology, numerology, Chinese zodiac, and more \u2014 all calculated to the minute you were born. Plus 70+ AI guide books and a prompt generator to explore your reading further.`;
+        ? `A unique Soul Blueprint has been lovingly created from your exact birth data. Inside you\'ll find ${cardCount}+ personalised readings across astrology, numerology, Chinese zodiac, and more, all calculated to the minute you were born. Plus 70+ AI guide books and a prompt generator to explore your reading further.`
+        : `Your unique Soul Blueprint has been personally created from your exact birth data. Inside you\'ll find ${cardCount}+ personalised readings across astrology, numerology, Chinese zodiac, and more, all calculated to the minute you were born. Plus 70+ AI guide books and a prompt generator to explore your reading further.`;
     const cosmicLine = isGift ? 'A map of the cosmos at the moment they arrived' : 'A map of the cosmos at the moment you arrived';
     const welcomeKey = `sb-welcome-${slug}`;
     const pwKey = `sb-pw-${slug}`;
@@ -519,6 +522,14 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
     </div>
     <div class="pw-error" id="pwError"></div>
     <div class="pw-hint">Password is case-insensitive</div>
+    <div class="pw-book-unlock">
+      <p class="pw-book-label">Have a book access code?</p>
+      <div class="pw-input-wrap">
+        <input type="text" class="pw-input" id="bookCodeInput" maxlength="16" placeholder="Enter book code" autocomplete="off" autocapitalize="characters" spellcheck="false">
+        <button class="pw-submit pw-book-btn" onclick="checkBookCode()">Unlock</button>
+      </div>
+      <div class="pw-error" id="bookCodeError"></div>
+    </div>
   </div>
 </div>`;
 
@@ -570,6 +581,21 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
   // Enter key to submit
   var inp=document.getElementById('pwInput');
   if(inp)inp.addEventListener('keydown',function(e){if(e.key==='Enter')window.checkPassword()});
+  // Book unlock code
+  window.checkBookCode=function(){
+    var code=document.getElementById('bookCodeInput').value.trim().toUpperCase();
+    if(code==='SOUL50BOOK'){
+      try{localStorage.setItem('sb-book-access','lifetime')}catch(e){}
+      document.getElementById('bookCodeError').textContent='';
+      document.getElementById('bookCodeInput').value='';
+      var label=document.querySelector('.pw-book-label');
+      if(label){label.textContent='Book Generator unlocked!';label.style.color='#4ade80';label.style.opacity='1'}
+    }else if(code){
+      document.getElementById('bookCodeError').textContent='Invalid book code. Check your purchase email.';
+    }
+  };
+  var bInp=document.getElementById('bookCodeInput');
+  if(bInp)bInp.addEventListener('keydown',function(e){if(e.key==='Enter')window.checkBookCode()});
 })();
 `;
 
@@ -594,13 +620,13 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
     </div>
     <div class="welcome-divider"></div>
     <button class="welcome-btn" onclick="dismissWelcome()">Begin Exploring \u2192</button>
-    <div class="welcome-note">Your reading is permanent \u2014 bookmark this page to return anytime</div>
+    <div class="welcome-note">Your reading is permanent, bookmark this page to return anytime</div>
     <div class="welcome-brand"><div class="welcome-brand-name">A Moment in Time \u00b7 by Quantum Merlin</div></div>
   </div>
 </div>`;
 
     const welcomeScript = `
-// Welcome overlay — show on first visit only
+// Welcome overlay, show on first visit only
 (function(){
   var key='${welcomeKey}';
   var seen=false;
@@ -749,7 +775,7 @@ function setGender(t){
   root.setProperty("--card-border",c.border);root.setProperty("--card-bg",c.cardBg);root.setProperty("--text",c.text);
 }
 
-// Progress tracking — uses is-read (mark as read) for progress
+// Progress tracking, uses is-read (mark as read) for progress
 function updateProgress(){
   var total=document.querySelectorAll(".reading-card").length;
   var read=document.querySelectorAll(".reading-card.is-read").length;
