@@ -1,6 +1,6 @@
 # Website Integration Guide - DIY Infographics Feature
 
-## 📋 Copy Button JavaScript Code
+##  Copy Button JavaScript Code
 
 ```html
 <!-- Add this to your reading pages -->
@@ -71,11 +71,11 @@
 </style>
 
 <!-- Toast notification -->
-<div id="toast" class="toast-notification">✓ Copied to clipboard!</div>
+<div id="toast" class="toast-notification"> Copied to clipboard!</div>
 
 <!-- Copy button example -->
 <div class="reading-section">
-  <button onclick="copyReading('reading-1', this)" class="copy-btn copy-position-top">📋 Copy Reading</button>
+  <button onclick="copyReading('reading-1', this)" class="copy-btn copy-position-top"> Copy Reading</button>
   
   <div id="reading-1" class="reading-content">
     <h3>Your Core Identity</h3>
@@ -94,7 +94,7 @@ function copyReading(readingId, btn) {
   navigator.clipboard.writeText(textToCopy).then(() => {
     // Update button
     const originalText = btn.innerHTML;
-    btn.innerHTML = '✓ Copied!';
+    btn.innerHTML = ' Copied!';
     btn.classList.add('copied');
     
     // Show toast
@@ -145,7 +145,7 @@ function copyMultipleReadings(readingIds, btn) {
   
   navigator.clipboard.writeText(combinedText).then(() => {
     const originalText = btn.innerHTML;
-    btn.innerHTML = '✓ ' + readingIds.length + ' readings copied!';
+    btn.innerHTML = ' ' + readingIds.length + ' readings copied!';
     btn.classList.add('copied');
     
     setTimeout(() => {
@@ -159,7 +159,7 @@ function copyMultipleReadings(readingIds, btn) {
 
 ---
 
-## 🎨 DIY Infographics Page Content
+##  DIY Infographics Page Content
 
 ```html
 <!DOCTYPE html>
@@ -171,7 +171,7 @@ function copyMultipleReadings(readingIds, btn) {
 </head>
 <body>
     <div class="container">
-        <h1>🎨 Create Your Own Soul Blueprint Infographics</h1>
+        <h1> Create Your Own Soul Blueprint Infographics</h1>
         
         <p class="intro">
             Turn your Soul Blueprint readings into stunning visual infographics — 
@@ -181,7 +181,7 @@ function copyMultipleReadings(readingIds, btn) {
         <div class="steps">
             <div class="step">
                 <h2>Step 1: Explore Readings</h2>
-                <p>Browse our readings and click the 📋 Copy button on any reading that speaks to you.</p>
+                <p>Browse our readings and click the  Copy button on any reading that speaks to you.</p>
                 <a href="/soulblueprint" class="cta-btn">Start Exploring →</a>
             </div>
             
@@ -213,31 +213,31 @@ function copyMultipleReadings(readingIds, btn) {
                 <div class="prompt-box">
                     <h4>Basic Infographic</h4>
                     <code>Create a visually stunning infographic summarizing this text. Highlight the main patterns, themes, and insights. Make it clear, elegant, and easy to share.</code>
-                    <button onclick="copyPrompt(this)" class="copy-prompt-btn">📋 Copy Prompt</button>
+                    <button onclick="copyPrompt(this)" class="copy-prompt-btn"> Copy Prompt</button>
                 </div>
                 
                 <div class="prompt-box">
                     <h4>Color-Coded Design</h4>
                     <code>Design a beautiful infographic using a soft cosmic color palette (deep blues, purples, and gold accents). Organize it with clear sections, icons, and visual hierarchy.</code>
-                    <button onclick="copyPrompt(this)" class="copy-prompt-btn">📋 Copy Prompt</button>
+                    <button onclick="copyPrompt(this)" class="copy-prompt-btn"> Copy Prompt</button>
                 </div>
                 
                 <div class="prompt-box">
                     <h4>Shareable Card Format</h4>
                     <code>Design this reading in a vertical card format perfect for social sharing. Include the most impactful insights at the top. Use a premium, non-cheesy aesthetic.</code>
-                    <button onclick="copyPrompt(this)" class="copy-prompt-btn">📋 Copy Prompt</button>
+                    <button onclick="copyPrompt(this)" class="copy-prompt-btn"> Copy Prompt</button>
                 </div>
             </div>
         </div>
         
         <div class="tips-section">
-            <h2>💡 Pro Tips</h2>
+            <h2> Pro Tips</h2>
             <ul>
-                <li>🎨 Customize colors by adding "Use [your color] accents" to any prompt</li>
-                <li>📱 For social sharing, add "Design for vertical mobile viewing"</li>
-                <li>🖨️ For printing, add "Design for A4 or letter-size printing"</li>
-                <li>🔄 Try combining multiple readings to see patterns across your life</li>
-                <li>✨ What you create is yours — share it, print it, gift it</li>
+                <li> Customize colors by adding "Use [your color] accents" to any prompt</li>
+                <li> For social sharing, add "Design for vertical mobile viewing"</li>
+                <li> For printing, add "Design for A4 or letter-size printing"</li>
+                <li> Try combining multiple readings to see patterns across your life</li>
+                <li> What you create is yours — share it, print it, gift it</li>
             </ul>
         </div>
         
@@ -253,7 +253,7 @@ function copyMultipleReadings(readingIds, btn) {
 
 ---
 
-## 📊 Quick Actions Bar (Sticky Footer)
+##  Quick Actions Bar (Sticky Footer)
 
 ```html
 <style>
@@ -317,10 +317,10 @@ function copyMultipleReadings(readingIds, btn) {
 </style>
 
 <div class="quick-actions-bar">
-  <button onclick="copyCurrentReading()" class="quick-action-btn">📋 Copy</button>
-  <button onclick="nextReading()" class="quick-action-btn">➡️ Next Reading</button>
-  <button onclick="openDIYGuide()" class="quick-action-btn">🎨 Make Visual</button>
-  <button onclick="shareReading()" class="quick-action-btn">🔗 Share</button>
+  <button onclick="copyCurrentReading()" class="quick-action-btn"> Copy</button>
+  <button onclick="nextReading()" class="quick-action-btn"> Next Reading</button>
+  <button onclick="openDIYGuide()" class="quick-action-btn"> Make Visual</button>
+  <button onclick="shareReading()" class="quick-action-btn"> Share</button>
 </div>
 
 <script>
@@ -366,7 +366,7 @@ function shareReading() {
 
 ---
 
-## 📈 Progress Tracker
+##  Progress Tracker
 
 ```html
 <style>
@@ -415,7 +415,7 @@ function shareReading() {
   <div class="progress-bar-container">
     <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
   </div>
-  <a href="/diy-infographics" class="progress-cta">🎨 Create an infographic from what you've found →</a>
+  <a href="/diy-infographics" class="progress-cta"> Create an infographic from what you've found →</a>
 </div>
 
 <script>
@@ -452,7 +452,7 @@ window.onload = function() {
 
 ---
 
-## 🎯 Ad Placement Recommendations
+##  Ad Placement Recommendations
 
 ```html
 <!-- Ad Placement Structure -->
@@ -463,7 +463,7 @@ window.onload = function() {
   <!-- ABOVE FOLD: 0-1 ads max -->
   
   <div class="reading-section">
-    <button class="copy-btn">📋 Copy Reading</button>
+    <button class="copy-btn"> Copy Reading</button>
     <div class="reading-content">
       <!-- Reading #1 -->
     </div>
@@ -474,7 +474,7 @@ window.onload = function() {
   </div>
   
   <div class="reading-section">
-    <button class="copy-btn">📋 Copy Reading</button>
+    <button class="copy-btn"> Copy Reading</button>
     <div class="reading-content">
       <!-- Reading #2 -->
     </div>
@@ -482,7 +482,7 @@ window.onload = function() {
   
   <!-- Every 3rd reading: subtle prompt + ad -->
   <div class="prompt-section">
-    <p>🎨 Turn these readings into visuals — <a href="/diy-infographics">See how</a></p>
+    <p> Turn these readings into visuals — <a href="/diy-infographics">See how</a></p>
   </div>
   <!-- AD 2: In-content native ad -->
   <div class="ad-slot ad-in-content">
@@ -537,7 +537,7 @@ window.onload = function() {
 
 ---
 
-## ⚙️ Implementation Checklist
+##  Implementation Checklist
 
 ### Phase 1 (This Week)
 - [ ] Add copy button CSS to your stylesheet
@@ -562,7 +562,7 @@ window.onload = function() {
 
 ---
 
-## 📝 Notes
+##  Notes
 
 - Copy buttons work with native clipboard API (modern browsers)
 - Fallback included for older browsers

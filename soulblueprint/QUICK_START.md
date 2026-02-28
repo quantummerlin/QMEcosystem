@@ -1,6 +1,6 @@
 # Quick Start Guide - A Moment in Time PDF Generator
 
-## 🎉 Installation & Usage
+##  Installation & Usage
 
 ### 1. Extract the ZIP
 ```bash
@@ -20,7 +20,7 @@ node generate.js ../Doyne-Jason-A-Moment-in-Time-Book.html
 
 That's it! Your PDF will be in `generator/output/`
 
-## 📚 Available Templates
+##  Available Templates
 
 ### Heart Bears (Default)
 Cute pastel design with hearts and soft colors
@@ -34,7 +34,7 @@ Original celestial design with cosmic colors
 node generate.js book.html --template cosmic
 ```
 
-## 📁 What's In The Package
+##  What's In The Package
 
 ```
 moment-in-time-pdf-generator.zip
@@ -52,7 +52,7 @@ moment-in-time-pdf-generator.zip
 └── concept-01-heart-bears.html              # Example design
 ```
 
-## 🎯 Common Commands
+##  Common Commands
 
 ```bash
 # Generate with Heart Bears template
@@ -71,7 +71,7 @@ node generate.js book.html --json-only
 node generate.js --help
 ```
 
-## ✨ Features
+##  Features
 
 - **Auto-parsing**: Extracts all data from source HTML automatically
 - **Multiple designs**: 2 beautiful templates included
@@ -79,7 +79,7 @@ node generate.js --help
 - **HTML preview**: See your book before printing
 - **Easy CLI**: Simple command-line interface
 
-## 📝 Output Files
+##  Output Files
 
 When you run the generator, you get:
 
@@ -89,27 +89,27 @@ When you run the generator, you get:
 
 Example: `generator/output/Doyne-Jason-A-Moment-in-Time-Book-heart-bears.pdf`
 
-## 🔧 Requirements
+##  Requirements
 
 - Node.js 18 or higher
 - npm (comes with Node.js)
 - ~200MB disk space (for dependencies)
 
-## 🎨 Creating Your Own Template
+##  Creating Your Own Template
 
 1. Copy a template folder: `cp -r templates/heart-bears templates/my-template`
 2. Edit `template.html` and `partials/*.html`
 3. Use placeholders like `{{name}}`, `{{title}}`, `{{chapters}}`
 4. Update `AVAILABLE_TEMPLATES` in `generate.js`
 
-## 💡 Tips
+##  Tips
 
 - The HTML file must have the same structure as the example
 - Each reading is on a new page in the PDF
 - Use `--json-only` to debug parsing issues
 - The parser extracts: 9 chapters, 90 readings, all metadata
 
-## 🐛 Need Help?
+##  Need Help?
 
 Check the full documentation in `generator/README.md`
 

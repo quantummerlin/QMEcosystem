@@ -9,7 +9,7 @@
         <meta property="og:title" content="AI Prompt Builder - Visual Soul Blueprint">
         <meta property="og:description" content="Many transformation types. Paste your reading, pick a style, and get a ready-to-use AI prompt.">
         <meta property="og:type" content="website">
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>">
         <link rel="stylesheet" href="../css/main.css">
 
  <style>
@@ -395,6 +395,18 @@
  color: var(--text-muted);
  margin-top: 2px;
  }
+ #blueprintInsertButtons .preset-btn {
+ font-size: 0.82em;
+ padding: 5px 12px;
+ border-radius: 6px;
+ }
+ #blueprintInsertButtons .preset-btn:hover {
+ transform: translateY(-1px);
+ box-shadow: 0 2px 8px rgba(124,58,237,0.2);
+ }
+ #savedReadingsList select {
+ font-size: 0.92em;
+ }
         </style>
         <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
@@ -405,8 +417,8 @@
         <!-- ========== NAV ========== -->
         <nav class="main-nav">
             <div class="nav-container">
-                <a href="/soulblueprint/" class="nav-logo">✨ Soul Blueprint</a>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+                <a href="/soulblueprint/" class="nav-logo"> Soul Blueprint</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu"></button>
                 <ul class="nav-menu">
                     <li><a href="/soulblueprint/">Generator</a></li>
                     <li><a href="/soulblueprint/examples/">Examples</a></li>
@@ -582,14 +594,26 @@
 
                     <!-- Step 2 -->
                     <div class="step-card">
-                        <h2><span class="step-number">2</span> Paste Your Reading(s)</h2>
+                        <h2><span class="step-number">2</span> Your Reading Data</h2>
+
+                        <!-- Load from saved readings -->
+                        <div class="form-group" id="blueprintLoaderGroup">
+                            <label>Load from Your Saved Readings:</label>
+                            <div id="savedReadingsList" style="margin-bottom:10px;"></div>
+                            <div id="blueprintInsertButtons" style="display:none;flex-wrap:wrap;gap:6px;margin-bottom:12px;"></div>
+                            <div id="noBlueprintMsg" style="display:none;padding:12px;background:#fef3c7;border:1px solid #fcd34d;border-radius:8px;font-size:0.88em;color:#92400e;line-height:1.5;">
+                                <strong>No saved readings found.</strong><br>
+                                <a href="/soulblueprint/" style="color:#7c3aed;font-weight:600;">Generate a reading first →</a> then come back here. Your data is saved locally and will appear automatically.
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <label for="readingContent">Your Soul Blueprint Reading(s):</label>
                             <textarea id="readingContent" class="form-control" placeholder="Paste your soul blueprint reading(s) here…
 
                             Tips:
-                            • For simple transformations, paste 1-3 readings
+                            • Use 'Load Reading' above to auto-fill from your saved blueprints
+                            • Or paste manually — both work great
                             • For complex transforms (novels, films), paste as many as you can
                             • Remove any personal info you don't want shared with AI
                             • Keep the original formatting for best results"></textarea>
@@ -669,10 +693,10 @@
 
                         <!-- Quick Actions -->
                         <div class="quick-actions">
-                            <button class="quick-action-btn" onclick="fillExample()" title="Load a sample reading to test">📝 Fill Example</button>
-                            <button class="quick-action-btn" onclick="clearAll()" title="Clear all fields">🗑 Clear All</button>
-                            <button class="quick-action-btn" onclick="saveCurrentPrompt()" title="Save this prompt for later">💾 Save Prompt</button>
-                            <button class="quick-action-btn" onclick="toggleSavedPrompts()" title="Load a previously saved prompt">📂 Load Saved</button>
+                            <button class="quick-action-btn" onclick="fillExample()" title="Load a sample reading to test"> Fill Example</button>
+                            <button class="quick-action-btn" onclick="clearAll()" title="Clear all fields"> Clear All</button>
+                            <button class="quick-action-btn" onclick="saveCurrentPrompt()" title="Save this prompt for later"> Save Prompt</button>
+                            <button class="quick-action-btn" onclick="toggleSavedPrompts()" title="Load a previously saved prompt"> Load Saved</button>
                         </div>
 
                         <!-- Saved Prompts Panel (hidden by default) -->
@@ -689,14 +713,14 @@
                                 <label>Adjust Prompt:</label>
                                 <button class="variation-btn" onclick="applyVariation('detailed')">+ More Detailed</button>
                                 <button class="variation-btn" onclick="applyVariation('shorter')">- Make Shorter</button>
-                                <button class="variation-btn" onclick="applyVariation('creative')">✨ More Creative</button>
-                                <button class="variation-btn" onclick="applyVariation('practical')">🔧 More Practical</button>
+                                <button class="variation-btn" onclick="applyVariation('creative')"> More Creative</button>
+                                <button class="variation-btn" onclick="applyVariation('practical')"> More Practical</button>
                             </div>
 
                             <div class="action-buttons" style="margin-top: 14px;">
-                                <button class="action-btn primary" onclick="copyPrompt()">📋 Copy to Clipboard</button>
-                                <button class="action-btn chatgpt" onclick="openChatGPT()">💬 Open in ChatGPT</button>
-                                <button class="action-btn gemini" onclick="openGemini()">🔮 Open in Gemini</button>
+                                <button class="action-btn primary" onclick="copyPrompt()"> Copy to Clipboard</button>
+                                <button class="action-btn chatgpt" onclick="openChatGPT()"> Open in ChatGPT</button>
+                                <button class="action-btn gemini" onclick="openGemini()"> Open in Gemini</button>
                             </div>
 
                             <!-- Gentle guidance before external tools -->
@@ -744,7 +768,7 @@
                         <div id="promptHistory">
                             <p style="color:var(--text-muted); font-style:italic;">No prompts generated yet…</p>
                         </div>
-                        <button class="clear-history-btn" onclick="clearHistory()">🗑 Clear History</button>
+                        <button class="clear-history-btn" onclick="clearHistory()"> Clear History</button>
                     </div>
                 </div>
             </div><!-- /builder-grid -->
@@ -782,12 +806,12 @@
                 <p>Visual Soul Blueprint Platform</p>
                 <p>Transform your soul reading into stunning visual art &amp; infinite experiences</p>
                 <p><a href="https://quantummerlin.com/soulblueprint" target="_blank" rel="noopener noreferrer">quantummerlin.com/soulblueprint</a></p>
-                <p class="footer-tagline">✨ Free guide • No design skills needed • Works with ChatGPT, Gemini & NotebookLM</p>
+                <p class="footer-tagline"> Free guide • No design skills needed • Works with ChatGPT, Gemini & NotebookLM</p>
             </div>
         </footer>
 
         <!-- ========== TOAST ========== -->
-        <div class="toast" id="toast">✓ Copied to clipboard!</div>
+        <div class="toast" id="toast"> Copied to clipboard!</div>
 
         <!-- Shared site JS loads FIRST so the page-specific IIFE can override copyPrompt -->
         <script src="../js/main.js"></script>
@@ -1761,7 +1785,7 @@ Here is the reading:
  ACTIONS
  ------------------------------------------------------------------ */
  function showToast(msg) {
- $toast.textContent = msg || '✓ Copied to clipboard!';
+ $toast.textContent = msg || ' Copied to clipboard!';
  $toast.classList.add('show');
  setTimeout(function () { $toast.classList.remove('show'); }, 2200);
  }
@@ -1872,7 +1896,7 @@ Here is the reading:
  }
  list.innerHTML = saved.map(function (item, i) {
  return '<div class="saved-prompt-item" onclick="loadSavedPrompt(' + i + ')">' +
- '<button class="history-delete" onclick="event.stopPropagation(); deleteSavedPrompt(' + i + ')" title="Delete">✕</button>' +
+ '<button class="history-delete" onclick="event.stopPropagation(); deleteSavedPrompt(' + i + ')" title="Delete"></button>' +
  '<div class="sp-name">' + escapeHTML(item.name) + '</div>' +
  '<div class="sp-date">' + escapeHTML(item.type) + ' • ' + escapeHTML(item.date) + '</div>' +
  '</div>';
@@ -2002,7 +2026,7 @@ Here is the reading:
  }
  var preview = item.prompt ? item.prompt.substring(0, 80) + '…' : '';
  return '<div class="history-item" onclick="loadFromHistory(' + origIdx + ')">' +
- '<button class="history-delete" onclick="event.stopPropagation(); deleteHistoryItem(' + origIdx + ')" title="Delete">✕</button>' +
+ '<button class="history-delete" onclick="event.stopPropagation(); deleteHistoryItem(' + origIdx + ')" title="Delete"></button>' +
  '<div class="h-type">' + escapeHTML(item.type) + '</div>' +
  '<div class="h-date">' + escapeHTML(item.date) + '</div>' +
  '<div class="h-preview">' + escapeHTML(preview) + '</div>' +
@@ -2047,6 +2071,309 @@ Here is the reading:
  div.appendChild(document.createTextNode(str));
  return div.innerHTML;
  }
+
+ /* ------------------------------------------------------------------
+ BLUEPRINT READING LOADER — Pull structured data from saved readings
+ ------------------------------------------------------------------ */
+ var currentBlueprintData = null;
+
+ function initBlueprintLoader() {
+     var allReadings = {};
+     try { allReadings = JSON.parse(localStorage.getItem('sb-saved-readings') || '{}'); } catch(e) {}
+
+     var keys = Object.keys(allReadings);
+     var $list = document.getElementById('savedReadingsList');
+     var $buttons = document.getElementById('blueprintInsertButtons');
+     var $noMsg = document.getElementById('noBlueprintMsg');
+
+     if (!keys.length) {
+         if ($noMsg) $noMsg.style.display = 'block';
+         if ($buttons) $buttons.style.display = 'none';
+         return;
+     }
+
+     if ($noMsg) $noMsg.style.display = 'none';
+
+     // Build reading selector dropdown
+     var html = '<select id="blueprintSelector" class="form-control" onchange="loadBlueprintReading(this.value)" style="margin-bottom:8px;">';
+     html += '<option value="">— Select a saved reading —</option>';
+     keys.forEach(function(key) {
+         var r = allReadings[key];
+         var name = r.userData ? r.userData.name : key;
+         var date = r.userData ? r.userData.birthDate : '';
+         html += '<option value="' + escapeHTML(key) + '">' + escapeHTML(name) + (date ? ' (' + date + ')' : '') + '</option>';
+     });
+     html += '</select>';
+     $list.innerHTML = html;
+ }
+
+ function loadBlueprintReading(readingId) {
+     var $buttons = document.getElementById('blueprintInsertButtons');
+     if (!readingId) {
+         $buttons.style.display = 'none';
+         currentBlueprintData = null;
+         return;
+     }
+
+     var allReadings = {};
+     try { allReadings = JSON.parse(localStorage.getItem('sb-saved-readings') || '{}'); } catch(e) {}
+     var reading = allReadings[readingId];
+     if (!reading || !reading.readings) return;
+
+     currentBlueprintData = reading;
+     var r = reading.readings;
+     var u = reading.userData || {};
+
+     // Also auto-fill the name field
+     if (u.name && $name) $name.value = u.name;
+
+     // Build structured insert buttons
+     var buttons = [];
+
+     // Identity summary (combined)
+     buttons.push({ label: ' Full Identity', key: 'identity', desc: 'Sun + Moon + Rising + Life Path summary' });
+
+     // Astrology
+     if (r.astrology) {
+         if (r.astrology.sunSign) buttons.push({ label: ' Sun: ' + getSignName(r.astrology.sunSign), key: 'sun' });
+         if (r.astrology.moonSign) buttons.push({ label: ' Moon: ' + getSignName(r.astrology.moonSign), key: 'moon' });
+         if (r.astrology.risingSign) buttons.push({ label: '⬆ Rising: ' + getSignName(r.astrology.risingSign), key: 'rising' });
+         if (r.astrology.mercurySign) buttons.push({ label: ' Mercury: ' + getSignName(r.astrology.mercurySign), key: 'mercury' });
+         if (r.astrology.venusSign) buttons.push({ label: ' Venus: ' + getSignName(r.astrology.venusSign), key: 'venus' });
+         if (r.astrology.marsSign) buttons.push({ label: ' Mars: ' + getSignName(r.astrology.marsSign), key: 'mars' });
+         if (r.astrology.chineseZodiac) buttons.push({ label: ' Chinese: ' + getSignName(r.astrology.chineseZodiac), key: 'chinese' });
+         if (r.astrology.element) buttons.push({ label: ' Element: ' + getSignName(r.astrology.element), key: 'element' });
+         if (r.astrology.moonPhase) buttons.push({ label: ' Moon Phase: ' + getSignName(r.astrology.moonPhase), key: 'moonphase' });
+         if (r.astrology.chiron) buttons.push({ label: ' Chiron: ' + getSignName(r.astrology.chiron), key: 'chiron' });
+         if (r.astrology.northNode) buttons.push({ label: ' North Node: ' + getSignName(r.astrology.northNode), key: 'northnode' });
+         if (r.astrology.lilith) buttons.push({ label: ' Lilith: ' + getSignName(r.astrology.lilith), key: 'lilith' });
+     }
+
+     // Numerology
+     if (r.numerology) {
+         if (r.numerology.lifePath) buttons.push({ label: ' Life Path: ' + r.numerology.lifePath, key: 'lifepath' });
+         if (r.numerology.destiny) buttons.push({ label: ' Destiny: ' + r.numerology.destiny, key: 'destiny' });
+         if (r.numerology.soulUrge) buttons.push({ label: ' Soul Urge: ' + r.numerology.soulUrge, key: 'soulurge' });
+         if (r.numerology.personality) buttons.push({ label: ' Personality: ' + r.numerology.personality, key: 'personality' });
+         if (r.numerology.expression) buttons.push({ label: ' Expression: ' + r.numerology.expression, key: 'expression' });
+         if (r.numerology.personalYear) buttons.push({ label: ' Personal Year: ' + r.numerology.personalYear, key: 'personalyear' });
+     }
+
+     // Insert All button
+     buttons.push({ label: ' Insert All Data', key: 'all', desc: 'Complete structured blueprint' });
+
+     var html = buttons.map(function(btn) {
+         var style = btn.key === 'identity' ? 'background:linear-gradient(135deg,#7c3aed,#a78bfa);color:#fff;border:none;font-weight:600;' :
+                     btn.key === 'all' ? 'background:linear-gradient(135deg,#059669,#10b981);color:#fff;border:none;font-weight:600;' :
+                     '';
+         return '<button class="preset-btn" onclick="insertBlueprintData(\'' + btn.key + '\')" style="' + style + '" title="' + (btn.desc || '') + '">' + btn.label + '</button>';
+     }).join('');
+
+     $buttons.innerHTML = html;
+     $buttons.style.display = 'flex';
+     updatePrompt();
+ }
+
+ function getSignName(signObj) {
+     if (!signObj) return '?';
+     if (typeof signObj === 'string') return signObj;
+     if (typeof signObj === 'number') return String(signObj);
+     return signObj.name || signObj.sign || signObj.animal || signObj.phase || signObj.element || JSON.stringify(signObj).substring(0, 20);
+ }
+
+ function getSignDescription(signObj) {
+     if (!signObj) return '';
+     if (typeof signObj === 'string') return signObj;
+     if (typeof signObj === 'number') return String(signObj);
+     var parts = [];
+     if (signObj.name || signObj.sign) parts.push(signObj.name || signObj.sign);
+     if (signObj.element) parts.push('Element: ' + signObj.element);
+     if (signObj.quality) parts.push('Quality: ' + signObj.quality);
+     if (signObj.ruler) parts.push('Ruler: ' + signObj.ruler);
+     if (signObj.animal) parts.push('Animal: ' + signObj.animal);
+     if (signObj.yinYang) parts.push(signObj.yinYang);
+     if (signObj.phase) parts.push('Phase: ' + signObj.phase);
+     if (signObj.illumination) parts.push('Illumination: ' + signObj.illumination + '%');
+     if (signObj.degree !== undefined) parts.push('Degree: ' + signObj.degree + '°');
+     return parts.join(' · ');
+ }
+
+ function insertBlueprintData(key) {
+     if (!currentBlueprintData || !currentBlueprintData.readings) return;
+     var r = currentBlueprintData.readings;
+     var u = currentBlueprintData.userData || {};
+     var text = '';
+
+     switch(key) {
+         case 'identity':
+             text = buildIdentitySummary(r, u);
+             break;
+         case 'sun':
+             text = 'Sun Sign: ' + getSignDescription(r.astrology.sunSign);
+             break;
+         case 'moon':
+             text = 'Moon Sign: ' + getSignDescription(r.astrology.moonSign);
+             break;
+         case 'rising':
+             text = 'Rising Sign: ' + getSignDescription(r.astrology.risingSign);
+             break;
+         case 'mercury':
+             text = 'Mercury: ' + getSignDescription(r.astrology.mercurySign);
+             break;
+         case 'venus':
+             text = 'Venus: ' + getSignDescription(r.astrology.venusSign);
+             break;
+         case 'mars':
+             text = 'Mars: ' + getSignDescription(r.astrology.marsSign);
+             break;
+         case 'chinese':
+             text = 'Chinese Zodiac: ' + getSignDescription(r.astrology.chineseZodiac);
+             break;
+         case 'element':
+             text = 'Dominant Element: ' + getSignDescription(r.astrology.element);
+             break;
+         case 'moonphase':
+             text = 'Moon Phase at Birth: ' + getSignDescription(r.astrology.moonPhase);
+             break;
+         case 'chiron':
+             text = 'Chiron (Wound/Healing): ' + getSignDescription(r.astrology.chiron);
+             break;
+         case 'northnode':
+             text = 'North Node (Life Direction): ' + getSignDescription(r.astrology.northNode);
+             break;
+         case 'lilith':
+             text = 'Black Moon Lilith: ' + getSignDescription(r.astrology.lilith);
+             break;
+         case 'lifepath':
+             text = 'Life Path Number: ' + r.numerology.lifePath;
+             break;
+         case 'destiny':
+             text = 'Destiny Number: ' + r.numerology.destiny;
+             break;
+         case 'soulurge':
+             text = 'Soul Urge Number: ' + r.numerology.soulUrge;
+             break;
+         case 'personality':
+             text = 'Personality Number: ' + r.numerology.personality;
+             break;
+         case 'expression':
+             text = 'Expression Number: ' + r.numerology.expression;
+             break;
+         case 'personalyear':
+             text = 'Personal Year: ' + r.numerology.personalYear;
+             break;
+         case 'all':
+             text = buildFullBlueprint(r, u);
+             break;
+         default:
+             return;
+     }
+
+     // Insert at cursor position or append
+     var textarea = $reading;
+     var start = textarea.selectionStart;
+     var end = textarea.selectionEnd;
+     var current = textarea.value;
+     var separator = current.length > 0 ? '\n\n' : '';
+     textarea.value = current.substring(0, start) + separator + text + current.substring(end);
+     textarea.focus();
+     updatePrompt();
+     showToast('Inserted: ' + key);
+ }
+
+ function buildIdentitySummary(r, u) {
+     var lines = [];
+     lines.push('=== COSMIC IDENTITY: ' + (u.name || 'Unknown').toUpperCase() + ' ===');
+     if (u.birthDate) lines.push('Born: ' + u.birthDate + (u.birthTime ? ' at ' + u.birthTime : '') + (u.birthPlace ? ' in ' + u.birthPlace : ''));
+     lines.push('');
+     if (r.astrology) {
+         if (r.astrology.sunSign) lines.push(' Sun Sign: ' + getSignDescription(r.astrology.sunSign));
+         if (r.astrology.moonSign) lines.push(' Moon Sign: ' + getSignDescription(r.astrology.moonSign));
+         if (r.astrology.risingSign) lines.push('⬆ Rising Sign: ' + getSignDescription(r.astrology.risingSign));
+         if (r.astrology.element) lines.push(' Element: ' + getSignDescription(r.astrology.element));
+     }
+     if (r.numerology) {
+         lines.push('');
+         if (r.numerology.lifePath) lines.push(' Life Path: ' + r.numerology.lifePath);
+         if (r.numerology.destiny) lines.push(' Destiny: ' + r.numerology.destiny);
+         if (r.numerology.soulUrge) lines.push(' Soul Urge: ' + r.numerology.soulUrge);
+     }
+     if (r.astrology && r.astrology.chineseZodiac) {
+         lines.push('');
+         lines.push(' Chinese Zodiac: ' + getSignDescription(r.astrology.chineseZodiac));
+     }
+     return lines.join('\n');
+ }
+
+ function buildFullBlueprint(r, u) {
+     var lines = [];
+     lines.push('╔══════════════════════════════════════╗');
+     lines.push('║  COMPLETE SOUL BLUEPRINT             ║');
+     lines.push('║  ' + (u.name || 'Unknown').toUpperCase().padEnd(35) + '║');
+     lines.push('╚══════════════════════════════════════╝');
+     if (u.birthDate) lines.push('Born: ' + u.birthDate + (u.birthTime ? ' at ' + u.birthTime : '') + (u.birthPlace ? ' in ' + u.birthPlace : ''));
+     lines.push('');
+
+     // Astrology
+     if (r.astrology) {
+         lines.push('── ASTROLOGY ──');
+         var astroKeys = [
+             ['sunSign', 'Sun'], ['moonSign', 'Moon'], ['risingSign', 'Rising'],
+             ['mercurySign', 'Mercury'], ['venusSign', 'Venus'], ['marsSign', 'Mars'],
+             ['jupiterSign', 'Jupiter'], ['saturnSign', 'Saturn'],
+             ['uranusSign', 'Uranus'], ['neptuneSign', 'Neptune'], ['plutoSign', 'Pluto'],
+             ['element', 'Element'], ['modality', 'Modality'], ['moonPhase', 'Moon Phase'],
+             ['chiron', 'Chiron'], ['northNode', 'North Node'], ['southNode', 'South Node'],
+             ['lilith', 'Lilith'], ['midheaven', 'Midheaven'], ['descendant', 'Descendant'],
+             ['chineseZodiac', 'Chinese Zodiac']
+         ];
+         astroKeys.forEach(function(pair) {
+             if (r.astrology[pair[0]]) lines.push(pair[1] + ': ' + getSignDescription(r.astrology[pair[0]]));
+         });
+         lines.push('');
+     }
+
+     // Numerology
+     if (r.numerology) {
+         lines.push('── NUMEROLOGY ──');
+         var numKeys = [
+             ['lifePath', 'Life Path'], ['destiny', 'Destiny'], ['soulUrge', 'Soul Urge'],
+             ['personality', 'Personality'], ['expression', 'Expression'], ['birthday', 'Birthday'],
+             ['maturity', 'Maturity'], ['personalYear', 'Personal Year'],
+             ['hiddenPassion', 'Hidden Passion']
+         ];
+         numKeys.forEach(function(pair) {
+             if (r.numerology[pair[0]] !== undefined) lines.push(pair[1] + ': ' + r.numerology[pair[0]]);
+         });
+         if (r.numerology.masterNumbers && r.numerology.masterNumbers.length) {
+             lines.push('Master Numbers: ' + r.numerology.masterNumbers.join(', '));
+         }
+         if (r.numerology.karmicDebt && r.numerology.karmicDebt.length) {
+             lines.push('Karmic Debt: ' + r.numerology.karmicDebt.join(', '));
+         }
+         lines.push('');
+     }
+
+     // Life Cycles
+     if (r.lifeCycles) {
+         lines.push('── LIFE CYCLES ──');
+         if (r.lifeCycles.age) lines.push('Current Age: ' + r.lifeCycles.age);
+         if (r.lifeCycles.lifeStage) lines.push('Life Stage: ' + getSignDescription(r.lifeCycles.lifeStage));
+     }
+
+     return lines.join('\n');
+ }
+
+ /* ------------------------------------------------------------------
+ INIT — Blueprint Loader
+ ------------------------------------------------------------------ */
+ document.addEventListener('DOMContentLoaded', function() {
+     initBlueprintLoader();
+ });
+
+ /* Expose blueprint functions globally */
+ window.loadBlueprintReading = loadBlueprintReading;
+ window.insertBlueprintData = insertBlueprintData;
 
  /* ------------------------------------------------------------------
  EVENT LISTENERS — auto-update on input

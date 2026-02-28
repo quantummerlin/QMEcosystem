@@ -23,7 +23,7 @@ h2 { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 14pt;
 h3 { font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-size: 8pt; color: var(--brown-light); text-transform: uppercase; letter-spacing: 0.12em; }
 
 .ornate-rule { text-align: center; margin: 3mm 0; }
-.ornate-rule::before { content: "— ❧ —"; color: var(--burgundy); font-size: 9pt; opacity: 0.5; }
+.ornate-rule::before { content: "—  —"; color: var(--burgundy); font-size: 9pt; opacity: 0.5; }
 
 .drop-cap::first-letter { font-family: 'Libre Baskerville', serif; font-size: 28pt; float: left; line-height: 0.8; margin: 1mm 2mm 0 0; color: var(--burgundy); }
 
@@ -84,10 +84,10 @@ h3 { font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-size: 8pt;
 .sc-col h5 { font-size: 7.5pt; color: var(--brown-light); margin-bottom: 0.5mm; }
 .sc-col ul { list-style: none; padding: 0; }
 .sc-col li { font-size: 7.5pt; color: var(--text-light); line-height: 1.4; padding: 0.3mm 0; }
-.sc-col li::before { content: "❧ "; color: var(--burgundy); font-size: 6pt; opacity: 0.5; }
+.sc-col li::before { content: " "; color: var(--burgundy); font-size: 6pt; opacity: 0.5; }
 
 .heart-divider { text-align: center; margin: 3mm 0; }
-.heart-divider::before { content: "— ❧ —"; color: var(--burgundy); font-size: 8pt; opacity: 0.4; }
+.heart-divider::before { content: "—  —"; color: var(--burgundy); font-size: 8pt; opacity: 0.4; }
 
 .closing { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; }
 .closing-ornament { color: var(--burgundy); font-size: 10pt; letter-spacing: 0.3em; margin-bottom: 6mm; opacity: 0.4; }
@@ -111,14 +111,14 @@ h3 { font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-size: 8pt;
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()">❧ Print / Save PDF</button></div>
-<div class="page cover"><div class="storybook-ornament">❧ · · ❧ · · ❧</div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="storybook-ornament">❧ · · ❧ · · ❧</div><div class="cover-brand">{{brand}}</div></div>
+<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()"> Print / Save PDF</button></div>
+<div class="page cover"><div class="storybook-ornament"> · ·  · · </div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="storybook-ornament"> · ·  · · </div><div class="cover-brand">{{brand}}</div></div>
 <div class="page half-title"><div class="aged-texture"></div><h1>{{title}}</h1><div class="ht-name">{{halfTitleName}}</div></div>
 <div class="page epigraph"><div class="aged-texture"></div><blockquote>{{epigraphQuote}}</blockquote><div class="attr">{{epigraphAttr}}</div><div class="dedication">{{dedication}}</div></div>
 <div class="page"><div class="aged-texture"></div><h2 class="snapshot-title">Cosmic Snapshot</h2><div class="snap-divider"></div>{{snapshot}}</div>
 <div class="page"><div class="aged-texture"></div><h2 class="toc-title">Contents</h2><div class="snap-divider"></div>{{toc}}</div>
 {{chapters}}
-<div class="page closing"><div class="aged-texture"></div><div class="closing-ornament">❧ · · ❧ · · ❧</div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
+<div class="page closing"><div class="aged-texture"></div><div class="closing-ornament"> · ·  · · </div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
 <div class="page colophon"><div class="aged-texture"></div><div class="colophon-brand">{{colophonBrand}}</div><div class="colophon-text">{{colophonText}}</div><div class="colophon-url">{{colophonURL}}</div></div>
 </body>
 </html>

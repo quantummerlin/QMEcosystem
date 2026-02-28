@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint Prompt Builder — Build AI Prompts From Your Reading | Soul Blueprint</title>
+    <meta name="description" content="Build personalised AI prompts using your real Soul Blueprint data. No copy-pasting — just click to insert your Sun sign, Life Path, and 20+ data points into ready-made prompts.">
+    <meta name="keywords" content="soul blueprint prompt builder, AI prompts from reading, personalised AI prompts, birth chart prompts, numerology prompts">
+    <link rel="canonical" href="https://quantummerlin.com/soulblueprint/prompt-builder.html">
+
+    <meta property="og:title" content="Blueprint Prompt Builder — Soul Blueprint">
+    <meta property="og:description" content="Build personalised AI prompts from your real reading data. Click to insert — no copy-pasting needed.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quantummerlin.com/soulblueprint/prompt-builder.html">
+    <meta property="og:site_name" content="Soul Blueprint">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Blueprint Prompt Builder — Soul Blueprint">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW4LGE7L1T');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --primary-light: #a78bfa;
+            --accent: #ffd700;
+            --bg: #faf5ff;
+            --bg-card: #ffffff;
+            --text: #1e1b4b;
+            --text-muted: #6b7280;
+            --border: #e5e7eb;
+            --radius: 12px;
+            --shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* ── HEADER ── */
+        .site-header {
+            background: #1a0a2e;
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+        }
+        .site-header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-header-brand {
+            color: #ffd700;
+            text-decoration: none;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .site-header-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .site-header-nav a {
+            color: #e8d5ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.85;
+            transition: opacity 0.2s;
+        }
+        .site-header-nav a:hover { opacity: 1; }
+        .site-header-nav a.active { color: #ffd700; opacity: 1; font-weight: 600; }
+        .header-cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff !important;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            opacity: 1 !important;
+        }
+
+        @media (max-width: 768px) {
+            .site-header-nav { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            .site-header-nav a { font-size: 0.8rem; }
+        }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            background: linear-gradient(135deg, #1a0a2e, #2d1b4e);
+            color: #e8d5ff;
+            padding: 48px 20px 40px;
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.2rem;
+            color: #ffd700;
+            margin-bottom: 12px;
+        }
+        .page-hero p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .hero-features {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* ── MAIN LAYOUT ── */
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+
+        .builder-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 24px;
+        }
+        @media (max-width: 900px) {
+            .builder-layout { grid-template-columns: 1fr; }
+        }
+
+        /* ── CARDS ── */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        .card h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card h2 .step {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ── FORM ── */
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.92rem;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+            color: var(--text);
+            transition: border-color 0.2s;
+        }
+        select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 200px;
+            font-family: 'Courier New', Consolas, monospace;
+            line-height: 1.55;
+        }
+
+        /* ── PROMPT BUILDER WIDGET STYLES ── */
+        .sb-pb-status { margin-bottom: 12px; }
+        .sb-pb-linked {
+            display: inline-block;
+            padding: 6px 14px;
+            background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(167,139,250,0.12));
+            border: 1px solid rgba(124,58,237,0.2);
+            border-radius: 20px;
+            font-size: 0.88rem;
+            color: var(--primary);
+        }
+        .sb-pb-empty {
+            padding: 20px;
+            background: #fef3c7;
+            border: 1px solid #fcd34d;
+            border-radius: var(--radius);
+            text-align: center;
+            font-size: 0.92rem;
+            color: #92400e;
+            line-height: 1.6;
+        }
+        .sb-pb-empty p { margin-bottom: 8px; }
+        .sb-pb-cta {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .sb-pb-selector { margin-bottom: 16px; }
+        .sb-pb-select { margin-top: 6px; }
+
+        .sb-pb-buttons { margin-bottom: 20px; }
+        .sb-pb-btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .sb-pb-group-label {
+            display: block;
+            width: 100%;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+        .sb-pb-btn {
+            padding: 6px 14px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: #fff;
+            color: var(--text);
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+            white-space: nowrap;
+        }
+        .sb-pb-btn:hover {
+            border-color: var(--primary);
+            background: rgba(124,58,237,0.04);
+            transform: translateY(-1px);
+        }
+        .sb-pb-btn-identity {
+            background: linear-gradient(135deg, #7c3aed, #a78bfa) !important;
+            color: #fff !important;
+            border: none !important;
+            font-weight: 600;
+        }
+        .sb-pb-btn-all {
+            background: linear-gradient(135deg, #059669, #10b981) !important;
+            color: #fff !important;
+            border: none !important;
+            font-weight: 600;
+        }
+
+        /* ── TEMPLATES ── */
+        .sb-pb-templates { margin-top: 4px; }
+        .sb-pb-tpl-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .sb-pb-tpl {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: #fff;
+        }
+        .sb-pb-tpl-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            background: rgba(124,58,237,0.04);
+            border-bottom: 1px solid var(--border);
+        }
+        .sb-pb-tpl-name {
+            font-weight: 600;
+            font-size: 0.92rem;
+        }
+        .sb-pb-tpl-cat {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            padding: 2px 10px;
+            background: rgba(0,0,0,0.04);
+            border-radius: 10px;
+        }
+        .sb-pb-tpl-text {
+            padding: 14px;
+            font-family: 'Courier New', Consolas, monospace;
+            font-size: 0.85rem;
+            line-height: 1.55;
+            white-space: pre-wrap;
+            color: var(--text);
+            max-height: 200px;
+            overflow-y: auto;
+            border: none;
+            outline: none;
+            margin: 0;
+            background: #fafafa;
+        }
+        .sb-pb-tpl-text:focus {
+            background: #f0ebff;
+        }
+        .sb-pb-tpl-actions {
+            display: flex;
+            gap: 8px;
+            padding: 10px 14px;
+            border-top: 1px solid var(--border);
+            background: rgba(0,0,0,0.01);
+        }
+        .sb-pb-tpl-copy, .sb-pb-tpl-insert {
+            padding: 6px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #fff;
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: all 0.15s;
+            font-family: 'Inter', sans-serif;
+        }
+        .sb-pb-tpl-copy:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+        .sb-pb-tpl-insert:hover { background: #059669; color: #fff; border-color: #059669; }
+
+        /* ── RIGHT COLUMN: PROMPT BOX ── */
+        .prompt-output-area {
+            position: sticky;
+            top: 80px;
+        }
+        .prompt-textarea-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .char-count {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+        .prompt-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .prompt-action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s;
+        }
+        .prompt-action-btn.primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+        }
+        .prompt-action-btn.primary:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(124,58,237,0.3); }
+        .prompt-action-btn.chatgpt {
+            background: #10a37f;
+            color: #fff;
+        }
+        .prompt-action-btn.chatgpt:hover { background: #0d8c6d; }
+        .prompt-action-btn.gemini {
+            background: linear-gradient(135deg, #4285f4, #7c3aed);
+            color: #fff;
+        }
+        .prompt-action-btn.gemini:hover { opacity: 0.9; }
+        .prompt-action-btn.clear {
+            background: #f3f4f6;
+            color: var(--text-muted);
+        }
+        .prompt-action-btn.clear:hover { background: #e5e7eb; }
+
+        .how-it-works {
+            margin-top: 24px;
+            padding: 16px;
+            background: rgba(124,58,237,0.04);
+            border-radius: var(--radius);
+            border-left: 3px solid var(--primary);
+        }
+        .how-it-works h3 {
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .how-it-works ol {
+            padding-left: 18px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+        .how-it-works ol li { margin-bottom: 6px; }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: #1a0a2e;
+            color: #e8d5ff;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .footer-col h4 {
+            color: #ffd700;
+            margin-bottom: 12px;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .footer-col a {
+            display: block;
+            color: #c9a0ff;
+            text-decoration: none;
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+        .footer-col a:hover { opacity: 1; }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.82rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.6rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <a href="/soulblueprint/" class="site-header-brand"> Soul Blueprint</a>
+            <nav class="site-header-nav">
+                <a href="/soulblueprint/">Generator</a>
+                <a href="/soulblueprint/examples/">Examples</a>
+                <a href="/soulblueprint/articles/">Guides</a>
+                <a href="/soulblueprint/prompt-builder.html" class="active">Prompt Builder</a>
+                <a href="/soulblueprint/" class="header-cta">Get Your Reading →</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="page-hero">
+        <h1>Blueprint Prompt Builder</h1>
+        <p>Build AI prompts from your real reading data. Select your blueprint, click to insert — no copy-pasting needed.</p>
+        <div class="hero-features">
+            <span class="hero-feature"> 100% local — nothing leaves your browser</span>
+            <span class="hero-feature"> One-click insert tokens</span>
+            <span class="hero-feature"> 8 pre-built prompt templates</span>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-container">
+
+        <div class="builder-layout">
+            <!-- LEFT: Blueprint selector + tokens + templates -->
+            <div class="left-col">
+                <div class="card">
+                    <h2><span class="step">1</span> Link Your Blueprint</h2>
+                    <div id="blueprintWidget" data-sb-prompt-builder data-sb-prompt-target="#promptBox"></div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Prompt text area -->
+            <div class="right-col">
+                <div class="card prompt-output-area">
+                    <h2><span class="step">2</span> Your Prompt</h2>
+
+                    <div class="prompt-textarea-label">
+                        <label for="promptBox">Write or build your prompt below:</label>
+                        <span class="char-count" id="charCount">0 chars</span>
+                    </div>
+                    <textarea id="promptBox" placeholder="Select a reading above, then click insert buttons to build your prompt here…
+
+Or pick one of the pre-built Blueprint-Aligned Prompts — they auto-fill with your real data.
+
+You can also type freely and mix in tokens as you go."></textarea>
+
+                    <div class="prompt-actions">
+                        <button class="prompt-action-btn primary" onclick="copyPrompt()"> Copy Prompt</button>
+                        <button class="prompt-action-btn chatgpt" onclick="openChatGPT()"> Open ChatGPT</button>
+                        <button class="prompt-action-btn gemini" onclick="openGemini()"> Open Gemini</button>
+                        <button class="prompt-action-btn clear" onclick="clearPrompt()"> Clear</button>
+                    </div>
+
+                    <div class="how-it-works">
+                        <h3>How it works</h3>
+                        <ol>
+                            <li><strong>Generate a reading</strong> on the <a href="/soulblueprint/" style="color:var(--primary);">main page</a> (it auto-saves)</li>
+                            <li><strong>Select your reading</strong> from the dropdown above</li>
+                            <li><strong>Click insert buttons</strong> to add specific data points, or use a pre-built template</li>
+                            <li><strong>Edit freely</strong> — the prompt box is fully editable</li>
+                            <li><strong>Copy & paste</strong> into ChatGPT, Gemini, or any AI tool</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Soul Blueprint</h4>
+                <a href="/soulblueprint/">Reading Generator</a>
+                <a href="/soulblueprint/examples/">Example Readings</a>
+                <a href="/soulblueprint/articles/">Transformation Guides</a>
+                <a href="/soulblueprint/prompt-builder.html">Prompt Builder</a>
+            </div>
+            <div class="footer-col">
+                <h4>Go Deeper</h4>
+                <a href="/soulblueprint/articles/best-ai-prompts-self-discovery/">Best AI Prompts</a>
+                <a href="/soulblueprint/articles/prompt-chaining-personality/">Prompt Chaining</a>
+                <a href="/soulblueprint/articles/how-to-use-ai-for-self-discovery/">AI for Self-Discovery</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="/soulblueprint/about.html">About</a>
+                <a href="/soulblueprint/privacy.html">Privacy Policy</a>
+                <a href="/soulblueprint/terms.html">Terms of Service</a>
+                <a href="/soulblueprint/disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 A Moment in Time. All tools run 100% in your browser.
+        </div>
+    </footer>
+
+    <script src="prompt-builder.js"></script>
+    <script>
+        // ── Prompt box interactions ──
+        var promptBox = document.getElementById('promptBox');
+        var charCount = document.getElementById('charCount');
+
+        promptBox.addEventListener('input', function() {
+            charCount.textContent = promptBox.value.length.toLocaleString() + ' chars';
+        });
+
+        function copyPrompt() {
+            var text = promptBox.value.trim();
+            if (!text) { alert('Write or build a prompt first!'); return; }
+            navigator.clipboard.writeText(text).then(function() {
+                showBtnFeedback(' Copy Prompt', ' Copied!');
+            }).catch(function() {
+                // fallback
+                var ta = document.createElement('textarea');
+                ta.value = text; ta.style.cssText = 'position:fixed;opacity:0;';
+                document.body.appendChild(ta); ta.select();
+                document.execCommand('copy'); document.body.removeChild(ta);
+                showBtnFeedback(' Copy Prompt', ' Copied!');
+            });
+        }
+
+        function openChatGPT() {
+            var text = promptBox.value.trim();
+            if (text) navigator.clipboard.writeText(text).catch(function(){});
+            window.open('https://chat.openai.com/', '_blank');
+        }
+
+        function openGemini() {
+            var text = promptBox.value.trim();
+            if (text) navigator.clipboard.writeText(text).catch(function(){});
+            window.open('https://gemini.google.com/', '_blank');
+        }
+
+        function clearPrompt() {
+            promptBox.value = '';
+            charCount.textContent = '0 chars';
+            promptBox.focus();
+        }
+
+        function showBtnFeedback(origText, newText) {
+            var btn = document.querySelector('.prompt-action-btn.primary');
+            if (!btn) return;
+            btn.textContent = newText;
+            setTimeout(function(){ btn.textContent = origText; }, 2000);
+        }
+    </script>
+</body>
+</html>

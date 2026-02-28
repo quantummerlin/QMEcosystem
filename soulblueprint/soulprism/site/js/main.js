@@ -7,7 +7,7 @@ function copyToClipboard(text, buttonElement) {
     navigator.clipboard.writeText(text).then(() => {
         if (buttonElement) {
             const original = buttonElement.innerText;
-            buttonElement.innerText = '✓ Copied!';
+            buttonElement.innerText = ' Copied!';
             buttonElement.classList.add('copied');
             setTimeout(() => {
                 buttonElement.innerText = original;
@@ -27,7 +27,7 @@ function copyToClipboard(text, buttonElement) {
         document.body.removeChild(textarea);
         if (buttonElement) {
             const original = buttonElement.innerText;
-            buttonElement.innerText = '✓ Copied!';
+            buttonElement.innerText = ' Copied!';
             buttonElement.classList.add('copied');
             setTimeout(() => {
                 buttonElement.innerText = original;
@@ -112,14 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+            this.textContent = navMenu.classList.contains('active') ? '' : '';
         });
 
         // Close menu when clicking a link
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
-                mobileToggle.textContent = '☰';
+                mobileToggle.textContent = '';
             });
         });
     }
@@ -250,14 +250,14 @@ document.addEventListener('click', function(e) {
         container.className = 'reading-paste-widget';
         container.innerHTML = `
             <div class="reading-paste-header">
-                <h3>📋 Paste Your Reading Once</h3>
+                <h3> Paste Your Reading Once</h3>
                 <p>Paste your soul blueprint reading below and it will auto-fill into every prompt on this page.</p>
             </div>
             <textarea id="globalReading" placeholder="Paste your complete soul blueprint reading here... It will replace [PASTE YOUR FULL READING HERE] in every prompt below.">${saved}</textarea>
             <div class="reading-paste-actions">
-                <button onclick="applyGlobalReading()" class="reading-paste-btn">✨ Apply to All Prompts</button>
+                <button onclick="applyGlobalReading()" class="reading-paste-btn"> Apply to All Prompts</button>
                 <button onclick="clearGlobalReading()" class="reading-paste-btn reading-paste-btn-outline">Clear</button>
-                <span class="reading-paste-status" id="readingStatus">${saved ? '✅ Reading saved from last visit' : ''}</span>
+                <span class="reading-paste-status" id="readingStatus">${saved ? ' Reading saved from last visit' : ''}</span>
             </div>
         `;
 
@@ -295,7 +295,7 @@ document.addEventListener('click', function(e) {
         });
 
         const status = document.getElementById('readingStatus');
-        if (status) status.textContent = '✅ Applied to all prompts!';
+        if (status) status.textContent = ' Applied to all prompts!';
         showNotification('Reading applied to all prompts on this page!');
     };
 

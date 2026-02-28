@@ -1,4 +1,4 @@
-# 🔮 Ultimate Reading System
+#  Ultimate Reading System
 
 ## One Codebase, Infinite Brands
 
@@ -6,7 +6,7 @@ A complete 58-reading numerology & astrology system that can be instantly rebran
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Choose Your Brand
 
@@ -34,7 +34,7 @@ Upload all files to any static hosting:
 
 ---
 
-## 📁 File Structure
+##  File Structure
 
 ```
 ultimate-reading-system/
@@ -44,37 +44,37 @@ ultimate-reading-system/
 ├── readings.js         # Reading interpretations (don't edit)
 ├── rebrand.js          # Quick rebrand script
 │
-├── config-baby.js      # 👶 Baby brand config
-├── config-kpop.js      # 🎤 K-Pop brand config
-├── config-stranger.js  # 🔮 Stranger Things brand config
+├── config-baby.js      #  Baby brand config
+├── config-kpop.js      #  K-Pop brand config
+├── config-stranger.js  #  Stranger Things brand config
 │
 └── README.md           # This file
 ```
 
 ---
 
-## 🎨 Available Brands
+##  Available Brands
 
-### 👶 Cosmic Baby Blueprint (`baby`)
+###  Cosmic Baby Blueprint (`baby`)
 - **Audience:** New parents, baby showers, birth announcements
 - **Theme:** Soft pink, warm, nurturing
 - **Tagline:** "Your Child's Complete Cosmic Profile"
 
-### 🎤 K-pop Kosmic (`kpop`)
+###  K-pop Kosmic (`kpop`)
 - **Audience:** K-Pop fans, stans, idol enthusiasts
 - **Theme:** Neon pink/purple, dark mode, energetic
 - **Tagline:** "Your Idol Destiny Revealed"
 
-### 🔮 Stranger Patterns (`stranger`)
+###  Stranger Patterns (`stranger`)
 - **Audience:** Stranger Things fans, supernatural enthusiasts
 - **Theme:** Dark red, mysterious, retro
 - **Tagline:** "The Upside Down Oracle"
 
 ---
 
-## 📊 What's Included (58 Readings)
+##  What's Included (58 Readings)
 
-### 🌟 Celestial/Astrology (13 readings)
+###  Celestial/Astrology (13 readings)
 - Sun Sign
 - Moon Sign
 - Rising Sign
@@ -89,7 +89,7 @@ ultimate-reading-system/
 - South Node
 - And more...
 
-### 🔢 Numerology (15 readings)
+###  Numerology (15 readings)
 - Life Path Number
 - Destiny Number
 - Soul Urge Number
@@ -105,25 +105,25 @@ ultimate-reading-system/
 - Karmic Debt
 - Master Numbers
 
-### ✨ Soul Mission (3 readings)
+###  Soul Mission (3 readings)
 - North Node Direction
 - South Node Gifts
 - Core Life Lesson
 
-### 🌈 Forecasts (4 readings)
+###  Forecasts (4 readings)
 - Year Ahead Forecast
 - Current Month Energy
 - Personal Year Theme
 - Era/Season Energy
 
-### 🌱 Life Cycles (3 readings)
+###  Life Cycles (3 readings)
 - Current Age
 - Next Birthday Countdown
 - Life Stage
 
 ---
 
-## 🛠️ Customization
+##  Customization
 
 ### Creating a New Brand
 
@@ -180,7 +180,7 @@ const brands = {
 
 ---
 
-## 💰 Monetization Ideas
+##  Monetization Ideas
 
 ### Free Model (AdSense)
 - Display ads between sections
@@ -202,7 +202,7 @@ const brands = {
 
 ---
 
-## 🚀 Deployment Checklist
+##  Deployment Checklist
 
 - [ ] Choose brand: `node rebrand.js [brand]`
 - [ ] Test locally in browser
@@ -216,7 +216,7 @@ const brands = {
 
 ---
 
-## 📈 Traffic Strategy
+##  Traffic Strategy
 
 ### For Baby Brand
 - Pinterest (baby boards)
@@ -238,7 +238,7 @@ const brands = {
 
 ---
 
-## 🔧 Technical Notes
+##  Technical Notes
 
 ### No Server Required
 This is a 100% client-side application. All calculations happen in the browser.
@@ -257,13 +257,13 @@ Built-in print styles for beautiful printed readings.
 
 ---
 
-## 📝 License
+##  License
 
 Free to use for personal and commercial projects.
 
 ---
 
-## 🎯 Quick Commands
+##  Quick Commands
 
 ```bash
 # Switch to Baby brand
@@ -278,7 +278,7 @@ node rebrand.js stranger
 
 ---
 
-## 💡 Tips
+##  Tips
 
 1. **Start with Baby brand** - Proven market, evergreen content
 2. **Test before deploying** - Open index.html locally first
@@ -302,4 +302,4 @@ All calculations are approximations for entertainment purposes
 
 ---
 
-**Built with ❤️ for infinite rebranding possibilities**
+**Built with  for infinite rebranding possibilities**

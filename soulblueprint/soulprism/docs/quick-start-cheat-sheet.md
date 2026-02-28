@@ -1,10 +1,10 @@
-# 🎨 Visual Soul Blueprint - Quick Start Guide
+#  Visual Soul Blueprint - Quick Start Guide
 
 **Create your complete visual soul blueprint in ONE conversation thread**
 
 ---
 
-## ⚡ 5-MINUTE SETUP
+##  5-MINUTE SETUP
 
 1. **Open** quantummerlin.com/soulblueprint
 2. **Find your** Sun, Moon, Rising signs
@@ -14,19 +14,19 @@
 
 ---
 
-## 🎯 THE GOLDEN RULE
+##  THE GOLDEN RULE
 
 **Keep ALL images in ONE conversation thread.**
 
 This ensures:
-- ✅ Consistent visual style
-- ✅ Unified color palette
-- ✅ Connected symbolism
-- ✅ One continuous story (your story)
+-  Consistent visual style
+-  Unified color palette
+-  Connected symbolism
+-  One continuous story (your story)
 
 ---
 
-## 📝 MAGIC PROMPT TEMPLATE
+##  MAGIC PROMPT TEMPLATE
 
 Copy this, fill in brackets, paste to AI:
 
@@ -43,7 +43,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🚀 START WITH THESE 5 (Foundation)
+##  START WITH THESE 5 (Foundation)
 
 | Order | Reading | What to Include |
 |-------|---------|-----------------|
@@ -57,7 +57,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 📊 CONTINUE WITH THESE TIERS
+##  CONTINUE WITH THESE TIERS
 
 **Tier 1: Core Identity** (7-10 images)
 Mercury, Venus, Mars, Jupiter, Saturn, Chinese Zodiac, Moon Phase
@@ -81,7 +81,7 @@ Health, Love, Career, Chakra Alignment
 
 ---
 
-## 🎨 COLOR PALETTE
+##  COLOR PALETTE
 
 Let it evolve naturally:
 - **Gold** (Sun) → Identity, vitality
@@ -96,7 +96,7 @@ Don't force it. The AI knows what it's doing.
 
 ---
 
-## 💾 SAVE YOUR IMAGES
+##  SAVE YOUR IMAGES
 
 **Naming:**
 `SoulBlueprint_[YourName]_[ReadingType]_[Details]`
@@ -123,7 +123,7 @@ Soul Blueprint - [Name]
 
 ---
 
-## ✨ DAILY USE (After You're Done)
+##  DAILY USE (After You're Done)
 
 - **Morning:** Sun image → set intention
 - **Decisions:** Relevant images → check alignment
@@ -133,7 +133,7 @@ Soul Blueprint - [Name]
 
 ---
 
-## 🎯 RIGHT NOW: YOUR FIRST IMAGE
+##  RIGHT NOW: YOUR FIRST IMAGE
 
 **Copy-paste this for Sun sign:**
 
@@ -151,7 +151,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🔥 PRO TIPS
+##  PRO TIPS
 
 1. **Regenerate** if image doesn't resonate
 2. **Take breaks** - come back with fresh eyes
@@ -161,7 +161,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🌟 YOUR SOUL BLUEPRINT AWAITS
+##  YOUR SOUL BLUEPRINT AWAITS
 
 Start with Sun.
 Continue with Moon.

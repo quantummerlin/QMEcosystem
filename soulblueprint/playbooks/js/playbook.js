@@ -10,9 +10,9 @@
 
         navigator.clipboard.writeText(pre.textContent).then(function () {
             btn.classList.add('copied');
-            btn.textContent = '✓ Copied!';
+            btn.textContent = ' Copied!';
             showToast('Prompt copied to clipboard!');
-            setTimeout(function () { btn.classList.remove('copied'); btn.textContent = '📋 Copy Prompt'; }, 2000);
+            setTimeout(function () { btn.classList.remove('copied'); btn.textContent = ' Copy Prompt'; }, 2000);
         }).catch(function () {
             // Fallback
             var ta = document.createElement('textarea');
@@ -24,9 +24,9 @@
             document.execCommand('copy');
             document.body.removeChild(ta);
             btn.classList.add('copied');
-            btn.textContent = '✓ Copied!';
+            btn.textContent = ' Copied!';
             showToast('Prompt copied to clipboard!');
-            setTimeout(function () { btn.classList.remove('copied'); btn.textContent = '📋 Copy Prompt'; }, 2000);
+            setTimeout(function () { btn.classList.remove('copied'); btn.textContent = ' Copy Prompt'; }, 2000);
         });
     };
 

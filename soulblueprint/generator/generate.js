@@ -64,7 +64,7 @@ async function main() {
   
   // Validate input
   if (!options.input) {
-    console.error('❌ Error: No input file specified');
+    console.error(' Error: No input file specified');
     console.error('Usage: node generate.js <input.html> [options]');
     console.error('Run "node generate.js --help" for more information');
     process.exit(1);
@@ -72,13 +72,13 @@ async function main() {
   
   // Check if input file exists
   if (!fs.existsSync(options.input)) {
-    console.error(`❌ Error: Input file not found: ${options.input}`);
+    console.error(` Error: Input file not found: ${options.input}`);
     process.exit(1);
   }
   
   // Validate template
   if (!AVAILABLE_TEMPLATES.includes(options.template)) {
-    console.error(`❌ Error: Unknown template "${options.template}"`);
+    console.error(` Error: Unknown template "${options.template}"`);
     console.error(`Available templates: ${AVAILABLE_TEMPLATES.join(', ')}`);
     process.exit(1);
   }
@@ -93,61 +93,61 @@ async function main() {
   fs.mkdirSync(path.dirname(options.output), { recursive: true });
   
   console.log('\n═════════════════════════════════════════════════════');
-  console.log('  🌟 A Moment in Time - PDF Generator');
+  console.log('   A Moment in Time - PDF Generator');
   console.log('═════════════════════════════════════════════════════\n');
   
   // Step 1: Parse input HTML
-  console.log('📖 Step 1: Parsing source HTML...');
+  console.log(' Step 1: Parsing source HTML...');
   const bookData = parseBookHTML(options.input);
-  console.log(`   ✅ Found: ${bookData.meta.name}`);
-  console.log(`   ✅ Chapters: ${bookData.chapters.length}`);
-  console.log(`   ✅ Readings: ${bookData.chapters.reduce((sum, ch) => sum + ch.readings.length, 0)}`);
+  console.log(`    Found: ${bookData.meta.name}`);
+  console.log(`    Chapters: ${bookData.chapters.length}`);
+  console.log(`    Readings: ${bookData.chapters.reduce((sum, ch) => sum + ch.readings.length, 0)}`);
   
   // Step 2: Load template
-  console.log('\n🎨 Step 2: Loading template...');
+  console.log('\n Step 2: Loading template...');
   const templatePath = path.join(__dirname, 'templates', options.template, 'template.html');
   const partialsDir = path.join(__dirname, 'templates', options.template, 'partials');
   
   if (!fs.existsSync(templatePath)) {
-    console.error(`❌ Error: Template not found: ${templatePath}`);
+    console.error(` Error: Template not found: ${templatePath}`);
     process.exit(1);
   }
   
   const template = fs.readFileSync(templatePath, 'utf-8');
-  console.log(`   ✅ Template: ${options.template}`);
+  console.log(`    Template: ${options.template}`);
   
   // Step 3: Fill template with data
-  console.log('\n✏️  Step 3: Populating template with data...');
+  console.log('\n  Step 3: Populating template with data...');
   const engine = new TemplateEngine();
   const filledHTML = engine.fillTemplate(template, bookData, partialsDir);
-  console.log('   ✅ Template populated');
+  console.log('    Template populated');
   
   // Step 4: Save intermediate HTML (optional)
   const htmlOutputPath = options.output.replace('.pdf', '.html');
   fs.writeFileSync(htmlOutputPath, filledHTML, 'utf-8');
-  console.log(`   ✅ HTML saved: ${htmlOutputPath}`);
+  console.log(`    HTML saved: ${htmlOutputPath}`);
   
   // If JSON only, save and exit
   if (options.jsonOnly) {
     const jsonPath = options.output.replace('.pdf', '.json');
     fs.writeFileSync(jsonPath, JSON.stringify(bookData, null, 2));
-    console.log(`\n✅ JSON saved: ${jsonPath}`);
-    console.log('🎉 Complete! (JSON-only mode)');
+    console.log(`\n JSON saved: ${jsonPath}`);
+    console.log(' Complete! (JSON-only mode)');
     process.exit(0);
   }
   
   // Step 5: Generate PDF
-  console.log('\n📄 Step 4: Generating PDF...');
+  console.log('\n Step 4: Generating PDF...');
   const pdfGen = new PDFGenerator();
   await pdfGen.generateFromHTML(filledHTML, options.output);
   
   console.log('\n═════════════════════════════════════════════════════');
-  console.log('  🎉 Success!');
+  console.log('   Success!');
   console.log('═════════════════════════════════════════════════════');
-  console.log(`\n📁 Output files:`);
+  console.log(`\n Output files:`);
   console.log(`   • PDF:  ${options.output}`);
   console.log(`   • HTML: ${htmlOutputPath}`);
-  console.log(`\n💡 To regenerate with different template:`);
+  console.log(`\n To regenerate with different template:`);
   console.log(`   node generate.js "${options.input}" --template <name> --output <path.pdf>\n`);
 }
 
@@ -192,7 +192,7 @@ EXAMPLES:
 // Run
 if (require.main === module) {
   main().catch(error => {
-    console.error('\n❌ Fatal error:', error.message);
+    console.error('\n Fatal error:', error.message);
     console.error(error.stack);
     process.exit(1);
   });

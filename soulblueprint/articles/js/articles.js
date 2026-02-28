@@ -38,7 +38,7 @@
         if (!btn) return;
         const orig = btn.innerHTML;
         btn.classList.add('copied');
-        btn.innerHTML = '✅ Copied!';
+        btn.innerHTML = ' Copied!';
         showToast('Copied to clipboard!');
         setTimeout(() => {
             btn.classList.remove('copied');
@@ -81,7 +81,7 @@
             if (!pre.parentElement.querySelector('.edit-hint')) {
                 var hint = document.createElement('span');
                 hint.className = 'edit-hint';
-                hint.textContent = '✏️ Click to edit before copying';
+                hint.textContent = ' Click to edit before copying';
                 pre.parentElement.appendChild(hint);
             }
         });
@@ -245,6 +245,52 @@
         initListStagger();
         initSmoothScroll();
         initTOC();
+        initBlueprintWidget();
+    }
+
+    // ---- Blueprint Prompt Widget (auto-inject on prompt-heavy pages) ----
+    function initBlueprintWidget() {
+        // Only activate on pages that have prompt boxes
+        var promptBoxes = document.querySelectorAll('.prompt-box, .vsb-prompt-box');
+        if (!promptBoxes.length) return;
+
+        // Check if there are any saved readings
+        var hasReadings = false;
+        try {
+            var saved = JSON.parse(localStorage.getItem('sb-saved-readings') || '{}');
+            hasReadings = Object.keys(saved).length > 0;
+        } catch(e) {}
+
+        if (!hasReadings) return; // Don't clutter the page if no readings exist
+
+        // Find the first tip-box or article hook, and inject the widget after it
+        var anchor = document.querySelector('.tip-box') ||
+                     document.querySelector('.article-hook') ||
+                     document.querySelector('.author-intro');
+
+        if (!anchor) return;
+
+        // Create widget container
+        var widget = document.createElement('div');
+        widget.className = 'sb-blueprint-widget';
+        widget.innerHTML = '<h3> Link Your Blueprint</h3>' +
+            '<p style="font-size:0.88rem;color:var(--color-text-secondary);margin-bottom:12px;">Select your saved reading below. Then click any insert button to auto-fill prompts with your real data — no copy-pasting needed.</p>' +
+            '<div data-sb-prompt-builder></div>';
+
+        anchor.parentNode.insertBefore(widget, anchor.nextSibling);
+
+        // Load prompt-builder.js dynamically
+        var script = document.createElement('script');
+        script.src = '/soulblueprint/prompt-builder.js';
+        script.onload = function() {
+            // Once loaded, auto-init will fire from the script itself
+            // because the DOM already has [data-sb-prompt-builder]
+            if (window.SBPromptBuilder) {
+                var container = widget.querySelector('[data-sb-prompt-builder]');
+                window.SBPromptBuilder.injectWidget(container, null);
+            }
+        };
+        document.body.appendChild(script);
     }
 
     if (document.readyState === 'loading') {

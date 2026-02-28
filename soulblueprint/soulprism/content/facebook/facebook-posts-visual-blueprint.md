@@ -1,4 +1,4 @@
-# 📘 Facebook Posts - Visual Soul Blueprint Campaign
+#  Facebook Posts - Visual Soul Blueprint Campaign
 
 **Voice:** Quantum Merlin — first person, personal. Son of a tarot reader, built A Moment in Time after his daughter was born. Found impossible patterns in charts/numbers connecting to the Bible. Shares from experience, not authority.
 
@@ -48,7 +48,7 @@ And when you can see that design, you can finally stop fighting it and start flo
 
 I created a free guide that shows you exactly how to transform your soul blueprint into stunning visual art using AI. No design skills needed. Just follow the steps.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
@@ -86,7 +86,7 @@ All connected. All meaningful. All yours.
 
 The free Visual Soul Blueprint Guide shows you exactly how to use the "one thread" strategy, with complete prompt templates and step-by-step instructions.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
@@ -128,7 +128,7 @@ And that's when everything changes.
 
 Create your own visual soul blueprint and experience that feeling of self-recognition. The free guide walks you through every step, platform to final image.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
@@ -174,7 +174,7 @@ And suddenly those 100+ readings become digestible. Meaningful. Alive.
 
 Transform overwhelming text into unforgettable visuals. The free Visual Soul Blueprint Guide shows you how to create your complete visual narrative in one day.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
@@ -220,7 +220,7 @@ And guidance that you actually use... changes your life.
 
 Your visual soul blueprint is waiting. The free guide shows you how to create it and how to use it daily for alignment and clarity.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
@@ -262,7 +262,7 @@ And that's when life stops feeling like a struggle and starts feeling like flow.
 
 Discover the patterns in your soul blueprint. The free Visual Soul Blueprint Guide helps you create images that reveal the connections across all your readings.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
@@ -306,7 +306,7 @@ In colors. In symbols. In visual stories that only you can tell.
 
 The free Visual Soul Blueprint Guide gives you everything you need to create your complete visual narrative. Platforms, prompts, step-by-step instructions.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
@@ -342,7 +342,7 @@ Your soul blueprint is waiting. What will you discover?
 
 Join the thousands of people creating their visual soul blueprints. The free guide makes it simple, even if you've never used AI art tools before.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
@@ -384,7 +384,7 @@ And it's worth every minute.
 
 Spend 2-3 hours creating something that will change how you see yourself forever. The free Visual Soul Blueprint Guide walks you through every step.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
@@ -426,11 +426,11 @@ Your visual soul blueprint shows you how.
 
 Discover YOUR design. The free Visual Soul Blueprint Guide helps you create a visual map of your soul's journey, so you can align instead of achieve.
 
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 ---
 
-## 📈 POSTING SCHEDULE
+##  POSTING SCHEDULE
 
 **Week 1:** Introduction phase
 - Day 1: Post 1 (Introduction)
@@ -453,7 +453,7 @@ Discover YOUR design. The free Visual Soul Blueprint Guide helps you create a vi
 
 ---
 
-## 🎯 ENGAGEMENT TIPS
+##  ENGAGEMENT TIPS
 
 **Between posts:**
 - Reply to every comment within 1 hour
@@ -476,26 +476,26 @@ Discover YOUR design. The free Visual Soul Blueprint Guide helps you create a vi
 
 ---
 
-## 🔄 PINNED COMMENT VARIATIONS
+##  PINNED COMMENT VARIATIONS
 
 Rotate these 5 versions to avoid repetition:
 
 **Version 1 (Direct):**
 I created a free guide that shows you exactly how to transform your soul blueprint into stunning visual art using AI. No design skills needed. Just follow the steps.
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 **Version 2 (Curiosity):**
 Want to see your soul blueprint as visual art? There's a free guide that walks you through everything—platforms, prompts, and the secret strategy that makes all your images flow together.
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 **Version 3 (Benefit):**
 Turn 100+ text readings into a cohesive visual story in one day. The free Visual Soul Blueprint Guide shows you how, with complete prompt templates and step-by-step instructions.
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 **Version 4 (Social):**
 Join the thousands of people creating visual soul blueprints and discovering themselves through AI art. The free guide makes it simple, even for beginners.
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint
 
 **Version 5 (Soft):**
 If this resonates, there's a complete guide that shows you how to create your own visual soul blueprint. Free. Step-by-step. Everything you need.
-👉 quantummerlin.com/visualblueprint
+ quantummerlin.com/visualblueprint

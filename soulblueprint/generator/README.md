@@ -2,7 +2,7 @@
 
 A Node.js tool that generates beautiful PDF books from "A Moment in Time" astrology reading HTML files with multiple design templates.
 
-## 🌟 Features
+##  Features
 
 - **Multi-Template Support**: Generate with different visual styles (Heart Bears, Cosmic, Minimalist, and more)
 - **Automatic Parsing**: Extracts all readings, chapters, and data from source HTML
@@ -10,12 +10,12 @@ A Node.js tool that generates beautiful PDF books from "A Moment in Time" astrol
 - **Command-Line Interface**: Easy to use CLI with flexible options
 - **HTML Preview**: Generates HTML files alongside PDFs for previewing
 
-## 📋 Requirements
+##  Requirements
 
 - Node.js 18+ 
 - npm
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```bash
 # Install dependencies
@@ -31,7 +31,7 @@ node generate.js path/to/book.html --template heart-bears
 node generate.js path/to/book.html --output my-reading.pdf
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 generator/
@@ -53,7 +53,7 @@ generator/
 └── output/              # Generated files (gitignored)
 ```
 
-## 💻 Usage
+##  Usage
 
 ### Basic Usage
 
@@ -92,7 +92,7 @@ node generate.js readings/Jane-Smith.html --json-only
 node generate.js input/book.html --template heart-bears --output output/Doyne-Jason.pdf
 ```
 
-## 🎨 Creating Custom Templates
+##  Creating Custom Templates
 
 To create a new template:
 
@@ -141,7 +141,7 @@ To create a new template:
 - `{{keywords}}` - Keywords array
 - `{{gifts}}` - Gifts list array
 
-## 🔧 Development
+##  Development
 
 ### Running Tests
 
@@ -159,7 +159,7 @@ node generate.js path/to/test.html
 npm install <package>
 ```
 
-## 📊 Data Structure
+##  Data Structure
 
 The parser extracts the following structure from source HTML:
 
@@ -184,7 +184,7 @@ The parser extracts the following structure from source HTML:
 }
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### PDF generation fails
 - Ensure you have enough disk space
@@ -201,11 +201,11 @@ The parser extracts the following structure from source HTML:
 - Verify source HTML has expected structure
 - Check template placeholders match data keys
 
-## 📄 License
+##  License
 
 Copyright © 2026 Quantum Merlin. All rights reserved.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 Built with:
 - [Puppeteer](https://pptr.dev/) - Headless Chrome for PDF generation

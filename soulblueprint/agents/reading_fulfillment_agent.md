@@ -49,22 +49,22 @@ Tell the user:
 - **Delivery message template** (copy-paste for Etsy):
 
 ```
-Hi! 🌟
+Hi! 
 
 Your personalised "A Moment in Time" reading for [Name] is ready!
 
-👉 Click here to explore your reading:
+ Click here to explore your reading:
 [URL]
 
 What you'll find:
-✨ 65+ personalised readings covering astrology, numerology & life patterns
-🔮 Expandable sections — explore at your own pace
-📱 Works on all devices — phone, tablet, laptop
-🖨️ Print or save anytime
+ 65+ personalised readings covering astrology, numerology & life patterns
+ Expandable sections — explore at your own pace
+ Works on all devices — phone, tablet, laptop
+ Print or save anytime
 
 This is your permanent link — it will never expire.
 
-Enjoy your cosmic journey! ✨
+Enjoy your cosmic journey! 
 ```
 
 ## Important Notes

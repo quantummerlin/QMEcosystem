@@ -1,4 +1,4 @@
-# 🦁 Example Prompts: Leo Sun Demonstration
+#  Example Prompts: Leo Sun Demonstration
 
 **This is a complete example showing how to create a visual soul blueprint for someone with Leo Sun.**
 
@@ -13,7 +13,7 @@
 
 ---
 
-## 🌞 IMAGE 1: SUN SIGN - LEO
+##  IMAGE 1: SUN SIGN - LEO
 
 **Prompt:**
 ```
@@ -41,7 +41,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🌙 IMAGE 2: MOON SIGN - SCORPIO
+##  IMAGE 2: MOON SIGN - SCORPIO
 
 **Prompt:**
 ```
@@ -69,7 +69,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🔮 IMAGE 3: RISING SIGN - SAGITTARIUS
+##  IMAGE 3: RISING SIGN - SAGITTARIUS
 
 **Prompt:**
 ```
@@ -99,7 +99,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🔢 IMAGE 4: LIFE PATH NUMBER - 7
+##  IMAGE 4: LIFE PATH NUMBER - 7
 
 **Prompt:**
 ```
@@ -130,7 +130,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## ⬆️ IMAGE 5: NORTH NODE - ARIES
+## ⬆ IMAGE 5: NORTH NODE - ARIES
 
 **Prompt:**
 ```
@@ -163,7 +163,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🧠 IMAGE 6: MERCURY IN VIRGO
+##  IMAGE 6: MERCURY IN VIRGO
 
 **Prompt:**
 ```
@@ -196,7 +196,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 💕 IMAGE 7: VENUS IN LEO
+##  IMAGE 7: VENUS IN LEO
 
 **Prompt:**
 ```
@@ -230,7 +230,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## ⚔️ IMAGE 8: MARS IN CANCER
+##  IMAGE 8: MARS IN CANCER
 
 **Prompt:**
 ```
@@ -264,7 +264,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🏛️ IMAGE 9: 4TH HOUSE EMPHASIS (Home & Roots)
+##  IMAGE 9: 4TH HOUSE EMPHASIS (Home & Roots)
 
 **Prompt:**
 ```
@@ -298,7 +298,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🔥 IMAGE 10: COMPARATIVE - SUN SQUARE MOON
+##  IMAGE 10: COMPARATIVE - SUN SQUARE MOON
 
 **Prompt:**
 ```
@@ -338,7 +338,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 📊 SARAH'S COMPLETE VISUAL PALETTE EVOLUTION
+##  SARAH'S COMPLETE VISUAL PALETTE EVOLUTION
 
 **Image 1 (Sun Leo):** Gold dominates
 **Image 2 (Moon Scorpio):** Silver added
@@ -356,7 +356,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 💡 WHAT THIS DEMONSTRATES
+##  WHAT THIS DEMONSTRATES
 
 **1. Consistency:** All images maintain the same ethereal, spiritual style
 **2. Evolution:** Colors add naturally, each image builds on previous ones
@@ -366,7 +366,7 @@ Maintain the same visual style, color palette, and symbolism established in the 
 
 ---
 
-## 🎯 YOUR TURN
+##  YOUR TURN
 
 Replace Sarah's information with your own:
 - Your birth date

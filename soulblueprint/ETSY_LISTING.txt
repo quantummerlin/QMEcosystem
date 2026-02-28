@@ -16,7 +16,8 @@ PRICE
 
 Tier 1: $9.99 — Single reading (intro 50% off, regular $19.99)
 Tier 2: $17.99 — 2 readings (intro 50% off, regular $35.99)
-Tier 3: $99.99 — Unlimited readings forever (generator access)
+Tier 3: $49.99 — 3 readings (intro 50% off, regular $99.98)
+Tier 4: $99.99 — Unlimited readings forever
 
 
 ────────────────────────────────────────────
@@ -29,14 +30,15 @@ Category: Digital Downloads > Astrology & Horoscopes
 Type: Digital download
 Quantity: 999
 
-Personalisation: OFF (the tool generates personalised readings — not made-to-order)
+Personalisation: ON
+  Prompt: "Please provide the following for each reading:\n1. Full name\n2. Date of birth (DD/MM/YYYY)\n3. Time of birth (if known)\n4. Place of birth (city, country)"
 
 
 ────────────────────────────────────────────
 DESCRIPTION (paste below as-is)
 ────────────────────────────────────────────
 
-✨ YOUR COMPLETE SOUL BLUEPRINT — 65+ Personalised Readings from Your Exact Birth Data ✨
+ YOUR COMPLETE SOUL BLUEPRINT — 65+ Personalised Readings from Your Exact Birth Data 
 
 I grew up as the son of a tarot reader and self-proclaimed witch. When my daughter was born, I paid $350 for her professional birth reading — and it changed everything. It was beautiful, profound, and made me realise: this knowledge is real, but it's gatekept behind expensive practitioners.
 
@@ -44,13 +46,38 @@ So I built this myself. Every calculation, every reading, every word — designe
 
 Not a generic horoscope. Your birth date, time, and place are mathematically calculated across 4 systems to produce a reading that's unique to you — down to the minute you were born.
 
-🔥 50% OFF INTRODUCTORY OFFER — 1 reading $9.99 (regular $19.99) · 2 for $17.99 · Unlimited $99.99
+ 50% OFF INTRODUCTORY OFFER — 1 reading $9.99 (regular $19.99) · 2 for $17.99 · 3 for $49.99 · Unlimited $99.99
+
+⏱ PLEASE NOTE: This is a made-to-order reading. After purchase, I'll personally create your unique Soul Blueprint and send you a private link within 24 hours (usually much faster!).
+
+ WANT TO SEE IT FIRST? Explore 12 full example readings for free — no purchase needed:
+→ quantummerlin.com/soulblueprint/examples/
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-WHAT YOU GET — INSTANT ACCESS
+HOW TO ORDER — WHAT I NEED FROM YOU
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✦ 65+ personalised readings covering:
+When you purchase, Etsy will show a "Add your personalisation" box. Please fill in the following for each person you'd like a reading for:
+
+  1. Full name
+  2. Date of birth (DD/MM/YYYY)
+  3. Time of birth (if known — even approximate helps!)
+  4. Place of birth (city and country)
+
+ Example:
+  "Jane Smith, 15/06/1990, 2:30pm, London, England"
+
+For 2+ readings, just list each person's details:
+  "1. Jane Smith, 15/06/1990, 2:30pm, London, England
+   2. Michael Smith, 03/05/1981, 1:30pm, Abu Dhabi, UAE"
+
+Don't know the birth time? No problem — I'll still create a full reading with 50+ insights. Birth time adds extra precision for Moon sign, Rising sign, and house placements. You can always message me later to update it.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT YOU GET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ 65+ personalised readings covering:
  • Western Astrology (Sun, Moon, Rising, all planets, houses, aspects)
  • Numerology (Life Path, Expression, Soul Urge, and more)
  • Chinese Zodiac (Year, Inner Animal, True Element)
@@ -59,16 +86,12 @@ WHAT YOU GET — INSTANT ACCESS
  • Deep Chiron, Lilith, and Node Readings
  • Transformative Planet Cycles
 
-✦ 11 Stunning Printable Book Templates
+ 11 Stunning Printable Book Templates
  • Dark Celestial, Cosmic Rainbow, Mystical Tarot, Art Deco, Botanical, and more
  • A4 and A5 sizes — ready to print or save as PDF
  • Each is a beautiful keepsake book of your full reading
 
-✦ Unlimited Readings — For Anyone
- • Generate readings for yourself, partner, friends, and family
- • No limits. Ever. One purchase = unlimited access forever.
-
-✦ Copy, Share & Gift Features
+ Copy, Share & Gift Features
  • Copy any reading as a beautiful card
  • Share via link with anyone
  • Perfect birthday, anniversary, or "just because" gift
@@ -77,48 +100,88 @@ WHAT YOU GET — INSTANT ACCESS
 HOW IT WORKS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Purchase → Instantly receive your private access link (digital download)
-2. Open the link in any browser (phone, tablet, or computer)
-3. Enter name, date of birth, time of birth, and birthplace
-4. Click "Generate" → Your complete reading calculates in seconds
-5. Scroll, explore, copy readings, generate printable books, share with friends
+1. Purchase and fill in the personalisation box with your birth details (see above for format)
+2. I personally create your unique Soul Blueprint from your exact birth data
+3. Within 24 hours, I'll send you a private link to your reading via Etsy message
+4. Open your link in any browser — phone, tablet, or computer
+5. Explore your 65+ readings, create printable books, share with loved ones
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FREE BONUS — INCLUDED WITH EVERY PURCHASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ 70+ How-To Guides & Articles (FREE)
+Your reading is just the beginning. I've written over 70 step-by-step guides showing you how to take your reading further:
+ • Create infographics, mood boards, and wall art from your reading
+ • Build a 30-day growth plan based on your Soul Blueprint
+ • Generate AI affirmations, journal prompts, and career guidance
+ • Turn your reading into a podcast, social media content, or personalised gift
+ • Deep dives into numerology, Chinese zodiac, relationship patterns, and more
+→ quantummerlin.com/soulblueprint/articles/
+
+ AI Prompt Builder (FREE)
+A powerful tool that lets you plug your reading data into expertly crafted AI prompts. Transform your Soul Blueprint into:
+ • Personalised affirmation sets
+ • Career guidance tailored to your cosmic profile
+ • Relationship compatibility deep dives
+ • Daily routines aligned with your numerology
+ • And much more — dozens of prompt templates included
+→ quantummerlin.com/soulblueprint/soulprism/site/tools/prompt-builder.html
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 WHAT MAKES THIS DIFFERENT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-▸ Not a PDF you've seen before — this is a living tool that generates unique readings
+▸ Not a PDF you've seen before — this is a beautifully crafted interactive reading
 ▸ 4 systems combined (most readings only cover one)
 ▸ 48 astronomical calculations from your exact birth data
 ▸ 100% private — your data never leaves your device
-▸ No login, no account, no subscription — just open and use
+▸ No login, no account, no subscription — just open and explore
 ▸ Works on any device with a browser
+▸ Each reading is personally created and delivered by hand
+▸ 70+ free guides + AI prompt builder included
 ▸ Built by one person who grew up in this world and found patterns in the numbers he can't unsee
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXPLORE BEFORE YOU BUY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Not sure yet? I get it. Here's what you can explore right now, totally free:
+
+ 12 Full Example Readings — see exactly what your Soul Blueprint looks like
+→ quantummerlin.com/soulblueprint/examples/
+
+ 70+ How-To Guides — articles on astrology, numerology, AI tools, and more
+→ quantummerlin.com/soulblueprint/articles/
+
+ AI Prompt Builder — transform any reading into actionable insights
+→ quantummerlin.com/soulblueprint/soulprism/site/tools/prompt-builder.html
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PERFECT GIFT FOR
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🎂 Birthdays — the most personal gift possible
-💑 Couples — compare your readings side by side
-👶 New parents — capture your baby's cosmic moment
-🎓 Milestones — graduation, new job, new chapter
-🎄 Holidays — unique, thoughtful, zero shipping
-💝 Self-care — understand yourself on a deeper level
+ Birthdays — the most personal gift possible
+ Couples — compare your readings side by side
+ New parents — capture your baby's cosmic moment
+ Milestones — graduation, new job, new chapter
+ Holidays — unique, thoughtful, zero shipping
+ Self-care — understand yourself on a deeper level
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DELIVERY
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✓ Instant digital download — no waiting
-✓ One HTML file containing your private access link
-✓ Open in any browser to access your generator
-✓ Bookmark it for permanent access
-✓ No software to install
+ Made-to-order — your reading is personally created from your birth data
+ Delivered within 24 hours via Etsy message (usually much faster!)
+ You'll receive a private link to your unique Soul Blueprint
+ Open in any browser — phone, tablet, or computer
+ Bookmark for permanent access — your reading is yours forever
+ No software to install
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Questions? I'm here to help. Just send me a message!
+Questions, issues, or ideas? Email us at soulblueprint@quantummerlin.com or message me right here on Etsy.
 
 © Quantum Merlin · quantummerlin.com
 
@@ -146,7 +209,7 @@ TAGS (13 max, comma-separated)
 MATERIALS (optional)
 ────────────────────────────────────────────
 
-Digital download, HTML file, Browser-based tool
+Digital download, Made-to-order reading, Browser-based
 
 
 ────────────────────────────────────────────
@@ -169,34 +232,65 @@ Slot 6:  BOOK TEMPLATE 2 — Different book template
 Slot 7:  MOBILE VIEW — Phone mockup showing it works on mobile
 Slot 8:  DEVICE MOCKUP — Tablet/laptop with the tool open
 Slot 9:  SOCIAL PROOF — Review, testimonial, or stat graphic
-Slot 10: TRUST — Privacy/guarantee badge or "How it works" steps
+Slot 10: TRUST — Privacy badge or "How it works" steps
 
 
 ────────────────────────────────────────────
-DIGITAL FILE TO UPLOAD
+DIGITAL FILES TO UPLOAD (one per variation)
 ────────────────────────────────────────────
 
-File: etsy-delivery.html
-(Located at: soulblueprint/etsy-delivery.html)
+Tier 1 ($9.99 — 1 Reading):
+  File: etsy-delivery-single.html
+  • Confirmation page — "Your reading is being created"
+  • What to expect + timeline
+  • Upgrade CTA to more readings
 
-This is the file buyers download. It contains:
-- Beautiful branded thank-you page
-- Gold CTA button linking to the hidden pro generator
-- Getting started steps
-- Feature checklist
-- Works offline — opens in any browser
+Tier 2 ($17.99 — 2 Readings):
+  File: etsy-delivery-double.html
+  • Confirmation page — "Your 2 readings are being created"
+  • What to expect + timeline
+  • Upgrade CTA to more readings
+
+Tier 3 ($49.99 — 3 Readings):
+  File: etsy-delivery-triple.html
+  • Confirmation page — "Your 3 readings are being created"
+  • What to expect + timeline
+  • Upgrade CTA to more readings
+
+Tier 4 ($99.99 — Unlimited):
+  File: etsy-delivery.html
+  • Confirmation page — "Your readings are being created"
+  • What to expect + timeline
+  • Full FAQ, support
+
+All files include:
+- Beautiful branded confirmation page
+- "What happens next" steps
+- Feature preview of what's coming
+- FAQ section
+- Support contact (email + Etsy message)
+- Entrance animations
+- Print-friendly styles
+
+NOTE: Reading links are delivered via Etsy message after manual generation.
+Command: node generator/fulfill.js --name="Name" --date=YYYY-MM-DD --time=HH:MM --place="City, Country"
+Output: quantummerlin.com/soulblueprint/r/{slug}/
 
 
 ────────────────────────────────────────────
 LAUNCH CHECKLIST
 ────────────────────────────────────────────
 
-[ ] Create Etsy listings with title above
-[ ] Set pricing: $9.99 (1 reading), $17.99 (2 readings), $99.99 (unlimited)
+[ ] Create Etsy listing with title above
+[ ] Set pricing: $9.99 (1 reading), $17.99 (2 readings), $49.99 (3 readings), $99.99 (unlimited)
 [ ] Paste description above
 [ ] Add all 13 tags
 [ ] Upload 10 listing images (use etsy-image-picker.html to sort)
-[ ] Upload etsy-delivery.html as the digital file
+[ ] Upload digital files per variation:
+    - Tier 1: etsy-delivery-single.html
+    - Tier 2: etsy-delivery-double.html
+    - Tier 3: etsy-delivery-triple.html
+    - Tier 4: etsy-delivery.html
 [ ] Set category to Digital Downloads > Astrology & Horoscopes
 [ ] Set as digital item (no shipping)
 [ ] Preview listing
@@ -206,9 +300,11 @@ LAUNCH CHECKLIST
 POST-LAUNCH
 ────────────────────────────────────────────
 
-[ ] Verify download works — buy as test or use Etsy preview
-[ ] Open etsy-delivery.html → confirm link goes to pro generator
-[ ] Generate a test reading on the pro URL
-[ ] Check GA4 for generator_upgrade_clicked events
+[ ] Verify delivery pages render correctly
+[ ] Test fulfill.js end-to-end: node generator/fulfill.js --name="Test" --date=1990-01-15 --time=14:30 --place="Melbourne, AU"
+[ ] Confirm generated reading URL works
+[ ] Git push test reading, verify on quantummerlin.com
+[ ] Practice full flow: Etsy order → read personalization → fulfill → send link via Etsy message
+[ ] Check GA4 for events
 [ ] Share listing link on socials
 [ ] Update Etsy link in soulblueprint CTAs from shop URL to direct listing URL

@@ -255,7 +255,7 @@ Their greatest fulfillment comes through service that transforms lives. They are
 
 var SUN_SIGN_READINGS = {
     Aries: {
-        symbol: "♈",
+        symbol: "",
         element: "Fire",
         ruling: "Mars",
         keywords: ["Courage", "Initiative", "Energy", "Leadership"],
@@ -276,7 +276,7 @@ This soul is here to teach others about courage and the power of taking action. 
     },
     
     Taurus: {
-        symbol: "♉",
+        symbol: "",
         element: "Earth",
         ruling: "Venus",
         keywords: ["Stability", "Sensuality", "Patience", "Determination"],
@@ -297,7 +297,7 @@ This soul is here to teach others about the value of patience and the beauty of 
     },
     
     Gemini: {
-        symbol: "♊",
+        symbol: "",
         element: "Air",
         ruling: "Mercury",
         keywords: ["Communication", "Curiosity", "Adaptability", "Intelligence"],
@@ -318,7 +318,7 @@ This soul is here to teach others about the power of communication and the joy o
     },
     
     Cancer: {
-        symbol: "♋",
+        symbol: "",
         element: "Water",
         ruling: "Moon",
         keywords: ["Nurturing", "Emotion", "Protection", "Intuition"],
@@ -339,7 +339,7 @@ This soul is here to teach others about the importance of emotional bonds and th
     },
     
     Leo: {
-        symbol: "♌",
+        symbol: "",
         element: "Fire",
         ruling: "Sun",
         keywords: ["Creativity", "Leadership", "Generosity", "Drama"],
@@ -360,7 +360,7 @@ This soul is here to teach others about the courage to be authentically themselv
     },
     
     Virgo: {
-        symbol: "♍",
+        symbol: "",
         element: "Earth",
         ruling: "Mercury",
         keywords: ["Analysis", "Service", "Perfectionism", "Health"],
@@ -381,7 +381,7 @@ This soul is here to teach others about the sacred nature of service and the bea
     },
     
     Libra: {
-        symbol: "♎",
+        symbol: "",
         element: "Air",
         ruling: "Venus",
         keywords: ["Balance", "Harmony", "Partnership", "Beauty"],
@@ -402,7 +402,7 @@ This soul is here to teach others about the art of balance and the importance of
     },
     
     Scorpio: {
-        symbol: "♏",
+        symbol: "",
         element: "Water",
         ruling: "Pluto",
         keywords: ["Intensity", "Transformation", "Power", "Mystery"],
@@ -423,7 +423,7 @@ This soul is here to teach others about the power of transformation and the cour
     },
     
     Sagittarius: {
-        symbol: "♐",
+        symbol: "",
         element: "Fire",
         ruling: "Jupiter",
         keywords: ["Adventure", "Philosophy", "Freedom", "Optimism"],
@@ -444,7 +444,7 @@ This soul is here to teach others about the joy of seeking and the importance of
     },
     
     Capricorn: {
-        symbol: "♑",
+        symbol: "",
         element: "Earth",
         ruling: "Saturn",
         keywords: ["Ambition", "Discipline", "Responsibility", "Achievement"],
@@ -465,7 +465,7 @@ This soul is here to teach others about the value of discipline and the satisfac
     },
     
     Aquarius: {
-        symbol: "♒",
+        symbol: "",
         element: "Air",
         ruling: "Uranus",
         keywords: ["Innovation", "Humanity", "Independence", "Originality"],
@@ -486,7 +486,7 @@ This soul is here to teach others about the power of innovation and the importan
     },
     
     Pisces: {
-        symbol: "♓",
+        symbol: "",
         element: "Water",
         ruling: "Neptune",
         keywords: ["Intuition", "Compassion", "Creativity", "Spirituality"],

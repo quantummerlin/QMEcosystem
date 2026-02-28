@@ -4,7 +4,7 @@ Copy and paste these prompts into your favorite free AI tool to create visual in
 
 ---
 
-## 🤖 ChatGPT Prompts
+##  ChatGPT Prompts
 
 ### Basic Infographic
 ```
@@ -29,7 +29,7 @@ Summarize this Soul Blueprint reading into a single, visually compelling one-pag
 
 ---
 
-## 💫 Gemini Prompts
+##  Gemini Prompts
 
 ### Elegant Visual Summary
 ```
@@ -54,7 +54,7 @@ Design this reading in a vertical card format perfect for social sharing. Includ
 
 ---
 
-## 📓 NotebookLM Prompts
+##  NotebookLM Prompts
 
 ### Structured Overview
 ```
@@ -79,7 +79,7 @@ Design this reading as a multi-panel infographic with each major insight in its 
 
 ---
 
-## 🎨 Pro Tips for Best Results
+##  Pro Tips for Best Results
 
 1. **Choose the Right Tool**
    - ChatGPT Free → Great for quick, clean designs
@@ -104,7 +104,7 @@ Design this reading as a multi-panel infographic with each major insight in its 
 
 ---
 
-## 💡 Advanced: Combine Multiple Readings
+##  Advanced: Combine Multiple Readings
 
 Want to see patterns across different readings?
 
@@ -118,7 +118,7 @@ Create a comparative infographic showing the connections and patterns between th
 
 ---
 
-## 📌 Quick Reminder
+##  Quick Reminder
 
 - All AI tools mentioned (ChatGPT, Gemini, NotebookLM) have free versions
 - No account needed for basic use

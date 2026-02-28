@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html <html lang="en" style="--primary: #FF69B4; --secondary: #FFB6C1; --accent: #FF1493; --background: #FFF0F5; --background-dark: #1a0a2e; --font-heading: 'Playfair Display', Georgia, serif; --font-body: 'Inter', 'Segoe UI', sans-serif; --card-border: #FFE4EC;"><head>
+<html <html lang="en" style="--primary: #6BA3D6; --secondary: #87CEEB; --accent: #4169E1; --background: #F0F8FF; --background-dark: #1a0a2e; --font-heading: 'Playfair Display', Georgia, serif; --font-body: 'Inter', 'Segoe UI', sans-serif; --card-border: #B0E0E6;"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title id="page-title">A Moment in Time - Your Complete Cosmic Reading</title>
-    <meta name="description" id="meta-description" content="At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights combining astrology, numerology, and life pattern analysis.">
+    <title id="page-title">A Moment in Time - Your Complete Cosmic Reading | by Quantum Merlin</title>
+    <meta name="description" id="meta-description" content="I built this after paying $350 for my daughter's birth reading and realising this knowledge shouldn't be gatekept. 65+ personalised insights combining astrology, numerology, and life pattern analysis.">
     <meta name="keywords" content="soul blueprint, cosmic reading, birth chart, astrology, numerology, spiritual insights, zodiac, quantum merlin">
     <meta name="author" content="Quantum Merlin">
     <meta name="robots" content="noindex, nofollow">
@@ -16,7 +16,7 @@
     
     
     <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#FF69B4">
+    <meta name="theme-color" content="#6BA3D6">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Soul Blueprint">
@@ -38,8 +38,8 @@
     <link rel="icon" type="image/svg+xml" href="/soulblueprint/icon-180.png?v=2">
     
     <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" id="og-title" content="A Moment in Time - Your Complete Cosmic Reading">
-    <meta property="og:description" id="og-description" content="At the exact moment you were born, the universe created a pattern. Get 65+ personalized insights combining astrology, numerology, and life pattern analysis.">
+    <meta property="og:title" id="og-title" content="A Moment in Time - Your Complete Cosmic Reading | by Quantum Merlin">
+    <meta property="og:description" id="og-description" content="I built this after paying $350 for my daughter's birth reading and realising this knowledge shouldn't be gatekept. 65+ personalised insights combining astrology, numerology, and life pattern analysis.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quantummerlin.com/soulblueprint/">
     <meta property="og:site_name" content="Quantum Merlin">
@@ -2038,7 +2038,7 @@
         }
         
         .reading-card .strengths li::before {
-            content: "✓";
+            content: "";
             color: #6BA3D6;
         }
         
@@ -3469,7 +3469,7 @@
             font-size: 0.92rem;
         }
         .fulfill-upgrade-card ul li::before {
-            content: '✦ ';
+            content: ' ';
             color: #FFD700;
         }
 
@@ -4993,6 +4993,45 @@
             .reading-nav-panel { width: 260px; }
         }
     
+/* Password gate */
+.pw-gate{position:fixed;top:0;left:0;right:0;bottom:0;background:linear-gradient(145deg,rgba(10,5,20,0.99),rgba(26,10,46,0.99));z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px 16px;font-family:'Inter','Segoe UI',system-ui,sans-serif}
+.pw-gate.hidden{display:none}
+.pw-card{max-width:380px;width:100%;background:linear-gradient(160deg,rgba(30,16,53,0.95),rgba(18,8,42,0.98));border:1.5px solid rgba(255,215,0,0.25);border-radius:20px;padding:36px 28px;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.5)}
+.pw-card h2{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;color:#ffd700;margin:0 0 8px}
+.pw-card .pw-subtitle{color:#e8d5ff;opacity:0.7;font-size:0.88rem;margin:0 0 24px;line-height:1.5}
+.pw-card .pw-name{color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;margin:0 0 20px}
+.pw-input-wrap{display:flex;gap:8px;margin-bottom:12px}
+.pw-input{flex:1;padding:14px 16px;border:2px solid rgba(255,215,0,0.2);border-radius:12px;background:rgba(255,255,255,0.05);color:#fff;font-size:1.1rem;font-family:monospace;letter-spacing:0.15em;text-transform:uppercase;text-align:center}
+.pw-input:focus{outline:none;border-color:rgba(255,215,0,0.5)}
+.pw-submit{padding:14px 24px;border:none;border-radius:12px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a0a2e;font-weight:700;font-size:0.95rem;cursor:pointer;transition:transform 0.15s}
+.pw-submit:hover{transform:scale(1.03)}
+.pw-error{color:#ff6b6b;font-size:0.82rem;margin:8px 0 0;min-height:1.2em}
+.pw-hint{color:#e8d5ff;opacity:0.35;font-size:0.72rem;margin-top:16px}
+@media(max-width:480px){.pw-card{padding:28px 20px}.pw-card h2{font-size:1.2rem}.pw-input{font-size:1rem;padding:12px}}
+/* Welcome overlay */
+.welcome-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:linear-gradient(145deg,rgba(10,5,20,0.97),rgba(26,10,46,0.98));z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px 16px;opacity:1;transition:opacity 0.6s ease;font-family:'Inter','Segoe UI',system-ui,sans-serif}
+.welcome-overlay.hiding{opacity:0;pointer-events:none}
+.welcome-card{max-width:420px;width:100%;background:linear-gradient(160deg,rgba(30,16,53,0.95),rgba(18,8,42,0.98));border:1.5px solid rgba(255,215,0,0.25);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.5),0 0 80px rgba(255,215,0,0.04);position:relative;overflow:hidden;animation:welcomeFadeIn 0.8s ease-out}
+.welcome-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 20%,rgba(255,215,0,0.04) 0%,transparent 50%),radial-gradient(circle at 70% 80%,rgba(102,126,234,0.05) 0%,transparent 50%);pointer-events:none}
+.welcome-card>*{position:relative;z-index:1}
+.welcome-label{font-family:'Playfair Display',Georgia,serif;font-size:0.82rem;color:#c9a0ff;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;margin-bottom:14px}
+.welcome-title{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;color:#ffd700;margin-bottom:6px;line-height:1.3;animation:welcomeFadeIn 0.5s ease-out 0.4s both}
+.welcome-name{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;color:#fff;margin-bottom:14px;line-height:1.2;animation:welcomeFadeIn 0.5s ease-out 0.5s both}
+.welcome-text{font-size:0.9rem;line-height:1.65;color:#e8d5ff;opacity:0.8;margin-bottom:24px;animation:welcomeFadeIn 0.5s ease-out 0.6s both}
+.welcome-features{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;text-align:left;margin-bottom:28px;animation:welcomeFadeIn 0.5s ease-out 0.7s both}
+.welcome-feature{display:flex;align-items:center;gap:6px;font-size:0.78rem;color:#e8d5ff;opacity:0.75;padding-left:8px}
+.welcome-feature::before{content:'';width:4px;height:4px;border-radius:50%;background:#ffd700;flex-shrink:0}
+.welcome-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,215,0,0.15),transparent);margin:0 0 24px}
+.welcome-btn{display:inline-block;background:linear-gradient(135deg,#ffd700 0%,#e6ac00 40%,#ffd700 60%,#ffe44d 80%,#ffd700 100%);background-size:200% auto;color:#1a0a2e;padding:16px 44px;border-radius:30px;font-size:1.05rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(255,215,0,0.3);transition:transform 0.2s,box-shadow 0.2s;animation:welcomeFadeIn 0.5s ease-out 0.8s both,welcomeShimmer 3s ease-in-out infinite}
+.welcome-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,215,0,0.4)}
+.welcome-note{font-size:0.72rem;opacity:0.35;margin-top:16px;animation:welcomeFadeIn 0.5s ease-out 0.9s both}
+.welcome-brand{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,215,0,0.08)}
+.welcome-brand-name{font-family:'Playfair Display',Georgia,serif;font-size:0.8rem;color:#c9a0ff;opacity:0.5}
+@keyframes welcomeFadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes welcomeShimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@media(max-width:480px){.welcome-card{padding:24px 16px;max-width:calc(100vw - 32px);border-radius:20px}.welcome-emoji{font-size:2.2rem;margin-bottom:4px}.welcome-label{font-size:0.72rem;margin-bottom:10px}.welcome-title{font-size:1.2rem;margin-bottom:4px}.welcome-name{font-size:1.35rem;margin-bottom:12px}.welcome-text{font-size:0.82rem;margin-bottom:18px;line-height:1.55}.welcome-features{grid-template-columns:1fr;gap:4px;margin-bottom:20px}.welcome-feature{font-size:0.75rem}.welcome-btn{padding:12px 32px;font-size:0.95rem}.welcome-note{font-size:0.68rem;margin-top:12px}.welcome-brand{margin-top:14px;padding-top:12px}.welcome-brand-name{font-size:0.72rem}.welcome-divider{margin:0 0 18px}}
+@media(max-width:360px){.welcome-card{padding:20px 14px}.welcome-title{font-size:1.1rem}.welcome-name{font-size:1.2rem}.welcome-btn{padding:10px 24px;font-size:0.88rem}}
+@media(prefers-reduced-motion:reduce){.welcome-overlay *{animation:none!important;transition:none!important}}
 /* New Reading button in nav */
 .new-reading-nav-btn{padding:6px 14px!important;border-radius:20px!important;background:var(--primary)!important;color:white!important;font-weight:600!important;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s}
 .new-reading-nav-btn:hover{transform:scale(1.05);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
@@ -5027,7 +5066,7 @@
 .upgrade-option .price .original{text-decoration:line-through;opacity:0.4;font-size:0.9rem;font-weight:400;margin-right:6px;color:var(--text)}
 .upgrade-option .price-note{font-size:0.8rem;opacity:0.6;margin:2px 0 0}
 .upgrade-option .features{text-align:left;margin:10px 0 0;padding:0;list-style:none;font-size:0.85rem;line-height:1.8}
-.upgrade-option .features li::before{content:"\2713  ";color:var(--primary);font-weight:700}
+.upgrade-option .features li::before{content:"\u2022  ";color:var(--primary);font-weight:700}
 .upgrade-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text);opacity:0.5;line-height:1}
 .upgrade-close:hover{opacity:1}
 .upgrade-back{background:none;border:none;color:var(--text);opacity:0.5;font-size:0.85rem;cursor:pointer;margin-top:8px}
@@ -5035,18 +5074,18 @@
 
 </style>
 </head>
-<body class="theme-girl">
+<body class="theme-boy">
     <!-- Welcome modal removed — Phase 2: users land directly on input form -->
 
     <!-- Theme Bar -->
-    <div class="theme-bar theme-selected-girl" id="themeBar">
-        <button class="theme-bar-btn active" data-theme="girl" onclick="setGender('girl')">
+    <div class="theme-bar theme-selected-boy" id="themeBar">
+        <button class="theme-bar-btn" data-theme="girl" onclick="setGender('girl')">
             Pink
         </button>
         <button class="theme-bar-btn" data-theme="purple" onclick="setGender('purple')">
             Purple
         </button>
-        <button class="theme-bar-btn" data-theme="boy" onclick="setGender('boy')">
+        <button class="theme-bar-btn active" data-theme="boy" onclick="setGender('boy')">
             Blue
         </button>
     </div>
@@ -5057,14 +5096,14 @@
     <!-- Site Navigation -->
     <nav class="site-nav" id="siteNav">
         <div class="site-nav-inner">
-            <a href="https://quantummerlin.com/soulblueprint/" class="site-nav-brand">✨ Soul Blueprint</a>
+            <a href="https://quantummerlin.com/soulblueprint/" class="site-nav-brand"> Soul Blueprint</a>
             <div class="site-nav-links">
                 
                 <a href="https://quantummerlin.com/soulblueprint/examples/">Examples</a>
                 <a href="https://quantummerlin.com/soulblueprint/articles/">Guides</a>
                 <a href="https://quantummerlin.com/soulblueprint/playbooks/">Playbooks</a>
                 <a href="https://quantummerlin.com/soulblueprint/soulprism/site/tools/prompt-builder.html">Prompt Builder</a>
-            <a class="new-reading-nav-btn" href="javascript:void(0)" onclick="showForm()">✨ New Reading</a></div>
+            <a class="new-reading-nav-btn" href="javascript:void(0)" onclick="showForm()">New Reading</a></div>
         </div>
     </nav>
 
@@ -5079,9 +5118,9 @@
             <p class="birth-info" id="birthInfo">Born Sunday, May 3, 1981 at 13:30 in Abu Dhabi, UAE</p>
             <div class="action-buttons">
                 
-                <button class="action-btn" onclick="copyAllReadings()">📋 Copy Blueprint</button>
+                <button class="action-btn" onclick="copyAllReadings()"> Copy Blueprint</button>
                 
-                <button class="action-btn" onclick="showForm()">✨ New Reading</button>
+                <button class="action-btn" onclick="showForm()">New Reading</button>
             </div>
         </div>
         
@@ -5107,8 +5146,8 @@
                 </div>
                 <div class="opening-letter-body" id="openingLetterBody">
                     <p>At the exact moment you were born, the cosmos arranged itself in a pattern that has never existed before and will never exist again. This reading captures that unique configuration — a map of your gifts, challenges, and potential.</p>
-                    <p><strong>👇 Tap any section below to explore it.</strong> Take your time — some insights click immediately, others reveal their meaning over time.</p>
-                    <p style="font-size:0.85rem;color:#636e72;margin-top:8px;">💾 <em>Your reading is saved on this device — come back anytime to continue exploring.</em></p>
+                    <p><strong> Tap any section below to explore it.</strong> Take your time — some insights click immediately, others reveal their meaning over time.</p>
+                    <p style="font-size:0.85rem;color:#636e72;margin-top:8px;"> <em>Your reading is saved on this device — come back anytime to continue exploring.</em></p>
                     
                 </div>
                 <div class="hero-progress">
@@ -5149,7 +5188,7 @@
             
             <!-- Reading Guide Nudge -->
             <div style="text-align:center;padding:16px 20px;margin:-10px 0 20px;background:linear-gradient(135deg,rgba(102,126,234,0.06),rgba(118,75,162,0.06));border-radius:14px;border:1px solid rgba(102,126,234,0.1);">
-                <p style="font-size:0.95rem;margin:0;line-height:1.5;"><strong>✨ Start here</strong> — your Big Three above is your core identity. Then explore the sections below at your own pace. There's no rush — this reading saves automatically.</p>
+                <p style="font-size:0.95rem;margin:0;line-height:1.5;"><strong> Start here</strong> — your Big Three above is your core identity. Then explore the sections below at your own pace. There's no rush — this reading saves automatically.</p>
             </div>
 
             <!-- AI Transformation Banner -->
@@ -5877,7 +5916,7 @@ Wayne Michael has a warrior spirit that needs direction, not suppression.<br>Cha
                         <span class="card-icon"></span>
                         <div class="reading-card-info">
                             <h3>Venus-Mars Conjunction - Passionate Heart</h3>
-                            <span class="result-value">☌ Venus-Mars Conjunction</span>
+                            <span class="result-value"> Venus-Mars Conjunction</span>
                         </div>
                     </div>
                     <div class="reading-card-right">
@@ -6224,7 +6263,7 @@ This placement often indicates a "late bloomer" financially.<br>Don't be discour
                         <span class="card-icon"></span>
                         <div class="reading-card-info">
                             <h3>Jupiter-Saturn Conjunction - Grounded Expansion</h3>
-                            <span class="result-value">☌ Jupiter-Saturn Conjunction</span>
+                            <span class="result-value"> Jupiter-Saturn Conjunction</span>
                         </div>
                     </div>
                     <div class="reading-card-right">
@@ -6930,7 +6969,7 @@ Spiritually, Wayne Michael have a natural advantage — they're already oriented
                         <span class="card-icon"></span>
                         <div class="reading-card-info">
                             <h3>Sun-Moon Conjunction - Unified Spirit</h3>
-                            <span class="result-value">☌ Sun-Moon Conjunction</span>
+                            <span class="result-value"> Sun-Moon Conjunction</span>
                         </div>
                     </div>
                     <div class="reading-card-right">
@@ -7034,9 +7073,9 @@ Spiritually, Wayne Michael have a natural advantage — they're already oriented
             </div><div class="sub-section-body"><div class="reading-card" id="section-15" data-card-id="section-15">
                 <div class="reading-card-header" onclick="toggleCard(this)">
                     <div class="reading-card-left">
-                        <span class="card-icon">♉</span>
+                        <span class="card-icon"></span>
                         <div class="reading-card-info">
-                            <h3>Taurus Stellium</h3>
+                            <h3> Taurus Stellium</h3>
                             <span class="result-value">5 Planets in Taurus</span>
                         </div>
                     </div>
@@ -7091,9 +7130,9 @@ Spiritually, Wayne Michael have a natural advantage — they're already oriented
             </div><div class="reading-card" id="section-16" data-card-id="section-16">
                 <div class="reading-card-header" onclick="toggleCard(this)">
                     <div class="reading-card-left">
-                        <span class="card-icon">♎</span>
+                        <span class="card-icon"></span>
                         <div class="reading-card-info">
-                            <h3>Libra Stellium</h3>
+                            <h3> Libra Stellium</h3>
                             <span class="result-value">3 Planets in Libra</span>
                         </div>
                     </div>
@@ -7206,7 +7245,7 @@ Spiritually, Wayne Michael have a natural advantage — they're already oriented
                         <span class="card-icon"></span>
                         <div class="reading-card-info">
                             <h3>Core Integration - Sun &amp; Moon</h3>
-                            <span class="result-value">♉ Taurus ☌ ♉ Taurus</span>
+                            <span class="result-value"> Taurus   Taurus</span>
                         </div>
                     </div>
                     <div class="reading-card-right">
@@ -8122,7 +8161,7 @@ This isn't a contradiction but a unique gift.<br>They can bring visionary ideas 
 <p class="calc-note">Personal Year = Birth Month + Birth Day + Current Year (each reduced)</p>
 <p><strong>Your Cycle Period:</strong> May 3, 2025 through May 2, 2026</p>
 <p class="calc-note">Personal Year cycles run from birthday to birthday, not January to January.<br>This year's energy began on your last birthday and shifts on your next one.</p>
-</div><p></p><p><em>The Energy of This Year:</em> The energy of this year is powerful, ambitious, and results-oriented.<br>After last year's inner preparation, this year brings external achievement.<br>Your personal power is at its peak.<br>Use it wisely.</p><p><em>Opportunities:</em> Opportunities arrive through leadership and manifestation.<br>Business success, financial gains, promotions, recognition, and material abundance all favor you now.<br>What you've built over the past 7 years bears fruit.</p><p><em>Challenges:</em> The challenges include workaholism, materialism, and misuse of power.<br>You may become so focused on achievement that you neglect relationships or health.<br>True power serves something larger than ego.</p><p><em>Relationships:</em> In your relationships, you may attract powerful partners or power struggles.<br>You need equals who respect your ambition.<br>Watch for a tendency to master or let work consume your personal life.</p><p><em>Career &amp; Money:</em> Career-wise, this is THE year for advancement, raises, promotions, starting businesses, or achieving significant professional milestones.<br>Your executive abilities are at your peak.<br>Lead.</p><p><em>Spiritual Focus:</em> Spiritually, you're learning that abundance is a flow, that power is for service, and that material success and spiritual growth aren't opposites.<br>This year teaches you sacred success.</p><p><em>⏰ Power Timing:</em>
+</div><p></p><p><em>The Energy of This Year:</em> The energy of this year is powerful, ambitious, and results-oriented.<br>After last year's inner preparation, this year brings external achievement.<br>Your personal power is at its peak.<br>Use it wisely.</p><p><em>Opportunities:</em> Opportunities arrive through leadership and manifestation.<br>Business success, financial gains, promotions, recognition, and material abundance all favor you now.<br>What you've built over the past 7 years bears fruit.</p><p><em>Challenges:</em> The challenges include workaholism, materialism, and misuse of power.<br>You may become so focused on achievement that you neglect relationships or health.<br>True power serves something larger than ego.</p><p><em>Relationships:</em> In your relationships, you may attract powerful partners or power struggles.<br>You need equals who respect your ambition.<br>Watch for a tendency to master or let work consume your personal life.</p><p><em>Career &amp; Money:</em> Career-wise, this is THE year for advancement, raises, promotions, starting businesses, or achieving significant professional milestones.<br>Your executive abilities are at your peak.<br>Lead.</p><p><em>Spiritual Focus:</em> Spiritually, you're learning that abundance is a flow, that power is for service, and that material success and spiritual growth aren't opposites.<br>This year teaches you sacred success.</p><p><em> Power Timing:</em>
 • <strong>Peak Months:</strong> Jan, May, Aug
 • <strong>Daily Power Time:</strong> Morning (8am-12pm) - Achievement energy peaks
 • <strong>Seasonal Pattern:</strong> Spring and Summer bring harvest</p><p><em>Guidance:</em> Step into your power.<br>Lead.<br>Build.<br>Achieve.<br>But remember that true abundance includes all areas of life—not just money.<br>Use your power wisely and generously.</p><p><em>Affirmation:</em> "I claim my power and create abundant success.<br>My achievements serve the highest good."</p><p></p>
@@ -8505,7 +8544,7 @@ This isn't a contradiction but a unique gift.<br>They can bring visionary ideas 
                         <span class="card-icon"></span>
                         <div class="reading-card-info">
                             <h3>North Node - Soul's Direction</h3>
-                            <span class="result-value">♌ Leo</span>
+                            <span class="result-value"> Leo</span>
                         </div>
                     </div>
                     <div class="reading-card-right">
@@ -8540,7 +8579,7 @@ This isn't a contradiction but a unique gift.<br>They can bring visionary ideas 
                         <span class="card-icon"></span>
                         <div class="reading-card-info">
                             <h3>South Node - Past Life Gifts</h3>
-                            <span class="result-value">♒ Aquarius</span>
+                            <span class="result-value"> Aquarius</span>
                         </div>
                     </div>
                     <div class="reading-card-right">
@@ -11266,7 +11305,7 @@ Wayne Michael carries Earth at your core (Sun) and Earth in your emotionally awa
                         </div>
                     </div>
                 </div>
-            </div></div></div><div class="batch-copy-section"><button class="batch-copy-btn master" onclick="copyAllReadings()">📋 Copy Complete Blueprint</button></div></div>
+            </div></div></div><div class="batch-copy-section"><button class="batch-copy-btn master" onclick="copyAllReadings()"> Copy Complete Blueprint</button></div></div>
             
             <!-- Completion Celebration -->
             
@@ -11282,13 +11321,13 @@ Wayne Michael carries Earth at your core (Sun) and Earth in your emotionally awa
             
             <!-- Cross-Product Bridge -->
             <div style="margin:30px 0;padding:24px;background:linear-gradient(135deg,rgba(102,126,234,0.04),rgba(118,75,162,0.04));border-radius:16px;border:1px solid rgba(102,126,234,0.1);text-align:center;">
-                <p style="font-size:1rem;margin-bottom:6px;"><strong>🌌 Explore More from Quantum Merlin</strong></p>
+                <p style="font-size:1rem;margin-bottom:6px;"><strong> Explore More from Quantum Merlin</strong></p>
                 <p style="font-size:0.88rem;color:#636e72;margin-bottom:16px;">Your cosmic journey doesn't end here — discover more free tools:</p>
                 <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
-                    <a href="https://quantummerlin.com/chinesezodiac/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'chinese_zodiac'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">🐉 Chinese Zodiac</a>
-                    <a href="https://quantummerlin.com/tarot/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'tarot'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">🃏 Tarot Reading</a>
-                    <a href="https://quantummerlin.com/crystals/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'crystals'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">💎 Crystal Guide</a>
-                    <a href="https://quantummerlin.com/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'hub'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;">🔮 All Tools</a>
+                    <a href="https://quantummerlin.com/chinesezodiac/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'chinese_zodiac'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;"> Chinese Zodiac</a>
+                    <a href="https://quantummerlin.com/tarot/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'tarot'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;"> Tarot Reading</a>
+                    <a href="https://quantummerlin.com/crystals/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'crystals'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;"> Crystal Guide</a>
+                    <a href="https://quantummerlin.com/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'hub'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;"> All Tools</a>
                 </div>
             </div>
             
@@ -11314,8 +11353,8 @@ Wayne Michael carries Earth at your core (Sun) and Earth in your emotionally awa
 
             <!-- Footer -->
             <footer class="results-footer">
-                <p class="generated-by" id="generatedBy">Created with love by A Moment in Time</p>
-                <p class="timestamp" id="timestamp">Generated on February 24, 2026 at 08:51 AM</p>
+                <p class="generated-by" id="generatedBy">Crafted by Quantum Merlin</p>
+                <p class="timestamp" id="timestamp">Generated on February 28, 2026 at 10:25 PM</p>
                 <div class="footer-actions">
                     
                     
@@ -11373,17 +11412,44 @@ Wayne Michael carries Earth at your core (Sun) and Earth in your emotionally awa
     
 
     <!-- Cookie Consent Banner -->
-    <div id="cookieConsent" style="display: block; position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 99999; background: rgb(26, 10, 46); color: rgb(224, 214, 240); padding: 14px 20px; font-size: 0.88rem; line-height: 1.5; box-shadow: rgba(0, 0, 0, 0.3) 0px -4px 20px; font-family: Inter, &quot;Segoe UI&quot;, sans-serif;">
-        <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;">
-            <p style="margin:0;flex:1;min-width:250px;">We use cookies for analytics (Google Analytics) and advertising (Google AdSense). Your reading data stays on your device. <a href="https://quantummerlin.com/soulblueprint/privacy.html" style="color:#D8B5FF;text-decoration:underline;">Privacy Policy</a></p>
-            <div style="display:flex;gap:10px;flex-shrink:0;">
-                <button onclick="acceptCookies()" style="padding:8px 22px;border-radius:20px;border:none;background:linear-gradient(135deg,#D8B5FF,#B19CD9);color:#1a0a2e;font-weight:600;cursor:pointer;font-size:0.88rem;">Accept</button>
-                <button onclick="declineCookies()" style="padding:8px 22px;border-radius:20px;border:1px solid rgba(216,181,255,0.4);background:transparent;color:#D8B5FF;font-weight:600;cursor:pointer;font-size:0.88rem;">Decline</button>
-            </div>
-        </div>
-    </div>
+    
     
 
+
+<div class="pw-gate" id="passwordGate">
+  <div class="pw-card">
+    <h2>Your Reading Awaits</h2>
+    <div class="pw-name">Wayne Michael</div>
+    <p class="pw-subtitle">Enter the password from your order confirmation to unlock your personalised reading.</p>
+    <div class="pw-input-wrap">
+      <input type="text" class="pw-input" id="pwInput" maxlength="8" placeholder="Enter password" autocomplete="off" autocapitalize="characters" spellcheck="false">
+      <button class="pw-submit" onclick="checkPassword()">Unlock</button>
+    </div>
+    <div class="pw-error" id="pwError"></div>
+    <div class="pw-hint">Password is case-insensitive</div>
+  </div>
+</div>
+
+<div class="welcome-overlay" id="welcomeOverlay">
+  <div class="welcome-card">
+    <div class="welcome-label">Thank You For Your Order</div>
+    <div class="welcome-title">Your Soul Blueprint Is Ready</div>
+    <div class="welcome-name">Wayne Michael</div>
+    <p class="welcome-text">Your unique Soul Blueprint has been personally created from your exact birth data. Inside you'll find 135+ personalised readings across astrology, numerology, Chinese zodiac, and more — all calculated to the minute you were born. Plus 70+ AI guide books and a prompt generator to explore your reading further.</p>
+    <div class="welcome-features">
+      <div class="welcome-feature"><span>135+ personalised readings</span></div>
+      <div class="welcome-feature"><span>70+ AI guide books</span></div>
+      <div class="welcome-feature"><span>Western &amp; Chinese astrology</span></div>
+      <div class="welcome-feature"><span>Numerology deep dive</span></div>
+      <div class="welcome-feature"><span>Love &amp; career insights</span></div>
+      <div class="welcome-feature"><span>AI prompt generator</span></div>
+    </div>
+    <div class="welcome-divider"></div>
+    <button class="welcome-btn" onclick="dismissWelcome()">Begin Exploring →</button>
+    <div class="welcome-note">Your reading is permanent — bookmark this page to return anytime</div>
+    <div class="welcome-brand"><div class="welcome-brand-name">A Moment in Time · by Quantum Merlin</div></div>
+  </div>
+</div>
 
 <div class="form-overlay" id="formOverlay" onclick="if(event.target===this)hideForm()">
   <div class="form-modal">
@@ -11409,7 +11475,7 @@ Wayne Michael carries Earth at your core (Sun) and Earth in your emotionally awa
         <span class="upgrade-badge">50% OFF</span>
         <h3>Single Reading</h3>
         <div class="price"><span class="original">$19.99</span> $9.99</div>
-        <p class="price-note">Special introductory price</p>
+        <p class="price-note">Introductory offer</p>
         <ul class="features">
           <li>135+ personalised reading cards</li>
           <li>17 cosmic sections analysed</li>
@@ -11418,8 +11484,32 @@ Wayne Michael carries Earth at your core (Sun) and Earth in your emotionally awa
         </ul>
       </a>
       <a class="upgrade-option" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
+        <span class="upgrade-badge">50% OFF</span>
+        <h3>2 Readings</h3>
+        <div class="price"><span class="original">$35.99</span> $17.99</div>
+        <p class="price-note">Introductory offer &middot; save even more</p>
+        <ul class="features">
+          <li>2 full personalised readings</li>
+          <li>All 135+ cards &amp; 17 sections each</li>
+          <li>Perfect for you &amp; a loved one</li>
+          <li>Permanent links to revisit anytime</li>
+        </ul>
+      </a>
+      <a class="upgrade-option featured" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
+        <span class="upgrade-badge">BEST VALUE</span>
+        <h3>3 Readings</h3>
+        <div class="price"><span class="original">$99.98</span> $49.99</div>
+        <p class="price-note">50% off &middot; family &amp; friends</p>
+        <ul class="features">
+          <li>3 full personalised readings</li>
+          <li>All 135+ cards &amp; 17 sections each</li>
+          <li>Perfect for family or friends</li>
+          <li>Permanent links to revisit anytime</li>
+        </ul>
+      </a>
+      <a class="upgrade-option" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
         <h3>Unlimited Readings</h3>
-        <div class="price">$77</div>
+        <div class="price">$99.99</div>
         <p class="price-note">One-time payment &middot; lifetime access</p>
         <ul class="features">
           <li>Generate unlimited readings forever</li>
@@ -11433,6 +11523,75 @@ Wayne Michael carries Earth at your core (Sun) and Earth in your emotionally awa
   </div>
 </div>
 <script>
+// Password gate
+(function(){
+  var pwKey='sb-pw-wayne-michael-sk27';
+  var pw='FYUUNG';
+  var unlocked=false;
+  try{unlocked=localStorage.getItem(pwKey)==='1'}catch(e){}
+  if(unlocked){
+    var g=document.getElementById('passwordGate');
+    if(g)g.classList.add('hidden');
+  }else{
+    document.body.style.overflow='hidden';
+    // Hide everything behind the gate
+    var results=document.getElementById('resultsSection');
+    if(results)results.style.visibility='hidden';
+    var wo=document.getElementById('welcomeOverlay');
+    if(wo)wo.style.display='none';
+  }
+  window.checkPassword=function(){
+    var input=document.getElementById('pwInput').value.trim().toUpperCase();
+    if(input===pw.toUpperCase()){
+      try{localStorage.setItem(pwKey,'1')}catch(e){}
+      var g=document.getElementById('passwordGate');
+      if(g)g.classList.add('hidden');
+      // Show content
+      var results=document.getElementById('resultsSection');
+      if(results)results.style.visibility='';
+      // Show welcome overlay if not seen
+      var wKey='sb-welcome-wayne-michael-sk27';
+      var wSeen=false;
+      try{wSeen=localStorage.getItem(wKey)==='1'}catch(e){}
+      if(!wSeen){
+        var wo=document.getElementById('welcomeOverlay');
+        if(wo)wo.style.display='';
+        document.body.style.overflow='hidden';
+      }else{
+        document.body.style.overflow='';
+      }
+    }else{
+      document.getElementById('pwError').textContent='Incorrect password. Please try again.';
+      document.getElementById('pwInput').value='';
+      document.getElementById('pwInput').focus();
+    }
+  };
+  // Enter key to submit
+  var inp=document.getElementById('pwInput');
+  if(inp)inp.addEventListener('keydown',function(e){if(e.key==='Enter')window.checkPassword()});
+})();
+
+// Welcome overlay — show on first visit only
+(function(){
+  var key='sb-welcome-wayne-michael-sk27';
+  var seen=false;
+  try{seen=localStorage.getItem(key)==='1'}catch(e){}
+  if(seen){
+    var wo=document.getElementById('welcomeOverlay');
+    if(wo)wo.style.display='none';
+  }else{
+    document.body.style.overflow='hidden';
+  }
+})();
+function dismissWelcome(){
+  var wo=document.getElementById('welcomeOverlay');
+  if(!wo)return;
+  wo.classList.add('hiding');
+  document.body.style.overflow='';
+  try{localStorage.setItem('sb-welcome-wayne-michael-sk27','1')}catch(e){}
+  setTimeout(function(){wo.style.display='none'},600);
+}
+
 var readCardIds=[];
 try{readCardIds=JSON.parse(localStorage.getItem("sb-read-sections")||"[]")}catch(e){}
 
@@ -11456,8 +11615,8 @@ function markCardAsRead(event,cardId){
     readCardIds=readCardIds.filter(function(id){return id!==cardId});
   }else{
     card.classList.add("is-read");
-    if(badge){badge.classList.add("is-read");badge.textContent="\u2713"}
-    if(btn){btn.classList.add("is-read");btn.textContent="\u2713 Read"}
+    if(badge){badge.classList.add("is-read");badge.textContent="Done"}
+    if(btn){btn.classList.add("is-read");btn.textContent="Read"}
     if(readCardIds.indexOf(cardId)===-1)readCardIds.push(cardId);
     // Auto-collapse and scroll
     card.classList.remove("expanded");
@@ -11523,8 +11682,4 @@ document.addEventListener("DOMContentLoaded",function(){updateProgress()});
 // Disable service worker
 if("serviceWorker" in navigator){navigator.serviceWorker.getRegistrations().then(function(r){r.forEach(function(reg){reg.unregister()})})}
 </script>
-
-<script src="/shared/js/quantum-explore.js" defer></script>
-
-<script src="/shared/js/quantum-email-capture.js" defer></script>
 </body></html>

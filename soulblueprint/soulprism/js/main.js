@@ -7,7 +7,7 @@ function copyToClipboard(text, buttonElement) {
     navigator.clipboard.writeText(text).then(() => {
         if (buttonElement) {
             const original = buttonElement.innerText;
-            buttonElement.innerText = '✓ Copied!';
+            buttonElement.innerText = ' Copied!';
             buttonElement.classList.add('copied');
             setTimeout(() => {
                 buttonElement.innerText = original;
@@ -27,7 +27,7 @@ function copyToClipboard(text, buttonElement) {
         document.body.removeChild(textarea);
         if (buttonElement) {
             const original = buttonElement.innerText;
-            buttonElement.innerText = '✓ Copied!';
+            buttonElement.innerText = ' Copied!';
             buttonElement.classList.add('copied');
             setTimeout(() => {
                 buttonElement.innerText = original;
@@ -112,14 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+            this.textContent = navMenu.classList.contains('active') ? '' : '';
         });
 
         // Close menu when clicking a link
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
-                mobileToggle.textContent = '☰';
+                mobileToggle.textContent = '';
             });
         });
     }

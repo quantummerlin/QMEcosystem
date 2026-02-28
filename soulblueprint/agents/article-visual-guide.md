@@ -92,7 +92,7 @@ A single glowing lightbulb floating against a soft gradient background (white to
 Split composition. Left third: electric blue accent stripe with the Soul Blueprint logo mark. Right two-thirds: white background with bold title "What Is AI? A Simple Guide" in dark navy Playfair Display. Below in Inter: "No jargon. No hype. Just clarity." Small "Soul Blueprint · Quantum Merlin" footer. Clean, minimal, trustworthy.
 
 **Pinterest Pin:**
-Tall vertical pin with a soft blue-to-white gradient background. At top: the glowing lightbulb with neural network motif (smaller version of hero). Below in large bold text: "What Is AI? The Simplest Explanation You'll Ever Read." Five bullet takeaways in blue-accented cards: "✓ What AI actually does", "✓ How it generates text", "✓ Why it matters for you", "✓ No tech background needed", "✓ 5-minute read." Bottom: Soul Blueprint branding bar.
+Tall vertical pin with a soft blue-to-white gradient background. At top: the glowing lightbulb with neural network motif (smaller version of hero). Below in large bold text: "What Is AI? The Simplest Explanation You'll Ever Read." Five bullet takeaways in blue-accented cards: " What AI actually does", " How it generates text", " Why it matters for you", " No tech background needed", " 5-minute read." Bottom: Soul Blueprint branding bar.
 
 **In-Article Screenshots:**
 1. A side-by-side comparison showing a simple prompt ("Tell me about Aries traits") and the AI output, highlighting how AI generates coherent text from a prompt
@@ -169,7 +169,7 @@ A crisp, minimal illustration: a speech bubble with a red "X" overlaying a vague
 White background with a bold, slightly playful composition. Title: "7 AI Mistakes You're Probably Making" in dark navy — the word "Mistakes" in the electric blue accent. Subtitle: "And exactly how to fix each one." A small "oops" emoji-style element in the corner for personality. Branding footer.
 
 **Pinterest Pin:**
-Light background with alternating white and soft blue-gray cards. Title: "Stop Making These AI Mistakes." Below: 7 numbered cards, each with a mistake and its fix in two-column format: "❌ Mistake: One-word prompts → ✅ Fix: Add context and specifics." Visually scannable at a glance. Bottom: branding.
+Light background with alternating white and soft blue-gray cards. Title: "Stop Making These AI Mistakes." Below: 7 numbered cards, each with a mistake and its fix in two-column format: " Mistake: One-word prompts →  Fix: Add context and specifics." Visually scannable at a glance. Bottom: branding.
 
 **In-Article Screenshots:**
 1. A real example of a vague prompt producing a generic, useless response
@@ -229,7 +229,7 @@ A digital notebook floating open, pages glowing softly. From the pages, luminous
 Dark background with a glowing notebook icon at center. Title: "NotebookLM: The AI That Reads Your Documents" in white Playfair Display. Subtitle in lighter text: "Upload your Soul Blueprint readings and let it find the patterns." Branding bottom-left.
 
 **Pinterest Pin:**
-Title: "NotebookLM Guide." Use case cards stacked vertically: "📚 Upload your reading HTML → 🔍 Ask questions about your patterns → 🎙️ Generate an AI podcast about your chart → 💡 Discover connections you missed." Each card with a small icon and one-line description. Pale blue-gray background. Branding bar.
+Title: "NotebookLM Guide." Use case cards stacked vertically: " Upload your reading HTML →  Ask questions about your patterns →  Generate an AI podcast about your chart →  Discover connections you missed." Each card with a small icon and one-line description. Pale blue-gray background. Branding bar.
 
 **In-Article Screenshots:**
 1. NotebookLM source upload screen — showing a Soul Blueprint reading HTML file being added
@@ -249,7 +249,7 @@ An open dictionary or glossary page where the definitions glow with soft blue li
 White background with a clean grid of 9 AI term tiles (3×3), each containing one term in bold with a tiny icon. Title above the grid: "AI Glossary: Every Term You Need to Know." Subtitle: "Plain English. No jargon. Bookmark-worthy." Electric blue accent border. Branding.
 
 **Pinterest Pin:**
-Title: "AI Glossary: 25+ Terms Explained Simply." Below: a long vertical list with alternating white and soft blue rows, each showing a term and its one-line definition. Example: "🔤 Token — A piece of a word that AI reads," "🎯 Prompt — The instruction you give AI." Scannable at a glance. Branding bar at bottom.
+Title: "AI Glossary: 25+ Terms Explained Simply." Below: a long vertical list with alternating white and soft blue rows, each showing a term and its one-line definition. Example: " Token — A piece of a word that AI reads," " Prompt — The instruction you give AI." Scannable at a glance. Branding bar at bottom.
 
 **In-Article Screenshots:**
 1. A visual diagram showing how a sentence gets broken into tokens (each word/fragment highlighted in a different color)
@@ -296,7 +296,7 @@ A silhouette of a person sitting cross-legged, seen from behind, facing a massiv
 Lavender gradient background. Title in white Playfair Display: "How to Use AI for Self-Discovery." Subtitle: "Turn your birth data into deep personal insight." A small constellation motif in the top-right corner. Branding bottom-left.
 
 **Pinterest Pin:**
-Title: "Use AI to Discover Who You Really Are." Below: 5 lavender-accented cards with discovery areas: "🪞 Personality patterns", "💫 Hidden strengths", "🌙 Emotional blueprint", "🔢 Numerology insights", "🌟 Life path direction." Bottom: "Start with your Soul Blueprint reading →" + branding.
+Title: "Use AI to Discover Who You Really Are." Below: 5 lavender-accented cards with discovery areas: " Personality patterns", " Hidden strengths", " Emotional blueprint", " Numerology insights", " Life path direction." Bottom: "Start with your Soul Blueprint reading →" + branding.
 
 **In-Article Screenshots:**
 1. A Soul Blueprint reading snippet showing personality insights — with annotations saying "This is what AI found from your birth data"
@@ -392,7 +392,7 @@ Two doors side by side in a dimly lit hallway. The left door is labelled "Tradit
 White background split down the middle. Left: "MBTI / Enneagram / Big 5" in muted gray. Right: "Soul Blueprint" in lavender with a subtle glow. Versus symbol in the center. Title: "AI Readings vs Personality Tests: Which Goes Deeper?" Branding.
 
 **Pinterest Pin:**
-Title: "Personality Tests vs AI Readings." Comparison table format with rows: "Depth ★★☆ vs ★★★★★", "Personalisation ★★☆ vs ★★★★★", "Actionability ★★★ vs ★★★★", "Accessibility ★★★★ vs ★★★★★", "Covers numerology ✗ vs ✓". Clean, data-driven comparison that makes the value obvious at a glance. Branding.
+Title: "Personality Tests vs AI Readings." Comparison table format with rows: "Depth  vs ", "Personalisation  vs ", "Actionability  vs ", "Accessibility  vs ", "Covers numerology  vs ". Clean, data-driven comparison that makes the value obvious at a glance. Branding.
 
 **In-Article Screenshots:**
 1. A standard MBTI results page (4 letters + generic description)
@@ -1296,7 +1296,7 @@ Title: "Ultimate Personality Systems Comparison." Below: a comparison matrix —
 **Slug:** `ai-relationship-insights`
 
 **Hero Image:**
-Two Soul Blueprint reading cards floating side by side, with golden threads connecting matching and opposing placements. Where threads connect harmoniously, they glow gold; where they reveal tension, they glow amber. Between the two cards, an insight panel shows "Compatibility: Communication ★★★★★, Values ★★★★, Challenge Zones ★★★." Analytical, revealing, fascinating.
+Two Soul Blueprint reading cards floating side by side, with golden threads connecting matching and opposing placements. Where threads connect harmoniously, they glow gold; where they reveal tension, they glow amber. Between the two cards, an insight panel shows "Compatibility: Communication , Values , Challenge Zones ." Analytical, revealing, fascinating.
 
 **OG/Social Card:**
 Dark background with two overlapping chart circles (synastry style) in gold. Title: "AI Relationship Insights From Two Readings" in gold. Subtitle: "Where you connect, where you clash, and how to navigate both." Branding.
@@ -1414,7 +1414,7 @@ A flat-lay product showcase: a mug with a zodiac design, a t-shirt with "Life Pa
 White background with 4 product mockups in a row (mug, shirt, poster, phone case). Title: "Print-on-Demand Products From Your Reading" in dark navy. Subtitle: "Redbubble, Zazzle, and Printful — AI designs them all." Branding.
 
 **Pinterest Pin:**
-Title: "Reading → Products Guide." Below: product ideas stacked vertically — "☕ Zodiac Mug (Sun sign)," "👕 Life Path T-Shirt (numerology)," "📱 Element Phone Case (chart balance)," "🎒 Constellation Tote (rising sign)," "🖼️ Birth Chart Art Print." Each with a platform recommendation. Bottom: "Full Redbubble/Zazzle tutorial →." Branding.
+Title: "Reading → Products Guide." Below: product ideas stacked vertically — " Zodiac Mug (Sun sign)," " Life Path T-Shirt (numerology)," " Element Phone Case (chart balance)," " Constellation Tote (rising sign)," " Birth Chart Art Print." Each with a platform recommendation. Bottom: "Full Redbubble/Zazzle tutorial →." Branding.
 
 **In-Article Screenshots:**
 1. The AI prompt generating design concepts for different product types from a reading
@@ -1498,7 +1498,7 @@ A circular arrangement of 12 gift icons, each representing a zodiac sign — eac
 Festive white background with 12 zodiac icons in a circle, each paired with a small gift emoji. Title: "Zodiac Gift Guide: Perfect Gifts by Sign" in dark navy. Subtitle: "What to buy for every sign in your life." Branding.
 
 **Pinterest Pin:**
-Title: "Gift Guide by Zodiac Sign." Below: 12 mini-cards (4 rows of 3), each showing sign + top gift idea — "♈ Aries: Adrenaline experience," "♉ Taurus: Luxury self-care set," "♊ Gemini: Curated book box." Ultra-pinnable reference format. Bottom: "Full guide + AI prompt →." Branding.
+Title: "Gift Guide by Zodiac Sign." Below: 12 mini-cards (4 rows of 3), each showing sign + top gift idea — " Aries: Adrenaline experience," " Taurus: Luxury self-care set," " Gemini: Curated book box." Ultra-pinnable reference format. Bottom: "Full guide + AI prompt →." Branding.
 
 **In-Article Screenshots:**
 1. The AI prompt generating personalised gift suggestions for each zodiac sign
@@ -1539,7 +1539,7 @@ Four quadrants representing the four seasons — Spring (pastel florals + Aries/
 Four-square seasonal layout (tiny icons for each season). Title: "Seasonal Reading Gift Ideas" in dark navy. Subtitle: "The perfect cosmic gift for every time of year." Pink gradient border. Branding.
 
 **Pinterest Pin:**
-Title: "Seasonal Gift Guide: Soul Blueprint Gifts." Below: 4 seasonal sections — "🌸 Spring: New beginnings poster + affirmation set," "☀️ Summer: Bold zodiac art + festival compatibility cards," "🍂 Autumn: Shadow work journal + meditation audio," "❄️ Winter: Full cosmic gift box + year-ahead reading." Each season in its color palette. Bottom: "See all gift ideas →." Branding.
+Title: "Seasonal Gift Guide: Soul Blueprint Gifts." Below: 4 seasonal sections — " Spring: New beginnings poster + affirmation set," " Summer: Bold zodiac art + festival compatibility cards," " Autumn: Shadow work journal + meditation audio," " Winter: Full cosmic gift box + year-ahead reading." Each season in its color palette. Bottom: "See all gift ideas →." Branding.
 
 **In-Article Screenshots:**
 1. The AI prompt generating seasonal gift ideas matched to zodiac energy

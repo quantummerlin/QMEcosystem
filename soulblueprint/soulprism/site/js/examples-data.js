@@ -110,7 +110,7 @@ Profile: An expansive shape with peaks in Confidence and Creative Expression. Th
 
          SUN (Leo)
         /    |    \\
-  □ MOON   △ VENUS   ✶ JUPITER
+  □ MOON   △ VENUS    JUPITER
   (Scorpio) (Leo)
      |         \\
   △ MARS      * MERCURY
@@ -121,7 +121,7 @@ Profile: An expansive shape with peaks in Confidence and Creative Expression. Th
 Key:
 □ = Square (tension/growth)
 △ = Trine (harmony)
-✶ = Sextile (opportunity)
+ = Sextile (opportunity)
 * = Conjunction
 
 Strongest Connection: Sun □ Moon — the core tension between outward confidence and inner emotional intensity.
@@ -168,8 +168,8 @@ RECOMMENDATION: Root chakra needs grounding work. Solar plexus is your powerhous
 ║      Born August 15, 1990            ║
 ╠═══════════════════════════════════════╣
 ║                                       ║
-║  ☀ SUN: Leo — Creative Leader        ║
-║  ☽ MOON: Scorpio — Deep Feeler       ║
+║   SUN: Leo — Creative Leader        ║
+║   MOON: Scorpio — Deep Feeler       ║
 ║  ↑ RISING: Sagittarius — Explorer    ║
 ║  # LIFE PATH: 7 — Spiritual Seeker   ║
 ║  → NORTH NODE: Aries — Pioneer       ║

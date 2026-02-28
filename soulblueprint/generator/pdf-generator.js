@@ -27,7 +27,7 @@ class PDFGenerator {
    * Generate PDF from HTML string
    */
   async generateFromHTML(html, outputPath) {
-    console.log('📄 Generating PDF...');
+    console.log(' Generating PDF...');
     
     const browser = await puppeteer.launch({
       headless: 'new',
@@ -52,7 +52,7 @@ class PDFGenerator {
       await browser.close();
       
       const sizeKB = Math.round(pdf.length / 1024);
-      console.log(`✅ PDF generated: ${outputPath} (${sizeKB} KB)`);
+      console.log(` PDF generated: ${outputPath} (${sizeKB} KB)`);
       
       return outputPath;
     } catch (error) {

@@ -151,7 +151,7 @@ a:hover { text-decoration: underline; }
 }
 
 .checklist li::before {
-    content: "✓";
+    content: "\2022";
     position: absolute;
     left: 0;
     color: var(--pb-success);

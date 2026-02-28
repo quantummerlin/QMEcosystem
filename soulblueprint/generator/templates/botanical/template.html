@@ -77,10 +77,10 @@ h3 { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 8pt; color: v
 .sc-col h5 { font-size: 7.5pt; color: var(--sage); margin-bottom: 0.5mm; }
 .sc-col ul { list-style: none; padding: 0; }
 .sc-col li { font-size: 7.5pt; color: var(--text-light); line-height: 1.4; padding: 0.3mm 0; }
-.sc-col li::before { content: "🌿 "; font-size: 6pt; }
+.sc-col li::before { content: " "; font-size: 6pt; }
 
 .heart-divider { text-align: center; margin: 3mm 0; }
-.heart-divider::before { content: "· 🌿 ·"; color: var(--sage-light); font-size: 8pt; letter-spacing: 0.2em; }
+.heart-divider::before { content: "·  ·"; color: var(--sage-light); font-size: 8pt; letter-spacing: 0.2em; }
 
 .closing { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; }
 .closing-ornament { color: var(--sage-light); font-size: 14pt; margin-bottom: 6mm; }
@@ -104,14 +104,14 @@ h3 { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 8pt; color: v
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()">🌿 Print / Save PDF</button></div>
-<div class="page cover"><div class="botanical-ornament">🌿</div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="botanical-ornament">🌿</div><div class="cover-brand">{{brand}}</div></div>
+<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()"> Print / Save PDF</button></div>
+<div class="page cover"><div class="botanical-ornament"></div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="botanical-ornament"></div><div class="cover-brand">{{brand}}</div></div>
 <div class="page half-title"><h1>{{title}}</h1><div class="ht-name">{{halfTitleName}}</div></div>
 <div class="page epigraph"><blockquote>{{epigraphQuote}}</blockquote><div class="attr">{{epigraphAttr}}</div><div class="dedication">{{dedication}}</div></div>
 <div class="page"><div class="leaf-pattern"></div><h2 class="snapshot-title">Cosmic Snapshot</h2><div class="snap-divider"></div>{{snapshot}}</div>
 <div class="page"><div class="leaf-pattern"></div><h2 class="toc-title">Contents</h2><div class="snap-divider"></div>{{toc}}</div>
 {{chapters}}
-<div class="page closing"><div class="closing-ornament">🌿</div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
+<div class="page closing"><div class="closing-ornament"></div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
 <div class="page colophon"><div class="colophon-brand">{{colophonBrand}}</div><div class="colophon-text">{{colophonText}}</div><div class="colophon-url">{{colophonURL}}</div></div>
 </body>
 </html>

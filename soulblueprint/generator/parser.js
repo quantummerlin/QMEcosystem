@@ -279,19 +279,19 @@ if (require.main === module) {
   const inputPath = process.argv[2] || path.join(__dirname, '..', 'Doyne-Jason-A-Moment-in-Time-Book.html');
   const outputPath = process.argv[3] || path.join(__dirname, 'output', 'parsed-data.json');
 
-  console.log(`📖 Parsing: ${inputPath}`);
+  console.log(` Parsing: ${inputPath}`);
   const data = parseBookHTML(inputPath);
   
   // Ensure output directory exists
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
   
-  console.log(`✅ Parsed successfully!`);
+  console.log(` Parsed successfully!`);
   console.log(`   Name: ${data.meta.name}`);
   console.log(`   Chapters: ${data.chapters.length}`);
   console.log(`   Total readings: ${data.chapters.reduce((sum, ch) => sum + ch.readings.length, 0)}`);
   console.log(`   Snapshot categories: ${data.snapshot.categories.length}`);
-  console.log(`📄 Output: ${outputPath}`);
+  console.log(` Output: ${outputPath}`);
 }
 
 module.exports = { parseBookHTML };

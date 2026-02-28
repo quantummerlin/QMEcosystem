@@ -20,7 +20,7 @@ const selectedBrand = process.argv[2];
 
 if (!selectedBrand || !brands[selectedBrand]) {
     console.log('');
-    console.log('🎨 ULTIMATE READING SYSTEM - REBRAND TOOL');
+    console.log(' ULTIMATE READING SYSTEM - REBRAND TOOL');
     console.log('=========================================');
     console.log('');
     console.log('Usage: node rebrand.js [brand]');
@@ -43,7 +43,7 @@ try {
     fs.writeFileSync(targetFile, content);
     
     console.log('');
-    console.log('✅ REBRAND SUCCESSFUL!');
+    console.log(' REBRAND SUCCESSFUL!');
     console.log('======================');
     console.log(`Brand: ${selectedBrand.toUpperCase()}`);
     console.log(`Config: ${brands[selectedBrand]} → config.js`);
@@ -51,6 +51,6 @@ try {
     console.log('Open index.html in your browser to see the changes.');
     console.log('');
 } catch (error) {
-    console.error('❌ Error:', error.message);
+    console.error(' Error:', error.message);
     process.exit(1);
 }

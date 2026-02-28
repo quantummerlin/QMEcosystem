@@ -17,7 +17,7 @@ body { font-family: 'Spectral', serif; font-size: 9.5pt; line-height: 1.7; color
 :root { --enchant: #5a3a8a; --enchant-light: #8a6ab8; --fairy-pink: #d4689a; --fairy-gold: #c8a040; --fairy-blue: #5a8ab8; --stardust: #e8d8f0; --moonlight: #f0e8ff; --text: #2a2848; --text-light: #5a5078; --cream: #fdf8ff; --border: rgba(90,58,138,0.15); }
 
 .sparkle { position: absolute; pointer-events: none; }
-.sparkle::before { content: "✦"; position: absolute; color: var(--fairy-gold); opacity: 0.15; font-size: 6pt; }
+.sparkle::before { content: ""; position: absolute; color: var(--fairy-gold); opacity: 0.15; font-size: 6pt; }
 .sparkle-1 { top: 15mm; right: 20mm; } .sparkle-1::before { font-size: 8pt; }
 .sparkle-2 { top: 40mm; left: 15mm; } .sparkle-2::before { font-size: 5pt; opacity: 0.1; }
 .sparkle-3 { bottom: 30mm; right: 25mm; } .sparkle-3::before { font-size: 7pt; opacity: 0.12; }
@@ -81,10 +81,10 @@ h2 { font-family: 'Alegreya SC', serif; font-weight: 400; font-size: 14pt; color
 .sc-col h5 { font-size: 7.5pt; color: var(--fairy-gold); margin-bottom: 0.5mm; }
 .sc-col ul { list-style: none; padding: 0; }
 .sc-col li { font-size: 7.5pt; color: var(--text-light); line-height: 1.4; padding: 0.3mm 0; }
-.sc-col li::before { content: "✦ "; color: var(--fairy-gold); font-size: 5pt; }
+.sc-col li::before { content: " "; color: var(--fairy-gold); font-size: 5pt; }
 
 .heart-divider { text-align: center; margin: 3mm 0; }
-.heart-divider::before { content: "· ✦ · ✦ ·"; color: var(--fairy-gold); font-size: 7pt; letter-spacing: 0.2em; opacity: 0.4; }
+.heart-divider::before { content: "·  ·  ·"; color: var(--fairy-gold); font-size: 7pt; letter-spacing: 0.2em; opacity: 0.4; }
 
 .closing { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; }
 .closing-ornament { color: var(--fairy-gold); font-size: 10pt; letter-spacing: 0.3em; margin-bottom: 6mm; opacity: 0.5; }
@@ -108,14 +108,14 @@ h2 { font-family: 'Alegreya SC', serif; font-weight: 400; font-size: 14pt; color
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
-<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()">✦ Print / Save PDF</button></div>
-<div class="page cover"><div class="fairy-ornament">✦</div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="fairy-ornament">✦</div><div class="cover-brand">{{brand}}</div></div>
+<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()"> Print / Save PDF</button></div>
+<div class="page cover"><div class="fairy-ornament"></div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="fairy-ornament"></div><div class="cover-brand">{{brand}}</div></div>
 <div class="page half-title"><div class="sparkle sparkle-1"></div><div class="sparkle sparkle-2"></div><h1>{{title}}</h1><div class="ht-name">{{halfTitleName}}</div></div>
 <div class="page epigraph"><div class="sparkle sparkle-1"></div><div class="sparkle sparkle-3"></div><blockquote>{{epigraphQuote}}</blockquote><div class="attr">{{epigraphAttr}}</div><div class="dedication">{{dedication}}</div></div>
 <div class="page"><div class="sparkle sparkle-1"></div><div class="sparkle sparkle-2"></div><h2 class="snapshot-title">Cosmic Snapshot</h2><div class="snap-divider"></div>{{snapshot}}</div>
 <div class="page"><div class="sparkle sparkle-3"></div><h2 class="toc-title">Contents</h2><div class="snap-divider"></div>{{toc}}</div>
 {{chapters}}
-<div class="page closing"><div class="sparkle sparkle-1"></div><div class="sparkle sparkle-2"></div><div class="sparkle sparkle-3"></div><div class="closing-ornament">✦ · · ✦ · · ✦</div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
+<div class="page closing"><div class="sparkle sparkle-1"></div><div class="sparkle sparkle-2"></div><div class="sparkle sparkle-3"></div><div class="closing-ornament"> · ·  · · </div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
 <div class="page colophon"><div class="colophon-brand">{{colophonBrand}}</div><div class="colophon-text">{{colophonText}}</div><div class="colophon-url">{{colophonURL}}</div></div>
 </body>
 </html>
