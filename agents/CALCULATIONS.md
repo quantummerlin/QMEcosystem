@@ -5,7 +5,7 @@
 
 ## Critical Rule: Single Source of Truth
 
-**Canonical file:** `soulblueprint/calculations.js` (1801 lines, 58 readings)
+**Canonical file:** `amomentintime/calculations.js` (1801 lines, 58 readings)
 
 All other `calculations.js` files are copies that MUST stay synchronised:
 - `stranger/calculations.js`

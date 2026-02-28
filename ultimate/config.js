@@ -9,7 +9,7 @@ const BRAND_CONFIG = {
     // ============================================
     // BRAND IDENTITY
     // ============================================
-    brandName: "Soul Blueprint",
+    brandName: "Quantum Merlin",
     tagline: "A Portrait of the Soul",
     subTagline: "65+ Personalized Readings • A Keepsake for Life",
     
@@ -37,13 +37,13 @@ const BRAND_CONFIG = {
         birthPlaceHelper: "Hospital location or city of birth"
     },
     
-    ctaButton: "✨ Create Soul Blueprint",
+    ctaButton: "✨ Create My Reading",
     loadingMessage: "Discovering the soul's story...",
     
     // Result page copy
-    resultTitle: "Soul Blueprint",
+    resultTitle: "Cosmic Reading",
     resultSubtitle: "A Portrait of",
-    generatedBy: "Created with love by Soul Blueprint",
+    generatedBy: "Created with love by Quantum Merlin",
     
     // ============================================
     // SECTION NAMES
@@ -157,8 +157,8 @@ const BRAND_CONFIG = {
     // SOCIAL SHARING
     // ============================================
     sharing: {
-        hashtags: ["SoulBlueprint", "BirthChart", "SoulReading", "GiftFromTheStars"],
-        defaultMessage: "I just discovered this beautiful soul blueprint! 🌟✨",
+        hashtags: ["BirthChart", "SoulReading", "GiftFromTheStars"],
+        defaultMessage: "I just discovered this beautiful cosmic reading! 🌟✨",
         twitterHandle: "@quantummerlin"
     },
     

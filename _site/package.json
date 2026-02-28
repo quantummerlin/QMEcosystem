@@ -1,0 +1,17 @@
+{
+  "name": "qm-ecosystem-functions",
+  "version": "1.0.0",
+  "description": "Quantum Merlin Ecosystem",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "build:static": "echo 'Static site - no build needed'"
+  }
+}

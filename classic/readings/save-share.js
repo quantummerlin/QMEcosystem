@@ -559,7 +559,7 @@ function generateGiftReading() {
         <div class="gift-footer">
             <p>"You are made of starstuff."</p>
             <p>— Carl Sagan</p>
-            <p class="brand">✨ Quantum Merlin Soul Blueprint ✨</p>
+            <p class="brand">✨ Quantum Merlin ✨</p>
             <p style="color: #666; font-size: 0.9rem; margin-top: 20px;">Generated ${today} at quantummerlin.com</p>
         </div>
     </div>

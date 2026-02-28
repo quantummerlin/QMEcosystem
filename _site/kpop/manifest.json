@@ -1,0 +1,49 @@
+{
+  "name": "K-Pop K-osmos ✨ Your Main Character Reading",
+  "short_name": "K-Pop K-osmos",
+  "description": "Discover your idol destiny! ✨ K-Pop themed numerology & astrology readings for stans 💜 Find your stan purpose and cosmic besties! No cap this app ate fr fr",
+  "start_url": "/kpop/tools_index.html",
+  "scope": "/kpop/",
+  "id": "kpop-cosmos-pwa",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#0D0015",
+  "theme_color": "#FF6B9D",
+  "orientation": "portrait-primary",
+  "dir": "ltr",
+  "lang": "en",
+  "categories": ["lifestyle", "entertainment", "utilities"],
+  "icons": [
+    {
+      "src": "kpop.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Life Path Calculator",
+      "short_name": "Life Path",
+      "description": "Discover your K-Pop destiny number ✨",
+      "url": "/kpop/life-path-calculator.html",
+      "icons": [{"src": "kpop.jpg", "sizes": "any"}]
+    },
+    {
+      "name": "Daily Fortune",
+      "short_name": "Fortune",
+      "description": "Get your daily stan guidance 💜",
+      "url": "/kpop/daily-fortune.html",
+      "icons": [{"src": "kpop.jpg", "sizes": "any"}]
+    },
+    {
+      "name": "Squad Chemistry",
+      "short_name": "Squad Vibe",
+      "description": "Check your bestie compatibility 💕",
+      "url": "/kpop/squad-chemistry-reading.html",
+      "icons": [{"src": "kpop.jpg", "sizes": "any"}]
+    }
+  ],
+  "prefer_related_applications": false,
+  "handle_links": "preferred"
+}

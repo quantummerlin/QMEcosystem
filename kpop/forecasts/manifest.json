@@ -1,0 +1,38 @@
+{
+  "name": "K-Pop Kosmic — Idol Forecast Generator",
+  "short_name": "K-Pop Forecast",
+  "description": "Free personalized daily idol forecast. K-Pop inspired numerology, astrology, tarot, moon phases & biorhythm for stans.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0D0015",
+  "theme_color": "#FF6B9D",
+  "orientation": "portrait",
+  "categories": ["lifestyle", "health", "spirituality"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a0a1a' width='100' height='100' rx='20'/><text y='.88em' x='.1em' font-size='80'>✦</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Daily Forecast",
+      "short_name": "Daily",
+      "description": "View your daily cosmic forecast",
+      "url": "./?tab=daily",
+      "icons": [{ "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>✦</text></svg>", "sizes": "any" }]
+    },
+    {
+      "name": "Weekly Forecast",
+      "short_name": "Weekly",
+      "description": "View your weekly outlook",
+      "url": "./?tab=weekly",
+      "icons": [{ "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>📅</text></svg>", "sizes": "any" }]
+    }
+  ]
+}

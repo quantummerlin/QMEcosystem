@@ -4,7 +4,7 @@
 // Generates beautiful themed HTML books from reading data.
 // 11 design templates + A4/A5 paper size support.
 // Open the downloaded HTML in Chrome → Print → Save as PDF.
-// Premium feature — included with $99.99 unlimited access via Etsy.
+// Premium feature — included with $69.99 unlimited access via Etsy.
 // ============================================================
 
 // ─── ACCESS GATE ─────────────────────────────────────────────
@@ -50,7 +50,7 @@ function showUpgradeModal() {
 
         <div style="background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);border-radius:16px;padding:18px;margin-bottom:20px;">
             <div style="font-size:0.82rem;opacity:0.6;margin-bottom:4px;">Included with Unlimited Access</div>
-            <div style="font-size:2rem;font-weight:700;color:#ffd700;margin-bottom:4px;">$99.99</div>
+            <div style="font-size:2rem;font-weight:700;color:#ffd700;margin-bottom:4px;">$69.99</div>
             <div style="font-size:0.82rem;opacity:0.6;">One-time payment · Lifetime access · Unlimited books & readings</div>
         </div>
 

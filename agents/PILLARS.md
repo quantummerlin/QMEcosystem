@@ -94,7 +94,7 @@
 
 ---
 
-## TIER 2: Soul Blueprint Family (Reading Generators)
+## TIER 2: Reading Generators
 
 ### Ultimate — `ultimate/`
 **Design System:** QME Elegant
@@ -110,10 +110,10 @@
 
 ---
 
-### Soul Blueprint — `soulblueprint/`
+### Soul Blueprint — `soulblueprint/` (SEPARATE PRODUCT)
 **Design System:** QME Elegant
 **HTML Count:** ~167 files (highest in ecosystem)
-**Identity:** The flagship branded reading generator — "Your Soul's Blueprint". Gift-worthy, shareable personalised readings.
+**Identity:** Separate branded product — not part of this ecosystem. Has its own deployment.
 
 **Core Tools:**
 - Reading generator (main product)
@@ -128,7 +128,7 @@
 - **Articles** (40+ pages) — SEO content (zodiac gift guide, YouTube shorts from reading, write manifesto with AI, viral zodiac content ideas, etc.)
 - **Hidden pro generator** at `/s/*` (noindexed)
 
-**Calculations:** `soulblueprint/calculations.js` (CANONICAL SOURCE)
+**Calculations:** `amomentintime/calculations.js` (CANONICAL SOURCE)
 
 ---
 
@@ -146,7 +146,7 @@
 - **Multi-language support:**
   - `amomentintime/esp/` — Spanish (full calculations + readings)
   - `amomentintime/pt/` — Portuguese (full calculations + readings)
-- **Generator Templates** (~70 files) — same 10 themes as Soul Blueprint
+- **Generator Templates** (~70 files) — same 10 themes as other reading generators
 - **Dual forecast engines:** `forecasts/engine.js` + `forecasts/forecast/engine.js`
 
 **Calculations:** `amomentintime/calculations.js` + `esp/calculations.js` + `pt/calculations.js`

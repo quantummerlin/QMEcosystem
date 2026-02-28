@@ -20,7 +20,7 @@ That's the thing I can't get out of my head. And honestly? It's the thing that t
 
 ## The Question That Started It
 
-When I first started building [Soul Blueprint](/soulblueprint/), I was treating each system independently. Numerology over here. Astrology over there. Chinese zodiac in its own column. They were separate modules. Separate calculations. Separate outputs.
+When I first started building [A Moment In Time](/amomentintime/), I was treating each system independently. Numerology over here. Astrology over there. Chinese zodiac in its own column. They were separate modules. Separate calculations. Separate outputs.
 
 That was the safe, sensible approach. These systems were developed by different civilisations, on different continents, across different centuries. There's no shared source code. No ancient conference where the Pythagoreans and Chinese astronomers compared notes. They *shouldn't* agree with each other.
 

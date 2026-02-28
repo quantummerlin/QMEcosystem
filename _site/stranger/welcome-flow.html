@@ -1,0 +1,423 @@
+<!-- STRANGER PATTERNS WELCOME FLOW COMPONENT -->
+<!-- Themed for the Upside Down Oracle - red/orange color scheme -->
+
+<style>
+    /* Welcome Flow Modal Styles - Stranger Patterns Theme */
+    .qm-welcome-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10, 5, 8, 0.97);
+        backdrop-filter: blur(10px);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+        padding: 20px;
+    }
+
+    .qm-welcome-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .qm-welcome-modal {
+        background: linear-gradient(135deg, rgba(139, 0, 0, 0.25), rgba(30, 20, 20, 0.9));
+        border: 1px solid rgba(255, 69, 0, 0.4);
+        border-radius: 20px;
+        max-width: 600px;
+        width: 100%;
+        padding: 40px;
+        box-shadow: 0 8px 32px rgba(139, 0, 0, 0.5), 0 0 100px rgba(255, 69, 0, 0.2);
+        transform: scale(0.9);
+        transition: transform 0.4s ease;
+        position: relative;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .qm-welcome-overlay.active .qm-welcome-modal {
+        transform: scale(1);
+    }
+
+    .qm-welcome-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .qm-welcome-title {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 2rem;
+        background: linear-gradient(135deg, #FF4500 0%, #DC143C 50%, #FF6B35 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+
+    .qm-welcome-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        display: block;
+        animation: stranger-pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes stranger-pulse {
+        0%, 100% { 
+            transform: translateY(0px); 
+            filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.5));
+        }
+        50% { 
+            transform: translateY(-10px); 
+            filter: drop-shadow(0 0 20px rgba(220, 20, 60, 0.8));
+        }
+    }
+
+    .qm-welcome-description {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.1rem;
+        color: #D4C5B0;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .qm-welcome-steps {
+        background: rgba(10, 5, 8, 0.6);
+        border: 1px solid rgba(255, 69, 0, 0.3);
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    .qm-welcome-step-title {
+        font-family: 'Cinzel', serif;
+        color: #FF4500;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .qm-welcome-step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        padding: 12px;
+        background: rgba(139, 0, 0, 0.15);
+        border-radius: 10px;
+        border-left: 3px solid #FF6B35;
+        transition: all 0.3s ease;
+    }
+
+    .qm-welcome-step:hover {
+        background: rgba(255, 69, 0, 0.15);
+        transform: translateX(5px);
+    }
+
+    .qm-welcome-step:last-child {
+        margin-bottom: 0;
+    }
+
+    .qm-welcome-step-number {
+        font-family: 'Cinzel', serif;
+        color: #FF6B35;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-right: 15px;
+        min-width: 30px;
+    }
+
+    .qm-welcome-step-text {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        color: #D4C5B0;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .qm-welcome-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .qm-welcome-button {
+        padding: 15px 35px;
+        border: none;
+        border-radius: 25px;
+        font-family: 'Cinzel', serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .qm-welcome-button-primary {
+        background: linear-gradient(135deg, #DC143C, #FF4500);
+        color: #ffffff;
+        box-shadow: 0 4px 15px rgba(220, 20, 60, 0.4);
+    }
+
+    .qm-welcome-button-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6);
+    }
+
+    .qm-welcome-button-secondary {
+        background: linear-gradient(135deg, rgba(139, 0, 0, 0.3), rgba(255, 69, 0, 0.2));
+        color: #D4C5B0;
+        border: 1px solid rgba(255, 69, 0, 0.4);
+    }
+
+    .qm-welcome-button-secondary:hover {
+        background: linear-gradient(135deg, rgba(139, 0, 0, 0.5), rgba(255, 69, 0, 0.4));
+        transform: translateY(-2px);
+    }
+
+    .qm-welcome-checkbox-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 69, 0, 0.25);
+    }
+
+    .qm-welcome-checkbox-container input[type="checkbox"] {
+        margin-right: 10px;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        accent-color: #FF4500;
+    }
+
+    .qm-welcome-checkbox-container label {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        color: rgba(212, 197, 176, 0.8);
+        font-size: 0.95rem;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .qm-welcome-footer {
+        text-align: center;
+        margin-top: 25px;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        color: #DC143C;
+        font-style: italic;
+        font-size: 1rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .qm-welcome-modal {
+            padding: 30px 20px;
+        }
+
+        .qm-welcome-title {
+            font-size: 1.5rem;
+        }
+
+        .qm-welcome-icon {
+            font-size: 2.5rem;
+        }
+
+        .qm-welcome-description {
+            font-size: 1rem;
+        }
+
+        .qm-welcome-button {
+            padding: 12px 25px;
+            font-size: 1rem;
+        }
+    }
+
+    /* Scrollbar Styling for Modal */
+    .qm-welcome-modal::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .qm-welcome-modal::-webkit-scrollbar-track {
+        background: rgba(10, 5, 8, 0.5);
+        border-radius: 10px;
+    }
+
+    .qm-welcome-modal::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #FF4500, #8B0000);
+        border-radius: 10px;
+    }
+</style>
+
+<!-- Welcome Flow HTML Structure -->
+<div class="qm-welcome-overlay" id="qmWelcomeOverlay">
+    <div class="qm-welcome-modal">
+        <div class="qm-welcome-header">
+            <span class="qm-welcome-icon" id="qmWelcomeIcon">⚡</span>
+            <h2 class="qm-welcome-title" id="qmWelcomeTitle">Welcome to the Upside Down</h2>
+        </div>
+
+        <p class="qm-welcome-description" id="qmWelcomeDescription">
+            Discover the strange forces hidden in your numbers and stars.
+        </p>
+
+        <div class="qm-welcome-steps">
+            <h3 class="qm-welcome-step-title">⚡ How to Use This Tool ⚡</h3>
+            <div id="qmWelcomeStepsContainer">
+                <!-- Steps will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <div class="qm-welcome-buttons">
+            <button class="qm-welcome-button qm-welcome-button-primary" id="qmWelcomeStart">
+                Enter the Strange
+            </button>
+            <button class="qm-welcome-button qm-welcome-button-secondary" id="qmWelcomeSkip">
+                Skip Intro
+            </button>
+        </div>
+
+        <div class="qm-welcome-checkbox-container">
+            <input type="checkbox" id="qmWelcomeDontShow" />
+            <label for="qmWelcomeDontShow">Don't show this again</label>
+        </div>
+
+        <div class="qm-welcome-footer">
+            ⚡ The Upside Down Oracle awaits... 🔮
+        </div>
+    </div>
+</div>
+
+<script>
+    // Stranger Patterns Welcome Flow Controller
+    (function() {
+        const STORAGE_KEY_PREFIX = 'stranger_welcome_dismissed_';
+        
+        // Get tool identifier from data attribute or URL
+        function getToolId() {
+            const metaTag = document.querySelector('meta[name="qm-tool-id"]');
+            if (metaTag) return metaTag.content;
+            
+            // Fallback: use URL path
+            return window.location.pathname.split('/').pop().replace('.html', '') || 'default';
+        }
+
+        // Check if welcome flow should be shown
+        function shouldShowWelcome() {
+            const toolId = getToolId();
+            const dismissed = localStorage.getItem(STORAGE_KEY_PREFIX + toolId);
+            return !dismissed;
+        }
+
+        // Initialize welcome flow
+        function initWelcomeFlow(config = {}) {
+            if (!shouldShowWelcome()) return;
+
+            const overlay = document.getElementById('qmWelcomeOverlay');
+            const icon = document.getElementById('qmWelcomeIcon');
+            const title = document.getElementById('qmWelcomeTitle');
+            const description = document.getElementById('qmWelcomeDescription');
+            const stepsContainer = document.getElementById('qmWelcomeStepsContainer');
+            const startBtn = document.getElementById('qmWelcomeStart');
+            const skipBtn = document.getElementById('qmWelcomeSkip');
+            const dontShowCheckbox = document.getElementById('qmWelcomeDontShow');
+
+            // Set content from config
+            if (config.icon) icon.textContent = config.icon;
+            if (config.title) title.textContent = config.title;
+            if (config.description) description.textContent = config.description;
+
+            // Populate steps
+            if (config.steps && config.steps.length > 0) {
+                stepsContainer.innerHTML = config.steps.map((step, index) => `
+                    <div class="qm-welcome-step">
+                        <div class="qm-welcome-step-number">${index + 1}.</div>
+                        <div class="qm-welcome-step-text">${step}</div>
+                    </div>
+                `).join('');
+            }
+
+            // Show overlay after a short delay for smooth entrance
+            setTimeout(() => {
+                overlay.classList.add('active');
+            }, 500);
+
+            // Close handlers
+            function closeWelcome() {
+                const toolId = getToolId();
+                if (dontShowCheckbox.checked) {
+                    localStorage.setItem(STORAGE_KEY_PREFIX + toolId, 'true');
+                }
+                overlay.classList.remove('active');
+                
+                // Remove from DOM after animation
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 400);
+
+                // Call onStart callback if provided
+                if (config.onStart) config.onStart();
+            }
+
+            startBtn.addEventListener('click', closeWelcome);
+            skipBtn.addEventListener('click', closeWelcome);
+
+            // Close on overlay click (outside modal)
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    closeWelcome();
+                }
+            });
+
+            // Close on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                    closeWelcome();
+                }
+            });
+        }
+
+        // Auto-initialize if config is provided via meta tags
+        function autoInit() {
+            const configMeta = document.querySelector('meta[name="qm-welcome-config"]');
+            if (configMeta) {
+                try {
+                    const config = JSON.parse(configMeta.content);
+                    initWelcomeFlow(config);
+                } catch (e) {
+                    console.warn('Invalid welcome flow config:', e);
+                }
+            }
+        }
+
+        // Expose to global scope for manual initialization
+        window.StrangerWelcomeFlow = {
+            init: initWelcomeFlow,
+            reset: function() {
+                const toolId = getToolId();
+                localStorage.removeItem(STORAGE_KEY_PREFIX + toolId);
+            },
+            resetAll: function() {
+                Object.keys(localStorage).forEach(key => {
+                    if (key.startsWith(STORAGE_KEY_PREFIX)) {
+                        localStorage.removeItem(key);
+                    }
+                });
+            }
+        };
+
+        // Auto-initialize on DOMContentLoaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', autoInit);
+        } else {
+            autoInit();
+        }
+    })();
+</script>

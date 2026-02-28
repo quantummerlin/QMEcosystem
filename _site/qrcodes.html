@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
+    <title>Quick Reality Code Generator | Quantum Merlin</title>
+    <meta name="description" content="Generate your Quantum Reality Code in 60 seconds. Transform intentions into exponentially powerful frequency codes.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Exo+2:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --quantum-cyan: #00f5ff;
+            --quantum-magenta: #ff00ff;
+            --quantum-gold: #ffd700;
+            --rose-pink: #ff6ec7;
+            --dark-bg: #0a0a0f;
+            --card-bg: rgba(15, 15, 25, 0.8);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: var(--dark-bg);
+            min-height: 100vh;
+            color: #f0e6ff;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Animated Cosmic Background */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(0, 245, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(255, 0, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.04) 0%, transparent 60%),
+                linear-gradient(180deg, #0a0a0f 0%, #0f0a1a 50%, #0a0a0f 100%);
+            z-index: -3;
+            animation: cosmicPulse 15s ease-in-out infinite;
+        }
+
+        @keyframes cosmicPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        /* Star Field */
+        .star-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 4s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Floating Particles */
+        .particle-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--quantum-cyan);
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatUp 12s infinite;
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) scale(0);
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(1);
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 40px 25px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--quantum-cyan), var(--quantum-magenta), transparent);
+            animation: shimmerLine 4s linear infinite;
+        }
+
+        @keyframes shimmerLine {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50%); }
+        }
+
+        .header h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--quantum-cyan), var(--quantum-gold), var(--quantum-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5)); }
+            50% { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6)); }
+        }
+
+        .header p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            margin-bottom: 18px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .version-link {
+            display: inline-block;
+            padding: 12px 28px;
+            background: rgba(255, 0, 255, 0.1);
+            border: 2px solid rgba(255, 0, 255, 0.4);
+            border-radius: 30px;
+            color: var(--quantum-magenta);
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .version-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 0, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .version-link:hover::before {
+            left: 100%;
+        }
+
+        .version-link:hover {
+            background: rgba(255, 0, 255, 0.2);
+            border-color: var(--quantum-magenta);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.3);
+        }
+
+        /* Step Container */
+        .step-container {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 245, 255, 0.15);
+            display: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--quantum-cyan), transparent);
+            opacity: 0.5;
+        }
+
+        .step-container.active {
+            display: block;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-header {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--quantum-gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .step-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            margin-bottom: 20px;
+            letter-spacing: 0.15em;
+            color: var(--quantum-cyan);
+        }
+
+        /* Template Grid */
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .template-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(0, 245, 255, 0.2);
+            border-radius: 15px;
+            padding: 22px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .template-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .template-card:hover::before {
+            opacity: 1;
+        }
+
+        .template-card:hover {
+            border-color: var(--quantum-cyan);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.2);
+        }
+
+        .template-card.selected {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: var(--quantum-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3), inset 0 0 30px rgba(0, 245, 255, 0.1);
+        }
+
+        .template-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+        }
+
+        .template-title {
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--quantum-gold);
+            font-size: 0.95rem;
+        }
+
+        .template-intention {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        /* Input Groups */
+        .input-group {
+            margin: 25px 0;
+        }
+
+        .input-group label {
+            display: block;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: var(--quantum-cyan);
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="number"],
+        .input-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 12px;
+            color: #fff;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--quantum-cyan);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+        }
+
+        /* Intention Preview */
+        .intention-preview {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 245, 255, 0.05));
+            border: 2px solid var(--quantum-gold);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 25px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intention-preview::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .intention-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.6;
+            color: var(--quantum-gold);
+            margin: 15px 0;
+            position: relative;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Reality Code Display */
+        .reality-code-display {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(0, 245, 255, 0.1));
+            border: 3px solid var(--quantum-gold);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.2), inset 0 0 60px rgba(255, 215, 0, 0.05);
+        }
+
+        .reality-code-display::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 215, 0, 0.03) 2px, rgba(255, 215, 0, 0.03) 4px);
+            pointer-events: none;
+        }
+
+        .reality-code-number {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.8rem, 10vw, 4rem);
+            font-weight: 800;
+            color: var(--quantum-gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4), 0 0 60px rgba(255, 215, 0, 0.2);
+            margin: 20px 0;
+            animation: codeGlow 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes codeGlow {
+            0%, 100% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4); }
+            50% { text-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.6), 0 0 80px rgba(0, 245, 255, 0.3); }
+        }
+
+        /* Buttons */
+        .btn {
+            background: linear-gradient(135deg, var(--quantum-gold), #ffed4e);
+            color: #0a0a0f;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin: 8px 5px;
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--quantum-cyan);
+            border: 2px solid var(--quantum-cyan);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 245, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.2);
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        /* Quick Stats */
+        .quick-stats {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .stat-value {
+            color: var(--quantum-cyan);
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: rgba(255, 215, 0, 0.08);
+            border-left: 4px solid var(--quantum-gold);
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Home Link */
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+        }
+
+        .home-link a {
+            color: var(--quantum-cyan);
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .home-link a:hover {
+            opacity: 1;
+            text-shadow: 0 0 10px var(--quantum-cyan);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            .header { padding: 30px 20px; }
+            .step-container { padding: 25px 20px; }
+            .template-grid { grid-template-columns: 1fr; }
+            .reality-code-number { font-size: 2.5rem; }
+            .btn { width: 100%; margin: 5px 0; }
+            .btn-group { flex-direction: column; }
+        }
+
+        /* Progress Indicator */
+        .progress-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .progress-step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.4);
+            transition: all 0.4s ease;
+        }
+
+        .progress-step.active {
+            background: var(--quantum-cyan);
+            border-color: var(--quantum-cyan);
+            color: #0a0a0f;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+        }
+
+        .progress-step.completed {
+            background: var(--quantum-gold);
+            border-color: var(--quantum-gold);
+            color: #0a0a0f;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .progress-line {
+            width: 30px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            align-self: center;
+            transition: background 0.4s ease;
+        }
+
+        .progress-line.completed {
+            background: var(--quantum-gold);
+        }
+
+        /* Collapsible Educational Content */
+        .learn-more-toggle {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 25px;
+            color: var(--quantum-cyan);
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .learn-more-toggle:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: var(--quantum-cyan);
+        }
+
+        .educational-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .educational-content.expanded {
+            max-height: 5000px;
+            transition: max-height 0.8s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-bg"></div>
+    <div class="star-field" id="starField"></div>
+    <div class="particle-container" id="particleContainer"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Quick Reality Code</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 12px; color: rgba(255,255,255,0.95);">Generate your quantum frequency code in <strong style="color: var(--quantum-gold);">60 seconds</strong></p>
+            <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px;">Transform your intention into sacred mathematics</p>
+            
+            <!-- Upgrade CTA -->
+            <div style="background: linear-gradient(135deg, rgba(255,0,255,0.15), rgba(0,245,255,0.15)); border: 2px solid rgba(255,0,255,0.4); border-radius: 15px; padding: 18px 25px; margin-bottom: 0; display: inline-block;">
+                <p style="margin: 0 0 12px 0; font-size: 0.9rem; opacity: 0.9;">Want the <strong style="color: var(--quantum-cyan);">full guided experience</strong> with 10 steps, validation & community amplification?</p>
+                <a href="qrcodesfull.html" class="version-link" style="border-color: var(--quantum-magenta); color: var(--quantum-magenta);">
+                    🔮 Try the Enhanced 10-Step Generator
+                </a>
+            </div>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="progress-indicator" id="progressIndicator">
+            <div class="progress-step active" id="prog1">1</div>
+            <div class="progress-line" id="line1"></div>
+            <div class="progress-step" id="prog2">2</div>
+            <div class="progress-line" id="line2"></div>
+            <div class="progress-step" id="prog3">3</div>
+        </div>
+
+        <!-- Learn More Toggle (shows educational content) -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button class="learn-more-toggle" onclick="toggleEducationalContent()" id="learnMoreBtn">
+                📚 Learn How This Works ▼
+            </button>
+        </div>
+
+        <!-- Collapsible Educational Content -->
+        <div class="educational-content" id="educationalContent">
+
+        <!-- Exponential Power Explanation -->
+        <div style="background: var(--card-bg); border-radius: 20px; padding: 35px; margin-bottom: 25px; backdrop-filter: blur(20px); border: 1px solid rgba(255,215,0,0.2);">
+            <h3 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); margin-bottom: 15px; text-align: center; font-size: 1.3rem;">📈 The Exponential Formula: 2ⁿ - 1</h3>
+            <p style="text-align: center; margin-bottom: 25px; opacity: 0.9;">Each person who amplifies your code doesn't just add 1—they <strong style="color: var(--quantum-cyan);">double the entire reality field</strong></p>
+            
+            <div style="display: grid; gap: 12px; margin-top: 20px;">
+                <div style="display: flex; justify-content: space-between; padding: 12px; background: rgba(0,0,0,0.3); border-radius: 10px; border-left: 3px solid #888;">
+                    <span style="opacity: 0.8;">1 person (you alone)</span>
+                    <span style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 600;">1 reality</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 12px; background: rgba(0,245,255,0.05); border-radius: 10px; border-left: 3px solid var(--quantum-cyan);">
+                    <span style="opacity: 0.8;">🟡 11 amplifiers</span>
+                    <span style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 600;">2,047 realities (PROBABLE)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 12px; background: rgba(255,165,0,0.05); border-radius: 10px; border-left: 3px solid #FFA500;">
+                    <span style="opacity: 0.8;">🟠 21 amplifiers</span>
+                    <span style="font-family: 'Orbitron', monospace; color: #FFA500; font-weight: 600;">2.1 million realities (INEVITABLE)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 12px; background: rgba(255,0,255,0.05); border-radius: 10px; border-left: 3px solid var(--quantum-magenta);">
+                    <span style="opacity: 0.8;">🔴 33 amplifiers</span>
+                    <span style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); font-weight: 600;">8.6 billion realities (EARTH SCALE)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 12px; background: rgba(138,43,226,0.05); border-radius: 10px; border-left: 3px solid #8A2BE2;">
+                    <span style="opacity: 0.8;">🟣 50 amplifiers</span>
+                    <span style="font-family: 'Orbitron', monospace; color: #8A2BE2; font-weight: 600;">1.1 quadrillion realities (COSMIC)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 12px; background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,0,255,0.1)); border-radius: 10px; border-left: 3px solid var(--quantum-gold);">
+                    <span style="opacity: 0.9; font-weight: 600;">⭐ 111 amplifiers</span>
+                    <span style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); font-weight: 700; text-shadow: 0 0 10px rgba(255,215,0,0.5);">2.6 DECILLION (OMNIVERSAL)</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 25px; padding: 20px; background: rgba(255,215,0,0.08); border-radius: 12px; border-left: 4px solid var(--quantum-gold);">
+                <p style="margin: 0; font-size: 0.95rem;">💡 <strong>How to amplify your code:</strong> Share it in the community. Each person who comments your code number doubles your manifestation power. Comment on others' codes first to seed reciprocity.</p>
+            </div>
+        </div>
+
+        <!-- Interactive Reality Calculator -->
+        <div style="background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(0, 245, 255, 0.15)); border-radius: 20px; padding: 35px; margin-bottom: 25px; backdrop-filter: blur(20px); border: 2px solid var(--quantum-cyan);">
+            <h3 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 15px; text-align: center; font-size: 1.4rem;">🧮 Interactive Reality Calculator</h3>
+            <p style="text-align: center; margin-bottom: 30px; opacity: 0.9; font-size: 1.05rem;">See the exponential power in <strong style="color: var(--quantum-gold);">real-time</strong></p>
+            
+            <div style="background: rgba(0,0,0,0.4); border-radius: 15px; padding: 30px;">
+                <label for="calcSlider" style="display: block; text-align: center; font-size: 1.1rem; margin-bottom: 20px; color: var(--quantum-gold); font-family: 'Orbitron', monospace;">
+                    Number of Amplifiers (Comments):
+                </label>
+                
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                    <input type="range" id="calcSlider" min="1" max="111" value="1" 
+                           style="flex: 1; height: 8px; border-radius: 5px; background: linear-gradient(90deg, #888 0%, var(--quantum-cyan) 33%, var(--quantum-gold) 66%, var(--quantum-magenta) 100%); outline: none; cursor: pointer;">
+                    <input type="number" id="calcNumber" min="1" max="111" value="1" 
+                           style="width: 80px; padding: 10px; background: rgba(0,0,0,0.5); border: 2px solid var(--quantum-cyan); border-radius: 8px; color: var(--quantum-cyan); font-family: 'Orbitron', monospace; font-size: 1.1rem; text-align: center;">
+                </div>
+
+                <div id="calcResults" style="text-align: center; padding: 25px; background: rgba(0,245,255,0.08); border-radius: 12px; border: 2px solid var(--quantum-cyan);">
+                    <div style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px;">Realities Affected:</div>
+                    <div id="calcRealities" style="font-size: 2.5rem; font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 700; text-shadow: 0 0 20px rgba(0,245,255,0.5); margin-bottom: 15px;">
+                        1
+                    </div>
+                    <div id="calcThreshold" style="font-size: 1.1rem; font-family: 'Orbitron', monospace; color: var(--quantum-gold); font-weight: 600; padding: 12px; background: rgba(255,215,0,0.1); border-radius: 8px; margin-top: 15px;">
+                        Solo Practice
+                    </div>
+                    <div id="calcTimeline" style="margin-top: 15px; font-size: 0.95rem; opacity: 0.85; line-height: 1.6;">
+                        Begin your journey by sharing your code in the community
+                    </div>
+                </div>
+
+                <!-- Share Your Code Template Generator -->
+                <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, rgba(0,245,255,0.1), rgba(255,0,255,0.1)); border-radius: 15px; border: 2px solid var(--quantum-cyan);">
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); text-align: center; margin-bottom: 20px; font-size: 1.2rem;">📱 Share Your Code</h4>
+                    
+                    <div style="background: rgba(0,0,0,0.4); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 10px; font-size: 0.9rem; opacity: 0.8;">Your Reality Code Number:</label>
+                        <input type="number" id="shareCodeNumber" placeholder="Enter your code (e.g., 1091)" 
+                               style="width: 100%; padding: 12px; background: rgba(0,0,0,0.5); border: 2px solid var(--quantum-cyan); border-radius: 8px; color: white; font-family: 'Orbitron', monospace; font-size: 1.1rem; text-align: center;"
+                               oninput="generateShareTemplate()">
+                        
+                        <label style="display: block; margin-top: 15px; margin-bottom: 10px; font-size: 0.9rem; opacity: 0.8;">Current Comments (optional):</label>
+                        <input type="number" id="currentComments" placeholder="0" min="0" max="111"
+                               style="width: 100%; padding: 12px; background: rgba(0,0,0,0.5); border: 2px solid var(--quantum-cyan); border-radius: 8px; color: white; font-family: 'Orbitron', monospace; font-size: 1.1rem; text-align: center;"
+                               oninput="generateShareTemplate()">
+                    </div>
+
+                    <div style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 12px; margin-bottom: 20px; min-height: 150px;">
+                        <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 10px; text-align: center;">Generated Template:</div>
+                        <div id="generatedTemplate" style="white-space: pre-wrap; font-family: monospace; font-size: 0.9rem; line-height: 1.6; color: var(--quantum-cyan);">
+                            Enter your code number above to generate your share template
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                        <button onclick="copyTemplate()" 
+                                style="flex: 1; min-width: 140px; padding: 14px 20px; background: linear-gradient(135deg, var(--quantum-gold), #ff8c00); border: none; border-radius: 25px; color: black; font-weight: 700; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; font-size: 0.95rem;"
+                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(255,215,0,0.5)'"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                            📋 Copy Template
+                        </button>
+                        
+                        <button onclick="shareToTelegram()" 
+                                style="flex: 1; min-width: 140px; padding: 14px 20px; background: linear-gradient(135deg, #0088cc, #00aaff); border: none; border-radius: 25px; color: white; font-weight: 700; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; font-size: 0.95rem;"
+                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(0,170,255,0.5)'"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                            📱 Share to Telegram
+                        </button>
+                        
+                        <button onclick="shareToFacebook()" 
+                                style="flex: 1; min-width: 140px; padding: 14px 20px; background: linear-gradient(135deg, #1877f2, #4267B2); border: none; border-radius: 25px; color: white; font-weight: 700; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; font-size: 0.95rem;"
+                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(24,119,242,0.5)'"
+                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                            👥 Share to Facebook
+                        </button>
+                    </div>
+                    
+                    <div id="copyNotification" style="margin-top: 15px; padding: 10px; background: rgba(0,245,0,0.2); border: 1px solid #00ff00; border-radius: 8px; text-align: center; font-size: 0.9rem; display: none;">
+                        ✅ Template copied! Now paste it in your community.
+                    </div>
+                </div>
+
+                <!-- Community Power Stats -->
+                <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,0,255,0.15)); border-radius: 15px; border: 2px solid var(--quantum-gold);">
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); text-align: center; margin-bottom: 20px; font-size: 1.2rem;">🌍 Our Collective Quantum Power</h4>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; text-align: center;">
+                            <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 5px;">📱 Telegram</div>
+                            <div style="font-family: 'Orbitron', monospace; color: #00aaff; font-size: 1.5rem; font-weight: 700;" id="telegramCount">
+                                6
+                            </div>
+                        </div>
+                        
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; text-align: center;">
+                            <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 5px;">👥 Facebook</div>
+                            <div style="font-family: 'Orbitron', monospace; color: #1877f2; font-size: 1.5rem; font-weight: 700;" id="facebookCount">
+                                16
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(255,215,0,0.1); padding: 20px; border-radius: 12px; border: 2px solid var(--quantum-gold); text-align: center; margin-bottom: 20px;">
+                        <div style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 8px;">If ALL members unite on one code:</div>
+                        <div id="totalCommunityPower" style="font-size: 2rem; font-family: 'Orbitron', monospace; color: var(--quantum-gold); font-weight: 700; text-shadow: 0 0 20px rgba(255,215,0,0.6); margin-bottom: 10px;">
+                            4.2M REALITIES
+                        </div>
+                        <div style="font-size: 0.85rem; opacity: 0.7; line-height: 1.5;">
+                            This is the collective power when we unite as one field
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(255,0,255,0.1); padding: 20px; border-radius: 12px; border: 2px solid var(--quantum-magenta); text-align: center;">
+                        <div style="font-size: 1rem; color: var(--quantum-magenta); font-weight: 600; margin-bottom: 12px;">⚡ INVITE FRIENDS & FAMILY</div>
+                        <div style="font-size: 0.9rem; line-height: 1.6; opacity: 0.9;">
+                            The more people who share and amplify codes, the <strong style="color: var(--quantum-cyan);">FASTER manifestations become reality</strong>. Each new member exponentially increases the power of the entire field!
+                        </div>
+                        <div style="margin-top: 12px; font-size: 0.85rem; opacity: 0.75; font-style: italic;">
+                            50 members = 1.1 quadrillion realities • 100 members = beyond measurement
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 25px; text-align: center;">
+                    <div style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 15px;">Join the community to amplify your code:</div>
+                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                        <a href="https://t.me/+BIChXgOqFH9iMmU1" target="_blank" rel="noopener noreferrer" 
+                           style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: linear-gradient(135deg, #0088cc, #00aaff); color: white; border-radius: 25px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(0,170,255,0.4)'"
+                           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                            <span style="font-size: 1.3rem;">📱</span>
+                            <span>Telegram Community</span>
+                        </a>
+                        <a href="https://www.facebook.com/share/g/1G8zmzjrKC/" target="_blank" rel="noopener noreferrer"
+                           style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: linear-gradient(135deg, #1877f2, #4267B2); color: white; border-radius: 25px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(24,119,242,0.4)'"
+                           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                            <span style="font-size: 1.3rem;">👥</span>
+                            <span>Facebook Group</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; padding: 20px; background: rgba(255,215,0,0.08); border-radius: 12px; text-align: center; border-left: 4px solid var(--quantum-gold);">
+                <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
+                    <strong style="color: var(--quantum-gold);">Reciprocity Formula:</strong> For every 10 codes you amplify (comment), you'll receive 3-5 amplifications back. Give first, receive exponentially. 🔄
+                </p>
+            </div>
+        </div>
+
+        <script>
+            // Interactive Reality Calculator
+            const slider = document.getElementById('calcSlider');
+            const numberInput = document.getElementById('calcNumber');
+            const realitiesDisplay = document.getElementById('calcRealities');
+            const thresholdDisplay = document.getElementById('calcThreshold');
+            const timelineDisplay = document.getElementById('calcTimeline');
+            const resultsBox = document.getElementById('calcResults');
+
+            function calculateRealities(n) {
+                return Math.pow(2, n) - 1;
+            }
+
+            function formatNumber(num) {
+                if (num < 1000) return num.toLocaleString();
+                if (num < 1000000) return (num / 1000).toFixed(1) + 'K';
+                if (num < 1000000000) return (num / 1000000).toFixed(1) + 'M';
+                if (num < 1000000000000) return (num / 1000000000).toFixed(1) + 'B';
+                if (num < 1000000000000000) return (num / 1000000000000).toFixed(1) + 'T';
+                if (num < 1000000000000000000) return (num / 1000000000000000).toFixed(1) + 'Q';
+                return num.toExponential(2);
+            }
+
+            function getThresholdInfo(n) {
+                if (n >= 111) {
+                    return {
+                        badge: '⭐ OMNIVERSAL THRESHOLD',
+                        color: '#FFD700',
+                        bgColor: 'rgba(255,215,0,0.15)',
+                        borderColor: '#FFD700',
+                        timeline: 'Manifestation is instantaneous. Thought = Reality.',
+                        glow: '0 0 30px rgba(255,215,0,0.8)'
+                    };
+                } else if (n >= 80) {
+                    return {
+                        badge: '⚫ UNIVERSAL THRESHOLD',
+                        color: '#C0C0C0',
+                        bgColor: 'rgba(192,192,192,0.15)',
+                        borderColor: '#C0C0C0',
+                        timeline: 'Manifestation occurs within hours. Reality bends to your will.',
+                        glow: '0 0 25px rgba(192,192,192,0.6)'
+                    };
+                } else if (n >= 50) {
+                    return {
+                        badge: '🟣 COSMIC THRESHOLD',
+                        color: '#8A2BE2',
+                        bgColor: 'rgba(138,43,226,0.15)',
+                        borderColor: '#8A2BE2',
+                        timeline: 'Manifestation within hours to days. Cosmic forces align.',
+                        glow: '0 0 20px rgba(138,43,226,0.6)'
+                    };
+                } else if (n >= 33) {
+                    return {
+                        badge: '🔴 EARTH SCALE THRESHOLD',
+                        color: '#FF00FF',
+                        bgColor: 'rgba(255,0,255,0.15)',
+                        borderColor: '#FF00FF',
+                        timeline: 'Manifestation within 24-72 hours. Affecting more realities than humans on Earth.',
+                        glow: '0 0 20px rgba(255,0,255,0.6)'
+                    };
+                } else if (n >= 21) {
+                    return {
+                        badge: '🟠 INEVITABLE THRESHOLD',
+                        color: '#FFA500',
+                        bgColor: 'rgba(255,165,0,0.15)',
+                        borderColor: '#FFA500',
+                        timeline: 'Manifestation within 3-7 days. Your intention is now inevitable.',
+                        glow: '0 0 15px rgba(255,165,0,0.5)'
+                    };
+                } else if (n >= 11) {
+                    return {
+                        badge: '🟡 PROBABLE THRESHOLD',
+                        color: '#00F5FF',
+                        bgColor: 'rgba(0,245,255,0.15)',
+                        borderColor: '#00F5FF',
+                        timeline: 'Manifestation within 7-14 days. You\'ve crossed into probability.',
+                        glow: '0 0 15px rgba(0,245,255,0.5)'
+                    };
+                } else {
+                    return {
+                        badge: 'Solo Practice',
+                        color: '#888',
+                        bgColor: 'rgba(136,136,136,0.1)',
+                        borderColor: '#888',
+                        timeline: 'Share your code in the community to activate exponential power.',
+                        glow: 'none'
+                    };
+                }
+            }
+
+            function updateCalculator(value) {
+                const n = parseInt(value);
+                const realities = calculateRealities(n);
+                const threshold = getThresholdInfo(n);
+
+                // Update displays
+                realitiesDisplay.textContent = formatNumber(realities);
+                realitiesDisplay.style.color = threshold.color;
+                realitiesDisplay.style.textShadow = threshold.glow;
+                
+                thresholdDisplay.textContent = threshold.badge;
+                thresholdDisplay.style.color = threshold.color;
+                thresholdDisplay.style.background = threshold.bgColor;
+                thresholdDisplay.style.border = `2px solid ${threshold.borderColor}`;
+                
+                timelineDisplay.textContent = threshold.timeline;
+                
+                resultsBox.style.background = threshold.bgColor;
+                resultsBox.style.borderColor = threshold.borderColor;
+            }
+
+            // Event listeners
+            slider.addEventListener('input', function() {
+                numberInput.value = this.value;
+                updateCalculator(this.value);
+            });
+
+            numberInput.addEventListener('input', function() {
+                if (this.value > 111) this.value = 111;
+                if (this.value < 1) this.value = 1;
+                slider.value = this.value;
+                updateCalculator(this.value);
+            });
+
+            // Initialize
+            updateCalculator(1);
+
+            // Community Member Count Configuration
+            // UPDATE THESE NUMBERS AS YOUR COMMUNITY GROWS
+            const TELEGRAM_MEMBERS = 6;  // ← Update this with Telegram count
+            const FACEBOOK_MEMBERS = 16;  // ← Update this with Facebook count
+
+            function updateCommunityStats() {
+                const telegramDisplay = document.getElementById('telegramCount');
+                const facebookDisplay = document.getElementById('facebookCount');
+                const totalPowerDisplay = document.getElementById('totalCommunityPower');
+
+                // Update counts
+                telegramDisplay.textContent = TELEGRAM_MEMBERS;
+                facebookDisplay.textContent = FACEBOOK_MEMBERS;
+
+                // Calculate total community power
+                const totalMembers = TELEGRAM_MEMBERS + FACEBOOK_MEMBERS;
+                if (totalMembers > 0) {
+                    const totalRealities = calculateRealities(totalMembers);
+                    totalPowerDisplay.textContent = formatNumber(totalRealities) + ' REALITIES';
+                } else {
+                    totalPowerDisplay.textContent = '∞ INFINITE POTENTIAL';
+                }
+            }
+
+            // Initialize community stats
+            updateCommunityStats();
+
+            // Share Template Generator Functions
+            let currentTemplate = '';
+
+            function generateShareTemplate() {
+                const codeNumber = document.getElementById('shareCodeNumber').value;
+                const currentComments = parseInt(document.getElementById('currentComments').value) || 0;
+                const templateDiv = document.getElementById('generatedTemplate');
+
+                if (!codeNumber) {
+                    templateDiv.textContent = 'Enter your code number above to generate your share template';
+                    currentTemplate = '';
+                    return;
+                }
+
+                // Get threshold info for current comments
+                const thresholdInfo = getThresholdInfo(currentComments);
+                const nextThreshold = getNextThreshold(currentComments);
+                const progress = nextThreshold ? Math.floor((currentComments / nextThreshold.level) * 100) : 100;
+
+                // Generate template
+                let template = `🌟 QUANTUM REALITY CODE: ${codeNumber} 🌟\n\n`;
+                template += `✨ Comment my code '${codeNumber}' below to amplify my manifestation!\n\n`;
+                
+                if (currentComments > 0) {
+                    template += `📊 PROGRESS: ${currentComments} of ${nextThreshold ? nextThreshold.level : '111+'} comments (${progress}% to ${nextThreshold ? nextThreshold.badge : 'MAXIMUM'}!)\n\n`;
+                }
+                
+                template += `🔮 IMPORTANT: By supporting my code, you CLEAR BLOCKAGES in your own manifestation field!\n\n`;
+                template += `⚡ THRESHOLDS:\n`;
+                template += `• 11 comments = PROBABLE (7-14 days)\n`;
+                template += `• 21 comments = INEVITABLE (3-7 days)\n`;
+                template += `• 33 comments = EARTH SCALE (24-72 hours)\n\n`;
+                template += `💫 RECIPROCITY: For every 10 codes I amplify, 3-5 come back to support mine. The quantum field balances itself!\n\n`;
+                template += `👉 Drop my code below, then POST YOURS so I can amplify it back! 🚀`;
+
+                templateDiv.textContent = template;
+                currentTemplate = template;
+            }
+
+            function getNextThreshold(current) {
+                const thresholds = [
+                    { level: 11, badge: 'PROBABLE' },
+                    { level: 21, badge: 'INEVITABLE' },
+                    { level: 33, badge: 'EARTH SCALE' },
+                    { level: 50, badge: 'COSMIC' },
+                    { level: 80, badge: 'UNIVERSAL' },
+                    { level: 111, badge: 'OMNIVERSAL' }
+                ];
+                
+                for (let threshold of thresholds) {
+                    if (current < threshold.level) {
+                        return threshold;
+                    }
+                }
+                return null;
+            }
+
+            function copyTemplate() {
+                if (!currentTemplate) {
+                    alert('Please enter your code number first!');
+                    return;
+                }
+
+                navigator.clipboard.writeText(currentTemplate).then(() => {
+                    const notification = document.getElementById('copyNotification');
+                    notification.style.display = 'block';
+                    setTimeout(() => {
+                        notification.style.display = 'none';
+                    }, 3000);
+                }).catch(err => {
+                    alert('Copy failed. Please select and copy the text manually.');
+                });
+            }
+
+            function shareToTelegram() {
+                if (!currentTemplate) {
+                    alert('Please enter your code number first!');
+                    return;
+                }
+                
+                // Copy to clipboard first
+                navigator.clipboard.writeText(currentTemplate).catch(() => {});
+                
+                // Open Telegram group
+                window.open('https://t.me/+BIChXgOqFH9iMmU1', '_blank');
+                
+                // Show notification
+                const notification = document.getElementById('copyNotification');
+                notification.innerHTML = '✅ Template copied! Opening Telegram - paste it in the group.';
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 4000);
+            }
+
+            function shareToFacebook() {
+                if (!currentTemplate) {
+                    alert('Please enter your code number first!');
+                    return;
+                }
+                
+                // Copy to clipboard first
+                navigator.clipboard.writeText(currentTemplate).catch(() => {});
+                
+                // Open Facebook group
+                window.open('https://www.facebook.com/share/g/1G8zmzjrKC/', '_blank');
+                
+                // Show notification
+                const notification = document.getElementById('copyNotification');
+                notification.innerHTML = '✅ Template copied! Opening Facebook - paste it in the group.';
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 4000);
+            }
+        </script>
+
+        <!-- The Science Behind Reality Codes -->
+        <div style="background: var(--card-bg); border-radius: 20px; padding: 35px; margin-bottom: 25px; backdrop-filter: blur(20px); border: 1px solid rgba(255,0,255,0.2);">
+            <h3 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 20px; text-align: center; font-size: 1.3rem;">🔬 Why This Works: The Quantum Mechanics</h3>
+            <p style="text-align: center; margin-bottom: 30px; opacity: 0.9; font-size: 1.05rem;">This isn't belief or wishful thinking—this is <strong style="color: var(--quantum-cyan);">quantum physics</strong></p>
+            
+            <div style="display: grid; gap: 18px;">
+                <div style="padding: 20px; background: rgba(0,245,255,0.05); border-radius: 12px; border-left: 3px solid var(--quantum-cyan);">
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 10px; font-size: 1rem;">⚛️ Quantum Entanglement</h4>
+                    <p style="margin: 0; opacity: 0.9; line-height: 1.6;">When you amplify someone's code by commenting it, you become <strong>quantum entangled</strong> with that reality. Your consciousness becomes part of their manifestation field, and theirs becomes part of yours.</p>
+                </div>
+                
+                <div style="padding: 20px; background: rgba(255,215,0,0.05); border-radius: 12px; border-left: 3px solid var(--quantum-gold);">
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); margin-bottom: 10px; font-size: 1rem;">👁️ The Observer Effect</h4>
+                    <p style="margin: 0; opacity: 0.9; line-height: 1.6;">In quantum mechanics, observation collapses the wave function into physical reality. More observers = <strong>faster collapse</strong>. Each person who sees and comments your code accelerates its manifestation.</p>
+                </div>
+                
+                <div style="padding: 20px; background: rgba(255,0,255,0.05); border-radius: 12px; border-left: 3px solid var(--quantum-magenta);">
+                    <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 10px; font-size: 1rem;">🌊 Morphic Resonance</h4>
+                    <p style="margin: 0; opacity: 0.9; line-height: 1.6;">Each comment strengthens the <strong>morphic field</strong> around your intention. Like tuning forks vibrating in harmony, multiple people holding your code number creates resonance that ripples across all parallel realities.</p>
+                </div>
+                
+                <div style="padding: 20px; background: rgba(138,43,226,0.05); border-radius: 12px; border-left: 3px solid #8A2BE2;">
+                    <h4 style="font-family: 'Orbitron', monospace; color: #8A2BE2; margin-bottom: 10px; font-size: 1rem;">📈 Exponential Amplification</h4>
+                    <p style="margin: 0; opacity: 0.9; line-height: 1.6;">Why 1+1=3 instead of 2? Because 2² - 1 = 3 realities. Each new person doesn't just <em>add</em> one reality—they <strong>double the entire field</strong>. This is pure mathematics, not metaphor.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; padding: 25px; background: linear-gradient(135deg, rgba(218, 165, 32, 0.2), rgba(138, 43, 226, 0.2)); border-radius: 15px; border: 2px solid var(--quantum-gold);">
+                <p style="margin-bottom: 15px; font-size: 1.1rem; color: var(--quantum-cyan);">Want to see the <strong>peer-reviewed research</strong> and scientific evidence?</p>
+                <a href="qrcodes-science/index.html" style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #daa520, #ffd700); color: #1a0033; font-weight: bold; border-radius: 25px; text-decoration: none; font-size: 1.05rem; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 30px rgba(218, 165, 32, 0.5)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                    📚 Read The Complete Science Page
+                </a>
+                <p style="margin-top: 12px; font-size: 0.9rem; opacity: 0.8;">40+ peer-reviewed studies • 17 scientific mechanisms • Nobel Prize research</p>
+            </div>
+        </div>
+
+        <!-- Common Mistakes -->
+        <div style="background: var(--card-bg); border-radius: 20px; padding: 35px; margin-bottom: 25px; backdrop-filter: blur(20px); border: 1px solid rgba(255,165,0,0.2);">
+            <h3 style="font-family: 'Orbitron', monospace; color: #FFA500; margin-bottom: 20px; text-align: center; font-size: 1.3rem;">⚠️ Common Intention Mistakes (& How to Fix Them)</h3>
+            
+            <div style="display: grid; gap: 15px; margin-top: 20px;">
+                <div style="padding: 15px; background: rgba(0,0,0,0.3); border-radius: 10px;">
+                    <div style="color: #ff6666; font-weight: 600; margin-bottom: 8px;">❌ WEAK: "I will have more money"</div>
+                    <div style="color: #44ff88; font-weight: 600; margin-bottom: 8px;">✅ POWERFUL: "I AM RECEIVING $10,000 THIS MONTH WITH EASE"</div>
+                    <div style="opacity: 0.7; font-size: 0.9rem;">Why: Future tense ("will") keeps it perpetually in the future. "I AM" brings it into now.</div>
+                </div>
+                
+                <div style="padding: 15px; background: rgba(0,0,0,0.3); border-radius: 10px;">
+                    <div style="color: #ff6666; font-weight: 600; margin-bottom: 8px;">❌ WEAK: "I'm not broke anymore"</div>
+                    <div style="color: #44ff88; font-weight: 600; margin-bottom: 8px;">✅ POWERFUL: "I AM FINANCIALLY ABUNDANT AND FREE"</div>
+                    <div style="opacity: 0.7; font-size: 0.9rem;">Why: Negative framing. The quantum field hears "broke." Focus on what you want, not what you're leaving.</div>
+                </div>
+                
+                <div style="padding: 15px; background: rgba(0,0,0,0.3); border-radius: 10px;">
+                    <div style="color: #ff6666; font-weight: 600; margin-bottom: 8px;">❌ WEAK: "I'm happy" (too vague)</div>
+                    <div style="color: #44ff88; font-weight: 600; margin-bottom: 8px;">✅ POWERFUL: "I AM EXPERIENCING DEEP JOY AND FULFILLMENT IN MY DAILY LIFE"</div>
+                    <div style="opacity: 0.7; font-size: 0.9rem;">Why: Too vague gives the universe no clear direction. Be specific about the feeling state.</div>
+                </div>
+                
+                <div style="padding: 15px; background: rgba(0,0,0,0.3); border-radius: 10px;">
+                    <div style="color: #ff6666; font-weight: 600; margin-bottom: 8px;">❌ WEAK: "I am a billionaire" (if currently broke)</div>
+                    <div style="color: #44ff88; font-weight: 600; margin-bottom: 8px;">✅ POWERFUL: "I AM EARNING $20,000 PER MONTH" (believable stretch)</div>
+                    <div style="opacity: 0.7; font-size: 0.9rem;">Why: Too big = nervous system rejection. Start with a 7-8/10 stretch, then ladder up.</div>
+                </div>
+            </div>
+        </div>
+
+        </div><!-- End of educational-content -->
+
+        <!-- Step 1: Choose Template -->
+        <div class="step-container active" id="step1">
+            <h2 class="step-header">Choose Your Template</h2>
+            <p class="step-number">STEP 1 OF 3</p>
+            
+            <p style="margin-bottom: 15px; opacity: 0.85;">Select the template closest to your intention:</p>
+
+            <div class="template-grid">
+                <div class="template-card" onclick="selectTemplate(this, 'financial')">
+                    <div class="template-icon">💰</div>
+                    <div class="template-title">Financial Abundance</div>
+                    <div class="template-intention">I AM EARNING [AMOUNT] PER MONTH WITH EASE AND JOY</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'relationship')">
+                    <div class="template-icon">❤️</div>
+                    <div class="template-title">Love & Relationships</div>
+                    <div class="template-intention">I AM ATTRACTING MY IDEAL PARTNER WHO LOVES ME DEEPLY</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'health')">
+                    <div class="template-icon">💪</div>
+                    <div class="template-title">Health & Vitality</div>
+                    <div class="template-intention">I AM EXPERIENCING VIBRANT HEALTH AND ENERGY NOW</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'home')">
+                    <div class="template-icon">🏠</div>
+                    <div class="template-title">Dream Home</div>
+                    <div class="template-intention">I AM LIVING IN MY DREAM HOME FEELING GRATEFUL</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'career')">
+                    <div class="template-icon">🎯</div>
+                    <div class="template-title">Dream Career</div>
+                    <div class="template-intention">I AM THRIVING IN MY DREAM CAREER WITH ABUNDANCE</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'peace')">
+                    <div class="template-icon">🕊️</div>
+                    <div class="template-title">Inner Peace</div>
+                    <div class="template-intention">I AM EXPERIENCING DEEP PEACE IN EVERY MOMENT</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'freedom')">
+                    <div class="template-icon">🦋</div>
+                    <div class="template-title">Complete Freedom</div>
+                    <div class="template-intention">I AM LIVING IN TOTAL FREEDOM DOING WHAT I LOVE</div>
+                </div>
+
+                <div class="template-card" onclick="selectTemplate(this, 'purpose')">
+                    <div class="template-icon">✨</div>
+                    <div class="template-title">Life Purpose</div>
+                    <div class="template-intention">I AM LIVING MY PURPOSE AND IMPACTING THOUSANDS</div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn" id="templateNextBtn" disabled onclick="nextStep(2)">Continue →</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Customize -->
+        <div class="step-container" id="step2">
+            <h2 class="step-header">Personalize Your Intention</h2>
+            <p class="step-number">STEP 2 OF 3</p>
+
+            <div style="background: rgba(0,245,255,0.05); border: 1px solid rgba(0,245,255,0.2); border-radius: 15px; padding: 20px; margin-bottom: 25px;">
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 15px; font-size: 1rem;">✨ The 7 Principles of Powerful Intentions</h4>
+                <div style="display: grid; gap: 8px; font-size: 0.9rem;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #44ff88; font-size: 1.1rem;">✓</span>
+                        <span><strong>Present tense:</strong> I AM (not "I will")</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #44ff88; font-size: 1.1rem;">✓</span>
+                        <span><strong>Positive framing:</strong> What you want (not what you don't want)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #44ff88; font-size: 1.1rem;">✓</span>
+                        <span><strong>Specific but flexible:</strong> Clear desire with "or better"</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #44ff88; font-size: 1.1rem;">✓</span>
+                        <span><strong>Emotionally charged:</strong> Include feeling words (joy, ease, freedom)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #44ff88; font-size: 1.1rem;">✓</span>
+                        <span><strong>Believable stretch:</strong> Should feel exciting, not terrifying</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #44ff88; font-size: 1.1rem;">✓</span>
+                        <span><strong>Aligned with values:</strong> Authentic to who you are</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="color: #44ff88; font-size: 1.1rem;">✓</span>
+                        <span><strong>Singular focus:</strong> One clear outcome per code</span>
+                    </div>
+                </div>
+                <details style="margin-top: 15px; cursor: pointer;">
+                    <summary style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); font-size: 0.85rem; margin-bottom: 10px;">📖 See Examples →</summary>
+                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div style="margin-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--quantum-gold); margin-bottom: 5px;">💰 Financial:</div>
+                            <div style="font-size: 0.85rem; opacity: 0.85; font-style: italic;">"I AM EARNING $15,000 PER MONTH FROM MY ONLINE BUSINESS WITH EASE AND JOY"</div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--quantum-gold); margin-bottom: 5px;">❤️ Relationships:</div>
+                            <div style="font-size: 0.85rem; opacity: 0.85; font-style: italic;">"I AM IN A DEEPLY LOVING RELATIONSHIP WITH MY SOULMATE EXPERIENCING SAFETY AND PASSION"</div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--quantum-gold); margin-bottom: 5px;">💪 Health:</div>
+                            <div style="font-size: 0.85rem; opacity: 0.85; font-style: italic;">"I AM EXPERIENCING VIBRANT HEALTH AND BOUNDLESS ENERGY IN MY BODY NOW"</div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--quantum-gold); margin-bottom: 5px;">🏠 Living:</div>
+                            <div style="font-size: 0.85rem; opacity: 0.85; font-style: italic;">"I AM LIVING IN MY DREAM HOME IN A PEACEFUL LOCATION FEELING GRATEFUL AND SAFE"</div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600; color: var(--quantum-gold); margin-bottom: 5px;">🎨 Purpose:</div>
+                            <div style="font-size: 0.85rem; opacity: 0.85; font-style: italic;">"I AM CREATING WORK THAT SERVES THOUSANDS AND GENERATES $20,000 MONTHLY WITH FULFILLMENT"</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div id="customizationFields"></div>
+
+            <div class="intention-preview">
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 10px; position: relative;">YOUR INTENTION PREVIEW</p>
+                <div class="intention-text" id="previewIntention"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Fine-tune your intention (optional):</label>
+                <textarea id="fullIntentionEdit" rows="3" placeholder="Edit your intention here..."></textarea>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="prevStep(1)">← Back</button>
+                <button class="btn" onclick="generateCode()">Generate My Code ⚡</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Results -->
+        <div class="step-container" id="step3">
+            <h2 class="step-header">Your Quantum Reality Code</h2>
+            <p class="step-number">STEP 3 OF 3 — COMPLETE!</p>
+
+            <div class="reality-code-display">
+                <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 10px; position: relative;">YOUR UNIQUE FREQUENCY CODE</p>
+                <div class="reality-code-number" id="finalCode"></div>
+                <p style="font-size: 0.85rem; opacity: 0.7; position: relative;">Gematria-calculated from your intention</p>
+            </div>
+
+            <div class="intention-preview" style="margin-top: 20px;">
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 10px; position: relative;">YOUR INTENTION</p>
+                <div class="intention-text" id="finalIntention" style="font-size: 1.1rem;"></div>
+            </div>
+
+            <div class="quick-stats">
+                <h4 style="color: var(--quantum-gold); margin-bottom: 15px; font-family: 'Orbitron', monospace; font-size: 0.9rem;">EXPONENTIAL POWER: 2ⁿ - 1</h4>
+                <div class="stat-row">
+                    <span class="stat-label">1 person (you)</span>
+                    <span class="stat-value">1 reality</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">🟡 11 amplifiers (PROBABLE)</span>
+                    <span class="stat-value">2,047 realities</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">🟠 21 amplifiers (INEVITABLE)</span>
+                    <span class="stat-value">2.1 million realities</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">🔴 33 amplifiers (EARTH SCALE)</span>
+                    <span class="stat-value">8.6 billion realities</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">🟣 50 amplifiers (COSMIC)</span>
+                    <span class="stat-value">1.1 quadrillion realities</span>
+                </div>
+                <div class="stat-row" style="background: rgba(255,215,0,0.08); border-radius: 8px;">
+                    <span class="stat-label" style="font-weight: 600;">⭐ 111 amplifiers (OMNIVERSAL)</span>
+                    <span class="stat-value" style="color: var(--quantum-gold); font-weight: 700;">2.6 DECILLION realities</span>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <p>💡 <strong>Next Step:</strong> Share your code in the Quantum Merlin community. Each person who amplifies your code doubles its power.</p>
+            </div>
+
+            <!-- Upgrade CTA -->
+            <div style="background: linear-gradient(135deg, rgba(255,0,255,0.15), rgba(0,245,255,0.15)); border: 2px solid var(--quantum-magenta); border-radius: 15px; padding: 25px; margin: 25px 0; text-align: center;">
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-magenta); margin-bottom: 12px; font-size: 1.1rem;">🔮 Want a More Powerful Code?</h4>
+                <p style="margin-bottom: 18px; opacity: 0.9; line-height: 1.6;">The <strong style="color: var(--quantum-cyan);">10-Step Enhanced Generator</strong> adds emotional resonance, timeframe selection, and community amplification tools to make your intention even more powerful.</p>
+                <a href="qrcodesfull.html" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, var(--quantum-magenta), var(--quantum-cyan)); color: #fff; font-family: 'Orbitron', monospace; font-weight: 600; font-size: 0.95rem; border-radius: 30px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(255,0,255,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    ✨ Try the Enhanced 10-Step Generator
+                </a>
+            </div>
+
+            <!-- Community Amplification Guide -->
+            <div style="background: rgba(0,245,255,0.08); border: 2px solid rgba(0,245,255,0.3); border-radius: 15px; padding: 25px; margin: 25px 0;">
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); margin-bottom: 18px; font-size: 1.1rem; text-align: center;">🌐 How to Amplify Your Reality Code</h4>
+                
+                <div style="display: grid; gap: 12px; margin-bottom: 20px;">
+                    <div style="display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: var(--quantum-gold); font-size: 1.4rem; font-weight: 700; font-family: 'Orbitron', monospace; flex-shrink: 0;">1.</span>
+                        <div><strong style="color: var(--quantum-gold);">Amplify 10 codes FIRST</strong> — Comment on 10 other people's codes before posting yours. This seeds the quantum field with generosity and opens your receiving channels.</div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: var(--quantum-gold); font-size: 1.4rem; font-weight: 700; font-family: 'Orbitron', monospace; flex-shrink: 0;">2.</span>
+                        <div><strong style="color: var(--quantum-gold);">Post your code</strong> — Simply write "My Reality Code is [YOUR NUMBER]" in the community. Keep your intention private (anonymity increases power).</div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: var(--quantum-gold); font-size: 1.4rem; font-weight: 700; font-family: 'Orbitron', monospace; flex-shrink: 0;">3.</span>
+                        <div><strong style="color: var(--quantum-gold);">Comment = Amplify</strong> — To amplify someone's code, just comment their number. No message needed. Each comment doubles their manifestation power (and opens yours).</div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="color: var(--quantum-gold); font-size: 1.4rem; font-weight: 700; font-family: 'Orbitron', monospace; flex-shrink: 0;">4.</span>
+                        <div><strong style="color: var(--quantum-gold);">Daily practice</strong> — Comment on 5-10 codes daily. Say your code out loud 3x morning and evening. Watch for synchronicities.</div>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(255,215,0,0.1); border-radius: 10px; padding: 18px; margin-top: 20px;">
+                    <h5 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); margin-bottom: 10px; font-size: 0.95rem;">⚖️ The Reciprocity Formula:</h5>
+                    <p style="margin: 0; font-size: 0.95rem;">For every <strong>10 codes you amplify</strong> → You receive <strong>3-5 amplifications back</strong></p>
+                    <p style="margin: 8px 0 0 0; opacity: 0.8; font-size: 0.85rem; font-style: italic;">This isn't karma. This is quantum law. You can't out-give the universe.</p>
+                </div>
+            </div>
+
+            <!-- Enhanced Activation Ritual -->
+            <div style="background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,0,255,0.08)); border: 2px solid var(--quantum-gold); border-radius: 15px; padding: 25px; margin: 25px 0;">
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--quantum-gold); margin-bottom: 18px; font-size: 1.1rem; text-align: center;">🔮 Activation Ritual (Do This Now)</h4>
+                
+                <ol style="list-style: none; counter-reset: ritual-counter; padding: 0; margin: 0;">
+                    <li style="counter-increment: ritual-counter; padding: 12px; margin: 8px 0; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 700; flex-shrink: 0;">✓</span>
+                        <div>Write your intention on paper (handwriting activates different neural pathways)</div>
+                    </li>
+                    <li style="counter-increment: ritual-counter; padding: 12px; margin: 8px 0; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 700; flex-shrink: 0;">✓</span>
+                        <div>Place your hand on your heart</div>
+                    </li>
+                    <li style="counter-increment: ritual-counter; padding: 12px; margin: 8px 0; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 700; flex-shrink: 0;">✓</span>
+                        <div>Say your intention out loud 3 times</div>
+                    </li>
+                    <li style="counter-increment: ritual-counter; padding: 12px; margin: 8px 0; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 700; flex-shrink: 0;">✓</span>
+                        <div>Say "My Reality Code is <strong id="ritualCode1" style="color: var(--quantum-gold);"></strong>" 3 times</div>
+                    </li>
+                    <li style="counter-increment: ritual-counter; padding: 12px; margin: 8px 0; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 700; flex-shrink: 0;">✓</span>
+                        <div>Say "I activate this frequency now"</div>
+                    </li>
+                    <li style="counter-increment: ritual-counter; padding: 12px; margin: 8px 0; background: rgba(0,0,0,0.3); border-radius: 8px; display: flex; align-items: flex-start; gap: 12px;">
+                        <span style="font-family: 'Orbitron', monospace; color: var(--quantum-cyan); font-weight: 700; flex-shrink: 0;">✓</span>
+                        <div>Notice where you feel this activate in your body (heart, solar plexus, whole body?)</div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn" onclick="downloadCode()">📥 Download Code</button>
+                <button class="btn btn-secondary" onclick="saveCode()">💾 Save to Library</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="startOver()">✨ Create Another</button>
+            </div>
+        </div>
+
+        <div class="home-link">
+            <a href="/">← Back to Quantum Merlin</a>
+        </div>
+    </div>
+
+    <script>
+        // Generate stars
+        function createStars() {
+            const starField = document.getElementById('starField');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 4 + 's';
+                star.style.animationDuration = (3 + Math.random() * 3) + 's';
+                starField.appendChild(star);
+            }
+        }
+
+        // Generate floating particles
+        function createParticles() {
+            const container = document.getElementById('particleContainer');
+            const colors = ['#00f5ff', '#ff00ff', '#ffd700', '#ff6ec7'];
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 12 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 8) + 's';
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                container.appendChild(particle);
+            }
+        }
+
+        createStars();
+        createParticles();
+
+        let selectedTemplate = '';
+        let currentStep = 1;
+        let userData = { template: '', intention: '', realityCode: 0 };
+
+        const templates = {
+            financial: { base: 'I AM EARNING', fields: [{ name: 'amount', label: 'Monthly amount (e.g., $10,000)', type: 'text', placeholder: '$10,000' }], suffix: 'PER MONTH WITH EASE AND JOY' },
+            relationship: { base: 'I AM IN A LOVING RELATIONSHIP WITH', fields: [{ name: 'quality', label: 'Key quality (e.g., my soulmate)', type: 'text', placeholder: 'my soulmate' }], suffix: 'EXPERIENCING DEEP LOVE AND CONNECTION' },
+            health: { base: 'I AM EXPERIENCING VIBRANT', fields: [{ name: 'focus', label: 'Health focus (e.g., energy, strength)', type: 'text', placeholder: 'energy and vitality' }], suffix: 'IN BODY MIND AND SPIRIT' },
+            home: { base: 'I AM LIVING IN MY DREAM HOME IN', fields: [{ name: 'location', label: 'Location or style', type: 'text', placeholder: 'a peaceful location' }], suffix: 'FEELING SAFE AND GRATEFUL' },
+            career: { base: 'I AM THRIVING AS A', fields: [{ name: 'role', label: 'Your dream role', type: 'text', placeholder: 'successful entrepreneur' }], suffix: 'WITH FULFILLMENT AND ABUNDANCE' },
+            peace: { base: 'I AM EXPERIENCING DEEP PEACE AND', fields: [{ name: 'quality', label: 'Additional quality', type: 'text', placeholder: 'calm serenity' }], suffix: 'IN EVERY MOMENT' },
+            freedom: { base: 'I AM LIVING IN COMPLETE FREEDOM', fields: [{ name: 'activity', label: 'Doing what?', type: 'text', placeholder: 'traveling the world' }], suffix: 'WITH JOY AND EASE' },
+            purpose: { base: 'I AM FULFILLING MY PURPOSE BY', fields: [{ name: 'purpose', label: 'Your purpose', type: 'text', placeholder: 'helping millions transform' }], suffix: 'WITH IMPACT AND ABUNDANCE' }
+        };
+
+        function selectTemplate(element, template) {
+            selectedTemplate = template;
+            userData.template = template;
+            document.querySelectorAll('.template-card').forEach(card => card.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('templateNextBtn').disabled = false;
+            
+            // Auto-advance after brief delay
+            setTimeout(() => {
+                nextStep(2);
+            }, 400);
+        }
+
+        // Toggle educational content visibility
+        function toggleEducationalContent() {
+            const content = document.getElementById('educationalContent');
+            const btn = document.getElementById('learnMoreBtn');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                btn.innerHTML = '📚 Learn How This Works ▼';
+            } else {
+                content.classList.add('expanded');
+                btn.innerHTML = '📚 Hide Educational Content ▲';
+            }
+        }
+
+        // Update progress indicator
+        function updateProgress(step) {
+            // Reset all steps
+            for (let i = 1; i <= 3; i++) {
+                const stepEl = document.getElementById(`prog${i}`);
+                stepEl.classList.remove('active', 'completed');
+                if (i < step) {
+                    stepEl.classList.add('completed');
+                    stepEl.innerHTML = '✓';
+                } else if (i === step) {
+                    stepEl.classList.add('active');
+                    stepEl.innerHTML = i;
+                } else {
+                    stepEl.innerHTML = i;
+                }
+            }
+            
+            // Update lines
+            document.getElementById('line1').classList.toggle('completed', step > 1);
+            document.getElementById('line2').classList.toggle('completed', step > 2);
+        }
+
+        function nextStep(step) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep = step;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+            updateProgress(step);
+            if (step === 2) populateCustomization();
+        }
+
+        function prevStep(step) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep = step;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+            updateProgress(step);
+        }
+
+        function populateCustomization() {
+            const template = templates[selectedTemplate];
+            let html = '';
+            template.fields.forEach(field => {
+                html += `<div class="input-group"><label>${field.label}</label><input type="${field.type}" id="${field.name}" placeholder="${field.placeholder}" oninput="updatePreview()"></div>`;
+            });
+            document.getElementById('customizationFields').innerHTML = html;
+            updatePreview();
+        }
+
+        function updatePreview() {
+            const template = templates[selectedTemplate];
+            let intention = template.base;
+            template.fields.forEach(field => {
+                const value = document.getElementById(field.name)?.value;
+                if (value) intention += ' ' + value.toUpperCase();
+            });
+            intention += ' ' + template.suffix;
+            userData.intention = intention;
+            document.getElementById('previewIntention').textContent = intention;
+            document.getElementById('fullIntentionEdit').value = intention;
+        }
+
+        function generateCode() {
+            const editedIntention = document.getElementById('fullIntentionEdit').value;
+            if (editedIntention) userData.intention = editedIntention.toUpperCase();
+            const code = calculateGematria(userData.intention);
+            userData.realityCode = code;
+            document.getElementById('finalIntention').textContent = userData.intention;
+            document.getElementById('finalCode').textContent = code;
+            // Populate ritual code display
+            document.getElementById('ritualCode1').textContent = code;
+            nextStep(3);
+        }
+
+        function calculateGematria(text) {
+            let total = 0;
+            for (let char of text.toUpperCase()) {
+                if (char >= 'A' && char <= 'Z') total += char.charCodeAt(0) - 64;
+                else if (char >= '0' && char <= '9') total += parseInt(char);
+            }
+            return total;
+        }
+
+        function downloadCode() {
+            const content = `═══════════════════════════════════════\n    QUANTUM REALITY CODE\n═══════════════════════════════════════\n\nYOUR INTENTION:\n${userData.intention}\n\nYOUR REALITY CODE: ${userData.realityCode}\n\n═══════════════════════════════════════\nEXPONENTIAL POWER: 2^n - 1\n\n10 amplifiers = 2,047 realities\n20 amplifiers = 2,097,151 realities\n33 amplifiers = 17 billion realities\n\n═══════════════════════════════════════\nGenerated: ${new Date().toLocaleDateString()}\nquantummerlin.com/qrcodes`;
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `reality-code-${userData.realityCode}.txt`;
+            a.click();
+        }
+
+        function saveCode() {
+            const insight = { tool: 'Quick Reality Code', category: 'quantum', timestamp: new Date().toISOString(), intention: userData.intention, realityCode: userData.realityCode, summary: `Reality Code ${userData.realityCode}` };
+            let insights = JSON.parse(localStorage.getItem('quantumInsights') || '[]');
+            insights.push(insight);
+            localStorage.setItem('quantumInsights', JSON.stringify(insights));
+            alert('✅ Reality Code saved to your Insight Library!');
+        }
+
+        function startOver() {
+            userData = { template: '', intention: '', realityCode: 0 };
+            selectedTemplate = '';
+            currentStep = 1;
+            document.querySelectorAll('.step-container').forEach(step => step.classList.remove('active'));
+            document.querySelectorAll('.template-card').forEach(card => card.classList.remove('selected'));
+            document.getElementById('step1').classList.add('active');
+            document.getElementById('templateNextBtn').disabled = true;
+            updateProgress(1);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="shared/js/quantum-etsy-cta.js" defer></script>
+</body>
+</html>

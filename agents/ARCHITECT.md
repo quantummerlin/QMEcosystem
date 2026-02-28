@@ -59,7 +59,7 @@ brand-folder/
 | `kpop/` + `kpop/readings/` | K-Pop | Readings subfolder structure |
 | `kosmickpop/` | Kosmick Pop | Extended K-Pop with 80+ exclusive tools |
 | `ultimate/` | Ultimate | Reference engine, source of truth for calculations |
-| `soulblueprint/` | Soul Blueprint | Main branded deployment |
+| `soulblueprint/` | Soul Blueprint | Separate product (not part of ecosystem) |
 | `amomentintime/` | A Moment In Time | Multi-language (esp/, pt/) |
 | `genesis/` | Genesis | Solfeggio frequency focus |
 | `40hz/` | 40Hz | Gamma wave focus |
@@ -104,7 +104,7 @@ shared/
 
 These are the MASTER copies. All other copies must stay synchronised.
 
-### calculations.js — `soulblueprint/calculations.js`
+### calculations.js — `amomentintime/calculations.js`
 Contains ALL calculation formulas:
 - `calculateLifePath(birthDate)` — Numerology Life Path with Master Number detection
 - `calculateDestinyNumber(name)` — Name-based destiny via Pythagorean values

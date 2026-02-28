@@ -67,7 +67,7 @@ async function handleSaveReading(request, env) {
     });
 
     // Use query param format since GitHub Pages doesn't support redirects
-    const shareUrl = `https://quantummerlin.com/soulblueprint/view.html?id=${readingId}`;
+    const shareUrl = `https://quantummerlin.com/amomentintime/view.html?id=${readingId}`;
 
     return jsonResponse({
       success: true,

@@ -8,7 +8,7 @@
 The ecosystem operates with **two distinct visual languages**. Every page belongs to one or the other. **Never mix them on the same page.**
 
 ### System 1: QME Elegant (Mystical/Purple/Gold)
-**Brands:** Soul Blueprint, Classic, A Moment In Time, Ultimate, Gravity, K-Pop, Kosmick Pop, LifeStrategy
+**Brands:** Classic, A Moment In Time, Ultimate, Gravity, K-Pop, Kosmick Pop, LifeStrategy
 
 | Token | Value | Usage |
 |---|---|---|

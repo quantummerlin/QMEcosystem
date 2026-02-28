@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating Reading...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #0d0221, #1a0533, #0d0221);
+            color: #e8d5ff;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .status-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        .spinner {
+            width: 50px; height: 50px;
+            border: 3px solid rgba(255,215,0,0.15);
+            border-top-color: #FFD700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 24px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        h2 { font-family: 'Playfair Display', serif; color: #FFD700; margin-bottom: 12px; font-size: 1.4rem; }
+        #msg { font-size: 0.95rem; opacity: 0.7; line-height: 1.6; }
+        .done h2 { color: #4CAF50; }
+        .error h2 { color: #ff6b6b; }
+        code { background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="status-card" id="card">
+        <div class="spinner" id="spinner"></div>
+        <h2 id="heading">Generating Reading...</h2>
+        <p id="msg">Preparing...</p>
+    </div>
+
+    <!-- Hidden iframe loads the generator page -->
+    <iframe id="generator" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+
+    <script>
+    (async function() {
+        var msg = document.getElementById('msg');
+        var heading = document.getElementById('heading');
+        var spinner = document.getElementById('spinner');
+        var card = document.getElementById('card');
+        var iframe = document.getElementById('generator');
+
+        function setStatus(text) { msg.textContent = text; }
+
+        function setDone(html) {
+            spinner.style.display = 'none';
+            heading.textContent = '\u2705 Reading Downloaded!';
+            card.classList.add('done');
+            msg.innerHTML = html;
+        }
+
+        function setError(text) {
+            spinner.style.display = 'none';
+            heading.textContent = '\u274C Error';
+            card.classList.add('error');
+            msg.textContent = text;
+        }
+
+        // 1. Nuke service workers & caches
+        try {
+            if ('serviceWorker' in navigator) {
+                var regs = await navigator.serviceWorker.getRegistrations();
+                for (var i = 0; i < regs.length; i++) await regs[i].unregister();
+            }
+            if ('caches' in window) {
+                var names = await caches.keys();
+                for (var i = 0; i < names.length; i++) await caches.delete(names[i]);
+            }
+        } catch(e) {}
+
+        // 2. Read URL parameters
+        var params = new URLSearchParams(window.location.search);
+        var name = params.get('name');
+        var date = params.get('date');
+        var time = params.get('time') || '';
+        var place = params.get('place') || '';
+
+        if (!name || !date) {
+            setError('Missing required parameters: name and date');
+            return;
+        }
+
+        setStatus('Loading generator for ' + name + '...');
+
+        // 3. Load generator in hidden iframe with the person's details
+        var genParams = new URLSearchParams({
+            name: name,
+            date: date,
+            fulfill: 'true',
+            _: Date.now().toString()
+        });
+        if (time) genParams.set('time', time);
+        if (place) genParams.set('place', place);
+        iframe.src = './index.html?' + genParams.toString();
+
+        // 4. Poll iframe until reading content appears
+        setStatus('Generating reading for ' + name + '...');
+
+        var readingHtml = null;
+        var allCss = '';
+        var maxWait = 150; // 2.5 minutes max
+
+        for (var sec = 0; sec < maxWait; sec++) {
+            await new Promise(function(r) { setTimeout(r, 1000); });
+
+            try {
+                var doc = iframe.contentDocument || iframe.contentWindow.document;
+                var container = doc.getElementById('readingsContainer');
+
+                if (container && container.children.length > 3 && container.innerHTML.length > 2000) {
+                    setStatus('Reading generated! Finalising...');
+                    // Wait for all sections to finish rendering
+                    await new Promise(function(r) { setTimeout(r, 5000); });
+
+                    // Clone and clean reading content
+                    var finalDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    var finalContainer = finalDoc.getElementById('readingsContainer').cloneNode(true);
+
+                    // Remove non-reading elements
+                    var removeSelectors = [
+                        '.ad-container', '.ad-placeholder', 'ins.adsbygoogle', 'iframe',
+                        '.pagination-controls', '.action-buttons', '#action-buttons',
+                        '.card-actions', '.transform-btn', '.copy-reading-btn',
+                        '.new-reading-prompt', '.ai-transform-banner', '.ai-transform-callout',
+                        '.ai-banner-dismiss', '.mark-read-btn', '.read-badge',
+                        '.section-mark-read-btn', '.gift-support-section', '.gift-box',
+                        '.coffee-box', '.gift-dialog-overlay', '#gift-share-dialog',
+                        '.gift-dialog', '.upgrade-card', '#fulfill-overlay',
+                        '#cookieConsent', '.header-actions', '.example-banner',
+                        '#exampleBanner', '.gift-btn', '.coffee-btn'
+                    ].join(',');
+                    finalContainer.querySelectorAll(removeSelectors).forEach(function(el) { el.remove(); });
+
+                    readingHtml = finalContainer.innerHTML;
+
+                    // Capture all inline CSS from the generator
+                    var styles = finalDoc.querySelectorAll('style');
+                    for (var s = 0; s < styles.length; s++) {
+                        allCss += styles[s].textContent + '\n';
+                    }
+
+                    break;
+                }
+            } catch(e) {
+                // iframe not ready yet
+            }
+
+            if (sec > 0 && sec % 5 === 0) {
+                setStatus('Generating reading for ' + name + '... (' + sec + 's)');
+            }
+        }
+
+        if (!readingHtml) {
+            setError('Reading generation timed out. Please try again.');
+            return;
+        }
+
+        // 5. Build the standalone reading page
+        setStatus('Building standalone reading page...');
+
+        var birthDate = new Date(date + 'T12:00:00');
+        var dateStr = birthDate.toLocaleDateString('en-GB', {
+            day: 'numeric', month: 'long', year: 'numeric'
+        });
+        var slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/g, '');
+
+        // Build using array join to avoid any template literal issues
+        var parts = [];
+        parts.push('<!DOCTYPE html>');
+        parts.push('<html lang="en">');
+        parts.push('<head>');
+        parts.push('    <meta charset="UTF-8">');
+        parts.push('    <meta name="viewport" content="width=device-width, initial-scale=1.0">');
+        parts.push('    <title>A Moment in Time for ' + name + '</title>');
+        parts.push('    <meta name="robots" content="noindex, nofollow">');
+        parts.push('    <link rel="icon" href="https://quantummerlin.com/soulblueprint/Amomentintime.jpg">');
+        parts.push('    <meta property="og:title" content="A Moment in Time for ' + name + '">');
+        parts.push('    <meta property="og:description" content="A personalised cosmic reading with 65+ insights covering astrology, numerology and life patterns.">');
+        parts.push('    <meta property="og:image" content="https://quantummerlin.com/soulblueprint/Amomentintime.jpg">');
+        parts.push('    <meta property="og:type" content="website">');
+        parts.push('    <meta name="twitter:card" content="summary_large_image">');
+        parts.push('    <meta name="twitter:title" content="A Moment in Time for ' + name + '">');
+        parts.push('    <meta name="twitter:image" content="https://quantummerlin.com/soulblueprint/Amomentintime.jpg">');
+        parts.push('    <link rel="apple-touch-icon" href="https://quantummerlin.com/soulblueprint/Amomentintime.jpg">');
+        parts.push('    <meta name="apple-mobile-web-app-capable" content="yes">');
+        parts.push('    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">');
+        parts.push('    <style>');
+        parts.push(allCss);
+        parts.push('    /* === Standalone Reading Overrides === */');
+        parts.push('    #input-section, .action-buttons, #action-buttons, .new-reading-prompt,');
+        parts.push('    .gift-support-section, .gift-box, .coffee-box, .gift-dialog-overlay,');
+        parts.push('    #gift-share-dialog, .ad-container, .ad-placeholder, ins.adsbygoogle,');
+        parts.push('    .pagination-controls, header, nav, #cookieConsent, .upgrade-card,');
+        parts.push('    #fulfill-overlay, .header-actions, .ai-transform-banner, .ai-transform-callout,');
+        parts.push('    .card-actions, .copy-reading-btn, .transform-btn, .mark-read-btn,');
+        parts.push('    .section-mark-read-btn, .read-badge, .ai-banner-dismiss, #exampleBanner,');
+        parts.push('    .example-banner, .new-reading-prompt, .gift-btn, .coffee-btn,');
+        parts.push('    .gift-dialog, .saved-readings-sidebar, #saved-readings-sidebar,');
+        parts.push('    .sidebar-toggle, #sidebar-toggle { display: none !important; }');
+        parts.push('    body { min-height: 100vh; }');
+        parts.push('    </style>');
+        parts.push('</head>');
+        parts.push('<body>');
+        parts.push('    <div style="text-align:center;padding:50px 20px 20px;">');
+        parts.push('        <h1 style="font-family:\'Playfair Display\',serif;color:#FFD700;font-size:clamp(2rem,5vw,3rem);margin-bottom:8px;">&#10024; A Moment in Time &#10024;</h1>');
+        parts.push('        <h2 style="font-family:\'Playfair Display\',serif;color:#e8d5ff;font-size:clamp(1.2rem,3vw,1.8rem);font-weight:400;">for ' + name + '</h2>');
+        var birthInfo = 'Born ' + dateStr;
+        if (time) birthInfo += ' at ' + time;
+        if (place) birthInfo += ' in ' + place;
+        parts.push('        <p style="color:rgba(232,213,255,0.6);margin-top:12px;font-family:\'Inter\',sans-serif;">' + birthInfo + '</p>');
+        parts.push('    </div>');
+        parts.push('    <div id="readingsContainer">');
+        parts.push(readingHtml);
+        parts.push('    </div>');
+        parts.push('    <div style="text-align:center;padding:40px 20px;opacity:0.4;font-family:\'Inter\',sans-serif;">');
+        parts.push('        <p>Created with &#10024; by <a href="https://quantummerlin.com" style="color:#FFD700;text-decoration:none;">Quantum Merlin</a></p>');
+        parts.push('    </div>');
+        parts.push('    <script>');
+        parts.push('    function toggleCard(headerEl) {');
+        parts.push('        var card = headerEl.closest(".reading-card");');
+        parts.push('        if (!card) return;');
+        parts.push('        if (card.classList.contains("expanded")) {');
+        parts.push('            card.classList.remove("expanded");');
+        parts.push('        } else {');
+        parts.push('            card.classList.add("expanded");');
+        parts.push('            setTimeout(function() { card.scrollIntoView({ behavior: "smooth", block: "nearest" }); }, 100);');
+        parts.push('        }');
+        parts.push('    }');
+        parts.push('    document.addEventListener("click", function(e) {');
+        parts.push('        var header = e.target.closest(".reading-card-header");');
+        parts.push('        if (header && !header.getAttribute("onclick")) { toggleCard(header); }');
+        parts.push('    });');
+        parts.push('    <\/script>');
+        parts.push('</body>');
+        parts.push('</html>');
+
+        var standalone = parts.join('\n');
+
+        // 6. Auto-download the file
+        var timestamp = Date.now().toString(36);
+        var filename = 'reading-' + slug + '-' + timestamp + '.html';
+
+        var blob = new Blob([standalone], { type: 'text/html' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+
+        // 7. Signal completion (agent reads document.title)
+        document.title = 'DONE:' + slug + ':' + filename;
+
+        setDone(
+            'Reading for <strong>' + name + '</strong> has been downloaded.<br><br>' +
+            'File: <code>' + filename + '</code><br><br>' +
+            'The agent will now deploy it to your site.'
+        );
+    })();
+    </script>
+</body>
+</html>

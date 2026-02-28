@@ -96,7 +96,7 @@
       border:   'rgba(255, 215, 0, 0.3)',
       bg:       'rgba(26, 10, 46, 0.92)',
       font:     "'Cinzel', serif",
-      label:    'Soul Blueprint'
+      label:    'A Moment In Time'
     },
     '40hz': {
       accent:   '#00d4ff',

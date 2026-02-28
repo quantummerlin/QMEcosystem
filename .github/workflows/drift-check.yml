@@ -22,7 +22,7 @@ jobs:
       - name: Check calculations.js drift
         run: |
           echo "=== calculations.js drift check ==="
-          CANONICAL="soulblueprint/calculations.js"
+          CANONICAL="amomentintime/calculations.js"
           COPIES=(
             "ultimate/calculations.js"
             "stranger/calculations.js"
@@ -87,7 +87,7 @@ jobs:
       - name: Check readings.js drift
         run: |
           echo "=== readings.js drift check ==="
-          CANONICAL="soulblueprint/readings.js"
+          CANONICAL="amomentintime/readings.js"
           COPIES=(
             "ultimate/readings.js"
             "stranger/readings.js"

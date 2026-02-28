@@ -13,7 +13,7 @@ Drive **qualified traffic** to tools, convert visitors into Etsy buyers and emai
 
 | Segment | Motivation | Entry Points | Upgrade Path |
 |---|---|---|---|
-| **Spiritual Seekers** | Self-discovery, daily guidance | Forecasts, angel numbers, moon phases | Full Soul Blueprint reading (Etsy) |
+| **Spiritual Seekers** | Self-discovery, daily guidance | Forecasts, angel numbers, moon phases | Full reading (Etsy) |
 | **Astro-Curious** | Birth chart, compatibility | Compatibility tool, life path calculator | Personalised report (Etsy) |
 | **K-Pop Stans** | Idol connections, fandom fun | K-Pop tools, squad chemistry | Kosmickpop premium tools |
 | **Wellness / Biohackers** | Cognitive enhancement, focus | 40Hz gamma generator | Frequency presets, session tracking |
@@ -29,8 +29,7 @@ Drive **qualified traffic** to tools, convert visitors into Etsy buyers and emai
 | Brand | Primary Keywords | Long-Tail Opportunities |
 |---|---|---|
 | Root / Classic | numerology calculator, life path number, compatibility calculator | "what is my life path number", "numerology compatibility free" |
-| Soul Blueprint | full birth chart reading, soul purpose reading, cosmic blueprint | "soul blueprint meaning", "personalised astrology report" |
-| A Moment In Time | astrology gift, personalised star chart gift | "unique birthday gift astrology", "lectura astrologica personalizada" |
+| A Moment In Time | astrology gift, personalised star chart gift, full birth chart reading | "unique birthday gift astrology", "lectura astrologica personalizada", "personalised astrology report" |
 | Stranger | stranger things personality quiz, upside down oracle | "which stranger things character am I", "stranger things horoscope" |
 | K-Pop / Kosmickpop | kpop astrology, idol compatibility, kpop numerology | "kpop birthday compatibility", "which kpop idol matches my zodiac" |
 | 40Hz | 40hz frequency generator, gamma wave meditation | "40hz benefits for brain", "gamma wave generator online free" |
@@ -74,7 +73,7 @@ Visitor → Free Tool → Email Capture → Welcome Sequence → Weekly Value �
 - Welcome automation (3-email sequence)
 - Weekly cosmic forecast digest
 - Monthly Etsy promo
-- Segmentation by entry brand (tag: soul-blueprint, stranger, kpop, etc.)
+- Segmentation by entry brand (tag: classic, stranger, kpop, etc.)
 
 ### Email Capture Placement Rules
 - **ALWAYS** on: Brand index pages, tool index pages, after free readings complete
@@ -102,20 +101,19 @@ A shared JS component (`shared/js/quantum-explore.js`) that:
 
 | If User Is On… | Recommend |
 |---|---|
-| Soul Blueprint | A Moment In Time (gift a reading), Stranger (fun quiz), Compatibility (relationships) |
-| Stranger | K-Pop (another fun brand), Soul Blueprint (deeper reading), 40Hz (chill zone) |
-| K-Pop / Kosmickpop | Stranger (vibe match), Soul Blueprint (go deeper), Compatibility (idol match) |
-| Genesis / 40Hz | Each other (frequency sister brands), Soul Blueprint (spiritual), Kosmickpop (fun) |
-| Classic | Soul Blueprint (upgraded version), A Moment In Time (gifts), Compatibility |
-| A Moment In Time | Soul Blueprint (own reading), Etsy shop (buy for others), Compatibility |
-| Root tools | Soul Blueprint (full reading), Stranger (fun), K-Pop (trending) |
+| A Moment In Time | Stranger (fun quiz), Compatibility (relationships), Etsy shop (buy for others) |
+| Stranger | K-Pop (another fun brand), A Moment In Time (deeper reading), 40Hz (chill zone) |
+| K-Pop / Kosmickpop | Stranger (vibe match), A Moment In Time (go deeper), Compatibility (idol match) |
+| Genesis / 40Hz | Each other (frequency sister brands), A Moment In Time (spiritual), Kosmickpop (fun) |
+| Classic | A Moment In Time (upgraded version), Compatibility |
+| Root tools | A Moment In Time (full reading), Stranger (fun), K-Pop (trending) |
 
 ---
 
 ## Etsy Optimization
 
 ### Current Listings Strategy
-- Personalised PDF readings: Soul Blueprint, Classic, Genesis, 40Hz
+- Personalised PDF readings: Classic, Genesis, 40Hz, A Moment In Time
 - **Primary shop:** https://www.etsy.com/shop/QuantumMerlin
 
 ### CTA Component

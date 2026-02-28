@@ -18,7 +18,7 @@
 
 ## How the Bug Spread
 
-The ecosystem has **code duplication by design** — each brand folder has its own copy of `calculations.js` and `engine.js`. The canonical source (`soulblueprint/calculations.js`) had the fix with proper LNY date tables, but when other brands were created by copying files, some copies:
+The ecosystem has **code duplication by design** — each brand folder has its own copy of `calculations.js` and `engine.js`. The canonical source (`amomentintime/calculations.js`) had the fix with proper LNY date tables, but when other brands were created by copying files, some copies:
 
 1. Never got the LNY table added
 2. Had the LNY table but callers used `calculate(year)` instead of `calculateForDate(date)`
@@ -33,7 +33,7 @@ This is the **drift problem** — copies diverge from the source over time.
 A systematic audit categorised every file into:
 
 ### Already Correct (9 files)
-- `soulblueprint/calculations.js` — had full LNY table + date checking
+- `amomentintime/calculations.js` — had full LNY table + date checking
 - `chinesezodiac/` — modern TS implementation with proper date logic
 - Several files that happened to have the fix
 
@@ -148,7 +148,7 @@ Commit: 8c293344
 ## Lessons Learned
 
 ### 1. The Canonical Source Pattern Works — When Enforced
-`soulblueprint/calculations.js` already had the fix. The bug existed because copies didn't get the update.
+`amomentintime/calculations.js` already had the fix. The bug existed because copies didn't get the update.
 
 **Prevention:** Always fix the canonical source FIRST, then propagate. Never fix a copy without checking the source.
 

@@ -90,7 +90,7 @@ Once you've explored the main tools, there are rabbit holes everywhere.
 - **[Energy Leak Detector](/energyleak.html)** — a psychological micro-tool that identifies where you might be losing energy unconsciously. Built this after a particularly brutal burnout year.
 - **[Hidden Strengths Revealer](/hidden-strengths-revealer.html)** — finds strengths you have that you've been undervaluing. This one consistently makes people emotional, which I didn't expect.
 
-And if you want the deepest dive possible — a full 65+ section personalised reading — that's what [Soul Blueprint](/soulblueprint/) does. It's the tool I originally built for my daughter. It's the one that started everything.
+And if you want the deepest dive possible — a full 65+ section personalised reading — that's what [A Moment In Time](/amomentintime/) does. It's the tool I originally built for my daughter. It's the one that started everything.
 
 ## One Last Thing
 

@@ -1,0 +1,66 @@
+{
+  "name": "The Gravity Pause - August 12, 2026",
+  "short_name": "Gravity Pause",
+  "description": "August 12, 2026: New Moon + Total Solar Eclipse + Leo Stellium. The countdown to a remarkable celestial alignment.",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#0a0015",
+  "theme_color": "#0a0015",
+  "orientation": "portrait-primary",
+  "lang": "en-US",
+  "dir": "ltr",
+  "id": "/gravity/",
+  "icons": [
+    {
+      "src": "gravity.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "gravity.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "gravity.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    },
+    {
+      "src": "gravity.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "The Gravity Pause - August 12, 2026 Countdown"
+    }
+  ],
+  "categories": ["lifestyle", "education", "entertainment"],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Solar Eclipse Reading",
+      "short_name": "Reading",
+      "description": "Astrological interpretation of the August 2026 eclipse",
+      "url": "reading.html?source=pwa",
+      "icons": [{"src": "icon-192.png", "sizes": "192x192"}]
+    }
+  ],
+  "related_applications": [],
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}

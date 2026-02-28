@@ -12,21 +12,16 @@
   "categories": ["lifestyle", "entertainment", "health", "utilities", "personalization"],
   "icons": [
     {
-      "src": "/assets/tarot/QMTarot.png",
+      "src": "/quantum-merlin.jpg",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/tarot/QMTarot.png",
+      "src": "/quantum-merlin.jpg",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any maskable"
-    },
-    {
-      "src": "/favicon.ico",
-      "sizes": "48x48",
-      "type": "image/x-icon"
     }
   ],
   "screenshots": [

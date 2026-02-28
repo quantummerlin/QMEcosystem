@@ -41,7 +41,7 @@
     if (path.includes('/kosmickpop/'))     return { name: 'Kosmick Pop', system: 'elegant', tag: 'kosmickpop' };
     if (path.includes('/genesis/'))        return { name: 'Genesis', system: 'synthwave', tag: 'genesis' };
     if (path.includes('/40hz/'))           return { name: '40Hz Gamma', system: 'synthwave', tag: '40hz' };
-    if (path.includes('/soulblueprint/'))  return { name: 'Soul Blueprint', system: 'elegant', tag: 'soulblueprint' };
+    if (path.includes('/soulblueprint/'))  return { name: 'Soul Blueprint', system: 'elegant', tag: 'soulblueprint' }; // Separate product
     if (path.includes('/amomentintime/'))  return { name: 'A Moment In Time', system: 'elegant', tag: 'amomentintime' };
     if (path.includes('/classic/'))        return { name: 'Classic', system: 'elegant', tag: 'classic' };
     return { name: 'Quantum Merlin', system: 'elegant', tag: 'root' };

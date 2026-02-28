@@ -5,7 +5,7 @@
 // Copy this file to config.js to activate
 // ============================================
 
-const BRAND_CONFIG = {
+var BRAND_CONFIG = {
     // ============================================
     // BRAND IDENTITY
     // ============================================
@@ -180,7 +180,7 @@ const BRAND_CONFIG = {
     // FOOTER
     // ============================================
     footer: {
-        copyright: "© 2025 Stranger Patterns",
+        copyright: "© 2026 Stranger Patterns",
         disclaimer: "For entertainment purposes only. Not affiliated with Netflix or Stranger Things. Friends don't lie! 🧇",
         links: [
             { text: "Privacy Policy", url: "/privacy.html" },

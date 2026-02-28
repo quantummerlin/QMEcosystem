@@ -29,7 +29,7 @@
 ### 2. Etsy Sales
 **Products:** Personalised readings delivered as PDFs or image downloads
 **Brands with Etsy integration:**
-- Soul Blueprint (primary Etsy channel)
+- A Moment In Time (primary Etsy channel)
 - Classic (etsy-tiles/)
 - Genesis (etsy-delivery-template, etsy-tiles/)
 - 40Hz (etsy-delivery-template)
@@ -38,7 +38,7 @@
 - `etsy-delivery-template.html` — email template for Etsy order delivery
 - `customer-welcome-email.html` — post-purchase welcome
 - `etsy-tiles/` — product listing images
-- `soulblueprint/etsy-image-picker.html` — thumbnail generation
+- `amomentintime/etsy-image-picker.html` — thumbnail generation
 
 **Flow:** Customer purchases on Etsy → order received → reading generated → PDF delivered → welcome email sent
 
@@ -74,10 +74,10 @@
 - **Mobile-friendly:** All pages pass mobile usability
 
 ### Content SEO
-- **Articles:** 40+ SEO articles in `soulblueprint/articles/`
+- **Articles:** 40+ SEO articles in `amomentintime/articles/`
   - zodiac gift guides
   - "how to" content (write manifesto with AI, viral zodiac content)
-  - informational (what is NotebookLM, what is soul blueprint)
+  - informational content
 - **Target keywords:**
   - "life path number calculator"
   - "angel number meaning [number]"
@@ -120,7 +120,7 @@
 gtag('event', 'tool_start', { tool_name: 'life-path-calculator', brand: 'classic' });
 
 // Full reading generated
-gtag('event', 'reading_complete', { reading_type: 'soul-blueprint', brand: 'soulblueprint' });
+gtag('event', 'reading_complete', { reading_type: 'cosmic-reading', brand: 'amomentintime' });
 
 // CTA clicked
 gtag('event', 'cta_click', { cta_type: 'apply_all_systems', tool_name: 'trust-radar' });

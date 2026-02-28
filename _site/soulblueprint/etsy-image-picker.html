@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Etsy Image Picker — Soul Blueprint</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f0f; color: #e0e0e0; padding: 20px; }
+
+        h1 { text-align: center; font-size: 1.4rem; margin-bottom: 6px; color: #ffd700; }
+        .subtitle { text-align: center; font-size: 0.85rem; opacity: 0.6; margin-bottom: 24px; }
+
+        /* Slot strip */
+        .slots { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 28px; padding: 16px; background: #1a1a1a; border-radius: 12px; border: 1px solid #333; position: sticky; top: 0; z-index: 100; }
+        .slot { width: 90px; min-height: 100px; border: 2px dashed #444; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.7rem; color: #888; cursor: pointer; position: relative; overflow: hidden; transition: border-color 0.2s; }
+        .slot.filled { border-color: #ffd700; border-style: solid; }
+        .slot img { width: 100%; height: 80px; object-fit: cover; border-radius: 6px 6px 0 0; }
+        .slot .slot-label { padding: 3px; font-size: 0.65rem; text-align: center; color: #ffd700; font-weight: 600; }
+        .slot .slot-num { font-size: 1.1rem; font-weight: 700; color: #ffd700; }
+        .slot .slot-desc { font-size: 0.6rem; opacity: 0.5; margin-top: 2px; }
+        .slot .remove-btn { position: absolute; top: 2px; right: 4px; background: rgba(255,0,0,0.8); color: #fff; border: none; width: 18px; height: 18px; border-radius: 50%; font-size: 0.7rem; cursor: pointer; display: none; line-height: 1; }
+        .slot.filled .remove-btn { display: block; }
+
+        /* Image grid */
+        .grid-header { font-size: 1rem; margin-bottom: 12px; color: #ccc; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 32px; }
+        .img-card { border: 2px solid #333; border-radius: 10px; overflow: hidden; cursor: pointer; transition: all 0.2s; position: relative; background: #1a1a1a; }
+        .img-card:hover { border-color: #666; transform: translateY(-2px); }
+        .img-card.selected { border-color: #ffd700; opacity: 0.5; }
+        .img-card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        .img-card .meta { padding: 6px 8px; font-size: 0.65rem; color: #888; display: flex; justify-content: space-between; }
+        .img-card .badge { position: absolute; top: 6px; left: 6px; background: #ffd700; color: #000; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; display: none; }
+        .img-card.selected .badge { display: block; }
+
+        /* Actions */
+        .actions { text-align: center; margin: 28px 0; }
+        .actions button { padding: 12px 28px; border-radius: 8px; border: none; font-size: 0.9rem; font-weight: 600; cursor: pointer; margin: 0 6px; transition: all 0.2s; }
+        .btn-primary { background: #ffd700; color: #000; }
+        .btn-primary:hover { background: #e6ac00; }
+        .btn-secondary { background: #333; color: #ddd; }
+        .btn-secondary:hover { background: #444; }
+
+        /* Output */
+        .output { background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 20px; margin-top: 20px; display: none; }
+        .output h3 { color: #ffd700; margin-bottom: 12px; }
+        .output pre { background: #111; padding: 12px; border-radius: 6px; font-size: 0.78rem; overflow-x: auto; color: #89d4cf; white-space: pre-wrap; }
+        .output .copy-btn { margin-top: 10px; padding: 8px 16px; background: #ffd700; color: #000; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.8rem; }
+
+        .tip { background: rgba(255,215,0,0.08); border: 1px solid rgba(255,215,0,0.2); border-radius: 8px; padding: 12px 16px; margin-bottom: 20px; font-size: 0.82rem; line-height: 1.5; }
+        .tip strong { color: #ffd700; }
+    </style>
+</head>
+<body>
+    <h1>Etsy Listing Image Picker</h1>
+    <p class="subtitle">Click images to assign them to Etsy listing slots 1–10, then export rename commands</p>
+
+    <div class="tip">
+        <strong>Etsy allows 10 images.</strong> Recommended order: 1) Hero/thumbnail, 2) Feature overview, 3-4) Reading screenshots, 5-6) Book template samples, 7-8) Mobile/device mockups, 9) Testimonial/social proof, 10) Guarantee/trust badge. Click an image, then click a slot.
+    </div>
+
+    <div class="slots" id="slotStrip">
+        <div class="slot" data-slot="1" onclick="assignToSlot(1)"><div class="slot-num">1</div><div class="slot-desc">Thumbnail</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(1)">&times;</div></div>
+        <div class="slot" data-slot="2" onclick="assignToSlot(2)"><div class="slot-num">2</div><div class="slot-desc">Features</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(2)">&times;</div></div>
+        <div class="slot" data-slot="3" onclick="assignToSlot(3)"><div class="slot-num">3</div><div class="slot-desc">Reading 1</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(3)">&times;</div></div>
+        <div class="slot" data-slot="4" onclick="assignToSlot(4)"><div class="slot-num">4</div><div class="slot-desc">Reading 2</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(4)">&times;</div></div>
+        <div class="slot" data-slot="5" onclick="assignToSlot(5)"><div class="slot-num">5</div><div class="slot-desc">Book 1</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(5)">&times;</div></div>
+        <div class="slot" data-slot="6" onclick="assignToSlot(6)"><div class="slot-num">6</div><div class="slot-desc">Book 2</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(6)">&times;</div></div>
+        <div class="slot" data-slot="7" onclick="assignToSlot(7)"><div class="slot-num">7</div><div class="slot-desc">Mobile</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(7)">&times;</div></div>
+        <div class="slot" data-slot="8" onclick="assignToSlot(8)"><div class="slot-num">8</div><div class="slot-desc">Device</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(8)">&times;</div></div>
+        <div class="slot" data-slot="9" onclick="assignToSlot(9)"><div class="slot-num">9</div><div class="slot-desc">Proof</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(9)">&times;</div></div>
+        <div class="slot" data-slot="10" onclick="assignToSlot(10)"><div class="slot-num">10</div><div class="slot-desc">Trust</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(10)">&times;</div></div>
+    </div>
+
+    <h3 class="grid-header">All Generated Images (<span id="imgCount">0</span>) — click to select, then click a slot above</h3>
+    <div class="grid" id="imageGrid"></div>
+
+    <div class="actions">
+        <button class="btn-primary" onclick="exportRenames()">Export Rename Commands</button>
+        <button class="btn-secondary" onclick="resetAll()">Reset All</button>
+    </div>
+
+    <div class="output" id="output">
+        <h3>PowerShell Rename Commands</h3>
+        <p style="font-size:0.82rem;opacity:0.7;margin-bottom:12px;">Copy and paste these into your terminal. Images will be copied to <code>soulblueprint/etsy-images/</code></p>
+        <pre id="outputCode"></pre>
+        <button class="copy-btn" onclick="copyOutput()">Copy Commands</button>
+    </div>
+
+    <script>
+        const IMAGE_DIR = 'articles/images/';
+        const images = [
+            "generated_image_019d5cdf-f287-4651-8470-e235a6cef2c1_0.jpeg",
+            "generated_image_0675ca82-330a-4fca-90a5-e71caca373be_0.jpeg",
+            "generated_image_0a862c9e-8b14-41ee-b006-046d66a5ec42_0.jpeg",
+            "generated_image_0bb76c48-e575-49fa-9daa-7388e38fff27_0.jpeg",
+            "generated_image_0e2abdf2-8eb3-4bb4-83a7-9a1c6aa18d2d_0.jpeg",
+            "generated_image_0f86d0aa-cdde-498b-ad41-e29112a23264_0.jpeg",
+            "generated_image_0ff7db22-0bad-4e28-8e39-cf232d0640ba_0.jpeg",
+            "generated_image_10a27438-f1ac-4e7e-8fd2-a821d20893d6_0.jpeg",
+            "generated_image_14ec6e0d-0884-45c2-abd8-905cfc98097a_0.png",
+            "generated_image_157a9b7f-a588-4e65-a809-34e814cc46e2_0.png",
+            "generated_image_1b5a1374-3037-4aff-89c6-b208f1ef27ea_0.jpeg",
+            "generated_image_1ee5c28a-947e-458f-b1f3-81ccf17d84f0_0.jpeg",
+            "generated_image_219af974-4269-45c1-8db7-d4f08f59553f_0.jpeg",
+            "generated_image_262ba2a0-3bb3-422b-9df4-42ae1f677f4d_0.jpeg",
+            "generated_image_28525fca-c6ad-413c-a3cb-2d1c23248a2c_0.png",
+            "generated_image_2e1ed297-6620-4b06-ad74-6c300552eeb1_0.jpeg",
+            "generated_image_3246f197-7d51-4b08-bbf8-10694e8ac0d7_0.jpeg",
+            "generated_image_36280483-ddf0-4c02-85b7-15ca30b4324c_0.png",
+            "generated_image_3b03504c-3845-47f0-8eca-8b255caad1c1_0.jpeg",
+            "generated_image_3b2102aa-6de5-4dae-b30f-5e284d92d084_0.png",
+            "generated_image_3c418bea-4e22-49e1-b60c-85a183c400a6_0.png",
+            "generated_image_425bcbe4-aae1-4d59-bc2f-7dc19c2c6e4e_0.png",
+            "generated_image_48191719-ab1b-4f34-acef-5fd85438b945_0.jpeg",
+            "generated_image_4a63c842-4820-48c6-a422-a40309977f65_0.png",
+            "generated_image_4ad8eb88-cb8f-479b-9cf5-4b56e3de9f5d_0.jpeg",
+            "generated_image_4d1d07aa-2ccb-4f53-9755-da5191c75f37_0.jpeg",
+            "generated_image_53069839-a581-443f-8afd-dea5e70bf85e_0.jpeg",
+            "generated_image_53779dec-f33d-4633-838c-01ae191371ec_0.jpeg",
+            "generated_image_53bde84d-3f89-45f7-8906-c251cee7ac35_0.jpeg",
+            "generated_image_553e81ed-87a4-4d77-9fda-efb650058b61_0.jpeg",
+            "generated_image_5bfeff8f-04eb-46e7-8885-c340f207466c_0.jpeg",
+            "generated_image_6322601c-6b00-4dd4-9219-42593994faaf_0.png",
+            "generated_image_7063fecf-6689-4a1d-a338-5b72978402bb_0.png",
+            "generated_image_7de814ed-d3d8-42ae-8eb4-9c61d4ee70e9_0.jpeg",
+            "generated_image_86fcdecb-fff2-44a6-8612-1424afba93e8_0.png",
+            "generated_image_87c4943c-6145-4658-ab61-c1251afbf267_0.jpeg",
+            "generated_image_8aab15eb-1fc9-4c45-8207-302caa3c0c9a_0.png",
+            "generated_image_8b51e8c6-5a28-4f66-9759-c1e4e2f83180_0.png",
+            "generated_image_8cca9676-83fa-45f6-a089-d2e61e6e295e_0.png",
+            "generated_image_8d344e6f-a179-4e4d-b7e7-70af49d8e19b_0.jpeg",
+            "generated_image_8d73bb7b-06e3-4923-b2c1-a0789265ea1c_0.jpeg",
+            "generated_image_93b5840c-203e-4dd3-bd5f-a88bcafe8767_0.jpeg",
+            "generated_image_96648a71-fc4e-4a26-a27d-d4208f6aa3c6_0.png",
+            "generated_image_9ea8d52c-df78-40da-9656-642ca9833534_0.png",
+            "generated_image_9ebaf7c7-212e-4534-9a99-0b10429a6474_0.jpeg",
+            "generated_image_a65e6b7c-0239-4017-948f-75d72bd3f091_0.jpeg",
+            "generated_image_a7f1ec41-3ece-425f-be4b-8058a8b4b9f4_0.png",
+            "generated_image_ab8a84f6-6a63-438c-a61e-3d5141be52d7_0.png",
+            "generated_image_aca522d1-2fc2-4f6e-bfe9-a32ee2a0e271_0.jpeg",
+            "generated_image_bb9fbb4a-840e-49d9-98cf-065ca2c7cbb9_0.jpeg",
+            "generated_image_c053d4ef-0042-41a3-8023-995585777cfa_0.jpeg",
+            "generated_image_c887f924-4f11-4fd8-95d2-97adbadeb81c_0.jpeg",
+            "generated_image_ccfe873a-bbfe-437c-bc2f-49c9c7a215e6_0.jpeg",
+            "generated_image_cd358d31-726f-46df-ab97-71a15a00e72b_0.png",
+            "generated_image_ce6d41c7-8eb9-40ec-b903-076b8f4a0579_0.png",
+            "generated_image_d3c08dba-e24f-4adb-a5b9-5bdc96461725_0.png",
+            "generated_image_d5c044d7-74da-4205-a1a4-32c48b2a9059_0.png",
+            "generated_image_d6764bbf-f4b8-4470-910d-ee6e6020ad3e_0.jpeg",
+            "generated_image_d764319d-6542-4e8b-9174-b98e6a5fb7a7_0.png",
+            "generated_image_d8e457cd-0b32-403c-b38e-326d53ca19ce_0.jpeg",
+            "generated_image_e9e8d06c-a4e6-4f5d-be76-d13b28bcfa91_0.jpeg",
+            "generated_image_ea540364-cd81-409b-84cc-331d7fa8ffd5_0.jpeg",
+            "generated_image_eb71fcca-bba5-48c6-8b12-6a193096e734_0.jpeg",
+            "generated_image_f4b59267-2962-4b35-93e6-ccbfead2d916_0.png",
+            "generated_image_f9bf2add-c43a-4f45-a0e2-606a8d7e42b5_0.png",
+            "generated_image_fe0ad683-6151-4f71-93d2-4ab9cebcfbed_0.jpeg",
+            "generated_image_ff44b901-a04f-4546-a220-6f51193322ea_0.jpeg"
+        ];
+
+        const slotNames = ['01-thumbnail','02-features','03-reading-sample-1','04-reading-sample-2','05-book-template-1','06-book-template-2','07-mobile-view','08-device-mockup','09-social-proof','10-trust-guarantee'];
+        let selectedImage = null;
+        let assignments = {}; // slot# -> filename
+
+        // Build image grid
+        const grid = document.getElementById('imageGrid');
+        document.getElementById('imgCount').textContent = images.length;
+
+        images.forEach((name, i) => {
+            const card = document.createElement('div');
+            card.className = 'img-card';
+            card.dataset.name = name;
+            const ext = name.split('.').pop();
+            const sizeHint = ext === 'png' ? 'PNG ~1MB' : 'JPEG ~80-160KB';
+            card.innerHTML = `
+                <div class="badge"></div>
+                <img src="${IMAGE_DIR}${name}" loading="lazy" alt="Image ${i+1}">
+                <div class="meta"><span>#${i+1}</span><span>${sizeHint}</span></div>
+            `;
+            card.addEventListener('click', () => selectImage(name, card));
+            grid.appendChild(card);
+        });
+
+        function selectImage(name, card) {
+            // Deselect previously selected (if not assigned)
+            if (selectedImage && selectedImage !== name) {
+                const prev = grid.querySelector(`.img-card[data-name="${selectedImage}"]`);
+                if (prev && !Object.values(assignments).includes(selectedImage)) {
+                    prev.classList.remove('selected');
+                    prev.querySelector('.badge').textContent = '';
+                }
+            }
+            selectedImage = name;
+            card.classList.add('selected');
+            card.querySelector('.badge').textContent = 'SELECTED';
+        }
+
+        function assignToSlot(slotNum) {
+            if (!selectedImage) { alert('Click an image first, then click a slot.'); return; }
+
+            // If this image was in another slot, remove it
+            for (const [s, img] of Object.entries(assignments)) {
+                if (img === selectedImage) {
+                    clearSlot(parseInt(s));
+                }
+            }
+
+            // If this slot had an image, unselect it
+            if (assignments[slotNum]) {
+                const oldName = assignments[slotNum];
+                const oldCard = grid.querySelector(`.img-card[data-name="${oldName}"]`);
+                if (oldCard) { oldCard.classList.remove('selected'); oldCard.querySelector('.badge').textContent = ''; }
+            }
+
+            assignments[slotNum] = selectedImage;
+
+            // Update slot visual
+            const slot = document.querySelector(`.slot[data-slot="${slotNum}"]`);
+            slot.classList.add('filled');
+            slot.innerHTML = `<img src="${IMAGE_DIR}${selectedImage}"><div class="slot-label">Slot ${slotNum}</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(${slotNum})">&times;</div>`;
+
+            // Update card badge
+            const card = grid.querySelector(`.img-card[data-name="${selectedImage}"]`);
+            if (card) { card.querySelector('.badge').textContent = `SLOT ${slotNum}`; card.querySelector('.badge').style.display = 'block'; }
+
+            selectedImage = null;
+        }
+
+        function clearSlot(slotNum) {
+            const name = assignments[slotNum];
+            if (name) {
+                const card = grid.querySelector(`.img-card[data-name="${name}"]`);
+                if (card) { card.classList.remove('selected'); card.querySelector('.badge').textContent = ''; card.querySelector('.badge').style.display = 'none'; }
+            }
+            delete assignments[slotNum];
+            const descs = ['Thumbnail','Features','Reading 1','Reading 2','Book 1','Book 2','Mobile','Device','Proof','Trust'];
+            const slot = document.querySelector(`.slot[data-slot="${slotNum}"]`);
+            slot.classList.remove('filled');
+            slot.innerHTML = `<div class="slot-num">${slotNum}</div><div class="slot-desc">${descs[slotNum-1]}</div><div class="remove-btn" onclick="event.stopPropagation();clearSlot(${slotNum})">&times;</div>`;
+        }
+
+        function resetAll() {
+            for (let i = 1; i <= 10; i++) clearSlot(i);
+            selectedImage = null;
+            document.querySelectorAll('.img-card.selected').forEach(c => { c.classList.remove('selected'); c.querySelector('.badge').textContent = ''; });
+        }
+
+        function exportRenames() {
+            const entries = Object.entries(assignments).sort((a,b) => a[0]-b[0]);
+            if (entries.length === 0) { alert('Assign at least one image to a slot first.'); return; }
+
+            const srcDir = 'C:\\Users\\WIPED\\QMEcosystem\\soulblueprint\\articles\\images';
+            const destDir = 'C:\\Users\\WIPED\\QMEcosystem\\soulblueprint\\etsy-images';
+
+            let cmds = `# Create etsy-images folder\nNew-Item -ItemType Directory -Force -Path "${destDir}"\n\n# Copy & rename selected images\n`;
+
+            entries.forEach(([slot, name]) => {
+                const ext = name.split('.').pop();
+                const newName = `${slotNames[parseInt(slot)-1]}.${ext}`;
+                cmds += `Copy-Item "${srcDir}\\${name}" "${destDir}\\${newName}"\n`;
+            });
+
+            cmds += `\n# Done! Upload images from: ${destDir}`;
+
+            document.getElementById('outputCode').textContent = cmds;
+            document.getElementById('output').style.display = 'block';
+            document.getElementById('output').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyOutput() {
+            const text = document.getElementById('outputCode').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy Commands', 2000);
+            });
+        }
+    </script>
+</body>
+</html>

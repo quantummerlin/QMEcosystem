@@ -40,7 +40,7 @@
 
 | Canonical Source | Consumers | What It Contains |
 |---|---|---|
-| `soulblueprint/calculations.js` | 7 brand copies of `calculations.js` | All astrology + numerology + Chinese zodiac + moon phase calculations |
+| `amomentintime/calculations.js` | 7 brand copies of `calculations.js` | All astrology + numerology + Chinese zodiac + moon phase calculations |
 | `amomentintime/forecasts/engine.js` | 4 brand copies of `engine.js` | CosmicEngine — forecast generation, daily/weekly/monthly/yearly |
 | `shared/css/quantum-*.css` | All branded sites | Design token system, base styles, animations, components |
 | `shared/js/quantum-*.js` | All branded sites | Analytics, donations, effects, nav, profile, onboarding |
@@ -60,7 +60,7 @@ All Chinese zodiac calculations MUST check the actual lunar new year date before
 
 ### 3. Brand Fidelity
 Every page must correctly implement its brand's design system. There are TWO design systems — see [BRANDING.md](BRANDING.md):
-- **QME Elegant** (purple/gold, Cinzel, serif) — Soul Blueprint, Classic, A Moment In Time
+- **QME Elegant** (purple/gold, Cinzel, serif) — Classic, A Moment In Time
 - **QRC Synthwave** (neon cyan/magenta, Orbitron, tech) — Genesis, 40Hz, Reality Codes
 
 K-Pop and Stranger have their own overlays on top of QME Elegant.
@@ -100,9 +100,8 @@ quantummerlin.com/
 │   ├── genesis/           — Solfeggio frequency generator
 │   └── 40hz/              — Gamma wave cognitive enhancement
 │
-├── SOUL BLUEPRINT FAMILY (reading generators)
+├── READING GENERATORS
 │   ├── ultimate/          — Core engine (source of truth)
-│   ├── soulblueprint/     — Main branded deployment
 │   └── amomentintime/     — Gift-oriented variant (multi-language)
 │       ├── esp/           — Spanish
 │       └── pt/            — Portuguese
@@ -166,7 +165,7 @@ Everything in the ecosystem draws from these nine systems. Every tool should con
 
 | Need | File |
 |---|---|
-| All calculation formulas | `soulblueprint/calculations.js` (canonical) |
+| All calculation formulas | `amomentintime/calculations.js` (canonical) |
 | Forecast engine | `amomentintime/forecasts/engine.js` (canonical) |
 | Reading content | `ultimate/readings.js` + `readings-extended.js` |
 | Deep readings | `ultimate/deep-*.js` (12+ modules) |

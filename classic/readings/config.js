@@ -10,7 +10,7 @@ var BRAND_CONFIG = {
     // BRAND IDENTITY
     // ============================================
     brandName: "Quantum Merlin",
-    tagline: "Your Complete Soul Blueprint • No Sign-Up • Always Free",
+    tagline: "No Sign-Up • Always Free",
     subTagline: "65+ personalized readings combining numerology, astrology, and cosmic wisdom — all from your birth data.",
     
     // Who is this reading for?
@@ -37,11 +37,11 @@ var BRAND_CONFIG = {
         birthPlaceHelper: "Where your journey began"
     },
     
-    ctaButton: "✨ Generate My Soul Blueprint",
+    ctaButton: "✨ Generate My Reading",
     loadingMessage: "Decoding your cosmic blueprint...",
     
     // Result page copy
-    resultTitle: "Soul Blueprint",
+    resultTitle: "Cosmic Reading",
     resultSubtitle: "The Cosmic Profile of",
     generatedBy: "Created with ✨ by Quantum Merlin",
     
@@ -157,8 +157,8 @@ var BRAND_CONFIG = {
     // SOCIAL SHARING
     // ============================================
     sharing: {
-        hashtags: ["QuantumMerlin", "SoulBlueprint", "CosmicReading", "NumerologyReading"],
-        defaultMessage: "I just discovered my Soul Blueprint on Quantum Merlin! ✨🔮",
+        hashtags: ["QuantumMerlin", "CosmicReading", "NumerologyReading"],
+        defaultMessage: "I just discovered my cosmic reading on Quantum Merlin! ✨🔮",
         twitterHandle: "@quantummerlin"
     },
     
@@ -194,9 +194,9 @@ var BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "Quantum Merlin — Your Complete Soul Blueprint | 65+ Free Cosmic Readings",
-        description: "Get 65+ personalized readings combining numerology, astrology, and cosmic wisdom. Enter your birth data once and explore your complete Soul Blueprint. Free, no sign-up required.",
-        keywords: "quantum merlin, soul blueprint, numerology reading, astrology reading, birth chart, life path number, free reading, cosmic profile, complete reading"
+        title: "Quantum Merlin — 65+ Free Cosmic Readings",
+        description: "Get 65+ personalized readings combining numerology, astrology, and cosmic wisdom. Enter your birth data once and explore your complete cosmic profile. Free, no sign-up required.",
+        keywords: "quantum merlin, numerology reading, astrology reading, birth chart, life path number, free reading, cosmic profile, complete reading"
     }
 };
 

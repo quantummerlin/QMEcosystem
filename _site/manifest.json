@@ -1,0 +1,80 @@
+{
+  "name": "Quantum Merlin - Cosmic Forecasts & Reality Codes",
+  "short_name": "Quantum Merlin",
+  "description": "Your personalized cosmic guidance combining 8 mystical systems: Astrology, Tarot, Numerology, Chinese Zodiac, Gematria, Frequencies & more. Get free daily forecasts and manifestation tools.",
+  "start_url": "/forecasts",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#00f5ff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["lifestyle", "entertainment", "health", "utilities", "personalization"],
+  "icons": [
+    {
+      "src": "/assets/tarot/QMTarot.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/tarot/QMTarot.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/shared/images/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Quantum Reality Codes Dashboard"
+    },
+    {
+      "src": "/shared/images/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Reality Codes Generator"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Daily Forecast",
+      "short_name": "Forecast",
+      "description": "Get your daily cosmic forecast",
+      "url": "/forecasts",
+      "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Reality Codes",
+      "short_name": "Codes",
+      "description": "Generate manifestation codes",
+      "url": "/quantum-merlin-hub/codes.html",
+      "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Frequency Generator",
+      "short_name": "Frequencies",
+      "description": "674 healing frequencies",
+      "url": "/genesis",
+      "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Quantum Tarot",
+      "short_name": "Tarot",
+      "description": "Daily tarot readings",
+      "url": "/quantum-merlin-hub/tarot.html",
+      "icons": [{"src": "/assets/tarot/QMTarot.png", "sizes": "96x96"}]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

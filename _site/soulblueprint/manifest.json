@@ -1,0 +1,37 @@
+{
+  "name": "Soul Blueprint - Cosmic Reading",
+  "short_name": "Soul Blueprint",
+  "description": "Discover your Soul Blueprint with 65+ personalized cosmic readings. Birth chart astrology, numerology insights, and spiritual guidance.",
+  "start_url": "/soulblueprint/",
+  "lang": "en",
+  "id": "soul-blueprint-cosmic-reading",
+  "display": "standalone",
+  "background_color": "#0a1628",
+  "theme_color": "#c9a6ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "Amomentintime.jpg?v=1",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "Amomentintime.jpg?v=1",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "Amomentintime.jpg?v=1",
+      "sizes": "180x180",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["lifestyle", "entertainment"],
+  "lang": "en",
+  "dir": "ltr",
+  "prefer_related_applications": false
+}

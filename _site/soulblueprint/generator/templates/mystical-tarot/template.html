@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}} — {{name}}</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@page { size: A5; margin: 14mm 12mm 16mm 12mm; }
+@media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .no-print { display: none !important; } .page { page-break-after: always; box-shadow: none; margin: 0; } .page:last-child { page-break-after: avoid; } }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Philosopher', sans-serif; font-size: 9.5pt; line-height: 1.7; color: #2a1a3a; background: #1a0a2a; }
+.page { width: 148mm; min-height: 210mm; background: #faf5ff; margin: 10mm auto; padding: 14mm 12mm 16mm 12mm; position: relative; box-shadow: 0 4px 30px rgba(100,30,160,0.15); overflow: hidden; }
+
+:root { --mystic: #4a1a6a; --mystic-light: #7a4a9a; --amethyst: #9a6ab8; --crimson: #8a2a4a; --gold: #c8a030; --gold-light: #e0c060; --midnight: #1a0a2a; --text: #2a1a3a; --text-light: #5a4a6a; --cream: #faf5ff; --cream-dark: #f0e8f8; --border: rgba(74,26,106,0.15); }
+
+.mystic-border { position: absolute; inset: 5mm; border: 1pt solid var(--amethyst); opacity: 0.15; pointer-events: none; }
+.mystic-border::before { content: ""; position: absolute; inset: 2mm; border: 0.5pt solid var(--gold); opacity: 0.3; }
+
+.tarot-symbol { text-align: center; font-size: 18pt; margin: 3mm 0; opacity: 0.3; }
+
+h1 { font-family: 'Uncial Antiqua', cursive; font-weight: 400; font-size: 22pt; color: var(--mystic); text-align: center; letter-spacing: 0.04em; }
+h2 { font-family: 'Uncial Antiqua', cursive; font-weight: 400; font-size: 14pt; color: var(--mystic); text-align: center; margin: 0 0 3mm; }
+
+.cover { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 210mm; background: radial-gradient(ellipse at 50% 30%, #2a1048 0%, #1a0a2a 50%, #0a0418 100%); padding: 20mm 15mm; position: relative; color: var(--gold-light); }
+.cover::before { content: ""; position: absolute; inset: 6mm; border: 1.5pt solid var(--gold); opacity: 0.25; }
+.cover::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(1px 1px at 20% 15%, rgba(255,255,255,0.4), transparent), radial-gradient(1px 1px at 80% 25%, rgba(200,160,48,0.3), transparent), radial-gradient(0.5px 0.5px at 50% 10%, rgba(255,255,255,0.5), transparent), radial-gradient(1px 1px at 10% 60%, rgba(200,160,48,0.2), transparent), radial-gradient(0.5px 0.5px at 90% 70%, rgba(255,255,255,0.3), transparent), radial-gradient(1px 1px at 30% 80%, rgba(154,106,184,0.3), transparent), radial-gradient(0.5px 0.5px at 70% 50%, rgba(255,255,255,0.2), transparent); pointer-events: none; }
+.cover .tarot-card { position: relative; z-index: 1; width: 30mm; height: 45mm; border: 1pt solid var(--gold); border-radius: 3mm; margin: 4mm auto; display: flex; align-items: center; justify-content: center; font-size: 24pt; background: rgba(200,160,48,0.05); }
+.cover h1 { font-size: 24pt; color: var(--gold-light); margin-bottom: 2mm; position: relative; z-index: 1; text-shadow: 0 0 20px rgba(200,160,48,0.3); }
+.cover .subtitle { font-family: 'Philosopher', sans-serif; font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(224,192,96,0.5); margin: 2mm 0 8mm; position: relative; z-index: 1; }
+.cover .cover-name { font-family: 'Uncial Antiqua', cursive; font-size: 16pt; color: #fff; margin: 0 0 5mm; position: relative; z-index: 1; }
+.cover .cover-details { font-size: 8pt; color: rgba(224,192,96,0.4); line-height: 1.8; position: relative; z-index: 1; }
+.cover .cover-brand { position: absolute; bottom: 14mm; left: 0; right: 0; font-size: 7pt; color: rgba(224,192,96,0.25); letter-spacing: 0.2em; text-transform: uppercase; }
+
+.half-title { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.half-title h1 { font-size: 18pt; }
+.half-title .ht-name { font-style: italic; color: var(--amethyst); margin-top: 4mm; font-size: 10pt; }
+
+.epigraph { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; text-align: center; }
+.epigraph blockquote { font-style: italic; font-size: 11pt; color: var(--text-light); max-width: 90mm; line-height: 1.8; }
+.epigraph .attr { font-family: 'Uncial Antiqua', cursive; font-size: 8pt; color: var(--amethyst); letter-spacing: 0.08em; margin-top: 3mm; }
+.epigraph .dedication { font-style: italic; font-size: 9pt; color: var(--text-light); margin-top: 15mm; line-height: 1.7; }
+
+.snapshot-title { font-family: 'Uncial Antiqua', cursive; font-size: 13pt; color: var(--mystic); text-align: center; margin-bottom: 2mm; }
+.snap-divider { width: 30mm; height: 0.5pt; background: linear-gradient(90deg, transparent, var(--amethyst), transparent); margin: 0 auto 4mm; }
+.snap-cat { margin-bottom: 3mm; }
+.snap-cat-title { font-size: 7.5pt; font-weight: 700; color: var(--mystic); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1mm; border-bottom: 0.5pt solid var(--border); padding-bottom: 0.5mm; }
+.snap-item { display: flex; justify-content: space-between; font-size: 8.5pt; padding: 0.3mm 0; }
+.snap-planet { color: var(--text-light); }
+.snap-sign { color: var(--mystic); font-weight: 700; }
+
+.toc-title { font-family: 'Uncial Antiqua', cursive; font-size: 13pt; color: var(--mystic); text-align: center; margin-bottom: 2mm; }
+.toc-section { margin-bottom: 3mm; }
+.toc-section-name { font-family: 'Uncial Antiqua', cursive; font-size: 10pt; color: var(--mystic); padding-bottom: 1mm; border-bottom: 0.5pt solid var(--border); }
+.toc-entry { font-size: 8pt; color: var(--text-light); padding: 0.3mm 0 0.3mm 3mm; }
+
+.chapter-opener { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 50%, var(--cream) 100%); }
+.chapter-num { font-size: 7pt; font-weight: 700; color: var(--amethyst); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 3mm; }
+.chapter-icon { font-size: 20pt; margin-bottom: 3mm; opacity: 0.6; }
+.chapter-title { font-family: 'Uncial Antiqua', cursive; font-size: 17pt; color: var(--mystic); margin: 0.5em 0; }
+.chapter-desc { font-style: italic; font-size: 9pt; color: var(--text-light); max-width: 95mm; line-height: 1.5; }
+.chapter-ornament { color: var(--amethyst); font-size: 9pt; letter-spacing: 0.3em; margin-top: 6mm; opacity: 0.3; }
+
+.reading { margin-bottom: 4mm; page-break-inside: avoid; }
+.reading-header { display: flex; align-items: baseline; gap: 2mm; padding-bottom: 1mm; border-bottom: 0.5pt solid var(--border); margin-bottom: 1.5mm; }
+.r-title { font-family: 'Uncial Antiqua', cursive; font-size: 10pt; color: var(--mystic); flex: 1; }
+.r-value { font-size: 8pt; color: var(--crimson); font-style: italic; }
+.reading-body { font-size: 9pt; line-height: 1.7; color: var(--text); text-align: justify; hyphens: auto; }
+.reading-body p { margin-bottom: 1.5mm; }
+.reading-body strong { color: var(--mystic); }
+.reading-body em { color: var(--crimson); }
+.reading-body h4 { font-family: 'Uncial Antiqua', cursive; font-size: 9pt; color: var(--mystic); margin: 2mm 0 1mm; }
+.reading-body h5 { font-size: 8pt; color: var(--amethyst); margin: 1.5mm 0 0.5mm; }
+
+.kw-row { display: flex; flex-wrap: wrap; gap: 1mm; margin: 1.5mm 0; }
+.kw { font-size: 6.5pt; padding: 0.3mm 2mm; border: 0.5pt solid var(--amethyst); color: var(--mystic); background: rgba(154,106,184,0.05); }
+.sc-grid { margin: 1.5mm 0; }
+.sc-col h5 { font-size: 7.5pt; color: var(--gold); margin-bottom: 0.5mm; }
+.sc-col ul { list-style: none; padding: 0; }
+.sc-col li { font-size: 7.5pt; color: var(--text-light); line-height: 1.4; padding: 0.3mm 0; }
+.sc-col li::before { content: "☽ "; color: var(--amethyst); font-size: 6pt; }
+
+.heart-divider { text-align: center; margin: 3mm 0; }
+.heart-divider::before { content: "☽ · ☆ · ☾"; color: var(--amethyst); font-size: 7pt; letter-spacing: 0.15em; opacity: 0.4; }
+
+.closing { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; }
+.closing-ornament { color: var(--amethyst); font-size: 10pt; letter-spacing: 0.3em; margin-bottom: 6mm; opacity: 0.4; }
+.closing h2 { font-family: 'Uncial Antiqua', cursive; font-size: 14pt; color: var(--mystic); margin-bottom: 5mm; }
+.closing-body { font-size: 9pt; color: var(--text-light); max-width: 100mm; line-height: 1.7; }
+.closing-body p { margin-bottom: 3mm; }
+.closing-quote { font-style: italic; font-size: 10pt; color: var(--amethyst); margin-top: 8mm; line-height: 1.6; }
+.closing-attr { font-size: 8pt; color: var(--text-light); margin-top: 2mm; }
+
+.colophon { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.colophon-brand { font-family: 'Uncial Antiqua', cursive; font-size: 11pt; color: var(--mystic); letter-spacing: 0.1em; margin-bottom: 6mm; }
+.colophon-text { font-size: 8pt; color: var(--text-light); text-align: center; line-height: 1.7; }
+.colophon-url { font-size: 7pt; color: var(--amethyst); margin-top: 4mm; }
+
+.print-bar { position: fixed; top: 0; left: 0; right: 0; background: var(--midnight); padding: 8px 20px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; border-bottom: 1px solid rgba(200,160,48,0.3); font-family: 'Philosopher', sans-serif; }
+.print-bar-title { color: var(--gold-light); font-size: 0.85rem; }
+.print-btn { background: linear-gradient(135deg, var(--mystic), var(--crimson)); color: var(--gold-light); border: none; padding: 8px 20px; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
+@media print { .print-bar { display: none !important; } body { background: white; } }
+@media screen { body { padding-top: 45px; } }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()">☽ Print / Save PDF</button></div>
+<div class="page cover"><div class="tarot-card">☆</div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="cover-brand">{{brand}}</div></div>
+<div class="page half-title"><div class="mystic-border"></div><h1>{{title}}</h1><div class="ht-name">{{halfTitleName}}</div></div>
+<div class="page epigraph"><div class="mystic-border"></div><blockquote>{{epigraphQuote}}</blockquote><div class="attr">{{epigraphAttr}}</div><div class="dedication">{{dedication}}</div></div>
+<div class="page"><div class="mystic-border"></div><h2 class="snapshot-title">Cosmic Snapshot</h2><div class="snap-divider"></div>{{snapshot}}</div>
+<div class="page"><div class="mystic-border"></div><h2 class="toc-title">Contents</h2><div class="snap-divider"></div>{{toc}}</div>
+{{chapters}}
+<div class="page closing"><div class="mystic-border"></div><div class="closing-ornament">☽ · ☆ · ☾</div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
+<div class="page colophon"><div class="mystic-border"></div><div class="colophon-brand">{{colophonBrand}}</div><div class="colophon-text">{{colophonText}}</div><div class="colophon-url">{{colophonURL}}</div></div>
+</body>
+</html>

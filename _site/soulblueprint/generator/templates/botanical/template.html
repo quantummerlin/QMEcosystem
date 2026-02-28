@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}} — {{name}}</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+@page { size: A5; margin: 14mm 12mm 16mm 12mm; }
+@media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } .no-print { display: none !important; } .page { page-break-after: always; box-shadow: none; margin: 0; } .page:last-child { page-break-after: avoid; } }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Lato', sans-serif; font-size: 9.5pt; line-height: 1.7; color: #2d3a2d; background: #e8ede4; }
+.page { width: 148mm; min-height: 210mm; background: #fafcf8; margin: 10mm auto; padding: 14mm 12mm 16mm 12mm; position: relative; box-shadow: 0 4px 24px rgba(60,90,60,0.1); overflow: hidden; }
+
+:root { --sage: #7a9a6d; --sage-dark: #4a6a3d; --sage-light: #a8c89a; --forest: #2d4a2d; --olive: #6b7a4a; --cream: #fafcf8; --cream-warm: #f5f0e8; --terra: #a07850; --text: #2d3a2d; --text-light: #5a6a5a; --border: rgba(122,154,109,0.3); }
+
+.leaf-pattern { position: absolute; top: 0; right: 0; width: 40mm; height: 40mm; opacity: 0.04; background: repeating-linear-gradient(45deg, var(--sage) 0px, var(--sage) 1px, transparent 1px, transparent 8px), repeating-linear-gradient(-45deg, var(--sage) 0px, var(--sage) 1px, transparent 1px, transparent 8px); pointer-events: none; }
+
+h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 24pt; color: var(--forest); text-align: center; letter-spacing: 0.03em; }
+h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 15pt; color: var(--forest); text-align: center; margin: 0 0 3mm; }
+h3 { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 8pt; color: var(--sage); text-transform: uppercase; letter-spacing: 0.12em; }
+
+.cover { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 210mm; background: linear-gradient(170deg, #f0f5ec 0%, #e8ede4 40%, #f5f0e8 100%); padding: 20mm 15mm; position: relative; }
+.cover::before { content: ""; position: absolute; inset: 8mm; border: 1pt solid var(--sage-light); opacity: 0.5; }
+.cover .botanical-ornament { position: relative; z-index: 1; font-size: 24pt; margin: 4mm 0; opacity: 0.5; }
+.cover h1 { font-size: 26pt; margin-bottom: 2mm; position: relative; z-index: 1; }
+.cover .subtitle { font-family: 'Lato', sans-serif; font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin: 2mm 0 10mm; position: relative; z-index: 1; }
+.cover .cover-name { font-family: 'Cormorant Garamond', serif; font-size: 18pt; color: var(--forest); font-weight: 500; font-style: italic; margin: 0 0 5mm; position: relative; z-index: 1; }
+.cover .cover-details { font-size: 8pt; color: var(--text-light); line-height: 1.8; position: relative; z-index: 1; }
+.cover .cover-brand { position: absolute; bottom: 14mm; left: 0; right: 0; font-size: 7pt; color: var(--sage); letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; }
+
+.half-title { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.half-title h1 { font-size: 18pt; }
+.half-title .ht-name { font-style: italic; color: var(--sage); margin-top: 4mm; font-size: 10pt; }
+
+.epigraph { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; text-align: center; }
+.epigraph blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 11pt; color: var(--text-light); max-width: 90mm; line-height: 1.8; }
+.epigraph .attr { font-size: 8pt; color: var(--sage); letter-spacing: 0.1em; margin-top: 3mm; }
+.epigraph .dedication { font-style: italic; font-size: 9pt; color: var(--text-light); margin-top: 15mm; line-height: 1.7; }
+
+.snapshot-title { font-family: 'Cormorant Garamond', serif; font-size: 14pt; color: var(--forest); text-align: center; margin-bottom: 2mm; }
+.snap-divider { width: 20mm; height: 0; border-top: 1pt solid var(--sage-light); margin: 0 auto 4mm; }
+.snap-cat { margin-bottom: 3mm; }
+.snap-cat-title { font-size: 7.5pt; font-weight: 700; color: var(--sage); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1mm; border-bottom: 0.5pt solid var(--border); padding-bottom: 0.5mm; }
+.snap-item { display: flex; justify-content: space-between; font-size: 8.5pt; padding: 0.3mm 0; }
+.snap-planet { color: var(--text-light); }
+.snap-sign { color: var(--forest); font-weight: 700; }
+
+.toc-title { font-family: 'Cormorant Garamond', serif; font-size: 14pt; color: var(--forest); text-align: center; margin-bottom: 2mm; }
+.toc-section { margin-bottom: 3mm; }
+.toc-section-name { font-family: 'Cormorant Garamond', serif; font-size: 10pt; color: var(--forest); padding-bottom: 1mm; border-bottom: 0.5pt solid var(--sage-light); }
+.toc-entry { font-size: 8pt; color: var(--text-light); padding: 0.3mm 0 0.3mm 3mm; }
+
+.chapter-opener { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; background: linear-gradient(180deg, var(--cream) 0%, var(--cream-warm) 50%, var(--cream) 100%); }
+.chapter-num { font-size: 7pt; font-weight: 700; color: var(--sage); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 3mm; }
+.chapter-icon { font-size: 20pt; margin-bottom: 3mm; opacity: 0.6; }
+.chapter-title { font-family: 'Cormorant Garamond', serif; font-size: 18pt; color: var(--forest); margin: 0.5em 0; }
+.chapter-desc { font-style: italic; font-size: 9pt; color: var(--text-light); max-width: 95mm; line-height: 1.5; }
+.chapter-ornament { color: var(--sage-light); font-size: 9pt; letter-spacing: 0.3em; margin-top: 6mm; }
+
+.reading { margin-bottom: 4mm; page-break-inside: avoid; }
+.reading-header { display: flex; align-items: baseline; gap: 2mm; padding-bottom: 1mm; border-bottom: 0.5pt solid var(--sage-light); margin-bottom: 1.5mm; }
+.r-title { font-family: 'Cormorant Garamond', serif; font-size: 11pt; font-weight: 600; color: var(--forest); flex: 1; }
+.r-value { font-size: 8pt; color: var(--sage); font-style: italic; }
+.reading-body { font-size: 9pt; line-height: 1.65; color: var(--text); text-align: justify; }
+.reading-body p { margin-bottom: 1.5mm; }
+.reading-body strong { color: var(--forest); }
+.reading-body em { color: var(--sage-dark); }
+.reading-body h4 { font-family: 'Cormorant Garamond', serif; font-size: 9.5pt; font-weight: 600; color: var(--forest); margin: 2mm 0 1mm; }
+.reading-body h5 { font-size: 8pt; color: var(--sage); margin: 1.5mm 0 0.5mm; }
+
+.kw-row { display: flex; flex-wrap: wrap; gap: 1mm; margin: 1.5mm 0; }
+.kw { font-size: 6.5pt; padding: 0.3mm 2mm; border: 0.5pt solid var(--sage-light); border-radius: 1mm; color: var(--sage-dark); background: rgba(122,154,109,0.05); }
+.sc-grid { margin: 1.5mm 0; }
+.sc-col h5 { font-size: 7.5pt; color: var(--sage); margin-bottom: 0.5mm; }
+.sc-col ul { list-style: none; padding: 0; }
+.sc-col li { font-size: 7.5pt; color: var(--text-light); line-height: 1.4; padding: 0.3mm 0; }
+.sc-col li::before { content: "🌿 "; font-size: 6pt; }
+
+.heart-divider { text-align: center; margin: 3mm 0; }
+.heart-divider::before { content: "· 🌿 ·"; color: var(--sage-light); font-size: 8pt; letter-spacing: 0.2em; }
+
+.closing { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 210mm; }
+.closing-ornament { color: var(--sage-light); font-size: 14pt; margin-bottom: 6mm; }
+.closing h2 { font-family: 'Cormorant Garamond', serif; font-size: 15pt; color: var(--forest); margin-bottom: 5mm; }
+.closing-body { font-size: 9pt; color: var(--text-light); max-width: 100mm; line-height: 1.7; }
+.closing-body p { margin-bottom: 3mm; }
+.closing-quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 10pt; color: var(--sage-dark); margin-top: 8mm; line-height: 1.6; }
+.closing-attr { font-size: 8pt; color: var(--text-light); margin-top: 2mm; }
+
+.colophon { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 210mm; }
+.colophon-brand { font-family: 'Cormorant Garamond', serif; font-size: 11pt; color: var(--forest); letter-spacing: 0.1em; margin-bottom: 6mm; }
+.colophon-text { font-size: 8pt; color: var(--text-light); text-align: center; line-height: 1.7; }
+.colophon-url { font-size: 7pt; color: var(--sage); margin-top: 4mm; }
+
+.print-bar { position: fixed; top: 0; left: 0; right: 0; background: linear-gradient(135deg, #e8ede4, #f0f5ec); padding: 8px 20px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; border-bottom: 1px solid var(--sage-light); font-family: 'Lato', sans-serif; }
+.print-bar-title { color: var(--forest); font-size: 0.85rem; }
+.print-btn { background: var(--sage); color: white; border: none; padding: 8px 20px; font-weight: 600; font-size: 0.8rem; cursor: pointer; border-radius: 3px; }
+@media print { .print-bar { display: none !important; } body { background: var(--cream); } }
+@media screen { body { padding-top: 45px; } }
+</style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+<div class="print-bar no-print"><div class="print-bar-title">{{title}} — {{name}}</div><button class="print-btn" onclick="window.print()">🌿 Print / Save PDF</button></div>
+<div class="page cover"><div class="botanical-ornament">🌿</div><h1>{{title}}</h1><div class="subtitle">{{subtitle}}</div><div class="cover-name">{{name}}</div><div class="cover-details">{{details}}</div><div class="botanical-ornament">🌿</div><div class="cover-brand">{{brand}}</div></div>
+<div class="page half-title"><h1>{{title}}</h1><div class="ht-name">{{halfTitleName}}</div></div>
+<div class="page epigraph"><blockquote>{{epigraphQuote}}</blockquote><div class="attr">{{epigraphAttr}}</div><div class="dedication">{{dedication}}</div></div>
+<div class="page"><div class="leaf-pattern"></div><h2 class="snapshot-title">Cosmic Snapshot</h2><div class="snap-divider"></div>{{snapshot}}</div>
+<div class="page"><div class="leaf-pattern"></div><h2 class="toc-title">Contents</h2><div class="snap-divider"></div>{{toc}}</div>
+{{chapters}}
+<div class="page closing"><div class="closing-ornament">🌿</div><h2>{{closingTitle}}</h2><div class="closing-body">{{closingBodyHTML}}</div><div class="closing-quote">{{closingQuote}}</div><div class="closing-attr">{{closingQuoteAttr}}</div></div>
+<div class="page colophon"><div class="colophon-brand">{{colophonBrand}}</div><div class="colophon-text">{{colophonText}}</div><div class="colophon-url">{{colophonURL}}</div></div>
+</body>
+</html>

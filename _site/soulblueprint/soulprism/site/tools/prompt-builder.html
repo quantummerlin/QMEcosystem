@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Prompt Builder | Visual Soul Blueprint</title>
+        <meta name="description" content="Build custom AI prompts to transform your soul blueprint readings into visual art, stories, infographics, and Creative experiences.">
+        <meta name="author" content="Quantum Merlin">
+        <meta property="og:title" content="AI Prompt Builder - Visual Soul Blueprint">
+        <meta property="og:description" content="Many transformation types. Paste your reading, pick a style, and get a ready-to-use AI prompt.">
+        <meta property="og:type" content="website">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+        <link rel="stylesheet" href="../css/main.css">
+
+ <style>
+ /* ============================================
+ Prompt Builder – page-specific styles
+ (builds on variables from main.css)
+ ============================================ */
+
+ /* ---------- layout ---------- */
+ .builder-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 30px;
+ margin: 30px 0 50px;
+ }
+ @media (max-width: 960px) {
+ .builder-grid { grid-template-columns: 1fr; }
+ }
+
+ /* ---------- step cards ---------- */
+ .step-card {
+ background: #fff;
+ border-radius: var(--radius-lg);
+ padding: 28px 30px;
+ margin-bottom: 24px;
+ box-shadow: var(--shadow-sm);
+ }
+ .step-card h2 {
+ color: var(--primary-purple);
+ font-size: 1.25em;
+ margin-bottom: 16px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ }
+ .step-number {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ width: 32px;
+ height: 32px;
+ border-radius: 50%;
+ background: var(--gradient-primary);
+ color: #fff;
+ font-size: 0.85em;
+ font-weight: 700;
+ flex-shrink: 0;
+ }
+
+ /* ---------- form controls ---------- */
+ .form-group { margin-bottom: 20px; }
+ .form-group:last-child { margin-bottom: 0; }
+
+ .form-group label {
+ display: block;
+ margin-bottom: 8px;
+ font-weight: 600;
+ color: var(--text-dark);
+ font-family: 'Segoe UI', Arial, sans-serif;
+ font-size: 0.95em;
+ }
+
+ .form-control {
+ width: 100%;
+ padding: 12px 14px;
+ border: 2px solid var(--border-light);
+ border-radius: var(--radius-sm);
+ font-size: 14px;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ transition: border-color 0.3s;
+ background: #fff;
+ color: var(--text-dark);
+ }
+ .form-control:focus {
+ outline: none;
+ border-color: var(--primary-purple);
+ }
+ textarea.form-control {
+ resize: vertical;
+ min-height: 160px;
+ font-family: 'Courier New', Consolas, monospace;
+ line-height: 1.55;
+ }
+ textarea.form-control.short { min-height: 90px; }
+
+ select.form-control { cursor: pointer; }
+
+ /* ---------- quick presets ---------- */
+ .quick-presets {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+ margin-top: 12px;
+ }
+ .preset-btn {
+ padding: 9px 16px;
+ background: var(--primary-purple);
+ color: #fff;
+ border: none;
+ border-radius: var(--radius-sm);
+ cursor: pointer;
+ font-size: 0.88em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ transition: var(--transition);
+ }
+ .preset-btn:hover {
+ background: var(--secondary-purple);
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-purple);
+ }
+
+ /* ---------- generated prompt ---------- */
+ .prompt-output-wrap {
+ background: #fff;
+ border: 2px solid var(--primary-purple);
+ border-radius: var(--radius-md);
+ padding: 22px;
+ }
+ .prompt-output-wrap h3 {
+ color: var(--primary-purple);
+ margin-bottom: 14px;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ }
+ .prompt-output {
+ background: var(--bg-light);
+ padding: 16px;
+ border-radius: var(--radius-sm);
+ font-family: 'Courier New', Consolas, monospace;
+ font-size: 0.88em;
+ line-height: 1.65;
+ max-height: 420px;
+ overflow-y: auto;
+ white-space: pre-wrap;
+ word-break: break-word;
+ color: var(--text-dark);
+ margin-bottom: 16px;
+ }
+
+ /* ---------- action buttons ---------- */
+ .action-buttons {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 10px;
+ }
+ .action-btn {
+ padding: 12px 22px;
+ color: #fff;
+ border: none;
+ border-radius: var(--radius-sm);
+ cursor: pointer;
+ font-weight: 700;
+ font-size: 0.92em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ transition: var(--transition);
+ }
+ .action-btn:hover {
+ transform: translateY(-2px);
+ box-shadow: var(--shadow-purple);
+ }
+ .action-btn:active { transform: translateY(0); }
+ .action-btn.primary { background: var(--gradient-primary); }
+ .action-btn.chatgpt { background: linear-gradient(135deg, #10a37f, #1a7f5a); }
+ .action-btn.gemini { background: linear-gradient(135deg, #4285f4, #34a853); }
+
+ /* ---------- tip box ---------- */
+ .tip-box {
+ background: #fff3cd;
+ border-left: 4px solid var(--warning);
+ padding: 16px 18px;
+ margin-top: 18px;
+ border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+ }
+ .tip-box h4 { color: #856404; margin-bottom: 8px; font-family: 'Segoe UI', Arial, sans-serif; }
+ .tip-box p { color: #856404; font-size: 0.9em; line-height: 1.5; }
+
+ /* ---------- history ---------- */
+ .history-item {
+ background: #fff;
+ padding: 14px 16px;
+ border-radius: var(--radius-sm);
+ margin-bottom: 10px;
+ border-left: 4px solid var(--primary-purple);
+ cursor: pointer;
+ transition: var(--transition);
+ }
+ .history-item:hover {
+ border-left-color: var(--secondary-purple);
+ background: var(--bg-light);
+ }
+ .history-item .h-type {
+ font-weight: 700;
+ color: var(--primary-purple);
+ font-family: 'Segoe UI', Arial, sans-serif;
+ }
+ .history-item .h-date {
+ font-size: 0.8em;
+ color: var(--text-muted);
+ margin-top: 2px;
+ }
+ .clear-history-btn {
+ margin-top: 14px;
+ padding: 10px 20px;
+ background: var(--error);
+ color: #fff;
+ border: none;
+ border-radius: var(--radius-sm);
+ cursor: pointer;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ font-size: 0.9em;
+ transition: var(--transition);
+ }
+ .clear-history-btn:hover { opacity: 0.85; }
+
+ /* ---------- toast ---------- */
+ .toast {
+ position: fixed;
+ bottom: 30px;
+ right: 30px;
+ background: var(--success);
+ color: #fff;
+ padding: 14px 26px;
+ border-radius: var(--radius-md);
+ font-weight: 700;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ opacity: 0;
+ transform: translateY(20px);
+ transition: all 0.3s;
+ z-index: 9999;
+ pointer-events: none;
+ }
+ .toast.show { opacity: 1; transform: translateY(0); }
+
+ /* ---------- premium badge in select ---------- */
+ .premium-opt { font-weight: 600; }
+
+ /* ---------- quick actions bar ---------- */
+ .quick-actions {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ margin-bottom: 16px;
+ padding-bottom: 14px;
+ border-bottom: 1px solid var(--border-light);
+ }
+ .quick-action-btn {
+ padding: 8px 14px;
+ background: var(--bg-light);
+ color: var(--text-dark);
+ border: 1px solid var(--border-light);
+ border-radius: var(--radius-sm);
+ cursor: pointer;
+ font-size: 0.82em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ transition: var(--transition);
+ display: inline-flex;
+ align-items: center;
+ gap: 5px;
+ }
+ .quick-action-btn:hover {
+ background: var(--primary-purple);
+ color: #fff;
+ border-color: var(--primary-purple);
+ }
+
+ /* ---------- prompt variations ---------- */
+ .prompt-variations {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ margin-top: 14px;
+ padding-top: 14px;
+ border-top: 1px solid var(--border-light);
+ }
+ .prompt-variations label {
+ display: block;
+ width: 100%;
+ font-size: 0.85em;
+ font-weight: 600;
+ color: var(--text-muted);
+ margin-bottom: 2px;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ }
+ .variation-btn {
+ padding: 7px 13px;
+ background: transparent;
+ color: var(--primary-purple);
+ border: 1px solid var(--primary-purple);
+ border-radius: 50px;
+ cursor: pointer;
+ font-size: 0.8em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ transition: var(--transition);
+ }
+ .variation-btn:hover {
+ background: var(--primary-purple);
+ color: #fff;
+ }
+
+ /* ---------- history enhancements ---------- */
+ .history-controls {
+ display: flex;
+ gap: 8px;
+ margin-bottom: 12px;
+ align-items: center;
+ }
+ .history-search {
+ flex: 1;
+ padding: 8px 12px;
+ border: 1px solid var(--border-light);
+ border-radius: var(--radius-sm);
+ font-size: 0.88em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ }
+ .history-search:focus {
+ outline: none;
+ border-color: var(--primary-purple);
+ }
+ .history-filter {
+ padding: 8px 12px;
+ border: 1px solid var(--border-light);
+ border-radius: var(--radius-sm);
+ font-size: 0.85em;
+ font-family: 'Segoe UI', Arial, sans-serif;
+ cursor: pointer;
+ background: #fff;
+ }
+ .history-item {
+ position: relative;
+ }
+ .history-delete {
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ background: none;
+ border: none;
+ color: var(--text-muted);
+ cursor: pointer;
+ font-size: 1em;
+ padding: 2px 6px;
+ border-radius: 4px;
+ transition: var(--transition);
+ }
+ .history-delete:hover {
+ color: var(--error);
+ background: rgba(239, 68, 68, 0.1);
+ }
+ .history-item .h-preview {
+ font-size: 0.78em;
+ color: var(--text-muted);
+ margin-top: 4px;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ max-width: 85%;
+ }
+
+ /* ---------- saved prompts ---------- */
+ .saved-prompt-item {
+ background: #fff;
+ padding: 14px 16px;
+ border-radius: var(--radius-sm);
+ margin-bottom: 10px;
+ border-left: 4px solid var(--accent-gold);
+ cursor: pointer;
+ transition: var(--transition);
+ position: relative;
+ }
+ .saved-prompt-item:hover {
+ background: var(--bg-light);
+ border-left-color: var(--secondary-purple);
+ }
+ .saved-prompt-item .sp-name {
+ font-weight: 700;
+ color: var(--primary-purple);
+ font-family: 'Segoe UI', Arial, sans-serif;
+ }
+ .saved-prompt-item .sp-date {
+ font-size: 0.8em;
+ color: var(--text-muted);
+ margin-top: 2px;
+ }
+        </style>
+        <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW4LGE7L1T');</script>
+</head>
+    <body>
+
+        <!-- ========== NAV ========== -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="/soulblueprint/" class="nav-logo">✨ Soul Blueprint</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="/soulblueprint/">Generator</a></li>
+                    <li><a href="/soulblueprint/examples/">Examples</a></li>
+                    <li><a href="/soulblueprint/articles/">Guides</a></li>
+                    <li><a href="/soulblueprint/playbooks/">Playbooks</a></li>
+                    <li><a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" class="active">Prompt Builder</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ========== PAGE HEADER ========== -->
+        <header class="page-header">
+            <div class="container">
+                <h1>AI Prompt Builder</h1>
+                <p class="subtitle">Create custom prompts for transforming your soul blueprint into infinite experiences</p>
+            </div>
+        </header>
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <div class="container">
+            <div class="builder-grid">
+
+                <!-- ===================== LEFT COLUMN ===================== -->
+                <div class="left-col">
+
+                    <!-- Reflection Guidance -->
+                    <div class="step-card" style="border-left: 4px solid var(--accent-gold); background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);">
+                        <h2 style="font-size: 1.1em; color: #92400e; margin-bottom: 8px;">Before You Generate Anything</h2>
+                        <p style="color: #78350f; font-size: 0.92em; line-height: 1.6; margin-bottom: 0;">Take a moment to notice the <strong>repeating themes</strong> across your readings. Which words keep appearing? Which energies feel most familiar? The more you understand your patterns, the more powerful your transformation will be.</p>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <h2><span class="step-number">1</span> Select Transformation Type</h2>
+
+                        <div class="form-group">
+                            <label for="transformationType">Choose Your Transformation:</label>
+                            <select id="transformationType" class="form-control" onchange="updatePrompt()">
+
+                                <optgroup label="Visual Art (Free AI)">
+                                    <option value="visual-portrait">Portrait Reading</option>
+                                    <option value="visual-scene">Scene Visualization</option>
+                                    <option value="visual-abstract">Abstract Art</option>
+                                    <option value="visual-symbolic">Symbolic Representation</option>
+                                    <option value="visual-infographic">Infographic Design</option>
+                                </optgroup>
+
+                                <optgroup label="Infographics (Free AI)">
+                                    <option value="infographic-pie">Pie Chart</option>
+                                    <option value="infographic-bar">Bar Chart</option>
+                                    <option value="infographic-timeline">Timeline</option>
+                                    <option value="infographic-diagram">Process Diagram</option>
+                                    <option value="infographic-radar">Radar Chart</option>
+                                    <option value="infographic-aspect-map">Aspect Network Map</option>
+                                    <option value="infographic-bubble">Category Bubble Map</option>
+                                    <option value="infographic-chakra">Chakra Alignment</option>
+                                    <option value="infographic-text">Text-Based Infographic</option>
+                                    <option value="infographic-wheel">Zodiac Wheel Diagram</option>
+                                    <option value="infographic-comparison">Side-by-Side Comparison</option>
+                                </optgroup>
+
+                                <optgroup label="Stories & Narrative (Free AI)">
+                                    <option value="story-hero">Hero's Journey</option>
+                                    <option value="story-fairy">Fairy Tale</option>
+                                    <option value="story-myth">Mythological Tale</option>
+                                    <option value="story-future">Future Self</option>
+                                    <option value="story-past">Past Life</option>
+                                    <option value="story-character">Character Archetype</option>
+                                    <option value="story-autobiography">Autobiographical Narrative</option>
+                                </optgroup>
+
+                                <optgroup label="Language Transforms (Free AI)">
+                                    <option value="language-mystical">Mystical Voice</option>
+                                    <option value="language-clinical">Clinical / Psychological</option>
+                                    <option value="language-casual">Casual Conversational</option>
+                                    <option value="language-poetic">Poetic Expression</option>
+                                    <option value="language-scientific">Scientific Analysis</option>
+                                    <option value="language-reading-level">Reading Level Adaptation</option>
+                                    <option value="language-perspective">Perspective Shift</option>
+                                </optgroup>
+
+                                <optgroup label="Practical Applications (Free AI)">
+                                    <option value="practical-daily">Daily Routine</option>
+                                    <option value="practical-morning">Morning Ritual</option>
+                                    <option value="practical-evening">Evening Wind-Down</option>
+                                    <option value="practical-career">Career Guidance</option>
+                                    <option value="practical-relationships">Relationship Insights</option>
+                                    <option value="practical-decision">Decision Framework</option>
+                                    <option value="practical-wellness">Wellness Plan</option>
+                                    <option value="practical-learning">Learning Style Profile</option>
+                                    <option value="practical-communication">Communication Guide</option>
+                                    <option value="practical-parenting">Parenting Insights</option>
+                                    <option value="practical-travel">Soul-Aligned Travel</option>
+                                </optgroup>
+
+                                <optgroup label="Spiritual Tools (Free AI)">
+                                    <option value="spiritual-meditation">Guided Meditation</option>
+                                    <option value="spiritual-affirmation">Affirmation Set</option>
+                                    <option value="spiritual-ritual">Personal Ritual</option>
+                                    <option value="spiritual-journal">Journal Prompts</option>
+                                    <option value="spiritual-mantra">Mantra Creation</option>
+                                    <option value="spiritual-crystal">Crystal & Gemstone Guide</option>
+                                    <option value="spiritual-chakra">Chakra Healing Plan</option>
+                                </optgroup>
+
+                                <optgroup label="Shadow Work (Free AI)">
+                                    <option value="shadow-mirror">Shadow Mirror Analysis</option>
+                                    <option value="shadow-triggers">Trigger Map & Response Guide</option>
+                                    <option value="shadow-inner-child">Inner Child Letter</option>
+                                    <option value="shadow-integration">Shadow Integration Ritual</option>
+                                    <option value="shadow-dialogue">Shadow Dialogue Script</option>
+                                    <option value="shadow-patterns">Recurring Pattern Decoder</option>
+                                    <option value="shadow-gifts">Shadow Gifts Inventory</option>
+                                </optgroup>
+
+                                <optgroup label="Creative Expressions (Free AI)">
+                                    <option value="creative-poetry">Free-Verse Poetry</option>
+                                    <option value="creative-haiku">Haiku Collection</option>
+                                    <option value="creative-acrostic">Acrostic Name Poem</option>
+                                    <option value="creative-songs">Song Lyrics</option>
+                                    <option value="creative-screenplay">Screenplay Scene</option>
+                                    <option value="creative-character">Character Portrait</option>
+                                    <option value="creative-mythology">Mythological Retelling</option>
+                                    <option value="creative-playlist">Soul Playlist</option>
+                                    <option value="creative-moodboard">Mood Board</option>
+                                </optgroup>
+
+                                <optgroup label="Multilingual & Cultural (Free AI)">
+                                    <option value="cultural-translation">Language Translation</option>
+                                    <option value="cultural-adaptation">Cultural Adaptation</option>
+                                </optgroup>
+
+                                <optgroup label="Interactive & Games (Free AI)">
+                                    <option value="interactive-quiz">Personality Quiz</option>
+                                    <option value="interactive-adventure">Adventure Story</option>
+                                    <option value="interactive-decision">Decision Tree</option>
+                                    <option value="interactive-scenario">Scenario Planning</option>
+                                    <option value="interactive-compatibility">Compatibility Quiz</option>
+                                </optgroup>
+
+                                <optgroup label="Audio & Spoken (Free AI)">
+                                    <option value="audio-narration">Narrated Reading Script</option>
+                                    <option value="audio-podcast">Podcast Episode Outline</option>
+                                    <option value="audio-asmr">ASMR Relaxation Script</option>
+                                </optgroup>
+
+                                <optgroup label="Premium Transformations (PRO)">
+                                    <option value="premium-autobiography">Full-Length Autobiography</option>
+                                    <option value="premium-novel">Fiction Novel</option>
+                                    <option value="premium-children">Children's Storybook</option>
+                                    <option value="premium-poetry">Poetry Collection</option>
+                                    <option value="premium-film">Feature Film Script</option>
+                                    <option value="premium-tv">TV Series Bible</option>
+                                    <option value="premium-game">Choose-Your-Own-Adventure Game</option>
+                                    <option value="premium-oracle">Oracle Deck Guidebook</option>
+                                    <option value="premium-art">Museum Art Series</option>
+                                    <option value="premium-character">Character Portfolio</option>
+                                    <option value="premium-podcast">Podcast Series</option>
+                                    <option value="premium-meditation">Meditation Library</option>
+                                    <option value="premium-mythology">Personal Mythology</option>
+                                    <option value="premium-ted">TED Talk Script</option>
+                                    <option value="premium-language">Ancestral Translation</option>
+                                    <option value="premium-daily">Daily Operating System</option>
+                                    <option value="premium-career">Career Strategy Guide</option>
+                                    <option value="premium-case">Psychological Case Study</option>
+                                    <option value="premium-course">Online Course</option>
+                                    <option value="premium-songs">Song Lyrics &amp; Album</option>
+                                    <option value="premium-play">Theater Play Script</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <h2><span class="step-number">2</span> Paste Your Reading(s)</h2>
+
+                        <div class="form-group">
+                            <label for="readingContent">Your Soul Blueprint Reading(s):</label>
+                            <textarea id="readingContent" class="form-control" placeholder="Paste your soul blueprint reading(s) here…
+
+                            Tips:
+                            • For simple transformations, paste 1-3 readings
+                            • For complex transforms (novels, films), paste as many as you can
+                            • Remove any personal info you don't want shared with AI
+                            • Keep the original formatting for best results"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Quick Presets (for testing):</label>
+                            <div class="quick-presets">
+                                <button class="preset-btn" onclick="loadPreset('sun')">Sun Sign</button>
+                                <button class="preset-btn" onclick="loadPreset('moon')">Moon</button>
+                                <button class="preset-btn" onclick="loadPreset('rising')">Rising</button>
+                                <button class="preset-btn" onclick="loadPreset('life-path')">Life Path</button>
+                                <button class="preset-btn" onclick="loadPreset('love')">Love</button>
+                                <button class="preset-btn" onclick="loadPreset('career')">Career</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <h2><span class="step-number">3</span> Customize Your Prompt</h2>
+
+                        <div class="form-group">
+                            <label for="toneSetting">Voice / Tone:</label>
+                            <select id="toneSetting" class="form-control">
+                                <option value="default">Default (matches transformation type)</option>
+                                <option value="clinical">Clinical / Psychological</option>
+                                <option value="cinematic">Cinematic / Dramatic</option>
+                                <option value="therapist">Warm Therapist</option>
+                                <option value="author">Author / Literary</option>
+                                <option value="parent">Parent-Friendly / Simple</option>
+                                <option value="mystical">Mystical / Esoteric</option>
+                                <option value="humorous">Humorous / Lighthearted</option>
+                                <option value="academic">Academic / Scholarly</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="depthSetting">Depth:</label>
+                            <select id="depthSetting" class="form-control">
+                                <option value="medium">Medium (recommended)</option>
+                                <option value="short">Short — quick overview</option>
+                                <option value="deep">Deep Dive — thorough exploration</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userName">Your Name (optional):</label>
+                            <input type="text" id="userName" class="form-control" placeholder="Enter your name for personalization">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customInstructions">Additional Instructions (optional):</label>
+                            <textarea id="customInstructions" class="form-control short" placeholder="E.g. Make it more humorous • Focus on career aspects • Add historical references"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stylePreference">Style Preference:</label>
+                            <select id="stylePreference" class="form-control">
+                                <option value="balanced">Balanced (recommended)</option>
+                                <option value="detailed">More Detailed</option>
+                                <option value="concise">More Concise</option>
+                                <option value="creative">More Creative</option>
+                                <option value="practical">More Practical</option>
+                                <option value="inspirational">More Inspirational</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== RIGHT COLUMN ===================== -->
+                <div class="right-col">
+
+                    <!-- Step 4 -->
+                    <div class="step-card">
+                        <h2><span class="step-number">4</span> Your Custom Prompt</h2>
+
+                        <!-- Quick Actions -->
+                        <div class="quick-actions">
+                            <button class="quick-action-btn" onclick="fillExample()" title="Load a sample reading to test">📝 Fill Example</button>
+                            <button class="quick-action-btn" onclick="clearAll()" title="Clear all fields">🗑 Clear All</button>
+                            <button class="quick-action-btn" onclick="saveCurrentPrompt()" title="Save this prompt for later">💾 Save Prompt</button>
+                            <button class="quick-action-btn" onclick="toggleSavedPrompts()" title="Load a previously saved prompt">📂 Load Saved</button>
+                        </div>
+
+                        <!-- Saved Prompts Panel (hidden by default) -->
+                        <div id="savedPromptsPanel" style="display:none; margin-bottom: 16px; padding: 14px; background: var(--bg-light); border-radius: var(--radius-sm); max-height: 200px; overflow-y: auto;">
+                            <div id="savedPromptsList"><p style="color:var(--text-muted); font-style:italic; font-size: 0.88em;">No saved prompts yet.</p></div>
+                        </div>
+
+                        <div class="prompt-output-wrap">
+                            <h3>Generated Prompt</h3>
+                            <div class="prompt-output" id="promptOutput">Select a transformation type and paste your reading to generate your custom prompt…</div>
+
+                            <!-- Prompt Variations -->
+                            <div class="prompt-variations">
+                                <label>Adjust Prompt:</label>
+                                <button class="variation-btn" onclick="applyVariation('detailed')">+ More Detailed</button>
+                                <button class="variation-btn" onclick="applyVariation('shorter')">- Make Shorter</button>
+                                <button class="variation-btn" onclick="applyVariation('creative')">✨ More Creative</button>
+                                <button class="variation-btn" onclick="applyVariation('practical')">🔧 More Practical</button>
+                            </div>
+
+                            <div class="action-buttons" style="margin-top: 14px;">
+                                <button class="action-btn primary" onclick="copyPrompt()">📋 Copy to Clipboard</button>
+                                <button class="action-btn chatgpt" onclick="openChatGPT()">💬 Open in ChatGPT</button>
+                                <button class="action-btn gemini" onclick="openGemini()">🔮 Open in Gemini</button>
+                            </div>
+
+                            <!-- Gentle guidance before external tools -->
+                            <div style="margin-top: 16px; padding: 14px 16px; background: rgba(102,126,234,0.06); border-radius: 8px; border-left: 3px solid var(--primary-purple);">
+                                <p style="font-size: 0.88em; color: #555; line-height: 1.6; margin: 0;"> <strong>Tip:</strong> After generating, review the AI's output carefully. You can refine it by asking follow-up questions in the same conversation — the AI remembers context.</p>
+                            </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <h4>Pro Tip</h4>
+                            <p id="proTip">For best results, paste multiple related readings together. This helps the AI understand the bigger picture and create more coherent transformations.</p>
+                        </div>
+
+                        <!-- Example Output -->
+                        <div class="example-wrap" id="exampleWrap">
+                            <h3>Example Output</h3>
+                            <p class="example-label">What this transformation looks like when AI processes a Leo Sun / Scorpio Moon reading:</p>
+                            <div class="example-output" id="exampleOutput"></div>
+                        </div>
+                    </div>
+
+                    <!-- History -->
+                    <div class="step-card">
+                        <h2>Prompt History</h2>
+
+                        <!-- History Controls -->
+                        <div class="history-controls">
+                            <input type="text" class="history-search" id="historySearch" placeholder="Search history..." oninput="filterHistory()">
+                            <select class="history-filter" id="historyFilter" onchange="filterHistory()">
+                                <option value="all">All Types</option>
+                                <option value="visual">Visual Art</option>
+                                <option value="infographic">Infographics</option>
+                                <option value="story">Stories</option>
+                                <option value="language">Language</option>
+                                <option value="practical">Practical</option>
+                                <option value="spiritual">Spiritual</option>
+                                <option value="shadow">Shadow Work</option>
+                                <option value="creative">Creative</option>
+                                <option value="interactive">Interactive</option>
+                                <option value="audio">Audio</option>
+                                <option value="premium">Premium</option>
+                            </select>
+                        </div>
+
+                        <div id="promptHistory">
+                            <p style="color:var(--text-muted); font-style:italic;">No prompts generated yet…</p>
+                        </div>
+                        <button class="clear-history-btn" onclick="clearHistory()">🗑 Clear History</button>
+                    </div>
+                </div>
+            </div><!-- /builder-grid -->
+        </div><!-- /container -->
+
+        <div class="container">
+            <!-- Soft PDF monetization placeholder -->
+            <div style="text-align: center; margin: 30px 0 10px; padding: 20px; background: rgba(255,215,0,0.08); border: 1px dashed rgba(255,215,0,0.3); border-radius: 12px;">
+                <p style="font-size: 0.95em; color: #92400e; margin-bottom: 4px;">Want a professionally formatted printable version of your reading?</p>
+                <p style="font-size: 0.85em; color: #a16207; opacity: 0.8;">Coming soon — beautiful PDF soul blueprints you can keep or gift.</p>
+            </div>
+
+            <!-- Loop-back: Try another reading -->
+            <div style="text-align: center; margin: 20px 0 30px; padding: 24px; background: rgba(102,126,234,0.06); border-radius: 12px;">
+                <p style="font-size: 1em; color: #555; margin-bottom: 12px;"><strong>Try another reading to compare patterns</strong></p>
+                <p style="font-size: 0.9em; color: #777; margin-bottom: 16px;">Each reading reveals different facets of your blueprint. Comparing transformations across readings can surface hidden connections.</p>
+                <a href="https://quantummerlin.com/soulblueprint" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding: 12px 28px; background: var(--gradient-primary); color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95em;">Generate Another Reading →</a>
+            </div>
+
+            <div class="page-nav">
+                <a href="../guides/examples.html" class="page-nav-prev">
+                <span class="nav-label">← Previous</span>
+                <span class="nav-title">Leo Sun Example</span>
+                </a>
+                <a href="../guides/transformations.html" class="page-nav-next">
+                <span class="nav-label">Explore more →</span>
+                <span class="nav-title">All Transformations</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- ========== FOOTER ========== -->
+        <footer>
+            <div class="container">
+                <p>Visual Soul Blueprint Platform</p>
+                <p>Transform your soul reading into stunning visual art &amp; infinite experiences</p>
+                <p><a href="https://quantummerlin.com/soulblueprint" target="_blank" rel="noopener noreferrer">quantummerlin.com/soulblueprint</a></p>
+                <p class="footer-tagline">✨ Free guide • No design skills needed • Works with ChatGPT, Gemini & NotebookLM</p>
+            </div>
+        </footer>
+
+        <!-- ========== TOAST ========== -->
+        <div class="toast" id="toast">✓ Copied to clipboard!</div>
+
+        <!-- Shared site JS loads FIRST so the page-specific IIFE can override copyPrompt -->
+        <script src="../js/main.js"></script>
+        <script src="../js/examples-data.js"></script>
+
+        <!-- ==========================================
+        INLINE JS — Prompt Builder Logic
+        ========================================== -->
+ <script>
+ (function () {
+ 'use strict';
+
+ /* ------------------------------------------------------------------
+ PROMPT TEMPLATES
+ ------------------------------------------------------------------ */
+ const templates = {
+
+ // ── Visual Art ──────────────────────────────────────────────
+ 'visual-portrait': `Create a mystical portrait representing someone with these cosmic patterns. Capture the essence of the traits described below. Use warm, ethereal light as the central element. Include subtle astrological and symbolic motifs woven into the background. Style: ethereal, spiritual, rich symbolism. No text overlay.
+
+Here is the reading:
+[READING]`,
+
+ 'visual-scene': `Create a mystical scene that visualizes the following soul blueprint placement. Show the traits, energies, and themes described. Use a rich colour palette that reflects the emotional tone. Include symbolic elements that hint at the deeper meaning. Maintain an ethereal, spiritual style throughout. No text overlay.
+
+Here is the reading:
+[READING]`,
+
+ 'visual-abstract': `You are an abstract expressionist artist. Transform this soul blueprint reading into an abstract art piece.
+
+[READING]
+
+Include:
+- Primary shapes and forms that echo the reading's energy
+- Colour relationships and contrasts reflecting the emotional tone
+- Texture and movement suggestions
+- Emotional energy expressed through abstraction
+- Hidden meanings in the composition
+- Balance between chaos and harmony
+
+Style: Abstract expressionism, Rothko / Kandinsky inspired. Provide a detailed description suitable for AI image generation.`,
+
+ 'visual-symbolic': `You are a symbolic artist. Create a symbolic representation based on this soul blueprint reading.
+
+[READING]
+
+Design a symbolic artwork featuring:
+- A central symbol or motif drawn from the reading
+- Supporting symbolic elements
+- Colour symbolism aligned to the energies described
+- Geometric relationships and sacred geometry touches
+- Archetypal imagery and layered meanings
+
+Style: Symbolic realism, Tarot-card aesthetic. Provide a detailed description for AI image generation.`,
+
+ 'visual-infographic': `You are an infographic designer. Create an infographic visualization based on this soul blueprint reading.
+
+[READING]
+
+Design an infographic that presents this information visually:
+- Main concept or theme at the top
+- 4-6 supporting data points / aspects
+- Clear visual hierarchy
+- Colour scheme for clarity
+- Icons or small illustrations
+- Clean, modern layout
+
+Provide a complete description suitable for AI image generation.`,
+
+ // ── Infographics ────────────────────────────────────────────
+ 'infographic-pie': `You are a data visualization expert. Extract the key components from this soul blueprint reading and design a pie chart infographic.
+
+[READING]
+
+- Identify 4-8 main categories or aspects
+- Assign representative percentages
+- Choose colours that relate to each category
+- Add labels and brief explanations
+- Include title: "Your Soul Blueprint Breakdown"
+
+Provide: complete pie chart description with colours, percentages, labels and layout.`,
+
+ 'infographic-bar': `You are a data visualization expert. Extract comparative data from this soul blueprint reading and design a bar chart.
+
+[READING]
+
+- Identify 5-7 items to compare
+- Use an appropriate scale / units
+- Colour-code different categories
+- Add value labels, axis labels, and title
+- Add trend indicators if applicable
+
+Provide: complete bar chart description with data, colours and layout.`,
+
+ 'infographic-timeline': `You are a timeline designer. Create a timeline infographic based on this soul blueprint reading.
+
+[READING]
+
+- Identify key phases or life periods implied by the reading
+- Order chronologically
+- Mark significant milestones
+- Add brief descriptions for each phase
+- Use visual markers for different event types
+- Include title and time scale
+
+Provide: complete timeline description with phases, milestones, and visual elements.`,
+
+ 'infographic-diagram': `You are a process diagram designer. Create a flow diagram based on this soul blueprint reading.
+
+[READING]
+
+- Identify main components or steps in the personal growth cycle
+- Show relationships and connections
+- Use arrows for flow direction
+- Add labels for each element
+- Colour-code different types
+- Include a clear title
+
+Provide: complete diagram description with components, connections, and layout.`,
+
+ 'infographic-radar': `You are a data visualization expert. Create a radar / spider chart based on this soul blueprint reading.
+
+[READING]
+
+- Extract 5-8 key dimensions or qualities
+- Rate each on a scale of 1-10 based on the reading
+- Arrange in circular pattern
+- Connect points to show overall profile shape
+- Colour different areas
+- Add labels and title: "Soul Blueprint Radar Profile"
+
+Provide: complete radar chart description with dimensions, values, colours, and layout.`,
+
+ // ── Stories & Narrative ──────────────────────────────────────
+ 'story-hero': `Transform this soul blueprint reading into a hero's journey narrative. The protagonist embodies these cosmic patterns.
+
+Structure the story as:
+1. **The Ordinary World** — life before awakening
+2. **Call to Adventure** — the cosmic invitation
+3. **Trials & Allies** — challenges and helpers
+4. **The Transformation** — the deepest change
+5. **The Return** — bringing wisdom home
+
+Here is the reading:
+[READING]`,
+
+ 'story-fairy': `Transform this soul blueprint reading into a fairy tale. The main character embodies the traits and energies described. Include magical elements, a moral lesson, and a hopeful ending.
+
+Here is the reading:
+[READING]`,
+
+ 'story-myth': `Transform this soul blueprint reading into a mythological tale, as if it were an ancient legend passed down through generations. Use archetypal symbols, a cosmic setting, and a transformative moral.
+
+Here is the reading:
+[READING]`,
+
+ 'story-future': `Using this soul blueprint reading, write a vivid "letter from your future self" set 10 years ahead. Describe the life you have built by fully embodying these energies. Be specific, optimistic, and grounded.
+
+Here is the reading:
+[READING]`,
+
+ 'story-past': `Using this soul blueprint reading, craft an imaginative past-life narrative that explains the karmic patterns and soul lessons described. Set it in a specific historical era and weave in symbolic details.
+
+Here is the reading:
+[READING]`,
+
+ // ── Language Transforms ──────────────────────────────────────
+ 'language-mystical': `Rewrite this soul blueprint reading in a mystical, oracle-like voice—poetic, evocative, and ancient. Use rich metaphor and sacred imagery.
+
+Here is the reading:
+[READING]`,
+
+ 'language-clinical': `Rewrite this soul blueprint reading in a clinical, psychological voice. Use personality-psychology terminology (Big Five, attachment theory, Jungian archetypes) and evidence-based framing.
+
+Here is the reading:
+[READING]`,
+
+ 'language-casual': `Rewrite this soul blueprint reading in a casual, conversational tone—like a wise friend explaining it over coffee. Use everyday language, humour, and relatable examples.
+
+Here is the reading:
+[READING]`,
+
+ 'language-poetic': `Transform this soul blueprint reading into a poem or series of poems. Use vivid imagery, metaphor, rhythm, and emotional resonance.
+
+Here is the reading:
+[READING]`,
+
+ 'language-scientific': `Rewrite this soul blueprint reading as a scientific analysis. Frame the traits as psychological constructs, cite parallels to research, and use a formal, analytical tone.
+
+Here is the reading:
+[READING]`,
+
+ // ── Practical Applications ──────────────────────────────────
+ 'practical-daily': `Create a daily routine aligned with this soul blueprint reading. Include:
+- Morning ritual (energy activation)
+- Energy management tips for the day
+- Decision-making framework based on core traits
+- Evening reflection practice
+
+Make it practical, actionable, and grounded.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-morning': `Create a detailed morning ritual (30-60 minutes) based on this soul blueprint reading. Include:
+- Wake-up timing aligned with your energy type
+- Physical movement (5-10 min) suited to your elemental balance
+- Breathwork or meditation technique (5 min)
+- Intention-setting practice using your core themes
+- Nourishment recommendations aligned with your energy
+- A specific affirmation drawn from the reading
+- Journaling prompt for the morning
+
+Make it practical, step-by-step, and immediately actionable.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-evening': `Create a detailed evening wind-down ritual (30-45 minutes) based on this soul blueprint reading. Include:
+- Transition practice to shift from active to receptive energy
+- Reflection exercise reviewing the day through your cosmic lens
+- Gratitude practice aligned with your soul themes
+- Body-based release technique (stretching, yoga, or bath ritual)
+- Dream-seeding visualization using themes from the reading
+- Journaling prompt for evening processing
+- Sleep environment suggestions matching your elemental nature
+
+Make it calming, restorative, and aligned with the reading's energy.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-career': `Create a career guidance plan based on this soul blueprint reading. Include ideal roles, work environments, growth strategies, and potential pitfalls to avoid. Be specific and actionable.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-relationships': `Create a relationship insights guide based on this soul blueprint reading. Cover communication style, attachment patterns, ideal partnership dynamics, and growth edges. Be compassionate and practical.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-decision': `Create a personal decision-making framework based on this soul blueprint reading. Include core values hierarchy, red-flag indicators, energy-alignment checks, and a step-by-step process.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-wellness': `Create a holistic wellness plan based on this soul blueprint reading. Include physical movement, nutrition themes, mental-health practices, and spiritual nourishment—all aligned to the energies described.
+
+Here is the reading:
+[READING]`,
+
+ // ── Spiritual Tools ─────────────────────────────────────────
+ 'spiritual-meditation': `Create a guided meditation based on this soul blueprint reading. Include:
+1. **Opening** — settling in, breath work (2 min)
+2. **Visualization** — meeting the energy described (5 min)
+3. **Integration** — bringing insight into the body (5 min)
+4. **Closing** — gratitude and grounding (3 min)
+
+Duration: ~15 minutes. Write it as a spoken script.
+
+Here is the reading:
+[READING]`,
+
+ 'spiritual-affirmation': `Create a set of 15-20 powerful affirmations based on this soul blueprint reading. Group them by theme (identity, purpose, relationships, growth). Make them present-tense, positive, and emotionally resonant.
+
+Here is the reading:
+[READING]`,
+
+ 'spiritual-ritual': `Design a personal ritual or ceremony based on this soul blueprint reading. Include materials needed, setting, step-by-step instructions, and the intention behind each step.
+
+Here is the reading:
+[READING]`,
+
+ 'spiritual-journal': `Create a set of 20 deep journal prompts based on this soul blueprint reading. Organize them into themes: Self-Discovery, Shadow Work, Purpose, Relationships, and Growth.
+
+Here is the reading:
+[READING]`,
+
+ 'spiritual-mantra': `Create a set of 7-10 personal mantras based on this soul blueprint reading. Each mantra should be 3-7 words, deeply resonant, and designed for daily repetition. Group by intention: grounding, empowerment, healing, and expansion.
+
+Here is the reading:
+[READING]`,
+
+ 'spiritual-crystal': `You are a crystal healing expert. Based on this soul blueprint reading, recommend 10-15 crystals and gemstones aligned with the energies described. For each crystal include: name, properties, how it aligns with the reading, and how to use it (meditation, wearing, placement).
+
+Here is the reading:
+[READING]`,
+
+ 'spiritual-chakra': `You are an energy healing practitioner. Create a comprehensive chakra healing plan based on this soul blueprint reading.
+
+For each of the 7 chakras (Root through Crown):
+1. Assess its current state based on the reading (overactive / balanced / underactive)
+2. Explain which reading themes connect to that chakra
+3. Provide a specific healing practice (meditation, yoga pose, sound, colour, food)
+4. Give a personalized affirmation for that chakra
+5. Suggest a crystal and essential oil pairing
+
+End with a full-body chakra balancing sequence (10 minutes) that integrates all the findings.
+
+Here is the reading:
+[READING]`,
+
+ // ── Shadow Work ─────────────────────────────────────────────
+ 'shadow-mirror': `You are a Jungian depth psychologist. Perform a shadow mirror analysis on this soul blueprint reading.
+
+For each major placement or theme:
+1. Identify the "light" expression (what the person shows the world)
+2. Identify the "shadow" expression (what gets repressed, denied, or projected)
+3. Explain how the shadow might manifest in daily life (triggers, projections, avoidance patterns)
+4. Describe the gift hidden inside the shadow
+5. Suggest one concrete practice to begin integrating this shadow aspect
+
+Be compassionate but honest. Use accessible language, not clinical jargon.
+
+Here is the reading:
+[READING]`,
+
+ 'shadow-triggers': `You are a trauma-informed therapist. Create a trigger map and response guide based on this soul blueprint reading.
+
+Identify 8-12 likely emotional triggers based on the placements and themes described. For each trigger:
+- The situation or behaviour that activates it
+- The underlying wound or fear it connects to (based on the reading)
+- The typical reactive response
+- A healthier conscious response aligned with the reading's gifts
+- A grounding technique specific to this trigger
+
+End with a "Trigger Response Protocol" — a simple 4-step process the person can use in the moment.
+
+Here is the reading:
+[READING]`,
+
+ 'shadow-inner-child': `You are a compassionate inner-child therapist. Write a letter FROM the person's inner child TO their adult self, based on this soul blueprint reading.
+
+The letter should:
+- Be written in a child's voice (age 5-8)
+- Reference the core wounds and needs revealed by the reading
+- Express what the inner child needs to feel safe
+- Ask for specific things the adult self can provide
+- Include both the pain and the pure joy of the inner child
+
+Then write a response letter FROM the adult self BACK to the inner child, offering reassurance, acknowledgment, and commitments based on the reading's strengths and gifts.
+
+Here is the reading:
+[READING]`,
+
+ 'shadow-integration': `You are a depth psychology practitioner. Design a shadow integration ritual based on this soul blueprint reading.
+
+Create a complete ceremony including:
+1. **Preparation** — materials needed, sacred space setup, timing recommendations
+2. **Invocation** — calling in the shadow aspects identified in the reading
+3. **Confrontation** — guided visualization to meet and dialogue with the shadow
+4. **Offering** — what must be released or sacrificed for integration
+5. **Integration** — a symbolic act that unites light and shadow
+6. **Closing** — sealing the work and returning to daily consciousness
+7. **Aftercare** — what to expect in the days following and how to process
+
+Here is the reading:
+[READING]`,
+
+ 'shadow-dialogue': `You are a gestalt therapist. Create a shadow dialogue script based on this soul blueprint reading.
+
+Write a dramatic dialogue between the person's "Light Self" and their "Shadow Self" as revealed by the reading. The dialogue should:
+- Open with the Light Self's complaints or frustrations about the Shadow
+- Allow the Shadow to respond with its own perspective and needs
+- Escalate to a confrontation where both sides reveal their deepest fears
+- Reach a turning point of mutual understanding
+- Resolve with a negotiated agreement for integration
+- Close with a unified voice expressing wholeness
+
+Include stage directions and emotional notes. Make it theatrically powerful.
+
+Here is the reading:
+[READING]`,
+
+ 'shadow-patterns': `You are a pattern recognition specialist and depth psychologist. Decode the recurring patterns hidden in this soul blueprint reading.
+
+Identify 5-8 recurring patterns, loops, or cycles the person likely experiences. For each:
+- **The Pattern** — describe the repeating cycle in clear terms
+- **The Origin** — which reading themes create this pattern
+- **The Payoff** — what the person unconsciously gets from repeating it
+- **The Cost** — what it costs them to stay in the loop
+- **The Exit Point** — the specific moment in the cycle where they can choose differently
+- **The New Pattern** — what replaces it when they break free
+
+End with a "Pattern Interrupt Toolkit" — 3 practical techniques they can use immediately.
+
+Here is the reading:
+[READING]`,
+
+ 'shadow-gifts': `You are a Jungian analyst. Create a Shadow Gifts Inventory based on this soul blueprint reading.
+
+The premise: every shadow aspect contains a hidden gift. For each challenging or "negative" theme in the reading:
+1. Name the shadow quality (e.g., "controlling", "avoidant", "people-pleasing")
+2. Identify the wound that created it
+3. Reveal the hidden gift inside (e.g., controlling → natural leadership; avoidant → deep sensitivity; people-pleasing → extraordinary empathy)
+4. Describe what the gift looks like when fully integrated
+5. Give one daily practice to transform the shadow into its gift
+
+End with a "Gift Statement" — a powerful affirmation that honours both the shadow and the gift.
+
+Here is the reading:
+[READING]`,
+
+ // ── Creative Expressions ────────────────────────────────────
+ 'creative-poetry': `Transform this soul blueprint reading into 3-5 free-verse poems. Each poem should capture a different facet of the reading — identity, shadow, gifts, purpose, destiny. Use vivid imagery, metaphor, and emotional resonance.
+
+Here is the reading:
+[READING]`,
+
+ 'creative-haiku': `Transform this soul blueprint reading into a collection of 15-20 haiku (5-7-5 syllable structure). Capture the essence of each trait, energy, and theme in these tiny, powerful poems. Group by theme.
+
+Here is the reading:
+[READING]`,
+
+ 'creative-acrostic': `Create an acrostic poem using the name provided (or "SOUL BLUEPRINT" if no name). Each line should relate to this soul blueprint reading, revealing a key trait or theme. Make it beautiful and deeply personal.
+
+Here is the reading:
+[READING]`,
+
+ 'creative-songs': `Transform this soul blueprint reading into song lyrics (2-3 songs). Include verse, chorus, bridge structure. Each song should capture a different energy from the reading. Include mood/genre suggestions.
+
+Here is the reading:
+[READING]`,
+
+ 'creative-screenplay': `Transform this soul blueprint reading into a short screenplay scene (5-10 pages). The protagonist embodies these cosmic patterns. Include scene heading, action lines, dialogue, and visual direction. Make the inner world visible through external action.
+
+Here is the reading:
+[READING]`,
+
+ 'creative-character': `Create a detailed character portrait based on this soul blueprint reading. Include: full name, age, appearance, personality traits, backstory, motivations, fears, greatest strength, fatal flaw, and a signature quote. Write it as a character bible entry.
+
+Here is the reading:
+[READING]`,
+
+ 'creative-mythology': `Retell this soul blueprint reading as an ancient myth. Set it in a mythological world — Greek, Norse, Egyptian, or another tradition that fits the energy. Include gods, quests, magical objects, and a transformative climax.
+
+Here is the reading:
+[READING]`,
+
+ 'creative-playlist': `You are a music curator with deep knowledge of astrology and personality psychology. Create a personalized soul playlist based on this soul blueprint reading.
+
+Include:
+- 20-30 song recommendations with artist and song title
+- Group by mood/theme: Morning Energy, Deep Focus, Emotional Release, Empowerment, Evening Wind-Down
+- For each song, write one sentence explaining why it resonates with the reading
+- Include genre variety that reflects the reading's energy range
+- Add a "theme song" — the one track that captures the entire soul blueprint
+- Suggest a playlist name and cover art description
+
+Here is the reading:
+[READING]`,
+
+ 'creative-moodboard': `You are a visual designer and creative director. Create a detailed mood board concept based on this soul blueprint reading.
+
+Include:
+- Colour palette (5-7 colours with hex codes) derived from the reading's energy
+- Texture descriptions (3-4 textures that evoke the reading's themes)
+- Typography suggestions (2-3 font styles that match the personality)
+- 8-10 image descriptions for mood board panels (landscapes, objects, textures, people, abstract)
+- Key words/phrases to overlay on the board
+- Overall aesthetic name (e.g., "Volcanic Serenity", "Ancient Future")
+- Layout description showing how elements should be arranged
+
+This should be detailed enough to recreate in Canva, Pinterest, or any design tool.
+
+Here is the reading:
+[READING]`,
+
+ // ── Multilingual & Cultural ─────────────────────────────────
+ 'cultural-translation': `Translate this soul blueprint reading into [specify language or say "the language that best fits the reading's energy"]. Maintain the spiritual depth and nuance. Add cultural context notes where direct translation would lose meaning.
+
+Here is the reading:
+[READING]`,
+
+ 'cultural-adaptation': `Adapt this soul blueprint reading through the lens of a specific cultural tradition (choose the one that most resonates with the energies described — e.g., Japanese Wabi-Sabi, Indian Ayurveda, Celtic Druidism, Indigenous Dreamtime, African Ubuntu). Reframe each insight using that culture's concepts, symbols, and wisdom traditions.
+
+Here is the reading:
+[READING]`,
+
+ // ── Interactive & Games ─────────────────────────────────────
+ 'interactive-quiz': `Create a personality quiz (15-20 questions) based on this soul blueprint reading. Each question should reveal a different facet of the reader's cosmic patterns. Include multiple-choice answers, scoring system, and 4-5 result profiles.
+
+Here is the reading:
+[READING]`,
+
+ 'interactive-adventure': `Create a short choose-your-own-adventure story (10-15 decision points) based on this soul blueprint reading. The protagonist faces choices that mirror the energies described. Include 3-4 possible endings reflecting different paths.
+
+Here is the reading:
+[READING]`,
+
+ 'interactive-decision': `Create a decision tree framework based on this soul blueprint reading. For the 5 most common life decisions (career, relationships, finances, health, creativity), create branching paths that align with the reader's cosmic patterns. Include yes/no questions and recommended actions.
+
+Here is the reading:
+[READING]`,
+
+ 'interactive-scenario': `Create 5 life scenarios based on this soul blueprint reading. For each scenario: describe the situation, present 3 possible responses aligned with different energies in the reading, and explain the likely outcome of each choice.
+
+Here is the reading:
+[READING]`,
+
+ 'interactive-compatibility': `Create a compatibility assessment tool based on this soul blueprint reading. Define the 5 key compatibility dimensions from the reading, describe ideal matches for each, create a scoring rubric, and provide sample partner profiles (best match, growth match, challenge match).
+
+Here is the reading:
+[READING]`,
+
+ // ── Audio & Spoken ──────────────────────────────────────────
+ 'audio-narration': `Transform this soul blueprint reading into a narrated script suitable for audio recording (10-15 minutes). Write it in second person ("You are..."), with dramatic pacing, pauses marked, breathing cues, and emotional crescendos. Include intro music and background sound suggestions.
+
+Here is the reading:
+[READING]`,
+
+ 'audio-podcast': `Create a podcast episode outline based on this soul blueprint reading. Include: episode title, 60-second hook, segment breakdown (intro, deep dive, practical takeaways, listener Q&A prompts, outro), talking points for each segment, and suggested episode length (20-30 min).
+
+Here is the reading:
+[READING]`,
+
+ 'audio-asmr': `Create an ASMR-style relaxation script based on this soul blueprint reading. Write it in a soft, whispery tone with gentle triggers (tapping, brushing, soft speech). Weave the reading's themes into a soothing 15-minute experience. Include sound effect directions and pacing notes.
+
+Here is the reading:
+[READING]`,
+
+ // ── Language Transforms (additional) ────────────────────────
+ 'language-reading-level': `Rewrite this soul blueprint reading at three different reading levels:
+
+1. **Simple (8th Grade)** — Clear, short sentences. Everyday language. No jargon.
+2. **Standard (College)** — Moderate complexity. Some technical terms explained in context.
+3. **Advanced (Academic)** — Scholarly tone. Technical terminology. Theoretical frameworks referenced.
+
+Here is the reading:
+[READING]`,
+
+ 'language-perspective': `Rewrite this soul blueprint reading from four different perspectives:
+
+1. **First Person** — "I am..." (self-affirmation style)
+2. **Second Person** — "You are..." (guide/coach style)
+3. **Third Person** — "They are..." (biographical/observer style)
+4. **Universal** — "One who carries this energy..." (archetypal/timeless style)
+
+Here is the reading:
+[READING]`,
+
+ // ── Infographics (additional) ───────────────────────────────
+ 'infographic-aspect-map': `You are a data visualization expert. Create an aspect network map based on this soul blueprint reading.
+
+[READING]
+
+- Identify all planets, signs, and houses mentioned
+- Map connections/aspects between them as network nodes and edges
+- Use line thickness for aspect strength
+- Colour-code harmonious (blue/green) vs challenging (red/orange) aspects
+- Include a legend and title: "Your Aspect Network"
+
+Provide: complete network diagram description with nodes, connections, colours, and layout.`,
+
+ 'infographic-bubble': `You are a data visualization expert. Create a bubble map categorizing all the themes in this soul blueprint reading.
+
+[READING]
+
+- Group related themes into 5-8 bubbles of varying sizes
+- Size reflects importance/emphasis in the reading
+- Colour-code by domain (identity, emotions, career, relationships, spirituality)
+- Show overlapping areas
+- Include labels and title: "Your Reading Category Map"
+
+Provide: complete bubble map description with categories, sizes, colours, and positioning.`,
+
+ 'infographic-chakra': `You are an energy healer and data visualizer. Create a chakra alignment diagram based on this soul blueprint reading.
+
+[READING]
+
+- Map the reading's themes to the 7 chakras (Root through Crown)
+- Rate each chakra's activation level (1-10) based on the reading
+- Identify overactive, balanced, and underactive chakras
+- Add colours, symbols, and brief descriptions for each
+- Include healing suggestions for imbalanced chakras
+- Title: "Your Soul Blueprint Chakra Profile"
+
+Provide: complete chakra diagram with levels, colours, and recommendations.`,
+
+ 'infographic-text': `You are an infographic designer. Create a TEXT-BASED infographic (no images needed — pure formatted text) based on this soul blueprint reading. This should be copy-pasteable into Canva, PowerPoint, or social media.
+
+[READING]
+
+Use:
+- Unicode symbols and emoji for visual interest
+- Box-drawing characters for sections
+- Bullet points and numbered lists
+- Bold headers (marked with ** **)
+- Clean spacing and alignment
+- Include: title, 4-6 data sections, key stats, and a summary footer
+
+Provide: complete text-based infographic ready to copy-paste.`,
+
+ 'infographic-wheel': `You are a data visualization expert. Create a zodiac wheel diagram based on this soul blueprint reading.
+
+[READING]
+
+- Place the 12 houses around a circular wheel
+- Mark planetary placements in their correct houses
+- Highlight the Ascendant, Midheaven, IC, and Descendant
+- Colour-code by element (Fire=red, Earth=green, Air=yellow, Water=blue)
+- Show aspect lines connecting planets (solid=conjunction/trine, dashed=square/opposition)
+- Add a legend and title: "Your Birth Chart Wheel"
+- Include brief annotations for the most significant placements
+
+Provide: complete wheel diagram description with positions, colours, connections, and layout.`,
+
+ 'infographic-comparison': `You are a data visualization expert. Create a side-by-side comparison infographic based on this soul blueprint reading.
+
+[READING]
+
+- Identify 2 contrasting themes or energies in the reading (e.g., Sun vs Moon, conscious vs unconscious, public vs private)
+- Create two columns with matching categories
+- Use contrasting colour schemes for each side
+- Show where the two sides overlap or complement
+- Add a synthesis row at the bottom showing integration points
+- Include title: "Your Dual Nature: [Theme A] vs [Theme B]"
+
+Provide: complete comparison layout with categories, data points, colours, and synthesis.`,
+
+ // ── Stories (additional) ────────────────────────────────────
+ 'story-character': `Transform this soul blueprint reading into a character archetype analysis. Identify the 3-5 dominant archetypes (e.g., The Healer, The Warrior, The Sage, The Lover, The Trickster) present in the reading. For each: describe the archetype, how it manifests, its gifts, its shadow, and a fictional character who shares this energy.
+
+Here is the reading:
+[READING]`,
+
+ 'story-autobiography': `Transform this soul blueprint reading into the opening chapter of an autobiography. Write in first person as if the reader is telling their own story. Weave the cosmic patterns into real-life moments, childhood memories, and turning points. Make it deeply personal and emotionally resonant.
+
+Here is the reading:
+[READING]`,
+
+ // ── Practical (additional) ──────────────────────────────────
+ 'practical-learning': `Create a personalized learning style profile based on this soul blueprint reading. Include: primary learning style (visual/auditory/kinesthetic/reading), ideal study environment, attention patterns, best time of day for learning, recommended study techniques, and subjects where you'll naturally excel.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-communication': `Create a communication style guide based on this soul blueprint reading. Include: natural communication strengths, potential blindspots, how you come across to others vs your intent, tips for difficult conversations, ideal communication channels, and how to adapt your style for different audiences.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-parenting': `Create parenting insights based on this soul blueprint reading. Include: your natural parenting style, strengths as a parent, potential challenges, how your cosmic patterns affect your children, age-specific guidance, and self-care recommendations for parents with these energies.
+
+Here is the reading:
+[READING]`,
+
+ 'practical-travel': `Create a soul-aligned travel guide based on this soul blueprint reading. Include: 10 destinations that resonate with your cosmic energy, ideal travel style, activities that feed your soul, packing essentials based on your energy needs, and a sample itinerary for your top destination.
+
+Here is the reading:
+[READING]`,
+
+ // ── Premium Transformations ─────────────────────────────────
+ 'premium-autobiography': `You are a bestselling ghostwriter. Transform my soul blueprint into a full-length autobiography outline (20+ chapters). Use the reading as the psychological backbone and weave it into real-life narrative arcs. Include chapter titles, key themes, and emotional beats.
+
+[READING]`,
+
+ 'premium-novel': `You are a fiction author. Transform my soul blueprint into a fiction novel outline. The protagonist's personality mirrors these cosmic patterns. Include plot structure, character arcs, world-building notes, and chapter breakdown.
+
+[READING]`,
+
+ 'premium-children': `You are a children's book author and illustrator. Transform my soul blueprint into a children's storybook (ages 5-10). Create a magical character who embodies these traits, a simple plot with a heartfelt lesson, and illustration descriptions for each page spread.
+
+[READING]`,
+
+ 'premium-poetry': `You are an acclaimed poet. Transform my soul blueprint into a poetry collection of 12-15 poems. Organize by theme: Identity, Shadow, Love, Purpose, Destiny. Use varied forms (free verse, haiku, sonnet, prose poem).
+
+[READING]`,
+
+ 'premium-film': `You are a screenwriter. Transform my soul blueprint into a feature film script treatment. Include logline, synopsis, three-act structure, character breakdowns, key scenes, and visual tone.
+
+[READING]`,
+
+ 'premium-tv': `You are a TV showrunner. Transform my soul blueprint into a TV series bible. Include concept, pilot outline, season arc, character profiles, episode log-lines for Season 1 (8-10 episodes), and tone/visual references.
+
+[READING]`,
+
+ 'premium-game': `You are a game designer. Transform my soul blueprint into a Choose-Your-Own-Adventure interactive story. Include opening scenario, 3-4 branching paths reflecting different energies in the reading, multiple endings, and decision-point descriptions.
+
+[READING]`,
+
+ 'premium-oracle': `You are a spiritual author. Transform my soul blueprint into an oracle deck guidebook. Design 22 cards with names, imagery descriptions, upright/reversed meanings, and a suggested spread layout.
+
+[READING]`,
+
+ 'premium-art': `You are a museum curator and art director. Transform my soul blueprint into a museum art series concept. Design 10-12 pieces with titles, medium, dimensions, visual descriptions, and curatorial statement.
+
+[READING]`,
+
+ 'premium-character': `You are a character designer. Transform my soul blueprint into a character portfolio with 5-7 distinct characters that each embody different facets of the reading. Include names, backstories, visual descriptions, abilities, and relationships.
+
+[READING]`,
+
+ 'premium-podcast': `You are a podcast producer. Transform my soul blueprint into a 10-episode podcast series plan. Include series title, tagline, episode titles, guest ideas, talking points, and intro/outro scripts.
+
+[READING]`,
+
+ 'premium-meditation': `You are a meditation teacher. Transform my soul blueprint into a meditation library of 7 guided meditations (one per day). Each should be 10-15 minutes, with unique themes drawn from the reading, full spoken scripts, and background music suggestions.
+
+[READING]`,
+
+ 'premium-mythology': `You are a mythologist and storyteller. Transform my soul blueprint into a personal mythology—an origin myth, a pantheon of inner archetypes, sacred places, rituals, and a prophecy. Write it as if discovered in an ancient text.
+
+[READING]`,
+
+ 'premium-ted': `You are a TED Talk coach. Transform my soul blueprint into a TED Talk script (12-18 minutes). Include a compelling hook, personal story arc, universal insight, audience interaction moments, and a memorable closing line.
+
+[READING]`,
+
+ 'premium-language': `You are a linguistic anthropologist. Transform my soul blueprint into an "ancestral translation"—rewrite the reading as if it were wisdom passed down in an ancient cultural tradition (choose the tradition that best fits the reading's energy). Include proverbs, cultural references, and ceremonial language.
+
+[READING]`,
+
+ 'premium-daily': `You are a life-design strategist. Transform my soul blueprint into a Daily Operating System—a comprehensive daily schedule and decision-making framework. Include morning protocol, energy windows, task-batching strategy, relationship check-ins, evening review, and weekly reset ritual.
+
+[READING]`,
+
+ 'premium-career': `You are a career strategist. Transform my soul blueprint into a Career Strategy Guide. Include ideal industries, role archetypes, networking approach, personal brand statement, 90-day action plan, and long-term vision board description.
+
+[READING]`,
+
+ 'premium-case': `You are a clinical psychologist. Transform my soul blueprint into a detailed psychological case study (anonymized). Include presenting patterns, developmental analysis, personality profile (Big Five, attachment, Jungian type), therapeutic recommendations, and prognosis.
+
+[READING]`,
+
+ 'premium-course': `You are an online-course creator. Transform my soul blueprint into a 6-module online course outline. Include course title, learning objectives, module breakdowns with lesson titles, activities, assignments, and a final capstone project.
+
+[READING]`,
+
+ 'premium-songs': `You are a singer-songwriter and producer. Transform my soul blueprint into a concept album of 8-10 songs. Include album title, track listing, lyrics (or lyric sketches), genre/mood notes, and production direction for each track.
+
+[READING]`,
+
+ 'premium-play': `You are a playwright. Transform my soul blueprint into a two-act theater play. Include character list, set descriptions, act/scene breakdowns, key monologues, and stage directions. The protagonist's inner world mirrors the reading.
+
+[READING]`
+ };
+
+ /* ------------------------------------------------------------------
+ PRO TIPS per type
+ ------------------------------------------------------------------ */
+ const tips = {
+ 'visual-portrait': 'For portraits, include multiple readings about personality and character for a more accurate representation.',
+ 'visual-scene': 'Describe the mood you want — peaceful, dramatic, mystical — to guide the AI.',
+ 'visual-abstract': 'Abstract art works beautifully with emotionally charged readings like Moon or Chiron.',
+ 'visual-symbolic': 'Include readings with strong archetypal themes (nodes, Lilith) for richer symbolism.',
+ 'visual-infographic':'Infographics work best with readings that have clear components or categories.',
+ 'infographic-pie': 'Pie charts shine when you have 4-8 distinct aspects to compare.',
+ 'infographic-bar': 'Bar charts are great for comparing planetary strengths or house emphases.',
+ 'infographic-timeline':'Timelines pair well with life-path, progressed, or transit readings.',
+ 'infographic-diagram':'Process diagrams work best for growth cycles or decision frameworks.',
+ 'infographic-radar': 'Radar charts beautifully show your multi-dimensional soul profile.',
+ 'story-hero': 'Include readings about challenges and gifts for a complete hero\'s journey arc.',
+ 'story-fairy': 'Children-friendly language works best — paste your simplest, most positive readings.',
+ 'story-myth': 'Nodes, Chiron, and Lilith readings add powerful mythological depth.',
+ 'story-future': 'Combine life-path and career readings for the most vivid future-self letter.',
+ 'story-past': 'Karmic readings (nodes, Saturn) create the most compelling past-life stories.',
+ 'language-mystical': 'This style pairs beautifully with Moon, Neptune, and 12th-house readings.',
+ 'language-clinical': 'Great for self-understanding — try it with your full personality profile readings.',
+ 'language-casual': 'Perfect for sharing your reading with friends who aren\'t into astrology.',
+ 'language-poetic': 'Venus, Moon, and Neptune readings produce the most beautiful poetry.',
+ 'language-scientific': 'Combine multiple readings for a comprehensive psychological analysis.',
+ 'practical-daily': 'Include your Sun, Moon, and Mars readings for the most aligned daily routine.',
+ 'practical-career': 'Midheaven and 10th-house readings are essential for career guidance.',
+ 'practical-relationships': 'Venus, 7th-house, and love-blueprint readings are key here.',
+ 'practical-decision': 'Mercury and Saturn readings help build the strongest decision frameworks.',
+ 'practical-wellness': 'Include 6th-house and Mars readings for body-aligned wellness plans.',
+ 'practical-morning': 'Combine Sun and Mars readings for the most energizing morning ritual.',
+ 'practical-evening': 'Moon and Neptune readings create the most restorative evening routines.',
+ 'spiritual-meditation':'Moon and Neptune readings create the most immersive meditations.',
+ 'spiritual-affirmation':'Sun and Jupiter readings produce the most empowering affirmations.',
+ 'spiritual-ritual': 'Include readings with strong elemental themes for richer rituals.',
+ 'spiritual-journal': 'Paste your most challenging readings — journal prompts thrive on shadow work.',
+ 'spiritual-mantra': 'Short, powerful readings (Sun, Moon) create the most resonant mantras.',
+ 'spiritual-crystal': 'Include elemental and planetary readings for the most accurate crystal matches.',
+ 'spiritual-chakra': 'Include readings about body, health, and energy for the most detailed chakra plan.',
+ 'shadow-mirror': 'Lilith, Chiron, Pluto, and 12th house readings produce the deepest shadow analysis.',
+ 'shadow-triggers': 'Include Mars, Pluto, and challenging aspect readings for the most complete trigger map.',
+ 'shadow-inner-child': 'Moon, 4th house, and Chiron readings connect most deeply to inner child work.',
+ 'shadow-integration': 'Include as many readings as possible — shadow integration works best with the full picture.',
+ 'shadow-dialogue': 'Opposing placements (Sun vs Moon, 1st vs 7th house) create the most dramatic dialogues.',
+ 'shadow-patterns': 'Node readings, Saturn, and Chiron reveal the deepest recurring patterns.',
+ 'shadow-gifts': 'Focus on your most challenging readings — those are where the biggest gifts hide.',
+ 'creative-poetry': 'Moon and Venus readings produce the most emotionally rich poetry.',
+ 'creative-haiku': 'Focus on one reading at a time — haiku thrives on simplicity.',
+ 'creative-acrostic': 'Enter your name in the Name field for a personalized acrostic poem.',
+ 'creative-songs': 'Venus, 5th house, and Moon readings make the most soulful lyrics.',
+ 'creative-screenplay': 'Dramatic placements (Pluto, Mars, 8th house) create compelling scenes.',
+ 'creative-character': 'Include multiple readings to create a multi-dimensional character.',
+ 'creative-mythology': 'Node and Chiron readings are mythology gold — include them.',
+ 'creative-playlist': 'Include multiple readings for variety — Sun for energy, Moon for emotion, Venus for aesthetics.',
+ 'creative-moodboard': 'Works best with visually rich readings — Venus, Neptune, and 5th house are ideal.',
+ 'cultural-translation': 'Specify the target language in Additional Instructions for best results.',
+ 'cultural-adaptation': 'Specify which cultural tradition in Additional Instructions, or let AI choose.',
+ 'interactive-quiz': 'Include 5+ readings for enough material to create diverse questions.',
+ 'interactive-adventure': 'Conflicting energies create the best branching story paths.',
+ 'interactive-decision': 'Saturn and Mercury readings create the strongest decision frameworks.',
+ 'interactive-scenario': 'Include challenging placements for the most thought-provoking scenarios.',
+ 'interactive-compatibility':'Venus, 7th house, and love blueprint readings are essential here.',
+ 'audio-narration': 'Moon and Neptune readings create the most immersive narration scripts.',
+ 'audio-podcast': 'Include diverse reading types for a well-rounded episode structure.',
+ 'audio-asmr': 'Water signs and Neptune readings create the most soothing ASMR scripts.',
+ 'language-reading-level':'Great for sharing your reading with different audiences.',
+ 'language-perspective': 'Try first-person for affirmations, second-person for coaching.',
+ 'infographic-aspect-map':'Include full chart readings with aspects for the richest network map.',
+ 'infographic-bubble': 'Paste multiple reading categories for the most comprehensive bubble map.',
+ 'infographic-chakra': 'Include body-related readings (Mars, 6th house) for accurate chakra mapping.',
+ 'infographic-text': 'Perfect for social media sharing — no design tools needed.',
+ 'infographic-wheel': 'Include full chart details with house placements for the most accurate wheel.',
+ 'infographic-comparison': 'Works best when the reading has clear contrasts — Sun vs Moon or public vs private self.',
+ 'story-character': 'Include shadow readings (Lilith, Chiron, Pluto) for deeper archetypes.',
+ 'story-autobiography': 'Paste your most personal readings for the most authentic story.',
+ 'practical-learning': 'Mercury and 3rd/9th house readings are most relevant for learning styles.',
+ 'practical-communication':'Mercury, 3rd house, and relationship readings create the best guides.',
+ 'practical-parenting': 'Moon, 4th house, and family-related readings are key here.',
+ 'practical-travel': 'Jupiter and 9th house readings are essential for travel guidance.',
+ 'premium-autobiography':'For autobiographies, include as many readings as possible — the more context, the better.',
+ 'premium-novel': 'Include readings about conflicts, relationships, and destiny for rich novel material.',
+ 'premium-children': 'Keep it to 2-3 positive readings for the best children\'s storybook.',
+ 'premium-poetry': 'Moon, Venus, and Chiron readings create the most emotionally resonant poetry.',
+ 'premium-film': 'Dramatic placements (Pluto, 8th house, nodes) make for compelling screenplays.',
+ 'premium-tv': 'Paste many readings — TV series need rich character depth.',
+ 'premium-game': 'Conflicting energies in your chart create the best branching story paths.',
+ 'premium-oracle': 'Include 12+ readings to have enough material for a full deck.',
+ 'premium-art': 'Visually symbolic readings (Lilith, asteroids) inspire striking art concepts.',
+ 'premium-character': 'Opposing placements create the most interesting character ensembles.',
+ 'premium-podcast': 'Include a variety of reading types for diverse episode topics.',
+ 'premium-meditation': 'Spiritual and emotional readings (Moon, Neptune, 12th house) work best.',
+ 'premium-mythology': 'Nodes, Chiron, and Lilith readings are mythology gold.',
+ 'premium-ted': 'Focus on your strongest, most unique placements for the TED Talk hook.',
+ 'premium-language': 'Cultural resonance is strongest with readings that mention heritage or ancestry.',
+ 'premium-daily': 'Sun, Mars, and Saturn readings create the most structured daily systems.',
+ 'premium-career': 'Midheaven + 2nd, 6th, and 10th house readings are essential.',
+ 'premium-case': 'Include challenging placements for a psychologically rich case study.',
+ 'premium-course': 'Jupiter and 9th-house readings pair well with educational content.',
+ 'premium-songs': 'Venus, Moon, and 5th-house readings make the most soulful lyrics.',
+ 'premium-play': 'Include dramatic placements and relationship readings for theatrical tension.'
+ };
+
+ /* ------------------------------------------------------------------
+ PRESET SAMPLE READINGS
+ ------------------------------------------------------------------ */
+ const presets = {
+ 'sun': ' SUN SIGN READING\n\nYour Sun represents your core identity, your ego, and the essence of who you are becoming. It is the central force of your personality — the gravitational pull around which everything else orbits.\n\nYou shine brightest when you express your authentic self without apology. Your vitality comes from creative self-expression. Your life purpose is to develop confidence, leadership, and the courage to be seen. Your greatest gifts include natural charisma, determination, and the ability to inspire others. Your challenges involve ego attachment, stubbornness, and learning when to yield.',
+
+ 'moon': ' MOON READING\n\nYour Moon reveals your emotional inner world — the part of you that exists beneath the surface. It governs your instincts, your comfort needs, and the way you nurture yourself and others.\n\nYou process feelings deeply and intuitively. Your emotional needs include security, emotional honesty, and space for vulnerability. You feel most at home when surrounded by beauty and meaningful connection. Your emotional shadow involves avoiding conflict and suppressing needs to keep the peace. When nurtured, you radiate warmth and profound empathy.',
+
+ 'rising': ' RISING SIGN READING\n\nYour Rising Sign is the mask you wear in the world — the first impression you give and the lens through which you approach new experiences. It shapes your appearance, your style, and the way you instinctively move through life.\n\nPeople first perceive you as confident, magnetic, and slightly mysterious. You approach life with intensity and purpose. Your first impressions are powerful and lasting. The world sees your strength before it sees your softness.',
+
+ 'life-path': ' LIFE PATH NUMBER READING\n\nYour Life Path Number reveals the overarching theme of your soul\'s journey in this lifetime. It describes the lessons you are here to learn, the gifts you carry, and the ultimate destination of your personal evolution.\n\nYour life purpose involves mastering independence and originality. You are here to pioneer new paths. Your natural talents include innovation, leadership, and visionary thinking. Your life lessons centre around courage, self-trust, and learning to stand alone when necessary.',
+
+ 'love': ' LOVE BLUEPRINT READING\n\nYour Love Blueprint reveals the patterns, needs, and gifts you bring to intimate relationships. It describes what you seek in a partner, how you express affection, and the soul lessons woven into your romantic life.\n\nIn love, you are passionate, loyal, and deeply devoted. You attract partners who mirror your intensity. Your relationship needs include emotional depth, intellectual stimulation, and shared purpose. Your gifts in partnership are unwavering loyalty and transformative love. Your challenges involve possessiveness and fear of vulnerability.',
+
+ 'career': ' CAREER BLUEPRINT READING\n\nYour Career Blueprint reveals your ideal professional path, work style, and the gifts you bring to your vocation. It describes the environments where you thrive and the legacy you are meant to build.\n\nYour work style is strategic, visionary, and detail-oriented. You thrive in environments that value innovation and autonomy. Your career gifts include creative problem-solving, natural authority, and the ability to see the big picture. Success comes when you align your work with your deeper purpose and resist the temptation to play small.'
+ };
+
+ /* ------------------------------------------------------------------
+ STYLE MODIFIERS
+ ------------------------------------------------------------------ */
+ const styleModifiers = {
+ 'detailed': '\n\nPlease provide extra detail and depth in your response.',
+ 'concise': '\n\nPlease keep your response concise and to the point.',
+ 'creative': '\n\nPlease be especially creative and imaginative in your approach.',
+ 'practical': '\n\nFocus on practical, actionable content.',
+ 'inspirational': '\n\nMake your response especially uplifting and inspiring.'
+ };
+
+ const toneModifiers = {
+ 'clinical': '\n\nUse a clinical, psychological voice. Be analytical and evidence-informed. Reference personality frameworks where relevant.',
+ 'cinematic': '\n\nUse a cinematic, dramatic voice. Write as if narrating a film. Rich imagery, tension, and emotional beats.',
+ 'therapist': '\n\nUse a warm, therapeutic voice. Gentle, affirming, non-judgmental. Like a trusted counsellor speaking directly to the person.',
+ 'author': '\n\nUse a literary, authorial voice. Elegant prose, metaphor, carefully crafted sentences. Think published non-fiction.',
+ 'parent': '\n\nUse simple, clear language suitable for someone new to astrology. Avoid jargon. Warm and encouraging.',
+ 'mystical': '\n\nUse a mystical, esoteric voice. Ancient wisdom, sacred language, spiritual depth.',
+ 'humorous': '\n\nUse a lighthearted, humorous tone. Witty observations, playful language, while still being insightful.',
+ 'academic': '\n\nUse an academic, scholarly voice. Well-structured, referenced, thorough. Suitable for study or research.'
+ };
+
+ const depthModifiers = {
+ 'short': '\n\nKeep the total response brief — around 200-400 words. Focus on the most essential points only.',
+ 'deep': '\n\nProvide a thorough, deep exploration. Go into significant detail. Aim for 1000-2000 words. Explore nuance, subtlety, and interconnections.'
+ };
+
+ /* ------------------------------------------------------------------
+ DOM REFS
+ ------------------------------------------------------------------ */
+ const $type = document.getElementById('transformationType');
+ const $reading = document.getElementById('readingContent');
+ const $name = document.getElementById('userName');
+ const $custom = document.getElementById('customInstructions');
+ const $style = document.getElementById('stylePreference');
+ const $tone = document.getElementById('toneSetting');
+ const $depth = document.getElementById('depthSetting');
+ const $output = document.getElementById('promptOutput');
+ const $tip = document.getElementById('proTip');
+ const $history = document.getElementById('promptHistory');
+ const $toast = document.getElementById('toast');
+ const $exampleWrap = document.getElementById('exampleWrap');
+ const $exampleOutput = document.getElementById('exampleOutput');
+
+ /* ------------------------------------------------------------------
+ CORE: updatePrompt
+ ------------------------------------------------------------------ */
+ function updatePrompt() {
+ const type = $type.value;
+ const reading = $reading.value.trim();
+ const name = $name.value.trim();
+ const custom = $custom.value.trim();
+ const style = $style.value;
+ const tone = $tone ? $tone.value : 'default';
+ const depth = $depth ? $depth.value : 'medium';
+
+ let prompt = templates[type] || 'Select a transformation type…';
+
+ // Replace reading placeholder
+ if (reading) {
+ prompt = prompt.replace('[READING]', reading);
+ }
+
+ // Replace name placeholder
+ if (name) {
+ prompt = prompt.replaceAll('[NAME]', name);
+ // Also prepend a name line if template doesn't have [NAME]
+ if (!templates[type].includes('[NAME]')) {
+ prompt = prompt.replace('[READING]', `Name: ${name}\n\n[READING]`);
+ }
+ }
+
+ // Append custom instructions
+ if (custom) {
+ prompt += '\n\nAdditional Instructions:\n' + custom;
+ }
+
+ // Append style modifier
+ if (style !== 'balanced' && styleModifiers[style]) {
+ prompt += styleModifiers[style];
+ }
+
+ // Append tone modifier
+ if (tone !== 'default' && toneModifiers[tone]) {
+ prompt += toneModifiers[tone];
+ }
+
+ // Append depth modifier
+ if (depth !== 'medium' && depthModifiers[depth]) {
+ prompt += depthModifiers[depth];
+ }
+
+ $output.textContent = prompt;
+
+ // Track prompt generation (only when a reading is actually pasted)
+ if (reading && type) {
+ if (typeof gtag === 'function') gtag('event', 'prompt_built', { transform_type: type });
+ }
+
+ // Update pro tip
+ $tip.textContent = tips[type] || 'For best results, paste multiple related readings together. This helps the AI understand the bigger picture.';
+
+ // Update example output
+ var exampleText = window.SOUL_EXAMPLES && window.SOUL_EXAMPLES[type];
+ if (exampleText && $exampleWrap) {
+ $exampleWrap.style.display = '';
+ $exampleOutput.textContent = exampleText;
+ } else if ($exampleWrap) {
+ $exampleWrap.style.display = 'none';
+ }
+ }
+
+ /* ------------------------------------------------------------------
+ ACTIONS
+ ------------------------------------------------------------------ */
+ function showToast(msg) {
+ $toast.textContent = msg || '✓ Copied to clipboard!';
+ $toast.classList.add('show');
+ setTimeout(function () { $toast.classList.remove('show'); }, 2200);
+ }
+
+ function copyPrompt() {
+ if (typeof gtag === 'function') gtag('event', 'prompt_copied', { source: 'prompt_builder' });
+ var text = $output.textContent;
+ navigator.clipboard.writeText(text).then(function () {
+ showToast();
+ saveToHistory();
+ }).catch(function () {
+ // Fallback
+ var ta = document.createElement('textarea');
+ ta.value = text;
+ ta.style.position = 'fixed';
+ ta.style.opacity = '0';
+ document.body.appendChild(ta);
+ ta.select();
+ document.execCommand('copy');
+ document.body.removeChild(ta);
+ showToast();
+ saveToHistory();
+ });
+ }
+
+ function openChatGPT() {
+ var prompt = encodeURIComponent($output.textContent);
+ window.open('https://chat.openai.com/?q=' + prompt, '_blank');
+ saveToHistory();
+ }
+
+ function openGemini() {
+ var prompt = encodeURIComponent($output.textContent);
+ window.open('https://gemini.google.com/app?q=' + prompt, '_blank');
+ saveToHistory();
+ }
+
+ /* ------------------------------------------------------------------
+ QUICK ACTIONS
+ ------------------------------------------------------------------ */
+ function fillExample() {
+ // Load a random preset to demonstrate
+ var keys = Object.keys(presets);
+ var randomKey = keys[Math.floor(Math.random() * keys.length)];
+ $reading.value = presets[randomKey];
+ updatePrompt();
+ showToast('Example loaded: ' + randomKey.replace('-', ' '));
+ }
+
+ function clearAll() {
+ $reading.value = '';
+ $name.value = '';
+ $custom.value = '';
+ $style.value = 'balanced';
+ if ($tone) $tone.value = 'default';
+ if ($depth) $depth.value = 'medium';
+ $type.selectedIndex = 0;
+ updatePrompt();
+ showToast('All fields cleared');
+ }
+
+ var SAVED_KEY = 'soulblueprint_saved_prompts';
+
+ function saveCurrentPrompt() {
+ var prompt = $output.textContent;
+ if (!prompt || prompt.indexOf('Select a transformation') === 0) {
+ showToast('Generate a prompt first');
+ return;
+ }
+ var saved = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]');
+ var opt = $type.options[$type.selectedIndex];
+ var name = window.prompt('Name this saved prompt (optional):') || opt.text;
+ saved.unshift({
+ name: name,
+ type: opt ? opt.text : $type.value,
+ typeValue: $type.value,
+ prompt: prompt,
+ reading: $reading.value,
+ tone: $tone ? $tone.value : 'default',
+ depth: $depth ? $depth.value : 'medium',
+ style: $style.value,
+ customInstructions: $custom.value,
+ userName: $name.value,
+ date: new Date().toLocaleString()
+ });
+ saved = saved.slice(0, 50);
+ localStorage.setItem(SAVED_KEY, JSON.stringify(saved));
+ showToast('Prompt saved: ' + name);
+ renderSavedPrompts();
+ }
+
+ function toggleSavedPrompts() {
+ var panel = document.getElementById('savedPromptsPanel');
+ if (panel.style.display === 'none') {
+ panel.style.display = '';
+ renderSavedPrompts();
+ } else {
+ panel.style.display = 'none';
+ }
+ }
+
+ function renderSavedPrompts() {
+ var saved = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]');
+ var list = document.getElementById('savedPromptsList');
+ if (!saved.length) {
+ list.innerHTML = '<p style="color:var(--text-muted); font-style:italic; font-size: 0.88em;">No saved prompts yet.</p>';
+ return;
+ }
+ list.innerHTML = saved.map(function (item, i) {
+ return '<div class="saved-prompt-item" onclick="loadSavedPrompt(' + i + ')">' +
+ '<button class="history-delete" onclick="event.stopPropagation(); deleteSavedPrompt(' + i + ')" title="Delete">✕</button>' +
+ '<div class="sp-name">' + escapeHTML(item.name) + '</div>' +
+ '<div class="sp-date">' + escapeHTML(item.type) + ' • ' + escapeHTML(item.date) + '</div>' +
+ '</div>';
+ }).join('');
+ }
+
+ function loadSavedPrompt(index) {
+ var saved = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]');
+ var item = saved[index];
+ if (!item) return;
+ $type.value = item.typeValue;
+ if (item.reading) $reading.value = item.reading;
+ if (item.userName) $name.value = item.userName;
+ if (item.customInstructions) $custom.value = item.customInstructions;
+ if (item.tone && $tone) $tone.value = item.tone;
+ if (item.depth && $depth) $depth.value = item.depth;
+ if (item.style) $style.value = item.style;
+ updatePrompt();
+ document.getElementById('savedPromptsPanel').style.display = 'none';
+ showToast('Loaded: ' + item.name);
+ }
+
+ function deleteSavedPrompt(index) {
+ var saved = JSON.parse(localStorage.getItem(SAVED_KEY) || '[]');
+ saved.splice(index, 1);
+ localStorage.setItem(SAVED_KEY, JSON.stringify(saved));
+ renderSavedPrompts();
+ showToast('Saved prompt deleted');
+ }
+
+ /* ------------------------------------------------------------------
+ PROMPT VARIATIONS
+ ------------------------------------------------------------------ */
+ function applyVariation(type) {
+ var current = $output.textContent;
+ if (!current || current.indexOf('Select a transformation') === 0) {
+ showToast('Generate a prompt first');
+ return;
+ }
+ var suffix = '';
+ switch (type) {
+ case 'detailed':
+ suffix = '\n\nIMPORTANT: Please provide significantly more detail than usual. Include specific examples, deeper analysis, additional sub-sections, and thorough explanations. Aim for at least 1500-2000 words.';
+ break;
+ case 'shorter':
+ suffix = '\n\nIMPORTANT: Please keep your response concise and focused. Aim for 300-500 words maximum. Prioritize the most essential insights only. Use bullet points where possible.';
+ break;
+ case 'creative':
+ suffix = '\n\nIMPORTANT: Be exceptionally creative and imaginative. Use unexpected metaphors, poetic language, vivid imagery, and surprising connections. Push beyond conventional interpretations.';
+ break;
+ case 'practical':
+ suffix = '\n\nIMPORTANT: Focus entirely on practical, actionable takeaways. Every paragraph should include something the reader can DO. Use numbered steps, specific timelines, and measurable actions.';
+ break;
+ }
+ $output.textContent = current + suffix;
+ showToast('Variation applied: ' + type);
+ }
+
+ /* ------------------------------------------------------------------
+ PRESETS
+ ------------------------------------------------------------------ */
+ function loadPreset(key) {
+ $reading.value = presets[key] || '';
+ updatePrompt();
+ }
+
+ /* ------------------------------------------------------------------
+ HISTORY (localStorage)
+ ------------------------------------------------------------------ */
+ var HISTORY_KEY = 'soulblueprint_prompt_history';
+
+ function saveToHistory() {
+ var history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+ var opt = $type.options[$type.selectedIndex];
+ history.unshift({
+ type: opt ? opt.text : $type.value,
+ typeValue: $type.value,
+ prompt: $output.textContent,
+ date: new Date().toLocaleString()
+ });
+ history = history.slice(0, 20); // keep last 20
+ localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+ renderHistory();
+ }
+
+ function loadHistory() { renderHistory(); }
+
+ function renderHistory(searchTerm, filterType) {
+ var history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+
+ // Apply filter
+ if (filterType && filterType !== 'all') {
+ history = history.filter(function (item) {
+ return item.typeValue && item.typeValue.indexOf(filterType) === 0;
+ });
+ }
+
+ // Apply search
+ if (searchTerm) {
+ var term = searchTerm.toLowerCase();
+ history = history.filter(function (item) {
+ return (item.type && item.type.toLowerCase().indexOf(term) !== -1) ||
+ (item.prompt && item.prompt.toLowerCase().indexOf(term) !== -1);
+ });
+ }
+
+ if (!history.length) {
+ var msg = (searchTerm || (filterType && filterType !== 'all'))
+ ? 'No matching prompts found.'
+ : 'No prompts generated yet…';
+ $history.innerHTML = '<p style="color:var(--text-muted); font-style:italic;">' + msg + '</p>';
+ return;
+ }
+
+ // Store original indices for deletion
+ var allHistory = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+
+ $history.innerHTML = history.map(function (item) {
+ var origIdx = allHistory.indexOf(item);
+ if (origIdx === -1) {
+ // Find by date match
+ for (var k = 0; k < allHistory.length; k++) {
+ if (allHistory[k].date === item.date && allHistory[k].typeValue === item.typeValue) {
+ origIdx = k; break;
+ }
+ }
+ }
+ var preview = item.prompt ? item.prompt.substring(0, 80) + '…' : '';
+ return '<div class="history-item" onclick="loadFromHistory(' + origIdx + ')">' +
+ '<button class="history-delete" onclick="event.stopPropagation(); deleteHistoryItem(' + origIdx + ')" title="Delete">✕</button>' +
+ '<div class="h-type">' + escapeHTML(item.type) + '</div>' +
+ '<div class="h-date">' + escapeHTML(item.date) + '</div>' +
+ '<div class="h-preview">' + escapeHTML(preview) + '</div>' +
+ '</div>';
+ }).join('');
+ }
+
+ function filterHistory() {
+ var searchInput = document.getElementById('historySearch');
+ var filterSelect = document.getElementById('historyFilter');
+ var term = searchInput ? searchInput.value : '';
+ var filter = filterSelect ? filterSelect.value : 'all';
+ renderHistory(term, filter);
+ }
+
+ function deleteHistoryItem(index) {
+ var history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+ if (index >= 0 && index < history.length) {
+ history.splice(index, 1);
+ localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+ filterHistory();
+ showToast('Prompt deleted');
+ }
+ }
+
+ function loadFromHistory(index) {
+ var history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+ var item = history[index];
+ if (!item) return;
+ $type.value = item.typeValue;
+ $output.textContent = item.prompt;
+ }
+
+ function clearHistory() {
+ localStorage.removeItem(HISTORY_KEY);
+ renderHistory();
+ showToast('History cleared');
+ }
+
+ function escapeHTML(str) {
+ var div = document.createElement('div');
+ div.appendChild(document.createTextNode(str));
+ return div.innerHTML;
+ }
+
+ /* ------------------------------------------------------------------
+ EVENT LISTENERS — auto-update on input
+ ------------------------------------------------------------------ */
+ $reading.addEventListener('input', updatePrompt);
+ $name.addEventListener('input', updatePrompt);
+ $custom.addEventListener('input', updatePrompt);
+ $style.addEventListener('change', updatePrompt);
+ if ($tone) $tone.addEventListener('change', updatePrompt);
+ if ($depth) $depth.addEventListener('change', updatePrompt);
+
+ /* ------------------------------------------------------------------
+ INIT
+ ------------------------------------------------------------------ */
+ document.addEventListener('DOMContentLoaded', function () {
+ loadHistory();
+ updatePrompt();
+ });
+
+ /* Expose functions globally so inline onclick handlers work */
+ window.updatePrompt = updatePrompt;
+ window.copyPrompt = copyPrompt;
+ window.openChatGPT = openChatGPT;
+ window.openGemini = openGemini;
+ window.loadPreset = loadPreset;
+ window.loadFromHistory = loadFromHistory;
+ window.clearHistory = clearHistory;
+ window.fillExample = fillExample;
+ window.clearAll = clearAll;
+ window.saveCurrentPrompt = saveCurrentPrompt;
+ window.toggleSavedPrompts = toggleSavedPrompts;
+ window.loadSavedPrompt = loadSavedPrompt;
+ window.deleteSavedPrompt = deleteSavedPrompt;
+ window.applyVariation = applyVariation;
+ window.filterHistory = filterHistory;
+ window.deleteHistoryItem = deleteHistoryItem;
+
+ })();
+        </script>
+
+<div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a0a2e;color:#e0d6f0;padding:14px 20px;font-size:0.88rem;line-height:1.5;box-shadow:0 -4px 20px rgba(0,0,0,0.3);font-family:Inter,'Segoe UI',sans-serif;">
+    <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;">
+        <p style="margin:0;flex:1;min-width:250px;">We use cookies for analytics (Google Analytics) and advertising (Google AdSense). Your reading data stays on your device. <a href="/soulblueprint/privacy.html" style="color:#D8B5FF;text-decoration:underline;">Privacy Policy</a></p>
+        <div style="display:flex;gap:10px;flex-shrink:0;">
+            <button onclick="acceptCookies()" style="padding:8px 22px;border-radius:20px;border:none;background:linear-gradient(135deg,#D8B5FF,#B19CD9);color:#1a0a2e;font-weight:600;cursor:pointer;font-size:0.88rem;">Accept</button>
+            <button onclick="declineCookies()" style="padding:8px 22px;border-radius:20px;border:1px solid rgba(216,181,255,0.4);background:transparent;color:#D8B5FF;font-weight:600;cursor:pointer;font-size:0.88rem;">Decline</button>
+        </div>
+    </div>
+</div>
+<script>
+(function(){if(!localStorage.getItem('sb-cookie-consent')){document.getElementById('cookieConsent').style.display='block';}})();
+function acceptCookies(){localStorage.setItem('sb-cookie-consent','accepted');document.getElementById('cookieConsent').style.display='none';}
+function declineCookies(){localStorage.setItem('sb-cookie-consent','declined');document.getElementById('cookieConsent').style.display='none';window['ga-disable-G-VW4LGE7L1T']=true;}
+if(localStorage.getItem('sb-cookie-consent')==='declined'){window['ga-disable-G-VW4LGE7L1T']=true;}
+</script>
+    </body>
+</html>

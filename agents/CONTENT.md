@@ -102,8 +102,7 @@ Quantum Merlin is a **personal navigation system for consciousness** — NOT a f
 | **Genesis** | Scientific-spiritual, frequency-focused, precise |
 | **40Hz** | Clinical-mystical, cognitive enhancement angle |
 | **K-Pop** | Playful, idol-culture references, fan energy |
-| **Soul Blueprint** | Warm, gift-worthy, celebratory |
-| **A Moment In Time** | Intimate, present-tense, gift-oriented |
+| **A Moment In Time** | Intimate, present-tense, gift-oriented, warm |
 | **Quantum Reality Codes** | Quantum-tech, manifestation-certain, coded language |
 
 ---
@@ -143,7 +142,7 @@ User inputs birth data
 
 ### Canonical Sources
 - **`ultimate/`** — Source of truth for all reading content
-- **`soulblueprint/`** — Source of truth for calculations
+- **`amomentintime/`** — Source of truth for calculations
 - Other brands copy from these
 
 ---

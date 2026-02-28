@@ -24,9 +24,10 @@
     soulblueprint: {
       name: 'Soul Blueprint',
       path: '/soulblueprint/',
-      tagline: 'Your complete cosmic reading — astrology, numerology & more',
+      tagline: 'Separate product — visit directly',
       emoji: '🌟',
       system: 'elegant',
+      hidden: true,
     },
     amomentintime: {
       name: 'A Moment In Time',

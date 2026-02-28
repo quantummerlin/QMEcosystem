@@ -1,10 +1,10 @@
-"""Fix Stranger footer and back-links that incorrectly point to /soulblueprint/.
+"""Fix Stranger footer and back-links that incorrectly point to other brands.
 
-All internal links in stranger/ pages should point to /stranger/ paths,
-not /soulblueprint/ paths. The four legal pages exist in stranger/:
+All internal links in stranger/ pages should point to /stranger/ paths.
+The four legal pages exist in stranger/:
   about.html, privacy.html, terms.html, disclaimer.html
 
-Also fixes back-links that say "Back to A Moment in Time" or "Back to Soul Blueprint"
+Also fixes back-links that say "Back to A Moment in Time"
 and changes them to "Back to Stranger Patterns".
 """
 

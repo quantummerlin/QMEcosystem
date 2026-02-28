@@ -1,0 +1,21 @@
+{
+  "name": "Baby Cosmic Blueprint",
+  "short_name": "Baby Blueprint",
+  "description": "Complete cosmic profile with 58 personalized readings for your little one",
+  "start_url": "/ultimate/",
+  "display": "standalone",
+  "background_color": "#FFF0F5",
+  "theme_color": "#FF69B4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "entertainment"],
+  "lang": "en",
+  "dir": "ltr"
+}

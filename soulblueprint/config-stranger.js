@@ -167,7 +167,7 @@ const BRAND_CONFIG = {
     // ============================================
     premium: {
         enabled: false,
-        price: "$9.99",
+        price: "$12.99",
         features: [
             "PDF Download",
             "No Ads",

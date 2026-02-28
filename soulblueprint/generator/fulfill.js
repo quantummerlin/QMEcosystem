@@ -487,7 +487,6 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
 .upgrade-badge{position:absolute;top:-10px;right:16px;background:var(--primary);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:10px;text-transform:uppercase}
 .upgrade-option h3{font-family:var(--font-heading);margin:0 0 6px;font-size:1.15rem;color:var(--text)}
 .upgrade-option .price{font-size:1.4rem;font-weight:700;color:var(--primary);margin:4px 0}
-.upgrade-option .price .original{text-decoration:line-through;opacity:0.4;font-size:0.9rem;font-weight:400;margin-right:6px;color:var(--text)}
 .upgrade-option .price-note{font-size:0.8rem;opacity:0.6;margin:2px 0 0}
 .upgrade-option .features{text-align:left;margin:10px 0 0;padding:0;list-style:none;font-size:0.85rem;line-height:1.8}
 .upgrade-option .features li::before{content:"\\u2022  ";color:var(--primary);font-weight:700}
@@ -646,10 +645,9 @@ function dismissWelcome(){
     <p class="upgrade-subtitle">Your cosmic blueprint is ready to be generated!<br>Choose your access level below.</p>
     <div class="upgrade-options">
       <a class="upgrade-option featured" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
-        <span class="upgrade-badge">50% OFF</span>
         <h3>Single Reading</h3>
-        <div class="price"><span class="original">$19.99</span> $9.99</div>
-        <p class="price-note">Introductory offer</p>
+        <div class="price">$12.99</div>
+        <p class="price-note">Your complete cosmic portrait</p>
         <ul class="features">
           <li>${cardCount}+ personalised reading cards</li>
           <li>17 cosmic sections analysed</li>
@@ -658,24 +656,23 @@ function dismissWelcome(){
         </ul>
       </a>
       <a class="upgrade-option" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
-        <span class="upgrade-badge">50% OFF</span>
         <h3>2 Readings</h3>
-        <div class="price"><span class="original">$35.99</span> $17.99</div>
-        <p class="price-note">Introductory offer &middot; save even more</p>
+        <div class="price">$19.99</div>
+        <p class="price-note">Perfect for you &amp; a loved one</p>
         <ul class="features">
           <li>2 full personalised readings</li>
           <li>All ${cardCount}+ cards &amp; 17 sections each</li>
-          <li>Perfect for you &amp; a loved one</li>
           <li>Permanent links to revisit anytime</li>
+          <li>Save vs buying separately</li>
         </ul>
       </a>
       <a class="upgrade-option featured" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
         <span class="upgrade-badge">BEST VALUE</span>
-        <h3>3 Readings</h3>
-        <div class="price"><span class="original">$99.98</span> $49.99</div>
-        <p class="price-note">50% off &middot; family &amp; friends</p>
+        <h3>5 Readings</h3>
+        <div class="price">$39.99</div>
+        <p class="price-note">Family &amp; friends bundle</p>
         <ul class="features">
-          <li>3 full personalised readings</li>
+          <li>5 full personalised readings</li>
           <li>All ${cardCount}+ cards &amp; 17 sections each</li>
           <li>Perfect for family or friends</li>
           <li>Permanent links to revisit anytime</li>
@@ -683,12 +680,12 @@ function dismissWelcome(){
       </a>
       <a class="upgrade-option" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
         <h3>Unlimited Readings</h3>
-        <div class="price">$99.99</div>
+        <div class="price">$69.99</div>
         <p class="price-note">One-time payment &middot; lifetime access</p>
         <ul class="features">
           <li>Generate unlimited readings forever</li>
           <li>All ${cardCount}+ cards &amp; 17 sections</li>
-          <li>Friends, family, anyone</li>
+          <li>11 printable book templates</li>
           <li>Future features included</li>
         </ul>
       </a>

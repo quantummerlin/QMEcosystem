@@ -62,7 +62,6 @@ Located at repo root. Controls HTTP headers per path pattern.
 - All `.py`, `.ps1`, `.md`, `.txt`, `.odt`, `.pdf`, `.log`, `.json`, `.xml`, `.zip`, `.mp4`, `.mov` files
 - `wrangler.toml`, `sw.js`
 - Backup/dev HTML files (index-local-backup, etc.)
-- `soulblueprint/s/*` (hidden pro generator)
 
 ### `_redirects` File
 Located at repo root. Cloudflare Pages redirects.
@@ -70,7 +69,6 @@ Located at repo root. Cloudflare Pages redirects.
 **Current rules:**
 ```
 # Shared reading links (200 = rewrite, not redirect)
-/soulblueprint/r/*   → /soulblueprint/view.html?id=:splat  200
 /amomentintime/r/*   → /amomentintime/view.html?id=:splat  200
 /amomentintime/esp/r/* → /amomentintime/esp/view.html?id=:splat  200
 /amomentintime/pt/r/*  → /amomentintime/pt/view.html?id=:splat  200
