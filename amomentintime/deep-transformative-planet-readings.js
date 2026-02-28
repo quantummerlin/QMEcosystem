@@ -93,7 +93,7 @@ But their rebellion creates alternatives. They build new systems, demonstrate ne
 
 The most powerful expression is revolutionizing wealth distribution not through destruction but through creating abundance systems that naturally serve everyone.`,
         
-        freedom: `Freedom for them is economic and physical. They need financial sovereignty - the ability to create security without being trapped in traditional systems. They need bodily autonomy.
+        freedom: `Freedom for them is economic and physical. They need financial independence - the ability to create security without being trapped in traditional systems. They need bodily autonomy.
 
 Their freedom quest may involve creating alternative income streams, building self-sufficient homesteads, or developing new technologies that liberate from economic dependence.
 
@@ -671,13 +671,13 @@ The ultimate expression is the revolutionary leader whose structural innovations
     Aquarius: {
         title: "Uranus in Aquarius - Ultimate Revolution",
         archetype: "The Future Builder",
-        hook: "With Uranus in Aquarius, this soul embodies pure revolutionary energy - Uranus in its home sign. They are here to transform humanity itself, to build the future, to catalyze evolutionary leaps in collective consciousness.",
+        hook: "With Uranus in Aquarius, this soul embodies pure revolutionary energy - Uranus in its home sign. They are here to transform humanity itself, to build the future, to spark great leaps in how people think and live together.",
         
         coreExpression: `Uranus in Aquarius creates the ultimate revolutionary - someone who doesn't just change systems but envisions entirely new paradigms of human existence. This is innovation at its purest, revolution for evolution's sake.
 
 This placement is Uranus fully expressed - breakthrough energy unfiltered. They don't just see the future - they download it, embody it, build it. They are lightning strikes of human potential.
 
-Their gift is capacity to access revolutionary vision beyond current understanding, to see what humanity can become, to catalyze collective evolution through being decades or centuries ahead.`,
+Their gift is capacity to access revolutionary vision beyond current understanding, to see what humanity can become, to spark collective growth through being decades or centuries ahead.`,
         
         innovation: `Their innovation spans all fields simultaneously - technology, social organization, consciousness, relationship, governance. They may pioneer technologies that don't yet exist conceptually, create social movements that redefine humanity.
 
@@ -995,7 +995,7 @@ The gift is capacity to make everyone feel they belong, to nurture without condi
 
 They also dissolve distinction between biological and chosen family, between personal nurturing and universal care. All beings become their children, all needs become their responsibility.
 
-The challenge is not dissolving so completely that they lose their own center - learning that universal love requires maintaining some boundaries to avoid codependent enmeshment.`,
+The challenge is not dissolving so completely that they lose their own center - learning that universal love requires maintaining some boundaries to avoid losing yourself in others.`,
         
         spiritualGift: `Their spiritual gift is channeling divine mother energy - unconditional love, infinite nurturing capacity, compassion that embraces all suffering. They embody universal maternal care.
 
@@ -1003,7 +1003,7 @@ They teach that all family wounds can heal through spiritual understanding, that
 
 The most powerful expression is someone who mothers so compassionately, so universally, that all who meet them feel loved, welcomed, held by something vaster than human care.`,
         
-        illusion: `The illusion is believing they must save everyone, or conversely, that all emotional need is manipulation. They may confuse codependency with compassion, enmeshment with love.
+        illusion: `The illusion is believing they must save everyone, or conversely, that all emotional need is manipulation. They may confuse unhealthy attachment with compassion, losing themselves in others with love.
 
 They may also fall into spiritual bypassing of healthy boundaries, believing saying no isn't compassionate, or sacrificing self completely in name of universal mothering.
 
@@ -1479,11 +1479,11 @@ They have capacity to love everyone and everything equally, to see only divine i
 
 The growth edge is learning that infinite compassion requires boundaries to avoid being depleted, that loving all beings includes taking care of this body, that martyrdom doesn't serve.`,
         
-        creativity: `Their creativity channels pure divine - making art that transports directly into transcendence, creating beauty that dissolves viewer into source, expressing ineffable through form.
+        creativity: `Their creativity channels something deeply spiritual - making art that transports people beyond the everyday, creating beauty that moves viewers to their core, expressing the inexpressible through form.
 
-They may pioneer transcendent music, create visual art that induces mystical states, develop poetry that captures enlightenment, or express through movement what cannot be said.
+They may pioneer deeply moving music, create visual art that opens people up, develop poetry that captures awakening, or express through movement what words cannot say.
 
-The key is that their creativity serves complete awakening - not just understanding but direct experience of divine, dissolution of observer into art itself.`,
+The key is that their creativity serves complete awakening - not just understanding but direct experience of the sacred, where the line between the observer and the art dissolves.`,
         
         generational: `As generational influence, Neptune in Pisces marks periods of maximum spiritual awakening potential, when mysticism surges, when collective consciousness touches transcendence, when divine reveals itself.
 
@@ -1737,7 +1737,7 @@ Their gift is capacity to heal generations of family trauma, to create new forms
         
         power: `Their power is emotional and nurturing. They have immense capacity to feel deeply, to create genuine emotional safety, to mother/nurture in ways that transform people.
 
-But they must learn difference between authentic emotional power (creating safety through presence) and false power (emotional manipulation, using vulnerability to control). Their journey involves discovering real nurturing versus codependent enmeshment.
+But they must learn difference between authentic emotional power (creating safety through presence) and false power (emotional manipulation, using vulnerability to control). Their journey involves discovering real nurturing versus unhealthy over-attachment.
 
 The most powerful expression is someone who has faced complete family breakdown and transformed it into capacity to create belonging so genuine it heals others' family wounds.`,
         
@@ -1771,7 +1771,7 @@ On personal level, it creates souls who will transform collective relationship w
         
         relationships: `In relationships, they need partners who can handle emotional intensity, who won't abandon during transformation, who want depth of intimacy that includes facing family wounds together.
 
-Power struggles around safety and dependency can be constant until they learn that true intimacy requires both people maintaining emotional sovereignty while connecting deeply.
+Power struggles around safety and dependency can be constant until they learn that true intimacy requires both people maintaining emotional independence while connecting deeply.
 
 The evolved expression is bringing transformative emotional depth to partnership - creating intimacy so safe both people can face their family wounds and heal.`,
         
@@ -1791,7 +1791,7 @@ Integration means becoming someone who has such intimate relationship with their
 
 Their spiritual gift is demonstrating that you can lose all family and discover you are home, that emotional death reveals you can create safety from within.
 
-The ultimate expression is the emotional phoenix who has died and been reborn through family trauma so many times they embody unconditional belonging - showing humanity that true family is spiritual, that home is wherever you are when you've claimed emotional sovereignty.`,
+The ultimate expression is the emotional phoenix who has died and been reborn through family trauma so many times they embody unconditional belonging - showing humanity that true family is spiritual, that home is wherever you are when you've found peace within yourself.`,
         
         affirmation: "I transform through emotional death and rebirth. My family wounds become capacity to create profound belonging. I am home within myself and nurture from overflow."
     },

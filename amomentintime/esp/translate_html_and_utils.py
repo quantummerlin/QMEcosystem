@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Translate all HTML pages and utility JS files in the esp/ directory to Spanish.
-Also fixes all /soulblueprint/ links to /amomentintime/esp/.
+Also fixes all legacy links to /amomentintime/esp/.
 """
 import os
 import re

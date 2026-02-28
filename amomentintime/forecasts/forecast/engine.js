@@ -1375,7 +1375,7 @@ const CosmicEngine = {
 
     return {
       title: `The ${sun} ${lpTrait.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')}`,
-      summary: `At your core, you are a ${lpTrait} (Life Path ${lp}) expressed through the ${elTrait} lens of ${sun} (${sunEl} sign). The Chinese zodiac adds the energy of the ${cnTrait} (${chinese.element} ${chinese.animal}), while your birth under a ${birthMoon.name} makes you ${mnTrait}. This is not a random collection of traits — it is a precisely calibrated soul blueprint, each system illuminating a different facet of who you truly are.`,
+      summary: `At your core, you are a ${lpTrait} (Life Path ${lp}) expressed through the ${elTrait} lens of ${sun} (${sunEl} sign). The Chinese zodiac adds the energy of the ${cnTrait} (${chinese.element} ${chinese.animal}), while your birth under a ${birthMoon.name} makes you ${mnTrait}. This is not a random collection of traits — it is a precisely calibrated cosmic portrait, each system illuminating a different facet of who you truly are.`,
       elements: {
         western: `${sun} (${sunEl})`,
         numerology: `Life Path ${lp}`,

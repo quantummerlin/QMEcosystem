@@ -5189,7 +5189,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
                 numbersSection.appendChild(createReadingCard(
                     config.readingTitles.lifePath,
                     deepLifePath.title,
-                    ['Soul Blueprint', 'Life Purpose', 'Core Energy'],
+                    ['Life Purpose', 'Core Energy'],
                     lifePathContent.replace(/this soul/gi, userData.name).replace(/this child/gi, userData.name),
                     [],
                     []
@@ -7914,7 +7914,7 @@ This isn't a flaw - it's their power source. The tension between these two drive
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `${userData.name.replace(/[^a-z0-9]/gi, '-')}-soul-blueprint-${selectedGiftColor}.html`;
+            a.download = `${userData.name.replace(/[^a-z0-9]/gi, '-')}-cosmic-reading-${selectedGiftColor}.html`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);

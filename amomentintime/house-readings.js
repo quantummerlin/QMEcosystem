@@ -1509,7 +1509,7 @@ The challenge is emotional control and the unconscious projection of family woun
             challenges: ["Family power dynamics", "Emotional control", "Ancestral wounds", "Home intensity"]
         },
         5: {
-            title: "Pluto in 5th House - The Creative Alchemist",
+            title: "Pluto in 5th House - The Creative Transformer",
             keywords: ["Transformative Creativity", "Intense Romance", "Powerful Self-Expression", "Creative Rebirth"],
             reading: `Pluto in the 5th House creates an overwhelming need for creative self-expression that transforms both the creator and the audience. Art isn't decoration — it's catharsis, revelation, and psychological excavation. They may be drawn to creative forms that explore darkness, sexuality, death, power, and the hidden dimensions of human experience. Their creative work has the power to disturb and heal simultaneously.
 
@@ -1517,7 +1517,7 @@ Romance is experienced at full intensity or not at all. Casual relationships fee
 
 Their relationship with children (if they have them) carries Plutonian intensity. They may be fiercely protective, deeply invested in their children's psychological wellbeing, and unusually honest with children about the realities of life. Parenting may trigger their deepest fears and most powerful growth.
 
-The challenge is romantic obsession and the use of creative or romantic intensity as a substitute for genuine emotional vulnerability. When Pluto rules the house of joy, pleasure can become addictive, romance can become power struggle, and creativity can become self-destruction disguised as art. Learning that true creative power comes from vulnerability rather than control, and that love is transformative only when both partners maintain their sovereignty, channels their extraordinary intensity into genuinely life-changing creative and romantic expression.`,
+The challenge is romantic obsession and the use of creative or romantic intensity as a substitute for genuine emotional vulnerability. When Pluto rules the house of joy, pleasure can become addictive, romance can become power struggle, and creativity can become self-destruction disguised as art. Learning that true creative power comes from vulnerability rather than control, and that love is transformative only when both partners maintain their independence, channels their extraordinary intensity into genuinely life-changing creative and romantic expression.`,
             strengths: ["Transformative art", "Creative intensity", "Passionate love", "Authentic self-expression"],
             challenges: ["Romantic obsession", "Creative compulsion", "Jealousy", "Intensity addiction"]
         },
@@ -1535,7 +1535,7 @@ The challenge is health obsession and work addiction. When Pluto rules the house
             challenges: ["Health obsession", "Work addiction", "Control of routines", "Crisis identification"]
         },
         7: {
-            title: "Pluto in 7th House - The Relationship Alchemist",
+            title: "Pluto in 7th House - The Relationship Transformer",
             keywords: ["Transformative Partnerships", "Intense Bonds", "Power in Relationships", "Partnership Depth"],
             reading: `Pluto in the 7th House creates partnerships that are life-changing, psychologically deep, and sometimes terrifyingly intense. There is no such thing as a casual relationship with this placement — every significant partnership becomes a crucible for transformation, forcing both people to confront their shadows, their power issues, and their deepest fears about intimacy and vulnerability.
 

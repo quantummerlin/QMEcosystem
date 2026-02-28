@@ -11,12 +11,12 @@
 // ============================================
 
 var AGE_CATEGORIES = {
-    baby:       { min: 0,  max: 2,   label: 'Baby',        icon: '👶', audience: 'parent', tag: 'For Parents of a Little One' },
-    child:      { min: 3,  max: 12,  label: 'Child',       icon: '💒', audience: 'parent', tag: 'For Parents & Caregivers' },
-    teen:       { min: 13, max: 17,  label: 'Teenager',    icon: '🌱', audience: 'blend',  tag: 'For a Growing Soul' },
-    youngAdult: { min: 18, max: 25,  label: 'Young Adult', icon: '✨', audience: 'self',   tag: 'For an Emerging Soul' },
-    adult:      { min: 26, max: 59,  label: 'Adult',       icon: '🌟', audience: 'self',   tag: null },
-    elder:      { min: 60, max: 150, label: 'Elder',       icon: '🦉', audience: 'self',   tag: 'For a Wise Soul' }
+    baby:       { min: 0,  max: 2,   label: 'Baby',        icon: '', audience: 'parent', tag: 'For Parents of a Little One' },
+    child:      { min: 3,  max: 12,  label: 'Child',       icon: '', audience: 'parent', tag: 'For Parents & Caregivers' },
+    teen:       { min: 13, max: 17,  label: 'Teenager',    icon: '', audience: 'blend',  tag: 'For a Growing Soul' },
+    youngAdult: { min: 18, max: 25,  label: 'Young Adult', icon: '', audience: 'self',   tag: 'For an Emerging Soul' },
+    adult:      { min: 26, max: 59,  label: 'Adult',       icon: '', audience: 'self',   tag: null },
+    elder:      { min: 60, max: 150, label: 'Elder',       icon: '', audience: 'self',   tag: 'For a Wise Soul' }
 };
 
 /**
@@ -598,7 +598,7 @@ function getAgeTag() {
  */
 function getAgeIcon() {
     const profile = getAgeProfile();
-    return profile.config.icon || '🌟';
+    return profile.config.icon || '';
 }
 
 

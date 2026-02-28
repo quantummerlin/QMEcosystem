@@ -356,7 +356,7 @@ They may attract intense partners who mirror hidden aspects of themselves. Relat
         title: "8th House Concentration - The Depth Navigator",
         rarity: "Rare (~1 in 70 charts)",
         keywords: ["Transformation", "Shared Resources", "Psychology", "Death/Rebirth", "Intimacy"],
-        archetype: "The Shadow Alchemist",
+        archetype: "The Shadow Worker",
         reading: `An extraordinary concentration of planets in the 8th House creates a soul destined for profound transformation and intimate understanding of life's mysteries. They live in the depths.
 
 This is the chart of psychologists, healers, researchers of hidden things, and those who face death (literal or metaphorical) as part of their path. Multiple planets here create someone who cannot do shallow.

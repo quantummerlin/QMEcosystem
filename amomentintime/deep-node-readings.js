@@ -1,6 +1,6 @@
 // ============================================
 // DEEP NORTH NODE & SOUTH NODE READINGS
-// The Karmic Axis - Soul's Journey and Past Patterns
+// The Karmic Axis - Growth Direction and Deep Patterns
 // ============================================
 
 var DEEP_NORTH_NODE_READINGS = {
@@ -10,11 +10,11 @@ var DEEP_NORTH_NODE_READINGS = {
         southNode: "Libra",
         hook: "With North Node in Aries, this soul's journey is toward independence, courage, and self-assertion. The comfort zone (South Node in Libra) was relationships, harmony, and considering others - but growth requires learning to put self first and act with warrior courage.",
         
-        pastLifePatterns: `The South Node in Libra reveals past life (or early childhood) patterns of focusing entirely on others, seeking approval, and maintaining harmony at all costs. This soul was the diplomat, the peacemaker, the one who always considered others' needs before their own.
+        pastLifePatterns: `The South Node in Libra reveals deep-rooted (or early childhood) patterns of focusing entirely on others, seeking approval, and maintaining harmony at all costs. This soul was the diplomat, the peacemaker, the one who always considered others' needs before their own.
 
-In past incarnations, success came through partnership, compromise, and social grace. There was skill at reading others, maintaining balance, and creating beautiful relationships. The gift was natural diplomacy and the ability to see all sides.
+In the past, success came through partnership, compromise, and social grace. There was skill at reading others, maintaining balance, and creating beautiful relationships. The gift was natural diplomacy and the ability to see all sides.
 
-But the shadow of this pattern is losing oneself in others, being unable to act without consensus, and avoiding conflict to the point of self-erasure. Too many lifetimes of "What do you think?" and "Whatever you prefer" created dependency on others' approval and inability to stand alone.`,
+But the shadow of this pattern is losing oneself in others, being unable to act without consensus, and avoiding conflict to the point of self-erasure. Too many years of "What do you think?" and "Whatever you prefer" created dependency on others' approval and inability to stand alone.`,
         
         oldComfortZone: `The Libra South Node comfort zone manifests as chronic people-pleasing, difficulty making decisions without consulting others, and fear of being alone or disliked. There's an automatic impulse to accommodate, compromise, and maintain peace even at great personal cost.
 
@@ -67,11 +67,11 @@ Ultimately, this placement is about learning that independence and relationship 
         southNode: "Scorpio",
         hook: "With North Node in Taurus, this soul's journey is toward stability, simplicity, and self-worth. The comfort zone (South Node in Scorpio) was intensity, crisis, and depending on others' resources - but growth requires building your own security and finding peace.",
         
-        pastLifePatterns: `The South Node in Scorpio reveals past life patterns of intensity, transformation through crisis, and deep entanglement with others' resources and energies. This soul was the transformer, the detective, the one who delved into darkness and emerged changed.
+        pastLifePatterns: `The South Node in Scorpio reveals deep-rooted patterns of intensity, transformation through crisis, and deep entanglement with others' resources and energies. This soul was the transformer, the detective, the one who delved into darkness and emerged changed.
 
-In past incarnations, life was dramatic and intense. Power, secrets, sexuality, death, and rebirth were familiar territory. There was skill at navigating crisis, perceiving hidden truths, and wielding psychological power. The gift was depth and transformative capacity.
+In the past, life was dramatic and intense. Power, secrets, sexuality, death, and rebirth were familiar territory. There was skill at navigating crisis, perceiving hidden truths, and wielding psychological power. The gift was depth and transformative capacity.
 
-But the shadow of this pattern is addiction to intensity, creating or attracting crisis, and inability to find peace in simplicity. Too many lifetimes of emotional extremes created belief that calm means something's wrong and that transformation requires trauma.`,
+But the shadow of this pattern is addiction to intensity, creating or attracting crisis, and inability to find peace in simplicity. Too many years of emotional extremes created belief that calm means something's wrong and that transformation requires trauma.`,
         
         oldComfortZone: `The Scorpio South Node comfort zone manifests as attraction to drama, crisis, and intensity. This soul may unconsciously create or attract situations that require survival mode, crisis management, or deep transformation. Calm feels boring or wrong.
 
@@ -124,11 +124,11 @@ Ultimately, this placement is about learning that enjoying life's simple pleasur
         southNode: "Sagittarius",
         hook: "With North Node in Gemini, this soul's journey is toward learning, curiosity, and open-minded communication. The comfort zone (South Node in Sagittarius) was having answers, teaching truth, and certainty - but growth requires becoming a perpetual student who questions everything.",
         
-        pastLifePatterns: `The South Node in Sagittarius reveals past life patterns of being the teacher, philosopher, or guru - the one with answers, vision, and truth. This soul was the preacher, the adventurer, the one who knew the meaning and shared it confidently.
+        pastLifePatterns: `The South Node in Sagittarius reveals deep-rooted patterns of being the teacher, philosopher, or guru - the one with answers, vision, and truth. This soul was the preacher, the adventurer, the one who knew the meaning and shared it confidently.
 
-In past incarnations, success came through having faith, teaching others, and providing philosophical frameworks. There was natural ability to inspire, to see the big picture, and to offer hope and meaning. The gift was vision and the capacity to uplift others.
+In the past, success came through having faith, teaching others, and providing philosophical frameworks. There was natural ability to inspire, to see the big picture, and to offer hope and meaning. The gift was vision and the capacity to uplift others.
 
-But the shadow of this pattern is dogmatism, preaching without listening, and being so certain of truth that you stop learning. Too many lifetimes of being the teacher created addiction to being right and difficulty admitting you don't know.`,
+But the shadow of this pattern is dogmatism, preaching without listening, and being so certain of truth that you stop learning. Too many years of being the teacher created addiction to being right and difficulty admitting you don't know.`,
         
         oldComfortZone: `The Sagittarius South Node comfort zone manifests as immediately forming opinions, teaching rather than listening, and being uncomfortable with not knowing. This soul may find themselves automatically adopting the teacher/guru role even when it's not appropriate.
 
@@ -181,11 +181,11 @@ Ultimately, this placement is about learning that staying curious keeps you aliv
         southNode: "Capricorn",
         hook: "With North Node in Cancer, this soul's journey is toward emotional connection, nurturing, and creating home. The comfort zone (South Node in Capricorn) was achievement, authority, and emotional control - but growth requires developing emotional intelligence and allowing vulnerability.",
         
-        pastLifePatterns: `The South Node in Capricorn reveals past life patterns of being the authority, the achiever, the one who had it all together professionally. This soul was the leader, manager, or public figure whose value came through accomplishment and control.
+        pastLifePatterns: `The South Node in Capricorn reveals deep-rooted patterns of being the authority, the achiever, the one who had it all together professionally. This soul was the leader, manager, or public figure whose value came through accomplishment and control.
 
-In past incarnations, success came through discipline, responsibility, and public achievement. There was natural ability to lead, organize, and accomplish. The gift was competence and the capacity to build structures that serve.
+In the past, success came through discipline, responsibility, and public achievement. There was natural ability to lead, organize, and accomplish. The gift was competence and the capacity to build structures that serve.
 
-But the shadow of this pattern is emotional suppression, workaholism, and inability to show vulnerability. Too many lifetimes of being the authority created disconnection from feelings and difficulty receiving care.`,
+But the shadow of this pattern is emotional suppression, workaholism, and inability to show vulnerability. Too many years of being the authority created disconnection from feelings and difficulty receiving care.`,
         
         oldComfortZone: `The Capricorn South Node comfort zone manifests as prioritizing career over family, suppressing emotions to maintain control, and measuring worth through achievement. This soul may find themselves automatically taking leadership roles even in personal relationships.
 
@@ -238,11 +238,11 @@ Ultimately, this placement is about learning that creating loving home and emoti
         southNode: "Aquarius",
         hook: "With North Node in Leo, this soul's journey is toward creative self-expression, following the heart, and individual recognition. The comfort zone (South Node in Aquarius) was the group, detachment, and suppressing individual needs - but growth requires becoming unapologetically yourself and shining.",
         
-        pastLifePatterns: `The South Node in Aquarius reveals past life patterns of being part of the collective, prioritizing group over self, and maintaining emotional detachment. This soul was the revolutionary, the humanitarian, the one who served the many at expense of the one.
+        pastLifePatterns: `The South Node in Aquarius reveals deep-rooted patterns of being part of the collective, prioritizing group over self, and maintaining emotional detachment. This soul was the revolutionary, the humanitarian, the one who served the many at expense of the one.
 
-In past incarnations, success came through group contribution, intellectual understanding, and staying detached from personal drama. There was natural ability to see the big picture, honor all perspectives equally, and innovate. The gift was vision for humanity's future.
+In the past, success came through group contribution, intellectual understanding, and staying detached from personal drama. There was natural ability to see the big picture, honor all perspectives equally, and innovate. The gift was vision for humanity's future.
 
-But the shadow of this pattern is suppressing individual needs for the group, emotional unavailability, and inability to take center stage. Too many lifetimes of serving the collective created difficulty honoring your unique heart and creative expression.`,
+But the shadow of this pattern is suppressing individual needs for the group, emotional unavailability, and inability to take center stage. Too many years of serving the collective created difficulty honoring your unique heart and creative expression.`,
         
         oldComfortZone: `The Aquarius South Node comfort zone manifests as always thinking of the group, intellectualizing emotions, and being uncomfortable with personal recognition. This soul may automatically deflect attention back to the team or cause.
 
@@ -295,11 +295,11 @@ Ultimately, this placement is about learning that creativity, joy, and self-expr
         southNode: "Pisces",
         hook: "With North Node in Virgo, this soul's journey is toward practical service, discernment, and grounded routines. The comfort zone (South Node in Pisces) was mysticism, escapism, and boundlessness - but growth requires developing discrimination, health habits, and useful skills.",
         
-        pastLifePatterns: `The South Node in Pisces reveals past life patterns of mysticism, escapism, and merging with the divine or collective unconscious. This soul was the mystic, the martyr, the one who dissolved boundaries and sacrificed self for spiritual unity.
+        pastLifePatterns: `The South Node in Pisces reveals deep-rooted patterns of mysticism, escapism, and merging with the divine or collective unconscious. This soul was the mystic, the martyr, the one who dissolved boundaries and sacrificed self for spiritual unity.
 
-In past incarnations, success came through faith, surrender, and compassion. There was natural ability to access spiritual realms, feel others' pain, and serve selflessly. The gift was boundless empathy and connection to something greater than self.
+In the past, success came through faith, surrender, and compassion. There was natural ability to access spiritual realms, feel others' pain, and serve selflessly. The gift was boundless empathy and connection to something greater than self.
 
-But the shadow of this pattern is escapism, victim mentality, and inability to function practically in the material world. Too many lifetimes of spiritual bypassing created difficulty with boundaries, discernment, and embodied living.`,
+But the shadow of this pattern is escapism, victim mentality, and inability to function practically in the material world. Too many years of spiritual bypassing created difficulty with boundaries, discernment, and embodied living.`,
         
         oldComfortZone: `The Pisces South Node comfort zone manifests as escaping into spirituality, fantasy, or substances rather than dealing with practical reality. This soul may find themselves spacing out, avoiding details, or martyring themselves.
 
@@ -352,11 +352,11 @@ Ultimately, this placement is about learning that spirituality includes embodime
         southNode: "Aries",
         hook: "With North Node in Libra, this soul's journey is toward partnership, compromise, and considering others. The comfort zone (South Node in Aries) was independence, doing things your way, and self-focus - but growth requires learning to collaborate and create harmony.",
         
-        pastLifePatterns: `The South Node in Aries reveals past life patterns of independence, warrior energy, and doing things alone. This soul was the pioneer, the fighter, the one who forged ahead without needing anyone's help or approval.
+        pastLifePatterns: `The South Node in Aries reveals deep-rooted patterns of independence, warrior energy, and doing things alone. This soul was the pioneer, the fighter, the one who forged ahead without needing anyone's help or approval.
 
-In past incarnations, success came through courage, quick action, and self-reliance. There was natural ability to lead, initiate, and survive alone. The gift was independence and the capacity to act decisively.
+In the past, success came through courage, quick action, and self-reliance. There was natural ability to lead, initiate, and survive alone. The gift was independence and the capacity to act decisively.
 
-But the shadow of this pattern is inability to partner, difficulty compromising, and believing you must do everything yourself. Too many lifetimes of warrior independence created blindness to others' needs and inability to share power or decision-making.`,
+But the shadow of this pattern is inability to partner, difficulty compromising, and believing you must do everything yourself. Too many years of warrior independence created blindness to others' needs and inability to share power or decision-making.`,
         
         oldComfortZone: `The Aries South Node comfort zone manifests as automatic independence, difficulty asking for help, and discomfort with compromise. This soul may find themselves acting unilaterally, not consulting others, or dominating relationships without meaning to.
 
@@ -409,11 +409,11 @@ Ultimately, this placement is about learning that creating harmony and beauty is
         southNode: "Taurus",
         hook: "With North Node in Scorpio, this soul's journey is toward transformation, intimacy, and shared resources. The comfort zone (South Node in Taurus) was stability, simplicity, and self-sufficiency - but growth requires embracing change, depth, and interdependence.",
         
-        pastLifePatterns: `The South Node in Taurus reveals past life patterns of building security, enjoying simple pleasures, and relying only on yourself. This soul was the farmer, artisan, or builder who created stability through their own steady effort.
+        pastLifePatterns: `The South Node in Taurus reveals deep-rooted patterns of building security, enjoying simple pleasures, and relying only on yourself. This soul was the farmer, artisan, or builder who created stability through their own steady effort.
 
-In past incarnations, success came through patience, self-sufficiency, and appreciating material world's pleasures. There was natural ability to work steadily, build resources, and find peace in simplicity. The gift was stability and grounded presence.
+In the past, success came through patience, self-sufficiency, and appreciating material world's pleasures. There was natural ability to work steadily, build resources, and find peace in simplicity. The gift was stability and grounded presence.
 
-But the shadow of this pattern is resistance to change, avoiding depth to maintain comfort, and inability to merge or share resources. Too many lifetimes of safe stability created fear of transformation and difficulty with intimacy.`,
+But the shadow of this pattern is resistance to change, avoiding depth to maintain comfort, and inability to merge or share resources. Too many years of safe stability created fear of transformation and difficulty with intimacy.`,
         
         oldComfortZone: `The Taurus South Node comfort zone manifests as clinging to security, avoiding anything that threatens stability, and keeping relationships surface-level. This soul may find themselves accumulating possessions, resisting change, or staying in comfort zone even when growth calls.
 
@@ -466,11 +466,11 @@ Ultimately, this placement is about learning that intensity and transformation a
         southNode: "Gemini",
         hook: "With North Node in Sagittarius, this soul's journey is toward faith, meaning, and expansive truth. The comfort zone (South Node in Gemini) was gathering information, staying local, and intellectual curiosity - but growth requires developing wisdom, teaching, and having faith in larger truth.",
         
-        pastLifePatterns: `The South Node in Gemini reveals past life patterns of constant learning, information gathering, and intellectual exploration without ever synthesizing it into wisdom. This soul was the student, messenger, or communicator who knew many things but lacked overarching philosophy.
+        pastLifePatterns: `The South Node in Gemini reveals deep-rooted patterns of constant learning, information gathering, and intellectual exploration without ever synthesizing it into wisdom. This soul was the student, messenger, or communicator who knew many things but lacked overarching philosophy.
 
-In past incarnations, success came through staying curious, asking questions, and communicating. There was natural ability to learn, adapt, and see multiple perspectives. The gift was intellectual flexibility and communication skill.
+In the past, success came through staying curious, asking questions, and communicating. There was natural ability to learn, adapt, and see multiple perspectives. The gift was intellectual flexibility and communication skill.
 
-But the shadow of this pattern is perpetual student who never becomes teacher, gathering information without finding meaning, and intellectual restlessness that prevents depth. Too many lifetimes of questions without answers created inability to commit to truth.`,
+But the shadow of this pattern is perpetual student who never becomes teacher, gathering information without finding meaning, and intellectual restlessness that prevents depth. Too many years of questions without answers created inability to commit to truth.`,
         
         oldComfortZone: `The Gemini South Node comfort zone manifests as perpetual information gathering, difficulty forming firm opinions, and intellectual approach to everything. This soul may find themselves constantly learning but never teaching, always having more questions, unable to commit to philosophy or truth.
 
@@ -482,7 +482,7 @@ The old pattern is to believe there's always more to learn before you can teach,
 
 Growth requires developing philosophical framework, teaching rather than just learning, and pursuing truth with conviction. It's about adventuring beyond familiar territory, having faith that life has meaning, and inspiring others with your vision.
 
-The journey is toward discovering that wisdom comes from committing to truth, that teaching deepens learning, and that faith in meaning serves better than endless intellectual inquiry. It's becoming the teacher after lifetimes as student.`,
+The journey is toward discovering that wisdom comes from committing to truth, that teaching deepens learning, and that faith in meaning serves better than endless intellectual inquiry. It's becoming the teacher after years as student.`,
         
         evolutionaryGoal: `The ultimate goal is to become wise teacher with philosophical vision while maintaining Gemini curiosity and communication skill. The Sagittarius development doesn't negate learning - it synthesizes it into wisdom.
 
@@ -523,11 +523,11 @@ Ultimately, this placement is about learning that teaching deepens your learning
         southNode: "Cancer",
         hook: "With North Node in Capricorn, this soul's journey is toward professional achievement, authority, and emotional discipline. The comfort zone (South Node in Cancer) was family, emotions, and being taken care of - but growth requires becoming the authority and achieving public success.",
         
-        pastLifePatterns: `The South Node in Cancer reveals past life patterns of nurturing others, prioritizing family, and being the emotional center. This soul was the mother, caregiver, or emotional foundation who everyone depended on for nurturance.
+        pastLifePatterns: `The South Node in Cancer reveals deep-rooted patterns of nurturing others, prioritizing family, and being the emotional center. This soul was the mother, caregiver, or emotional foundation who everyone depended on for nurturance.
 
-In past incarnations, success came through creating home, emotional availability, and caring for others. There was natural ability to nurture, empathize, and create belonging. The gift was emotional intelligence and capacity to make others feel safe.
+In the past, success came through creating home, emotional availability, and caring for others. There was natural ability to nurture, empathize, and create belonging. The gift was emotional intelligence and capacity to make others feel safe.
 
-But the shadow of this pattern is emotional dependency, inability to leave family/home, and avoiding professional achievement out of guilt or fear. Too many lifetimes of being needed emotionally created difficulty achieving outside of family context.`,
+But the shadow of this pattern is emotional dependency, inability to leave family/home, and avoiding professional achievement out of guilt or fear. Too many years of being needed emotionally created difficulty achieving outside of family context.`,
         
         oldComfortZone: `The Cancer South Node comfort zone manifests as prioritizing family over career, being emotionally enmeshed, and avoiding public roles. This soul may find themselves always being the nurturer, staying home, or feeling guilty about professional ambition.
 
@@ -580,11 +580,11 @@ Ultimately, this placement is about learning that professional success and famil
         southNode: "Leo",
         hook: "With North Node in Aquarius, this soul's journey is toward collective consciousness, innovation, and emotional detachment. The comfort zone (South Node in Leo) was personal recognition, creative drama, and being the star - but growth requires serving the collective and releasing need for applause.",
         
-        pastLifePatterns: `The South Node in Leo reveals past life patterns of creative expression, receiving recognition, and being center stage. This soul was the king, performer, or creative genius whose value came through individual brilliance and personal love.
+        pastLifePatterns: `The South Node in Leo reveals deep-rooted patterns of creative expression, receiving recognition, and being center stage. This soul was the king, performer, or creative genius whose value came through individual brilliance and personal love.
 
-In past incarnations, success came through creative self-expression, following your heart, and being celebrated for your unique gifts. There was natural ability to shine, lead, and inspire through personal magnetism. The gift was radiance and creative joy.
+In the past, success came through creative self-expression, following your heart, and being celebrated for your unique gifts. There was natural ability to shine, lead, and inspire through personal magnetism. The gift was radiance and creative joy.
 
-But the shadow of this pattern is addiction to recognition, drama, and inability to think of the collective. Too many lifetimes of being the star created need for constant attention and difficulty with group consciousness.`,
+But the shadow of this pattern is addiction to recognition, drama, and inability to think of the collective. Too many years of being the star created need for constant attention and difficulty with group consciousness.`,
         
         oldComfortZone: `The Leo South Node comfort zone manifests as needing to be center of attention, making everything dramatic and personal, and measuring worth through recognition. This soul may find themselves automatically taking lead, seeking applause, or creating drama to feel alive.
 
@@ -637,11 +637,11 @@ Ultimately, this placement is about learning that being part of humanity's forwa
         southNode: "Virgo",
         hook: "With North Node in Pisces, this soul's journey is toward faith, compassion, and surrender to something greater. The comfort zone (South Node in Virgo) was analysis, perfection, and control - but growth requires releasing into mystery and trusting the unseen.",
         
-        pastLifePatterns: `The South Node in Virgo reveals past life patterns of analysis, service, and perfectionism. This soul was the healer, craftsperson, or analyst whose value came through skill, discernment, and fixing problems.
+        pastLifePatterns: `The South Node in Virgo reveals deep-rooted patterns of analysis, service, and perfectionism. This soul was the healer, craftsperson, or analyst whose value came through skill, discernment, and fixing problems.
 
-In past incarnations, success came through precision, practical service, and attention to detail. There was natural ability to analyze, organize, and perfect. The gift was competence and the capacity to serve practically.
+In the past, success came through precision, practical service, and attention to detail. There was natural ability to analyze, organize, and perfect. The gift was competence and the capacity to serve practically.
 
-But the shadow of this pattern is over-analysis, criticism, and inability to surrender to faith. Too many lifetimes of trying to perfect and control created anxiety, inability to trust, and disconnection from spiritual mystery.`,
+But the shadow of this pattern is over-analysis, criticism, and inability to surrender to faith. Too many years of trying to perfect and control created anxiety, inability to trust, and disconnection from spiritual mystery.`,
         
         oldComfortZone: `The Virgo South Node comfort zone manifests as analyzing everything, trying to fix and perfect, and being anxious about details. This soul may find themselves unable to relax, constantly criticizing self and others, or trying to control outcomes through preparation.
 
@@ -691,7 +691,7 @@ Ultimately, this placement is about learning that spiritual service is as valuab
 
 // ============================================
 // DEEP SOUTH NODE READINGS
-// The Comfort Zone - Past Life Patterns and Familiar Territory
+// The Comfort Zone - Deep Patterns and Familiar Territory
 // ============================================
 
 var DEEP_SOUTH_NODE_READINGS = {
@@ -699,17 +699,17 @@ var DEEP_SOUTH_NODE_READINGS = {
         title: "South Node in Aries - The Warrior's Comfort Zone",
         archetype: "From Independence to Partnership",
         northNode: "Libra",
-        hook: "With South Node in Aries, this soul's past incarnations were spent mastering independence, courage, and self-assertion. You came into this life knowing how to stand alone, act decisively, and prioritize yourself - now you're learning partnership and consideration of others.",
+        hook: "With South Node in Aries, this person's natural strengths were built through independence, courage, and self-assertion. You came into this life knowing how to stand alone, act decisively, and prioritize yourself - now you're learning partnership and consideration of others.",
         
-        masterPattern: `The South Node in Aries represents lifetimes of warrior energy - being the pioneer, the first, the one who forges ahead alone. You were the soldier, the entrepreneur, the independent spirit who needed no one's help or approval.
+        masterPattern: `The South Node in Aries represents deep experience of warrior energy - being the pioneer, the first, the one who forges ahead alone. You were the soldier, the entrepreneur, the independent spirit who needed no one's help or approval.
 
-In those incarnations, you learned courage, quick decision-making, and self-reliance. You became skilled at initiating, leading, and surviving alone. Independence was your strength and your identity.
+Along the way, you learned courage, quick decision-making, and self-reliance. You became skilled at initiating, leading, and surviving alone. Independence was your strength and your identity.
 
 These skills are gifts you carry into this life - the capacity to act decisively, stand alone when necessary, and lead courageously. The Aries South Node makes you naturally brave and self-sufficient.`,
         
         comfortablePattern: `The comfortable pattern is doing things your way, making decisions without consulting others, and believing you know best. You may find yourself automatically taking charge, acting unilaterally, or feeling frustrated when you have to accommodate others.
 
-There's deep familiarity with being "the boss" - whether formally or informally. You're comfortable with conflict and competition because that's where you've spent lifetimes. Independence feels right; dependency feels wrong.
+There's deep familiarity with being "the boss" - whether formally or informally. You're comfortable with conflict and competition because that's where you've spent years. Independence feels right; dependency feels wrong.
 
 The ease with which you can stand alone, make quick decisions, and take action is your gift. But it becomes problematic when you can't partner, compromise, or consider others. The pattern that once served survival now prevents intimacy and collaboration.`,
         
@@ -749,7 +749,7 @@ The growth edge is learning that considering your partner doesn't diminish you, 
 
 The evolved expression is being a strong individual who creates powerful partnership, someone who CAN stand alone but CHOOSES to stand together, who brings warrior strength to collaborative effort.`,
         
-        spiritualMeaning: `Spiritually, the Aries South Node represents mastery of individual will and self-development. You've spent lifetimes learning who you are independent of others. That work is complete.
+        spiritualMeaning: `Spiritually, the Aries South Node represents mastery of individual will and self-development. You've spent years learning who you are independent of others. That work is complete.
 
 This lifetime is about discovering that the next level of evolution includes others. Not losing yourself in them (Cancer South Node's lesson) but maintaining yourself while creating union. The spiritual warrior who learns diplomacy.
 
@@ -762,17 +762,17 @@ The deeper teaching is that true strength includes the ability to compromise, tr
         title: "South Node in Taurus - The Builder's Comfort Zone",
         archetype: "From Stability to Transformation",
         northNode: "Scorpio",
-        hook: "With South Node in Taurus, this soul's past incarnations were spent building security, enjoying simple pleasures, and cultivating self-sufficiency. You came into this life knowing how to create stability through your own effort - now you're learning transformation and shared resources.",
+        hook: "With South Node in Taurus, this person's natural strengths were built through building security, enjoying simple pleasures, and cultivating self-sufficiency. You came into this life knowing how to create stability through your own effort - now you're learning transformation and shared resources.",
         
-        masterPattern: `The South Node in Taurus represents lifetimes of building material security - being the farmer, artisan, or provider who created wealth through patient effort. You were the one who worked steadily, accumulated resources, and found peace in simplicity.
+        masterPattern: `The South Node in Taurus represents deep experience of building material security - being the farmer, artisan, or provider who created wealth through patient effort. You were the one who worked steadily, accumulated resources, and found peace in simplicity.
 
-In those incarnations, you learned patience, self-sufficiency, and appreciation for material world. You became skilled at working with earth, creating beauty, and building security. Stability was your achievement and your identity.
+Along the way, you learned patience, self-sufficiency, and appreciation for material world. You became skilled at working with earth, creating beauty, and building security. Stability was your achievement and your identity.
 
 These skills are gifts you carry into this life - the capacity to work steadily, create abundance, and find joy in simple pleasures. The Taurus South Node makes you naturally grounded and capable of building wealth.`,
         
         comfortablePattern: `The comfortable pattern is relying only on yourself, building your own resources, and avoiding anything that threatens stability. You may find yourself automatically choosing security over growth, comfort over transformation, predictability over depth.
 
-There's deep familiarity with self-sufficiency - you don't like depending on others financially or emotionally. You're comfortable with routine and accumulation because that's where you've spent lifetimes. Stability feels right; change feels threatening.
+There's deep familiarity with self-sufficiency - you don't like depending on others financially or emotionally. You're comfortable with routine and accumulation because that's where you've spent years. Stability feels right; change feels threatening.
 
 The ease with which you can build material security, work patiently, and enjoy life's pleasures is your gift. But it becomes problematic when you resist transformation, avoid depth, or can't share resources. The pattern that once created wealth now prevents deeper intimacy and growth.`,
         
@@ -812,7 +812,7 @@ The growth edge is learning that intimacy requires vulnerability and merging, th
 
 The evolved expression is being grounded enough to handle intensity, stable enough to risk transformation, self-sufficient enough to merge from choice rather than need.`,
         
-        spiritualMeaning: `Spiritually, the Taurus South Node represents mastery of material plane and building form. You've spent lifetimes learning how to manifest in the physical world. That work is complete.
+        spiritualMeaning: `Spiritually, the Taurus South Node represents mastery of material plane and building form. You've spent years learning how to manifest in the physical world. That work is complete.
 
 This lifetime is about discovering that form must transform, that security can be spiritual as well as material, and that depth enriches life beyond simple pleasures. The builder who learns alchemy.
 
@@ -825,17 +825,17 @@ The deeper teaching is that transformation isn't destruction - it's evolution. A
         title: "South Node in Gemini - The Student's Comfort Zone",
         archetype: "From Questions to Wisdom",
         northNode: "Sagittarius",
-        hook: "With South Node in Gemini, this soul's past incarnations were spent gathering information, communicating, and staying curious. You came into this life knowing how to learn and ask questions - now you're learning to teach and commit to truth.",
+        hook: "With South Node in Gemini, this person's natural strengths were built through gathering information, communicating, and staying curious. You came into this life knowing how to learn and ask questions - now you're learning to teach and commit to truth.",
         
-        masterPattern: `The South Node in Gemini represents lifetimes as the student, messenger, or communicator - being the one who gathered information, asked questions, and shared knowledge. You were the curious mind, the networker, the one who knew a little about everything.
+        masterPattern: `The South Node in Gemini represents deep experience as the student, messenger, or communicator - being the one who gathered information, asked questions, and shared knowledge. You were the curious mind, the networker, the one who knew a little about everything.
 
-In those incarnations, you learned intellectual flexibility, communication skill, and how to learn quickly. You became skilled at adapting, seeing multiple perspectives, and conveying information. Learning was your mastery.
+Along the way, you learned intellectual flexibility, communication skill, and how to learn quickly. You became skilled at adapting, seeing multiple perspectives, and conveying information. Learning was your mastery.
 
 These skills are gifts you carry into this life - the capacity to learn quickly, communicate clearly, and see multiple sides. The Gemini South Node makes you naturally curious and intellectually agile.`,
         
         comfortablePattern: `The comfortable pattern is staying in student mode, constantly learning without ever feeling you know enough to teach. You may find yourself automatically gathering more information rather than forming conclusions, asking questions rather than providing answers.
 
-There's deep familiarity with intellectual exploration without commitment - knowing many things without claiming expertise in any. You're comfortable with questions because that's where you've spent lifetimes. Knowing feels presumptuous; learning feels safe.
+There's deep familiarity with intellectual exploration without commitment - knowing many things without claiming expertise in any. You're comfortable with questions because that's where you've spent years. Knowing feels presumptuous; learning feels safe.
 
 The ease with which you can learn, communicate, and adapt is your gift. But it becomes problematic when you never synthesize information into wisdom, never commit to teaching, or intellectualize rather than finding meaning. The pattern that once created knowledge now prevents wisdom.`,
         
@@ -875,7 +875,7 @@ The growth edge is learning that shared philosophy creates deeper bond than shar
 
 The evolved expression is being intellectually engaging while also philosophically deep, communicating clearly while also inspiring with vision, staying curious while also having wisdom to share.`,
         
-        spiritualMeaning: `Spiritually, the Gemini South Node represents mastery of mind and knowledge gathering. You've spent lifetimes learning how to learn, how to communicate, how to think. That work is complete.
+        spiritualMeaning: `Spiritually, the Gemini South Node represents mastery of mind and knowledge gathering. You've spent years learning how to learn, how to communicate, how to think. That work is complete.
 
 This lifetime is about discovering that knowledge without wisdom is empty, that learning without teaching doesn't serve, and that faith in meaning matters more than intellectual understanding. The eternal student who becomes wise teacher.
 
@@ -888,11 +888,11 @@ The deeper teaching is that sometimes you must commit to truth even when you can
         title: "South Node in Cancer - The Nurturer's Comfort Zone",
         archetype: "From Emotion to Authority",
         northNode: "Capricorn",
-        hook: "With South Node in Cancer, this soul's past incarnations were spent nurturing, creating home, and being emotionally available. You came into this life knowing how to care for others and create belonging - now you're learning professional achievement and emotional discipline.",
+        hook: "With South Node in Cancer, this person's natural strengths were built through nurturing, creating home, and being emotionally available. You came into this life knowing how to care for others and create belonging - now you're learning professional achievement and emotional discipline.",
         
-        masterPattern: `The South Node in Cancer represents lifetimes as the mother, caregiver, or emotional center - being the one everyone turned to for nurturance and safety. You were the homemaker, the emotional foundation, the one who kept the family together.
+        masterPattern: `The South Node in Cancer represents deep experience as the mother, caregiver, or emotional center - being the one everyone turned to for nurturance and safety. You were the homemaker, the emotional foundation, the one who kept the family together.
 
-In those incarnations, you learned empathy, emotional intelligence, and how to create belonging. You became skilled at nurturing, feeling what others feel, and making people feel safe. Caring was your mastery.
+Along the way, you learned empathy, emotional intelligence, and how to create belonging. You became skilled at nurturing, feeling what others feel, and making people feel safe. Caring was your mastery.
 
 These skills are gifts you carry into this life - the capacity to empathize deeply, create home, and nurture others. The Cancer South Node makes you naturally emotionally intelligent and caring.`,
         
@@ -916,7 +916,7 @@ The nurturing pattern that once created belonging now prevents your own growth. 
         
         shadowExpression: `The shadow of Cancer South Node is emotional manipulation, guilt-tripping, and smothering those you love. You may find yourself making others responsible for your feelings, being the martyr, or keeping others dependent to feel needed.
 
-There can be moodiness and taking things personally - not because you're overly sensitive, but because you've spent lifetimes in the emotional realm and haven't yet developed Capricorn's discipline and perspective.
+There can be moodiness and taking things personally - not because you're overly sensitive, but because you've spent years in the emotional realm and haven't yet developed Capricorn's discipline and perspective.
 
 The darkest shadow is emotional dependency disguised as caregiving - needing to be needed, keeping others small so you can nurture them, avoiding your own ambitions to stay in the comfortable caregiver role.`,
         
@@ -938,7 +938,7 @@ The growth edge is learning that healthy partnership includes both people having
 
 The evolved expression is being emotionally available while also professionally successful, nurturing your family while also building career, being the emotional center while also being the authority.`,
         
-        spiritualMeaning: `Spiritually, the Cancer South Node represents mastery of emotional realm and creation of belonging. You've spent lifetimes learning how to love, how to nurture, how to create home. That work is complete.
+        spiritualMeaning: `Spiritually, the Cancer South Node represents mastery of emotional realm and creation of belonging. You've spent years learning how to love, how to nurture, how to create home. That work is complete.
 
 This lifetime is about discovering that achievement serves those you love, that authority can be nurturing, and that your professional success models possibility for those you care for. The mother who becomes leader.
 
@@ -951,11 +951,11 @@ The deeper teaching is that you serve family better when you're fulfilled profes
         title: "South Node in Leo - The Star's Comfort Zone",
         archetype: "From Recognition to Revolution",
         northNode: "Aquarius",
-        hook: "With South Node in Leo, this soul's past incarnations were spent in the spotlight, expressing creatively, and receiving recognition. You came into this life knowing how to shine and be special - now you're learning to serve the collective and release need for applause.",
+        hook: "With South Node in Leo, this person's natural strengths were built through time in the spotlight, expressing creatively, and receiving recognition. You came into this life knowing how to shine and be special - now you're learning to serve the collective and release need for applause.",
         
-        masterPattern: `The South Node in Leo represents lifetimes as the king, performer, or creative genius - being the one who shone brightly and received love and admiration. You were the leader, the artist, the one who was celebrated for your unique gifts.
+        masterPattern: `The South Node in Leo represents deep experience as the king, performer, or creative genius - being the one who shone brightly and received love and admiration. You were the leader, the artist, the one who was celebrated for your unique gifts.
 
-In those incarnations, you learned creative expression, leadership through personal magnetism, and how to inspire through your radiance. You became skilled at performing, leading, and bringing joy. Being special was your identity.
+Along the way, you learned creative expression, leadership through personal magnetism, and how to inspire through your radiance. You became skilled at performing, leading, and bringing joy. Being special was your identity.
 
 These skills are gifts you carry into this life - the capacity to create, lead, and inspire. The Leo South Node makes you naturally charismatic and creatively gifted.`,
         
@@ -979,7 +979,7 @@ The star pattern that once brought joy now creates isolation. What was mastery i
         
         shadowExpression: `The shadow of Leo South Node is narcissism, drama addiction, and inability to think beyond yourself. You may find yourself creating drama to feel alive, needing constant validation, or being the "star" who makes the team about them.
 
-There can be emotional reactivity and taking things personally - not because you're immature, but because you've spent lifetimes in heart-centered expression and haven't yet developed Aquarius's emotional detachment and group consciousness.
+There can be emotional reactivity and taking things personally - not because you're immature, but because you've spent years in heart-centered expression and haven't yet developed Aquarius's emotional detachment and group consciousness.
 
 The darkest shadow is empty recognition - being celebrated but feeling hollow, having admirers but not equals, being the star who's ultimately alone because they can't step out of the spotlight long enough to be one of the team.`,
         
@@ -1001,7 +1001,7 @@ The growth edge is learning that community of equals serves better than fan club
 
 The evolved expression is being creatively expressive while also thinking of the collective, being warm and generous while also emotionally detached enough to see clearly, leading while being one of equals.`,
         
-        spiritualMeaning: `Spiritually, the Leo South Node represents mastery of individual creative expression and leadership through personal power. You've spent lifetimes learning how to shine, how to create, how to inspire through your radiance. That work is complete.
+        spiritualMeaning: `Spiritually, the Leo South Node represents mastery of individual creative expression and leadership through personal power. You've spent years learning how to shine, how to create, how to inspire through your radiance. That work is complete.
 
 This lifetime is about discovering that your gifts serve best when applied to collective benefit, that true leadership means innovating for the many, and that the most revolutionary act is releasing need for personal recognition. The king who becomes revolutionary.
 
@@ -1014,11 +1014,11 @@ The deeper teaching is that you become immortal not through being remembered as 
         title: "South Node in Virgo - The Healer's Comfort Zone",
         archetype: "From Perfection to Faith",
         northNode: "Pisces",
-        hook: "With South Node in Virgo, this soul's past incarnations were spent analyzing, perfecting, and serving practically. You came into this life knowing how to fix problems and be useful - now you're learning to surrender to faith and trust the mystery.",
+        hook: "With South Node in Virgo, this person's natural strengths were built through analysing, perfecting, and serving practically. You came into this life knowing how to fix problems and be useful - now you're learning to surrender to faith and trust the mystery.",
         
-        masterPattern: `The South Node in Virgo represents lifetimes as the healer, craftsperson, or analyst - being the one who fixed problems through skill and attention to detail. You were the doctor, the artisan, the efficient servant who made things work better.
+        masterPattern: `The South Node in Virgo represents deep experience as the healer, craftsperson, or analyst - being the one who fixed problems through skill and attention to detail. You were the doctor, the artisan, the efficient servant who made things work better.
 
-In those incarnations, you learned precision, practical service, and how to perfect your craft. You became skilled at analyzing, organizing, and fixing what was broken. Competence was your identity.
+Along the way, you learned precision, practical service, and how to perfect your craft. You became skilled at analyzing, organizing, and fixing what was broken. Competence was your identity.
 
 These skills are gifts you carry into this life - the capacity to serve practically, attend to details, and perfect your work. The Virgo South Node makes you naturally skilled and capable.`,
         
@@ -1042,7 +1042,7 @@ The analytical pattern that once created excellence now creates anxiety. What wa
         
         shadowExpression: `The shadow of Virgo South Node is hyper-criticism, anxiety, and inability to accept imperfection. You may find yourself constantly worried, being the martyr who serves but resents it, or criticizing yourself and others relentlessly.
 
-There can be health anxiety and obsessive attention to body - not because you're a hypochondriac, but because you've spent lifetimes perfecting physical form and haven't yet developed Pisces' trust in divine plan.
+There can be health anxiety and obsessive attention to body - not because you're a hypochondriac, but because you've spent years perfecting physical form and haven't yet developed Pisces' trust in divine plan.
 
 The darkest shadow is anxious perfectionism that prevents peace - being so focused on flaws that you can't see wholeness, so busy fixing that you never surrender, so competent that you can't receive grace.`,
         
@@ -1064,7 +1064,7 @@ The growth edge is learning that love requires accepting imperfection, that some
 
 The evolved expression is being practically helpful while also spiritually accepting, serving skillfully while also surrendering to relationship's mystery, being competent while also having faith in love's divine imperfection.`,
         
-        spiritualMeaning: `Spiritually, the Virgo South Node represents mastery of material realm and perfection of craft. You've spent lifetimes learning how to serve, how to perfect, how to function skillfully in physical world. That work is complete.
+        spiritualMeaning: `Spiritually, the Virgo South Node represents mastery of material realm and perfection of craft. You've spent years learning how to serve, how to perfect, how to function skillfully in physical world. That work is complete.
 
 This lifetime is about discovering that some things can't be fixed only accepted, that faith serves better than analysis, and that compassion heals more than criticism. The healer who surrenders to mystery becomes mystic healer.
 
@@ -1077,11 +1077,11 @@ The deeper teaching is that divine plan includes imperfection, that grace works 
         title: "South Node in Libra - The Diplomat's Comfort Zone",
         archetype: "From Harmony to Independence",
         northNode: "Aries",
-        hook: "With South Node in Libra, this soul's past incarnations were spent creating harmony, partnering, and considering others. You came into this life knowing how to compromise and maintain peace - now you're learning to be independent and put yourself first.",
+        hook: "With South Node in Libra, this person's natural strengths were built through creating harmony, partnering, and considering others. You came into this life knowing how to compromise and maintain peace - now you're learning to be independent and put yourself first.",
         
-        masterPattern: `The South Node in Libra represents lifetimes as the diplomat, partner, or peacemaker - being the one who created harmony and excelled in relationships. You were the mediator, the balanced one, the person who always found the win-win solution.
+        masterPattern: `The South Node in Libra represents deep experience as the diplomat, partner, or peacemaker - being the one who created harmony and excelled in relationships. You were the mediator, the balanced one, the person who always found the win-win solution.
 
-In those incarnations, you learned partnership, compromise, and how to create beauty and peace. You became skilled at seeing all perspectives, maintaining balance, and social grace. Harmony was your mastery.
+Along the way, you learned partnership, compromise, and how to create beauty and peace. You became skilled at seeing all perspectives, maintaining balance, and social grace. Harmony was your mastery.
 
 These skills are gifts you carry into this life - the capacity to partner well, see multiple perspectives, and create beauty. The Libra South Node makes you naturally diplomatic and relationship-oriented.`,
         
@@ -1105,7 +1105,7 @@ The diplomatic pattern that once created beautiful relationships now prevents yo
         
         shadowExpression: `The shadow of Libra South Node is people-pleasing, inability to stand alone, and passive-aggressive resentment. You may find yourself saying yes when you mean no, accommodating until you resent it, or being so focused on fairness that you never just choose what YOU want.
 
-There can be decision-making paralysis - not because you're indecisive, but because you've spent lifetimes considering all perspectives and haven't yet developed Aries' ability to just choose and act.
+There can be decision-making paralysis - not because you're indecisive, but because you've spent years considering all perspectives and haven't yet developed Aries' ability to just choose and act.
 
 The darkest shadow is self-erasure in service of harmony - having no idea what you want independent of others, being unable to function alone, maintaining beautiful relationships while having no self to relate from.`,
         
@@ -1127,7 +1127,7 @@ The growth edge is learning that healthy relationships require two whole people,
 
 The evolved expression is being excellent partner while maintaining fierce independence, being diplomatic while also asserting your needs, creating harmony while also being willing to disrupt it when necessary.`,
         
-        spiritualMeaning: `Spiritually, the Libra South Node represents mastery of relationship and creation of harmony. You've spent lifetimes learning how to partner, how to balance, how to create beauty through union. That work is complete.
+        spiritualMeaning: `Spiritually, the Libra South Node represents mastery of relationship and creation of harmony. You've spent years learning how to partner, how to balance, how to create beauty through union. That work is complete.
 
 This lifetime is about discovering that you must be whole individual before you can truly partner, that asserting yourself serves relationships, and that sometimes the most loving thing is to disagree. The diplomat who becomes warrior.
 
@@ -1140,11 +1140,11 @@ The deeper teaching is that true partnership requires two whole people, that har
         title: "South Node in Scorpio - The Transformer's Comfort Zone",
         archetype: "From Intensity to Peace",
         northNode: "Taurus",
-        hook: "With South Node in Scorpio, this soul's past incarnations were spent in intensity, transformation, and merging with others. You came into this life knowing depth and crisis - now you're learning to find peace in simplicity and build your own security.",
+        hook: "With South Node in Scorpio, this person's natural strengths were built through intensity, transformation, and merging with others. You came into this life knowing depth and crisis - now you're learning to find peace in simplicity and build your own security.",
         
-        masterPattern: `The South Node in Scorpio represents lifetimes of intense transformation - being the shaman, the investigator, or the one who navigated life's depths. You were the transformer, the keeper of secrets, the one who understood power and shadow.
+        masterPattern: `The South Node in Scorpio represents deep experience of intense transformation - being the shaman, the investigator, or the one who navigated life's depths. You were the transformer, the keeper of secrets, the one who understood power and shadow.
 
-In those incarnations, you learned psychological depth, how to navigate crisis, and how to access hidden dimensions. You became skilled at transformation, intimate merging, and working with shared resources. Intensity was your mastery.
+Along the way, you learned psychological depth, how to navigate crisis, and how to access hidden dimensions. You became skilled at transformation, intimate merging, and working with shared resources. Intensity was your mastery.
 
 These skills are gifts you carry into this life - the capacity for depth, psychological insight, and transformation. The Scorpio South Node makes you naturally able to handle crisis and navigate shadow.`,
         
@@ -1168,7 +1168,7 @@ The transformation pattern that once created growth now prevents peace. What was
         
         shadowExpression: `The shadow of Scorpio South Node is drama addiction, manipulation through emotional intensity, and inability to function without crisis. You may find yourself creating problems to solve, wielding power through controlling shared resources, or being jealous and possessive.
 
-There can be obsession with depth to the point where nothing satisfies - not because you're hard to please, but because you've spent lifetimes in intensity and haven't yet developed Taurus' ability to find meaning in simple pleasures.
+There can be obsession with depth to the point where nothing satisfies - not because you're hard to please, but because you've spent years in intensity and haven't yet developed Taurus' ability to find meaning in simple pleasures.
 
 The darkest shadow is transformation addiction - burning everything down repeatedly rather than building something stable, being so comfortable with crisis that you sabotage peace, merging so completely with others that you have no independent resources or identity.`,
         
@@ -1190,7 +1190,7 @@ The growth edge is learning that stable, peaceful relationships can be deep, tha
 
 The evolved expression is being capable of deep intimacy while maintaining financial independence, creating peaceful partnerships while carrying depth, being profound while also being simple.`,
         
-        spiritualMeaning: `Spiritually, the Scorpio South Node represents mastery of transformation, shadow work, and deep merging. You've spent lifetimes learning how to die and be reborn, how to navigate darkness, how to access power. That work is complete.
+        spiritualMeaning: `Spiritually, the Scorpio South Node represents mastery of transformation, shadow work, and deep merging. You've spent years learning how to die and be reborn, how to navigate darkness, how to access power. That work is complete.
 
 This lifetime is about discovering that peace is the prize of transformation, that stability can be spiritual, and that building simple abundance honors your depth. The shaman who becomes farmer.
 
@@ -1203,11 +1203,11 @@ The deeper teaching is that you've transformed enough - now it's time to enjoy t
         title: "South Node in Sagittarius - The Seeker's Comfort Zone",
         archetype: "From Vision to Curiosity",
         northNode: "Gemini",
-        hook: "With South Node in Sagittarius, this soul's past incarnations were spent teaching truth, seeking meaning, and having faith. You came into this life knowing the big picture - now you're learning to stay curious, ask questions, and appreciate local details.",
+        hook: "With South Node in Sagittarius, this person's natural strengths were built through teaching truth, seeking meaning, and having faith. You came into this life knowing the big picture - now you're learning to stay curious, ask questions, and appreciate local details.",
         
-        masterPattern: `The South Node in Sagittarius represents lifetimes as the teacher, philosopher, or seeker - being the one who held vision and taught truth. You were the guru, the adventurer, the one who found meaning and inspired others with it.
+        masterPattern: `The South Node in Sagittarius represents deep experience as the teacher, philosopher, or seeker - being the one who held vision and taught truth. You were the guru, the adventurer, the one who found meaning and inspired others with it.
 
-In those incarnations, you learned faith, philosophical thinking, and how to inspire with vision. You became skilled at teaching, seeing patterns, and providing meaning. Wisdom was your mastery.
+Along the way, you learned faith, philosophical thinking, and how to inspire with vision. You became skilled at teaching, seeing patterns, and providing meaning. Wisdom was your mastery.
 
 These skills are gifts you carry into this life - the capacity to see the big picture, have faith, and inspire others. The Sagittarius South Node makes you naturally philosophical and visionary.`,
         
@@ -1231,7 +1231,7 @@ The teacher pattern that once inspired now prevents your own learning. What was 
         
         shadowExpression: `The shadow of Sagittarius South Node is dogmatism, intellectual arrogance disguised as faith, and inability to be present. You may find yourself preaching at people, believing you're always right, or seeking meaning in travel/philosophy while ignoring the meaningful right in front of you.
 
-There can be restlessness and inability to appreciate the local - not because you're flighty, but because you've spent lifetimes seeking truth in distant places and haven't yet developed Gemini's appreciation for what's here.
+There can be restlessness and inability to appreciate the local - not because you're flighty, but because you've spent years seeking truth in distant places and haven't yet developed Gemini's appreciation for what's here.
 
 The darkest shadow is the guru who stopped learning - being so certain of your truth that you miss others' wisdom, teaching the same philosophy for lifetimes without integrating new information, being the wise one who's ultimately ignorant because you can't be student.`,
         
@@ -1253,7 +1253,7 @@ The growth edge is learning that conversation serves better than sermon, that yo
 
 The evolved expression is being philosophically inspiring while also genuinely curious about your partner, teaching while also learning, providing vision while also appreciating daily life together.`,
         
-        spiritualMeaning: `Spiritually, the Sagittarius South Node represents mastery of meaning-making, faith, and teaching. You've spent lifetimes learning how to find truth, how to inspire, how to provide vision. That work is complete.
+        spiritualMeaning: `Spiritually, the Sagittarius South Node represents mastery of meaning-making, faith, and teaching. You've spent years learning how to find truth, how to inspire, how to provide vision. That work is complete.
 
 This lifetime is about discovering that staying curious keeps truth alive, that everyone is both teacher and student, and that wisdom is found in everyday moments as much as grand philosophies. The guru who becomes student.
 
@@ -1266,11 +1266,11 @@ The deeper teaching is that your teaching deepens when you remain open to learni
         title: "South Node in Capricorn - The Authority's Comfort Zone",
         archetype: "From Control to Nurturing",
         northNode: "Cancer",
-        hook: "With South Node in Capricorn, this soul's past incarnations were spent achieving, leading, and maintaining control. You came into this life knowing how to succeed professionally - now you're learning emotional availability and the value of family and home.",
+        hook: "With South Node in Capricorn, this person's natural strengths were built through achieving, leading, and maintaining control. You came into this life knowing how to succeed professionally - now you're learning emotional availability and the value of family and home.",
         
-        masterPattern: `The South Node in Capricorn represents lifetimes as the authority, leader, or achiever - being the one in charge, the public figure whose value came through accomplishment. You were the king, the CEO, the responsible one who made things work.
+        masterPattern: `The South Node in Capricorn represents deep experience as the authority, leader, or achiever - being the one in charge, the public figure whose value came through accomplishment. You were the king, the CEO, the responsible one who made things work.
 
-In those incarnations, you learned discipline, professional competence, and how to achieve. You became skilled at leadership, organization, and public success. Authority was your mastery.
+Along the way, you learned discipline, professional competence, and how to achieve. You became skilled at leadership, organization, and public success. Authority was your mastery.
 
 These skills are gifts you carry into this life - the capacity to lead, achieve, and take responsibility. The Capricorn South Node makes you naturally competent and capable of success.`,
         
@@ -1294,7 +1294,7 @@ The achievement pattern that once created success now prevents intimacy. What wa
         
         shadowExpression: `The shadow of Capricorn South Node is workaholism, emotional unavailability, and using achievement to avoid feelings. You may find yourself always working, being cold or distant emotionally, or measuring everyone (including yourself) by productivity.
 
-There can be inability to show weakness or ask for help - not because you're arrogant, but because you've spent lifetimes being the authority and haven't yet developed Cancer's capacity to be vulnerable and emotionally open.
+There can be inability to show weakness or ask for help - not because you're arrogant, but because you've spent years being the authority and haven't yet developed Cancer's capacity to be vulnerable and emotionally open.
 
 The darkest shadow is empty success - achieving everything professionally but having no emotional connections, being respected but not loved, being the authority who's ultimately alone because they couldn't show their heart.`,
         
@@ -1316,7 +1316,7 @@ The growth edge is learning that vulnerability strengthens relationships, that f
 
 The evolved expression is being professionally successful while emotionally available, being the authority in work while being vulnerable at home, providing stability while also providing emotional nurturance.`,
         
-        spiritualMeaning: `Spiritually, the Capricorn South Node represents mastery of worldly achievement and professional success. You've spent lifetimes learning how to lead, achieve, and be authority. That work is complete.
+        spiritualMeaning: `Spiritually, the Capricorn South Node represents mastery of worldly achievement and professional success. You've spent years learning how to lead, achieve, and be authority. That work is complete.
 
 This lifetime is about discovering that true success includes emotional fulfillment, that being vulnerable is power, and that family and emotional connections matter as much as professional achievement. The king who becomes parent.
 
@@ -1329,11 +1329,11 @@ The deeper teaching is that you've achieved enough professionally - now it's tim
         title: "South Node in Aquarius - The Revolutionary's Comfort Zone",
         archetype: "From Detachment to Heart",
         northNode: "Leo",
-        hook: "With South Node in Aquarius, this soul's past incarnations were spent serving the collective, innovating for humanity, and maintaining emotional detachment. You came into this life knowing about group consciousness - now you're learning to honor your individual heart and creative expression.",
+        hook: "With South Node in Aquarius, this person's natural strengths were built through serving the collective, innovating for humanity, and maintaining emotional detachment. You came into this life knowing about group consciousness - now you're learning to honor your individual heart and creative expression.",
         
-        masterPattern: `The South Node in Aquarius represents lifetimes of revolutionary service - being the innovator, the reformer, or the one who thought of humanity's future. You were the visionary, the rebel, the one who served the many over the one.
+        masterPattern: `The South Node in Aquarius represents deep experience of revolutionary service - being the innovator, the reformer, or the one who thought of humanity's future. You were the visionary, the rebel, the one who served the many over the one.
 
-In those incarnations, you learned collective consciousness, innovation, and how to think beyond personal concerns. You became skilled at seeing humanity's needs, creating change, and maintaining objective perspective. Serving the future was your mastery.
+Along the way, you learned collective consciousness, innovation, and how to think beyond personal concerns. You became skilled at seeing humanity's needs, creating change, and maintaining objective perspective. Serving the future was your mastery.
 
 These skills are gifts you carry into this life - the capacity to innovate, think collectively, and serve humanity. The Aquarius South Node makes you naturally progressive and humanitarian.`,
         
@@ -1357,7 +1357,7 @@ The revolutionary pattern that once served humanity now prevents your own joy. W
         
         shadowExpression: `The shadow of Aquarius South Node is cold detachment, using collective service to avoid personal intimacy, and suppressing joy or recognition as egotistical. You may find yourself unable to celebrate your uniqueness, being emotionally unavailable, or making everything about "the cause" rather than personal connection.
 
-There can be inability to receive love or recognition - not because you're humble, but because you've spent lifetimes serving the collective and haven't yet developed Leo's capacity to honor your individual heart and receive celebration.
+There can be inability to receive love or recognition - not because you're humble, but because you've spent years serving the collective and haven't yet developed Leo's capacity to honor your individual heart and receive celebration.
 
 The darkest shadow is emotional disconnection disguised as enlightenment - being so focused on humanity that you miss the human in front of you, so committed to future that you can't be present with your own heart, so identified with being one of many that you have no individual creative expression.`,
         
@@ -1379,7 +1379,7 @@ The growth edge is learning that romantic passion serves you, that being someone
 
 The evolved expression is being humanitarian while also warmly loving, maintaining friendships while having passionate romance, thinking clearly while also feeling deeply.`,
         
-        spiritualMeaning: `Spiritually, the Aquarius South Node represents mastery of collective consciousness and service to humanity. You've spent lifetimes learning how to innovate, serve the many, think objectively. That work is complete.
+        spiritualMeaning: `Spiritually, the Aquarius South Node represents mastery of collective consciousness and service to humanity. You've spent years learning how to innovate, serve the many, think objectively. That work is complete.
 
 This lifetime is about discovering that your individual joy serves the collective, that following your heart is revolutionary, and that creative self-expression is spiritual practice. The revolutionary who becomes creator.
 
@@ -1392,11 +1392,11 @@ The deeper teaching is that you serve humanity best when you're honoring your un
         title: "South Node in Pisces - The Mystic's Comfort Zone",
         archetype: "From Surrender to Skill",
         northNode: "Virgo",
-        hook: "With South Node in Pisces, this soul's past incarnations were spent in spiritual realms, surrendering to faith, and merging with the divine. You came into this life knowing mysticism - now you're learning practical skill and grounded service.",
+        hook: "With South Node in Pisces, this person's natural strengths were built through spiritual exploration, surrendering to faith, and merging with something greater. You came into this life knowing mysticism - now you're learning practical skill and grounded service.",
         
-        masterPattern: `The South Node in Pisces represents lifetimes of mystical experience - being the mystic, the artist, or the one who accessed spiritual dimensions. You were the dreamer, the compassionate one, the person who dissolved into unity.
+        masterPattern: `The South Node in Pisces represents deep experience of mystical connection - being the mystic, the artist, or the one who accessed spiritual dimensions. You were the dreamer, the compassionate one, the person who dissolved into unity.
 
-In those incarnations, you learned faith, compassion, and how to access the unseen. You became skilled at spiritual practice, surrendering to divine will, and feeling universal love. Mysticism was your mastery.
+Along the way, you learned faith, compassion, and how to access the unseen. You became skilled at spiritual practice, surrendering to divine will, and feeling universal love. Mysticism was your mastery.
 
 These skills are gifts you carry into this life - the capacity for faith, deep compassion, and spiritual connection. The Pisces South Node makes you naturally intuitive and spiritually attuned.`,
         
@@ -1420,7 +1420,7 @@ The mystic pattern that once connected you to divine now prevents functioning in
         
         shadowExpression: `The shadow of Pisces South Node is escapism disguised as spirituality, victim mentality, and inability to function practically. You may find yourself spacing out, playing the martyr, or believing material competence is "unspiritual."
 
-There can be addiction issues or fantasy addiction - not because you're weak, but because you've spent lifetimes in spiritual realms and haven't yet developed Virgo's capacity to function skillfully in material world.
+There can be addiction issues or fantasy addiction - not because you're weak, but because you've spent years in spiritual realms and haven't yet developed Virgo's capacity to function skillfully in material world.
 
 The darkest shadow is spiritual bypassing - using faith and compassion to avoid developing competence, being so surrendered you're irresponsible, having such poor boundaries you absorb everyone's dysfunction, being the mystic who can't pay rent.`,
         
@@ -1442,7 +1442,7 @@ The growth edge is learning that boundaries strengthen relationships, that pract
 
 The evolved expression is being deeply compassionate while maintaining boundaries, spiritually connected while practically supportive, faithful while also discerning.`,
         
-        spiritualMeaning: `Spiritually, the Pisces South Node represents mastery of mystical realms and surrender to divine. You've spent lifetimes learning how to access spiritual dimensions, how to have faith, how to feel universal love. That work is complete.
+        spiritualMeaning: `Spiritually, the Pisces South Node represents mastery of mystical realms and surrender to divine. You've spent years learning how to access spiritual dimensions, how to have faith, how to feel universal love. That work is complete.
 
 This lifetime is about discovering that spirituality includes embodiment, that serving practically is sacred, and that developing skill honors the divine. The mystic who becomes healer.
 
