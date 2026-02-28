@@ -4149,6 +4149,194 @@
 .loading-overlay.active.loading-text {
  animation: loadPulse 2s ease-in-out infinite;
  }
+
+ /* ============================================ */
+ /* SVG ICON SYSTEM                              */
+ /* ============================================ */
+ 
+ .amit-icon {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     flex-shrink: 0;
+ }
+ 
+ .amit-icon svg {
+     width: 1em;
+     height: 1em;
+     stroke: currentColor;
+     stroke-width: 1.75;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+     fill: none;
+ }
+ 
+ /* Section header icons */
+ .section-header .icon .amit-icon {
+     font-size: 1.6rem;
+     color: var(--primary);
+     opacity: 0.85;
+     transition: all 0.3s ease;
+ }
+ 
+ .section-header:hover .icon .amit-icon {
+     opacity: 1;
+     transform: scale(1.1);
+ }
+ 
+ /* Sub-section icons */
+ .sub-section-header .sub-icon .amit-icon {
+     font-size: 1.1rem;
+     color: var(--primary);
+     opacity: 0.7;
+ }
+ 
+ /* Card icons with SVG */
+ .card-icon .amit-icon {
+     font-size: 1.4rem;
+     color: var(--primary);
+ }
+ 
+ /* SVG chevron arrows */
+ .section-arrow .amit-icon,
+ .sub-section-arrow .amit-icon,
+ .expand-icon .amit-icon {
+     font-size: 1rem;
+     color: var(--primary);
+     opacity: 0.6;
+     transition: transform 0.3s ease, opacity 0.2s ease;
+ }
+ 
+ .section-content:not(.collapsed) .section-arrow .amit-icon {
+     transform: rotate(180deg);
+ }
+ 
+ .sub-section:not(.collapsed) .sub-section-arrow .amit-icon {
+     transform: rotate(180deg);
+ }
+ 
+ /* ============================================ */
+ /* ENTRANCE ANIMATIONS                          */
+ /* ============================================ */
+ 
+ @keyframes cardSlideIn {
+     from {
+         opacity: 0;
+         transform: translateY(12px);
+     }
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+ 
+ .reading-card {
+     animation: cardSlideIn 0.35s ease-out both;
+ }
+ 
+ .section-content .reading-card:nth-child(2) { animation-delay: 0.03s; }
+ .section-content .reading-card:nth-child(3) { animation-delay: 0.06s; }
+ .section-content .reading-card:nth-child(4) { animation-delay: 0.09s; }
+ .section-content .reading-card:nth-child(5) { animation-delay: 0.12s; }
+ .section-content .reading-card:nth-child(6) { animation-delay: 0.15s; }
+ 
+ @keyframes sectionReveal {
+     from {
+         opacity: 0;
+         transform: translateY(16px);
+     }
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+ 
+ .section-content {
+     animation: sectionReveal 0.4s ease-out both;
+ }
+ 
+ /* Welcome modal icon styling */
+ .welcome-icon-wrap {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 56px;
+     height: 56px;
+     border-radius: 50%;
+     background: linear-gradient(135deg, rgba(255,105,180,0.12), rgba(177,156,217,0.12));
+     margin: 0 auto 16px;
+ }
+ 
+ .welcome-icon-wrap .amit-icon {
+     font-size: 1.6rem;
+     color: var(--primary);
+ }
+ 
+ .welcome-feature-list {
+     list-style: none;
+     padding: 0;
+     margin: 16px 0;
+ }
+ 
+ .welcome-feature-list li {
+     display: flex;
+     align-items: flex-start;
+     gap: 12px;
+     padding: 10px 0;
+     font-size: 0.95rem;
+     color: #555;
+     line-height: 1.5;
+     border-bottom: 1px solid rgba(0,0,0,0.04);
+ }
+ 
+ .welcome-feature-list li:last-child {
+     border-bottom: none;
+ }
+ 
+ .welcome-feature-list .amit-icon {
+     font-size: 1.1rem;
+     color: var(--primary);
+     flex-shrink: 0;
+     margin-top: 2px;
+ }
+ 
+ .privacy-badge {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+     border: 1px solid #bbf7d0;
+     border-radius: 12px;
+     padding: 14px 16px;
+     margin: 16px 0;
+ }
+ 
+ .privacy-badge .amit-icon {
+     font-size: 1.3rem;
+     color: #16a34a;
+     flex-shrink: 0;
+ }
+ 
+ .privacy-badge p {
+     margin: 0;
+     font-size: 0.9rem;
+     color: #166534;
+     line-height: 1.5;
+ }
+ 
+ .free-badge {
+     display: inline-flex;
+     align-items: center;
+     gap: 6px;
+     background: linear-gradient(135deg, var(--primary), var(--secondary));
+     color: white;
+     padding: 6px 14px;
+     border-radius: 20px;
+     font-size: 0.85rem;
+     font-weight: 600;
+     letter-spacing: 0.02em;
+ }
+
  </style>
 </head>
 <body>
@@ -4156,25 +4344,49 @@
  <div class="welcome-modal" id="welcomeModal" style="display: none;">
  <div class="welcome-content">
  <div class="welcome-header">
- <h2>Welcome to Your Reading</h2>
- <p>A moment in time, captured forever</p>
+ <h2>A Moment in Time</h2>
+ <p>Your complete cosmic reading, always free</p>
  </div>
  
  <div class="welcome-body">
- <!-- Step 1: Introduction -->
+ <!-- Step 1: Privacy & Free (Lead with trust) -->
  <div class="welcome-step active" data-step="1">
- <h3>How This Works</h3>
- <p>Enter a birth date and time, and we'll reveal the cosmic patterns that were written in the stars at that exact moment.</p>
- <p>You'll receive <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom.</p>
- <div class="welcome-highlight">
- <p>"At the exact moment you were born, the universe created a unique pattern just for you."</p>
+ <div class="welcome-icon-wrap">
+ <span class="amit-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+ </div>
+ <h3>Your Privacy Comes First</h3>
+ <div class="privacy-badge">
+ <span class="amit-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+ <p><strong>100% private.</strong> Your birth data never leaves your device. No accounts, no tracking, no data collection. Everything stays in your browser.</p>
+ </div>
+ <div class="privacy-badge" style="background: linear-gradient(135deg, #fdf2f8, #fce7f3); border-color: #fbcfe8;">
+ <span class="amit-icon" style="color: var(--primary);"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+ <p><strong>Always free, forever.</strong> No subscriptions, no paywalls, no hidden costs. 65+ full readings at no charge.</p>
  </div>
  </div>
  
- <!-- Step 2: Theme Selection -->
+ <!-- Step 2: What you get -->
  <div class="welcome-step" data-step="2">
+ <div class="welcome-icon-wrap">
+ <span class="amit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+ </div>
+ <h3>What You'll Discover</h3>
+ <p>Enter a birth date, and we'll reveal the cosmic patterns encoded at that exact moment.</p>
+ <ul class="welcome-feature-list">
+ <li><span class="amit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>Full birth chart — Sun, Moon, Rising and all planets</li>
+ <li><span class="amit-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Complete numerology — Life Path, Destiny, Soul Urge and more</li>
+ <li><span class="amit-icon"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>Soul mission, life patterns and current cosmic cycles</li>
+ <li><span class="amit-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>Love blueprint and compatibility insights</li>
+ </ul>
+ </div>
+ 
+ <!-- Step 3: Theme Selection -->
+ <div class="welcome-step" data-step="3">
+ <div class="welcome-icon-wrap">
+ <span class="amit-icon"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="0.5"/><circle cx="17.5" cy="10.5" r="0.5"/><circle cx="8.5" cy="7.5" r="0.5"/><circle cx="6.5" cy="12.5" r="0.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></span>
+ </div>
  <h3>Choose Your Voice</h3>
- <p>This choice shapes how your reading speaks to you:</p>
+ <p>This shapes the tone and energy of your reading:</p>
  <div class="theme-preview-btns">
  <button class="theme-preview-btn pink selected" onclick="selectWelcomeTheme('girl')">Pink</button>
  <button class="theme-preview-btn purple" onclick="selectWelcomeTheme('purple')">Purple</button>
@@ -4188,31 +4400,32 @@
  <p style="text-align: center; font-size: 0.85rem; opacity: 0.7; margin-top: 15px;">You can change this anytime from the bar at the top</p>
  </div>
  
- <!-- Step 3: How to Read -->
- <div class="welcome-step" data-step="3">
- <h3>No Pressure to Read Everything</h3>
- <p>This is a <strong>substantial amount of information</strong>—think of it as an instruction manual for understanding a soul, not something to rush through.</p>
- <p>Take your time. Come back to different sections when they feel relevant. Some insights might click immediately; others may make sense months from now.</p>
+ <!-- Step 4: How to use -->
+ <div class="welcome-step" data-step="4">
+ <div class="welcome-icon-wrap">
+ <span class="amit-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+ </div>
+ <h3>Take Your Time</h3>
+ <p>This is a <strong>substantial reading</strong> — think of it as an instruction manual for understanding a soul, not something to rush through.</p>
  <div class="welcome-highlight">
- <p>"Use this as a reference guide, not a test to complete."</p>
+ <p>"Come back to different sections when they feel relevant. Some insights click immediately; others make sense months from now."</p>
  </div>
  <div class="saved-readings-note">
  <p><strong>Your readings are automatically saved.</strong></p>
- <p>Click "New Reading" anytime and you'll find all your saved profiles at the bottom of the page. Create readings for friends, family, or yourself—they'll all be there waiting.</p>
+ <p>Create readings for friends, family, or yourself — they'll all be waiting when you return.</p>
  </div>
  </div>
  
- <!-- Step 4: Accuracy Note -->
- <div class="welcome-step" data-step="4">
- <h3>A Gentle Note on Accuracy</h3>
- <p>Perhaps <strong>70% will feel uncannily accurate</strong>. The rest? The stars and numbers capture your absolute potential—they cannot know your traumas, circumstances, or the choices you've made along the way.</p>
- <p>If something doesn't resonate, it might be unlived potential waiting to be discovered. Or simply not your path.</p>
+ <!-- Step 5: Accuracy note -->
+ <div class="welcome-step" data-step="5">
+ <div class="welcome-icon-wrap">
+ <span class="amit-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+ </div>
+ <h3>A Gentle Note</h3>
+ <p>Perhaps <strong>70% will feel uncannily accurate</strong>. The rest? The stars and numbers capture your absolute potential — they cannot know your traumas, circumstances, or the choices you've made along the way.</p>
+ <p>If something doesn't resonate, it might be unlived potential waiting to be discovered.</p>
  <div class="welcome-highlight">
  <p>"Maybe, just maybe, this is the reading that sets you on the path to who you were always meant to be."</p>
- </div>
- <div class="privacy-note">
- <span class="icon lock-icon"></span>
- <p><strong>Your data stays with you.</strong> Everything is stored locally on your device. We never see, collect, or share your birth information.</p>
  </div>
  </div>
  </div>
@@ -4224,6 +4437,7 @@
  <div class="welcome-dot" data-dot="2"></div>
  <div class="welcome-dot" data-dot="3"></div>
  <div class="welcome-dot" data-dot="4"></div>
+ <div class="welcome-dot" data-dot="5"></div>
  </div>
  <button class="welcome-nav-btn primary" id="welcomeNextBtn" onclick="welcomeNext()">Next</button>
  </div>
@@ -4454,30 +4668,110 @@
  </section>
  
  <!-- Scripts with cache bust -->
- <script src="config.js?v=37"></script>
- <script src="calculations.js?v=37"></script>
- <script src="readings.js?v=37"></script>
- <script src="house-readings.js?v=37"></script>
- <script src="deep-house-readings.js?v=37"></script>
- <script src="aspect-readings.js?v=37"></script>
- <script src="advanced-readings.js?v=37"></script>
- <script src="deep-readings.js?v=37"></script>
- <script src="deep-planet-readings.js?v=37"></script>
- <script src="deep-planet-readings-outer.js?v=37"></script>
- <script src="deep-numerology-readings.js?v=37"></script>
- <script src="deep-chinese-zodiac-readings.js?v=37"></script>
- <script src="deep-chiron-readings.js?v=37"></script>
- <script src="deep-lilith-readings.js?v=37"></script>
- <script src="deep-node-readings.js?v=37"></script>
- <script src="deep-transformative-planet-readings.js?v=37"></script>
- <script src="readings-extended.js?v=37"></script>
- <script src="love-blueprint.js?v=37"></script>
- <script src="tone-variations.js?v=37"></script>
- <script src="age-language.js?v=37"></script>
- <script src="life-pattern-readings.js?v=37"></script>
- <script src="save-share.js?v=37"></script>
- <script src="book-generator.js?v=37"></script>
+ <script src="config.js?v=38"></script>
+ <script src="calculations.js?v=38"></script>
+ <script src="readings.js?v=38"></script>
+ <script src="house-readings.js?v=38"></script>
+ <script src="deep-house-readings.js?v=38"></script>
+ <script src="aspect-readings.js?v=38"></script>
+ <script src="advanced-readings.js?v=38"></script>
+ <script src="deep-readings.js?v=38"></script>
+ <script src="deep-planet-readings.js?v=38"></script>
+ <script src="deep-planet-readings-outer.js?v=38"></script>
+ <script src="deep-numerology-readings.js?v=38"></script>
+ <script src="deep-chinese-zodiac-readings.js?v=38"></script>
+ <script src="deep-chiron-readings.js?v=38"></script>
+ <script src="deep-lilith-readings.js?v=38"></script>
+ <script src="deep-node-readings.js?v=38"></script>
+ <script src="deep-transformative-planet-readings.js?v=38"></script>
+ <script src="readings-extended.js?v=38"></script>
+ <script src="love-blueprint.js?v=38"></script>
+ <script src="tone-variations.js?v=38"></script>
+ <script src="age-language.js?v=38"></script>
+ <script src="life-pattern-readings.js?v=38"></script>
+ <script src="save-share.js?v=38"></script>
+ <script src="book-generator.js?v=38"></script>
  <script>
+ // ============================================
+ // SVG ICON SYSTEM (Lucide-inspired)
+ // ============================================
+ 
+ const AMIT_ICONS = {
+     // Section icons
+     celestial: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>',
+     numbers: '<svg viewBox="0 0 24 24"><path d="M4 17l6-12"/><path d="M14 17l6-12"/><path d="M3 7h8"/><path d="M13 7h8"/><path d="M3 17h8"/><path d="M13 17h8"/></svg>',
+     soul: '<svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>',
+     forecasts: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+     
+     // Sub-section icons
+     corePlanets: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>',
+     personalPlanets: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>',
+     socialPlanets: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>',
+     outerPlanets: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+     soulPoints: '<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+     houses: '<svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+     aspects: '<svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
+     special: '<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+     
+     // Custom section icons
+     angular: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>',
+     vertex: '<svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>',
+     nodesHouses: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 8l-8 8"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="15" r="1.5"/></svg>',
+     ageTimeline: '<svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="4"/><polyline points="6 10 12 4 18 10"/></svg>',
+     synthesis: '<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+     identityCompression: '<svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+     archetypalRole: '<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+     cognitiveTendencies: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>',
+     nameAnalysis: '<svg viewBox="0 0 24 24"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>',
+     biologicalTiming: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+     probabilityWindows: '<svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>',
+     locationStrategy: '<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+     wrapup: '<svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+     numerologyOverview: '<svg viewBox="0 0 24 24"><path d="M4 17l6-12"/><path d="M14 17l6-12"/><path d="M3 7h8"/><path d="M13 7h8"/><path d="M3 17h8"/><path d="M13 17h8"/></svg>',
+     
+     // Utility icons
+     chevronDown: '<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>',
+     check: '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>',
+     lock: '<svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>',
+     shield: '<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+     heart: '<svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+     sparkle: '<svg viewBox="0 0 24 24"><path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3z"/></svg>',
+     moon: '<svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>',
+     sun: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>',
+     globe: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>',
+     star: '<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+     compass: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>',
+     book: '<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+     
+     // Reading type icons (for card-icon slots)
+     sunSign: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>',
+     moonSign: '<svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>',
+     risingSign: '<svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="4"/><polyline points="6 10 12 4 18 10"/></svg>',
+     mercury: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>',
+     venus: '<svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+     mars: '<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+     jupiter: '<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+     saturn: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+     uranus: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+     neptune: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>',
+     pluto: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>',
+     chineseZodiac: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>',
+     lifePath: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>',
+     destiny: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>'
+ };
+ 
+ // Helper: wrap SVG in a span with amit-icon class
+ function amitIcon(name) {
+     const svg = AMIT_ICONS[name];
+     if (!svg) return '';
+     return `<span class="amit-icon">${svg}</span>`;
+ }
+ 
+ // Helper: create SVG chevron
+ function amitChevron() {
+     return `<span class="amit-icon">${AMIT_ICONS.chevronDown}</span>`;
+ }
+
  // ============================================
  // MULTI-READING STORAGE SYSTEM
  // ============================================
@@ -5161,14 +5455,14 @@
  celestialSection.appendChild(blueprintSummary);
  
  // Create collapsible sub-sections for organizing the celestial readings
- const coreSubSection = createSubSection('core-planets', '', 'Core Identity (Sun, Moon, Rising)', false);
- const personalSubSection = createSubSection('personal-planets', '', 'Personal Planets (Mercury, Venus, Mars)');
- const socialSubSection = createSubSection('social-planets', '', 'Social Planets (Jupiter, Saturn)');
- const outerSubSection = createSubSection('outer-planets', '', 'Outer Planets (Uranus, Neptune, Pluto)');
- const soulSubSection = createSubSection('soul-points', '', 'Soul Points (Nodes, Chiron, Lilith)');
- const housesSubSection = createSubSection('houses', '', 'House Placements');
- const aspectsSubSection = createSubSection('aspects', '', 'Aspects & Connections');
- const specialSubSection = createSubSection('special', '', 'Special Features');
+ const coreSubSection = createSubSection('core-planets', 'corePlanets', 'Core Identity (Sun, Moon, Rising)', false);
+ const personalSubSection = createSubSection('personal-planets', 'personalPlanets', 'Personal Planets (Mercury, Venus, Mars)');
+ const socialSubSection = createSubSection('social-planets', 'socialPlanets', 'Social Planets (Jupiter, Saturn)');
+ const outerSubSection = createSubSection('outer-planets', 'outerPlanets', 'Outer Planets (Uranus, Neptune, Pluto)');
+ const soulSubSection = createSubSection('soul-points', 'soulPoints', 'Soul Points (Nodes, Chiron, Lilith)');
+ const housesSubSection = createSubSection('houses', 'houses', 'House Placements');
+ const aspectsSubSection = createSubSection('aspects', 'aspects', 'Aspects & Connections');
+ const specialSubSection = createSubSection('special', 'special', 'Special Features');
  
  // Sun Sign - DEEP READING
  const deepSun = (typeof DEEP_SUN_READINGS!== 'undefined')? DEEP_SUN_READINGS[sunSign.name]: null;
@@ -7319,7 +7613,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  angularSectionWrapper.className = 'reading-section';
  const angularSection = createCustomSection(
  'angular',
- '',
+ 'angular',
  'The Four Life Pillars',
  `The foundational anchors shaping ${userData.name}'s life path`
  );
@@ -7413,7 +7707,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  angularSectionWrapper.className = 'reading-section';
  const angularSection = createCustomSection(
  'angular',
- '',
+ 'angular',
  'The Four Life Pillars',
  `The foundational anchors shaping ${userData.name}'s life path`
  );
@@ -7437,7 +7731,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  vertexSectionWrapper.className = 'reading-section';
  const vertexSection = createCustomSection(
  'vertex',
- '',
+ 'vertex',
  'Fated Activation Points',
  'Destined turning points and pivotal life moments'
  );
@@ -7481,7 +7775,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  vertexSectionWrapper.className = 'reading-section';
  const vertexSection = createCustomSection(
  'vertex',
- '',
+ 'vertex',
  'Fated Activation Points',
  'Destined turning points and pivotal life moments'
  );
@@ -7501,7 +7795,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  nodesSectionWrapper.className = 'reading-section';
  const nodesSection = createCustomSection(
  'nodes-houses',
- '',
+ 'nodesHouses',
  'Karmic Life Areas',
  `Where soul evolution unfolds in ${userData.name}'s life`
  );
@@ -7542,7 +7836,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  nodesSectionWrapper.className = 'reading-section';
  const nodesSection = createCustomSection(
  'nodes-houses',
- '',
+ 'nodesHouses',
  'Karmic Life Areas',
  `Where soul evolution unfolds in ${userData.name}'s life`
  );
@@ -7569,7 +7863,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  timelineSectionWrapper.className = 'reading-section';
  const timelineSection = createCustomSection(
  'age-timeline',
- '',
+ 'ageTimeline',
  'Life Timeline',
  `Key cosmic milestones and phases across ${userData.name}'s lifetime`
  );
@@ -7618,7 +7912,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  synthesisSectionWrapper.className = 'reading-section';
  const synthesisSection = createCustomSection(
  'synthesis',
- '',
+ 'synthesis',
  'Life Blueprints',
  `Deep synthesis of ${userData.name}'s cosmic design across key life areas`
  );
@@ -7734,7 +8028,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  if (idComp && idComp.reading) {
  const idWrapper = document.createElement('div');
  idWrapper.className = 'reading-section';
- const idSection = createCustomSection('identity-compression', '', 'Identity Compression', 'Your entire chart distilled into a single operating style — the mode you default to when everything else is stripped away');
+ const idSection = createCustomSection('identity-compression', 'identityCompression', 'Identity Compression', 'Your entire chart distilled into a single operating style — the mode you default to when everything else is stripped away');
  
  // Primary Style
  const pr = idComp.reading;
@@ -7782,7 +8076,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  if (archRole && archRole.reading) {
  const archWrapper = document.createElement('div');
  archWrapper.className = 'reading-section';
- const archSection = createCustomSection('archetypal-role', '', 'Archetypal Role', 'When all your cosmic data overlaps, you naturally cluster into one of six fundamental roles');
+ const archSection = createCustomSection('archetypal-role', 'archetypalRole', 'Archetypal Role', 'When all your cosmic data overlaps, you naturally cluster into one of six fundamental roles');
  
  const ar = archRole.reading;
  archSection.appendChild(createReadingCard(
@@ -7815,7 +8109,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  if (cogTend) {
  const cogWrapper = document.createElement('div');
  cogWrapper.className = 'reading-section';
- const cogSection = createCustomSection('cognitive-tendencies', '', 'Cognitive Tendencies', 'How you think, decide, and process the world — derived from your Mercury, Mars, Saturn, and life path');
+ const cogSection = createCustomSection('cognitive-tendencies', 'cognitiveTendencies', 'Cognitive Tendencies', 'How you think, decide, and process the world — derived from your Mercury, Mars, Saturn, and life path');
  
  // Build each tendency as a card
  const tendencyOrder = [
@@ -7870,7 +8164,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  if (nameAnalysis) {
  const nameWrapper = document.createElement('div');
  nameWrapper.className = 'reading-section';
- const nameSection = createCustomSection('name-analysis', '', 'Name Analysis', 'The phonetic, linguistic, and energetic signature encoded in your name');
+ const nameSection = createCustomSection('name-analysis', 'nameAnalysis', 'Name Analysis', 'The phonetic, linguistic, and energetic signature encoded in your name');
  
  // Cornerstone
  nameSection.appendChild(createReadingCard(
@@ -7946,7 +8240,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  if (bioTiming) {
  const bioWrapper = document.createElement('div');
  bioWrapper.className = 'reading-section';
- const bioSection = createCustomSection('biological-timing', '', 'Biological Timing & Saturn Return', 'Where you are in the universal lifecycle — and what the data says about what comes next');
+ const bioSection = createCustomSection('biological-timing', 'biologicalTiming', 'Biological Timing & Saturn Return', 'Where you are in the universal lifecycle — and what the data says about what comes next');
  
  // Saturn Return card
  if (bioTiming.saturnReturn.reading) {
@@ -7987,7 +8281,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  if (probWindows) {
  const probWrapper = document.createElement('div');
  probWrapper.className = 'reading-section';
- const probSection = createCustomSection('probability-windows', '', 'Life Pattern Probability Windows', 'Statistical models estimate when you are most likely to experience major life events — not prophecy, but pattern likelihood');
+ const probSection = createCustomSection('probability-windows', 'probabilityWindows', 'Life Pattern Probability Windows', 'Statistical models estimate when you are most likely to experience major life events — not prophecy, but pattern likelihood');
  
  // Personal year context card
  if (probWindows.personalYearContext) {
@@ -8053,7 +8347,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  if (locStrategy && locStrategy.hasMC) {
  const locWrapper = document.createElement('div');
  locWrapper.className = 'reading-section';
- const locSection = createCustomSection('location-strategy', '', 'Location Strategy', 'Where on Earth your chart suggests the strongest alignment for career, relationships, lifestyle, and growth');
+ const locSection = createCustomSection('location-strategy', 'locationStrategy', 'Location Strategy', 'Where on Earth your chart suggests the strongest alignment for career, relationships, lifestyle, and growth');
  
  Object.entries(locStrategy.zones).forEach(([key, zone]) => {
  if (zone.data) {
@@ -8120,7 +8414,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  wrapupSectionWrapper.className = 'reading-section';
  const wrapupSection = createCustomSection(
  'wrapup',
- '',
+ 'wrapup',
  'The Complete Moment in Time',
  `A sacred synthesis of ${userData.name}'s energetic signature at birth`
  );
@@ -8231,13 +8525,13 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  section.innerHTML = `
  <div class="section-header" onclick="toggleSection('${id}')">
  <div class="section-header-content">
- <span class="icon">${sectionConfig.icon}</span>
+ <span class="icon">${amitIcon(sectionConfig.icon)}</span>
  <div class="section-header-text">
  <h2>${sectionConfig.name}${countHtml}</h2>
  <p class="description">${sectionConfig.description}</p>
  </div>
  </div>
- <span class="section-arrow">▼</span>
+ <span class="section-arrow">${amitChevron()}</span>
  </div>
  `;
  
@@ -8255,13 +8549,13 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  section.innerHTML = `
  <div class="section-header" onclick="toggleSection('${id}')">
  <div class="section-header-content">
- <span class="icon">${icon}</span>
+ <span class="icon">${amitIcon(icon)}</span>
  <div class="section-header-text">
  <h2>${name}${countHtml}</h2>
  <p class="description">${description}</p>
  </div>
  </div>
- <span class="section-arrow">▼</span>
+ <span class="section-arrow">${amitChevron()}</span>
  </div>
  `;
 
@@ -8280,10 +8574,10 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  header.onclick = function() { toggleSubSection(id); };
  header.innerHTML = `
  <div class="sub-section-header-content">
- <span class="sub-icon">${icon}</span>
+ <span class="sub-icon">${amitIcon(icon)}</span>
  <h4>${title}<span class="sub-count"></span></h4>
  </div>
- <span class="sub-section-arrow">▼</span>
+ <span class="sub-section-arrow">${amitChevron()}</span>
  `;
  
  const body = document.createElement('div');
@@ -9139,18 +9433,30 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  generateActionBlock('yearFocus', enhancements);
  }
  
- // Extract emoji from title and put on its own line
- const emojiRegex = /^([\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F000}-\u{1F02F}\u{1F0A0}-\u{1F0FF}]+)\s*/u;
- const emojiMatch = title.match(emojiRegex);
+ // Map title keywords to SVG icons
+ const TITLE_ICON_MAP = {
+ 'Sun': 'sunSign', 'Moon': 'moonSign', 'Rising': 'risingSign', 'Ascendant': 'risingSign',
+ 'Mercury': 'mercury', 'Venus': 'venus', 'Mars': 'mars',
+ 'Jupiter': 'jupiter', 'Saturn': 'saturn',
+ 'Uranus': 'uranus', 'Neptune': 'neptune', 'Pluto': 'pluto',
+ 'Chiron': 'soulPoints', 'Lilith': 'soulPoints', 'Node': 'nodesHouses',
+ 'House': 'houses', 'Aspect': 'aspects',
+ 'Life Path': 'lifePath', 'Destiny': 'destiny', 'Soul Urge': 'soul',
+ 'Personal Year': 'forecasts', 'Chinese': 'chineseZodiac',
+ 'Love': 'heart', 'Compatibility': 'heart',
+ 'Vertex': 'vertex', 'Midheaven': 'star'
+ };
  let iconHtml = '';
  let cleanTitle = title;
  
- if (emojiMatch) {
- iconHtml = emojiMatch[1];
- cleanTitle = title.replace(emojiRegex, '');
- } else {
- iconHtml = '';
+ // Find matching icon from title keywords
+ for (const [keyword, iconKey] of Object.entries(TITLE_ICON_MAP)) {
+ if (title.includes(keyword)) {
+ iconHtml = amitIcon(iconKey);
+ break;
  }
+ }
+ if (!iconHtml) iconHtml = amitIcon('sparkle');
  
  // Check if this card was previously marked as read
  const isRead = readSectionIds.includes(cardId);
@@ -9169,7 +9475,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  </div>
  <div class="reading-card-right">
  <span class="read-badge ${isRead? 'is-read': ''}" title="Mark as read">${isRead? '': ''}</span>
- <span class="expand-icon">▼</span>
+ <span class="expand-icon">${amitChevron()}</span>
  </div>
  </div>
  <div class="reading-card-body">
@@ -9202,7 +9508,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  card.classList.add('is-read');
  }
 
- const safeIcon = icon || '';
+ const safeIcon = icon? amitIcon(icon) || icon: amitIcon('sparkle');
 
  card.innerHTML = `
  <div class="reading-card-header" onclick="toggleCard(this)">
@@ -9215,7 +9521,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  </div>
  <div class="reading-card-right">
  <span class="read-badge ${isRead? 'is-read': ''}" title="Mark as read">${isRead? '': ''}</span>
- <span class="expand-icon">▼</span>
+ <span class="expand-icon">${amitChevron()}</span>
  </div>
  </div>
  <div class="reading-card-body">
@@ -9936,7 +10242,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  
  if ('serviceWorker' in navigator) {
  window.addEventListener('load', () => {
- navigator.serviceWorker.register('sw.js?v=45')
+ navigator.serviceWorker.register('sw.js?v=46')
 .then((registration) => {
  console.log('Service Worker registered:', registration.scope);
  })
@@ -10006,7 +10312,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  // ============================================
  
  let welcomeCurrentStep = 1;
- const welcomeTotalSteps = 4;
+ const welcomeTotalSteps = 5;
  
  function selectWelcomeTheme(theme) {
  // Update button states

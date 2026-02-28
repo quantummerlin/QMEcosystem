@@ -51,22 +51,22 @@ var BRAND_CONFIG = {
     sections: {
         celestial: {
             name: "Celestial Gifts",
-            icon: "",
+            icon: "celestial",
             description: "Your planetary influences and cosmic personality"
         },
         numbers: {
             name: "Karmic Numbers & Soul Codes",
-            icon: "",
+            icon: "numbers",
             description: "The numerological blueprint encoded in your birth"
         },
         soul: {
             name: "Soul Mission",
-            icon: "",
+            icon: "soul",
             description: "Your deeper purpose and spiritual gifts"
         },
         forecasts: {
             name: "Current Cycles",
-            icon: "",
+            icon: "forecasts",
             description: "The energetic rhythms influencing your present moment"
         }
     },
