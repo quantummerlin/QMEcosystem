@@ -84,7 +84,7 @@
         /* Base styles - will be customized by config */
         :root {
             --primary: #FF69B4;
-            --secondary: #FFD700;
+            --secondary: #B19CD9;
             --accent: #00CED1;
             --background: #FFF5F8;
             --background-dark: #1a0a2e;
@@ -4165,7 +4165,7 @@
                 <div class="welcome-step active" data-step="1">
                     <h3>How This Works</h3>
                     <p>Enter a birth date and time, and we'll reveal the cosmic patterns that were written in the stars at that exact moment.</p>
-                    <p>You'll receive <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom—a complete soul blueprint.</p>
+                    <p>You'll receive <strong>65+ personalized readings</strong> combining astrology, numerology, and ancient wisdom.</p>
                     <div class="welcome-highlight">
                         <p>"At the exact moment you were born, the universe created a unique pattern just for you."</p>
                     </div>
@@ -4454,29 +4454,29 @@
     </section>
     
     <!-- Scripts with cache bust -->
-    <script src="config.js?v=35"></script>
-    <script src="calculations.js?v=35"></script>
-    <script src="readings.js?v=35"></script>
-    <script src="house-readings.js?v=35"></script>
-    <script src="deep-house-readings.js?v=35"></script>
-    <script src="aspect-readings.js?v=35"></script>
-    <script src="advanced-readings.js?v=35"></script>
-    <script src="deep-readings.js?v=35"></script>
-    <script src="deep-planet-readings.js?v=35"></script>
-    <script src="deep-planet-readings-outer.js?v=35"></script>
-    <script src="deep-numerology-readings.js?v=35"></script>
-    <script src="deep-chinese-zodiac-readings.js?v=35"></script>
-    <script src="deep-chiron-readings.js?v=35"></script>
-    <script src="deep-lilith-readings.js?v=35"></script>
-    <script src="deep-node-readings.js?v=35"></script>
-    <script src="deep-transformative-planet-readings.js?v=35"></script>
-    <script src="readings-extended.js?v=35"></script>
-    <script src="love-blueprint.js?v=35"></script>
-    <script src="tone-variations.js?v=35"></script>
-    <script src="age-language.js?v=1"></script>
-    <script src="life-pattern-readings.js?v=2"></script>
-    <script src="save-share.js?v=35"></script>
-    <script src="book-generator.js?v=1"></script>
+    <script src="config.js?v=36"></script>
+    <script src="calculations.js?v=36"></script>
+    <script src="readings.js?v=36"></script>
+    <script src="house-readings.js?v=36"></script>
+    <script src="deep-house-readings.js?v=36"></script>
+    <script src="aspect-readings.js?v=36"></script>
+    <script src="advanced-readings.js?v=36"></script>
+    <script src="deep-readings.js?v=36"></script>
+    <script src="deep-planet-readings.js?v=36"></script>
+    <script src="deep-planet-readings-outer.js?v=36"></script>
+    <script src="deep-numerology-readings.js?v=36"></script>
+    <script src="deep-chinese-zodiac-readings.js?v=36"></script>
+    <script src="deep-chiron-readings.js?v=36"></script>
+    <script src="deep-lilith-readings.js?v=36"></script>
+    <script src="deep-node-readings.js?v=36"></script>
+    <script src="deep-transformative-planet-readings.js?v=36"></script>
+    <script src="readings-extended.js?v=36"></script>
+    <script src="love-blueprint.js?v=36"></script>
+    <script src="tone-variations.js?v=36"></script>
+    <script src="age-language.js?v=2"></script>
+    <script src="life-pattern-readings.js?v=3"></script>
+    <script src="save-share.js?v=36"></script>
+    <script src="book-generator.js?v=2"></script>
     <script>
         // ============================================
         // MULTI-READING STORAGE SYSTEM
@@ -6777,7 +6777,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 numbersSection.appendChild(createReadingCard(
                     config.readingTitles.lifePath,
                     deepLifePath.title,
-                    ['Soul Blueprint', 'Life Purpose', 'Core Energy'],
+                    ['Life Purpose', 'Core Energy'],
                     lifePathContent.replace(/this soul/gi, userData.name).replace(/this child/gi, userData.name),
                     [],
                     []
@@ -9909,9 +9909,9 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         <p>quantummerlin.com/amomentintime</p>
     </div>
 
-<script src="/shared/js/quantum-explore.js" defer></script>
+<script src="/shared/js/quantum-explore.js" defer><\/script>
 
-<script src="/shared/js/quantum-email-capture.js" defer></script>
+<script src="/shared/js/quantum-email-capture.js" defer><\/script>
 </body>
 </html>`;
             
@@ -9920,7 +9920,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `${userData.name.replace(/[^a-z0-9]/gi, '-')}-soul-blueprint-${selectedGiftColor}.html`;
+            a.download = `${userData.name.replace(/[^a-z0-9]/gi, '-')}-cosmic-reading-${selectedGiftColor}.html`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -9936,7 +9936,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
         
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
+                navigator.serviceWorker.register('sw.js?v=44')
                     .then((registration) => {
                         console.log('Service Worker registered:', registration.scope);
                     })
