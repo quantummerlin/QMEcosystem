@@ -271,7 +271,13 @@ async function main() {
         // ---- Post-process: inject our own script + modals, fix </script> issues ----
         const nameSlug = args.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '');
         const slug = `${nameSlug}-${randomSlug()}`;
-        const html = buildFinalHtml(fullHtml, args.name, args.gift === 'true', slug, password);
+        const html = buildFinalHtml(fullHtml, args.name, args.gift === 'true', slug, password, {
+            date: args.date,
+            time: args.time || '',
+            place: args.place || '',
+            theme: theme,
+            cardCount: cardCount
+        });
 
         const outDir = path.join(READINGS_DIR, slug);
         fs.mkdirSync(outDir, { recursive: true });
@@ -339,7 +345,70 @@ async function main() {
 // ============================================
 // BUILD FINAL HTML — inject modals + JS into captured page
 // ============================================
-function buildFinalHtml(capturedHtml, personName, isGift, slug, password) {
+function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthData) {
+    birthData = birthData || {};
+
+    // ---- Zodiac sign calculator ----
+    function getSunSign(dateStr) {
+        if (!dateStr) return '';
+        const [, m, d] = dateStr.split('-').map(Number);
+        const signs = [
+            ['Capricorn',  [1,1],  [1,19]],
+            ['Aquarius',   [1,20], [2,18]],
+            ['Pisces',     [2,19], [3,20]],
+            ['Aries',      [3,21], [4,19]],
+            ['Taurus',     [4,20], [5,20]],
+            ['Gemini',     [5,21], [6,20]],
+            ['Cancer',     [6,21], [7,22]],
+            ['Leo',        [7,23], [8,22]],
+            ['Virgo',      [8,23], [9,22]],
+            ['Libra',      [9,23], [10,22]],
+            ['Scorpio',    [10,23],[11,21]],
+            ['Sagittarius',[11,22],[12,21]],
+            ['Capricorn',  [12,22],[12,31]]
+        ];
+        for (const [name, [sm, sd], [em, ed]] of signs) {
+            if ((m === sm && d >= sd) || (m === em && d <= ed)) return name;
+        }
+        return '';
+    }
+
+    // ---- Date/time formatter ----
+    function formatBirthDate(dateStr) {
+        if (!dateStr) return '';
+        const [y, m, d] = dateStr.split('-').map(Number);
+        const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        const suffix = (d === 1 || d === 21 || d === 31) ? 'st' : (d === 2 || d === 22) ? 'nd' : (d === 3 || d === 23) ? 'rd' : 'th';
+        return `${d}${suffix} ${months[m-1]} ${y}`;
+    }
+    function formatBirthTime(timeStr) {
+        if (!timeStr) return '';
+        const [h, min] = timeStr.split(':').map(Number);
+        const ampm = h >= 12 ? 'PM' : 'AM';
+        const h12 = h % 12 || 12;
+        return `${h12}:${String(min).padStart(2,'0')} ${ampm}`;
+    }
+
+    // ---- Build personalized data ----
+    const sunSign = getSunSign(birthData.date);
+    const formattedDate = formatBirthDate(birthData.date);
+    const formattedTime = formatBirthTime(birthData.time);
+    const birthPlace = birthData.place || '';
+    const cardCount = birthData.cardCount || 135;
+    const overlayTheme = birthData.theme || 'girl';
+
+    // Build birth details line: "3rd May 1981 · 1:30 PM · Abu Dhabi, UAE"
+    const detailParts = [formattedDate, formattedTime, birthPlace].filter(Boolean);
+    const birthDetailsLine = detailParts.join(' \u00b7 ');
+
+    // Theme color map for overlay accents
+    const themeColors = {
+        girl:   { glow: 'rgba(255,105,180,0.3)', glowStrong: 'rgba(255,105,180,0.5)', label: '#ffb6c1', signColor: '#ff69b4', border: 'rgba(255,105,180,0.25)', dotBg: '#ff69b4' },
+        boy:    { glow: 'rgba(107,163,214,0.3)', glowStrong: 'rgba(107,163,214,0.5)', label: '#87ceeb', signColor: '#6ba3d6', border: 'rgba(107,163,214,0.25)', dotBg: '#6ba3d6' },
+        purple: { glow: 'rgba(216,181,255,0.3)', glowStrong: 'rgba(216,181,255,0.5)', label: '#d8b5ff', signColor: '#b19cd9', border: 'rgba(216,181,255,0.25)', dotBg: '#d8b5ff' }
+    };
+    const tc = themeColors[overlayTheme] || themeColors.girl;
+
     // Additional CSS for the form/upgrade modals, nav button, welcome overlay, and password gate
     const extraCss = `
 /* Password gate */
@@ -360,28 +429,31 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password) {
 /* Welcome overlay */
 .welcome-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:linear-gradient(145deg,rgba(10,5,20,0.97),rgba(26,10,46,0.98));z-index:9999;display:flex;align-items:center;justify-content:center;padding:60px 16px 24px;opacity:1;transition:opacity 0.6s ease;font-family:'Inter','Segoe UI',system-ui,sans-serif;overflow-y:auto}
 .welcome-overlay.hiding{opacity:0;pointer-events:none}
-.welcome-card{max-width:420px;width:100%;background:linear-gradient(160deg,rgba(30,16,53,0.95),rgba(18,8,42,0.98));border:1.5px solid rgba(255,215,0,0.25);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.5),0 0 80px rgba(255,215,0,0.04);position:relative;overflow:hidden;animation:welcomeFadeIn 0.8s ease-out}
-.welcome-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 20%,rgba(255,215,0,0.04) 0%,transparent 50%),radial-gradient(circle at 70% 80%,rgba(102,126,234,0.05) 0%,transparent 50%);pointer-events:none}
+.welcome-card{max-width:440px;width:100%;background:linear-gradient(160deg,rgba(30,16,53,0.95),rgba(18,8,42,0.98));border:1.5px solid ${tc.border};border-radius:24px;padding:36px 28px;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.5),0 0 80px ${tc.glow};position:relative;overflow:hidden;animation:welcomeFadeIn 0.8s ease-out}
+.welcome-card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 20%,${tc.glow} 0%,transparent 50%),radial-gradient(circle at 70% 80%,rgba(102,126,234,0.05) 0%,transparent 50%);pointer-events:none}
 .welcome-card>*{position:relative;z-index:1}
-.welcome-label{font-family:'Playfair Display',Georgia,serif;font-size:0.82rem;color:#c9a0ff;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;margin-bottom:14px}
+.welcome-cosmic{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:0.82rem;color:${tc.label};opacity:0.6;margin-bottom:16px;letter-spacing:0.03em;animation:welcomeFadeIn 0.5s ease-out 0.2s both}
+.welcome-label{font-family:'Playfair Display',Georgia,serif;font-size:0.82rem;color:${tc.label};letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;margin-bottom:14px;animation:welcomeFadeIn 0.5s ease-out 0.3s both}
 .welcome-title{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;color:#ffd700;margin-bottom:6px;line-height:1.3;animation:welcomeFadeIn 0.5s ease-out 0.4s both}
-.welcome-name{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;color:#fff;margin-bottom:14px;line-height:1.2;animation:welcomeFadeIn 0.5s ease-out 0.5s both}
-.welcome-text{font-size:0.9rem;line-height:1.65;color:#e8d5ff;opacity:0.8;margin-bottom:24px;animation:welcomeFadeIn 0.5s ease-out 0.6s both}
+.welcome-name{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;color:#fff;margin-bottom:8px;line-height:1.2;animation:welcomeFadeIn 0.5s ease-out 0.5s both}
+.welcome-birth-details{font-size:0.78rem;color:#e8d5ff;opacity:0.7;letter-spacing:0.06em;margin-bottom:6px;animation:welcomeFadeIn 0.5s ease-out 0.55s both}
+.welcome-sign{font-family:'Playfair Display',Georgia,serif;font-size:0.92rem;color:${tc.signColor};font-weight:600;letter-spacing:0.08em;margin-bottom:16px;animation:welcomeFadeIn 0.5s ease-out 0.6s both}
+.welcome-text{font-size:0.9rem;line-height:1.65;color:#e8d5ff;opacity:0.8;margin-bottom:24px;animation:welcomeFadeIn 0.5s ease-out 0.65s both}
 .welcome-features{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;text-align:left;margin-bottom:28px;animation:welcomeFadeIn 0.5s ease-out 0.7s both}
 .welcome-feature{display:flex;align-items:center;gap:6px;font-size:0.78rem;color:#e8d5ff;opacity:0.75;padding-left:8px}
-.welcome-feature::before{content:'';width:4px;height:4px;border-radius:50%;background:#ffd700;flex-shrink:0}
-.welcome-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,215,0,0.15),transparent);margin:0 0 24px}
+.welcome-feature::before{content:'';width:4px;height:4px;border-radius:50%;background:${tc.dotBg};flex-shrink:0}
+.welcome-divider{height:1px;background:linear-gradient(90deg,transparent,${tc.border},transparent);margin:0 0 24px}
 .welcome-btn{display:inline-block;background:linear-gradient(135deg,#ffd700 0%,#ffec80 20%,#ffd700 40%,#e6ac00 60%,#ffd700 80%,#ffe44d 100%);background-size:300% auto;color:#1a0a2e;padding:18px 52px;border-radius:40px;font-size:1.1rem;font-weight:800;letter-spacing:0.04em;text-decoration:none;border:2px solid rgba(255,236,128,0.5);cursor:pointer;box-shadow:0 6px 30px rgba(255,215,0,0.4),0 0 60px rgba(255,215,0,0.12),inset 0 1px 0 rgba(255,255,255,0.3);transition:transform 0.25s,box-shadow 0.25s;animation:welcomeFadeIn 0.5s ease-out 0.8s both,welcomeShimmer 2.5s ease-in-out infinite,welcomePulse 2s ease-in-out infinite;position:relative}
 .welcome-btn::after{content:'';position:absolute;inset:-4px;border-radius:44px;background:linear-gradient(135deg,rgba(255,215,0,0.3),rgba(255,236,128,0.1),rgba(255,215,0,0.3));z-index:-1;filter:blur(8px);opacity:0.7;animation:welcomePulse 2s ease-in-out infinite}
 .welcome-btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 10px 40px rgba(255,215,0,0.5),0 0 80px rgba(255,215,0,0.18),inset 0 1px 0 rgba(255,255,255,0.4)}
 .welcome-note{font-size:0.78rem;opacity:0.65;margin-top:18px;color:#c9a0ff;letter-spacing:0.02em;animation:welcomeFadeIn 0.5s ease-out 0.9s both}
-.welcome-brand{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,215,0,0.08)}
-.welcome-brand-name{font-family:'Playfair Display',Georgia,serif;font-size:0.8rem;color:#c9a0ff;opacity:0.5}
+.welcome-brand{margin-top:20px;padding-top:16px;border-top:1px solid ${tc.border}}
+.welcome-brand-name{font-family:'Playfair Display',Georgia,serif;font-size:0.8rem;color:${tc.label};opacity:0.5}
 @keyframes welcomeFadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes welcomeShimmer{0%{background-position:-200% center}100%{background-position:200% center}}
 @keyframes welcomePulse{0%,100%{box-shadow:0 6px 30px rgba(255,215,0,0.4),0 0 60px rgba(255,215,0,0.12)}50%{box-shadow:0 6px 36px rgba(255,215,0,0.55),0 0 80px rgba(255,215,0,0.2)}}
-@media(max-width:480px){.welcome-card{padding:24px 16px;max-width:calc(100vw - 32px);border-radius:20px}.welcome-emoji{font-size:2.2rem;margin-bottom:4px}.welcome-label{font-size:0.72rem;margin-bottom:10px}.welcome-title{font-size:1.2rem;margin-bottom:4px}.welcome-name{font-size:1.35rem;margin-bottom:12px}.welcome-text{font-size:0.82rem;margin-bottom:18px;line-height:1.55}.welcome-features{grid-template-columns:1fr;gap:4px;margin-bottom:20px}.welcome-feature{font-size:0.75rem}.welcome-btn{padding:14px 36px;font-size:0.98rem}.welcome-note{font-size:0.72rem;margin-top:12px;opacity:0.6}.welcome-brand{margin-top:14px;padding-top:12px}.welcome-brand-name{font-size:0.72rem}.welcome-divider{margin:0 0 18px}}
-@media(max-width:360px){.welcome-card{padding:20px 14px}.welcome-title{font-size:1.1rem}.welcome-name{font-size:1.2rem}.welcome-btn{padding:10px 24px;font-size:0.88rem}}
+@media(max-width:480px){.welcome-card{padding:24px 16px;max-width:calc(100vw - 32px);border-radius:20px}.welcome-cosmic{font-size:0.74rem;margin-bottom:12px}.welcome-label{font-size:0.72rem;margin-bottom:10px}.welcome-title{font-size:1.2rem;margin-bottom:4px}.welcome-name{font-size:1.35rem;margin-bottom:6px}.welcome-birth-details{font-size:0.72rem;margin-bottom:4px}.welcome-sign{font-size:0.82rem;margin-bottom:12px}.welcome-text{font-size:0.82rem;margin-bottom:18px;line-height:1.55}.welcome-features{grid-template-columns:1fr;gap:4px;margin-bottom:20px}.welcome-feature{font-size:0.75rem}.welcome-btn{padding:14px 36px;font-size:0.98rem}.welcome-note{font-size:0.72rem;margin-top:12px;opacity:0.6}.welcome-brand{margin-top:14px;padding-top:12px}.welcome-brand-name{font-size:0.72rem}.welcome-divider{margin:0 0 18px}}
+@media(max-width:360px){.welcome-card{padding:20px 14px}.welcome-title{font-size:1.1rem}.welcome-name{font-size:1.2rem}.welcome-sign{font-size:0.78rem}.welcome-btn{padding:10px 24px;font-size:0.88rem}}
 @media(prefers-reduced-motion:reduce){.welcome-overlay *{animation:none!important;transition:none!important}}
 /* New Reading button in nav */
 .new-reading-nav-btn{padding:6px 14px!important;border-radius:20px!important;background:var(--primary)!important;color:white!important;font-weight:600!important;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s}
@@ -428,9 +500,9 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password) {
     const welcomeLabel = isGift ? 'A Gift Created Just For You' : 'Thank You For Your Order';
     const welcomeTitle = isGift ? 'Someone Special Created This For You' : 'Your Soul Blueprint Is Ready';
     const welcomeText = isGift
-        ? `A unique Soul Blueprint has been lovingly created from your exact birth data. Inside you\'ll find 135+ personalised readings across astrology, numerology, Chinese zodiac, and more — all calculated to the minute you were born. Plus 70+ AI guide books and a prompt generator to explore your reading further.`
-        : `Your unique Soul Blueprint has been personally created from your exact birth data. Inside you\'ll find 135+ personalised readings across astrology, numerology, Chinese zodiac, and more — all calculated to the minute you were born. Plus 70+ AI guide books and a prompt generator to explore your reading further.`;
-    const welcomeEmoji = '';
+        ? `A unique Soul Blueprint has been lovingly created from your exact birth data. Inside you\'ll find ${cardCount}+ personalised readings across astrology, numerology, Chinese zodiac, and more \u2014 all calculated to the minute you were born. Plus 70+ AI guide books and a prompt generator to explore your reading further.`
+        : `Your unique Soul Blueprint has been personally created from your exact birth data. Inside you\'ll find ${cardCount}+ personalised readings across astrology, numerology, Chinese zodiac, and more \u2014 all calculated to the minute you were born. Plus 70+ AI guide books and a prompt generator to explore your reading further.`;
+    const cosmicLine = isGift ? 'A map of the cosmos at the moment they arrived' : 'A map of the cosmos at the moment you arrived';
     const welcomeKey = `sb-welcome-${slug}`;
     const pwKey = `sb-pw-${slug}`;
 
@@ -501,15 +573,19 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password) {
 })();
 `;
 
+    const birthDetailsHtml = birthDetailsLine ? `\n    <div class="welcome-birth-details">${escapeHtml(birthDetailsLine)}</div>` : '';
+    const sunSignHtml = sunSign ? `\n    <div class="welcome-sign">${escapeHtml(sunSign)} Sun</div>` : '';
+
     const welcomeHtml = `
 <div class="welcome-overlay" id="welcomeOverlay">
   <div class="welcome-card">
+    <div class="welcome-cosmic">${cosmicLine}</div>
     <div class="welcome-label">${welcomeLabel}</div>
     <div class="welcome-title">${welcomeTitle}</div>
-    <div class="welcome-name">${personName}</div>
+    <div class="welcome-name">${escapeHtml(personName)}</div>${birthDetailsHtml}${sunSignHtml}
     <p class="welcome-text">${welcomeText}</p>
     <div class="welcome-features">
-      <div class="welcome-feature"><span>135+ personalised readings</span></div>
+      <div class="welcome-feature"><span>${cardCount}+ personalised readings</span></div>
       <div class="welcome-feature"><span>70+ AI guide books</span></div>
       <div class="welcome-feature"><span>Western &amp; Chinese astrology</span></div>
       <div class="welcome-feature"><span>Numerology deep dive</span></div>
