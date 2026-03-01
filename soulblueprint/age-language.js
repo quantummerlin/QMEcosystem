@@ -408,39 +408,39 @@ var AGE_OPENING_LETTERS = {
 var AGE_CLOSING_TEMPLATES = {
     baby: {
         heading: "{name}'s Story is Just Beginning...",
-        body: "You've just explored {name}'s complete moment in time — a unique constellation of energies that has never existed before and will never exist again.\n\nWith a {sunSign} Sun warming their core, a {moonSign} Moon cradling their emotional world, and Life Path {lifePath} lighting the road ahead, {name} carries a beautiful combination of gifts waiting to unfold.\n\nKeep this reading close. As {name} grows — first steps, first words, first adventures — you'll begin to see these cosmic threads weaving through their story.",
+        body: "You've just explored {name}'s complete Soul Blueprint — a unique constellation of energies that has never existed before and will never exist again.\n\nWith a {sunSign} Sun warming their core, a {moonSign} Moon cradling their emotional world, and Life Path {lifePath} lighting the road ahead, {name} carries a beautiful combination of gifts waiting to unfold.\n\nKeep this reading close. As {name} grows — first steps, first words, first adventures — you'll begin to see these cosmic threads weaving through their story.",
         quote: "Every soul arrives with a purpose. {name}'s purpose is written in the stars — and you get to watch it unfold.",
-        attr: "A Moment in Time"
+        attr: "Soul Blueprint"
     },
     child: {
         heading: "{name}'s Cosmic Adventure Continues...",
-        body: "You've just explored {name}'s complete moment in time — a unique constellation of energies that will unfold throughout their life.\n\nWith a {sunSign} Sun shaping their personality, a {moonSign} Moon guiding their emotions, and Life Path {lifePath} revealing their soul's journey, {name} has a remarkable set of gifts.\n\nShare these insights with them when the moment feels right. Understanding their cosmic blueprint can help them feel seen, understood, and proud of who they are.",
+        body: "You've just explored {name}'s complete Soul Blueprint — a unique constellation of energies that will unfold throughout their life.\n\nWith a {sunSign} Sun shaping their personality, a {moonSign} Moon guiding their emotions, and Life Path {lifePath} revealing their soul's journey, {name} has a remarkable set of gifts.\n\nShare these insights with them when the moment feels right. Understanding their cosmic blueprint can help them feel seen, understood, and proud of who they are.",
         quote: "Every soul arrives with a purpose. {name}'s is written in the stars — and it's already starting to shine.",
-        attr: "A Moment in Time"
+        attr: "Soul Blueprint"
     },
     teen: {
         heading: "{name}'s Story is Unfolding...",
-        body: "You've just explored your complete moment in time — a unique constellation of energies that has never existed before and will never exist again.\n\nWith a {sunSign} Sun at your core, a {moonSign} Moon shaping your inner world, and Life Path {lifePath} guiding your direction, you carry a powerful combination of gifts.\n\nThe person you're becoming isn't random. It's written in the stars — and it's yours to shape.",
+        body: "You've just explored your complete Soul Blueprint — a unique constellation of energies that has never existed before and will never exist again.\n\nWith a {sunSign} Sun at your core, a {moonSign} Moon shaping your inner world, and Life Path {lifePath} guiding your direction, you carry a powerful combination of gifts.\n\nThe person you're becoming isn't random. It's written in the stars — and it's yours to shape.",
         quote: "You are not too young to know yourself deeply. {name}, your purpose is already alive inside you.",
-        attr: "A Moment in Time"
+        attr: "Soul Blueprint"
     },
     youngAdult: {
         heading: "{name}'s Cosmic Story Continues...",
-        body: "You've just explored your complete moment in time — a unique constellation of energies that has never existed before and will never exist again.\n\nWith a {sunSign} Sun driving your identity, a {moonSign} Moon fueling your emotional depth, and Life Path {lifePath} directing your soul's purpose, you carry a rare combination of gifts.\n\nReturn to this reading whenever you need a reminder of who you truly are beneath all the roles you play.",
+        body: "You've just explored your complete Soul Blueprint — a unique constellation of energies that has never existed before and will never exist again.\n\nWith a {sunSign} Sun driving your identity, a {moonSign} Moon fueling your emotional depth, and Life Path {lifePath} directing your soul's purpose, you carry a rare combination of gifts.\n\nReturn to this reading whenever you need a reminder of who you truly are beneath all the roles you play.",
         quote: "Every soul arrives with a purpose. Yours is written in the stars — and you're just getting started.",
-        attr: "A Moment in Time"
+        attr: "Soul Blueprint"
     },
     adult: {
         heading: "{name}'s Cosmic Story Continues...",
-        body: "You've just explored your complete moment in time — a unique constellation of energies that has never existed before and will never exist again.\n\nWith a {sunSign} Sun illuminating your core identity, a {moonSign} Moon nurturing your emotional world, and Life Path {lifePath} guiding your soul's journey, you carry a sacred combination of gifts.\n\nReturn to these pages whenever you need a reminder of who you truly are beneath all the roles you play.",
+        body: "You've just explored your complete Soul Blueprint — a unique constellation of energies that has never existed before and will never exist again.\n\nWith a {sunSign} Sun illuminating your core identity, a {moonSign} Moon nurturing your emotional world, and Life Path {lifePath} guiding your soul's journey, you carry a sacred combination of gifts.\n\nReturn to these pages whenever you need a reminder of who you truly are beneath all the roles you play.",
         quote: "Every soul arrives with a purpose. {name}'s purpose is written in the stars.",
-        attr: "A Moment in Time"
+        attr: "Soul Blueprint"
     },
     elder: {
         heading: "The Stars Still Sing for {name}...",
-        body: "You've just explored your complete moment in time — a constellation of energies that has accompanied you through every chapter of your extraordinary life.\n\nWith a {sunSign} Sun that has illuminated your path, a {moonSign} Moon that has held your deepest feelings, and Life Path {lifePath} that has guided your soul's evolution, you carry the full harvest of a rich cosmic blueprint.\n\nThese pages are a mirror for the wisdom you've already earned. Share your light with those who are still finding their way.",
+        body: "You've just explored your complete Soul Blueprint — a constellation of energies that has accompanied you through every chapter of your extraordinary life.\n\nWith a {sunSign} Sun that has illuminated your path, a {moonSign} Moon that has held your deepest feelings, and Life Path {lifePath} that has guided your soul's evolution, you carry the full harvest of a rich cosmic blueprint.\n\nThese pages are a mirror for the wisdom you've already earned. Share your light with those who are still finding their way.",
         quote: "The stars that witnessed {name}'s birth have watched a remarkable story unfold — and it's not finished yet.",
-        attr: "A Moment in Time"
+        attr: "Soul Blueprint"
     }
 };
 

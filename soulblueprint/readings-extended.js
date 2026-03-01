@@ -2676,7 +2676,7 @@ var PROGRESSION_READINGS = {
 // ============================================
 
 var COSMIC_WRAPUP = {
-    title: "The Complete Moment in Time",
+    title: "The Complete Soul Blueprint",
     icon: "",
     
     generate: function(data) {
@@ -2704,7 +2704,7 @@ var COSMIC_WRAPUP = {
 
     On the day ${name} took their first breath, the cosmos aligned in a pattern that has never existed before and will never exist again. This isn't metaphor—it's mathematical precision. The exact positions of Sun, Moon, planets, and stars at that moment created a celestial fingerprint as unique as the lines on ${name}'s tiny hands.
 
-    What follows is ${name}'s energetic birth certificate—the moment in time that describes not who they must become, but who they already ARE at their deepest level. These patterns don't limit; they illuminate. They don't predict; they empower.`;
+    What follows is ${name}'s energetic birth certificate—the Soul Blueprint that describes not who they must become, but who they already ARE at their deepest level. These patterns don't limit; they illuminate. They don't predict; they empower.`;
         
         const coreEssence = `THE THREE PILLARS OF SELF
 
@@ -2745,7 +2745,7 @@ The lunar phase at birth carries significance: ${getMoonPhaseMeaning(moonPhase)}
         
         const gifts = `THE GIFTS ${name.toUpperCase()} BRINGS
 
-    ${name} didn't arrive empty-handed. The moment in time reveals specific gifts:
+    ${name} didn't arrive empty-handed. The Soul Blueprint reveals specific gifts:
 
 From their ${sunSign} Sun: ${deepSun ? deepSun.affirmation : 'The gift of authentic self-expression'}
 
@@ -2785,7 +2785,7 @@ Welcome to Earth, beloved ${name}. The universe has been waiting for you.`;
         
         const parentGuidance = `FOR ${name.toUpperCase()}'S PARENTS & GUARDIANS
 
-    Understanding this moment in time is a gift—not a cage. Here's how to use it:
+    Understanding this Soul Blueprint is a gift—not a cage. Here's how to use it:
 
 THE ${sunSign} SUN NEEDS:
 ${getSunNeed(sunSign)}. Honor their core nature by providing ${getSunNeedSpecific(sunSign)}.
@@ -2811,7 +2811,7 @@ Your job isn't to change who ${name} is. It's to create the conditions where who
 You were chosen for this sacred role. Trust yourself. Trust ${name}. Trust the cosmos that brought you together.`;
         
         return {
-            title: `The Complete Moment in Time for ${name}`,
+            title: `The Complete Soul Blueprint for ${name}`,
             keywords: ['Soul Essence', 'Life Purpose', 'Celestial Gifts', 'Celestial Design'],
             opening: opening,
             coreEssence: coreEssence,

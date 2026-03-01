@@ -2,7 +2,7 @@
 
 /**
  * Main Generator CLI
- * A Moment in Time - PDF Book Generator
+ * Soul Blueprint - PDF Book Generator
  */
 
 const { parseBookHTML } = require('./parser');
@@ -93,7 +93,7 @@ async function main() {
   fs.mkdirSync(path.dirname(options.output), { recursive: true });
   
   console.log('\n═════════════════════════════════════════════════════');
-  console.log('   A Moment in Time - PDF Generator');
+  console.log('   Soul Blueprint - PDF Generator');
   console.log('═════════════════════════════════════════════════════\n');
   
   // Step 1: Parse input HTML
@@ -153,7 +153,7 @@ async function main() {
 
 function showHelp() {
   console.log(`
-A Moment in Time - PDF Book Generator
+Soul Blueprint - PDF Book Generator
 ═══════════════════════════════════════
 
 USAGE:

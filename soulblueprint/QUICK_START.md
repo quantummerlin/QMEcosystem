@@ -1,4 +1,4 @@
-# Quick Start Guide - A Moment in Time PDF Generator
+# Quick Start Guide - Soul Blueprint PDF Generator
 
 ##  Installation & Usage
 

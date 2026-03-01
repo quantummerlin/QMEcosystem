@@ -1,5 +1,5 @@
 // ============================================
-// A MOMENT IN TIME - BRAND CONFIGURATION
+// SOUL BLUEPRINT - BRAND CONFIGURATION
 // ============================================
 // Universal branding for all ages
 // Copy this file to config.js to activate
@@ -9,7 +9,7 @@ var BRAND_CONFIG = {
     // ============================================
     // BRAND IDENTITY
     // ============================================
-    brandName: "A Moment in Time",
+    brandName: "Soul Blueprint",
     tagline: "Your Complete Soul Blueprint",
     subTagline: "Astrology \u2022 Numerology \u2022 Life Patterns \u2022 65+ Personalized Readings",
     
@@ -38,10 +38,10 @@ var BRAND_CONFIG = {
     },
     
     ctaButton: "Generate Your Reading",
-    loadingMessage: "Capturing your moment...",
+    loadingMessage: "Mapping your cosmic blueprint...",
     
     // Result page copy
-    resultTitle: "A Moment in Time",
+    resultTitle: "Soul Blueprint",
     resultSubtitle: "A Portrait of",
     generatedBy: "Crafted by Quantum Merlin",
     
@@ -153,7 +153,7 @@ var BRAND_CONFIG = {
     // ============================================
     sharing: {
         hashtags: ["SoulBlueprint", "BirthChart", "SoulReading", "GiftFromTheStars"],
-        defaultMessage: "I just got my reading from A Moment in Time.",
+        defaultMessage: "I just got my reading from Soul Blueprint.",
         twitterHandle: "@quantummerlin"
     },
     
@@ -177,7 +177,7 @@ var BRAND_CONFIG = {
     founder: {
         name: "Quantum Merlin",
         location: "Melbourne, Victoria, Australia",
-        bio: "Son of a tarot reader and crystal-loving self-proclaimed witch. I built A Moment in Time after paying $350 for my daughter's birth reading and realising this knowledge shouldn't be gatekept. What started as a personal project became a mission when I found profound, impossible patterns in the charts and numbers — connections that trace back to the Bible itself.",
+        bio: "Son of a tarot reader and crystal-loving self-proclaimed witch. I built Soul Blueprint after paying $350 for my daughter's birth reading and realising this knowledge shouldn't be gatekept. What started as a personal project became a mission when I found profound, impossible patterns in the charts and numbers — connections that trace back to the Bible itself.",
         storyBeats: {
             heritage: "Grew up as the son of a tarot reader, rune caster, crystal collector, and self-proclaimed witch.",
             catalyst: "When my daughter was born, I paid $350 for her professional reading — and it changed everything.",
@@ -191,7 +191,7 @@ var BRAND_CONFIG = {
     // FOOTER
     // ============================================
     footer: {
-        copyright: "© 2026 A Moment in Time by Quantum Merlin",
+        copyright: "© 2026 Soul Blueprint by Quantum Merlin",
         disclaimer: "For entertainment and reflection purposes. Every person is unique and will grow in their own beautiful way.",
         links: [
             { text: "Privacy Policy", url: "/soulblueprint/privacy.html" },
@@ -204,9 +204,9 @@ var BRAND_CONFIG = {
     // SEO
     // ============================================
     seo: {
-        title: "A Moment in Time - Your Complete Cosmic Reading | by Quantum Merlin",
+        title: "Soul Blueprint - Your Complete Cosmic Reading | by Quantum Merlin",
         description: "I built this after paying $350 for my daughter's birth reading and realising this knowledge shouldn't be gatekept. 65+ personalised insights combining astrology, numerology, and life pattern analysis.",
-        keywords: "quantum merlin, a moment in time, astrology reading, numerology reading, birth chart, life path, personalized reading, soul blueprint"
+        keywords: "quantum merlin, soul blueprint, astrology reading, numerology reading, birth chart, life path, personalized reading, soul blueprint"
     }
 };
 

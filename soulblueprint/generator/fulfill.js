@@ -297,7 +297,7 @@ async function main() {
         // Print delivery message template
         console.log(`\n--- ETSY DELIVERY MESSAGE ---`);
         console.log(`Hi!\n`);
-        console.log(`Your personalised "A Moment in Time" reading for ${args.name} is ready!\n`);
+        console.log(`Your personalised "Soul Blueprint" reading for ${args.name} is ready!\n`);
         console.log(`Click here to explore your reading:`);
         console.log(`${deployUrl}\n`);
         console.log(`Your password: ${password}\n`);
@@ -596,7 +596,7 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
     <div class="welcome-divider"></div>
     <button class="welcome-btn" onclick="dismissWelcome()">Begin Exploring \u2192</button>
     <div class="welcome-note">Your reading is permanent, bookmark this page to return anytime</div>
-    <div class="welcome-brand"><div class="welcome-brand-name">A Moment in Time \u00b7 by Quantum Merlin</div></div>
+    <div class="welcome-brand"><div class="welcome-brand-name">Soul Blueprint \u00b7 by Quantum Merlin</div></div>
   </div>
 </div>`;
 

@@ -2313,7 +2313,7 @@
             color: var(--primary);
         }
         
-        /* A Moment in Time Summary */
+        /* Soul Blueprint Summary */
         .cosmic-blueprint-summary {
             background: linear-gradient(135deg, rgba(103,58,183,0.08) 0%, rgba(255,105,180,0.08) 100%);
             border-top: 5px solid linear-gradient(90deg, var(--primary), var(--secondary));
@@ -4938,7 +4938,7 @@
     <!-- Input Section -->
     <section class="input-section" id="inputSection">
         <header class="header">
-            <h1 id="brandName">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
+            <h1 id="brandName">Soul Blueprint<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
             <p class="tagline" id="tagline">Your Cosmic DNA — Decoded in 60 Seconds</p>
             <p class="sub-tagline" id="subTagline">5 ancient systems. 65+ readings. One birth moment. Zero fluff.</p>
             <p class="sub-tagline" style="font-size:0.88rem;opacity:0.7;margin-top:4px;">100% private — all calculations happen on your device</p>
@@ -5329,7 +5329,7 @@
     <!-- Results Section -->
     <section class="results-section" id="resultsSection">
         <div class="results-header">
-            <h1 id="resultTitle">A Moment in Time<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
+            <h1 id="resultTitle">Soul Blueprint<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
             <p class="subject-name" id="subjectName"></p>
             <p class="birth-info" id="birthInfo"></p>
             <!-- Action buttons available in pro version only -->
@@ -5356,7 +5356,7 @@
             <!-- Opening Letter -->
             <div class="opening-letter">
                 <div class="opening-letter-header">
-                    <h1>Your Complete Moment in Time</h1>
+                    <h1>Your Complete Soul Blueprint</h1>
                     <p class="reading-subtitle">Reading for <strong id="openingName">...</strong></p>
                 </div>
                 <div class="opening-letter-body" id="openingLetterBody">
@@ -5437,7 +5437,7 @@
             <div class="completion-celebration">
                 <div class="celebration-icon"></div>
                 <h3>Reading Complete! </h3>
-                <p>You've explored all the cosmic insights for this moment in time.</p>
+                <p>You've explored all the cosmic insights in this reading.</p>
                 <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(118,75,162,0.06)); border-radius: 16px; border: 1px solid rgba(255,215,0,0.2); text-align:center;">
                     <p style="font-size: 1rem; margin-bottom: 12px;"><strong> Want Your Own Personalised Reading?</strong></p>
                     <p style="font-size: 0.95rem; margin-bottom: 16px;">Generate readings for yourself, friends & family with printable books, copy & share features, gift cards, and more.</p>
@@ -6316,7 +6316,7 @@
             const celestialSection = createSection('celestial', config.sections.celestial);
             
             // ============================================
-            // A MOMENT IN TIME SUMMARY - Planetary Overview
+            // SOUL BLUEPRINT SUMMARY - Planetary Overview
             // ============================================
             const sunSign = readings.astrology.sunSign;
             const moonSign = readings.astrology.moonSign;
@@ -6968,7 +6968,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepRising.parentGuidan
                         `<p><strong>${intensityLabel} ${stellium.element.toUpperCase()} STELLIUM</strong></p>
                         <p><em>Planets concentrated: ${stellium.planets.join(', ')}</em></p>
                         <p>${stelliumReading.reading}</p>
-                        <p class="cosmic-highlight">This concentration of ${stellium.count} celestial bodies in ${stellium.sign} creates a powerful focal point in ${userData.name}'s moment in time. This is where their energy naturally wants to express itself most intensely.</p>` :
+                        <p class="cosmic-highlight">This concentration of ${stellium.count} celestial bodies in ${stellium.sign} creates a powerful focal point in ${userData.name}'s Soul Blueprint. This is where their energy naturally wants to express itself most intensely.</p>` :
                         `<p><strong>${intensityLabel} STELLIUM</strong></p>
                         <p>With ${stellium.count} planets in ${stellium.sign}, there is an extraordinary concentration of ${stellium.element} energy in this area of life.</p>
                         <p>Planets: ${stellium.planets.join(', ')}</p>`;
@@ -9364,7 +9364,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 const wrapupSection = createCustomSection(
                     'wrapup',
                     '',
-                    'The Complete Moment in Time',
+                    'The Complete Soul Blueprint',
                     `A sacred synthesis of ${userData.name}'s energetic signature at birth`
                 );
                 
@@ -11056,7 +11056,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
             
             if (navigator.share) {
                 navigator.share({
-                    title: `A Moment in Time for ${name}`,
+                    title: `Soul Blueprint for ${name}`,
                     text: text,
                     url: window.location.href
                 });
@@ -11103,7 +11103,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
             closingContainer.innerHTML = `
                 <div class="closing-card">
                     <h3>${userData.name}'s Complete Portrait</h3>
-                    <p>You've just explored ${userData.name}'s complete moment in time — a unique constellation of energies that has never existed before and will never exist again.</p>
+                    <p>You've just explored ${userData.name}'s complete Soul Blueprint — a unique constellation of energies that has never existed before and will never exist again.</p>
                     <p>At their core, ${userData.name} is a <strong>${sunSign} Sun</strong> with a <strong>${moonSign} Moon</strong> — carrying ${elementNote}. Life Path <strong>${lifePath}</strong> guides the soul's journey, while Soul Urge <strong>${soulUrge}</strong> reveals the heart's deepest desire.</p>
                     ${risingLine}
                     <p>${venusLine}${nodeLine}</p>
@@ -11291,14 +11291,14 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
         }
         
         function shareVia(method, url, name) {
-            const text = `I created a special Moment in Time reading for ${name}! Check out their cosmic blueprint:`;
+            const text = `I created a special Soul Blueprint reading for ${name}! Check out their cosmic blueprint:`;
             
             switch(method) {
                 case 'whatsapp':
                     window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
                     break;
                 case 'email':
-                    window.open(`mailto:?subject=A Moment in Time for ${name}&body=${encodeURIComponent(text + '\n\n' + url)}`, '_blank');
+                    window.open(`mailto:?subject=Soul Blueprint for ${name}&body=${encodeURIComponent(text + '\n\n' + url)}`, '_blank');
                     break;
                 case 'sms':
                     window.open(`sms:?body=${encodeURIComponent(text + ' ' + url)}`, '_blank');
@@ -11306,7 +11306,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
                 case 'native':
                     if (navigator.share) {
                         navigator.share({
-                            title: `A Moment in Time for ${name}`,
+                            title: `Soul Blueprint for ${name}`,
                             text: text,
                             url: url
                         });
@@ -11394,7 +11394,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Moment in Time for ${userData.name} - A Gift from the Stars</title>
+    <title>Soul Blueprint for ${userData.name} - A Gift from the Stars</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -11528,7 +11528,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
 </head>
 <body>
     <div class="gift-header">
-        <h1>A Moment in Time for ${userData.name}</h1>
+        <h1>Soul Blueprint for ${userData.name}</h1>
         <p class="subtitle">Your Celestial Design Revealed</p>
         <p class="birth-info">Born ${new Date(userData.birthDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}${userData.birthTime ? ' at ' + userData.birthTime : ''}${userData.birthPlace ? ' in ' + userData.birthPlace : ''}</p>
     </div>
@@ -11545,7 +11545,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
     
     <div class="gift-footer">
         <p class="love">Made with love</p>
-        <p>Generated by A Moment in Time by Quantum Merlin</p>
+        <p>Generated by Soul Blueprint by Quantum Merlin</p>
         <p>quantummerlin.com/soulblueprint</p>
     </div>
 

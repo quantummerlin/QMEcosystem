@@ -228,9 +228,9 @@ Three visual themes (boy blue, girl pink, purple) — especially powerful for th
 The reading works without internet after first load. This is a key differentiator vs subscription services:
 > "Works offline — your reading is a self-contained file. No login, no subscription, no internet needed after first visit."
 
-### "A Moment in Time" Branding
+### "Soul Blueprint" Branding
 This is the reading's actual display title when opened. It's poetic and memorable:
-> "Your reading is titled 'A Moment in Time for [Name]' — capturing the exact cosmic snapshot of your birth."
+> "Your reading is titled 'Soul Blueprint for [Name]' — capturing the exact cosmic snapshot of your birth."
 
 ### Section Reading Counts
 Each section shows its own reading count. This shows depth:

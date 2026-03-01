@@ -1,5 +1,5 @@
-// A Moment in Time - Service Worker
-const CACHE_NAME = 'moment-in-time-v56';
+// Soul Blueprint - Service Worker
+const CACHE_NAME = 'soul-blueprint-v57';
 const ASSETS_TO_CACHE = [
     '/soulblueprint/',
     '/soulblueprint/index.html',
@@ -24,14 +24,14 @@ const ASSETS_TO_CACHE = [
 ];
 
 // Cache for shared readings (stored separately for offline access)
-const READINGS_CACHE = 'moment-readings-v1';
+const READINGS_CACHE = 'sb-readings-v1';
 
 // Install event - cache assets
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => {
-                console.log('Caching A Moment in Time assets');
+                console.log('Caching Soul Blueprint assets');
                 return cache.addAll(ASSETS_TO_CACHE);
             })
             .then(() => self.skipWaiting())
@@ -73,12 +73,8 @@ self.addEventListener('fetch', (event) => {
         return;
     }
     
-    // Special handling for shared reading pages /soulblueprint/r/*
+    // Customer readings are self-contained HTML — never intercept, always serve from network
     if (url.pathname.match(/\/soulblueprint\/r\//)) {
-        event.respondWith(
-            fetch(event.request)
-                .catch(() => caches.match('/soulblueprint/view.html'))
-        );
         return;
     }
     

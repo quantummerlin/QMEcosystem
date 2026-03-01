@@ -1,5 +1,5 @@
 // ============================================================
-// A MOMENT IN TIME, THEMED BOOK GENERATOR
+// SOUL BLUEPRINT, THEMED BOOK GENERATOR
 // ============================================================
 // Generates beautiful themed HTML books from reading data.
 // 11 design templates + A4/A5 paper size support.
@@ -445,7 +445,7 @@ function collectBookData() {
 
     // ── Meta ──
     const meta = {
-        title: 'A Moment in Time',
+        title: 'Soul Blueprint',
         subtitle: 'A Complete Cosmic Portrait',
         name: name,
         details: [birthDate, userData.birthTime || '', userData.birthPlace || ''].filter(Boolean),
@@ -535,16 +535,16 @@ function collectBookData() {
     // ── Closing ──
     const closing = {
         title: 'The Story Continues',
-        bodyHTML: `<p>You have just explored ${_escHtml(name)}\u2019s complete moment in time, a unique constellation of energies that has never existed before and will never exist again.</p><p>With a ${_escHtml(safe(astro.sunSign, 'name'))} Sun illuminating the core identity, a ${_escHtml(safe(astro.moonSign, 'name'))} Moon nurturing the emotional world, and Life Path ${numr.lifePath || '\u2014'} guiding the soul\u2019s journey, ${_escHtml(name)} carries a sacred combination of gifts.</p><p>Return to these pages whenever you need a reminder of who you truly are beneath all the roles you play.</p>`,
+        bodyHTML: `<p>You have just explored ${_escHtml(name)}\u2019s complete Soul Blueprint, a unique constellation of energies that has never existed before and will never exist again.</p><p>With a ${_escHtml(safe(astro.sunSign, 'name'))} Sun illuminating the core identity, a ${_escHtml(safe(astro.moonSign, 'name'))} Moon nurturing the emotional world, and Life Path ${numr.lifePath || '\u2014'} guiding the soul\u2019s journey, ${_escHtml(name)} carries a sacred combination of gifts.</p><p>Return to these pages whenever you need a reminder of who you truly are beneath all the roles you play.</p>`,
         quote: `\u201CEvery soul arrives with a purpose. ${name}\u2019s purpose is written in the stars.\u201D`,
-        quoteAttr: ', A Moment in Time'
+        quoteAttr: ', Soul Blueprint'
     };
 
     // ── Colophon ──
     const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     const colophon = {
         brand: 'Quantum Merlin',
-        text: `A Moment in Time, A Complete Cosmic Portrait for ${name}\n\nGenerated on ${today}\nreadings.quantummerlin.com\n\nFor entertainment and spiritual reflection purposes.\nEvery person is unique and will grow in their own beautiful way.\n\n\u00A9 ${new Date().getFullYear()} Quantum Merlin. All rights reserved.`,
+        text: `Soul Blueprint, A Complete Cosmic Portrait for ${name}\n\nGenerated on ${today}\nreadings.quantummerlin.com\n\nFor entertainment and spiritual reflection purposes.\nEvery person is unique and will grow in their own beautiful way.\n\n\u00A9 ${new Date().getFullYear()} Quantum Merlin. All rights reserved.`,
         url: 'readings.quantummerlin.com'
     };
 
@@ -958,7 +958,7 @@ async function generateBook() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${safeName}-Moment-in-Time-${themeTag}-${sizeTag}.html`;
+        a.download = `${safeName}-Soul-Blueprint-${themeTag}-${sizeTag}.html`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -1067,7 +1067,7 @@ function buildCosmicClassicHTML(bookData, paperSize) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Moment in Time, ${name}</title>
+<title>Soul Blueprint, ${name}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -1181,14 +1181,14 @@ ${a4Block}
 <body>
 <div class="print-bar">
     <div>
-        <div class="print-bar-title">A Moment in Time, ${name}</div>
+        <div class="print-bar-title">Soul Blueprint, ${name}</div>
         <div class="print-bar-hint">Press Ctrl+P (or \u2318+P) \u2192 Save as PDF. Paper size ${paperSize} is set automatically.</div>
     </div>
     <button class="print-btn" onclick="window.print()">\uD83D\uDDA8\uFE0F Print / Save as PDF</button>
 </div>
 <div class="book">
-    <div class="page half-title"><h1>A Moment in Time</h1><div class="ht-name">${_escHtml(bookData.meta.halfTitleName)}</div></div>
-    <div class="page cover"><div class="stars"></div><div class="border-outer"></div><div class="border-inner"></div><div class="cover-ornament">\u00b7 \u00b7 \u2726 \u00b7 \u00b7</div><div class="cover-title">A Moment<br>in Time</div><div class="cover-subtitle">A Complete Cosmic Portrait</div><div class="cover-ornament">\u2014 \u2727 \u2014</div><div class="cover-name">${name}</div><div class="cover-details">${details.join('<br>')}</div><div class="cover-ornament">\u00b7 \u00b7 \u2726 \u00b7 \u00b7</div><div class="cover-brand">Quantum Merlin</div></div>
+    <div class="page half-title"><h1>Soul Blueprint</h1><div class="ht-name">${_escHtml(bookData.meta.halfTitleName)}</div></div>
+    <div class="page cover"><div class="stars"></div><div class="border-outer"></div><div class="border-inner"></div><div class="cover-ornament">\u00b7 \u00b7 \u2726 \u00b7 \u00b7</div><div class="cover-title">Soul<br>Blueprint</div><div class="cover-subtitle">A Complete Cosmic Portrait</div><div class="cover-ornament">\u2014 \u2727 \u2014</div><div class="cover-name">${name}</div><div class="cover-details">${details.join('<br>')}</div><div class="cover-ornament">\u00b7 \u00b7 \u2726 \u00b7 \u00b7</div><div class="cover-brand">Quantum Merlin</div></div>
     <div class="page epigraph"><blockquote>${bookData.meta.epigraphQuote}</blockquote><div class="attr">${_escHtml(bookData.meta.epigraphAttr)}</div><div class="dedication">${bookData.meta.dedication.replace(/\n/g, '<br>')}</div></div>
     <div class="page"><div class="snapshot-title">Cosmic Coordinates</div><div class="snap-divider"></div><div class="snap-grid">${snapshotHTML}</div></div>
     <div class="page"><div class="toc-title">Contents</div><div class="snap-divider"></div>${tocHTML}</div>

@@ -1,6 +1,6 @@
 /**
  * Book HTML Parser
- * Extracts all structured reading data from the source "A Moment in Time" HTML
+ * Extracts all structured reading data from the source "Soul Blueprint" HTML
  * and outputs a clean JSON data model that any template can consume.
  */
 
@@ -28,7 +28,7 @@ function parseBookHTML(htmlPath) {
 function extractMeta($) {
   const cover = $('.cover');
   const meta = {
-    title: 'A Moment in Time',
+    title: 'Soul Blueprint',
     subtitle: '',
     name: '',
     details: [],

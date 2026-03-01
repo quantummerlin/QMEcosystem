@@ -1,4 +1,4 @@
-# A Moment in Time PDF Generator - Project Summary
+# Soul Blueprint PDF Generator - Project Summary
 
 ##  COMPLETED - Ready for Delivery
 

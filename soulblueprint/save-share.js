@@ -94,7 +94,7 @@ function generateGiftReading() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Moment in Time - A Gift for ${name}</title>
+    <title>Soul Blueprint - A Gift for ${name}</title>
     <style>
         /* ============================================ */
         /* GIFT READING STYLES                         */
@@ -480,7 +480,7 @@ function generateGiftReading() {
         <!-- Gift Cover -->
         <div class="gift-cover">
             <div class="gift-ribbon"></div>
-            <h1 class="gift-title">A Moment in Time</h1>
+            <h1 class="gift-title">Soul Blueprint</h1>
             <p class="gift-subtitle">A Cosmic Gift Reading</p>
             <div class="gift-for">
                 Specially Created For
@@ -567,7 +567,7 @@ function generateGiftReading() {
 </html>`;
 
     // Create and download the gift file
-    const fileName = `${name.replace(/[^a-zA-Z0-9]/g, '-')}-Moment-in-Time-Gift.html`;
+    const fileName = `${name.replace(/[^a-zA-Z0-9]/g, '-')}-Soul-Blueprint-Gift.html`;
     const blob = new Blob([giftHTML], { type: 'text/html;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -729,7 +729,7 @@ function downloadReading() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Moment in Time for ${userData.name}</title>
+    <title>Soul Blueprint for ${userData.name}</title>
     <style>
         ${document.getElementById('dynamic-styles').innerHTML}
     </style>
@@ -737,7 +737,7 @@ function downloadReading() {
 <body>
     <div class="container">
         <header>
-            <h1>A Moment in Time for ${userData.name}</h1>
+            <h1>Soul Blueprint for ${userData.name}</h1>
             <p>Born: ${formatDate(userData.birthDate)} at ${userData.birthTime || 'unknown time'}</p>
             <p>Location: ${userData.birthPlace || 'unknown location'}</p>
             <p>Generated: ${new Date().toLocaleDateString()}</p>
@@ -771,7 +771,7 @@ function formatDate(dateStr) {
 async function shareReading() {
     const userData = JSON.parse(localStorage.getItem('lastReading') || '{}');
     const shareData = {
-        title: `${userData.name}'s Soul Blueprint — A Moment in Time`,
+        title: `${userData.name}'s Soul Blueprint — Soul Blueprint`,
         text: `I just discovered ${userData.name}'s cosmic DNA — 65+ personalized readings from one birth moment. Built by Quantum Merlin. Try it:`,
         url: window.location.href
     };
