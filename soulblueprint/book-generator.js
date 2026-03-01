@@ -4,7 +4,7 @@
 // Generates beautiful themed HTML books from reading data.
 // 11 design templates + A4/A5 paper size support.
 // Open the downloaded HTML in Chrome → Print → Save as PDF.
-// Premium feature, included with 5-reading bundle via Etsy.
+// Premium feature, included with 3-reading bundle via Etsy.
 // ============================================================
 
 // ─── ACCESS GATE ─────────────────────────────────────────────
@@ -49,9 +49,9 @@ function showUpgradeModal() {
         <p style="font-size:0.92rem;line-height:1.6;opacity:0.85;margin-bottom:20px;">Turn any Soul Blueprint reading into a stunning printable keepsake book, choose from <strong>11 premium templates</strong> including Art Deco, Botanical, Celestial Watercolor, and more.</p>
 
         <div style="background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);border-radius:16px;padding:18px;margin-bottom:20px;">
-            <div style="font-size:0.82rem;opacity:0.6;margin-bottom:4px;">Included with 5-Reading Bundle</div>
-            <div style="font-size:2rem;font-weight:700;color:#ffd700;margin-bottom:4px;">$39.99</div>
-            <div style="font-size:0.82rem;opacity:0.6;">One-time payment · 5 readings + printable books</div>
+            <div style="font-size:0.82rem;opacity:0.6;margin-bottom:4px;">Included with 3-Reading Bundle</div>
+            <div style="font-size:2rem;font-weight:700;color:#ffd700;margin-bottom:4px;">$24.99</div>
+            <div style="font-size:0.82rem;opacity:0.6;">One-time payment · 3 readings + printable books</div>
         </div>
 
         <div style="text-align:left;padding:0 8px;margin-bottom:22px;">
@@ -69,12 +69,12 @@ function showUpgradeModal() {
             </div>
             <div style="display:flex;align-items:start;gap:8px;font-size:0.88rem;">
                 <span style="color:#ffd700;flex-shrink:0;"></span>
-                <span>5 personalised readings included</span>
+                <span>3 personalised readings included</span>
             </div>
         </div>
 
         <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('book_upgrade_clicked',{source:'modal'});" style="display:inline-block;background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;border:none;padding:14px 40px;border-radius:30px;font-size:1.05rem;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 4px 20px rgba(255,215,0,0.3);letter-spacing:0.02em;transition:all 0.2s;">
-            Get 5-Reading Bundle →
+            Get 3-Reading Bundle →
         </a>
         <p style="font-size:0.72rem;opacity:0.4;margin-top:14px;">Already purchased? <a href="#" onclick="promptUnlockCode();return false;" style="color:#c9a0ff;text-decoration:underline;">Enter your access code</a></p>
     </div>
@@ -445,7 +445,7 @@ function collectBookData() {
 
     // ── Meta ──
     const meta = {
-        title: 'Soul Blueprint',
+        title: 'Soul Blueprint:',
         subtitle: 'A Complete Cosmic Portrait',
         name: name,
         details: [birthDate, userData.birthTime || '', userData.birthPlace || ''].filter(Boolean),

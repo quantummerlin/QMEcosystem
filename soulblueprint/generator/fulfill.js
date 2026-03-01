@@ -669,11 +669,11 @@ function dismissWelcome(){
       </a>
       <a class="upgrade-option featured" href="https://www.etsy.com/shop/QuantumMerlin" target="_blank">
         <span class="upgrade-badge">BEST VALUE</span>
-        <h3>5 Readings</h3>
-        <div class="price">$39.99</div>
+        <h3>3 Readings</h3>
+        <div class="price">$24.99</div>
         <p class="price-note">Family &amp; friends bundle</p>
         <ul class="features">
-          <li>5 full personalised readings</li>
+          <li>3 full personalised readings</li>
           <li>All ${cardCount}+ cards &amp; 17 sections each</li>
           <li>Perfect for family or friends</li>
           <li>Permanent links to revisit anytime</li>
