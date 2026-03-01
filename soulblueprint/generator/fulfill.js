@@ -418,16 +418,13 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
 .pw-card h2{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;color:#ffd700;margin:0 0 8px}
 .pw-card .pw-subtitle{color:#e8d5ff;opacity:0.7;font-size:0.88rem;margin:0 0 24px;line-height:1.5}
 .pw-card .pw-name{color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:1.2rem;margin:0 0 20px}
-.pw-input-wrap{display:flex;gap:8px;margin-bottom:12px}
-.pw-input{flex:1;padding:14px 16px;border:2px solid rgba(255,215,0,0.2);border-radius:12px;background:rgba(255,255,255,0.05);color:#fff;font-size:1.1rem;font-family:monospace;letter-spacing:0.15em;text-transform:uppercase;text-align:center}
+.pw-input-wrap{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+.pw-input{width:100%;padding:14px 16px;border:2px solid rgba(255,215,0,0.2);border-radius:12px;background:rgba(255,255,255,0.05);color:#fff;font-size:1.1rem;font-family:monospace;letter-spacing:0.15em;text-transform:uppercase;text-align:center;box-sizing:border-box}
 .pw-input:focus{outline:none;border-color:rgba(255,215,0,0.5)}
-.pw-submit{padding:14px 24px;border:none;border-radius:12px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a0a2e;font-weight:700;font-size:0.95rem;cursor:pointer;transition:transform 0.15s}
+.pw-submit{width:100%;padding:14px 24px;border:none;border-radius:12px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a0a2e;font-weight:700;font-size:0.95rem;cursor:pointer;transition:transform 0.15s}
 .pw-submit:hover{transform:scale(1.03)}
 .pw-error{color:#ff6b6b;font-size:0.82rem;margin:8px 0 0;min-height:1.2em}
 .pw-hint{color:#e8d5ff;opacity:0.35;font-size:0.72rem;margin-top:16px}
-.pw-book-unlock{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,215,0,0.12)}
-.pw-book-label{color:#e8d5ff;opacity:0.55;font-size:0.78rem;margin:0 0 10px}
-.pw-book-btn{background:linear-gradient(135deg,#c9a0ff,#8b5cf6)!important}
 @media(max-width:480px){.pw-card{padding:28px 20px}.pw-card h2{font-size:1.2rem}.pw-input{font-size:1rem;padding:12px}}
 /* Welcome overlay */
 .welcome-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:linear-gradient(145deg,rgba(10,5,20,0.97),rgba(26,10,46,0.98));z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding:0 16px;opacity:1;transition:opacity 0.6s ease;font-family:'Inter','Segoe UI',system-ui,sans-serif;overflow-y:auto}
@@ -522,14 +519,6 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
     </div>
     <div class="pw-error" id="pwError"></div>
     <div class="pw-hint">Password is case-insensitive</div>
-    <div class="pw-book-unlock">
-      <p class="pw-book-label">Have a book access code?</p>
-      <div class="pw-input-wrap">
-        <input type="text" class="pw-input" id="bookCodeInput" maxlength="16" placeholder="Enter book code" autocomplete="off" autocapitalize="characters" spellcheck="false">
-        <button class="pw-submit pw-book-btn" onclick="checkBookCode()">Unlock</button>
-      </div>
-      <div class="pw-error" id="bookCodeError"></div>
-    </div>
   </div>
 </div>`;
 
@@ -581,21 +570,7 @@ function buildFinalHtml(capturedHtml, personName, isGift, slug, password, birthD
   // Enter key to submit
   var inp=document.getElementById('pwInput');
   if(inp)inp.addEventListener('keydown',function(e){if(e.key==='Enter')window.checkPassword()});
-  // Book unlock code
-  window.checkBookCode=function(){
-    var code=document.getElementById('bookCodeInput').value.trim().toUpperCase();
-    if(code==='SOUL50BOOK'){
-      try{localStorage.setItem('sb-book-access','lifetime')}catch(e){}
-      document.getElementById('bookCodeError').textContent='';
-      document.getElementById('bookCodeInput').value='';
-      var label=document.querySelector('.pw-book-label');
-      if(label){label.textContent='Book Generator unlocked!';label.style.color='#4ade80';label.style.opacity='1'}
-    }else if(code){
-      document.getElementById('bookCodeError').textContent='Invalid book code. Check your purchase email.';
-    }
-  };
-  var bInp=document.getElementById('bookCodeInput');
-  if(bInp)bInp.addEventListener('keydown',function(e){if(e.key==='Enter')window.checkBookCode()});
+
 })();
 `;
 
