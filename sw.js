@@ -1,5 +1,5 @@
 // Mocktails & Dreams — 3020 | Service Worker
-const CACHE_NAME = 'md3020-v2';
+const CACHE_NAME = 'md3020-v3';
 const ASSETS = [
   './',
   './index.html',

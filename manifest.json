@@ -6,8 +6,8 @@
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#0a0a0f",
-  "theme_color": "#FF2D95",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "categories": ["food", "drink", "lifestyle"],
   "lang": "en-AU",
   "icons": [
