@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mocktails & Dreams — 3020 | Sunshine West</title>
+  <meta name="description" content="Fresh pressed juices, wellness tonics, mocktails, smoothies & specialty coffee. Produce-powered bar in Sunshine West 3020.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mocktails & Dreams — 3020">
+  <meta property="og:description" content="Produce-powered bar in Sunshine West. Fresh juices, mocktails, smoothies & coffee.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://quantummerlin.com/mocktails&dreams/">
+  <link rel="canonical" href="https://quantummerlin.com/mocktails&dreams/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mocktails & Dreams — 3020">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23FF2D55'>M</text></svg>">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="M&D 3020">
+</head>
+<body>
+
+<div class="app" id="app">
+  <div class="pages-container" id="pagesContainer">
+
+    <!-- ===== PAGE 0: HERO ===== -->
+    <div class="page page-hero" id="page-home" data-page="0">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="logo-container">
+          <img src="M&DLogo.png" alt="Mocktails & Dreams — 3020">
+        </div>
+        <p class="hero-tagline">Colour · Theatre · Freshness · Good Vibes</p>
+        <p class="hero-sub">Sunshine West 3020</p>
+        <button class="hero-cta" onclick="goToPage(1)">Explore the Menu</button>
+      </div>
+      <div class="swipe-indicator">
+        <span>Swipe</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 1: FRESH PRESSED JUICES ===== -->
+    <div class="page" id="page-juices" data-page="1">
+      <div class="page-scroll">
+        <div class="page-header">
+          <h2 class="page-title accent-green">Fresh Pressed Juices</h2>
+          <p class="page-subtitle">Cold pressed · 500ml</p>
+          <div class="price-badge accent-green">$8 each</div>
+        </div>
+        <div class="menu-grid cards-stagger">
+          <div class="menu-card">
+            <span class="badge badge-popular">Popular</span>
+            <h3 class="card-name">ABC Zing</h3>
+            <p class="card-desc">Apple, beetroot, carrot & ginger. Straw-drop beetroot creates a sunrise effect.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Cold Warmer</h3>
+            <p class="card-desc">Carrot, apple & fresh ginger. Cold juice, warming kick.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Alkaliser</h3>
+            <p class="card-desc">Cucumber, celery, apple, pineapple & lemon.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Watermelon Reset</h3>
+            <p class="card-desc">Watermelon, orange, apple & lemon.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Sunshine Passion</h3>
+            <p class="card-desc">Orange & passionfruit.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Tropical Dream</h3>
+            <p class="card-desc">Orange, pineapple & passionfruit.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Cucumber Mint</h3>
+            <p class="card-desc">Cucumber, lemon & mint. Refreshing as juice or mocktail mixer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 2: WELLNESS & TONICS ===== -->
+    <div class="page" id="page-wellness" data-page="2">
+      <div class="page-scroll">
+        <div class="page-header">
+          <h2 class="page-title accent-gold">Wellness & Tonics</h2>
+          <p class="page-subtitle">Functional drinks · Health-forward</p>
+          <div class="price-badge accent-gold">$8 each</div>
+        </div>
+        <div class="menu-grid cards-stagger">
+          <div class="menu-card">
+            <span class="badge badge-popular">Popular</span>
+            <h3 class="card-name">Immuni-T</h3>
+            <p class="card-desc">Ginger, lemon, honey & water. Your daily immune shield.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Fire Immunity</h3>
+            <p class="card-desc">Immuni-T + cayenne chilli.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Golden Glow</h3>
+            <p class="card-desc">Turmeric, lemon, honey & black pepper.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Golden Fire</h3>
+            <p class="card-desc">Golden Glow + cayenne chilli.</p>
+          </div>
+          <div class="menu-card">
+            <span class="badge badge-gym">Gym Fuel</span>
+            <h3 class="card-name">Beetroid — Nature's Steroid</h3>
+            <p class="card-desc">Beetroot, lemon, ginger & honey water. Natural performance fuel.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Good Morning Glengala</h3>
+            <p class="card-desc">100% celery juice. The gut-healing morning ritual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 3: WELLNESS SHOTS ===== -->
+    <div class="page" id="page-shots" data-page="3">
+      <div class="page-scroll">
+        <div class="page-header">
+          <h2 class="page-title accent-purple">Wellness Shots</h2>
+          <p class="page-subtitle">Concentrated · 60ml</p>
+          <div class="price-badge accent-purple">$4 each</div>
+        </div>
+        <div class="shots-grid cards-stagger">
+          <div class="shot-chip">
+            <div class="shot-info">
+              <span class="shot-name">Ginger Shot</span>
+              <span class="shot-desc">Pure ginger fire</span>
+            </div>
+          </div>
+          <div class="shot-chip">
+            <div class="shot-info">
+              <span class="shot-name">Turmeric Shot</span>
+              <span class="shot-desc">Golden anti-inflammatory</span>
+            </div>
+          </div>
+          <div class="shot-chip">
+            <div class="shot-info">
+              <span class="shot-name">Lemon Shot</span>
+              <span class="shot-desc">Pure citrus cleanse</span>
+            </div>
+          </div>
+          <div class="shot-chip">
+            <div class="shot-info">
+              <span class="shot-name">Immunity Shot</span>
+              <span class="shot-desc">Ginger + lemon + honey</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 4: MOCKTAILS & DREAMS ===== -->
+    <div class="page" id="page-mocktails" data-page="4">
+      <div class="page-scroll">
+        <div class="page-header">
+          <h2 class="page-title accent-pink">Mocktails & Dreams</h2>
+          <p class="page-subtitle">Zero alcohol · All vibes</p>
+          <div class="price-badge accent-pink">$8 each · 500ml</div>
+        </div>
+        <div class="menu-grid cards-stagger">
+          <div class="menu-card">
+            <span class="badge badge-popular">Popular</span>
+            <h3 class="card-name">Glengala Sunrise</h3>
+            <p class="card-desc">Strawberry syrup, fresh OJ, pineapple, soda & mint. A sunrise in a cup.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Purple Rain</h3>
+            <p class="card-desc">Strawberry & blueberry syrups, apple juice & soda. Deep purple cascade.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Island Dream</h3>
+            <p class="card-desc">Coconut cream, pineapple & soda. Non-alcoholic pina colada.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">3020 Full Moon</h3>
+            <p class="card-desc">Charcoal lemonade & soda. Jet black, tastes like lemonade.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Tropical Dream Spritz</h3>
+            <p class="card-desc">Pineapple, passionfruit syrup, lemon & soda.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Golden Glow Spritz</h3>
+            <p class="card-desc">Orange, pineapple, lemon, turmeric & honey syrup.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 5: SIGNATURE SERIES ===== -->
+    <div class="page" id="page-signatures" data-page="5">
+      <div class="page-scroll">
+        <div class="page-header">
+          <h2 class="page-title accent-cyan">Signature Series</h2>
+          <p class="page-subtitle">Colour-shifting theatre</p>
+          <div class="price-badge accent-cyan">$9 each · 500ml</div>
+        </div>
+        <div class="menu-grid cards-stagger">
+          <div class="menu-card card-signature">
+            <span class="badge badge-signature">Signature</span>
+            <h3 class="card-name">Dream Colada Shift</h3>
+            <p class="card-desc">Coconut cream, pineapple, soda & syrup float. Stir to shift colour. The Instagram drink.</p>
+          </div>
+          <div class="menu-card card-signature">
+            <span class="badge badge-signature">Signature</span>
+            <h3 class="card-name">Blood Moon</h3>
+            <p class="card-desc">Charcoal lemonade with strawberry syrup drizzle. Dark & dramatic.</p>
+          </div>
+          <div class="menu-card card-signature">
+            <span class="badge badge-signature">Signature</span>
+            <h3 class="card-name">Black & Gold</h3>
+            <p class="card-desc">Charcoal lemonade with passionfruit syrup float. Black + gold contrast.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 6: SMOOTHIE DREAMS ===== -->
+    <div class="page" id="page-smoothies" data-page="6">
+      <div class="page-scroll">
+        <div class="page-header">
+          <h2 class="page-title accent-orange">Smoothie Dreams</h2>
+          <p class="page-subtitle">Banana base · Choose your milk</p>
+          <div class="price-badge accent-orange">$8 each · 500ml</div>
+        </div>
+        <div class="menu-grid cards-stagger">
+          <div class="menu-card">
+            <span class="badge badge-popular">Popular</span>
+            <h3 class="card-name">Strawberry Dream</h3>
+            <p class="card-desc">Banana, strawberries, dates & milk.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Blueberry Dream</h3>
+            <p class="card-desc">Banana, blueberries, dates & milk.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Pina Colada Dream</h3>
+            <p class="card-desc">Pineapple, banana & coconut milk.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Chocolate Dream</h3>
+            <p class="card-desc">Raw cacao, dates, banana & milk.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">No-Tella</h3>
+            <p class="card-desc">Banana, raw cacao, dates, hazelnuts & milk.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Turkish Delight Dream</h3>
+            <p class="card-desc">Banana, raw cacao, dates, milk & rose water.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Mango Dream</h3>
+            <p class="card-desc">Mango, banana, dates & milk.</p>
+          </div>
+          <div class="menu-card">
+            <span class="badge badge-gym">Gym Fuel</span>
+            <h3 class="card-name">Hemp & Spinach Dream</h3>
+            <p class="card-desc">Hemp seeds, spinach, banana & milk.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Black Forest Dream</h3>
+            <p class="card-desc">Frozen cherries, banana, raw cacao, dates & milk.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Cinnamon Dream</h3>
+            <p class="card-desc">Banana, cinnamon, dates & milk.</p>
+          </div>
+        </div>
+        <div class="info-pill">
+          <strong>Milk Options</strong> Regular · Soy · Almond · Coconut — all available, no extra charge
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 7: COFFEE & LATTES ===== -->
+    <div class="page" id="page-coffee" data-page="7">
+      <div class="page-scroll">
+        <div class="page-header">
+          <h2 class="page-title accent-orange">Coffee & Lattes</h2>
+          <p class="page-subtitle">Specialty beans · Made with care</p>
+        </div>
+
+        <h3 class="section-label accent-orange">Classic Coffee — $4-$5</h3>
+        <div class="coffee-grid cards-stagger">
+          <div class="coffee-card"><div class="coffee-name">Espresso</div></div>
+          <div class="coffee-card"><div class="coffee-name">Long Black</div></div>
+          <div class="coffee-card"><div class="coffee-name">Flat White</div></div>
+          <div class="coffee-card"><div class="coffee-name">Cappuccino</div></div>
+          <div class="coffee-card"><div class="coffee-name">Latte</div></div>
+          <div class="coffee-card"><div class="coffee-name">Mocha</div></div>
+        </div>
+
+        <h3 class="section-label accent-purple" style="margin-top: 2rem;">Wellness Lattes — $6</h3>
+        <div class="menu-grid cards-stagger" style="max-width: 900px; margin: 0 auto;">
+          <div class="menu-card">
+            <h3 class="card-name">Golden Latte</h3>
+            <p class="card-desc">Turmeric, milk, honey & black pepper.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Beet & Ginger Latte</h3>
+            <p class="card-desc">Ginger juice, beetroot juice & almond/soy milk.</p>
+          </div>
+          <div class="menu-card">
+            <h3 class="card-name">Full Moon Latte</h3>
+            <p class="card-desc">Activated charcoal, milk & sweetener. Optional espresso shot.</p>
+          </div>
+        </div>
+
+        <h3 class="section-label" style="margin-top: 2rem; color: rgba(255,255,255,0.35);">Coming Soon — Add-Ons (+$1)</h3>
+        <div class="coming-soon-row">
+          <span class="pill-tag">Lion's Mane</span>
+          <span class="pill-tag">Cordyceps</span>
+          <span class="pill-tag">Reishi</span>
+        </div>
+
+        <div class="info-pill" style="margin-top: 1.5rem;">
+          <strong>Milk Options</strong> Regular · Soy · Almond · Oat (coming soon)
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE 8: ORDER ===== -->
+    <div class="page" id="page-order" data-page="8">
+      <div class="page-scroll">
+        <div class="page-header">
+          <h2 class="page-title accent-pink">Order Now</h2>
+          <p class="page-subtitle">Text us your order · Pay via Square invoice</p>
+        </div>
+
+        <form class="order-form" id="orderForm" onsubmit="return false;">
+          <div class="form-group">
+            <label for="custName">Your Name</label>
+            <input type="text" id="custName" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="custPhone">Your Phone</label>
+            <input type="tel" id="custPhone" placeholder="04XX XXX XXX" required>
+          </div>
+          <div class="form-group">
+            <label for="custOrder">Your Order</label>
+            <textarea id="custOrder" placeholder="e.g. 1x Glengala Sunrise, 1x No-Tella, 1x Flat White..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="custTime">Pickup Time</label>
+            <input type="text" id="custTime" placeholder="e.g. 10:30am, ASAP, 15 mins...">
+          </div>
+          <div class="form-terms">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I understand payment is via Square invoice sent to my phone. Orders 5+ drinks require a deposit. Orders confirmed via text reply.</label>
+          </div>
+          <button type="button" class="btn-submit" onclick="submitOrder()">Send Order via SMS</button>
+        </form>
+
+        <div class="page-footer">
+          <div class="footer-brand">Mocktails & Dreams</div>
+          <div class="footer-tagline">Colour · Theatre · Freshness · Good Vibes</div>
+          <div class="footer-location">
+            82 Glengala Road, Sunshine West VIC 3020<br>
+            <a href="https://www.instagram.com/mocktailsanddreams3020" target="_blank" rel="noopener">@mocktailsanddreams3020</a>
+          </div>
+          <div class="footer-copy">&copy; 2026 Mocktails & Dreams — 3020. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- DOCK — Apple tab bar with SVG icons -->
+<nav class="dock" id="dock">
+  <button class="dock-item active" data-target="0" aria-label="Home">
+    <span class="dock-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+    <span class="dock-label">Home</span>
+  </button>
+  <button class="dock-item" data-target="1" aria-label="Juices">
+    <span class="dock-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
+    <span class="dock-label">Juices</span>
+  </button>
+  <button class="dock-item" data-target="2" aria-label="Wellness">
+    <span class="dock-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+    <span class="dock-label">Wellness</span>
+  </button>
+  <button class="dock-item" data-target="3" aria-label="Shots">
+    <span class="dock-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+    <span class="dock-label">Shots</span>
+  </button>
+  <button class="dock-item" data-target="4" aria-label="Mocktails">
+    <span class="dock-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8M12 17v5"/><path d="M17 2L12 16 7 2"/></svg></span>
+    <span class="dock-label">Drinks</span>
+  </button>
+  <button class="dock-item" data-target="5" aria-label="Signatures">
+    <span class="dock-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+    <span class="dock-label">Sigs</span>
+  </button>
+  <button class="dock-item" data-target="6" aria-label="Smoothies">
+    <span class="dock-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg></span>
+    <span class="dock-label">Smooth</span>
+  </button>
+  <button class="dock-item" data-target="7" aria-label="Coffee">
+    <span class="dock-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></span>
+    <span class="dock-label">Coffee</span>
+  </button>
+  <button class="dock-item" data-target="8" aria-label="Order">
+    <span class="dock-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+    <span class="dock-label">Order</span>
+  </button>
+</nav>
+
+<!-- JAVASCRIPT — Swipe Engine, Dock, Animations -->
+<script>
+// ============================================================
+// SWIPE ENGINE V2 — Velocity-based, GPU-accelerated, PWA-ready
+// ============================================================
+const totalPages = 9;
+let currentPage = 0;
+const container = document.getElementById('pagesContainer');
+const dockItems = document.querySelectorAll('.dock-item');
+const pages = document.querySelectorAll('.page');
+const swipeHint = document.querySelector('.swipe-indicator');
+
+const SPRING = 'transform 0.5s cubic-bezier(0.32, 0.72, 0, 1)';
+const DIRECTION_THRESHOLD = 8;
+const SWIPE_DIST_RATIO = 0.15;
+const VELOCITY_COMMIT = 0.35;
+
+let touchStartX = 0, touchStartY = 0, touchCurrentX = 0, touchStartTime = 0;
+let isDragging = false, dragDirection = null, rafId = null, hasEverSwiped = false;
+
+function goToPage(index, animate = true) {
+  const prev = currentPage;
+  currentPage = Math.max(0, Math.min(totalPages - 1, index));
+  container.style.transition = animate ? SPRING : 'none';
+  container.style.transform = `translate3d(-${currentPage * 100}vw, 0, 0)`;
+  updateDock();
+  if (prev !== currentPage) {
+    animatePageIn(currentPage);
+    const scroller = pages[currentPage].querySelector('.page-scroll');
+    if (scroller) scroller.scrollTop = 0;
+    if (!hasEverSwiped && swipeHint) {
+      hasEverSwiped = true;
+      swipeHint.style.transition = 'opacity 0.5s ease';
+      swipeHint.style.opacity = '0';
+      setTimeout(() => { swipeHint.style.display = 'none'; }, 600);
+    }
+  }
+  if (!animate) { container.offsetHeight; container.style.transition = SPRING; }
+}
+
+function updateDock() {
+  dockItems.forEach(item => {
+    item.classList.toggle('active', parseInt(item.dataset.target) === currentPage);
+  });
+}
+
+function animatePageIn(pageIndex) {
+  const page = pages[pageIndex];
+  const header = page.querySelector('.page-header');
+  if (header) {
+    header.style.opacity = '0';
+    header.style.transform = 'translateY(-12px)';
+    requestAnimationFrame(() => {
+      header.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      header.style.opacity = '1';
+      header.style.transform = 'translateY(0)';
+    });
+  }
+  const cards = page.querySelectorAll('.cards-stagger > *');
+  cards.forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(16px) scale(0.97)';
+    setTimeout(() => {
+      card.style.transition = 'opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0) scale(1)';
+    }, 60 + i * 50);
+  });
+}
+
+// Touch handling
+container.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+  touchCurrentX = touchStartX;
+  touchStartTime = Date.now();
+  isDragging = true;
+  dragDirection = null;
+  container.style.transition = 'none';
+}, { passive: true });
+
+container.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  const tx = e.touches[0].clientX;
+  const ty = e.touches[0].clientY;
+  const dx = tx - touchStartX;
+  const dy = ty - touchStartY;
+  touchCurrentX = tx;
+  if (!dragDirection) {
+    if (Math.abs(dx) > DIRECTION_THRESHOLD || Math.abs(dy) > DIRECTION_THRESHOLD) {
+      dragDirection = Math.abs(dx) > Math.abs(dy) ? 'horizontal' : 'vertical';
+    }
+    return;
+  }
+  if (dragDirection !== 'horizontal') return;
+  e.preventDefault();
+  if (rafId) cancelAnimationFrame(rafId);
+  rafId = requestAnimationFrame(() => {
+    let adjustedDx = dx;
+    if ((currentPage === 0 && dx > 0) || (currentPage === totalPages - 1 && dx < 0)) {
+      adjustedDx = dx * 0.2;
+    }
+    container.style.transform = `translate3d(${-currentPage * window.innerWidth + adjustedDx}px, 0, 0)`;
+  });
+}, { passive: false });
+
+container.addEventListener('touchend', () => {
+  if (!isDragging) return;
+  isDragging = false;
+  if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+  container.style.transition = SPRING;
+  if (dragDirection === 'horizontal') {
+    const dx = touchCurrentX - touchStartX;
+    const elapsed = Math.max(Date.now() - touchStartTime, 1);
+    const velocity = dx / elapsed;
+    const threshold = window.innerWidth * SWIPE_DIST_RATIO;
+    if ((dx < -threshold || velocity < -VELOCITY_COMMIT) && currentPage < totalPages - 1) {
+      goToPage(currentPage + 1);
+    } else if ((dx > threshold || velocity > VELOCITY_COMMIT) && currentPage > 0) {
+      goToPage(currentPage - 1);
+    } else {
+      goToPage(currentPage);
+    }
+  }
+  dragDirection = null;
+}, { passive: true });
+
+// Dock
+dockItems.forEach(item => {
+  item.addEventListener('click', () => goToPage(parseInt(item.dataset.target)));
+});
+
+// Keyboard
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') { e.preventDefault(); goToPage(currentPage + 1); }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); goToPage(currentPage - 1); }
+});
+
+// Order form
+function submitOrder() {
+  const name = document.getElementById('custName').value.trim();
+  const phone = document.getElementById('custPhone').value.trim();
+  const order = document.getElementById('custOrder').value.trim();
+  const time = document.getElementById('custTime').value.trim();
+  const terms = document.getElementById('terms').checked;
+  if (!name || !phone || !order) { alert('Please fill in your name, phone and order.'); return; }
+  if (!terms) { alert('Please accept the payment terms.'); return; }
+  const body = `New order from M&D 3020\n\nName: ${name}\nPhone: ${phone}\nOrder: ${order}\nPickup: ${time || 'ASAP'}\n\nPayment: Square invoice please`;
+  window.location.href = `sms:0434694141?body=${encodeURIComponent(body)}`;
+}
+
+// PWA
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+
+// Boot
+animatePageIn(0);
+</script>
+</body>
+</html>

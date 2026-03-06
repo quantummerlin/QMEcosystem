@@ -1,0 +1,21 @@
+{
+  "name": "Mocktails & Dreams — 3020",
+  "short_name": "M&D 3020",
+  "description": "Produce-powered bar in Sunshine West. Fresh juices, mocktails, smoothies & coffee.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "categories": ["food", "drink", "lifestyle"],
+  "lang": "en-AU",
+  "icons": [
+    {
+      "src": "M&DLogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
