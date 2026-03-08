@@ -12,22 +12,6 @@
  * Format: { neutral: { feminine: "word", masculine: "word", neutral: "word" } }
  */
 var TONE_SUBSTITUTIONS = {
-    // Pronouns and references
-    "This individual": { feminine: "She", masculine: "He", neutral: "This soul" },
-    "this individual": { feminine: "she", masculine: "he", neutral: "this soul" },
-    "This soul": { feminine: "She", masculine: "He", neutral: "This soul" },
-    "this soul": { feminine: "she", masculine: "he", neutral: "this soul" },
-    "They are": { feminine: "She is", masculine: "He is", neutral: "They are" },
-    "they are": { feminine: "she is", masculine: "he is", neutral: "they are" },
-    "They have": { feminine: "She has", masculine: "He has", neutral: "They have" },
-    "they have": { feminine: "she has", masculine: "he has", neutral: "they have" },
-    "They will": { feminine: "She will", masculine: "He will", neutral: "They will" },
-    "they will": { feminine: "she will", masculine: "he will", neutral: "they will" },
-    "Their": { feminine: "Her", masculine: "His", neutral: "Their" },
-    "their": { feminine: "her", masculine: "his", neutral: "their" },
-    "them": { feminine: "her", masculine: "him", neutral: "them" },
-    "themselves": { feminine: "herself", masculine: "himself", neutral: "themselves" },
-    
     // Descriptive adjustments
     "strength": { feminine: "inner strength", masculine: "strength", neutral: "strength" },
     "powerful": { feminine: "deeply powerful", masculine: "powerful", neutral: "powerful" },
@@ -60,7 +44,7 @@ var PHRASE_SUBSTITUTIONS = {
     "natural-born leader": { feminine: "natural-born leader and nurturer", masculine: "natural-born leader", neutral: "natural guide" },
     "conquering challenges": { feminine: "transforming challenges", masculine: "conquering challenges", neutral: "overcoming challenges" },
     "fierce determination": { feminine: "graceful determination", masculine: "fierce determination", neutral: "quiet determination" },
-    "battle their way": { feminine: "navigate their way", masculine: "battle their way", neutral: "find their way" },
+    "battle your way": { feminine: "navigate your way", masculine: "battle your way", neutral: "find your way" },
     "dominating presence": { feminine: "commanding presence", masculine: "dominating presence", neutral: "notable presence" },
     "aggressive approach": { feminine: "assertive approach", masculine: "aggressive approach", neutral: "direct approach" }
 };

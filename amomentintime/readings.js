@@ -13,16 +13,16 @@ var LIFE_PATH_READINGS = {
  1: {
  title: "The Pioneer",
  keywords: ["Leadership", "Independence", "Innovation", "Courage"],
- summary: "A natural-born leader destined to forge their own path.",
- reading: `This soul has arrived with the energy of the pioneer and trailblazer. Life Path 1 indicates a destiny filled with opportunities to lead, innovate, and stand independently. From the earliest days, there will be a noticeable drive to do things their own way.
+ summary: "A natural-born leader destined to forge your own path.",
+ reading: `You have arrived with the energy of the pioneer and trailblazer. Life Path 1 indicates a destiny filled with opportunities to lead, innovate, and stand independently. From the earliest days, there will be a noticeable drive to do things your own way.
 
-This individual possesses an innate courage that will serve them throughout life. They are here to learn the lessons of self-reliance and to develop the confidence to trust their own instincts. While others may follow the crowd, this soul is meant to create new paths for others to follow.
+You possess an innate courage that will serve you throughout life. You are here to learn the lessons of self-reliance and to develop the confidence to trust your own instincts. While others may follow the crowd, you are meant to create new paths for others to follow.
 
-The journey of a Life Path 1 involves learning to balance independence with cooperation. Early in life, they may struggle with authority figures or feel frustrated when forced to conform. This is natural - their spirit is designed to question, challenge, and ultimately improve upon existing systems.
+The journey of a Life Path 1 involves learning to balance independence with cooperation. Early in life, you may struggle with authority figures or feel frustrated when forced to conform. This is natural - your spirit is designed to question, challenge, and ultimately improve upon existing systems.
 
-Key strengths include originality, determination, and the ability to inspire others through example. Challenges may arise around stubbornness, impatience, or difficulty accepting help from others. The greatest growth comes when they learn that true leadership involves lifting others up, not just charging ahead alone.
+Key strengths include originality, determination, and the ability to inspire others through example. Challenges may arise around stubbornness, impatience, or difficulty accepting help from others. The greatest growth comes when you learn that true leadership involves lifting others up, not just charging ahead alone.
 
-In relationships, career, and personal development, this soul will thrive when given the freedom to express their unique vision. They are here to show the world that one person with conviction can indeed make a difference.`,
+In relationships, career, and personal development, you will thrive when given the freedom to express your unique vision. You are here to show the world that one person with conviction can indeed make a difference.`,
  strengths: ["Natural leadership", "Creative thinking", "Self-motivation", "Courage under pressure"],
  challenges: ["Stubbornness", "Impatience", "Difficulty delegating", "Fear of dependence"],
  advice: "Trust your instincts, but remember that even pioneers need companions on the journey."
@@ -32,17 +32,17 @@ In relationships, career, and personal development, this soul will thrive when g
  title: "The Peacemaker",
  keywords: ["Harmony", "Cooperation", "Sensitivity", "Diplomacy"],
  summary: "A gentle soul destined to bring people together.",
- reading: `This soul has arrived with the gift of sensitivity and the mission of creating harmony. Life Path 2 indicates a destiny centered around relationships, cooperation, and the subtle art of bringing people together.
+ reading: `You have arrived with the gift of sensitivity and the mission of creating harmony. Life Path 2 indicates a destiny centered around relationships, cooperation, and the subtle art of bringing people together.
 
-From early on, this individual will demonstrate an unusual awareness of others' feelings and needs. They possess an intuitive understanding of emotional undercurrents that others often miss. This sensitivity is both their greatest gift and their most significant challenge.
+From early on, you will demonstrate an unusual awareness of others' feelings and needs. You possess an intuitive understanding of emotional undercurrents that others often miss. This sensitivity is both your greatest gift and your most significant challenge.
 
-The journey of a Life Path 2 involves learning to honor their gentle nature while developing healthy boundaries. They are natural mediators and peacemakers, often finding themselves in the role of the bridge between conflicting parties. Their presence has a calming effect on others.
+The journey of a Life Path 2 involves learning to honor your gentle nature while developing healthy boundaries. You are natural mediators and peacemakers, often finding yourself in the role of the bridge between conflicting parties. Your presence has a calming effect on others.
 
-Key strengths include empathy, patience, and the ability to see multiple perspectives. They excel in partnerships and collaborative environments. Challenges may arise around indecision, over-sensitivity to criticism, or losing themselves in others' needs.
+Key strengths include empathy, patience, and the ability to see multiple perspectives. You excel in partnerships and collaborative environments. Challenges may arise around indecision, over-sensitivity to criticism, or losing yourself in others' needs.
 
-This soul is here to teach the world about the power of gentleness and cooperation. In a world that often values aggression and competition, they remind us that lasting solutions come through understanding and compromise.
+You are here to teach the world about the power of gentleness and cooperation. In a world that often values aggression and competition, you remind us that lasting solutions come through understanding and compromise.
 
-Their greatest fulfillment comes through meaningful connections and contributing to the greater good through supportive roles. They may not always be in the spotlight, but their influence is profound and lasting.`,
+Your greatest fulfillment comes through meaningful connections and contributing to the greater good through supportive roles. You may not always be in the spotlight, but your influence is profound and lasting.`,
  strengths: ["Deep empathy", "Diplomatic skills", "Patience", "Intuitive understanding"],
  challenges: ["Over-sensitivity", "Indecision", "People-pleasing", "Self-neglect"],
  advice: "Your sensitivity is a superpower, not a weakness. Learn to protect your energy while sharing your gifts."
@@ -52,17 +52,17 @@ Their greatest fulfillment comes through meaningful connections and contributing
  title: "The Creative",
  keywords: ["Expression", "Joy", "Creativity", "Communication"],
  summary: "A vibrant soul destined to inspire through creative expression.",
- reading: `This soul has arrived bursting with creative energy and the gift of joyful expression. Life Path 3 indicates a destiny filled with opportunities to create, communicate, and bring light to the world through artistic endeavors.
+ reading: `You have arrived bursting with creative energy and the gift of joyful expression. Life Path 3 indicates a destiny filled with opportunities to create, communicate, and bring light to the world through artistic endeavors.
 
-From the earliest moments, there will be a noticeable sparkle - a natural charm and enthusiasm that draws others in. This individual is here to remind the world of the importance of play, creativity, and self-expression.
+From the earliest moments, there will be a noticeable sparkle - a natural charm and enthusiasm that draws others in. You are here to remind the world of the importance of play, creativity, and self-expression.
 
-The journey of a Life Path 3 involves learning to channel their abundant creative energy productively. They possess natural talents in communication, whether through words, art, music, or other forms of expression. Their challenge is to develop the discipline to fully manifest their creative visions.
+The journey of a Life Path 3 involves learning to channel your abundant creative energy productively. You possess natural talents in communication, whether through words, art, music, or other forms of expression. Your challenge is to develop the discipline to fully manifest your creative visions.
 
-Key strengths include optimism, imagination, and the ability to uplift others' spirits. They have a gift for seeing beauty and possibility where others see only the ordinary. Challenges may arise around scattered energy, difficulty with follow-through, or using humor to avoid deeper emotions.
+Key strengths include optimism, imagination, and the ability to uplift others' spirits. You have a gift for seeing beauty and possibility where others see only the ordinary. Challenges may arise around scattered energy, difficulty with follow-through, or using humor to avoid deeper emotions.
 
-This soul is here to teach the world about the healing power of creativity and joy. Their presence reminds others not to take life too seriously and that self-expression is essential to well-being.
+You are here to teach the world about the healing power of creativity and joy. Your presence reminds others not to take life too seriously and that self-expression is essential to well-being.
 
-Their greatest fulfillment comes through creative projects that allow them to share their unique perspective with the world. Whether through art, entertainment, teaching, or any form of communication, they are meant to inspire and delight.`,
+Your greatest fulfillment comes through creative projects that allow you to share your unique perspective with the world. Whether through art, entertainment, teaching, or any form of communication, you are meant to inspire and delight.`,
  strengths: ["Natural creativity", "Optimism", "Communication skills", "Ability to inspire joy"],
  challenges: ["Scattered focus", "Avoiding depth", "Self-doubt about talents", "Difficulty with routine"],
  advice: "Your creativity is your gift to the world. Develop the discipline to fully express your vision."
@@ -72,17 +72,17 @@ Their greatest fulfillment comes through creative projects that allow them to sh
  title: "The Builder",
  keywords: ["Stability", "Hard Work", "Practicality", "Foundation"],
  summary: "A grounded soul destined to create lasting structures.",
- reading: `This soul has arrived with the energy of the master builder and the mission of creating lasting foundations. Life Path 4 indicates a destiny centered around hard work, practicality, and building things that endure.
+ reading: `You have arrived with the energy of the master builder and the mission of creating lasting foundations. Life Path 4 indicates a destiny centered around hard work, practicality, and building things that endure.
 
-From early on, this individual will demonstrate a natural inclination toward order, structure, and systematic thinking. They find comfort in routine and take satisfaction in seeing tangible results from their efforts.
+From early on, you will demonstrate a natural inclination toward order, structure, and systematic thinking. You find comfort in routine and take satisfaction in seeing tangible results from your efforts.
 
-The journey of a Life Path 4 involves learning to balance their need for security with openness to change. They are the architects of the zodiac, capable of turning dreams into reality through methodical effort and unwavering determination.
+The journey of a Life Path 4 involves learning to balance your need for security with openness to change. You are the architects of the zodiac, capable of turning dreams into reality through methodical effort and unwavering determination.
 
-Key strengths include reliability, organizational skills, and the ability to work steadily toward long-term goals. They excel at creating systems and structures that benefit others. Challenges may arise around rigidity, workaholism, or difficulty adapting to unexpected changes.
+Key strengths include reliability, organizational skills, and the ability to work steadily toward long-term goals. You excel at creating systems and structures that benefit others. Challenges may arise around rigidity, workaholism, or difficulty adapting to unexpected changes.
 
-This soul is here to teach the world about the value of patience, persistence, and solid foundations. In a world that often seeks quick fixes, they remind us that lasting success is built brick by brick.
+You are here to teach the world about the value of patience, persistence, and solid foundations. In a world that often seeks quick fixes, you remind us that lasting success is built brick by brick.
 
-Their greatest fulfillment comes through creating something of lasting value - whether a business, a family, a home, or any structure that will stand the test of time. They are the ones who turn visions into reality.`,
+Your greatest fulfillment comes through creating something of lasting value - whether a business, a family, a home, or any structure that will stand the test of time. You are the ones who turn visions into reality.`,
  strengths: ["Reliability", "Organizational skills", "Determination", "Practical wisdom"],
  challenges: ["Rigidity", "Resistance to change", "Workaholism", "Pessimism"],
  advice: "Your steady nature is your strength. Remember to build in flexibility and time for joy."
@@ -92,17 +92,17 @@ Their greatest fulfillment comes through creating something of lasting value - w
  title: "The Freedom Seeker",
  keywords: ["Adventure", "Change", "Freedom", "Versatility"],
  summary: "A dynamic soul destined to experience life's full spectrum.",
- reading: `This soul has arrived with an insatiable curiosity and the mission of experiencing all that life has to offer. Life Path 5 indicates a destiny filled with adventure, change, and the pursuit of freedom.
+ reading: `You have arrived with an insatiable curiosity and the mission of experiencing all that life has to offer. Life Path 5 indicates a destiny filled with adventure, change, and the pursuit of freedom.
 
-From the earliest days, there will be a restless energy - a need to explore, question, and experience. This individual is here to learn through direct experience rather than secondhand knowledge.
+From the earliest days, there will be a restless energy - a need to explore, question, and experience. You are here to learn through direct experience rather than secondhand knowledge.
 
-The journey of a Life Path 5 involves learning to balance their need for freedom with responsibility. They are natural adventurers, drawn to travel, new experiences, and anything that breaks the monotony of routine.
+The journey of a Life Path 5 involves learning to balance your need for freedom with responsibility. You are natural adventurers, drawn to travel, new experiences, and anything that breaks the monotony of routine.
 
-Key strengths include adaptability, resourcefulness, and the ability to thrive in changing circumstances. They bring excitement and fresh perspectives wherever they go. Challenges may arise around commitment, impulsiveness, or difficulty with routine and responsibility.
+Key strengths include adaptability, resourcefulness, and the ability to thrive in changing circumstances. You bring excitement and fresh perspectives wherever you go. Challenges may arise around commitment, impulsiveness, or difficulty with routine and responsibility.
 
-This soul is here to teach the world about the importance of embracing change and living fully. Their enthusiasm for life is contagious, inspiring others to step outside their comfort zones.
+You are here to teach the world about the importance of embracing change and living fully. Your enthusiasm for life is contagious, inspiring others to step outside their comfort zones.
 
-Their greatest fulfillment comes through experiences that expand their understanding of the world and themselves. They are meant to be the bridge between different cultures, ideas, and ways of being.`,
+Your greatest fulfillment comes through experiences that expand your understanding of the world and yourself. You are meant to be the bridge between different cultures, ideas, and ways of being.`,
  strengths: ["Adaptability", "Enthusiasm", "Versatility", "Courage to try new things"],
  challenges: ["Restlessness", "Commitment issues", "Impulsiveness", "Scattered energy"],
  advice: "Your love of freedom is beautiful. Learn that true freedom includes the freedom to commit."
@@ -112,17 +112,17 @@ Their greatest fulfillment comes through experiences that expand their understan
  title: "The Nurturer",
  keywords: ["Love", "Responsibility", "Family", "Service"],
  summary: "A loving soul destined to care for and heal others.",
- reading: `This soul has arrived with a heart full of love and the mission of nurturing others. Life Path 6 indicates a destiny centered around family, responsibility, and service to loved ones and community.
+ reading: `You have arrived with a heart full of love and the mission of nurturing others. Life Path 6 indicates a destiny centered around family, responsibility, and service to loved ones and community.
 
-From early on, this individual will demonstrate a natural inclination to care for others. They have an innate sense of responsibility and often take on the role of caretaker, even from a young age.
+From early on, you will demonstrate a natural inclination to care for others. You have an innate sense of responsibility and often take on the role of caretaker, even from a young age.
 
-The journey of a Life Path 6 involves learning to balance giving with receiving. They are natural healers and counselors, drawn to roles where they can make a difference in others' lives. Their challenge is to care for themselves as lovingly as they care for others.
+The journey of a Life Path 6 involves learning to balance giving with receiving. You are natural healers and counselors, drawn to roles where you can make a difference in others' lives. Your challenge is to care for yourself as lovingly as you care for others.
 
-Key strengths include compassion, reliability, and the ability to create harmony in their environment. They excel at making others feel loved and supported. Challenges may arise around perfectionism, over-giving, or difficulty accepting help.
+Key strengths include compassion, reliability, and the ability to create harmony in your environment. You excel at making others feel loved and supported. Challenges may arise around perfectionism, over-giving, or difficulty accepting help.
 
-This soul is here to teach the world about unconditional love and the beauty of service. Their presence creates a sense of home and belonging wherever they go.
+You are here to teach the world about unconditional love and the beauty of service. Your presence creates a sense of home and belonging wherever you go.
 
-Their greatest fulfillment comes through meaningful relationships and contributing to the well-being of their family and community. They are the heart of any group they belong to.`,
+Your greatest fulfillment comes through meaningful relationships and contributing to the well-being of your family and community. You are the heart of any group you belong to.`,
  strengths: ["Deep compassion", "Reliability", "Healing presence", "Ability to create harmony"],
  challenges: ["Perfectionism", "Over-giving", "Difficulty receiving", "Martyrdom"],
  advice: "Your loving nature is your gift. Remember that you cannot pour from an empty cup."
@@ -132,17 +132,17 @@ Their greatest fulfillment comes through meaningful relationships and contributi
  title: "The Seeker",
  keywords: ["Wisdom", "Introspection", "Spirituality", "Analysis"],
  summary: "A thoughtful soul destined to seek deeper truths.",
- reading: `This soul has arrived with a questioning mind and the mission of seeking deeper understanding. Life Path 7 indicates a destiny centered around wisdom, spirituality, and the pursuit of truth.
+ reading: `You have arrived with a questioning mind and the mission of seeking deeper understanding. Life Path 7 indicates a destiny centered around wisdom, spirituality, and the pursuit of truth.
 
-From early on, this individual will demonstrate a contemplative nature and a need for solitude. They are natural philosophers, drawn to questions about the meaning of life and the nature of reality.
+From early on, you will demonstrate a contemplative nature and a need for solitude. You are natural philosophers, drawn to questions about the meaning of life and the nature of reality.
 
-The journey of a Life Path 7 involves learning to balance their inner world with outer engagement. They are gifted analysts and researchers, capable of seeing patterns and connections that others miss. Their challenge is to share their insights rather than remaining isolated in their thoughts.
+The journey of a Life Path 7 involves learning to balance your inner world with outer engagement. You are gifted analysts and researchers, capable of seeing patterns and connections that others miss. Your challenge is to share your insights rather than remaining isolated in your thoughts.
 
-Key strengths include analytical ability, intuition, and depth of understanding. They excel in fields requiring research, analysis, or spiritual insight. Challenges may arise around isolation, skepticism, or difficulty connecting emotionally with others.
+Key strengths include analytical ability, intuition, and depth of understanding. You excel in fields requiring research, analysis, or spiritual insight. Challenges may arise around isolation, skepticism, or difficulty connecting emotionally with others.
 
-This soul is here to teach the world about the value of contemplation and the pursuit of wisdom. In a world focused on external achievement, they remind us of the importance of inner development.
+You are here to teach the world about the value of contemplation and the pursuit of wisdom. In a world focused on external achievement, you remind us of the importance of inner development.
 
-Their greatest fulfillment comes through understanding - whether through study, meditation, or direct spiritual experience. They are the seekers who illuminate the path for others.`,
+Your greatest fulfillment comes through understanding - whether through study, meditation, or direct spiritual experience. You are the seekers who illuminate the path for others.`,
  strengths: ["Analytical mind", "Intuition", "Depth of thought", "Spiritual awareness"],
  challenges: ["Isolation", "Over-thinking", "Emotional distance", "Perfectionism"],
  advice: "Your quest for truth is noble. Remember to share your wisdom and connect with others."
@@ -152,17 +152,17 @@ Their greatest fulfillment comes through understanding - whether through study, 
  title: "The Powerhouse",
  keywords: ["Achievement", "Abundance", "Authority", "Success"],
  summary: "An ambitious soul destined for material and spiritual mastery.",
- reading: `This soul has arrived with powerful energy and the mission of mastering the material world. Life Path 8 indicates a destiny centered around achievement, abundance, and the responsible use of power.
+ reading: `You have arrived with powerful energy and the mission of mastering the material world. Life Path 8 indicates a destiny centered around achievement, abundance, and the responsible use of power.
 
-From early on, this individual will demonstrate ambition and a natural understanding of how the material world works. They are drawn to positions of authority and have an innate ability to manifest their goals.
+From early on, you will demonstrate ambition and a natural understanding of how the material world works. You are drawn to positions of authority and have an innate ability to manifest your goals.
 
-The journey of a Life Path 8 involves learning to balance material success with spiritual values. They are natural leaders in business and finance, capable of building empires. Their challenge is to use their power for the greater good and to remember that true wealth includes more than money.
+The journey of a Life Path 8 involves learning to balance material success with spiritual values. You are natural leaders in business and finance, capable of building empires. Your challenge is to use your power for the greater good and to remember that true wealth includes more than money.
 
-Key strengths include determination, business acumen, and the ability to manifest abundance. They excel in leadership roles and have a natural authority that others respect. Challenges may arise around workaholism, materialism, or misuse of power.
+Key strengths include determination, business acumen, and the ability to manifest abundance. You excel in leadership roles and have a natural authority that others respect. Challenges may arise around workaholism, materialism, or misuse of power.
 
-This soul is here to teach the world about the responsible use of power and resources. They demonstrate that material success and spiritual integrity can coexist.
+You are here to teach the world about the responsible use of power and resources. You demonstrate that material success and spiritual integrity can coexist.
 
-Their greatest fulfillment comes through achievements that benefit not just themselves but others as well. They are meant to be stewards of resources, using their power to create positive change.`,
+Your greatest fulfillment comes through achievements that benefit not just yourself but others as well. You are meant to be stewards of resources, using your power to create positive change.`,
  strengths: ["Natural authority", "Business skills", "Determination", "Manifestation ability"],
  challenges: ["Workaholism", "Materialism", "Control issues", "Neglecting relationships"],
  advice: "Your power is meant to serve. Remember that true success includes love and fulfillment."
@@ -172,17 +172,17 @@ Their greatest fulfillment comes through achievements that benefit not just them
  title: "The Humanitarian",
  keywords: ["Compassion", "Wisdom", "Service", "Completion"],
  summary: "An old soul destined to serve humanity.",
- reading: `This person has arrived with deep wells of wisdom and the mission of serving humanity. Life Path 9 indicates a destiny centered around compassion, universal love, and contributing to the greater good.
+ reading: `You have arrived with deep wells of wisdom and the mission of serving humanity. Life Path 9 indicates a destiny centered around compassion, universal love, and contributing to the greater good.
 
-From early on, this individual will demonstrate unusual maturity and a concern for others that extends beyond their immediate circle. They seem to understand suffering and have a natural desire to alleviate it.
+From early on, you will demonstrate unusual maturity and a concern for others that extends beyond your immediate circle. You seem to understand suffering and have a natural desire to alleviate it.
 
-The journey of a Life Path 9 involves learning to balance their idealism with practical action. They are natural humanitarians, drawn to causes that benefit humanity as a whole. Their challenge is to release attachment to outcomes and trust in the larger plan.
+The journey of a Life Path 9 involves learning to balance your idealism with practical action. You are natural humanitarians, drawn to causes that benefit humanity as a whole. Your challenge is to release attachment to outcomes and trust in the larger plan.
 
-Key strengths include wisdom, compassion, and the ability to see the big picture. They excel in roles that allow them to make a difference on a large scale. Challenges may arise around disappointment with humanity, difficulty with personal relationships, or neglecting their own needs.
+Key strengths include wisdom, compassion, and the ability to see the big picture. You excel in roles that allow you to make a difference on a large scale. Challenges may arise around disappointment with humanity, difficulty with personal relationships, or neglecting your own needs.
 
-This soul is here to teach the world about unconditional love and the interconnectedness of all beings. They remind us that we are all part of one human family.
+You are here to teach the world about unconditional love and the interconnectedness of all beings. You remind us that we are all part of one human family.
 
-Their greatest fulfillment comes through service that transcends personal gain. They are the ones who leave the world better than they found it.`,
+Your greatest fulfillment comes through service that transcends personal gain. You are the ones who leave the world better than you found it.`,
  strengths: ["Universal compassion", "Wisdom", "Artistic talent", "Ability to inspire"],
  challenges: ["Idealism", "Difficulty with endings", "Scattered giving", "Personal neglect"],
  advice: "Your compassion is boundless. Remember to include yourself in the circle of your love."
@@ -192,17 +192,17 @@ Their greatest fulfillment comes through service that transcends personal gain. 
  title: "The Illuminator",
  keywords: ["Intuition", "Inspiration", "Spiritual Messenger", "Visionary"],
  summary: "A master soul destined to illuminate and inspire.",
- reading: `This soul has arrived with extraordinary spiritual gifts and the mission of illuminating the path for others. Life Path 11 is a Master Number, indicating a destiny of heightened intuition, inspiration, and spiritual leadership.
+ reading: `You have arrived with extraordinary spiritual gifts and the mission of illuminating the path for others. Life Path 11 is a Master Number, indicating a destiny of heightened intuition, inspiration, and spiritual leadership.
 
-From early on, this individual will demonstrate unusual sensitivity and awareness. They may seem to know things without being told and have experiences that others find difficult to understand.
+From early on, you will demonstrate unusual sensitivity and awareness. You may seem to know things without being told and have experiences that others find difficult to understand.
 
-The journey of a Life Path 11 involves learning to manage their heightened sensitivity while fulfilling their role as a spiritual messenger. They are natural channels for higher wisdom, capable of inspiring others through their words and presence.
+The journey of a Life Path 11 involves learning to manage your heightened sensitivity while fulfilling your role as a spiritual messenger. You are natural channels for higher wisdom, capable of inspiring others through your words and presence.
 
-Key strengths include powerful intuition, inspirational ability, and connection to higher realms. They excel in roles that allow them to share spiritual insights or creative visions. Challenges may arise around nervous tension, self-doubt, or difficulty grounding their visions in reality.
+Key strengths include powerful intuition, inspirational ability, and connection to higher realms. You excel in roles that allow you to share spiritual insights or creative visions. Challenges may arise around nervous tension, self-doubt, or difficulty grounding your visions in reality.
 
-This soul is here to teach the world about the reality of the spiritual dimension and the power of inspiration. They are bridges between the seen and unseen worlds.
+You are here to teach the world about the reality of the spiritual dimension and the power of inspiration. You are bridges between the seen and unseen worlds.
 
-Their greatest fulfillment comes through sharing their insights in ways that uplift and inspire others. They are meant to be beacons of light in times of darkness.`,
+Your greatest fulfillment comes through sharing your insights in ways that uplift and inspire others. You are meant to be beacons of light in times of darkness.`,
  strengths: ["Powerful intuition", "Inspirational presence", "Spiritual awareness", "Creative vision"],
  challenges: ["Nervous tension", "Self-doubt", "Difficulty grounding", "Overwhelm"],
  advice: "Your sensitivity is your gift. Learn to ground your visions and trust your inner knowing."
@@ -212,17 +212,17 @@ Their greatest fulfillment comes through sharing their insights in ways that upl
  title: "The Master Builder",
  keywords: ["Vision", "Manifestation", "Legacy", "Global Impact"],
  summary: "A master soul destined to build lasting legacies.",
- reading: `This soul has arrived with the rare ability to turn grand visions into reality. Life Path 22 is a Master Number, indicating a destiny of building structures and systems that benefit humanity on a large scale.
+ reading: `You have arrived with the rare ability to turn grand visions into reality. Life Path 22 is a Master Number, indicating a destiny of building structures and systems that benefit humanity on a large scale.
 
-From early on, this individual will demonstrate both visionary thinking and practical ability. They have the rare combination of being able to see the big picture while also understanding the steps needed to get there.
+From early on, you will demonstrate both visionary thinking and practical ability. You have the rare combination of being able to see the big picture while also understanding the steps needed to get there.
 
-The journey of a Life Path 22 involves learning to manage the enormous potential they carry. They are capable of achievements that seem impossible to others, but this potential comes with great responsibility and pressure.
+The journey of a Life Path 22 involves learning to manage the enormous potential you carry. You are capable of achievements that seem impossible to others, but this potential comes with great responsibility and pressure.
 
-Key strengths include visionary thinking, organizational ability, and the power to manifest on a large scale. They excel in roles that allow them to build lasting structures or systems. Challenges may arise around the pressure of their potential, workaholism, or difficulty with the mundane aspects of life.
+Key strengths include visionary thinking, organizational ability, and the power to manifest on a large scale. You excel in roles that allow you to build lasting structures or systems. Challenges may arise around the pressure of your potential, workaholism, or difficulty with the mundane aspects of life.
 
-This soul is here to teach the world about the power of combining vision with practical action. They demonstrate that dreams can become reality through dedicated effort.
+You are here to teach the world about the power of combining vision with practical action. You demonstrate that dreams can become reality through dedicated effort.
 
-Their greatest fulfillment comes through creating something of lasting value that benefits many people. They are the architects of a better world.`,
+Your greatest fulfillment comes through creating something of lasting value that benefits many people. You are the architects of a better world.`,
  strengths: ["Visionary thinking", "Practical ability", "Leadership", "Manifestation power"],
  challenges: ["Pressure of potential", "Workaholism", "Impatience", "Overwhelm"],
  advice: "Your potential is extraordinary. Remember to pace yourself and celebrate small victories."
@@ -232,17 +232,17 @@ Their greatest fulfillment comes through creating something of lasting value tha
  title: "The Master Teacher",
  keywords: ["Healing", "Teaching", "Selfless Service", "Spiritual Mastery"],
  summary: "A master soul destined to heal and teach through love.",
- reading: `This soul has arrived with the highest vibration of love and the mission of healing and teaching through selfless service. Life Path 33 is the rarest Master Number, indicating a destiny of spiritual mastery and profound service to humanity.
+ reading: `You have arrived with the highest vibration of love and the mission of healing and teaching through selfless service. Life Path 33 is the rarest Master Number, indicating a destiny of spiritual mastery and profound service to humanity.
 
-From early on, this individual will demonstrate extraordinary compassion and a natural ability to heal others through their presence alone. They seem to carry a light that others are drawn to.
+From early on, you will demonstrate extraordinary compassion and a natural ability to heal others through your presence alone. You seem to carry a light that others are drawn to.
 
-The journey of a Life Path 33 involves learning to embody unconditional love while maintaining healthy boundaries. They are natural healers and teachers, capable of transforming lives through their example and guidance.
+The journey of a Life Path 33 involves learning to embody unconditional love while maintaining healthy boundaries. You are natural healers and teachers, capable of transforming lives through your example and guidance.
 
-Key strengths include healing presence, teaching ability, and the capacity for unconditional love. They excel in roles that allow them to serve and uplift others. Challenges may arise around martyrdom, difficulty with personal needs, or the weight of others' expectations.
+Key strengths include healing presence, teaching ability, and the capacity for unconditional love. You excel in roles that allow you to serve and uplift others. Challenges may arise around martyrdom, difficulty with personal needs, or the weight of others' expectations.
 
-This soul is here to teach the world about the transformative power of love. They demonstrate that healing happens through presence and compassion.
+You are here to teach the world about the transformative power of love. You demonstrate that healing happens through presence and compassion.
 
-Their greatest fulfillment comes through service that transforms lives. They are the embodiment of love in action.`,
+Your greatest fulfillment comes through service that transforms lives. You are the embodiment of love in action.`,
  strengths: ["Healing presence", "Teaching ability", "Unconditional love", "Spiritual wisdom"],
  challenges: ["Martyrdom", "Self-neglect", "Overwhelming responsibility", "High expectations"],
  advice: "Your love is transformative. Remember that you too deserve the love you give so freely."
@@ -260,17 +260,17 @@ var SUN_SIGN_READINGS = {
  ruling: "Mars",
  keywords: ["Courage", "Initiative", "Energy", "Leadership"],
  summary: "Bold, energetic, and always ready to take the lead.",
- reading: `Born under the sign of the Ram, this soul carries the fire of new beginnings and the courage to charge forward where others hesitate. Aries energy is pure initiative - the spark that starts the fire, the first brave step into unknown territory.
+ reading: `Born under the sign of the Ram, you carry the fire of new beginnings and the courage to charge forward where others hesitate. Aries energy is pure initiative - the spark that starts the fire, the first brave step into unknown territory.
 
-This placement brings natural leadership abilities and an infectious enthusiasm for life. There's a pioneering spirit here, a willingness to be first and to blaze trails for others to follow. Competition energizes rather than intimidates.
+You have natural leadership abilities and an infectious enthusiasm for life. There's a pioneering spirit here, a willingness to be first and to blaze trails for others to follow. Competition energizes rather than intimidates.
 
 The Aries nature is direct and honest, sometimes to a fault. There's little patience for games or manipulation - what you see is what you get. This authenticity is refreshing in a world of pretense.
 
 Challenges may arise around impulsiveness, impatience, or difficulty seeing projects through to completion. The excitement of starting something new can overshadow the satisfaction of finishing. Learning to pace that abundant energy is a lifelong lesson.
 
-In relationships, Aries brings passion and excitement. They need partners who can match their energy and appreciate their independence. Boredom is the enemy - they thrive with someone who keeps life interesting.
+In relationships, Aries brings passion and excitement. You need partners who can match your energy and appreciate your independence. Boredom is the enemy - you thrive with someone who keeps life interesting.
 
-This soul is here to teach others about courage and the power of taking action. They remind us that sometimes the best strategy is simply to begin.`,
+You are here to teach others about courage and the power of taking action. You remind us that sometimes the best strategy is simply to begin.`,
  strengths: ["Courage", "Leadership", "Enthusiasm", "Honesty"],
  challenges: ["Impulsiveness", "Impatience", "Self-centeredness", "Quick temper"]
  },
@@ -280,18 +280,18 @@ This soul is here to teach others about courage and the power of taking action. 
  element: "Earth",
  ruling: "Venus",
  keywords: ["Stability", "Sensuality", "Patience", "Determination"],
- summary: "Grounded, sensual, and steadfast in their pursuits.",
- reading: `Born under the sign of the Bull, this soul carries the energy of the earth itself - stable, patient, and deeply connected to the physical world. Taurus energy is about building, sustaining, and appreciating the beauty of material existence.
+ summary: "Grounded, sensual, and steadfast in your pursuits.",
+ reading: `Born under the sign of the Bull, you carry the energy of the earth itself - stable, patient, and deeply connected to the physical world. Taurus energy is about building, sustaining, and appreciating the beauty of material existence.
 
-This placement brings a natural appreciation for comfort, beauty, and the finer things in life. There's an innate understanding that life is meant to be enjoyed through the senses - good food, beautiful surroundings, physical affection.
+You have a natural appreciation for comfort, beauty, and the finer things in life. There's an innate understanding that life is meant to be enjoyed through the senses - good food, beautiful surroundings, physical affection.
 
-The Taurus nature is reliable and determined. Once committed to a path, they see it through with remarkable persistence. They are the ones who show up, day after day, building something lasting through steady effort.
+The Taurus nature is reliable and determined. Once committed to a path, you see it through with remarkable persistence. You are the ones who show up, day after day, building something lasting through steady effort.
 
-Challenges may arise around stubbornness, resistance to change, or becoming too attached to comfort and security. The desire for stability can sometimes become rigidity. Learning to embrace necessary changes is part of their growth.
+Challenges may arise around stubbornness, resistance to change, or becoming too attached to comfort and security. The desire for stability can sometimes become rigidity. Learning to embrace necessary changes is part of your growth.
 
-In relationships, Taurus brings loyalty and sensuality. They need partners who appreciate their steady nature and share their values around security and comfort. Trust is built slowly but runs deep.
+In relationships, Taurus brings loyalty and sensuality. You need partners who appreciate your steady nature and share your values around security and comfort. Trust is built slowly but runs deep.
 
-This soul is here to teach others about the value of patience and the beauty of the physical world. They remind us that lasting success is built through consistent effort.`,
+You are here to teach others about the value of patience and the beauty of the physical world. You remind us that lasting success is built through consistent effort.`,
  strengths: ["Reliability", "Patience", "Sensuality", "Determination"],
  challenges: ["Stubbornness", "Possessiveness", "Resistance to change", "Materialism"]
  },
@@ -302,17 +302,17 @@ This soul is here to teach others about the value of patience and the beauty of 
  ruling: "Mercury",
  keywords: ["Communication", "Curiosity", "Adaptability", "Intelligence"],
  summary: "Quick-witted, curious, and endlessly communicative.",
- reading: `Born under the sign of the Twins, this soul carries the energy of the eternal student - curious, communicative, and endlessly fascinated by the world of ideas. Gemini energy is about connection, learning, and sharing information.
+ reading: `Born under the sign of the Twins, you carry the energy of the eternal student - curious, communicative, and endlessly fascinated by the world of ideas. Gemini energy is about connection, learning, and sharing information.
 
-This placement brings natural communication abilities and a quick, agile mind. There's an insatiable curiosity here, a need to know a little about everything. Boredom is the enemy - variety is essential for happiness.
+You have natural communication abilities and a quick, agile mind. There's an insatiable curiosity here, a need to know a little about everything. Boredom is the enemy - variety is essential for happiness.
 
-The Gemini nature is adaptable and social. They can talk to anyone about anything and have a gift for making connections between seemingly unrelated ideas. Their minds work quickly, often juggling multiple thoughts simultaneously.
+The Gemini nature is adaptable and social. You can talk to anyone about anything and have a gift for making connections between seemingly unrelated ideas. Your minds work quickly, often juggling multiple thoughts simultaneously.
 
-Challenges may arise around inconsistency, superficiality, or difficulty with commitment. The love of variety can sometimes prevent deep mastery of any one thing. Learning to focus and follow through is part of their growth.
+Challenges may arise around inconsistency, superficiality, or difficulty with commitment. The love of variety can sometimes prevent deep mastery of any one thing. Learning to focus and follow through is part of your growth.
 
-In relationships, Gemini brings intellectual stimulation and fun. They need partners who can engage their minds and appreciate their need for variety and social connection. Communication is the foundation of their bonds.
+In relationships, Gemini brings intellectual stimulation and fun. You need partners who can engage your minds and appreciate your need for variety and social connection. Communication is the foundation of your bonds.
 
-This soul is here to teach others about the power of communication and the joy of learning. They remind us that life is endlessly interesting when we stay curious.`,
+You are here to teach others about the power of communication and the joy of learning. You remind us that life is endlessly interesting when we stay curious.`,
  strengths: ["Communication", "Adaptability", "Intelligence", "Wit"],
  challenges: ["Inconsistency", "Superficiality", "Restlessness", "Indecision"]
  },
@@ -323,17 +323,17 @@ This soul is here to teach others about the power of communication and the joy o
  ruling: "Moon",
  keywords: ["Nurturing", "Emotion", "Protection", "Intuition"],
  summary: "Deeply caring, intuitive, and protective of loved ones.",
- reading: `Born under the sign of the Crab, this soul carries the energy of the Great Mother - nurturing, protective, and deeply connected to the emotional realm. Cancer energy is about home, family, and the bonds that sustain us.
+ reading: `Born under the sign of the Crab, you carry the energy of the Great Mother - nurturing, protective, and deeply connected to the emotional realm. Cancer energy is about home, family, and the bonds that sustain us.
 
-This placement brings natural nurturing abilities and profound emotional intelligence. There's an intuitive understanding of others' needs and a genuine desire to provide comfort and security.
+You have natural nurturing abilities and profound emotional intelligence. There's an intuitive understanding of others' needs and a genuine desire to provide comfort and security.
 
-The Cancer nature is sensitive and caring. They create home wherever they go, making others feel safe and welcomed. Their memory for emotional experiences is remarkable - they never forget how someone made them feel.
+The Cancer nature is sensitive and caring. You create home wherever you go, making others feel safe and welcomed. Your memory for emotional experiences is remarkable - you never forget how someone made you feel.
 
-Challenges may arise around moodiness, over-sensitivity, or difficulty letting go of the past. The protective shell can sometimes become a prison. Learning to balance self-protection with openness is part of their growth.
+Challenges may arise around moodiness, over-sensitivity, or difficulty letting go of the past. The protective shell can sometimes become a prison. Learning to balance self-protection with openness is part of your growth.
 
-In relationships, Cancer brings deep devotion and emotional depth. They need partners who appreciate their sensitivity and can provide the security they crave. Family and home life are central to their happiness.
+In relationships, Cancer brings deep devotion and emotional depth. You need partners who appreciate your sensitivity and can provide the security you crave. Family and home life are central to your happiness.
 
-This soul is here to teach others about the importance of emotional bonds and the power of nurturing. They remind us that we all need a safe harbor.`,
+You are here to teach others about the importance of emotional bonds and the power of nurturing. You remind us that we all need a safe harbor.`,
  strengths: ["Nurturing", "Intuition", "Loyalty", "Emotional depth"],
  challenges: ["Moodiness", "Over-sensitivity", "Clinginess", "Living in the past"]
  },
@@ -344,17 +344,17 @@ This soul is here to teach others about the importance of emotional bonds and th
  ruling: "Sun",
  keywords: ["Creativity", "Leadership", "Generosity", "Drama"],
  summary: "Radiant, creative, and born to shine.",
- reading: `Born under the sign of the Lion, this soul carries the energy of the Sun itself - radiant, creative, and naturally commanding attention. Leo energy is about self-expression, creativity, and the courage to be seen.
+ reading: `Born under the sign of the Lion, you carry the energy of the Sun itself - radiant, creative, and naturally commanding attention. Leo energy is about self-expression, creativity, and the courage to be seen.
 
-This placement brings natural charisma and creative abilities. There's a warmth here that draws others in, a generous spirit that wants to share the spotlight and lift others up.
+You have natural charisma and creative abilities. There's a warmth here that draws others in, a generous spirit that wants to share the spotlight and lift others up.
 
-The Leo nature is confident and expressive. They have a gift for making life feel more dramatic and exciting. Their enthusiasm is contagious, and their loyalty to loved ones is fierce.
+The Leo nature is confident and expressive. You have a gift for making life feel more dramatic and exciting. Your enthusiasm is contagious, and your loyalty to loved ones is fierce.
 
-Challenges may arise around ego, need for attention, or difficulty accepting criticism. The desire to shine can sometimes overshadow others. Learning to share the stage gracefully is part of their growth.
+Challenges may arise around ego, need for attention, or difficulty accepting criticism. The desire to shine can sometimes overshadow others. Learning to share the stage gracefully is part of your growth.
 
-In relationships, Leo brings passion, romance, and generosity. They need partners who appreciate their need for admiration and can match their warmth. Love should feel like a grand adventure.
+In relationships, Leo brings passion, romance, and generosity. You need partners who appreciate your need for admiration and can match your warmth. Love should feel like a grand adventure.
 
-This soul is here to teach others about the courage to be authentically themselves. They remind us that we all have an inner light meant to shine.`,
+You are here to teach others about the courage to be authentically yourself. You remind us that we all have an inner light meant to shine.`,
  strengths: ["Creativity", "Generosity", "Leadership", "Warmth"],
  challenges: ["Pride", "Need for attention", "Stubbornness", "Dramatic reactions"]
  },
@@ -365,17 +365,17 @@ This soul is here to teach others about the courage to be authentically themselv
  ruling: "Mercury",
  keywords: ["Analysis", "Service", "Perfectionism", "Health"],
  summary: "Analytical, helpful, and dedicated to improvement.",
- reading: `Born under the sign of the Virgin, this soul carries the energy of the sacred servant - analytical, helpful, and dedicated to making things better. Virgo energy is about refinement, service, and the pursuit of excellence.
+ reading: `Born under the sign of the Virgin, you carry the energy of the sacred servant - analytical, helpful, and dedicated to making things better. Virgo energy is about refinement, service, and the pursuit of excellence.
 
-This placement brings natural analytical abilities and a keen eye for detail. There's a genuine desire to be useful, to contribute something of value, to help systems and people function better.
+You have natural analytical abilities and a keen eye for detail. There's a genuine desire to be useful, to contribute something of value, to help systems and people function better.
 
-The Virgo nature is practical and discerning. They see what needs improvement and have the skills to make it happen. Their standards are high, first and foremost for themselves.
+The Virgo nature is practical and discerning. You see what needs improvement and have the skills to make it happen. Your standards are high, first and foremost for yourself.
 
-Challenges may arise around perfectionism, criticism, or anxiety about not being good enough. The desire for improvement can become obsessive. Learning to accept imperfection is part of their growth.
+Challenges may arise around perfectionism, criticism, or anxiety about not being good enough. The desire for improvement can become obsessive. Learning to accept imperfection is part of your growth.
 
-In relationships, Virgo brings devotion and practical support. They need partners who appreciate their helpful nature and don't mistake their suggestions for criticism. Love is shown through acts of service.
+In relationships, Virgo brings devotion and practical support. You need partners who appreciate your helpful nature and don't mistake your suggestions for criticism. Love is shown through acts of service.
 
-This soul is here to teach others about the sacred nature of service and the beauty of attention to detail. They remind us that small improvements add up to transformation.`,
+You are here to teach others about the sacred nature of service and the beauty of attention to detail. You remind us that small improvements add up to transformation.`,
  strengths: ["Analytical mind", "Helpfulness", "Attention to detail", "Practicality"],
  challenges: ["Perfectionism", "Over-criticism", "Anxiety", "Self-doubt"]
  },
@@ -386,17 +386,17 @@ This soul is here to teach others about the sacred nature of service and the bea
  ruling: "Venus",
  keywords: ["Balance", "Harmony", "Partnership", "Beauty"],
  summary: "Diplomatic, artistic, and devoted to harmony.",
- reading: `Born under the sign of the Scales, this soul carries the energy of the peacemaker - diplomatic, artistic, and devoted to creating harmony. Libra energy is about balance, beauty, and the art of relationship.
+ reading: `Born under the sign of the Scales, you carry the energy of the peacemaker - diplomatic, artistic, and devoted to creating harmony. Libra energy is about balance, beauty, and the art of relationship.
 
-This placement brings natural diplomatic abilities and an aesthetic sensibility. There's an innate understanding of how to bring people together and create environments of beauty and peace.
+You have natural diplomatic abilities and an aesthetic sensibility. There's an innate understanding of how to bring people together and create environments of beauty and peace.
 
-The Libra nature is gracious and fair-minded. They see all sides of every situation and genuinely want everyone to be happy. Their charm opens doors and smooths conflicts.
+The Libra nature is gracious and fair-minded. You see all sides of every situation and genuinely want everyone to be happy. Your charm opens doors and smooths conflicts.
 
-Challenges may arise around indecision, people-pleasing, or avoiding necessary conflict. The desire for harmony can sometimes mean sacrificing authenticity. Learning to take a stand is part of their growth.
+Challenges may arise around indecision, people-pleasing, or avoiding necessary conflict. The desire for harmony can sometimes mean sacrificing authenticity. Learning to take a stand is part of your growth.
 
-In relationships, Libra brings romance and partnership skills. They need partners who value harmony and can engage in the dance of give and take. Relationship is their natural habitat.
+In relationships, Libra brings romance and partnership skills. You need partners who value harmony and can engage in the dance of give and take. Relationship is your natural habitat.
 
-This soul is here to teach others about the art of balance and the importance of beauty. They remind us that peace is worth working for.`,
+You are here to teach others about the art of balance and the importance of beauty. You remind us that peace is worth working for.`,
  strengths: ["Diplomacy", "Fairness", "Charm", "Artistic sense"],
  challenges: ["Indecision", "People-pleasing", "Conflict avoidance", "Superficiality"]
  },
@@ -407,17 +407,17 @@ This soul is here to teach others about the art of balance and the importance of
  ruling: "Pluto",
  keywords: ["Intensity", "Transformation", "Power", "Mystery"],
  summary: "Intense, transformative, and deeply perceptive.",
- reading: `Born under the sign of the Scorpion, this soul carries the energy of transformation - intense, perceptive, and unafraid of life's depths. Scorpio energy is about power, regeneration, and the courage to face what others avoid.
+ reading: `Born under the sign of the Scorpion, you carry the energy of transformation - intense, perceptive, and unafraid of life's depths. Scorpio energy is about power, regeneration, and the courage to face what others avoid.
 
-This placement brings natural psychological insight and emotional intensity. There's an ability to see beneath surfaces, to understand hidden motivations, to perceive what others try to hide.
+You have natural psychological insight and emotional intensity. There's an ability to see beneath surfaces, to understand hidden motivations, to perceive what others try to hide.
 
-The Scorpio nature is passionate and determined. When they commit to something, they do so completely. Their loyalty is fierce, and their capacity for transformation is remarkable.
+The Scorpio nature is passionate and determined. When you commit to something, you do so completely. Your loyalty is fierce, and your capacity for transformation is remarkable.
 
-Challenges may arise around control, jealousy, or difficulty letting go. The intensity can sometimes become obsession. Learning to trust and release is part of their growth.
+Challenges may arise around control, jealousy, or difficulty letting go. The intensity can sometimes become obsession. Learning to trust and release is part of your growth.
 
-In relationships, Scorpio brings depth and passion. They need partners who can handle intensity and aren't afraid of emotional truth. Surface connections hold no interest.
+In relationships, Scorpio brings depth and passion. You need partners who can handle intensity and aren't afraid of emotional truth. Surface connections hold no interest.
 
-This soul is here to teach others about the power of transformation and the courage to face darkness. They remind us that from death comes rebirth.`,
+You are here to teach others about the power of transformation and the courage to face darkness. You remind us that from death comes rebirth.`,
  strengths: ["Perception", "Determination", "Passion", "Transformative power"],
  challenges: ["Jealousy", "Control issues", "Secretiveness", "Intensity"]
  },
@@ -428,17 +428,17 @@ This soul is here to teach others about the power of transformation and the cour
  ruling: "Jupiter",
  keywords: ["Adventure", "Philosophy", "Freedom", "Optimism"],
  summary: "Adventurous, philosophical, and eternally optimistic.",
- reading: `Born under the sign of the Archer, this soul carries the energy of the eternal seeker - adventurous, philosophical, and always aiming for something higher. Sagittarius energy is about expansion, truth, and the joy of the journey.
+ reading: `Born under the sign of the Archer, you carry the energy of the eternal seeker - adventurous, philosophical, and always aiming for something higher. Sagittarius energy is about expansion, truth, and the joy of the journey.
 
-This placement brings natural optimism and a love of adventure. There's an insatiable curiosity about the world, a need to explore both physical territories and realms of thought.
+You have natural optimism and a love of adventure. There's an insatiable curiosity about the world, a need to explore both physical territories and realms of thought.
 
-The Sagittarius nature is honest and enthusiastic. They say what they mean and mean what they say. Their faith in life's possibilities is contagious.
+The Sagittarius nature is honest and enthusiastic. You say what you mean and mean what you say. Your faith in life's possibilities is contagious.
 
-Challenges may arise around restlessness, tactlessness, or difficulty with commitment. The love of freedom can sometimes mean avoiding responsibility. Learning to balance adventure with stability is part of their growth.
+Challenges may arise around restlessness, tactlessness, or difficulty with commitment. The love of freedom can sometimes mean avoiding responsibility. Learning to balance adventure with stability is part of your growth.
 
-In relationships, Sagittarius brings fun and growth. They need partners who share their love of adventure and can give them space to explore. Love should expand horizons.
+In relationships, Sagittarius brings fun and growth. You need partners who share your love of adventure and can give you space to explore. Love should expand horizons.
 
-This soul is here to teach others about the joy of seeking and the importance of faith. They remind us that life is an adventure meant to be embraced.`,
+You are here to teach others about the joy of seeking and the importance of faith. You remind us that life is an adventure meant to be embraced.`,
  strengths: ["Optimism", "Honesty", "Adventure", "Philosophical mind"],
  challenges: ["Restlessness", "Tactlessness", "Commitment issues", "Over-promising"]
  },
@@ -449,17 +449,17 @@ This soul is here to teach others about the joy of seeking and the importance of
  ruling: "Saturn",
  keywords: ["Ambition", "Discipline", "Responsibility", "Achievement"],
  summary: "Ambitious, disciplined, and built for success.",
- reading: `Born under the sign of the Sea-Goat, this soul carries the energy of the master achiever - ambitious, disciplined, and determined to reach the summit. Capricorn energy is about structure, responsibility, and the rewards of persistent effort.
+ reading: `Born under the sign of the Sea-Goat, you carry the energy of the master achiever - ambitious, disciplined, and determined to reach the summit. Capricorn energy is about structure, responsibility, and the rewards of persistent effort.
 
-This placement brings natural organizational abilities and a strong work ethic. There's an understanding that success comes through dedication and that shortcuts rarely lead to lasting achievement.
+You have natural organizational abilities and a strong work ethic. There's an understanding that success comes through dedication and that shortcuts rarely lead to lasting achievement.
 
-The Capricorn nature is responsible and mature. They take their commitments seriously and can be counted on to deliver. Their patience for long-term goals is remarkable.
+The Capricorn nature is responsible and mature. You take your commitments seriously and can be counted on to deliver. Your patience for long-term goals is remarkable.
 
-Challenges may arise around workaholism, pessimism, or difficulty relaxing. The focus on achievement can sometimes mean neglecting other aspects of life. Learning to balance work with play is part of their growth.
+Challenges may arise around workaholism, pessimism, or difficulty relaxing. The focus on achievement can sometimes mean neglecting other aspects of life. Learning to balance work with play is part of your growth.
 
-In relationships, Capricorn brings stability and commitment. They need partners who appreciate their dedication and share their values around building a secure future. Love is demonstrated through reliability.
+In relationships, Capricorn brings stability and commitment. You need partners who appreciate your dedication and share your values around building a secure future. Love is demonstrated through reliability.
 
-This soul is here to teach others about the value of discipline and the satisfaction of earned success. They remind us that mountains are climbed one step at a time.`,
+You are here to teach others about the value of discipline and the satisfaction of earned success. You remind us that mountains are climbed one step at a time.`,
  strengths: ["Discipline", "Ambition", "Reliability", "Patience"],
  challenges: ["Workaholism", "Pessimism", "Rigidity", "Emotional reserve"]
  },
@@ -470,17 +470,17 @@ This soul is here to teach others about the value of discipline and the satisfac
  ruling: "Uranus",
  keywords: ["Innovation", "Humanity", "Independence", "Originality"],
  summary: "Innovative, humanitarian, and delightfully unconventional.",
- reading: `Born under the sign of the Water Bearer, this soul carries the energy of the visionary - innovative, humanitarian, and unafraid to be different. Aquarius energy is about progress, community, and the courage to think outside the box.
+ reading: `Born under the sign of the Water Bearer, you carry the energy of the visionary - innovative, humanitarian, and unafraid to be different. Aquarius energy is about progress, community, and the courage to think outside the box.
 
-This placement brings natural inventiveness and a concern for humanity. There's an ability to see future possibilities and a genuine desire to make the world better for everyone.
+You have natural inventiveness and a concern for humanity. There's an ability to see future possibilities and a genuine desire to make the world better for everyone.
 
-The Aquarius nature is independent and original. They march to their own drum and inspire others to question convention. Their friendships span diverse groups and backgrounds.
+The Aquarius nature is independent and original. You march to your own drum and inspire others to question convention. Your friendships span diverse groups and backgrounds.
 
-Challenges may arise around emotional detachment, rebelliousness, or difficulty with intimacy. The focus on humanity can sometimes mean neglecting individual relationships. Learning to balance the universal with the personal is part of their growth.
+Challenges may arise around emotional detachment, rebelliousness, or difficulty with intimacy. The focus on humanity can sometimes mean neglecting individual relationships. Learning to balance the universal with the personal is part of your growth.
 
-In relationships, Aquarius brings friendship and intellectual stimulation. They need partners who respect their independence and share their ideals. Love should feel like a meeting of minds.
+In relationships, Aquarius brings friendship and intellectual stimulation. You need partners who respect your independence and share your ideals. Love should feel like a meeting of minds.
 
-This soul is here to teach others about the power of innovation and the importance of community. They remind us that progress requires those willing to be different.`,
+You are here to teach others about the power of innovation and the importance of community. You remind us that progress requires those willing to be different.`,
  strengths: ["Innovation", "Humanitarianism", "Independence", "Originality"],
  challenges: ["Emotional detachment", "Rebelliousness", "Unpredictability", "Aloofness"]
  },
@@ -491,17 +491,17 @@ This soul is here to teach others about the power of innovation and the importan
  ruling: "Neptune",
  keywords: ["Intuition", "Compassion", "Creativity", "Spirituality"],
  summary: "Intuitive, compassionate, and deeply spiritual.",
- reading: `Born under the sign of the Fish, this soul carries the energy of the mystic - intuitive, compassionate, and connected to realms beyond the physical. Pisces energy is about spiritual depth, creativity, and the softening of boundaries.
+ reading: `Born under the sign of the Fish, you carry the energy of the mystic - intuitive, compassionate, and connected to realms beyond the physical. Pisces energy is about spiritual depth, creativity, and the softening of boundaries.
 
-This placement brings natural psychic sensitivity and artistic abilities. There's a direct line to the collective unconscious, an ability to tap into universal feelings and express them through creative work.
+You have natural psychic sensitivity and artistic abilities. There's a direct line to the collective unconscious, an ability to tap into universal feelings and express you through creative work.
 
-The Pisces nature is gentle and empathetic. They feel others' pain as their own and have a natural desire to heal and comfort. Their imagination knows no bounds.
+The Pisces nature is gentle and empathetic. You feel others' pain as your own and have a natural desire to heal and comfort. Your imagination knows no bounds.
 
-Challenges may arise around boundaries, escapism, or difficulty with practical matters. The sensitivity can sometimes become overwhelming. Learning to protect their energy while staying open is part of their growth.
+Challenges may arise around boundaries, escapism, or difficulty with practical matters. The sensitivity can sometimes become overwhelming. Learning to protect your energy while staying open is part of your growth.
 
-In relationships, Pisces brings romance and spiritual connection. They need partners who appreciate their sensitivity and can help ground their dreams. Love should feel transcendent.
+In relationships, Pisces brings romance and spiritual connection. You need partners who appreciate your sensitivity and can help ground your dreams. Love should feel transcendent.
 
-This soul is here to teach others about compassion and the reality of the unseen world. They remind us that we are all connected in ways beyond our understanding.`,
+You are here to teach others about compassion and the reality of the unseen world. You remind us that we are all connected in ways beyond our understanding.`,
  strengths: ["Intuition", "Compassion", "Creativity", "Spiritual awareness"],
  challenges: ["Escapism", "Boundary issues", "Over-sensitivity", "Impracticality"]
  }
@@ -517,13 +517,13 @@ var CHINESE_ZODIAC_READINGS = {
  yin_yang: "Yang",
  keywords: ["Clever", "Quick-witted", "Resourceful", "Versatile"],
  summary: "Intelligent and adaptable, with natural charm.",
- reading: `Born in the Year of the Rat, this soul carries the energy of the clever survivor - quick-witted, resourceful, and naturally charming. The Rat is the first animal in the Chinese zodiac, symbolizing new beginnings and initiative.
+ reading: `Born in the Year of the Rat, you carry the energy of the clever survivor - quick-witted, resourceful, and naturally charming. The Rat is the first animal in the Chinese zodiac, symbolizing new beginnings and initiative.
 
 Rat energy brings natural intelligence and adaptability. There's an ability to find opportunities where others see obstacles, to make the most of any situation through wit and resourcefulness.
 
-Those born under this sign are often successful in business and social situations. They have a natural charm that opens doors and a quick mind that spots opportunities. Their instincts for survival and success are strong.
+Those born under this sign are often successful in business and social situations. You have a natural charm that opens doors and a quick mind that spots opportunities. Your instincts for survival and success are strong.
 
-In relationships, Rats are devoted to family and close friends. They may have a wide social circle but reserve their deepest loyalty for their inner circle. They need partners who appreciate their cleverness and can keep up with their active minds.`,
+In relationships, Rats are devoted to family and close friends. You may have a wide social circle but reserve your deepest loyalty for your inner circle. You need partners who appreciate your cleverness and can keep up with your active minds.`,
  strengths: ["Intelligence", "Adaptability", "Charm", "Resourcefulness"],
  challenges: ["Opportunism", "Restlessness", "Stubbornness", "Critical nature"]
  },
@@ -533,13 +533,13 @@ In relationships, Rats are devoted to family and close friends. They may have a 
  yin_yang: "Yin",
  keywords: ["Diligent", "Dependable", "Strong", "Determined"],
  summary: "Hardworking and reliable, with quiet strength.",
- reading: `Born in the Year of the Ox, this soul carries the energy of the steadfast worker - diligent, dependable, and possessed of quiet strength. The Ox represents the value of hard work and the rewards of patience.
+ reading: `Born in the Year of the Ox, you carry the energy of the steadfast worker - diligent, dependable, and possessed of quiet strength. The Ox represents the value of hard work and the rewards of patience.
 
 Ox energy brings natural determination and reliability. There's an ability to work steadily toward goals without needing recognition or praise. Success comes through persistent effort rather than luck or shortcuts.
 
-Those born under this sign are often the backbone of any organization or family. They can be counted on to show up and do what needs to be done. Their strength is quiet but immense.
+Those born under this sign are often the backbone of any organization or family. You can be counted on to show up and do what needs to be done. Your strength is quiet but immense.
 
-In relationships, Oxen are loyal and devoted. They may not be the most expressive, but their commitment runs deep. They need partners who appreciate their steady nature and don't mistake quietness for lack of feeling.`,
+In relationships, Oxen are loyal and devoted. You may not be the most expressive, but your commitment runs deep. You need partners who appreciate your steady nature and don't mistake quietness for lack of feeling.`,
  strengths: ["Reliability", "Patience", "Strength", "Determination"],
  challenges: ["Stubbornness", "Rigidity", "Difficulty expressing emotions", "Resistance to change"]
  },
@@ -549,13 +549,13 @@ In relationships, Oxen are loyal and devoted. They may not be the most expressiv
  yin_yang: "Yang",
  keywords: ["Brave", "Competitive", "Confident", "Charismatic"],
  summary: "Bold and magnetic, with natural leadership.",
- reading: `Born in the Year of the Tiger, this soul carries the energy of the fearless leader - brave, competitive, and naturally magnetic. The Tiger represents courage, power, and the willingness to take risks.
+ reading: `Born in the Year of the Tiger, you carry the energy of the fearless leader - brave, competitive, and naturally magnetic. The Tiger represents courage, power, and the willingness to take risks.
 
 Tiger energy brings natural confidence and charisma. There's an ability to inspire others and lead by example. Fear is felt but not allowed to prevent action.
 
-Those born under this sign are often found in leadership positions or pursuing ambitious goals. They have a presence that commands attention and respect. Their enthusiasm is contagious.
+Those born under this sign are often found in leadership positions or pursuing ambitious goals. You have a presence that commands attention and respect. Your enthusiasm is contagious.
 
-In relationships, Tigers are passionate and protective. They need partners who can handle their intensity and appreciate their need for independence. Love with a Tiger is never boring.`,
+In relationships, Tigers are passionate and protective. You need partners who can handle your intensity and appreciate your need for independence. Love with a Tiger is never boring.`,
  strengths: ["Courage", "Confidence", "Leadership", "Passion"],
  challenges: ["Impulsiveness", "Arrogance", "Restlessness", "Difficulty with authority"]
  },
@@ -565,13 +565,13 @@ In relationships, Tigers are passionate and protective. They need partners who c
  yin_yang: "Yin",
  keywords: ["Gentle", "Elegant", "Alert", "Compassionate"],
  summary: "Graceful and kind, with refined sensibilities.",
- reading: `Born in the Year of the Rabbit, this soul carries the energy of the gentle diplomat - elegant, alert, and naturally compassionate. The Rabbit represents grace, good fortune, and the power of gentleness.
+ reading: `Born in the Year of the Rabbit, you carry the energy of the gentle diplomat - elegant, alert, and naturally compassionate. The Rabbit represents grace, good fortune, and the power of gentleness.
 
-Rabbit energy brings natural refinement and social grace. There's an ability to navigate complex social situations with ease and to create harmony wherever they go.
+Rabbit energy brings natural refinement and social grace. There's an ability to navigate complex social situations with ease and to create harmony wherever you go.
 
-Those born under this sign often have excellent taste and an appreciation for beauty. They prefer peaceful environments and harmonious relationships. Their kindness draws others to them.
+Those born under this sign often have excellent taste and an appreciation for beauty. You prefer peaceful environments and harmonious relationships. Your kindness draws others to you.
 
-In relationships, Rabbits are devoted and romantic. They need partners who appreciate their gentle nature and can provide the security they crave. Love should feel safe and beautiful.`,
+In relationships, Rabbits are devoted and romantic. You need partners who appreciate your gentle nature and can provide the security you crave. Love should feel safe and beautiful.`,
  strengths: ["Diplomacy", "Elegance", "Compassion", "Intuition"],
  challenges: ["Over-sensitivity", "Indecision", "Avoiding conflict", "Pessimism"]
  },
@@ -581,13 +581,13 @@ In relationships, Rabbits are devoted and romantic. They need partners who appre
  yin_yang: "Yang",
  keywords: ["Powerful", "Lucky", "Ambitious", "Fearless"],
  summary: "Magnificent and fortunate, destined for greatness.",
- reading: `Born in the Year of the Dragon, this soul carries the energy of the mythical beast - powerful, fortunate, and destined for remarkable things. The Dragon is the most auspicious sign in Chinese astrology, representing power, luck, and success.
+ reading: `Born in the Year of the Dragon, you carry the energy of the mythical beast - powerful, fortunate, and destined for remarkable things. The Dragon is the most auspicious sign in Chinese astrology, representing power, luck, and success.
 
 Dragon energy brings natural magnetism and ambition. There's an expectation of success and a confidence that often becomes self-fulfilling. Dragons seem to attract good fortune.
 
-Those born under this sign often achieve remarkable things. They have big dreams and the courage to pursue them. Their presence is commanding and their potential seems limitless.
+Those born under this sign often achieve remarkable things. You have big dreams and the courage to pursue you. Your presence is commanding and your potential seems limitless.
 
-In relationships, Dragons are passionate and generous. They need partners who can match their energy and appreciate their need for admiration. Love with a Dragon is an adventure.`,
+In relationships, Dragons are passionate and generous. You need partners who can match your energy and appreciate your need for admiration. Love with a Dragon is an adventure.`,
  strengths: ["Confidence", "Ambition", "Luck", "Charisma"],
  challenges: ["Arrogance", "Impatience", "Intolerance", "Unrealistic expectations"]
  },
@@ -597,13 +597,13 @@ In relationships, Dragons are passionate and generous. They need partners who ca
  yin_yang: "Yin",
  keywords: ["Wise", "Intuitive", "Elegant", "Mysterious"],
  summary: "Wise and enigmatic, with deep intuition.",
- reading: `Born in the Year of the Snake, this soul carries the energy of the wise sage - intuitive, elegant, and delightfully mysterious. The Snake represents wisdom, intuition, and the power of transformation.
+ reading: `Born in the Year of the Snake, you carry the energy of the wise sage - intuitive, elegant, and delightfully mysterious. The Snake represents wisdom, intuition, and the power of transformation.
 
 Snake energy brings natural wisdom and psychological insight. There's an ability to see beneath surfaces and understand hidden motivations. Snakes often know things without being told.
 
-Those born under this sign are often drawn to philosophy, psychology, or spiritual pursuits. They have refined tastes and appreciate the finer things in life. Their mystery is part of their charm.
+Those born under this sign are often drawn to philosophy, psychology, or spiritual pursuits. You have refined tastes and appreciate the finer things in life. Your mystery is part of your charm.
 
-In relationships, Snakes are devoted but private. They need partners who respect their need for space and can appreciate their depth. Love with a Snake is intense and transformative.`,
+In relationships, Snakes are devoted but private. You need partners who respect your need for space and can appreciate your depth. Love with a Snake is intense and transformative.`,
  strengths: ["Wisdom", "Intuition", "Elegance", "Determination"],
  challenges: ["Jealousy", "Suspicion", "Secretiveness", "Possessiveness"]
  },
@@ -613,13 +613,13 @@ In relationships, Snakes are devoted but private. They need partners who respect
  yin_yang: "Yang",
  keywords: ["Energetic", "Independent", "Adventurous", "Warm"],
  summary: "Free-spirited and warm, with boundless energy.",
- reading: `Born in the Year of the Horse, this soul carries the energy of the wild stallion - energetic, independent, and always ready for adventure. The Horse represents freedom, travel, and the joy of movement.
+ reading: `Born in the Year of the Horse, you carry the energy of the wild stallion - energetic, independent, and always ready for adventure. The Horse represents freedom, travel, and the joy of movement.
 
 Horse energy brings natural enthusiasm and warmth. There's a love of freedom and adventure that cannot be contained. Horses need room to run.
 
-Those born under this sign are often found traveling, exploring, or pursuing active lifestyles. They have a warmth that draws others to them and an energy that seems inexhaustible.
+Those born under this sign are often found traveling, exploring, or pursuing active lifestyles. You have a warmth that draws others to you and an energy that seems inexhaustible.
 
-In relationships, Horses are passionate but need independence. They need partners who can give them space while still providing a home base. Love should feel like freedom, not a cage.`,
+In relationships, Horses are passionate but need independence. You need partners who can give you space while still providing a home base. Love should feel like freedom, not a cage.`,
  strengths: ["Energy", "Independence", "Warmth", "Adaptability"],
  challenges: ["Impatience", "Restlessness", "Commitment issues", "Self-centeredness"]
  },
@@ -629,13 +629,13 @@ In relationships, Horses are passionate but need independence. They need partner
  yin_yang: "Yin",
  keywords: ["Gentle", "Creative", "Kind", "Peaceful"],
  summary: "Artistic and gentle, with a peaceful nature.",
- reading: `Born in the Year of the Goat (or Sheep), this soul carries the energy of the gentle artist - creative, kind, and naturally peaceful. The Goat represents creativity, compassion, and the beauty of gentleness.
+ reading: `Born in the Year of the Goat (or Sheep), you carry the energy of the gentle artist - creative, kind, and naturally peaceful. The Goat represents creativity, compassion, and the beauty of gentleness.
 
-Goat energy brings natural artistic abilities and a peaceful disposition. There's an appreciation for beauty in all forms and a genuine kindness that touches everyone they meet.
+Goat energy brings natural artistic abilities and a peaceful disposition. There's an appreciation for beauty in all forms and a genuine kindness that touches everyone you meet.
 
-Those born under this sign are often drawn to creative pursuits or helping professions. They have a calming presence and an ability to see beauty where others miss it.
+Those born under this sign are often drawn to creative pursuits or helping professions. You have a calming presence and an ability to see beauty where others miss it.
 
-In relationships, Goats are devoted and romantic. They need partners who appreciate their gentle nature and can provide security. Love should feel nurturing and safe.`,
+In relationships, Goats are devoted and romantic. You need partners who appreciate your gentle nature and can provide security. Love should feel nurturing and safe.`,
  strengths: ["Creativity", "Kindness", "Peacefulness", "Artistic talent"],
  challenges: ["Indecision", "Over-sensitivity", "Pessimism", "Dependency"]
  },
@@ -645,13 +645,13 @@ In relationships, Goats are devoted and romantic. They need partners who appreci
  yin_yang: "Yang",
  keywords: ["Clever", "Curious", "Playful", "Inventive"],
  summary: "Brilliant and playful, with endless curiosity.",
- reading: `Born in the Year of the Monkey, this soul carries the energy of the clever trickster - brilliant, curious, and endlessly playful. The Monkey represents intelligence, wit, and the joy of problem-solving.
+ reading: `Born in the Year of the Monkey, you carry the energy of the clever trickster - brilliant, curious, and endlessly playful. The Monkey represents intelligence, wit, and the joy of problem-solving.
 
-Monkey energy brings natural cleverness and curiosity. There's an ability to find solutions to any problem and a playfulness that makes life more fun for everyone around them.
+Monkey energy brings natural cleverness and curiosity. There's an ability to find solutions to any problem and a playfulness that makes life more fun for everyone around you.
 
-Those born under this sign are often successful in fields requiring quick thinking and creativity. They have a gift for seeing possibilities and a charm that opens doors.
+Those born under this sign are often successful in fields requiring quick thinking and creativity. You have a gift for seeing possibilities and a charm that opens doors.
 
-In relationships, Monkeys are fun and stimulating. They need partners who can keep up with their quick minds and appreciate their playful nature. Love should never be boring.`,
+In relationships, Monkeys are fun and stimulating. You need partners who can keep up with your quick minds and appreciate your playful nature. Love should never be boring.`,
  strengths: ["Intelligence", "Creativity", "Adaptability", "Charm"],
  challenges: ["Restlessness", "Mischievousness", "Opportunism", "Arrogance"]
  },
@@ -661,13 +661,13 @@ In relationships, Monkeys are fun and stimulating. They need partners who can ke
  yin_yang: "Yin",
  keywords: ["Observant", "Hardworking", "Confident", "Honest"],
  summary: "Proud and capable, with keen observation.",
- reading: `Born in the Year of the Rooster, this soul carries the energy of the proud herald - observant, hardworking, and confidently honest. The Rooster represents diligence, observation, and the courage to speak truth.
+ reading: `Born in the Year of the Rooster, you carry the energy of the proud herald - observant, hardworking, and confidently honest. The Rooster represents diligence, observation, and the courage to speak truth.
 
 Rooster energy brings natural confidence and attention to detail. There's an ability to see what others miss and a willingness to speak up about it. Roosters don't shy away from the spotlight.
 
-Those born under this sign are often successful in fields requiring precision and presentation. They have high standards and aren't afraid to express their opinions.
+Those born under this sign are often successful in fields requiring precision and presentation. You have high standards and aren't afraid to express your opinions.
 
-In relationships, Roosters are loyal and honest. They need partners who appreciate their directness and can handle their high standards. Love should be built on truth.`,
+In relationships, Roosters are loyal and honest. You need partners who appreciate your directness and can handle your high standards. Love should be built on truth.`,
  strengths: ["Observation", "Confidence", "Honesty", "Hard work"],
  challenges: ["Critical nature", "Perfectionism", "Boastfulness", "Inflexibility"]
  },
@@ -677,13 +677,13 @@ In relationships, Roosters are loyal and honest. They need partners who apprecia
  yin_yang: "Yang",
  keywords: ["Loyal", "Honest", "Protective", "Reliable"],
  summary: "Faithful and true, with unwavering loyalty.",
- reading: `Born in the Year of the Dog, this soul carries the energy of the faithful guardian - loyal, honest, and naturally protective. The Dog represents loyalty, justice, and the value of true friendship.
+ reading: `Born in the Year of the Dog, you carry the energy of the faithful guardian - loyal, honest, and naturally protective. The Dog represents loyalty, justice, and the value of true friendship.
 
 Dog energy brings natural loyalty and a strong sense of right and wrong. There's an instinct to protect loved ones and stand up for what's fair. Dogs are the friends everyone needs.
 
-Those born under this sign are often found in roles where they can help or protect others. They have a straightforward honesty and a reliability that makes them invaluable.
+Those born under this sign are often found in roles where you can help or protect others. You have a straightforward honesty and a reliability that makes you invaluable.
 
-In relationships, Dogs are devoted and protective. They need partners who value loyalty and can be trusted completely. Love should feel safe and true.`,
+In relationships, Dogs are devoted and protective. You need partners who value loyalty and can be trusted completely. Love should feel safe and true.`,
  strengths: ["Loyalty", "Honesty", "Reliability", "Protectiveness"],
  challenges: ["Anxiety", "Pessimism", "Stubbornness", "Difficulty trusting"]
  },
@@ -693,13 +693,13 @@ In relationships, Dogs are devoted and protective. They need partners who value 
  yin_yang: "Yin",
  keywords: ["Generous", "Compassionate", "Diligent", "Sincere"],
  summary: "Warm-hearted and generous, with genuine kindness.",
- reading: `Born in the Year of the Pig, this soul carries the energy of the generous benefactor - warm-hearted, compassionate, and genuinely kind. The Pig represents generosity, sincerity, and the joy of giving.
+ reading: `Born in the Year of the Pig, you carry the energy of the generous benefactor - warm-hearted, compassionate, and genuinely kind. The Pig represents generosity, sincerity, and the joy of giving.
 
 Pig energy brings natural warmth and generosity. There's a genuine desire to help others and share good fortune. Pigs believe in the goodness of people.
 
-Those born under this sign are often successful through their sincerity and hard work. They have a way of making others feel comfortable and valued.
+Those born under this sign are often successful through your sincerity and hard work. You have a way of making others feel comfortable and valued.
 
-In relationships, Pigs are devoted and generous. They need partners who appreciate their giving nature and won't take advantage of their kindness. Love should feel abundant and warm.`,
+In relationships, Pigs are devoted and generous. You need partners who appreciate your giving nature and won't take advantage of your kindness. Love should feel abundant and warm.`,
  strengths: ["Generosity", "Sincerity", "Compassion", "Diligence"],
  challenges: ["Naivety", "Over-indulgence", "Gullibility", "Materialism"]
  }
@@ -714,13 +714,13 @@ var MOON_PHASE_READINGS = {
  icon: '',
  keywords: ["New Beginnings", "Potential", "Introspection", "Planting Seeds"],
  summary: "Born at the start of a new cycle, full of potential.",
- reading: `Born under the New Moon, this soul arrived at the beginning of a lunar cycle - a time of new beginnings, fresh starts, and unlimited potential. The New Moon represents the seed before it sprouts, full of possibility but not yet visible.
+ reading: `Born under the New Moon, you arrived at the beginning of a lunar cycle - a time of new beginnings, fresh starts, and unlimited potential. The New Moon represents the seed before it sprouts, full of possibility but not yet visible.
 
 This birth timing suggests a soul who is here to initiate new things. There's a natural affinity for beginnings, for planting seeds that will grow over time. The potential is enormous, even if it's not immediately apparent.
 
-New Moon souls often have a strong inner life and may need time alone to recharge. They are naturally introspective and may take time to reveal their full selves to the world. Like the dark moon, their light grows over time.
+New Moon souls often have a strong inner life and may need time alone to recharge. You are naturally introspective and may take time to reveal your full selves to the world. Like the dark moon, your light grows over time.
 
-In life, these individuals often experience a sense of starting fresh, of being at the beginning of something important. They may be pioneers in their fields or families, initiating changes that others will continue.`,
+In life, these individuals often experience a sense of starting fresh, of being at the beginning of something important. You may be pioneers in your fields or families, initiating changes that others will continue.`,
  strengths: ["Fresh perspective", "Potential", "Introspection", "Initiative"],
  challenges: ["Uncertainty", "Need for validation", "Slow starts", "Self-doubt"]
  },
@@ -729,13 +729,13 @@ In life, these individuals often experience a sense of starting fresh, of being 
  icon: '',
  keywords: ["Growth", "Intention", "Determination", "Faith"],
  summary: "Born in a time of emerging growth and determination.",
- reading: `Born under the Waxing Crescent Moon, this soul arrived during a time of emerging growth - when the first sliver of light appears after the darkness. This phase represents intention, determination, and the courage to move forward despite uncertainty.
+ reading: `Born under the Waxing Crescent Moon, you arrived during a time of emerging growth - when the first sliver of light appears after the darkness. This phase represents intention, determination, and the courage to move forward despite uncertainty.
 
 This birth timing suggests a soul who is here to push through obstacles and manifest intentions into reality. There's a natural determination and faith that things will work out, even when evidence is scarce.
 
-Waxing Crescent souls often have a pioneering spirit and aren't afraid to take the first steps on an untrodden path. They understand that growth requires effort and are willing to put in the work.
+Waxing Crescent souls often have a pioneering spirit and aren't afraid to take the first steps on an untrodden path. You understand that growth requires effort and are willing to put in the work.
 
-In life, these individuals often experience a sense of building momentum, of things gradually coming together through persistent effort. They are the ones who keep going when others give up.`,
+In life, these individuals often experience a sense of building momentum, of things gradually coming together through persistent effort. You are the ones who keep going when others give up.`,
  strengths: ["Determination", "Faith", "Courage", "Persistence"],
  challenges: ["Impatience", "Frustration with slow progress", "Self-doubt", "Overwhelm"]
  },
@@ -744,13 +744,13 @@ In life, these individuals often experience a sense of building momentum, of thi
  icon: '',
  keywords: ["Action", "Decision", "Challenge", "Commitment"],
  summary: "Born at a time of decisive action and commitment.",
- reading: `Born under the First Quarter Moon, this soul arrived at a critical turning point - when the moon is half-illuminated and decisions must be made. This phase represents action, challenge, and the commitment to move forward.
+ reading: `Born under the First Quarter Moon, you arrived at a critical turning point - when the moon is half-illuminated and decisions must be made. This phase represents action, challenge, and the commitment to move forward.
 
 This birth timing suggests a soul who is here to take decisive action and overcome obstacles. There's a natural ability to make tough decisions and commit fully to a chosen path.
 
-First Quarter souls often find themselves at crossroads throughout life, facing challenges that require courage and commitment. They are natural problem-solvers who thrive under pressure.
+First Quarter souls often find yourself at crossroads throughout life, facing challenges that require courage and commitment. You are natural problem-solvers who thrive under pressure.
 
-In life, these individuals often experience pivotal moments that require them to choose and commit. They are the ones who take action when others hesitate.`,
+In life, these individuals often experience pivotal moments that require you to choose and commit. You are the ones who take action when others hesitate.`,
  strengths: ["Decisiveness", "Courage", "Problem-solving", "Commitment"],
  challenges: ["Impulsiveness", "Conflict", "Stubbornness", "Crisis orientation"]
  },
@@ -759,13 +759,13 @@ In life, these individuals often experience pivotal moments that require them to
  icon: '',
  keywords: ["Refinement", "Analysis", "Adjustment", "Preparation"],
  summary: "Born in a time of refinement and preparation.",
- reading: `Born under the Waxing Gibbous Moon, this soul arrived during a time of refinement - when the moon is almost full and final adjustments are being made. This phase represents analysis, improvement, and preparation for culmination.
+ reading: `Born under the Waxing Gibbous Moon, you arrived during a time of refinement - when the moon is almost full and final adjustments are being made. This phase represents analysis, improvement, and preparation for culmination.
 
 This birth timing suggests a soul who is here to perfect and refine. There's a natural eye for detail and a desire to make things better. Nothing is ever quite good enough - there's always room for improvement.
 
-Waxing Gibbous souls often have high standards and analytical minds. They excel at seeing what needs adjustment and making the necessary changes.
+Waxing Gibbous souls often have high standards and analytical minds. You excel at seeing what needs adjustment and making the necessary changes.
 
-In life, these individuals often experience a sense of almost-there, of being on the verge of something significant. They are the ones who put in the final effort to ensure success.`,
+In life, these individuals often experience a sense of almost-there, of being on the verge of something significant. You are the ones who put in the final effort to ensure success.`,
  strengths: ["Analytical mind", "Attention to detail", "Improvement focus", "Preparation"],
  challenges: ["Perfectionism", "Over-analysis", "Anxiety", "Never feeling ready"]
  },
@@ -774,13 +774,13 @@ In life, these individuals often experience a sense of almost-there, of being on
  icon: '',
  keywords: ["Illumination", "Fulfillment", "Clarity", "Culmination"],
  summary: "Born at the peak of the lunar cycle, fully illuminated.",
- reading: `Born under the Full Moon, this soul arrived at the peak of the lunar cycle - when the moon is fully illuminated and everything is revealed. This phase represents fulfillment, clarity, and the culmination of efforts.
+ reading: `Born under the Full Moon, you arrived at the peak of the lunar cycle - when the moon is fully illuminated and everything is revealed. This phase represents fulfillment, clarity, and the culmination of efforts.
 
 This birth timing suggests a soul who is here to shine brightly and be seen. There's a natural magnetism and a life that tends toward significant achievements and recognition.
 
-Full Moon souls often have strong personalities and aren't afraid to be in the spotlight. They have a natural ability to bring things to completion and to be present at important moments.
+Full Moon souls often have strong personalities and aren't afraid to be in the spotlight. You have a natural ability to bring things to completion and to be present at important moments.
 
-In life, these individuals often experience heightened emotions and significant events. They are the ones who live life fully and aren't afraid to be seen.`,
+In life, these individuals often experience heightened emotions and significant events. You are the ones who live life fully and aren't afraid to be seen.`,
  strengths: ["Clarity", "Magnetism", "Achievement", "Emotional awareness"],
  challenges: ["Emotional intensity", "Need for recognition", "Relationship focus", "Overwhelm"]
  },
@@ -789,13 +789,13 @@ In life, these individuals often experience heightened emotions and significant 
  icon: '',
  keywords: ["Sharing", "Teaching", "Gratitude", "Distribution"],
  summary: "Born in a time of sharing wisdom and gratitude.",
- reading: `Born under the Waning Gibbous Moon, this soul arrived during a time of sharing - when the full moon begins to decrease and its light is distributed. This phase represents teaching, gratitude, and the sharing of wisdom.
+ reading: `Born under the Waning Gibbous Moon, you arrived during a time of sharing - when the full moon begins to decrease and its light is distributed. This phase represents teaching, gratitude, and the sharing of wisdom.
 
-This birth timing suggests a soul who is here to share what they've learned with others. There's a natural teaching ability and a desire to give back.
+This birth timing suggests a soul who is here to share what you've learned with others. There's a natural teaching ability and a desire to give back.
 
-Waning Gibbous souls often find fulfillment in mentoring, teaching, or sharing their experiences. They understand that wisdom is meant to be passed on.
+Waning Gibbous souls often find fulfillment in mentoring, teaching, or sharing your experiences. You understand that wisdom is meant to be passed on.
 
-In life, these individuals often experience a sense of having something valuable to share. They are the ones who help others learn from their experiences.`,
+In life, these individuals often experience a sense of having something valuable to share. You are the ones who help others learn from your experiences.`,
  strengths: ["Teaching ability", "Generosity", "Wisdom", "Gratitude"],
  challenges: ["Over-giving", "Difficulty receiving", "Preachiness", "Letting go"]
  },
@@ -804,13 +804,13 @@ In life, these individuals often experience a sense of having something valuable
  icon: '',
  keywords: ["Release", "Reflection", "Transition", "Letting Go"],
  summary: "Born at a time of release and transition.",
- reading: `Born under the Last Quarter Moon, this soul arrived at another critical turning point - when the moon is half-illuminated again but now decreasing. This phase represents release, reflection, and the courage to let go.
+ reading: `Born under the Last Quarter Moon, you arrived at another critical turning point - when the moon is half-illuminated again but now decreasing. This phase represents release, reflection, and the courage to let go.
 
 This birth timing suggests a soul who is here to help with transitions and endings. There's a natural ability to release what no longer serves and to help others do the same.
 
-Last Quarter souls often find themselves helping others through changes and transitions. They understand that endings are necessary for new beginnings.
+Last Quarter souls often find yourself helping others through changes and transitions. You understand that endings are necessary for new beginnings.
 
-In life, these individuals often experience significant transitions and may serve as guides for others going through changes. They are the ones who understand that letting go is sometimes the bravest choice.`,
+In life, these individuals often experience significant transitions and may serve as guides for others going through changes. You are the ones who understand that letting go is sometimes the bravest choice.`,
  strengths: ["Wisdom", "Ability to let go", "Transition guidance", "Reflection"],
  challenges: ["Difficulty with new beginnings", "Nostalgia", "Crisis orientation", "Resistance"]
  },
@@ -819,13 +819,13 @@ In life, these individuals often experience significant transitions and may serv
  icon: '',
  keywords: ["Rest", "Surrender", "Completion", "Preparation"],
  summary: "Born in a time of rest and spiritual preparation.",
- reading: `Born under the Waning Crescent Moon, this soul arrived during the final phase of the lunar cycle - when the moon is barely visible and preparing for renewal. This phase represents rest, surrender, and spiritual preparation.
+ reading: `Born under the Waning Crescent Moon, you arrived during the final phase of the lunar cycle - when the moon is barely visible and preparing for renewal. This phase represents rest, surrender, and spiritual preparation.
 
 This birth timing suggests a soul who is here to complete cycles and prepare for new ones. There's a natural spirituality and an understanding of the importance of rest and reflection.
 
-Waning Crescent souls often have strong intuition and may be drawn to spiritual or healing work. They understand that rest is not laziness but preparation.
+Waning Crescent souls often have strong intuition and may be drawn to spiritual or healing work. You understand that rest is not laziness but preparation.
 
-In life, these individuals often experience a sense of completing something important and preparing for what's next. They are the ones who understand the value of the pause before the new beginning.`,
+In life, these individuals often experience a sense of completing something important and preparing for what's next. You are the ones who understand the value of the pause before the new beginning.`,
  strengths: ["Intuition", "Spirituality", "Completion ability", "Rest appreciation"],
  challenges: ["Low energy", "Difficulty starting", "Escapism", "Withdrawal"]
  }
@@ -839,84 +839,84 @@ var MERCURY_SIGN_READINGS = {
  Aries: {
  keywords: ["Quick Thinker", "Direct", "Impulsive", "Bold"],
  summary: "Fast, direct communication with a competitive edge.",
- reading: `Mercury in Aries creates a quick, decisive mind that thinks and speaks with boldness. Communication style is direct, sometimes blunt, and always energetic. This placement indicates someone who thinks on their feet and isn't afraid to voice opinions first. Ideas come rapidly, and there's little patience for slow deliberation. The challenge is learning to listen as well as speak, and to consider others' perspectives before charging ahead with conclusions.`,
+ reading: `Mercury in Aries creates a quick, decisive mind that thinks and speaks with boldness. Communication style is direct, sometimes blunt, and always energetic. You tend toward someone who thinks on your feet and isn't afraid to voice opinions first. Ideas come rapidly, and there's little patience for slow deliberation. The challenge is learning to listen as well as speak, and to consider others' perspectives before charging ahead with conclusions.`,
  strengths: ["Quick thinking", "Decisive", "Courageous speaker", "Initiates ideas"],
  challenges: ["Impatience", "Interrupting", "Missing details", "Argumentative"]
  },
  Taurus: {
  keywords: ["Deliberate", "Practical", "Reliable", "Thorough"],
  summary: "Methodical thinking with a focus on practical outcomes.",
- reading: `Mercury in Taurus brings a deliberate, grounded approach to thinking and communication. Ideas are processed slowly but thoroughly, with an emphasis on practical application. This placement indicates someone who thinks things through before speaking and values common sense over abstract theory. Memory is strong, especially for sensory details. The challenge is remaining open to new ideas and not becoming mentally rigid.`,
+ reading: `Mercury in Taurus brings a deliberate, grounded approach to thinking and communication. Ideas are processed slowly but thoroughly, with an emphasis on practical application. You tend toward someone who thinks things through before speaking and values common sense over abstract theory. Memory is strong, especially for sensory details. The challenge is remaining open to new ideas and not becoming mentally rigid.`,
  strengths: ["Practical wisdom", "Good memory", "Reliable information", "Patient learning"],
  challenges: ["Mental stubbornness", "Slow to adapt", "Resistance to new ideas", "Overthinking"]
  },
  Gemini: {
  keywords: ["Versatile", "Curious", "Articulate", "Quick-witted"],
  summary: "Brilliant, adaptable communication with endless curiosity.",
- reading: `Mercury in Gemini is in its home sign, creating a brilliant, versatile mind. Communication flows easily, and there's a natural gift for language, writing, and connecting ideas. This placement indicates someone who learns quickly, enjoys variety, and can discuss almost any topic. The mind is restless and curious, always seeking new information. The challenge is developing focus and following through on ideas rather than constantly moving to the next thing.`,
+ reading: `Mercury in Gemini is in its home sign, creating a brilliant, versatile mind. Communication flows easily, and there's a natural gift for language, writing, and connecting ideas. You tend toward someone who learns quickly, enjoys variety, and can discuss almost any topic. The mind is restless and curious, always seeking new information. The challenge is developing focus and following through on ideas rather than constantly moving to the next thing.`,
  strengths: ["Excellent communication", "Quick learning", "Versatility", "Wit and humor"],
  challenges: ["Scattered thinking", "Superficiality", "Nervousness", "Inconsistency"]
  },
  Cancer: {
  keywords: ["Intuitive", "Retentive", "Emotional", "Nurturing"],
  summary: "Emotional intelligence with powerful memory.",
- reading: `Mercury in Cancer brings emotional depth to thinking and communication. Ideas are processed through feelings, and memory is colored by emotional associations. This placement indicates someone who communicates with sensitivity and remembers how things made them feel. There's a natural ability to understand others' emotional needs. The challenge is separating objective thinking from emotional reactions and not taking criticism too personally.`,
+ reading: `Mercury in Cancer brings emotional depth to thinking and communication. Ideas are processed through feelings, and memory is colored by emotional associations. You tend toward someone who communicates with sensitivity and remembers how things made you feel. There's a natural ability to understand others' emotional needs. The challenge is separating objective thinking from emotional reactions and not taking criticism too personally.`,
  strengths: ["Emotional intelligence", "Powerful memory", "Intuitive communication", "Supportive listener"],
  challenges: ["Subjective thinking", "Moodiness affecting logic", "Defensive reactions", "Difficulty with criticism"]
  },
  Leo: {
  keywords: ["Dramatic", "Creative", "Confident", "Expressive"],
  summary: "Bold, creative expression with natural authority.",
- reading: `Mercury in Leo brings warmth, creativity, and dramatic flair to communication. Ideas are expressed with confidence and style, often with natural storytelling ability. This placement indicates someone who speaks with authority and enjoys being heard. There's a creative approach to problem-solving and a gift for inspiring others through words. The challenge is remaining open to others' ideas and not dominating conversations.`,
+ reading: `Mercury in Leo brings warmth, creativity, and dramatic flair to communication. Ideas are expressed with confidence and style, often with natural storytelling ability. You tend toward someone who speaks with authority and enjoys being heard. There's a creative approach to problem-solving and a gift for inspiring others through words. The challenge is remaining open to others' ideas and not dominating conversations.`,
  strengths: ["Confident speaking", "Creative ideas", "Inspiring communication", "Leadership through words"],
  challenges: ["Arrogance", "Need for attention", "Difficulty listening", "Stubbornness"]
  },
  Virgo: {
  keywords: ["Analytical", "Precise", "Critical", "Practical"],
  summary: "Precise, analytical thinking with attention to detail.",
- reading: `Mercury in Virgo is in its other home sign, creating an exceptionally analytical and precise mind. Communication is detailed, organized, and focused on practical matters. This placement indicates someone who notices what others miss and excels at breaking down complex problems. There's a gift for editing, organizing, and improving systems. The challenge is not becoming overly critical or getting lost in details at the expense of the big picture.`,
+ reading: `Mercury in Virgo is in its other home sign, creating an exceptionally analytical and precise mind. Communication is detailed, organized, and focused on practical matters. You tend toward someone who notices what others miss and excels at breaking down complex problems. There's a gift for editing, organizing, and improving systems. The challenge is not becoming overly critical or getting lost in details at the expense of the big picture.`,
  strengths: ["Analytical mind", "Attention to detail", "Practical problem-solving", "Organization"],
  challenges: ["Over-criticism", "Perfectionism", "Worry", "Missing the forest for trees"]
  },
  Libra: {
  keywords: ["Diplomatic", "Fair", "Charming", "Indecisive"],
  summary: "Graceful communication with a gift for harmony.",
- reading: `Mercury in Libra brings diplomacy, fairness, and charm to thinking and communication. Ideas are weighed carefully from multiple perspectives before conclusions are drawn. This placement indicates someone who communicates with grace and has a natural ability to mediate and find common ground. There's an appreciation for beautiful language and artistic expression. The challenge is making decisions and stating opinions without excessive hedging.`,
+ reading: `Mercury in Libra brings diplomacy, fairness, and charm to thinking and communication. Ideas are weighed carefully from multiple perspectives before conclusions are drawn. You tend toward someone who communicates with grace and has a natural ability to mediate and find common ground. There's an appreciation for beautiful language and artistic expression. The challenge is making decisions and stating opinions without excessive hedging.`,
  strengths: ["Diplomatic speech", "Fair-minded", "Charming communication", "Mediation skills"],
  challenges: ["Indecision", "People-pleasing", "Avoids confrontation", "Superficial agreeableness"]
  },
  Scorpio: {
  keywords: ["Penetrating", "Strategic", "Secretive", "Intense"],
  summary: "Deep, probing mind that sees beneath the surface.",
- reading: `Mercury in Scorpio creates a penetrating, investigative mind that naturally sees beneath the surface. Communication is intense, strategic, and often reveals hidden motivations in others. This placement indicates someone who thinks deeply and isn't satisfied with superficial explanations. There's a gift for research, psychology, and uncovering secrets. The challenge is trusting others enough to share thoughts openly and not using knowledge as power.`,
+ reading: `Mercury in Scorpio creates a penetrating, investigative mind that naturally sees beneath the surface. Communication is intense, strategic, and often reveals hidden motivations in others. You tend toward someone who thinks deeply and isn't satisfied with superficial explanations. There's a gift for research, psychology, and uncovering secrets. The challenge is trusting others enough to share thoughts openly and not using knowledge as power.`,
  strengths: ["Investigative mind", "Strategic thinking", "Psychological insight", "Determination"],
  challenges: ["Suspicion", "Secretiveness", "Manipulation", "Obsessive thinking"]
  },
  Sagittarius: {
  keywords: ["Philosophical", "Optimistic", "Blunt", "Expansive"],
  summary: "Big-picture thinking with philosophical depth.",
- reading: `Mercury in Sagittarius brings expansive, philosophical thinking and honest, sometimes blunt communication. Ideas focus on meaning, truth, and the big picture rather than details. This placement indicates someone who thinks about life's larger questions and communicates with enthusiasm and optimism. There's a love of learning, especially about cultures, philosophy, and travel. The challenge is attending to details and being diplomatic when honesty might hurt.`,
+ reading: `Mercury in Sagittarius brings expansive, philosophical thinking and honest, sometimes blunt communication. Ideas focus on meaning, truth, and the big picture rather than details. You tend toward someone who thinks about life's larger questions and communicates with enthusiasm and optimism. There's a love of learning, especially about cultures, philosophy, and travel. The challenge is attending to details and being diplomatic when honesty might hurt.`,
  strengths: ["Visionary thinking", "Honesty", "Optimism", "Philosophical depth"],
  challenges: ["Tactlessness", "Overlooking details", "Over-promising", "Preachy"]
  },
  Capricorn: {
  keywords: ["Structured", "Ambitious", "Serious", "Practical"],
  summary: "Disciplined thinking focused on achievement.",
- reading: `Mercury in Capricorn brings structure, discipline, and practicality to thinking and communication. Ideas are organized, ambitious, and focused on long-term results. This placement indicates someone who thinks strategically about career and achievement. Communication is serious and authoritative. There's a gift for planning and organizing complex projects. The challenge is lightening up and not dismissing ideas that don't have obvious practical value.`,
+ reading: `Mercury in Capricorn brings structure, discipline, and practicality to thinking and communication. Ideas are organized, ambitious, and focused on long-term results. You tend toward someone who thinks strategically about career and achievement. Communication is serious and authoritative. There's a gift for planning and organizing complex projects. The challenge is lightening up and not dismissing ideas that don't have obvious practical value.`,
  strengths: ["Strategic planning", "Disciplined thinking", "Authority", "Long-term vision"],
  challenges: ["Pessimism", "Rigidity", "Dismissive of fun", "Too serious"]
  },
  Aquarius: {
  keywords: ["Innovative", "Humanitarian", "Unconventional", "Objective"],
  summary: "Original thinking with a humanitarian perspective.",
- reading: `Mercury in Aquarius creates an innovative, unconventional mind that thinks ahead of its time. Communication is objective, often focused on ideas that benefit humanity or challenge conventions. This placement indicates someone who thinks independently and often has brilliant, original ideas. There's a natural understanding of technology and systems. The challenge is connecting ideas to emotional reality and not becoming too detached or contrary.`,
+ reading: `Mercury in Aquarius creates an innovative, unconventional mind that thinks ahead of its time. Communication is objective, often focused on ideas that benefit humanity or challenge conventions. You tend toward someone who thinks independently and often has brilliant, original ideas. There's a natural understanding of technology and systems. The challenge is connecting ideas to emotional reality and not becoming too detached or contrary.`,
  strengths: ["Original thinking", "Objectivity", "Innovation", "Humanitarian focus"],
  challenges: ["Emotional detachment", "Contrarian", "Stubbornly unconventional", "Impractical ideas"]
  },
  Pisces: {
  keywords: ["Imaginative", "Intuitive", "Poetic", "Dreamy"],
  summary: "Intuitive, imaginative communication through feeling.",
- reading: `Mercury in Pisces brings imagination, intuition, and poetic sensibility to thinking and communication. Ideas flow from feeling and imagination rather than logic. This placement indicates someone who thinks in images, metaphors, and possibilities. There's a natural gift for creative writing, music, and understanding the unspoken. The challenge is organizing thoughts clearly and not getting lost in fantasy or confusion.`,
+ reading: `Mercury in Pisces brings imagination, intuition, and poetic sensibility to thinking and communication. Ideas flow from feeling and imagination rather than logic. You tend toward someone who thinks in images, metaphors, and possibilities. There's a natural gift for creative writing, music, and understanding the unspoken. The challenge is organizing thoughts clearly and not getting lost in fantasy or confusion.`,
  strengths: ["Imagination", "Intuition", "Artistic expression", "Empathetic understanding"],
  challenges: ["Confusion", "Disorganization", "Escapism", "Difficulty with facts"]
  }
@@ -926,11 +926,11 @@ var VENUS_SIGN_READINGS = {
  Aries: {
  keywords: ["Passionate", "Impulsive", "Independent", "Exciting"],
  summary: "Bold, exciting love that thrives on passion and challenge.",
- reading: `Venus in Aries loves with passion, excitement, and fierce independence. Romance is pursued boldly — there is an unmistakable attraction to challenge, conquest, and the thrill of the chase. This soul falls in love quickly and intensely, drawn to partners who spark excitement and keep things unpredictable.
+ reading: `Venus in Aries loves with passion, excitement, and fierce independence. Romance is pursued boldly — there is an unmistakable attraction to challenge, conquest, and the thrill of the chase. You falls in love quickly and intensely, drawn to partners who spark excitement and keep things unpredictable.
 
 The love language here is direct action and passionate pursuit. Grand gestures come naturally: surprise declarations, spontaneous adventures, and the willingness to fight for what the heart wants. There is nothing subtle about this placement — when feelings strike, the whole world knows.
 
-In relationships, this soul brings contagious enthusiasm and a refusal to let love grow stale. They are fiercely loyal once committed, though they need a partner who can match their energy and keep the spark alive. Boredom is the greatest threat to this heart.
+In relationships, you bring contagious enthusiasm and a refusal to let love grow stale. You are fiercely loyal once committed, though you need a partner who can match your energy and keep the spark alive. Boredom is the greatest threat to this heart.
 
 The growth edge lies in developing patience and nurturing long-term intimacy beyond the initial excitement. Learning that love deepens through quiet moments — not just fireworks — transforms this passionate heart into an enduring flame.`,
  strengths: ["Passionate", "Direct in love", "Exciting partner", "Brave heart"],
@@ -941,9 +941,9 @@ The growth edge lies in developing patience and nurturing long-term intimacy bey
  summary: "Deep, sensual love that values security and pleasure.",
  reading: `Venus in Taurus is in its home sign, creating a deeply sensual, loyal, and devoted approach to love. Romance is experienced through the senses — good food shared by candlelight, beautiful surroundings, lingering physical affection, and the slow cultivation of trust over time.
 
-This soul loves deeply and consistently, building relationships like cathedrals: stone by stone, with the intention of forever. Security and comfort are not luxuries but necessities for the heart to fully open. Once committed, their devotion is virtually unshakeable.
+You love deeply and consistently, building relationships like cathedrals: stone by stone, with the intention of forever. Security and comfort are not luxuries but necessities for the heart to fully open. Once committed, your devotion is virtually unshakeable.
 
-The love language is physical touch and thoughtful gifts that show attentiveness. This placement creates someone who remembers preferences, who shows up reliably, and who expresses love through creating beauty and comfort in shared spaces. Partners feel cherished and grounded in their presence.
+The love language is physical touch and thoughtful gifts that show attentiveness. Your nature creates someone who remembers preferences, who shows up reliably, and who expresses love through creating beauty and comfort in shared spaces. Partners feel cherished and grounded in your presence.
 
 The growth edge involves releasing possessiveness and remaining open to change within relationships. Learning that love is not ownership — and that security comes from within rather than from controlling circumstances — allows this devoted heart to love with even greater freedom and depth.`,
  strengths: ["Loyal devotion", "Sensual expression", "Stability", "Appreciation of beauty"],
@@ -954,9 +954,9 @@ The growth edge involves releasing possessiveness and remaining open to change w
  summary: "Light, playful love that thrives on mental connection.",
  reading: `Venus in Gemini brings a playful, curious, and communicative approach to love. Romance is intellectual first — sparked by a clever comment, sustained by endless conversation, and deepened through sharing ideas, books, and inside jokes that no one else understands.
 
-This soul falls in love with minds. They need a partner who can match their wit, surprise them with a new perspective, and keep the conversation flowing across years. Variety and mental stimulation are oxygen for this heart — routine and predictability feel like slow suffocation.
+You falls in love with minds. You need a partner who can match your wit, surprise you with a new perspective, and keep the conversation flowing across years. Variety and mental stimulation are oxygen for this heart — routine and predictability feel like slow suffocation.
 
-In relationships, they bring lightness, humor, and an ability to talk through anything. They are naturally charming and socially gifted, making partners feel intellectually seen and constantly entertained. Love letters, witty texts, and shared curiosities are their currency of affection.
+In relationships, you bring lightness, humor, and an ability to talk through anything. You are naturally charming and socially gifted, making partners feel intellectually seen and constantly entertained. Love letters, witty texts, and shared curiosities are your currency of affection.
 
 The growth edge lies in developing emotional depth and consistency beneath the sparkling surface. Learning to stay present when conversations turn difficult — and to connect heart-to-heart, not just mind-to-mind — transforms this charming lover into a truly intimate partner.`,
  strengths: ["Charming", "Great conversationalist", "Adaptable", "Fun-loving"],
@@ -965,11 +965,11 @@ The growth edge lies in developing emotional depth and consistency beneath the s
  Cancer: {
  keywords: ["Nurturing", "Protective", "Emotional", "Devoted"],
  summary: "Nurturing, devoted love that creates emotional security.",
- reading: `Venus in Cancer brings deep emotional sensitivity and nurturing devotion to love. Romance means creating a sanctuary — a world where both partners feel safe enough to be completely vulnerable. This soul loves with protective instincts and remembers every emotional detail: the first song you danced to, the way you looked that particular Tuesday.
+ reading: `Venus in Cancer brings deep emotional sensitivity and nurturing devotion to love. Romance means creating a sanctuary — a world where both partners feel safe enough to be completely vulnerable. You love with protective instincts and remembers every emotional detail: the first song you danced to, the way you looked that particular Tuesday.
 
-The love language is acts of care and emotional attunement. Cooking favorite meals, remembering important dates, creating cozy rituals, and showing up during hard times — these are the love letters of Venus in Cancer. Home is not just a place but a feeling they create around the people they cherish.
+The love language is acts of care and emotional attunement. Cooking favorite meals, remembering important dates, creating cozy rituals, and showing up during hard times — these are the love letters of Venus in Cancer. Home is not just a place but a feeling you create around the people you cherish.
 
-In relationships, they offer a depth of emotional loyalty that is rare and precious. They intuitively sense what their partner needs, often before the partner knows themselves. This empathic gift creates bonds of extraordinary intimacy and trust.
+In relationships, you offer a depth of emotional loyalty that is rare and precious. You intuitively sense what your partner needs, often before the partner knows yourself. This empathic gift creates bonds of extraordinary intimacy and trust.
 
 The growth edge involves releasing clinginess and the temptation to use past hurts as armor against new love. Learning that true security comes from within — not from controlling closeness — allows this nurturing heart to love with open hands rather than a tight grip.`,
  strengths: ["Nurturing love", "Emotional depth", "Loyalty", "Protective care"],
@@ -978,13 +978,13 @@ The growth edge involves releasing clinginess and the temptation to use past hur
  Leo: {
  keywords: ["Romantic", "Generous", "Dramatic", "Loyal"],
  summary: "Grand, generous love that celebrates and adores.",
- reading: `Venus in Leo brings warmth, romance, and dramatic flair to love. This is the placement of grand gestures — surprise parties, heartfelt declarations, handwritten love letters, and the kind of devotion that makes everyone in the room feel the glow. When this soul loves, they love with their entire being.
+ reading: `Venus in Leo brings warmth, romance, and dramatic flair to love. This is the placement of grand gestures — surprise parties, heartfelt declarations, handwritten love letters, and the kind of devotion that makes everyone in the room feel the glow. When you love, you love with your entire being.
 
-Romance requires mutual admiration and celebration. This heart needs to feel special and, in return, makes their partner feel like the most important person alive. Generosity flows naturally — with time, attention, gifts, and an unwavering loyalty that stands firm through storms.
+Romance requires mutual admiration and celebration. This heart needs to feel special and, in return, makes your partner feel like the most important person alive. Generosity flows naturally — with time, attention, gifts, and an unwavering loyalty that stands firm through storms.
 
-In relationships, they bring infectious joy and a talent for keeping the magic alive. Date nights never stop being important. Compliments are given freely. Love is treated as something worth celebrating every single day, not just on anniversaries.
+In relationships, you bring infectious joy and a talent for keeping the magic alive. Date nights never stop being important. Compliments are given freely. Love is treated as something worth celebrating every single day, not just on anniversaries.
 
-The growth edge lies in learning to share the spotlight gracefully and finding security that does not depend on constant external validation. When this generous heart learns that love is not a performance but a practice, their natural radiance becomes even more magnificent.`,
+The growth edge lies in learning to share the spotlight gracefully and finding security that does not depend on constant external validation. When this generous heart learns that love is not a performance but a practice, your natural radiance becomes even more magnificent.`,
  strengths: ["Generous lover", "Romantic gestures", "Loyal heart", "Warmth"],
  challenges: ["Need for attention", "Drama", "Pride", "Demanding"]
  },
@@ -993,9 +993,9 @@ The growth edge lies in learning to share the spotlight gracefully and finding s
  summary: "Devoted, practical love expressed through service.",
  reading: `Venus in Virgo brings a devoted, practical, and quietly attentive approach to love. Romance is expressed through acts of service — remembering how you take your coffee, noticing when something is wrong before you say a word, fixing what is broken, and quietly making life better in a hundred small ways.
 
-This soul loves by being useful and showing up consistently. They may not make grand declarations, but their love is written in the details: the packed lunch with a note inside, the errand run without being asked, the careful attention to a partner's health and comfort. Every small act is a love letter.
+You love by being useful and showing up consistently. You may not make grand declarations, but your love is written in the details: the packed lunch with a note inside, the errand run without being asked, the careful attention to a partner's health and comfort. Every small act is a love letter.
 
-In relationships, they bring reliability, thoughtfulness, and a genuine desire to help their partner become their best self. They notice and appreciate effort, and they invest deeply in building something that works beautifully day after day.
+In relationships, you bring reliability, thoughtfulness, and a genuine desire to help your partner become your best self. You notice and appreciate effort, and you invest deeply in building something that works beautifully day after day.
 
 The growth edge involves releasing the habit of over-criticism — of self and partner alike. Learning that imperfection is not a failure but a feature of being human allows this devoted heart to express affection more freely and to receive love without feeling the need to earn it first.`,
  strengths: ["Devoted service", "Reliability", "Attention to needs", "Practical support"],
@@ -1004,50 +1004,50 @@ The growth edge involves releasing the habit of over-criticism — of self and p
  Libra: {
  keywords: ["Romantic", "Harmonious", "Charming", "Partnership-oriented"],
  summary: "Graceful, harmonious love that seeks true partnership.",
- reading: `Venus in Libra is in its other home sign, creating a naturally romantic, graceful, and partnership-oriented approach to love. Romance is elegant and balanced — this soul has an innate understanding of what makes relationships beautiful and seeks to create harmony in every connection.
+ reading: `Venus in Libra is in its other home sign, creating a naturally romantic, graceful, and partnership-oriented approach to love. Romance is elegant and balanced — you have an innate understanding of what makes relationships beautiful and seeks to create harmony in every connection.
 
-There is a gift here for seeing both sides, for compromise, and for creating spaces where love can flourish. This placement brings natural charm, social grace, and the ability to make others feel valued and seen. Beauty matters — in surroundings, in manners, and in the way love is expressed.
+There is a gift here for seeing both sides, for compromise, and for creating spaces where love can flourish. You have natural charm, social grace, and the ability to make others feel valued and seen. Beauty matters — in surroundings, in manners, and in the way love is expressed.
 
-In relationships, they thrive on genuine partnership — sharing decisions, creating aesthetic harmony, and building a life that reflects mutual values. They are skilled mediators who can smooth conflict and restore balance when things go awry. Love, for them, is an art form to be practiced daily.
+In relationships, you thrive on genuine partnership — sharing decisions, creating aesthetic harmony, and building a life that reflects mutual values. You are skilled mediators who can smooth conflict and restore balance when things go awry. Love, for you, is an art form to be practiced daily.
 
-The growth edge involves maintaining individuality within partnership and developing the courage to face necessary conflict rather than preserving peace at any cost. When this graceful heart learns that authentic harmony includes honest disagreement, their relationships reach extraordinary depth.`,
+The growth edge involves maintaining individuality within partnership and developing the courage to face necessary conflict rather than preserving peace at any cost. When this graceful heart learns that authentic harmony includes honest disagreement, your relationships reach extraordinary depth.`,
  strengths: ["Natural romantic", "Graceful in love", "Seeks harmony", "Charming partner"],
  challenges: ["Codependency", "Indecision", "Avoids conflict", "Loses self in others"]
  },
  Scorpio: {
  keywords: ["Intense", "Passionate", "Deep", "Transformative"],
  summary: "Intense, transformative love that demands all or nothing.",
- reading: `Venus in Scorpio brings intense, passionate, and transformative energy to love. Romance is all or nothing — a deep, consuming, life-altering force that demands complete honesty and total surrender. Surface-level connections hold no interest for this soul. They crave the kind of intimacy that strips away every mask.
+ reading: `Venus in Scorpio brings intense, passionate, and transformative energy to love. Romance is all or nothing — a deep, consuming, life-altering force that demands complete honesty and total surrender. Surface-level connections hold no interest for you. You crave the kind of intimacy that strips away every mask.
 
-The love language is emotional truth and physical intensity. This placement creates someone who sees through pretense instantly and is drawn to the raw, unedited version of their partner. Secrets, lies, and half-truths are dealbreakers. What they offer in return is a devotion so fierce it borders on the sacred.
+The love language is emotional truth and physical intensity. Your nature creates someone who sees through pretense instantly and is drawn to the raw, unedited version of your partner. Secrets, lies, and half-truths are dealbreakers. What you offer in return is a devotion so fierce it borders on the sacred.
 
-In relationships, they bring loyalty that runs bone-deep, an intuitive understanding of their partner's hidden wounds, and the courage to love in ways that transform both people permanently. Being loved by Venus in Scorpio is an experience that changes you at a cellular level.
+In relationships, you bring loyalty that runs bone-deep, an intuitive understanding of your partner's hidden wounds, and the courage to love in ways that transform both people permanently. Being loved by Venus in Scorpio is an experience that changes you at a cellular level.
 
-The growth edge involves learning to trust without needing to control, and to love without the fear that vulnerability will be weaponized. When this intensely devoted heart releases the need for power within love, their capacity for soul-deep connection becomes truly extraordinary.`,
+The growth edge involves learning to trust without needing to control, and to love without the fear that vulnerability will be weaponized. When this intensely devoted heart releases the need for power within love, your capacity for soul-deep connection becomes truly extraordinary.`,
  strengths: ["Deep devotion", "Passionate intensity", "Loyalty", "Transformative love"],
  challenges: ["Jealousy", "Possessiveness", "Control issues", "Difficulty trusting"]
  },
  Sagittarius: {
  keywords: ["Adventurous", "Free-spirited", "Optimistic", "Honest"],
  summary: "Adventurous, free-spirited love that expands horizons.",
- reading: `Venus in Sagittarius brings adventure, optimism, and joyful freedom to love. Romance is an exploration — of places, philosophies, cultures, and the ever-expanding territory of what two people can experience together. This soul falls in love with enthusiasm and sees every relationship as an invitation to grow.
+ reading: `Venus in Sagittarius brings adventure, optimism, and joyful freedom to love. Romance is an exploration — of places, philosophies, cultures, and the ever-expanding territory of what two people can experience together. You falls in love with enthusiasm and sees every relationship as an invitation to grow.
 
 The love language is shared adventure and radical honesty. Weekend road trips, late-night philosophical debates, spontaneous flights, and the willingness to tell the truth even when it is uncomfortable — these are the building blocks of love for this placement. A partner who expands horizons is irresistible.
 
-In relationships, they bring optimism, laughter, and a refusal to let love become small or routine. They believe in the best version of their partner and inspire growth through their own restless quest for meaning. Life with them is never boring, always expanding.
+In relationships, you bring optimism, laughter, and a refusal to let love become small or routine. You believe in the best version of your partner and inspire growth through your own restless quest for meaning. Life with you is never boring, always expanding.
 
-The growth edge lies in learning that commitment is not a cage and that being fully present in ordinary moments is its own kind of adventure. When this free-spirited heart discovers that depth and freedom can coexist, their love becomes both vast and enduring.`,
+The growth edge lies in learning that commitment is not a cage and that being fully present in ordinary moments is its own kind of adventure. When this free-spirited heart discovers that depth and freedom can coexist, your love becomes both vast and enduring.`,
  strengths: ["Adventurous spirit", "Optimism", "Honesty", "Growth-oriented"],
  challenges: ["Commitment issues", "Tactlessness", "Restlessness", "Avoids depth"]
  },
  Capricorn: {
  keywords: ["Committed", "Ambitious", "Reserved", "Loyal"],
  summary: "Serious, committed love that builds lasting partnerships.",
- reading: `Venus in Capricorn brings a serious, committed, and quietly powerful approach to love. Romance develops slowly here — trust is earned through consistency, and love is proven through action rather than words. This soul does not fall easily, but when they choose someone, that choice carries the weight of permanence.
+ reading: `Venus in Capricorn brings a serious, committed, and quietly powerful approach to love. Romance develops slowly here — trust is earned through consistency, and love is proven through action rather than words. You do not fall easily, but when you choose someone, that choice carries the weight of permanence.
 
 The love language is acts of commitment and building together. Planning for the future, showing up during hard times, providing stability, and investing in a shared life that grows stronger with each passing year — these are the expressions of a Capricorn Venus heart. Love is demonstrated, not declared.
 
-In relationships, they bring extraordinary loyalty, practical wisdom, and the rare ability to love someone more as time passes rather than less. They are the partner you can count on absolutely — the one who stays when things get difficult and who builds something real.
+In relationships, you bring extraordinary loyalty, practical wisdom, and the rare ability to love someone more as time passes rather than less. You are the partner you can count on absolutely — the one who stays when things get difficult and who builds something real.
 
 The growth edge involves allowing warmth and vulnerability to soften the edges of reserve. Learning that emotional expression is not weakness, and that ambition need not overshadow tenderness, transforms this steadfast heart into a partner of remarkable depth and devotion.`,
  strengths: ["Commitment", "Reliability", "Long-term vision", "Practical love"],
@@ -1056,11 +1056,11 @@ The growth edge involves allowing warmth and vulnerability to soften the edges o
  Aquarius: {
  keywords: ["Unconventional", "Friendly", "Independent", "Idealistic"],
  summary: "Unconventional, friendship-based love that values freedom.",
- reading: `Venus in Aquarius brings an unconventional, intellectually-driven, and friendship-based approach to love. Romance begins with meeting of minds and shared ideals — physical attraction alone is never enough. This soul needs a partner who respects their independence, stimulates their thinking, and shares their vision of how the world could be better.
+ reading: `Venus in Aquarius brings an unconventional, intellectually-driven, and friendship-based approach to love. Romance begins with meeting of minds and shared ideals — physical attraction alone is never enough. You need a partner who respects your independence, stimulates your thinking, and shares your vision of how the world could be better.
 
 The love language is respect for individuality and intellectual connection. Deep conversations about ideas, shared causes, giving each other space to grow independently, and treating the relationship as a partnership of equals rather than a merger of identities — these are the foundations of love here.
 
-In relationships, they bring loyalty, open-mindedness, and a refreshing refusal to follow conventional scripts. They love in their own way on their own terms, and that originality creates something genuinely unique. Partners are treated as fascinating individuals rather than possessions or extensions of self.
+In relationships, you bring loyalty, open-mindedness, and a refreshing refusal to follow conventional scripts. You love in your own way on your own terms, and that originality creates something genuinely unique. Partners are treated as fascinating individuals rather than possessions or extensions of self.
 
 The growth edge involves developing emotional intimacy alongside intellectual connection. Learning that vulnerability is not a threat to independence — and that sometimes the heart knows things the mind cannot — allows this brilliantly original lover to experience the full spectrum of human connection.`,
  strengths: ["Open-minded", "Respects individuality", "Loyal friend-lover", "Idealistic"],
@@ -1069,13 +1069,13 @@ The growth edge involves developing emotional intimacy alongside intellectual co
  Pisces: {
  keywords: ["Romantic", "Compassionate", "Intuitive", "Dreamy"],
  summary: "Romantic, compassionate love that goes beyond boundaries.",
- reading: `Venus in Pisces is exalted, creating the most romantic, compassionate, and intuitively connected approach to love. Romance here goes beyond the ordinary — this soul loves with a depth that borders on the spiritual, seeing the divine in their partner and seeking a connection that dissolves the boundary between two separate beings.
+ reading: `Venus in Pisces is exalted, creating the most romantic, compassionate, and intuitively connected approach to love. Romance here goes beyond the ordinary — you love with a depth that borders on the spiritual, seeing the divine in your partner and seeking a connection that dissolves the boundary between two separate beings.
 
-The love language is emotional attunement and soulful presence. They sense what their partner feels without being told, love unconditionally, and bring a tenderness to relationships that can heal deep wounds. Music, art, shared silences, and moments of deep closeness are their natural territory.
+The love language is emotional attunement and soulful presence. You sense what your partner feels without being told, love unconditionally, and bring a tenderness to relationships that can heal deep wounds. Music, art, shared silences, and moments of deep closeness are your natural territory.
 
-In relationships, they bring extraordinary empathy, creative inspiration, and the rare ability to love someone exactly as they are. They see past flaws to the soul beneath, and their acceptance has a healing quality that transforms partners. Being loved by Venus in Pisces feels like coming home to a place you have always known.
+In relationships, you bring extraordinary empathy, creative inspiration, and the rare ability to love someone exactly as you are. You see past flaws to the soul beneath, and your acceptance has a healing quality that transforms partners. Being loved by Venus in Pisces feels like coming home to a place you have always known.
 
-The growth edge involves maintaining healthy boundaries and discernment. Learning that unconditional love does not mean accepting mistreatment — and that idealization can blind as much as it illuminates — allows this exquisitely romantic heart to find partners truly worthy of their devotion.`,
+The growth edge involves maintaining healthy boundaries and discernment. Learning that unconditional love does not mean accepting mistreatment — and that idealization can blind as much as it illuminates — allows this exquisitely romantic heart to find partners truly worthy of your devotion.`,
  strengths: ["Unconditional love", "Deep compassion", "Romantic soul", "Intuitive connection"],
  challenges: ["Idealization", "Boundary issues", "Escapism", "Martyr tendencies"]
  }
@@ -1085,11 +1085,11 @@ var MARS_SIGN_READINGS = {
  Aries: {
  keywords: ["Aggressive", "Direct", "Competitive", "Pioneering"],
  summary: "Pure, direct energy that takes immediate action.",
- reading: `Mars in Aries is in its home sign, creating the most direct and powerful expression of drive and ambition. Energy here is explosive, competitive, and action-oriented — this soul acts first and figures out the details later, armed with natural courage and an instinct for leadership.
+ reading: `Mars in Aries is in its home sign, creating the most direct and powerful expression of drive and ambition. Energy here is explosive, competitive, and action-oriented — you acts first and figures out the details later, armed with natural courage and an instinct for leadership.
 
 Physical vitality runs high and demands regular, vigorous outlets. Sports, competition, physical challenges, and anything that gets the adrenaline flowing are essential — not optional. Without constructive channels, this restless energy turns inward and becomes frustration or outward as unnecessary conflict.
 
-In pursuit of goals, this placement creates a formidable force. There is no hesitation, no second-guessing, and no waiting for permission. When something needs to happen, this soul makes it happen. They inspire others through sheer boldness and the willingness to go first into the unknown.
+In pursuit of goals, this placement creates a formidable force. There is no hesitation, no second-guessing, and no waiting for permission. When something needs to happen, you make it happen. You inspire others through sheer boldness and the willingness to go first into the unknown.
 
 The growth edge lies in cultivating patience and strategic thinking. Learning that not every situation requires a charge — and that sometimes the most powerful action is deliberate pause — transforms raw warrior energy into truly unstoppable leadership.`,
  strengths: ["Courage", "Quick action", "Competitive drive", "Leadership"],
@@ -1098,11 +1098,11 @@ The growth edge lies in cultivating patience and strategic thinking. Learning th
  Taurus: {
  keywords: ["Persistent", "Steady", "Sensual", "Determined"],
  summary: "Slow, steady force that builds toward goals relentlessly.",
- reading: `Mars in Taurus brings a slow-burning, persistent, and immovable approach to action. Energy here is not explosive but relentless — building toward goals with the kind of determination that outlasts every obstacle. This soul is hard to start but absolutely impossible to stop once committed to a course.
+ reading: `Mars in Taurus brings a slow-burning, persistent, and immovable approach to action. Energy here is not explosive but relentless — building toward goals with the kind of determination that outlasts every obstacle. You are hard to start but absolutely impossible to stop once committed to a course.
 
 Physical energy is deeply connected to the body and the senses. Stamina is extraordinary — this placement favors endurance over speed, sustained effort over quick bursts. Working with the hands, building tangible things, and physical comfort all fuel this engine.
 
-In pursuit of goals, this is the tortoise that always beats the hare. Progress may appear slow to outsiders, but every step forward is permanent. This soul builds things that last because they refuse to cut corners or take shortcuts that compromise quality.
+In pursuit of goals, this is the tortoise that always beats the hare. Progress may appear slow to outsiders, but every step forward is permanent. You build things that last because you refuse to cut corners or take shortcuts that compromise quality.
 
 The growth edge involves overcoming inertia and developing flexibility. Learning that adaptation is not the same as defeat — and that sometimes changing direction is the strongest move — transforms this steady powerhouse into a force that is both enduring and responsive.`,
  strengths: ["Persistence", "Endurance", "Determination", "Steady effort"],
@@ -1111,9 +1111,9 @@ The growth edge involves overcoming inertia and developing flexibility. Learning
  Gemini: {
  keywords: ["Versatile", "Quick", "Scattered", "Communicative"],
  summary: "Quick, versatile energy that fights with words and wit.",
- reading: `Mars in Gemini brings quick, versatile, and intellectually-driven energy to everything this soul pursues. Action is mental rather than physical — conflicts are fought with words, debates are won through wit, and goals are achieved through cleverness and strategic communication.
+ reading: `Mars in Gemini brings quick, versatile, and intellectually-driven energy to everything you pursues. Action is mental rather than physical — conflicts are fought with words, debates are won through wit, and goals are achieved through cleverness and strategic communication.
 
-This placement creates someone who can juggle multiple projects simultaneously, using information as their primary weapon. They are fast learners who adapt quickly, pivoting from one approach to another with a nimbleness that leaves slower competitors behind. The mind is always racing, always strategizing.
+Your nature creates someone who can juggle multiple projects simultaneously, using information as your primary weapon. You are fast learners who adapt quickly, pivoting from one approach to another with a nimbleness that leaves slower competitors behind. The mind is always racing, always strategizing.
 
 Physical energy has a nervous, restless quality that needs constant variety. Routine kills motivation here. The ideal outlets combine mental and physical engagement — sports that require strategy, work that changes daily, and pursuits that never allow boredom to settle in.
 
@@ -1124,11 +1124,11 @@ The growth edge involves focusing scattered energy and developing the patience t
  Cancer: {
  keywords: ["Protective", "Indirect", "Tenacious", "Emotional"],
  summary: "Protective energy that defends home and loved ones.",
- reading: `Mars in Cancer brings protective, emotionally-driven energy that is quiet in ordinary times but ferocious when loved ones are threatened. This soul does not seek conflict, but their defensive instincts are among the most powerful in the zodiac — provoke the people they love, and they become an immovable wall.
+ reading: `Mars in Cancer brings protective, emotionally-driven energy that is quiet in ordinary times but ferocious when loved ones are threatened. You do not seek conflict, but your defensive instincts are among the most powerful in the zodiac — provoke the people you love, and you become an immovable wall.
 
 Action here is guided by intuition and emotion rather than logic. Energy levels fluctuate with moods, meaning motivation surges when feelings are engaged and evaporates when the heart is not invested. The most powerful fuel for this Mars is a deep emotional reason to act.
 
-In pursuit of goals, the approach is indirect but remarkably tenacious. Like water wearing away stone, this soul achieves through persistent emotional engagement rather than frontal assault. They sense the right moment to act and use emotional intelligence as their greatest strategic advantage.
+In pursuit of goals, the approach is indirect but remarkably tenacious. Like water wearing away stone, you achieve through persistent emotional engagement rather than frontal assault. You sense the right moment to act and use emotional intelligence as your greatest strategic advantage.
 
 The growth edge involves developing comfort with direct confrontation and expressing anger cleanly rather than through passive-aggressive channels. Learning that honest conflict is healthier than suppressed resentment transforms this protective energy into a force that defends without manipulation.`,
  strengths: ["Protective instincts", "Tenacity", "Emotional drive", "Defensive strength"],
@@ -1137,11 +1137,11 @@ The growth edge involves developing comfort with direct confrontation and expres
  Leo: {
  keywords: ["Confident", "Dramatic", "Creative", "Proud"],
  summary: "Confident, dramatic energy that seeks recognition.",
- reading: `Mars in Leo brings confident, dramatic, and creatively charged energy to everything this soul undertakes. Action is bold, often theatrical, and carries an inherent desire for recognition and applause. This is not mere vanity — it is the natural expression of a heart that invests genuine pride in every effort.
+ reading: `Mars in Leo brings confident, dramatic, and creatively charged energy to everything you undertakes. Action is bold, often theatrical, and carries an inherent desire for recognition and applause. This is not mere vanity — it is the natural expression of a heart that invests genuine pride in every effort.
 
-Physical energy is warm, generous, and needs creative outlets. Performance, sports, leadership roles, and any pursuit where effort can be seen and appreciated fuel this engine. The motivation to excel is inseparable from the desire to inspire — this soul wants to lead by brilliant example.
+Physical energy is warm, generous, and needs creative outlets. Performance, sports, leadership roles, and any pursuit where effort can be seen and appreciated fuel this engine. The motivation to excel is inseparable from the desire to inspire — you want to lead by brilliant example.
 
-In pursuit of goals, there is a magnificent willpower and refusal to accept mediocrity. Half-hearted efforts are physically impossible here. Everything is done with flair, commitment, and an expectation that quality will be noticed. They bring others along through sheer force of enthusiasm and personal magnetism.
+In pursuit of goals, there is a magnificent willpower and refusal to accept mediocrity. Half-hearted efforts are physically impossible here. Everything is done with flair, commitment, and an expectation that quality will be noticed. You bring others along through sheer force of enthusiasm and personal magnetism.
 
 The growth edge involves learning to sustain effort even without an audience and accepting that not every achievement requires applause. When this confident energy learns that quiet mastery is as valuable as public triumph, its natural leadership becomes truly authoritative rather than performative.`,
  strengths: ["Confidence", "Leadership", "Creative drive", "Warmth"],
@@ -1150,7 +1150,7 @@ The growth edge involves learning to sustain effort even without an audience and
  Virgo: {
  keywords: ["Precise", "Analytical", "Helpful", "Critical"],
  summary: "Precise, service-oriented energy focused on improvement.",
- reading: `Mars in Virgo brings precise, analytical, and meticulously focused energy to every pursuit. Action is methodical, detailed, and oriented toward improvement and efficiency. This soul approaches challenges with a craftsman's eye — identifying exactly what needs fixing and applying effort with surgical precision.
+ reading: `Mars in Virgo brings precise, analytical, and meticulously focused energy to every pursuit. Action is methodical, detailed, and oriented toward improvement and efficiency. You approach challenges with a craftsman's eye — identifying exactly what needs fixing and applying effort with surgical precision.
 
 Physical energy has a nervous, productive quality that becomes anxious without useful work. The hands need to be busy, the mind needs problems to solve, and the body needs routines that maintain health and functionality. This placement often produces dedicated athletes, skilled artisans, and tireless workers.
 
@@ -1163,11 +1163,11 @@ The growth edge involves releasing the grip of perfectionism and accepting that 
  Libra: {
  keywords: ["Diplomatic", "Indecisive", "Balanced", "Passive"],
  summary: "Diplomatic energy that seeks fair solutions.",
- reading: `Mars in Libra brings diplomatic, strategically-minded energy that seeks fairness and balance in every conflict. Action here is rarely impulsive — instead, it is carefully calibrated to account for all perspectives. This soul fights for justice and beauty with the precision of a chess player thinking several moves ahead.
+ reading: `Mars in Libra brings diplomatic, strategically-minded energy that seeks fairness and balance in every conflict. Action here is rarely impulsive — instead, it is carefully calibrated to account for all perspectives. You fight for justice and beauty with the precision of a chess player thinking several moves ahead.
 
-Physical energy is social and aesthetic in nature, activated most powerfully through partnership and collaboration. Competition feels less natural than cooperation, and the most motivating goals involve creating something beautiful or correcting an injustice that offends their deep sense of fairness.
+Physical energy is social and aesthetic in nature, activated most powerfully through partnership and collaboration. Competition feels less natural than cooperation, and the most motivating goals involve creating something beautiful or correcting an injustice that offends your deep sense of fairness.
 
-In pursuit of goals, this placement brings remarkable strategic intelligence. The ability to see all sides of a situation — to anticipate objections and craft solutions that satisfy everyone — makes this soul invaluable in negotiations, collaborations, and any pursuit requiring consensus.
+In pursuit of goals, this placement brings remarkable strategic intelligence. The ability to see all sides of a situation — to anticipate objections and craft solutions that satisfy everyone — makes you invaluable in negotiations, collaborations, and any pursuit requiring consensus.
 
 The growth edge involves learning to take decisive independent action without needing agreement or a partner to push against. When this diplomatic energy develops the courage to act on personal conviction — even when it disrupts harmony — it becomes a truly powerful force for both justice and achievement.`,
  strengths: ["Diplomacy", "Fairness", "Strategic thinking", "Charm"],
@@ -1176,11 +1176,11 @@ The growth edge involves learning to take decisive independent action without ne
  Scorpio: {
  keywords: ["Intense", "Strategic", "Powerful", "Determined"],
  summary: "Intense, strategic power that never forgets.",
- reading: `Mars in Scorpio is in its traditional home sign, creating intense, strategic, and extraordinarily powerful energy. Action is calculated, patient, and devastatingly effective when finally unleashed. This soul possesses a willpower that borders on the superhuman — once they decide on a course, nothing in the universe can divert them.
+ reading: `Mars in Scorpio is in its traditional home sign, creating intense, strategic, and extraordinarily powerful energy. Action is calculated, patient, and devastatingly effective when finally unleashed. You possess a willpower that borders on the superhuman — once you decide on a course, nothing in the universe can divert you.
 
-Physical energy is intense and runs deep rather than burning hot on the surface. Stamina is phenomenal, fueled by emotional conviction and an almost obsessive commitment to whatever captures their focus. Crisis situations actually increase their power rather than diminishing it.
+Physical energy is intense and runs deep rather than burning hot on the surface. Stamina is phenomenal, fueled by emotional conviction and an almost obsessive commitment to whatever captures your focus. Crisis situations actually increase your power rather than diminishing it.
 
-In pursuit of goals, this placement is arguably the most formidable in the zodiac. Strategic patience combines with psychological insight and absolute determination to create someone who achieves the impossible through sheer force of will. They understand leverage, timing, and the transformative power of focused intention.
+In pursuit of goals, this placement is arguably the most formidable in the zodiac. Strategic patience combines with psychological insight and absolute determination to create someone who achieves the impossible through sheer force of will. You understand leverage, timing, and the transformative power of focused intention.
 
 The growth edge involves learning forgiveness and releasing the impulse to use power destructively. When this intensely powerful energy chooses transformation over retaliation — and channels its extraordinary willpower toward creation rather than control — it becomes a force that literally changes the world.`,
  strengths: ["Willpower", "Strategic mind", "Intensity", "Resilience"],
@@ -1189,11 +1189,11 @@ The growth edge involves learning forgiveness and releasing the impulse to use p
  Sagittarius: {
  keywords: ["Adventurous", "Enthusiastic", "Restless", "Philosophical"],
  summary: "Adventurous, enthusiastic energy seeking new horizons.",
- reading: `Mars in Sagittarius brings adventurous, enthusiastic, and expansively optimistic energy to everything this soul pursues. Action is driven by ideals, philosophical conviction, and an insatiable hunger for new experiences. This placement creates someone who charges toward horizons with infectious enthusiasm and unshakeable faith that things will work out.
+ reading: `Mars in Sagittarius brings adventurous, enthusiastic, and expansively optimistic energy to everything you pursues. Action is driven by ideals, philosophical conviction, and an insatiable hunger for new experiences. Your nature creates someone who charges toward horizons with infectious enthusiasm and unshakeable faith that things will work out.
 
 Physical energy is athletic, restless, and craves adventure. Travel, outdoor activities, sports, and any pursuit that combines physical movement with mental expansion are essential. The body needs freedom and space — confinement of any kind is intolerable to this fiery Mars.
 
-In pursuit of goals, there is a magnificent scope of ambition and optimism. Where others see obstacles, this soul sees opportunities for growth. They inspire entire teams through sheer belief, and their enthusiasm makes even impossible goals feel achievable. The vision is always grand, always expansive.
+In pursuit of goals, there is a magnificent scope of ambition and optimism. Where others see obstacles, you see opportunities for growth. You inspire entire teams through sheer belief, and your enthusiasm makes even impossible goals feel achievable. The vision is always grand, always expansive.
 
 The growth edge involves developing focus and follow-through. Learning that commitment to a single path often achieves more than scattering energy across a dozen adventures — and that the most profound discoveries sometimes require staying in one place long enough to dig deep — transforms restless enthusiasm into purposeful mastery.`,
  strengths: ["Enthusiasm", "Adventure", "Optimism", "Idealism"],
@@ -1202,7 +1202,7 @@ The growth edge involves developing focus and follow-through. Learning that comm
  Capricorn: {
  keywords: ["Ambitious", "Disciplined", "Strategic", "Persistent"],
  summary: "Ambitious, disciplined energy climbing toward success.",
- reading: `Mars in Capricorn is exalted, creating the most disciplined, strategic, and achievement-oriented expression of energy in the zodiac. Every action is calculated for maximum long-term impact. This soul plays the long game with a patience and precision that is breathtaking to witness — they do not waste a single movement on anything that does not serve the ultimate goal.
+ reading: `Mars in Capricorn is exalted, creating the most disciplined, strategic, and achievement-oriented expression of energy in the zodiac. Every action is calculated for maximum long-term impact. You play the long game with a patience and precision that is breathtaking to witness — you do not waste a single movement on anything that does not serve the ultimate goal.
 
 Physical energy is enduring and focused, more marathon than sprint. Stamina comes from discipline rather than adrenaline, and the body responds to structure and routine. Hard work is not a burden but a deep satisfaction — there is genuine pleasure in the grind.
 
@@ -1215,24 +1215,24 @@ The growth edge involves finding balance between achievement and living. Learnin
  Aquarius: {
  keywords: ["Unconventional", "Rebellious", "Innovative", "Detached"],
  summary: "Innovative, rebellious energy fighting for change.",
- reading: `Mars in Aquarius brings unconventional, innovative, and fiercely independent energy to every pursuit. Action is directed toward progress, revolution, and breaking free from limitations that constrain human potential. This soul fights for causes larger than self, using original approaches that no one else would consider.
+ reading: `Mars in Aquarius brings unconventional, innovative, and fiercely independent energy to every pursuit. Action is directed toward progress, revolution, and breaking free from limitations that constrain human potential. You fight for causes larger than self, using original approaches that no one else would consider.
 
 Physical energy has an electric, erratic quality — brilliant bursts of focused effort followed by periods of apparent disengagement. Conventional routines feel stifling. The ideal outlets involve technology, group collaboration, activism, and any pursuit where originality is an asset rather than a liability.
 
-In pursuit of goals, this placement brings a genius for innovation and a stubborn refusal to follow established paths. Problems are solved through lateral thinking and unconventional strategies. They see possibilities that others miss entirely and have the courage to pursue ideas that seem radical until they prove to be visionary.
+In pursuit of goals, this placement brings a genius for innovation and a stubborn refusal to follow established paths. Problems are solved through lateral thinking and unconventional strategies. You see possibilities that others miss entirely and have the courage to pursue ideas that seem radical until you prove to be visionary.
 
-The growth edge involves channeling rebellious energy constructively and developing consistency. Learning that real change often requires working within systems as well as against them — and that being contrary for its own sake wastes precious revolutionary energy — transforms this brilliant rebel into an effective architect of genuine progress.`,
+The growth edge involves channeling rebellious energy constructively and developing consistency. Learning that real change often requires working within systems as well as against you — and that being contrary for its own sake wastes precious revolutionary energy — transforms this brilliant rebel into an effective architect of genuine progress.`,
  strengths: ["Innovation", "Independence", "Humanitarian drive", "Originality"],
  challenges: ["Rebellious", "Unpredictable", "Detached", "Stubbornly contrary"]
  },
  Pisces: {
  keywords: ["Intuitive", "Passive", "Creative", "Indirect"],
  summary: "Intuitive, creative energy that flows around obstacles.",
- reading: `Mars in Pisces brings intuitive, creatively-charged, and fluidly adaptive energy to everything this soul pursues. Action is guided by inspiration, compassion, and spiritual impulses rather than logic or strategy. Like water finding its path downhill, this soul achieves goals through flow and adaptation rather than force.
+ reading: `Mars in Pisces brings intuitive, creatively-charged, and fluidly adaptive energy to everything you pursues. Action is guided by inspiration, compassion, and spiritual impulses rather than logic or strategy. Like water finding its path downhill, you achieve goals through flow and adaptation rather than force.
 
-Physical energy is variable and deeply connected to emotional and spiritual states. When inspired, there is a tireless quality to their effort. When disconnected from meaning, energy evaporates completely. The arts, healing work, spiritual practice, and compassionate service are the most powerful fuels for this Mars.
+Physical energy is variable and deeply connected to emotional and spiritual states. When inspired, there is a tireless quality to your effort. When disconnected from meaning, energy evaporates completely. The arts, healing work, spiritual practice, and compassionate service are the most powerful fuels for this Mars.
 
-In pursuit of goals, the approach is indirect but surprisingly effective. They sense currents that others miss, navigate obstacles by flowing around them, and use imagination as their primary tool. What looks like passivity is often a deep attunement to timing — waiting for the right moment to act with seemingly effortless precision.
+In pursuit of goals, the approach is indirect but surprisingly effective. You sense currents that others miss, navigate obstacles by flowing around you, and use imagination as your primary tool. What looks like passivity is often a deep attunement to timing — waiting for the right moment to act with seemingly effortless precision.
 
 The growth edge involves developing the capacity for direct action and asserting boundaries clearly. Learning that confrontation is sometimes an act of compassion — and that saying no protects the energy needed for genuine service — transforms this intuitively gifted soul into someone who is both spiritually attuned and personally powerful.`,
  strengths: ["Intuitive action", "Creativity", "Compassion", "Adaptability"],
@@ -1244,11 +1244,11 @@ var JUPITER_SIGN_READINGS = {
  Aries: {
  keywords: ["Pioneering", "Bold", "Independent", "Enthusiastic"],
  summary: "Luck through initiative, courage, and bold action.",
- reading: `Jupiter in Aries expands through pioneering action, independence, and bold initiative. Fortune favors the brave here — opportunities appear precisely when this soul summons the courage to step forward first, take the risk, and lead the charge into uncharted territory.
+ reading: `Jupiter in Aries expands through pioneering action, independence, and bold initiative. Fortune favors the brave here — opportunities appear precisely when you summons the courage to step forward first, take the risk, and lead the charge into uncharted territory.
 
-Growth comes through initiative and the willingness to begin before conditions are perfect. This placement creates natural entrepreneurs and trailblazers who attract abundance by doing what others only talk about. The universe rewards their courage with doors that open at exactly the right moment.
+Growth comes through initiative and the willingness to begin before conditions are perfect. Your nature creates natural entrepreneurs and trailblazers who attract abundance by doing what others only talk about. The universe rewards your courage with doors that open at exactly the right moment.
 
-There is an infectious optimism here that inspires others to take action as well. This soul's enthusiasm becomes a catalyst for entire groups, creating ripple effects of positive change wherever bold moves are made. Leadership itself becomes a form of luck — the more they lead, the more fortune follows.
+There is an infectious optimism here that inspires others to take action as well. Your enthusiasm becomes a catalyst for entire groups, creating ripple effects of positive change wherever bold moves are made. Leadership itself becomes a form of luck — the more you lead, the more fortune follows.
 
 The growth edge involves tempering enthusiasm with strategy. Learning that patience is not weakness and that calculated risks yield better returns than impulsive ones transforms this boldly fortunate placement into a truly unstoppable force for expansive achievement.`,
  strengths: ["Entrepreneurial luck", "Courage attracts opportunity", "Leadership growth", "Initiative rewarded"],
@@ -1259,7 +1259,7 @@ The growth edge involves tempering enthusiasm with strategy. Learning that patie
  summary: "Luck through patience, persistence, and material wisdom.",
  reading: `Jupiter in Taurus expands through patience, practical wisdom, and a deep appreciation for the abundance of the physical world. Growth comes through steady effort, sensible investments, and the understanding that true wealth is built slowly and enjoyed thoroughly.
 
-This placement creates a natural gift for attracting material abundance. Money, resources, and opportunities seem to gravitate toward this soul, not through dramatic windfalls but through the accumulated rewards of consistent effort and sound judgment. They understand that real prosperity is sustainable prosperity.
+Your nature creates a natural gift for attracting material abundance. Money, resources, and opportunities seem to gravitate toward you, not through dramatic windfalls but through the accumulated rewards of consistent effort and sound judgment. You understand that real prosperity is sustainable prosperity.
 
 There is a profound capacity to enjoy abundance here — not merely to accumulate it. Good food, beautiful surroundings, comfortable living, and the simple pleasure of a life well-built are all expressions of Jupiter in Taurus at its finest. Gratitude itself becomes a magnet for more.
 
@@ -1270,11 +1270,11 @@ The growth edge involves avoiding complacency and recognizing that security can 
  Gemini: {
  keywords: ["Curious", "Communicative", "Versatile", "Social"],
  summary: "Luck through communication, learning, and connections.",
- reading: `Jupiter in Gemini expands through communication, learning, and the art of making connections. Growth comes through curiosity — every conversation, book, class, and chance encounter holds potential seeds of fortune. This soul's greatest asset is an insatiable hunger to learn and an ability to synthesize information into wisdom.
+ reading: `Jupiter in Gemini expands through communication, learning, and the art of making connections. Growth comes through curiosity — every conversation, book, class, and chance encounter holds potential seeds of fortune. Your greatest asset is an insatiable hunger to learn and an ability to synthesize information into wisdom.
 
-Opportunities arrive through networking, education, and the willingness to share ideas generously. This placement creates gifted communicators whose words open doors — writers, teachers, salespeople, and networkers who turn casual connections into meaningful opportunities through genuine intellectual engagement.
+Opportunities arrive through networking, education, and the willingness to share ideas generously. Your nature creates gifted communicators whose words open doors — writers, teachers, salespeople, and networkers who turn casual connections into meaningful opportunities through genuine intellectual engagement.
 
-There is a remarkable mental agility here that allows this soul to see connections others miss. Ideas from one field cross-pollinate with insights from another, creating innovative approaches that attract recognition and reward. The more they learn and share, the more abundance flows.
+There is a remarkable mental agility here that allows you to see connections others miss. Ideas from one field cross-pollinate with insights from another, creating innovative approaches that attract recognition and reward. The more you learn and share, the more abundance flows.
 
 The growth edge involves choosing depth over breadth when it matters most. Learning that true wisdom sometimes requires staying with one subject long enough to master it — rather than perpetually sampling — transforms this brilliantly versatile mind into a source of genuine intellectual authority.`,
  strengths: ["Communication luck", "Learning opportunities", "Social expansion", "Versatile growth"],
@@ -1285,22 +1285,22 @@ The growth edge involves choosing depth over breadth when it matters most. Learn
  summary: "Luck through nurturing, family, and emotional intelligence.",
  reading: `Jupiter in Cancer is exalted, creating extraordinary abundance through nurturing, family bonds, and emotional wisdom. This is one of the most fortunate placements in the zodiac — growth comes naturally through caring for others, creating emotional security, and honoring the bonds of family and home.
 
-Opportunities flow through emotional intelligence and the deep trust this soul inspires. People instinctively feel safe with them, which opens doors in both personal and professional life. Real estate, food, family businesses, and caregiving fields are particularly blessed by this placement.
+Opportunities flow through emotional intelligence and the deep trust you inspire. People instinctively feel safe with you, which opens doors in both personal and professional life. Real estate, food, family businesses, and caregiving fields are particularly blessed by this placement.
 
-There is a profound capacity for creating belonging wherever this soul goes. Home is not just a physical space but an emotional experience they create — warm, welcoming, and abundant. Their generosity with emotional support returns to them multiplied in material and spiritual blessings.
+There is a profound capacity for creating belonging wherever you go. Home is not just a physical space but an emotional experience you create — warm, welcoming, and abundant. Your generosity with emotional support returns to you multiplied in material and spiritual blessings.
 
-The growth edge involves expanding beyond the familiar without losing the security that fuels their gifts. Learning that the nurturing heart can extend its warmth far beyond family and close circles — to community, to strangers, to the world — unlocks the full exalted potential of this beautifully blessed placement.`,
+The growth edge involves expanding beyond the familiar without losing the security that fuels your gifts. Learning that the nurturing heart can extend its warmth far beyond family and close circles — to community, to strangers, to the world — unlocks the full exalted potential of this beautifully blessed placement.`,
  strengths: ["Family blessings", "Emotional wisdom", "Nurturing abundance", "Intuitive luck"],
  challenges: ["Over-protective", "Clinging to security", "Emotional excess", "Fear of growth"]
  },
  Leo: {
  keywords: ["Generous", "Creative", "Confident", "Dramatic"],
  summary: "Luck through creativity, generosity, and self-expression.",
- reading: `Jupiter in Leo expands through creativity, generosity, and the courageous expression of authentic self. Fortune follows this soul like a spotlight — the more genuinely they express their unique gifts and share their talents, the more abundance and recognition flow their way.
+ reading: `Jupiter in Leo expands through creativity, generosity, and the courageous expression of authentic self. Fortune follows you like a spotlight — the more genuinely you express your unique gifts and share your talents, the more abundance and recognition flow your way.
 
-Growth comes through creative work, entertainment, leadership, and any pursuit where personal flair and warmth can shine. This placement creates people who attract opportunity through charisma and the willingness to take center stage when their gifts call for it. Confidence itself becomes a form of luck.
+Growth comes through creative work, entertainment, leadership, and any pursuit where personal flair and warmth can shine. Your nature creates people who attract opportunity through charisma and the willingness to take center stage when your gifts call for it. Confidence itself becomes a form of luck.
 
-There is a magnificent generosity here that amplifies abundance. This soul gives freely — time, energy, praise, resources — and finds that giving opens channels for even greater receiving. Their warmth inspires loyalty and creates networks of mutual support that sustain growth over a lifetime.
+There is a magnificent generosity here that amplifies abundance. You give freely — time, energy, praise, resources — and finds that giving opens channels for even greater receiving. Your warmth inspires loyalty and creates networks of mutual support that sustain growth over a lifetime.
 
 The growth edge involves ensuring that the desire for recognition does not eclipse the authentic creative expression that attracts it. Learning that true abundance comes from the joy of creating rather than the applause of performing allows this radiantly fortunate placement to shine without burning.`,
  strengths: ["Creative abundance", "Generous luck", "Confidence attracts", "Inspiring presence"],
@@ -1309,11 +1309,11 @@ The growth edge involves ensuring that the desire for recognition does not eclip
  Virgo: {
  keywords: ["Analytical", "Helpful", "Practical", "Modest"],
  summary: "Luck through service, skill, and attention to detail.",
- reading: `Jupiter in Virgo expands through service, mastery of practical skills, and meticulous attention to the details that others overlook. Growth comes through being genuinely useful — this soul attracts abundance by solving real problems with real competence, building a reputation for excellence one careful effort at a time.
+ reading: `Jupiter in Virgo expands through service, mastery of practical skills, and meticulous attention to the details that others overlook. Growth comes through being genuinely useful — you attract abundance by solving real problems with real competence, building a reputation for excellence one careful effort at a time.
 
-Opportunities arrive through demonstrated skill and the willingness to serve. Healthcare, craftsmanship, analysis, education, and any field requiring precision and dedication are particularly blessed. This placement creates experts whose knowledge is both broad and practically applicable.
+Opportunities arrive through demonstrated skill and the willingness to serve. Healthcare, craftsmanship, analysis, education, and any field requiring precision and dedication are particularly blessed. Your nature creates experts whose knowledge is both broad and practically applicable.
 
-There is a quiet form of abundance here that compounds over time. While flashier placements may attract sudden windfalls, Jupiter in Virgo builds wealth through accumulated expertise, efficient systems, and the trust that comes from consistently excellent work. Quality is their currency.
+There is a quiet form of abundance here that compounds over time. While flashier placements may attract sudden windfalls, Jupiter in Virgo builds wealth through accumulated expertise, efficient systems, and the trust that comes from consistently excellent work. Quality is your currency.
 
 The growth edge involves releasing perfectionism that prevents the very growth Jupiter promises. Learning that expansion sometimes requires accepting imperfect action over perfect inaction — and that the big picture matters as much as the details — unlocks abundant opportunities that meticulous preparation has already earned.`,
  strengths: ["Service abundance", "Skill development", "Practical wisdom", "Health consciousness"],
@@ -1322,24 +1322,24 @@ The growth edge involves releasing perfectionism that prevents the very growth J
  Libra: {
  keywords: ["Diplomatic", "Artistic", "Partnership-oriented", "Fair"],
  summary: "Luck through partnerships, beauty, and harmony.",
- reading: `Jupiter in Libra expands through partnerships, artistic pursuits, and the creation of harmony in every sphere of life. Fortune flows most powerfully through collaboration — this soul's greatest opportunities arrive through other people, and the ability to create balanced, mutually beneficial relationships is their greatest asset.
+ reading: `Jupiter in Libra expands through partnerships, artistic pursuits, and the creation of harmony in every sphere of life. Fortune flows most powerfully through collaboration — your greatest opportunities arrive through other people, and the ability to create balanced, mutually beneficial relationships is your greatest asset.
 
 Growth comes through aesthetic sensibility, diplomatic skill, and the art of fair dealing. Law, art, design, counseling, and any field requiring the ability to bring opposing forces into harmony are particularly blessed. Beauty itself becomes a path to abundance.
 
-There is a natural gift for creating win-win situations that amplifies prosperity for everyone involved. This soul's fairness and charm open doors that force and ambition alone cannot — people want to work with them, invest in them, and support their vision because they feel genuinely valued in return.
+There is a natural gift for creating win-win situations that amplifies prosperity for everyone involved. Your fairness and charm open doors that force and ambition alone cannot — people want to work with you, invest in you, and support your vision because you feel genuinely valued in return.
 
-The growth edge involves learning to pursue personal goals with equal vigor. Recognizing that healthy self-interest is not selfishness — and that the best partnerships begin with two whole individuals — allows this diplomatically gifted soul to attract opportunities that serve their own growth, not just the growth of others.`,
+The growth edge involves learning to pursue personal goals with equal vigor. Recognizing that healthy self-interest is not selfishness — and that the best partnerships begin with two whole individuals — allows this diplomatically gifted soul to attract opportunities that serve your own growth, not just the growth of others.`,
  strengths: ["Partnership luck", "Artistic abundance", "Diplomatic growth", "Fair rewards"],
  challenges: ["Indecision", "Dependent on others", "Superficial harmony", "Avoids necessary conflict"]
  },
  Scorpio: {
  keywords: ["Transformative", "Intense", "Resourceful", "Deep"],
  summary: "Luck through transformation, depth, and shared resources.",
- reading: `Jupiter in Scorpio expands through transformation, psychological depth, and the fearless exploration of what lies beneath the surface. Fortune favors this soul when they embrace change rather than resist it — their greatest opportunities emerge from crisis, endings, and the willingness to dive into the depths where others fear to go.
+ reading: `Jupiter in Scorpio expands through transformation, psychological depth, and the fearless exploration of what lies beneath the surface. Fortune favors you when you embrace change rather than resist it — your greatest opportunities emerge from crisis, endings, and the willingness to dive into the depths where others fear to go.
 
-Growth comes through managing shared resources, understanding hidden motivations, and the courage to face uncomfortable truths. Finance, psychology, research, healing, and any field requiring penetrating insight are powerfully blessed. This placement creates people who profit from transformation itself.
+Growth comes through managing shared resources, understanding hidden motivations, and the courage to face uncomfortable truths. Finance, psychology, research, healing, and any field requiring penetrating insight are powerfully blessed. Your nature creates people who profit from transformation itself.
 
-There is a remarkable ability to regenerate and reinvent here. Where others see destruction, this soul sees raw material for something better. Every ending becomes a beginning, every loss an eventual gain, and every crisis a doorway to expanded power and understanding.
+There is a remarkable ability to regenerate and reinvent here. Where others see destruction, you see raw material for something better. Every ending becomes a beginning, every loss an eventual gain, and every crisis a doorway to expanded power and understanding.
 
 The growth edge involves trusting the process of expansion without needing to control every variable. Learning that openness and generosity amplify abundance more effectively than secrecy and strategic withholding allows this deeply powerful placement to attract the extraordinary prosperity that profound transformation makes possible.`,
  strengths: ["Transformative luck", "Deep wisdom", "Resource management", "Regenerative growth"],
@@ -1348,11 +1348,11 @@ The growth edge involves trusting the process of expansion without needing to co
  Sagittarius: {
  keywords: ["Optimistic", "Adventurous", "Philosophical", "Expansive"],
  summary: "Luck through adventure, learning, and faith.",
- reading: `Jupiter in Sagittarius is in its home sign, creating the most naturally fortunate and expansive placement in the zodiac. Luck here is almost legendary — this soul seems to land on their feet no matter the height of the fall, protected by an unshakeable faith in life's ultimate benevolence.
+ reading: `Jupiter in Sagittarius is in its home sign, creating the most naturally fortunate and expansive placement in the zodiac. Luck here is almost legendary — you seems to land on your feet no matter the height of the fall, protected by an unshakeable faith in life's ultimate benevolence.
 
-Growth comes through adventure, higher education, philosophical exploration, and the courage to follow beliefs wherever they lead. Travel, teaching, publishing, law, and spiritual pursuits are all powerfully blessed. The bigger the dream, the more the universe conspires to support it.
+Growth comes through adventure, higher education, philosophical exploration, and the courage to follow beliefs wherever you lead. Travel, teaching, publishing, law, and spiritual pursuits are all powerfully blessed. The bigger the dream, the more the universe conspires to support it.
 
-There is a contagious optimism here that literally creates good fortune. By believing in positive outcomes, this soul takes the bold actions that make positive outcomes possible. Their enthusiasm attracts allies, mentors, and opportunities that more cautious souls never encounter.
+There is a contagious optimism here that literally creates good fortune. By believing in positive outcomes, you take the bold actions that make positive outcomes possible. Your enthusiasm attracts allies, mentors, and opportunities that more cautious souls never encounter.
 
 The growth edge involves learning when expansion should pause and consolidation should begin. Recognizing that bigger is not always better — and that the deepest wisdom sometimes comes from staying rather than seeking — transforms legendary luck into sustainable prosperity built on genuine wisdom.`,
  strengths: ["Natural luck", "Optimistic growth", "Adventurous abundance", "Faith rewarded"],
@@ -1361,7 +1361,7 @@ The growth edge involves learning when expansion should pause and consolidation 
  Capricorn: {
  keywords: ["Ambitious", "Disciplined", "Patient", "Structured"],
  summary: "Luck through discipline, hard work, and patience.",
- reading: `Jupiter in Capricorn expands through discipline, structured effort, and the patience to build something that endures. Fortune here is earned rather than given — opportunities appear when this soul demonstrates competence, accepts responsibility, and commits to the long road of mastery.
+ reading: `Jupiter in Capricorn expands through discipline, structured effort, and the patience to build something that endures. Fortune here is earned rather than given — opportunities appear when you demonstrate competence, accepts responsibility, and commits to the long road of mastery.
 
 Growth comes through hard work, institutional knowledge, and playing by the rules long enough to understand which rules can eventually be rewritten. Business, government, management, and any field requiring demonstrated authority are blessed by this placement, though rewards arrive later rather than sooner.
 
@@ -1374,9 +1374,9 @@ The growth edge involves remembering that joy and spontaneity are not threats to
  Aquarius: {
  keywords: ["Innovative", "Humanitarian", "Progressive", "Independent"],
  summary: "Luck through innovation, community, and progressive thinking.",
- reading: `Jupiter in Aquarius expands through innovation, humanitarian vision, and the progressive thinking that sees what the world needs before the world knows it needs it. Fortune flows most powerfully when this soul serves the collective good — personal abundance becomes a natural byproduct of genuine service to humanity.
+ reading: `Jupiter in Aquarius expands through innovation, humanitarian vision, and the progressive thinking that sees what the world needs before the world knows it needs it. Fortune flows most powerfully when you serve the collective good — personal abundance becomes a natural byproduct of genuine service to humanity.
 
-Growth comes through technology, social movements, community building, and any pursuit that connects individual brilliance with collective benefit. This placement creates visionaries whose most radical ideas eventually become mainstream wisdom, attracting recognition and reward in the process.
+Growth comes through technology, social movements, community building, and any pursuit that connects individual brilliance with collective benefit. Your nature creates visionaries whose most radical ideas eventually become mainstream wisdom, attracting recognition and reward in the process.
 
 There is a gift for seeing the future here — not through mysticism but through the clear-eyed recognition of emerging patterns and unmet needs. Friendships and networks are particularly blessed, creating webs of mutual support that amplify individual efforts into movements.
 
@@ -1389,9 +1389,9 @@ The growth edge involves remaining connected to personal relationships while pur
  summary: "Luck through faith, compassion, and spiritual connection.",
  reading: `Jupiter in Pisces is in its traditional home sign, creating profound abundance through compassion, imagination, and spiritual faith. This is the placement of miraculous fortune — the kind that arrives through synchronicity, divine timing, and the mysterious workings of a universe that rewards genuine selflessness.
 
-Growth comes through trusting intuition, helping others without expectation of return, and following creative and spiritual callings wherever they lead. The arts, healing, spiritual work, and any pursuit involving imagination and compassion are extraordinarily blessed.
+Growth comes through trusting intuition, helping others without expectation of return, and following creative and spiritual callings wherever you lead. The arts, healing, spiritual work, and any pursuit involving imagination and compassion are extraordinarily blessed.
 
-There is a boundless generosity here that actually amplifies abundance rather than depleting it. The more this soul gives, the more they receive — not through strategy but through a natural cycle of give and take. Their faith itself becomes a creative force that shapes reality.
+There is a boundless generosity here that actually amplifies abundance rather than depleting it. The more you give, the more you receive — not through strategy but through a natural cycle of give and take. Your faith itself becomes a creative force that shapes reality.
 
 The growth edge involves developing practical discernment alongside spiritual openness. Learning that boundaries protect the generous heart — and that wise compassion is more effective than indiscriminate giving — allows this beautifully blessed placement to channel its extraordinary fortune into lasting good for both self and the world.`,
  strengths: ["Spiritual luck", "Creative abundance", "Compassionate growth", "Intuitive guidance"],
@@ -1405,9 +1405,9 @@ var SATURN_SIGN_READINGS = {
  summary: "Learning discipline through patience with action and assertion.",
  reading: `Saturn in Aries brings life's deepest lessons through the territory of action, assertion, and the courage to claim space in the world. Early in life, there may be significant blocks around taking initiative — a hesitation before acting, a frustration when energy is suppressed, or experiences that made bold self-assertion feel dangerous.
 
-The developmental journey requires building disciplined courage over time. Where Mars in Aries acts impulsively, Saturn in Aries learns to act with considered precision. Every instance of earned initiative — every time this soul pushes past fear to take action — strengthens a foundation of authentic authority.
+The developmental journey requires building disciplined courage over time. Where Mars in Aries acts impulsively, Saturn in Aries learns to act with considered precision. Every instance of earned initiative — every time you push past fear to take action — strengthens a foundation of authentic authority.
 
-The mastery that eventually emerges is extraordinary: a leader who acts from wisdom rather than impulse, who commands respect because they have earned the right to lead through sustained effort and tested courage. This is not borrowed confidence but the real thing, forged in difficulty.
+The mastery that eventually emerges is extraordinary: a leader who acts from wisdom rather than impulse, who commands respect because you have earned the right to lead through sustained effort and tested courage. This is not borrowed confidence but the real thing, forged in difficulty.
 
 The ultimate reward is becoming a disciplined warrior — someone whose actions carry the weight of hard-won experience. Patience transforms raw courage into strategic power, and the leader who once struggled to act becomes the one others trust to act wisely.`,
  strengths: ["Disciplined action", "Patient courage", "Earned leadership", "Controlled assertion"],
@@ -1422,7 +1422,7 @@ The developmental journey involves learning that true security cannot be rushed 
 
 Over time, this placement produces some of the most financially astute and materially stable people in the zodiac. The fear of not having enough transforms into an unshakeable ability to create and maintain real security. Self-worth, too, shifts from external validation to an inner knowing that no circumstance can diminish.
 
-The ultimate reward is becoming a pillar of stability — someone who has built lasting value through sustained effort and who understands, from hard experience, what truly matters. Their relationship with material security becomes a source of wisdom they can share with others.`,
+The ultimate reward is becoming a pillar of stability — someone who has built lasting value through sustained effort and who understands, from hard experience, what truly matters. Your relationship with material security becomes a source of wisdom you can share with others.`,
  strengths: ["Financial wisdom", "Steady building", "Earned security", "Patient persistence"],
  challenges: ["Financial fears", "Scarcity mentality", "Stubborn resistance", "Self-worth issues"]
  },
@@ -1433,20 +1433,20 @@ The ultimate reward is becoming a pillar of stability — someone who has built 
 
 The developmental journey involves transforming scattered mental energy into focused intellectual power. Where unstructured Gemini energy flits from topic to topic, Saturn demands mastery. Study becomes deeper, communication more precise, and ideas more carefully considered before being shared.
 
-Over time, this placement produces remarkably clear thinkers and communicators. The early struggles with expression evolve into an ability to articulate complex ideas with unusual clarity and authority. Words are never wasted — every sentence carries weight because this soul knows the cost of careless communication.
+Over time, this placement produces remarkably clear thinkers and communicators. The early struggles with expression evolve into an ability to articulate complex ideas with unusual clarity and authority. Words are never wasted — every sentence carries weight because you know the cost of careless communication.
 
-The ultimate reward is becoming a respected voice of reason — a teacher, writer, or thinker whose words carry authority precisely because they were hard-won. The mind that once struggled to focus becomes a precision instrument, and the communicator who once hesitated speaks with the confidence of genuine knowledge.`,
+The ultimate reward is becoming a respected voice of reason — a teacher, writer, or thinker whose words carry authority precisely because you were hard-won. The mind that once struggled to focus becomes a precision instrument, and the communicator who once hesitated speaks with the confidence of genuine knowledge.`,
  strengths: ["Focused mind", "Careful speech", "Thorough learning", "Mental discipline"],
  challenges: ["Communication blocks", "Learning difficulties", "Mental anxiety", "Scattered focus"]
  },
  Cancer: {
  keywords: ["Emotional Discipline", "Family Responsibility", "Protective Boundaries", "Earned Security"],
  summary: "Learning discipline through emotional maturity and family duties.",
- reading: `Saturn in Cancer brings life's deepest lessons through the territory of emotions, family, and inner security. Early experiences may include emotional restrictions, family responsibilities beyond their years, or a home environment that required premature self-reliance. The heart learns early that safety must be built from within.
+ reading: `Saturn in Cancer brings life's deepest lessons through the territory of emotions, family, and inner security. Early experiences may include emotional restrictions, family responsibilities beyond your years, or a home environment that required premature self-reliance. The heart learns early that safety must be built from within.
 
-The developmental journey involves creating a solid internal foundation that does not depend on external circumstances. While others may find easy comfort in family warmth, this soul must build their own emotional infrastructure — learning to be their own parent, their own safe harbor, their own source of unconditional support.
+The developmental journey involves creating a solid internal foundation that does not depend on external circumstances. While others may find easy comfort in family warmth, you must build your own emotional infrastructure — learning to be your own parent, your own safe harbor, your own source of unconditional support.
 
-Over time, this challenging placement produces people of extraordinary emotional resilience. Having built their own security from scratch, they understand emotional architecture in ways that the naturally secure never need to. Their capacity to provide genuine support to others grows directly from having learned to support themselves.
+Over time, this challenging placement produces people of extraordinary emotional resilience. Having built your own security from scratch, you understand emotional architecture in ways that the naturally secure never need to. Your capacity to provide genuine support to others grows directly from having learned to support yourself.
 
 The ultimate reward is becoming an unshakeable source of emotional stability for self and others. The child who had to grow up too fast becomes the adult whose emotional maturity is a gift — a rock that others can lean on precisely because it was built through real experience rather than comfortable circumstance.`,
  strengths: ["Emotional maturity", "Self-reliance", "Protective strength", "Family responsibility"],
@@ -1459,9 +1459,9 @@ The ultimate reward is becoming an unshakeable source of emotional stability for
 
 The developmental journey involves learning that authentic self-expression does not require anyone's permission — but it does require the discipline of genuine craft. Superficial charm is not enough. Real creative authority must be earned through sustained effort, practice, and the humility to develop skill before demanding applause.
 
-Over time, this placement produces creators and leaders of remarkable substance. Their work carries gravitas because it was not created for attention but from genuine need to express. Recognition, when it comes, is built on solid foundations rather than flash.
+Over time, this placement produces creators and leaders of remarkable substance. Your work carries gravitas because it was not created for attention but from genuine need to express. Recognition, when it comes, is built on solid foundations rather than flash.
 
-The ultimate reward is becoming a creative authority whose confidence is earned rather than performed. The soul who once struggled to shine becomes a light that others trust precisely because its warmth is real. Humble mastery becomes their signature, and the world recognizes depth that mere showmanship cannot achieve.`,
+The ultimate reward is becoming a creative authority whose confidence is earned rather than performed. The soul who once struggled to shine becomes a light that others trust precisely because its warmth is real. Humble mastery becomes your signature, and the world recognizes depth that mere showmanship cannot achieve.`,
  strengths: ["Humble confidence", "Disciplined creativity", "Earned respect", "Mature self-expression"],
  challenges: ["Creative blocks", "Fear of spotlight", "Recognition struggles", "Ego challenges"]
  },
@@ -1472,20 +1472,20 @@ The ultimate reward is becoming a creative authority whose confidence is earned 
 
 The developmental journey involves transforming anxious perfectionism into genuine mastery. The difference is crucial — perfectionism serves fear while mastery serves excellence. Learning to apply exacting standards productively rather than destructively is the core lesson of this placement.
 
-Over time, this soul develops skills of extraordinary precision and depth. Whether in healing, craft, analysis, or service, their dedication to doing things correctly produces work of exceptional quality. Health challenges often become catalysts for developing expertise that helps others.
+Over time, you develop skills of extraordinary precision and depth. Whether in healing, craft, analysis, or service, your dedication to doing things correctly produces work of exceptional quality. Health challenges often become catalysts for developing expertise that helps others.
 
-The ultimate reward is becoming a master of their craft — someone whose skill is so refined and whose service is so reliable that excellence becomes effortless. The anxious worker transforms into the trusted expert, and the body that once signaled distress becomes an instrument of precision and resilience.`,
+The ultimate reward is becoming a master of your craft — someone whose skill is so refined and whose service is so reliable that excellence becomes effortless. The anxious worker transforms into the trusted expert, and the body that once signaled distress becomes an instrument of precision and resilience.`,
  strengths: ["Expert skills", "Health mastery", "Service dedication", "Detailed work"],
  challenges: ["Perfectionism anxiety", "Health worries", "Over-criticism", "Work burden"]
  },
  Libra: {
  keywords: ["Relationship Wisdom", "Commitment Mastery", "Fair Dealing", "Partnership Lessons"],
  summary: "Learning discipline through commitment and balance in relationships.",
- reading: `Saturn in Libra is exalted — its highest expression — bringing mastery in relationships, justice, and the art of balanced commitment. Lessons come through serious engagement with partnership: learning what fairness truly means, discovering the difference between compromise and capitulation, and building relationships that endure because they are founded on genuine equity.
+ reading: `Saturn in Libra is exalted — its highest expression — bringing mastery in relationships, justice, and the art of balanced commitment. Lessons come through serious engagement with partnership: learning what fairness truly means, discovering the difference between compromise and capitulation, and building relationships that endure because you are founded on genuine equity.
 
-The developmental journey involves taking relationships seriously enough to do the difficult work they require. Surface harmony is not enough for this placement — real balance demands honest negotiation, clear boundaries, and the willingness to address injustice even when it disrupts the peace.
+The developmental journey involves taking relationships seriously enough to do the difficult work you require. Surface harmony is not enough for this placement — real balance demands honest negotiation, clear boundaries, and the willingness to address injustice even when it disrupts the peace.
 
-Over time, this placement produces extraordinary partners, mediators, and judges of character. Their understanding of human dynamics runs deep because they have done the painstaking work of learning how people truly function in relationship — not the romantic ideal but the complex, rewarding reality.
+Over time, this placement produces extraordinary partners, mediators, and judges of character. Your understanding of human dynamics runs deep because you have done the painstaking work of learning how people truly function in relationship — not the romantic ideal but the complex, rewarding reality.
 
 The ultimate reward is becoming a trusted anchor in relationships and a respected voice of fairness. The commitment that once felt heavy transforms into a source of profound stability, and the person who learned about love the hard way becomes the wisest counselor in matters of the heart.`,
  strengths: ["Relationship wisdom", "Commitment strength", "Fair judgment", "Diplomatic mastery"],
@@ -1494,13 +1494,13 @@ The ultimate reward is becoming a trusted anchor in relationships and a respecte
  Scorpio: {
  keywords: ["Emotional Mastery", "Power Discipline", "Transformation Control", "Deep Wisdom"],
  summary: "Learning discipline through emotional depth and power management.",
- reading: `Saturn in Scorpio brings life's deepest lessons through the territory of power, trust, intimacy, and transformation. The experiences that shape this soul are often intense — encounters with betrayal, loss, or the misuse of power that teach, at a visceral level, the responsibility that comes with wielding influence over others.
+ reading: `Saturn in Scorpio brings life's deepest lessons through the territory of power, trust, intimacy, and transformation. The experiences that shape you are often intense — encounters with betrayal, loss, or the misuse of power that teach, at a visceral level, the responsibility that comes with wielding influence over others.
 
-The developmental journey involves learning to navigate darkness with integrity. This soul must develop the emotional discipline to face what terrifies most people — grief, rage, desire, vulnerability — without being consumed or corrupted by it. The stakes are real, and the growth is proportional.
+The developmental journey involves learning to navigate darkness with integrity. You must develop the emotional discipline to face what terrifies most people — grief, rage, desire, vulnerability — without being consumed or corrupted by it. The stakes are real, and the growth is proportional.
 
-Over time, this placement produces people of remarkable psychological strength and wisdom. They understand the mechanics of power because they have been tested by it. Trust, once so difficult, is offered with extraordinary discernment. And their capacity to transform through crisis becomes a gift they can extend to others.
+Over time, this placement produces people of remarkable psychological strength and wisdom. You understand the mechanics of power because you have been tested by it. Trust, once so difficult, is offered with extraordinary discernment. And your capacity to transform through crisis becomes a gift you can extend to others.
 
-The ultimate reward is becoming a wise guide through the underworld — someone who can hold space for darkness without fear because they have survived their own. The soul that learned about power through hard experience becomes the one others trust when everything falls apart.`,
+The ultimate reward is becoming a wise guide through the underworld — someone who can hold space for darkness without fear because you have survived your own. The soul that learned about power through hard experience becomes the one others trust when everything falls apart.`,
  strengths: ["Emotional mastery", "Power wisdom", "Transformative strength", "Deep understanding"],
  challenges: ["Control issues", "Trust difficulties", "Intense fear", "Secretive burden"]
  },
@@ -1511,9 +1511,9 @@ The ultimate reward is becoming a wise guide through the underworld — someone 
 
 The developmental journey involves testing every assumption, questioning every doctrine, and building a personal philosophy that can withstand the weight of real life. Faith must be earned through experience, not inherited from authority. Truth must be verified through living, not accepted on hearsay.
 
-Over time, this placement produces thinkers of remarkable depth and integrity. Their beliefs carry authority because they have been tested and refined through direct experience. Where others offer platitudes, this soul offers hard-won wisdom that rings true because it emerged from genuine questioning.
+Over time, this placement produces thinkers of remarkable depth and integrity. Your beliefs carry authority because you have been tested and refined through direct experience. Where others offer platitudes, you offer hard-won wisdom that rings true because it emerged from genuine questioning.
 
-The ultimate reward is becoming a respected teacher and truth-seeker whose wisdom is grounded in reality. The soul that once lost faith discovers something far more valuable — a philosophy tested by fire and proven by life, capable of guiding others through their own dark nights with genuine authority.`,
+The ultimate reward is becoming a respected teacher and truth-seeker whose wisdom is grounded in reality. The soul that once lost faith discovers something far more valuable — a philosophy tested by fire and proven by life, capable of guiding others through your own dark nights with genuine authority.`,
  strengths: ["Grounded wisdom", "Practical faith", "Tested beliefs", "Earned truth"],
  challenges: ["Faith crises", "Pessimistic doubt", "Dogmatic rigidity", "Adventure fear"]
  },
@@ -1522,22 +1522,22 @@ The ultimate reward is becoming a respected teacher and truth-seeker whose wisdo
  summary: "Ultimate mastery through patience, discipline, and earned achievement.",
  reading: `Saturn in Capricorn is in its home sign, creating the most powerful and concentrated expression of discipline, responsibility, and the drive toward lasting achievement. This placement carries the full weight of Saturn's teaching — there are no shortcuts, no workarounds, and no substitutes for genuine effort sustained over time.
 
-The developmental journey is one of total responsibility. This soul learns early that they must earn everything through their own effort — that authority, respect, and success are not given but built, brick by painstaking brick, through years of dedicated work and unwavering commitment.
+The developmental journey is one of total responsibility. You learn early that you must earn everything through your own effort — that authority, respect, and success are not given but built, brick by painstaking brick, through years of dedicated work and unwavering commitment.
 
-Over time, this placement produces achievers of extraordinary substance. Their success is built on bedrock rather than sand, and their authority commands genuine respect because it was earned through demonstrated competence. They become the standard against which others measure professionalism and dedication.
+Over time, this placement produces achievers of extraordinary substance. Your success is built on bedrock rather than sand, and your authority commands genuine respect because it was earned through demonstrated competence. You become the standard against which others measure professionalism and dedication.
 
-The ultimate reward is becoming a genuine authority — respected not for title or position but for the unmistakable quality of accomplishment that only sustained mastery produces. The disciplined soul who accepted full responsibility for their life creates a legacy that outlasts them.`,
+The ultimate reward is becoming a genuine authority — respected not for title or position but for the unmistakable quality of accomplishment that only sustained mastery produces. The disciplined soul who accepted full responsibility for your life creates a legacy that outlasts you.`,
  strengths: ["Natural authority", "Disciplined achievement", "Patient mastery", "Lasting success"],
  challenges: ["Excessive seriousness", "Workaholism", "Emotional coldness", "Status obsession"]
  },
  Aquarius: {
  keywords: ["Disciplined Innovation", "Responsible Freedom", "Structured Progress", "Community Commitment"],
  summary: "Learning discipline through responsible innovation and community service.",
- reading: `Saturn in Aquarius is in its traditional home sign, bringing mastery in innovation, social architecture, and the disciplined pursuit of progressive change. The lessons here involve balancing individual vision with collective responsibility — learning that lasting reform requires structure, patience, and the willingness to build systems rather than just challenge them.
+ reading: `Saturn in Aquarius is in its traditional home sign, bringing mastery in innovation, social architecture, and the disciplined pursuit of progressive change. The lessons here involve balancing individual vision with collective responsibility — learning that lasting reform requires structure, patience, and the willingness to build systems rather than just challenge you.
 
 The developmental journey involves channeling revolutionary energy into constructive form. Raw rebellion must mature into strategic reform. Individual brilliance must learn to serve the group without losing its originality. The tension between freedom and responsibility becomes the creative friction that produces genuine innovation.
 
-Over time, this placement creates remarkable community builders and social architects. Their innovations endure because they are grounded in practical reality and genuine understanding of how groups function. They bring structure to vision and discipline to idealism, creating change that actually sticks.
+Over time, this placement creates remarkable community builders and social architects. Your innovations endure because you are grounded in practical reality and genuine understanding of how groups function. You bring structure to vision and discipline to idealism, creating change that actually sticks.
 
 The ultimate reward is becoming a respected reformer whose progressive vision is matched by the practical ability to implement it. The rebel who once fought against systems learns to build better ones — creating lasting structures that serve collective evolution while honoring individual freedom.`,
  strengths: ["Disciplined innovation", "Responsible reform", "Community dedication", "Structured progress"],
@@ -1550,7 +1550,7 @@ The ultimate reward is becoming a respected reformer whose progressive vision is
 
 The developmental journey involves grounding spiritual gifts in practical service. Mystical experience must translate into tangible help. Creative vision must find disciplined form. Compassion must develop the discernment to serve effectively rather than simply absorb others' pain.
 
-Over time, this placement produces healers and spiritual guides of remarkable depth and practical effectiveness. Their spiritual understanding is not theoretical but forged through direct experience — including the experience of suffering that initially seemed meaningless but eventually revealed profound purpose.
+Over time, this placement produces healers and spiritual guides of remarkable depth and practical effectiveness. Your spiritual understanding is not theoretical but forged through direct experience — including the experience of suffering that initially seemed meaningless but eventually revealed profound purpose.
 
 The ultimate reward is becoming a bridge between worlds — a grounded mystic whose spiritual wisdom serves practical human needs. The soul that once struggled to find meaning in suffering discovers the ability to transform pain into healing, and the dreamer who once escaped reality learns to bring dreams into material form.`,
  strengths: ["Spiritual discipline", "Practical compassion", "Creative mastery", "Grounded intuition"],
@@ -1569,9 +1569,9 @@ var CHIRON_SIGN_READINGS = {
 
 This wound often manifests as a deep hesitation before taking action, a pattern of putting others first to the point of self-erasure, or an overcompensation through aggressive behavior that masks profound uncertainty about one's own worth and right to lead.
 
-The healing journey involves reclaiming the right to exist fully and unapologetically. Each act of authentic self-assertion — however small — mends this wound. Over time, the soul discovers that taking up space is not selfish but necessary, and that their unique identity is not a burden but a gift the world needs.
+The healing journey involves reclaiming the right to exist fully and unapologetically. Each act of authentic self-assertion — however small — mends this wound. Over time, the soul discovers that taking up space is not selfish but necessary, and that your unique identity is not a burden but a gift the world needs.
 
-The extraordinary gift that emerges is the ability to help others find their own courage and authentic self-expression. Having walked the painful path from self-doubt to self-knowing, this soul becomes a powerful guide for anyone struggling to claim their own identity and voice.`
+The extraordinary gift that emerges is the ability to help others find your own courage and authentic self-expression. Having walked the painful path from self-doubt to self-knowing, you becomes a powerful guide for anyone struggling to claim your own identity and voice.`
  },
  Taurus: {
  keywords: ["Worth Wound", "Value Healing", "Security Recovery", "Self-Worth Journey"],
@@ -1579,9 +1579,9 @@ The extraordinary gift that emerges is the ability to help others find their own
 
 This wound often manifests as a complicated relationship with money and possessions — either hoarding out of scarcity fear or rejecting material needs as unspiritual. There may be a persistent sense that true comfort and security are always just out of reach, no matter how much is accumulated.
 
-The healing journey involves developing genuine self-worth that is independent of external possessions, financial status, or others' valuations. This soul must learn from within that their value is inherent — not earned through productivity, attractiveness, or usefulness. The body itself often becomes a vehicle for healing through grounding practices.
+The healing journey involves developing genuine self-worth that is independent of external possessions, financial status, or others' valuations. You must learn from within that your value is inherent — not earned through productivity, attractiveness, or usefulness. The body itself often becomes a vehicle for healing through grounding practices.
 
-The extraordinary gift that emerges is the ability to help others recognize and claim their own inherent value. Having navigated the painful territory of worthlessness, this soul becomes a powerful mirror reflecting back the genuine worth that others cannot see in themselves.`
+The extraordinary gift that emerges is the ability to help others recognize and claim your own inherent value. Having navigated the painful territory of worthlessness, you becomes a powerful mirror reflecting back the genuine worth that others cannot see in yourself.`
  },
  Gemini: {
  keywords: ["Communication Wound", "Learning Healing", "Voice Recovery", "Mental Clarity"],
@@ -1591,7 +1591,7 @@ This wound often manifests as anxiety around self-expression, a belief that one'
 
 The healing journey involves finding one's authentic voice and trusting that what one has to say matters. This may require unlearning deeply held beliefs about intellectual inadequacy and discovering that communication is not about perfection but about genuine connection and the courage to share what is real.
 
-The extraordinary gift that emerges is the ability to help others find their own voices and communicate with confidence. Having experienced the pain of silence, this soul develops an extraordinary sensitivity to what others are struggling to express — becoming a gifted teacher, writer, or communicator who gives language to the unspoken.`
+The extraordinary gift that emerges is the ability to help others find your own voices and communicate with confidence. Having experienced the pain of silence, you develop an extraordinary sensitivity to what others are struggling to express — becoming a gifted teacher, writer, or communicator who gives language to the unspoken.`
  },
  Cancer: {
  keywords: ["Nurturing Wound", "Belonging Healing", "Home Recovery", "Emotional Security"],
@@ -1599,9 +1599,9 @@ The extraordinary gift that emerges is the ability to help others find their own
 
 This wound often manifests as difficulty trusting that love is reliable, a tendency to over-nurture others while neglecting personal emotional needs, or a pattern of recreating the very instability that caused the original pain. Home may feel like something that exists for others but remains perpetually elusive for oneself.
 
-The healing journey involves creating inner security and learning to mother oneself with the tenderness that may have been missing in childhood. This soul must build from the inside out — constructing an emotional home within that no external circumstance can demolish. Self-nurturing is not indulgence but medicine.
+The healing journey involves creating inner security and learning to mother oneself with the tenderness that may have been missing in childhood. You must build from the inside out — constructing an emotional home within that no external circumstance can demolish. Self-nurturing is not indulgence but medicine.
 
-The extraordinary gift that emerges is the ability to help others heal family wounds and create genuine belonging. Having known the ache of emotional homelessness, this soul develops a profound capacity to create safe emotional spaces where others can finally feel they are held, seen, and welcome.`
+The extraordinary gift that emerges is the ability to help others heal family wounds and create genuine belonging. Having known the ache of emotional homelessness, you develop a profound capacity to create safe emotional spaces where others can finally feel you are held, seen, and welcome.`
  },
  Leo: {
  keywords: ["Recognition Wound", "Creative Healing", "Heart Recovery", "Joy Reclamation"],
@@ -1609,9 +1609,9 @@ The extraordinary gift that emerges is the ability to help others heal family wo
 
 This wound often manifests as a painful paradox: a deep need to express and be recognized alongside an equally deep terror of visibility. Creative gifts may be hidden or downplayed, and joy may feel like something that must be earned rather than freely experienced. The inner child carries bruises around play and self-expression.
 
-The healing journey involves reclaiming creative joy without requiring external validation to justify it. This soul must learn to create for the sake of creating, to shine without permission, and to understand that their unique expression is not vanity but a vital contribution that the world genuinely needs.
+The healing journey involves reclaiming creative joy without requiring external validation to justify it. You must learn to create for the sake of creating, to shine without permission, and to understand that your unique expression is not vanity but a vital contribution that the world genuinely needs.
 
-The extraordinary gift that emerges is the ability to help others express their unique gifts without shame or apology. Having navigated the painful territory between hiding and shining, this soul becomes a powerful encourager — someone who sees the spark in others and fans it into flame with genuine celebration.`
+The extraordinary gift that emerges is the ability to help others express your unique gifts without shame or apology. Having navigated the painful territory between hiding and shining, you becomes a powerful encourager — someone who sees the spark in others and fans it into flame with genuine celebration.`
  },
  Virgo: {
  keywords: ["Perfection Wound", "Service Healing", "Health Recovery", "Self-Acceptance"],
@@ -1619,9 +1619,9 @@ The extraordinary gift that emerges is the ability to help others express their 
 
 This wound often manifests as chronic self-criticism, health anxieties, or a compulsive need to be useful in order to feel worthy of love and belonging. There may be a persistent sense that no matter how hard one tries, the effort is never quite good enough — a moving goalpost of perfection that ensures perpetual inadequacy.
 
-The healing journey involves accepting imperfection as inherently human rather than as personal failure. This soul must learn that they are worthy of love not because of what they do but because of who they are — that flaws are not problems to solve but textures that make a life beautiful and real.
+The healing journey involves accepting imperfection as inherently human rather than as personal failure. You must learn that you are worthy of love not because of what you do but because of who you are — that flaws are not problems to solve but textures that make a life beautiful and real.
 
-The extraordinary gift that emerges is the ability to help others accept themselves while still growing. Having intimately known the prison of perfectionism, this soul becomes a compassionate guide who shows others that self-improvement and self-acceptance are not opposites but partners in the journey toward wholeness.`
+The extraordinary gift that emerges is the ability to help others accept yourself while still growing. Having intimately known the prison of perfectionism, you becomes a compassionate guide who shows others that self-improvement and self-acceptance are not opposites but partners in the journey toward wholeness.`
  },
  Libra: {
  keywords: ["Relationship Wound", "Balance Healing", "Partnership Recovery", "Harmony Seeking"],
@@ -1629,9 +1629,9 @@ The extraordinary gift that emerges is the ability to help others accept themsel
 
 This wound often manifests as a pattern of losing oneself in relationships, attracting partners who replicate early imbalances, or avoiding intimacy altogether because the cost of connection feels too high. There may be a deep belief that true partnership — balanced, fair, and mutually nourishing — is something that happens for other people.
 
-The healing journey involves learning that healthy relationship begins with a healthy relationship with oneself. This soul must discover that they can be fully themselves within partnership — that love does not require self-abandonment, and that speaking difficult truths actually strengthens rather than destroys genuine connection.
+The healing journey involves learning that healthy relationship begins with a healthy relationship with oneself. You must discover that you can be fully yourself within partnership — that love does not require self-abandonment, and that speaking difficult truths actually strengthens rather than destroys genuine connection.
 
-The extraordinary gift that emerges is the ability to help others create balanced, healthy relationships. Having navigated the painful landscape of codependency and self-loss, this soul becomes a wise counselor who understands both the beauty and the danger of deep connection — and how to have one without the other.`
+The extraordinary gift that emerges is the ability to help others create balanced, healthy relationships. Having navigated the painful landscape of codependency and self-loss, you becomes a wise counselor who understands both the beauty and the danger of deep connection — and how to have one without the other.`
  },
  Scorpio: {
  keywords: ["Trust Wound", "Power Healing", "Intimacy Recovery", "Transformation"],
@@ -1639,19 +1639,19 @@ The extraordinary gift that emerges is the ability to help others create balance
 
 This wound often manifests as difficulty trusting others with emotional or physical closeness, a need to control situations to prevent further harm, or a pattern of crisis and transformation that feels relentless. Intimacy is simultaneously craved and feared because the soul knows, from direct experience, what can happen when defenses come down.
 
-The healing journey involves learning to trust again — not naively, but with the informed wisdom that only direct experience with betrayal can teach. This soul must discover that vulnerability, chosen consciously, is not weakness but extraordinary courage, and that true power lies in the ability to transform pain rather than perpetuate it.
+The healing journey involves learning to trust again — not naively, but with the informed wisdom that only direct experience with betrayal can teach. You must discover that vulnerability, chosen consciously, is not weakness but extraordinary courage, and that true power lies in the ability to transform pain rather than perpetuate it.
 
-The extraordinary gift that emerges is the ability to help others transform their deepest wounds into wisdom. Having survived the underworld and emerged intact, this soul becomes a powerful healer and guide for those facing their own darkness — offering not false comfort but genuine companionship through the fire.`
+The extraordinary gift that emerges is the ability to help others transform your deepest wounds into wisdom. Having survived the underworld and emerged intact, you becomes a powerful healer and guide for those facing your own darkness — offering not false comfort but genuine companionship through the fire.`
  },
  Sagittarius: {
  keywords: ["Faith Wound", "Meaning Healing", "Truth Recovery", "Belief Restoration"],
- reading: `Chiron in Sagittarius indicates a core wound around meaning, faith, and the search for truth. Early experiences may have shattered beliefs — religious hypocrisy, betrayal by trusted teachers, cultural displacement, or events so senseless that they demolished any comfortable framework for understanding why things happen.
+ reading: `Chiron in Sagittarius indicates a core wound around meaning, faith, and the search for truth. Early experiences may have shattered beliefs — religious hypocrisy, betrayal by trusted teachers, cultural displacement, or events so senseless that you demolished any comfortable framework for understanding why things happen.
 
 This wound often manifests as cynicism masking a desperate hunger for meaning, a restless searching that never quite arrives, or rigid adherence to beliefs that serve as armor against the terror of meaninglessness. Travel and education may be pursued compulsively as attempts to find the truth that will finally make everything make sense.
 
-The healing journey involves finding authentic personal truth rather than borrowing it from institutions or authorities. This soul must build their own philosophy from the ground of direct experience — accepting that some questions may never have answers, and that the search itself, conducted with honesty, is a valid form of faith.
+The healing journey involves finding authentic personal truth rather than borrowing it from institutions or authorities. You must build your own philosophy from the ground of direct experience — accepting that some questions may never have answers, and that the search itself, conducted with honesty, is a valid form of faith.
 
-The extraordinary gift that emerges is the ability to help others find meaning and restore genuine faith. Having experienced the devastating loss of borrowed belief, this soul becomes a truthful guide who does not offer easy answers but accompanies others on the honest search for meaning that transforms despair into wisdom.`
+The extraordinary gift that emerges is the ability to help others find meaning and restore genuine faith. Having experienced the devastating loss of borrowed belief, you becomes a truthful guide who does not offer easy answers but accompanies others on the honest search for meaning that transforms despair into wisdom.`
  },
  Capricorn: {
  keywords: ["Authority Wound", "Achievement Healing", "Structure Recovery", "Self-Mastery"],
@@ -1659,9 +1659,9 @@ The extraordinary gift that emerges is the ability to help others find meaning a
 
 This wound often manifests as a complicated relationship with ambition — either relentless overachievement that never feels sufficient or a deep reluctance to claim authority for fear of becoming the very power structures that caused the original pain. Success and failure both carry disproportionate emotional weight.
 
-The healing journey involves becoming one's own healthy authority. This soul must learn to create internal structures of discipline and achievement that serve genuine growth rather than anxious compensation. The goal is not to reject ambition but to purify it — to pursue excellence from a place of wholeness rather than woundedness.
+The healing journey involves becoming one's own healthy authority. You must learn to create internal structures of discipline and achievement that serve genuine growth rather than anxious compensation. The goal is not to reject ambition but to purify it — to pursue excellence from a place of wholeness rather than woundedness.
 
-The extraordinary gift that emerges is the ability to help others achieve their goals with wisdom and integrity. Having experienced both the failure and the redemption of worldly structures, this soul becomes a mentor who understands that true success is built on self-respect, not external validation.`
+The extraordinary gift that emerges is the ability to help others achieve your goals with wisdom and integrity. Having experienced both the failure and the redemption of worldly structures, you becomes a mentor who understands that true success is built on self-respect, not external validation.`
  },
  Aquarius: {
  keywords: ["Belonging Wound", "Individuality Healing", "Community Recovery", "Authentic Self"],
@@ -1669,9 +1669,9 @@ The extraordinary gift that emerges is the ability to help others achieve their 
 
 This wound often manifests as a painful oscillation between desperate attempts to belong and defiant rejection of group norms. There may be a belief that full acceptance requires hiding one's true nature, or conversely, that being authentic means accepting permanent isolation. Community feels simultaneously essential and unattainable.
 
-The healing journey involves discovering that true belonging does not require conformity. This soul must find or create communities that celebrate rather than merely tolerate difference — learning that their uniqueness is precisely what they have to offer, and that the right people will recognize and value exactly what makes them unusual.
+The healing journey involves discovering that true belonging does not require conformity. You must find or create communities that celebrate rather than merely tolerate difference — learning that your uniqueness is precisely what you have to offer, and that the right people will recognize and value exactly what makes you unusual.
 
-The extraordinary gift that emerges is the ability to help others celebrate their uniqueness and find genuine community. Having navigated the painful territory of otherness, this soul becomes a bridge-builder who creates spaces where diverse individuals can belong without sacrificing authenticity — where being different is not just accepted but essential.`
+The extraordinary gift that emerges is the ability to help others celebrate your uniqueness and find genuine community. Having navigated the painful territory of otherness, you becomes a bridge-builder who creates spaces where diverse individuals can belong without sacrificing authenticity — where being different is not just accepted but essential.`
  },
  Pisces: {
  keywords: ["Spiritual Wound", "Unity Healing", "Boundary Recovery", "Divine Connection"],
@@ -1679,132 +1679,132 @@ The extraordinary gift that emerges is the ability to help others celebrate thei
 
 This wound often manifests as boundary difficulties — absorbing others' emotions, escaping into fantasy or substances, or feeling simultaneously drawn to and terrified of spiritual surrender. The sensitivity here is extraordinary but untrained, making the world feel overwhelmingly raw until healthy containers for that sensitivity are developed.
 
-The healing journey involves learning that spiritual connection and personal boundaries are not opposites but partners. This soul must discover how to open to something greater without losing themselves — how to feel everything without drowning, how to serve without being consumed, and how to trust the bigger picture without abandoning practical reality.
+The healing journey involves learning that spiritual connection and personal boundaries are not opposites but partners. You must discover how to open to something greater without losing yourself — how to feel everything without drowning, how to serve without being consumed, and how to trust the bigger picture without abandoning practical reality.
 
-The extraordinary gift that emerges is the ability to help others find genuine spiritual connection while staying grounded. Having navigated the difficult waters between losing oneself and opening up, this soul becomes a gifted healer and spiritual guide who can hold sacred space for others' journeys without losing their own center.`
+The extraordinary gift that emerges is the ability to help others find genuine spiritual connection while staying grounded. Having navigated the difficult waters between losing oneself and opening up, you becomes a gifted healer and spiritual guide who can hold sacred space for others' journeys without losing your own center.`
  }
 };
 
 var LILITH_SIGN_READINGS = {
  Aries: {
  keywords: ["Suppressed Rage", "Hidden Warrior", "Shadow Independence", "Reclaimed Power"],
- reading: `Black Moon Lilith in Aries represents the suppressed or rejected warrior within — the anger, independence, and fierce autonomy that was shamed, punished, or deemed unacceptable. Somewhere in this soul's story, asserting themselves or expressing rage was met with consequences severe enough to drive that power underground.
+ reading: `Black Moon Lilith in Aries represents the suppressed or rejected warrior within — the anger, independence, and fierce autonomy that was shamed, punished, or deemed unacceptable. Somewhere in your story, asserting yourself or expressing rage was met with consequences severe enough to drive that power underground.
 
 The shadow manifestation is a complicated relationship with anger. It may explode in disproportionate bursts after long periods of suppression, or it may turn inward as self-sabotage. The drive for independence may operate unconsciously — creating conflicts that force separation rather than directly claiming the freedom that is needed.
 
-The shadow work involves learning to recognize anger as valid information rather than a character flaw. This soul must reclaim the right to fight — for themselves, for their boundaries, for what matters — without guilt or shame. Anger, when owned consciously, becomes a precision tool rather than a destructive force.
+The shadow work involves learning to recognize anger as valid information rather than a character flaw. You must reclaim the right to fight — for yourself, for your boundaries, for what matters — without guilt or shame. Anger, when owned consciously, becomes a precision tool rather than a destructive force.
 
 The gift of integration is becoming a fierce protector who channels warrior energy constructively. Once reclaimed, this placement produces extraordinary courage — the kind that stands up for the voiceless, confronts injustice without flinching, and uses righteous anger as fuel for meaningful change.`
  },
  Taurus: {
  keywords: ["Suppressed Desire", "Hidden Sensuality", "Shadow Worth", "Reclaimed Body"],
- reading: `Black Moon Lilith in Taurus represents the suppressed or rejected sensuality, physical desire, and unapologetic self-worth that was shamed or denied. Somewhere in this soul's story, wanting things — pleasure, beauty, abundance, physical satisfaction — was treated as evidence of moral weakness or dangerous excess.
+ reading: `Black Moon Lilith in Taurus represents the suppressed or rejected sensuality, physical desire, and unapologetic self-worth that was shamed or denied. Somewhere in your story, wanting things — pleasure, beauty, abundance, physical satisfaction — was treated as evidence of moral weakness or dangerous excess.
 
 The shadow manifestation is a complicated relationship with the body and material desires. There may be cycles of deprivation and indulgence, discomfort with physical pleasure, or a persistent sense that wanting things makes one greedy or unspiritual. Self-worth may be unconsciously tied to denial rather than enjoyment.
 
-The shadow work involves reclaiming the right to want, to enjoy, and to inhabit the body fully without apology. This soul must learn that physical pleasure is not sinful, that material abundance is not shameful, and that the body's desires carry wisdom that the mind alone cannot access.
+The shadow work involves reclaiming the right to want, to enjoy, and to inhabit the body fully without apology. You must learn that physical pleasure is not sinful, that material abundance is not shameful, and that the body's desires carry wisdom that the mind alone cannot access.
 
-The gift of integration is becoming magnificently comfortable in one's own skin — someone who models healthy embodiment and unapologetic self-valuation. Once reclaimed, this placement produces a grounded, sensual presence that gives others permission to enjoy their own physical existence without guilt.`
+The gift of integration is becoming magnificently comfortable in one's own skin — someone who models healthy embodiment and unapologetic self-valuation. Once reclaimed, this placement produces a grounded, sensual presence that gives others permission to enjoy your own physical existence without guilt.`
  },
  Gemini: {
  keywords: ["Suppressed Voice", "Hidden Truths", "Shadow Intellect", "Reclaimed Expression"],
- reading: `Black Moon Lilith in Gemini represents the suppressed or rejected voice — the inconvenient truths, dangerous ideas, and uncomfortable observations that this soul learned to keep silent. Somewhere in the story, speaking honestly was met with punishment, dismissal, or social exile severe enough to teach that certain thoughts must never be spoken aloud.
+ reading: `Black Moon Lilith in Gemini represents the suppressed or rejected voice — the inconvenient truths, dangerous ideas, and uncomfortable observations that you learned to keep silent. Somewhere in the story, speaking honestly was met with punishment, dismissal, or social exile severe enough to teach that certain thoughts must never be spoken aloud.
 
 The shadow manifestation is a complicated relationship with honesty and expression. There may be compulsive truth-telling that alienates others, or its opposite — a carefully constructed persona that says only what is safe. Gossip, manipulation through information, or intellectual dishonesty may operate as shadow outlets for the suppressed voice.
 
-The shadow work involves learning to speak uncomfortable truths with both courage and compassion. This soul must reclaim the right to say what they see, think what they think, and share what they know — even when it disrupts comfortable narratives or challenges consensus.
+The shadow work involves learning to speak uncomfortable truths with both courage and compassion. You must reclaim the right to say what you see, think what you think, and share what you know — even when it disrupts comfortable narratives or challenges consensus.
 
-The gift of integration is becoming a voice for what needs to be said but rarely is. Once reclaimed, this placement produces extraordinary communicators who cut through pretense with laser precision — truth-tellers whose words may sting but ultimately liberate everyone they touch from the prison of denial.`
+The gift of integration is becoming a voice for what needs to be said but rarely is. Once reclaimed, this placement produces extraordinary communicators who cut through pretense with laser precision — truth-tellers whose words may sting but ultimately liberate everyone you touch from the prison of denial.`
  },
  Cancer: {
  keywords: ["Suppressed Needs", "Hidden Emotions", "Shadow Mother", "Reclaimed Nurturing"],
- reading: `Black Moon Lilith in Cancer represents the suppressed or rejected emotional needs and the darker dimensions of nurturing instinct. Somewhere in this soul's story, having needs was treated as weakness, or the full range of maternal and emotional expression — including rage, grief, and fierce protectiveness — was deemed unacceptable.
+ reading: `Black Moon Lilith in Cancer represents the suppressed or rejected emotional needs and the darker dimensions of nurturing instinct. Somewhere in your story, having needs was treated as weakness, or the full range of maternal and emotional expression — including rage, grief, and fierce protectiveness — was deemed unacceptable.
 
 The shadow manifestation is a complicated relationship with emotional vulnerability and caregiving. There may be compulsive nurturing that masks a hunger to be nurtured, emotional manipulation disguised as care, or a complete shutdown of emotional needs as a survival strategy. The inner mother carries wounds that affect all expressions of love and care.
 
-The shadow work involves acknowledging the full spectrum of emotional experience — including the uncomfortable feelings that nurturing cultures would rather suppress. This soul must allow themselves to need, to rage, to grieve without performing acceptable versions of these raw human experiences.
+The shadow work involves acknowledging the full spectrum of emotional experience — including the uncomfortable feelings that nurturing cultures would rather suppress. You must allow yourself to need, to rage, to grieve without performing acceptable versions of these raw human experiences.
 
 The gift of integration is authentic emotional expression and nurturing without martyrdom. Once reclaimed, this placement produces someone who can hold space for the full catastrophe of human emotion — the dark and the light — offering genuine care that does not require the caregiver to disappear in the process.`
  },
  Leo: {
  keywords: ["Suppressed Creativity", "Hidden Ego", "Shadow Queen", "Reclaimed Spotlight"],
- reading: `Black Moon Lilith in Leo represents the suppressed or rejected creative power, ambition, and hunger for recognition that was shamed into hiding. Somewhere in this soul's story, the desire to shine — to be seen, celebrated, and adored — was treated as narcissism, vanity, or a threat to others' comfort.
+ reading: `Black Moon Lilith in Leo represents the suppressed or rejected creative power, ambition, and hunger for recognition that was shamed into hiding. Somewhere in your story, the desire to shine — to be seen, celebrated, and adored — was treated as narcissism, vanity, or a threat to others' comfort.
 
-The shadow manifestation is a complicated relationship with attention and creative expression. There may be secret ambition that is never publicly owned, creative gifts that remain permanently hidden, or an oscillation between dramatic attention-seeking and complete withdrawal. The inner sovereign has been exiled from their own throne.
+The shadow manifestation is a complicated relationship with attention and creative expression. There may be secret ambition that is never publicly owned, creative gifts that remain permanently hidden, or an oscillation between dramatic attention-seeking and complete withdrawal. The inner sovereign has been exiled from your own throne.
 
-The shadow work involves reclaiming the right to shine brightly without dimming for anyone's comfort. This soul must learn that their creative power is not arrogance — it is a force of nature that was never meant to be contained. Wanting recognition is not pathology; it is the natural response of genuine gifts seeking expression.
+The shadow work involves reclaiming the right to shine brightly without dimming for anyone's comfort. You must learn that your creative power is not arrogance — it is a force of nature that was never meant to be contained. Wanting recognition is not pathology; it is the natural response of genuine gifts seeking expression.
 
-The gift of integration is radiating authentic creative power that illuminates rather than intimidates. Once reclaimed, this placement produces a magnificent creative presence — someone who shines so unapologetically that they give everyone around them permission to claim their own light without shame.`
+The gift of integration is radiating authentic creative power that illuminates rather than intimidates. Once reclaimed, this placement produces a magnificent creative presence — someone who shines so unapologetically that you give everyone around you permission to claim your own light without shame.`
  },
  Virgo: {
  keywords: ["Suppressed Criticism", "Hidden Perfection", "Shadow Healer", "Reclaimed Discernment"],
- reading: `Black Moon Lilith in Virgo represents the suppressed or rejected critical faculty and the darker dimensions of the healing instinct. Somewhere in this soul's story, the ability to see flaws — in systems, in people, in oneself — was treated as destructive rather than constructive. The truth-seeing eye was forced shut.
+ reading: `Black Moon Lilith in Virgo represents the suppressed or rejected critical faculty and the darker dimensions of the healing instinct. Somewhere in your story, the ability to see flaws — in systems, in people, in oneself — was treated as destructive rather than constructive. The truth-seeing eye was forced shut.
 
 The shadow manifestation is a complicated relationship with perfectionism and service. There may be relentless self-criticism that no achievement can satisfy, compulsive helping that masks a need for control, or a talent for identifying exactly what is wrong that alienates rather than heals. The inner analyst operates in shadow, cutting where it could cure.
 
-The shadow work involves owning the full power of discernment without turning it into self-punishment. This soul must learn that seeing what is broken is the first step toward healing — that critical intelligence, when wielded with compassion rather than contempt, is one of the most valuable gifts a human can possess.
+The shadow work involves owning the full power of discernment without turning it into self-punishment. You must learn that seeing what is broken is the first step toward healing — that critical intelligence, when wielded with compassion rather than contempt, is one of the most valuable gifts a human can possess.
 
-The gift of integration is becoming a healer who sees clearly without destroying. Once reclaimed, this placement produces extraordinary diagnosticians of human experience — people who can identify exactly what needs attention and address it with precision and care, transforming their penetrating sight into genuine service.`
+The gift of integration is becoming a healer who sees clearly without destroying. Once reclaimed, this placement produces extraordinary diagnosticians of human experience — people who can identify exactly what needs attention and address it with precision and care, transforming your penetrating sight into genuine service.`
  },
  Libra: {
  keywords: ["Suppressed Conflict", "Hidden Desires", "Shadow Partner", "Reclaimed Boundaries"],
- reading: `Black Moon Lilith in Libra represents the suppressed or rejected personal desires that were sacrificed on the altar of relationship harmony. Somewhere in this soul's story, having individual wants within partnership was treated as selfish, and the price of love was the systematic erasure of personal needs.
+ reading: `Black Moon Lilith in Libra represents the suppressed or rejected personal desires that were sacrificed on the altar of relationship harmony. Somewhere in your story, having individual wants within partnership was treated as selfish, and the price of love was the systematic erasure of personal needs.
 
 The shadow manifestation is a complicated relationship with fairness and partnership. There may be a pattern of giving everything while secretly keeping score, passive-aggressive resentment that undermines the very harmony being maintained, or attraction to relationships that replay the original dynamic of self-abandonment for the sake of connection.
 
-The shadow work involves acknowledging that personal desires are not selfish but essential. This soul must learn that a relationship built on one person's systematic self-denial is not harmonious — it is a pressure cooker. Genuine partnership requires two whole people, not one whole person and one ghost of the person they used to be.
+The shadow work involves acknowledging that personal desires are not selfish but essential. You must learn that a relationship built on one person's systematic self-denial is not harmonious — it is a pressure cooker. Genuine partnership requires two whole people, not one whole person and one ghost of the person you used to be.
 
 The gift of integration is creating relationships where both partners' needs genuinely matter. Once reclaimed, this placement produces someone who models radical honesty within partnership — proving that real love does not require self-erasure and that the most beautiful relationships are built on the uncomfortable foundation of mutual truth.`
  },
  Scorpio: {
  keywords: ["Suppressed Power", "Hidden Darkness", "Shadow Transformer", "Reclaimed Depth"],
- reading: `Black Moon Lilith in Scorpio represents the full depth of suppressed power, raw sexuality, and engagement with the taboo. This is Lilith at her most potent — the shadow material here is not mild but oceanic in its depth and intensity. Somewhere in this soul's story, the full force of their primal power was deemed too dangerous to exist.
+ reading: `Black Moon Lilith in Scorpio represents the full depth of suppressed power, raw sexuality, and engagement with the taboo. This is Lilith at her most potent — the shadow material here is not mild but oceanic in its depth and intensity. Somewhere in your story, the full force of your primal power was deemed too dangerous to exist.
 
 The shadow manifestation is a complicated relationship with power, sexuality, and the darker dimensions of human experience. There may be compulsive attraction to crisis and intensity, unconscious manipulation as a survival mechanism, or a terror of one's own power so complete that it is projected onto others who then seem threatening.
 
-The shadow work involves embracing the dark feminine in all her power — not the sanitized version but the real thing. This soul must learn to face their own capacity for destruction, their own depths of desire, and their own relationship with power and death without flinching or dissociating.
+The shadow work involves embracing the dark feminine in all her power — not the sanitized version but the real thing. You must learn to face your own capacity for destruction, your own depths of desire, and your own relationship with power and death without flinching or dissociating.
 
-The gift of integration is becoming a transformer who is genuinely unafraid of darkness. Once reclaimed, this placement produces extraordinary healers, therapists, and guides who can accompany others into the underworld because they know the territory intimately — offering not rescue from the dark but companionship through it.`
+The gift of integration is becoming a transformer who is genuinely unafraid of darkness. Once reclaimed, this placement produces extraordinary healers, therapists, and guides who can accompany others into the underworld because you know the territory intimately — offering not rescue from the dark but companionship through it.`
  },
  Sagittarius: {
  keywords: ["Suppressed Truth", "Hidden Wildness", "Shadow Seeker", "Reclaimed Freedom"],
- reading: `Black Moon Lilith in Sagittarius represents the suppressed or rejected wildness, inconvenient truths, and untameable freedom that was forced into domestication. Somewhere in this soul's story, the expansive, truth-seeking, boundary-breaking spirit was caged — by dogma, by social expectation, or by beliefs that freedom was irresponsible.
+ reading: `Black Moon Lilith in Sagittarius represents the suppressed or rejected wildness, inconvenient truths, and untameable freedom that was forced into domestication. Somewhere in your story, the expansive, truth-seeking, boundary-breaking spirit was caged — by dogma, by social expectation, or by beliefs that freedom was irresponsible.
 
-The shadow manifestation is a complicated relationship with truth and freedom. There may be a pattern of explosive escapes from situations that have become too confining, beliefs held with such rigid intensity that they become new prisons, or a hunger for experience so intense it becomes self-destructive rather than liberating.
+The shadow manifestation is a complicated relationship with truth and freedom. There may be a pattern of explosive escapes from situations that have become too confining, beliefs held with such rigid intensity that you become new prisons, or a hunger for experience so intense it becomes self-destructive rather than liberating.
 
-The shadow work involves speaking truth regardless of consequences while developing the wisdom to do so constructively. This soul must reclaim the wild, uncensored, boundary-crossing spirit without using it as a weapon or an escape hatch. Freedom must be claimed consciously rather than seized in desperate flight.
+The shadow work involves speaking truth regardless of consequences while developing the wisdom to do so constructively. You must reclaim the wild, uncensored, boundary-crossing spirit without using it as a weapon or an escape hatch. Freedom must be claimed consciously rather than seized in desperate flight.
 
 The gift of integration is becoming a truth-teller and freedom-seeker who cannot be silenced or tamed. Once reclaimed, this placement produces magnificent wild spirits whose very existence challenges the comfortable lies that keep others small — people who live proof that authentic freedom and genuine responsibility can coexist.`
  },
  Capricorn: {
  keywords: ["Suppressed Ambition", "Hidden Authority", "Shadow Queen", "Reclaimed Power"],
- reading: `Black Moon Lilith in Capricorn represents the suppressed or rejected ambition, authority, and worldly power that was deemed inappropriate or dangerous. Somewhere in this soul's story — and often in the collective story of their gender or culture — claiming public power, professional authority, or material success was met with punishment or shame.
+ reading: `Black Moon Lilith in Capricorn represents the suppressed or rejected ambition, authority, and worldly power that was deemed inappropriate or dangerous. Somewhere in your story — and often in the collective story of your gender or culture — claiming public power, professional authority, or material success was met with punishment or shame.
 
-The shadow manifestation is a complicated relationship with success and authority. There may be relentless ambition that cannot be publicly acknowledged, self-sabotage at the threshold of achievement, or a pattern of building impressive structures only to destroy them before they are completed. Power is simultaneously craved and feared.
+The shadow manifestation is a complicated relationship with success and authority. There may be relentless ambition that cannot be publicly acknowledged, self-sabotage at the threshold of achievement, or a pattern of building impressive structures only to destroy you before you are completed. Power is simultaneously craved and feared.
 
-The shadow work involves owning ambition without apology and claiming authority as a birthright rather than a transgression. This soul must learn that wanting to succeed, to lead, to build something enduring in the material world is not a character flaw — it is a legitimate expression of their full power.
+The shadow work involves owning ambition without apology and claiming authority as a birthright rather than a transgression. You must learn that wanting to succeed, to lead, to build something enduring in the material world is not a character flaw — it is a legitimate expression of your full power.
 
 The gift of integration is becoming an authority figure who wields power wisely and openly. Once reclaimed, this placement produces formidable leaders whose ambition is liberated from shame — people who build structures that serve not just personal success but collective empowerment, proving that power itself is not corrupt.`
  },
  Aquarius: {
  keywords: ["Suppressed Rebellion", "Hidden Genius", "Shadow Revolutionary", "Reclaimed Originality"],
- reading: `Black Moon Lilith in Aquarius represents the suppressed or rejected revolutionary thinking, radical originality, and visionary genius that was deemed too extreme for acceptance. Somewhere in this soul's story, ideas that were genuinely ahead of their time were met with exclusion, ridicule, or the terrifying message that being truly original means being permanently alone.
+ reading: `Black Moon Lilith in Aquarius represents the suppressed or rejected revolutionary thinking, radical originality, and visionary genius that was deemed too extreme for acceptance. Somewhere in your story, ideas that were genuinely ahead of your time were met with exclusion, ridicule, or the terrifying message that being truly original means being permanently alone.
 
 The shadow manifestation is a complicated relationship with belonging and originality. There may be a pattern of deliberately alienating others to maintain independence, hiding genuinely brilliant ideas behind conventional facades, or oscillating between desperate conformity and explosive rebellion. The genius operates in shadow, never fully owned.
 
-The shadow work involves embracing the inner rebel and visionary without requiring the world's approval or understanding. This soul must learn that truly original thought is inherently uncomfortable for the mainstream — and that discomfort in others is not evidence of wrongness but often evidence of genuine insight.
+The shadow work involves embracing the inner rebel and visionary without requiring the world's approval or understanding. You must learn that truly original thought is inherently uncomfortable for the mainstream — and that discomfort in others is not evidence of wrongness but often evidence of genuine insight.
 
 The gift of integration is becoming an innovator who changes the world through radical thinking. Once reclaimed, this placement produces genuine visionaries whose ideas may disturb the status quo but ultimately advance human evolution — people who have the courage to think what no one else is willing to think and speak what no one else dares to say.`
  },
  Pisces: {
  keywords: ["Suppressed Intuition", "Hidden Psychic", "Shadow Mystic", "Reclaimed Spirituality"],
- reading: `Black Moon Lilith in Pisces represents the suppressed or rejected psychic abilities, mystical experiences, and spiritual gifts that were dismissed, feared, or pathologized. Somewhere in this soul's story, their extraordinary sensitivity and connection to unseen dimensions was treated not as a gift but as a disorder — something to be medicated, prayed away, or hidden.
+ reading: `Black Moon Lilith in Pisces represents the suppressed or rejected psychic abilities, mystical experiences, and spiritual gifts that were dismissed, feared, or pathologized. Somewhere in your story, your extraordinary sensitivity and connection to unseen dimensions was treated not as a gift but as a disorder — something to be medicated, prayed away, or hidden.
 
 The shadow manifestation is a complicated relationship with spiritual experience and the boundaries between self and other. There may be escapism through substances or fantasy, psychic abilities that operate chaotically without conscious direction, or a tendency to merge with others' pain in ways that are destructive rather than healing.
 
-The shadow work involves trusting and deliberately developing intuitive gifts rather than allowing them to operate from shadow. This soul must learn to distinguish between genuine spiritual sensitivity and unhealthy loss of boundaries — honoring the mystic within while maintaining the practical grounding that keeps otherworldly gifts useful rather than overwhelming.
+The shadow work involves trusting and deliberately developing intuitive gifts rather than allowing you to operate from shadow. You must learn to distinguish between genuine spiritual sensitivity and unhealthy loss of boundaries — honoring the mystic within while maintaining the practical grounding that keeps otherworldly gifts useful rather than overwhelming.
 
-The gift of integration is becoming a mystic who bridges worlds without losing themselves. Once reclaimed, this placement produces extraordinary spiritual workers — healers, artists, and visionaries who channel deep wisdom into forms that serve the human world, proving that the boundary between worlds is not a wall but a doorway.`
+The gift of integration is becoming a mystic who bridges worlds without losing yourself. Once reclaimed, this placement produces extraordinary spiritual workers — healers, artists, and visionaries who channel deep wisdom into forms that serve the human world, proving that the boundary between worlds is not a wall but a doorway.`
  }
 };
 
@@ -1812,13 +1812,13 @@ var NORTH_NODE_READINGS = {
  Aries: {
  keywords: ["Independence", "Courage", "Self-Focus", "Initiative"],
  summary: "Soul growth through developing independence and self-assertion.",
- reading: `The North Node in Aries indicates a growth path toward independence, courage, and authentic self-assertion. Deep-rooted patterns (South Node in Libra) created deep expertise in partnership, compromise, and keeping the peace — but at the cost of knowing who they are as an individual, separate from relationships.
+ reading: `The North Node in Aries indicates a growth path toward independence, courage, and authentic self-assertion. Deep-rooted patterns (South Node in Libra) created deep expertise in partnership, compromise, and keeping the peace — but at the cost of knowing who you are as an individual, separate from relationships.
 
 This lifetime calls for the uncomfortable but essential work of putting oneself first. The old pattern of deferring to others, seeking consensus before acting, and defining identity through partnership must give way to a new paradigm: self-reliance, bold initiative, and the courage to act on personal conviction even when it disrupts harmony.
 
-Growth comes through each moment of choosing authenticity over approval. Learning to say no, to disagree openly, to pursue personal goals without requiring everyone's permission — these are the small acts of courage that move this soul toward who they are meant to become. Conflict, rather than being avoided, becomes a teacher.
+Growth comes through each moment of choosing authenticity over approval. Learning to say no, to disagree openly, to pursue personal goals without requiring everyone's permission — these are the small acts of courage that move you toward who you are meant to become. Conflict, rather than being avoided, becomes a teacher.
 
-Here is what is interesting: developing genuine independence actually improves relationships. Someone who knows themselves fully brings far more to partnership than someone who has lost themselves in it. The brave heart this lifetime asks for creates the authentic individual that others can truly love.`
+Here is what is interesting: developing genuine independence actually improves relationships. Someone who knows yourself fully brings far more to partnership than someone who has lost yourself in it. The brave heart this lifetime asks for creates the authentic individual that others can truly love.`
  },
  Taurus: {
  keywords: ["Stability", "Self-Worth", "Simplicity", "Patience"],
@@ -1827,7 +1827,7 @@ Here is what is interesting: developing genuine independence actually improves r
 
 This lifetime calls for the radical act of finding peace in the ordinary. The old pattern of gravitating toward crisis, depending on others' resources, and using emotional intensity as a substitute for genuine security must give way to a new paradigm: building one's own stability, developing personal resources, and discovering that calm is not boring but profoundly nourishing.
 
-Growth comes through patience and steady effort rather than dramatic transformation. Learning to stay, to build slowly, to appreciate what is already present rather than constantly seeking the next upheaval — these are the evolutionary lessons. The body itself becomes a teacher, grounding this soul in sensory reality.
+Growth comes through patience and steady effort rather than dramatic transformation. Learning to stay, to build slowly, to appreciate what is already present rather than constantly seeking the next upheaval — these are the evolutionary lessons. The body itself becomes a teacher, grounding you in sensory reality.
 
 What actually works is building a foundation of stability first — real transformation grows from there. Someone who has built genuine inner security can face life's inevitable changes with calm steadiness rather than panic. The peace this lifetime asks for creates the unshakeable center from which real strength flows.`
  },
@@ -1838,9 +1838,9 @@ What actually works is building a foundation of stability first — real transfo
 
 This lifetime calls for exchanging the podium for the student's desk. The old pattern of preaching, assuming moral authority, and treating personal beliefs as universal truth must give way to a new paradigm: asking questions, listening more than speaking, and remaining genuinely open to perspectives that challenge comfortable certainties.
 
-Growth comes through curiosity and intellectual humility. Learning to say "I don't know" is a form of courage for this soul. Gathering information before drawing conclusions, engaging with diverse viewpoints, and treating everyday conversations as sources of genuine wisdom — these are the evolutionary tasks.
+Growth comes through curiosity and intellectual humility. Learning to say "I don't know" is a form of courage for you. Gathering information before drawing conclusions, engaging with diverse viewpoints, and treating everyday conversations as sources of genuine wisdom — these are the evolutionary tasks.
 
-The surprising truth is that real wisdom comes from being willing to not have all the answers. Someone who stays curious and open discovers truths far richer than anything rigid certainty could produce. The curiosity this lifetime asks for creates a wiser teacher than the one who thought they already knew.`
+The surprising truth is that real wisdom comes from being willing to not have all the answers. Someone who stays curious and open discovers truths far richer than anything rigid certainty could produce. The curiosity this lifetime asks for creates a wiser teacher than the one who thought you already knew.`
  },
  Cancer: {
  keywords: ["Nurturing", "Emotional Security", "Home", "Vulnerability"],
@@ -1849,9 +1849,9 @@ The surprising truth is that real wisdom comes from being willing to not have al
 
 This lifetime calls for trading the boardroom for the living room. The old pattern of defining worth through accomplishment, suppressing emotions for the sake of productivity, and treating vulnerability as weakness must give way to a new paradigm: emotional intelligence, familial devotion, and the courage to need and be needed.
 
-Growth comes through allowing feelings to guide decisions alongside logic. Learning to nurture without expecting ROI, to prioritize family over career when the heart insists, and to sit with emotions rather than managing them — these are the evolutionary challenges that reshape this soul's relationship with what truly matters.
+Growth comes through allowing feelings to guide decisions alongside logic. Learning to nurture without expecting ROI, to prioritize family over career when the heart insists, and to sit with emotions rather than managing you — these are the evolutionary challenges that reshape your relationship with what truly matters.
 
-What many people miss is that emotional fulfillment actually creates a foundation for even greater achievement. Someone who is nourished by genuine love and belonging brings far more creative energy to their public work than someone running on empty. The openness this lifetime asks for becomes the source of their greatest strength.`
+What many people miss is that emotional fulfillment actually creates a foundation for even greater achievement. Someone who is nourished by genuine love and belonging brings far more creative energy to your public work than someone running on empty. The openness this lifetime asks for becomes the source of your greatest strength.`
  },
  Leo: {
  keywords: ["Self-Expression", "Creativity", "Joy", "Heart-Centered Living"],
@@ -1862,7 +1862,7 @@ This lifetime calls for stepping into the spotlight as a singular creative force
 
 Growth comes through each act of creative courage. Performing, creating, leading from the heart rather than the head, risking being seen in all one's individual glory — these are the evolutionary lessons. Joy itself becomes a spiritual practice, and the willingness to be dramatic and passionate replaces cool detachment.
 
-Here is the thing: being genuinely yourself actually helps everyone around you more than blending in ever could. Someone who dares to shine inspires others to find their own light. The creative courage this lifetime asks for becomes a gift not just to them but to everyone who sees it.`
+Here is the thing: being genuinely yourself actually helps everyone around you more than blending in ever could. Someone who dares to shine inspires others to find your own light. The creative courage this lifetime asks for becomes a gift not just to you but to everyone who sees it.`
  },
  Virgo: {
  keywords: ["Service", "Discernment", "Practical Skills", "Health"],
@@ -1871,7 +1871,7 @@ Here is the thing: being genuinely yourself actually helps everyone around you m
 
 This lifetime calls for bringing heaven down to earth. The old pattern of floating in spiritual abstraction, playing the martyr, and avoiding the unglamorous work of daily life must give way to a new paradigm: developing concrete skills, serving in tangible ways, and treating routine as a form of devotion rather than a prison.
 
-Growth comes through discipline and discernment. Learning to distinguish between genuine intuition and wishful thinking, to show up consistently for unglamorous tasks, and to express compassion through practical help rather than mere emotional sympathy — these are the evolutionary lessons that ground this soul's gifts.
+Growth comes through discipline and discernment. Learning to distinguish between genuine intuition and wishful thinking, to show up consistently for unglamorous tasks, and to express compassion through practical help rather than mere emotional sympathy — these are the evolutionary lessons that ground your gifts.
 
 The surprising truth is that spiritual depth becomes far more powerful when put into practical action. Someone who can turn big-picture vision into everyday helpfulness becomes a genuine healer rather than a well-meaning dreamer. The humble service this lifetime asks for becomes the way real change enters the world.`
  },
@@ -1895,7 +1895,7 @@ This lifetime calls for releasing the grip on comfort and diving into the transf
 
 Growth comes through each willingness to let go. Learning to share control, to merge resources with another, to allow old versions of self to die so new ones can be born — these are the evolutionary tasks. The soul must discover that what feels like destruction is often reconstruction.
 
-What turns out to be true is that lasting security can only be found through a willingness to change. Someone who accepts that nothing stays the same discovers something far stronger than material comfort — the knowledge that they can survive anything and come out stronger. The depth this lifetime asks for creates an inner toughness that nothing can break.`
+What turns out to be true is that lasting security can only be found through a willingness to change. Someone who accepts that nothing stays the same discovers something far stronger than material comfort — the knowledge that you can survive anything and come out stronger. The depth this lifetime asks for creates an inner toughness that nothing can break.`
  },
  Sagittarius: {
  keywords: ["Faith", "Adventure", "Higher Learning", "Truth-Seeking"],
@@ -1926,9 +1926,9 @@ What becomes clear over time is that genuine emotional security comes through ma
 
 This lifetime calls for redirecting personal gifts toward collective service. The old pattern of seeking individual recognition, requiring special treatment, and measuring worth through personal applause must give way to a new paradigm: group consciousness, progressive thinking, and service to causes larger than oneself.
 
-Growth comes through each willingness to serve the group rather than the ego. Joining movements, collaborating as equals, championing innovation that serves humanity, and finding fulfillment in collective progress rather than personal recognition — these are the evolutionary tasks that reshape this soul's understanding of what matters.
+Growth comes through each willingness to serve the group rather than the ego. Joining movements, collaborating as equals, championing innovation that serves humanity, and finding fulfillment in collective progress rather than personal recognition — these are the evolutionary tasks that reshape your understanding of what matters.
 
-What this path reveals is that genuine personal significance comes through service to something larger. Someone who channels their considerable personal gifts toward the greater good achieves a far more lasting legacy than anyone who chased personal glory alone. The big-picture vision this lifetime asks for creates an impact that outlasts any individual spotlight.`
+What this path reveals is that genuine personal significance comes through service to something larger. Someone who channels your considerable personal gifts toward the greater good achieves a far more lasting legacy than anyone who chased personal glory alone. The big-picture vision this lifetime asks for creates an impact that outlasts any individual spotlight.`
  },
  Pisces: {
  keywords: ["Spirituality", "Compassion", "Surrender", "Unity"],
@@ -1937,9 +1937,9 @@ What this path reveals is that genuine personal significance comes through servi
 
 This lifetime calls for the radical leap from fixing to flowing. The old pattern of analyzing every problem, criticizing every imperfection, and believing that harder work is always the answer must give way to a new paradigm: trust, surrender, compassion, and the understanding that some of life's greatest gifts arrive through letting go rather than holding on.
 
-Growth comes through faith, artistic expression, and selfless service. Learning to trust intuition over analysis, to offer compassion without requiring improvement, and to surrender control to something larger than the rational mind — these are the evolutionary tasks that soften this soul's grip and open their heart.
+Growth comes through faith, artistic expression, and selfless service. Learning to trust intuition over analysis, to offer compassion without requiring improvement, and to surrender control to something larger than the rational mind — these are the evolutionary tasks that soften your grip and open your heart.
 
-What this journey teaches is that letting go creates more strength than holding tight ever could. Someone who learns to trust in something larger than their own plan discovers a peace and purpose that no amount of perfectionist effort could produce. The faith this lifetime asks for becomes the source of a calm that overthinking alone could never find.`
+What this journey teaches is that letting go creates more strength than holding tight ever could. Someone who learns to trust in something larger than your own plan discovers a peace and purpose that no amount of perfectionist effort could produce. The faith this lifetime asks for becomes the source of a calm that overthinking alone could never find.`
  }
 };
 
@@ -1950,313 +1950,313 @@ What this journey teaches is that letting go creates more strength than holding 
 var BIRTHDAY_NUMBER_READINGS = {
  1: { 
  title: "The Leader", 
- reading: `Birthday 1 brings natural leadership, originality, and pioneering spirit into this life. This soul came in knowing how to initiate, to be first, to forge new paths.
+ reading: `Birthday 1 brings natural leadership, originality, and pioneering spirit into this life. You came in knowing how to initiate, to be first, to forge new paths.
 
-The day of birth imparts a special gift for independence and self-starting. Even in childhood, there's a desire to do things their own way, to lead rather than follow, to be original rather than imitative.
+The day of birth imparts a special gift for independence and self-starting. Even in childhood, there's a desire to do things your own way, to lead rather than follow, to be original rather than imitative.
 
-This is someone who inspires others by example, who can take charge when needed, and who thrives when given autonomy. Their special talent is the courage to begin what others only dream about.
+This is someone who inspires others by example, who can take charge when needed, and who thrives when given autonomy. Your special talent is the courage to begin what others only dream about.
 
-For children with Birthday 1: Give them leadership opportunities early. Let them make decisions and experience consequences. Their independence is a gift — nurture it.`
+For children with Birthday 1: Give you leadership opportunities early. Let you make decisions and experience consequences. Your independence is a gift — nurture it.`
  },
  2: { 
  title: "The Diplomat", 
- reading: `Birthday 2 brings natural sensitivity, cooperation, and diplomatic gifts into this life. This soul came in attuned to others' feelings and skilled at creating harmony.
+ reading: `Birthday 2 brings natural sensitivity, cooperation, and diplomatic gifts into this life. You came in attuned to others' feelings and skilled at creating harmony.
 
 The day of birth imparts a special gift for partnership and support. Even in childhood, there's awareness of others' emotions and a desire to help, to mediate, to bring people together.
 
-This is someone who excels in partnerships, who can sense what others need before they ask, and who creates peace wherever they go. Their special talent is the ability to truly listen and understand.
+This is someone who excels in partnerships, who can sense what others need before you ask, and who creates peace wherever you go. Your special talent is the ability to truly listen and understand.
 
-For children with Birthday 2: Honor their sensitivity — it's their superpower. Create harmonious environments. Let them support others but ensure they also receive support.`
+For children with Birthday 2: Honor your sensitivity — it's your superpower. Create harmonious environments. Let you support others but ensure you also receive support.`
  },
  3: { 
  title: "The Entertainer", 
- reading: `Birthday 3 brings natural creativity, self-expression, and joy into this life. This soul came in ready to create, to communicate, and to uplift through their presence.
+ reading: `Birthday 3 brings natural creativity, self-expression, and joy into this life. You came in ready to create, to communicate, and to uplift through your presence.
 
 The day of birth imparts a special gift for inspiring and entertaining others. Even in childhood, there's a creative spark, a way with words, and an ability to bring smiles to faces.
 
-This is someone who lights up rooms, who can express what others struggle to articulate, and who makes life more beautiful through their creativity. Their special talent is spreading joy.
+This is someone who lights up rooms, who can express what others struggle to articulate, and who makes life more beautiful through your creativity. Your special talent is spreading joy.
 
-For children with Birthday 3: Provide creative outlets abundantly. Celebrate their self-expression. Their joy is meant to be shared — don't dim their light.`
+For children with Birthday 3: Provide creative outlets abundantly. Celebrate your self-expression. Your joy is meant to be shared — don't dim your light.`
  },
  4: { 
  title: "The Builder", 
- reading: `Birthday 4 brings natural stability, practicality, and strong work ethic into this life. This soul came in knowing how to build, to organize, and to create lasting structures.
+ reading: `Birthday 4 brings natural stability, practicality, and strong work ethic into this life. You came in knowing how to build, to organize, and to create lasting structures.
 
 The day of birth imparts a special gift for practical accomplishment. Even in childhood, there's a love of order, a patience for detailed work, and satisfaction in tangible results.
 
-This is someone who can be relied upon absolutely, who builds things to last, and who finds satisfaction in hard work done well. Their special talent is turning dreams into solid reality.
+This is someone who can be relied upon absolutely, who builds things to last, and who finds satisfaction in hard work done well. Your special talent is turning dreams into solid reality.
 
-For children with Birthday 4: Give them projects with visible results. Honor their need for routine and order. Their reliability is a rare gift — don't mistake it for rigidity.`
+For children with Birthday 4: Give you projects with visible results. Honor your need for routine and order. Your reliability is a rare gift — don't mistake it for rigidity.`
  },
  5: { 
  title: "The Freedom Lover", 
- reading: `Birthday 5 brings natural versatility, love of freedom, and adaptability into this life. This soul came in ready to experience everything, to change and grow, to live fully.
+ reading: `Birthday 5 brings natural versatility, love of freedom, and adaptability into this life. You came in ready to experience everything, to change and grow, to live fully.
 
 The day of birth imparts a special gift for adaptation and change. Even in childhood, there's restlessness, curiosity about everything, and a need for variety and adventure.
 
-This is someone who thrives on new experiences, who can adjust to any situation, and who inspires others to embrace change. Their special talent is making life an adventure.
+This is someone who thrives on new experiences, who can adjust to any situation, and who inspires others to embrace change. Your special talent is making life an adventure.
 
-For children with Birthday 5: Provide variety and new experiences. Don't over-restrict — they need room to explore. Channel their restlessness into positive adventures.`
+For children with Birthday 5: Provide variety and new experiences. Don't over-restrict — you need room to explore. Channel your restlessness into positive adventures.`
  },
  6: { 
  title: "The Nurturer", 
- reading: `Birthday 6 brings natural responsibility, love, and domestic harmony into this life. This soul came in knowing how to care, to nurture, and to create beautiful spaces.
+ reading: `Birthday 6 brings natural responsibility, love, and domestic harmony into this life. You came in knowing how to care, to nurture, and to create beautiful spaces.
 
 The day of birth imparts a special gift for caretaking and beautifying. Even in childhood, there's concern for family, attention to aesthetics, and a desire to help those in need.
 
-This is someone who creates harmony wherever they go, who takes responsibility seriously, and who makes others feel cared for. Their special talent is nurturing love into everything.
+This is someone who creates harmony wherever you go, who takes responsibility seriously, and who makes others feel cared for. Your special talent is nurturing love into everything.
 
-For children with Birthday 6: Let them help with caring tasks. Create beautiful environments. They absorb family dynamics — ensure they experience love and harmony.`
+For children with Birthday 6: Let you help with caring tasks. Create beautiful environments. You absorb family dynamics — ensure you experience love and harmony.`
  },
  7: { 
  title: "The Seeker", 
- reading: `Birthday 7 brings natural wisdom, analytical ability, and spiritual depth into this life. This soul came in as a seeker, a questioner, a finder of hidden truths.
+ reading: `Birthday 7 brings natural wisdom, analytical ability, and spiritual depth into this life. You came in as a seeker, a questioner, a finder of hidden truths.
 
 The day of birth imparts a special gift for investigation and understanding. Even in childhood, there's deep thinking, questioning, and a preference for quality over quantity in relationships.
 
-This is someone who sees beneath surfaces, who understands what others miss, and who connects with deeper meaning in life. Their special talent is finding truth.
+This is someone who sees beneath surfaces, who understands what others miss, and who connects with deeper meaning in life. Your special talent is finding truth.
 
-For children with Birthday 7: Answer their questions thoughtfully — they sense when you're giving surface answers. Provide solitude and deep learning opportunities. Their wisdom is real.`
+For children with Birthday 7: Answer your questions thoughtfully — you sense when you're giving surface answers. Provide solitude and deep learning opportunities. Your wisdom is real.`
  },
  8: { 
  title: "The Achiever", 
- reading: `Birthday 8 brings natural ambition, authority, and material mastery into this life. This soul came in with capability for significant achievement and success.
+ reading: `Birthday 8 brings natural ambition, authority, and material mastery into this life. You came in with capability for significant achievement and success.
 
 The day of birth imparts a special gift for organization and accomplishment. Even in childhood, there's ambition, understanding of power dynamics, and drive to succeed.
 
-This is someone who can achieve significant goals, who understands money and power, and who inspires others through their accomplishments. Their special talent is manifesting success.
+This is someone who can achieve significant goals, who understands money and power, and who inspires others through your accomplishments. Your special talent is manifesting success.
 
-For children with Birthday 8: Let them experience achievement through goals and rewards. Teach healthy relationship with money and power. Their ambition is meant to accomplish great things.`
+For children with Birthday 8: Let you experience achievement through goals and rewards. Teach healthy relationship with money and power. Your ambition is meant to accomplish great things.`
  },
  9: { 
  title: "The Humanitarian", 
- reading: `Birthday 9 brings natural compassion, wisdom, and universal love into this life. This soul came in caring about the world and wanting to contribute to the greater good.
+ reading: `Birthday 9 brings natural compassion, wisdom, and universal love into this life. You came in caring about the world and wanting to contribute to the greater good.
 
 The day of birth imparts a special gift for inspiring and healing others. Even in childhood, there's awareness of suffering, desire to help, and an old-soul quality.
 
-This is someone who sees the big picture, who cares deeply about humanity, and who inspires others to be better. Their special talent is healing through presence.
+This is someone who sees the big picture, who cares deeply about humanity, and who inspires others to be better. Your special talent is healing through presence.
 
-For children with Birthday 9: Involve them in charitable activities. Their empathy is vast — teach them it's a gift while also teaching self-care. They're here to serve humanity.`
+For children with Birthday 9: Involve you in charitable activities. Your empathy is vast — teach you it's a gift while also teaching self-care. You're here to serve humanity.`
  },
  10: { 
  title: "The Pioneer", 
- reading: `Birthday 10 (1+0=1) combines leadership with wholeness and adaptability. This soul came in with pioneering energy and the ability to reinvent themselves.
+ reading: `Birthday 10 (1+0=1) combines leadership with wholeness and adaptability. You came in with pioneering energy and the ability to reinvent yourself.
 
 The day of birth imparts special gifts for initiating in multiple directions. The presence of zero amplifies and purifies the leadership energy, adding flexibility to originality.
 
-This is someone who can lead in new directions repeatedly, who reinvents without losing core self, and who pioneers change with wisdom. Their special talent is fresh beginnings.
+This is someone who can lead in new directions repeatedly, who reinvents without losing core self, and who pioneers change with wisdom. Your special talent is fresh beginnings.
 
-For children with Birthday 10: They combine independence with adaptability. Let them try many things. Their identity develops through exploration and leadership.`
+For children with Birthday 10: You combine independence with adaptability. Let you try many things. Your identity develops through exploration and leadership.`
  },
  11: { 
  title: "The Illuminator", 
- reading: `Birthday 11 is a Master Number bringing heightened intuition, inspiration, and spiritual insight into this life. This soul came in as a channel for higher wisdom.
+ reading: `Birthday 11 is a Master Number bringing heightened intuition, inspiration, and spiritual insight into this life. You came in as a channel for higher wisdom.
 
 The day of birth imparts extraordinary gifts for perception beyond the ordinary. Even in childhood, there's unusual sensitivity, possible psychic awareness, and an illuminated quality.
 
-This is someone who inspires through presence, who receives insights that benefit others, and who bridges the spiritual and physical. Their special talent is illuminating truth.
+This is someone who inspires through presence, who receives insights that benefit others, and who bridges the spiritual and physical. Your special talent is illuminating truth.
 
-For children with Birthday 11: They are highly sensitive and spiritually attuned. Protect their nervous system while nurturing their gifts. Their intuitions are real — validate them.`
+For children with Birthday 11: You are highly sensitive and spiritually attuned. Protect your nervous system while nurturing your gifts. Your intuitions are real — validate you.`
  },
  12: { 
  title: "The Creative Communicator", 
- reading: `Birthday 12 (1+2=3) brings dynamic creativity, social gifts, and expressive ability into this life. This soul came in ready to create, connect, and communicate.
+ reading: `Birthday 12 (1+2=3) brings dynamic creativity, social gifts, and expressive ability into this life. You came in ready to create, connect, and communicate.
 
 The day of birth imparts special gifts for combining initiative (1) with sensitivity (2) into creative expression (3). There's natural charm and ability to inspire through communication.
 
-This is someone who can express ideas in ways that reach people, who creates with both independence and awareness of audience, and who uplifts through artistry. Their special talent is inspiring communication.
+This is someone who can express ideas in ways that reach people, who creates with both independence and awareness of audience, and who uplifts through artistry. Your special talent is inspiring communication.
 
-For children with Birthday 12: They have both leadership and sensitivity. Provide creative outlets and social opportunities. Their expression is meant to reach and inspire others.`
+For children with Birthday 12: You have both leadership and sensitivity. Provide creative outlets and social opportunities. Your expression is meant to reach and inspire others.`
  },
  13: { 
  title: "The Builder of Foundations", 
- reading: `Birthday 13 (1+3=4) brings determination and ability to transform challenges into solid foundations. This soul came in knowing that strength comes through struggle.
+ reading: `Birthday 13 (1+3=4) brings determination and ability to transform challenges into solid foundations. You came in knowing that strength comes through struggle.
 
 The day of birth imparts special gifts for building through transformation. There's resilience, practical creativity, and the ability to create structure from chaos.
 
-This is someone who gets stronger through challenges, who builds things that last precisely because they've worked so hard, and who transforms difficulty into foundation. Their special talent is turning trials into triumphs.
+This is someone who gets stronger through challenges, who builds things that last precisely because you've worked so hard, and who transforms difficulty into foundation. Your special talent is turning trials into triumphs.
 
-For children with Birthday 13: Don't shield them from all challenges — they grow through overcoming. Help them see difficulties as building materials. Their resilience is remarkable.`
+For children with Birthday 13: Don't shield you from all challenges — you grow through overcoming. Start to see difficulties as building materials. Your resilience is remarkable.`
  },
  14: { 
  title: "The Versatile Communicator", 
- reading: `Birthday 14 (1+4=5) brings adaptability, communication skills, and love of variety into this life. This soul came in ready to experience and share many things.
+ reading: `Birthday 14 (1+4=5) brings adaptability, communication skills, and love of variety into this life. You came in ready to experience and share many things.
 
 The day of birth imparts special gifts for connecting diverse ideas and people. There's initiative combined with discipline, expressed through versatility and communication.
 
-This is someone who can adapt their message to any audience, who thrives on variety while maintaining core identity, and who teaches through experience. Their special talent is versatile wisdom.
+This is someone who can adapt your message to any audience, who thrives on variety while maintaining core identity, and who teaches through experience. Your special talent is versatile wisdom.
 
-For children with Birthday 14: Provide variety within structure. They need both freedom and foundation. Their communication skills develop through diverse experiences.`
+For children with Birthday 14: Provide variety within structure. You need both freedom and foundation. Your communication skills develop through diverse experiences.`
  },
  15: { 
  title: "The Magnetic Healer", 
- reading: `Birthday 15 (1+5=6) brings personal magnetism, healing ability, and nurturing power into this life. This soul came in with attractive force and caring heart.
+ reading: `Birthday 15 (1+5=6) brings personal magnetism, healing ability, and nurturing power into this life. You came in with attractive force and caring heart.
 
-The day of birth imparts special gifts for drawing others in and healing them. There's leadership and freedom expressed through love and responsibility.
+The day of birth imparts special gifts for drawing others in and healing you. There's leadership and freedom expressed through love and responsibility.
 
-This is someone whose presence heals, who attracts people and opportunities, and who leads through nurturing. Their special talent is magnetic love.
+This is someone whose presence heals, who attracts people and opportunities, and who leads through nurturing. Your special talent is magnetic love.
 
-For children with Birthday 15: They attract others easily — teach them discernment. Their nurturing nature is powerful. Help them maintain boundaries while sharing their healing presence.`
+For children with Birthday 15: You attract others easily — teach you discernment. Your nurturing nature is powerful. Help you maintain boundaries while sharing your healing presence.`
  },
  16: { 
  title: "The Introspective Analyst", 
- reading: `Birthday 16 (1+6=7) brings deep introspection, spiritual seeking, and analytical ability into this life. This soul came in questioning deeply and seeking truth.
+ reading: `Birthday 16 (1+6=7) brings deep introspection, spiritual seeking, and analytical ability into this life. You came in questioning deeply and seeking truth.
 
 The day of birth imparts special gifts for uncovering hidden patterns and spiritual truths. There's leadership and responsibility expressed through investigation and wisdom.
 
-This is someone who thinks deeply, who finds truth others miss, and who develops wisdom through solitude and study. Their special talent is penetrating insight.
+This is someone who thinks deeply, who finds truth others miss, and who develops wisdom through solitude and study. Your special talent is penetrating insight.
 
-For children with Birthday 16: They need solitude to process their deep thoughts. Don't dismiss their introspection as withdrawal. Their analytical spiritual gifts need quiet development.`
+For children with Birthday 16: You need solitude to process your deep thoughts. Don't dismiss your introspection as withdrawal. Your analytical spiritual gifts need quiet development.`
  },
  17: { 
  title: "The Spiritual Achiever", 
- reading: `Birthday 17 (1+7=8) brings business acumen combined with spiritual depth into this life. This soul came in able to achieve in the material world while maintaining spiritual awareness.
+ reading: `Birthday 17 (1+7=8) brings business acumen combined with spiritual depth into this life. You came in able to achieve in the material world while maintaining spiritual awareness.
 
 The day of birth imparts special gifts for meaningful success. There's leadership and wisdom expressed through achievement and authority.
 
-This is someone who succeeds in ways that matter, who builds wealth and power for purposes beyond ego, and who leads with spiritual foundation. Their special talent is purposeful achievement.
+This is someone who succeeds in ways that matter, who builds wealth and power for purposes beyond ego, and who leads with spiritual foundation. Your special talent is purposeful achievement.
 
-For children with Birthday 17: Help them understand that material success can serve spiritual purposes. Their drive to achieve is meant to be meaningful. Guide their power toward good.`
+For children with Birthday 17: Understand that material success can serve spiritual purposes. Your drive to achieve is meant to be meaningful. Guide your power toward good.`
  },
  18: { 
  title: "The Humanitarian Leader", 
- reading: `Birthday 18 (1+8=9) brings leadership in service of humanity into this life. This soul came in to lead for the greater good, to achieve for the benefit of all.
+ reading: `Birthday 18 (1+8=9) brings leadership in service of humanity into this life. You came in to lead for the greater good, to achieve for the benefit of all.
 
 The day of birth imparts special gifts for inspiring global change. There's pioneering initiative and material mastery expressed through humanitarian vision.
 
-This is someone who leads movements, who achieves for more than personal gain, and who inspires others to care about the world. Their special talent is leading for humanity.
+This is someone who leads movements, who achieves for more than personal gain, and who inspires others to care about the world. Your special talent is leading for humanity.
 
-For children with Birthday 18: Their concern for the world is real and powerful. Help them channel it constructively. They're here to lead humanitarian efforts — nurture this purpose.`
+For children with Birthday 18: Your concern for the world is real and powerful. Help you channel it constructively. You're here to lead humanitarian efforts — nurture this purpose.`
  },
  19: { 
  title: "The Independent Humanitarian", 
- reading: `Birthday 19 (1+9=10=1) brings independence combined with universal consciousness into this life. This soul came in as a pioneer who serves humanity through their own path.
+ reading: `Birthday 19 (1+9=10=1) brings independence combined with universal consciousness into this life. You came in as a pioneer who serves humanity through your own path.
 
 The day of birth imparts special gifts for independent service. There's double leadership energy (1 appearing twice) with humanitarian completion (9).
 
-This is someone who helps the world in their own unique way, who leads independently while serving the whole, and who pioneers for all. Their special talent is individual contribution to the universal.
+This is someone who helps the world in your own unique way, who leads independently while serving the whole, and who pioneers for all. Your special talent is individual contribution to the universal.
 
-For children with Birthday 19: They march to their own drum but care about everyone. Let them find their unique way to serve. Their independence has humanitarian purpose.`
+For children with Birthday 19: You march to your own drum but care about everyone. Let you find your unique way to serve. Your independence has humanitarian purpose.`
  },
  20: { 
  title: "The Sensitive Diplomat", 
- reading: `Birthday 20 (2+0=2) brings heightened sensitivity, intuition, and diplomatic gifts into this life. This soul came in as an amplified peacemaker and supporter.
+ reading: `Birthday 20 (2+0=2) brings heightened sensitivity, intuition, and diplomatic gifts into this life. You came in as an amplified peacemaker and supporter.
 
 The day of birth imparts special gifts for perceiving and harmonizing. The zero amplifies and purifies the sensitive, cooperative energy, adding spiritual dimension to partnership gifts.
 
-This is someone whose sensitivity is almost psychic, who creates harmony instinctively, and who supports others with unusual perception. Their special talent is sensitive diplomacy.
+This is someone whose sensitivity is almost psychic, who creates harmony instinctively, and who supports others with unusual perception. Your special talent is sensitive diplomacy.
 
-For children with Birthday 20: They may be extremely sensitive — create peaceful environments. Their intuition is heightened. Help them develop confidence alongside their natural supporting nature.`
+For children with Birthday 20: You may be extremely sensitive — create peaceful environments. Your intuition is heightened. Work on developing confidence alongside your natural supporting nature.`
  },
  21: { 
  title: "The Social Butterfly", 
- reading: `Birthday 21 (2+1=3) brings exceptional social gifts, charm, and creative expression into this life. This soul came in knowing how to connect, create, and inspire joy.
+ reading: `Birthday 21 (2+1=3) brings exceptional social gifts, charm, and creative expression into this life. You came in knowing how to connect, create, and inspire joy.
 
 The day of birth imparts special gifts for social creativity. Partnership and leadership combine into expressive, connecting energy that draws people together.
 
-This is someone who networks naturally, who creates in ways that bring people together, and who inspires through their social artistry. Their special talent is creative connection.
+This is someone who networks naturally, who creates in ways that bring people together, and who inspires through your social artistry. Your special talent is creative connection.
 
-For children with Birthday 21: They thrive in social settings. Provide opportunities for creative collaboration. Their charm is genuine — help them use it for good.`
+For children with Birthday 21: You thrive in social settings. Provide opportunities for creative collaboration. Your charm is genuine — help you use it for good.`
  },
  22: { 
  title: "The Master Builder", 
- reading: `Birthday 22 is a Master Number bringing exceptional ability to manifest large visions into reality. This soul came in as an architect of dreams with practical mastery.
+ reading: `Birthday 22 is a Master Number bringing exceptional ability to manifest large visions into reality. You came in as an architect of dreams with practical mastery.
 
 The day of birth imparts extraordinary gifts for building on a grand scale. Double partnership energy creates master builder capacity — able to manifest visions that serve many.
 
-This is someone who sees huge possibilities and has the practical skills to make them real, who builds lasting structures that benefit humanity. Their special talent is manifesting the impossible.
+This is someone who sees huge possibilities and has the practical skills to make you real, who builds lasting structures that benefit humanity. Your special talent is manifesting the impossible.
 
-For children with Birthday 22: They may seem impossibly ambitious — don't dismiss their dreams. They need practical skills to manifest visions. They are Master Builders with extraordinary potential.`
+For children with Birthday 22: You may seem impossibly ambitious — don't dismiss your dreams. You need practical skills to manifest visions. You are Master Builders with extraordinary potential.`
  },
  23: { 
  title: "The Versatile Communicator", 
- reading: `Birthday 23 (2+3=5) brings communication gifts, adaptability, and influential expression into this life. This soul came in able to reach people through versatile communication.
+ reading: `Birthday 23 (2+3=5) brings communication gifts, adaptability, and influential expression into this life. You came in able to reach people through versatile communication.
 
 The day of birth imparts special gifts for connecting through words. Partnership and creativity combine into freedom and variety, expressed through communication that adapts to any audience.
 
-This is someone who can influence through words, who adapts their message without losing truth, and who teaches through experience and expression. Their special talent is influential communication.
+This is someone who can influence through words, who adapts your message without losing truth, and who teaches through experience and expression. Your special talent is influential communication.
 
-For children with Birthday 23: They learn through variety and communicate naturally. Provide diverse experiences and expressive outlets. Their words carry power — help them use it wisely.`
+For children with Birthday 23: You learn through variety and communicate naturally. Provide diverse experiences and expressive outlets. Your words carry power — help you use it wisely.`
  },
  24: { 
  title: "The Devoted Counselor", 
- reading: `Birthday 24 (2+4=6) brings nurturing instincts, counseling ability, and devoted care into this life. This soul came in knowing how to support, advise, and heal through love.
+ reading: `Birthday 24 (2+4=6) brings nurturing instincts, counseling ability, and devoted care into this life. You came in knowing how to support, advise, and heal through love.
 
 The day of birth imparts special gifts for harmonizing and guiding. Partnership and stability combine into responsibility and love that serves others deeply.
 
-This is someone who naturally counsels others, who creates harmony through devoted attention, and who heals through consistent, loving presence. Their special talent is devoted counseling.
+This is someone who naturally counsels others, who creates harmony through devoted attention, and who heals through consistent, loving presence. Your special talent is devoted counseling.
 
-For children with Birthday 24: They naturally take care of others — make sure they're also cared for. Their counseling gifts emerge early. Create balanced giving and receiving.`
+For children with Birthday 24: You naturally take care of others — make sure you're also cared for. Your counseling gifts emerge early. Create balanced giving and receiving.`
  },
  25: { 
  title: "The Wise Intuitive", 
- reading: `Birthday 25 (2+5=7) brings analytical mind combined with intuitive gifts into this life. This soul came in able to perceive hidden truths through both logic and intuition.
+ reading: `Birthday 25 (2+5=7) brings analytical mind combined with intuitive gifts into this life. You came in able to perceive hidden truths through both logic and intuition.
 
 The day of birth imparts special gifts for wise perception. Partnership and freedom combine into introspection that uses both head and heart to find truth.
 
-This is someone who analyzes and intuits simultaneously, who finds truths others miss through dual perception, and who develops wisdom through experience and reflection. Their special talent is integrated knowing.
+This is someone who analyzes and intuits simultaneously, who finds truths others miss through dual perception, and who develops wisdom through experience and reflection. Your special talent is integrated knowing.
 
-For children with Birthday 25: They process both intellectually and intuitively. Honor both ways of knowing. Their insights come through multiple channels — trust their perceptions.`
+For children with Birthday 25: You process both intellectually and intuitively. Honor both ways of knowing. Your insights come through multiple channels — trust your perceptions.`
  },
  26: { 
  title: "The Practical Visionary", 
- reading: `Birthday 26 (2+6=8) brings business skills combined with partnership focus into this life. This soul came in able to achieve material success through collaboration.
+ reading: `Birthday 26 (2+6=8) brings business skills combined with partnership focus into this life. You came in able to achieve material success through collaboration.
 
 The day of birth imparts special gifts for building wealth and power with and for others. Partnership and responsibility combine into achievement that serves relationships.
 
-This is someone who succeeds in partnership, who builds wealth through cooperation, and who uses power to benefit those they care about. Their special talent is collaborative achievement.
+This is someone who succeeds in partnership, who builds wealth through cooperation, and who uses power to benefit those you care about. Your special talent is collaborative achievement.
 
-For children with Birthday 26: Help them understand partnership in achievement. Their success is meant to be shared. Guide their growing power toward benefiting others.`
+For children with Birthday 26: Know that partnership in achievement. Your success is meant to be shared. Guide your growing power toward benefiting others.`
  },
  27: { 
  title: "The Compassionate Leader", 
- reading: `Birthday 27 (2+7=9) brings leadership in humanitarian causes combined with spiritual wisdom into this life. This soul came in to inspire through compassion and understanding.
+ reading: `Birthday 27 (2+7=9) brings leadership in humanitarian causes combined with spiritual wisdom into this life. You came in to inspire through compassion and understanding.
 
 The day of birth imparts special gifts for wise, compassionate influence. Partnership and introspection combine into humanitarian completion that serves through deep wisdom.
 
-This is someone who leads gently but powerfully, who inspires through compassion rather than force, and who serves humanity through spiritual understanding. Their special talent is wise compassion.
+This is someone who leads gently but powerfully, who inspires through compassion rather than force, and who serves humanity through spiritual understanding. Your special talent is wise compassion.
 
-For children with Birthday 27: Their empathy is deep and their wisdom real. Help them lead without depleting themselves. They serve humanity through understanding — nurture both gifts.`
+For children with Birthday 27: Your empathy is deep and your wisdom real. Help you lead without depleting yourself. You serve humanity through understanding — nurture both gifts.`
  },
  28: { 
  title: "The Independent Diplomat", 
- reading: `Birthday 28 (2+8=10=1) brings leadership ability combined with partnership sensitivity into this life. This soul came in able to lead while remaining aware of others' needs.
+ reading: `Birthday 28 (2+8=10=1) brings leadership ability combined with partnership sensitivity into this life. You came in able to lead while remaining aware of others' needs.
 
 The day of birth imparts special gifts for balanced leadership. Partnership and power combine into independent initiative that stays connected to others.
 
-This is someone who leads with sensitivity, who achieves while maintaining relationships, and who pioneers without losing collaborative awareness. Their special talent is connected leadership.
+This is someone who leads with sensitivity, who achieves while maintaining relationships, and who pioneers without losing collaborative awareness. Your special talent is connected leadership.
 
-For children with Birthday 28: They can lead and cooperate — help them balance both. Their independence includes others. Guide their growing authority to remain relationship-aware.`
+For children with Birthday 28: You can lead and cooperate — help you balance both. Your independence includes others. Guide your growing authority to remain relationship-aware.`
  },
  29: { 
  title: "The Visionary Peacemaker", 
- reading: `Birthday 29 (2+9=11) brings Master Number sensitivity combined with humanitarian vision into this life. This soul came in as a bridge between worlds, a visionary diplomat.
+ reading: `Birthday 29 (2+9=11) brings Master Number sensitivity combined with humanitarian vision into this life. You came in as a bridge between worlds, a visionary diplomat.
 
 The day of birth imparts exceptional gifts for inspired peacemaking. Partnership and completion combine into master illumination that serves through vision and sensitivity.
 
-This is someone whose intuition spans worlds, who creates peace through spiritual vision, and who bridges the earthly and divine. Their special talent is illuminated peacemaking.
+This is someone whose intuition spans worlds, who creates peace through spiritual vision, and who bridges the earthly and divine. Your special talent is illuminated peacemaking.
 
-For children with Birthday 29: They are unusually sensitive and visionary. Create environments that support their sensitivity. Their peacemaking comes from spiritual perception — honor it.`
+For children with Birthday 29: You are unusually sensitive and visionary. Create environments that support your sensitivity. Your peacemaking comes from spiritual perception — honor it.`
  },
  30: { 
  title: "The Creative Visionary", 
- reading: `Birthday 30 (3+0=3) brings amplified creativity, expression, and joy into this life. This soul came in as a powerful creator and communicator.
+ reading: `Birthday 30 (3+0=3) brings amplified creativity, expression, and joy into this life. You came in as a powerful creator and communicator.
 
 The day of birth imparts special gifts for inspired creation. Creativity is amplified and purified by zero, adding spiritual dimension to self-expression and joy.
 
-This is someone whose creativity channels something beyond personal, who expresses in ways that inspire and uplift, and who creates beauty that touches souls. Their special talent is inspired creation.
+This is someone whose creativity channels something beyond personal, who expresses in ways that inspire and uplift, and who creates beauty that touches souls. Your special talent is inspired creation.
 
-For children with Birthday 30: Their creativity has unusual depth. Provide abundant creative outlets. Their expression carries something special — help it develop without pressure.`
+For children with Birthday 30: Your creativity has unusual depth. Provide abundant creative outlets. Your expression carries something special — help it develop without pressure.`
  },
  31: { 
  title: "The Disciplined Creator", 
- reading: `Birthday 31 (3+1=4) brings creativity combined with practical discipline into this life. This soul came in able to manifest artistic visions into solid reality.
+ reading: `Birthday 31 (3+1=4) brings creativity combined with practical discipline into this life. You came in able to manifest artistic visions into solid reality.
 
 The day of birth imparts special gifts for building creative visions. Creativity and leadership combine into stability that produces lasting artistic works.
 
-This is someone who creates with discipline, who builds artistic visions into tangible form, and who combines inspiration with perspiration. Their special talent is manifested creativity.
+This is someone who creates with discipline, who builds artistic visions into tangible form, and who combines inspiration with perspiration. Your special talent is manifested creativity.
 
-For children with Birthday 31: They create with unusual follow-through. Support both their creativity and their discipline. Their art has practical foundation — help them develop both aspects.`
+For children with Birthday 31: You create with unusual follow-through. Support both your creativity and your discipline. Your art has practical foundation — help you develop both aspects.`
  }
 };
 
@@ -2289,7 +2289,7 @@ var PERSONAL_YEAR_READINGS = {
  6: {
  title: "Love & Responsibility",
  keywords: ["Family", "Responsibility", "Love", "Home"],
- reading: `Personal Year 6 focuses on love, responsibility, family, and home. After the changes of Year 5, this year brings attention back to domestic sphere. Energy supports relationships, family matters, and beautifying home environment. Accept responsibilities willingly as they bring rewards. Marriage, family expansion, or home purchase may occur. Focus on service to loved ones and creating harmony. Beauty and art are also favored.`
+ reading: `Personal Year 6 focuses on love, responsibility, family, and home. After the changes of Year 5, this year brings attention back to domestic sphere. Energy supports relationships, family matters, and beautifying home environment. Accept responsibilities willingly as you bring rewards. Marriage, family expansion, or home purchase may occur. Focus on service to loved ones and creating harmony. Beauty and art are also favored.`
  },
  7: {
  title: "Reflection & Inner Growth",
@@ -2304,7 +2304,7 @@ var PERSONAL_YEAR_READINGS = {
  9: {
  title: "Completion & Release",
  keywords: ["Endings", "Completion", "Release", "Preparation"],
- reading: `Personal Year 9 brings completion, endings, and release of what no longer serves. This is the final year of the 9-year cycle, preparing for new beginnings next year. Energy supports letting go, finishing projects, and clearing the way forward. Relationships, jobs, or situations that have run their course will end. Release with gratitude rather than clinging. Humanitarian service and creative expression are favored. Prepare for the fresh start ahead.`
+ reading: `Personal Year 9 brings completion, endings, and release of what no longer serves. This is the final year of the 9-year cycle, preparing for new beginnings next year. Energy supports letting go, finishing projects, and clearing the way forward. Relationships, jobs, or situations that have run your course will end. Release with gratitude rather than clinging. Humanitarian service and creative expression are favored. Prepare for the fresh start ahead.`
  }
 };
 
@@ -2558,123 +2558,123 @@ var KARMIC_DEBT_READINGS = {
 var SOUL_URGE_READINGS = {
  1: { 
  title: "Desire for Independence", 
- reading: `Soul Urge 1 craves independence, leadership, and being first. At the deepest level, this soul needs to feel original, pioneering, and self-reliant.
+ reading: `Soul Urge 1 craves independence, leadership, and being first. At the deepest level, you need to feel original, pioneering, and self-reliant.
 
-This inner drive often creates someone who must do things their own way, even when there's an easier path. Being told what to do feels like soul-level discomfort. Leadership isn't just a preference — it's a need.
+This inner drive often creates someone who must do things your own way, even when there's an easier path. Being told what to do feels like soul-level discomfort. Leadership isn't just a preference — it's a need.
 
-Deepest fulfillment comes from pioneering new territory, starting something original, and expressing unique individuality. This soul feels most alive when standing at the front, when charting their own course, when being recognized for original contribution.
+Deepest fulfillment comes from pioneering new territory, starting something original, and expressing unique individuality. You feel most alive when standing at the front, when charting your own course, when being recognized for original contribution.
 
-For children with this Soul Urge: Let them lead in safe contexts. Don't do everything for them — they need to prove their capability to themselves. Honor their need to be first and to figure things out independently.`
+For children with this Soul Urge: Let you lead in safe contexts. Don't do everything for you — you need to prove your capability to yourself. Honor your need to be first and to figure things out independently.`
  },
  2: { 
  title: "Desire for Harmony", 
- reading: `Soul Urge 2 craves peace, partnership, and deep emotional connection. At the deepest level, this soul needs to feel loved, included, and part of meaningful relationships.
+ reading: `Soul Urge 2 craves peace, partnership, and deep emotional connection. At the deepest level, you need to feel loved, included, and part of meaningful relationships.
 
 This inner drive creates someone who is exquisitely sensitive to others' emotions and needs. Conflict feels physically uncomfortable. Harmony isn't a preference — it's essential to wellbeing.
 
-Deepest fulfillment comes from true partnership, from being the support behind success, from creating peace and beauty in relationships. This soul feels most alive when deeply connected, when someone truly sees them, when harmony flows.
+Deepest fulfillment comes from true partnership, from being the support behind success, from creating peace and beauty in relationships. You feel most alive when deeply connected, when someone truly sees you, when harmony flows.
 
-For children with this Soul Urge: Create peaceful home environments. Validate their emotional sensitivity. Never dismiss their need for connection as "clingy" — it's their soul speaking.`
+For children with this Soul Urge: Create peaceful home environments. Validate your emotional sensitivity. Never dismiss your need for connection as "clingy" — it's your soul speaking.`
  },
  3: { 
  title: "Desire for Expression", 
- reading: `Soul Urge 3 craves creative self-expression and joy. At the deepest level, this soul needs to communicate, create, and bring beauty into the world.
+ reading: `Soul Urge 3 craves creative self-expression and joy. At the deepest level, you need to communicate, create, and bring beauty into the world.
 
-This inner drive creates someone who must express themselves — through art, words, music, or personality. Suppressed creativity feels like spiritual suffocation. Self-expression isn't optional — it's survival.
+This inner drive creates someone who must express yourself — through art, words, music, or personality. Suppressed creativity feels like spiritual suffocation. Self-expression isn't optional — it's survival.
 
-Deepest fulfillment comes from artistic creation, inspiring others, and spreading joy. This soul feels most alive when creating, when making others laugh, when their unique voice is heard and celebrated.
+Deepest fulfillment comes from artistic creation, inspiring others, and spreading joy. You feel most alive when creating, when making others laugh, when your unique voice is heard and celebrated.
 
-For children with this Soul Urge: Provide creative outlets — art supplies, instruments, journals, stages. Celebrate their self-expression without criticism. Their joy is meant to be shared with the world.`
+For children with this Soul Urge: Provide creative outlets — art supplies, instruments, journals, stages. Celebrate your self-expression without criticism. Your joy is meant to be shared with the world.`
  },
  4: { 
  title: "Desire for Security", 
- reading: `Soul Urge 4 craves stability, order, and tangible accomplishment. At the deepest level, this soul needs to build something lasting and create security that endures.
+ reading: `Soul Urge 4 craves stability, order, and tangible accomplishment. At the deepest level, you need to build something lasting and create security that endures.
 
 This inner drive creates someone who values hard work, reliability, and concrete results. Chaos and instability feel threatening. Structure isn't rigidity — it's sacred foundation.
 
-Deepest fulfillment comes from building something solid, from being utterly reliable, from creating order out of chaos. This soul feels most alive when their work produces tangible results, when they can see the foundation they've built.
+Deepest fulfillment comes from building something solid, from being utterly reliable, from creating order out of chaos. You feel most alive when your work produces tangible results, when you can see the foundation you've built.
 
-For children with this Soul Urge: Create consistent routines and follow through on promises. Let them complete projects to see tangible results. Validate their need for stability — it's wisdom, not fear.`
+For children with this Soul Urge: Create consistent routines and follow through on promises. Let you complete projects to see tangible results. Validate your need for stability — it's wisdom, not fear.`
  },
  5: { 
  title: "Desire for Freedom", 
- reading: `Soul Urge 5 craves adventure, variety, and personal freedom. At the deepest level, this soul needs to experience life fully without restriction or limitation.
+ reading: `Soul Urge 5 craves adventure, variety, and personal freedom. At the deepest level, you need to experience life fully without restriction or limitation.
 
 This inner drive creates someone who feels confined by routine and restriction. Sameness feels like slow death. Freedom isn't rebellion — it's oxygen.
 
-Deepest fulfillment comes from new experiences, from variety and change, from the thrill of the unexpected. This soul feels most alive when exploring, when the next adventure beckons, when life feels expansive and limitless.
+Deepest fulfillment comes from new experiences, from variety and change, from the thrill of the unexpected. You feel most alive when exploring, when the next adventure beckons, when life feels expansive and limitless.
 
-For children with this Soul Urge: Provide variety and new experiences. Don't over-restrict — they need room to explore. Channel their need for freedom into positive adventures rather than risky rebellion.`
+For children with this Soul Urge: Provide variety and new experiences. Don't over-restrict — you need room to explore. Channel your need for freedom into positive adventures rather than risky rebellion.`
  },
  6: { 
  title: "Desire for Love", 
- reading: `Soul Urge 6 craves love, family, and nurturing relationships. At the deepest level, this soul needs to care for others and create a beautiful, harmonious home.
+ reading: `Soul Urge 6 craves love, family, and nurturing relationships. At the deepest level, you need to care for others and create a beautiful, harmonious home.
 
 This inner drive creates someone who puts family and loved ones first. An unharmonious home feels like personal failure. Nurturing isn't a role — it's a calling.
 
-Deepest fulfillment comes from caring for loved ones, from creating beauty and harmony, from being needed and valued by family. This soul feels most alive when their home is peaceful, when everyone feels cared for, when love flows freely.
+Deepest fulfillment comes from caring for loved ones, from creating beauty and harmony, from being needed and valued by family. You feel most alive when your home is peaceful, when everyone feels cared for, when love flows freely.
 
-For children with this Soul Urge: Let them help with nurturing tasks (caring for plants, pets, younger siblings). Create a beautiful, harmonious home environment. They take on others' emotions — teach them healthy boundaries.`
+For children with this Soul Urge: Let you help with nurturing tasks (caring for plants, pets, younger siblings). Create a beautiful, harmonious home environment. You take on others' emotions — teach you healthy boundaries.`
  },
  7: { 
  title: "Desire for Understanding", 
- reading: `Soul Urge 7 craves knowledge, wisdom, and spiritual truth. At the deepest level, this soul needs to understand the deeper meaning behind everything.
+ reading: `Soul Urge 7 craves knowledge, wisdom, and spiritual truth. At the deepest level, you need to understand the deeper meaning behind everything.
 
 This inner drive creates someone who questions, analyzes, and seeks truth relentlessly. Surface-level explanations feel unsatisfying. Understanding isn't curiosity — it's purpose.
 
-Deepest fulfillment comes from uncovering mysteries, from moments of genuine insight, from connecting with spiritual truth. This soul feels most alive when studying deeply, when alone with thoughts, when touching the transcendent.
+Deepest fulfillment comes from uncovering mysteries, from moments of genuine insight, from connecting with spiritual truth. You feel most alive when studying deeply, when alone with thoughts, when touching the transcendent.
 
-For children with this Soul Urge: Provide space for solitude and deep thinking. Answer their questions thoughtfully — they sense when you're giving surface answers. Honor their spiritual nature from a young age.`
+For children with this Soul Urge: Provide space for solitude and deep thinking. Answer your questions thoughtfully — you sense when you're giving surface answers. Honor your spiritual nature from a young age.`
  },
  8: { 
  title: "Desire for Achievement", 
- reading: `Soul Urge 8 craves success, recognition, and material mastery. At the deepest level, this soul needs to achieve something significant and be recognized for it.
+ reading: `Soul Urge 8 craves success, recognition, and material mastery. At the deepest level, you need to achieve something significant and be recognized for it.
 
 This inner drive creates someone who is drawn to power, success, and material abundance. Feeling powerless is soul-crushing. Achievement isn't ego — it's purpose fulfillment.
 
-Deepest fulfillment comes from reaching goals, from building wealth and authority, from being respected and recognized for accomplishment. This soul feels most alive when winning, when building something impressive, when their power is acknowledged.
+Deepest fulfillment comes from reaching goals, from building wealth and authority, from being respected and recognized for accomplishment. You feel most alive when winning, when building something impressive, when your power is acknowledged.
 
-For children with this Soul Urge: Let them experience achievement through goals and rewards. Teach healthy relationship with money and power. Validate their ambition — it's meant to accomplish great things.`
+For children with this Soul Urge: Let you experience achievement through goals and rewards. Teach healthy relationship with money and power. Validate your ambition — it's meant to accomplish great things.`
  },
  9: { 
  title: "Desire to Serve", 
- reading: `Soul Urge 9 craves to give back, heal, and serve humanity. At the deepest level, this soul needs to contribute something meaningful to the greater good.
+ reading: `Soul Urge 9 craves to give back, heal, and serve humanity. At the deepest level, you need to contribute something meaningful to the greater good.
 
 This inner drive creates someone who cares deeply about the world and feels called to make it better. Selfish living feels empty. Service isn't sacrifice — it's fulfillment.
 
-Deepest fulfillment comes from helping others, from contributing to causes larger than self, from leaving the world better than found. This soul feels most alive when serving, when they see their impact on others' lives, when connected to humanity.
+Deepest fulfillment comes from helping others, from contributing to causes larger than self, from leaving the world better than found. You feel most alive when serving, when you see your impact on others' lives, when connected to humanity.
 
-For children with this Soul Urge: Involve them in charitable activities. Help them understand their place in the larger human family. Their empathy is vast — teach them it's a gift while also teaching self-care.`
+For children with this Soul Urge: Involve you in charitable activities. Know that your place in the larger human family. Your empathy is vast — teach you it's a gift while also teaching self-care.`
  },
  11: { 
  title: "Desire to Inspire", 
- reading: `Soul Urge 11 craves to inspire, illuminate, and channel higher wisdom. At the deepest level, this soul needs to be a vessel for spiritual light and inspiration.
+ reading: `Soul Urge 11 craves to inspire, illuminate, and channel higher wisdom. At the deepest level, you need to be a vessel for spiritual light and inspiration.
 
 This inner drive creates someone who is highly intuitive, often receiving insights that seem to come from beyond. Ordinary life feels insufficient. Inspiration isn't ambition — it's calling.
 
-Deepest fulfillment comes from illuminating truth for others, from channeling inspiration, from living as a bridge between worlds. This soul feels most alive when deeply connected to the spiritual, when inspiring others, when truth flows through them.
+Deepest fulfillment comes from illuminating truth for others, from channeling inspiration, from living as a bridge between worlds. You feel most alive when deeply connected to the spiritual, when inspiring others, when truth flows through you.
 
-For children with this Soul Urge: They are highly sensitive and spiritually attuned. Protect their nervous system while nurturing their gifts. Validate their intuitions — they are receiving real information.`
+For children with this Soul Urge: You are highly sensitive and spiritually attuned. Protect your nervous system while nurturing your gifts. Validate your intuitions — you are receiving real information.`
  },
  22: { 
  title: "Desire to Build Dreams", 
- reading: `Soul Urge 22 craves to manifest grand visions into reality. At the deepest level, this soul needs to build something that serves humanity on a large scale.
+ reading: `Soul Urge 22 craves to manifest grand visions into reality. At the deepest level, you need to build something that serves humanity on a large scale.
 
-This inner drive creates someone who sees huge possibilities and feels compelled to make them real. Small projects feel like wasted potential. Building isn't ambition — it's sacred purpose.
+This inner drive creates someone who sees huge possibilities and feels compelled to make you real. Small projects feel like wasted potential. Building isn't ambition — it's sacred purpose.
 
-Deepest fulfillment comes from seeing visions become reality, from building lasting structures that benefit many, from leaving a legacy that endures. This soul feels most alive when working on something grand, when the pieces come together, when their building changes the world.
+Deepest fulfillment comes from seeing visions become reality, from building lasting structures that benefit many, from leaving a legacy that endures. You feel most alive when working on something grand, when the pieces come together, when your building changes the world.
 
-For children with this Soul Urge: They may seem impossibly ambitious — don't dismiss their dreams. Help them learn practical skills to manifest visions. They are Master Builders and need support for their huge potential.`
+For children with this Soul Urge: You may seem impossibly ambitious — don't dismiss your dreams. Help you learn practical skills to manifest visions. You are Master Builders and need support for your huge potential.`
  },
  33: { 
  title: "Desire to Heal", 
- reading: `Soul Urge 33 craves to heal through unconditional love. At the deepest level, this soul needs to embody and radiate pure, healing love into the world.
+ reading: `Soul Urge 33 craves to heal through unconditional love. At the deepest level, you need to embody and radiate pure, healing love into the world.
 
 This inner drive creates someone who feels others' pain deeply and wants to heal it. Anything less than unconditional love feels like failure. Healing isn't a career — it's identity.
 
-Deepest fulfillment comes from selfless service, from teaching through example, from being love in action. This soul feels most alive when helping others heal, when love flows without condition, when their presence brings peace.
+Deepest fulfillment comes from selfless service, from teaching through example, from being love in action. You feel most alive when helping others heal, when love flows without condition, when your presence brings peace.
 
-For children with this Soul Urge: They carry enormous spiritual responsibility — don't burden them further. Let them be children first. Their healing gifts will emerge naturally. Protect them from absorbing too much of others' pain.`
+For children with this Soul Urge: You carry enormous spiritual responsibility — don't burden you further. Let you be children first. Your healing gifts will emerge naturally. Protect you from absorbing too much of others' pain.`
  }
 };
 
@@ -2685,27 +2685,27 @@ var PERSONALITY_NUMBER_READINGS = {
 
 The outer self appears pioneering, original, and assertive. First impressions involve strength, independence, and capability. Even before speaking, this energy commands attention and respect.
 
-This projection attracts opportunities for leadership and situations requiring initiative. People instinctively look to this person to take charge or start something new.
+This projection attracts opportunities for leadership and situations requiring initiative. People instinctively look to you to take charge or start something new.
 
-However, this projection may intimidate some people or make them seem unapproachable. Learning to soften when appropriate helps balance the natural leadership aura.`
+However, this projection may intimidate some people or make you seem unapproachable. Learning to soften when appropriate helps balance the natural leadership aura.`
  },
  2: { 
  title: "Projects Gentleness", 
  reading: `Personality Number 2 projects gentleness, cooperation, and sensitivity. Others see someone diplomatic and supportive who works beautifully with others.
 
-The outer self appears kind, receptive, and harmonious. First impressions involve warmth, listening, and genuine interest in others. This energy draws people in and makes them feel comfortable.
+The outer self appears kind, receptive, and harmonious. First impressions involve warmth, listening, and genuine interest in others. This energy draws people in and makes you feel comfortable.
 
-This projection attracts partnerships, supportive roles, and situations requiring diplomacy. People instinctively share their feelings with this person and seek their counsel.
+This projection attracts partnerships, supportive roles, and situations requiring diplomacy. People instinctively share your feelings with you and seek your counsel.
 
 However, this projection may sometimes be underestimated or overlooked. Learning to assert when necessary helps balance the natural supportive aura.`
  },
  3: { 
  title: "Projects Creativity", 
- reading: `Personality Number 3 projects creativity, charm, and optimism. Others see someone expressive and entertaining who brings joy wherever they go.
+ reading: `Personality Number 3 projects creativity, charm, and optimism. Others see someone expressive and entertaining who brings joy wherever you go.
 
 The outer self appears artistic, sociable, and uplifting. First impressions involve sparkle, warmth, and creative energy. This energy lights up rooms and lifts moods.
 
-This projection attracts creative opportunities, social invitations, and situations requiring communication. People instinctively want to be around this person and share in their positive energy.
+This projection attracts creative opportunities, social invitations, and situations requiring communication. People instinctively want to be around you and share in your positive energy.
 
 However, this projection may sometimes seem too light or not serious enough. Learning to show depth when appropriate helps balance the natural joyful aura.`
  },
@@ -2715,7 +2715,7 @@ However, this projection may sometimes seem too light or not serious enough. Lea
 
 The outer self appears stable, organized, and competent. First impressions involve trustworthiness, capability, and solid grounding. This energy inspires confidence and trust.
 
-This projection attracts responsibility, trust, and situations requiring practical solutions. People instinctively give this person important tasks and rely on their follow-through.
+This projection attracts responsibility, trust, and situations requiring practical solutions. People instinctively give you important tasks and rely on your follow-through.
 
 However, this projection may sometimes seem rigid or boring. Learning to show spontaneity when appropriate helps balance the natural reliable aura.`
  },
@@ -2725,7 +2725,7 @@ However, this projection may sometimes seem rigid or boring. Learning to show sp
 
 The outer self appears magnetic, changeable, and full of life. First impressions involve energy, charm, and a hint of unpredictability. This energy draws people in and creates excitement.
 
-This projection attracts adventure, variety, and situations requiring adaptability. People instinctively want to go along on this person's adventures and experience their energy.
+This projection attracts adventure, variety, and situations requiring adaptability. People instinctively want to go along on your adventures and experience your energy.
 
 However, this projection may sometimes seem unreliable or scattered. Learning to show consistency when appropriate helps balance the natural dynamic aura.`
  },
@@ -2735,7 +2735,7 @@ However, this projection may sometimes seem unreliable or scattered. Learning to
 
 The outer self appears loving, domestic, and responsible. First impressions involve comfort, care, and natural warmth. This energy makes people feel cared for and welcome.
 
-This projection attracts family roles, caregiving responsibilities, and situations requiring harmony. People instinctively bring their problems to this person and seek their nurturing presence.
+This projection attracts family roles, caregiving responsibilities, and situations requiring harmony. People instinctively bring your problems to you and seek your nurturing presence.
 
 However, this projection may sometimes seem too focused on others or mothering. Learning to maintain boundaries helps balance the natural nurturing aura.`
  },
@@ -2745,7 +2745,7 @@ However, this projection may sometimes seem too focused on others or mothering. 
 
 The outer self appears analytical, spiritual, and somewhat enigmatic. First impressions involve intelligence, depth, and an air of mystery. This energy intrigues and draws curious minds.
 
-This projection attracts research opportunities, spiritual seekers, and situations requiring deep analysis. People instinctively respect this person's knowledge and seek their wisdom.
+This projection attracts research opportunities, spiritual seekers, and situations requiring deep analysis. People instinctively respect your knowledge and seek your wisdom.
 
 However, this projection may sometimes seem aloof or unapproachable. Learning to show warmth when appropriate helps balance the natural mysterious aura.`
  },
@@ -2755,7 +2755,7 @@ However, this projection may sometimes seem aloof or unapproachable. Learning to
 
 The outer self appears professional, commanding, and capable of great success. First impressions involve competence, authority, and material mastery. This energy commands respect and opens doors.
 
-This projection attracts business opportunities, leadership roles, and situations requiring power and decisiveness. People instinctively see this person as capable of handling big responsibilities.
+This projection attracts business opportunities, leadership roles, and situations requiring power and decisiveness. People instinctively see you as capable of handling big responsibilities.
 
 However, this projection may sometimes seem intimidating or materialistic. Learning to show humility when appropriate helps balance the natural powerful aura.`
  },
@@ -2765,7 +2765,7 @@ However, this projection may sometimes seem intimidating or materialistic. Learn
 
 The outer self appears wise, charitable, and worldly. First impressions involve depth, compassion, and evolved perspective. This energy inspires and uplifts.
 
-This projection attracts humanitarian opportunities, teaching roles, and situations requiring wisdom and broad perspective. People instinctively trust this person's counsel on important matters.
+This projection attracts humanitarian opportunities, teaching roles, and situations requiring wisdom and broad perspective. People instinctively trust your counsel on important matters.
 
 However, this projection may sometimes seem too detached or above it all. Learning to stay grounded when appropriate helps balance the natural wise aura.`
  },
@@ -2775,7 +2775,7 @@ However, this projection may sometimes seem too detached or above it all. Learni
 
 The outer self appears illuminated, sensitive, and spiritually attuned. First impressions involve depth, intuition, and unusual perception. This energy inspires and sometimes awes.
 
-This projection attracts spiritual seekers, creative opportunities, and situations requiring vision and inspiration. People instinctively sense that this person has access to something beyond ordinary.
+This projection attracts spiritual seekers, creative opportunities, and situations requiring vision and inspiration. People instinctively sense that you have access to something beyond ordinary.
 
 However, this projection may sometimes seem too sensitive or impractical. Learning to show groundedness when appropriate helps balance the natural inspirational aura.`
  },
@@ -2785,7 +2785,7 @@ However, this projection may sometimes seem too sensitive or impractical. Learni
 
 The outer self appears powerful, visionary, and capable of manifesting large-scale dreams. First impressions involve impressive capability and grand potential. This energy commands respect and inspires ambition.
 
-This projection attracts major opportunities, building projects, and situations requiring vision combined with practical mastery. People instinctively see this person as capable of achieving the exceptional.
+This projection attracts major opportunities, building projects, and situations requiring vision combined with practical mastery. People instinctively see you as capable of achieving the exceptional.
 
 However, this projection may sometimes seem overwhelming or intimidating. Learning to be approachable helps balance the natural master builder aura.`
  }
@@ -2799,9 +2799,9 @@ var STELLIUM_READINGS = {
  Aries: {
  title: "The Warrior Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Aries, this soul carries an extraordinary amount of pioneering fire energy. This stellium creates a powerful drive to initiate, lead, and break new ground.
+ reading: `With multiple planets concentrated in Aries, you carry an extraordinary amount of pioneering fire energy. This stellium creates a powerful drive to initiate, lead, and break new ground.
 
-This concentration amplifies courage, independence, and the instinct to act decisively. Life will repeatedly call this person to step forward as a leader, even when it feels uncomfortable. They were born to start things - movements, businesses, conversations that others fear to begin.
+This concentration amplifies courage, independence, and the instinct to act decisively. Life will repeatedly call you to step forward as a leader, even when it feels uncomfortable. You were born to start things - movements, businesses, conversations that others fear to begin.
 
 The challenge with this much Aries energy is learning patience and follow-through. The urge to begin new ventures can overshadow the need to complete existing ones. Impulsivity may create situations that require later cleanup.
 
@@ -2810,9 +2810,9 @@ This stellium gifts an almost warrior-like spirit. When properly channeled, it c
  Taurus: {
  title: "The Abundance Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Taurus, this soul carries an extraordinary amount of earth-stabilizing energy. This stellium creates a powerful drive toward security, beauty, and material mastery.
+ reading: `With multiple planets concentrated in Taurus, you carry an extraordinary amount of earth-stabilizing energy. This stellium creates a powerful drive toward security, beauty, and material mastery.
 
-This concentration amplifies determination, sensuality, and the ability to build lasting value. Life will repeatedly call this person to create things of enduring worth - whether physical possessions, businesses, or relationships built to last.
+This concentration amplifies determination, sensuality, and the ability to build lasting value. Life will repeatedly call you to create things of enduring worth - whether physical possessions, businesses, or relationships built to last.
 
 The challenge with this much Taurus energy is avoiding stagnation and over-attachment to comfort. Resistance to change, while providing stability, can also prevent necessary growth and evolution.
 
@@ -2821,9 +2821,9 @@ This stellium gifts an almost magnetic relationship with abundance. When properl
  Gemini: {
  title: "The Messenger Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Gemini, this soul carries an extraordinary amount of mental air energy. This stellium creates a powerful drive to communicate, learn, and connect ideas and people.
+ reading: `With multiple planets concentrated in Gemini, you carry an extraordinary amount of mental air energy. This stellium creates a powerful drive to communicate, learn, and connect ideas and people.
 
-This concentration amplifies curiosity, versatility, and the ability to see multiple perspectives simultaneously. Life will repeatedly call this person to serve as a bridge between different worlds, translating complex ideas into accessible forms.
+This concentration amplifies curiosity, versatility, and the ability to see multiple perspectives simultaneously. Life will repeatedly call you to serve as a bridge between different worlds, translating complex ideas into accessible forms.
 
 The challenge with this much Gemini energy is finding focus and depth. The mind may race in multiple directions at once, making it difficult to commit to a single path or master one subject thoroughly.
 
@@ -2832,9 +2832,9 @@ This stellium gifts an almost supernatural ability with words and ideas. When pr
  Cancer: {
  title: "The Nurturer Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Cancer, this soul carries an extraordinary amount of lunar emotional energy. This stellium creates a powerful drive to nurture, protect, and create emotional security.
+ reading: `With multiple planets concentrated in Cancer, you carry an extraordinary amount of lunar emotional energy. This stellium creates a powerful drive to nurture, protect, and create emotional security.
 
-This concentration amplifies intuition, empathy, and the ability to create sacred spaces of belonging. Life will repeatedly call this person to serve as a caretaker, whether of people, places, traditions, or memories.
+This concentration amplifies intuition, empathy, and the ability to create sacred spaces of belonging. Life will repeatedly call you to serve as a caretaker, whether of people, places, traditions, or memories.
 
 The challenge with this much Cancer energy is managing emotional sensitivity and avoiding over-protection. The urge to care for others may become smothering, or emotional wounds may take longer to heal.
 
@@ -2843,9 +2843,9 @@ This stellium gifts an almost psychic level of emotional intelligence. When prop
  Leo: {
  title: "The Radiance Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Leo, this soul carries an extraordinary amount of solar creative energy. This stellium creates a powerful drive to shine, create, and inspire through personal expression.
+ reading: `With multiple planets concentrated in Leo, you carry an extraordinary amount of solar creative energy. This stellium creates a powerful drive to shine, create, and inspire through personal expression.
 
-This concentration amplifies charisma, creativity, and the natural ability to lead through magnetic presence. Life will repeatedly call this person to step into the spotlight, whether they seek it or not.
+This concentration amplifies charisma, creativity, and the natural ability to lead through magnetic presence. Life will repeatedly call you to step into the spotlight, whether you seek it or not.
 
 The challenge with this much Leo energy is balancing confidence with humility. The need for recognition may become excessive, or the ego may resist necessary feedback and growth.
 
@@ -2854,9 +2854,9 @@ This stellium gifts an almost royal quality of presence and creative power. When
  Virgo: {
  title: "The Analyst Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Virgo, this soul carries an extraordinary amount of earth-refining energy. This stellium creates a powerful drive to analyze, improve, and perfect.
+ reading: `With multiple planets concentrated in Virgo, you carry an extraordinary amount of earth-refining energy. This stellium creates a powerful drive to analyze, improve, and perfect.
 
-This concentration amplifies discernment, skill-building, and the ability to see how things can be made better. Life will repeatedly call this person to serve through practical expertise and attention to detail.
+This concentration amplifies discernment, skill-building, and the ability to see how things can be made better. Life will repeatedly call you to serve through practical expertise and attention to detail.
 
 The challenge with this much Virgo energy is managing perfectionism and self-criticism. The pursuit of improvement may become an endless chase that prevents appreciation of what already is.
 
@@ -2865,9 +2865,9 @@ This stellium gifts an almost supernatural attention to detail and capacity for 
  Libra: {
  title: "The Harmonizer Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Libra, this soul carries an extraordinary amount of air-balancing energy. This stellium creates a powerful drive toward beauty, partnership, and justice.
+ reading: `With multiple planets concentrated in Libra, you carry an extraordinary amount of air-balancing energy. This stellium creates a powerful drive toward beauty, partnership, and justice.
 
-This concentration amplifies diplomacy, aesthetic sense, and the ability to bring opposing forces into harmony. Life will repeatedly call this person to serve as a mediator, beautifier, or advocate for fairness.
+This concentration amplifies diplomacy, aesthetic sense, and the ability to bring opposing forces into harmony. Life will repeatedly call you to serve as a mediator, beautifier, or advocate for fairness.
 
 The challenge with this much Libra energy is making decisions and maintaining personal boundaries. The desire to please everyone may lead to losing oneself in others' needs and opinions.
 
@@ -2876,9 +2876,9 @@ This stellium gifts an almost magical ability to create beauty and harmony in an
  Scorpio: {
  title: "The Transformer Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Scorpio, this soul carries an extraordinary amount of water-transforming energy. This stellium creates a powerful drive toward depth, truth, and complete transformation.
+ reading: `With multiple planets concentrated in Scorpio, you carry an extraordinary amount of water-transforming energy. This stellium creates a powerful drive toward depth, truth, and complete transformation.
 
-This concentration amplifies intensity, psychological insight, and the ability to navigate the darkest territories of human experience. Life will repeatedly call this person to serve as a healer, investigator, or agent of profound change.
+This concentration amplifies intensity, psychological insight, and the ability to navigate the darkest territories of human experience. Life will repeatedly call you to serve as a healer, investigator, or agent of profound change.
 
 The challenge with this much Scorpio energy is managing intensity and the tendency toward obsession. The drive to go deep may become consuming, and trust issues may complicate relationships.
 
@@ -2887,20 +2887,20 @@ This stellium gifts an almost supernatural ability to see beneath surfaces and f
  Sagittarius: {
  title: "The Explorer Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Sagittarius, this soul carries an extraordinary amount of fire-expanding energy. This stellium creates a powerful drive toward adventure, wisdom, and the expansion of horizons.
+ reading: `With multiple planets concentrated in Sagittarius, you carry an extraordinary amount of fire-expanding energy. This stellium creates a powerful drive toward adventure, wisdom, and the expansion of horizons.
 
-This concentration amplifies optimism, philosophical thinking, and the need for freedom and meaning. Life will repeatedly call this person to serve as a teacher, adventurer, or seeker of truth.
+This concentration amplifies optimism, philosophical thinking, and the need for freedom and meaning. Life will repeatedly call you to serve as a teacher, adventurer, or seeker of truth.
 
 The challenge with this much Sagittarius energy is maintaining focus and follow-through. The constant seeking of new horizons may prevent deep roots from forming, and bluntness may unintentionally wound others.
 
-This stellium gifts an almost prophetic ability to inspire hope and illuminate meaning. When properly channeled, it creates someone capable of remarkable teaching and inspiring others toward their own expansions. The key is learning to find the infinite in the immediate.`
+This stellium gifts an almost prophetic ability to inspire hope and illuminate meaning. When properly channeled, it creates someone capable of remarkable teaching and inspiring others toward your own expansions. The key is learning to find the infinite in the immediate.`
  },
  Capricorn: {
  title: "The Achiever Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Capricorn, this soul carries an extraordinary amount of earth-building energy. This stellium creates a powerful drive toward achievement, mastery, and lasting legacy.
+ reading: `With multiple planets concentrated in Capricorn, you carry an extraordinary amount of earth-building energy. This stellium creates a powerful drive toward achievement, mastery, and lasting legacy.
 
-This concentration amplifies ambition, discipline, and the ability to play the long game. Life will repeatedly call this person to build structures - whether businesses, institutions, or other works meant to stand the test of time.
+This concentration amplifies ambition, discipline, and the ability to play the long game. Life will repeatedly call you to build structures - whether businesses, institutions, or other works meant to stand the test of time.
 
 The challenge with this much Capricorn energy is avoiding workaholism and emotional coldness. The drive for achievement may overshadow personal relationships and the need for rest and play.
 
@@ -2909,9 +2909,9 @@ This stellium gifts an almost ancient sense of wisdom and capability. When prope
  Aquarius: {
  title: "The Visionary Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Aquarius, this soul carries an extraordinary amount of air-innovating energy. This stellium creates a powerful drive toward originality, community, and revolutionary change.
+ reading: `With multiple planets concentrated in Aquarius, you carry an extraordinary amount of air-innovating energy. This stellium creates a powerful drive toward originality, community, and revolutionary change.
 
-This concentration amplifies uniqueness, humanitarian thinking, and the ability to envision futures that others cannot yet see. Life will repeatedly call this person to serve as an innovator, activist, or voice for collective progress.
+This concentration amplifies uniqueness, humanitarian thinking, and the ability to envision futures that others cannot yet see. Life will repeatedly call you to serve as an innovator, activist, or voice for collective progress.
 
 The challenge with this much Aquarius energy is maintaining connection and avoiding emotional detachment. The focus on the collective may come at the expense of intimate relationships, and the need to be different may become its own form of conformity.
 
@@ -2920,9 +2920,9 @@ This stellium gifts an almost prophetic ability to see coming trends and innovat
  Pisces: {
  title: "The Mystic Concentration",
  symbol: "",
- reading: `With multiple planets concentrated in Pisces, this soul carries an extraordinary amount of water-dissolving energy. This stellium creates a powerful drive toward transcendence, compassion, and spiritual connection.
+ reading: `With multiple planets concentrated in Pisces, you carry an extraordinary amount of water-dissolving energy. This stellium creates a powerful drive toward transcendence, compassion, and spiritual connection.
 
-This concentration amplifies intuition, creativity, and the ability to sense what lies beyond ordinary perception. Life will repeatedly call this person to serve as an artist, healer, or spiritual guide.
+This concentration amplifies intuition, creativity, and the ability to sense what lies beyond ordinary perception. Life will repeatedly call you to serve as an artist, healer, or spiritual guide.
 
 The challenge with this much Pisces energy is maintaining boundaries and staying grounded. The natural tendency toward merging may lead to confusion about where self ends and others begin, and escapism may become tempting.
 
@@ -2964,7 +2964,7 @@ var SOUTH_NODE_READINGS = {
  Aries: {
  keywords: ["Past Independence", "Warrior Energy", "Self-Focus", "Courage"],
  summary: "Natural gifts of independence, courage, and self-assertion.",
- reading: `The South Node in Aries indicates natural mastery of independence, courage, and self-assertion. They are naturally a warrior, a pioneer, and a leader. They come into this life with natural confidence and the ability to act independently.
+ reading: `The South Node in Aries indicates natural mastery of independence, courage, and self-assertion. You are naturally a warrior, a pioneer, and a leader. You come into this life with natural confidence and the ability to act independently.
 
 These gifts include fearlessness in new ventures, the ability to stand alone when necessary, and natural leadership instincts. However, the growth path now requires balancing these strengths with awareness of others and cooperation.
 
@@ -2975,7 +2975,7 @@ The challenge is not falling back into purely self-focused patterns but using pa
  Taurus: {
  keywords: ["Past Stability", "Material Mastery", "Sensual Gifts", "Patience"],
  summary: "Natural gifts of material mastery, sensuality, and building.",
- reading: `The South Node in Taurus indicates natural mastery of material security, sensual pleasure, and patient building. They are naturally a builder, an artist, and a steward of resources. They come into this life with natural appreciation for beauty and the ability to create stability.
+ reading: `The South Node in Taurus indicates natural mastery of material security, sensual pleasure, and patient building. You are naturally a builder, an artist, and a steward of resources. You come into this life with natural appreciation for beauty and the ability to create stability.
 
 These gifts include practical wisdom, artistic sensibility, and the ability to manifest material abundance. However, the growth path now requires moving beyond attachment to security and comfort to embrace transformation and shared resources.
 
@@ -2986,7 +2986,7 @@ The challenge is not becoming stuck in materialism or resistance to change. The 
  Gemini: {
  keywords: ["Past Communication", "Mental Agility", "Versatility", "Curiosity"],
  summary: "Natural gifts of communication, learning, and mental flexibility.",
- reading: `The South Node in Gemini indicates natural mastery of communication, learning, and mental agility. They are naturally a teacher, a writer, and a gatherer of information. They come into this life with natural curiosity and the ability to connect with diverse people.
+ reading: `The South Node in Gemini indicates natural mastery of communication, learning, and mental agility. You are naturally a teacher, a writer, and a gatherer of information. You come into this life with natural curiosity and the ability to connect with diverse people.
 
 These gifts include quick learning, verbal fluency, and the ability to see multiple perspectives. However, the growth path now requires moving beyond gathering information to developing wisdom and commitment to truth.
 
@@ -2997,18 +2997,18 @@ The challenge is not becoming scattered or superficial in pursuit of variety. Th
  Cancer: {
  keywords: ["Past Nurturing", "Emotional Depth", "Home Focus", "Protection"],
  summary: "Natural gifts of nurturing, emotional intelligence, and creating home.",
- reading: `The South Node in Cancer indicates natural mastery of nurturing, emotional care, and creating sanctuary. They are naturally a caregiver, a healer, and a protector. They come into this life with natural emotional sensitivity and the ability to care for others.
+ reading: `The South Node in Cancer indicates natural mastery of nurturing, emotional care, and creating sanctuary. You are naturally a caregiver, a healer, and a protector. You come into this life with natural emotional sensitivity and the ability to care for others.
 
 These gifts include deep empathy, intuitive understanding of needs, and the ability to create emotional safety. However, the growth path now requires moving beyond emotional dependency and family focus to develop public achievement and emotional maturity.
 
-The challenge is not becoming overly protective or dependent on emotional security. The gift is the ability to nurture and create belonging wherever they go.`,
+The challenge is not becoming overly protective or dependent on emotional security. The gift is the ability to nurture and create belonging wherever you go.`,
  strengths: ["Deep empathy", "Nurturing ability", "Emotional intelligence", "Protective instinct"],
  challenges: ["Emotional dependency", "Over-protection", "Difficulty with boundaries", "Living in the past"]
  },
  Leo: {
  keywords: ["Past Creativity", "Self-Expression", "Leadership", "Generosity"],
  summary: "Natural gifts of creativity, self-expression, and natural leadership.",
- reading: `The South Node in Leo indicates natural mastery of creativity, self-expression, and commanding attention. They are naturally a performer, a leader, and a creator. They come into this life with natural charisma and the ability to shine.
+ reading: `The South Node in Leo indicates natural mastery of creativity, self-expression, and commanding attention. You are naturally a performer, a leader, and a creator. You come into this life with natural charisma and the ability to shine.
 
 These gifts include creative talent, leadership presence, and the ability to inspire others. However, the growth path now requires moving beyond ego needs and personal recognition to serve the collective and embrace equality.
 
@@ -3019,7 +3019,7 @@ The challenge is not becoming addicted to attention or allowing pride to block g
  Virgo: {
  keywords: ["Past Service", "Analytical Skill", "Perfection", "Health"],
  summary: "Natural gifts of service, analysis, and practical skills.",
- reading: `The South Node in Virgo indicates natural mastery of service, analysis, and practical perfection. They are naturally a healer, a craftsperson, and a devoted helper. They come into this life with natural attention to detail and the ability to improve systems.
+ reading: `The South Node in Virgo indicates natural mastery of service, analysis, and practical perfection. You are naturally a healer, a craftsperson, and a devoted helper. You come into this life with natural attention to detail and the ability to improve systems.
 
 These gifts include analytical precision, practical skills, and genuine desire to be of service. However, the growth path now requires moving beyond perfectionism and criticism to embrace wholeness and spiritual connection.
 
@@ -3030,7 +3030,7 @@ The challenge is not becoming trapped in self-criticism or over-analysis. The gi
  Libra: {
  keywords: ["Past Partnership", "Diplomacy", "Harmony", "Fairness"],
  summary: "Natural gifts of partnership, diplomacy, and creating harmony.",
- reading: `The South Node in Libra indicates natural mastery of partnership, diplomacy, and creating beauty. They are naturally a diplomat, an artist, and a relationship expert. They come into this life with natural charm and the ability to create harmony.
+ reading: `The South Node in Libra indicates natural mastery of partnership, diplomacy, and creating beauty. You are naturally a diplomat, an artist, and a relationship expert. You come into this life with natural charm and the ability to create harmony.
 
 These gifts include diplomatic skill, aesthetic sensibility, and genuine care for fairness. However, the growth path now requires moving beyond people-pleasing and dependence on relationships to develop independent identity and decisive action.
 
@@ -3041,7 +3041,7 @@ The challenge is not losing oneself in relationships or avoiding necessary confl
  Scorpio: {
  keywords: ["Past Power", "Transformation", "Depth", "Intensity"],
  summary: "Natural gifts of power, transformation, and emotional depth.",
- reading: `The South Node in Scorpio indicates natural mastery of power, transformation, and emotional intensity. They are naturally a healer, a mystic, and a wielder of power. They come into this life with natural depth and the ability to transform.
+ reading: `The South Node in Scorpio indicates natural mastery of power, transformation, and emotional intensity. You are naturally a healer, a mystic, and a wielder of power. You come into this life with natural depth and the ability to transform.
 
 These gifts include emotional intensity, psychological insight, and the ability to navigate crisis. However, the growth path now requires moving beyond power struggles and emotional drama to embrace simplicity and stability.
 
@@ -3052,7 +3052,7 @@ The challenge is not becoming trapped in obsession or using power destructively.
  Sagittarius: {
  keywords: ["Past Wisdom", "Adventure", "Faith", "Teaching"],
  summary: "Natural gifts of wisdom, adventure, and spiritual seeking.",
- reading: `The South Node in Sagittarius indicates natural mastery of wisdom, adventure, and spiritual truth. They are naturally a teacher, a philosopher, and a seeker. They come into this life with natural optimism and the ability to inspire faith.
+ reading: `The South Node in Sagittarius indicates natural mastery of wisdom, adventure, and spiritual truth. You are naturally a teacher, a philosopher, and a seeker. You come into this life with natural optimism and the ability to inspire faith.
 
 These gifts include philosophical depth, adventurous spirit, and the ability to see the big picture. However, the growth path now requires moving beyond dogmatic beliefs and restless seeking to develop practical skills and attention to detail.
 
@@ -3063,7 +3063,7 @@ The challenge is not becoming preachy or avoiding commitment through constant mo
  Capricorn: {
  keywords: ["Past Achievement", "Authority", "Discipline", "Responsibility"],
  summary: "Natural gifts of achievement, authority, and practical mastery.",
- reading: `The South Node in Capricorn indicates natural mastery of achievement, authority, and practical success. They are naturally a leader, a builder of institutions, and an authority figure. They come into this life with natural ambition and the ability to succeed.
+ reading: `The South Node in Capricorn indicates natural mastery of achievement, authority, and practical success. You are naturally a leader, a builder of institutions, and an authority figure. You come into this life with natural ambition and the ability to succeed.
 
 These gifts include organizational skill, patience for long-term goals, and the ability to handle responsibility. However, the growth path now requires moving beyond career obsession and emotional suppression to develop family connections and emotional awareness.
 
@@ -3074,7 +3074,7 @@ The challenge is not becoming a workaholic or sacrificing relationships for achi
  Aquarius: {
  keywords: ["Past Innovation", "Humanitarianism", "Independence", "Vision"],
  summary: "Natural gifts of innovation, humanitarian service, and progressive thinking.",
- reading: `The South Node in Aquarius indicates natural mastery of innovation, humanitarian service, and progressive ideals. They are naturally a reformer, an inventor, and a community leader. They come into this life with natural originality and concern for humanity.
+ reading: `The South Node in Aquarius indicates natural mastery of innovation, humanitarian service, and progressive ideals. You are naturally a reformer, an inventor, and a community leader. You come into this life with natural originality and concern for humanity.
 
 These gifts include innovative thinking, humanitarian values, and the ability to envision the future. However, the growth path now requires moving beyond detachment and group focus to develop individual creative expression and heart-centered connection.
 
@@ -3085,7 +3085,7 @@ The challenge is not becoming too detached or contrary for its own sake. The gif
  Pisces: {
  keywords: ["Past Spirituality", "Compassion", "Imagination", "Unity"],
  summary: "Natural gifts of spirituality, compassion, and artistic sensitivity.",
- reading: `The South Node in Pisces indicates natural mastery of spirituality, compassion, and mystical connection. They are naturally a mystic, an artist, and a spiritual healer. They come into this life with natural sensitivity and connection to the unseen.
+ reading: `The South Node in Pisces indicates natural mastery of spirituality, compassion, and mystical connection. You are naturally a mystic, an artist, and a spiritual healer. You come into this life with natural sensitivity and connection to the unseen.
 
 These gifts include profound empathy, artistic sensitivity, and spiritual awareness. However, the growth path now requires moving beyond escapism and boundary dissolution to develop practical skills and healthy boundaries.
 
