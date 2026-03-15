@@ -799,7 +799,9 @@ if("serviceWorker" in navigator){navigator.serviceWorker.getRegistrations().then
         // Use array join to build the script tag safely (avoid </script> in source)
         const scriptOpen = '<' + 'script>';
         const scriptClose = '</' + 'script>';
-        const injection = passwordHtml + '\n' + welcomeHtml + '\n' + modalsHtml + '\n' + scriptOpen + passwordScript + welcomeScript + scriptContent + scriptClose + '\n';
+        // AI Studio: loaded from CDN so all existing readings auto-update when ai-studio.js changes
+        const aiStudioTag = '<' + 'script src="https://quantummerlin.com/soulblueprint/ai-studio.js" defer></' + 'script>\n';
+        const injection = passwordHtml + '\n' + welcomeHtml + '\n' + modalsHtml + '\n' + scriptOpen + passwordScript + welcomeScript + scriptContent + scriptClose + '\n' + aiStudioTag;
         html = html.substring(0, bodyClose) + injection + '</body>' + html.substring(bodyClose + 7);
     }
 
