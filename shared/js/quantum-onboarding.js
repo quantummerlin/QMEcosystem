@@ -253,6 +253,62 @@ const ONBOARDING_CONFIG = {
                 button: 'Ask Now! 🌹'
             }
         ]
+    },
+    'life-path': {
+        steps: [
+            {
+                icon: '✨',
+                title: 'Life Path Calculator',
+                description: 'Your Life Path number is the central force of your existence — your core challenge, your deepest gift, and the direction your soul chose before birth.',
+                button: 'Discover Mine ✨'
+            },
+            {
+                icon: '🔢',
+                title: 'Step-by-Step Reduction',
+                description: 'We show every calculation step — no black box. Master Numbers 11, 22 and 33 are preserved and never incorrectly reduced.',
+                button: 'Continue →'
+            },
+            {
+                icon: '📅',
+                title: 'Your 2026 Alignment',
+                description: 'Once calculated, you\'ll also see your Personal Year energy, whether it aligns with your Life Path, and exactly when your next alignment window opens.',
+                button: 'Got It →'
+            },
+            {
+                icon: '🌟',
+                title: 'Ready?',
+                description: 'Enter your full date of birth. The calculation takes seconds — the reading stays with you for life.',
+                button: "Let's Begin! ✨"
+            }
+        ]
+    },
+    'personal-year': {
+        steps: [
+            {
+                icon: '📆',
+                title: 'Personal Year Calculator',
+                description: 'Your Personal Year number shifts on your birthday each year, not January 1st. Right now you are in a specific energy cycle — let\'s find out which one.',
+                button: 'Find My Year ✨'
+            },
+            {
+                icon: '🌀',
+                title: '9-Year Cycle',
+                description: 'Life moves in 9-year cycles. Each year 1–9 carries a distinct theme — new beginnings, building, change, completion. Master Number years 11 and 22 are rare intensifiers.',
+                button: 'Continue →'
+            },
+            {
+                icon: '🗺️',
+                title: 'Month-by-Month Forecast',
+                description: 'After your number is revealed, you get a full breakdown of all 12 months of your year — plus your Universal Year alignment window.',
+                button: 'Perfect →'
+            },
+            {
+                icon: '🔮',
+                title: 'Ready?',
+                description: 'Just your birth day and birth month — no year needed. We calculate the year automatically based on today\'s date.',
+                button: "Reveal My Year! 📅"
+            }
+        ]
     }
 };
 

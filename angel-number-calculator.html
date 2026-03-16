@@ -3505,15 +3505,6 @@
     <script src="shared/js/quantum-analytics.js"></script>
     <script src="shared/js/quantum-feedback.js"></script>
     
-    <!-- Include Welcome Flow Component -->
-    <script>
-        fetch('shared/components/welcome-flow.html')
-            .then(response => response.text())
-            .then(html => {
-                document.body.insertAdjacentHTML('beforeend', html);
-            });
-    </script>
-    
     <script>
         // Initialize angel number onboarding on first visit
         window.addEventListener('DOMContentLoaded', function() {

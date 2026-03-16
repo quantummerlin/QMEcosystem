@@ -1270,5 +1270,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script src="shared/js/quantum-onboarding.js?v=2.0.0"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  initQuantumOnboarding('life-path', function() {
+    document.querySelector('.calc-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
 </body>
 </html>
