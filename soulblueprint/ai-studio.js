@@ -8,7 +8,8 @@
  * Served from quantummerlin.com/soulblueprint/ai-studio.js
  * Update here → all existing readings automatically get the update on next load.
  *
- * Providers: OpenAI · Google Gemini · Anthropic Claude · Generic (Ollama, Groq, etc.)
+ * Providers: OpenAI · Google Gemini · Anthropic Claude · OpenRouter · Qwen · Generic (Ollama, Groq, etc.)
+ * Text-to-speech: OpenAI TTS · OpenRouter TTS
  * Security: keys stored only in localStorage, never sent anywhere except the AI provider.
  */
 (function () {
@@ -116,7 +117,7 @@
 
     // ─── CAPABILITY DETECTION ──────────────────────────────────────────────────
     async function detectCapabilities(provider, key, endpoint) {
-        var caps = { text: false, images: false, imageModels: [], textModel: '', error: '' };
+        var caps = { text: false, images: false, tts: false, imageModels: [], textModel: '', error: '' };
         try {
             if (provider === 'openai') {
                 var res = await fetch('https://api.openai.com/v1/models', {
@@ -126,6 +127,7 @@
                 var data = await res.json();
                 caps.text = true;
                 caps.textModel = 'gpt-4o';
+                caps.tts = true;
                 var imageIds = ['dall-e-3', 'dall-e-2', 'gpt-image-1'];
                 var found = (data.data || []).filter(function (m) { return imageIds.indexOf(m.id) !== -1; });
                 if (found.length) { caps.images = true; caps.imageModels = found.map(function (m) { return m.id; }); }
@@ -147,14 +149,44 @@
                     if (res.ok) {
                         caps.text = true;
                         caps.textModel = 'claude-3-5-sonnet-20241022';
-                        caps.images = false;
                     } else {
                         caps.error = 'Key rejected (HTTP ' + res.status + '). Note: Claude may block direct browser requests — try OpenAI or Gemini if generation fails.';
                     }
                 } catch (corsErr) {
                     caps.error = 'Anthropic blocks direct browser requests (CORS policy). Text generation will be attempted anyway, but may fail. OpenAI or Gemini are more reliable for browser use.';
-                    caps.text = true; // attempt anyway, fail gracefully at generate time
+                    caps.text = true;
                     caps.textModel = 'claude-3-5-sonnet-20241022';
+                }
+
+            } else if (provider === 'openrouter') {
+                var res = await fetch('https://openrouter.ai/api/v1/models', {
+                    headers: { 'Authorization': 'Bearer ' + key, 'HTTP-Referer': 'https://quantummerlin.com', 'X-Title': 'Soul Blueprint AI Studio' }
+                });
+                if (!res.ok) { caps.error = 'API key rejected (HTTP ' + res.status + ')'; return caps; }
+                var data = await res.json();
+                caps.text = true;
+                caps.textModel = 'openai/gpt-4o';
+                caps.tts = true; // OpenRouter proxies OpenAI TTS
+                var imgIds = ['openai/dall-e-3', 'openai/dall-e-2', 'stability/stable-diffusion'];
+                var found = (data.data || []).filter(function (m) { return imgIds.some(function (id) { return (m.id || '').indexOf('dall-e') !== -1 || (m.id || '').indexOf('stable-diffusion') !== -1; }); });
+                if (found.length) { caps.images = true; caps.imageModels = [found[0].id]; }
+
+            } else if (provider === 'qwen') {
+                var res = await fetch('https://dashscope.aliyuncs.com/compatible-mode/v1/models', {
+                    headers: { 'Authorization': 'Bearer ' + key }
+                });
+                if (res.ok) {
+                    var data = await res.json();
+                    caps.text = true;
+                    caps.textModel = 'qwen-max';
+                    // Check for image-capable models
+                    var imgModel = (data.data || []).find(function (m) { return (m.id || '').indexOf('wanx') !== -1 || (m.id || '').indexOf('flux') !== -1; });
+                    if (imgModel) { caps.images = true; caps.imageModels = [imgModel.id]; }
+                } else {
+                    // DashScope may return 404 for /models — assume text works if key format looks valid
+                    caps.text = true;
+                    caps.textModel = 'qwen-max';
+                    caps.error = 'Could not verify Qwen models list — text generation will be attempted. Ensure your DashScope API key is active.';
                 }
 
             } else if (provider === 'generic') {
@@ -167,6 +199,9 @@
                         var data = await res.json();
                         caps.text = true;
                         caps.textModel = (data.data && data.data[0]) ? data.data[0].id : 'gpt-4o';
+                        // Detect TTS support (Ollama, LM Studio etc. don't have it — OpenAI-compat services may)
+                        var hasTts = (data.data || []).some(function (m) { return (m.id || '').indexOf('tts') !== -1; });
+                        if (hasTts) caps.tts = true;
                     } else {
                         caps.text = true; caps.textModel = 'gpt-4o';
                         caps.error = 'Could not verify models — text generation will still be attempted.';
@@ -188,10 +223,17 @@
         var model = cfg.model || caps.textModel || (DEFAULTS[provider] || {}).text || 'gpt-4o';
         var base = ((provider === 'generic' ? cfg.endpoint : '') || (DEFAULTS[provider] || {}).base || '').replace(/\/$/, '');
 
-        if (provider === 'openai' || provider === 'generic') {
+        // OpenAI-compatible providers (OpenAI, OpenRouter, Qwen/DashScope, Generic)
+        if (provider === 'openai' || provider === 'generic' || provider === 'openrouter' || provider === 'qwen') {
+            var headers = { 'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json' };
+            // OpenRouter requires referrer headers
+            if (provider === 'openrouter') {
+                headers['HTTP-Referer'] = 'https://quantummerlin.com';
+                headers['X-Title'] = 'Soul Blueprint AI Studio';
+            }
             var res = await fetch(base + '/v1/chat/completions', {
                 method: 'POST',
-                headers: { 'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json' },
+                headers: headers,
                 body: JSON.stringify({
                     model: model,
                     messages: [{ role: 'system', content: systemPrompt }, { role: 'user', content: userPrompt }],
@@ -268,6 +310,36 @@
             var d = await res.json();
             return { b64: d.data[0].b64_json, model: imgModel };
 
+        } else if (provider === 'openrouter') {
+            // OpenRouter proxies DALL-E via OpenAI-compatible endpoint
+            var imgModel = (caps.imageModels && caps.imageModels[0]) || 'openai/dall-e-3';
+            var res = await fetch('https://openrouter.ai/api/v1/images/generations', {
+                method: 'POST',
+                headers: { 'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json', 'HTTP-Referer': 'https://quantummerlin.com', 'X-Title': 'Soul Blueprint AI Studio' },
+                body: JSON.stringify({ model: imgModel, prompt: prompt, n: 1, size: '1024x1024', response_format: 'b64_json' })
+            });
+            if (!res.ok) {
+                var e = await res.json().catch(function () { return {}; });
+                throw new Error((e.error && e.error.message) || 'Image API error HTTP ' + res.status);
+            }
+            var d = await res.json();
+            return { b64: d.data[0].b64_json, model: imgModel };
+
+        } else if (provider === 'qwen') {
+            // Qwen image generation via DashScope compatible mode
+            var imgModel = (caps.imageModels && caps.imageModels[0]) || 'wanx-v1-t2i-v2';
+            var res = await fetch('https://dashscope.aliyuncs.com/compatible-mode/v1/images/generations', {
+                method: 'POST',
+                headers: { 'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json' },
+                body: JSON.stringify({ model: imgModel, prompt: prompt, n: 1, size: '1024x1024', response_format: 'b64_json' })
+            });
+            if (!res.ok) {
+                var e = await res.json().catch(function () { return {}; });
+                throw new Error((e.error && e.error.message) || 'Qwen image API error HTTP ' + res.status);
+            }
+            var d = await res.json();
+            return { b64: d.data[0].b64_json, model: imgModel };
+
         } else if (provider === 'gemini') {
             var imgModel = (caps.imageModels && caps.imageModels[0]) || 'imagen-3.0-generate-001';
             var res = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + imgModel + ':predict?key=' + key, {
@@ -285,6 +357,48 @@
         throw new Error('Image generation is not supported by this provider or key.');
     }
 
+    // ─── TEXT-TO-SPEECH ──────────────────────────────────────────────────────
+    // Returns a blob URL (session only — not persisted to localStorage)
+    var _ttsUrls = {}; // in-memory store for blob URLs this session
+
+    async function generateSpeech(text, voice, cfg) {
+        var provider = cfg.provider;
+        var key = cfg.key;
+        if (provider !== 'openai' && provider !== 'openrouter' && provider !== 'generic') {
+            throw new Error('Text-to-speech is available with OpenAI and OpenRouter keys. Gemini, Claude, and Qwen do not currently support browser-based TTS.');
+        }
+        var base = ((provider === 'generic' ? cfg.endpoint : '') || (DEFAULTS[provider] || {}).base || '').replace(/\/$/, '');
+        var headers = { 'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json' };
+        if (provider === 'openrouter') {
+            headers['HTTP-Referer'] = 'https://quantummerlin.com';
+            headers['X-Title'] = 'Soul Blueprint AI Studio';
+        }
+        // TTS has a 4096 char input limit — truncate cleanly at a sentence boundary
+        var input = text.length > 4000 ? text.slice(0, 4000).replace(/[^.!?]*$/, '').trim() || text.slice(0, 4000) : text;
+        var ttsModel = provider === 'openrouter' ? 'openai/tts-1' : 'tts-1';
+        var res = await fetch(base + '/v1/audio/speech', {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify({ model: ttsModel, input: input, voice: voice || 'nova', response_format: 'mp3' })
+        });
+        if (!res.ok) {
+            var e = await res.json().catch(function () { return {}; });
+            throw new Error((e.error && e.error.message) || 'TTS API error HTTP ' + res.status);
+        }
+        var blob = await res.blob();
+        var url = URL.createObjectURL(blob);
+        return url;
+    }
+
+    var TTS_VOICES = [
+        { id: 'nova',    label: 'Nova — warm, natural' },
+        { id: 'alloy',   label: 'Alloy — clear, balanced' },
+        { id: 'echo',    label: 'Echo — smooth, male' },
+        { id: 'fable',   label: 'Fable — expressive' },
+        { id: 'onyx',    label: 'Onyx — deep, authoritative' },
+        { id: 'shimmer', label: 'Shimmer — soft, breathy' }
+    ];
+
     // ─── TEXT PROMPT TEMPLATES ─────────────────────────────────────────────────
     function getTextPrompts(id, d) {
         var name  = d.name;
@@ -300,6 +414,34 @@
             name + (birth ? ' (' + birth + ')' : '') + '. ' +
             'Sun: ' + sun + ', Moon: ' + moon + ', Rising: ' + rise + '.\n' + ctx +
             'Be specific to them using their actual signs — not generic astrology content.';
+
+        var ttsPrompts = {
+            'tts-affirmations': {
+                system: base,
+                user: 'Write 30 daily affirmations for ' + name + ' to listen to each morning. Write them as natural spoken sentences — warm, direct, personal. Each affirmation should name their actual Sun or Moon sign and feel true, not hollow. Number them. Keep each under 25 words. Spoken tone throughout — no bullet headers, no categories, just 30 flowing numbered affirmations.'
+            },
+            'tts-meditation': {
+                system: base,
+                user: 'Write a 10-minute guided morning meditation for ' + name + ' to record or listen to. Write as a narrated, spoken script. Slow, warm, meditative pacing. Include: opening breath (30 sec), body scan with elemental imagery for ' + sun + ' energy (2 min), a visualisation unique to their ' + sun + '/' + moon + ' combination (3 min), a release passage (2 min), a spoken intention for the day (1 min), a gratitude close (1 min). Write naturally as if speaking directly to them. Avoid any heading labels in the output — just the full flowing script.'
+            },
+            'tts-mantra': {
+                system: base,
+                user: 'Write a personalised morning mantra for ' + name + ' to speak aloud daily. It should be 5–8 sentences long — short enough to memorise. Reference their Sun sign ' + sun + ' and their life purpose. Make it feel like a genuine declaration of who they are, not a generic affirmation. Speak directly to ' + name + ' in second person. End with a single powerful closing line they will remember all day.'
+            },
+            'tts-intro': {
+                system: base,
+                user: 'Write a 2-minute spoken cosmic introduction for ' + name + ' — as if narrating the opening of a documentary about their life. Begin with the exact moment of their birth (' + birth + ') and the cosmic conditions. Describe their fundamental nature through ' + sun + ' Sun, ' + moon + ' Moon, ' + rise + ' Rising. Name their unique gifts, their quiet depths, and the thread that runs through everything they do. Warm, poetic, and deeply personal. Write as a continuous spoken narrative — no headers or labels.'
+            },
+            'tts-shadow': {
+                system: base,
+                user: 'Write 10 deep shadow work prompts for ' + name + ' based on their ' + sun + ' Sun, ' + moon + ' Moon profile. These will be listened to, not read — so write them as warm spoken questions with a brief (1-sentence) context before each. Each prompt should require genuine honesty about a pattern, fear, or wound. Number them. Pause naturally between each. The tone is a trusted therapist asking a caring question.'
+            },
+            'tts-career': {
+                system: base,
+                user: 'Write a 3-minute spoken career narrative for ' + name + ' — as if a wise mentor is describing the professional life this person was made for. Through their ' + sun + ' Sun, ' + moon + ' Moon, and rising ' + rise + ': the environments where they thrive, the roles aligned with their nature, the work that would feel like home. Then their one career shadow — the pattern to watch. Spoken/narrative format. No bullet lists, no headers. Conversational and warm.'
+            }
+        };
+        if (ttsPrompts[id]) return ttsPrompts[id];
 
         var map = {
             'deep-personality': {
@@ -442,6 +584,15 @@
         { id: 'zodiac-art',      icon: '⭐', title: 'Zodiac Symbol Art',    desc: 'Fine art interpretation of your Sun sign — wall-art quality' }
     ];
 
+    var TTS_CREATIONS = [
+        { id: 'tts-affirmations', icon: '🔊', title: 'Affirmations Audio',    desc: '30 personalised affirmations read aloud — listen daily or save as MP3' },
+        { id: 'tts-meditation',   icon: '🎧', title: 'Meditation Audio',       desc: 'Your personalised 10-minute morning meditation, spoken aloud' },
+        { id: 'tts-mantra',       icon: '🌀', title: 'Daily Mantra',           desc: 'A short, powerful personal mantra to repeat each morning' },
+        { id: 'tts-intro',        icon: '🌟', title: 'Cosmic Introduction',    desc: 'A spoken portrait of who you are — beautiful to listen to or share' },
+        { id: 'tts-shadow',       icon: '🌑', title: 'Shadow Work Prompts',    desc: 'Ten deep journal prompts read aloud, for reflection and healing' },
+        { id: 'tts-career',       icon: '🎙️', title: 'Career Narrative',       desc: 'Your career alignment report read to you — great for commutes' }
+    ];
+
     // ─── STATE ────────────────────────────────────────────────────────────────
     var state = {
         open:           false,
@@ -449,7 +600,8 @@
         activeCategory: 'Know Yourself',
         activeItem:     null,
         output:         null,
-        outputType:     'text',   // text | image
+        outputType:     'text',   // text | image | audio
+        ttsVoice:       'nova',
         readingData:    null
     };
 
@@ -550,6 +702,8 @@
             '.sbai-saved-row:hover{border-color:var(--primary,#9b59b6)}',
             '.sbai-saved-name{font-size:.85rem;font-weight:600;color:var(--text,#333)}',
             '.sbai-saved-date{font-size:.75rem;color:var(--text,#333);opacity:.5;margin-top:2px}',
+            /* Audio player */
+            '.sbai-audio-wrap{margin-bottom:16px}.sbai-audio-wrap audio{width:100%;border-radius:10px;outline:none}.sbai-voice-sel{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.sbai-voice-sel label{font-size:.8rem;font-weight:600;color:var(--text,#333);opacity:.6;width:100%}.sbai-voice-btn{padding:6px 14px;border-radius:16px;border:1.5px solid var(--card-border,#eee);background:none;cursor:pointer;font-size:.8rem;font-family:inherit;color:var(--text,#333);transition:all .15s}.sbai-voice-btn.on{background:var(--primary,#9b59b6);color:#fff;border-color:var(--primary,#9b59b6)}',
             /* Mobile */
             '@media(max-width:500px){#sbai-panel{border-radius:20px 20px 0 0}#sbai-btn{bottom:16px;right:16px;padding:10px 16px;font-size:.85rem}.sbai-acts{grid-template-columns:1fr}.sbai-body{padding:16px 18px}.sbai-out-btns{flex-direction:column}.sbai-obtn{min-width:unset}}'
         ].join('\n');
@@ -579,15 +733,14 @@
         var d       = state.readingData || {};
         var saved   = getSavedOutputs();
         var savedKeys = Object.keys(saved);
-        var ALL     = TEXT_CREATIONS.concat(IMAGE_CREATIONS);
+        var ALL     = TEXT_CREATIONS.concat(IMAGE_CREATIONS).concat(TTS_CREATIONS);
 
         var capsHtml = '';
         if (isReady) {
             capsHtml = '<div class="sbai-caps">' +
-                '<span class="sbai-cap">✓ Text Generation</span>' +
-                (caps.images
-                    ? '<span class="sbai-cap">✓ Image Generation</span>'
-                    : '<span class="sbai-cap no">✗ Images not available</span>') +
+                '<span class="sbai-cap">✓ Text</span>' +
+                (caps.images ? '<span class="sbai-cap">✓ Images</span>' : '<span class="sbai-cap no">✗ Images</span>') +
+                (caps.tts    ? '<span class="sbai-cap">✓ Speech</span>' : '<span class="sbai-cap no">✗ Speech</span>') +
                 '</div>';
         }
 
@@ -606,6 +759,13 @@
                         '<span class="sbai-act-desc">6 cosmic visuals from your chart</span>' +
                     '</button>'
                     : '') +
+                (caps.tts
+                    ? '<button class="sbai-act" id="sbai-open-tts">' +
+                        '<span class="sbai-act-icon">🔊</span>' +
+                        '<span class="sbai-act-title">Text-to-Speech</span>' +
+                        '<span class="sbai-act-desc">6 audio creations from your reading</span>' +
+                    '</button>'
+                    : '') +
                 '</div>';
         }
 
@@ -613,7 +773,7 @@
         if (savedKeys.length > 0) {
             savedHtml = '<div class="sbai-saved-sec"><div class="sbai-saved-hdr">Your Saved Creations</div>';
             savedKeys.slice(-5).reverse().forEach(function (k) {
-                var item = ALL.find(function (c) { return c.id === k; });
+                var item = ALL.filter(function (c) { return c.id === k; })[0];
                 var label = item ? item.title : k;
                 var dt = saved[k].savedAt ? new Date(saved[k].savedAt).toLocaleDateString() : '';
                 savedHtml += '<div class="sbai-saved-row" data-sid="' + esc(k) + '">' +
@@ -639,34 +799,46 @@
     function viewConfig(cfg) {
         var provider = cfg.provider || 'openai';
         var tabs = [
-            { id: 'openai',    label: 'OpenAI' },
-            { id: 'gemini',    label: 'Gemini' },
-            { id: 'anthropic', label: 'Claude' },
-            { id: 'generic',   label: 'Other / Local' }
+            { id: 'openai',     label: 'OpenAI' },
+            { id: 'gemini',     label: 'Gemini' },
+            { id: 'anthropic',  label: 'Claude' },
+            { id: 'openrouter', label: 'OpenRouter' },
+            { id: 'qwen',       label: 'Qwen' },
+            { id: 'generic',    label: 'Other / Local' }
         ];
         var tabsHtml = '<div class="sbai-ptabs">' +
             tabs.map(function (t) {
                 return '<button class="sbai-ptab' + (t.id === provider ? ' on' : '') + '" data-prov="' + t.id + '">' + t.label + '</button>';
             }).join('') + '</div>';
 
-        var keyLab = provider === 'gemini' ? 'Gemini API Key' :
-                     provider === 'anthropic' ? 'Anthropic API Key' :
-                     provider === 'generic' ? 'API Key (leave blank for local)' : 'OpenAI API Key';
-        var keyPh  = provider === 'gemini' ? 'AIza...' :
-                     provider === 'anthropic' ? 'sk-ant-...' : 'sk-...';
+        var keyLab = provider === 'gemini'     ? 'Gemini API Key (console.cloud.google.com)' :
+                     provider === 'anthropic'  ? 'Anthropic API Key (console.anthropic.com)' :
+                     provider === 'openrouter' ? 'OpenRouter API Key (openrouter.ai/keys)' :
+                     provider === 'qwen'       ? 'Alibaba DashScope API Key (dashscope.aliyuncs.com)' :
+                     provider === 'generic'    ? 'API Key (leave blank for local Ollama)' :
+                                                 'OpenAI API Key (platform.openai.com/api-keys)';
+        var keyPh  = provider === 'gemini'     ? 'AIza...' :
+                     provider === 'anthropic'  ? 'sk-ant-...' :
+                     provider === 'openrouter' ? 'sk-or-v1-...' :
+                     provider === 'qwen'       ? 'sk-...' : 'sk-...';
         var defModel = (DEFAULTS[provider] || {}).text || '';
+
+        var noteHtml = '';
+        if (provider === 'openrouter') noteHtml = '<div class="sbai-sec" style="background:rgba(99,179,237,.1);border-color:rgba(99,179,237,.3)">ℹ OpenRouter gives you access to 200+ models (GPT-4o, Claude, Llama, Gemma and more) with a single key. Free tier available at openrouter.ai</div>';
+        if (provider === 'qwen')       noteHtml = '<div class="sbai-sec" style="background:rgba(99,179,237,.1);border-color:rgba(99,179,237,.3)">ℹ Qwen is Alibaba\'s AI. Get a free DashScope API key at dashscope.aliyuncs.com. Qwen-Max is comparable to GPT-4. No TTS support.</div>';
 
         return hdr('Connect Your AI', '', true, true) +
             '<div class="sbai-body">' +
             tabsHtml +
+            noteHtml +
             '<div class="sbai-sec">🔒 Your key is stored only in this browser and sent only to the AI provider. Set a spending limit on your provider\'s dashboard before connecting.</div>' +
             '<div class="sbai-fld"><label>' + keyLab + '</label>' +
                 '<input type="password" id="sbai-key" placeholder="' + keyPh + '" value="' + esc(cfg.key || '') + '" autocomplete="off"></div>' +
             (provider === 'generic'
-                ? '<div class="sbai-fld"><label>Base URL (e.g. http://localhost:11434 for Ollama, https://api.groq.com for Groq)</label>' +
+                ? '<div class="sbai-fld"><label>Base URL (e.g. http://localhost:11434 for Ollama, https://api.groq.com for Groq, https://api.together.xyz)</label>' +
                     '<input type="text" id="sbai-ep" placeholder="https://..." value="' + esc(cfg.endpoint || '') + '"></div>'
                 : '') +
-            '<div class="sbai-fld"><label>Model <span style="opacity:.5;font-weight:400;font-size:.8rem">(auto-filled, edit if needed)</span></label>' +
+            '<div class="sbai-fld"><label>Model <span style="opacity:.5;font-weight:400;font-size:.8rem">(auto-filled — edit to use a specific model)</span></label>' +
                 '<input type="text" id="sbai-model" placeholder="' + defModel + '" value="' + esc(cfg.model || defModel) + '"></div>' +
             '<button class="sbai-connect" id="sbai-connect">Connect ✦</button>' +
             '<div class="sbai-status" id="sbai-status"></div>' +
@@ -684,36 +856,61 @@
     }
 
     function viewOutput() {
-        var item   = state.activeItem;
-        var isImg  = state.outputType === 'image';
-        var outEl  = isImg
+        var item    = state.activeItem;
+        var isImg   = state.outputType === 'image';
+        var isAudio = state.outputType === 'audio';
+
+        var voiceSel = '';
+        if (isAudio) {
+            voiceSel = '<div class="sbai-voice-sel"><label>Voice</label>' +
+                TTS_VOICES.map(function (v) {
+                    return '<button class="sbai-voice-btn' + (v.id === state.ttsVoice ? ' on' : '') + '" data-voice="' + v.id + '">' + v.label + '</button>';
+                }).join('') +
+                '</div>';
+        }
+
+        var outEl = isImg
             ? '<img class="sbai-out-img" id="sbai-img" src="data:image/png;base64,' + state.output + '" alt="Generated image">'
-            : '<div class="sbai-out-text" id="sbai-txt">' + esc(state.output) + '</div>';
+            : isAudio
+                ? ('<div class="sbai-audio-wrap"><audio controls src="' + esc(state.output) + '"></audio></div>')
+                : '<div class="sbai-out-text" id="sbai-txt">' + esc(state.output) + '</div>';
+
+        var btns = isImg
+            ? '<button class="sbai-obtn p" id="sbai-copy">⬇ Download PNG</button>' +
+              '<button class="sbai-obtn s" id="sbai-dl">⬇ Save PNG</button>' +
+              '<button class="sbai-obtn s" id="sbai-save">💾 Save to Reading</button>'
+            : isAudio
+                ? '<button class="sbai-obtn p" id="sbai-dl">⬇ Download MP3</button>' +
+                  '<button class="sbai-obtn s" id="sbai-regen">🔄 Regenerate</button>'
+                : '<button class="sbai-obtn p" id="sbai-copy">📋 Copy</button>' +
+                  '<button class="sbai-obtn s" id="sbai-dl">⬇ Download .txt</button>' +
+                  '<button class="sbai-obtn s" id="sbai-save">💾 Save to Reading</button>' +
+                  '<button class="sbai-obtn s" id="sbai-print">🖨 Printable View</button>';
 
         return hdr(item ? item.title : 'Your Creation', '', true, true) +
             '<div class="sbai-body">' +
+            (isAudio ? voiceSel : '') +
             outEl +
-            '<div class="sbai-out-btns">' +
-                '<button class="sbai-obtn p" id="sbai-copy">' + (isImg ? '⬇ Download Image' : '📋 Copy') + '</button>' +
-                '<button class="sbai-obtn s" id="sbai-dl">⬇ Download ' + (isImg ? 'PNG' : '.txt') + '</button>' +
-                '<button class="sbai-obtn s" id="sbai-save">💾 Save to Reading</button>' +
-                (!isImg ? '<button class="sbai-obtn s" id="sbai-print">🖨 Printable View</button>' : '') +
-            '</div>' +
+            '<div class="sbai-out-btns">' + btns + '</div>' +
             '<div class="sbai-saved-tick" id="sbai-tick">✓ Saved to your reading</div>' +
             '</div>';
     }
 
     function viewGrid(cfg) {
+        var isTts = state.activeCategory === 'Audio & Voice';
         var isImg = state.activeCategory === 'Images';
         var cats  = ['Know Yourself', 'Love & Relationships', 'Life & Career', 'Wellness & Spirit', 'Content & Creative'];
         if (cfg.caps && cfg.caps.images) cats.push('Images');
+        if (cfg.caps && cfg.caps.tts)    cats.push('Audio & Voice');
 
         var tabsHtml = '<div class="sbai-ctabs">' +
             cats.map(function (c) {
                 return '<button class="sbai-ctab' + (c === state.activeCategory ? ' on' : '') + '" data-cat="' + esc(c) + '">' + esc(c) + '</button>';
             }).join('') + '</div>';
 
-        var items = isImg ? IMAGE_CREATIONS : TEXT_CREATIONS.filter(function (c) { return c.cat === state.activeCategory; });
+        var items = isImg ? IMAGE_CREATIONS
+                  : isTts ? TTS_CREATIONS
+                  : TEXT_CREATIONS.filter(function (c) { return c.cat === state.activeCategory; });
         var saved = getSavedOutputs();
 
         var gridHtml = '<div class="sbai-grid">' +
@@ -775,13 +972,16 @@
         el = document.getElementById('sbai-open-img');
         if (el) el.addEventListener('click', function () { state.activeCategory = 'Images'; state.view = 'grid'; render(); });
 
+        el = document.getElementById('sbai-open-tts');
+        if (el) el.addEventListener('click', function () { state.activeCategory = 'Audio & Voice'; state.view = 'grid'; render(); });
+
         // Saved rows
         document.querySelectorAll('.sbai-saved-row').forEach(function (row) {
             row.addEventListener('click', function () {
                 var id   = row.getAttribute('data-sid');
                 var saved = getSavedOutputs();
                 if (!saved[id]) return;
-                var ALL  = TEXT_CREATIONS.concat(IMAGE_CREATIONS);
+                var ALL  = TEXT_CREATIONS.concat(IMAGE_CREATIONS).concat(TTS_CREATIONS);
                 state.activeItem  = ALL.find(function (c) { return c.id === id; }) || { id: id, title: id, icon: '' };
                 state.output      = saved[id].text;
                 state.outputType  = saved[id].type || 'text';
@@ -815,9 +1015,19 @@
         document.querySelectorAll('.sbai-card').forEach(function (card) {
             card.addEventListener('click', function () {
                 var id  = card.getAttribute('data-iid');
-                var ALL = TEXT_CREATIONS.concat(IMAGE_CREATIONS);
+                var ALL = TEXT_CREATIONS.concat(IMAGE_CREATIONS).concat(TTS_CREATIONS);
                 var item = ALL.find(function (c) { return c.id === id; });
                 if (item) handleGenerate(item);
+            });
+        });
+
+        // Voice selector buttons
+        document.querySelectorAll('.sbai-voice-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                state.ttsVoice = btn.getAttribute('data-voice');
+                // Re-render just the voice selector highlight
+                document.querySelectorAll('.sbai-voice-btn').forEach(function (b) { b.classList.remove('on'); });
+                btn.classList.add('on');
             });
         });
 
@@ -826,6 +1036,7 @@
         el = document.getElementById('sbai-dl');    if (el) el.addEventListener('click', handleDownload);
         el = document.getElementById('sbai-save');  if (el) el.addEventListener('click', handleSave);
         el = document.getElementById('sbai-print'); if (el) el.addEventListener('click', handlePrint);
+        el = document.getElementById('sbai-regen'); if (el) el.addEventListener('click', function () { if (state.activeItem) handleGenerate(state.activeItem); });
     }
 
     // ─── HANDLERS ────────────────────────────────────────────────────────────
@@ -885,10 +1096,19 @@
         render();
 
         try {
-            var d      = state.readingData || {};
+            var d         = state.readingData || {};
             var isImgItem = IMAGE_CREATIONS.find(function (c) { return c.id === item.id; });
+            var isTtsItem = TTS_CREATIONS.find(function (c) { return c.id === item.id; });
 
-            if (isImgItem) {
+            if (isTtsItem) {
+                var prompts = getTextPrompts(item.id, d);
+                if (!prompts) throw new Error('TTS prompt not found for: ' + item.id);
+                // Generate text first, then convert to speech
+                var text = await generateText(prompts.system, prompts.user, cfg);
+                var audioUrl = await generateSpeech(text, state.ttsVoice, cfg);
+                state.output     = audioUrl;
+                state.outputType = 'audio';
+            } else if (isImgItem) {
                 var prompt = getImagePrompt(item.id, d);
                 if (!prompt) throw new Error('Image prompt not found for: ' + item.id);
                 var result = await generateImage(prompt, cfg);
@@ -904,7 +1124,11 @@
             state.view = 'output';
             render();
         } catch (err) {
-            state.output     = 'Error: ' + err.message + '\n\nIf this is a CORS error, Anthropic does not allow direct browser requests — switch to OpenAI or Gemini. If the API key was rejected, check it is correct and active. If you are using a local model (Ollama), make sure it is running.';
+            var hint = '';
+            if (err.message.indexOf('Anthropic') !== -1 || err.message.indexOf('CORS') !== -1) hint = '\n\nSwitch to OpenAI or OpenRouter for browser-based generation.';
+            else if (err.message.indexOf('TTS') !== -1 || err.message.indexOf('speech') !== -1) hint = '\n\nText-to-speech requires an OpenAI or OpenRouter key.';
+            else if (err.message.indexOf('Ollama') !== -1 || err.message.indexOf('localhost') !== -1) hint = '\n\nMake sure Ollama is running: open a terminal and run `ollama serve`.';
+            state.output     = 'Error: ' + err.message + hint;
             state.outputType = 'text';
             state.view       = 'output';
             render();
@@ -934,12 +1158,18 @@
         if (state.outputType === 'image' && state.output) {
             a.href = 'data:image/png;base64,' + state.output;
             a.download = filename + '.png';
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        } else if (state.outputType === 'audio' && state.output) {
+            // Blob URL — just set as href + download
+            a.href = state.output;
+            a.download = filename + '.mp3';
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
         } else if (state.output) {
             a.href = URL.createObjectURL(new Blob([state.output], { type: 'text/plain' }));
             a.download = filename + '.txt';
-        } else return;
-        document.body.appendChild(a); a.click(); document.body.removeChild(a);
-        if (a.href.startsWith('blob:')) URL.revokeObjectURL(a.href);
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            URL.revokeObjectURL(a.href);
+        }
     }
 
     function handleSave() {
