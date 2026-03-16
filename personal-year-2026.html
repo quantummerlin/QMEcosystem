@@ -190,6 +190,24 @@ body {
 /* RESULT */
 .result-section { display: none; }
 .fade-in { animation: fadeIn 0.6s ease-out forwards; }
+
+/* BIRTHDAY TRANSITION */
+.birthday-transition {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 20px; border-radius: 12px; margin: 0 0 24px;
+  font-family: 'Cinzel', serif; font-size: 0.8rem; line-height: 1.7;
+}
+.birthday-transition strong { display: block; margin-bottom: 2px; }
+.birthday-transition.entered {
+  background: rgba(255,215,0,0.07); border: 1px solid rgba(255,215,0,0.3);
+  color: var(--ancient-gold, #ffd700);
+}
+.birthday-transition.upcoming {
+  background: rgba(0,245,255,0.06); border: 1px solid rgba(0,245,255,0.25);
+  color: var(--mystic-cyan, #00f5ff);
+}
+.birthday-transition .bt-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 3px; }
+.birthday-transition .bt-sub { opacity: 0.7; font-family: 'Cormorant Garamond', serif; font-size: 0.92rem; }
 @keyframes fadeIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 
 .result-hero {
@@ -405,8 +423,8 @@ body {
     </div>
 
     <div class="calc-formula" id="formulaDisplay">
-      Day + Month + 2026 = Your Personal Year
-      <span>Formula: reduce to single digit (or Master Number 11/22)</span>
+      Day + Month + Year = Your Personal Year
+      <span>Formula: reduce to single digit (or Master Number 11/22) · shifts on your birthday</span>
     </div>
 
     <button class="calc-btn" onclick="calculatePersonalYear()">✦ Reveal My Personal Year for 2026 ✦</button>
@@ -422,6 +440,9 @@ body {
       <div id="stepLines"></div>
     </div>
 
+    <!-- BIRTHDAY TRANSITION NOTICE -->
+    <div id="birthdayTransition"></div>
+
     <!-- RESULT HERO -->
     <div class="result-hero" id="resultHero" data-year="2026">
       <div id="masterBadgeEl"></div>
@@ -432,7 +453,7 @@ body {
 
     <!-- FULL DESCRIPTION -->
     <div class="py-desc-card">
-      <div class="py-desc-title">✦ What Personal Year <span id="pyNumInline"></span> Means for You in 2026</div>
+      <div class="py-desc-title">✦ What Personal Year <span id="pyNumInline"></span> Means for You in <span id="pyYearInline">2026</span></div>
       <div class="py-desc-text" id="pyDescFull"></div>
       <div class="py-focus-grid">
         <div class="py-focus-card">
@@ -448,7 +469,7 @@ body {
 
     <!-- MONTH BREAKDOWN -->
     <div class="months-section">
-      <div class="months-title">⬡ Month-by-Month Breakdown · 2026</div>
+      <div class="months-title">⬡ Month-by-Month Breakdown · <span id="monthsYearLabel">2026</span></div>
       <div class="month-accordion" id="monthAccordion"></div>
     </div>
 
@@ -476,8 +497,8 @@ body {
   <div class="explainer">
     <div class="exp-label">✦ Understanding Personal Years</div>
     <h2 class="exp-heading">How the Personal Year Cycle Works</h2>
-    <p class="exp-text">Your Personal Year changes each January 1st and runs in a 9-year cycle (plus potential Master Number years of 11 and 22). Each year carries a specific energy that shapes your opportunities, challenges, and the type of growth available to you.</p>
-    <p class="exp-text"><strong>Formula:</strong> Birth Day + Birth Month + Current Year (2026). Reduce the total to a single digit. Stop if you reach 11 or 22 (Master Numbers).</p>
+    <p class="exp-text">Your Personal Year shifts on your <strong>birthday</strong> each year — not January 1st. From your birthday in one year to the day before your next birthday, you are in a specific Personal Year energy that runs in a 9-year cycle (plus Master Number years of 11 and 22).</p>
+    <p class="exp-text"><strong>Formula:</strong> Birth Day + Birth Month + Your Active Year. Reduce the total to a single digit. Stop if you reach 11 or 22 (Master Numbers). The "active year" is the calendar year your current Personal Year began (on your last birthday).</p>
     <p class="exp-text"><strong>Example:</strong> Born 16th March → 16 + 3 + 2026 = 2045 → 2+0+4+5 = 11 (Master Number — do not reduce further). Personal Year 11 for 2026.</p>
 
     <div class="exp-label" style="margin-top: 32px">✦ All Personal Years at a Glance</div>
@@ -742,6 +763,11 @@ function isMaster(n) { return n === 11 || n === 22; }
 // CALCULATE
 // ═════════════════════════════════════════════
 
+function getOrdinal(n) {
+  const s = ['th','st','nd','rd'], v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
 function calculatePersonalYear() {
   const day = parseInt(document.getElementById('inputDay').value);
   const month = parseInt(document.getElementById('inputMonth').value);
@@ -749,18 +775,33 @@ function calculatePersonalYear() {
   if (!day || !month) { err.style.display = 'block'; return; }
   err.style.display = 'none';
 
-  const raw = day + month + 2026;
+  // Personal Year shifts on YOUR BIRTHDAY, not January 1st
+  const today = new Date();
+  const todayMonth = today.getMonth() + 1;
+  const todayDay = today.getDate();
+  const thisYear = today.getFullYear();
+  const birthdayPassedThisYear = (month < todayMonth) || (month === todayMonth && day <= todayDay);
+  const activeYear = birthdayPassedThisYear ? thisYear : thisYear - 1;
+
+  const raw = day + month + activeYear;
   const raw2 = String(raw).split('').reduce((a,d)=>a+parseInt(d),0);
   const py = reduceToBase(raw2);
+
+  // Next year PY for the transition notice
+  const nextYear = birthdayPassedThisYear ? thisYear + 1 : thisYear;
+  const rawNext = day + month + nextYear;
+  const raw2Next = String(rawNext).split('').reduce((a,d)=>a+parseInt(d),0);
+  const pyNext = reduceToBase(raw2Next);
 
   // Save for widget use
   try { localStorage.setItem('qm_birth_day', day); localStorage.setItem('qm_birth_month', month); } catch(e){}
 
-  // Steps
   const monthNames = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  // Steps
   let stepHTML = `<div class="step-line">${day} (${monthNames[month] || 'Month ' + month} birth day)</div>
     <div class="step-line">+ ${month} (month of birth)</div>
-    <div class="step-line">+ 2026 (current year)</div>
+    <div class="step-line">+ ${activeYear} (your active personal year cycle)</div>
     <div class="step-line">= <span class="step-highlight">${raw}</span></div>`;
   if (raw !== raw2) {
     stepHTML += `<div class="step-line">${String(raw).split('').join(' + ')} = <span class="step-highlight">${raw2}</span></div>`;
@@ -768,20 +809,39 @@ function calculatePersonalYear() {
   if (raw2 !== py) {
     stepHTML += `<div class="step-line">${isMaster(py) ? String(raw2) + ' = <span class="step-highlight">' + py + ' ✧ (Master Number — do not reduce)</span>' : String(raw2).split('').join(' + ') + ' = <span class="step-highlight">' + py + '</span>'}</div>`;
   }
-  stepHTML += `<div class="step-line" style="margin-top:8px;color:var(--ancient-gold);font-weight:700;">Your Personal Year 2026: <span class="step-highlight">${py}${isMaster(py)?' ✧':''}</span></div>`;
+  stepHTML += `<div class="step-line" style="margin-top:8px;color:var(--ancient-gold);font-weight:700;">Your Personal Year ${activeYear}: <span class="step-highlight">${py}${isMaster(py)?' ✧':''}</span></div>`;
   document.getElementById('stepLines').innerHTML = stepHTML;
 
-  // Update formula display
-  document.getElementById('formulaDisplay').innerHTML = `${day} + ${month} + 2026 = ${raw}${raw2 !== py ? ' → reduce → ' : ' → '}<strong style="color:var(--ancient-gold)">${py}${isMaster(py)?' ✧':''}</strong><span>Your Personal Year for 2026</span>`;
+  // Birthday transition notice
+  const birthMonthName = monthNames[month];
+  const ordDay = getOrdinal(day);
+  let transitionHTML;
+  if (birthdayPassedThisYear) {
+    transitionHTML = `<div class="birthday-transition entered">
+      <span class="bt-icon">✦</span>
+      <div><strong>You entered Personal Year ${py} on your ${thisYear} birthday</strong>
+      <span class="bt-sub">${birthMonthName} ${ordDay}, ${thisYear} · Next shift → Personal Year ${pyNext} begins ${birthMonthName} ${ordDay}, ${nextYear}</span></div>
+    </div>`;
+  } else {
+    transitionHTML = `<div class="birthday-transition upcoming">
+      <span class="bt-icon">◑</span>
+      <div><strong>You are in Personal Year ${py} (since ${birthMonthName} ${ordDay}, ${activeYear})</strong>
+      <span class="bt-sub">Personal Year ${pyNext} begins on your birthday: ${birthMonthName} ${ordDay}, ${thisYear}</span></div>
+    </div>`;
+  }
+  document.getElementById('birthdayTransition').innerHTML = transitionHTML;
 
-  renderResult(py, day, month);
+  // Update formula display
+  document.getElementById('formulaDisplay').innerHTML = `${day} + ${month} + ${activeYear} = ${raw}${raw2 !== py ? ' → reduce → ' : ' → '}<strong style="color:var(--ancient-gold)">${py}${isMaster(py)?' ✧':''}</strong><span>Your Personal Year ${activeYear}</span>`;
+
+  renderResult(py, day, month, activeYear);
 
   setTimeout(() => {
     document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 300);
 }
 
-function renderResult(py, day, month) {
+function renderResult(py, day, month, activeYear) {
   const data = PY_DATA[py];
   if (!data) return;
 
@@ -800,9 +860,12 @@ function renderResult(py, day, month) {
   }
 
   resultNum.textContent = py + (isMaster(py) ? ' ✧' : '');
+  resultHero.dataset.year = activeYear;
   document.getElementById('resultPyName').textContent = data.name;
   document.getElementById('resultTagline').textContent = data.tagline;
   document.getElementById('pyNumInline').textContent = py;
+  document.getElementById('pyYearInline').textContent = activeYear;
+  document.getElementById('monthsYearLabel').textContent = activeYear;
   document.getElementById('pyDescFull').textContent = data.fullDesc;
 
   document.getElementById('focusList').innerHTML = data.focus.map(f => `<li>${f}</li>`).join('');
@@ -834,7 +897,7 @@ function renderResult(py, day, month) {
 
   // Share text
   const monthNames = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
-  const shareMsg = `My Personal Year for 2026 is ${py} — ${data.name}. 2026 = Universal Year 1 (The Sun Year). My 2026 theme: "${data.tagline}" Calculate yours → quantummerlin.com/personal-year-2026`;
+  const shareMsg = `My Personal Year ${activeYear} is ${py} — ${data.name}. 2026 = Universal Year 1 (The Sun Year). My theme: "${data.tagline}" Calculate yours → quantummerlin.com/personal-year-2026`;
   document.getElementById('shareText').textContent = shareMsg;
 
   resultSection.style.display = 'block';
