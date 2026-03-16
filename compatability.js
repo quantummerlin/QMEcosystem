@@ -634,7 +634,15 @@ class QuantumCompatibilityCalculator {
 
     displayResults(results, soul1, soul2, relationshipType) {
         const resultsContainer = document.getElementById('resultsContainer');
-        
+
+        // Build shareable card text
+        const _lp1 = results.numerology ? results.numerology.lifePath1 : '?';
+        const _lp2 = results.numerology ? results.numerology.lifePath2 : '?';
+        const _s1  = results.zodiac ? results.zodiac.sign1 : '';
+        const _s2  = results.zodiac ? results.zodiac.sign2 : '';
+        const _scoreLabel = results.overall >= 85 ? 'rare cosmic alignment' : results.overall >= 70 ? 'beautiful soul harmony' : 'transformative soul connection';
+        const shareCardText = `✦ Quantum Compatibility: ${soul1.name} & ${soul2.name}\n${'━'.repeat(42)}\nOverall: ${results.overall}% — ${_scoreLabel}\nLife Path ${_lp1} + ${_lp2}${_s1 ? ` | ${_s1} + ${_s2}` : ''}\n\n"${results.message}"\n\nCalculate yours → quantummerlin.com/compatibility`;
+
         resultsContainer.innerHTML = `
             <div style="text-align:center;margin-bottom:2rem;">
                 <div style="font-size:3rem;margin-bottom:1rem;">✨</div>
@@ -836,9 +844,16 @@ class QuantumCompatibilityCalculator {
                 </div>
             </div>
             
-            <div style="text-align:center;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);">
-                <button onclick="window.print()" style="background:linear-gradient(135deg,var(--neon-cyan),var(--neon-purple));color:white;border:none;padding:12px 30px;border-radius:25px;cursor:pointer;font-family:'Orbitron',monospace;margin:5px;">📥 Save Reading</button>
-                <button onclick="navigator.share?navigator.share({title:'Quantum Compatibility',text:'${soul1.name} & ${soul2.name}: ${results.overall}% compatible!',url:window.location.href}):alert('Copy the URL to share!')" style="background:transparent;color:var(--neon-cyan);border:2px solid var(--neon-cyan);padding:12px 30px;border-radius:25px;cursor:pointer;font-family:'Orbitron',monospace;margin:5px;">🔗 Share</button>
+            <!-- Shareable Card -->
+            <div style="margin:2rem 0;padding:1.5rem 1.5rem 1.8rem;background:rgba(0,245,255,0.04);border:1px solid rgba(0,245,255,0.25);border-radius:16px;">
+                <h4 style="color:var(--neon-gold);font-family:'Orbitron',monospace;font-size:0.85rem;letter-spacing:0.06em;margin-bottom:0.5rem;text-align:center;">✦ SHARE YOUR READING</h4>
+                <p style="color:rgba(255,255,255,0.45);font-size:0.78rem;text-align:center;margin-bottom:1rem;">Copy this text and share it anywhere</p>
+                <pre id="qmShareCardPre" style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px 16px;font-family:'Courier New',monospace;font-size:0.82rem;color:rgba(220,210,255,0.9);white-space:pre-wrap;word-break:break-word;line-height:1.75;margin-bottom:1.1rem;user-select:all;">${shareCardText.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+                    <button id="qmCopyBtn" onclick="qmCopyShareCard()" style="background:linear-gradient(135deg,#0e7490,#7c3aed);color:white;border:none;padding:11px 28px;border-radius:22px;cursor:pointer;font-family:'Orbitron',monospace;font-size:0.78rem;letter-spacing:0.04em;transition:all 0.3s;">📋 Copy to Clipboard</button>
+                    <button onclick="window.print()" style="background:transparent;color:var(--neon-cyan);border:2px solid rgba(0,245,255,0.35);padding:11px 22px;border-radius:22px;cursor:pointer;font-family:'Orbitron',monospace;font-size:0.78rem;">📥 Print</button>
+                    <button onclick="if(navigator.share)navigator.share({title:'Quantum Compatibility',text:'${soul1.name} & ${soul2.name}: ${results.overall}% compatible!',url:window.location.href})" style="background:transparent;color:var(--neon-gold);border:2px solid rgba(255,215,0,0.35);padding:11px 22px;border-radius:22px;cursor:pointer;font-family:'Orbitron',monospace;font-size:0.78rem;">🔗 Share</button>
+                </div>
             </div>
         `;
         
@@ -860,6 +875,38 @@ class QuantumCompatibilityCalculator {
             </div>
         `;
     }
+}
+
+// Copy shareable card text to clipboard
+function qmCopyShareCard() {
+    const pre = document.getElementById('qmShareCardPre');
+    const btn = document.getElementById('qmCopyBtn');
+    if (!pre || !btn) return;
+    const text = pre.innerText;
+    const markCopied = () => {
+        btn.textContent = '✓ Copied!';
+        btn.style.background = 'linear-gradient(135deg,#059669,#065f46)';
+        setTimeout(() => {
+            btn.textContent = '📋 Copy to Clipboard';
+            btn.style.background = 'linear-gradient(135deg,#0e7490,#7c3aed)';
+        }, 2500);
+    };
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(markCopied).catch(() => {
+            _qmFallbackCopy(text); markCopied();
+        });
+    } else {
+        _qmFallbackCopy(text); markCopied();
+    }
+}
+function _qmFallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(ta);
 }
 
 // Initialize and expose globally

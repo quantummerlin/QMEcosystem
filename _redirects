@@ -36,3 +36,25 @@
 /amomentintime/r/*  /amomentintime/view.html?id=:splat  200
 /amomentintime/esp/r/*  /amomentintime/esp/view.html?id=:splat  200
 /amomentintime/pt/r/*  /amomentintime/pt/view.html?id=:splat  200
+
+# Redirect old stripped angel number page to canonical
+/angel-number-calculator-new.html  /angel-number-calculator.html  301
+/angel-number-calculator-new  /angel-number-calculator.html  301
+
+# Clean URL redirects for new tools
+/personal-year  /personal-year-2026.html  301
+/personal-year-2026  /personal-year-2026.html  200
+/life-path  /life-path-calculator.html  301
+/life-path-calculator  /life-path-calculator.html  200
+
+/angel-numbers/111  /angel-numbers/111.html  200
+/angel-numbers/222  /angel-numbers/222.html  200
+/angel-numbers/333  /angel-numbers/333.html  200
+/angel-numbers/444  /angel-numbers/444.html  200
+/angel-numbers/555  /angel-numbers/555.html  200
+/angel-numbers/666  /angel-numbers/666.html  200
+/angel-numbers/777  /angel-numbers/777.html  200
+/angel-numbers/888  /angel-numbers/888.html  200
+/angel-numbers/999  /angel-numbers/999.html  200
+/angel-numbers/1111  /angel-numbers/1111.html  200
+/angel-numbers/1234  /angel-numbers/1234.html  200
