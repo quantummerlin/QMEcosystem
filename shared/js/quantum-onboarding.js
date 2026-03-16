@@ -344,7 +344,7 @@ function createOnboardingModal(config, storageKey, onCompleteCallback) {
     let stepsHTML = '';
     config.steps.forEach((step, index) => {
         const isActive = index === 0 ? 'active' : '';
-        const nextStep = index + 1;
+        const nextStep = index + 2;
         const isLast = index === config.steps.length - 1;
         const clickAction = isLast 
             ? `closeQuantumOnboarding('${storageKey}', ${onCompleteCallback ? 'onboardingComplete' : 'null'})`
