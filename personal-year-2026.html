@@ -210,6 +210,57 @@ body {
 .birthday-transition .bt-sub { opacity: 0.7; font-family: 'Cormorant Garamond', serif; font-size: 0.92rem; }
 @keyframes fadeIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 
+/* UNIVERSAL YEAR ALIGNMENT */
+.uy-alignment {
+  border-radius: 16px; padding: 24px 28px; margin: 0 0 24px;
+  position: relative; overflow: hidden;
+}
+.uy-alignment.active-now {
+  background: linear-gradient(135deg, rgba(255,215,0,0.12), rgba(255,107,157,0.07));
+  border: 2px solid rgba(255,215,0,0.5);
+  animation: uyPulse 3s ease-in-out infinite;
+}
+.uy-alignment.future {
+  background: linear-gradient(135deg, rgba(138,43,226,0.08), rgba(0,245,255,0.05));
+  border: 1px solid rgba(138,43,226,0.3);
+}
+.uy-alignment::after {
+  content: '✦'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+  font-size: 5rem; opacity: 0.04; pointer-events: none; line-height: 1;
+}
+.uya-label {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.15em;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.uy-alignment.active-now .uya-label { color: var(--ancient-gold); }
+.uy-alignment.future .uya-label { color: rgba(180,150,255,0.9); }
+.uya-title {
+  font-family: 'Cinzel', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 6px;
+}
+.uy-alignment.active-now .uya-title { color: var(--ancient-gold); }
+.uy-alignment.future .uya-title { color: rgba(200,180,255,0.9); }
+.uya-meta {
+  font-family: 'Orbitron', monospace; font-size: 0.72rem; letter-spacing: 0.08em;
+  opacity: 0.6; margin-bottom: 12px;
+}
+.uya-desc { color: rgba(240,230,255,0.78); font-size: 0.9rem; line-height: 1.75; }
+.uya-tag {
+  display: inline-block; margin-top: 14px; padding: 5px 16px; border-radius: 20px;
+  font-family: 'Orbitron', monospace; font-size: 0.7rem; letter-spacing: 0.1em;
+}
+.uy-alignment.active-now .uya-tag {
+  background: rgba(255,215,0,0.15); color: var(--ancient-gold);
+  border: 1px solid rgba(255,215,0,0.3);
+}
+.uy-alignment.future .uya-tag {
+  background: rgba(138,43,226,0.15); color: rgba(200,180,255,0.9);
+  border: 1px solid rgba(138,43,226,0.3);
+}
+@keyframes uyPulse {
+  0%,100% { box-shadow: 0 0 25px rgba(255,215,0,0.1); }
+  50% { box-shadow: 0 0 45px rgba(255,215,0,0.2); }
+}
+
 .result-hero {
   background: linear-gradient(135deg, rgba(218,165,32,0.1), rgba(0,245,255,0.06));
   border: 2px solid rgba(218,165,32,0.35); border-radius: 20px; padding: 40px;
@@ -465,6 +516,15 @@ body {
           <ul class="pf-list" id="avoidList"></ul>
         </div>
       </div>
+    </div>
+
+    <!-- UNIVERSAL YEAR ALIGNMENT -->
+    <div class="uy-alignment" id="uyAlignment" style="display:none">
+      <div class="uya-label" id="uyaLabel"></div>
+      <div class="uya-title" id="uyaTitle"></div>
+      <div class="uya-meta" id="uyaMeta"></div>
+      <div class="uya-desc" id="uyaDesc"></div>
+      <div class="uya-tag" id="uyaTag"></div>
     </div>
 
     <!-- MONTH BREAKDOWN -->
@@ -889,6 +949,70 @@ function renderResult(py, day, month, activeYear) {
       <div class="month-body">${m.text}</div>
     </div>`;
   }).join('');
+
+  // ── Universal Year alignment ──
+  function calcUniversalYear(yr) {
+    let n = String(yr).split('').reduce((a,d)=>a+parseInt(d),0);
+    while (n > 9 && n !== 11 && n !== 22) n = String(n).split('').reduce((a,d)=>a+parseInt(d),0);
+    return n;
+  }
+  function getOrdinalPY(n) {
+    const s = ['th','st','nd','rd'], v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+  const UY_NAMES = {
+    1:'New Beginnings', 2:'Partnership', 3:'Creative Expansion', 4:'Foundation Building',
+    5:'Change & Freedom', 6:'Love & Responsibility', 7:'Introspection & Wisdom',
+    8:'Power & Abundance', 9:'Completion & Release', 11:'Spiritual Illumination', 22:'Master Builder'
+  };
+  const uyPanel = document.getElementById('uyAlignment');
+  const uyCalYear = calcUniversalYear(activeYear);
+  if (py === uyCalYear) {
+    // Active alignment — find next
+    let nextAlignCalYear = null;
+    for (let y = activeYear + 1; y <= activeYear + 18; y++) {
+      const futurePY = (() => {
+        let raw = day + month + y;
+        let n2 = String(raw).split('').reduce((a,d)=>a+parseInt(d),0);
+        return reduceToBase(n2);
+      })();
+      if (futurePY === calcUniversalYear(y)) { nextAlignCalYear = y; break; }
+    }
+    uyPanel.className = 'uy-alignment active-now';
+    uyPanel.style.display = 'block';
+    document.getElementById('uyaLabel').textContent = '✦ Personal Year & Universal Year Alignment — Active Now';
+    document.getElementById('uyaTitle').textContent = `Your Personal Year ${py} matches Universal Year ${uyCalYear} · ${UY_NAMES[py] || ''}`;
+    const monthNamesPY2 = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+    document.getElementById('uyaMeta').textContent = `Active since ${monthNamesPY2[month]} ${getOrdinalPY(day)}, ${activeYear}${nextAlignCalYear ? ' · Next alignment: ' + nextAlignCalYear : ''}`;
+    document.getElementById('uyaDesc').innerHTML = `When your Personal Year matches the Universal Year, your individual cycle is <em>in resonance</em> with the collective planetary energy. There is no current between who you are becoming and what the world is doing — they are moving as one. Actions taken now land with unusual clarity and carry further than they normally would. This is a rare window of amplified momentum.`;
+    document.getElementById('uyaTag').textContent = nextAlignCalYear ? `Next alignment: ${nextAlignCalYear}` : 'Rare alignment — in effect now';
+  } else {
+    // Find next year where PY === Universal Year
+    let nextAlignCalYear = null;
+    let nextAlignPY = null;
+    let nextUY = null;
+    for (let y = activeYear + 1; y <= activeYear + 18; y++) {
+      const futurePY = (() => {
+        let raw = day + month + y;
+        let n2 = String(raw).split('').reduce((a,d)=>a+parseInt(d),0);
+        return reduceToBase(n2);
+      })();
+      const futureUY = calcUniversalYear(y);
+      if (futurePY === futureUY) { nextAlignCalYear = y; nextAlignPY = futurePY; nextUY = futureUY; break; }
+    }
+    if (nextAlignCalYear) {
+      const monthNamesPY2 = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
+      uyPanel.className = 'uy-alignment future';
+      uyPanel.style.display = 'block';
+      document.getElementById('uyaLabel').textContent = '◈ Your Next Personal Year ↔ Universal Year Alignment';
+      document.getElementById('uyaTitle').textContent = `Personal Year ${nextAlignPY} meets Universal Year ${nextUY} in ${nextAlignCalYear}`;
+      document.getElementById('uyaMeta').textContent = `Begins ${monthNamesPY2[month]} ${getOrdinalPY(day)}, ${nextAlignCalYear} · ${UY_NAMES[nextAlignPY] || ''}`;
+      document.getElementById('uyaDesc').innerHTML = `In ${nextAlignCalYear}, your Personal Year will match the Universal Year — meaning your individual cycle aligns with the collective planetary energy. When this happens, your actions carry an extra current: the world is moving in the same direction you are. This window is one of the most potent for visibility, momentum, and results that resonate beyond your immediate circle. Mark the date.`;
+      document.getElementById('uyaTag').textContent = `Alignment begins ${monthNamesPY2[month]} ${getOrdinalPY(day)}, ${nextAlignCalYear}`;
+    } else {
+      uyPanel.style.display = 'none';
+    }
+  }
 
   // Auto-open current month
   const currentMonth = new Date().getMonth();
