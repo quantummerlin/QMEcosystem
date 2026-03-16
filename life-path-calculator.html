@@ -339,10 +339,66 @@ body {
   margin-bottom: 20px; position: relative; overflow: hidden;
 }
 .personal-year-card::before {
-  content: '2026'; position: absolute; right: -10px; bottom: -20px;
+  content: attr(data-year); position: absolute; right: -10px; bottom: -20px;
   font-family: 'Orbitron', monospace; font-size: 6rem; font-weight: 700;
   color: rgba(0,245,255,0.04); line-height: 1; pointer-events: none;
 }
+
+/* ALIGNMENT PANEL */
+.alignment-panel {
+  border-radius: 16px; padding: 24px 28px; margin-bottom: 20px;
+  position: relative; overflow: hidden;
+}
+.alignment-panel.active-now {
+  background: linear-gradient(135deg, rgba(255,215,0,0.12), rgba(255,107,157,0.08));
+  border: 2px solid rgba(255,215,0,0.5);
+  box-shadow: 0 0 30px rgba(255,215,0,0.12), inset 0 0 30px rgba(255,215,0,0.03);
+}
+.alignment-panel.future {
+  background: linear-gradient(135deg, rgba(138,43,226,0.08), rgba(0,245,255,0.05));
+  border: 1px solid rgba(138,43,226,0.3);
+}
+.alignment-panel::before {
+  content: '✦'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+  font-size: 5rem; opacity: 0.04; pointer-events: none; line-height: 1;
+}
+.alignment-header {
+  font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.15em;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.alignment-panel.active-now .alignment-header { color: var(--ancient-gold); }
+.alignment-panel.future .alignment-header { color: rgba(138,43,226,0.9); }
+.alignment-title {
+  font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700;
+  margin-bottom: 8px;
+}
+.alignment-panel.active-now .alignment-title { color: var(--ancient-gold); }
+.alignment-panel.future .alignment-title { color: rgba(200,180,255,0.9); }
+.alignment-meta {
+  font-family: 'Orbitron', monospace; font-size: 0.75rem; letter-spacing: 0.08em;
+  opacity: 0.6; margin-bottom: 12px;
+}
+.alignment-desc {
+  color: rgba(240,230,255,0.78); font-size: 0.92rem; line-height: 1.75;
+}
+.alignment-countdown {
+  display: inline-block; margin-top: 14px;
+  padding: 6px 16px; border-radius: 20px;
+  font-family: 'Orbitron', monospace; font-size: 0.72rem; letter-spacing: 0.1em;
+}
+.alignment-panel.active-now .alignment-countdown {
+  background: rgba(255,215,0,0.15); color: var(--ancient-gold);
+  border: 1px solid rgba(255,215,0,0.3);
+}
+.alignment-panel.future .alignment-countdown {
+  background: rgba(138,43,226,0.15); color: rgba(200,180,255,0.9);
+  border: 1px solid rgba(138,43,226,0.3);
+}
+@keyframes alignPulse {
+  0%,100% { box-shadow: 0 0 30px rgba(255,215,0,0.12), inset 0 0 30px rgba(255,215,0,0.03); }
+  50% { box-shadow: 0 0 50px rgba(255,215,0,0.22), inset 0 0 40px rgba(255,215,0,0.06); }
+}
+.alignment-panel.active-now { animation: alignPulse 3s ease-in-out infinite; }
 .py-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 16px; }
 .py-label {
   font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.15em;
@@ -584,16 +640,25 @@ body {
       <div id="readingText"></div>
     </div>
 
-    <!-- PERSONAL YEAR 2026 -->
-    <div class="personal-year-card" id="personalYearCard">
+    <!-- PERSONAL YEAR -->
+    <div class="personal-year-card" id="personalYearCard" data-year="">
       <div class="py-header">
         <div>
-          <div class="py-label">Your Personal Year · 2026 · Universal Year 1</div>
+          <div class="py-label" id="pyLabel">Your Personal Year · Universal Year 1</div>
           <div class="py-number" id="pyNumber"></div>
           <div class="py-name" id="pyName"></div>
         </div>
       </div>
       <div class="py-desc" id="pyDesc"></div>
+    </div>
+
+    <!-- ALIGNMENT PANEL -->
+    <div class="alignment-panel" id="alignmentPanel" style="display:none">
+      <div class="alignment-header" id="alignmentHeader"></div>
+      <div class="alignment-title" id="alignmentTitle"></div>
+      <div class="alignment-meta" id="alignmentMeta"></div>
+      <div class="alignment-desc" id="alignmentDesc"></div>
+      <div class="alignment-countdown" id="alignmentCountdown"></div>
     </div>
 
     <!-- SHARE -->
@@ -1026,17 +1091,76 @@ function renderResult(lp, karmicDebt, birthDay, birthMonth) {
   // Full reading
   document.getElementById('readingText').innerHTML = data.reading.map(p => `<p>${p}</p>`).join('');
 
-  // Personal Year 2026
-  const pyRaw = birthDay + birthMonth + 2026;
-  const py = reduceToBase(pyRaw > 99 ? sumDigits(pyRaw) : pyRaw);
+  // Personal Year — birthday-aware (shifts on birthday, not Jan 1)
+  const today = new Date();
+  const todayMonth = today.getMonth() + 1;
+  const todayDay = today.getDate();
+  const thisYear = today.getFullYear();
+  const birthdayPassedThisYear = (birthMonth < todayMonth) || (birthMonth === todayMonth && birthDay <= todayDay);
+  const activeYear = birthdayPassedThisYear ? thisYear : thisYear - 1;
+
+  function calcPY(bDay, bMonth, yr) {
+    const raw = bDay + bMonth + yr;
+    return reduceToBase(raw > 99 ? sumDigits(raw) : raw);
+  }
+
+  const py = calcPY(birthDay, birthMonth, activeYear);
   const pyData = PERSONAL_YEARS[py] || PERSONAL_YEARS[Math.min(py, 9)];
+
+  document.getElementById('personalYearCard').dataset.year = activeYear;
+  document.getElementById('pyLabel').textContent = `Your Personal Year · ${activeYear} · Universal Year ${calcPY(1,1,activeYear)}`;
   document.getElementById('pyNumber').textContent = py + (isMaster(py) ? ' ✧' : '');
   document.getElementById('pyName').textContent = pyData ? pyData.name : '';
   document.getElementById('pyDesc').innerHTML = (pyData ? pyData.desc : '') + (data.personal_year_boost ? `<br><br><strong style="color:var(--ancient-gold)">${data.personal_year_boost}</strong>` : '');
 
+  // ── Alignment: when does PY === Life Path? ──
+  const alignPanel = document.getElementById('alignmentPanel');
+  const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const birthMonthName = MONTH_NAMES[birthMonth - 1];
+
+  function getOrdinal(n) {
+    const s = ['th','st','nd','rd'], v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+
+  if (py === lp) {
+    // Currently in alignment — started on this year's birthday
+    const alignStartYear = activeYear;
+    const nextAlignYear = (() => { for (let y = activeYear + 1; y <= activeYear + 18; y++) { if (calcPY(birthDay, birthMonth, y) === lp) return y; } })();
+    alignPanel.className = 'alignment-panel active-now';
+    alignPanel.style.display = 'block';
+    document.getElementById('alignmentHeader').textContent = '✦ Life Path & Personal Year Alignment — Active Now';
+    document.getElementById('alignmentTitle').textContent = `You are in your Life Path ${lp} year right now`;
+    document.getElementById('alignmentMeta').textContent = `Started ${birthMonthName} ${getOrdinal(birthDay)}, ${alignStartYear} · Next alignment: ${nextAlignYear}`;
+    document.getElementById('alignmentDesc').innerHTML = `When your Personal Year matches your Life Path, the energy of who you fundamentally <em>are</em> is fully supported by the year you are <em>in</em>. There is no friction between your core number and the current cycle — only amplification. This is one of the most potent windows in your 9-year cycle for clarity of direction, authentic action, and progress that truly reflects your soul's path.`;
+    document.getElementById('alignmentCountdown').textContent = `Next alignment returns ${birthMonthName} ${getOrdinal(birthDay)}, ${nextAlignYear}`;
+  } else {
+    // Not in alignment — find the next year where PY will equal LP
+    let nextAlignYear = null;
+    let nextAlignPY = null;
+    for (let y = activeYear + 1; y <= activeYear + 18; y++) {
+      const futPY = calcPY(birthDay, birthMonth, y);
+      if (futPY === lp) { nextAlignYear = y; nextAlignPY = futPY; break; }
+    }
+    if (nextAlignYear) {
+      const yearsUntil = nextAlignYear - thisYear + (birthdayPassedThisYear ? 0 : -1);
+      const alignYearData = PERSONAL_YEARS[lp] || PERSONAL_YEARS[Math.min(lp, 9)];
+      const yearsLabel = yearsUntil <= 0 ? 'later this year' : yearsUntil === 1 ? 'in 1 year' : `in ${yearsUntil} years`;
+      alignPanel.className = 'alignment-panel future';
+      alignPanel.style.display = 'block';
+      document.getElementById('alignmentHeader').textContent = '◈ Your Next Life Path Alignment';
+      document.getElementById('alignmentTitle').textContent = `Personal Year ${lp} returns ${birthMonthName} ${getOrdinal(birthDay)}, ${nextAlignYear}`;
+      document.getElementById('alignmentMeta').textContent = `${yearsLabel.charAt(0).toUpperCase() + yearsLabel.slice(1)} · ${alignYearData ? alignYearData.name : ''}`;
+      document.getElementById('alignmentDesc').innerHTML = `In ${nextAlignYear}, your Personal Year will match your Life Path ${lp}. When these two numbers align, the energy of who you fundamentally <em>are</em> is fully supported by the year you are <em>in</em> — no friction, only amplification. This is one of the most potent windows in your 9-year cycle for clarity, authentic action, and progress that truly reflects your soul's core direction. Mark it.`;
+      document.getElementById('alignmentCountdown').textContent = `Alignment begins ${birthMonthName} ${getOrdinal(birthDay)}, ${nextAlignYear}`;
+    } else {
+      alignPanel.style.display = 'none';
+    }
+  }
+
   // Share text
   const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-  const shareMsg = `My Life Path Number is ${lp} — ${data.name}. "${data.tagline}" My Personal Year in 2026 is ${py} (${pyData ? pyData.name : ''}). Calculated with Quantum Merlin → quantummerlin.com/life-path-calculator`;
+  const shareMsg = `My Life Path Number is ${lp} — ${data.name}. "${data.tagline}" My Personal Year ${activeYear} is ${py} (${pyData ? pyData.name : ''}). Calculated with Quantum Merlin → quantummerlin.com/life-path-calculator`;
   document.getElementById('shareText').textContent = shareMsg;
 
   resultSection.style.display = 'block';
