@@ -375,6 +375,47 @@ body {
 /* CTA row */
 .cta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
 @media(max-width: 500px){ .cta-row { grid-template-columns: 1fr; } }
+
+/* ── MOBILE & PWA ── */
+@media(max-width: 680px) {
+  .qm-header { padding: 14px 16px; }
+  .qm-nav-links { gap: 14px; }
+  .qm-nav-links a { font-size: 11px; }
+  .container { padding-left: 14px; padding-right: 14px; }
+  .hero { padding: 40px 0 30px; }
+  .hero-sub { text-align: center; }
+  .universal-year-box {
+    grid-template-columns: 1fr; text-align: center;
+    padding: 18px 16px; gap: 12px;
+  }
+  .uy-num { font-size: 2.8rem; }
+  .birthday-transition {
+    flex-direction: column; align-items: center; text-align: center;
+  }
+  .birthday-transition .bt-icon { margin-top: 0; }
+  .step-box-title { text-align: center; }
+  .step-line { text-align: center; }
+  .result-py-tagline { text-align: center; }
+  .py-desc-title { text-align: center; }
+  .py-desc-text { font-size: 0.9rem; }
+  .pf-label { text-align: center; }
+  .uy-alignment { padding: 20px 16px; }
+  .uy-alignment::after { display: none; }
+  .uya-label { text-align: center; }
+  .uya-title { text-align: center; }
+  .uya-meta { text-align: center; }
+  .uya-desc { text-align: center; }
+  .months-title { text-align: center; }
+  .share-card-title { text-align: center; }
+  .share-text { font-size: 0.82rem; }
+  .exp-label { text-align: center; }
+  .exp-heading { text-align: center; }
+  .exp-text { font-size: 0.9rem; }
+}
+@media(max-width: 400px) {
+  .qm-nav-links a { font-size: 10px; }
+  .qm-nav-links { gap: 10px; }
+}
 .cta-btn {
   display: block; padding: 14px 16px; border: 1px solid; border-radius: 12px;
   text-decoration: none; text-align: center; font-family: 'Cinzel', serif; font-size: 11px;
