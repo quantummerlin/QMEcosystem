@@ -277,8 +277,39 @@ var BRAND_CONFIG = {
         sun: { label: "Sun Sign", desc: "Main Vocal Energy ☀️" },
         moon: { label: "Moon Sign", desc: "Hidden B-Side 🌙" },
         rising: { label: "Rising Sign", desc: "Stage Presence ⭐" }
+    },
+
+    // ============================================
+    // 🤖 AI GUIDE — STAR
+    // ============================================
+    ai: {
+        // OpenRouter model to use (free tier)
+        model: 'openrouter/healer-alpha',
+
+        // ⚠️  OWNER ACTION REQUIRED:
+        // Paste your OpenRouter API key below (free tier).
+        // This key will be visible in client-side JS — only use
+        // a free-tier key with a spending cap set in OpenRouter.
+        // Users can also supply their own key via the ⚙️ button.
+        siteKey: '',
+
+        // Daily request limit per visitor (when using the site key)
+        dailyLimit: 10,
+
+        // AI persona details
+        personaName: 'STAR',
+        personaTitle: 'Cosmic Idol Guide from 2087',
+
+        // OpenRouter API endpoint (OpenAI-compatible)
+        endpoint: 'https://openrouter.ai/api/v1/chat/completions'
     }
 };
+
+// ─── Expose AI config to ai-guide.js ───
+if (typeof window !== 'undefined') {
+    window.KK_CONFIG = window.KK_CONFIG || {};
+    window.KK_CONFIG.ai = BRAND_CONFIG.ai;
+}
 
 const BRAND_PRESETS = {
     kpop: BRAND_CONFIG

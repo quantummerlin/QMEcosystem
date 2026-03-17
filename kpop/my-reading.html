@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>My Idol Reading Hub 💜 K-pop Kosmic</title>
+  <meta name="description" content="Enter your details once and explore all 58+ cosmic readings in one place, guided by STAR — your AI idol mentor.">
+  <meta name="theme-color" content="#0a0118">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Hub styles -->
+  <link rel="stylesheet" href="reading-hub.css">
+
+  <!-- Confetti CDN (small, ~3KB gz) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<!-- ── Animated background ── -->
+<div id="particle-bg"></div>
+
+<!-- ── Loading overlay ── -->
+<div id="loading-overlay">
+  <div class="loading-spinner"></div>
+  <div class="loading-msg" id="loading-msg">Calculating your idol blueprint… 🌟</div>
+</div>
+
+<!-- ── Achievement toast ── -->
+<div id="achievement-toast" role="alert" aria-live="polite">
+  <div class="toast-icon" id="toast-icon">🏆</div>
+  <div>
+    <div class="toast-lbl">Achievement Unlocked!</div>
+    <div class="toast-name" id="toast-name"></div>
+    <div class="toast-desc" id="toast-desc"></div>
+  </div>
+</div>
+
+<!-- ── API Key Modal ── -->
+<div class="modal-overlay" id="modal-apikey" role="dialog" aria-modal="true" aria-labelledby="ak-title">
+  <div class="modal-box">
+    <div class="modal-title" id="ak-title">🔑 Use Your Own API Key</div>
+    <div class="modal-subtitle">Enter your <a href="https://openrouter.ai/keys" target="_blank" rel="noopener" style="color:var(--cyan)">OpenRouter API key</a> for unlimited STAR conversations.<br>Your key is stored on this device only — never sent to our servers.</div>
+    <input type="password" class="modal-input" id="ak-input" placeholder="sk-or-…" autocomplete="off">
+    <div class="modal-btns">
+      <button class="btn-cancel" onclick="closeApiKeyModal()">Cancel</button>
+      <button class="btn-save"   onclick="saveApiKey()">💾 Save Key</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Cosmic ID Card Modal ── -->
+<div class="modal-overlay" id="modal-idcard" role="dialog" aria-modal="true" aria-labelledby="id-title">
+  <div class="modal-box" style="max-width:500px;text-align:center">
+    <div class="modal-title" id="id-title">📸 Your Cosmic ID Card</div>
+    <canvas id="id-card-canvas" width="840" height="520" style="width:100%;max-width:420px;height:auto;border-radius:14px;border:1px solid rgba(168,85,247,.35);margin:0.9rem auto;display:block;"></canvas>
+    <div class="id-card-actions">
+      <button class="btn-reveal" style="width:auto;padding:.55rem 1.1rem;font-size:.88rem" onclick="KK_IDCard.download()">⬇️ Download PNG</button>
+      <button class="btn-reveal" style="width:auto;padding:.55rem 1.1rem;font-size:.88rem;background:linear-gradient(135deg,#22D3EE,#A855F7)" onclick="KK_IDCard.share()">🔗 Share</button>
+      <button class="btn-cancel"  onclick="closeIdCardModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Main wrapper ── -->
+<div class="hub-wrapper">
+
+  <!-- ════════════════════════════════════════
+       PHASE 1 — DATA ENTRY FORM
+  ════════════════════════════════════════ -->
+  <section id="entry-section">
+    <div class="entry-logo">K-POP KOSMIC ✨</div>
+    <div class="entry-tagline">Enter your details once · All 58+ readings in one place · Guided by your AI idol mentor</div>
+
+    <div class="form-card">
+      <div class="form-title">🎤 Your Idol Blueprint</div>
+      <div class="form-subtitle">One form · 58+ cosmic readings · No sign-up needed ✨</div>
+
+      <!-- Saved profile loader (shown when profiles exist) -->
+      <div class="profile-selector-row" id="profile-row">
+        <select id="profile-select" aria-label="Load a saved profile"></select>
+        <button class="btn-load-profile" type="button" onclick="loadProfile()">Load ✨</button>
+      </div>
+
+      <form id="entry-form" autocomplete="off" novalidate>
+        <div class="form-group">
+          <label for="inp-name">🎤 Your Name or Stage Name</label>
+          <input type="text" id="inp-name" placeholder="Enter your name or dream stage name ✨" required maxlength="60" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="inp-date">🎂 Birthday (Your Debut Date)</label>
+          <input type="date" id="inp-date" required min="1900-01-01" max="2025-12-31">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inp-time">⏰ Birth Time <span style="opacity:.55">(optional)</span></label>
+            <input type="time" id="inp-time" autocomplete="off">
+            <div class="form-note">For exact Rising & Moon sign 🌙</div>
+          </div>
+          <div class="form-group">
+            <label for="inp-place">📍 Birth Place <span style="opacity:.55">(optional)</span></label>
+            <input type="text" id="inp-place" placeholder="Seoul, South Korea" autocomplete="off" maxlength="80">
+            <div class="form-note">For accurate house system 🏠</div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-reveal" id="btn-reveal">
+          🫰 Reveal My Idol Destiny 화이팅!
+        </button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       PHASE 2 — READING HUB
+  ════════════════════════════════════════ -->
+  <section id="hub-section">
+
+    <!-- Sticky progress bar -->
+    <div class="progress-bar-sticky">
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="progress-label"><strong id="prog-num">0</strong>&nbsp;/ <span id="prog-total">58</span> readings unlocked</div>
+    </div>
+
+    <!-- Header -->
+    <div class="hub-header">
+      <div class="hub-logo">K-POP KOSMIC ✨</div>
+      <div class="hub-user-line">Reading for <strong id="hub-name">—</strong> · <span id="hub-date">—</span></div>
+    </div>
+
+    <!-- Big Three snapshot -->
+    <div class="big-three-grid">
+      <div class="b3-card">
+        <div class="b3-icon">☀️</div>
+        <div class="b3-lbl">Main Vocal Energy</div>
+        <div class="b3-val" id="b3-sun">—</div>
+      </div>
+      <div class="b3-card">
+        <div class="b3-icon">🌙</div>
+        <div class="b3-lbl">Hidden B-Side</div>
+        <div class="b3-val" id="b3-moon">—</div>
+      </div>
+      <div class="b3-card">
+        <div class="b3-icon">⭐</div>
+        <div class="b3-lbl">Stage Presence</div>
+        <div class="b3-val" id="b3-rising">—</div>
+      </div>
+    </div>
+
+    <!-- Action bar -->
+    <div class="action-bar">
+      <button class="action-btn" onclick="doSurpriseMe()">🎲 Surprise Me</button>
+      <button class="action-btn" onclick="doCheckIn()">✨ Daily Check-in&nbsp;<span class="streak-badge" id="streak-badge">0</span>🔥</button>
+      <button class="action-btn" onclick="openIdCardModal()">📸 Cosmic ID Card</button>
+      <button class="action-btn" onclick="startNewReading()">🔄 New Reading</button>
+    </div>
+
+    <!-- Tab nav -->
+    <nav class="tab-nav" role="tablist" aria-label="Reading categories">
+      <button class="tab-btn active" data-tab="numerology"   role="tab" aria-selected="true" >🔢 Trainee Numbers  <span class="tab-count" id="tc-numerology">0</span></button>
+      <button class="tab-btn"        data-tab="astrology"    role="tab" aria-selected="false">⭐ Celestial Stage  <span class="tab-count" id="tc-astrology">0</span></button>
+      <button class="tab-btn"        data-tab="forecasts"    role="tab" aria-selected="false">📅 Era Timeline     <span class="tab-count" id="tc-forecasts">0</span></button>
+      <button class="tab-btn"        data-tab="kpop"         role="tab" aria-selected="false">🎤 Idol Vibes</button>
+      <button class="tab-btn"        data-tab="achievements" role="tab" aria-selected="false">🏆 Badges</button>
+    </nav>
+
+    <!-- Tab: Numerology -->
+    <div id="tab-numerology" class="tab-panel active" role="tabpanel">
+      <div class="cards-grid" id="grid-numerology"></div>
+    </div>
+
+    <!-- Tab: Astrology -->
+    <div id="tab-astrology" class="tab-panel" role="tabpanel">
+      <div class="cards-grid" id="grid-astrology"></div>
+    </div>
+
+    <!-- Tab: Forecasts / Era Timeline -->
+    <div id="tab-forecasts" class="tab-panel" role="tabpanel">
+      <div class="streak-panel">
+        <div>🔥</div>
+        <div class="streak-num" id="streak-panel-num">0</div>
+        <div class="streak-lbl">day check-in streak · Come back tomorrow to keep it going!</div>
+      </div>
+      <div class="cards-grid" id="grid-forecasts"></div>
+    </div>
+
+    <!-- Tab: K-Pop Idol Vibes (link cards) -->
+    <div id="tab-kpop" class="tab-panel" role="tabpanel">
+      <div style="margin-bottom:.8rem">
+        <div class="section-label">🎤 K-pop Specialist Tools</div>
+        <div class="cards-grid" id="grid-kpop"></div>
+      </div>
+    </div>
+
+    <!-- Tab: Achievements -->
+    <div id="tab-achievements" class="tab-panel" role="tabpanel">
+      <div class="section-label">🏆 Your Badge Collection</div>
+      <div class="achievements-grid" id="achievements-grid"></div>
+    </div>
+
+  </section>
+</div><!-- .hub-wrapper -->
+
+
+<!-- ── AI Chat Widget ── -->
+<div id="ai-widget">
+  <div class="ai-panel" id="ai-panel" role="dialog" aria-label="STAR AI Guide chat">
+    <!-- Header -->
+    <div class="ai-panel-head">
+      <div class="ai-ava">🌟</div>
+      <div class="ai-head-info">
+        <div class="ai-head-name">STAR ✨</div>
+        <div class="ai-head-status">Online · Cosmic Idol Guide from 2087</div>
+      </div>
+      <div class="ai-quota" id="ai-quota">10/10 today</div>
+      <div class="ai-head-btns">
+        <button class="ai-icon-btn" onclick="openApiKeyModal()" title="Use your own API key">⚙️</button>
+        <button class="ai-icon-btn" onclick="KK_AI.toggle()" title="Close chat" aria-label="Close chat">✕</button>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div class="ai-msgs" id="ai-msgs" aria-live="polite"></div>
+
+    <!-- Quick chips -->
+    <div class="ai-chips" id="ai-chips">
+      <button class="ai-chip" onclick="chipClick(this)">What's my main character energy?</button>
+      <button class="ai-chip" onclick="chipClick(this)">Hidden strengths I should know?</button>
+      <button class="ai-chip" onclick="chipClick(this)">What patterns stand out in my chart?</button>
+    </div>
+
+    <!-- Input -->
+    <div class="ai-input-row">
+      <input type="text" id="ai-input" placeholder="Ask STAR anything…" maxlength="500"
+             onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendAIMessage();}"
+             aria-label="Message STAR">
+      <button class="ai-send" id="ai-send-btn" onclick="sendAIMessage()" aria-label="Send">✦</button>
+    </div>
+  </div>
+
+  <button class="ai-fab" onclick="KK_AI.toggle()" title="Chat with STAR — your AI idol guide" aria-label="Open AI guide">
+    🌟
+    <span class="ai-notif" id="ai-notif" aria-hidden="true"></span>
+  </button>
+</div>
+
+<!-- Confetti canvas (fallback) -->
+<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SCRIPTS — order matters (data before calculations)
+══════════════════════════════════════════════════════ -->
+<script src="config.js"></script>
+<script src="readings/readings.js"></script>
+<script src="readings/readings-extended.js"></script>
+<script src="readings/deep-readings.js"></script>
+<script src="readings/deep-planet-readings.js"></script>
+<script src="readings/deep-planet-readings-outer.js"></script>
+<script src="readings/deep-numerology-readings.js"></script>
+<script src="readings/deep-node-readings.js"></script>
+<script src="readings/deep-chiron-readings.js"></script>
+<script src="readings/deep-lilith-readings.js"></script>
+<script src="readings/deep-chinese-zodiac-readings.js"></script>
+<script src="readings/deep-transformative-planet-readings.js"></script>
+<script src="readings/calculations.js"></script>
+<script src="ai-guide.js"></script>
+
+<script>
+/* ══════════════════════════════════════════════════════
+   MY-READING HUB — MAIN LOGIC
+══════════════════════════════════════════════════════ */
+
+'use strict';
+
+/* ─── State ─── */
+var HUB = {
+  userData:  null,
+  readings:  null,
+  readCards: [],       // card IDs the user has opened
+  totalCards: 0
+};
+
+/* ─── READING CARD CONFIG ─── */
+/* extractName works for both strings and {name,sign,animal,phase} objects */
+function extractName(v) {
+  if (v == null) return null;
+  if (typeof v === 'string') return v;
+  if (typeof v === 'number') return v;
+  return v.name || v.sign || v.animal || v.phase || v.element || v.modality || null;
+}
+
+/* Lookup reading data from a global object by key (case-insensitive fallback) */
+function lookupReading(objNames, key) {
+  if (key == null) return null;
+  var names = Array.isArray(objNames) ? objNames : [objNames];
+  for (var n of names) {
+    var obj = window[n];
+    if (!obj) continue;
+    if (obj[key]            !== undefined) return obj[key];
+    var lk = String(key).toLowerCase();
+    if (obj[lk]             !== undefined) return obj[lk];
+    var ck = lk.charAt(0).toUpperCase() + lk.slice(1);
+    if (obj[ck]             !== undefined) return obj[ck];
+  }
+  return null;
+}
+
+var CARDS_CONFIG = [
+  /* ── NUMEROLOGY TAB ── */
+  { id:'lifePath',     tab:'numerology', title:'🎤 Life Path — Your Idol Archetype',        getValue: r => r?.numerology?.lifePath,    objs:['LIFE_PATH_READINGS'],                                                    labelFn: v => 'Life Path '+v },
+  { id:'destiny',      tab:'numerology', title:'✨ Destiny Number — Your Debut Concept',    getValue: r => r?.numerology?.destiny,     objs:['DESTINY_NUMBER_READINGS','EXPRESSION_READINGS','LIFE_PATH_READINGS'],    labelFn: v => 'Destiny '+v  },
+  { id:'soulUrge',     tab:'numerology', title:'💜 Soul Urge — Your True Desire',           getValue: r => r?.numerology?.soulUrge,    objs:['SOUL_URGE_READINGS'],                                                    labelFn: v => 'Soul Urge '+v },
+  { id:'personality',  tab:'numerology', title:'🫰 Personality — Your Fan Service Style',   getValue: r => r?.numerology?.personality, objs:['PERSONALITY_NUMBER_READINGS'],                                           labelFn: v => 'Personality '+v },
+  { id:'birthday',     tab:'numerology', title:'🎂 Birthday Number — Your Hidden Talent',   getValue: r => r?.numerology?.birthday,    objs:['BIRTHDAY_NUMBER_READINGS'],                                              labelFn: v => 'Birthday '+v },
+  { id:'expression',   tab:'numerology', title:'🎵 Expression — Your Natural Gift',         getValue: r => r?.numerology?.expression,  objs:['EXPRESSION_READINGS','LIFE_PATH_READINGS'],                              labelFn: v => 'Expression '+v },
+  { id:'maturity',     tab:'numerology', title:'👑 Maturity Number — Your Sunbaenim Era',    getValue: r => r?.numerology?.maturity,    objs:['MATURITY_NUMBER_READINGS','LIFE_PATH_READINGS'],                         labelFn: v => 'Maturity '+v },
+  { id:'hiddenPassion',tab:'numerology', title:'🔥 Hidden Passion — Your Secret Power',     getValue: r => r?.numerology?.hiddenPassion,objs:['HIDDEN_PASSION_READINGS','LIFE_PATH_READINGS'],                          labelFn: v => 'Hidden Passion '+v },
+  { id:'pinnacle1',    tab:'numerology', title:'🏆 Pinnacle 1 — Your Debut Arc',            getValue: r => r?.numerology?.pinnacles?.[0], objs:['PINNACLE_NUMBER_READINGS'],                                           labelFn: v => 'Pinnacle '+v },
+  { id:'pinnacle2',    tab:'numerology', title:'🏆 Pinnacle 2 — Your Breakout Era',         getValue: r => r?.numerology?.pinnacles?.[1], objs:['PINNACLE_NUMBER_READINGS'],                                           labelFn: v => 'Pinnacle '+v },
+  { id:'challenge1',   tab:'numerology', title:'💪 Core Challenge — Your Trainee Battle',   getValue: r => { var c=r?.numerology?.challenges; return Array.isArray(c)?c[0]:(c?.challenge1||c?.main||c?.first); }, objs:['CHALLENGE_NUMBER_READINGS'], labelFn: v => 'Challenge '+v },
+  { id:'challenge2',   tab:'numerology', title:'💪 Second Challenge — Your Growth Arc',     getValue: r => { var c=r?.numerology?.challenges; return Array.isArray(c)?c[1]:(c?.challenge2||c?.second); }, objs:['CHALLENGE_NUMBER_READINGS'], labelFn: v => 'Challenge '+v },
+  { id:'karmicDebt',   tab:'numerology', title:'⚖️ Karmic Debt — Past Life Lessons',       getValue: r => { var k=r?.numerology?.karmicDebt; if(!k) return null; return Array.isArray(k)?k[0]:(k?.number||null); }, objs:['KARMIC_DEBT_READINGS'], labelFn: v => 'Karmic Debt '+v },
+  { id:'masterNumbers',tab:'numerology', title:'∞ Master Numbers — Your Cosmic Amplifier', getValue: r => { var m=r?.numerology?.masterNumbers; if(!m) return null; if(typeof m==='number') return m; return m?.number||m?.master||null; }, objs:['LIFE_PATH_READINGS'], labelFn: v => 'Master Number '+v },
+
+  /* ── ASTROLOGY TAB ── */
+  { id:'sunSign',      tab:'astrology',  title:'☀️ Sun Sign — Your Main Vocal Energy',      getValue: r => extractName(r?.astrology?.sunSign),     objs:['SUN_SIGN_READINGS'],                                       labelFn: v => v },
+  { id:'moonSign',     tab:'astrology',  title:'🌙 Moon Sign — Your Hidden B-Side',         getValue: r => extractName(r?.astrology?.moonSign),    objs:['MOON_SIGN_READINGS','SUN_SIGN_READINGS'],                   labelFn: v => 'Moon in '+v },
+  { id:'risingSign',   tab:'astrology',  title:'⭐ Rising Sign — Your Stage Presence',       getValue: r => extractName(r?.astrology?.risingSign),  objs:['RISING_SIGN_READINGS','SUN_SIGN_READINGS'],                 labelFn: v => v+' Rising' },
+  { id:'mercurySign',  tab:'astrology',  title:'💬 Mercury — Your V-Live Chat Style',       getValue: r => extractName(r?.astrology?.mercurySign), objs:['MERCURY_SIGN_READINGS'],                                   labelFn: v => 'Mercury in '+v },
+  { id:'venusSign',    tab:'astrology',  title:'💗 Venus — Your Visual & Love Language',    getValue: r => extractName(r?.astrology?.venusSign),   objs:['VENUS_SIGN_READINGS'],                                     labelFn: v => 'Venus in '+v },
+  { id:'marsSign',     tab:'astrology',  title:'🔥 Mars — Your Performance Fire',           getValue: r => extractName(r?.astrology?.marsSign),    objs:['MARS_SIGN_READINGS'],                                      labelFn: v => 'Mars in '+v },
+  { id:'jupiterSign',  tab:'astrology',  title:'🌟 Jupiter — Your All-Kill Luck',           getValue: r => extractName(r?.astrology?.jupiterSign), objs:['JUPITER_SIGN_READINGS'],                                   labelFn: v => 'Jupiter in '+v },
+  { id:'saturnSign',   tab:'astrology',  title:'💪 Saturn — Your Trainee Struggle Arc',     getValue: r => extractName(r?.astrology?.saturnSign),  objs:['SATURN_SIGN_READINGS'],                                    labelFn: v => 'Saturn in '+v },
+  { id:'uranusSign',   tab:'astrology',  title:'⚡ Uranus — Your Rebel Concept',            getValue: r => extractName(r?.astrology?.uranusSign),  objs:['URANUS_SIGN_READINGS','OUTER_PLANET_READINGS','SUN_SIGN_READINGS'], labelFn: v => 'Uranus in '+v },
+  { id:'neptuneSign',  tab:'astrology',  title:'🌊 Neptune — Your Dream Stage',            getValue: r => extractName(r?.astrology?.neptuneSign), objs:['NEPTUNE_SIGN_READINGS','OUTER_PLANET_READINGS','SUN_SIGN_READINGS'], labelFn: v => 'Neptune in '+v },
+  { id:'plutoSign',    tab:'astrology',  title:'🌑 Pluto — Your Transformation Arc',       getValue: r => extractName(r?.astrology?.plutoSign),   objs:['PLUTO_SIGN_READINGS','OUTER_PLANET_READINGS','SUN_SIGN_READINGS'],  labelFn: v => 'Pluto in '+v },
+  { id:'chineseZodiac',tab:'astrology',  title:'🐉 Eastern Zodiac — Your Spirit Animal',   getValue: r => extractName(r?.astrology?.chineseZodiac), objs:['CHINESE_ZODIAC_READINGS','DEEP_CHINESE_ZODIAC_READINGS'], labelFn: v => v },
+  { id:'moonPhase',    tab:'astrology',  title:'🌙 Birth Moon Phase — Your Pre-Debut Energy', getValue: r => extractName(r?.astrology?.moonPhase), objs:['MOON_PHASE_READINGS'],                                      labelFn: v => v },
+  { id:'northNode',    tab:'astrology',  title:'🚀 North Node — Your Debut Destiny',       getValue: r => extractName(r?.astrology?.northNode),   objs:['NORTH_NODE_READINGS'],                                     labelFn: v => 'North Node in '+v },
+  { id:'southNode',    tab:'astrology',  title:'🌸 South Node — Your Pre-Debut Gifts',     getValue: r => extractName(r?.astrology?.southNode),   objs:['SOUTH_NODE_READINGS'],                                     labelFn: v => 'South Node in '+v },
+  { id:'chiron',       tab:'astrology',  title:'🩹 Chiron — Your Wounded Healer',          getValue: r => extractName(r?.astrology?.chiron),      objs:['CHIRON_SIGN_READINGS'],                                    labelFn: v => 'Chiron in '+v },
+  { id:'lilith',       tab:'astrology',  title:'🖤 Lilith — Your Shadow Power',            getValue: r => extractName(r?.astrology?.lilith),      objs:['LILITH_SIGN_READINGS'],                                    labelFn: v => 'Lilith in '+v },
+  { id:'element',      tab:'astrology',  title:'🌍 Dominant Element — Your Core Vibe',     getValue: r => extractName(r?.astrology?.element),     objs:['ELEMENT_READINGS'],                                        labelFn: v => v+' Element' },
+  { id:'modality',     tab:'astrology',  title:'⚙️ Modality — Your Action Style',          getValue: r => extractName(r?.astrology?.modality),    objs:['MODALITY_READINGS'],                                       labelFn: v => v+' Modality' },
+
+  /* ── ERA TIMELINE / FORECASTS TAB ── */
+  { id:'personalYear', tab:'forecasts',  title:'📀 Personal Year — This Era\'s Theme',     getValue: r => r?.numerology?.personalYear,  objs:['PERSONAL_YEAR_READINGS'],                                              labelFn: v => 'Personal Year '+v },
+  { id:'personalMonth',tab:'forecasts',  title:'📅 Personal Month — This Month\'s Vibe',   getValue: r => r?.numerology?.personalMonth, objs:['PERSONAL_YEAR_READINGS','PERSONAL_MONTH_READINGS'],                     labelFn: v => 'Personal Month '+v },
+  { id:'personalDay',  tab:'forecasts',  title:'🌅 Personal Day — Today\'s Energy',        getValue: r => r?.numerology?.personalDay,   objs:['PERSONAL_YEAR_READINGS','PERSONAL_MONTH_READINGS'],                     labelFn: v => 'Personal Day '+v },
+  { id:'lifeStage',    tab:'forecasts',  title:'🌱 Life Stage — Your Current Arc',         getValue: r => extractName(r?.lifeCycles?.lifeStage), objs:['LIFE_STAGE_READINGS'],                                          labelFn: v => v },
+  { id:'pinnacle3',    tab:'forecasts',  title:'🏆 Pinnacle 3 — Your Peak Power Era',      getValue: r => r?.numerology?.pinnacles?.[2], objs:['PINNACLE_NUMBER_READINGS'],                                            labelFn: v => 'Pinnacle '+v },
+  { id:'pinnacle4',    tab:'forecasts',  title:'🏆 Pinnacle 4 — Your Legacy Era',          getValue: r => r?.numerology?.pinnacles?.[3], objs:['PINNACLE_NUMBER_READINGS'],                                            labelFn: v => 'Pinnacle '+v }
+];
+
+/* K-Pop link cards (navigate to specialist pages, passing stored userData) */
+var KPOP_LINKS = [
+  { icon:'🌟', title:'Main Character Energy',     desc:'Discover your ultimate K-pop main character archetype',            href:'kpop_main_character.html' },
+  { icon:'💜', title:'Bias Energy Reading',        desc:'What energy do you radiate to your biases?',                       href:'kpop_bias_energy.html'    },
+  { icon:'📊', title:'Idol Chart Analysis',        desc:'Your full K-pop idol metrics chart — visual, vocal, dance & more', href:'kpop_idol_chart.html'     },
+  { icon:'✨', title:'Stage Name Analysis',         desc:'How your name shapes your idol destiny',                           href:'kpop_stage_name.html'     },
+  { icon:'🎋', title:'Lightstick Color',            desc:'Your cosmic lightstick color & concert energy',                    href:'kpop_lightstick.html'     },
+  { icon:'🎤', title:'K-pop Group Generator',       desc:'Build your dream K-pop group lineup',                             href:'kpop_group_generator.html'},
+  { icon:'🎭', title:'Band Builder',                desc:'Debut your own K-pop group from scratch',                         href:'band-builder.html'        },
+  { icon:'❤️', title:'Squad Chemistry Reading',     desc:'How you vibe with your entire squad cosmically',                  href:'squad-chemistry-reading.html' },
+  { icon:'💕', title:'Love Compatibility',          desc:'Venus × Mars compatibility with anyone',                          href:'love-compatibility-reading.html' }
+];
+
+
+/* ══════════════════════════════════════════════════════
+   FORM + PROFILE LOADING
+══════════════════════════════════════════════════════ */
+(function initEntry() {
+  /* populate profile dropdown */
+  var profileRow = document.getElementById('profile-row');
+  var profileSel = document.getElementById('profile-select');
+  try {
+    var profiles = JSON.parse(localStorage.getItem('quantumMerlinProfiles') || '{}');
+    var keys = Object.keys(profiles);
+    if (keys.length > 0) {
+      profileRow.classList.add('visible');
+      profileSel.innerHTML = '<option value="">— Load a saved profile —</option>' +
+        keys.map(function(k){ return '<option value="'+escHtml(k)+'">'+escHtml(k)+'</option>'; }).join('');
+    }
+  } catch(_) {}
+
+  /* check if we have a cached session */
+  try {
+    var session = JSON.parse(localStorage.getItem('kk-hub-session') || 'null');
+    if (session && session.userData && session.readings && session.timestamp) {
+      var age = Date.now() - session.timestamp;
+      if (age < 24*60*60*1000) { // valid for 24h
+        applySession(session);
+        return;
+      }
+    }
+  } catch(_) {}
+})();
+
+function loadProfile() {
+  var key = document.getElementById('profile-select')?.value;
+  if (!key) return;
+  try {
+    var profiles = JSON.parse(localStorage.getItem('quantumMerlinProfiles') || '{}');
+    var p = profiles[key];
+    if (!p) return;
+    var d = document.getElementById('inp-name');  if(d) d.value = p.preferredName || key;
+    var e = document.getElementById('inp-date');  if(e) e.value = p.birthDate || '';
+    var f = document.getElementById('inp-time');  if(f) f.value = p.birthTime || '';
+    var g = document.getElementById('inp-place'); if(g) g.value = p.birthPlace || '';
+  } catch(_) {}
+}
+
+/* Form submit */
+document.getElementById('entry-form').addEventListener('submit', function(ev) {
+  ev.preventDefault();
+  var name  = document.getElementById('inp-name')?.value?.trim();
+  var date  = document.getElementById('inp-date')?.value;
+  var time  = document.getElementById('inp-time')?.value || '';
+  var place = document.getElementById('inp-place')?.value?.trim() || '';
+
+  if (!name || !date) return;
+
+  var userData = { name, birthDate: date, birthTime: time, birthPlace: place };
+  revealReading(userData);
+});
+
+function revealReading(userData) {
+  showLoading(true);
+  /* defer to next tick so loading overlay renders */
+  setTimeout(function() {
+    try {
+      if (typeof calculateAllReadings !== 'function') {
+        showLoading(false);
+        alert('Calculation engine not loaded. Please check your connection and reload the page.');
+        return;
+      }
+      var readings = calculateAllReadings(userData);
+      var session = { userData, readings, readCards: [], timestamp: Date.now() };
+      localStorage.setItem('kk-hub-session', JSON.stringify(session));
+      applySession(session);
+    } catch(err) {
+      showLoading(false);
+      console.error('calculateAllReadings failed:', err);
+      alert('Could not calculate readings: ' + err.message + '\nTry checking your birth date format.');
+    }
+  }, 80);
+}
+
+function applySession(session) {
+  HUB.userData  = session.userData;
+  HUB.readings  = session.readings;
+  HUB.readCards = session.readCards || [];
+
+  showHubSection();
+  renderHub();
+  showLoading(false);
+
+  KK_AI.init(HUB.userData, HUB.readings);
+  KK_Achievements.renderGrid();
+  KK_Streak.updateUI();
+}
+
+function startNewReading() {
+  if (!confirm('Start a new reading? Your current session will be cleared.')) return;
+  localStorage.removeItem('kk-hub-session');
+  HUB.userData = null; HUB.readings = null; HUB.readCards = [];
+  document.getElementById('hub-section').style.display   = 'none';
+  document.getElementById('entry-section').style.display = '';
+  document.getElementById('ai-widget').style.display = 'none';
+  // reset form
+  document.getElementById('inp-name').value = '';
+  document.getElementById('inp-date').value = '';
+  document.getElementById('inp-time').value = '';
+  document.getElementById('inp-place').value = '';
+}
+
+
+/* ══════════════════════════════════════════════════════
+   HUB RENDERING
+══════════════════════════════════════════════════════ */
+function showHubSection() {
+  document.getElementById('entry-section').style.display = 'none';
+  document.getElementById('hub-section').style.display   = '';
+  document.getElementById('ai-widget').style.display     = '';
+}
+
+function renderHub() {
+  var r  = HUB.readings;
+  var ud = HUB.userData;
+
+  /* User info header */
+  var el = document.getElementById('hub-name'); if(el) el.textContent = ud.name;
+  var bd = ud.birthDate ? new Date(ud.birthDate+'T12:00:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}) : '';
+  el = document.getElementById('hub-date'); if(el) el.textContent = bd;
+
+  /* Big Three */
+  setInnerText('b3-sun',    extractName(r?.astrology?.sunSign)    || '?');
+  setInnerText('b3-moon',   extractName(r?.astrology?.moonSign)   || '?');
+  setInnerText('b3-rising', extractName(r?.astrology?.risingSign) || '?');
+
+  /* Build reading cards per tab */
+  var tabs = ['numerology','astrology','forecasts'];
+  tabs.forEach(function(tab) {
+    var cards = CARDS_CONFIG.filter(function(c){ return c.tab === tab; });
+    var grid  = document.getElementById('grid-'+tab);
+    if (!grid) return;
+    grid.innerHTML = '';
+    cards.forEach(function(cfg) {
+      grid.appendChild(buildCard(cfg));
+    });
+    /* Tab count (total, not read) */
+    var tc = document.getElementById('tc-'+tab);
+    if (tc) tc.textContent = cards.length;
+  });
+
+  /* K-Pop link cards */
+  var kpopGrid = document.getElementById('grid-kpop');
+  if (kpopGrid) {
+    kpopGrid.innerHTML = '';
+    KPOP_LINKS.forEach(function(lnk) {
+      var a = document.createElement('a');
+      a.className = 'link-card';
+      a.href = lnk.href;
+      a.innerHTML = '<div class="link-card-icon">'+lnk.icon+'</div>' +
+                    '<div class="link-card-body"><div class="link-card-title">'+escHtml(lnk.title)+'</div><div class="link-card-desc">'+escHtml(lnk.desc)+'</div></div>' +
+                    '<div class="link-card-arrow">→</div>';
+      kpopGrid.appendChild(a);
+    });
+  }
+
+  /* Total card count & progress */
+  HUB.totalCards = CARDS_CONFIG.length;
+  updateProgress();
+}
+
+/* ── Build one reading card ── */
+function buildCard(cfg) {
+  var val  = cfg.getValue ? cfg.getValue(HUB.readings) : null;
+  var data = (val != null) ? lookupReading(cfg.objs, val) : null;
+  var label = (val != null && cfg.labelFn) ? cfg.labelFn(val) : '';
+
+  var card = document.createElement('div');
+  card.className = 'reading-card' + (HUB.readCards.includes(cfg.id) ? ' is-read' : '');
+  card.dataset.id = cfg.id;
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('aria-expanded', 'false');
+
+  /* Header */
+  var keywords = (data?.keywords || []).slice(0,4);
+  var kwHtml = keywords.map(function(k){ return '<span class="kw-tag">'+escHtml(k)+'</span>'; }).join('');
+
+  card.innerHTML =
+    '<div class="card-header">' +
+      '<div class="card-title-wrap">' +
+        '<div class="card-title">'+escHtml(cfg.title)+'</div>' +
+        (label ? '<div class="card-val-label">'+escHtml(label)+'</div>' : '') +
+      '</div>' +
+      '<div class="card-icons">' +
+        '<span class="read-badge">✓ read</span>' +
+        '<span class="card-lock">🔒</span>' +
+        '<span class="card-chevron">▼</span>' +
+      '</div>' +
+    '</div>' +
+    (kwHtml ? '<div class="card-keywords">'+kwHtml+'</div>' : '') +
+    '<div class="card-body">' +
+      '<hr class="card-divider">' +
+      buildCardBodyHTML(data, cfg, val) +
+      '<button class="btn-ask-star" onclick="askStar(event,\''+escHtml(cfg.title)+'\',\''+escHtml(label)+'\')">🌟 Ask STAR about this reading</button>' +
+    '</div>';
+
+  /* Toggle on click/keyboard */
+  function toggle() {
+    var wasOpen = card.classList.contains('open');
+    /* close other open cards in same grid for clean UX */
+    var grid = card.parentElement;
+    if (grid) grid.querySelectorAll('.reading-card.open').forEach(function(c){ if(c!==card) _closeCard(c); });
+
+    if (wasOpen) {
+      _closeCard(card);
+    } else {
+      _openCard(card, cfg.id);
+    }
+  }
+
+  card.addEventListener('click', function(e) {
+    if (e.target.classList.contains('btn-ask-star')) return;
+    toggle();
+  });
+  card.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+  });
+
+  return card;
+}
+
+function _openCard(card, id) {
+  card.classList.add('open');
+  card.setAttribute('aria-expanded', 'true');
+  /* Reveal flash */
+  card.classList.remove('reveal-flash');
+  void card.offsetWidth; // reflow
+  card.classList.add('reveal-flash');
+  KK_Sound.play('flip');
+
+  /* Mark as read */
+  if (!HUB.readCards.includes(id)) {
+    HUB.readCards.push(id);
+    card.classList.add('is-read');
+    persistReadCards();
+    updateProgress();
+
+    var readCount = HUB.readCards.length;
+    KK_Achievements.check('card_read', { readCount });
+    if (readCount === 1) KK_Achievements.unlock('first_debut');
+    if (readCount >= HUB.totalCards * 0.85) KK_Achievements.unlock('cosmic_scholar');
+    KK_Achievements.checkBigThree(HUB.readCards);
+
+    /* Tell AI */
+    KK_AI.onCardOpened(id, card.querySelector('.card-title')?.textContent || '', readCount);
+  }
+}
+
+function _closeCard(card) {
+  card.classList.remove('open');
+  card.setAttribute('aria-expanded', 'false');
+}
+
+/* ── Card body HTML ── */
+function buildCardBodyHTML(data, cfg, val) {
+  if (!data && (val == null)) {
+    return '<p class="card-no-data">No data available for this placement. Birth time or place may be needed for more accuracy. 🌙</p>';
+  }
+  if (!data) {
+    return '<p class="card-no-data">Reading text coming soon for ' + escHtml(String(val)) + '. ✨</p>';
+  }
+
+  var html = '';
+
+  /* Main reading text */
+  var text = data.reading || data.description || data.text || data.summary || '';
+  if (text) {
+    html += '<div class="reading-text">'+escHtml(text).replace(/\n/g,'<br>')+'</div>';
+  }
+
+  /* Strengths */
+  var strengths = data.strengths || data.gifts || [];
+  if (strengths.length > 0) {
+    html += '<div class="mini-section-title">✨ Strengths</div>' +
+            '<ul class="pill-list strengths">' +
+            strengths.slice(0,5).map(function(s){ return '<li>'+escHtml(s)+'</li>'; }).join('') +
+            '</ul>';
+  }
+
+  /* Challenges */
+  var challenges = data.challenges || data.shadow || [];
+  if (challenges.length > 0) {
+    html += '<div class="mini-section-title">💪 Growth Areas</div>' +
+            '<ul class="pill-list challenges">' +
+            challenges.slice(0,4).map(function(c){ return '<li>'+escHtml(c)+'</li>'; }).join('') +
+            '</ul>';
+  }
+
+  /* Advice */
+  var advice = data.advice || data.tip || data.guidance || '';
+  if (advice) {
+    html += '<div class="card-advice">' + escHtml(advice) + '</div>';
+  }
+
+  return html || '<p class="card-no-data">Tap "Ask STAR" for a personalized interpretation of this placement! 🌟</p>';
+}
+
+/* ── Progress ── */
+function updateProgress() {
+  var read  = HUB.readCards.length;
+  var total = HUB.totalCards;
+  var pct   = total > 0 ? Math.round((read / total) * 100) : 0;
+
+  var fill = document.getElementById('progress-fill'); if(fill) fill.style.width = pct+'%';
+  var num  = document.getElementById('prog-num');      if(num)  num.textContent  = read;
+  var tot  = document.getElementById('prog-total');    if(tot)  tot.textContent  = total;
+
+  if (pct === 100) {
+    KK_Sound.play('complete');
+    KK_Confetti.burst({ particleCount: 220 });
+  }
+}
+
+function persistReadCards() {
+  try {
+    var session = JSON.parse(localStorage.getItem('kk-hub-session') || '{}');
+    session.readCards = HUB.readCards;
+    localStorage.setItem('kk-hub-session', JSON.stringify(session));
+  } catch(_) {}
+}
+
+
+/* ══════════════════════════════════════════════════════
+   TAB SWITCHING
+══════════════════════════════════════════════════════ */
+document.querySelectorAll('.tab-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var tab = btn.dataset.tab; if (!tab) return;
+
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+
+    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+    var panel = document.getElementById('tab-'+tab);
+    if (panel) panel.classList.add('active');
+  });
+});
+
+
+/* ══════════════════════════════════════════════════════
+   FUN FEATURES
+══════════════════════════════════════════════════════ */
+
+/* Surprise Me — spotlight a random unread card */
+function doSurpriseMe() {
+  KK_Achievements.unlock('surprise');
+  var unread = CARDS_CONFIG.filter(function(c){ return !HUB.readCards.includes(c.id); });
+  if (unread.length === 0) {
+    KK_AI.open();
+    var inp = document.getElementById('ai-input'); if(inp) { inp.value = 'I\'ve read everything! What should I focus on?'; }
+    return;
+  }
+  var pick = unread[Math.floor(Math.random() * unread.length)];
+
+  /* Switch to the right tab */
+  var tabBtn = document.querySelector('[data-tab="'+pick.tab+'"]');
+  if (tabBtn) tabBtn.click();
+
+  /* Find the card and highlight it */
+  setTimeout(function() {
+    var card = document.querySelector('[data-id="'+pick.id+'"]');
+    if (!card) return;
+    /* Remove existing spotlights */
+    document.querySelectorAll('.surprise-glow').forEach(function(c){ c.classList.remove('surprise-glow'); });
+    card.classList.add('surprise-glow');
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(function(){ card.classList.remove('surprise-glow'); }, 5000);
+    KK_Sound.play('ping');
+  }, 200);
+}
+
+/* Daily Check-In */
+function doCheckIn() {
+  var result = KK_Streak.checkIn();
+  KK_Confetti.burst({ particleCount: 60, spread: 50 });
+  /* Update panel numbers */
+  document.querySelectorAll('#streak-panel-num').forEach(function(el){ el.textContent = result.count; });
+  document.querySelectorAll('#streak-badge').forEach(function(el){ el.textContent = result.count; });
+}
+
+/* Cosmic ID Card */
+function openIdCardModal() {
+  KK_IDCard.generate(HUB.userData, HUB.readings);
+  document.getElementById('modal-idcard')?.classList.add('open');
+}
+function closeIdCardModal() {
+  document.getElementById('modal-idcard')?.classList.remove('open');
+}
+
+/* API Key modal */
+function openApiKeyModal() {
+  document.getElementById('modal-apikey')?.classList.add('open');
+  var inp = document.getElementById('ak-input');
+  if (inp) {
+    var existing = localStorage.getItem('kk-user-apikey') || '';
+    inp.value = existing ? '••••••••••••' : '';
+    inp.placeholder = existing ? 'Key saved — enter a new one to replace' : 'sk-or-…';
+  }
+}
+function closeApiKeyModal() {
+  document.getElementById('modal-apikey')?.classList.remove('open');
+}
+function saveApiKey() {
+  var inp = document.getElementById('ak-input');
+  var val = inp?.value?.trim() || '';
+  if (val && val !== '••••••••••••') {
+    var ok = KK_AI.saveApiKey(val);
+    if (ok) {
+      closeApiKeyModal();
+      KK_Achievements.unlock('ai_chat');
+      showToast('🔑', 'API Key Saved!', 'Unlimited STAR conversations activated!');
+    } else {
+      alert('That doesn\'t look like a valid API key. It should start with "sk-or-".');
+    }
+  } else {
+    /* Clear if empty */
+    KK_AI.clearApiKey();
+    closeApiKeyModal();
+  }
+}
+
+/* Close modals when clicking backdrop */
+document.querySelectorAll('.modal-overlay').forEach(function(m) {
+  m.addEventListener('click', function(e) {
+    if (e.target === m) m.classList.remove('open');
+  });
+});
+
+/* Ask STAR from a card */
+function askStar(e, title, label) {
+  e.stopPropagation();
+  KK_AI.askAboutCard(title, label);
+  KK_Achievements.unlock('ai_chat');
+}
+
+/* AI input helpers */
+function sendAIMessage() {
+  var inp = document.getElementById('ai-input');
+  if (!inp) return;
+  var text = inp.value.trim();
+  if (!text) return;
+  KK_Achievements.unlock('ai_chat');
+  KK_AI.sendMessage(text);
+  inp.value = '';
+}
+function chipClick(btn) {
+  var text = btn.textContent;
+  KK_AI.sendMessage(text);
+  KK_Achievements.unlock('ai_chat');
+}
+
+
+/* ══════════════════════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════════════════════ */
+function escHtml(str) {
+  if (str == null) return '';
+  return String(str)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+function setInnerText(id, text) {
+  var el = document.getElementById(id);
+  if (el) el.textContent = text;
+}
+
+function showLoading(on) {
+  var el = document.getElementById('loading-overlay');
+  if (!el) return;
+  if (on) {
+    el.classList.add('show');
+    /* Cycle loading messages */
+    var msgs = (window.BRAND_CONFIG?.loadingMessages) || ['Calculating your idol blueprint… 🌟'];
+    var msgEl = document.getElementById('loading-msg');
+    if (msgEl) {
+      var idx = 0;
+      msgEl.textContent = msgs[0];
+      window._loadingInterval = setInterval(function(){
+        idx = (idx + 1) % msgs.length;
+        msgEl.textContent = msgs[idx];
+      }, 1200);
+    }
+  } else {
+    el.classList.remove('show');
+    clearInterval(window._loadingInterval);
+  }
+}
+
+/* Simple toast (re-uses achievement toast) */
+function showToast(icon, name, desc) {
+  document.getElementById('toast-icon').textContent = icon;
+  document.getElementById('toast-name').textContent = name;
+  document.getElementById('toast-desc').textContent = desc;
+  var t = document.getElementById('achievement-toast');
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 3200);
+}
+
+
+/* ══════════════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════════════ */
+KK_Particles_init();
+
+/* Keyboard: Escape closes modals */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(function(m){ m.classList.remove('open'); });
+    KK_AI.close();
+  }
+});
+
+/* Prevent AI widget from hiding when it's over interactive elements */
+document.getElementById('ai-widget')?.addEventListener('click', function(e){ e.stopPropagation(); });
+</script>
+
+</body>
+</html>
