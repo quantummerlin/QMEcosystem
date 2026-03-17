@@ -14,8 +14,16 @@
    ===================================================== */
 
 /* ─── CONFIG (overridden by window.KK_CONFIG if set) ─── */
+// PRIVACY: These models are governed by Google/Mistral/Meta API policies —
+// they do NOT train on API data. PII (name, birth date, time, place) is
+// NEVER sent to any API. Only derived chart values are included in prompts.
 var KK_AI_CONFIG = window.KK_CONFIG?.ai || {
-  model: 'openrouter/healer-alpha',
+  // Model waterfall — tried in order; falls back on 429/503 rate-limit errors.
+  models: [
+    'google/gemini-2.0-flash-exp:free',      // Primary: fast, smart, privacy-safe
+    'mistralai/mistral-7b-instruct:free',    // Fallback 1: emotionally fluent
+    'meta-llama/llama-3.1-8b-instruct:free' // Fallback 2: reliable last resort
+  ],
   siteKey: '',          // Set your OpenRouter API key here
   dailyLimit: 10,
   personaName: 'STAR',
@@ -169,67 +177,150 @@ var KK_AI = (function () {
     }
   }
 
-  /* ── Private: build STAR system prompt ── */
+  /* ── Private: build STAR system prompt (PII-FREE) ── */
+  // PRIVACY: We deliberately NEVER include name, birth date, birth time, or
+  // birth place in any API call. Only DERIVED chart values (sign names,
+  // numerology numbers) are sent — these are not personally identifiable.
   function _buildSystemPrompt() {
     var r = _readings;
-    var lp  = r?.numerology?.lifePath;
+
+    // Numerology — numbers only, no raw dates
+    var lp      = r?.numerology?.lifePath;
     var lpTitle = window.LIFE_PATH_READINGS?.[lp]?.title || '';
-    var sun  = _extractName(r?.astrology?.sunSign);
-    var moon = _extractName(r?.astrology?.moonSign);
-    var rise = _extractName(r?.astrology?.risingSign);
-    var py   = r?.numerology?.personalYear;
-    var dest = r?.numerology?.destiny;
-    var u    = _userData || {};
+    var dest    = r?.numerology?.destiny;
+    var su      = r?.numerology?.soulUrge;
+    var pers    = r?.numerology?.personality;
+    var expr    = r?.numerology?.expression;
+    var mat     = r?.numerology?.maturity;
+    var bday    = r?.numerology?.birthday;
+    var py      = r?.numerology?.personalYear;
+    var pm      = r?.numerology?.personalMonth;
+
+    // Astrology — sign names only, no raw birth data
+    var sun    = _extractName(r?.astrology?.sunSign);
+    var moon   = _extractName(r?.astrology?.moonSign);
+    var rise   = _extractName(r?.astrology?.risingSign);
+    var merc   = _extractName(r?.astrology?.mercurySign);
+    var venus  = _extractName(r?.astrology?.venusSign);
+    var mars   = _extractName(r?.astrology?.marsSign);
+    var jup    = _extractName(r?.astrology?.jupiterSign);
+    var sat    = _extractName(r?.astrology?.saturnSign);
+    var elem   = _extractName(r?.astrology?.element);
+    var mod    = _extractName(r?.astrology?.modality);
+    var nn     = _extractName(r?.astrology?.northNode);
+    var chiron = _extractName(r?.astrology?.chiron);
+    var cz     = _extractName(r?.astrology?.chineseZodiac);
+    var moonPh = _extractName(r?.astrology?.moonPhase);
+
+    var chart =
+      '=== COSMIC CHART (derived values only — no personal data) ===\n\n' +
+      '— NUMEROLOGY —\n' +
+      'Life Path: '     + (lp   || '?') + (lpTitle ? ' (' + lpTitle + ')' : '') + '\n' +
+      'Destiny: '       + (dest || '?') + '\n' +
+      'Soul Urge: '     + (su   || '?') + '\n' +
+      'Personality: '   + (pers || '?') + '\n' +
+      'Expression: '    + (expr || '?') + '\n' +
+      'Maturity: '      + (mat  || '?') + '\n' +
+      'Birthday No.: '  + (bday || '?') + '\n' +
+      'Personal Year: ' + (py   || '?') + '\n' +
+      'Personal Month: '+ (pm   || '?') + '\n\n' +
+      '— ASTROLOGY —\n' +
+      'Sun: '           + (sun    || '?') + '\n' +
+      'Moon: '          + (moon   || '?') + '\n' +
+      'Rising: '        + (rise   || '?') + '\n' +
+      'Mercury: '       + (merc   || '?') + '\n' +
+      'Venus: '         + (venus  || '?') + '\n' +
+      'Mars: '          + (mars   || '?') + '\n' +
+      'Jupiter: '       + (jup    || '?') + '\n' +
+      'Saturn: '        + (sat    || '?') + '\n' +
+      'Element: '       + (elem   || '?') + '\n' +
+      'Modality: '      + (mod    || '?') + '\n' +
+      'North Node: '    + (nn     || '?') + '\n' +
+      'Chiron: '        + (chiron || '?') + '\n' +
+      'Chinese Zodiac: '+ (cz     || '?') + '\n' +
+      'Moon Phase: '    + (moonPh || '?');
 
     return 'You are STAR (Stellar Trajectory & Aura Reader) \u2014 a legendary K-pop idol from 2087 who mastered cosmic astrology and numerology.\n\n' +
       'YOUR PERSONALITY:\n' +
       '\u2022 Sassy, hype, and supportive like an iconic idol mentor\n' +
       '\u2022 Use K-pop language naturally: era, comeback, debut, slay, ate that, main character, bias wrecker, visual, center, maknae, sunbaenim, \ud654\uc774\ud305 (hwaiting), daesang, ult, stan\n' +
-      '\u2022 Occasionally reference K-pop artists/groups to illustrate points\n' +
-      '\u2022 Be specific \u2014 point out connections BETWEEN different readings\n' +
+      '\u2022 Occasionally reference K-pop artists/groups to illustrate cosmic points\n' +
+      '\u2022 Be SPECIFIC \u2014 cross-reference multiple placements in your answers\n' +
       '\u2022 Keep responses UNDER 200 words \u2014 punchy like a good lyric\n' +
-      '\u2022 End with a \u2728 or K-pop phrase signature\n' +
-      '\u2022 NEVER make up birth data or readings\n\n' +
-      'USER PROFILE:\n' +
-      '\u2022 Name: ' + (u.name || 'unknown') + '\n' +
-      '\u2022 Life Path ' + lp + (lpTitle ? ': ' + lpTitle : '') + '\n' +
-      '\u2022 Sun: ' + (sun || 'unknown') + ' · Moon: ' + (moon || 'unknown') + ' · Rising: ' + (rise || 'unknown') + '\n' +
-      '\u2022 Personal Year: ' + (py || 'unknown') + ' · Destiny: ' + (dest || 'unknown') + '\n' +
-      '\u2022 Birth Date: ' + (u.birthDate || 'unknown') +
-      (u.birthTime  ? ' · Time: ' + u.birthTime  : '') +
-      (u.birthPlace ? ' · Place: ' + u.birthPlace : '') + '\n\n' +
+      '\u2022 End every response with \u2728 or a K-pop phrase\n' +
+      '\u2022 NEVER fabricate readings. Only reference the chart values below.\n\n' +
+      chart + '\n\n' +
       'YOUR ROLE:\n' +
-      '1. Clarify specific readings the user asks about\n' +
-      '2. Spot fascinating cross-reading patterns (e.g. "Venus in Scorpio + Soul Urge 8 = main character of every love story")\n' +
-      '3. Highlight things they may have missed\n' +
-      '4. Give actionable advice wrapped in K-pop metaphors';
+      '1. Answer questions about specific readings in STAR\'s voice\n' +
+      '2. Spot cross-pattern insights (e.g. "Venus in Scorpio + Soul Urge 8 = the main character of every love story")\n' +
+      '3. Point out things the user may have missed\n' +
+      '4. Give actionable advice wrapped in K-pop metaphors\n\n' +
+      'PRIVACY NOTE: You have NOT been given the user\'s name, birth date, time, or location. Do not ask for them. Work only from the chart values above.';
   }
 
-  /* ── Private: OpenRouter fetch (SSE streaming) ── */
+  /* ── Private: OpenRouter fetch with model waterfall ── */
+  // Tries each model in KK_AI_CONFIG.models in order.
+  // Falls back to next model ONLY on 429 (rate limit) or 503 (unavailable).
+  // All other HTTP errors (401 bad key, 400 bad request) fail immediately.
   async function _callOpenRouter(messages, apiKey) {
     if (!apiKey) throw new Error('NO_KEY');
-    var res = await fetch(KK_AI_CONFIG.endpoint, {
-      method: 'POST',
-      headers: {
-        'Authorization': 'Bearer ' + apiKey,
-        'Content-Type': 'application/json',
-        'HTTP-Referer': window.location.origin,
-        'X-Title': 'K-pop Kosmic'
-      },
-      body: JSON.stringify({
-        model: KK_AI_CONFIG.model,
-        messages: messages,
-        stream: true,
-        max_tokens: 500,
-        temperature: 0.92
-      })
-    });
-    if (!res.ok) {
-      var err = {};
-      try { err = await res.clone().json(); } catch(_) {}
-      throw new Error((err.error?.message || err.message || 'HTTP ' + res.status));
+
+    var models = (KK_AI_CONFIG.models && KK_AI_CONFIG.models.length)
+      ? KK_AI_CONFIG.models
+      : ['google/gemini-2.0-flash-exp:free', 'mistralai/mistral-7b-instruct:free', 'meta-llama/llama-3.1-8b-instruct:free'];
+
+    var lastError = null;
+    for (var i = 0; i < models.length; i++) {
+      var model = models[i];
+      try {
+        var res = await fetch(KK_AI_CONFIG.endpoint, {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer ' + apiKey,
+            'Content-Type': 'application/json',
+            'HTTP-Referer': window.location.origin,
+            'X-Title': 'K-pop Kosmic'
+          },
+          body: JSON.stringify({
+            model: model,
+            messages: messages,
+            stream: true,
+            max_tokens: 500,
+            temperature: 0.92
+          })
+        });
+
+        if (res.ok) return res.body; // success — return readable stream
+
+        // Parse error details
+        var errBody = {};
+        try { errBody = await res.clone().json(); } catch(_) {}
+        var errMsg = errBody.error?.message || errBody.message || 'HTTP ' + res.status;
+
+        // 429 rate-limit / 503 model unavailable → try next in waterfall
+        if (res.status === 429 || res.status === 503) {
+          console.warn('[STAR] Model ' + model + ' unavailable (' + res.status + '), trying next…');
+          lastError = new Error(errMsg);
+          continue;
+        }
+
+        // Auth failure or other hard errors → don't bother trying other models
+        throw new Error(errMsg);
+
+      } catch (fetchErr) {
+        // Re-throw auth/key errors immediately
+        var msg = fetchErr.message || '';
+        if (msg === 'NO_KEY' || msg.includes('401') || msg.includes('Unauthorized')) {
+          throw fetchErr;
+        }
+        // Network-level error (offline, DNS fail) → try next model
+        lastError = fetchErr;
+        continue;
+      }
     }
-    return res.body;
+
+    // All models exhausted
+    throw lastError || new Error('All models unavailable — try again in a moment');
   }
 
   /* ── Private: read SSE stream, render live ── */

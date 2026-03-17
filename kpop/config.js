@@ -283,8 +283,17 @@ var BRAND_CONFIG = {
     // 🤖 AI GUIDE — STAR
     // ============================================
     ai: {
-        // OpenRouter model to use (free tier)
-        model: 'openrouter/healer-alpha',
+        // PRIVACY: These are third-party models (Google, Mistral, Meta) routed
+        // through OpenRouter. They do NOT train on API data. The system prompt
+        // never includes name, birth date, time, or place — only derived chart
+        // values (sign names, numbers).
+        //
+        // Models are tried in order; falls back on 429/503 rate-limit errors.
+        models: [
+            'google/gemini-2.0-flash-exp:free',      // Primary: fast, smart
+            'mistralai/mistral-7b-instruct:free',    // Fallback 1
+            'meta-llama/llama-3.1-8b-instruct:free' // Fallback 2
+        ],
 
         // ⚠️  OWNER ACTION REQUIRED:
         // Paste your OpenRouter API key below (free tier).
