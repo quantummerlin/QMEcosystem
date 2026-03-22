@@ -8,7 +8,7 @@ const State = {
   currentModelId: null,
   threads: {},          // { threadId: { id, title, modelId, messages: [], createdAt } }
   apiKey: '',
-  theme: 'quantum',
+  theme: 'dark',
   skills: [],
   memory: [],
   isStreaming: false,
@@ -108,7 +108,7 @@ function init() {
 function loadState() {
   try {
     State.apiKey = localStorage.getItem(KEYS.apiKey) || '';
-    State.theme = localStorage.getItem(KEYS.theme) || 'quantum';
+    State.theme = localStorage.getItem(KEYS.theme) || 'dark';
     State.currentModelId = localStorage.getItem(KEYS.currentModel) || MODEL_REGISTRY[0].id;
     State.currentThreadId = localStorage.getItem(KEYS.currentThread) || null;
 
@@ -1266,7 +1266,7 @@ function updateTierDisplay() {
   const tierInfoEl = document.getElementById('tierInfo');
   if (tierInfoEl) {
     tierInfoEl.innerHTML = `
-      <div style="padding: 12px; background: var(--hover-bg); border-radius: 8px; margin-bottom: 12px;">
+      <div style="padding: 12px; background: var(--hover); border-radius: 8px; margin-bottom: 12px;">
         <div style="font-size: 12px; font-weight: 600; margin-bottom: 4px;">Current Plan: ${tier === 'FREE' ? 'Free Tier' : 'BYO API'}</div>
         <div style="font-size: 11px; opacity: 0.6;">${remaining} / ${limit} requests remaining today</div>
       </div>

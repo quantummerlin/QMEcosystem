@@ -1,20 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="quantum">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Quantum Merlin AI Hub</title>
   <meta name="description" content="Free ethical AI chat aggregator. Access multiple AI models in one interface.">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/theme-quantum.css">
-  <link rel="stylesheet" href="css/theme-dark.css">
-  <link rel="stylesheet" href="css/theme-white.css">
-  <style>
-    /* Inline critical: prevent FOUC */
-    html { background: #0a0a0f; }
-    html[data-theme="dark"] { background: #111111; }
-    html[data-theme="white"] { background: #ffffff; }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <style>html{background:#111111}html[data-theme="quantum"]{background:#0c0c14}html[data-theme="white"]{background:#fff}</style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
@@ -31,35 +23,12 @@
     <aside class="sidebar" id="sidebar">
 
       <div class="sidebar-header">
-        <!-- Brand -->
         <div class="sidebar-brand">
           <div class="sidebar-brand-icon">QM</div>
           <div class="sidebar-brand-name">Quantum Merlin</div>
         </div>
-
-        <!-- Model Selector -->
-        <div class="model-selector-wrap" id="modelSelectorWrap">
-          <button class="model-selector-btn" id="modelSelectorBtn" aria-expanded="false">
-            <span class="model-name" id="currentModelName">Select a model...</span>
-            <span class="chevron">&#9662;</span>
-          </button>
-          <div class="model-dropdown" id="modelDropdown">
-            <div class="model-dropdown-search">
-              <input type="text" id="modelSearchInput" placeholder="Search models..." autocomplete="off">
-            </div>
-            <div class="model-dropdown-list" id="modelDropdownList">
-              <!-- Populated by JS -->
-            </div>
-            <div class="model-dropdown-footer">
-              Model not working? <a href="mailto:brokenmodel@quantummerlin.com">Report it</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- New Chat Button -->
-        <button class="new-chat-btn" id="newChatBtn">
+        <button class="new-chat-btn" id="newChatBtn" title="New Chat">
           <span class="plus-icon">+</span>
-          <span>New Chat</span>
         </button>
       </div>
 
@@ -85,17 +54,34 @@
       <header class="top-bar">
         <div class="top-bar-left">
           <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle sidebar">&#9776;</button>
-          <span class="top-bar-thread-info" id="threadInfo"></span>
         </div>
-        <div class="top-bar-right">
-          <div class="token-counter" id="tokenCounter" title="Requests remaining today">
-            20 left today
-          </div>
-          <button class="right-menu-btn" id="rightMenuBtn" aria-label="Settings menu" aria-expanded="false">
-            &#8942;
+
+        <!-- Model Selector (centered) -->
+        <div class="model-selector-wrap" id="modelSelectorWrap">
+          <button class="model-selector-btn" id="modelSelectorBtn" aria-expanded="false">
+            <span class="model-name" id="currentModelName">Select model...</span>
+            <span class="chevron">&#9662;</span>
           </button>
+          <div class="model-dropdown" id="modelDropdown">
+            <div class="model-dropdown-search">
+              <input type="text" id="modelSearchInput" placeholder="Search models..." autocomplete="off">
+            </div>
+            <div class="model-dropdown-list" id="modelDropdownList">
+              <!-- Populated by JS -->
+            </div>
+            <div class="model-dropdown-footer">
+              Model not working? <a href="mailto:brokenmodel@quantummerlin.com">Report it</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-bar-right">
+          <div class="token-counter" id="tokenCounter" title="Requests remaining today"></div>
+          <button class="right-menu-btn" id="rightMenuBtn" aria-label="Menu" aria-expanded="false">&#8942;</button>
         </div>
       </header>
+      <!-- threadInfo: kept for JS, hidden visually -->
+      <span id="threadInfo" style="display:none;"></span>
 
       <!-- Right Dropdown Menu -->
       <div class="right-menu-dropdown" id="rightMenuDropdown">
