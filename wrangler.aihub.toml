@@ -1,0 +1,32 @@
+# ============================================================
+# Quantum Merlin AI Hub — Proxy Worker
+# Deploy with: wrangler deploy --config wrangler.aihub.toml
+# ============================================================
+
+name               = "qm-aihub-proxy"
+main               = "cloudflare/aihub-worker.js"
+compatibility_date = "2026-01-31"
+
+# ── KV Namespace ─────────────────────────────────────────────
+# Create it first:
+#   wrangler kv:namespace create AIHUB_RATE_LIMITS --config wrangler.aihub.toml
+# Then paste the returned id below.
+[[kv_namespaces]]
+binding = "AIHUB_RATE_LIMITS"
+id      = "e2c2c1824f164a32bd0f662421c5469e"
+
+# ── Route ────────────────────────────────────────────────────
+# Uncomment after deployment, or set the route in the Cloudflare dashboard:
+# Workers & Pages → qm-aihub-proxy → Settings → Triggers → Add Route
+#
+# [[routes]]
+# pattern   = "quantummerlin.com/api/aihub/chat"
+# zone_name = "quantummerlin.com"
+
+# ── Secrets (set via CLI, never hardcoded here) ──────────────
+# Add each key with:
+#   wrangler secret put OR_KEY_1 --config wrangler.aihub.toml
+#   wrangler secret put OR_KEY_2 --config wrangler.aihub.toml
+#   ... up to OR_KEY_10
+#
+# Get free OpenRouter keys at: https://openrouter.ai/keys

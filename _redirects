@@ -1,12 +1,15 @@
 /soulblueprint/r/*  /soulblueprint/view.html?id=:splat  200
 
+# AI Hub clean URL
+/aihub  /aihub/  301
+
 # ═══════════════════════════════════════════════════════════════
 # 301 REDIRECTS — Consolidate duplicate pages
 # ═══════════════════════════════════════════════════════════════
 
 # Old pages → new canonical versions
-/about.html  /about-new.html  301
-/contact.html  /contact-new.html  301
+/about.html  /about  301
+/contact.html  /contact  301
 
 # Fix typo URL (compatabilty → compatibility)
 /compatabilty.html  /compatibility.html  301
@@ -29,8 +32,8 @@
 /forecasts  /forecasts.html  301
 /soul-card  /soulcard.html  301
 /birth-sigil  /birth-sigil.html  301
-/about  /about-new.html  301
-/contact  /contact-new.html  301
+/about  /about.html  200
+/contact  /contact.html  200
 
 # A Moment in Time redirects
 /amomentintime/r/*  /amomentintime/view.html?id=:splat  200
@@ -48,6 +51,11 @@
 /life-path-calculator  /life-path-calculator.html  200
 /compatibility  /compatibility.html  200
 /angel-number-calculator  /angel-number-calculator.html  200
+
+# New tools
+/business-numerology  /business-numerology.html  200
+/power-days  /power-days.html  200
+/personal-day  /personal-day.html  200
 
 /angel-numbers/111  /angel-numbers/111.html  200
 /angel-numbers/222  /angel-numbers/222.html  200

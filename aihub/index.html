@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="quantum">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Merlin AI Hub</title>
+  <meta name="description" content="Free ethical AI chat aggregator. Access multiple AI models in one interface.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme-quantum.css">
+  <link rel="stylesheet" href="css/theme-dark.css">
+  <link rel="stylesheet" href="css/theme-white.css">
+  <style>
+    /* Inline critical: prevent FOUC */
+    html { background: #0a0a0f; }
+    html[data-theme="dark"] { background: #111111; }
+    html[data-theme="white"] { background: #ffffff; }
+  </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar Overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Context Switch Warning Toast -->
+  <div class="context-warning" id="contextWarning"></div>
+
+  <div class="app-container">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="sidebar-header">
+        <!-- Brand -->
+        <div class="sidebar-brand">
+          <div class="sidebar-brand-icon">QM</div>
+          <div class="sidebar-brand-name">Quantum Merlin</div>
+        </div>
+
+        <!-- Model Selector -->
+        <div class="model-selector-wrap" id="modelSelectorWrap">
+          <button class="model-selector-btn" id="modelSelectorBtn" aria-expanded="false">
+            <span class="model-name" id="currentModelName">Select a model...</span>
+            <span class="chevron">&#9662;</span>
+          </button>
+          <div class="model-dropdown" id="modelDropdown">
+            <div class="model-dropdown-search">
+              <input type="text" id="modelSearchInput" placeholder="Search models..." autocomplete="off">
+            </div>
+            <div class="model-dropdown-list" id="modelDropdownList">
+              <!-- Populated by JS -->
+            </div>
+            <div class="model-dropdown-footer">
+              Model not working? <a href="mailto:brokenmodel@quantummerlin.com">Report it</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Chat Button -->
+        <button class="new-chat-btn" id="newChatBtn">
+          <span class="plus-icon">+</span>
+          <span>New Chat</span>
+        </button>
+      </div>
+
+      <!-- Conversation History -->
+      <div class="sidebar-conversations" id="conversationList">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <a class="coffee-link" href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener noreferrer">
+          <span class="coffee-icon">&#9749;</span>
+          <span>Buy Me a Coffee</span>
+        </a>
+      </div>
+
+    </aside>
+
+    <!-- ===== MAIN AREA ===== -->
+    <main class="main-area">
+
+      <!-- Top Bar -->
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle sidebar">&#9776;</button>
+          <span class="top-bar-thread-info" id="threadInfo"></span>
+        </div>
+        <div class="top-bar-right">
+          <div class="token-counter" id="tokenCounter" title="Requests remaining today">
+            20 left today
+          </div>
+          <button class="right-menu-btn" id="rightMenuBtn" aria-label="Settings menu" aria-expanded="false">
+            &#8942;
+          </button>
+        </div>
+      </header>
+
+      <!-- Right Dropdown Menu -->
+      <div class="right-menu-dropdown" id="rightMenuDropdown">
+
+        <!-- Theme Switcher -->
+        <div class="right-menu-section">
+          <div class="right-menu-section-title">Theme</div>
+          <div class="theme-switcher-row">
+            <button class="theme-option" data-theme-choice="quantum">Quantum Merlin</button>
+            <button class="theme-option" data-theme-choice="dark">Dark</button>
+            <button class="theme-option" data-theme-choice="white">White</button>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="right-menu-section">
+          <div class="right-menu-section-title">Skills</div>
+          <div class="right-menu-item" id="openSkillsBtn">
+            <span class="menu-icon">&#9881;</span>
+            <span>Manage Skills</span>
+          </div>
+        </div>
+
+        <!-- Memory -->
+        <div class="right-menu-section">
+          <div class="right-menu-section-title">Memory</div>
+          <div class="right-menu-item" id="openMemoryBtn">
+            <span class="menu-icon">&#128218;</span>
+            <span>Manage Memory</span>
+          </div>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="right-menu-section">
+          <div class="right-menu-section-title">Leaderboard</div>
+          <div class="right-menu-item" style="opacity:0.4; cursor:default;">
+            <span class="menu-icon">&#127942;</span>
+            <span>Coming Soon</span>
+          </div>
+        </div>
+
+        <!-- Settings -->
+        <div class="right-menu-section">
+          <div class="right-menu-section-title">Settings</div>
+          <div class="right-menu-item" id="openSettingsBtn">
+            <span class="menu-icon">&#9881;</span>
+            <span>API Configuration</span>
+          </div>
+          <div class="right-menu-item" id="exportDataBtn">
+            <span class="menu-icon">&#128190;</span>
+            <span>Export All Data</span>
+          </div>
+          <div class="right-menu-item" id="clearAllDataBtn" style="color: #ef4444;">
+            <span class="menu-icon">&#128465;</span>
+            <span>Clear All Data</span>
+          </div>
+        </div>
+
+        <!-- Report -->
+        <div class="right-menu-section">
+          <div class="right-menu-section-title">Feedback</div>
+          <div class="right-menu-item">
+            <span class="menu-icon">&#9993;</span>
+            <a href="mailto:brokenmodel@quantummerlin.com">Report Broken Model</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chat Area -->
+      <div class="chat-area" id="chatArea">
+        <!-- Welcome Screen (shown when no messages) -->
+        <div class="welcome-screen" id="welcomeScreen">
+          <div class="welcome-title">Quantum Merlin</div>
+          <div class="welcome-subtitle">
+            A free, ethical AI chat hub. Select a model from the sidebar and start a conversation.
+            Switch models mid-thread without losing context.
+          </div>
+          <div class="welcome-disclaimer">
+            These AI models are provided free through OpenRouter. Your conversations are stored
+            locally in your browser. Please be aware that the AI providers may use interactions
+            for model training. Do not share sensitive personal information.
+          </div>
+        </div>
+
+        <!-- Chat Messages Container -->
+        <div class="chat-messages" id="chatMessages" style="display:none;">
+          <!-- Messages populated by JS -->
+        </div>
+
+        <!-- Summarise & Continue Button -->
+        <button class="summarise-btn" id="summariseBtn">
+          Summarise & Continue in New Thread
+        </button>
+      </div>
+
+      <!-- Input Area -->
+      <div class="input-area">
+        <div class="input-container">
+          <!-- File Capability Chips -->
+          <div class="file-cap-bar" id="fileCapBar">
+            <!-- Populated by JS based on selected model -->
+          </div>
+
+          <!-- File Attachment Preview -->
+          <div class="file-attachment-preview" id="fileAttachmentPreview">
+            <!-- Populated by JS -->
+          </div>
+
+          <!-- Input Box -->
+          <div class="input-box">
+            <textarea
+              id="messageInput"
+              placeholder="Type your message..."
+              rows="1"
+              autofocus
+            ></textarea>
+            <div class="input-actions">
+              <button class="input-action-btn" id="attachFileBtn" title="Attach file">
+                &#128206;
+              </button>
+              <button class="input-action-btn send-btn" id="sendBtn" title="Send message">
+                &#10148;
+              </button>
+            </div>
+          </div>
+          <input type="file" id="fileInput" style="display:none;" multiple>
+
+          <div class="input-footer-text">
+            These free AI models may use your interactions for training. Do not share sensitive information.
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- ===== MODALS ===== -->
+
+  <!-- Skills Modal -->
+  <div class="modal-overlay" id="skillsModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Skills</h3>
+        <button class="modal-close-btn" data-close-modal="skillsModal">&#10005;</button>
+      </div>
+      <div class="modal-body" id="skillsModalBody">
+        <!-- Populated by JS -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn restore-defaults-btn" id="restoreSkillsBtn">Restore Defaults</button>
+        <button class="modal-btn primary" data-close-modal="skillsModal">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Memory Modal -->
+  <div class="modal-overlay" id="memoryModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Memory</h3>
+        <button class="modal-close-btn" data-close-modal="memoryModal">&#10005;</button>
+      </div>
+      <div class="modal-body" id="memoryModalBody">
+        <!-- Populated by JS -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn restore-defaults-btn" id="restoreMemoryBtn">Restore Defaults</button>
+        <button class="modal-btn primary" data-close-modal="memoryModal">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal-overlay" id="settingsModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>API Configuration</h3>
+        <button class="modal-close-btn" data-close-modal="settingsModal">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <div id="tierInfo"></div>
+        <div class="memory-item">
+          <label class="memory-label" for="apiKeyInput">OpenRouter API Key (Optional)</label>
+          <textarea id="apiKeyInput" rows="2" placeholder="sk-or-v1-..." style="font-family: 'JetBrains Mono', monospace; font-size: 11px;"></textarea>
+        </div>
+        <p style="font-size: 11px; opacity: 0.5; margin-top: 8px; line-height: 1.6;">
+          <strong>Free tier:</strong> 20 requests/day with our shared key.<br>
+          <strong>Your own key:</strong> 50 requests/day.<br>
+          <strong>$10+ credit:</strong> 1000 requests/day.<br><br>
+          Get your free API key at <a href="https://openrouter.ai/keys" target="_blank" rel="noopener" style="text-decoration:underline;">openrouter.ai/keys</a>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn" data-close-modal="settingsModal">Cancel</button>
+        <button class="modal-btn primary" id="saveApiKeyBtn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm Clear Data Modal -->
+  <div class="modal-overlay" id="clearDataModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Clear All Data</h3>
+        <button class="modal-close-btn" data-close-modal="clearDataModal">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 14px; line-height: 1.7;">
+          This will permanently delete all conversations, settings, skills, and memory from your browser.
+          This action cannot be undone.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn" data-close-modal="clearDataModal">Cancel</button>
+        <button class="modal-btn primary" id="confirmClearBtn" style="background:#ef4444; border-color:#ef4444;">Confirm Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/models.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
