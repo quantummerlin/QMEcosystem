@@ -1,5 +1,8 @@
 /soulblueprint/r/*  /soulblueprint/view.html?id=:splat  200
 
+# Frequency Generator clean URL
+/frequencygenerator  /frequencygenerator/  301
+
 # AI Hub clean URL
 /aihub  /aihub/  301
 
