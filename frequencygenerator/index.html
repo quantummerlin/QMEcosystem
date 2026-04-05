@@ -1511,6 +1511,16 @@ document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible' && srcNode) acquireWakeLock();
 });
 
+// ── Keyboard avoid: hide bottom nav when soft keyboard opens ──
+(function(){
+  const origH = window.innerHeight;
+  window.addEventListener('resize', () => {
+    const bnav = document.getElementById('bottom-nav');
+    if (!bnav) return;
+    bnav.style.display = window.innerHeight < origH * 0.75 ? 'none' : '';
+  });
+})();
+
 function openTheoryOverlay(){document.getElementById('theory-overlay').classList.add('on');document.body.style.overflow='hidden';}
 function closeTheoryOverlay(){document.getElementById('theory-overlay').classList.remove('on');document.body.style.overflow='';}
 function switchBrowseTab(tab){document.getElementById('browse-library').style.display=tab==='library'?'':'none';document.getElementById('browse-presets').style.display=tab==='presets'?'':'none';document.querySelectorAll('.browse-tab').forEach(b=>b.classList.toggle('active',b.id==='browse-tab-'+tab));}
