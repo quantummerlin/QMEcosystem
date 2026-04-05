@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#060b14">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Freq Generator">
+  <meta name="apple-mobile-web-app-title" content="Freq Gen">
   <meta name="description" content="Pure sine wave audio therapy with real-time cymatics visualization — Quantum Merlin">
   <meta property="og:title" content="Therapeutic Frequency Generator — Quantum Merlin">
   <meta property="og:description" content="Pure sine wave audio therapy with real-time cymatics visualization">
@@ -18,7 +18,7 @@
   <link rel="icon" type="image/jpeg" href="/quantum-merlin.jpg">
   <link rel="icon" type="image/jpeg" sizes="192x192" href="/quantum-merlin.jpg">
   <link rel="apple-touch-icon" href="/quantum-merlin.jpg">
-  <link rel="manifest" href="data:application/json,{}">
+  <link rel="manifest" href="/frequencygenerator/manifest.json">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Orbitron:wght@400;500;600;700;800&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <title>Therapeutic Frequency Generator — Quantum Merlin</title>
   <!-- Google Analytics -->
@@ -34,7 +34,7 @@
       --text: #ffffff; --dim: rgba(255,255,255,.7); --muted: rgba(255,255,255,.5);
       --border: rgba(0,245,255,.1); --success: #10b981; --danger: #ef4444;
     }
-    html, body { overflow-x: hidden; }
+    html, body { overflow-x: hidden; overscroll-behavior: none; }
     body {
       background: var(--bg); color: var(--text);
       font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -137,7 +137,7 @@
     .input {
       width: 100%; background: var(--card2); border: 1px solid var(--border);
       border-radius: 8px; padding: .55rem .85rem; color: var(--text);
-      font-size: .88rem; outline: none; transition: border-color .18s; text-align: center;
+      font-size: 1rem; outline: none; transition: border-color .18s; text-align: center;
     }
     .input:focus { border-color: var(--acl); }
     .input::placeholder { color: var(--muted); }
@@ -1002,6 +1002,7 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
       srcNode = c.createBufferSource(); srcNode.buffer = ab;
       srcNode.connect(analyser); analyser.connect(gainNode); gainNode.connect(c.destination);
       srcNode.start(); srcNode.onended = stopAudio;
+      acquireWakeLock();
       playStart = c.currentTime; playDuration = ab.duration;
       document.getElementById('pl-name').textContent = trackName;
       document.getElementById('pl-freqs').textContent = fmtList(frequencies);
@@ -1029,6 +1030,7 @@ function stopAudio() {
   document.getElementById('prog-fill').style.width = '0%';
   document.querySelectorAll('.preset-card,.trinity-row').forEach(el => el.classList.remove('playing'));
   const pi = document.getElementById('pause-icon'); if(pi) pi.textContent = '⏸';
+  releaseWakeLock();
 }
 
 function togglePause() {
@@ -1486,6 +1488,19 @@ document.querySelectorAll('.bnav-btn').forEach(btn=>{btn.addEventListener('click
 
 // ── Toast ──
 let toastTimer;
+// ── Screen Wake Lock ──
+let wakeLock = null;
+async function acquireWakeLock() {
+  if (!('wakeLock' in navigator)) return;
+  try { wakeLock = await navigator.wakeLock.request('screen'); } catch(e) {}
+}
+function releaseWakeLock() {
+  if (wakeLock) { wakeLock.release().catch(()=>{}); wakeLock = null; }
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && srcNode) acquireWakeLock();
+});
+
 function openTheoryOverlay(){document.getElementById('theory-overlay').classList.add('on');document.body.style.overflow='hidden';}
 function closeTheoryOverlay(){document.getElementById('theory-overlay').classList.remove('on');document.body.style.overflow='';}
 function switchBrowseTab(tab){document.getElementById('browse-library').style.display=tab==='library'?'':'none';document.getElementById('browse-presets').style.display=tab==='presets'?'':'none';document.querySelectorAll('.browse-tab').forEach(b=>b.classList.toggle('active',b.id==='browse-tab-'+tab));}

@@ -1,0 +1,24 @@
+{
+  "name": "Quantum Merlin's Frequency Generator",
+  "short_name": "Freq Gen",
+  "description": "Pure sine wave audio therapy with real-time cymatics visualization",
+  "start_url": "/frequencygenerator/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/quantum-merlin.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/quantum-merlin.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
