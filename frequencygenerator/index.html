@@ -22,6 +22,7 @@
       --text: #eef2ff; --dim: #94a3b8; --muted: #475569;
       --border: rgba(255,255,255,.07); --success: #10b981; --danger: #ef4444;
     }
+    html, body { overflow-x: hidden; }
     body {
       background: var(--bg); color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -231,7 +232,7 @@
     .preset-card { animation:presetSlideIn 0.4s ease-out both; }
     @keyframes presetSlideIn { from { opacity:0; transform:translateY(16px) scale(0.97); } to { opacity:1; transform:translateY(0) scale(1); } }
     .trinity-row { animation:trinitySlideIn 0.35s ease-out both; }
-    @keyframes trinitySlideIn { from { opacity:0; transform:translateX(-20px); } to { opacity:1; transform:translateX(0); } }
+    @keyframes trinitySlideIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
     .floating-orb { position:fixed; border-radius:50%; filter:blur(60px); opacity:0.08; pointer-events:none; z-index:0; animation:floatOrb 20s ease-in-out infinite; }
     .floating-orb:nth-child(1) { width:300px; height:300px; background:#7c3aed; top:10%; left:-5%; animation-delay:0s; }
     .floating-orb:nth-child(2) { width:250px; height:250px; background:#06b6d4; top:50%; right:-5%; animation-delay:-7s; }
@@ -1030,7 +1031,7 @@ function updateVisuals(freqs){const section=document.getElementById('vis-section
 
 // ── Custom Track UI ──
 const freqList=[],SAVED_TRACKS_KEY='qm_saved_tracks';
-(function initFreqInput(){const raw=document.getElementById('freq-raw');let isProcessing=false;raw.addEventListener('keydown',e=>{if(isProcessing)return;if(e.key==='Enter'||e.key===','){e.preventDefault();isProcessing=true;const val=raw.value.replace(',','').trim();if(val)addFreq(val);raw.value='';setTimeout(()=>{isProcessing=false;raw.focus();},10);}else if(e.key==='Backspace'&&raw.value===''&&freqList.length>0){e.preventDefault();freqList.pop();renderFreqs();}});raw.addEventListener('blur',()=>{const val=raw.value.replace(',','').trim();if(val){addFreq(val);raw.value='';}});document.getElementById('freq-box').addEventListener('mousedown',e=>{if(e.target.classList.contains('freq-tag-x'))e.preventDefault();});})();
+(function initFreqInput(){const raw=document.getElementById('freq-raw');raw.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();const val=raw.value.replace(/,/g,'').trim();if(val)addFreq(val);raw.value='';}else if(e.key==='Backspace'&&raw.value===''&&freqList.length>0){e.preventDefault();freqList.pop();renderFreqs();}});raw.addEventListener('input',()=>{if(raw.value.includes(',')){const parts=raw.value.split(',');const last=parts.pop();parts.forEach(p=>{const v=p.trim();if(v)addFreq(v);});raw.value=last;}});raw.addEventListener('blur',()=>{const val=raw.value.replace(/,/g,'').trim();if(val){addFreq(val);raw.value='';}});document.getElementById('freq-box').addEventListener('mousedown',e=>{if(e.target.classList.contains('freq-tag-x'))e.preventDefault();});})();
 function addFreq(raw){const parts=raw.split(',').map(p=>p.trim()).filter(Boolean);for(const p of parts){const f=parseFloat(p);if(isNaN(f)||f<=0){toast('Invalid: '+p,'error');continue;}if(freqList.length>=6){toast('Maximum 6 frequencies','error');break;}if(freqList.includes(f)){toast('Frequency already added: '+fmtHz(f),'info');continue;}freqList.push(f);}renderFreqs();}
 function removeFreq(i){freqList.splice(i,1);renderFreqs();}
 function renderFreqs(){const box=document.getElementById('freq-box'),raw=document.getElementById('freq-raw');box.innerHTML='';freqList.forEach((f,i)=>{const tag=document.createElement('span');tag.className='freq-tag';tag.innerHTML=fmtHz(f)+` <button class="freq-tag-x" onclick="removeFreq(${i})">×</button>`;box.appendChild(tag);});box.appendChild(raw);updateVisuals(freqList);}
