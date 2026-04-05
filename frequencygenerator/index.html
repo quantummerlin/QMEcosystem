@@ -1328,162 +1328,340 @@ const THEORY_DATA = {
   ]
 };
 
-function renderTheory(){const container=document.getElementById('theory-content');if(!container)return;let html='';html+='<div class="theory-section"><div class="theory-section-title">Introduction to Frequency Therapy</div><div class="theory-card"><div class="theory-desc">Sound frequency therapy, also known as vibrational medicine, uses specific audio frequencies to influence brainwave states, promote healing, and alter consciousness. The practice draws from ancient traditions, modern neuroscience, and physics. When the brain is exposed to specific frequencies, it tends to synchronize with them through a process called entrainment, shifting mental states and promoting various therapeutic effects.</div></div></div>';html+='<div class="theory-section"><div class="theory-section-title">Solfeggio Frequencies</div><div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">The Solfeggio frequencies are a set of ancient musical tones believed to have spiritual and healing properties. Originally used in Gregorian chants, these frequencies were said to promote spiritual awakening and physical healing.</div></div>';THEORY_DATA.solfeggio.forEach(item=>{html+=`<div class="theory-card"><div class="theory-freq">${item.freq} Hz</div><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div><div>${item.tags.map(t=>`<span class="theory-tag">${t}</span>`).join('')}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">Brainwave States</div><div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">Your brain produces electrical activity measured in cycles per second (Hertz). These brainwaves correlate with different states of consciousness, from deep sleep to peak awareness. By exposing the brain to specific frequencies through audio stimulation, we can encourage it to enter desired states — a process called brainwave entrainment.</div></div><div class="theory-brainwave">';THEORY_DATA.brainwaves.forEach(bw=>{html+=`<div class="theory-bw-card" style="border-left:3px solid ${bw.color||'var(--teal)'}"><div class="theory-bw-name">${bw.name}</div><div class="theory-bw-range">${bw.range}</div><div class="theory-bw-desc">${bw.desc}</div></div>`;});html+='</div></div>';html+='<div class="theory-section"><div class="theory-section-title">Chakra System & Frequencies</div><div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">The chakra system originates from ancient Indian tradition and describes seven energy centers along the spine. Each chakra governs specific physical, emotional, and spiritual aspects. Modern frequency therapy maps specific Hz values to each chakra, using sound to balance and activate these energy centers.</div></div>';THEORY_DATA.chakras.forEach((ch,i)=>{html+=`<div class="theory-card"><div class="theory-freq" style="color:${ch.color}">${ch.name} — ${ch.freq}</div><div class="theory-name">Location: ${ch.location}</div><div class="theory-desc">${ch.desc}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">Special Frequencies</div>';THEORY_DATA.special.forEach(item=>{html+=`<div class="theory-card"><div class="theory-freq">${item.freq} Hz</div><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div><div>${item.tags.map(t=>`<span class="theory-tag">${t}</span>`).join('')}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">PEMF Research & Science</div><div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">Pulsed Electromagnetic Field (PEMF) therapy uses specific frequencies to stimulate cellular repair and reduce inflammation. NASA and other research institutions have published studies showing measurable benefits of frequency-based therapies for bone healing, pain management, and nerve regeneration.</div></div>';THEORY_DATA.pemf.forEach(item=>{html+=`<div class="theory-card"><div class="theory-freq">${item.range}</div><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">The Science of Binaural Beats & Entrainment</div>';THEORY_DATA.binaural.forEach(item=>{html+=`<div class="theory-card"><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">Usage Guide & Best Practices</div>';THEORY_DATA.usage.forEach(section=>{html+=`<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">${section.title}</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.6">${section.tips.map(tip=>`<li>${tip}</li>`).join('')}</ul></div>`;});html+='</div>';
 
-// Water & Crystal Charging Guide
-html+='<div class="theory-section"><div class="theory-section-title">Water & Crystal Charging Guide</div>';
-html+='<div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">Charging water and crystals with frequencies is a powerful practice that extends the benefits of sound therapy beyond the listening session. Water acts as a receptive medium that holds the vibrational imprint, while crystals amplify and store the frequency energy.</div></div>';
+function scrollToTheorySection(id){
+  const el=document.getElementById(id);
+  const ov=document.getElementById('theory-overlay');
+  if(el&&ov)ov.scrollTop=el.offsetTop-64;
+  document.querySelectorAll('.theory-nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.sec===id));
+}
+function toggleFaq(el){
+  const ans=el.nextElementSibling;
+  const isOn=ans.classList.contains('on');
+  document.querySelectorAll('.theory-faq-a').forEach(a=>a.classList.remove('on'));
+  document.querySelectorAll('.theory-faq-q .faq-arr').forEach(a=>a.textContent='›');
+  if(!isOn){ans.classList.add('on');el.querySelector('.faq-arr').textContent='˅';}
+}
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">How to Charge Water</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Use spring water</strong> in a glass container — never plastic, as it distorts frequencies</li>';
-html+='<li><strong>Place the glass</strong> directly in front of or on top of your speaker</li>';
-html+='<li><strong>Play your chosen frequency track</strong> for the full duration (15-30 minutes)</li>';
-html+='<li><strong>Set your intention</strong> before starting — speak it aloud or hold it in mind</li>';
-html+='<li><strong>Drink immediately</strong> after charging for maximum potency</li>';
-html+='<li><strong>How long it lasts:</strong> Peak potency is 0-6 hours; effective for up to 24-48 hours if stored in glass away from EMFs</li>';
-html+='<li><strong>Dosage:</strong> 250ml per session; you can drink multiple glasses of the same frequency throughout the day</li>';
-html+='<li><strong>Pro tip:</strong> Charge water with your morning track and sip it throughout the day for sustained effects</li>';
-html+='</ul></div>';
+function renderTheory(){
+  const container=document.getElementById('theory-content');
+  if(!container)return;
+  const D=getGlobalDur();
+  const navSecs=[
+    {id:'ts-0',label:'Quick Ref'},{id:'ts-1',label:'Science'},{id:'ts-2',label:'Solfeggio'},
+    {id:'ts-3',label:'Brainwaves'},{id:'ts-4',label:'Chakras'},{id:'ts-5',label:'Special'},
+    {id:'ts-6',label:'Entrainment'},{id:'ts-7',label:'PEMF'},{id:'ts-8',label:'How To Use'},
+    {id:'ts-9',label:'FAQ'},{id:'ts-10',label:'Safety'},{id:'ts-11',label:'Water & Crystals'},
+    {id:'ts-12',label:'7-Day Protocol'},{id:'ts-13',label:'Environments'},
+  ];
+  const nav=`<div class="theory-nav" id="theory-nav">${navSecs.map((s,i)=>`<button class="theory-nav-btn${i===0?' active':''}" data-sec="${s.id}" onclick="scrollToTheorySection('${s.id}')">${s.label}</button>`).join('')}</div>`;
+  function pBtn(freqs,name){return `<button class="theory-play-btn" onclick="closeTheoryOverlay();playAudio(${JSON.stringify(freqs)},${JSON.stringify(name)},${D},null)">▶ Play</button>`;}
+  function sec(id,title,body){return `<div class="theory-section" id="${id}"><div class="theory-section-title">${title}</div>${body}</div>`;}
+  let html=nav;
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">How to Charge Crystals</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Clear quartz</strong> is the universal amplifier — works with any frequency</li>';
-html+='<li><strong>Place the crystal</strong> directly on or next to the speaker during playback</li>';
-html+='<li><strong>Charge for the full track duration</strong> (15-30 minutes)</li>';
-html+='<li><strong>Set your intention</strong> — hold the crystal and state your purpose</li>';
-html+='<li><strong>Carry it with you</strong> in your pocket or wear it as jewelry for all-day resonance</li>';
-html+='<li><strong>How long it lasts:</strong> A charged crystal holds its frequency for 3-7 days; recharge weekly</li>';
-html+='<li><strong>To cleanse:</strong> Place in sunlight for 1 hour, moonlight overnight, or bury in salt for 24 hours</li>';
-html+='<li><strong>Best crystals:</strong> Clear quartz (amplifier), Amethyst (spiritual), Rose quartz (love), Black tourmaline (protection), Citrine (abundance)</li>';
-html+='</ul></div>';
+  // ── 0. Quick Reference ──
+  const qref=[
+    {hz:[174],name:'Pain Relief',use:'Pain, grounding, security'},
+    {hz:[285],name:'Tissue Repair',use:'Wound healing, regeneration'},
+    {hz:[396],name:'Fear Release',use:'Guilt, grief, root clearing'},
+    {hz:[417],name:'Facilitating Change',use:'Trauma release, creativity'},
+    {hz:[528],name:'DNA Repair / Love',use:'Cellular healing, miracles'},
+    {hz:[639],name:'Relationships',use:'Heart chakra, connection'},
+    {hz:[741],name:'Expression & Detox',use:'Throat, toxin clearing'},
+    {hz:[852],name:'Intuition',use:'Third eye, inner vision'},
+    {hz:[963],name:'Divine Consciousness',use:'Crown, pineal activation'},
+    {hz:[7.83],name:'Schumann Resonance',use:'Earth grounding, balance'},
+    {hz:[40],name:'Gamma Boost',use:'Memory, focus, Alzheimer\'s prevention'},
+    {hz:[432],name:'Nature\'s Tuning',use:'Universal harmony, calm'},
+    {hz:[528,639],name:'Heart Healing Combo',use:'Love + connection'},
+    {hz:[37,73],name:'Creation Pair',use:'Manifestation, abundance'},
+    {hz:[7.83,10,40],name:'Digital Detox',use:'Grounding, calm focus'},
+    {hz:[528,963],name:'Ascension Combo',use:'Healing + awakening'},
+  ];
+  const qgrid=`<div class="theory-qref-grid">${qref.map(q=>`<div class="theory-qref-item"><div class="theory-qref-hz">${q.hz.join(' + ')} Hz</div><div style="font-size:.72rem;font-weight:600;color:var(--fg);margin:.1rem 0">${q.name}</div><div class="theory-qref-use">${q.use}</div>${pBtn(q.hz,q.name)}</div>`).join('')}</div>`;
+  html+=sec('ts-0','Quick Reference',qgrid);
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">Best Practices</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Use wired speakers</strong> — Bluetooth adds digital noise that contaminates the frequency</li>';
-html+='<li><strong>Enable Airplane Mode</strong> on your device to eliminate EMF interference</li>';
-html+='<li><strong>Keep the water/crystal close</strong> to the speaker — within 1-2 inches for best results</li>';
-html+='<li><strong>Match the frequency to your goal</strong> — e.g., 528Hz for healing water, 888Hz for abundance crystal</li>';
-html+='<li><strong>Combine methods</strong> — charge both water AND a crystal simultaneously for amplified effects</li>';
-html+='<li><strong>Label your charged water</strong> with the frequency and date if storing</li>';
-html+='<li><strong>Never use tap water</strong> — its chemical content interferes with frequency structuring</li>';
-html+='<li><strong>Trust your intuition</strong> — if something feels off, adjust your approach</li>';
-html+='</ul></div>';
-
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">Frequency-Water-Crystal Pairing Guide</div>';
-html+='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.5rem;margin-top:.5rem">';
-const pairings=[{freq:"174 Hz",use:"Pain Relief Water",crystal:"Red Jasper"},{freq:"285 Hz",use:"Tissue Repair Water",crystal:"Carnelian"},{freq:"396 Hz",use:"Fear Release Water",crystal:"Smoky Quartz"},{freq:"417 Hz",use:"Change Facilitation",crystal:"Orange Calcite"},{freq:"528 Hz",use:"DNA Repair Water",crystal:"Clear Quartz"},{freq:"639 Hz",use:"Heart Connection Water",crystal:"Rose Quartz"},{freq:"741 Hz",use:"Detox Water",crystal:"Blue Lace Agate"},{freq:"852 Hz",use:"Third Eye Water",crystal:"Amethyst"},{freq:"963 Hz",use:"Crown Activation Water",crystal:"Selenite"},{freq:"7.83 Hz",use:"Grounding Water",crystal:"Hematite"},{freq:"432 Hz",use:"Harmony Water",crystal:"Green Aventurine"},{freq:"888 Hz",use:"Abundance Crystal",crystal:"Citrine"},{freq:"444 Hz",use:"Protection Crystal",crystal:"Black Tourmaline"},{freq:"777 Hz",use:"Luck Crystal",crystal:"Pyrite"}];
-pairings.forEach(p=>{html+=`<div style="background:var(--card3);border:1px solid var(--border);border-radius:6px;padding:.5rem"><div style="font-size:.7rem;font-weight:600;color:var(--teal)">${p.freq}</div><div style="font-size:.65rem;color:var(--dim)">${p.use}</div><div style="font-size:.6rem;color:var(--muted)">Crystal: ${p.crystal}</div></div>`;});
-html+='</div></div></div>';
-
-html+='</div>';
-
-// 7-Day Granthi Immersion Protocol
-html+='<div class="theory-section"><div class="theory-section-title">7-Day Granthi Immersion Protocol</div>';
-html+='<div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">A structured 7-day frequency protocol for deep spiritual transformation. This protocol follows the traditional Granthi (psychic knot) unlocking sequence, progressing from purification to integration. Each day builds upon the previous, creating a cumulative effect on consciousness.</div></div>';
-
-const granthiDays=[
-  {day:1,name:"Purification",freqs:"174 + 417 + 528 Hz",desc:"Clears foundational blockages and prepares the system for deep work. Releases old patterns and creates space for transformation.",tip:"Start your day with this track. Drink charged water throughout the day."},
-  {day:2,name:"Root Release",freqs:"194 + 396 + 8 Hz",desc:"Shatters the first psychic knot (Brahma Granthi). Releases deep-seated survival fears and allows primal energy to rise.",tip:"Ground intensely after listening. Walk barefoot on earth for 20 minutes."},
-  {day:3,name:"Heart Stabilization",freqs:"528 + 639 + 10 Hz",desc:"Integrates the powerful root energy and anchors it in the heart. Prevents imbalance and builds a stable core of compassion.",tip:"Do not skip this day — it's critical for safe progression. Focus on heart-centered meditation."},
-  {day:4,name:"Love & Compassion",freqs:"741 + 852 + 12.5 Hz",desc:"Dissolves the second psychic knot (Vishnu Granthi). Transforms personal power and emotional attachment into universal love.",tip:"This is where healing abilities may emerge. Stay open to insights and synchronicities."},
-  {day:5,name:"Psychic Clarification",freqs:"141 + 963 + 15 Hz",desc:"Purifies the channels of perception (throat and third eye). Prepares for the final ascent with clarity and discernment.",tip:"Journal any visions or insights. Trust your intuitive downloads."},
-  {day:6,name:"Spiritual Dissolution",freqs:"963 + 999 + 4.5 Hz",desc:"Shatters the final knot (Rudra Granthi) of attachment to individuality. Facilitates awareness of non-duality and ego dissolution.",tip:"Advanced day — rest if needed. This can be intense. Ground aggressively afterward."},
-  {day:7,name:"Integration",freqs:"432 + 963 + 40 Hz",desc:"Integrates the entire journey. Stabilizes the connection to the crown chakra and binds the new state of consciousness into your being.",tip:"Celebrate your journey. Set intentions for how you'll use this expanded awareness."},
-];
-
-granthiDays.forEach(d=>{
-  html+=`<div class="theory-card">
-    <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem">
-      <div style="background:var(--accent);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">${d.day}</div>
-      <div><div style="font-size:.85rem;font-weight:600">Day ${d.day}: ${d.name}</div><div style="font-size:.65rem;color:var(--teal);font-family:monospace">${d.freqs}</div></div>
+  // ── 1. Science ──
+  const sci=`
+    <div class="theory-card">
+      <div class="theory-name" style="margin-bottom:.4rem">History of Sound Healing</div>
+      <div class="theory-desc">Sound as medicine predates written history. Ancient Egyptians used vowel-sound chanting in healing temples. Tibetan monks used singing bowls for centuries. Pythagoras prescribed music as medicine in 600 BCE. The science: matter vibrates, the body is matter, and targeted vibration can shift cellular function.</div>
     </div>
-    <div class="theory-desc" style="margin-bottom:.5rem">${d.desc}</div>
-    <div style="font-size:.7rem;color:var(--muted);background:var(--card3);padding:.4rem .6rem;border-radius:4px">💡 <strong>Tip:</strong> ${d.tip}</div>
-  </div>`;
-});
+    <div class="theory-card">
+      <div class="theory-name" style="margin-bottom:.4rem">How Frequencies Affect the Body</div>
+      <div class="theory-desc">Cells communicate via bioelectric and electromagnetic fields. Specific sound frequencies create resonant vibrations that interact with these fields. Dr. Masaru Emoto's water crystal research showed frequency-exposed water forms structured, coherent crystalline patterns — relevant given the body is ~60% water. Cymatics (visible sound patterns) demonstrate that matter physically reorganizes under specific frequencies.</div>
+    </div>
+    <div class="theory-card">
+      <div class="theory-name" style="margin-bottom:.4rem">How To Use This App</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+        <li><strong>Browse tab:</strong> Curated tracks ready to play — tap any card to start</li>
+        <li><strong>Create tab:</strong> Type any Hz value to build your own combination track</li>
+        <li><strong>Player bar:</strong> Always visible when playing — tap the track name to see Now Playing view</li>
+        <li><strong>WAV download:</strong> Generate high-quality audio files for offline use</li>
+        <li><strong>Save tracks:</strong> Store your custom combinations in My Library</li>
+        <li><strong>Playlists:</strong> Queue multiple tracks for extended sessions</li>
+      </ul>
+    </div>`;
+  html+=sec('ts-1','The Science of Frequency Therapy',sci);
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">Protocol Guidelines</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Listen daily</strong> for 15-30 minutes per session</li>';
-html+='<li><strong>Use headphones</strong> for the deepest experience</li>';
-html+='<li><strong>Ground after each session</strong> — walk barefoot, eat root vegetables, drink water</li>';
-html+='<li><strong>Journal your experiences</strong> — note dreams, insights, and physical sensations</li>';
-html+='<li><strong>Do not skip Day 3</strong> — it is the critical stabilization day</li>';
-html+='<li><strong>If you feel overwhelmed</strong>, return to Day 3 frequencies until you feel stable</li>';
-html+='<li><strong>Repeat quarterly</strong> for ongoing spiritual maintenance and deepening</li>';
-html+='<li><strong>Set clear intention</strong> before each session — state your purpose aloud</li>';
-html+='</ul></div></div>';
+  // ── 2. Solfeggio ──
+  const solBody='<div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">The Solfeggio scale derives from a 6th-century Gregorian hymn. Rediscovered by Dr. Joseph Puleo in 1999 after appearing in the Book of Numbers. Each tone is mathematically related through digital root reduction (Pythagorean numerology).</div></div>'+
+    THEORY_DATA.solfeggio.map(item=>`<div class="theory-card"><div class="theory-card-row"><div style="flex:1"><div class="theory-freq">${item.freq} Hz</div><div class="theory-name">${item.name}</div></div>${pBtn([item.freq],item.name)}</div><div class="theory-desc" style="margin:.35rem 0">${item.desc}</div><div>${item.tags.map(t=>`<span class="theory-tag">${t}</span>`).join('')}</div></div>`).join('');
+  html+=sec('ts-2','Solfeggio Frequencies',solBody);
 
-// Business & Environmental Applications
-html+='<div class="theory-section"><div class="theory-section-title">Business & Environmental Applications</div>';
-html+='<div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">Frequencies can be used to enhance business environments, charge products, and clear spaces. These protocols use subtle, continuous frequency playback to create energetic shifts in commercial and personal spaces.</div></div>';
+  // ── 3. Brainwaves ──
+  const bwBody='<div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">Your brain produces electrical activity in cycles per second (Hz). These states correlate with consciousness levels. Frequency entrainment gently guides your brain to a target state — this is backed by decades of neuroscience research using EEG measurements.</div></div><div class="theory-brainwave">'+
+    THEORY_DATA.brainwaves.map(bw=>`<div class="theory-bw-card" style="border-left:3px solid ${bw.color||'var(--teal)'}"><div class="theory-bw-name">${bw.name}</div><div class="theory-bw-range">${bw.range}</div><div class="theory-bw-desc">${bw.desc}</div></div>`).join('')+'</div>'+
+    `<div class="theory-card" style="margin-top:.65rem">
+      <div class="theory-name" style="margin-bottom:.4rem">Practical Entrainment Guide</div>
+      <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.7rem">
+        <tr style="color:var(--muted);border-bottom:1px solid var(--border)"><td style="padding:.3rem .4rem">Goal</td><td>Frequency</td><td>Duration</td></tr>
+        <tr style="border-bottom:1px solid var(--border)"><td style="padding:.3rem .4rem">Deep sleep</td><td>1–4 Hz Delta</td><td>30 min before bed</td></tr>
+        <tr style="border-bottom:1px solid var(--border)"><td style="padding:.3rem .4rem">Meditation</td><td>4–7 Hz Theta</td><td>15–20 min</td></tr>
+        <tr style="border-bottom:1px solid var(--border)"><td style="padding:.3rem .4rem">Calm focus</td><td>8–10 Hz Alpha</td><td>During work</td></tr>
+        <tr style="border-bottom:1px solid var(--border)"><td style="padding:.3rem .4rem">Peak performance</td><td>20–40 Hz Beta/Gamma</td><td>Morning sessions</td></tr>
+        <tr><td style="padding:.3rem .4rem">Memory/cognition</td><td>40 Hz Gamma</td><td>45 min sessions</td></tr>
+      </table></div>
+    </div>`;
+  html+=sec('ts-3','Brainwave States & Entrainment',bwBody);
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🏪 Fruit Shop / Retail Space Protocol</div>';
-html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Track:</strong> 37 + 73 + 528 Hz (Abundance Repair)</li>';
-html+='<li><strong>How:</strong> Play on loop overnight at low volume through a small speaker</li>';
-html+='<li><strong>Place a clear quartz crystal</strong> near the speaker to store and amplify the intention</li>';
-html+='<li><strong>Intention:</strong> "This space attracts abundance and loyal customers"</li>';
-html+='<li><strong>Duration:</strong> Play from closing time until opening — 8+ hours</li>';
-html+='<li><strong>Result:</strong> Creates an energetic field that attracts customers and promotes positive transactions</li>';
-html+='</ul></div>';
+  // ── 4. Chakras ──
+  const chColors={Red:'#ef4444',Orange:'#f97316',Yellow:'#eab308',Green:'#22c55e',Blue:'#3b82f6',Indigo:'#6366f1','Violet/White':'#a855f7'};
+  const chBody='<div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">The chakra system maps 7 energy vortices along the spine. Each governs a layer of physical, emotional, and spiritual function. Modern frequency therapy assigns Solfeggio tones to each chakra, creating a precise sonic healing map for the entire energy body.</div></div>'+
+    THEORY_DATA.chakras.map(ch=>`<div class="theory-card"><div class="theory-card-row"><div style="flex:1"><div class="theory-freq" style="color:${chColors[ch.color]||'var(--teal)'}">${ch.name}</div><div style="font-size:.7rem;color:var(--dim);margin:.1rem 0">${ch.location} · <span style="color:${chColors[ch.color]||'var(--teal)'};font-weight:600">${ch.color}</span></div><div style="font-size:.72rem;font-family:monospace;color:var(--teal)">${ch.freq}</div></div>${pBtn([parseFloat(ch.freq)],ch.name+' Chakra')}</div><div class="theory-desc" style="margin-top:.35rem">${ch.desc}</div></div>`).join('');
+  html+=sec('ts-4','Chakra System & Frequencies',chBody);
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🧃 Juice / Product Charging Protocol</div>';
-html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Track:</strong> 528 Hz (DNA Repair / Love Frequency)</li>';
-html+='<li><strong>How:</strong> Place juice bottles or products near the speaker during playback</li>';
-html+='<li><strong>Duration:</strong> 30-60 minutes of continuous playback</li>';
-html+='<li><strong>Intention:</strong> "This product is charged with healing and vitality"</li>';
-html+='<li><strong>Best frequencies for products:</strong> 528 Hz (healing), 888 Hz (abundance), 432 Hz (harmony)</li>';
-html+='<li><strong>Pro tip:</strong> Charge products before they go on display — the frequency imprint lasts for days</li>';
-html+='</ul></div>';
+  // ── 5. Special Frequencies ──
+  const spBody=THEORY_DATA.special.map(item=>`<div class="theory-card"><div class="theory-card-row"><div style="flex:1"><div class="theory-freq">${item.freq} Hz</div><div class="theory-name">${item.name}</div></div>${pBtn([item.freq],item.name)}</div><div class="theory-desc" style="margin:.35rem 0">${item.desc}</div><div>${item.tags.map(t=>`<span class="theory-tag">${t}</span>`).join('')}</div></div>`).join('');
+  html+=sec('ts-5','Special Frequencies',spBody);
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🏠 Room Clearing & Space Cleansing Protocol</div>';
-html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Track:</strong> 417 + 741 + 432 Hz (Change + Detox + Harmony)</li>';
-html+='<li><strong>How:</strong> Play at medium volume while walking through each room</li>';
-html+='<li><strong>Open windows</strong> to allow stagnant energy to exit</li>';
-html+='<li><strong>Intention:</strong> "This space is cleared of all negative and stagnant energy"</li>';
-html+='<li><strong>Duration:</strong> 20-30 minutes for a standard home</li>';
-html+='<li><strong>Follow up with:</strong> 528 + 639 Hz to fill the cleared space with love and harmony</li>';
-html+='<li><strong>For heavy energy:</strong> Use 396 + 417 Hz first, then follow with clearing</li>';
-html+='</ul></div>';
+  // ── 6. Entrainment Science ──
+  const entBody=`
+    ${THEORY_DATA.binaural.map(item=>`<div class="theory-card"><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div></div>`).join('')}
+    <div class="theory-card">
+      <div class="theory-name" style="margin-bottom:.4rem">The Frequency Following Response (FFR)</div>
+      <div class="theory-desc">First documented by biophysicist Gerald Oster in 1973 in Scientific American. The FFR is the brain's natural tendency to synchronize its electrical activity with external rhythmic stimuli. This is not a fringe claim — it is measurable on EEG in real time. The effect peaks at frequencies below 40 Hz, matching precisely the range of human brainwave states.</div>
+    </div>
+    <div class="theory-card">
+      <div class="theory-name" style="margin-bottom:.4rem">Monaural Beats vs Binaural Beats vs Isochronic</div>
+      <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.7rem">
+        <tr style="color:var(--muted);border-bottom:1px solid var(--border)"><td style="padding:.3rem .4rem">Type</td><td>Requires Headphones?</td><td>Mechanism</td></tr>
+        <tr style="border-bottom:1px solid var(--border)"><td style="padding:.3rem .4rem"><strong>Binaural</strong></td><td>Yes (stereo)</td><td>Brain creates difference tone</td></tr>
+        <tr style="border-bottom:1px solid var(--border)"><td style="padding:.3rem .4rem"><strong>Monaural</strong></td><td>No</td><td>Beats encoded in signal</td></tr>
+        <tr><td style="padding:.3rem .4rem"><strong>Isochronic</strong></td><td>No</td><td>Pulsed on/off rhythm</td></tr>
+      </table></div>
+    </div>`;
+  html+=sec('ts-6','Binaural Beats & Entrainment Science',entBody);
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🌿 Garden & Plant Enhancement</div>';
-html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Track:</strong> 528 Hz (Nature\u2019s healing frequency)</li>';
-html+='<li><strong>How:</strong> Play near plants or garden for 30 minutes daily</li>';
-html+='<li><strong>Water plants</strong> with frequency-charged water for enhanced growth</li>';
-html+='<li><strong>Intention:</strong> "These plants grow strong and healthy"</li>';
-html+='<li><strong>Research:</strong> Studies show plants respond positively to specific frequencies</li>';
-html+='</ul></div>';
+  // ── 7. PEMF ──
+  const pemfBody='<div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">Pulsed Electromagnetic Field therapy uses low-frequency pulses to stimulate cellular repair. NASA\'s 4-year study (2003) demonstrated PEMF reversed bone density loss in astronauts and increased nerve regeneration 2.5–4× over controls. FDA-cleared for depression (2011) and bone healing. Over 2,000 peer-reviewed studies support its efficacy.</div></div>'+
+    THEORY_DATA.pemf.map(item=>`<div class="theory-card"><div class="theory-freq">${item.range}</div><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div></div>`).join('')+
+    `<div class="theory-card">
+      <div class="theory-name" style="margin-bottom:.4rem">Key PEMF Research Highlights</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+        <li><strong>NASA (2003):</strong> 40 Hz stimulation increased nerve regeneration 2.5–4× and reversed bone density loss</li>
+        <li><strong>MIT (2019):</strong> 40 Hz gamma entrainment reduced amyloid and tau proteins in Alzheimer's mice by ~50%</li>
+        <li><strong>Journal of Pain Research (2009):</strong> PEMF significantly reduced chronic pain and fibromyalgia symptoms</li>
+        <li><strong>Spine Journal (2006):</strong> Accelerated spinal fusion surgery recovery with 7.5–20 Hz PEMF</li>
+        <li><strong>FDA Clearance:</strong> Bone growth stimulators (1979), depression treatment (2011), OA knee pain (2015)</li>
+      </ul>
+    </div>`;
+  html+=sec('ts-7','PEMF Research & Science',pemfBody);
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">💼 Office / Workspace Optimization</div>';
-html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Morning:</strong> 16 + 40 + 100 Hz (Focus & Creative Action) — play during work hours</li>';
-html+='<li><strong>Afternoon slump:</strong> 20.3 + 40 Hz (Hyper-Learning) — 15 minute reset</li>';
-html+='<li><strong>End of day:</strong> 7.83 + 10 Hz (Grounding & Calm) — transition to home mode</li>';
-html+='<li><strong>Place a charged clear quartz</strong> on your desk for sustained focus</li>';
-html+='<li><strong>Charge your water bottle</strong> with focus frequencies each morning</li>';
-html+='</ul></div>';
+  // ── 8. How To Use ──
+  const useBody=THEORY_DATA.usage.map(s=>`<div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">${s.title}</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">${s.tips.map(t=>`<li>${t}</li>`).join('')}</ul></div>`).join('')+
+    `<div class="theory-card">
+      <div class="theory-name" style="margin-bottom:.4rem">Optimal Listening Environment</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+        <li><strong>Position:</strong> Lying down or seated with a straight spine</li>
+        <li><strong>Lighting:</strong> Dimmed or candlelit — avoid bright screens</li>
+        <li><strong>Temperature:</strong> Slightly warm — cold environments trigger alertness and resist entrainment</li>
+        <li><strong>Phones/EMFs:</strong> Enable Airplane Mode to remove background EMF noise</li>
+        <li><strong>Headphones:</strong> Over-ear headphones produce the strongest entrainment effect; earbuds are fine for therapeutic tones</li>
+        <li><strong>Eyes:</strong> Closed, or with a light eye mask — visual input competes with entrainment</li>
+        <li><strong>Timing:</strong> Morning (6-9am) and evening (9-11pm) are peak neuroplasticity windows</li>
+      </ul>
+    </div>
+    <div class="theory-card">
+      <div class="theory-name" style="margin-bottom:.4rem">Dosage Guide</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+        <li><strong>Beginner:</strong> 10–15 min/day, 3–4 days/week — allow your system to adjust</li>
+        <li><strong>Intermediate:</strong> 20–30 min/day, 5 days/week — consistent results emerge in 2–4 weeks</li>
+        <li><strong>Advanced:</strong> 30–60 min/day — for deep protocol work (7-Day Granthi etc.)</li>
+        <li><strong>Acute use:</strong> Pain, stress, anxiety — use as needed, up to 3× daily</li>
+        <li><strong>Rest days:</strong> Take 1–2 days off per week — integration periods accelerate results</li>
+        <li><strong>Volume:</strong> Should be comfortable and clear, never loud — the frequency matters, not the volume</li>
+      </ul>
+    </div>`;
+  html+=sec('ts-8','Usage Guide & Best Practices',useBody);
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🚗 Vehicle / Commute Protocol</div>';
-html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Track:</strong> 7.83 + 10 + 40 Hz (Digital Detox / Grounding)</li>';
-html+='<li><strong>How:</strong> Play through car speakers during commute</li>';
-html+='<li><strong>Intention:</strong> "I arrive calm, focused, and safe"</li>';
-html+='<li><strong>For road rage:</strong> Switch to 174 + 432 Hz (Pain Relief + Harmony)</li>';
-html+='</ul></div>';
+  // ── 9. FAQ ──
+  const faqs=[
+    {q:'How long before I notice results?',a:'Most people notice shift in relaxation or focus within the first session. Deeper therapeutic results (pain, sleep, mood) typically emerge after 1–2 weeks of consistent daily use. Neurological changes measurable on EEG have been documented after 30 sessions.'},
+    {q:'Do I need headphones?',a:'For binaural beats: yes, stereo headphones are required — the effect depends on delivering different frequencies to each ear. For single-frequency Solfeggio and therapeutic tones, speakers work fine. Over-ear headphones produce the strongest entrainment effect overall.'},
+    {q:'Can I use this while sleeping?',a:'Yes, and Delta frequencies (0.5–4 Hz) are specifically designed for sleep enhancement. Keep volume low (barely audible). Many users report improved sleep quality within 3–7 days of nightly use. Avoid stimulating Gamma/Beta frequencies before bed.'},
+    {q:'What is the difference between 432 Hz and 440 Hz music?',a:'Standard Western music is tuned to 440 Hz (concert pitch, established in 1939). 432 Hz is mathematically aligned with the Pythagorean temperament and appears frequently in natural ratios. Proponents report it sounds warmer and more resonant. The scientific debate is ongoing, but many listeners subjectively prefer it.'},
+    {q:'Can I combine multiple frequencies?',a:'Yes. The app supports up to 6 simultaneous frequencies. The most powerful combinations are complementary pairs like 37+73 Hz (creation), 528+639 Hz (heart healing), and 7.83+40 Hz (grounded gamma focus). Start with 2–3 frequencies and experiment. Trust your body — if a combination feels off, simplify it.'},
+    {q:'Is it safe to use every day?',a:'For most healthy adults, yes. Therapeutic frequency listening is non-invasive and accumulative. Daily use consistently outperforms occasional use in all published protocols. See the Safety section for contraindications.'},
+    {q:'What volume should I use?',a:'Comfortable and clear. Frequency therapy works at low volumes — the brain entrains to the waveform pattern, not the loudness. Listening too loud can cause auditory fatigue and counteract the relaxation response. A general rule: if you can comfortably hold a conversation over it, the volume is appropriate.'},
+    {q:'Why does the app generate audio instead of playing recordings?',a:'Generated audio is mathematically precise — each frequency is an exact sine wave at the specified Hz. Pre-recorded tracks introduce room acoustics, compression artifacts, and pitch variations. This app generates surgical-precision tones directly from the Web Audio API for maximum therapeutic accuracy.'},
+  ];
+  const faqBody=faqs.map(f=>`<div class="theory-faq-q" onclick="toggleFaq(this)">${f.q}<span class="faq-arr">›</span></div><div class="theory-faq-a">${f.a}</div>`).join('');
+  html+=sec('ts-9','Frequently Asked Questions',faqBody);
 
-html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">General Guidelines for Environmental Use</div>';
-html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
-html+='<li><strong>Use wired speakers</strong> for cleanest frequency transmission</li>';
-html+='<li><strong>Low volume is sufficient</strong> — the frequencies work energetically, not just acoustically</li>';
-html+='<li><strong>Set clear intention</strong> before starting — speak it aloud or hold it in mind</li>';
-html+='<li><strong>Use crystals as amplifiers</strong> — place them near the speaker to store and radiate the energy</li>';
-html+='<li><strong>Consistency matters</strong> — daily or nightly protocols build cumulative effects</li>';
-html+='<li><strong>Match the frequency to the goal</strong> — abundance for business, healing for products, clearing for spaces</li>';
-html+='<li><strong>Trust your intuition</strong> — if a space feels heavy, use clearing frequencies first</li>';
-html+='</ul></div></div>';
+  // ── 10. Safety ──
+  const safeBody=`
+    <div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">Frequency therapy is safe for most healthy adults. The following conditions require caution or complete avoidance. When in doubt, consult a qualified healthcare provider before beginning.</div></div>
+    <div class="theory-warn"><div class="theory-warn-title">⚠️ Epilepsy & Seizure Disorders</div><div class="theory-warn-text">Do not use frequency entrainment if you have a history of epilepsy, photosensitive seizures, or any seizure disorder. Rhythmic audio stimulation can trigger seizures in susceptible individuals. This is a hard contraindication — do not proceed without written clearance from a neurologist.</div></div>
+    <div class="theory-warn"><div class="theory-warn-title">⚠️ Cardiac Pacemakers & Implanted Devices</div><div class="theory-warn-text">Electromagnetic frequency stimulation may interfere with pacemakers and other implanted electronic medical devices. Consult your cardiologist before use. Err on the side of caution — standard headphone listening poses minimal risk but high-power speaker setups should be avoided.</div></div>
+    <div class="theory-warn"><div class="theory-warn-title">⚠️ Pregnancy</div><div class="theory-warn-text">Avoid high-intensity or deep Delta/Theta entrainment during pregnancy, particularly during the first trimester. Gentle 432 Hz and Solfeggio frequencies at low volume are generally considered safe, but consult your midwife or obstetrician. Avoid binaural beats until the third trimester.</div></div>
+    <div class="theory-warn"><div class="theory-warn-title">⚠️ Acute Mental Health Episodes</div><div class="theory-warn-text">Deep Theta and Delta frequencies (and the 7-Day Granthi protocol) can surface suppressed emotional material. Individuals currently experiencing acute psychosis, mania, severe PTSD, or dissociative episodes should not use deep entrainment programs without clinical supervision. Gentle Alpha/Solfeggio at low volume may be stabilizing rather than destabilizing.</div></div>
+    <div class="theory-warn"><div class="theory-warn-title">⚠️ Driving & Operating Heavy Machinery</div><div class="theory-warn-text">Do not use Delta, Theta, or Alpha entrainment frequencies while driving or operating machinery. These frequencies are designed to reduce alertness and shift consciousness toward sleep-adjacent states. Only Gamma (30–100 Hz) and Beta (14–30 Hz) tracks are appropriate for use during active tasks.</div></div>
+    <div class="theory-card" style="margin-top:.65rem">
+      <div class="theory-name" style="margin-bottom:.4rem">Safe Use Guidelines</div>
+      <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+        <li>Start with shorter sessions (10–15 min) to assess your sensitivity</li>
+        <li>If you feel dizzy, nauseous, or anxious — stop immediately and rest</li>
+        <li>Headache after a session indicates too much volume or too long a duration — reduce both</li>
+        <li>Emotional release (crying, warmth, tingling) is normal and often indicates the frequency is working</li>
+        <li>Always ground after deep entrainment: drink water, eat something, walk barefoot outside</li>
+        <li>Children under 12 should not use entrainment frequencies; basic Solfeggio at low volume is fine for older children with parental guidance</li>
+      </ul>
+    </div>`;
+  html+=sec('ts-10','Safety & Contraindications',safeBody);
 
-html+='<div style="margin-top:1.5rem;padding:.85rem 1rem;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:8px;font-size:.72rem;color:var(--dim);line-height:1.5"><strong style="color:#fca5a5">Disclaimer:</strong> The information provided is for educational and entertainment purposes only. Frequency therapy is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions regarding a medical condition.</div>';container.innerHTML=html;}
+  // ── 11. Water & Crystals ──
+  const wcBody=`
+    <div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">Charging water and crystals extends the benefits of frequency therapy beyond the session. Dr. Masaru Emoto's research demonstrated water forms coherent crystalline structures when exposed to positive intention and harmonious sound. Crystals act as piezoelectric transducers — they convert mechanical vibration (sound waves) into stored electromagnetic patterns.</div></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">How to Charge Water</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Use spring water</strong> in a glass container — never plastic</li>
+      <li><strong>Place the glass</strong> within 2 inches of the speaker</li>
+      <li><strong>Play your chosen frequency</strong> for 15–30 minutes</li>
+      <li><strong>Set your intention</strong> before pressing play — speak it aloud</li>
+      <li><strong>Drink immediately</strong> after charging for maximum potency</li>
+      <li><strong>Peak potency:</strong> 0–6 hours; effective for up to 24–48 hours in glass away from EMFs</li>
+      <li><strong>Dosage:</strong> 250ml per session; multiple glasses per day of the same frequency is fine</li>
+    </ul></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">How to Charge Crystals</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Clear quartz</strong> is the universal amplifier — works with any frequency</li>
+      <li><strong>Place the crystal</strong> on or next to the speaker during playback</li>
+      <li><strong>Charge for the full track duration</strong> (15–30 minutes)</li>
+      <li><strong>Carry it or wear it</strong> for all-day resonance</li>
+      <li><strong>Holds frequency</strong> for 3–7 days; recharge weekly</li>
+      <li><strong>To cleanse:</strong> Sunlight 1 hour, moonlight overnight, or salt burial 24 hours</li>
+      <li><strong>Best crystals:</strong> Clear quartz (amplifier) · Amethyst (spiritual) · Rose quartz (love) · Black tourmaline (protection) · Citrine (abundance)</li>
+    </ul></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">Frequency–Water–Crystal Pairings</div>
+    <div class="theory-qref-grid" style="margin-top:.5rem">${[
+      {freq:'174 Hz',use:'Pain Relief Water',crystal:'Red Jasper'},
+      {freq:'285 Hz',use:'Tissue Repair Water',crystal:'Carnelian'},
+      {freq:'396 Hz',use:'Fear Release Water',crystal:'Smoky Quartz'},
+      {freq:'417 Hz',use:'Change Water',crystal:'Orange Calcite'},
+      {freq:'528 Hz',use:'DNA Repair Water',crystal:'Clear Quartz'},
+      {freq:'639 Hz',use:'Heart Water',crystal:'Rose Quartz'},
+      {freq:'741 Hz',use:'Detox Water',crystal:'Blue Lace Agate'},
+      {freq:'852 Hz',use:'Third Eye Water',crystal:'Amethyst'},
+      {freq:'963 Hz',use:'Crown Water',crystal:'Selenite'},
+      {freq:'7.83 Hz',use:'Grounding Water',crystal:'Hematite'},
+      {freq:'432 Hz',use:'Harmony Water',crystal:'Green Aventurine'},
+      {freq:'888 Hz',use:'Abundance Crystal',crystal:'Citrine'},
+    ].map(p=>`<div class="theory-qref-item"><div class="theory-qref-hz">${p.freq}</div><div style="font-size:.66rem;color:var(--fg)">${p.use}</div><div class="theory-qref-use">Crystal: ${p.crystal}</div></div>`).join('')}</div></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">Best Practices</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Use wired speakers</strong> — Bluetooth adds digital noise</li>
+      <li><strong>Enable Airplane Mode</strong> to eliminate EMF interference during charging</li>
+      <li><strong>Never use tap water</strong> — chlorine and fluoride interfere with structured water formation</li>
+      <li><strong>Label charged water</strong> with frequency and date if storing</li>
+      <li><strong>Combine methods</strong> — charge water AND a crystal simultaneously for amplified effects</li>
+    </ul></div>`;
+  html+=sec('ts-11','Water & Crystal Charging',wcBody);
+
+  // ── 12. 7-Day Granthi ──
+  const granthiDays=[
+    {day:1,name:'Purification',freqs:[174,417,528],fStr:'174 + 417 + 528 Hz',desc:'Clears foundational blockages and prepares the system for deep work. Releases old patterns and creates space for transformation.',tip:'Start your day with this track. Drink charged water throughout the day.'},
+    {day:2,name:'Root Release',freqs:[194,396,8],fStr:'194 + 396 + 8 Hz',desc:'Shatters the first psychic knot (Brahma Granthi). Releases deep-seated survival fears and allows primal energy to rise.',tip:'Ground intensely after listening. Walk barefoot on earth for 20 minutes.'},
+    {day:3,name:'Heart Stabilization',freqs:[528,639,10],fStr:'528 + 639 + 10 Hz',desc:'Critical integration day. Anchors root energy in the heart and builds a stable core of compassion. Do NOT skip.',tip:'Focus on heart-centered meditation. This day prevents imbalance.'},
+    {day:4,name:'Love & Compassion',freqs:[741,852,12.5],fStr:'741 + 852 + 12.5 Hz',desc:'Dissolves the second knot (Vishnu Granthi). Transforms personal power into universal love.',tip:'Healing abilities may emerge. Stay open to synchronicities.'},
+    {day:5,name:'Psychic Clarification',freqs:[141,963,15],fStr:'141 + 963 + 15 Hz',desc:'Purifies the channels of perception. Prepares for the final ascent with clarity and discernment.',tip:'Journal any visions or insights. Trust your intuitive downloads.'},
+    {day:6,name:'Spiritual Dissolution',freqs:[963,999,4.5],fStr:'963 + 999 + 4.5 Hz',desc:'Shatters the final knot (Rudra Granthi). Facilitates awareness of non-duality. Can be intense.',tip:'Advanced day — rest if needed. Ground aggressively afterward.'},
+    {day:7,name:'Integration',freqs:[432,963,40],fStr:'432 + 963 + 40 Hz',desc:'Integrates the entire journey. Stabilizes crown chakra connection and binds the new state of consciousness.',tip:'Celebrate your journey. Set intentions for how you\'ll use this expanded awareness.'},
+  ];
+  const grBodyDays=granthiDays.map(d=>`<div class="theory-card">
+    <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.45rem">
+      <div style="background:var(--accent);color:#fff;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;flex-shrink:0">${d.day}</div>
+      <div style="flex:1"><div style="font-size:.85rem;font-weight:600">Day ${d.day}: ${d.name}</div><div style="font-size:.65rem;color:var(--teal);font-family:monospace">${d.fStr}</div></div>
+      ${pBtn(d.freqs,'Day '+d.day+': '+d.name)}
+    </div>
+    <div class="theory-desc" style="margin-bottom:.4rem">${d.desc}</div>
+    <div style="font-size:.7rem;color:var(--muted);background:var(--card3);padding:.35rem .6rem;border-radius:4px">💡 ${d.tip}</div>
+  </div>`).join('');
+  const grBody=`<div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">A structured 7-day frequency protocol for deep spiritual transformation following the traditional Granthi (psychic knot) unlocking sequence. Each day builds on the previous, creating cumulative shifts in consciousness.</div></div>${grBodyDays}
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">Protocol Guidelines</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Listen daily</strong> for 15–30 minutes per session</li>
+      <li><strong>Do NOT skip Day 3</strong> — it is the critical stabilization day</li>
+      <li><strong>If overwhelmed,</strong> return to Day 3 frequencies until stable</li>
+      <li><strong>Ground after each session</strong> — walk barefoot, eat root vegetables, drink water</li>
+      <li><strong>Journal your experiences</strong> — note dreams, insights, and physical sensations</li>
+      <li><strong>Repeat quarterly</strong> for ongoing spiritual maintenance</li>
+    </ul></div>`;
+  html+=sec('ts-12','7-Day Granthi Immersion Protocol',grBody);
+
+  // ── 13. Environments ──
+  const envBody=`
+    <div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">Frequencies can be used to enhance business environments, charge products, and clear spaces. These protocols use subtle continuous frequency playback to create sustained energetic shifts in commercial and personal spaces.</div></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">🏪 Retail / Fruit Shop Protocol</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Track:</strong> 37 + 73 + 528 Hz — play on loop overnight at low volume ${pBtn([37,73,528],'Abundance Repair')}</li>
+      <li><strong>Place a clear quartz crystal</strong> near the speaker to amplify the field</li>
+      <li><strong>Intention:</strong> "This space attracts abundance and loyal customers"</li>
+      <li><strong>Duration:</strong> From closing until opening — 8+ hours</li>
+    </ul></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">🧃 Product Charging Protocol</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Track:</strong> 528 Hz — place products within 2 inches of the speaker ${pBtn([528],'528 Hz DNA Repair')}</li>
+      <li><strong>Duration:</strong> 30–60 minutes</li>
+      <li><strong>Best Hz:</strong> 528 (healing) · 888 (abundance) · 432 (harmony)</li>
+      <li><strong>Imprint lasts</strong> for days — charge before display</li>
+    </ul></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">🏠 Space Clearing Protocol</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Track:</strong> 417 + 741 + 432 Hz — play while walking through each room ${pBtn([417,741,432],'Space Clearing')}</li>
+      <li><strong>Open windows</strong> to allow stagnant energy to exit</li>
+      <li><strong>Follow up with:</strong> 528 + 639 Hz to fill cleared space with love and harmony</li>
+      <li><strong>For heavy energy:</strong> Use 396 + 417 Hz first</li>
+    </ul></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">💼 Office / Workspace Optimization</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Morning:</strong> 16 + 40 + 100 Hz — Focus & Creative Action ${pBtn([16,40,100],'Focus & Creative Action')}</li>
+      <li><strong>Afternoon reset:</strong> 20.3 + 40 Hz — Hyper-Learning boost ${pBtn([20.3,40],'Hyper-Learning')}</li>
+      <li><strong>End of day:</strong> 7.83 + 10 Hz — Ground & transition ${pBtn([7.83,10],'Grounding & Calm')}</li>
+    </ul></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">🌿 Garden & Plant Enhancement</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li>Play 528 Hz near plants for 30 min daily ${pBtn([528],'Nature\'s Healing')}</li>
+      <li>Water plants with 528 Hz-charged water for enhanced growth</li>
+      <li>Studies show measurable positive response in plant growth rates</li>
+    </ul></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">🚗 Vehicle / Commute Protocol</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Track:</strong> 7.83 + 10 + 40 Hz through car speakers ${pBtn([7.83,10,40],'Digital Detox')}</li>
+      <li><strong>For road rage:</strong> Switch to 174 + 432 Hz ${pBtn([174,432],'Pain Relief + Harmony')}</li>
+    </ul></div>
+    <div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">General Environmental Guidelines</div>
+    <ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">
+      <li><strong>Low volume is sufficient</strong> — frequencies work energetically, not just acoustically</li>
+      <li><strong>Use wired speakers</strong> for cleanest transmission</li>
+      <li><strong>Set clear intention</strong> before starting — speak it aloud</li>
+      <li><strong>Consistency builds cumulative effects</strong> — daily protocols outperform one-off sessions</li>
+    </ul></div>
+    <div style="margin-top:1.2rem;padding:.85rem 1rem;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:8px;font-size:.72rem;color:var(--dim);line-height:1.55"><strong style="color:#fca5a5">Disclaimer:</strong> Information provided is for educational and entertainment purposes only. Frequency therapy is not a substitute for professional medical advice. Always consult a qualified healthcare provider regarding medical conditions.</div>`;
+  html+=sec('ts-13','Business & Environmental Applications',envBody);
+
+  container.innerHTML=html;
+}
 
 // ── Legal Pages ──
 const LEGAL_CONTENT = {
