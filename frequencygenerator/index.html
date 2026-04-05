@@ -39,7 +39,7 @@
       background: var(--bg); color: var(--text);
       font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       min-height: 100vh; display: flex; flex-direction: column;
-      align-items: center; padding-bottom: 84px; -webkit-tap-highlight-color: transparent;
+      align-items: center; padding-bottom: 140px; -webkit-tap-highlight-color: transparent;
     }
     .header {
       background: linear-gradient(160deg, #0a0a1a 0%, #0a0f1e 100%);
@@ -64,18 +64,59 @@
     .qm-brand { display:flex; align-items:center; justify-content:center; gap:.65rem; margin-bottom:.6rem; position:relative; text-decoration:none; }
     .qm-logo-icon { width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #00f5ff 0%, #9d00ff 100%); border-radius:10px; font-family:'Orbitron',sans-serif; font-weight:800; font-size:.9rem; color:#fff; box-shadow:0 0 20px rgba(0,245,255,.4); flex-shrink:0; }
     .qm-logo-text { font-family:'Orbitron',sans-serif; font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; background:linear-gradient(135deg,#00f5ff,#ff00ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    .nav {
-      background: var(--card); border-bottom: 1px solid var(--border);
-      display: flex; padding: 0 2rem; gap: .25rem; justify-content: center; flex-wrap: wrap;
+    /* ── Bottom Navigation ── */
+    .bottom-nav {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 190;
+      background: rgba(10,10,20,.96); backdrop-filter: blur(14px);
+      border-top: 1px solid var(--border);
+      display: flex; align-items: stretch; height: 60px;
+      padding-bottom: env(safe-area-inset-bottom, 0);
     }
-    .nav-tab {
-      padding: .75rem 1.25rem; color: var(--dim); cursor: pointer; border: none;
-      border-bottom: 2px solid transparent; background: none; font-size: .82rem;
-      font-family: 'Exo 2', sans-serif; font-weight: 600; letter-spacing:.03em;
-      transition: color .15s, border-color .15s; outline: none;
+    .bnav-btn {
+      flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: .15rem; background: none; border: none; color: var(--muted);
+      font-family: 'Exo 2', sans-serif; font-size: .58rem; font-weight: 600;
+      letter-spacing: .04em; text-transform: uppercase; cursor: pointer;
+      transition: color .15s; position: relative; outline: none;
+      -webkit-tap-highlight-color: transparent; min-height: 44px; padding: .3rem 0;
     }
-    .nav-tab:hover { color: #fff; }
-    .nav-tab.active { color: var(--acl); border-bottom-color: var(--acl); }
+    .bnav-icon { font-size: 1.3rem; line-height: 1; transition: transform .15s; display: block; }
+    .bnav-btn:active .bnav-icon { transform: scale(.85); }
+    .bnav-btn:hover { color: #fff; }
+    .bnav-btn.active { color: var(--acl); }
+    .bnav-btn.active::before {
+      content: ''; position: absolute; top: 0; left: 20%; right: 20%;
+      height: 2px; background: var(--acl);
+      box-shadow: 0 0 8px var(--acl); border-radius: 0 0 3px 3px;
+    }
+    .bnav-create {
+      flex: 0 0 72px; background: linear-gradient(160deg,#9d00ff,#7c3aed);
+      border-radius: 14px 14px 0 0; margin: 0 6px; color: #fff !important;
+      box-shadow: 0 -4px 22px rgba(157,0,255,.45);
+    }
+    .bnav-create.active { color: #fff !important; }
+    .bnav-create.active::before { display: none; }
+    /* Theory info button */
+    .info-btn {
+      position: absolute; top: .55rem; right: .8rem;
+      background: rgba(0,245,255,.07); border: 1px solid rgba(0,245,255,.22);
+      color: var(--acl); font-family: 'Exo 2', sans-serif; font-size: .68rem;
+      font-weight: 600; letter-spacing: .04em; border-radius: 20px;
+      padding: .28rem .72rem; cursor: pointer; transition: all .18s; z-index: 2;
+    }
+    .info-btn:hover { background: rgba(0,245,255,.15); border-color: var(--acl); }
+    /* Browse sub-tabs */
+    .browse-tabs { display: flex; gap: .4rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: .6rem; }
+    .browse-tab { padding: .4rem 1.1rem; border-radius: 20px; font-size: .78rem; font-weight: 600; font-family: 'Exo 2', sans-serif; background: none; border: 1px solid transparent; color: var(--muted); cursor: pointer; transition: all .15s; }
+    .browse-tab.active { background: rgba(0,245,255,.12); border-color: var(--acl); color: var(--acl); }
+    /* Theory overlay */
+    .theory-overlay { position: fixed; inset: 0; z-index: 9000; background: rgba(0,0,0,.93); overflow-y: auto; display: none; }
+    .theory-overlay.on { display: block; }
+    .theory-overlay-inner { max-width: 780px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+    .theory-overlay-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; padding-bottom: .75rem; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(0,0,0,.96); z-index: 1; padding-top: .5rem; }
+    .theory-overlay-title { font-family: 'Orbitron', sans-serif; font-size: .95rem; font-weight: 700; background: linear-gradient(135deg,#00f5ff,#ff00ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .theory-overlay-close { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .theory-overlay-close:hover { background: rgba(255,255,255,.18); }
     .main { flex: 1; padding: 1.75rem 2rem; max-width: 1040px; margin: 0 auto; width: 100%; text-align: center; }
     .tab-pane { display: none; }
     .tab-pane.active { display: block; }
@@ -84,7 +125,7 @@
       border-radius: 14px; padding: 1.5rem; margin-bottom: 1.25rem;
     }
     .card-title {
-      font-size: .72rem; font-weight: 700; letter-spacing: .1em;
+      font-size: .82rem; font-weight: 700; letter-spacing: .1em;
       text-transform: uppercase; color: var(--acl); margin-bottom: 1.1rem;
     }
     .field { margin-bottom: 1.1rem; }
@@ -132,7 +173,7 @@
     .btn-teal:not(:disabled):hover { background: linear-gradient(135deg,#00f5ff,#00c4d6); transform: translateY(-1px); box-shadow: 0 0 28px rgba(0,245,255,.4); }
     .btn-ghost { background: var(--card2); color: var(--dim); border: 1px solid var(--border); }
     .btn-ghost:not(:disabled):hover { border-color: var(--acl); color: var(--text); }
-    .btn-sm { padding: .32rem .7rem; font-size: .75rem; border-radius: 6px; }
+    .btn-sm { padding: .45rem .85rem; font-size: .78rem; border-radius: 6px; }
     .btn-row { display: flex; gap: .65rem; flex-wrap: wrap; justify-content: center; }
     .icon-play, .icon-download, .icon-stop { display: inline-block; width: 12px; height: 12px; position: relative; }
     .icon-play { border-left: 10px solid currentColor; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
@@ -153,7 +194,6 @@
       .vis-section.on { grid-template-columns: 1fr; }
       .cymatics-canvas { width: 180px !important; height: 180px !important; }
       .header h1 { font-size: 1.35rem; }
-      .nav { padding: 0 0.5rem; }
       .main { padding: 1rem 0.75rem; }
     }
     .cymatics-wrap { display: flex; flex-direction: column; align-items: center; gap: .55rem; position: relative; }
@@ -164,7 +204,7 @@
       animation: cymPulse 4s ease-in-out infinite;
     }
     @keyframes cymPulse { 0%,100%{transform:scale(1);box-shadow:0 0 36px rgba(124,58,237,.22),0 0 10px rgba(6,182,212,.15)} 50%{transform:scale(1.02);box-shadow:0 0 50px rgba(124,58,237,.35),0 0 20px rgba(6,182,212,.25)} }
-    .cymatics-lbl { font-size: .62rem; color: var(--muted); text-transform: uppercase; letter-spacing: .09em; }
+    .cymatics-lbl { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .09em; }
     .cym-fullscreen-btn { position:absolute; top:6px; right:6px; background:rgba(0,0,0,.5); border:1px solid rgba(255,255,255,.2); color:#fff; width:28px; height:28px; border-radius:6px; cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .2s; z-index:10; }
     .cymatics-wrap:hover .cym-fullscreen-btn, .cymatics-wrap .cym-fullscreen-btn:focus { opacity:1; }
     @media (hover:none) { .cym-fullscreen-btn { opacity:0.7; } }
@@ -205,7 +245,7 @@
     .ti-freqs { font-size:.72rem; color:var(--muted); font-family:monospace; }
     .ta { display:flex; gap:.4rem; }
     .player {
-      position:fixed; bottom:0; left:0; right:0; background:rgba(10,14,26,.94);
+      position:fixed; bottom:60px; left:0; right:0; background:rgba(10,14,26,.94);
       backdrop-filter:blur(12px); border-top:1px solid var(--border);
       padding:.7rem 2rem; display:none; align-items:center; gap:1rem; z-index:200;
     }
@@ -327,16 +367,8 @@
   </div>
   <h1>Frequency Generator</h1>
   <p>Pure sine wave audio therapy with real-time cymatics</p>
+  <button class="info-btn" id="info-btn" onclick="openTheoryOverlay()" title="Frequency Theory &amp; Reference">ⓘ Theory</button>
 </header>
-<nav class="nav" id="nav" role="tablist" aria-label="Main navigation">
-  <button class="nav-tab active" data-tab="home" role="tab" aria-selected="true">Home</button>
-  <button class="nav-tab" data-tab="library" role="tab">Library</button>
-  <button class="nav-tab" data-tab="presets" role="tab">Presets</button>
-  <button class="nav-tab" data-tab="custom" role="tab">Custom</button>
-  <button class="nav-tab" data-tab="playlists" role="tab">Playlists</button>
-  <button class="nav-tab" data-tab="theory" role="tab">Theory</button>
-  <button class="nav-tab" data-tab="legal" role="tab">Legal</button>
-</nav>
 <main class="main">
   <!-- Visualizer (always visible during playback) -->
   <div class="vis-section" id="vis-section">
@@ -376,30 +408,35 @@
       <div id="popular-tracks" style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center"></div>
     </div>
   </div>
-  <!-- Library -->
-  <div class="tab-pane" id="pane-library">
-    <div class="card library-grid" style="display:grid;grid-template-columns:200px 1fr;gap:1.2rem;text-align:left">
-      <div id="library-sidebar" class="library-sidebar" style="max-height:70vh;overflow-y:auto">
-        <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">Collections</div>
-        <div id="library-nav" class="library-nav-wrap"></div>
+  <!-- Browse (Library + Presets merged) -->
+  <div class="tab-pane" id="pane-browse">
+    <div class="browse-tabs">
+      <button class="browse-tab active" id="browse-tab-library" onclick="switchBrowseTab('library')">📚 Library</button>
+      <button class="browse-tab" id="browse-tab-presets" onclick="switchBrowseTab('presets')">🎛️ Presets</button>
+    </div>
+    <div id="browse-library">
+      <div class="card library-grid" style="display:grid;grid-template-columns:200px 1fr;gap:1.2rem;text-align:left">
+        <div id="library-sidebar" class="library-sidebar" style="max-height:70vh;overflow-y:auto">
+          <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">Collections</div>
+          <div id="library-nav" class="library-nav-wrap"></div>
+        </div>
+        <div>
+          <input type="text" id="library-search" class="input" placeholder="Search all 200+ tracks…" style="margin-bottom:.85rem" oninput="filterLibrary()">
+          <div id="library-content"></div>
+        </div>
       </div>
-      <div>
-        <input type="text" id="library-search" class="input" placeholder="Search all 200+ tracks…" style="margin-bottom:.85rem" oninput="filterLibrary()">
-        <div id="library-content"></div>
+    </div>
+    <div id="browse-presets" style="display:none">
+      <div class="card">
+        <div class="card-title">Core Therapeutic Presets</div>
+        <input type="text" class="input" id="preset-search" placeholder="Search presets…" style="margin-bottom:.85rem" oninput="filterPresets()">
+        <div class="filter-row" id="filter-row"></div>
+        <div class="preset-grid" id="preset-grid"></div>
       </div>
     </div>
   </div>
-  <!-- Presets -->
-  <div class="tab-pane" id="pane-presets">
-    <div class="card">
-      <div class="card-title">Core Therapeutic Presets</div>
-      <input type="text" class="input" id="preset-search" placeholder="Search presets…" style="margin-bottom:.85rem" oninput="filterPresets()">
-      <div class="filter-row" id="filter-row"></div>
-      <div class="preset-grid" id="preset-grid"></div>
-    </div>
-  </div>
-  <!-- Custom -->
-  <div class="tab-pane" id="pane-custom">
+  <!-- Create -->
+  <div class="tab-pane" id="pane-create">
     <div class="card">
       <div class="card-title">Build Your Track</div>
       <div class="field"><label for="track-name">Track Name</label><input type="text" id="track-name" class="input" placeholder="Custom Therapeutic Track" value="Custom Therapeutic Track"></div>
@@ -411,10 +448,10 @@
         <button class="btn btn-ghost" id="save-custom-btn" onclick="saveCurrentTrack()">Save Track</button>
       </div>
     </div>
-    <div class="card"><div class="card-title">Saved Tracks (stored locally)</div><div id="saved-tracks-container"></div></div>
   </div>
-  <!-- Playlists -->
-  <div class="tab-pane" id="pane-playlists">
+  <!-- My Library -->
+  <div class="tab-pane" id="pane-mylib">
+    <div class="card"><div class="card-title">Saved Tracks</div><div id="saved-tracks-container"></div></div>
     <div class="card">
       <div class="card-title">Playlist Manager</div>
       <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;justify-content:center">
@@ -426,14 +463,8 @@
       <div id="playlists-container"></div>
     </div>
   </div>
-  <!-- Theory -->
-  <div class="tab-pane" id="pane-theory">
-    <div class="card">
-      <div class="card-title">Frequency Therapy Theory & Reference</div>
-      <p style="font-size:.82rem;color:var(--muted);margin-bottom:1.2rem;text-align:left">Sound frequencies can influence brainwave states, promote healing, and alter consciousness. Below is a comprehensive guide to therapeutic frequencies.</p>
-      <div id="theory-content" style="text-align:left"></div>
-    </div>
-  </div>
+  <!-- Theory (content rendered into overlay) -->
+  <div class="tab-pane" id="pane-theory" style="display:none"></div>
   <!-- Legal -->
   <div class="tab-pane" id="pane-legal">
     <div class="card">
@@ -448,6 +479,24 @@
     </div>
   </div>
 </main>
+<!-- Theory Overlay -->
+<div class="theory-overlay" id="theory-overlay">
+  <div class="theory-overlay-inner">
+    <div class="theory-overlay-hdr">
+      <span class="theory-overlay-title">Frequency Therapy — Theory & Reference</span>
+      <button class="theory-overlay-close" onclick="closeTheoryOverlay()" aria-label="Close">✕</button>
+    </div>
+    <p style="font-size:.82rem;color:var(--muted);margin-bottom:1.2rem">Sound frequencies can influence brainwave states, promote healing, and alter consciousness. Below is a comprehensive guide to therapeutic frequencies.</p>
+    <div id="theory-content" style="text-align:left"></div>
+  </div>
+</div>
+<!-- Bottom Navigation -->
+<nav class="bottom-nav" id="bottom-nav" role="tablist" aria-label="Main navigation">
+  <button class="bnav-btn active" data-tab="home" role="tab" aria-selected="true"><span class="bnav-icon">🏠</span><span>Home</span></button>
+  <button class="bnav-btn" data-tab="browse" role="tab" aria-selected="false"><span class="bnav-icon">🔍</span><span>Browse</span></button>
+  <button class="bnav-btn bnav-create" data-tab="create" role="tab" aria-selected="false"><span class="bnav-icon">⚡</span><span>Create</span></button>
+  <button class="bnav-btn" data-tab="mylib" role="tab" aria-selected="false"><span class="bnav-icon">🎶</span><span>My Library</span></button>
+</nav>
 <div class="player" id="player">
   <div class="pl-info"><div class="pl-name" id="pl-name">—</div><div class="pl-freqs" id="pl-freqs">—</div></div>
   <div class="pl-prog"><div class="prog-track" id="prog-track"><div class="prog-fill" id="prog-fill"></div></div><div class="pl-time" id="pl-time">0:00</div></div>
@@ -1353,17 +1402,21 @@ const LEGAL_CONTENT = {
 function showLegal(type){const container=document.getElementById('legal-content');if(!container)return;container.innerHTML=LEGAL_CONTENT[type]||'<p>Content not found.</p>';}
 
 // ── Nav Tab Switching ──
-document.querySelectorAll('.nav-tab').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.nav-tab').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));btn.classList.add('active');btn.setAttribute('aria-selected','true');document.getElementById('pane-'+btn.dataset.tab).classList.add('active');});});
+document.querySelectorAll('.bnav-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.bnav-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));btn.classList.add('active');btn.setAttribute('aria-selected','true');const pane=document.getElementById('pane-'+btn.dataset.tab);if(pane)pane.classList.add('active');});});
 
 // ── Toast ──
 let toastTimer;
+function openTheoryOverlay(){document.getElementById('theory-overlay').classList.add('on');document.body.style.overflow='hidden';}
+function closeTheoryOverlay(){document.getElementById('theory-overlay').classList.remove('on');document.body.style.overflow='';}
+function switchBrowseTab(tab){document.getElementById('browse-library').style.display=tab==='library'?'':'none';document.getElementById('browse-presets').style.display=tab==='presets'?'':'none';document.querySelectorAll('.browse-tab').forEach(b=>b.classList.toggle('active',b.id==='browse-tab-'+tab));}
+
 function toast(msg,type='info'){const el=document.getElementById('toast');el.textContent=msg;el.className='toast '+type+' on';clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('on'),3200);}
 
 // ── Background Particles ──
 (function initBgParticles(){const canvas=document.getElementById('bg-particles');if(!canvas)return;const c=canvas.getContext('2d');let W,H;const particles=[];const PARTICLE_COUNT=80;const GRID_SIZE=120;let grid={};function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}resize();window.addEventListener('resize',resize);class BgParticle{constructor(){this.reset();}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.size=0.5+Math.random()*2;this.speedX=(Math.random()-0.5)*0.3;this.speedY=(Math.random()-0.5)*0.3;this.opacity=0.2+Math.random()*0.5;this.pulse=Math.random()*Math.PI*2;this.pulseSpeed=0.005+Math.random()*0.01;this.color=Math.random()>0.5?'124,58,237':'6,182,212';}update(){this.x+=this.speedX;this.y+=this.speedY;this.pulse+=this.pulseSpeed;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}draw(){const alpha=this.opacity*(0.5+0.5*Math.sin(this.pulse));c.beginPath();c.arc(this.x,this.y,this.size,0,Math.PI*2);c.fillStyle=`rgba(${this.color},${alpha})`;c.fill();}}for(let i=0;i<PARTICLE_COUNT;i++)particles.push(new BgParticle());function buildGrid(){grid={};for(let i=0;i<particles.length;i++){const p=particles[i],cx=Math.floor(p.x/GRID_SIZE),cy=Math.floor(p.y/GRID_SIZE),key=cx+','+cy;if(!grid[key])grid[key]=[];grid[key].push(i);}}function drawConnections(){buildGrid();const drawn=new Set();for(const key in grid){const[cx,cy]=key.split(',').map(Number);for(let dx=-1;dx<=1;dx++){for(let dy=-1;dy<=1;dy++){const nk=(cx+dx)+','+(cy+dy);if(!grid[nk])continue;for(const i of grid[key]){for(const j of grid[nk]){if(i>=j)continue;const pk=i<j?i+','+j:j+','+i;if(drawn.has(pk))continue;drawn.add(pk);const ddx=particles[i].x-particles[j].x,ddy=particles[i].y-particles[j].y,dist2=ddx*ddx+ddy*ddy;if(dist2<14400){const dist=Math.sqrt(dist2),alpha=(1-dist/120)*0.15;c.beginPath();c.moveTo(particles[i].x,particles[i].y);c.lineTo(particles[j].x,particles[j].y);c.strokeStyle=`rgba(124,58,237,${alpha})`;c.lineWidth=0.5;c.stroke();}}}}}}}function animate(){c.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw();});drawConnections();requestAnimationFrame(animate);}animate();})();
 
 // ── Ripple Click Effect ──
-(function initRipple(){document.addEventListener('click',function(e){const target=e.target.closest('.btn,.nav-tab,.chip');if(!target)return;const ripple=document.createElement('span');ripple.className='ripple';const rect=target.getBoundingClientRect();const size=Math.max(rect.width,rect.height,20);ripple.style.width=ripple.style.height=size+'px';ripple.style.left=(e.clientX-rect.left-size/2)+'px';ripple.style.top=(e.clientY-rect.top-size/2)+'px';target.style.position=target.style.position||'relative';target.style.overflow='hidden';target.appendChild(ripple);ripple.addEventListener('animationend',()=>ripple.remove());});})();
+(function initRipple(){document.addEventListener('click',function(e){const target=e.target.closest('.btn,.bnav-btn,.chip');if(!target)return;const ripple=document.createElement('span');ripple.className='ripple';const rect=target.getBoundingClientRect();const size=Math.max(rect.width,rect.height,20);ripple.style.width=ripple.style.height=size+'px';ripple.style.left=(e.clientX-rect.left-size/2)+'px';ripple.style.top=(e.clientY-rect.top-size/2)+'px';target.style.position=target.style.position||'relative';target.style.overflow='hidden';target.appendChild(ripple);ripple.addEventListener('animationend',()=>ripple.remove());});})();
 
 // ── Button Mouse-Tracking Glow ──
 (function initBtnGlow(){document.querySelectorAll('.btn-primary,.btn-teal').forEach(btn=>{btn.addEventListener('mousemove',e=>{const rect=btn.getBoundingClientRect(),x=((e.clientX-rect.left)/rect.width)*100,y=((e.clientY-rect.top)/rect.height)*100;btn.style.setProperty('--mx',x+'%');btn.style.setProperty('--my',y+'%');});});})();
@@ -1372,7 +1425,6 @@ function toast(msg,type='info'){const el=document.getElementById('toast');el.tex
 //  BOOT
 // ══════════════════════════════════════════════════════════════
 initPresets();
-initTrinity();
 initLibrary();
 renderSavedTracks();
 renderPlaylists();
@@ -1400,6 +1452,7 @@ document.addEventListener('keydown', function(e){
   if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'||e.target.tagName==='SELECT') return;
   if(e.code==='Space'&&srcNode){ e.preventDefault(); togglePause(); }
   if(e.code==='Escape'&&srcNode){ e.preventDefault(); stopAudio(); }
+  if(e.code==='Escape'&&document.getElementById('theory-overlay')?.classList.contains('on')){ closeTheoryOverlay(); }
 });
 </script>
 <footer class="qm-footer">
@@ -1411,6 +1464,11 @@ document.addEventListener('keydown', function(e){
       <a href="/quantum-merlin-hub/codes-new.html">✨ Reality Codes</a>
       <a href="/quantum-merlin-hub/tarot-new.html">🃏 Tarot</a>
       <a href="/about-new.html">ℹ️ About</a>
+    </div>
+    <div class="qm-footer-links" style="margin-top:.4rem">
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Use</a>
     </div>
     <p class="qm-footer-copy">© 2026 Quantum Merlin · All rights reserved</p>
   </div>
