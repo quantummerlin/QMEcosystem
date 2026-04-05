@@ -19,7 +19,7 @@
   <link rel="icon" type="image/jpeg" sizes="192x192" href="/quantum-merlin.jpg">
   <link rel="apple-touch-icon" href="/quantum-merlin.jpg">
   <link rel="manifest" href="data:application/json,{}">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Orbitron:wght@400;500;600;700;800&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <title>Therapeutic Frequency Generator — Quantum Merlin</title>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
@@ -43,7 +43,7 @@
     }
     .header {
       background: linear-gradient(160deg, #0a0a1a 0%, #0a0f1e 100%);
-      border-bottom: 1px solid var(--border); padding: 1.2rem 2rem 1rem;
+      border-bottom: 1px solid var(--border); padding: 1.5rem 2rem 1.2rem;
       text-align: center; position: relative; overflow: hidden;
     }
     .header::before {
@@ -52,18 +52,22 @@
       animation: hpulse 5s ease-in-out infinite;
     }
     @keyframes hpulse { 0%,100%{opacity:.5;transform:scale(1)} 50%{opacity:1;transform:scale(1.06)} }
-    .header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.55rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
-      background: linear-gradient(135deg, #00f5ff 0%, #ff00ff 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; position: relative;
-      text-shadow: 0 0 30px rgba(0,245,255,.3);
+    .hero-eyebrow {
+      font-family: 'Cinzel', serif; font-size: .72rem; font-weight: 600;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); margin-bottom: .4rem;
+      position: relative;
     }
-    .header p { color: var(--dim); font-size: .8rem; margin-top: .3rem; position: relative; }
-    .qm-brand { display:flex; align-items:center; justify-content:center; gap:.65rem; margin-bottom:.6rem; position:relative; text-decoration:none; }
-    .qm-logo-icon { width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #00f5ff 0%, #9d00ff 100%); border-radius:10px; font-family:'Orbitron',sans-serif; font-weight:800; font-size:.9rem; color:#fff; box-shadow:0 0 20px rgba(0,245,255,.4); flex-shrink:0; }
-    .qm-logo-text { font-family:'Orbitron',sans-serif; font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; background:linear-gradient(135deg,#00f5ff,#ff00ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .hero-word {
+      display: block; font-family: 'Cinzel Decorative', serif; font-weight: 900;
+      font-size: clamp(2.4rem, 11vw, 4rem); line-height: 1.0; text-transform: uppercase;
+      background: linear-gradient(135deg, #00f5ff 0%, #b04aff 50%, #ff00ff 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 18px rgba(0,245,255,.35)) drop-shadow(0 0 40px rgba(157,0,255,.25));
+      position: relative;
+    }
+    .header p { color: var(--muted); font-size: .72rem; margin-top: .6rem; position: relative; letter-spacing: .04em; }
     /* ── Bottom Navigation ── */
     .bottom-nav {
       position: fixed; bottom: 0; left: 0; right: 0; z-index: 190;
@@ -361,13 +365,13 @@
 <div class="floating-orb"></div>
 <div class="floating-orb"></div>
 <header class="header">
-  <div class="qm-brand">
-    <div class="qm-logo-icon">QM</div>
-    <span class="qm-logo-text">Quantum Merlin</span>
+  <div style="position:relative">
+    <p class="hero-eyebrow">Quantum Merlin's</p>
+    <span class="hero-word">Frequency</span>
+    <span class="hero-word">Generator</span>
   </div>
-  <h1>Frequency Generator</h1>
-  <p>Pure sine wave audio therapy with real-time cymatics</p>
-  <button class="info-btn" id="info-btn" onclick="openTheoryOverlay()" title="Frequency Theory &amp; Reference">ⓘ Theory</button>
+  <p>Pure sine wave audio therapy &amp; real-time cymatics</p>
+  <button class="info-btn" id="info-btn" onclick="openTheoryOverlay()" title="Frequency Theory &amp; Reference">&#x24d8; Theory</button>
 </header>
 <main class="main">
   <!-- Visualizer (always visible during playback) -->
@@ -984,7 +988,7 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
         const m = Math.floor(el / 60), sv = Math.floor(el % 60);
         document.getElementById('pl-time').textContent = m + ':' + String(sv).padStart(2,'0');
       }, 200);
-      updateVisuals(frequencies); startOscilloscope(); startPlayerCymatics(frequencies);
+      updateVisuals(frequencies); startOscilloscope(); if(window.innerWidth>=640) startPlayerCymatics(frequencies);
       toast('Playing: ' + trackName, 'success'); highlightPlaying(trackName);
     } catch (e) { toast('Error: ' + e.message, 'error'); }
     finally { if (triggerBtnId) setBtnLoading(triggerBtnId, false); }
@@ -1054,7 +1058,7 @@ const FREQ_COLORS = ['#a78bfa','#67e8f9','#86efac','#fde68a','#f9a8d4','#fb923c'
 const FREQ_GLOWS = ['rgba(167,139,250,','rgba(103,232,249,','rgba(134,239,172,','rgba(253,230,138,','rgba(249,168,212,','rgba(251,146,60,'];
 let cyRaf = null, cyT = 0, cyFreqs = [], analyser = null, oscRaf = null;
 let plCymRaf = null, plCymT = 0, plCymFreqs = [], waveAnimRaf = null, wavePhase = 0, lastWaveFrame = 0;
-let vibFieldsByFreq = {}, lastFreqs = [], lastVibTime = -1, sandLayers = [], SAND_PER_FREQ = 1200;
+let vibFieldsByFreq = {}, lastFreqs = [], lastVibTime = -1, sandLayers = [], SAND_PER_FREQ = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? 350 : 1200;
 const VIB_SENSITIVITY = 3.2, FRICTION = 0.90, RANDOM_JITTER = 0.12, EDGE_PUSH = 0.6;
 const SAND_COLORS = [{r:220,g:195,b:160},{r:180,g:200,b:220},{r:210,g:180,b:170},{r:190,g:215,b:185},{r:225,g:210,b:170},{r:200,g:185,b:210}];
 
@@ -1413,7 +1417,7 @@ function switchBrowseTab(tab){document.getElementById('browse-library').style.di
 function toast(msg,type='info'){const el=document.getElementById('toast');el.textContent=msg;el.className='toast '+type+' on';clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('on'),3200);}
 
 // ── Background Particles ──
-(function initBgParticles(){const canvas=document.getElementById('bg-particles');if(!canvas)return;const c=canvas.getContext('2d');let W,H;const particles=[];const PARTICLE_COUNT=80;const GRID_SIZE=120;let grid={};function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}resize();window.addEventListener('resize',resize);class BgParticle{constructor(){this.reset();}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.size=0.5+Math.random()*2;this.speedX=(Math.random()-0.5)*0.3;this.speedY=(Math.random()-0.5)*0.3;this.opacity=0.2+Math.random()*0.5;this.pulse=Math.random()*Math.PI*2;this.pulseSpeed=0.005+Math.random()*0.01;this.color=Math.random()>0.5?'124,58,237':'6,182,212';}update(){this.x+=this.speedX;this.y+=this.speedY;this.pulse+=this.pulseSpeed;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}draw(){const alpha=this.opacity*(0.5+0.5*Math.sin(this.pulse));c.beginPath();c.arc(this.x,this.y,this.size,0,Math.PI*2);c.fillStyle=`rgba(${this.color},${alpha})`;c.fill();}}for(let i=0;i<PARTICLE_COUNT;i++)particles.push(new BgParticle());function buildGrid(){grid={};for(let i=0;i<particles.length;i++){const p=particles[i],cx=Math.floor(p.x/GRID_SIZE),cy=Math.floor(p.y/GRID_SIZE),key=cx+','+cy;if(!grid[key])grid[key]=[];grid[key].push(i);}}function drawConnections(){buildGrid();const drawn=new Set();for(const key in grid){const[cx,cy]=key.split(',').map(Number);for(let dx=-1;dx<=1;dx++){for(let dy=-1;dy<=1;dy++){const nk=(cx+dx)+','+(cy+dy);if(!grid[nk])continue;for(const i of grid[key]){for(const j of grid[nk]){if(i>=j)continue;const pk=i<j?i+','+j:j+','+i;if(drawn.has(pk))continue;drawn.add(pk);const ddx=particles[i].x-particles[j].x,ddy=particles[i].y-particles[j].y,dist2=ddx*ddx+ddy*ddy;if(dist2<14400){const dist=Math.sqrt(dist2),alpha=(1-dist/120)*0.15;c.beginPath();c.moveTo(particles[i].x,particles[i].y);c.lineTo(particles[j].x,particles[j].y);c.strokeStyle=`rgba(124,58,237,${alpha})`;c.lineWidth=0.5;c.stroke();}}}}}}}function animate(){c.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw();});drawConnections();requestAnimationFrame(animate);}animate();})();
+(function initBgParticles(){const canvas=document.getElementById('bg-particles');if(!canvas)return;const c=canvas.getContext('2d');let W,H;const particles=[];const PARTICLE_COUNT=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)?35:80;const GRID_SIZE=120;let grid={};function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}resize();window.addEventListener('resize',resize);class BgParticle{constructor(){this.reset();}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.size=0.5+Math.random()*2;this.speedX=(Math.random()-0.5)*0.3;this.speedY=(Math.random()-0.5)*0.3;this.opacity=0.2+Math.random()*0.5;this.pulse=Math.random()*Math.PI*2;this.pulseSpeed=0.005+Math.random()*0.01;this.color=Math.random()>0.5?'124,58,237':'6,182,212';}update(){this.x+=this.speedX;this.y+=this.speedY;this.pulse+=this.pulseSpeed;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}draw(){const alpha=this.opacity*(0.5+0.5*Math.sin(this.pulse));c.beginPath();c.arc(this.x,this.y,this.size,0,Math.PI*2);c.fillStyle=`rgba(${this.color},${alpha})`;c.fill();}}for(let i=0;i<PARTICLE_COUNT;i++)particles.push(new BgParticle());function buildGrid(){grid={};for(let i=0;i<particles.length;i++){const p=particles[i],cx=Math.floor(p.x/GRID_SIZE),cy=Math.floor(p.y/GRID_SIZE),key=cx+','+cy;if(!grid[key])grid[key]=[];grid[key].push(i);}}function drawConnections(){buildGrid();const drawn=new Set();for(const key in grid){const[cx,cy]=key.split(',').map(Number);for(let dx=-1;dx<=1;dx++){for(let dy=-1;dy<=1;dy++){const nk=(cx+dx)+','+(cy+dy);if(!grid[nk])continue;for(const i of grid[key]){for(const j of grid[nk]){if(i>=j)continue;const pk=i<j?i+','+j:j+','+i;if(drawn.has(pk))continue;drawn.add(pk);const ddx=particles[i].x-particles[j].x,ddy=particles[i].y-particles[j].y,dist2=ddx*ddx+ddy*ddy;if(dist2<14400){const dist=Math.sqrt(dist2),alpha=(1-dist/120)*0.15;c.beginPath();c.moveTo(particles[i].x,particles[i].y);c.lineTo(particles[j].x,particles[j].y);c.strokeStyle=`rgba(124,58,237,${alpha})`;c.lineWidth=0.5;c.stroke();}}}}}}}function animate(){c.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw();});drawConnections();requestAnimationFrame(animate);}animate();})();
 
 // ── Ripple Click Effect ──
 (function initRipple(){document.addEventListener('click',function(e){const target=e.target.closest('.btn,.bnav-btn,.chip');if(!target)return;const ripple=document.createElement('span');ripple.className='ripple';const rect=target.getBoundingClientRect();const size=Math.max(rect.width,rect.height,20);ripple.style.width=ripple.style.height=size+'px';ripple.style.left=(e.clientX-rect.left-size/2)+'px';ripple.style.top=(e.clientY-rect.top-size/2)+'px';target.style.position=target.style.position||'relative';target.style.overflow='hidden';target.appendChild(ripple);ripple.addEventListener('animationend',()=>ripple.remove());});})();
