@@ -543,6 +543,7 @@
   <canvas id="pl-osc" class="pl-osc" width="74" height="28"></canvas>
   <canvas id="pl-cym" class="pl-cym" width="36" height="36"></canvas>
   <button class="pause-btn" id="pause-btn" onclick="togglePause()"><span id="pause-icon">⏸</span></button>
+  <button class="pause-btn" id="share-btn" onclick="shareCurrentTrack()" title="Share" style="font-size:.95rem">↗</button>
   <button class="stop-btn" onclick="stopAudio()"><span class="icon-stop"></span> Stop</button>
 </div>
 <div class="toast" id="toast"></div>
@@ -1010,6 +1011,7 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
       srcNode = c.createBufferSource(); srcNode.buffer = ab;
       srcNode.connect(analyser); analyser.connect(gainNode); gainNode.connect(c.destination);
       srcNode.start(); srcNode.onended = stopAudio;
+      currentTrackName = trackName; currentTrackFreqs = frequencies.slice();
       acquireWakeLock();
       playStart = c.currentTime; playDuration = ab.duration;
       document.getElementById('pl-name').textContent = trackName;
@@ -1512,6 +1514,20 @@ document.addEventListener('visibilitychange', () => {
 function openTheoryOverlay(){document.getElementById('theory-overlay').classList.add('on');document.body.style.overflow='hidden';}
 function closeTheoryOverlay(){document.getElementById('theory-overlay').classList.remove('on');document.body.style.overflow='';}
 function switchBrowseTab(tab){document.getElementById('browse-library').style.display=tab==='library'?'':'none';document.getElementById('browse-presets').style.display=tab==='presets'?'':'none';document.querySelectorAll('.browse-tab').forEach(b=>b.classList.toggle('active',b.id==='browse-tab-'+tab));}
+
+// ── Share ──
+let currentTrackName = '', currentTrackFreqs = [];
+function shareCurrentTrack() { shareTrack(currentTrackName, currentTrackFreqs); }
+function shareTrack(name, freqs) {
+  if (!name) return;
+  const text = `${name}\nFrequencies: ${freqs.map(fmtHz).join(', ')}\nTherapeutic audio by Quantum Merlin`;
+  const url = 'https://quantummerlin.com/frequencygenerator/';
+  if (navigator.share) {
+    navigator.share({ title: name, text, url }).catch(()=>{});
+  } else {
+    navigator.clipboard?.writeText(url + '\n' + text).then(()=>toast('Link copied to clipboard','success')).catch(()=>toast('Copy: '+url,'info'));
+  }
+}
 
 function toast(msg,type='info'){const el=document.getElementById('toast');el.textContent=msg;el.className='toast '+type+' on';clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('on'),3200);}
 
