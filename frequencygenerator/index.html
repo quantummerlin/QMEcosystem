@@ -204,7 +204,7 @@
     .toast.info { background:rgba(99,102,241,.92); color:#fff; }
     .toast.success { background:rgba(16,185,129,.92); color:#fff; }
     .toast.error { background:rgba(239,68,68,.92); color:#fff; }
-    @media (max-width:600px) { .main { padding:1rem 0.5rem; } .preset-grid { grid-template-columns:1fr; } .player { padding:.6rem 1rem; } .pl-info { flex:0 0 130px; } .card { padding:1rem; } .btn-row { justify-content:center; } }
+    @media (max-width:600px) { .main { padding:1rem 0.5rem; } .preset-grid { grid-template-columns:1fr; } .player { padding:.6rem 1rem; flex-wrap:wrap; } .pl-info { flex:0 0 130px; } .card { padding:1rem; } .btn-row { justify-content:center; } .library-grid { grid-template-columns:1fr !important; } .library-grid .library-sidebar { max-height:none; overflow-y:visible; } .library-grid .library-sidebar .library-nav-wrap { display:flex; flex-wrap:wrap; gap:.3rem; } .library-grid .library-sidebar .library-nav-wrap a { display:inline-block; } .trinity-row { flex-wrap:wrap; } .ta { width:100%; justify-content:flex-start; } .preset-btns { flex-wrap:wrap; } }
     @media (min-width:768px) { .main { max-width:900px; } }
     ::-webkit-scrollbar { width:5px; }
     ::-webkit-scrollbar-track { background:var(--bg); }
@@ -327,10 +327,10 @@
   </div>
   <!-- Library -->
   <div class="tab-pane" id="pane-library">
-    <div class="card" style="display:grid;grid-template-columns:200px 1fr;gap:1.2rem;text-align:left">
-      <div id="library-sidebar" style="max-height:70vh;overflow-y:auto">
+    <div class="card library-grid" style="display:grid;grid-template-columns:200px 1fr;gap:1.2rem;text-align:left">
+      <div id="library-sidebar" class="library-sidebar" style="max-height:70vh;overflow-y:auto">
         <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">Collections</div>
-        <div id="library-nav"></div>
+        <div id="library-nav" class="library-nav-wrap"></div>
       </div>
       <div>
         <input type="text" id="library-search" class="input" placeholder="Search all 200+ tracks…" style="margin-bottom:.85rem" oninput="filterLibrary()">
