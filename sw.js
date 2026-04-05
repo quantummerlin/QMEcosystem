@@ -3,7 +3,7 @@
  * Provides offline support and caching for PWA functionality
  */
 
-const CACHE_NAME = 'qm-cache-v3';
+const CACHE_NAME = 'qm-cache-v4';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache immediately on install
