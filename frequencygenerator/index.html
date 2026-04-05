@@ -19,56 +19,62 @@
   <link rel="icon" type="image/jpeg" sizes="192x192" href="/quantum-merlin.jpg">
   <link rel="apple-touch-icon" href="/quantum-merlin.jpg">
   <link rel="manifest" href="data:application/json,{}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <title>Therapeutic Frequency Generator — Quantum Merlin</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VW4LGE7L1T');</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #060b14; --card: #0d1423; --card2: #121d30; --card3: #172038;
-      --accent: #7c3aed; --acl: #a78bfa; --aglow: rgba(124,58,237,.28);
-      --teal: #06b6d4; --tglow: rgba(6,182,212,.22);
-      --text: #eef2ff; --dim: #94a3b8; --muted: #475569;
-      --border: rgba(255,255,255,.07); --success: #10b981; --danger: #ef4444;
+      --bg: #0a0a0f; --card: rgba(20,20,35,.95); --card2: rgba(30,30,50,.85); --card3: rgba(40,40,60,.7);
+      --accent: #9d00ff; --acl: #00f5ff; --aglow: rgba(0,245,255,.28);
+      --teal: #00f5ff; --tglow: rgba(0,245,255,.22);
+      --magenta: #ff00ff; --gold: #ffd700; --pink: #ff1493;
+      --text: #ffffff; --dim: rgba(255,255,255,.7); --muted: rgba(255,255,255,.5);
+      --border: rgba(0,245,255,.1); --success: #10b981; --danger: #ef4444;
     }
     html, body { overflow-x: hidden; }
     body {
       background: var(--bg); color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       min-height: 100vh; display: flex; flex-direction: column;
       align-items: center; padding-bottom: 84px; -webkit-tap-highlight-color: transparent;
     }
     .header {
-      background: linear-gradient(160deg, #0d1423 0%, #0a0f1e 100%);
-      border-bottom: 1px solid var(--border); padding: 1rem 2rem 1rem;
+      background: linear-gradient(160deg, #0a0a1a 0%, #0a0f1e 100%);
+      border-bottom: 1px solid var(--border); padding: 1.2rem 2rem 1rem;
       text-align: center; position: relative; overflow: hidden;
     }
     .header::before {
       content: ''; position: absolute; inset: -40%;
-      background: radial-gradient(ellipse at 50% 50%, rgba(124,58,237,.12) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 50% 50%, rgba(0,245,255,.08) 0%, rgba(157,0,255,.06) 30%, transparent 60%);
       animation: hpulse 5s ease-in-out infinite;
     }
     @keyframes hpulse { 0%,100%{opacity:.5;transform:scale(1)} 50%{opacity:1;transform:scale(1.06)} }
     .header h1 {
-      font-size: 1.75rem; font-weight: 800; letter-spacing: -.02em;
-      background: linear-gradient(120deg, #c4b5fd 10%, #67e8f9 90%);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.55rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+      background: linear-gradient(135deg, #00f5ff 0%, #ff00ff 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text; position: relative;
+      text-shadow: 0 0 30px rgba(0,245,255,.3);
     }
-    .header p { color: var(--muted); font-size: .8rem; margin-top: .3rem; position: relative; }
+    .header p { color: var(--dim); font-size: .8rem; margin-top: .3rem; position: relative; }
     .qm-brand { display:flex; align-items:center; justify-content:center; gap:.65rem; margin-bottom:.6rem; position:relative; text-decoration:none; }
-    .qm-logo-icon { width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%); border-radius:10px; font-weight:800; font-size:.9rem; color:#fff; box-shadow:0 0 20px rgba(124,58,237,.4); flex-shrink:0; }
-    .qm-logo-text { font-size:.82rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--dim); }
-    .qm-home-link { position:absolute; top:1rem; left:1rem; color:var(--muted); text-decoration:none; font-size:.72rem; display:flex; align-items:center; gap:.3rem; z-index:5; transition:color .15s; }
-    .qm-home-link:hover { color:var(--acl); }
+    .qm-logo-icon { width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #00f5ff 0%, #9d00ff 100%); border-radius:10px; font-family:'Orbitron',sans-serif; font-weight:800; font-size:.9rem; color:#fff; box-shadow:0 0 20px rgba(0,245,255,.4); flex-shrink:0; }
+    .qm-logo-text { font-family:'Orbitron',sans-serif; font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; background:linear-gradient(135deg,#00f5ff,#ff00ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
     .nav {
       background: var(--card); border-bottom: 1px solid var(--border);
       display: flex; padding: 0 2rem; gap: .25rem; justify-content: center; flex-wrap: wrap;
     }
     .nav-tab {
-      padding: .75rem 1.25rem; color: var(--muted); cursor: pointer; border: none;
-      border-bottom: 2px solid transparent; background: none; font-size: .875rem;
-      font-weight: 500; transition: color .15s, border-color .15s; outline: none;
+      padding: .75rem 1.25rem; color: var(--dim); cursor: pointer; border: none;
+      border-bottom: 2px solid transparent; background: none; font-size: .82rem;
+      font-family: 'Exo 2', sans-serif; font-weight: 600; letter-spacing:.03em;
+      transition: color .15s, border-color .15s; outline: none;
     }
-    .nav-tab:hover { color: var(--text); }
+    .nav-tab:hover { color: #fff; }
     .nav-tab.active { color: var(--acl); border-bottom-color: var(--acl); }
     .main { flex: 1; padding: 1.75rem 2rem; max-width: 1040px; margin: 0 auto; width: 100%; text-align: center; }
     .tab-pane { display: none; }
@@ -78,8 +84,8 @@
       border-radius: 14px; padding: 1.5rem; margin-bottom: 1.25rem;
     }
     .card-title {
-      font-size: .7rem; font-weight: 700; letter-spacing: .08em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem;
+      font-size: .72rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--acl); margin-bottom: 1.1rem;
     }
     .field { margin-bottom: 1.1rem; }
     .field label { display: block; font-size: .8rem; color: var(--dim); margin-bottom: .35rem; }
@@ -115,15 +121,15 @@
     }
     .btn:disabled { opacity: .45; cursor: not-allowed; transform: none !important; }
     .btn-primary {
-      background: linear-gradient(135deg, #7c3aed, #6d28d9);
-      color: #fff; box-shadow: 0 0 18px var(--aglow);
+      background: linear-gradient(135deg, #9d00ff, #7c3aed);
+      color: #fff; box-shadow: 0 0 18px rgba(157,0,255,.3);
     }
-    .btn-primary:not(:disabled):hover { background: linear-gradient(135deg,#8b5cf6,#7c3aed); transform: translateY(-1px); box-shadow: 0 0 28px var(--aglow); }
+    .btn-primary:not(:disabled):hover { background: linear-gradient(135deg,#b347ff,#9d00ff); transform: translateY(-1px); box-shadow: 0 0 28px rgba(157,0,255,.5); }
     .btn-teal {
-      background: linear-gradient(135deg, #0891b2, #0e7490);
+      background: linear-gradient(135deg, #00c4d6, #00a8c6);
       color: #fff; box-shadow: 0 0 18px var(--tglow);
     }
-    .btn-teal:not(:disabled):hover { background: linear-gradient(135deg,#06b6d4,#0891b2); transform: translateY(-1px); box-shadow: 0 0 28px var(--tglow); }
+    .btn-teal:not(:disabled):hover { background: linear-gradient(135deg,#00f5ff,#00c4d6); transform: translateY(-1px); box-shadow: 0 0 28px rgba(0,245,255,.4); }
     .btn-ghost { background: var(--card2); color: var(--dim); border: 1px solid var(--border); }
     .btn-ghost:not(:disabled):hover { border-color: var(--acl); color: var(--text); }
     .btn-sm { padding: .32rem .7rem; font-size: .75rem; border-radius: 6px; }
@@ -181,17 +187,17 @@
     .pl-cym.on { display:block; }
     .filter-row { display:flex; flex-wrap:wrap; gap:.38rem; margin-bottom:.85rem; }
     .chip { padding:.22rem .7rem; border-radius:20px; font-size:.72rem; cursor:pointer; background:var(--card2); border:1px solid var(--border); color:var(--muted); transition:all .15s; }
-    .chip:hover, .chip.on { background:rgba(124,58,237,.2); border-color:var(--acl); color:var(--acl); }
+    .chip:hover, .chip.on { background:rgba(0,245,255,.15); border-color:var(--acl); color:var(--acl); }
     .preset-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:.7rem; justify-items:center; }
     .preset-card { background:var(--card2); border:1px solid var(--border); border-radius:10px; padding:.95rem 1rem; transition:border-color .18s,box-shadow .18s; width:100%; max-width:340px; }
-    .preset-card:hover { border-color:rgba(124,58,237,.35); box-shadow:0 0 16px rgba(124,58,237,.08); }
+    .preset-card:hover { border-color:rgba(0,245,255,.35); box-shadow:0 0 16px rgba(0,245,255,.1); }
     .preset-card.playing { border-color:var(--acl); box-shadow:0 0 22px var(--aglow); }
     .preset-name { font-size:.88rem; font-weight:600; margin-bottom:.3rem; }
     .preset-freqs { font-size:.72rem; color:var(--muted); font-family:monospace; margin-bottom:.7rem; }
     .preset-btns { display:flex; gap:.45rem; }
     .trinity-list { display:flex; flex-direction:column; gap:.45rem; max-width:600px; margin:0 auto; }
     .trinity-row { background:var(--card2); border:1px solid var(--border); border-radius:10px; padding:.8rem 1rem; display:flex; align-items:center; gap:1rem; transition:border-color .18s; }
-    .trinity-row:hover { border-color:rgba(124,58,237,.35); }
+    .trinity-row:hover { border-color:rgba(0,245,255,.3); }
     .trinity-row.playing { border-color:var(--acl); box-shadow:0 0 18px var(--aglow); }
     .tn { font-size:.72rem; color:var(--muted); font-family:monospace; min-width:1.5rem; }
     .ti { flex:1; }
@@ -290,12 +296,23 @@
     @media (max-width:600px) { .theory-brainwave { grid-template-columns:1fr; } }
     /* Library sidebar */
     #library-sidebar a { display:block; padding:.35rem .5rem; font-size:.72rem; color:var(--dim); text-decoration:none; border-radius:4px; cursor:pointer; transition:all .15s; }
-    #library-sidebar a:hover, #library-sidebar a.active { background:rgba(124,58,237,.15); color:var(--acl); }
+    #library-sidebar a:hover, #library-sidebar a.active { background:rgba(0,245,255,.12); color:var(--acl); }
     /* Legal pages */
     .legal-content h3 { color:var(--acl); margin:1rem 0 .5rem; font-size:.9rem; }
     .legal-content p { margin-bottom:.75rem; }
     .legal-content ul { padding-left:1.2rem; }
     .legal-content li { margin-bottom:.3rem; }
+    /* Footer */
+    .qm-footer { width:100%; background:linear-gradient(180deg, var(--bg) 0%, #050508 100%); border-top:1px solid var(--border); padding:2.5rem 1.5rem 2rem; text-align:center; margin-top:2rem; }
+    .qm-footer-inner { max-width:600px; margin:0 auto; }
+    .qm-coffee-btn { display:inline-block; padding:.75rem 2rem; background:linear-gradient(135deg, #ffd700, #ff8c00); color:#0a0a0f; text-decoration:none; border-radius:25px; font-family:'Exo 2',sans-serif; font-weight:700; font-size:.95rem; transition:all .3s; box-shadow:0 0 20px rgba(255,215,0,.3); }
+    .qm-coffee-btn:hover { transform:translateY(-2px); box-shadow:0 0 30px rgba(255,215,0,.5); }
+    .qm-footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem 1.2rem; margin:1.5rem 0 1.2rem; }
+    .qm-footer-links a { color:var(--dim); text-decoration:none; font-size:.78rem; transition:color .15s; }
+    .qm-footer-links a:hover { color:var(--acl); }
+    .qm-footer-copy { font-size:.68rem; color:var(--muted); }
+    /* Card title branding */
+    .card-title { font-family:'Orbitron',sans-serif; letter-spacing:.04em; }
   </style>
 </head>
 <body>
@@ -304,13 +321,12 @@
 <div class="floating-orb"></div>
 <div class="floating-orb"></div>
 <header class="header">
-  <a href="/hub.html" class="qm-home-link">← Hub</a>
-  <a href="/hub.html" class="qm-brand">
+  <div class="qm-brand">
     <div class="qm-logo-icon">QM</div>
     <span class="qm-logo-text">Quantum Merlin</span>
-  </a>
-  <h1>Therapeutic Frequency Generator</h1>
-  <p>Pure sine wave audio therapy</p>
+  </div>
+  <h1>Frequency Generator</h1>
+  <p>Pure sine wave audio therapy with real-time cymatics</p>
 </header>
 <nav class="nav" id="nav" role="tablist" aria-label="Main navigation">
   <button class="nav-tab active" data-tab="home" role="tab" aria-selected="true">Home</button>
@@ -1386,5 +1402,18 @@ document.addEventListener('keydown', function(e){
   if(e.code==='Escape'&&srcNode){ e.preventDefault(); stopAudio(); }
 });
 </script>
+<footer class="qm-footer">
+  <div class="qm-footer-inner">
+    <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener" class="qm-coffee-btn">☕ Buy Merlin a Coffee</a>
+    <div class="qm-footer-links">
+      <a href="/hub.html">🔮 Quantum Merlin Hub</a>
+      <a href="/genesis/index-enhanced.html">🎵 Genesis Frequencies</a>
+      <a href="/quantum-merlin-hub/codes-new.html">✨ Reality Codes</a>
+      <a href="/quantum-merlin-hub/tarot-new.html">🃏 Tarot</a>
+      <a href="/about-new.html">ℹ️ About</a>
+    </div>
+    <p class="qm-footer-copy">© 2026 Quantum Merlin · All rights reserved</p>
+  </div>
+</footer>
 </body>
 </html>
