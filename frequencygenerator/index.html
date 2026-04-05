@@ -10,7 +10,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Freq Generator">
-  <meta name="description" content="Pure sine wave audio therapy with real-time cymatics visualization">
+  <meta name="description" content="Pure sine wave audio therapy with real-time cymatics visualization — Quantum Merlin">
+  <meta property="og:title" content="Therapeutic Frequency Generator — Quantum Merlin">
+  <meta property="og:description" content="Pure sine wave audio therapy with real-time cymatics visualization">
+  <meta property="og:image" content="https://quantummerlin.com/shared/images/og-image.png">
+  <meta property="og:url" content="https://quantummerlin.com/frequencygenerator/">
+  <link rel="icon" type="image/jpeg" href="/quantum-merlin.jpg">
+  <link rel="icon" type="image/jpeg" sizes="192x192" href="/quantum-merlin.jpg">
+  <link rel="apple-touch-icon" href="/quantum-merlin.jpg">
   <link rel="manifest" href="data:application/json,{}">
   <title>Therapeutic Frequency Generator — Quantum Merlin</title>
   <style>
@@ -31,7 +38,7 @@
     }
     .header {
       background: linear-gradient(160deg, #0d1423 0%, #0a0f1e 100%);
-      border-bottom: 1px solid var(--border); padding: 1.6rem 2rem 1.4rem;
+      border-bottom: 1px solid var(--border); padding: 1rem 2rem 1rem;
       text-align: center; position: relative; overflow: hidden;
     }
     .header::before {
@@ -47,6 +54,11 @@
       background-clip: text; position: relative;
     }
     .header p { color: var(--muted); font-size: .8rem; margin-top: .3rem; position: relative; }
+    .qm-brand { display:flex; align-items:center; justify-content:center; gap:.65rem; margin-bottom:.6rem; position:relative; text-decoration:none; }
+    .qm-logo-icon { width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%); border-radius:10px; font-weight:800; font-size:.9rem; color:#fff; box-shadow:0 0 20px rgba(124,58,237,.4); flex-shrink:0; }
+    .qm-logo-text { font-size:.82rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--dim); }
+    .qm-home-link { position:absolute; top:1rem; left:1rem; color:var(--muted); text-decoration:none; font-size:.72rem; display:flex; align-items:center; gap:.3rem; z-index:5; transition:color .15s; }
+    .qm-home-link:hover { color:var(--acl); }
     .nav {
       background: var(--card); border-bottom: 1px solid var(--border);
       display: flex; padding: 0 2rem; gap: .25rem; justify-content: center; flex-wrap: wrap;
@@ -292,8 +304,13 @@
 <div class="floating-orb"></div>
 <div class="floating-orb"></div>
 <header class="header">
+  <a href="/hub.html" class="qm-home-link">← Hub</a>
+  <a href="/hub.html" class="qm-brand">
+    <div class="qm-logo-icon">QM</div>
+    <span class="qm-logo-text">Quantum Merlin</span>
+  </a>
   <h1>Therapeutic Frequency Generator</h1>
-  <p>Pure sine wave audio therapy — Quantum Merlin</p>
+  <p>Pure sine wave audio therapy</p>
 </header>
 <nav class="nav" id="nav" role="tablist" aria-label="Main navigation">
   <button class="nav-tab active" data-tab="home" role="tab" aria-selected="true">Home</button>
