@@ -357,6 +357,21 @@
     .qm-footer-copy { font-size:.68rem; color:var(--muted); }
     /* Card title branding */
     .card-title { font-family:'Orbitron',sans-serif; letter-spacing:.04em; }
+    /* Goal suggestion panel */
+    .goal-panel { display:none; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:1.25rem; margin-bottom:1.25rem; animation:tabFadeIn .25s ease-out; }
+    .goal-panel.on { display:block; }
+    .goal-panel-hdr { display:flex; align-items:center; gap:.6rem; margin-bottom:1rem; }
+    .goal-panel-emoji { font-size:1.8rem; line-height:1; }
+    .goal-panel-title { flex:1; font-family:'Orbitron',sans-serif; font-size:.85rem; font-weight:700; color:var(--acl); text-transform:uppercase; letter-spacing:.06em; }
+    .goal-back-btn { background:none; border:1px solid var(--border); color:var(--muted); border-radius:20px; padding:.25rem .75rem; font-size:.72rem; cursor:pointer; transition:all .15s; font-family:'Exo 2',sans-serif; }
+    .goal-back-btn:hover { border-color:var(--acl); color:var(--acl); }
+    .goal-track-list { display:flex; flex-direction:column; gap:.55rem; }
+    .goal-track { background:var(--card2); border:1px solid var(--border); border-radius:10px; padding:.8rem 1rem; display:flex; align-items:center; gap:.75rem; transition:border-color .18s; }
+    .goal-track:hover { border-color:rgba(0,245,255,.3); }
+    .goal-track.playing { border-color:var(--acl); box-shadow:0 0 18px var(--aglow); }
+    .goal-track-info { flex:1; min-width:0; text-align:left; }
+    .goal-track-name { font-size:.88rem; font-weight:600; margin-bottom:.18rem; }
+    .goal-track-why { font-size:.72rem; color:var(--dim); line-height:1.4; }
   </style>
 </head>
 <body>
@@ -385,17 +400,27 @@
   </div>
   <!-- Home -->
   <div class="tab-pane active" id="pane-home">
+    <!-- Goal suggestion panel (shown when a goal button is tapped) -->
+    <div class="goal-panel" id="goal-panel">
+      <div class="goal-panel-hdr">
+        <span class="goal-panel-emoji" id="goal-panel-emoji"></span>
+        <span class="goal-panel-title" id="goal-panel-title"></span>
+        <button class="goal-back-btn" onclick="closeGoalPanel()">← Back</button>
+      </div>
+      <div class="goal-track-list" id="goal-track-list"></div>
+    </div>
+    <div id="home-main">
     <div class="card">
       <div class="card-title">What do you need today?</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.65rem;margin-bottom:1.2rem">
-        <button class="btn btn-ghost" onclick="quickStart('sleep')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🌙</span><span style="font-size:.75rem">Sleep Better</span></button>
-        <button class="btn btn-ghost" onclick="quickStart('focus')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🎯</span><span style="font-size:.75rem">Focus & Study</span></button>
-        <button class="btn btn-ghost" onclick="quickStart('anxiety')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🧘</span><span style="font-size:.75rem">Calm Anxiety</span></button>
-        <button class="btn btn-ghost" onclick="quickStart('healing')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">💚</span><span style="font-size:.75rem">Heal & Recover</span></button>
-        <button class="btn btn-ghost" onclick="quickStart('manifest')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">✨</span><span style="font-size:.75rem">Manifest</span></button>
-        <button class="btn btn-ghost" onclick="quickStart('meditate')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🔮</span><span style="font-size:.75rem">Meditate</span></button>
-        <button class="btn btn-ghost" onclick="quickStart('protection')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🛡️</span><span style="font-size:.75rem">Protection</span></button>
-        <button class="btn btn-ghost" onclick="quickStart('energy')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">⚡</span><span style="font-size:.75rem">Energy Boost</span></button>
+        <button class="btn btn-ghost" onclick="openGoalPanel('sleep')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🌙</span><span style="font-size:.75rem">Sleep Better</span></button>
+        <button class="btn btn-ghost" onclick="openGoalPanel('focus')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🎯</span><span style="font-size:.75rem">Focus & Study</span></button>
+        <button class="btn btn-ghost" onclick="openGoalPanel('anxiety')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🧘</span><span style="font-size:.75rem">Calm Anxiety</span></button>
+        <button class="btn btn-ghost" onclick="openGoalPanel('healing')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">💚</span><span style="font-size:.75rem">Heal & Recover</span></button>
+        <button class="btn btn-ghost" onclick="openGoalPanel('manifest')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">✨</span><span style="font-size:.75rem">Manifest</span></button>
+        <button class="btn btn-ghost" onclick="openGoalPanel('meditate')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🔮</span><span style="font-size:.75rem">Meditate</span></button>
+        <button class="btn btn-ghost" onclick="openGoalPanel('protection')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🛡️</span><span style="font-size:.75rem">Protection</span></button>
+        <button class="btn btn-ghost" onclick="openGoalPanel('energy')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">⚡</span><span style="font-size:.75rem">Energy Boost</span></button>
       </div>
     </div>
     <div class="card">
@@ -410,6 +435,7 @@
     <div class="card">
       <div class="card-title">Popular Tracks</div>
       <div id="popular-tracks" style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center"></div>
+    </div>
     </div>
   </div>
   <!-- Browse (Library + Presets merged) -->
@@ -1159,7 +1185,57 @@ function renderLibraryContent(name){const content=document.getElementById('libra
 function filterLibrary(){const q=document.getElementById('library-search').value.toLowerCase(),content=document.getElementById('library-content');if(!q){if(currentLibCollection)renderLibraryContent(currentLibCollection);return;}let html='';Object.entries(ALL_COLLECTIONS).forEach(([collName,coll])=>{coll.forEach(t=>{if(t.name.toLowerCase().includes(q)||t.freqs.join(' ').includes(q)){const meta=getTrackMeta(t.name),attrFreqs=escAttr(JSON.stringify(t.freqs)),attrName=escAttr(JSON.stringify(t.name));html+=`<div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:.85rem;margin-bottom:.65rem"><div style="font-size:.6rem;color:var(--muted);margin-bottom:.2rem">${collName}</div><div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem"><div><div style="font-size:.85rem;font-weight:600">${t.name}</div><div style="font-size:.65rem;color:var(--muted);font-family:monospace">${fmtList(t.freqs)}</div></div><div style="display:flex;gap:.3rem"><button class="btn btn-primary btn-sm" onclick="playAudio(${attrFreqs},${attrName},getGlobalDur(),null)" style="padding:.2rem .6rem;font-size:.65rem">Play</button><button class="btn btn-teal btn-sm" onclick="downloadWAV(${attrFreqs},${attrName},getGlobalDur(),null)" style="padding:.2rem .6rem;font-size:.65rem">WAV</button><button class="btn btn-ghost btn-sm" onclick="saveTrackDirect(${attrName},${attrFreqs})" style="padding:.2rem .6rem;font-size:.65rem">Save</button></div></div><div style="margin-top:.5rem;font-size:.7rem;color:var(--dim);line-height:1.5"><p style="margin-bottom:.3rem">${meta.desc}</p><p style="margin-bottom:.3rem"><strong style="color:var(--teal)">Benefits:</strong> ${meta.benefits.join(', ')}</p></div></div>`;}});});content.innerHTML=html||'<div style="font-size:.75rem;color:var(--muted)">No tracks found.</div>';}
 
 // ── Quick Start ──
+const GOAL_META = {
+  sleep:      { emoji:'🌙', label:'Sleep Better',   why:['Eases you into deep delta sleep','Quiets mental chatter fast','Whole-body relaxation'] },
+  focus:      { emoji:'🎯', label:'Focus & Study',  why:['Sustained gamma wave entrainment','Locks in concentration for hours','Used by students before exams'] },
+  anxiety:    { emoji:'🧘', label:'Calm Anxiety',   why:['Lowers cortisol response in 5 min','Grounds racing thoughts','Emergency calm for acute stress'] },
+  healing:    { emoji:'💚', label:'Heal & Recover', why:['Accelerates cellular regeneration','Repairs energetic imbalances','Helps after illness or injury'] },
+  manifest:   { emoji:'✨', label:'Manifest',       why:['Bridges intention to reality','High-frequency attraction field','Visualise while listening'] },
+  meditate:   { emoji:'🔮', label:'Meditate',       why:['Opens gateway to deep stillness','Activates theta consciousness','Ideal for beginners & adepts'] },
+  protection: { emoji:'🛡️', label:'Protection',    why:['Creates an energetic boundary','Clears negative interference','Strong before difficult situations'] },
+  energy:     { emoji:'⚡', label:'Energy Boost',   why:['Activates gamma brainwaves fast','Natural stimulation — no caffeine','Morning or mid-afternoon dip'] },
+};
+
+function openGoalPanel(goal){
+  const tracks=QUICK_START_MAP[goal];if(!tracks)return;
+  const meta=GOAL_META[goal]||{emoji:'✦',label:goal,why:[]};
+  document.getElementById('goal-panel-emoji').textContent=meta.emoji;
+  document.getElementById('goal-panel-title').textContent=meta.label+' — Choose a track';
+  const list=document.getElementById('goal-track-list');
+  list.innerHTML='';
+  tracks.forEach((t,idx)=>{
+    const coll=ALL_COLLECTIONS[t.c];if(!coll||!coll[t.i])return;
+    const track=coll[t.i];
+    const why=meta.why[idx]||'';
+    const row=document.createElement('div');
+    row.className='goal-track';
+    row.id='gt-'+goal+'-'+idx;
+    const attrFreqs=escAttr(JSON.stringify(track.freqs));
+    const attrName=escAttr(JSON.stringify(track.name));
+    const freqStr=track.freqs.map(fmtHz).join(' · ');
+    row.innerHTML=`<div class="goal-track-info"><div class="goal-track-name">${sanitizeHTML(track.name)}</div>${why?`<div class="goal-track-why">${sanitizeHTML(why)}</div>`:''}
+      <div style="font-size:.65rem;color:var(--muted);font-family:monospace;margin-top:.2rem">${sanitizeHTML(freqStr)}</div></div>
+      <button class="btn btn-primary btn-sm" onclick="playGoalTrack(${attrFreqs},${attrName},'gt-${goal}-${idx}')"><span class="icon-play"></span> Play</button>`;
+    list.appendChild(row);
+  });
+  document.getElementById('goal-panel').classList.add('on');
+  document.getElementById('home-main').style.display='none';
+  document.getElementById('goal-panel').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function closeGoalPanel(){
+  document.getElementById('goal-panel').classList.remove('on');
+  document.getElementById('home-main').style.display='';
+}
+
+function playGoalTrack(freqs,name,rowId){
+  document.querySelectorAll('.goal-track').forEach(r=>r.classList.remove('playing'));
+  const row=document.getElementById(rowId);if(row)row.classList.add('playing');
+  playAudio(freqs,name,getGlobalDur(),null);
+}
+
 function quickStart(goal){const tracks=QUICK_START_MAP[goal];if(!tracks)return;const t=tracks[0],coll=ALL_COLLECTIONS[t.c];if(!coll)return;playAudio(coll[t.i].freqs,coll[t.i].name,getGlobalDur(),null);toast('Playing: '+coll[t.i].name,'success');}
+
 
 // ── Popular Tracks ──
 function renderPopularTracks(){const container=document.getElementById('popular-tracks');if(!container)return;const popular=[{name:"Game Over Protocol",freqs:[7.83,20.3,40]},{name:"DNA Light Codes",freqs:[37,73,528]},{name:"Anxiety Relief",freqs:[6,8,10]},{name:"Deep Sleep Delta",freqs:[2.5]},{name:"Quantum Manifestor",freqs:[37,73,194]},{name:"Pain Relief & Management",freqs:[5,100,174]},{name:"Universal Harmony",freqs:[37,73,432]},{name:"Miracle Frequency",freqs:[8,40,528]}];container.innerHTML=popular.map(t=>`<button class="btn btn-ghost btn-sm" onclick="playAudio(${escAttr(JSON.stringify(t.freqs))},${escAttr(JSON.stringify(t.name))},getGlobalDur(),null)" style="font-size:.7rem">${t.name}</button>`).join('');}
@@ -1406,7 +1482,7 @@ const LEGAL_CONTENT = {
 function showLegal(type){const container=document.getElementById('legal-content');if(!container)return;container.innerHTML=LEGAL_CONTENT[type]||'<p>Content not found.</p>';}
 
 // ── Nav Tab Switching ──
-document.querySelectorAll('.bnav-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.bnav-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));btn.classList.add('active');btn.setAttribute('aria-selected','true');const pane=document.getElementById('pane-'+btn.dataset.tab);if(pane)pane.classList.add('active');});});
+document.querySelectorAll('.bnav-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.bnav-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));btn.classList.add('active');btn.setAttribute('aria-selected','true');const pane=document.getElementById('pane-'+btn.dataset.tab);if(pane)pane.classList.add('active');closeGoalPanel();});});
 
 // ── Toast ──
 let toastTimer;
