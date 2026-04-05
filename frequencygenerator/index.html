@@ -195,48 +195,10 @@
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
       .floating-orb, #bg-particles { display: none; }
     }
-    .wcanvas { width: 100%; height: 110px; display: block; background: var(--card2); border: 1px solid var(--border); border-radius: 8px; }
-    .vis-section {
-      display: none; grid-template-columns: auto 1fr; gap: 1.2rem; margin-bottom: 1.25rem;
-      background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem;
-      position: relative; overflow: hidden;
-    }
-    .vis-section.on { display: grid; }
     @media (max-width:640px) {
-      .vis-section.on { grid-template-columns: 1fr; }
-      .cymatics-canvas { width: 180px !important; height: 180px !important; }
       .header h1 { font-size: 1.35rem; }
       .main { padding: 1rem 0.75rem; }
     }
-    .cymatics-wrap { display: flex; flex-direction: column; align-items: center; gap: .55rem; position: relative; }
-    .cymatics-canvas {
-      width: 200px; height: 200px; border-radius: 50%; border: 1px solid rgba(124,58,237,.45);
-      box-shadow: 0 0 36px rgba(124,58,237,.22), 0 0 10px rgba(6,182,212,.15), 0 0 60px rgba(124,58,237,.15), inset 0 0 30px rgba(124,58,237,.1);
-      image-rendering: pixelated; image-rendering: crisp-edges; cursor: default;
-      animation: cymPulse 4s ease-in-out infinite;
-    }
-    @keyframes cymPulse { 0%,100%{transform:scale(1);box-shadow:0 0 36px rgba(124,58,237,.22),0 0 10px rgba(6,182,212,.15)} 50%{transform:scale(1.02);box-shadow:0 0 50px rgba(124,58,237,.35),0 0 20px rgba(6,182,212,.25)} }
-    .cymatics-lbl { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .09em; }
-    .cym-fullscreen-btn { position:absolute; top:6px; right:6px; background:rgba(0,0,0,.5); border:1px solid rgba(255,255,255,.2); color:#fff; width:28px; height:28px; border-radius:6px; cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .2s; z-index:10; }
-    .cymatics-wrap:hover .cym-fullscreen-btn, .cymatics-wrap .cym-fullscreen-btn:focus { opacity:1; }
-    @media (hover:none) { .cym-fullscreen-btn { opacity:0.7; } }
-    .cym-fullscreen-overlay { position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.95); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; }
-    .cym-fullscreen-overlay canvas { border-radius:50%; border:1px solid rgba(124,58,237,.45); box-shadow:0 0 60px rgba(124,58,237,.3), 0 0 120px rgba(6,182,212,.15); }
-    .cym-fullscreen-overlay .cym-fs-close { position:absolute; top:1rem; right:1rem; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.2rem; display:flex; align-items:center; justify-content:center; }
-    .cym-fullscreen-overlay .cym-fs-close:hover { background:rgba(255,255,255,.2); }
-    .cym-fullscreen-overlay .cym-fs-label { font-size:.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:.1em; }
-    .vis-right { flex: 1; display: flex; flex-direction: column; gap: .85rem; min-width: 0; }
-    .vis-subtitle { font-size: .64rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-    .freq-waves { display: flex; flex-direction: column; gap: .55rem; position: relative; }
-    .wave-overlay-canvas { width:100%; height:90px; border-radius:8px; border:1px solid rgba(124,58,237,.25); box-shadow:0 0 20px rgba(124,58,237,.1),inset 0 0 15px rgba(6,182,212,.05); display:block; }
-    .wave-legend { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.15rem; }
-    .wave-leg-item { font-size:.68rem; font-family:monospace; display:flex; align-items:center; gap:.28rem; }
-    .wave-leg-swatch { display:inline-block; width:20px; height:2px; border-radius:1px; flex-shrink:0; box-shadow:0 0 4px currentColor; }
-    .composite-canvas { width:100%; height:64px; display:block; border-radius:7px; border:1px solid rgba(124,58,237,.2); background:var(--card2); box-shadow:0 0 15px rgba(124,58,237,.12),0 0 30px rgba(6,182,212,.08); }
-    .pl-osc { display:none; width:74px; height:28px; border-radius:4px; flex-shrink:0; background:rgba(9,13,22,.8); border:1px solid var(--border); }
-    .pl-osc.on { display:block; }
-    .pl-cym { display:none; width:36px; height:36px; border-radius:50%; border:1px solid rgba(124,58,237,.4); flex-shrink:0; image-rendering:pixelated; }
-    .pl-cym.on { display:block; }
     .filter-row { display:flex; flex-wrap:wrap; gap:.38rem; margin-bottom:.85rem; }
     .chip { padding:.22rem .7rem; border-radius:20px; font-size:.72rem; cursor:pointer; background:var(--card2); border:1px solid var(--border); color:var(--muted); transition:all .15s; }
     .chip:hover, .chip.on { background:rgba(0,245,255,.15); border-color:var(--acl); color:var(--acl); }
@@ -346,6 +308,37 @@
     .theory-bw-range { font-size:.7rem; color:var(--teal); font-family:monospace; margin-bottom:.2rem; }
     .theory-bw-desc { font-size:.72rem; color:var(--dim); line-height:1.4; }
     @media (max-width:600px) { .theory-brainwave { grid-template-columns:1fr; } }
+    .theory-nav { display:flex; gap:.35rem; overflow-x:auto; padding:.5rem 0 .75rem; scrollbar-width:none; -webkit-overflow-scrolling:touch; flex-wrap:nowrap; margin-bottom:1rem; }
+    .theory-nav::-webkit-scrollbar { display:none; }
+    .theory-nav-btn { flex-shrink:0; padding:.32rem .75rem; border-radius:20px; font-size:.68rem; font-weight:600; letter-spacing:.04em; background:var(--card2); border:1px solid var(--border); color:var(--muted); cursor:pointer; white-space:nowrap; transition:all .15s; touch-action:manipulation; }
+    .theory-nav-btn:hover { border-color:rgba(0,245,255,.4); color:var(--text); }
+    .theory-nav-btn.active { background:rgba(0,245,255,.12); border-color:var(--acl); color:var(--acl); }
+    .theory-qref-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:.4rem; }
+    .theory-qref-item { background:var(--card3); border:1px solid var(--border); border-radius:6px; padding:.5rem .6rem; display:flex; flex-direction:column; gap:.2rem; }
+    .theory-qref-hz { font-size:.8rem; font-weight:700; color:var(--teal); font-family:monospace; }
+    .theory-qref-use { font-size:.65rem; color:var(--dim); line-height:1.3; }
+    .theory-play-btn { padding:.22rem .6rem; font-size:.65rem; border-radius:5px; background:rgba(124,58,237,.2); border:1px solid rgba(124,58,237,.4); color:var(--acl); cursor:pointer; align-self:flex-start; margin-top:auto; touch-action:manipulation; }
+    .theory-play-btn:hover { background:rgba(124,58,237,.35); }
+    .theory-card-row { display:flex; align-items:flex-start; justify-content:space-between; gap:.5rem; }
+    .theory-faq-q { font-size:.82rem; font-weight:600; color:var(--text); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:.5rem; padding:.65rem 1rem; background:var(--card2); border:1px solid var(--border); border-radius:8px; margin-bottom:.35rem; touch-action:manipulation; }
+    .theory-faq-a { font-size:.75rem; color:var(--dim); line-height:1.6; padding:.65rem 1rem .75rem; background:rgba(124,58,237,.06); border:1px solid rgba(124,58,237,.2); border-radius:0 0 8px 8px; margin-top:-.35rem; margin-bottom:.35rem; display:none; }
+    .theory-faq-a.on { display:block; }
+    .theory-warn { background:rgba(239,68,68,.08); border:1px solid rgba(239,68,68,.2); border-radius:8px; padding:.75rem 1rem; margin-bottom:.5rem; }
+    .theory-warn-title { font-size:.8rem; font-weight:700; color:#fca5a5; margin-bottom:.3rem; }
+    .theory-warn-text { font-size:.72rem; color:var(--dim); line-height:1.55; }
+    /* Now Playing Overlay */
+    #now-playing-overlay { position:fixed; inset:0; background:rgba(4,4,10,.95); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); z-index:300; overflow-y:auto; overscroll-behavior:contain; }
+    .npo-inner { width:min(400px,100%); margin:0 auto; padding:max(env(safe-area-inset-top,16px),16px) 1rem 5rem; display:flex; flex-direction:column; align-items:center; gap:.85rem; }
+    .npo-topbar { width:100%; display:flex; justify-content:flex-end; }
+    .npo-close-btn { background:rgba(255,255,255,.08); border:1px solid var(--border); color:var(--muted); font-size:.75rem; cursor:pointer; padding:.3rem .75rem; border-radius:20px; }
+    .npo-track-name { font-family:'Cinzel',serif; font-size:1.05rem; font-weight:700; color:var(--acl); text-align:center; text-shadow:0 0 14px rgba(0,245,255,.35); }
+    .npo-track-freqs { font-size:.68rem; color:var(--dim); font-family:monospace; text-align:center; }
+    #cymatics-canvas { border-radius:50%; border:1px solid rgba(0,245,255,.15); box-shadow:0 0 40px rgba(0,245,255,.08); display:block; }
+    .npo-waves { width:100%; min-height:90px; border-radius:8px; overflow:hidden; }
+    .npo-controls { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; justify-content:center; margin-top:.25rem; }
+    #npo-vol { -webkit-appearance:none; appearance:none; height:4px; background:var(--card3); border-radius:2px; outline:none; }
+    #npo-vol::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:14px; height:14px; border-radius:50%; background:var(--acl); cursor:pointer; }
+    #npo-vol::-moz-range-thumb { width:14px; height:14px; border-radius:50%; background:var(--acl); cursor:pointer; border:none; }
     /* Library sidebar */
     #library-sidebar a { display:block; padding:.35rem .5rem; font-size:.72rem; color:var(--dim); text-decoration:none; border-radius:4px; cursor:pointer; transition:all .15s; }
     #library-sidebar a:hover, #library-sidebar a.active { background:rgba(0,245,255,.12); color:var(--acl); }
@@ -397,15 +390,6 @@
   <button class="info-btn" id="info-btn" onclick="openTheoryOverlay()" title="Frequency Theory &amp; Reference">&#x24d8; Theory</button>
 </header>
 <main class="main">
-  <!-- Visualizer (always visible during playback) -->
-  <div class="vis-section" id="vis-section">
-    <div class="cymatics-wrap">
-      <canvas id="cymatics-canvas" class="cymatics-canvas" width="200" height="200"></canvas>
-      <div class="cymatics-lbl">Cymatics Pattern</div>
-      <button class="cym-fullscreen-btn" id="cym-fs-btn" onclick="toggleCymFullscreen()" title="Fullscreen">⛶</button>
-    </div>
-    <div class="vis-right"><div class="vis-subtitle">Individual Frequency Waves</div><div id="freq-waves" class="freq-waves"></div><div><div class="vis-subtitle" style="margin-bottom:.4rem">Composite Waveform</div><canvas id="composite-canvas" class="composite-canvas" height="64"></canvas></div></div>
-  </div>
   <!-- Home -->
   <div class="tab-pane active" id="pane-home">
     <!-- Goal suggestion panel (shown when a goal button is tapped) -->
@@ -536,15 +520,27 @@
   <button class="bnav-btn" data-tab="mylib" role="tab" aria-selected="false"><span class="bnav-icon">🎶</span><span>My Library</span></button>
 </nav>
 <div class="player" id="player">
-  <div class="pl-info"><div class="pl-name" id="pl-name">—</div><div class="pl-freqs" id="pl-freqs">—</div></div>
+  <div class="pl-info" onclick="if(srcNode)openNowPlaying()" style="cursor:pointer" title="Tap to expand"><div class="pl-name" id="pl-name">—</div><div class="pl-freqs" id="pl-freqs">—</div></div>
   <div class="pl-prog"><div class="prog-track" id="prog-track"><div class="prog-fill" id="prog-fill"></div></div><div class="pl-time" id="pl-time">0:00</div></div>
-  <div style="display:flex;align-items:center;gap:.3rem;flex-shrink:0"><label style="font-size:.6rem;color:var(--muted)">Duration:</label><input type="text" id="global-dur" class="input" value="96.3" style="width:52px;padding:.15rem .3rem;font-size:.65rem;text-align:center" title="Track duration (seconds or minutes e.g. 5m)"></div>
   <div style="display:flex;align-items:center;gap:.3rem;flex-shrink:0" title="Volume"><span style="font-size:.7rem;color:var(--muted)">🔊</span><input type="range" id="vol-slider" min="0" max="1" step="0.01" value="0.8" style="width:60px"></div>
-  <canvas id="pl-osc" class="pl-osc" width="74" height="28"></canvas>
-  <canvas id="pl-cym" class="pl-cym" width="36" height="36"></canvas>
   <button class="pause-btn" id="pause-btn" onclick="togglePause()"><span id="pause-icon">⏸</span></button>
   <button class="pause-btn" id="share-btn" onclick="shareCurrentTrack()" title="Share" style="font-size:.95rem">↗</button>
   <button class="stop-btn" onclick="stopAudio()"><span class="icon-stop"></span> Stop</button>
+</div>
+<div id="now-playing-overlay" style="display:none">
+  <div class="npo-inner">
+    <div class="npo-topbar"><button class="npo-close-btn" onclick="closeNowPlaying()">✕ Close</button></div>
+    <div class="npo-track-name" id="npo-track-name">—</div>
+    <div class="npo-track-freqs" id="npo-track-freqs">—</div>
+    <canvas id="cymatics-canvas" width="200" height="200" style="width:260px;height:260px"></canvas>
+    <div id="freq-waves" class="npo-waves"></div>
+    <div class="npo-controls">
+      <div style="display:flex;align-items:center;gap:.4rem"><span style="font-size:.8rem;color:var(--muted)">🔊</span><input type="range" id="npo-vol" min="0" max="1" step="0.01" value="0.8" style="width:90px" oninput="const v=parseFloat(this.value);document.getElementById('vol-slider').value=v;if(gainNode)gainNode.gain.value=v"></div>
+      <button class="pause-btn" onclick="togglePause()"><span id="npo-pause-icon">⏸</span></button>
+      <button class="pause-btn" onclick="shareCurrentTrack()" title="Share" style="font-size:.95rem">↗</button>
+      <button class="stop-btn" onclick="stopAudio()"><span class="icon-stop"></span> Stop</button>
+    </div>
+  </div>
 </div>
 <div class="toast" id="toast"></div>
 <script>
@@ -989,7 +985,7 @@ function fmtList(freqs) { return freqs.map(fmtHz).join(', '); }
 function sanitizeId(s) { return s.replace(/[^a-zA-Z0-9]/g,'_'); }
 function sanitizeHTML(s){const el=document.createElement('span');el.textContent=s;return el.innerHTML;}
 function escAttr(s){return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function getGlobalDur() { return parseDur(document.getElementById('global-dur')?.value || '96.3'); }
+function getGlobalDur() { return parseDur(document.getElementById('dur-input')?.value || '96.3'); }
 
 function setBtnLoading(id, loading) {
   const b = document.getElementById(id);
@@ -1006,12 +1002,11 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
     try {
       const samples = buildTrack(frequencies, totalDur), c = ctx(), ab = c.createBuffer(1, samples.length, SR);
       ab.copyToChannel(samples, 0);
-      analyser = c.createAnalyser(); analyser.fftSize = 512;
       gainNode = c.createGain(); gainNode.gain.value = parseFloat(document.getElementById('vol-slider')?.value||0.8);
       srcNode = c.createBufferSource(); srcNode.buffer = ab;
-      srcNode.connect(analyser); analyser.connect(gainNode); gainNode.connect(c.destination);
+      srcNode.connect(gainNode); gainNode.connect(c.destination);
       srcNode.start(); srcNode.onended = stopAudio;
-      currentTrackName = trackName; currentTrackFreqs = frequencies.slice();
+      currentTrackName = trackName; currentTrackFreqs = frequencies.slice(); _npFreqs = frequencies.slice();
       acquireWakeLock();
       playStart = c.currentTime; playDuration = ab.duration;
       document.getElementById('pl-name').textContent = trackName;
@@ -1025,7 +1020,6 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
         const m = Math.floor(el / 60), sv = Math.floor(el % 60);
         document.getElementById('pl-time').textContent = m + ':' + String(sv).padStart(2,'0');
       }, 200);
-      updateVisuals(frequencies); startOscilloscope(); if(window.innerWidth>=640) startPlayerCymatics(frequencies);
       toast('Playing: ' + trackName, 'success'); highlightPlaying(trackName);
     } catch (e) { toast('Error: ' + e.message, 'error'); }
     finally { if (triggerBtnId) setBtnLoading(triggerBtnId, false); }
@@ -1035,11 +1029,14 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
 function stopAudio() {
   if (srcNode) { try { srcNode.stop(); } catch(e){} srcNode = null; }
   gainNode = null; pauseOffset = 0;
-  clearInterval(progTimer); stopOscilloscope(); stopPlayerCymatics();
+  clearInterval(progTimer);
   document.getElementById('player').classList.remove('on');
   document.getElementById('prog-fill').style.width = '0%';
   document.querySelectorAll('.preset-card,.trinity-row').forEach(el => el.classList.remove('playing'));
   const pi = document.getElementById('pause-icon'); if(pi) pi.textContent = '⏸';
+  {const _i=document.getElementById('npo-pause-icon');if(_i)_i.textContent='⏸';}
+  stopCymatics(); stopWaveAnimation();
+  const _npo=document.getElementById('now-playing-overlay');if(_npo)_npo.style.display='none';
   releaseWakeLock();
 }
 
@@ -1049,10 +1046,12 @@ function togglePause() {
     pauseOffset = actx.currentTime - playStart;
     actx.suspend();
     document.getElementById('pause-icon').textContent = '▶';
+    {const _i=document.getElementById('npo-pause-icon');if(_i)_i.textContent='▶';}
   } else if (actx.state === 'suspended') {
     actx.resume();
     playStart = actx.currentTime - pauseOffset;
     document.getElementById('pause-icon').textContent = '⏸';
+    {const _i=document.getElementById('npo-pause-icon');if(_i)_i.textContent='⏸';}
   }
 }
 
@@ -1090,7 +1089,7 @@ function encodeWAV(samples) {
   return buf;
 }
 
-// ── Visualizers ──
+// ── Visualizer Constants ──
 const CYM_SZ = 200;
 const FREQ_COLORS = ['#a78bfa','#67e8f9','#86efac','#fde68a','#f9a8d4','#fb923c'];
 const FREQ_GLOWS = ['rgba(167,139,250,','rgba(103,232,249,','rgba(134,239,172,','rgba(253,230,138,','rgba(249,168,212,','rgba(251,146,60,'];
@@ -1099,6 +1098,7 @@ let plCymRaf = null, plCymT = 0, plCymFreqs = [], waveAnimRaf = null, wavePhase 
 let vibFieldsByFreq = {}, lastFreqs = [], lastVibTime = -1, sandLayers = [], SAND_PER_FREQ = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? 350 : 1200;
 const VIB_SENSITIVITY = 3.2, FRICTION = 0.90, RANDOM_JITTER = 0.12, EDGE_PUSH = 0.6;
 const SAND_COLORS = [{r:220,g:195,b:160},{r:180,g:200,b:220},{r:210,g:180,b:170},{r:190,g:215,b:185},{r:225,g:210,b:170},{r:200,g:185,b:210}];
+let _npFreqs = [];
 
 function besselJ0(x) { if(x===0)return 1; const ax=Math.abs(x); if(ax<8){const y=x*x;const a1=57568490574+y*(-13362590354+y*(651619640.7+y*(-11214424.18+y*(77392.33017+y*(-184.9052456)))));const a2=57568490411+y*(1029532985+y*(9494680.718+y*(59272.64853+y*(267.8532712+y*1))));return a1/a2;}else{const z=8/ax,y=z*z,xx=ax-0.785398164;const a1=1+y*(-0.1098628627e-2+y*(0.2734510407e-4+y*(-0.2073370639e-5+y*0.2093887211e-6)));const a2=-0.1562499995e-1+y*(0.1430488765e-3+y*(-0.6911147651e-5+y*(0.7621095161e-6-y*0.934935152e-7)));return Math.sqrt(0.636619772/ax)*(Math.cos(xx)*a1-z*Math.sin(xx)*a2);}}
 function besselJ1(x) { if(x===0)return 0; const ax=Math.abs(x); if(ax<8){const y=x*x;const a1=x*(72362614232+y*(-7895059235+y*(242396853.1+y*(-2972611.439+y*(15704.48260+y*(-30.16036606))))));const a2=144725228442+y*(2300535178+y*(18583304.74+y*(99447.43394+y*(376.9991397+y*1))));return a1/a2;}else{const z=8/ax,y=z*z,xx=ax-2.356194491;const a1=1+y*(0.183105e-2+y*(-0.3516396496e-4+y*(0.2457520174e-5+y*(-0.240337019e-6))));const a2=0.04687499995+y*(-0.2002690873e-3+y*(0.8449199096e-5+y*(-0.88228987e-6+y*0.105787412e-6)));const r=Math.sqrt(0.636619772/ax)*(Math.cos(xx)*a1-z*Math.sin(xx)*a2);return x<0?-r:r;}}
@@ -1151,14 +1151,16 @@ function stopWaveAnimation(){if(waveAnimRaf){cancelAnimationFrame(waveAnimRaf);w
 
 function drawComposite(freqs,phase=0,ts=0){const canvas=document.getElementById('composite-canvas');if(!canvas||!freqs.length)return;const W=canvas.offsetWidth||600;if(canvas.width!==W)canvas.width=W;const H=64,c=canvas.getContext('2d');const bgGrad=c.createLinearGradient(0,0,0,H);bgGrad.addColorStop(0,'#080c17');bgGrad.addColorStop(0.5,'#0d1423');bgGrad.addColorStop(1,'#080c17');c.fillStyle=bgGrad;c.fillRect(0,0,W,H);drawStars(c,W,H,ts);c.save();c.strokeStyle='rgba(124,58,237,.12)';c.shadowColor='#7c3aed';c.shadowBlur=3;c.lineWidth=1;c.beginPath();c.moveTo(0,H/2);c.lineTo(W,H/2);c.stroke();c.restore();const foundFreq=Math.min(...freqs),points=[];for(let x=0;x<W;x++){const tx=(x/W)*4*2*Math.PI;let val=0;freqs.forEach((freq,i)=>{const ph=i*Math.PI/4;let amp;if(freq===foundFreq||freq<=100)amp=1;else if(freq<=400)amp=0.2;else if(freq<=1000)amp=0.1;else amp=0.05;if(freq!==foundFreq)amp/=freqs.length;val+=Math.sin(tx*(freq/foundFreq)-phase+ph)*amp;});val/=Math.max(1,freqs.length*0.6);const y=H/2-val*(H/2-5);points.push({x,y,val});}c.save();c.strokeStyle='rgba(124,58,237,0.2)';c.lineWidth=8;c.shadowColor='#8b5cf6';c.shadowBlur=20;c.lineCap='round';c.lineJoin='round';c.beginPath();points.forEach((p,i)=>i===0?c.moveTo(p.x,p.y):c.lineTo(p.x,p.y));c.stroke();c.restore();c.save();c.strokeStyle='rgba(6,182,212,0.25)';c.lineWidth=4;c.shadowColor='#06b6d4';c.shadowBlur=12;c.lineCap='round';c.lineJoin='round';c.beginPath();points.forEach((p,i)=>i===0?c.moveTo(p.x,p.y):c.lineTo(p.x,p.y));c.stroke();c.restore();const pulseGlow=0.7+0.3*Math.sin(ts*0.003),grad=c.createLinearGradient(0,0,W,0);grad.addColorStop(0,'#7c3aed');grad.addColorStop(0.25,'#a78bfa');grad.addColorStop(0.5,'#06b6d4');grad.addColorStop(0.75,'#67e8f9');grad.addColorStop(1,'#7c3aed');c.save();c.strokeStyle=grad;c.lineWidth=2;c.shadowColor='#8b5cf6';c.shadowBlur=10*pulseGlow;c.lineCap='round';c.lineJoin='round';c.beginPath();points.forEach((p,i)=>i===0?c.moveTo(p.x,p.y):c.lineTo(p.x,p.y));c.stroke();c.restore();c.save();points.forEach((p,i)=>{if(i===0||i===points.length-1)return;const prev=points[i-1],next=points[i+1];if((p.val>prev.val&&p.val>next.val)||(p.val<prev.val&&p.val<next.val)){const sparkle=0.5+0.5*Math.sin(ts*0.008+i*0.3);c.globalAlpha=0.5+sparkle*0.5;c.shadowColor=Math.abs(p.val)>0.3?'#a78bfa':'#67e8f9';c.shadowBlur=6+sparkle*4;c.fillStyle=c.shadowColor;c.beginPath();c.arc(p.x,p.y,1.5+sparkle,0,Math.PI*2);c.fill();}});c.restore();}
 
-function updateVisuals(freqs){const section=document.getElementById('vis-section');if(!section)return;if(!freqs.length){stopCymatics();stopWaveAnimation();section.classList.remove('on');return;}section.classList.add('on');startWaveAnimation(freqs);startCymatics(freqs);}
+function openNowPlaying(){const ov=document.getElementById('now-playing-overlay');if(!ov)return;document.getElementById('npo-track-name').textContent=document.getElementById('pl-name').textContent;document.getElementById('npo-track-freqs').textContent=document.getElementById('pl-freqs').textContent;document.getElementById('npo-vol').value=document.getElementById('vol-slider').value;const pi=document.getElementById('pause-icon');if(pi)document.getElementById('npo-pause-icon').textContent=pi.textContent;ov.style.display='block';if(_npFreqs.length){stopCymatics();stopWaveAnimation();startCymatics(_npFreqs);startWaveAnimation(_npFreqs);}}
+function closeNowPlaying(){const ov=document.getElementById('now-playing-overlay');if(ov)ov.style.display='none';stopCymatics();stopWaveAnimation();}
+function updateVisuals(freqs){const ov=document.getElementById('now-playing-overlay');if(!ov||ov.style.display==='none')return;if(!freqs.length){stopCymatics();stopWaveAnimation();return;}startWaveAnimation(freqs);startCymatics(freqs);}
 
 // ── Custom Track UI ──
 const freqList=[],SAVED_TRACKS_KEY='qm_saved_tracks';
 (function initFreqInput(){const raw=document.getElementById('freq-raw');raw.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();const val=raw.value.replace(/,/g,'').trim();if(val)addFreq(val);raw.value='';}else if(e.key==='Backspace'&&raw.value===''&&freqList.length>0){e.preventDefault();freqList.pop();renderFreqs();}});raw.addEventListener('input',()=>{if(raw.value.includes(',')){const parts=raw.value.split(',');const last=parts.pop();parts.forEach(p=>{const v=p.trim();if(v)addFreq(v);});raw.value=last;}});raw.addEventListener('blur',()=>{const val=raw.value.replace(/,/g,'').trim();if(val){addFreq(val);raw.value='';}});document.getElementById('freq-box').addEventListener('mousedown',e=>{if(e.target.classList.contains('freq-tag-x'))e.preventDefault();});})();
 function addFreq(raw){const parts=raw.split(',').map(p=>p.trim()).filter(Boolean);for(const p of parts){const f=parseFloat(p);if(isNaN(f)||f<=0){toast('Invalid: '+p,'error');continue;}if(freqList.length>=6){toast('Maximum 6 frequencies','error');break;}if(freqList.includes(f)){toast('Frequency already added: '+fmtHz(f),'info');continue;}freqList.push(f);}renderFreqs();}
 function removeFreq(i){freqList.splice(i,1);renderFreqs();}
-function renderFreqs(){const box=document.getElementById('freq-box'),raw=document.getElementById('freq-raw');box.innerHTML='';freqList.forEach((f,i)=>{const tag=document.createElement('span');tag.className='freq-tag';tag.innerHTML=fmtHz(f)+` <button class="freq-tag-x" onclick="removeFreq(${i})">×</button>`;box.appendChild(tag);});box.appendChild(raw);updateVisuals(freqList);}
+function renderFreqs(){const box=document.getElementById('freq-box'),raw=document.getElementById('freq-raw');box.innerHTML='';freqList.forEach((f,i)=>{const tag=document.createElement('span');tag.className='freq-tag';tag.innerHTML=fmtHz(f)+` <button class="freq-tag-x" onclick="removeFreq(${i})">×</button>`;box.appendChild(tag);});box.appendChild(raw);}
 function playCustom(){if(!freqList.length){toast('Add at least one frequency','error');return;}const name=document.getElementById('track-name').value.trim()||'Custom Therapeutic Track',dur=parseDur(document.getElementById('dur-input').value);if(!dur){toast('Invalid duration','error');return;}playAudio([...freqList],name,dur,'play-custom-btn');}
 function downloadCustom(){if(!freqList.length){toast('Add at least one frequency','error');return;}const name=document.getElementById('track-name').value.trim()||'Custom Therapeutic Track',dur=parseDur(document.getElementById('dur-input').value);if(!dur){toast('Invalid duration','error');return;}downloadWAV([...freqList],name,dur,'dl-custom-btn');}
 function saveCurrentTrack(){if(!freqList.length){toast('Add at least one frequency first','error');return;}const name=document.getElementById('track-name').value.trim();if(!name){toast('Please enter a track name','error');return;}const tracks=getSavedTracks();tracks[name]={name,frequencies:[...freqList],duration:document.getElementById('dur-input').value||'96.3',savedAt:Date.now()};try{localStorage.setItem(SAVED_TRACKS_KEY,JSON.stringify(tracks));}catch(e){toast('Storage full — clear some saved data','error');return;}toast('Saved: '+name,'success');renderSavedTracks();}
