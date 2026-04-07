@@ -104,12 +104,13 @@
     /* Theory info button */
     .info-btn {
       position: absolute; top: .55rem; right: .8rem;
-      background: rgba(0,245,255,.07); border: 1px solid rgba(0,245,255,.22);
+      background: linear-gradient(135deg, rgba(0,245,255,.1), rgba(255,0,255,.08));
+      border: 1px solid rgba(0,245,255,.3);
       color: var(--acl); font-family: 'Exo 2', sans-serif; font-size: .68rem;
-      font-weight: 600; letter-spacing: .04em; border-radius: 20px;
-      padding: .28rem .72rem; cursor: pointer; transition: all .18s; z-index: 2;
+      font-weight: 700; letter-spacing: .06em; border-radius: 20px;
+      padding: .28rem .8rem; cursor: pointer; transition: all .2s; z-index: 2;
     }
-    .info-btn:hover { background: rgba(0,245,255,.15); border-color: var(--acl); }
+    .info-btn:hover { background: linear-gradient(135deg, rgba(0,245,255,.22), rgba(255,0,255,.15)); border-color: #ff00ff; color: #fff; transform: scale(1.04); }
     /* Browse sub-tabs */
     .browse-tabs { display: flex; gap: .4rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: .6rem; }
     .browse-tab { padding: .4rem 1.1rem; border-radius: 20px; font-size: .78rem; font-weight: 600; font-family: 'Exo 2', sans-serif; background: none; border: 1px solid transparent; color: var(--muted); cursor: pointer; transition: all .15s; }
@@ -413,7 +414,7 @@
     <span class="hero-word">Generator</span>
   </div>
   <p>Pure sine wave audio therapy &amp; real-time cymatics</p>
-  <button class="info-btn" id="info-btn" onclick="openTheoryOverlay()" title="Frequency Theory &amp; Reference">&#x24d8; Theory</button>
+  <button class="info-btn" id="info-btn" onclick="openTheoryOverlay()" title="Frequency Science &amp; Hidden Knowledge">✦ Decode the Science</button>
 </header>
 <main class="main">
   <!-- Home -->
