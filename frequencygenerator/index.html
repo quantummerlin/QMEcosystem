@@ -315,6 +315,16 @@
     .theory-nav-btn { flex-shrink:0; padding:.32rem .75rem; border-radius:20px; font-size:.68rem; font-weight:600; letter-spacing:.04em; background:var(--card2); border:1px solid var(--border); color:var(--muted); cursor:pointer; white-space:nowrap; transition:all .15s; touch-action:manipulation; }
     .theory-nav-btn:hover { border-color:rgba(0,245,255,.4); color:var(--text); }
     .theory-nav-btn.active { background:rgba(0,245,255,.12); border-color:var(--acl); color:var(--acl); }
+    /* Find My Track */
+    .ftm-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem; margin-top:.3rem; }
+    .ftm-cat { background:var(--card2); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+    .ftm-cat-hdr { display:flex; align-items:center; gap:.5rem; padding:.55rem .9rem; border-bottom:1px solid; }
+    .ftm-cat-icon { font-size:.9rem; }
+    .ftm-cat-label { font-size:.76rem; font-weight:700; letter-spacing:.03em; }
+    .ftm-track-row { display:flex; align-items:center; gap:.5rem; padding:.45rem .9rem; border-bottom:1px solid var(--border); }
+    .ftm-track-row:last-child { border-bottom:none; }
+    .ftm-track-name { font-size:.76rem; font-weight:600; color:var(--text); margin-bottom:.1rem; }
+    .ftm-track-blurb { font-size:.63rem; color:var(--dim); line-height:1.3; }
     .theory-qref-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:.4rem; }
     .theory-qref-item { background:var(--card3); border:1px solid var(--border); border-radius:6px; padding:.5rem .6rem; display:flex; flex-direction:column; gap:.2rem; }
     .theory-qref-hz { font-size:.8rem; font-weight:700; color:var(--teal); font-family:monospace; }
@@ -1755,7 +1765,7 @@ function renderTheory(){
   if(!container)return;
   const D=getGlobalDur();
   const navSecs=[
-    {id:'ts-0',label:'Quick Ref'},{id:'ts-1',label:'Science'},{id:'ts-2',label:'Solfeggio'},
+    {id:'ts-14',label:'🎯 Find My Track'},{id:'ts-0',label:'Quick Ref'},{id:'ts-1',label:'Science'},{id:'ts-2',label:'Solfeggio'},
     {id:'ts-3',label:'Brainwaves'},{id:'ts-4',label:'Chakras'},{id:'ts-5',label:'Special'},
     {id:'ts-6',label:'Entrainment'},{id:'ts-7',label:'PEMF'},{id:'ts-8',label:'How To Use'},
     {id:'ts-9',label:'FAQ'},{id:'ts-10',label:'Safety'},{id:'ts-11',label:'Water & Crystals'},
@@ -1765,6 +1775,79 @@ function renderTheory(){
   function pBtn(freqs,name){return `<button class="theory-play-btn" onclick="closeTheoryOverlay();playAudio(${JSON.stringify(freqs)},${JSON.stringify(name)},${D},null)">▶ Play</button>`;}
   function sec(id,title,body){return `<div class="theory-section" id="${id}"><div class="theory-section-title">${title}</div>${body}</div>`;}
   let html=nav;
+
+  // ── Freq lookup for Find My Track ──
+  const _fm={};
+  for(const coll of Object.values(ALL_COLLECTIONS)){for(const t of coll){if(!_fm[t.name])_fm[t.name]=t.freqs;}}
+  TRINITY.forEach(t=>{if(!_fm[t.name])_fm[t.name]=t.freqs;});
+  Object.entries(PRESETS).forEach(([k,v])=>{if(!_fm[k])_fm[k]=v;});
+  function fpBtn(n,blurb){const f=_fm[n]||[432];return `<div class="ftm-track-row"><div style="flex:1;min-width:0"><div class="ftm-track-name">${n}</div><div class="ftm-track-blurb">${blurb}</div></div>${pBtn(f,n)}</div>`;}
+
+  // ── 14. Find My Track ──
+  const ftmCats=[
+    {icon:'😴',label:'Sleep & Insomnia',color:'#6366f1',tracks:[
+      ['Deep Sleep Delta','Pure Delta 2.5Hz — the gold standard of deep sleep entrainment'],
+      ['Brain Quieter','Silences racing thoughts — made for the busy ADHD mind at bedtime'],
+      ['Dream Enhancement','Vivid, memorable dreams and lucid dreaming preparation'],
+      ['Gentle Renewal','The softest overnight frequency — ideal for sensitive sleepers'],
+    ]},
+    {icon:'😰',label:'Anxiety & Stress',color:'#06b6d4',tracks:[
+      ['Anxiety Dissolver','Breaks anxiety loops and calms the nervous system from the root'],
+      ['Instant Calm in Chaos','Emergency protocol — works in under 5 minutes'],
+      ['Peaceful Mind','Daily anchor for chronic overthinkers and worriers'],
+      ['ADHD + Anxiety','For nervous systems stuck in permanent high-alert mode'],
+    ]},
+    {icon:'🧠',label:'Focus & Productivity',color:'#8b5cf6',tracks:[
+      ['The Filter','Blocks distractions and sustains deep work focus blocks'],
+      ['Flow State Engine','Trigger and hold creative hyperfocus on demand'],
+      ['Genius Activation','Peak cognition grounded in Earth — insight and clarity'],
+      ['Dopamine Ignition','Override morning brain fog — initiates dopamine pathways'],
+    ]},
+    {icon:'💊',label:'Pain & Physical Recovery',color:'#ef4444',tracks:[
+      ['Pain Relief & Management','Natural theta-based pain reduction — no side effects'],
+      ['Cellular Blueprint','Tissue regeneration — post-surgery, injury and wound recovery'],
+      ['NAD+ Cellular Energy','Mitochondrial support, longevity and cellular vitality'],
+      ['Vitality & Well-Being','Daily immune boost and energy restoration'],
+    ]},
+    {icon:'💓',label:'Emotional Healing',color:'#ec4899',tracks:[
+      ['Total Forgiveness','Release guilt, resentment and unforgiveness completely'],
+      ['I Am Worthy','21-day self-worth rebuilding from the DNA level up'],
+      ['Unshakeable Confidence','Dissolve imposter syndrome and chronic self-doubt'],
+      ['The Change Catalyst','The transformation trifecta — break old patterns for good'],
+    ]},
+    {icon:'🚀',label:'Manifestation & Abundance',color:'#f59e0b',tracks:[
+      ['Wealth DNA Activation','Cellular prosperity codes + DNA abundance programming'],
+      ['Quantum Manifestor','Bridge intention to physical manifestation'],
+      ['Genesis 1:1 Creation','Sacred prime prayer amplifier — speak desires into reality'],
+      ['Joyful Success','Align success with joy, not effort or force'],
+    ]},
+    {icon:'🔮',label:'Spiritual & Awakening',color:'#a855f7',tracks:[
+      ['Pineal Activation','Crown chakra and pineal gland — frequency of the divine'],
+      ['Consciousness Download','Angelic gateway + third eye for spiritual insight downloads'],
+      ['Akashic Records Portal','Access soul wisdom, past-life information and guidance'],
+      ['Primal Awakening','Deep body-spirit integration — fully alive from the root'],
+    ]},
+    {icon:'⚡',label:'Energy & Motivation',color:'#10b981',tracks:[
+      ['Day Starter','Clean morning activation — motivated, grounded, focused'],
+      ['Grounded Euphoria','Natural endorphin release — joy without stimulants or caffeine'],
+      ['Morning Activation','Wake body, mind and spirit — sets the energetic tone for the day'],
+      ['Norepinephrine Rising','Ramp up alertness and transition into peak performance'],
+    ]},
+    {icon:'🌱',label:'Meditation & Inner Peace',color:'#0ea5e9',tracks:[
+      ['Universal Harmony','432Hz background — anyone can use, anytime, anywhere'],
+      ['Deep Theta Waves','Gateway to deep meditation and subconscious access'],
+      ['OM Coherence Field','The sustained effect of OM chanting — in pure audio form'],
+      ['I Am Presence','Stillness and pure I Am awareness — for meditators'],
+    ]},
+    {icon:'🛡️',label:'Protection & Energy Clearing',color:'#64748b',tracks:[
+      ["Empathic Shielding","Shield your energy field before social events or crowds"],
+      ["Aura Reset","3-stage cleanse after heavy or draining interactions"],
+      ["Sensory Overload Reset","Post-overwhelm recovery — returns senses to calm"],
+      ["Healer's Hand","For healers and energy workers — amplifies healing output"],
+    ]},
+  ];
+  const ftmBody=`<p style="font-size:.8rem;color:var(--muted);margin-bottom:1.25rem">New here, or not sure where to start? Pick your goal — every track has a play button so you can listen immediately.</p><div class="ftm-grid">${ftmCats.map(cat=>`<div class="ftm-cat"><div class="ftm-cat-hdr" style="background:${cat.color}1a;border-color:${cat.color}50"><span class="ftm-cat-icon">${cat.icon}</span><span class="ftm-cat-label" style="color:${cat.color}">${cat.label}</span></div>${cat.tracks.map(([n,b])=>fpBtn(n,b)).join('')}</div>`).join('')}</div>`;
+  html+=sec('ts-14','🎯 Find My Track',ftmBody);
 
   // ── 0. Quick Reference ──
   const qref=[
