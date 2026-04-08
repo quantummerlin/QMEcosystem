@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title id="page-title">Soul Blueprint | Complete Cosmic Reading – Quantum Merlin</title>
-    <meta name="description" id="meta-description" content="Discover your Soul Blueprint with 65+ personalized cosmic readings. Birth chart astrology, numerology insights, and spiritual guidance. Zero data collection.">
+    <title id="page-title">Free Soul Blueprint Reading � Personalized Cosmic Insights</title>
+    <meta name="description" id="meta-description" content="100% free Soul Blueprint reading � 50-200 personalized astrology & numerology insights based on your chart complexity. No signup, no payment, no data collection.">
     <meta name="keywords" content="soul blueprint, cosmic reading, birth chart, astrology, numerology, spiritual insights, zodiac, quantum merlin">
     <meta name="author" content="Quantum Merlin">
     <meta name="robots" content="index, follow">
@@ -15,10 +15,13 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-VW4LGE7L1T');
-        // GA4 custom event helper — no PII, behavioural only
+        // GA4 custom event helper � no PII, behavioural only
         function sbTrack(name, params) { try { gtag('event', name, params || {}); } catch(e) {} }
         
     </script>
+    
+    <!-- Google AdSense (loaded only after cookie consent) -->
+    <script id="adsense-script" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous" data-cookie-consent="required"></script>
     
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#FF69B4">
@@ -39,7 +42,7 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Soul Blueprint - Cosmic Reading",
-        "description": "Discover your Soul Blueprint with 65+ personalized cosmic readings including birth chart astrology, numerology insights, and spiritual guidance.",
+        "description": "Discover your Soul Blueprint with personalized cosmic readings including birth chart astrology, numerology insights, and spiritual guidance.",
         "url": "https://quantummerlin.com/soulblueprint/",
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Any",
@@ -58,8 +61,8 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
     
     <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" id="og-title" content="Soul Blueprint | Complete Cosmic Reading – Quantum Merlin">
-    <meta property="og:description" id="og-description" content="Discover your Soul Blueprint with 65+ personalized cosmic readings. Birth chart astrology, numerology insights, and spiritual guidance. Zero data collection.">
+    <meta property="og:title" id="og-title" content="Soul Blueprint | Complete Cosmic Reading � Quantum Merlin">
+    <meta property="og:description" id="og-description" content="Discover your Soul Blueprint with personalized cosmic readings. Birth chart astrology, numerology insights, and spiritual guidance. Zero data collection.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://quantummerlin.com/soulblueprint/">
     <meta property="og:site_name" content="Quantum Merlin">
@@ -70,8 +73,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Soul Blueprint | Complete Cosmic Reading – Quantum Merlin">
-    <meta name="twitter:description" content="Discover your Soul Blueprint with 65+ personalized cosmic readings. Birth chart, numerology & spiritual insights.">
+    <meta name="twitter:title" content="Soul Blueprint | Complete Cosmic Reading � Quantum Merlin">
+    <meta name="twitter:description" content="Discover your Soul Blueprint with personalized cosmic readings. Birth chart, numerology & spiritual insights.">
     <meta name="twitter:image" content="https://quantummerlin.com/soulblueprint/icon-512.png?v=2">
     
     <!-- Fonts -->
@@ -95,7 +98,7 @@
             --font-body: 'Inter', 'Segoe UI', sans-serif;
         }
         
-        /* Pink Theme (default for girl) */
+        /* Rose Theme */
         body.theme-girl {
             --primary: #FF69B4;
             --secondary: #FFB6C1;
@@ -113,7 +116,7 @@
             --card-border: #E6D5F7;
         }
         
-        /* Blue Theme (for boy) */
+        /* Sky Theme */
         body.theme-boy {
             --primary: #6BA3D6;
             --secondary: #87CEEB;
@@ -576,7 +579,7 @@
             padding: 20px;
         }
         
-        /* Site Navigation — always visible for unified navigation */
+        /* Site Navigation � always visible for unified navigation */
         .site-nav {
             position: sticky;
             top: 0;
@@ -2064,7 +2067,7 @@
         
         .reading-card .growth-areas li::before,
         .reading-card .strengths-challenges > div:last-child li::before {
-            content: "→";
+            content: "?";
             color: #FF69B4;
         }
         
@@ -2307,7 +2310,7 @@
         }
         
         .strengths-challenges li::before {
-            content: '•';
+            content: '�';
             position: absolute;
             left: 0;
             color: var(--primary);
@@ -2568,7 +2571,7 @@
         }
         
         .action-block li::before {
-            content: "→";
+            content: "?";
             position: absolute;
             left: 0;
             color: var(--primary);
@@ -3470,14 +3473,22 @@
             color: white;
         }
 
-        /* AdSense Placeholder (disabled to remove gaps) */
+        /* AdSense Container � enabled for free ad-supported model */
         .ad-container {
-            display: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            min-height: 0 !important;
-            border: 0 !important;
-            background: none !important;
+            min-height: 90px;
+            margin: 24px 0;
+            text-align: center;
+            background: rgba(0,0,0,0.02);
+            border-radius: 12px;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+        body.dark-theme .ad-container,
+        body.color-mode-pink .ad-container,
+        body.color-mode-blue .ad-container,
+        body.color-mode-purple .ad-container {
+            background: rgba(255,255,255,0.03);
         }
 
         .ad-placeholder {
@@ -4897,18 +4908,18 @@
     </style>
 </head>
 <body>
-    <!-- Welcome modal removed — Phase 2: users land directly on input form -->
+    <!-- Welcome modal removed � Phase 2: users land directly on input form -->
 
     <!-- Theme Bar -->
     <div class="theme-bar" id="themeBar">
         <button class="theme-bar-btn" data-theme="girl" onclick="setGender('girl')">
-            Pink
+            Rose
         </button>
         <button class="theme-bar-btn" data-theme="purple" onclick="setGender('purple')">
-            Purple
+            Celestial
         </button>
         <button class="theme-bar-btn" data-theme="boy" onclick="setGender('boy')">
-            Blue
+            Sky
         </button>
     </div>
     
@@ -4931,6 +4942,7 @@
                 <a href="/soulblueprint/articles/">Guides</a>
                 <a href="/soulblueprint/playbooks/">Playbooks</a>
                 <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html">Prompt Builder</a>
+                <a href="#myReadingsSection" onclick="document.getElementById('myReadingsSection').style.display='block';document.getElementById('myReadingsSection').scrollIntoView({behavior:'smooth'});return false;">My Readings</a>
             </div>
         </div>
     </nav>
@@ -4939,20 +4951,25 @@
     <section class="input-section" id="inputSection">
         <header class="header">
             <h1 id="brandName">Soul Blueprint<span class="title-dots"><span class="dot dot1">.</span><span class="dot dot2">.</span><span class="dot dot3">.</span></span></h1>
-            <p class="tagline" id="tagline">Your Cosmic DNA — Decoded in 60 Seconds</p>
-            <p class="sub-tagline" id="subTagline">5 ancient systems. 65+ readings. One birth moment. Zero fluff.</p>
-            <p class="sub-tagline" style="font-size:0.88rem;opacity:0.7;margin-top:4px;">100% private — all calculations happen on your device</p>
+            <p class="tagline" id="tagline">Your Cosmic DNA � Decoded in 60 Seconds</p>
+            <p class="sub-tagline" id="subTagline">5 ancient systems. 50-200 readings. One birth moment. Zero fluff.</p>
+            <p class="sub-tagline" style="font-size:0.88rem;opacity:0.7;margin-top:4px;">100% private � all calculations happen on your device</p>
         </header>
         
         <!-- Inline welcome tip for first-time visitors (non-blocking) -->
         <div id="welcomeTip" style="display:none;max-width:500px;margin:0 auto 18px;padding:14px 18px;background:linear-gradient(135deg,rgba(255,105,180,0.08),rgba(135,206,235,0.08));border-radius:14px;border:1px solid rgba(255,105,180,0.15);position:relative;text-align:center;font-size:0.92rem;line-height:1.6;color:#444;">
             <button onclick="dismissWelcomeTip()" style="position:absolute;top:6px;right:10px;background:none;border:none;font-size:1.2rem;cursor:pointer;color:#999;padding:2px 6px;" aria-label="Dismiss">&times;</button>
-            <strong style="color:#2d1b4e;">Welcome!</strong> Enter a name &amp; birthdate to generate <strong>65+ personalized readings</strong>. 
+            <strong style="color:#2d1b4e;">Welcome!</strong> Enter a name &amp; birthdate to generate <strong>personalized readings (50-200 based on your chart)</strong>. 
             Readings auto-save so you can create them for friends too. 
             After your reading, look for the <strong> Transform</strong> buttons to create AI art, stories &amp; more.
         </div>
 
         <div class="container">
+            <!-- Quick proof teaser � full profiles further below -->
+            <div style="margin-bottom:18px;padding:12px 16px;background:rgba(102,126,234,0.06);border:1px solid rgba(102,126,234,0.12);border-radius:12px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+                <span style="font-size:0.83rem;opacity:0.75;"> 12 complete example readings available below the form</span>
+                <button onclick="document.getElementById('exampleProfiles').scrollIntoView({behavior:'smooth'});" style="padding:6px 14px;border:1px solid rgba(102,126,234,0.3);border-radius:20px;background:none;color:#667eea;font-size:0.78rem;cursor:pointer;font-family:inherit;white-space:nowrap;">See examples ?</button>
+            </div>
             <form class="input-form" id="readingForm">
                 <div class="form-group">
                     <label id="nameLabel">Name</label>
@@ -4996,7 +5013,7 @@
             <!-- What's Inside Preview -->
             <div style="margin-top:32px;padding:24px;background:linear-gradient(135deg,rgba(102,126,234,0.06),rgba(118,75,162,0.06));border-radius:16px;border:1px solid rgba(102,126,234,0.12);">
                 <p style="text-align:center;font-weight:700;font-size:1.05rem;margin-bottom:6px;color:#2d1b4e;">What's Inside Your Birth Moment Analysis</p>
-                <p style="text-align:center;font-size:0.82rem;opacity:0.6;margin-bottom:16px;">Not a generic horoscope — every reading is mathematically calculated from your exact birth data</p>
+                <p style="text-align:center;font-size:0.82rem;opacity:0.6;margin-bottom:16px;">Not a generic horoscope � every reading is mathematically calculated from your exact birth data</p>
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;text-align:center;">
                     <div style="padding:12px 8px;background:rgba(255,255,255,0.7);border-radius:12px;"><span style="font-size:1.3rem;"></span><div style="font-weight:600;font-size:0.85rem;margin-top:4px;">Celestial Gifts</div><div style="font-size:0.75rem;opacity:0.6;">10 planetary readings</div></div>
                     <div style="padding:12px 8px;background:rgba(255,255,255,0.7);border-radius:12px;"><span style="font-size:1.3rem;"></span><div style="font-weight:600;font-size:0.85rem;margin-top:4px;">Soul Codes</div><div style="font-size:0.75rem;opacity:0.6;">8 numerology readings</div></div>
@@ -5006,31 +5023,31 @@
                     <div style="padding:12px 8px;background:rgba(255,255,255,0.7);border-radius:12px;"><span style="font-size:1.3rem;"></span><div style="font-weight:600;font-size:0.85rem;margin-top:4px;">Keepsake Book</div><div style="font-size:0.75rem;opacity:0.6;">11 premium templates</div></div>
                 </div>
                 <!-- Anti-positioning -->
-                <p style="text-align:center;font-size:0.78rem;opacity:0.5;margin-top:14px;line-height:1.5;">This is not a horoscope. No vague predictions. No generic personality quiz.<br>Real astronomical calculations × numerological analysis × multi-system synthesis.</p>
+                <p style="text-align:center;font-size:0.78rem;opacity:0.5;margin-top:14px;line-height:1.5;">This is not a horoscope. No vague predictions. No generic personality quiz.<br>Real astronomical calculations � numerological analysis � multi-system synthesis.</p>
             </div>
 
-            <!-- Real Proof Bar — every number verified from codebase -->
+            <!-- Real Proof Bar � every number verified from codebase -->
             <div style="margin-top:18px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;font-size:0.78rem;opacity:0.55;text-align:center;line-height:1.6;">
                 <span>48 calculation functions</span>
-                <span>·</span>
+                <span>�</span>
                 <span>4 systems (Western Astrology, Numerology, Chinese Zodiac, Life Patterns)</span>
-                <span>·</span>
+                <span>�</span>
                 <span>73 guides</span>
-                <span>·</span>
+                <span>�</span>
                 <span>12 example profiles</span>
-                <span>·</span>
+                <span>�</span>
                 <span>No account needed</span>
-                <span>·</span>
+                <span>�</span>
                 <span>Your data never leaves your device</span>
             </div>
 
             <!-- ============================================ -->
-            <!-- EXAMPLE PROFILES — explore before you buy -->
+            <!-- EXAMPLE PROFILES � explore before you buy -->
             <!-- ============================================ -->
             <div id="exampleProfiles" style="margin-top:40px;padding:32px 20px;background:linear-gradient(135deg,rgba(102,126,234,0.04),rgba(118,75,162,0.04));border-radius:20px;border:1px solid rgba(102,126,234,0.1);">
                 <div style="text-align:center;margin-bottom:8px;">
                     <h2 style="font-size:1.3rem;margin:0 0 10px;font-family:'Playfair Display','Georgia',serif;">Not sure yet? Explore real readings first</h2>
-                    <p style="font-size:0.93rem;opacity:0.75;max-width:560px;margin:0 auto 20px;line-height:1.6;">We've pre-loaded 12 complete readings so you can see the depth and detail before you commit. Click any profile below — it's the same analysis you'd get for your own birth data.</p>
+                    <p style="font-size:0.93rem;opacity:0.75;max-width:560px;margin:0 auto 20px;line-height:1.6;">We've pre-loaded 12 complete readings so you can see the depth and detail before you commit. Click any profile below � it's the same analysis you'd get for your own birth data.</p>
                 </div>
 
                 <!-- Element Filters -->
@@ -5044,13 +5061,13 @@
 
                 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;" id="exProfileGrid">
 
-                    <!-- 1. Luna Reyes — Scorpio -->
+                    <!-- 1. Luna Reyes � Scorpio -->
                     <div class="ep-card" data-element="water" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#2d1b69,#6b2fa0);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Luna Reyes</div>
-                                <div style="font-size:.8rem;opacity:.65;">Nov 8, 1995 · 2:15 AM · Mexico City</div>
+                                <div style="font-size:.8rem;opacity:.65;">Nov 8, 1995 � 2:15 AM � Mexico City</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5062,16 +5079,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Wood Pig </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Deep Intuition</span>
                         </div>
-                        <a href="/soulblueprint/?name=Luna+Reyes&date=1995-11-08&time=02:15&place=Mexico+City,+Mexico" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Luna+Reyes&date=1995-11-08&time=02:15&place=Mexico+City,+Mexico" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 2. Kai Nakamura — Leo -->
+                    <!-- 2. Kai Nakamura � Leo -->
                     <div class="ep-card" data-element="fire" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#f5a623,#e85d04);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Kai Nakamura</div>
-                                <div style="font-size:.8rem;opacity:.65;">Aug 3, 2001 · 11:30 AM · Tokyo</div>
+                                <div style="font-size:.8rem;opacity:.65;">Aug 3, 2001 � 11:30 AM � Tokyo</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5083,16 +5100,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Metal Snake </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Creative Visionary</span>
                         </div>
-                        <a href="/soulblueprint/?name=Kai+Nakamura&date=2001-08-03&time=11:30&place=Tokyo,+Japan" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Kai+Nakamura&date=2001-08-03&time=11:30&place=Tokyo,+Japan" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 3. Ava Mitchell — Virgo -->
+                    <!-- 3. Ava Mitchell � Virgo -->
                     <div class="ep-card" data-element="earth" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#4a7c59,#2d5016);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Ava Mitchell</div>
-                                <div style="font-size:.8rem;opacity:.65;">Sep 14, 1988 · 6:45 PM · London</div>
+                                <div style="font-size:.8rem;opacity:.65;">Sep 14, 1988 � 6:45 PM � London</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5104,16 +5121,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Earth Dragon </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Healer Energy</span>
                         </div>
-                        <a href="/soulblueprint/?name=Ava+Mitchell&date=1988-09-14&time=18:45&place=London,+UK" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Ava+Mitchell&date=1988-09-14&time=18:45&place=London,+UK" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 4. Marcus Thompson — Aries -->
+                    <!-- 4. Marcus Thompson � Aries -->
                     <div class="ep-card" data-element="fire" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#e74c3c,#c0392b);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Marcus Thompson</div>
-                                <div style="font-size:.8rem;opacity:.65;">Mar 29, 1992 · 9:00 AM · Atlanta</div>
+                                <div style="font-size:.8rem;opacity:.65;">Mar 29, 1992 � 9:00 AM � Atlanta</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5125,16 +5142,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Water Monkey </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Natural Leader</span>
                         </div>
-                        <a href="/soulblueprint/?name=Marcus+Thompson&date=1992-03-29&time=09:00&place=Atlanta,+USA" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Marcus+Thompson&date=1992-03-29&time=09:00&place=Atlanta,+USA" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 5. Sofia Hernandez — Capricorn -->
+                    <!-- 5. Sofia Hernandez � Capricorn -->
                     <div class="ep-card" data-element="earth" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#4a5568,#2d3748);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Sofia Hernandez</div>
-                                <div style="font-size:.8rem;opacity:.65;">Jan 2, 2003 · 4:20 PM · Buenos Aires</div>
+                                <div style="font-size:.8rem;opacity:.65;">Jan 2, 2003 � 4:20 PM � Buenos Aires</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5146,16 +5163,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Water Horse </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Ambitious Builder</span>
                         </div>
-                        <a href="/soulblueprint/?name=Sofia+Hernandez&date=2003-01-02&time=16:20&place=Buenos+Aires,+Argentina" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Sofia+Hernandez&date=2003-01-02&time=16:20&place=Buenos+Aires,+Argentina" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 6. Ethan Park — Gemini -->
+                    <!-- 6. Ethan Park � Gemini -->
                     <div class="ep-card" data-element="air" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#f6d365,#fda085);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Ethan Park</div>
-                                <div style="font-size:.8rem;opacity:.65;">Jun 15, 1997 · 7:30 AM · Seoul</div>
+                                <div style="font-size:.8rem;opacity:.65;">Jun 15, 1997 � 7:30 AM � Seoul</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5167,16 +5184,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Fire Ox </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Quick Mind</span>
                         </div>
-                        <a href="/soulblueprint/?name=Ethan+Park&date=1997-06-15&time=07:30&place=Seoul,+South+Korea" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Ethan+Park&date=1997-06-15&time=07:30&place=Seoul,+South+Korea" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 7. Zara Ahmed — Taurus -->
+                    <!-- 7. Zara Ahmed � Taurus -->
                     <div class="ep-card" data-element="earth" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#2ecc71,#27ae60);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Zara Ahmed</div>
-                                <div style="font-size:.8rem;opacity:.65;">May 5, 1990 · 10:00 PM · Dubai</div>
+                                <div style="font-size:.8rem;opacity:.65;">May 5, 1990 � 10:00 PM � Dubai</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5188,16 +5205,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Metal Horse </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Creative Luxury</span>
                         </div>
-                        <a href="/soulblueprint/?name=Zara+Ahmed&date=1990-05-05&time=22:00&place=Dubai,+UAE" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Zara+Ahmed&date=1990-05-05&time=22:00&place=Dubai,+UAE" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 8. Jordan Rivera — Aquarius -->
+                    <!-- 8. Jordan Rivera � Aquarius -->
                     <div class="ep-card" data-element="air" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#00b4d8,#0077b6);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Jordan Rivera</div>
-                                <div style="font-size:.8rem;opacity:.65;">Feb 14, 1999 · No birth time · San Juan</div>
+                                <div style="font-size:.8rem;opacity:.65;">Feb 14, 1999 � No birth time � San Juan</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5209,16 +5226,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Earth Rabbit </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Humanitarian</span>
                         </div>
-                        <a href="/soulblueprint/?name=Jordan+Rivera&date=1999-02-14&place=San+Juan,+Puerto+Rico" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Jordan+Rivera&date=1999-02-14&place=San+Juan,+Puerto+Rico" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 9. Mia Chen — Cancer -->
+                    <!-- 9. Mia Chen � Cancer -->
                     <div class="ep-card" data-element="water" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#b8c6db,#6c8ebd);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Mia Chen</div>
-                                <div style="font-size:.8rem;opacity:.65;">Jul 4, 1985 · 3:33 AM · Taipei</div>
+                                <div style="font-size:.8rem;opacity:.65;">Jul 4, 1985 � 3:33 AM � Taipei</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5230,16 +5247,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Wood Ox </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Nurturing Leader</span>
                         </div>
-                        <a href="/soulblueprint/?name=Mia+Chen&date=1985-07-04&time=03:33&place=Taipei,+Taiwan" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Mia+Chen&date=1985-07-04&time=03:33&place=Taipei,+Taiwan" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 10. Leo Dubois — Pisces -->
+                    <!-- 10. Leo Dubois � Pisces -->
                     <div class="ep-card" data-element="water" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#a18cd1,#fbc2eb);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Leo Dubois</div>
-                                <div style="font-size:.8rem;opacity:.65;">Mar 12, 2010 · 12:00 PM · Paris</div>
+                                <div style="font-size:.8rem;opacity:.65;">Mar 12, 2010 � 12:00 PM � Paris</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5251,16 +5268,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Metal Tiger </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Young Soul</span>
                         </div>
-                        <a href="/soulblueprint/?name=Leo+Dubois&date=2010-03-12&time=12:00&place=Paris,+France" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Leo+Dubois&date=2010-03-12&time=12:00&place=Paris,+France" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 11. Priya Sharma — Sagittarius -->
+                    <!-- 11. Priya Sharma � Sagittarius -->
                     <div class="ep-card" data-element="fire" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#9b59b6,#8e44ad);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Priya Sharma</div>
-                                <div style="font-size:.8rem;opacity:.65;">Dec 1, 1993 · 5:15 AM · Mumbai</div>
+                                <div style="font-size:.8rem;opacity:.65;">Dec 1, 1993 � 5:15 AM � Mumbai</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5272,16 +5289,16 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Water Rooster </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Philosophical Explorer</span>
                         </div>
-                        <a href="/soulblueprint/?name=Priya+Sharma&date=1993-12-01&time=05:15&place=Mumbai,+India" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Priya+Sharma&date=1993-12-01&time=05:15&place=Mumbai,+India" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
-                    <!-- 12. Noah Williams — Libra -->
+                    <!-- 12. Noah Williams � Libra -->
                     <div class="ep-card" data-element="air" style="background:rgba(255,255,255,0.6);border:1px solid rgba(102,126,234,0.12);border-radius:16px;padding:20px;transition:all .3s ease;">
                         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
                             <div style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:linear-gradient(135deg,#fd79a8,#e84393);"></div>
                             <div>
                                 <div style="font-weight:700;font-size:1.05rem;">Noah Williams</div>
-                                <div style="font-size:.8rem;opacity:.65;">Oct 10, 2000 · 8:45 PM · Sydney</div>
+                                <div style="font-size:.8rem;opacity:.65;">Oct 10, 2000 � 8:45 PM � Sydney</div>
                             </div>
                         </div>
                         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:.84rem;margin-bottom:12px;">
@@ -5293,7 +5310,7 @@
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Metal Dragon </span>
                             <span style="background:rgba(102,126,234,0.08);padding:3px 9px;border-radius:14px;font-size:.75rem;">Social Strategist</span>
                         </div>
-                        <a href="/soulblueprint/?name=Noah+Williams&date=2000-10-10&time=20:45&place=Sydney,+Australia" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading →</a>
+                        <a href="/soulblueprint/?name=Noah+Williams&date=2000-10-10&time=20:45&place=Sydney,+Australia" style="display:block;text-align:center;padding:10px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;font-size:.88rem;">View Full Reading ?</a>
                     </div>
 
                 </div>
@@ -5301,26 +5318,26 @@
                 <!-- Bottom CTA -->
                 <div style="text-align:center;margin-top:28px;padding-top:20px;border-top:1px solid rgba(102,126,234,0.1);">
                     <p style="font-size:0.92rem;opacity:0.7;margin-bottom:14px;">Convinced? Your unique reading is just a click away.</p>
-                    <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'examples_bottom_cta'});" style="display:inline-block;padding:14px 40px;background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;border-radius:30px;font-weight:700;font-size:1.02rem;text-decoration:none;box-shadow:0 4px 20px rgba(255,215,0,0.25);">Get Your Reading — $12.99 →</a>
-                    <p style="font-size:0.72rem;opacity:0.4;margin-top:8px;">1 reading $12.99 · 2 for $19.99 · 3 for $24.99</p>
+                    <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'examples_bottom_cta'});" style="display:inline-block;padding:14px 40px;background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;border-radius:30px;font-weight:700;font-size:1.02rem;text-decoration:none;box-shadow:0 4px 20px rgba(255,215,0,0.25);">Get Your Reading � $12.99 ?</a>
+                    <p style="font-size:0.72rem;opacity:0.4;margin-top:8px;">1 reading $12.99 � 2 for $19.99 � 3 for $24.99</p>
                 </div>
             </div>
 
             <div class="footer-links" aria-label="Legal links">
                 <a href="/soulblueprint/examples/">Examples</a>
-                <span>•</span>
+                <span>�</span>
                 <a href="/soulblueprint/articles/">Guides</a>
-                <span>•</span>
+                <span>�</span>
                 <a href="/soulblueprint/playbooks/">Playbooks</a>
-                <span>•</span>
+                <span>�</span>
                 <a href="/soulblueprint/about.html">About</a>
-                <span>•</span>
+                <span>�</span>
                 <a href="/soulblueprint/privacy.html">Privacy</a>
-                <span>•</span>
+                <span>�</span>
                 <a href="/soulblueprint/terms.html">Terms</a>
-                <span>•</span>
+                <span>�</span>
                 <a href="/soulblueprint/disclaimer.html">Disclaimer</a>
-                <span>•</span>
+                <span>�</span>
                 <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
             </div>
         </div>
@@ -5335,7 +5352,7 @@
             <!-- Action buttons available in pro version only -->
             <div id="sampleReadingBanner" style="display:none;margin-top:12px;padding:10px 18px;background:linear-gradient(135deg,rgba(255,215,0,0.08),rgba(118,75,162,0.06));border:1px solid rgba(255,215,0,0.2);border-radius:12px;font-size:0.88rem;text-align:center;">
                 <span> This is a sample reading.</span>
-                <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'sample_banner'});" style="color:#ffd700;font-weight:600;text-decoration:none;margin-left:6px;">Generate your own →</a>
+                <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'sample_banner'});" style="color:#ffd700;font-weight:600;text-decoration:none;margin-left:6px;">Generate your own ?</a>
             </div>
         </div>
         
@@ -5360,9 +5377,9 @@
                     <p class="reading-subtitle">Reading for <strong id="openingName">...</strong></p>
                 </div>
                 <div class="opening-letter-body" id="openingLetterBody">
-                    <p>At the exact moment you were born, the cosmos arranged itself in a pattern that has never existed before and will never exist again. This reading captures that unique configuration — a map of your gifts, challenges, and potential.</p>
-                    <p><strong> Tap any section below to explore it.</strong> Take your time — some insights click immediately, others reveal their meaning over time.</p>
-                    <p style="font-size:0.85rem;color:#636e72;margin-top:8px;"> <em>Your reading is saved on this device — come back anytime to continue exploring.</em></p>
+                    <p>At the exact moment you were born, the cosmos arranged itself in a pattern that has never existed before and will never exist again. This reading captures that unique configuration � a map of your gifts, challenges, and potential.</p>
+                    <p><strong> Tap any section below to explore it.</strong> Take your time � some insights click immediately, others reveal their meaning over time.</p>
+                    <p style="font-size:0.85rem;color:#636e72;margin-top:8px;"> <em>Your reading is saved on this device � come back anytime to continue exploring.</em></p>
                     <div class="ai-transform-callout">
                         <p> <strong>See something you love?</strong> Hit the <strong> Transform This</strong> button on any reading to turn it into AI-generated art, stories, meditations, and more with ChatGPT or Gemini.</p>
                     </div>
@@ -5379,25 +5396,25 @@
             <div class="cosmic-snapshot" id="cosmicSnapshot">
                 <div class="cosmic-snapshot-header">
                     <h2>Your Cosmic Snapshot</h2>
-                    <p>The Big Three — your core celestial identity</p>
+                    <p>The Big Three � your core celestial identity</p>
                 </div>
                 <div class="big-three-grid">
                     <div class="big-three-item">
                         <span class="planet-icon"></span>
                         <div class="planet-name">Sun Sign</div>
-                        <div class="sign-name" id="bigThreeSun">—</div>
+                        <div class="sign-name" id="bigThreeSun">�</div>
                         <div class="sign-desc">Core Identity</div>
                     </div>
                     <div class="big-three-item">
                         <span class="planet-icon"></span>
                         <div class="planet-name">Moon Sign</div>
-                        <div class="sign-name" id="bigThreeMoon">—</div>
+                        <div class="sign-name" id="bigThreeMoon">�</div>
                         <div class="sign-desc">Emotional Self</div>
                     </div>
                     <div class="big-three-item">
                         <span class="planet-icon"></span>
                         <div class="planet-name">Rising Sign</div>
-                        <div class="sign-name" id="bigThreeRising">—</div>
+                        <div class="sign-name" id="bigThreeRising">�</div>
                         <div class="sign-desc">First Impression</div>
                     </div>
                 </div>
@@ -5405,7 +5422,7 @@
             
             <!-- Reading Guide Nudge -->
             <div style="text-align:center;padding:16px 20px;margin:-10px 0 20px;background:linear-gradient(135deg,rgba(102,126,234,0.06),rgba(118,75,162,0.06));border-radius:14px;border:1px solid rgba(102,126,234,0.1);">
-                <p style="font-size:0.95rem;margin:0;line-height:1.5;"><strong> Start here</strong> — your Big Three above is your core identity. Then explore the sections below at your own pace. There's no rush — this reading saves automatically.</p>
+                <p style="font-size:0.95rem;margin:0;line-height:1.5;"><strong> Start here</strong> � your Big Three above is your core identity. Then explore the sections below at your own pace. There's no rush � this reading saves automatically.</p>
             </div>
 
             <!-- AI Transformation Banner -->
@@ -5413,10 +5430,10 @@
                 <div class="ai-banner-icon"></div>
                 <div class="ai-banner-content">
                     <strong>Turn any reading into art, stories, or meditations</strong>
-                    <p>Tap <strong> Transform This</strong> on any reading → pick a format → copy the prompt → paste into ChatGPT or Gemini. That's it!</p>
+                    <p>Tap <strong> Transform This</strong> on any reading ? pick a format ? copy the prompt ? paste into ChatGPT or Gemini. That's it!</p>
                 </div>
-                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank" class="ai-banner-btn">Advanced Prompt Builder →</a>
-                <button class="ai-banner-dismiss" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button>
+                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank" class="ai-banner-btn">Advanced Prompt Builder ?</a>
+                <button class="ai-banner-dismiss" onclick="this.parentElement.style.display='none'" title="Dismiss">�</button>
             </div>
 
             <!-- Example Reading Banner (shown when loaded from examples page) -->
@@ -5425,7 +5442,7 @@
                 <div class="example-banner-text">
                     You're viewing an <strong>example reading</strong>. Want your own unique blueprint?
                 </div>
-                <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" class="example-banner-btn" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'example_banner'});">Get Yours on Etsy →</a>
+                <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" class="example-banner-btn" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'example_banner'});">Get Yours on Etsy ?</a>
             </div>
 
             <!-- Reading Sections -->
@@ -5441,8 +5458,8 @@
                 <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(118,75,162,0.06)); border-radius: 16px; border: 1px solid rgba(255,215,0,0.2); text-align:center;">
                     <p style="font-size: 1rem; margin-bottom: 12px;"><strong> Want Your Own Personalised Reading?</strong></p>
                     <p style="font-size: 0.95rem; margin-bottom: 16px;">Generate readings for yourself, friends & family with printable books, copy & share features, gift cards, and more.</p>
-                    <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'completion_cta'});" style="display:inline-block;padding:13px 36px;background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;border:none;border-radius:25px;font-weight:700;font-size:0.98rem;cursor:pointer;text-decoration:none;box-shadow:0 4px 20px rgba(255,215,0,0.25);">Get Your Reading — $12.99 →</a>
-                    <div style="font-size:0.72rem;opacity:0.5;margin-top:8px;">1 reading $12.99 · 2 for $19.99 · 3 for $24.99</div>
+                    <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'completion_cta'});" style="display:inline-block;padding:13px 36px;background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;border:none;border-radius:25px;font-weight:700;font-size:0.98rem;cursor:pointer;text-decoration:none;box-shadow:0 4px 20px rgba(255,215,0,0.25);">Get Your Reading � $12.99 ?</a>
+                    <div style="font-size:0.72rem;opacity:0.5;margin-top:8px;">1 reading $12.99 � 2 for $19.99 � 3 for $24.99</div>
                 </div>
 
                 <!-- Discover More Section -->
@@ -5495,9 +5512,9 @@
                 <div class="quick-prompt-output" id="quickPromptOutput">
                     <div class="qt-instruction-bar"> <strong>Copy this prompt</strong> and paste it into <strong>ChatGPT</strong> or <strong>Gemini</strong></div>
                     <pre id="quickPromptText"></pre>
-                    <button class="quick-prompt-copy" onclick="copyQuickPrompt()"> Copy Prompt — Then Paste Into ChatGPT or Gemini</button>
+                    <button class="quick-prompt-copy" onclick="copyQuickPrompt()"> Copy Prompt � Then Paste Into ChatGPT or Gemini</button>
                 </div>
-                <p style="text-align:center;margin-top:14px;font-size:0.88rem;opacity:0.75;">Want more control? <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;font-weight:600;" target="_blank">Open the Prompt Builder →</a></p>
+                <p style="text-align:center;margin-top:14px;font-size:0.88rem;opacity:0.75;">Want more control? <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;font-weight:600;" target="_blank">Open the Prompt Builder ?</a></p>
             </div>
             
             <!-- Playbook Navigation -->
@@ -5549,14 +5566,14 @@
                     </a>
                 </div>
                 <p style="text-align:center;margin-top:14px;font-size:0.9rem;">
-                    <a href="/soulblueprint/playbooks/" style="color:#667eea;text-decoration:none;font-weight:600;">Browse All Playbooks →</a>
+                    <a href="/soulblueprint/playbooks/" style="color:#667eea;text-decoration:none;font-weight:600;">Browse All Playbooks ?</a>
                 </p>
             </div>
             
             <!-- Cross-Product Bridge -->
             <div style="margin:30px 0;padding:24px;background:linear-gradient(135deg,rgba(102,126,234,0.04),rgba(118,75,162,0.04));border-radius:16px;border:1px solid rgba(102,126,234,0.1);text-align:center;">
                 <p style="font-size:1rem;margin-bottom:6px;"><strong> Explore More from Quantum Merlin</strong></p>
-                <p style="font-size:0.88rem;color:#636e72;margin-bottom:16px;">Your cosmic journey doesn't end here — discover more tools:</p>
+                <p style="font-size:0.88rem;color:#636e72;margin-bottom:16px;">Your cosmic journey doesn't end here � discover more tools:</p>
                 <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
                     <a href="https://quantummerlin.com/chinesezodiac/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'chinese_zodiac'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;"> Chinese Zodiac</a>
                     <a href="https://quantummerlin.com/tarot/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'tarot'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;"> Tarot Reading</a>
@@ -5564,13 +5581,36 @@
                     <a href="https://quantummerlin.com/" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('cross_product_click',{product:'hub'});" style="display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(255,255,255,0.8);border:1px solid rgba(102,126,234,0.15);border-radius:12px;text-decoration:none;color:#333;font-size:0.9rem;font-weight:500;transition:all 0.2s;"> All Tools</a>
                 </div>
             </div>
+
+            <!-- Email Capture -->
+            <div id="emailCapturePanel" style="margin:24px 0;padding:22px 20px;background:linear-gradient(135deg,rgba(255,215,0,0.06),rgba(200,150,255,0.06));border:1.5px solid rgba(255,215,0,0.18);border-radius:16px;text-align:center;">
+                <p style="font-size:0.95rem;font-weight:700;margin:0 0 4px;color:#2d1b4e;"> Get new guides & free mini-readings by email</p>
+                <p style="font-size:0.8rem;opacity:0.65;margin:0 0 14px;">One or two emails a month. No spam. Unsubscribe any time.</p>
+                <form onsubmit="handleEmailCapture(event)" style="display:flex;gap:8px;max-width:380px;margin:0 auto;flex-wrap:wrap;justify-content:center;">
+                    <input type="email" id="emailCaptureInput" placeholder="your@email.com" required style="flex:1;min-width:180px;padding:10px 14px;border:1px solid rgba(102,126,234,0.25);border-radius:25px;font-size:0.88rem;background:rgba(255,255,255,0.85);outline:none;font-family:inherit;">
+                    <button type="submit" style="padding:10px 20px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:25px;font-size:0.88rem;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap;">Subscribe</button>
+                </form>
+                <div id="emailCaptureSuccess" style="display:none;font-size:0.85rem;color:#5a8a5a;margin-top:10px;font-weight:600;"> You're in! Check your inbox for a welcome note.</div>
+            </div>
             
             <!-- Reading Summary & Closing -->
             <div id="readingClosing" class="reading-closing">
                 <!-- Populated by JavaScript -->
             </div>
-            
-            <!-- Gift & Book features available in pro version -->
+
+            <!-- Post-Reading Action Panel -->
+            <div id="postReadingActions" style="display:none;margin:28px 0;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+                <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('prompt_builder_cta_clicked',{source:'post_reading'});" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px 16px;background:linear-gradient(135deg,rgba(102,126,234,0.12),rgba(118,75,162,0.12));border:1.5px solid rgba(102,126,234,0.25);border-radius:16px;text-decoration:none;color:inherit;text-align:center;transition:all 0.2s;cursor:pointer;">
+                    <span style="font-size:1.8rem;"></span>
+                    <span style="font-weight:700;font-size:0.95rem;color:#2d1b4e;">Build AI Prompts</span>
+                    <span style="font-size:0.78rem;opacity:0.65;line-height:1.4;">Turn your reading into personalised AI prompts for reflection, journaling & guidance</span>
+                </a>
+                <button onclick="if(typeof giftReading==='function'){document.getElementById('readingClosing').scrollIntoView({behavior:'smooth'});setTimeout(()=>giftReading(),300);}if(typeof sbTrack==='function')sbTrack('gift_cta_clicked',{source:'post_reading'});" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px 16px;background:linear-gradient(135deg,rgba(255,180,100,0.12),rgba(255,100,150,0.12));border:1.5px solid rgba(255,160,80,0.25);border-radius:16px;color:inherit;text-align:center;transition:all 0.2s;cursor:pointer;font-family:inherit;">
+                    <span style="font-size:1.8rem;"></span>
+                    <span style="font-weight:700;font-size:0.95rem;color:#2d1b4e;">Create a Gift</span>
+                    <span style="font-size:0.78rem;opacity:0.65;line-height:1.4;">Generate a printable gift version of this reading for someone special</span>
+                </button>
+            </div>
             
             <!-- Reading Nav Float -->
             <div class="reading-nav-float" id="readingNavFloat">
@@ -5589,26 +5629,26 @@
                 <p class="timestamp" id="timestamp"></p>
                 <div class="footer-actions">
                     <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'footer_cta'});" class="action-btn primary" style="text-decoration:none;"> Get Your Own Reading</a>
-                    <button class="new-reading-btn" onclick="document.getElementById('exampleProfiles')?.scrollIntoView({behavior:'smooth'});">↑ Explore More Examples</button>
+                    <button class="new-reading-btn" onclick="document.getElementById('exampleProfiles')?.scrollIntoView({behavior:'smooth'});">? Explore More Examples</button>
                 </div>
                 <div style="text-align:center;margin:16px 0;">
-                    <p style="font-size:0.9rem;opacity:0.65;">Want to explore your reading in a different format? <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;" target="_blank">Try the Prompt Builder →</a></p>
+                    <p style="font-size:0.9rem;opacity:0.65;">Want to explore your reading in a different format? <a href="/soulblueprint/soulprism/site/tools/prompt-builder.html" style="color:#667eea;text-decoration:none;" target="_blank">Try the Prompt Builder ?</a></p>
                 </div>
                 <div class="footer-links">
                     <a href="/soulblueprint/examples/">Examples</a>
-                    <span>•</span>
+                    <span>�</span>
                     <a href="/soulblueprint/articles/">Guides</a>
-                    <span>•</span>
+                    <span>�</span>
                     <a href="/soulblueprint/playbooks/">Playbooks</a>
-                    <span>•</span>
+                    <span>�</span>
                     <a href="/soulblueprint/about.html">About</a>
-                    <span>•</span>
+                    <span>�</span>
                     <a href="/soulblueprint/privacy.html">Privacy</a>
-                    <span>•</span>
+                    <span>�</span>
                     <a href="/soulblueprint/terms.html">Terms</a>
-                    <span>•</span>
+                    <span>�</span>
                     <a href="/soulblueprint/disclaimer.html">Disclaimer</a>
-                    <span>•</span>
+                    <span>�</span>
                     <button class="dark-toggle" type="button" data-color-toggle title="Toggle dark mode">Dark mode</button>
                 </div>
                 <p class="disclaimer" id="disclaimer">Created for personal insight and reflection. Every person is unique and will grow in their own beautiful way.</p>
@@ -6065,18 +6105,18 @@
 
                 <div style="font-size:1.8rem;margin-bottom:8px;"></div>
                 <h2 style="color:#ffd700;font-size:1.15rem;font-family:'Playfair Display','Georgia',serif;margin:0 0 8px;">Unlock Your Personal Reading</h2>
-                <p style="font-size:0.84rem;line-height:1.55;opacity:0.85;margin-bottom:6px;">Your birth data produces a <strong>unique, mathematically calculated</strong> analysis across <strong>4 systems</strong> — not a generic horoscope.</p>
-                <p style="font-size:0.78rem;line-height:1.45;opacity:0.6;margin-bottom:16px;">65+ personalised readings · astrology, numerology, Chinese zodiac, love, career & life patterns · 11 printable book templates.</p>
+                <p style="font-size:0.84rem;line-height:1.55;opacity:0.85;margin-bottom:6px;">Your birth data produces a <strong>unique, mathematically calculated</strong> analysis across <strong>4 systems</strong> � not a generic horoscope.</p>
+                <p style="font-size:0.78rem;line-height:1.45;opacity:0.6;margin-bottom:16px;">135+ personalised readings � astrology, numerology, Chinese zodiac, love, career & life patterns � 11 printable book templates.</p>
 
                 <div style="background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.2);border-radius:14px;padding:12px;margin-bottom:16px;">
                     <div style="font-size:1.8rem;font-weight:700;color:#ffd700;margin-bottom:2px;">$12.99</div>
-                    <div style="font-size:0.72rem;opacity:0.55;">1 reading $12.99 · 2 for $19.99 · 3 for $24.99</div>
+                    <div style="font-size:0.72rem;opacity:0.55;">1 reading $12.99 � 2 for $19.99 � 3 for $24.99</div>
                 </div>
 
                 <div style="text-align:left;padding:0 4px;margin-bottom:18px;display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;">
                     <div style="display:flex;align-items:start;gap:6px;font-size:0.8rem;">
                         <span style="color:#ffd700;flex-shrink:0;"></span>
-                        <span>65+ personalised readings</span>
+                        <span>135+ personalised readings</span>
                     </div>
                     <div style="display:flex;align-items:start;gap:6px;font-size:0.8rem;">
                         <span style="color:#ffd700;flex-shrink:0;"></span>
@@ -6092,16 +6132,16 @@
                     </div>
                     <div style="display:flex;align-items:start;gap:6px;font-size:0.8rem;grid-column:1/-1;justify-content:center;">
                         <span style="color:#ffd700;flex-shrink:0;"></span>
-                        <span>100% private — data never leaves your device</span>
+                        <span>100% private � data never leaves your device</span>
                     </div>
                 </div>
 
                 <a href="https://www.etsy.com/shop/QuantumMerlin" target="_blank" rel="noopener" onclick="if(typeof sbTrack==='function')sbTrack('generator_upgrade_clicked',{source:'form_modal'});" style="display:inline-block;background:linear-gradient(135deg,#ffd700,#e6ac00);color:#1a0a2e;border:none;padding:13px 36px;border-radius:30px;font-size:1rem;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 4px 20px rgba(255,215,0,0.3);letter-spacing:0.02em;transition:all 0.2s;">
-                    Get Your Reading — $12.99 →
+                    Get Your Reading � $12.99 ?
                 </a>
 
                 <button onclick="document.getElementById('generatorUpgradeOverlay').remove();document.getElementById('exampleProfiles').scrollIntoView({behavior:'smooth'});" style="display:block;margin:14px auto 0;background:none;border:1px solid rgba(255,215,0,0.2);color:#c9a0ff;padding:9px 24px;border-radius:20px;font-size:0.82rem;cursor:pointer;transition:all 0.2s;opacity:0.75;">
-                    Explore 12 Example Readings First ↓
+                    Explore 12 Example Readings First ?
                 </button>
             </div>
             `;
@@ -6110,10 +6150,40 @@
         }
         
         // ============================================
+        // EMAIL CAPTURE
+        // ============================================
+
+        function handleEmailCapture(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailCaptureInput').value.trim();
+            if (!email) return;
+            // Store locally so we don't ask again
+            localStorage.setItem('sb-email-captured', email);
+            // Track
+            if (typeof sbTrack === 'function') sbTrack('email_captured', { source: 'results_panel' });
+            // Show success, hide form
+            e.target.style.display = 'none';
+            const success = document.getElementById('emailCaptureSuccess');
+            if (success) success.style.display = 'block';
+        }
+
+        // Hide email capture if already subscribed
+        (function() {
+            if (localStorage.getItem('sb-email-captured')) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    const p = document.getElementById('emailCapturePanel');
+                    if (p) p.style.display = 'none';
+                });
+            }
+        })();
+
+        // ============================================
         // READING GENERATION
         // ============================================
         
         async function generateReading(userData) {
+            if (window.QRC_ANALYTICS) QRC_ANALYTICS.trackTool('Soul Blueprint Reading', 'generate_reading');
+            try { if (typeof gtag === 'function') gtag('event', 'reading_generate', { tool_name: 'soulblueprint', user_name: (userData && userData.name) ? 'provided' : 'anonymous' }); } catch(e) {}
             // Show loading
             const overlay = document.getElementById('loadingOverlay');
             const progressBar = document.getElementById('loadingProgressBar');
@@ -6124,12 +6194,12 @@
             // Cycling loading messages
             const userName = userData.name || 'your';
             const loadingMessages = [
-                `Mapping the stars at ${userName}'s moment of birth…`,
-                `Calculating ${userName}'s planetary positions…`,
-                `Analyzing celestial patterns…`,
-                `Reading the numerology in ${userName}'s name…`,
-                `Building ${userName}'s complete reading…`,
-                'Almost there…'
+                `Mapping the stars at ${userName}'s moment of birth�`,
+                `Calculating ${userName}'s planetary positions�`,
+                `Analyzing celestial patterns�`,
+                `Reading the numerology in ${userName}'s name�`,
+                `Building ${userName}'s complete reading�`,
+                'Almost there�'
             ];
             let msgIndex = 0;
             loadingText.textContent = loadingMessages[0];
@@ -6142,7 +6212,7 @@
                 }, 400);
             }, 2800);
             
-            // Smooth progress curve (deliberate pacing — slows near end for anticipation)
+            // Smooth progress curve (deliberate pacing � slows near end for anticipation)
             let progress = 0;
             const progressInterval = setInterval(() => {
                 const remaining = 90 - progress;
@@ -6248,11 +6318,20 @@
             // Set timestamp
             document.getElementById('timestamp').textContent = `Generated on ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`;
             
+            // Initialise age-adaptive language before rendering
+            if (typeof initAgeLanguage === 'function') {
+                initAgeLanguage(userData.birthDate);
+            }
+
             // Build Reading Sections
             buildReadingSections(userData, readings);
             
             // Build Reading Closing Summary
             buildReadingClosing(userData, readings);
+
+            // Show post-reading action panel
+            const postActions = document.getElementById('postReadingActions');
+            if (postActions) postActions.style.display = 'grid';
             
             // Sync read progress from any pre-ticked cards
             syncCardReadProgressFromDom();
@@ -6298,7 +6377,7 @@
             const container = document.getElementById('readingsContainer');
             container.innerHTML = '';
             
-            // Gate parent-specific content — only show for baby/child/teen
+            // Gate parent-specific content � only show for baby/child/teen
             const _showParentContent = typeof shouldShowParentGuidance !== 'function' || shouldShowParentGuidance();
             
             // Reset section counter and load saved progress
@@ -6347,11 +6426,11 @@
                     <div class="sub-section-header-content">
                         <h4>Cosmic Snapshot</h4>
                     </div>
-                    <span class="sub-section-arrow">▼</span>
+                    <span class="sub-section-arrow">?</span>
                 </div>
                 <div class="sub-section-body">
                     <div class="cosmic-blueprint-content">
-                        <p class="blueprint-intro">A complete overview of ${userData.name}'s celestial coordinates — the positions of all major celestial bodies at the moment of birth.</p>
+                        <p class="blueprint-intro">A complete overview of ${userData.name}'s celestial coordinates � the positions of all major celestial bodies at the moment of birth.</p>
                         
                         <div class="blueprint-grid">
                             <div class="blueprint-category">
@@ -6402,7 +6481,26 @@
                 </div>
             `;
             celestialSection.appendChild(blueprintSummary);
-            
+
+            // ============================================
+            // INTEGRATION SYNTHESIS � connects Big Three
+            // ============================================
+            const integrationEl = document.createElement('div');
+            integrationEl.className = 'sub-section collapsed';
+            integrationEl.id = 'subsection-integration-synthesis';
+            integrationEl.innerHTML = `
+                <div class="sub-section-header" onclick="toggleSubSection('integration-synthesis')">
+                    <div class="sub-section-header-content">
+                        <h4> Your Core Pattern � How It All Connects</h4>
+                    </div>
+                    <span class="sub-section-arrow">?</span>
+                </div>
+                <div class="sub-section-body">
+                    ${generateIntegrationSynthesis(userData.name, sunSign, moonSign, readings.numerology.lifePath)}
+                </div>
+            `;
+            celestialSection.appendChild(integrationEl);
+
             // Create collapsible sub-sections for organizing the celestial readings
             const coreSubSection = createSubSection('core-planets', '', 'Core Identity (Sun, Moon, Rising)', false);
             const personalSubSection = createSubSection('personal-planets', '', 'Personal Planets (Mercury, Venus, Mars)');
@@ -7001,25 +7099,25 @@ ${planetBreakdown}
 
 <strong>What This Means Psychologically:</strong>
 
-${userData.name} doesn't have a single "type" — they contain multitudes that sometimes cooperate and sometimes compete. The ${signList} combination creates internal complexity that others often sense but can't quite name. There's a density to their presence, a feeling that there's more happening beneath the surface than most people carry.
+${userData.name} doesn't have a single "type" � they contain multitudes that sometimes cooperate and sometimes compete. The ${signList} combination creates internal complexity that others often sense but can't quite name. There's a density to their presence, a feeling that there's more happening beneath the surface than most people carry.
 
-This is both gift and weight. Multiple stelliums mean multiple areas of concentrated talent, but also multiple areas demanding attention simultaneously. Life rarely allows focus on just one thing — growth comes from learning to honour all parts without fragmenting.
+This is both gift and weight. Multiple stelliums mean multiple areas of concentrated talent, but also multiple areas demanding attention simultaneously. Life rarely allows focus on just one thing � growth comes from learning to honour all parts without fragmenting.
 
 <strong>The Integration Challenge:</strong>
 
 The ${elementList} energies don't automatically harmonise. ${combined[0].element} energy wants ${combined[0].element === 'Fire' ? 'action, recognition, forward movement' : combined[0].element === 'Earth' ? 'stability, tangible results, material security' : combined[0].element === 'Air' ? 'mental stimulation, communication, variety' : 'emotional depth, intuitive connection, feeling'}. ${combined[1] ? combined[1].element + ' energy wants ' + (combined[1].element === 'Fire' ? 'passionate expression and spontaneity' : combined[1].element === 'Earth' ? 'practical grounding and patience' : combined[1].element === 'Air' ? 'intellectual freedom and social connection' : 'emotional safety and creative flow') + '.' : ''}
 
-The growth edge is finding the rhythm — knowing when to emphasise which energy, rather than trying to express all of them at maximum volume simultaneously.
+The growth edge is finding the rhythm � knowing when to emphasise which energy, rather than trying to express all of them at maximum volume simultaneously.
 
 <strong>The Hidden Pattern:</strong>
 
-People with multiple stelliums often feel that life keeps bringing them back to the same themes, the same types of situations, the same kinds of growth edges. This is the stelliums talking. They create attractors in the psyche — life circumstances that match their concentrated energy keep appearing because that's where the soul work is.
+People with multiple stelliums often feel that life keeps bringing them back to the same themes, the same types of situations, the same kinds of growth edges. This is the stelliums talking. They create attractors in the psyche � life circumstances that match their concentrated energy keep appearing because that's where the soul work is.
 
 <strong>The Opportunity:</strong>
 
 When integrated, this configuration produces someone with unusual range and depth. Not a specialist but a powerful generalist. Not simple but fascinating. The combination of ${signList} creates a unique inner alchemy that, when consciously developed, allows ${userData.name} to bridge worlds others can't even imagine connecting.
 
-<em>Integration Affirmation:</em> "I am not fragmented — I am multifaceted. Each part of me has purpose. I learn to honour all of who I am."`;
+<em>Integration Affirmation:</em> "I am not fragmented � I am multifaceted. Each part of me has purpose. I learn to honour all of who I am."`;
 
                     celestialSection.appendChild(createReadingCard(
                         'Stellium Synthesis',
@@ -7265,13 +7363,13 @@ When integrated, this configuration produces someone with unusual range and dept
                 if (sunMoonAspect.nature === 'harmonious') {
                     paradoxReading = `<strong>The Psychological Spine of This Chart:</strong>
 
-${userData.name} has a harmonious ${sunMoonAspect.aspect} between their ${sunSign.name} Sun and ${moonSign.name} Moon — and this is one of the most significant blessings a chart can contain. What they consciously want and what they emotionally need are fundamentally aligned.
+${userData.name} has a harmonious ${sunMoonAspect.aspect} between their ${sunSign.name} Sun and ${moonSign.name} Moon � and this is one of the most significant blessings a chart can contain. What they consciously want and what they emotionally need are fundamentally aligned.
 
 <strong>What This Means Internally:</strong>
 
 Most people live with some degree of internal conflict between who they're trying to become (Sun) and what they need to feel safe (Moon). ${userData.name} has unusual coherence here. Their conscious identity and their emotional foundation support rather than undermine each other.
 
-This doesn't mean life is easy — it means their inner resources are unified rather than divided. When challenges come, they can draw on both their ${sunSign.element} will and their ${moonSign.element} emotional resilience without one sabotaging the other.
+This doesn't mean life is easy � it means their inner resources are unified rather than divided. When challenges come, they can draw on both their ${sunSign.element} will and their ${moonSign.element} emotional resilience without one sabotaging the other.
 
 <strong>Identity & Emotional Needs:</strong>
 
@@ -7281,13 +7379,13 @@ With ${sunSign.element} and ${moonSign.element} in harmony, these drives natural
 
 <strong>Relationship Patterns:</strong>
 
-This integration makes them relatively easy to love — what you see is close to what you get. They're not hiding major contradictions that emerge only in intimacy. Partners don't have to navigate dramatic splits between their public and private selves.
+This integration makes them relatively easy to love � what you see is close to what you get. They're not hiding major contradictions that emerge only in intimacy. Partners don't have to navigate dramatic splits between their public and private selves.
 
 They tend to attract and be attracted to people who appreciate both their ${sunSign.element} identity and their ${moonSign.element} emotional nature, because these aren't in conflict.
 
 <strong>Decision-Making Style:</strong>
 
-They process decisions ${sunNeeds.decision.replace('quickly', 'relatively quickly')} because their gut (Moon) and their conscious will (Sun) usually agree. When they feel conflicted, it's worth paying attention — something genuinely complex may be occurring.
+They process decisions ${sunNeeds.decision.replace('quickly', 'relatively quickly')} because their gut (Moon) and their conscious will (Sun) usually agree. When they feel conflicted, it's worth paying attention � something genuinely complex may be occurring.
 
 <strong>Stress Response:</strong>
 
@@ -7302,11 +7400,11 @@ ${userData.name} feels most secure ${moonNeeds.safety}. Because their Sun suppor
                 } else {
                     paradoxReading = `<strong>The Psychological Spine of This Chart:</strong>
 
-${userData.name} has a ${sunMoonAspect.aspect} between their ${sunSign.name} Sun and ${moonSign.name} Moon — creating one of the most important growth dynamics in their chart. What they consciously want and what they emotionally need don't naturally align, creating creative tension that shapes their entire development.
+${userData.name} has a ${sunMoonAspect.aspect} between their ${sunSign.name} Sun and ${moonSign.name} Moon � creating one of the most important growth dynamics in their chart. What they consciously want and what they emotionally need don't naturally align, creating creative tension that shapes their entire development.
 
-<strong>This Is Not a Flaw — It's a Power Source:</strong>
+<strong>This Is Not a Flaw � It's a Power Source:</strong>
 
-The tension between ${sunSign.element} Sun and ${moonSign.element} Moon creates internal complexity that, when understood, becomes the engine of profound self-awareness. People with harmonious Sun-Moon aspects often coast through life without examining themselves deeply. ${userData.name} doesn't have that luxury — and ultimately, that's a gift.
+The tension between ${sunSign.element} Sun and ${moonSign.element} Moon creates internal complexity that, when understood, becomes the engine of profound self-awareness. People with harmonious Sun-Moon aspects often coast through life without examining themselves deeply. ${userData.name} doesn't have that luxury � and ultimately, that's a gift.
 
 <strong>The Core Tension:</strong>
 
@@ -7316,13 +7414,13 @@ These drives can feel contradictory. When they pursue their Sun's goals, their M
 
 <strong>Identity vs. Emotional Needs:</strong>
 
-You may notice ${userData.name} sometimes feels pulled in two directions — what they think they should want versus what actually makes them feel okay. This isn't weakness or confusion; it's the Sun-Moon square or opposition doing its work.
+You may notice ${userData.name} sometimes feels pulled in two directions � what they think they should want versus what actually makes them feel okay. This isn't weakness or confusion; it's the Sun-Moon square or opposition doing its work.
 
 The ${sunSign.element} part of them wants to ${sunSign.element === 'Fire' ? 'act boldly and be recognised' : sunSign.element === 'Earth' ? 'build something tangible and stable' : sunSign.element === 'Air' ? 'think freely and communicate widely' : 'connect deeply and express creatively'}. The ${moonSign.element} part needs ${moonNeeds.moon}. Both are valid. Both deserve attention.
 
 <strong>Relationship Patterns:</strong>
 
-In relationships, partners may see different versions of ${userData.name} — the ${sunSign.name} self they present consciously and the ${moonSign.name} self that emerges in emotional intimacy. This isn't deception; it's complexity.
+In relationships, partners may see different versions of ${userData.name} � the ${sunSign.name} self they present consciously and the ${moonSign.name} self that emerges in emotional intimacy. This isn't deception; it's complexity.
 
 Successful partners learn to love both versions and help them integrate rather than forcing a choice. ${userData.name}'s growth edge is letting both parts be seen without shame.
 
@@ -7342,7 +7440,7 @@ ${userData.name}'s ${moonSign.name} Moon feels most secure ${moonNeeds.safety}. 
 
 <strong>The Integration Path:</strong>
 
-Growth doesn't come from eliminating this tension — it comes from using it consciously. The friction between Sun and Moon creates the heat that forges character. People with this aspect often become deeply self-aware precisely because they had to be.
+Growth doesn't come from eliminating this tension � it comes from using it consciously. The friction between Sun and Moon creates the heat that forges character. People with this aspect often become deeply self-aware precisely because they had to be.
 
 <strong>Integration Affirmation:</strong>
 <em>"I contain creative tensions that make me complex and interesting. I learn to honour both my conscious will and my emotional truth, knowing that I am large enough to hold both."</em>`;
@@ -7923,7 +8021,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 
                 <div class="num-calc-section">
                     <h4>Life Path Number: ${readings.numerology.lifePath}</h4>
-                    <p>Your Life Path is the most important number — it reveals your life's purpose and the journey you're meant to walk.</p>
+                    <p>Your Life Path is the most important number � it reveals your life's purpose and the journey you're meant to walk.</p>
                     <div class="calc-steps">
                         <div class="calc-step">
                             <span class="calc-label">Birth Date:</span>
@@ -7931,19 +8029,19 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                         </div>
                         <div class="calc-step">
                             <span class="calc-label">Reduce Month (${birthMonth}):</span>
-                            <span class="calc-value">${birthMonth} → ${monthReduced}</span>
+                            <span class="calc-value">${birthMonth} ? ${monthReduced}</span>
                         </div>
                         <div class="calc-step">
                             <span class="calc-label">Reduce Day (${birthDay}):</span>
-                            <span class="calc-value">${birthDay} → ${dayReduced}</span>
+                            <span class="calc-value">${birthDay} ? ${dayReduced}</span>
                         </div>
                         <div class="calc-step">
                             <span class="calc-label">Reduce Year (${birthYear}):</span>
-                            <span class="calc-value">${String(birthYear).split('').join(' + ')} = ${String(birthYear).split('').reduce((a,b) => +a + +b)} → ${yearReduced}</span>
+                            <span class="calc-value">${String(birthYear).split('').join(' + ')} = ${String(birthYear).split('').reduce((a,b) => +a + +b)} ? ${yearReduced}</span>
                         </div>
                         <div class="calc-step final">
                             <span class="calc-label">Add Together:</span>
-                            <span class="calc-value">${monthReduced} + ${dayReduced} + ${yearReduced} = ${lifePathSum} → <strong>${readings.numerology.lifePath}</strong></span>
+                            <span class="calc-value">${monthReduced} + ${dayReduced} + ${yearReduced} = ${lifePathSum} ? <strong>${readings.numerology.lifePath}</strong></span>
                         </div>
                     </div>
                     <p class="calc-note">*Master Numbers (11, 22, 33) are not reduced, as they carry special significance.</p>
@@ -7951,7 +8049,7 @@ Growth doesn't come from eliminating this tension — it comes from using it con
                 
                 <div class="num-calc-section">
                     <h4>Destiny Number: ${readings.numerology.destiny}</h4>
-                    <p>Calculated from your full birth name — each letter has a numeric value. All letters are added and reduced.</p>
+                    <p>Calculated from your full birth name � each letter has a numeric value. All letters are added and reduced.</p>
                     <div class="letter-chart">${letterChart}</div>
                     <p>Add all letter values in "<strong>${userData.fullName}</strong>" and reduce to a single digit (or Master Number).</p>
                 </div>
@@ -8269,9 +8367,9 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     personalYearContent += `
 
 <em> Power Timing:</em>
-• <strong>Peak Months:</strong> ${timingDetails.powerMonths.map(m => ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]).join(', ')}
-• <strong>Daily Power Time:</strong> ${timingDetails.dailyPowerTime}
-• <strong>Seasonal Pattern:</strong> ${timingDetails.seasonalPattern}`;
+� <strong>Peak Months:</strong> ${timingDetails.powerMonths.map(m => ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]).join(', ')}
+� <strong>Daily Power Time:</strong> ${timingDetails.dailyPowerTime}
+� <strong>Seasonal Pattern:</strong> ${timingDetails.seasonalPattern}`;
                 }
 
                 personalYearContent += `
@@ -8440,7 +8538,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     'Karmic Patterns',
                     'Clear Karmic Slate',
                     ['Evolutionary Growth', 'Natural Flow', 'Forward Momentum'],
-                    `<strong>No Classic Karmic Debt Numbers Detected</strong>\n\n${userData.name}'s numerological chart shows no 13, 14, 16, or 19 patterns in the core numbers. This is significant and worth celebrating.\n\n<strong>What This Means:</strong> The absence of karmic debt numbers suggests that this soul's lessons are primarily <em>evolutionary</em> rather than <em>corrective</em>. Where karmic debt indicates specific deep patterns requiring attention, a clear karmic slate suggests this lifetime is more focused on new growth than old resolution.\n\n<strong>The Opportunity:</strong> Without the weight of karmic debt, ${userData.name} has greater freedom to chart their own course. Energy that might otherwise go toward resolving old patterns can instead be directed toward new achievements, creative expression, and building something original.\n\n<strong>The Responsibility:</strong> A clear karmic slate is not permission for carelessness. The numerological wisdom suggests that choices made in this lifetime are being written fresh — they will shape what comes next. This is both liberating and calls for conscious living.\n\n<strong>Integration:</strong> This soul can focus fully on their Life Path lessons, Destiny calling, and Pinnacle opportunities without the undertow of unfinished business. Trust the forward momentum. The universe is not asking for repayment—it's inviting contribution.`,
+                    `<strong>No Classic Karmic Debt Numbers Detected</strong>\n\n${userData.name}'s numerological chart shows no 13, 14, 16, or 19 patterns in the core numbers. This is significant and worth celebrating.\n\n<strong>What This Means:</strong> The absence of karmic debt numbers suggests that this soul's lessons are primarily <em>evolutionary</em> rather than <em>corrective</em>. Where karmic debt indicates specific deep patterns requiring attention, a clear karmic slate suggests this lifetime is more focused on new growth than old resolution.\n\n<strong>The Opportunity:</strong> Without the weight of karmic debt, ${userData.name} has greater freedom to chart their own course. Energy that might otherwise go toward resolving old patterns can instead be directed toward new achievements, creative expression, and building something original.\n\n<strong>The Responsibility:</strong> A clear karmic slate is not permission for carelessness. The numerological wisdom suggests that choices made in this lifetime are being written fresh � they will shape what comes next. This is both liberating and calls for conscious living.\n\n<strong>Integration:</strong> This soul can focus fully on their Life Path lessons, Destiny calling, and Pinnacle opportunities without the undertow of unfinished business. Trust the forward momentum. The universe is not asking for repayment�it's inviting contribution.`,
                     [],
                     []
                 ));
@@ -8977,7 +9075,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (idComp && idComp.reading) {
                         const idWrapper = document.createElement('div');
                         idWrapper.className = 'reading-section';
-                        const idSection = createCustomSection('identity-compression', '', 'Identity Compression', 'Your entire chart distilled into a single operating style — the mode you default to when everything else is stripped away');
+                        const idSection = createCustomSection('identity-compression', '', 'Identity Compression', 'Your entire chart distilled into a single operating style � the mode you default to when everything else is stripped away');
                         
                         // Primary Style
                         const pr = idComp.reading;
@@ -9058,7 +9156,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (cogTend) {
                         const cogWrapper = document.createElement('div');
                         cogWrapper.className = 'reading-section';
-                        const cogSection = createCustomSection('cognitive-tendencies', '', 'Cognitive Tendencies', 'How you think, decide, and process the world — derived from your Mercury, Mars, Saturn, and life path');
+                        const cogSection = createCustomSection('cognitive-tendencies', '', 'Cognitive Tendencies', 'How you think, decide, and process the world � derived from your Mercury, Mars, Saturn, and life path');
                         
                         // Build each tendency as a card
                         const tendencyOrder = [
@@ -9078,7 +9176,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                                 
                                 // Add sources if available
                                 if (data.sources && data.sources.length > 0) {
-                                    enrichedDesc += '\n\n<strong>Key Influences:</strong> ' + data.sources.join(' • ');
+                                    enrichedDesc += '\n\n<strong>Key Influences:</strong> ' + data.sources.join(' � ');
                                 }
                                 
                                 cogSection.appendChild(createReadingCard(
@@ -9098,7 +9196,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                                 'Cognitive Synthesis',
                                 'How your thinking dimensions interact',
                                 ['Integration', 'Cross-Pattern', 'Meta-Profile'],
-                                'When we look at how your cognitive dimensions interact — not just each one in isolation — a more nuanced picture emerges:\n\n' + cogTend.synthesis,
+                                'When we look at how your cognitive dimensions interact � not just each one in isolation � a more nuanced picture emerges:\n\n' + cogTend.synthesis,
                                 [],
                                 []
                             ));
@@ -9117,20 +9215,20 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         
                         // Cornerstone
                         nameSection.appendChild(createReadingCard(
-                            'Cornerstone — The Letter ' + nameAnalysis.cornerstone.letter,
+                            'Cornerstone � The Letter ' + nameAnalysis.cornerstone.letter,
                             nameAnalysis.cornerstone.trait,
                             ['First Impression', 'Initiative Style', 'Opening Energy'],
-                            'The cornerstone is the first letter of your name — it shapes how you approach new situations and how others perceive you at first contact.\n\n' + nameAnalysis.cornerstone.description,
+                            'The cornerstone is the first letter of your name � it shapes how you approach new situations and how others perceive you at first contact.\n\n' + nameAnalysis.cornerstone.description,
                             [],
                             []
                         ));
                         
                         // Capstone
                         nameSection.appendChild(createReadingCard(
-                            'Capstone — The Letter ' + nameAnalysis.capstone.letter,
+                            'Capstone � The Letter ' + nameAnalysis.capstone.letter,
                             nameAnalysis.capstone.trait || 'How you complete what you start',
                             ['Completion Style', 'Follow-Through', 'Closing Energy'],
-                            'The capstone is the last letter of your first name — it reveals how you finish projects, close chapters, and bring things to completion.\n\n' + nameAnalysis.capstone.reading,
+                            'The capstone is the last letter of your first name � it reveals how you finish projects, close chapters, and bring things to completion.\n\n' + nameAnalysis.capstone.reading,
                             [],
                             []
                         ));
@@ -9138,10 +9236,10 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         // First Vowel
                         if (nameAnalysis.firstVowel.letter) {
                             nameSection.appendChild(createReadingCard(
-                                'First Vowel — ' + nameAnalysis.firstVowel.letter,
+                                'First Vowel � ' + nameAnalysis.firstVowel.letter,
                                 nameAnalysis.firstVowel.trait,
                                 ['Inner Nature', 'Emotional Core', 'Hidden Self'],
-                                'The first vowel in your name reveals your inner nature — the private self that operates beneath the public personality.\n\n' + nameAnalysis.firstVowel.description,
+                                'The first vowel in your name reveals your inner nature � the private self that operates beneath the public personality.\n\n' + nameAnalysis.firstVowel.description,
                                 [],
                                 []
                             ));
@@ -9161,7 +9259,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         
                         nameSection.appendChild(createReadingCard(
                             'Phonetic Impact Profile',
-                            'How your name sounds to others — before they even know you',
+                            'How your name sounds to others � before they even know you',
                             ['Sound Psychology', 'First Impressions', 'Name Power'],
                             'Research in phonosemantics shows that the sounds in your name create unconscious impressions. Hard consonants project authority; soft consonants project warmth; vowel ratios affect approachability. Here\'s how your name scores:\n\n' + phoneticHTML,
                             [],
@@ -9171,10 +9269,10 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         // Name Synthesis (cornerstone + capstone interaction)
                         if (nameAnalysis.synthesis) {
                             nameSection.appendChild(createReadingCard(
-                                'Name Arc: ' + nameAnalysis.cornerstone.letter + ' → ' + nameAnalysis.capstone.letter,
+                                'Name Arc: ' + nameAnalysis.cornerstone.letter + ' ? ' + nameAnalysis.capstone.letter,
                                 nameAnalysis.nameProfile || 'Your Name\'s Energetic Signature',
                                 ['Start-to-Finish Arc', 'Name Psychology', nameAnalysis.nameProfile || 'Profile'],
-                                'The interaction between how your name begins (cornerstone) and how it ends (capstone) creates an arc — a sonic journey that shapes how people experience you from first contact to lasting impression.\n\n' + nameAnalysis.synthesis,
+                                'The interaction between how your name begins (cornerstone) and how it ends (capstone) creates an arc � a sonic journey that shapes how people experience you from first contact to lasting impression.\n\n' + nameAnalysis.synthesis,
                                 [],
                                 []
                             ));
@@ -9189,7 +9287,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (bioTiming) {
                         const bioWrapper = document.createElement('div');
                         bioWrapper.className = 'reading-section';
-                        const bioSection = createCustomSection('biological-timing', '', 'Biological Timing & Saturn Return', 'Where you are in the universal lifecycle — and what the data says about what comes next');
+                        const bioSection = createCustomSection('biological-timing', '', 'Biological Timing & Saturn Return', 'Where you are in the universal lifecycle � and what the data says about what comes next');
                         
                         // Saturn Return card
                         if (bioTiming.saturnReturn.reading) {
@@ -9230,7 +9328,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     if (probWindows) {
                         const probWrapper = document.createElement('div');
                         probWrapper.className = 'reading-section';
-                        const probSection = createCustomSection('probability-windows', '', 'Life Pattern Probability Windows', 'Statistical models estimate when you are most likely to experience major life events — not prophecy, but pattern likelihood');
+                        const probSection = createCustomSection('probability-windows', '', 'Life Pattern Probability Windows', 'Statistical models estimate when you are most likely to experience major life events � not prophecy, but pattern likelihood');
                         
                         // Personal year context card
                         if (probWindows.personalYearContext) {
@@ -9256,14 +9354,14 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                             if (cat.active.length > 0) {
                                 windowText += '<strong style="color:var(--primary-color,#FF69B4)">ACTIVE NOW:</strong>\n';
                                 cat.active.forEach(w => {
-                                    windowText += `• <strong>Age ${w.age}</strong> (${w.probability}) — ${w.reason}\n`;
+                                    windowText += `� <strong>Age ${w.age}</strong> (${w.probability}) � ${w.reason}\n`;
                                 });
                                 windowText += '\n';
                             }
                             if (cat.upcoming.length > 0) {
                                 windowText += '<strong>Upcoming Windows:</strong>\n';
                                 cat.upcoming.forEach(w => {
-                                    windowText += `• <strong>Age ${w.age}</strong> (~${w.yearsUntil} years away, ${w.probability}) — ${w.reason}\n`;
+                                    windowText += `� <strong>Age ${w.age}</strong> (~${w.yearsUntil} years away, ${w.probability}) � ${w.reason}\n`;
                                 });
                                 windowText += '\n';
                             }
@@ -9300,7 +9398,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                         
                         Object.entries(locStrategy.zones).forEach(([key, zone]) => {
                             if (zone.data) {
-                                const citiesList = zone.data.regions.join(' • ');
+                                const citiesList = zone.data.regions.join(' � ');
                                 const zoneText = zone.explanation + '\n\n<strong>Resonant Locations:</strong> ' + citiesList + '\n\n<strong>Environmental Energy:</strong> ' + zone.data.energy;
                                 locSection.appendChild(createReadingCard(
                                     zone.title,
@@ -9399,7 +9497,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     []
                 ));
                 
-                // Parent guidance card — only shown for baby/child age groups
+                // Parent guidance card � only shown for baby/child age groups
                 const showParentCard = typeof shouldShowParentClosingCard === 'function' ? shouldShowParentClosingCard() : true;
                 if (wrapup.parentGuidance && showParentCard) {
                     const parentLabel = typeof getParentGuidanceLabel === 'function' ? getParentGuidanceLabel() : 'Guidance for Parents & Caregivers';
@@ -9507,7 +9605,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                             <p class="description">${sectionConfig.description}</p>
                         </div>
                     </div>
-                    <span class="section-arrow">▼</span>
+                    <span class="section-arrow">?</span>
                 </div>
             `;
             
@@ -9531,7 +9629,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                             <p class="description">${description}</p>
                         </div>
                     </div>
-                    <span class="section-arrow">▼</span>
+                    <span class="section-arrow">?</span>
                 </div>
             `;
 
@@ -9553,7 +9651,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     <span class="sub-icon">${icon}</span>
                     <h4>${title}<span class="sub-count"></span></h4>
                 </div>
-                <span class="sub-section-arrow">▼</span>
+                <span class="sub-section-arrow">?</span>
             `;
             
             const body = document.createElement('div');
@@ -9660,15 +9758,18 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             const pagination = document.createElement('div');
             pagination.className = 'pagination-controls';
             pagination.innerHTML = `
-                <button type="button" id="prev-page" onclick="prevPage()">← Previous</button>
+                <button type="button" id="prev-page" onclick="prevPage()">? Previous</button>
                 <span class="page-indicator" id="page-indicator">Section 1 of 2</span>
-                <button type="button" id="next-page" onclick="nextPage()">Next →</button>
+                <button type="button" id="next-page" onclick="nextPage()">Next ?</button>
             `;
             return pagination;
         }
         
         function createAdSlot() {
-            return null;
+            var adDiv = document.createElement('div');
+            adDiv.className = 'ad-container';
+            adDiv.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+            return adDiv;
         }
 
         function removeAdSlots() {
@@ -9700,19 +9801,19 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             // Sun Sign enhancements
             sunSign: {
                 Aries: {
-                    tryThis: ["Start each day with a physical activity — even 5 minutes of movement ignites their fire", "Give them small leadership roles (picking the family movie, leading the way on walks)", "Celebrate their courage, not just their victories"],
+                    tryThis: ["Start each day with a physical activity � even 5 minutes of movement ignites their fire", "Give them small leadership roles (picking the family movie, leading the way on walks)", "Celebrate their courage, not just their victories"],
                     journalPrompt: "What makes you feel brave? When you try something new, how does it feel in your body?",
                     dailyPractice: "Morning power pose: Stand tall like a superhero for 30 seconds to start the day strong",
                     affirmation: "I am a brave leader. My fire lights the way."
                 },
                 Taurus: {
-                    tryThis: ["Create a cozy reading nook with soft textures they can touch", "Involve them in cooking or gardening — they love sensory experiences", "Give them time to process changes; rushing creates resistance"],
+                    tryThis: ["Create a cozy reading nook with soft textures they can touch", "Involve them in cooking or gardening � they love sensory experiences", "Give them time to process changes; rushing creates resistance"],
                     journalPrompt: "What are 5 things that make you feel safe and comfortable? What do they smell, feel, or taste like?",
                     dailyPractice: "Grounding walk: Feel your feet on the earth and notice 3 beautiful things in nature",
                     affirmation: "I am steady and strong. Good things come to me naturally."
                 },
                 Gemini: {
-                    tryThis: ["Keep conversations going with 'what if' and 'why' questions", "Rotate toys and books frequently to satisfy their need for variety", "Let them explain things to you — teaching deepens their learning"],
+                    tryThis: ["Keep conversations going with 'what if' and 'why' questions", "Rotate toys and books frequently to satisfy their need for variety", "Let them explain things to you � teaching deepens their learning"],
                     journalPrompt: "If you could learn any skill in the world, what would it be? Who would you teach it to?",
                     dailyPractice: "Curiosity moment: Learn one new fact each day and share it with someone",
                     affirmation: "My mind is a treasure chest. Every question opens new doors."
@@ -9724,7 +9825,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     affirmation: "My feelings are my superpower. I am loved exactly as I am."
                 },
                 Leo: {
-                    tryThis: ["Create a 'stage' where they can perform — even if it's just the living room", "Celebrate their creative efforts with genuine enthusiasm", "Let them pick their own outfits and express their personal style"],
+                    tryThis: ["Create a 'stage' where they can perform � even if it's just the living room", "Celebrate their creative efforts with genuine enthusiasm", "Let them pick their own outfits and express their personal style"],
                     journalPrompt: "What do you love most about yourself? What makes you special and unique?",
                     dailyPractice: "Shine moment: Do one thing today that lets your creative light shine",
                     affirmation: "I am a radiant star. My light inspires others to shine too."
@@ -9736,7 +9837,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     affirmation: "I make the world better just by being me. Progress, not perfection."
                 },
                 Libra: {
-                    tryThis: ["Expose them to art, music, and beautiful environments", "Model healthy conflict resolution — they're watching closely", "Give them choices between options to build decision-making skills"],
+                    tryThis: ["Expose them to art, music, and beautiful environments", "Model healthy conflict resolution � they're watching closely", "Give them choices between options to build decision-making skills"],
                     journalPrompt: "What does fairness mean to you? Describe a time when you helped make things fair.",
                     dailyPractice: "Beauty break: Notice one beautiful thing today and tell someone about it",
                     affirmation: "I create harmony wherever I go. My kindness makes the world more beautiful."
@@ -9748,7 +9849,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     affirmation: "I feel deeply and that is my strength. I can transform anything."
                 },
                 Sagittarius: {
-                    tryThis: ["Plan adventures — even small ones like exploring a new park", "Expose them to different cultures through food, music, and stories", "Answer their philosophical questions honestly, even the hard ones"],
+                    tryThis: ["Plan adventures � even small ones like exploring a new park", "Expose them to different cultures through food, music, and stories", "Answer their philosophical questions honestly, even the hard ones"],
                     journalPrompt: "If you could travel anywhere in the world, where would you go? What would you discover?",
                     dailyPractice: "Wonder moment: Look up at the sky and imagine all the places waiting to be explored",
                     affirmation: "The world is full of wonder. Every day is a new adventure."
@@ -9766,7 +9867,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     affirmation: "I am wonderfully unique. My different way of thinking changes the world."
                 },
                 Pisces: {
-                    tryThis: ["Provide creative outlets: art supplies, music, imaginative play", "Create calm spaces for them to recharge their sensitive system", "Believe their intuitive hits — they often know things they can't explain"],
+                    tryThis: ["Provide creative outlets: art supplies, music, imaginative play", "Create calm spaces for them to recharge their sensitive system", "Believe their intuitive hits � they often know things they can't explain"],
                     journalPrompt: "If your dreams could send you a message, what would they say?",
                     dailyPractice: "Imagination time: Spend 5 minutes daydreaming or creating something from your heart",
                     affirmation: "My imagination is a gift. I am connected to something magical."
@@ -9854,7 +9955,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 1: {
                     tryThis: ["Start a project that's completely your own creation", "Practice making decisions without seeking others' approval", "Set one bold goal this year that scares you a little"],
                     journalPrompt: "When do you feel most like a leader? What would you do if you knew you couldn't fail?",
-                    dailyPractice: "Pioneer moment: Do something first today — be the one who starts",
+                    dailyPractice: "Pioneer moment: Do something first today � be the one who starts",
                     affirmation: "I am a creative force. I lead by being authentically myself."
                 },
                 2: {
@@ -9864,7 +9965,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     affirmation: "I am a peacemaker. My sensitivity is a gift to the world."
                 },
                 3: {
-                    tryThis: ["Express yourself creatively today — write, draw, sing, or create", "Share your joy openly; your enthusiasm is contagious", "Start a creative project you've been putting off"],
+                    tryThis: ["Express yourself creatively today � write, draw, sing, or create", "Share your joy openly; your enthusiasm is contagious", "Start a creative project you've been putting off"],
                     journalPrompt: "What form of creative expression feels most natural to you? What stops you from creating more?",
                     dailyPractice: "Joy spark: Create something today, no matter how small",
                     affirmation: "My creativity flows endlessly. I inspire others with my expression."
@@ -10205,7 +10306,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             // Update arrow direction
             const arrow = section.querySelector('.section-arrow');
             if (arrow) {
-                arrow.textContent = isCurrentlyCollapsed ? '▲' : '▼';
+                arrow.textContent = isCurrentlyCollapsed ? '?' : '?';
             }
         }
 
@@ -10222,7 +10323,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                 
                 const arrow = section.querySelector('.section-arrow');
                 if (arrow) {
-                    arrow.textContent = isCollapsed ? '▼' : '▲';
+                    arrow.textContent = isCollapsed ? '?' : '?';
                 }
             });
         }
@@ -10247,7 +10348,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             }
             if (meterText) {
                 meterText.textContent = totalSections > 0
-                    ? `Reading progress: ${scrollPercent}% • ${readCount}/${totalSections} sections read`
+                    ? `Reading progress: ${scrollPercent}% � ${readCount}/${totalSections} sections read`
                     : `Reading progress: ${scrollPercent}%`;
             }
         }
@@ -10439,7 +10540,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     </div>
                     <div class="reading-card-right">
                         <span class="read-badge ${isRead ? 'is-read' : ''}" title="Mark as read">${isRead ? '' : ''}</span>
-                        <span class="expand-icon">▼</span>
+                        <span class="expand-icon">?</span>
                     </div>
                 </div>
                 <div class="reading-card-body">
@@ -10493,7 +10594,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
                     </div>
                     <div class="reading-card-right">
                         <span class="read-badge ${isRead ? 'is-read' : ''}" title="Mark as read">${isRead ? '' : ''}</span>
-                        <span class="expand-icon">▼</span>
+                        <span class="expand-icon">?</span>
                     </div>
                 </div>
                 <div class="reading-card-body">
@@ -10538,7 +10639,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             if (strengthsEl) extras += '\n\nStrengths:\n' + strengthsEl.innerText;
             if (challengesEl) extras += '\n\nGrowth Areas:\n' + challengesEl.innerText;
             
-            const fullText = (title + (value ? ' — ' + value : '') + '\n\n' + content + extras).trim();
+            const fullText = (title + (value ? ' � ' + value : '') + '\n\n' + content + extras).trim();
             
             const btn = event.currentTarget;
             navigator.clipboard.writeText(fullText).then(() => {
@@ -10583,7 +10684,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
 
         // ========== Phase 1: Blueprint Playbook JS ==========
 
-        // Transform button handler — opens transform options in a NEW TAB
+        // Transform button handler � opens transform options in a NEW TAB
         function showTransformOptions(event, cardId) {
             event.stopPropagation();
             const card = document.getElementById(cardId);
@@ -10601,7 +10702,7 @@ ${_showParentContent ? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuid
             if (strengthsEl) extras += '\n\nStrengths:\n' + strengthsEl.innerText;
             if (challengesEl) extras += '\n\nGrowth Areas:\n' + challengesEl.innerText;
             
-            const fullText = (title + (value ? ' — ' + value : '') + '\n\n' + content + extras).trim();
+            const fullText = (title + (value ? ' � ' + value : '') + '\n\n' + content + extras).trim();
             
             // Store in localStorage so the new tab can read it
             localStorage.setItem('sb_transform_reading', fullText);
@@ -10637,7 +10738,7 @@ pre{background:rgba(255,255,255,0.04);border:1px solid rgba(255,215,0,0.15);bord
 </style></head><body>
 <div class="container">
 <h1>\\u2728 Transform This Reading</h1>
-<p class="subtitle">"${title.replace(/"/g,'&quot;')}" — pick what you want to create:</p>
+<p class="subtitle">"${title.replace(/"/g,'&quot;')}" � pick what you want to create:</p>
 <div class="format-grid">
 <button class="format-btn" onclick="pick('portrait')">\\ud83c\\udfa8 AI Portrait</button>
 <button class="format-btn" onclick="pick('infographic')">\\ud83d\\udcca Infographic</button>
@@ -10689,7 +10790,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
             const blobUrl = URL.createObjectURL(blob);
             window.open(blobUrl, '_blank');
             
-            showCopyToast(' Transform tab opened — pick a format there!');
+            showCopyToast(' Transform tab opened � pick a format there!');
         }
         
         // Quick Transform prompt templates
@@ -10698,7 +10799,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
             infographic: `You are a data visualization expert. Extract the key components from this soul blueprint reading and design an infographic.\n\nIdentify 5-8 main aspects, assign visual weights, choose meaningful colours, add clear labels. Include a title and legend.\n\nHere is the reading:\n[READING]`,
             story: `Transform this soul blueprint reading into a hero's journey narrative. Structure as: 1) The Ordinary World, 2) Call to Adventure, 3) Trials & Allies, 4) The Transformation, 5) The Return.\n\nHere is the reading:\n[READING]`,
             affirmation: `Create a set of 15-20 powerful affirmations based on this soul blueprint reading. Group them by theme (identity, purpose, relationships, growth). Make them present-tense, positive, and emotionally resonant.\n\nHere is the reading:\n[READING]`,
-            meditation: `Create a guided meditation based on this soul blueprint reading. Include: Opening (settling in, breath work — 2 min), Visualization (meeting the energy described — 5 min), Integration (bringing insight into the body — 5 min), Closing (gratitude and grounding — 3 min). Write it as a spoken script.\n\nHere is the reading:\n[READING]`,
+            meditation: `Create a guided meditation based on this soul blueprint reading. Include: Opening (settling in, breath work � 2 min), Visualization (meeting the energy described � 5 min), Integration (bringing insight into the body � 5 min), Closing (gratitude and grounding � 3 min). Write it as a spoken script.\n\nHere is the reading:\n[READING]`,
             routine: `Create a daily routine aligned with this soul blueprint reading. Include: Morning ritual (energy activation), Energy management tips for the day, Decision-making framework based on core traits, Evening reflection practice. Make it practical, actionable, and grounded.\n\nHere is the reading:\n[READING]`
         };
         
@@ -10738,7 +10839,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
                     copyBtn.textContent = ' Copied! Now paste into ChatGPT or Gemini';
                     copyBtn.classList.add('copied');
                     setTimeout(() => {
-                        copyBtn.textContent = ' Copy Prompt — Then Paste Into ChatGPT or Gemini';
+                        copyBtn.textContent = ' Copy Prompt � Then Paste Into ChatGPT or Gemini';
                         copyBtn.classList.remove('copied');
                     }, 4000);
                 }
@@ -10756,7 +10857,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
                     copyBtn.textContent = ' Copied! Now paste into ChatGPT or Gemini';
                     copyBtn.classList.add('copied');
                     setTimeout(() => {
-                        copyBtn.textContent = ' Copy Prompt — Then Paste Into ChatGPT or Gemini';
+                        copyBtn.textContent = ' Copy Prompt � Then Paste Into ChatGPT or Gemini';
                         copyBtn.classList.remove('copied');
                     }, 4000);
                 }
@@ -10778,7 +10879,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
                 const contentEl = card.querySelector('.reading-content');
                 const content = contentEl ? contentEl.innerText : '';
                 if (content) {
-                    allText += title + (value ? ' — ' + value : '') + '\n\n' + content + '\n\n---\n\n';
+                    allText += title + (value ? ' � ' + value : '') + '\n\n' + content + '\n\n---\n\n';
                 }
             });
             
@@ -11068,6 +11169,78 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
         }
         
         // ============================================
+        // INTEGRATION SYNTHESIS
+        // ============================================
+
+        function generateIntegrationSynthesis(name, sunSign, moonSign, lifePathNum) {
+            const sunEl = sunSign.element;
+            const moonEl = moonSign.element;
+            const lp = lifePathNum;
+
+            const sunDescriptions = {
+                'Fire': 'a radiant, courageous identity that expresses itself through action, passion, and inspiring others',
+                'Earth': 'a grounded, purposeful identity that expresses itself through building, reliability, and tangible achievement',
+                'Air': 'a curious, communicative identity that expresses itself through ideas, connection, and mental exploration',
+                'Water': 'a deep, intuitive identity that expresses itself through feeling, empathy, and emotional intelligence'
+            };
+            const moonDescriptions = {
+                'Fire': 'an emotional world that needs freedom, passion, and immediate expression to feel alive',
+                'Earth': 'an emotional world that finds security through stability, routine, and physical presence',
+                'Air': 'an emotional world that processes feelings through thought, conversation, and mental distance',
+                'Water': 'an emotional world of extraordinary depth, sensitivity, and fluid intuitive knowing'
+            };
+            const lpMissions = {
+                1: 'pioneer new paths and develop true self-reliance',
+                2: 'build bridges between people and master the art of partnership',
+                3: 'express creative gifts and teach the world about joy',
+                4: 'create lasting foundations and master disciplined effort',
+                5: 'embrace freedom, change, and the full spectrum of experience',
+                6: 'nurture, heal, and take responsibility for those in their care',
+                7: 'seek truth, develop wisdom, and understand the deeper nature of reality',
+                8: 'build material mastery and learn the wise use of power',
+                9: 'serve humanity and let go of everything that no longer serves',
+                11: 'hold a higher vision and inspire through spiritual intuition',
+                22: 'build systems and structures that serve humanity at scale',
+                33: 'embody unconditional love and guide others through compassionate wisdom'
+            };
+            const elementSynergies = {
+                'Fire-Fire': 'This double-fire pattern means emotional life and public self are both powered by the same fuel � passion, momentum, and presence. The invitation is to ensure this fire has depth beneath its heat.',
+                'Fire-Earth': 'The Fire Sun and Earth Moon create a productive tension: the world sees boldness and initiative, while inside there is a quiet need for stability and tangible proof. When these two work together, they produce someone who both dreams and delivers.',
+                'Fire-Air': 'The Fire Sun and Air Moon make for a naturally expressive, communicative presence. Ideas ignite quickly and feelings translate into words with ease. The shadow is a tendency to stay in the bright and verbal, avoiding the quieter depths.',
+                'Fire-Water': 'The Fire Sun and Water Moon combination holds great intensity � the outer self is confident and action-oriented, while the inner world is rich with feeling and sometimes turbulence. Integrating these two is the central work.',
+                'Earth-Fire': 'The Earth Sun and Fire Moon create a fascinating paradox: the world sees someone steady and reliable, while emotionally there is a need for excitement, expression, and aliveness. This combination tends to surprise people once they are trusted.',
+                'Earth-Earth': 'Double Earth means both the public self and the inner world are anchored in the material, the practical, and the enduring. What you see is what you get � but the depth beneath that constancy is profound.',
+                'Earth-Air': 'The Earth Sun and Air Moon bring together the tangible and the conceptual. There is a gift here for translating complex ideas into practical forms that people can actually use.',
+                'Earth-Water': 'The Earth Sun and Water Moon create someone who is deeply nurturing without appearing overtly emotional. Stable on the outside, oceanic on the inside � this combination holds enormous capacity for care.',
+                'Air-Fire': 'The Air Sun and Fire Moon make for someone whose mind sparks brilliance and whose emotions burn bright. Enthusiasm is genuine and communication is magnetic. The growth edge is developing patience with the slower rhythms of life.',
+                'Air-Earth': 'The Air Sun and Earth Moon create a thinker who is also a builder. Ideas don't stay abstract � there's an inner drive to make them real, useful, and lasting.',
+                'Air-Air': 'Double Air makes for one of the most intellectually alive combinations � the public self engages through ideas, and the emotional self also finds comfort in understanding and language. True depth comes through learning to trust feeling before it is explained.',
+                'Air-Water': 'The Air Sun and Water Moon navigate between thought and feeling constantly. This creates profound empathic intelligence. The integration work is allowing emotion to be expressed directly rather than always being translated first.',
+                'Water-Fire': 'The Water Sun and Fire Moon creates a visionary who feels deeply but is driven to act on those feelings. The outer self may appear mysterious or contained; internally there is more fire than most people expect.',
+                'Water-Earth': 'The Water Sun and Earth Moon combination builds slowly and loves deeply. The outer self is perceptive and private; the emotional world needs safety, steadiness, and physical comfort to open fully.',
+                'Water-Air': 'The Water Sun and Air Moon navigates between two very different ways of knowing � deep intuitive knowing and sharp intellectual analysis. The gift is emotional intelligence that can be clearly articulated.',
+                'Water-Water': 'Double Water creates oceanic depth across both the public self and private inner world. Perception is extraordinary. The essential work is developing the boundaries that allow this sensitivity to be a gift rather than a burden.'
+            };
+
+            const sunDesc = sunDescriptions[sunEl] || 'a distinctive identity with its own unique signature';
+            const moonDesc = moonDescriptions[moonEl] || 'an inner emotional world with its own distinct needs';
+            const lpMission = lpMissions[lp] || `walk a Life Path ${lp} journey of growth and discovery`;
+            const synergy = elementSynergies[`${sunEl}-${moonEl}`] || 'a unique interplay between outer identity and inner emotional life';
+
+            return `<div style="padding: 4px 0 8px;">
+<p style="font-size:1.05rem;line-height:1.75;margin-bottom:14px;">
+<strong>${name}</strong> carries <strong>Sun in ${sunSign.name}</strong> � ${sunDesc} � alongside a <strong>Moon in ${moonSign.name}</strong>, which means ${moonDesc}. Running through all of it is a <strong>Life Path ${lp}</strong> � a soul-level mission to ${lpMission}.
+</p>
+<p style="font-size:1rem;line-height:1.75;margin-bottom:14px;padding:14px 18px;background:rgba(102,126,234,0.06);border-left:3px solid var(--primary);border-radius:0 10px 10px 0;">
+${synergy}
+</p>
+<p style="font-size:0.97rem;line-height:1.75;color:var(--text-secondary,#555);">
+Together, these three create a soul signature that is entirely unique to ${name}. The readings below give each element its full depth � but they all point back to this same central pattern. Return here whenever the detail feels overwhelming.
+</p>
+</div>`;
+        }
+
+        // ============================================
         // READING CLOSING SUMMARY
         // ============================================
         
@@ -11090,25 +11263,25 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
             const elements = [sunElement, moonElement].filter(Boolean);
             const uniqueElements = [...new Set(elements)];
             const elementNote = uniqueElements.length === 1 
-                ? `a strong ${uniqueElements[0]} presence — giving them ${uniqueElements[0] === 'Fire' ? 'passion and drive' : uniqueElements[0] === 'Earth' ? 'groundedness and determination' : uniqueElements[0] === 'Air' ? 'intellect and curiosity' : 'emotional depth and intuition'}`
+                ? `a strong ${uniqueElements[0]} presence � giving them ${uniqueElements[0] === 'Fire' ? 'passion and drive' : uniqueElements[0] === 'Earth' ? 'groundedness and determination' : uniqueElements[0] === 'Air' ? 'intellect and curiosity' : 'emotional depth and intuition'}`
                 : uniqueElements.length === 2 
-                    ? `a blend of ${uniqueElements[0]} and ${uniqueElements[1]} energy — balancing ${uniqueElements[0] === 'Fire' || uniqueElements[1] === 'Fire' ? 'passion' : 'depth'} with ${uniqueElements.includes('Earth') ? 'practicality' : uniqueElements.includes('Air') ? 'curiosity' : 'intuition'}`
+                    ? `a blend of ${uniqueElements[0]} and ${uniqueElements[1]} energy � balancing ${uniqueElements[0] === 'Fire' || uniqueElements[1] === 'Fire' ? 'passion' : 'depth'} with ${uniqueElements.includes('Earth') ? 'practicality' : uniqueElements.includes('Air') ? 'curiosity' : 'intuition'}`
                     : 'a unique elemental blend';
             
-            const risingLine = risingSign && risingSign !== 'Unknown' ? `<p>With ${risingSign} Rising, the world sees ${userData.name} through a lens of ${risingSign} energy — a first impression that may differ beautifully from what lies beneath.</p>` : '';
+            const risingLine = risingSign && risingSign !== 'Unknown' ? `<p>With ${risingSign} Rising, the world sees ${userData.name} through a lens of ${risingSign} energy � a first impression that may differ beautifully from what lies beneath.</p>` : '';
             const venusLine = venusSign ? `Venus in ${venusSign} shapes how ${userData.name} loves and what they find beautiful, ` : '';
             const nodeLine = northNode ? `while the North Node in ${northNode} points toward the growth and lessons this lifetime is designed to bring.` : '';
-            const chineseLine = chineseZodiac ? `<p>In Chinese astrology, ${userData.name} carries the spirit of the ${chineseZodiac} — adding another dimension of ancient wisdom to this already rich portrait.</p>` : '';
+            const chineseLine = chineseZodiac ? `<p>In Chinese astrology, ${userData.name} carries the spirit of the ${chineseZodiac} � adding another dimension of ancient wisdom to this already rich portrait.</p>` : '';
             
             closingContainer.innerHTML = `
                 <div class="closing-card">
                     <h3>${userData.name}'s Complete Portrait</h3>
-                    <p>You've just explored ${userData.name}'s complete Soul Blueprint — a unique constellation of energies that has never existed before and will never exist again.</p>
-                    <p>At their core, ${userData.name} is a <strong>${sunSign} Sun</strong> with a <strong>${moonSign} Moon</strong> — carrying ${elementNote}. Life Path <strong>${lifePath}</strong> guides the soul's journey, while Soul Urge <strong>${soulUrge}</strong> reveals the heart's deepest desire.</p>
+                    <p>You've just explored ${userData.name}'s complete Soul Blueprint � a unique constellation of energies that has never existed before and will never exist again.</p>
+                    <p>At their core, ${userData.name} is a <strong>${sunSign} Sun</strong> with a <strong>${moonSign} Moon</strong> � carrying ${elementNote}. Life Path <strong>${lifePath}</strong> guides the soul's journey, while Soul Urge <strong>${soulUrge}</strong> reveals the heart's deepest desire.</p>
                     ${risingLine}
                     <p>${venusLine}${nodeLine}</p>
                     ${chineseLine}
-                    <p>This reading is a map of potential — the cosmic seeds planted at the moment of birth. Come back to it whenever you need guidance, clarity, or simply a reminder of who you are at your deepest level.</p>
+                    <p>This reading is a map of potential � the cosmic seeds planted at the moment of birth. Come back to it whenever you need guidance, clarity, or simply a reminder of who you are at your deepest level.</p>
                     <p class="closing-affirmation">"${userData.name}'s purpose is written in the stars. This reading is the first page."</p>
                 </div>
             `;
@@ -11536,7 +11709,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
     <div class="gift-message">
         <h2>${giftedBy ? 'A Gift from ' + giftedBy : 'With Love'}</h2>
         <p>This reading was created with love to celebrate the unique soul that is ${userData.name}. May these cosmic insights illuminate the path ahead and remind you of the infinite potential within.</p>
-        ${giftedBy ? '<p class="gifted-signature">— ' + giftedBy + '</p>' : ''}
+        ${giftedBy ? '<p class="gifted-signature">� ' + giftedBy + '</p>' : ''}
     </div>
     
     ${readingsContainer.innerHTML}
@@ -11552,7 +11725,7 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
 <script src="/shared/js/quantum-explore.js" defer><\/script>
 
 <script src="/shared/js/quantum-email-capture.js" defer><\/script>
-</body>
+<script src=languages.js></script><script src=ai-assistant.js></script></body>
 </html>`;
             
             // Create downloadable file
@@ -11577,12 +11750,8 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js')
-                    .then((registration) => {
-                        console.log('Service Worker registered:', registration.scope);
-                    })
-                    .catch((error) => {
-                        console.log('Service Worker registration failed:', error);
-                    });
+                    .then(() => {})
+                    .catch(() => {});
             });
         }
         
@@ -11756,7 +11925,26 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
         </div>
     </div>
     <script>
+    // AdSense initializer � only loads after cookie consent
+    function initializeAdSense() {
+        var adScript = document.getElementById('adsense-script');
+        if (adScript && adScript.getAttribute('src').indexOf('XXXXXXXXXXXXXXXX') > -1) {
+            // Replace placeholder with real publisher ID
+            adScript.src = adScript.src.replace('ca-pub-XXXXXXXXXXXXXXXX', 'ca-pub-XXXXXXXXXXXXXXXX');
+        }
+        // Push ads to AdSense
+        try {
+            var ads = document.querySelectorAll('.adsbygoogle');
+            ads.forEach(function(ad) {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            });
+        } catch(e) { console.warn('AdSense init error:', e); }
+    }
+    // Auto-init if consent already given
     (function(){
+        if (localStorage.getItem('sb-cookie-consent') === 'accepted') {
+            initializeAdSense();
+        }
         if (!localStorage.getItem('sb-cookie-consent')) {
             document.getElementById('cookieConsent').style.display = 'block';
         }
@@ -11764,6 +11952,8 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
     function acceptCookies() {
         localStorage.setItem('sb-cookie-consent', 'accepted');
         document.getElementById('cookieConsent').style.display = 'none';
+        // Initialize AdSense after consent
+        initializeAdSense();
     }
     function declineCookies() {
         localStorage.setItem('sb-cookie-consent', 'declined');
@@ -11776,5 +11966,5 @@ setTimeout(() => { btn.textContent = '\\ud83d\\udccb Copy Prompt \\u2014 Then Pa
         window['ga-disable-G-VW4LGE7L1T'] = true;
     }
     </script>
-</body>
+<script src=languages.js></script><script src=ai-assistant.js></script></body>
 </html>

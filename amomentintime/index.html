@@ -5168,6 +5168,8 @@
  // ============================================
  
  async function generateReading(userData) {
+ if (window.QRC_ANALYTICS) QRC_ANALYTICS.trackTool('A Moment In Time Reading', 'generate_reading');
+ try { if (typeof gtag === 'function') gtag('event', 'reading_generate', { tool_name: 'amomentintime', user_name: (userData && userData.name) ? 'provided' : 'anonymous' }); } catch(e) {}
  // Show loading
  const overlay = document.getElementById('loadingOverlay');
  const progressBar = document.getElementById('loadingProgressBar');
