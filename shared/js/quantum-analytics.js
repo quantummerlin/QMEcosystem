@@ -38,6 +38,8 @@ const QRC_ANALYTICS = {
     this._autoTrackButtons();
     this._autoTrackScroll();
     this._autoTrackEcosystemLinks();
+    this._autoTrackTimeOnPage();
+    this._setUserProperties();
     // Defer result observation so dynamically-rendered tools have time to paint
     setTimeout(() => this._autoTrackResults(), 800);
   },
@@ -148,6 +150,81 @@ const QRC_ANALYTICS = {
     SELECTORS.forEach(sel => {
       try { document.querySelectorAll(sel).forEach(el => obs.observe(el)); } catch(e) {}
     });
+  },
+
+  // ── Auto: time-on-page quality events (30s / 60s / 120s / 180s) ──
+  _autoTrackTimeOnPage() {
+    const milestones = [30, 60, 120, 180];
+    const fired = new Set();
+    const start = Date.now();
+    const check = () => {
+      const elapsed = Math.floor((Date.now() - start) / 1000);
+      milestones.forEach(s => {
+        if (elapsed >= s && !fired.has(s)) {
+          fired.add(s);
+          this._fire('time_on_page', {
+            seconds:   s,
+            tool_name: this._toolName,
+            page_type: this._pageType
+          });
+        }
+      });
+      if (fired.size < milestones.length) setTimeout(check, 10000);
+    };
+    setTimeout(check, 30000);
+  },
+
+  // ── User properties — persistent behavioural segmentation ─────
+  _setUserProperties() {
+    try {
+      // Read signals from localStorage set by various tools across the ecosystem
+      const savedTracks   = JSON.parse(localStorage.getItem('qm_saved_tracks')  || '{}');
+      const readingCount  = parseInt(localStorage.getItem('qm_reading_count')   || '0', 10);
+      const emailCaptured = !!localStorage.getItem('qm_email_captured');
+      const hasSavedFreqs = Object.keys(savedTracks).length > 0;
+
+      // Determine preferred tool type from page type history
+      const pageTypeHistory = JSON.parse(localStorage.getItem('qm_page_type_history') || '[]');
+      pageTypeHistory.push(this._pageType);
+      if (pageTypeHistory.length > 20) pageTypeHistory.shift();
+      localStorage.setItem('qm_page_type_history', JSON.stringify(pageTypeHistory));
+
+      // Find most visited category
+      const freq = {};
+      pageTypeHistory.forEach(t => { freq[t] = (freq[t] || 0) + 1; });
+      const preferredType = Object.entries(freq).sort((a, b) => b[1] - a[1])[0]?.[0] || this._pageType;
+
+      // Increment reading count if this is a reading page
+      const newReadingCount = this._pageType === 'reading' ? readingCount + 1 : readingCount;
+      if (this._pageType === 'reading') localStorage.setItem('qm_reading_count', newReadingCount);
+
+      // Classify engagement tier
+      const totalVisits = pageTypeHistory.length;
+      const engagementTier = totalVisits >= 10 ? 'power_user'
+                           : totalVisits >= 4  ? 'returning'
+                           : 'new';
+
+      this._fire('set_user_properties', {
+        preferred_tool_type: preferredType,
+        engagement_tier:     engagementTier,
+        readings_generated:  newReadingCount > 5 ? '5+' : String(newReadingCount),
+        has_saved_tracks:    hasSavedFreqs,
+        has_email:           emailCaptured,
+        page_type_session:   this._pageType
+      });
+
+      // GA4 user_properties (scoped to user, persists across sessions in GA4)
+      try {
+        if (typeof gtag === 'function') {
+          gtag('set', 'user_properties', {
+            preferred_tool_type: preferredType,
+            engagement_tier:     engagementTier,
+            has_saved_tracks:    String(hasSavedFreqs),
+            has_email:           String(emailCaptured)
+          });
+        }
+      } catch(e) {}
+    } catch(e) {}
   },
 
   // ── Explicit tracking methods (backward compatible) ───────────
