@@ -1483,6 +1483,7 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
       srcNode.connect(gainNode); gainNode.connect(c.destination);
       srcNode.start(); srcNode.onended = stopAudio;
       currentTrackName = trackName; currentTrackFreqs = frequencies.slice(); _npFreqs = frequencies.slice();
+      _trackPlayStart=Date.now();gta('track_play',{track_name:trackName,frequencies:frequencies.join('+'),duration_min:Math.round(totalDur/60)});
       acquireWakeLock();
       playStart = c.currentTime; playDuration = ab.duration;
       document.getElementById('pl-name').textContent = trackName;
@@ -1503,6 +1504,7 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
 }
 
 function stopAudio() {
+  if(_trackPlayStart&&currentTrackName){const _ls=Math.round((Date.now()-_trackPlayStart)/1000);if(_ls>2)gta('track_stop',{track_name:currentTrackName,listen_seconds:_ls,completed:_ls>=(Math.round(playDuration||0)-5)});}_trackPlayStart=0;
   if (srcNode) { try { srcNode.stop(); } catch(e){} srcNode = null; }
   gainNode = null; pauseOffset = 0;
   clearInterval(progTimer);
@@ -1546,6 +1548,7 @@ function downloadWAV(frequencies, trackName, totalDur, triggerBtnId) {
       a.href = url; a.download = trackName.replace(/[^a-z0-9 _\-]/gi, '').replace(/\s+/g,'_') + '_THERAPEUTIC.wav';
       a.click(); URL.revokeObjectURL(url);
       toast('Downloaded: ' + a.download, 'success');
+      gta('wav_download',{track_name:trackName,frequencies:frequencies.join('+')});
     } catch (e) { toast('Error: ' + e.message, 'error'); }
     finally { if (triggerBtnId) setBtnLoading(triggerBtnId, false); }
   }, 20);
@@ -1575,6 +1578,8 @@ let vibFieldsByFreq = {}, lastFreqs = [], lastVibTime = -1, sandLayers = [], SAN
 const VIB_SENSITIVITY = 3.2, FRICTION = 0.90, RANDOM_JITTER = 0.12, EDGE_PUSH = 0.6;
 const SAND_COLORS = [{r:0,g:245,b:255},{r:157,g:0,b:255},{r:255,g:0,b:255},{r:80,g:220,b:255},{r:200,g:100,b:255},{r:255,g:100,b:200}];
 let _npFreqs = [];
+let _trackPlayStart = 0;
+function gta(ev,params){try{if(typeof gtag==='function')gtag('event',ev,params);}catch(e){}}
 
 function besselJ0(x) { if(x===0)return 1; const ax=Math.abs(x); if(ax<8){const y=x*x;const a1=57568490574+y*(-13362590354+y*(651619640.7+y*(-11214424.18+y*(77392.33017+y*(-184.9052456)))));const a2=57568490411+y*(1029532985+y*(9494680.718+y*(59272.64853+y*(267.8532712+y*1))));return a1/a2;}else{const z=8/ax,y=z*z,xx=ax-0.785398164;const a1=1+y*(-0.1098628627e-2+y*(0.2734510407e-4+y*(-0.2073370639e-5+y*0.2093887211e-6)));const a2=-0.1562499995e-1+y*(0.1430488765e-3+y*(-0.6911147651e-5+y*(0.7621095161e-6-y*0.934935152e-7)));return Math.sqrt(0.636619772/ax)*(Math.cos(xx)*a1-z*Math.sin(xx)*a2);}}
 function besselJ1(x) { if(x===0)return 0; const ax=Math.abs(x); if(ax<8){const y=x*x;const a1=x*(72362614232+y*(-7895059235+y*(242396853.1+y*(-2972611.439+y*(15704.48260+y*(-30.16036606))))));const a2=144725228442+y*(2300535178+y*(18583304.74+y*(99447.43394+y*(376.9991397+y*1))));return a1/a2;}else{const z=8/ax,y=z*z,xx=ax-2.356194491;const a1=1+y*(0.183105e-2+y*(-0.3516396496e-4+y*(0.2457520174e-5+y*(-0.240337019e-6))));const a2=0.04687499995+y*(-0.2002690873e-3+y*(0.8449199096e-5+y*(-0.88228987e-6+y*0.105787412e-6)));const r=Math.sqrt(0.636619772/ax)*(Math.cos(xx)*a1-z*Math.sin(xx)*a2);return x<0?-r:r;}}
@@ -1666,7 +1671,7 @@ const _collReg={};let _collId=0;
 function renderCollection(collection,listId,playPrefix,dlPrefix){const list=document.getElementById(listId);if(!list)return;list.innerHTML='';const regId='_c'+(_collId++);_collReg[regId]=collection;collection.forEach((t,i)=>{const row=document.createElement('div');row.className='trinity-row';row.style.cssText='flex-wrap:wrap;';row.dataset.name=t.name;const sid=sanitizeId(t.name),meta=getTrackMeta(t.name),attrName=escAttr(JSON.stringify(t.name)),attrFreqs=escAttr(JSON.stringify(t.freqs));row.innerHTML=`<div class="tn">${String(i+1).padStart(2,'0')}</div><div class="ti" style="flex:1;min-width:0"><div class="ti-name" style="cursor:pointer" onclick="toggleTrackDetail(this)">${t.name} <span style="font-size:.6rem;color:var(--muted)">▼</span></div><div class="ti-freqs">${fmtList(t.freqs)}</div><div class="track-detail" style="display:none;margin-top:.5rem;font-size:.7rem;color:var(--dim);line-height:1.5;text-align:left"><p style="margin-bottom:.4rem"><strong style="color:var(--acl)">Description:</strong> ${meta.desc}</p><p style="margin-bottom:.4rem"><strong style="color:var(--teal)">Benefits:</strong> ${meta.benefits.map(b=>`<span style="display:inline-block;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:4px;padding:.1rem .35rem;margin:.1rem">${b}</span>`).join(' ')}</p><p style="margin-bottom:.4rem"><strong style="color:var(--acl)">Who For:</strong> ${meta.whoFor}</p><p style="margin-bottom:.4rem"><strong style="color:var(--teal)">How To Use:</strong> ${meta.howToUse}</p><p style="margin-bottom:.4rem"><strong style="color:var(--acl)">Affirmations:</strong><br>${meta.affirmations.map(a=>`<em style="color:var(--muted)">"${a}"</em>`).join('<br>')}</p></div></div><div class="ta"><button class="btn btn-primary btn-sm" id="${playPrefix}-${i}" onclick="playCollection('${regId}', ${i}, '${playPrefix}')"><span class="icon-play"></span> Play</button><button class="btn btn-teal btn-sm" id="${dlPrefix}-${i}" onclick="dlCollection('${regId}', ${i}, '${dlPrefix}')"><span class="icon-download"></span> WAV</button><button class="btn btn-ghost btn-sm" onclick="saveTrackDirect(${attrName}, ${attrFreqs})" title="Save track"><span style="font-size:.85rem">+</span> Save</button></div>`;list.appendChild(row);});}
 function playCollection(regId,i,prefix){const coll=_collReg[regId];if(!coll)return;const t=coll[i];playAudio(t.freqs,t.name,getGlobalDur(),prefix+'-'+i);}
 function dlCollection(regId,i,prefix){const coll=_collReg[regId];if(!coll)return;const t=coll[i];downloadWAV(t.freqs,t.name,getGlobalDur(),prefix+'-'+i);}
-function saveTrackDirect(name,freqs){const tracks=getSavedTracks();tracks[name]={name,frequencies:[...freqs],duration:'96.3',savedAt:Date.now()};try{localStorage.setItem(SAVED_TRACKS_KEY,JSON.stringify(tracks));}catch(e){toast('Storage full — clear some saved data','error');return;}toast('Saved: '+name,'success');renderSavedTracks();}
+function saveTrackDirect(name,freqs){const tracks=getSavedTracks();tracks[name]={name,frequencies:[...freqs],duration:'96.3',savedAt:Date.now()};try{localStorage.setItem(SAVED_TRACKS_KEY,JSON.stringify(tracks));}catch(e){toast('Storage full — clear some saved data','error');return;}toast('Saved: '+name,'success');gta('library_save',{track_name:name,frequencies:freqs.join('+')});renderSavedTracks();}
 
 // ── Library ──
 let currentLibCollection=null;
@@ -1875,6 +1880,7 @@ function toggleTheoryAcc(id,forceOpen){
   const btn=item.querySelector('.theory-acc-hdr');
   if(btn)btn.setAttribute('aria-expanded',willOpen?'true':'false');
   if(willOpen){
+    const _te=item.querySelector('.theory-acc-hdr span');gta('theory_section_open',{section_id:id,section_title:_te?_te.textContent:id});
     const ov=document.getElementById('theory-overlay');
     if(ov)setTimeout(()=>ov.scrollTo({top:item.offsetTop-72,behavior:'smooth'}),30);
   }
@@ -1900,7 +1906,7 @@ function renderTheory(){
   for(const coll of Object.values(ALL_COLLECTIONS)){for(const t of coll){if(!_fm[t.name])_fm[t.name]=t.freqs;}}
   TRINITY.forEach(t=>{if(!_fm[t.name])_fm[t.name]=t.freqs;});
   Object.entries(PRESETS).forEach(([k,v])=>{if(!_fm[k])_fm[k]=v;});
-  function fpBtn(n,blurb){const f=_fm[n]||[432];return `<div class="ftm-track-row"><div style="flex:1;min-width:0"><div class="ftm-track-name">${n}</div><div class="ftm-track-blurb">${blurb}</div></div>${pBtn(f,n)}</div>`;}
+  function fpBtn(n,blurb,catLabel){const f=_fm[n]||[432];return `<div class="ftm-track-row"><div style="flex:1;min-width:0"><div class="ftm-track-name">${n}</div><div class="ftm-track-blurb">${blurb}</div></div><button class="theory-play-btn" onclick="gta('find_my_track_play',{goal_category:${escAttr(JSON.stringify(catLabel||''))},track_name:${escAttr(JSON.stringify(n))}});closeTheoryOverlay();playAudio(${JSON.stringify(f)},${escAttr(JSON.stringify(n))},${D},null)">▶ Play</button></div>`;}
 
   // ── 14. Find My Track ──
   const ftmCats=[
@@ -1965,7 +1971,7 @@ function renderTheory(){
       ["Healer's Hand","For healers and energy workers — amplifies healing output"],
     ]},
   ];
-  const ftmBody=`<p style="font-size:.8rem;color:var(--muted);margin-bottom:1.25rem">New here, or not sure where to start? Pick your goal — every track has a play button so you can listen immediately.</p><div class="ftm-grid">${ftmCats.map(cat=>`<div class="ftm-cat"><div class="ftm-cat-hdr" style="background:${cat.color}1a;border-color:${cat.color}50"><span class="ftm-cat-icon">${cat.icon}</span><span class="ftm-cat-label" style="color:${cat.color}">${cat.label}</span></div>${cat.tracks.map(([n,b])=>fpBtn(n,b)).join('')}</div>`).join('')}</div>`;
+  const ftmBody=`<p style="font-size:.8rem;color:var(--muted);margin-bottom:1.25rem">New here, or not sure where to start? Pick your goal — every track has a play button so you can listen immediately.</p><div class="ftm-grid">${ftmCats.map(cat=>`<div class="ftm-cat"><div class="ftm-cat-hdr" style="background:${cat.color}1a;border-color:${cat.color}50"><span class="ftm-cat-icon">${cat.icon}</span><span class="ftm-cat-label" style="color:${cat.color}">${cat.label}</span></div>${cat.tracks.map(([n,b])=>fpBtn(n,b,cat.label)).join('')}</div>`).join('')}</div>`;
   // ── Build sections in engagement order ──
 
   // ── 0. Quick Reference ──
@@ -2320,6 +2326,7 @@ let currentTrackName = '', currentTrackFreqs = [];
 function shareCurrentTrack() { shareTrack(currentTrackName, currentTrackFreqs); }
 function shareTrack(name, freqs) {
   if (!name) return;
+  gta('share_track',{track_name:name});
   const text = `${name}\nFrequencies: ${freqs.map(fmtHz).join(', ')}\nTherapeutic audio by Quantum Merlin`;
   const url = 'https://quantummerlin.com/frequencygenerator/';
   if (navigator.share) {
