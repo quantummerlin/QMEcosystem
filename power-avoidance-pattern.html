@@ -785,6 +785,7 @@
         }
 
         function generateResults() {
+            if (window.QRC_ANALYTICS) QRC_ANALYTICS.trackTool('Power Avoidance Pattern', 'reveal');
             const q1 = answers.q1;
             const q2 = answers.q2;
             const q3 = answers.q3;

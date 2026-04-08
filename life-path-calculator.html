@@ -550,6 +550,7 @@ body {
 
 .error-msg { color: #ff6b9d; font-size: 0.85rem; text-align: center; padding: 10px 0; display: none; font-family: 'Cinzel', serif; }
 </style>
+<script src="/shared/js/qm-memory.js"></script>
 </head>
 <body>
 
@@ -1002,8 +1003,10 @@ function calculateLifePath() {
     return;
   }
   errEl.style.display = 'none';
+  if (window.QRC_ANALYTICS) QRC_ANALYTICS.trackTool('Life Path Calculator', 'calculate');
 
-  // ── Reduce each group ──
+  // Save to cross-tool memory
+  if (typeof QMMemory !== 'undefined') QMMemory.save({ day, month, year });
   const daySum = sumDigits(day);
   const dayReduced = reduceToBase(daySum);
 

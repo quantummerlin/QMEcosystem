@@ -443,6 +443,7 @@ body {
 .year-tile.master .yt-num { color: var(--mystic-cyan); }
 .year-tile .yt-name { font-size: 0.7rem; color: rgba(240,230,255,0.5); margin-top: 5px; }
 </style>
+<script src="/shared/js/qm-memory.js"></script>
 </head>
 <body>
 
@@ -875,6 +876,7 @@ function calculatePersonalYear() {
   const err = document.getElementById('errMsg');
   if (!day || !month) { err.style.display = 'block'; return; }
   err.style.display = 'none';
+  if (window.QRC_ANALYTICS) QRC_ANALYTICS.trackTool('Personal Year Calculator', 'calculate');
 
   // Personal Year shifts on YOUR BIRTHDAY, not January 1st
   const today = new Date();
@@ -896,6 +898,7 @@ function calculatePersonalYear() {
 
   // Save for widget use
   try { localStorage.setItem('qm_birth_day', day); localStorage.setItem('qm_birth_month', month); } catch(e){}
+  if (typeof QMMemory !== 'undefined') QMMemory.save({ day, month });
 
   const monthNames = ['','January','February','March','April','May','June','July','August','September','October','November','December'];
 

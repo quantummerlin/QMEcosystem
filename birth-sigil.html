@@ -2706,6 +2706,7 @@
                 showNotification('Please enter your complete birth date', 'error');
                 return;
             }
+            if (window.QRC_ANALYTICS) QRC_ANALYTICS.trackTool('Birth Sigil Generator', 'generate');
             
             // Save user's birth data to profile for cross-tool usage
             if (window.QuantumMerlinProfile) {
