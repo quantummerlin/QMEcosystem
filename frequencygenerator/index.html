@@ -1966,7 +1966,7 @@ function renderTheory(){
     ]},
   ];
   const ftmBody=`<p style="font-size:.8rem;color:var(--muted);margin-bottom:1.25rem">New here, or not sure where to start? Pick your goal — every track has a play button so you can listen immediately.</p><div class="ftm-grid">${ftmCats.map(cat=>`<div class="ftm-cat"><div class="ftm-cat-hdr" style="background:${cat.color}1a;border-color:${cat.color}50"><span class="ftm-cat-icon">${cat.icon}</span><span class="ftm-cat-label" style="color:${cat.color}">${cat.label}</span></div>${cat.tracks.map(([n,b])=>fpBtn(n,b)).join('')}</div>`).join('')}</div>`;
-  html+=sec('ts-14','🎯 Find My Track',ftmBody);
+  // ── Build sections in engagement order ──
 
   // ── 0. Quick Reference ──
   const qref=[
@@ -1988,8 +1988,6 @@ function renderTheory(){
     {hz:[528,963],name:'Ascension Combo',use:'Healing + awakening'},
   ];
   const qgrid=`<div class="theory-qref-grid">${qref.map(q=>`<div class="theory-qref-item"><div class="theory-qref-hz">${q.hz.join(' + ')} Hz</div><div style="font-size:.72rem;font-weight:600;color:var(--fg);margin:.1rem 0">${q.name}</div><div class="theory-qref-use">${q.use}</div>${pBtn(q.hz,q.name)}</div>`).join('')}</div>`;
-  html+=sec('ts-0','Quick Reference',qgrid);
-
   // ── 1. Science ──
   const sci=`
     <div class="theory-card">
@@ -2011,12 +2009,10 @@ function renderTheory(){
         <li><strong>Playlists:</strong> Queue multiple tracks for extended sessions</li>
       </ul>
     </div>`;
-  html+=sec('ts-1','The Science of Frequency Therapy',sci);
 
   // ── 2. Solfeggio ──
   const solBody='<div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">The Solfeggio scale derives from a 6th-century Gregorian hymn. Rediscovered by Dr. Joseph Puleo in 1999 after appearing in the Book of Numbers. Each tone is mathematically related through digital root reduction (Pythagorean numerology).</div></div>'+
     THEORY_DATA.solfeggio.map(item=>`<div class="theory-card"><div class="theory-card-row"><div style="flex:1"><div class="theory-freq">${item.freq} Hz</div><div class="theory-name">${item.name}</div></div>${pBtn([item.freq],item.name)}</div><div class="theory-desc" style="margin:.35rem 0">${item.desc}</div><div>${item.tags.map(t=>`<span class="theory-tag">${t}</span>`).join('')}</div></div>`).join('');
-  html+=sec('ts-2','Solfeggio Frequencies',solBody);
 
   // ── 3. Brainwaves ──
   const bwBody='<div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">Your brain produces electrical activity in cycles per second (Hz). These states correlate with consciousness levels. Frequency entrainment gently guides your brain to a target state — this is backed by decades of neuroscience research using EEG measurements.</div></div><div class="theory-brainwave">'+
@@ -2032,17 +2028,14 @@ function renderTheory(){
         <tr><td style="padding:.3rem .4rem">Memory/cognition</td><td>40 Hz Gamma</td><td>45 min sessions</td></tr>
       </table></div>
     </div>`;
-  html+=sec('ts-3','Brainwave States & Entrainment',bwBody);
 
   // ── 4. Chakras ──
   const chColors={Red:'#ef4444',Orange:'#f97316',Yellow:'#eab308',Green:'#22c55e',Blue:'#3b82f6',Indigo:'#6366f1','Violet/White':'#a855f7'};
   const chBody='<div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">The chakra system maps 7 energy vortices along the spine. Each governs a layer of physical, emotional, and spiritual function. Modern frequency therapy assigns Solfeggio tones to each chakra, creating a precise sonic healing map for the entire energy body.</div></div>'+
     THEORY_DATA.chakras.map(ch=>`<div class="theory-card"><div class="theory-card-row"><div style="flex:1"><div class="theory-freq" style="color:${chColors[ch.color]||'var(--teal)'}">${ch.name}</div><div style="font-size:.7rem;color:var(--dim);margin:.1rem 0">${ch.location} · <span style="color:${chColors[ch.color]||'var(--teal)'};font-weight:600">${ch.color}</span></div><div style="font-size:.72rem;font-family:monospace;color:var(--teal)">${ch.freq}</div></div>${pBtn([parseFloat(ch.freq)],ch.name+' Chakra')}</div><div class="theory-desc" style="margin-top:.35rem">${ch.desc}</div></div>`).join('');
-  html+=sec('ts-4','Chakra System & Frequencies',chBody);
 
   // ── 5. Special Frequencies ──
   const spBody=THEORY_DATA.special.map(item=>`<div class="theory-card"><div class="theory-card-row"><div style="flex:1"><div class="theory-freq">${item.freq} Hz</div><div class="theory-name">${item.name}</div></div>${pBtn([item.freq],item.name)}</div><div class="theory-desc" style="margin:.35rem 0">${item.desc}</div><div>${item.tags.map(t=>`<span class="theory-tag">${t}</span>`).join('')}</div></div>`).join('');
-  html+=sec('ts-5','Special Frequencies',spBody);
 
   // ── 6. Entrainment Science ──
   const entBody=`
@@ -2060,7 +2053,6 @@ function renderTheory(){
         <tr><td style="padding:.3rem .4rem"><strong>Isochronic</strong></td><td>No</td><td>Pulsed on/off rhythm</td></tr>
       </table></div>
     </div>`;
-  html+=sec('ts-6','Binaural Beats & Entrainment Science',entBody);
 
   // ── 7. PEMF ──
   const pemfBody='<div class="theory-card" style="margin-bottom:.65rem"><div class="theory-desc">Pulsed Electromagnetic Field therapy uses low-frequency pulses to stimulate cellular repair. NASA\'s 4-year study (2003) demonstrated PEMF reversed bone density loss in astronauts and increased nerve regeneration 2.5–4× over controls. FDA-cleared for depression (2011) and bone healing. Over 2,000 peer-reviewed studies support its efficacy.</div></div>'+
@@ -2075,7 +2067,6 @@ function renderTheory(){
         <li><strong>FDA Clearance:</strong> Bone growth stimulators (1979), depression treatment (2011), OA knee pain (2015)</li>
       </ul>
     </div>`;
-  html+=sec('ts-7','PEMF Research & Science',pemfBody);
 
   // ── 8. How To Use ──
   const useBody=THEORY_DATA.usage.map(s=>`<div class="theory-card"><div class="theory-name" style="margin-bottom:.4rem">${s.title}</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">${s.tips.map(t=>`<li>${t}</li>`).join('')}</ul></div>`).join('')+
@@ -2102,7 +2093,6 @@ function renderTheory(){
         <li><strong>Volume:</strong> Should be comfortable and clear, never loud — the frequency matters, not the volume</li>
       </ul>
     </div>`;
-  html+=sec('ts-8','Usage Guide & Best Practices',useBody);
 
   // ── 9. FAQ ──
   const faqs=[
@@ -2116,7 +2106,6 @@ function renderTheory(){
     {q:'Why does the app generate audio instead of playing recordings?',a:'Generated audio is mathematically precise — each frequency is an exact sine wave at the specified Hz. Pre-recorded tracks introduce room acoustics, compression artifacts, and pitch variations. This app generates surgical-precision tones directly from the Web Audio API for maximum therapeutic accuracy.'},
   ];
   const faqBody=faqs.map(f=>`<div class="theory-faq-q" onclick="toggleFaq(this)">${f.q}<span class="faq-arr">›</span></div><div class="theory-faq-a">${f.a}</div>`).join('');
-  html+=sec('ts-9','Frequently Asked Questions',faqBody);
 
   // ── 10. Safety ──
   const safeBody=`
@@ -2137,7 +2126,6 @@ function renderTheory(){
         <li>Children under 12 should not use entrainment frequencies; basic Solfeggio at low volume is fine for older children with parental guidance</li>
       </ul>
     </div>`;
-  html+=sec('ts-10','Safety & Contraindications',safeBody);
 
   // ── 11. Water & Crystals ──
   const wcBody=`
@@ -2185,7 +2173,6 @@ function renderTheory(){
       <li><strong>Label charged water</strong> with frequency and date if storing</li>
       <li><strong>Combine methods</strong> — charge water AND a crystal simultaneously for amplified effects</li>
     </ul></div>`;
-  html+=sec('ts-11','Water & Crystal Charging',wcBody);
 
   // ── 12. 7-Day Granthi ──
   const granthiDays=[
@@ -2216,7 +2203,6 @@ function renderTheory(){
       <li><strong>Journal your experiences</strong> — note dreams, insights, and physical sensations</li>
       <li><strong>Repeat quarterly</strong> for ongoing spiritual maintenance</li>
     </ul></div>`;
-  html+=sec('ts-12','7-Day Granthi Immersion Protocol',grBody);
 
   // ── 13. Environments ──
   const envBody=`
@@ -2267,12 +2253,24 @@ function renderTheory(){
       <li><strong>Consistency builds cumulative effects</strong> — daily protocols outperform one-off sessions</li>
     </ul></div>
     <div style="margin-top:1.2rem;padding:.85rem 1rem;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:8px;font-size:.72rem;color:var(--dim);line-height:1.55"><strong style="color:#fca5a5">Disclaimer:</strong> Information provided is for educational and entertainment purposes only. Frequency therapy is not a substitute for professional medical advice. Always consult a qualified healthcare provider regarding medical conditions.</div>`;
-  html+=sec('ts-13','Business & Environmental Applications',envBody);
+  // ── Assemble in engagement-optimized order ──
+  html+=sec('ts-14','🎯 Find My Track',ftmBody);
+  html+=sec('ts-0','⚡ Quick Reference',qgrid);
+  html+=sec('ts-8','📖 Usage Guide & Best Practices',useBody);
+  html+=sec('ts-1','🔬 The Science of Frequency Therapy',sci);
+  html+=sec('ts-2','🎵 Solfeggio Frequencies',solBody);
+  html+=sec('ts-3','🧠 Brainwave States & Entrainment',bwBody);
+  html+=sec('ts-4','🌈 Chakra System & Frequencies',chBody);
+  html+=sec('ts-5','✨ Special Frequencies',spBody);
+  html+=sec('ts-9','❓ Frequently Asked Questions',faqBody);
+  html+=sec('ts-6','🎧 Binaural Beats & Entrainment Science',entBody);
+  html+=sec('ts-7','⚕️ PEMF Research & Science',pemfBody);
+  html+=sec('ts-10','🛡️ Safety & Contraindications',safeBody);
+  html+=sec('ts-12','🔮 7-Day Granthi Immersion Protocol',grBody);
+  html+=sec('ts-11','💎 Water & Crystal Charging',wcBody);
+  html+=sec('ts-13','🏢 Business & Environmental Applications',envBody);
 
   container.innerHTML=html;
-  // Open first section (Find My Track) by default
-  const first=container.querySelector('.theory-acc-item');
-  if(first){first.classList.add('open');const btn=first.querySelector('.theory-acc-hdr');if(btn)btn.setAttribute('aria-expanded','true');}
 }
 
 // ── Legal Pages ──
