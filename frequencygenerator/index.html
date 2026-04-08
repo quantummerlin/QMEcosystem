@@ -409,8 +409,7 @@
     .trinity-row:nth-child(8) { animation-delay:0.4s; }
     .trinity-row:nth-child(9) { animation-delay:0.45s; }
     .trinity-row:nth-child(10) { animation-delay:0.5s; }
-    .theory-section { margin-bottom:1.5rem; }
-    .theory-section-title { font-size:.95rem; font-weight:700; color:var(--acl); margin-bottom:.6rem; padding-bottom:.3rem; border-bottom:1px solid var(--border); }
+    /* Theory accordion */
     .theory-card { background:var(--card2); border:1px solid var(--border); border-radius:8px; padding:.85rem 1rem; margin-bottom:.5rem; transition:border-color .18s; }
     .theory-card:hover { border-color:rgba(124,58,237,.35); }
     .theory-freq { font-size:1.05rem; font-weight:700; color:var(--teal); font-family:monospace; margin-bottom:.2rem; }
@@ -423,11 +422,17 @@
     .theory-bw-range { font-size:.7rem; color:var(--teal); font-family:monospace; margin-bottom:.2rem; }
     .theory-bw-desc { font-size:.72rem; color:var(--dim); line-height:1.4; }
     @media (max-width:600px) { .theory-brainwave { grid-template-columns:1fr; } }
-    .theory-nav { display:flex; gap:.35rem; overflow-x:auto; padding:.5rem 0 .75rem; scrollbar-width:none; -webkit-overflow-scrolling:touch; flex-wrap:nowrap; margin-bottom:1rem; }
-    .theory-nav::-webkit-scrollbar { display:none; }
-    .theory-nav-btn { flex-shrink:0; padding:.32rem .75rem; border-radius:20px; font-size:.68rem; font-weight:600; letter-spacing:.04em; background:var(--card2); border:1px solid var(--border); color:var(--muted); cursor:pointer; white-space:nowrap; transition:all .15s; touch-action:manipulation; }
-    .theory-nav-btn:hover { border-color:rgba(0,245,255,.4); color:var(--text); }
-    .theory-nav-btn.active { background:rgba(0,245,255,.12); border-color:var(--acl); color:var(--acl); }
+    .theory-acc-item { border:1px solid var(--border); border-radius:10px; margin-bottom:.45rem; overflow:hidden; transition:border-color .2s; }
+    .theory-acc-item.open { border-color:rgba(0,245,255,.3); }
+    .theory-acc-hdr { width:100%; display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:.75rem 1rem; background:var(--card2); color:var(--muted); font-family:'Exo 2',sans-serif; font-size:.85rem; font-weight:700; letter-spacing:.03em; cursor:pointer; border:none; text-align:left; transition:background .15s,color .15s; }
+    .theory-acc-hdr:hover { background:var(--card3); color:var(--text); }
+    .theory-acc-item.open .theory-acc-hdr { background:rgba(0,245,255,.07); color:var(--acl); border-bottom:1px solid rgba(0,245,255,.15); }
+    .theory-acc-arr { font-size:1rem; transition:transform .25s; flex-shrink:0; line-height:1; }
+    .theory-acc-item.open .theory-acc-arr { transform:rotate(90deg); }
+    .theory-acc-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s ease; }
+    .theory-acc-item.open .theory-acc-body { grid-template-rows:1fr; }
+    .theory-acc-inner { overflow:hidden; padding:0; }
+    .theory-acc-item.open .theory-acc-inner { padding:.9rem 1rem 1rem; }
     /* Find My Track */
     .ftm-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:.75rem; margin-top:.3rem; }
     .ftm-cat { background:var(--card2); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
@@ -1861,11 +1866,18 @@ const THEORY_DATA = {
 };
 
 
-function scrollToTheorySection(id){
-  const el=document.getElementById(id);
-  const ov=document.getElementById('theory-overlay');
-  if(el&&ov)ov.scrollTop=el.offsetTop-64;
-  document.querySelectorAll('.theory-nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.sec===id));
+function scrollToTheorySection(id){ toggleTheoryAcc(id,true); }
+function toggleTheoryAcc(id,forceOpen){
+  const item=document.getElementById(id);
+  if(!item)return;
+  const willOpen=forceOpen?true:!item.classList.contains('open');
+  item.classList.toggle('open',willOpen);
+  const btn=item.querySelector('.theory-acc-hdr');
+  if(btn)btn.setAttribute('aria-expanded',willOpen?'true':'false');
+  if(willOpen){
+    const ov=document.getElementById('theory-overlay');
+    if(ov)setTimeout(()=>ov.scrollTo({top:item.offsetTop-72,behavior:'smooth'}),30);
+  }
 }
 function toggleFaq(el){
   const ans=el.nextElementSibling;
@@ -1879,17 +1891,9 @@ function renderTheory(){
   const container=document.getElementById('theory-content');
   if(!container)return;
   const D=getGlobalDur();
-  const navSecs=[
-    {id:'ts-14',label:'🎯 Find My Track'},{id:'ts-0',label:'Quick Ref'},{id:'ts-1',label:'Science'},{id:'ts-2',label:'Solfeggio'},
-    {id:'ts-3',label:'Brainwaves'},{id:'ts-4',label:'Chakras'},{id:'ts-5',label:'Special'},
-    {id:'ts-6',label:'Entrainment'},{id:'ts-7',label:'PEMF'},{id:'ts-8',label:'How To Use'},
-    {id:'ts-9',label:'FAQ'},{id:'ts-10',label:'Safety'},{id:'ts-11',label:'Water & Crystals'},
-    {id:'ts-12',label:'7-Day Protocol'},{id:'ts-13',label:'Environments'},
-  ];
-  const nav=`<div class="theory-nav" id="theory-nav">${navSecs.map((s,i)=>`<button class="theory-nav-btn${i===0?' active':''}" data-sec="${s.id}" onclick="scrollToTheorySection('${s.id}')">${s.label}</button>`).join('')}</div>`;
   function pBtn(freqs,name){return `<button class="theory-play-btn" onclick="closeTheoryOverlay();playAudio(${JSON.stringify(freqs)},${JSON.stringify(name)},${D},null)">▶ Play</button>`;}
-  function sec(id,title,body){return `<div class="theory-section" id="${id}"><div class="theory-section-title">${title}</div>${body}</div>`;}
-  let html=nav;
+  function sec(id,title,body){return `<div class="theory-acc-item" id="${id}"><button class="theory-acc-hdr" onclick="toggleTheoryAcc('${id}')" aria-expanded="false"><span>${title}</span><span class="theory-acc-arr">›</span></button><div class="theory-acc-body"><div class="theory-acc-inner">${body}</div></div></div>`;}
+  let html='';
 
   // ── Freq lookup for Find My Track ──
   const _fm={};
@@ -2266,6 +2270,9 @@ function renderTheory(){
   html+=sec('ts-13','Business & Environmental Applications',envBody);
 
   container.innerHTML=html;
+  // Open first section (Find My Track) by default
+  const first=container.querySelector('.theory-acc-item');
+  if(first){first.classList.add('open');const btn=first.querySelector('.theory-acc-hdr');if(btn)btn.setAttribute('aria-expanded','true');}
 }
 
 // ── Legal Pages ──
