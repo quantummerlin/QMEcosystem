@@ -627,7 +627,7 @@
       <div class="card-title">Build Your Track</div>
       <div class="field"><label for="track-name">Track Name</label><input type="text" id="track-name" class="input" placeholder="Custom Therapeutic Track" value="Custom Therapeutic Track"></div>
       <div class="field"><label>Frequencies (Hz) — up to 6. Press Enter or comma to add.</label><div class="freq-box" id="freq-box" onclick="document.getElementById('freq-raw').focus()"><input type="text" id="freq-raw" class="freq-raw" placeholder="e.g. 528"></div><div class="hint">Examples: 528 | 174, 285, 396 | 7.83, 40 | 2, 6, 10, 40</div></div>
-      <div class="field"><label for="dur-input">Duration</label><input type="text" id="dur-input" class="input" placeholder="96.3" value="96.3"><div class="hint">Formats: seconds (96.3) | minutes (5m) | target MP3 size (18mb, max 20mb)</div></div>
+      <div class="field"><label for="dur-input">Duration</label><input type="text" id="dur-input" class="input" placeholder="60m" value="60m"><div class="hint">Formats: seconds (300) | minutes (60m) | target MP3 size (18mb, max 20mb)</div></div>
       <div class="btn-row">
         <button class="btn btn-primary" id="play-custom-btn" onclick="playCustom()"><span class="icon-play"></span> Play</button>
         <button class="btn btn-teal" id="dl-custom-btn" onclick="downloadCustom()"><span class="icon-download"></span> Download WAV</button>
@@ -1454,7 +1454,7 @@ function buildTrack(frequencies, totalDur) {
 
 function parseDur(raw) {
   const s = (raw || '').trim().toLowerCase();
-  if (!s) return 96.3;
+  if (!s) return 3600;
   if (s.endsWith('mb')) { const mb = parseFloat(s); if (isNaN(mb) || mb <= 0 || mb > 20) return null; return mb / 0.04; }
   if (s.endsWith('m')) { const m = parseFloat(s); return (isNaN(m) || m <= 0) ? null : m * 60; }
   const v = parseFloat(s);
@@ -1466,7 +1466,7 @@ function fmtList(freqs) { return freqs.map(fmtHz).join(', '); }
 function sanitizeId(s) { return s.replace(/[^a-zA-Z0-9]/g,'_'); }
 function sanitizeHTML(s){const el=document.createElement('span');el.textContent=s;return el.innerHTML;}
 function escAttr(s){return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function getGlobalDur() { return parseDur(document.getElementById('dur-input')?.value || '96.3'); }
+function getGlobalDur() { return parseDur(document.getElementById('dur-input')?.value || '60m'); }
 
 function setBtnLoading(id, loading) {
   const b = document.getElementById(id);
@@ -1492,6 +1492,16 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
   // Create AudioContext synchronously during the user gesture (required by iOS/Android autoplay policy)
   if (!actx || actx.state === 'closed') actx = new (window.AudioContext || window.webkitAudioContext)();
   const c = actx;
+  // Auto-detect the triggering button from the current click event if no ID was passed
+  // Covers library, quickstart, popular tracks, theory buttons — all callers that pass null
+  if (!triggerBtnId) {
+    const evtTarget = window.event?.target || window.event?.srcElement;
+    const btnEl = evtTarget ? (evtTarget.tagName === 'BUTTON' ? evtTarget : evtTarget.closest?.('button')) : null;
+    if (btnEl) {
+      if (!btnEl.id) btnEl.id = 'pb-' + (Date.now() % 1000000);
+      triggerBtnId = btnEl.id;
+    }
+  }
   if (triggerBtnId) setBtnLoading(triggerBtnId, true);
   const go = () => {
     try {
