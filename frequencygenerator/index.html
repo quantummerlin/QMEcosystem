@@ -1472,11 +1472,12 @@ function setBtnLoading(id, loading) {
 
 function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
   stopAudio();
+  const c = ctx(); // unlock AudioContext synchronously during user gesture (required on iOS/Android)
   if (triggerBtnId) setBtnLoading(triggerBtnId, true);
   toast('Generating audio…', 'info');
   setTimeout(() => {
     try {
-      const samples = buildTrack(frequencies, totalDur), c = ctx(), ab = c.createBuffer(1, samples.length, SR);
+      const samples = buildTrack(frequencies, totalDur), ab = c.createBuffer(1, samples.length, SR);
       ab.copyToChannel(samples, 0);
       gainNode = c.createGain(); gainNode.gain.value = parseFloat(document.getElementById('vol-slider')?.value||0.8);
       srcNode = c.createBufferSource(); srcNode.buffer = ab;

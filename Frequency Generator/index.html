@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#060b14">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Freq Generator">
+  <meta name="description" content="Pure sine wave audio therapy with real-time cymatics visualization">
+  <link rel="manifest" href="data:application/json,{}">
+  <title>Therapeutic Frequency Generator — Quantum Merlin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #060b14; --card: #0d1423; --card2: #121d30; --card3: #172038;
+      --accent: #7c3aed; --acl: #a78bfa; --aglow: rgba(124,58,237,.28);
+      --teal: #06b6d4; --tglow: rgba(6,182,212,.22);
+      --text: #eef2ff; --dim: #94a3b8; --muted: #475569;
+      --border: rgba(255,255,255,.07); --success: #10b981; --danger: #ef4444;
+    }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh; display: flex; flex-direction: column;
+      align-items: center; padding-bottom: 84px; -webkit-tap-highlight-color: transparent;
+    }
+    .header {
+      background: linear-gradient(160deg, #0d1423 0%, #0a0f1e 100%);
+      border-bottom: 1px solid var(--border); padding: 1.6rem 2rem 1.4rem;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .header::before {
+      content: ''; position: absolute; inset: -40%;
+      background: radial-gradient(ellipse at 50% 50%, rgba(124,58,237,.12) 0%, transparent 60%);
+      animation: hpulse 5s ease-in-out infinite;
+    }
+    @keyframes hpulse { 0%,100%{opacity:.5;transform:scale(1)} 50%{opacity:1;transform:scale(1.06)} }
+    .header h1 {
+      font-size: 1.75rem; font-weight: 800; letter-spacing: -.02em;
+      background: linear-gradient(120deg, #c4b5fd 10%, #67e8f9 90%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; position: relative;
+    }
+    .header p { color: var(--muted); font-size: .8rem; margin-top: .3rem; position: relative; }
+    .nav {
+      background: var(--card); border-bottom: 1px solid var(--border);
+      display: flex; padding: 0 2rem; gap: .25rem; justify-content: center; flex-wrap: wrap;
+    }
+    .nav-tab {
+      padding: .75rem 1.25rem; color: var(--muted); cursor: pointer; border: none;
+      border-bottom: 2px solid transparent; background: none; font-size: .875rem;
+      font-weight: 500; transition: color .15s, border-color .15s; outline: none;
+    }
+    .nav-tab:hover { color: var(--text); }
+    .nav-tab.active { color: var(--acl); border-bottom-color: var(--acl); }
+    .main { flex: 1; padding: 1.75rem 2rem; max-width: 1040px; margin: 0 auto; width: 100%; text-align: center; }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem; margin-bottom: 1.25rem;
+    }
+    .card-title {
+      font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem;
+    }
+    .field { margin-bottom: 1.1rem; }
+    .field label { display: block; font-size: .8rem; color: var(--dim); margin-bottom: .35rem; }
+    .input {
+      width: 100%; background: var(--card2); border: 1px solid var(--border);
+      border-radius: 8px; padding: .55rem .85rem; color: var(--text);
+      font-size: .88rem; outline: none; transition: border-color .18s; text-align: center;
+    }
+    .input:focus { border-color: var(--acl); }
+    .input::placeholder { color: var(--muted); }
+    .freq-box {
+      display: flex; flex-wrap: wrap; gap: .4rem; background: var(--card2);
+      border: 1px solid var(--border); border-radius: 8px; padding: .45rem .6rem;
+      min-height: 44px; align-items: center; cursor: text; transition: border-color .18s;
+    }
+    .freq-box:focus-within { border-color: var(--acl); }
+    .freq-tag {
+      display: flex; align-items: center; gap: .3rem;
+      background: rgba(124,58,237,.18); border: 1px solid rgba(124,58,237,.35);
+      border-radius: 6px; padding: .18rem .45rem; font-size: .78rem; color: var(--acl);
+    }
+    .freq-tag-x {
+      background: none; border: none; color: inherit; cursor: pointer;
+      opacity: .55; font-size: 1rem; line-height: 1; padding: 0;
+    }
+    .freq-tag-x:hover { opacity: 1; }
+    .freq-raw { flex: 1; min-width: 80px; background: none; border: none; outline: none; color: var(--text); font-size: .88rem; padding: .18rem .25rem; }
+    .hint { font-size: .72rem; color: var(--muted); margin-top: .3rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .45rem; padding: .6rem 1.2rem;
+      border-radius: 8px; font-size: .84rem; font-weight: 600; cursor: pointer;
+      border: none; outline: none; transition: all .18s; white-space: nowrap;
+    }
+    .btn:disabled { opacity: .45; cursor: not-allowed; transform: none !important; }
+    .btn-primary {
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: #fff; box-shadow: 0 0 18px var(--aglow);
+    }
+    .btn-primary:not(:disabled):hover { background: linear-gradient(135deg,#8b5cf6,#7c3aed); transform: translateY(-1px); box-shadow: 0 0 28px var(--aglow); }
+    .btn-teal {
+      background: linear-gradient(135deg, #0891b2, #0e7490);
+      color: #fff; box-shadow: 0 0 18px var(--tglow);
+    }
+    .btn-teal:not(:disabled):hover { background: linear-gradient(135deg,#06b6d4,#0891b2); transform: translateY(-1px); box-shadow: 0 0 28px var(--tglow); }
+    .btn-ghost { background: var(--card2); color: var(--dim); border: 1px solid var(--border); }
+    .btn-ghost:not(:disabled):hover { border-color: var(--acl); color: var(--text); }
+    .btn-sm { padding: .32rem .7rem; font-size: .75rem; border-radius: 6px; }
+    .btn-row { display: flex; gap: .65rem; flex-wrap: wrap; justify-content: center; }
+    .icon-play, .icon-download, .icon-stop { display: inline-block; width: 12px; height: 12px; position: relative; }
+    .icon-play { border-left: 10px solid currentColor; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+    .icon-download { border: none; }
+    .icon-download::before { content: ''; position: absolute; left: 3px; top: 0; width: 6px; height: 7px; border-bottom: 2px solid currentColor; border-left: 2px solid currentColor; border-right: 2px solid currentColor; }
+    .icon-download::after { content: ''; position: absolute; left: 5px; top: 2px; width: 2px; height: 6px; background: currentColor; }
+    .icon-stop { background: currentColor; border-radius: 1px; }
+    .spin { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.25); border-top-color: #fff; border-radius: 50%; animation: spinning .65s linear infinite; }
+    @keyframes spinning { to { transform: rotate(360deg); } }
+    .wcanvas { width: 100%; height: 110px; display: block; background: var(--card2); border: 1px solid var(--border); border-radius: 8px; }
+    .vis-section {
+      display: none; grid-template-columns: auto 1fr; gap: 1.2rem; margin-bottom: 1.25rem;
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem;
+      position: relative; overflow: hidden;
+    }
+    .vis-section.on { display: grid; }
+    @media (max-width:640px) {
+      .vis-section.on { grid-template-columns: 1fr; }
+      .cymatics-canvas { width: 180px !important; height: 180px !important; }
+      .header h1 { font-size: 1.35rem; }
+      .nav { padding: 0 0.5rem; }
+      .main { padding: 1rem 0.75rem; }
+    }
+    .cymatics-wrap { display: flex; flex-direction: column; align-items: center; gap: .55rem; position: relative; }
+    .cymatics-canvas {
+      width: 200px; height: 200px; border-radius: 50%; border: 1px solid rgba(124,58,237,.45);
+      box-shadow: 0 0 36px rgba(124,58,237,.22), 0 0 10px rgba(6,182,212,.15), 0 0 60px rgba(124,58,237,.15), inset 0 0 30px rgba(124,58,237,.1);
+      image-rendering: pixelated; image-rendering: crisp-edges; cursor: default;
+      animation: cymPulse 4s ease-in-out infinite;
+    }
+    @keyframes cymPulse { 0%,100%{transform:scale(1);box-shadow:0 0 36px rgba(124,58,237,.22),0 0 10px rgba(6,182,212,.15)} 50%{transform:scale(1.02);box-shadow:0 0 50px rgba(124,58,237,.35),0 0 20px rgba(6,182,212,.25)} }
+    .cymatics-lbl { font-size: .62rem; color: var(--muted); text-transform: uppercase; letter-spacing: .09em; }
+    .vis-right { flex: 1; display: flex; flex-direction: column; gap: .85rem; min-width: 0; }
+    .vis-subtitle { font-size: .64rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .freq-waves { display: flex; flex-direction: column; gap: .55rem; position: relative; }
+    .wave-overlay-canvas { width:100%; height:90px; border-radius:8px; border:1px solid rgba(124,58,237,.25); box-shadow:0 0 20px rgba(124,58,237,.1),inset 0 0 15px rgba(6,182,212,.05); display:block; }
+    .wave-legend { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.15rem; }
+    .wave-leg-item { font-size:.68rem; font-family:monospace; display:flex; align-items:center; gap:.28rem; }
+    .wave-leg-swatch { display:inline-block; width:20px; height:2px; border-radius:1px; flex-shrink:0; box-shadow:0 0 4px currentColor; }
+    .composite-canvas { width:100%; height:64px; display:block; border-radius:7px; border:1px solid rgba(124,58,237,.2); background:var(--card2); box-shadow:0 0 15px rgba(124,58,237,.12),0 0 30px rgba(6,182,212,.08); }
+    .pl-osc { display:none; width:74px; height:28px; border-radius:4px; flex-shrink:0; background:rgba(9,13,22,.8); border:1px solid var(--border); }
+    .pl-osc.on { display:block; }
+    .pl-cym { display:none; width:36px; height:36px; border-radius:50%; border:1px solid rgba(124,58,237,.4); flex-shrink:0; image-rendering:pixelated; }
+    .pl-cym.on { display:block; }
+    .filter-row { display:flex; flex-wrap:wrap; gap:.38rem; margin-bottom:.85rem; }
+    .chip { padding:.22rem .7rem; border-radius:20px; font-size:.72rem; cursor:pointer; background:var(--card2); border:1px solid var(--border); color:var(--muted); transition:all .15s; }
+    .chip:hover, .chip.on { background:rgba(124,58,237,.2); border-color:var(--acl); color:var(--acl); }
+    .preset-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:.7rem; justify-items:center; }
+    .preset-card { background:var(--card2); border:1px solid var(--border); border-radius:10px; padding:.95rem 1rem; transition:border-color .18s,box-shadow .18s; width:100%; max-width:340px; }
+    .preset-card:hover { border-color:rgba(124,58,237,.35); box-shadow:0 0 16px rgba(124,58,237,.08); }
+    .preset-card.playing { border-color:var(--acl); box-shadow:0 0 22px var(--aglow); }
+    .preset-name { font-size:.88rem; font-weight:600; margin-bottom:.3rem; }
+    .preset-freqs { font-size:.72rem; color:var(--muted); font-family:monospace; margin-bottom:.7rem; }
+    .preset-btns { display:flex; gap:.45rem; }
+    .trinity-list { display:flex; flex-direction:column; gap:.45rem; max-width:600px; margin:0 auto; }
+    .trinity-row { background:var(--card2); border:1px solid var(--border); border-radius:10px; padding:.8rem 1rem; display:flex; align-items:center; gap:1rem; transition:border-color .18s; }
+    .trinity-row:hover { border-color:rgba(124,58,237,.35); }
+    .trinity-row.playing { border-color:var(--acl); box-shadow:0 0 18px var(--aglow); }
+    .tn { font-size:.72rem; color:var(--muted); font-family:monospace; min-width:1.5rem; }
+    .ti { flex:1; }
+    .ti-name { font-size:.88rem; font-weight:500; }
+    .ti-freqs { font-size:.72rem; color:var(--muted); font-family:monospace; }
+    .ta { display:flex; gap:.4rem; }
+    .player {
+      position:fixed; bottom:0; left:0; right:0; background:rgba(10,14,26,.94);
+      backdrop-filter:blur(12px); border-top:1px solid var(--border);
+      padding:.7rem 2rem; display:none; align-items:center; gap:1rem; z-index:200;
+    }
+    .player.on { display:flex; }
+    .pl-info { min-width:0; flex:0 0 180px; }
+    .pl-name { font-size:.82rem; font-weight:600; color:var(--acl); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .pl-freqs { font-size:.68rem; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .pl-prog { flex:1; display:flex; align-items:center; gap:.65rem; }
+    .prog-track { flex:1; height:4px; background:var(--card3); border-radius:2px; }
+    .prog-fill { height:100%; background:linear-gradient(90deg,#7c3aed,#06b6d4); border-radius:2px; width:0%; transition:width .15s linear; }
+    .pl-time { font-size:.7rem; color:var(--muted); min-width:54px; text-align:right; }
+    .stop-btn { padding:.32rem .72rem; font-size:.75rem; border-radius:6px; background:rgba(239,68,68,.15); border:1px solid rgba(239,68,68,.35); color:#fca5a5; cursor:pointer; }
+    .stop-btn:hover { background:rgba(239,68,68,.25); }
+    .pause-btn { padding:.32rem .72rem; font-size:.85rem; border-radius:6px; background:rgba(124,58,237,.15); border:1px solid rgba(124,58,237,.35); color:var(--acl); cursor:pointer; line-height:1; }
+    .pause-btn:hover { background:rgba(124,58,237,.25); }
+    .prog-track { cursor:pointer; }
+    .prog-track:hover { height:6px; margin-top:-1px; }
+    #vol-slider { -webkit-appearance:none; appearance:none; height:4px; background:var(--card3); border-radius:2px; outline:none; }
+    #vol-slider::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:12px; height:12px; border-radius:50%; background:var(--acl); cursor:pointer; }
+    #vol-slider::-moz-range-thumb { width:12px; height:12px; border-radius:50%; background:var(--acl); cursor:pointer; border:none; }
+    .toast { position:fixed; top:1rem; right:1rem; padding:.65rem .95rem; border-radius:8px; font-size:.8rem; max-width:300px; opacity:0; transform:translateY(-8px); transition:all .25s; z-index:500; pointer-events:none; }
+    .toast.on { opacity:1; transform:translateY(0); }
+    .toast.info { background:rgba(99,102,241,.92); color:#fff; }
+    .toast.success { background:rgba(16,185,129,.92); color:#fff; }
+    .toast.error { background:rgba(239,68,68,.92); color:#fff; }
+    @media (max-width:600px) { .main { padding:1rem 0.5rem; } .preset-grid { grid-template-columns:1fr; } .player { padding:.6rem 1rem; } .pl-info { flex:0 0 130px; } .card { padding:1rem; } .btn-row { justify-content:center; } }
+    @media (min-width:768px) { .main { max-width:900px; } }
+    ::-webkit-scrollbar { width:5px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
+    #bg-particles { position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:0.4; }
+    .card { position:relative; overflow:hidden; animation:cardFadeIn 0.6s ease-out both; }
+    .card::after { content:''; position:absolute; inset:0; border-radius:14px; padding:1px; background:linear-gradient(var(--angle,0deg),transparent 40%,rgba(124,58,237,.3) 50%,rgba(6,182,212,.3) 60%,transparent 70%); -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0); -webkit-mask-composite:xor; mask-composite:exclude; animation:rotateBorder 6s linear infinite; pointer-events:none; }
+    @property --angle { syntax:'<angle>'; initial-value:0deg; inherits:false; }
+    @keyframes rotateBorder { to { --angle:360deg; } }
+    @keyframes cardFadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .card:nth-child(1) { animation-delay:0.1s; }
+    .card:nth-child(2) { animation-delay:0.2s; }
+    .card:nth-child(3) { animation-delay:0.3s; }
+    .ripple { position:absolute; border-radius:50%; background:rgba(124,58,237,.35); transform:scale(0); animation:rippleAnim 0.6s ease-out; pointer-events:none; }
+    @keyframes rippleAnim { to { transform:scale(4); opacity:0; } }
+    .preset-card { animation:presetSlideIn 0.4s ease-out both; }
+    @keyframes presetSlideIn { from { opacity:0; transform:translateY(16px) scale(0.97); } to { opacity:1; transform:translateY(0) scale(1); } }
+    .trinity-row { animation:trinitySlideIn 0.35s ease-out both; }
+    @keyframes trinitySlideIn { from { opacity:0; transform:translateX(-20px); } to { opacity:1; transform:translateX(0); } }
+    .floating-orb { position:fixed; border-radius:50%; filter:blur(60px); opacity:0.08; pointer-events:none; z-index:0; animation:floatOrb 20s ease-in-out infinite; }
+    .floating-orb:nth-child(1) { width:300px; height:300px; background:#7c3aed; top:10%; left:-5%; animation-delay:0s; }
+    .floating-orb:nth-child(2) { width:250px; height:250px; background:#06b6d4; top:50%; right:-5%; animation-delay:-7s; }
+    .floating-orb:nth-child(3) { width:200px; height:200px; background:#8b5cf6; bottom:10%; left:30%; animation-delay:-14s; }
+    @keyframes floatOrb { 0%,100%{transform:translate(0,0) scale(1)} 25%{transform:translate(40px,-30px) scale(1.1)} 50%{transform:translate(-20px,20px) scale(0.95)} 75%{transform:translate(30px,40px) scale(1.05)} }
+    .tab-pane { animation:tabFadeIn 0.3s ease-out; }
+    @keyframes tabFadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+    .btn-primary, .btn-teal { position:relative; overflow:hidden; }
+    .btn-primary::before, .btn-teal::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.15) 0%,transparent 60%); opacity:0; transition:opacity 0.3s; pointer-events:none; }
+    .btn-primary:hover::before, .btn-teal:hover::before { opacity:1; }
+    .preset-card:nth-child(1) { animation-delay:0.05s; }
+    .preset-card:nth-child(2) { animation-delay:0.1s; }
+    .preset-card:nth-child(3) { animation-delay:0.15s; }
+    .preset-card:nth-child(4) { animation-delay:0.2s; }
+    .preset-card:nth-child(5) { animation-delay:0.25s; }
+    .preset-card:nth-child(6) { animation-delay:0.3s; }
+    .preset-card:nth-child(7) { animation-delay:0.35s; }
+    .preset-card:nth-child(8) { animation-delay:0.4s; }
+    .preset-card:nth-child(n+9) { animation-delay:0.45s; }
+    .trinity-row:nth-child(1) { animation-delay:0.05s; }
+    .trinity-row:nth-child(2) { animation-delay:0.1s; }
+    .trinity-row:nth-child(3) { animation-delay:0.15s; }
+    .trinity-row:nth-child(4) { animation-delay:0.2s; }
+    .trinity-row:nth-child(5) { animation-delay:0.25s; }
+    .trinity-row:nth-child(6) { animation-delay:0.3s; }
+    .trinity-row:nth-child(7) { animation-delay:0.35s; }
+    .trinity-row:nth-child(8) { animation-delay:0.4s; }
+    .trinity-row:nth-child(9) { animation-delay:0.45s; }
+    .trinity-row:nth-child(10) { animation-delay:0.5s; }
+    .theory-section { margin-bottom:1.5rem; }
+    .theory-section-title { font-size:.95rem; font-weight:700; color:var(--acl); margin-bottom:.6rem; padding-bottom:.3rem; border-bottom:1px solid var(--border); }
+    .theory-card { background:var(--card2); border:1px solid var(--border); border-radius:8px; padding:.85rem 1rem; margin-bottom:.5rem; transition:border-color .18s; }
+    .theory-card:hover { border-color:rgba(124,58,237,.35); }
+    .theory-freq { font-size:1.05rem; font-weight:700; color:var(--teal); font-family:monospace; margin-bottom:.2rem; }
+    .theory-name { font-size:.85rem; font-weight:600; color:var(--text); margin-bottom:.25rem; }
+    .theory-desc { font-size:.75rem; color:var(--dim); line-height:1.45; }
+    .theory-tag { display:inline-block; padding:.1rem .45rem; border-radius:4px; font-size:.65rem; font-weight:600; margin:.15rem .2rem 0 0; background:rgba(124,58,237,.15); color:var(--acl); border:1px solid rgba(124,58,237,.25); }
+    .theory-brainwave { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.5rem; margin-top:.5rem; }
+    .theory-bw-card { background:var(--card2); border:1px solid var(--border); border-radius:8px; padding:.75rem 1rem; }
+    .theory-bw-name { font-size:.85rem; font-weight:700; margin-bottom:.15rem; }
+    .theory-bw-range { font-size:.7rem; color:var(--teal); font-family:monospace; margin-bottom:.2rem; }
+    .theory-bw-desc { font-size:.72rem; color:var(--dim); line-height:1.4; }
+    @media (max-width:600px) { .theory-brainwave { grid-template-columns:1fr; } }
+    /* Library sidebar */
+    #library-sidebar a { display:block; padding:.35rem .5rem; font-size:.72rem; color:var(--dim); text-decoration:none; border-radius:4px; cursor:pointer; transition:all .15s; }
+    #library-sidebar a:hover, #library-sidebar a.active { background:rgba(124,58,237,.15); color:var(--acl); }
+    /* Legal pages */
+    .legal-content h3 { color:var(--acl); margin:1rem 0 .5rem; font-size:.9rem; }
+    .legal-content p { margin-bottom:.75rem; }
+    .legal-content ul { padding-left:1.2rem; }
+    .legal-content li { margin-bottom:.3rem; }
+  </style>
+</head>
+<body>
+<canvas id="bg-particles"></canvas>
+<div class="floating-orb"></div>
+<div class="floating-orb"></div>
+<div class="floating-orb"></div>
+<header class="header">
+  <h1>Therapeutic Frequency Generator</h1>
+  <p>Pure sine wave audio therapy — Quantum Merlin</p>
+</header>
+<nav class="nav" id="nav" role="tablist" aria-label="Main navigation">
+  <button class="nav-tab active" data-tab="home" role="tab" aria-selected="true">Home</button>
+  <button class="nav-tab" data-tab="library" role="tab">Library</button>
+  <button class="nav-tab" data-tab="presets" role="tab">Presets</button>
+  <button class="nav-tab" data-tab="custom" role="tab">Custom</button>
+  <button class="nav-tab" data-tab="playlists" role="tab">Playlists</button>
+  <button class="nav-tab" data-tab="theory" role="tab">Theory</button>
+  <button class="nav-tab" data-tab="legal" role="tab">Legal</button>
+</nav>
+<main class="main">
+  <!-- Home -->
+  <div class="tab-pane active" id="pane-home">
+    <div class="card">
+      <div class="card-title">What do you need today?</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.65rem;margin-bottom:1.2rem">
+        <button class="btn btn-ghost" onclick="quickStart('sleep')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🌙</span><span style="font-size:.75rem">Sleep Better</span></button>
+        <button class="btn btn-ghost" onclick="quickStart('focus')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🎯</span><span style="font-size:.75rem">Focus & Study</span></button>
+        <button class="btn btn-ghost" onclick="quickStart('anxiety')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🧘</span><span style="font-size:.75rem">Calm Anxiety</span></button>
+        <button class="btn btn-ghost" onclick="quickStart('healing')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">💚</span><span style="font-size:.75rem">Heal & Recover</span></button>
+        <button class="btn btn-ghost" onclick="quickStart('manifest')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">✨</span><span style="font-size:.75rem">Manifest</span></button>
+        <button class="btn btn-ghost" onclick="quickStart('meditate')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🔮</span><span style="font-size:.75rem">Meditate</span></button>
+        <button class="btn btn-ghost" onclick="quickStart('protection')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">🛡️</span><span style="font-size:.75rem">Protection</span></button>
+        <button class="btn btn-ghost" onclick="quickStart('energy')" style="flex-direction:column;padding:1rem;gap:.3rem;height:auto"><span style="font-size:1.5rem">⚡</span><span style="font-size:.75rem">Energy Boost</span></button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Daily Routine Suggestions</div>
+      <div style="text-align:left;font-size:.78rem;color:var(--dim);line-height:1.6">
+        <p><strong style="color:var(--acl)">🌅 Morning (5 min):</strong> Morning Activation — sets positive tone for the day</p>
+        <p><strong style="color:var(--teal)">💼 Work (15 min):</strong> Goal Achiever or Homework Focus — sustained concentration</p>
+        <p><strong style="color:var(--acl)">🌤️ Afternoon (10 min):</strong> Digital Detox or Stress Relief — reset and recharge</p>
+        <p><strong style="color:var(--teal)">🌙 Evening (15 min):</strong> Evening Wind Down or Deep Sleep — prepare for rest</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Popular Tracks</div>
+      <div id="popular-tracks" style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center"></div>
+    </div>
+  </div>
+  <!-- Library -->
+  <div class="tab-pane" id="pane-library">
+    <div class="card" style="display:grid;grid-template-columns:200px 1fr;gap:1.2rem;text-align:left">
+      <div id="library-sidebar" style="max-height:70vh;overflow-y:auto">
+        <div style="font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">Collections</div>
+        <div id="library-nav"></div>
+      </div>
+      <div>
+        <input type="text" id="library-search" class="input" placeholder="Search all 200+ tracks…" style="margin-bottom:.85rem" oninput="filterLibrary()">
+        <div id="library-content"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Presets -->
+  <div class="tab-pane" id="pane-presets">
+    <div class="card">
+      <div class="card-title">Core Therapeutic Presets</div>
+      <input type="text" class="input" id="preset-search" placeholder="Search presets…" style="margin-bottom:.85rem" oninput="filterPresets()">
+      <div class="filter-row" id="filter-row"></div>
+      <div class="preset-grid" id="preset-grid"></div>
+    </div>
+  </div>
+  <!-- Custom -->
+  <div class="tab-pane" id="pane-custom">
+    <div class="card">
+      <div class="card-title">Build Your Track</div>
+      <div class="field"><label for="track-name">Track Name</label><input type="text" id="track-name" class="input" placeholder="Custom Therapeutic Track" value="Custom Therapeutic Track"></div>
+      <div class="field"><label>Frequencies (Hz) — up to 6. Press Enter or comma to add.</label><div class="freq-box" id="freq-box" onclick="document.getElementById('freq-raw').focus()"><input type="text" id="freq-raw" class="freq-raw" placeholder="e.g. 528"></div><div class="hint">Examples: 528 | 174, 285, 396 | 7.83, 40 | 2, 6, 10, 40</div></div>
+      <div class="field"><label for="dur-input">Duration</label><input type="text" id="dur-input" class="input" placeholder="96.3" value="96.3"><div class="hint">Formats: seconds (96.3) | minutes (5m) | target MP3 size (18mb, max 20mb)</div></div>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="play-custom-btn" onclick="playCustom()"><span class="icon-play"></span> Play</button>
+        <button class="btn btn-teal" id="dl-custom-btn" onclick="downloadCustom()"><span class="icon-download"></span> Download WAV</button>
+        <button class="btn btn-ghost" id="save-custom-btn" onclick="saveCurrentTrack()">Save Track</button>
+      </div>
+    </div>
+    <div class="card"><div class="card-title">Saved Tracks (stored locally)</div><div id="saved-tracks-container"></div></div>
+    <div class="vis-section" id="vis-section">
+      <div class="cymatics-wrap"><canvas id="cymatics-canvas" class="cymatics-canvas" width="200" height="200"></canvas><div class="cymatics-lbl">Cymatics Pattern</div></div>
+      <div class="vis-right"><div class="vis-subtitle">Individual Frequency Waves</div><div id="freq-waves" class="freq-waves"></div><div><div class="vis-subtitle" style="margin-bottom:.4rem">Composite Waveform</div><canvas id="composite-canvas" class="composite-canvas" height="64"></canvas></div></div>
+    </div>
+  </div>
+  <!-- Playlists -->
+  <div class="tab-pane" id="pane-playlists">
+    <div class="card">
+      <div class="card-title">Playlist Manager</div>
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;justify-content:center">
+        <input type="text" id="playlist-name" class="input" placeholder="New playlist name…" style="max-width:220px">
+        <button class="btn btn-primary btn-sm" onclick="createPlaylist()">+ Create Playlist</button>
+        <button class="btn btn-teal btn-sm" onclick="exportPlaylists()">Export All</button>
+        <button class="btn btn-ghost btn-sm" onclick="importPlaylists()">Import</button>
+      </div>
+      <div id="playlists-container"></div>
+    </div>
+  </div>
+  <!-- Theory -->
+  <div class="tab-pane" id="pane-theory">
+    <div class="card">
+      <div class="card-title">Frequency Therapy Theory & Reference</div>
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:1.2rem;text-align:left">Sound frequencies can influence brainwave states, promote healing, and alter consciousness. Below is a comprehensive guide to therapeutic frequencies.</p>
+      <div id="theory-content" style="text-align:left"></div>
+    </div>
+  </div>
+  <!-- Legal -->
+  <div class="tab-pane" id="pane-legal">
+    <div class="card">
+      <div class="card-title">Legal Information</div>
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem">
+        <button class="btn btn-ghost btn-sm" onclick="showLegal('privacy')">Privacy Policy</button>
+        <button class="btn btn-ghost btn-sm" onclick="showLegal('terms')">Terms of Use</button>
+        <button class="btn btn-ghost btn-sm" onclick="showLegal('disclaimer')">Disclaimer</button>
+        <button class="btn btn-ghost btn-sm" onclick="showLegal('cookies')">Cookie Policy</button>
+      </div>
+      <div id="legal-content" class="legal-content"></div>
+    </div>
+  </div>
+</main>
+<div class="player" id="player">
+  <div class="pl-info"><div class="pl-name" id="pl-name">—</div><div class="pl-freqs" id="pl-freqs">—</div></div>
+  <div class="pl-prog"><div class="prog-track" id="prog-track"><div class="prog-fill" id="prog-fill"></div></div><div class="pl-time" id="pl-time">0:00</div></div>
+  <div style="display:flex;align-items:center;gap:.3rem;flex-shrink:0"><label style="font-size:.6rem;color:var(--muted)">Duration:</label><input type="text" id="global-dur" class="input" value="96.3" style="width:52px;padding:.15rem .3rem;font-size:.65rem;text-align:center" title="Track duration (seconds or minutes e.g. 5m)"></div>
+  <div style="display:flex;align-items:center;gap:.3rem;flex-shrink:0" title="Volume"><span style="font-size:.7rem;color:var(--muted)">🔊</span><input type="range" id="vol-slider" min="0" max="1" step="0.01" value="0.8" style="width:60px"></div>
+  <canvas id="pl-osc" class="pl-osc" width="74" height="28"></canvas>
+  <canvas id="pl-cym" class="pl-cym" width="36" height="36"></canvas>
+  <button class="pause-btn" id="pause-btn" onclick="togglePause()"><span id="pause-icon">⏸</span></button>
+  <button class="stop-btn" onclick="stopAudio()"><span class="icon-stop"></span> Stop</button>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+// ══════════════════════════════════════════════════════════════
+//  DATA — Comprehensive Frequency Database
+// ══════════════════════════════════════════════════════════════
+const TRACK_METADATA = {
+  "Deep Theta Waves": { desc:"Foundation theta brainwave entrainment paired with the sacred 37/73Hz primes. Opens the gateway to deep meditation and subconscious access.", benefits:["Deep relaxation","Meditation support","Stress reduction","Subconscious access"], whoFor:"Meditators, anyone seeking calm, spiritual explorers", howToUse:"Listen for 15-20 mins with headphones. Best in a quiet space. Can be used before sleep.", affirmations:["I am calm and centered.","My mind flows with peace.","I access deep wisdom easily."] },
+  "Cosmic Gateway": { desc:"Opens the cosmic connection using 27.5Hz, a frequency linked to Earth's rotation and sacred geometry.", benefits:["Expanded awareness","Cosmic connection","Spiritual opening"], whoFor:"Advanced meditators, starseeds, consciousness explorers", howToUse:"Use during meditation or stargazing. 15-30 minutes. Ground yourself afterward.", affirmations:["I am connected to the cosmos.","The universe flows through me.","I am open to higher dimensions."] },
+  "Angelic Resonance": { desc:"Connects to higher realms using 111Hz, the Angelic Gateway frequency. Promotes divine communication and protection.", benefits:["Angelic connection","Divine guidance","Spiritual protection"], whoFor:"Those seeking spiritual guidance, lightworkers, empaths", howToUse:"Listen with open heart. 15-20 mins. Set intention for guidance before starting.", affirmations:["I am guided and protected.","Angelic light surrounds me.","I receive divine wisdom."] },
+  "Quantum Manifestor": { desc:"Activates manifestation power with 194Hz. Bridges the gap between intention and physical reality.", benefits:["Manifestation acceleration","Reality creation","Intention amplification"], whoFor:"Manifestors, law of attraction practitioners, goal-setters", howToUse:"Listen while visualizing your desires. 15-30 mins. Speak affirmations aloud.", affirmations:["I create my reality effortlessly.","My intentions manifest instantly.","Abundance flows to me."] },
+  "Universal Harmony": { desc:"Finds perfect balance using 432Hz, the natural tuning of the universe. Promotes peace, coherence, and alignment.", benefits:["Inner peace","Universal alignment","Emotional balance"], whoFor:"Everyone, especially those feeling out of sync or stressed", howToUse:"Play in background during work or relaxation. 30+ minutes.", affirmations:["I am in harmony with the universe.","Peace flows through me.","All is well in my world."] },
+  "DNA Light Codes": { desc:"Cellular repair and transformation using 528Hz, the Miracle Tone. Repairs DNA and bathes cells in love.", benefits:["DNA repair","Cellular regeneration","Emotional healing","Love frequency"], whoFor:"Healers, those seeking physical/emotional repair, biohackers", howToUse:"Listen daily for 15-30 mins. Drink charged water afterward for enhanced effect.", affirmations:["My cells are healing and renewing.","Love flows through my DNA.","I am whole and perfect."] },
+  "Heart Chakra Synergy": { desc:"Opens connection and love using 639Hz. Harmonizes relationships and fosters compassion.", benefits:["Heart opening","Relationship healing","Compassion","Emotional balance"], whoFor:"Those working on relationships, empaths, heart-centered individuals", howToUse:"Listen while focusing on the heart center. 15-20 mins.", affirmations:["My heart is open to love.","I forgive and release the past.","I am worthy of love."] },
+  "Intuitive Awakening": { desc:"Activates inner knowing with 741Hz. Awakens intuition, detoxifies the mind, and promotes clear expression.", benefits:["Intuition boost","Mental detox","Clear expression","Problem solving"], whoFor:"Psychics, creatives, decision-makers, truth-seekers", howToUse:"Use before making decisions or creative work. 15 mins.", affirmations:["I trust my inner voice.","My intuition is sharp and clear.","I express my truth with ease."] },
+  "Third Eye Clarity": { desc:"Expands perception using 852Hz. Returns to spiritual order and activates the third eye.", benefits:["Third eye activation","Psychic vision","Spiritual order","Mental clarity"], whoFor:"Psychic developers, meditators, those seeking deeper insight", howToUse:"Listen in darkness or with eye mask. 15-20 mins.", affirmations:["I see clearly with my inner eye.","My perception is expanding.","I am spiritually awake."] },
+  "Pineal Activation": { desc:"Crown chakra and divine connection using 963Hz. The frequency of the gods, promoting oneness and enlightenment.", benefits:["Pineal gland activation","Crown chakra opening","Divine connection","Enlightenment"], whoFor:"Advanced spiritual practitioners, mystics, enlightenment seekers", howToUse:"Use sparingly. 10-15 mins. Ground thoroughly afterward.", affirmations:["I am one with the divine.","My crown chakra is open and radiant.","I receive cosmic wisdom."] },
+  "Thoth Manifestation": { desc:"47.0Hz - The frequency of the Builder. Used to materialize thoughts and intentions into physical reality.", benefits:["Materialization","Thought-to-form","Creation"], whoFor:"Manifestors, creators", howToUse:"Listen while visualizing your goal. 15 mins.", affirmations:["My thoughts become reality.","I build my dreams."] },
+  "Thoth Communication": { desc:"57.2Hz - Aligns with Thoth as the scribe and messenger. Enhances clarity in speech, writing, and telepathic communication.", benefits:["Clear speech","Telepathy","Writing flow"], whoFor:"Speakers, writers, communicators", howToUse:"Listen before speaking or writing. 10-15 mins.", affirmations:["My words carry power.","I communicate with clarity."] },
+  "Thoth Healing": { desc:"68.5Hz - The frequency of the Healer. Aims to restore balance and harmony to the physical and energetic bodies.", benefits:["Physical healing","Energetic balance","Restoration"], whoFor:"Healers, those recovering from illness", howToUse:"Listen during rest or healing sessions. 20 mins.", affirmations:["My body heals perfectly.","Balance is restored."] },
+  "Thoth Intuition": { desc:"91.3Hz - Opens the gateway to inner knowing and psychic faculties. Connects to the subconscious and higher mind.", benefits:["Psychic opening","Subconscious access","Inner knowing"], whoFor:"Psychics, intuitives", howToUse:"Meditate with this track. 15 mins.", affirmations:["I know what I need to know.","My intuition guides me."] },
+  "Thoth Creativity": { desc:"95.5Hz - The frequency of the Artist. Unlocks creative potential, inspiration, and innovative problem-solving.", benefits:["Creative flow","Inspiration","Innovation"], whoFor:"Artists, inventors, problem-solvers", howToUse:"Listen while creating. 20 mins.", affirmations:["Creativity flows through me.","I am inspired."] },
+  "Thoth Strength": { desc:"96.8Hz - Builds inner fortitude, courage, and resilience. Provides the power to overcome obstacles.", benefits:["Courage","Resilience","Inner power"], whoFor:"Those facing challenges, warriors", howToUse:"Listen before difficult tasks. 10 mins.", affirmations:["I am strong and resilient.","I overcome all obstacles."] },
+  "Thoth Love": { desc:"112.4Hz - Vibrates at the core of universal love, fostering compassion, self-love, and unity consciousness.", benefits:["Universal love","Self-love","Compassion"], whoFor:"Everyone, especially those needing self-love", howToUse:"Listen with hand on heart. 15 mins.", affirmations:["I am love.","I love myself completely."] },
+  "Thoth Knowledge": { desc:"117.5Hz - Accesses akashic records and deep wisdom. Facilitates learning, understanding, and the retention of information.", benefits:["Wisdom access","Learning boost","Memory retention"], whoFor:"Students, wisdom seekers", howToUse:"Listen while studying or meditating. 20 mins.", affirmations:["I access infinite wisdom.","Learning is easy for me."] },
+  "Thoth Spiritual Connection": { desc:"121.9Hz - The highest frequency, bridging the individual soul with the divine and the cosmos. Facilitates mystical states.", benefits:["Divine bridge","Mystical states","Soul connection"], whoFor:"Mystics, spiritual seekers", howToUse:"Meditate deeply. 15 mins.", affirmations:["I am connected to Source.","My soul sings with the cosmos."] },
+  "Digital Detox - Screen Time Calm": { desc:"Helps children transition from screen time to calm time. Uses 7.83Hz (grounding), 10Hz (alpha calm), and 40Hz (cognitive reset).", benefits:["Reduces screen agitation","Promotes calm transition","Resets dopamine"], whoFor:"Parents, children, anyone with screen fatigue", howToUse:"Play 10 mins before screen time ends, continue 20 mins after. Use speakers.", affirmations:["I am calm after screens.","My mind is peaceful."] },
+  "Game Over Protocol": { desc:"The trinity of transition for highly engaging games. 7.83Hz grounds, 20.3Hz competitively engages the brain, 40Hz synchronizes and resets.", benefits:["Breaks hyper-focus loops","Grounds energy","Prevents meltdowns"], whoFor:"Parents of gamers, ADHD support", howToUse:"Start 10 mins before game ends. Play 20 mins after. Use speakers.", affirmations:["I transition easily.","I am calm and grounded."] },
+  "After School Reset": { desc:"Decompresses from the structured school environment. Eases anxiety and releases the day's tensions.", benefits:["Stress release","Mood improvement","Transition support"], whoFor:"School children, students", howToUse:"Play immediately after school. 15 mins.", affirmations:["School is done, I am home.","I release the day's stress."] },
+  "Homework Focus": { desc:"Creates a bubble of concentrated calm. Supports sustained attention and information retention.", benefits:["Sustained focus","Memory retention","Calm concentration"], whoFor:"Students, homework strugglers", howToUse:"Play during homework time. 30 mins.", affirmations:["I focus easily.","Learning is fun."] },
+  "Morning Activation": { desc:"Awakens mind, body, and spirit. Sets a positive tone for the day with focused energy.", benefits:["Energy boost","Mental clarity","Positive start"], whoFor:"Everyone, especially morning groggers", howToUse:"Listen first thing in the morning. 10 mins.", affirmations:["I am awake and alive.","Today is full of possibility."] },
+  "Evening Wind Down": { desc:"Releases the day's stress and prepares the body for restful sleep.", benefits:["Stress release","Sleep prep","Relaxation"], whoFor:"Everyone, especially insomniacs", howToUse:"Listen 30 mins before bed. 15 mins.", affirmations:["I release the day.","Sleep comes easily."] },
+  "Anxiety Dissolver": { desc:"Breaks anxiety loops at their root. Calms the nervous system and restores peace.", benefits:["Anxiety relief","Nervous system calm","Loop breaking"], whoFor:"Anxiety sufferers, worriers", howToUse:"Listen during anxiety spikes. 15 mins.", affirmations:["I am safe and calm.","Anxiety dissolves now."] },
+  "Confidence Embodiment": { desc:"Builds unshakeable self-belief and presence. Master frequency, strength, and light.", benefits:["Self-belief","Presence","Confidence"], whoFor:"Public speakers, leaders, anyone needing confidence", howToUse:"Listen before challenging situations. 10 mins.", affirmations:["I am confident and capable.","I stand in my power."] },
+  "Third Eye Activation": { desc:"Deep theta, mental projection, and light body activation for profound third eye opening.", benefits:["Third eye opening","Psychic vision","Mental projection"], whoFor:"Psychic developers", howToUse:"Meditate with eye mask. 15 mins.", affirmations:["My third eye opens wide.","I see the truth."] },
+  "Kundalini Rising (Safe)": { desc:"Deep stasis, gateway, and root ignition for safe kundalini awakening.", benefits:["Safe energy rise","Root ignition","Spiritual awakening"], whoFor:"Advanced yogis, energy workers", howToUse:"Use with caution. 10 mins. Ground well after.", affirmations:["My energy rises safely.","I am grounded and awake."] },
+  "Akashic Records Portal": { desc:"Gateway, knowledge, and high-level access to the Akashic Records.", benefits:["Akashic access","Soul wisdom","Past life info"], whoFor:"Akashic readers, soul explorers", howToUse:"Meditate with question. 20 mins.", affirmations:["I access the Akashic Records.","Wisdom flows to me."] },
+  "DNA Repair & Activation": { desc:"Focus, miracle tone, and galactic code for deep cellular and DNA repair.", benefits:["DNA repair","Cellular health","Genetic activation"], whoFor:"Biohackers, healers", howToUse:"Listen daily. 20 mins.", affirmations:["My DNA is perfect.","My cells renew."] },
+  "Pain Relief & Management": { desc:"Theta pain block, vitality, and foundation for natural pain relief.", benefits:["Pain reduction","Natural relief","Comfort"], whoFor:"Chronic pain sufferers", howToUse:"Listen during pain. 20 mins.", affirmations:["My body is comfortable.","Pain releases now."] },
+  "Solar Harmony": { desc:"Solar resonance, heart chakra, and crown connection to the sun's energy.", benefits:["Solar energy","Vitality","Heart-crown connection"], whoFor:"Sun worshippers, energy seekers", howToUse:"Listen in sunlight. 15 mins.", affirmations:["I am one with the sun.","Solar energy fills me."] },
+  "Sirian Gateway": { desc:"Sirian codes, galactic, and framework peak for connection to Sirius.", benefits:["Sirian connection","Galactic wisdom","Starseed activation"], whoFor:"Sirian starseeds", howToUse:"Meditate under stars. 15 mins.", affirmations:["I connect to Sirius.","My starseed memory awakens."] },
+  "Earth Element": { desc:"Earth, stability, and root/sacral connection for grounding.", benefits:["Grounding","Stability","Root strength"], whoFor:"Everyone, especially spacey types", howToUse:"Walk barefoot while listening. 15 mins.", affirmations:["I am grounded.","Earth supports me."] },
+  "Water Element": { desc:"Alpha, water element, and universal flow for emotional flow.", benefits:["Emotional flow","Adaptability","Cleansing"], whoFor:"Those needing emotional release", howToUse:"Listen near water. 15 mins.", affirmations:["I flow like water.","Emotions cleanse me."] },
+  "Writer's Inspiration": { desc:"Theta insight, hyper-learning, and creativity for writers.", benefits:["Writing flow","Inspiration","Word access"], whoFor:"Writers, bloggers", howToUse:"Listen while writing. 30 mins.", affirmations:["Words flow through me.","I am inspired."] },
+  "Mathematical Insight": { desc:"Focused beta, Pythagorean perfection for math and logic.", benefits:["Math clarity","Logic boost","Pattern recognition"], whoFor:"Mathematicians, coders", howToUse:"Listen while working. 20 mins.", affirmations:["I see patterns easily.","Math is clear."] },
+  "Empathic Shielding": { desc:"Grounding, strength, and light barrier for empaths.", benefits:["Empath protection","Boundary setting","Energy shielding"], whoFor:"Empaths, sensitives", howToUse:"Listen before social events. 10 mins.", affirmations:["I am shielded.","Only love enters."] },
+  "Soulmate Attraction": { desc:"Gateway, love, and heart connection for soulmate attraction.", benefits:["Soulmate attraction","Love magnetism","Heart opening"], whoFor:"Singles, love seekers", howToUse:"Listen while visualizing partner. 15 mins.", affirmations:["My soulmate is coming.","I am ready for love."] },
+  "The Great Return": { desc:"Deep delta, Earth, and ultimate completion for integration.", benefits:["Integration","Completion","Return to self"], whoFor:"Everyone, especially after deep work", howToUse:"Listen after sessions. 15 mins.", affirmations:["I am whole.","I return to center."] },
+  "I Am Presence": { desc:"Focused being, master healing, 'I Am' love for presence.", benefits:["Presence","I Am awareness","Self-realization"], whoFor:"Meditators, seekers", howToUse:"Meditate on 'I Am'. 15 mins.", affirmations:["I Am that I Am.","I am present."] },
+  "Instant Calm in Chaos": { desc:"Delta calm, Earth, focused freeze for instant calm.", benefits:["Instant calm","Chaos navigation","Focus freeze"], whoFor:"Everyone in stress", howToUse:"Listen during stress. 5 mins.", affirmations:["I am calm now.","Chaos cannot touch me."] },
+  "Miracle Frequency": { desc:"Gateway, gamma, miracle tone for the impossible.", benefits:["Miracles","Impossible made possible","Divine intervention"], whoFor:"Those needing miracles", howToUse:"Listen with faith. 15 mins.", affirmations:["Miracles happen daily.","I am a miracle."] },
+  "System Reboot": { desc:"Deep delta, Earth, gamma sync for full system reboot.", benefits:["Full reset","System reboot","Fresh start"], whoFor:"Everyone feeling stuck", howToUse:"Listen when overwhelmed. 15 mins.", affirmations:["I reboot now.","I am fresh and new."] },
+  "Healer's Hand": { desc:"Theta, master healing, cellular repair for laying on hands.", benefits:["Healing touch","Energy transfer","Cellular repair"], whoFor:"Healers, bodyworkers", howToUse:"Listen while healing. 15 mins.", affirmations:["My hands heal.","Love flows through me."] },
+};
+
+function getTrackMeta(name) {
+  return TRACK_METADATA[name] || {
+    desc:"A therapeutic frequency track designed for specific vibrational benefits.",
+    benefits:["Frequency therapy","Vibrational support"],
+    whoFor:"Anyone seeking vibrational support",
+    howToUse:"Listen for 15-20 minutes with headphones. Set a clear intention before starting.",
+    affirmations:["I am open to healing.","Frequencies support my well-being."]
+  };
+}
+
+const PRESETS = {
+  "528 Hz Love Frequency":[528],"432 Hz Nature Tuning":[432],"396 Hz Fear Release":[396],
+  "741 Hz Consciousness":[741],"852 Hz Intuition":[852],"174 Hz Pain Relief":[174],
+  "285 Hz Tissue Healing":[285],"639 Hz Relationships":[639],"963 Hz Pineal Activation":[963],
+  "Delta Deep Sleep":[1,2,4],"Theta Meditation":[4,6,8],"Alpha Relaxation":[8,10,12],
+  "Beta Focus":[15,20,25],"Gamma Awareness":[40,60,80],
+  "Schumann Primary":[7.83],"Schumann Complete":[7.83,14.3,20.8],"Earth Grounding":[7.83,14.3],
+  "Solfeggio Core 3":[396,528,741],"Solfeggio Lower 3":[174,285,396],
+  "Solfeggio Upper 3":[741,852,963],"Complete Solfeggio":[174,285,396,417,528,639],
+  "Anxiety Relief":[6,8,10],"Pain Management":[2,4,10,40],"Sleep Induction":[1,2,4,6],
+  "Stress Relief":[7.83,10,40],"Depression Support":[6,8,10,40],"Focus Enhancement":[8,15,40],
+  "Healing Frequencies":[174,285,528,741],
+  "Bone Healing":[7.5,15,20],"Tissue Repair":[2,10,20],"Inflammation Reduction":[2,10,40],
+  "Circulation Boost":[0.1,10],"Nerve Regeneration":[2,10],"Immune Support":[7.83,10,40],
+  "Complete Healing Protocol":[174,285,528,741,852],"Brainwave Optimization":[2,6,10,15,40],
+  "Stress Recovery Protocol":[7.83,8,10,40],"Sleep Therapy Protocol":[1,2,4,7.83],
+  "Pain Relief Protocol":[2,4,10,174,528],"Meditation Enhancement":[4,6,8,7.83,40],
+};
+
+const PRESET_CATS = {
+  "All":()=>true,"Single":(n,f)=>f.length===1,
+  "Brainwave":(n)=>/Delta|Theta|Alpha|Beta|Gamma/.test(n),
+  "Solfeggio":(n)=>/Solfeggio|528|432|396|741|852|174|285|639|963/.test(n),
+  "Schumann":(n)=>/Schumann|Earth/.test(n),"Sleep":(n)=>/Sleep/.test(n),
+  "Healing":(n)=>/Heal|Pain|Tissue|Bone|Nerve|Immune|Inflam|Circulat/.test(n),
+  "Protocol":(n)=>/Protocol|Optimization|Complete/.test(n),
+  "Meditation":(n)=>/Meditat|Relax|Anxiet|Stress|Depress|Focus/.test(n),
+};
+
+const TRINITY = [
+  {name:"Deep Theta Waves",freqs:[37,73,9]},{name:"Cosmic Gateway",freqs:[37,73,27.5]},
+  {name:"Angelic Resonance",freqs:[37,73,111]},{name:"Quantum Manifestor",freqs:[37,73,194]},
+  {name:"Universal Harmony",freqs:[37,73,432]},{name:"DNA Light Codes",freqs:[37,73,528]},
+  {name:"Heart Chakra Synergy",freqs:[37,73,639]},{name:"Intuitive Awakening",freqs:[37,73,741]},
+  {name:"Third Eye Clarity",freqs:[37,73,852]},{name:"Pineal Activation",freqs:[37,73,963]},
+];
+
+const TRINITY_V2 = [
+  {name:"Healing Trauma",freqs:[37,73,174]},{name:"Manifesting Reality",freqs:[37,73,194]},
+  {name:"Past Life Gateway",freqs:[37,73,9]},{name:"Spirit Guides",freqs:[37,73,111]},
+  {name:"Dream Control",freqs:[37,73,12]},{name:"DNA Awakening",freqs:[37,73,528]},
+  {name:"Animal Communication",freqs:[37,73,639]},{name:"Memory Enhancement",freqs:[37,73,741]},
+  {name:"Fear Dissolution",freqs:[37,73,396]},{name:"Sound Healing",freqs:[37,73,432]},
+  {name:"Parallel Selves",freqs:[37,73,417]},{name:"Akashic Records",freqs:[37,73,852]},
+  {name:"Future Glimpses",freqs:[37,73,963]},{name:"Telepathy",freqs:[37,73,88]},
+  {name:"Remote Viewing",freqs:[37,73,40]},{name:"Plant Consciousness",freqs:[37,73,136]},
+  {name:"Pain Elimination",freqs:[37,73,285]},{name:"Ancestral Wisdom",freqs:[37,73,33]},
+  {name:"Divine Messages",freqs:[37,73,777]},{name:"Sacred Geometry",freqs:[37,73,144]},
+  {name:"Alien Contact",freqs:[37,73,22.2]},{name:"Time Dilation",freqs:[37,73,27.5]},
+  {name:"Weather Influence",freqs:[37,73,68]},{name:"Light Language",freqs:[37,73,108]},
+  {name:"Geometric Codes",freqs:[37,73,369]},{name:"Void Exploration",freqs:[37,73,0.5]},
+  {name:"Cosmic Consciousness",freqs:[37,73,72]},{name:"Entity Communication",freqs:[37,73,444]},
+  {name:"Dimensional Portals",freqs:[37,73,110]},{name:"Galactic History",freqs:[37,73,192]},
+  {name:"Gravity Manipulation",freqs:[37,73,5]},{name:"Levitation Theory",freqs:[37,73,40,10]},
+  {name:"Invisibility Concept",freqs:[37,73,500]},{name:"Materialization",freqs:[37,73,999]},
+  {name:"Quantum Entanglement",freqs:[37,73,11.76]},{name:"Holographic Universe",freqs:[37,73,360]},
+  {name:"Timelessness",freqs:[37,73,1.618]},{name:"Mythical Realms",freqs:[37,73,88.8]},
+  {name:"Unity with Source",freqs:[37,73,999]},
+];
+
+const THOTH_FREQUENCIES = [
+  {name:"Thoth Manifestation",freqs:[47.0]},{name:"Thoth Communication",freqs:[57.2]},
+  {name:"Thoth Healing",freqs:[68.5]},{name:"Thoth Intuition",freqs:[91.3]},
+  {name:"Thoth Creativity",freqs:[95.5]},{name:"Thoth Strength",freqs:[96.8]},
+  {name:"Thoth Love",freqs:[112.4]},{name:"Thoth Knowledge",freqs:[117.5]},
+  {name:"Thoth Spiritual Connection",freqs:[121.9]},
+  {name:"Tablet I - Light Invocation",freqs:[47.0,112.4,121.9]},{name:"Tablet II - Halls of Amenti",freqs:[68.5,91.3,117.5]},
+  {name:"Tablet III - Key of Wisdom",freqs:[57.2,117.5,121.9]},{name:"Tablet IV - Space Born",freqs:[91.3,95.5,121.9]},
+  {name:"Tablet V - Shadow Mastery",freqs:[68.5,96.8,112.4]},{name:"Tablet VI - Key of Magic",freqs:[47.0,95.5,96.8]},
+  {name:"Tablet VII - Planetary Balance",freqs:[68.5,112.4,117.5]},{name:"Tablet VIII - Key of Mysteries",freqs:[57.2,91.3,121.9]},
+  {name:"Tablet IX - Lord of Cycles",freqs:[47.0,96.8,117.5]},{name:"Tablet X - Crown of Ascension",freqs:[112.4,117.5,121.9]},
+];
+
+const FAMILY_WELLNESS = [
+  {name:"Digital Detox - Screen Time Calm",freqs:[7.83,10,40]},{name:"Game Over Protocol",freqs:[7.83,20.3,40]},
+  {name:"After School Reset",freqs:[7.83,9.4,528]},{name:"Homework Focus",freqs:[14.1,40,360]},
+  {name:"Sibling Harmony",freqs:[186,639,432]},{name:"Brave Heart - Nighttime",freqs:[96.8,128,174]},
+  {name:"Tantrum Tamer",freqs:[2.5,285,417]},{name:"Family Connection",freqs:[528,639,777]},
+  {name:"Little Explorers Sleep",freqs:[2.0,100,432]},{name:"Gamers Come Down",freqs:[7.83,10,40]},
+  {name:"Immune Shield",freqs:[40,285,528]},{name:"Confidence Boost",freqs:[20.3,57.2,112.4]},
+  {name:"Morning Activation",freqs:[10,16,60]},{name:"Calm Focus for Kids",freqs:[10,7.83,432]},
+];
+
+const SOMATIC_SPIRITUAL = [
+  {name:"Third Eye Activation",freqs:[3.5,13.5,144]},{name:"Crown Chakra Connection",freqs:[1.1,8,963]},
+  {name:"Heart Chakra Unblocking",freqs:[5,136.1,528]},{name:"Root Chakra Grounding",freqs:[2,7.83,256]},
+  {name:"Kundalini Rising (Safe)",freqs:[0.5,8,100]},{name:"Past Life Access",freqs:[4,329,117.5]},
+  {name:"Akashic Records Portal",freqs:[7,117.5,170]},{name:"Spirit Guides Connection",freqs:[6.3,33,111]},
+  {name:"Astral Projection Prep",freqs:[3.8,22.5,40]},{name:"Channeling State",freqs:[4.5,144,170]},
+  {name:"Dark Night of Soul Support",freqs:[1.5,7,174]},{name:"Ego Dissolution",freqs:[1.1,13.5,999]},
+  {name:"Unity Consciousness",freqs:[0.1,7.83,112.4]},{name:"Mystical Insight",freqs:[5,40,121.9]},
+  {name:"Sacred Geometry Download",freqs:[10,27.5,128]},{name:"Mantra & Prayer Power",freqs:[108,136.1,144]},
+  {name:"Shadow Work Integration",freqs:[2,396,417]},{name:"Karmic Release",freqs:[4,417,852]},
+  {name:"Ancestral Healing",freqs:[2.5,174,285]},{name:"Divine Feminine",freqs:[9.5,112.4,432]},
+  {name:"Divine Masculine",freqs:[12,96.8,369]},{name:"Christ Consciousness",freqs:[13,528,999]},
+  {name:"Buddha Nature",freqs:[5,136.1,963]},{name:"Shamanic Journeying",freqs:[4,6.8,55]},
+  {name:"Quantum Healing State",freqs:[4.5,33.8,40]},
+];
+
+const SOMATIC_HEALING = [
+  {name:"DNA Repair & Activation",freqs:[20,528,152]},{name:"Cellular Regeneration",freqs:[2,285,55]},
+  {name:"Immune System Boost",freqs:[10,40,150]},{name:"Pain Relief & Management",freqs:[5,100,174]},
+  {name:"Anti-Inflammatory",freqs:[40,68.5,144]},{name:"Detoxification Support",freqs:[16,95.5,285]},
+  {name:"Longevity & Telomere",freqs:[8,33.8,528]},{name:"Hormonal Balance",freqs:[9.4,37,111]},
+  {name:"Metabolic Optimization",freqs:[12,55,128]},{name:"Nervous System Reset",freqs:[4,10,68.5]},
+  {name:"Deep Sleep & Physical Repair",freqs:[1,4,174]},{name:"Eyesight Support",freqs:[14,72,141]},
+  {name:"Hearing Acuity",freqs:[16,57.2,128]},{name:"Muscle Growth & Repair",freqs:[2,20,285]},
+  {name:"Brain Fog Clearance",freqs:[14.1,40,100]},
+];
+
+const SOMATIC_COSMIC = [
+  {name:"Solar Harmony",freqs:[7.23,126.22,160]},{name:"Lunar Connection",freqs:[105.21,136.1]},
+  {name:"Sirian Gateway",freqs:[52,152,170]},{name:"Pleiadian Healing",freqs:[157,165,170]},
+  {name:"Arcturian Knowledge",freqs:[133,144,170]},{name:"Andromedan Clarity",freqs:[143,155,170]},
+  {name:"Lyran Heritage",freqs:[138,148,170]},{name:"Orion Wisdom",freqs:[145,158,170]},
+  {name:"Galactic Center",freqs:[111,144,170]},{name:"Universal Mind",freqs:[0.5,7.83,170]},
+];
+
+const MANIFESTATION_ABUNDANCE = [
+  {name:"Tesla Base",freqs:[3]},{name:"Tesla Harmony",freqs:[6]},{name:"Tesla Power",freqs:[9]},
+  {name:"Tesla Key",freqs:[369]},{name:"Tesla Reverse",freqs:[693]},{name:"Tesla Master",freqs:[936]},
+  {name:"Manifestation Grid",freqs:[144]},{name:"Manifestation Power",freqs:[194]},
+  {name:"Natural Abundance",freqs:[432]},{name:"Miracle Manifestation",freqs:[528]},
+  {name:"Lucky Numbers",freqs:[777]},{name:"Infinite Wealth",freqs:[888]},
+  {name:"Manifestation Portal",freqs:[1111]},{name:"Ultimate Abundance",freqs:[8888]},
+];
+
+const BRAINWAVE_ENTRAINMENT = [
+  {name:"Void State",freqs:[0.1]},{name:"Deep Healing",freqs:[1]},{name:"Regeneration",freqs:[2]},
+  {name:"Dreamless Sleep",freqs:[3]},{name:"Shamanic Journey",freqs:[4.5]},{name:"Deep Meditation",freqs:[5]},
+  {name:"Memory Consolidation",freqs:[6]},{name:"Creative Flow",freqs:[7]},{name:"Alpha Bridge",freqs:[8]},
+  {name:"Relaxed Awareness",freqs:[10]},{name:"Intuitive Insight",freqs:[11]},{name:"Alert Relaxation",freqs:[13]},
+  {name:"Focused Attention",freqs:[14]},{name:"Mental Clarity",freqs:[15]},{name:"Beta Peak",freqs:[18]},
+  {name:"Cognitive Enhancement",freqs:[20]},{name:"Problem Solving",freqs:[25]},{name:"High Beta",freqs:[30]},
+  {name:"Gamma Entry",freqs:[35]},{name:"Perception Enhancement",freqs:[50]},{name:"Higher Awareness",freqs:[70]},
+  {name:"Consciousness Expansion",freqs:[80]},{name:"Neural Synchrony",freqs:[90]},{name:"Hyper Gamma",freqs:[100]},
+];
+
+const CHAKRA_SYSTEM = [
+  {name:"Root Chakra",freqs:[194]},{name:"Sacral Chakra",freqs:[210]},{name:"Solar Plexus",freqs:[126]},
+  {name:"Heart Chakra",freqs:[136]},{name:"Throat Chakra",freqs:[141]},{name:"Third Eye",freqs:[221]},
+  {name:"Crown Chakra",freqs:[172]},{name:"Earth Star",freqs:[802,7.83]},{name:"Soul Star",freqs:[825,963]},
+  {name:"Stellar Gateway",freqs:[848,144]},
+];
+
+const SLEEP_EXTENDED = [
+  {name:"Deep Sleep Delta",freqs:[2.5]},{name:"Coma Recovery",freqs:[0.3]},{name:"Cellular Repair Sleep",freqs:[0.7]},
+  {name:"Growth Hormone Release",freqs:[1.2]},{name:"Memory Consolidation Sleep",freqs:[1.8]},
+  {name:"Immune System Sleep",freqs:[2.2]},{name:"REM Enhancement",freqs:[3.5]},{name:"Dream Programming",freqs:[4.5]},
+  {name:"Sleep Optimization",freqs:[6.3]},{name:"Quantum Sleep",freqs:[1.5]},{name:"Trauma Support Loop",freqs:[0.5]},
+];
+
+const PROTECTION_SERIES = [
+  {name:"Psychic Boundaries",freqs:[22]},{name:"Angelic Guard",freqs:[444]},{name:"Divine Protection",freqs:[555]},
+  {name:"Quantum Shield",freqs:[939]},{name:"Energy Clearing",freqs:[1010]},{name:"Spiritual Protection",freqs:[1212]},
+  {name:"Ultimate Shield",freqs:[9999]},
+];
+
+const EMERGENCY_PROTOCOLS = [
+  {name:"Instant Calm",freqs:[4,10,100]},{name:"Pause Button",freqs:[2.5,7.83,20]},{name:"Rewind Memory",freqs:[4,13.5,40]},
+  {name:"Fast Forward",freqs:[8,20.3,144]},{name:"Eraser - Mental Mistakes",freqs:[5,417,852]},
+  {name:"Amplifier - Positive",freqs:[10,40,112.4]},{name:"Stabilizer - Spiritual",freqs:[7.83,33.8,100]},
+  {name:"Translator - Dreams",freqs:[5.5,13.5,117.5]},{name:"Anchor - Manifesting",freqs:[16,47,128]},
+  {name:"Compassion - Lost",freqs:[7,11,144]},{name:"Master Key",freqs:[8,33,369]},
+  {name:"System Reboot",freqs:[1,7.83,40]},{name:"Software Update",freqs:[8,20.3,117.5]},
+  {name:"Healer's Hand",freqs:[4,33.8,285]},{name:"Gardener's Touch",freqs:[7.83,15,128]},
+  {name:"Animal Whisperer",freqs:[4,20,141]},{name:"Pre-Birth Memory",freqs:[1.5,4,8]},
+  {name:"Between Life Planning",freqs:[4,13.5,117.5]},{name:"Soul Retrieval",freqs:[4.5,33,144]},
+  {name:"Miracle Frequency",freqs:[8,40,528]},
+];
+
+// Top 10 Life-Changing Frequency Triples (from research)
+const TOP_10_LIFE_CHANGING = [
+  {name:"Ascension Trigger",freqs:[1.1,11.76,310]},
+  {name:"Immortality Code",freqs:[0.1,33.8,999]},
+  {name:"Genius Activation",freqs:[7.83,20.3,963]},
+  {name:"Cellular Reboot",freqs:[2.5,55,528]},
+  {name:"Consciousness Download",freqs:[40,111,852]},
+  {name:"Primal Awakening",freqs:[5.5,69,936]},
+  {name:"Harmonic Perfection",freqs:[10,128,432]},
+  {name:"Astral Body",freqs:[13.5,144,777]},
+  {name:"Alchemy Formula",freqs:[27.5,417,639]},
+  {name:"Quantum Purification",freqs:[0.5,100,2000]},
+];
+
+// 20.3Hz Hyper-Learning Collection (30+ cognitive enhancement combinations)
+const HYPER_LEARNING_20_3 = [
+  {name:"Cognitive Overdrive",freqs:[20.3,40,100]},
+  {name:"Mental Clarity & Divine Insight",freqs:[20.3,528,963]},
+  {name:"Focused Grounding",freqs:[20.3,7.83,417]},
+  {name:"Ascended Mastery",freqs:[20.3,333,999]},
+  {name:"Mind-Body Coherence",freqs:[20.3,55,639]},
+  {name:"Intuitive Genius",freqs:[20.3,111,852]},
+  {name:"Harmonic Learning",freqs:[20.3,27.5,432]},
+  {name:"Energetic Problem-Solving",freqs:[20.3,69,741]},
+  {name:"Pineal Hyper-Activation",freqs:[20.3,128,936]},
+  {name:"Stasis Breakthrough",freqs:[20.3,0.1,2000]},
+  {name:"Deep Focus Drive",freqs:[20.3,2.5,310]},
+  {name:"Calm Precision",freqs:[20.3,10,777]},
+  {name:"Manifestation Matrix",freqs:[20.3,13.5,144]},
+  {name:"Healing Intelligence",freqs:[20.3,33.8,528]},
+  {name:"Theta Insight Accelerator",freqs:[20.3,5.5,936]},
+  {name:"Kundalini Cognition",freqs:[20.3,100,999]},
+  {name:"Energetic Clarity",freqs:[20.3,417,852]},
+  {name:"Heart-Mind Sync",freqs:[20.3,27,639]},
+  {name:"Gamma-Sonic Leap",freqs:[20.3,40,2000]},
+  {name:"Hibernation Learning",freqs:[20.3,0.5,432]},
+  {name:"Nikola Tesla's Trinity",freqs:[20.3,7,369]},
+  {name:"Solfeggio Detox Accelerator",freqs:[20.3,18.98,741]},
+  {name:"Sensory Fusion",freqs:[20.3,40,120]},
+  {name:"OM Harmonic Focus",freqs:[20.3,136.1,432]},
+  {name:"Binary Cognition",freqs:[20.3,500,1000]},
+  {name:"Pineal Gateway",freqs:[20.3,172,963]},
+  {name:"Quantum Field Repair",freqs:[20.3,285,528]},
+  {name:"Pythagorean Intellect",freqs:[20.3,64,256]},
+  {name:"Gateway Manifestation",freqs:[20.3,90,111]},
+  {name:"Ultra-Dynamic Range",freqs:[20.3,0.01,20000]},
+];
+
+// 40Hz Gamma Collection (40 cognitive enhancement combinations)
+const GAMMA_40_COLLECTION = [
+  {name:"Grounding Clarity",freqs:[40,7.83,432]},
+  {name:"Divine Awareness",freqs:[40,528,963]},
+  {name:"Calm Insight",freqs:[40,10,111]},
+  {name:"Deep Intuition",freqs:[40,5.5,174]},
+  {name:"Mental Reset",freqs:[40,20.3,417]},
+  {name:"Healing Connection",freqs:[40,27.5,639]},
+  {name:"Energetic Awakening",freqs:[40,100,852]},
+  {name:"Lucid Dreaming",freqs:[40,2.5,936]},
+  {name:"Spiritual Alignment",freqs:[40,33,777]},
+  {name:"Stasis Breakthrough",freqs:[40,0.1,2000]},
+  {name:"Primordial Focus",freqs:[40,1.1,310]},
+  {name:"Cellular Command",freqs:[40,55,741]},
+  {name:"Manifestation Clarity",freqs:[40,13.5,144]},
+  {name:"Vitality Coherence",freqs:[40,69,528]},
+  {name:"Harmonic Enlightenment",freqs:[40,128,963]},
+  {name:"Gateway Purge",freqs:[40,90,417]},
+  {name:"Field Repair",freqs:[40,285,639]},
+  {name:"Pythagorean Gamma",freqs:[40,64,432]},
+  {name:"Cosmic Resolution",freqs:[40,500,999]},
+  {name:"Hibernation Awakening",freqs:[40,0.5,20000]},
+  // Part 2 - 20 more combinations
+  {name:"Gamma-Sonic Leap",freqs:[40,20.3,2000]},
+  {name:"Neural Synchrony",freqs:[40,7,91.3]},
+  {name:"Cognitive Binding",freqs:[40,15,100]},
+  {name:"Peak Awareness",freqs:[40,45,144]},
+  {name:"Insight Activation",freqs:[40,8,852]},
+  {name:"Memory Consolidation",freqs:[40,6,528]},
+  {name:"Sensory Integration",freqs:[40,30,741]},
+  {name:"Bliss State",freqs:[40,112.4,963]},
+  {name:"Expanded Consciousness",freqs:[40,80,121.9]},
+  {name:"Compassion Gamma",freqs:[40,639,112.4]},
+  {name:"Focus Gamma",freqs:[40,16,100]},
+  {name:"Creative Gamma",freqs:[40,95.5,144]},
+  {name:"Learning Gamma",freqs:[40,20.3,117.5]},
+  {name:"Healing Gamma",freqs:[40,33.8,285]},
+  {name:"Protection Gamma",freqs:[40,444,963]},
+  {name:"Abundance Gamma",freqs:[40,888,528]},
+  {name:"Manifestation Gamma",freqs:[40,194,777]},
+  {name:"Detox Gamma",freqs:[40,741,417]},
+  {name:"Pain Relief Gamma",freqs:[40,174,285]},
+  {name:"Sleep Prep Gamma",freqs:[40,2.5,174]},
+];
+
+// Emotional Release Collection (25 tracks for releasing negative patterns)
+const EMOTIONAL_RELEASE_COLLECTION = [
+  {name:"Releasing Control",freqs:[325,417]},
+  {name:"Letting Go of Fear",freqs:[335,396]},
+  {name:"Releasing Anger",freqs:[350,174]},
+  {name:"Releasing Guilt",freqs:[375,396]},
+  {name:"Releasing Trauma",freqs:[390,417]},
+  {name:"Breaking Addictions",freqs:[410,528]},
+  {name:"Releasing Anxiety",freqs:[425,7.83]},
+  {name:"Releasing Jealousy",freqs:[445,639]},
+  {name:"Releasing Resentment",freqs:[450,417]},
+  {name:"Releasing Victimhood",freqs:[455,96.8]},
+  {name:"Releasing Self-Sabotage",freqs:[460,396]},
+  {name:"Releasing Procrastination",freqs:[470,20.3]},
+  {name:"Releasing Perfectionism",freqs:[475,528]},
+  {name:"Releasing Judgment",freqs:[485,852]},
+  {name:"Releasing Criticism",freqs:[490,741]},
+  {name:"Releasing Blame",freqs:[495,417]},
+  {name:"Releasing Negativity",freqs:[510,432]},
+  {name:"Releasing Depression",freqs:[515,528]},
+  {name:"Releasing Grief",freqs:[520,639]},
+  {name:"Releasing Sadness",freqs:[525,528]},
+  {name:"Releasing Heartache",freqs:[530,639]},
+  {name:"Releasing Loneliness",freqs:[535,112.4]},
+  {name:"Releasing Insecurity",freqs:[540,174]},
+  {name:"Releasing Shame",freqs:[545,396]},
+  {name:"Releasing Unworthiness",freqs:[550,528]},
+];
+
+const ALL_COLLECTIONS = {
+  "Top 10 Life-Changing":TOP_10_LIFE_CHANGING,
+  "20.3Hz Hyper-Learning":HYPER_LEARNING_20_3,
+  "40Hz Gamma Collection":GAMMA_40_COLLECTION,
+  "Emotional Release":EMOTIONAL_RELEASE_COLLECTION,
+  "Trinity Album":TRINITY,"Trinity Volume 2":TRINITY_V2,"Thoth Frequencies":THOTH_FREQUENCIES,
+  "Family & Wellness":FAMILY_WELLNESS,"Spiritual Awakening":SOMATIC_SPIRITUAL,
+  "Healing & Biology":SOMATIC_HEALING,"Cosmic & Galactic":SOMATIC_COSMIC,
+  "Manifestation & Abundance":MANIFESTATION_ABUNDANCE,"Brainwave Entrainment":BRAINWAVE_ENTRAINMENT,
+  "Chakra System":CHAKRA_SYSTEM,"Sleep Extended":SLEEP_EXTENDED,"Protection":PROTECTION_SERIES,
+  "Emergency Protocols":EMERGENCY_PROTOCOLS,
+};
+
+// Quick start map
+const QUICK_START_MAP = {
+  sleep:[{c:"Sleep Extended",i:0},{c:"Sleep Extended",i:1},{c:"Trinity Album",i:0}],
+  focus:[{c:"Brainwave Entrainment",i:13},{c:"Brainwave Entrainment",i:14},{c:"Trinity Album",i:3}],
+  anxiety:[{c:"Healing & Biology",i:3},{c:"Emergency Protocols",i:0},{c:"Trinity Album",i:4}],
+  healing:[{c:"Healing & Biology",i:0},{c:"Healing & Biology",i:1},{c:"Trinity Album",i:5}],
+  manifest:[{c:"Manifestation & Abundance",i:7},{c:"Manifestation & Abundance",i:9},{c:"Trinity Album",i:3}],
+  meditate:[{c:"Spiritual Awakening",i:0},{c:"Spiritual Awakening",i:5},{c:"Trinity Album",i:0}],
+  protection:[{c:"Protection",i:0},{c:"Protection",i:1},{c:"Emergency Protocols",i:10}],
+  energy:[{c:"Brainwave Entrainment",i:15},{c:"Brainwave Entrainment",i:23},{c:"Trinity Album",i:3}],
+};
+
+const SR = 44100;
+const SEG_DUR = 96.3;
+let actx = null, srcNode = null, gainNode = null, playStart = 0, playDuration = 0, progTimer = null, pauseOffset = 0;
+
+function ctx() {
+  if (!actx || actx.state === 'closed') actx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: SR });
+  if (actx.state === 'suspended') actx.resume();
+  return actx;
+}
+
+function makeSegment(frequencies, segDur) {
+  const n = Math.floor(SR * segDur), out = new Float32Array(n), foundFreq = Math.min(...frequencies);
+  for (let i = 0; i < frequencies.length; i++) {
+    const freq = frequencies[i], phase = i * Math.PI / 4, kf = 2 * Math.PI * freq / SR;
+    let amp;
+    if (freq === foundFreq || freq <= 100) amp = 1.0;
+    else if (freq <= 400) amp = 0.2;
+    else if (freq <= 1000) amp = 0.1;
+    else amp = 0.05;
+    if (freq !== foundFreq) amp /= frequencies.length;
+    for (let j = 0; j < n; j++) out[j] += Math.sin(kf * j + phase) * amp;
+  }
+  const fi = Math.min(Math.floor(0.5 * SR), Math.floor(n / 2)), fo = Math.min(Math.floor(0.1 * SR), Math.floor(n / 2));
+  for (let i = 0; i < fi; i++) { const v = Math.sin((i / fi) * (Math.PI / 2)); out[i] *= v * v; }
+  for (let i = 0; i < fo; i++) { const v = Math.cos((i / fo) * (Math.PI / 2)); out[n - 1 - i] *= v * v; }
+  return out;
+}
+
+function buildTrack(frequencies, totalDur) {
+  const seg = makeSegment(frequencies, SEG_DUR), pauseN = Math.floor(SR * 1.0), pause = new Float32Array(pauseN);
+  const loops = Math.max(1, Math.floor(totalDur / SEG_DUR)), rem = totalDur % SEG_DUR;
+  let remSeg = null;
+  if (rem > 0.1) remSeg = makeSegment(frequencies, rem);
+  let total = loops * seg.length;
+  if (loops > 1) total += (loops - 1) * pauseN;
+  if (remSeg) total += remSeg.length;
+  const buf = new Float32Array(total);
+  let off = 0;
+  for (let i = 0; i < loops; i++) { buf.set(seg, off); off += seg.length; if (i < loops - 1) { buf.set(pause, off); off += pauseN; } }
+  if (remSeg) buf.set(remSeg, off);
+  let peak = 0;
+  for (let i = 0; i < buf.length; i++) { const a = Math.abs(buf[i]); if (a > peak) peak = a; }
+  if (peak > 0.85) { const scale = 0.8 / peak; for (let i = 0; i < buf.length; i++) buf[i] = Math.tanh(buf[i] * scale) * 0.75; }
+  else { for (let i = 0; i < buf.length; i++) buf[i] *= 0.8; }
+  return buf;
+}
+
+function parseDur(raw) {
+  const s = (raw || '').trim().toLowerCase();
+  if (!s) return 96.3;
+  if (s.endsWith('mb')) { const mb = parseFloat(s); if (isNaN(mb) || mb <= 0 || mb > 20) return null; return mb / 0.04; }
+  if (s.endsWith('m')) { const m = parseFloat(s); return (isNaN(m) || m <= 0) ? null : m * 60; }
+  const v = parseFloat(s);
+  return (isNaN(v) || v <= 0) ? null : v;
+}
+
+function fmtHz(f) { return (f % 1 === 0 ? f : parseFloat(f.toFixed(2))) + ' Hz'; }
+function fmtList(freqs) { return freqs.map(fmtHz).join(', '); }
+function sanitizeId(s) { return s.replace(/[^a-zA-Z0-9]/g,'_'); }
+function sanitizeHTML(s){const el=document.createElement('span');el.textContent=s;return el.innerHTML;}
+function escAttr(s){return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function getGlobalDur() { return parseDur(document.getElementById('global-dur')?.value || '96.3'); }
+
+function setBtnLoading(id, loading) {
+  const b = document.getElementById(id);
+  if (!b) return;
+  if (loading) { b.dataset.label = b.innerHTML; b.innerHTML = '<span class="spin"></span> Working…'; b.disabled = true; }
+  else { if (b.dataset.label) b.innerHTML = b.dataset.label; b.disabled = false; }
+}
+
+function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
+  stopAudio();
+  const c = ctx(); // unlock AudioContext synchronously during user gesture (required on iOS/Android)
+  if (triggerBtnId) setBtnLoading(triggerBtnId, true);
+  toast('Generating audio…', 'info');
+  setTimeout(() => {
+    try {
+      const samples = buildTrack(frequencies, totalDur), ab = c.createBuffer(1, samples.length, SR);
+      ab.copyToChannel(samples, 0);
+      analyser = c.createAnalyser(); analyser.fftSize = 512;
+      gainNode = c.createGain(); gainNode.gain.value = parseFloat(document.getElementById('vol-slider')?.value||0.8);
+      srcNode = c.createBufferSource(); srcNode.buffer = ab;
+      srcNode.connect(analyser); analyser.connect(gainNode); gainNode.connect(c.destination);
+      srcNode.start(); srcNode.onended = stopAudio;
+      playStart = c.currentTime; playDuration = ab.duration;
+      document.getElementById('pl-name').textContent = trackName;
+      document.getElementById('pl-freqs').textContent = fmtList(frequencies);
+      document.getElementById('player').classList.add('on');
+      clearInterval(progTimer);
+      progTimer = setInterval(() => {
+        if (!actx || !srcNode) return;
+        const el = actx.currentTime - playStart, pct = Math.min(100, (el / playDuration) * 100);
+        document.getElementById('prog-fill').style.width = pct + '%';
+        const m = Math.floor(el / 60), sv = Math.floor(el % 60);
+        document.getElementById('pl-time').textContent = m + ':' + String(sv).padStart(2,'0');
+      }, 200);
+      updateVisuals(frequencies); startOscilloscope(); startPlayerCymatics(frequencies);
+      toast('Playing: ' + trackName, 'success'); highlightPlaying(trackName);
+    } catch (e) { toast('Error: ' + e.message, 'error'); }
+    finally { if (triggerBtnId) setBtnLoading(triggerBtnId, false); }
+  }, 20);
+}
+
+function stopAudio() {
+  if (srcNode) { try { srcNode.stop(); } catch(e){} srcNode = null; }
+  gainNode = null; pauseOffset = 0;
+  clearInterval(progTimer); stopOscilloscope(); stopPlayerCymatics();
+  document.getElementById('player').classList.remove('on');
+  document.getElementById('prog-fill').style.width = '0%';
+  document.querySelectorAll('.preset-card,.trinity-row').forEach(el => el.classList.remove('playing'));
+  const pi = document.getElementById('pause-icon'); if(pi) pi.textContent = '⏸';
+}
+
+function togglePause() {
+  if (!actx || !srcNode) return;
+  if (actx.state === 'running') {
+    pauseOffset = actx.currentTime - playStart;
+    actx.suspend();
+    document.getElementById('pause-icon').textContent = '▶';
+  } else if (actx.state === 'suspended') {
+    actx.resume();
+    playStart = actx.currentTime - pauseOffset;
+    document.getElementById('pause-icon').textContent = '⏸';
+  }
+}
+
+function highlightPlaying(name) {
+  document.querySelectorAll('.preset-card,.trinity-row').forEach(el => { el.classList.toggle('playing', el.dataset.name === name); });
+}
+
+function downloadWAV(frequencies, trackName, totalDur, triggerBtnId) {
+  if (triggerBtnId) setBtnLoading(triggerBtnId, true);
+  toast('Generating WAV…', 'info');
+  setTimeout(() => {
+    try {
+      const samples = buildTrack(frequencies, totalDur), wavBuf = encodeWAV(samples);
+      const blob = new Blob([wavBuf], { type: 'audio/wav' }), url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = trackName.replace(/[^a-z0-9 _\-]/gi, '').replace(/\s+/g,'_') + '_THERAPEUTIC.wav';
+      a.click(); URL.revokeObjectURL(url);
+      toast('Downloaded: ' + a.download, 'success');
+    } catch (e) { toast('Error: ' + e.message, 'error'); }
+    finally { if (triggerBtnId) setBtnLoading(triggerBtnId, false); }
+  }, 20);
+}
+
+function encodeWAV(samples) {
+  const ch = 1, bps = 16, byteRate = SR * ch * bps / 8, blockAlign = ch * bps / 8, dataSize = samples.length * blockAlign;
+  const buf = new ArrayBuffer(44 + dataSize), v = new DataView(buf);
+  function ws(off, s) { for (let i=0;i<s.length;i++) v.setUint8(off+i, s.charCodeAt(i)); }
+  ws(0,'RIFF'); v.setUint32(4,36+dataSize,true); ws(8,'WAVE');
+  ws(12,'fmt '); v.setUint32(16,16,true); v.setUint16(20,1,true);
+  v.setUint16(22,ch,true); v.setUint32(24,SR,true); v.setUint32(28,byteRate,true);
+  v.setUint16(32,blockAlign,true); v.setUint16(34,bps,true);
+  ws(36,'data'); v.setUint32(40,dataSize,true);
+  let off = 44;
+  for (let i = 0; i < samples.length; i++) { const s = Math.max(-1, Math.min(1, samples[i])); v.setInt16(off, s < 0 ? s * 0x8000 : s * 0x7FFF, true); off += 2; }
+  return buf;
+}
+
+// ── Visualizers ──
+const CYM_SZ = 200;
+const FREQ_COLORS = ['#a78bfa','#67e8f9','#86efac','#fde68a','#f9a8d4','#fb923c'];
+const FREQ_GLOWS = ['rgba(167,139,250,','rgba(103,232,249,','rgba(134,239,172,','rgba(253,230,138,','rgba(249,168,212,','rgba(251,146,60,'];
+let cyRaf = null, cyT = 0, cyFreqs = [], analyser = null, oscRaf = null;
+let plCymRaf = null, plCymT = 0, plCymFreqs = [], waveAnimRaf = null, wavePhase = 0, lastWaveFrame = 0;
+let vibFieldsByFreq = {}, lastFreqs = [], lastVibTime = -1, sandLayers = [], SAND_PER_FREQ = 1200;
+const VIB_SENSITIVITY = 3.2, FRICTION = 0.90, RANDOM_JITTER = 0.12, EDGE_PUSH = 0.6;
+const SAND_COLORS = [{r:220,g:195,b:160},{r:180,g:200,b:220},{r:210,g:180,b:170},{r:190,g:215,b:185},{r:225,g:210,b:170},{r:200,g:185,b:210}];
+
+function besselJ0(x) { if(x===0)return 1; const ax=Math.abs(x); if(ax<8){const y=x*x;const a1=57568490574+y*(-13362590354+y*(651619640.7+y*(-11214424.18+y*(77392.33017+y*(-184.9052456)))));const a2=57568490411+y*(1029532985+y*(9494680.718+y*(59272.64853+y*(267.8532712+y*1))));return a1/a2;}else{const z=8/ax,y=z*z,xx=ax-0.785398164;const a1=1+y*(-0.1098628627e-2+y*(0.2734510407e-4+y*(-0.2073370639e-5+y*0.2093887211e-6)));const a2=-0.1562499995e-1+y*(0.1430488765e-3+y*(-0.6911147651e-5+y*(0.7621095161e-6-y*0.934935152e-7)));return Math.sqrt(0.636619772/ax)*(Math.cos(xx)*a1-z*Math.sin(xx)*a2);}}
+function besselJ1(x) { if(x===0)return 0; const ax=Math.abs(x); if(ax<8){const y=x*x;const a1=x*(72362614232+y*(-7895059235+y*(242396853.1+y*(-2972611.439+y*(15704.48260+y*(-30.16036606))))));const a2=144725228442+y*(2300535178+y*(18583304.74+y*(99447.43394+y*(376.9991397+y*1))));return a1/a2;}else{const z=8/ax,y=z*z,xx=ax-2.356194491;const a1=1+y*(0.183105e-2+y*(-0.3516396496e-4+y*(0.2457520174e-5+y*(-0.240337019e-6))));const a2=0.04687499995+y*(-0.2002690873e-3+y*(0.8449199096e-5+y*(-0.88228987e-6+y*0.105787412e-6)));const r=Math.sqrt(0.636619772/ax)*(Math.cos(xx)*a1-z*Math.sin(xx)*a2);return x<0?-r:r;}}
+function besselJn(n,x){if(n===0)return besselJ0(x);if(n===1)return besselJ1(x);let j0=besselJ0(x),j1=besselJ1(x);for(let i=2;i<=n;i++){const j2=(2*(i-1)/x)*j1-j0;j0=j1;j1=j2;}return j1;}
+function besselI0(x){if(x===0)return 1;const ax=Math.abs(x);if(ax<3.75){const y=x/3.75,yy=y*y;return 1+yy*(3.5156229+yy*(3.0899424+yy*(1.2067492+yy*(0.2659732+yy*(0.360768e-1+yy*0.45813e-2)))));}else{const y=3.75/ax;return(Math.exp(ax)/Math.sqrt(ax))*(0.39894228+y*(0.1328592e-1+y*(0.225319e-2+y*(-0.157565e-2+y*(0.916281e-2+y*(-0.2057706e-1+y*(0.2635537e-1+y*(-0.1647633e-1+y*0.392377e-2))))))));}}
+function besselI1(x){if(x===0)return 0;const ax=Math.abs(x);if(ax<3.75){const y=x/3.75,yy=y*y;const r=ax*(0.5+yy*(0.87890594+yy*(0.51498869+yy*(0.15084934+yy*(0.2658733e-1+yy*(0.301532e-2+yy*0.32411e-3))))));return x<0?-r:r;}else{const y=3.75/ax;const r=(Math.exp(ax)/Math.sqrt(ax))*(0.39894228+y*(-0.3988024e-1+y*(-0.362018e-2+y*(0.163801e-2+y*(-0.1031555e-1+y*(0.2282967e-1+y*(-0.2895312e-1+y*(0.1787654e-1-y*0.420059e-2))))))));return x<0?-r:r;}}
+function besselIn(n,x){if(n===0)return besselI0(x);if(n===1)return besselI1(x);let i0=besselI0(x),i1=besselI1(x);for(let i=0;i<n-1;i++){const next=i0-(2*(i+1)/x)*i1;i0=i1;i1=next;}return i1;}
+
+const CLAMPED_PLATE_EIGENVALUES = [[3.196,6.306,9.440,12.58,15.72],[4.611,7.799,10.94,14.08,17.22],[5.906,9.090,12.23,15.37,18.51],[7.143,10.33,13.47,16.61,19.75],[8.344,11.53,14.67,17.81,20.95],[9.516,12.70,15.84,18.98,22.12]];
+function freqToCircularMode(f){const normFreq=Math.log(f/20)/Math.log(2000/20);const maxIdx=CLAMPED_PLATE_EIGENVALUES.length*CLAMPED_PLATE_EIGENVALUES[0].length;const idx=Math.min(maxIdx-1,Math.floor(normFreq*maxIdx*0.7));const n=Math.floor(idx/CLAMPED_PLATE_EIGENVALUES[0].length),s=idx%CLAMPED_PLATE_EIGENVALUES[0].length;const ka=CLAMPED_PLATE_EIGENVALUES[Math.min(n,CLAMPED_PLATE_EIGENVALUES.length-1)][Math.min(s,CLAMPED_PLATE_EIGENVALUES[0].length-1)];return{n,s,ka};}
+
+class SandGrain{constructor(x,y){this.x=x;this.y=y;this.vx=0;this.vy=0;this.size=0.4+Math.random()*1;this.settled=0;}}
+function initSandLayers(freqs,SZ){sandLayers=[];const half=SZ/2,radius=half-3;freqs.forEach((freq,fi)=>{const grains=[];for(let i=0;i<SAND_PER_FREQ;i++){const angle=Math.random()*Math.PI*2,r=Math.sqrt(Math.random())*radius;grains.push(new SandGrain(half+Math.cos(angle)*r,half+Math.sin(angle)*r));}sandLayers.push({freq,grains,colorIdx:fi});});}
+function computeSingleFreqVibration(SZ,freq,t){const key=String(freq);if(vibFieldsByFreq[key])return vibFieldsByFreq[key];const half=SZ/2,breathe=0.88+0.12*Math.sin(t*1.1+freq*0.01),field=new Float32Array(SZ*SZ);const mode=freqToCircularMode(freq),{n,ka}=mode;for(let py=0;py<SZ;py++){for(let px=0;px<SZ;px++){const dx=px-half,dy=py-half,dr=Math.sqrt(dx*dx+dy*dy)/half,idx=py*SZ+px;if(dr>1){field[idx]=1;continue;}const r=dr,theta=Math.atan2(dy,dx),kr=ka*r,Jn_ka=besselJn(n,ka),In_ka=besselIn(n,ka),ratio=In_ka!==0?Jn_ka/In_ka:0,Jn_kr=besselJn(n,kr),In_kr=besselIn(n,kr),radialPart=Jn_kr-ratio*In_kr,angularPart=Math.cos(n*theta);let val=radialPart*angularPart;val*=breathe;field[idx]=Math.abs(val);}}vibFieldsByFreq[key]=field;return field;}
+function updateSandLayer(layer,SZ,t){const half=SZ/2,vibField=computeSingleFreqVibration(SZ,layer.freq,t),maxR=half-3;for(let i=0;i<layer.grains.length;i++){const grain=layer.grains[i],px=Math.max(0,Math.min(SZ-1,Math.round(grain.x))),py=Math.max(0,Math.min(SZ-1,Math.round(grain.y))),vibration=vibField[py*SZ+px];let gradX=0,gradY=0;if(px>0&&px<SZ-1&&py>0&&py<SZ-1){gradX=(vibField[py*SZ+(px-1)]-vibField[py*SZ+(px+1)])*0.5;gradY=(vibField[(py-1)*SZ+px]-vibField[(py+1)*SZ+px])*0.5;}const force=vibration*VIB_SENSITIVITY;grain.vx+=gradX*force+(Math.random()-0.5)*RANDOM_JITTER;grain.vy+=gradY*force+(Math.random()-0.5)*RANDOM_JITTER;const dx=px-half,dy=py-half,dist=Math.sqrt(dx*dx+dy*dy);if(dist>maxR*0.82){const push=((dist-maxR*0.82)/(maxR*0.18))*EDGE_PUSH;grain.vx-=(dx/(dist||1))*push;grain.vy-=(dy/(dist||1))*push;}grain.vx*=FRICTION;grain.vy*=FRICTION;grain.x+=grain.vx;grain.y+=grain.vy;grain.x=Math.max(1,Math.min(SZ-2,grain.x));grain.y=Math.max(1,Math.min(SZ-2,grain.y));const speed=Math.sqrt(grain.vx*grain.vx+grain.vy*grain.vy);grain.settled=speed<0.04?grain.settled+1:0;}}
+
+function renderCymaticsInto(canvas,SZ,freqs,t){if(!freqs.length||!canvas)return;const sc=canvas.getContext('2d'),half=SZ/2;const freqsKey=freqs.join(','),lastKey=lastFreqs.join(',');if(freqsKey!==lastKey){vibFieldsByFreq={};lastFreqs=[...freqs];initSandLayers(freqs,SZ);}lastVibTime=t;for(let li=0;li<sandLayers.length;li++)updateSandLayer(sandLayers[li],SZ,t);sc.fillStyle='#080c16';sc.fillRect(0,0,SZ,SZ);sc.save();sc.beginPath();sc.arc(half,half,half-1,0,Math.PI*2);sc.clip();const plateGrad=sc.createRadialGradient(half,half,0,half,half,half);plateGrad.addColorStop(0,'#161b28');plateGrad.addColorStop(0.6,'#12162a');plateGrad.addColorStop(1,'#0a0e1a');sc.fillStyle=plateGrad;sc.fillRect(0,0,SZ,SZ);sc.restore();sc.strokeStyle='rgba(80,100,140,0.3)';sc.lineWidth=1.5;sc.beginPath();sc.arc(half,half,half-1,0,Math.PI*2);sc.stroke();sc.save();sc.beginPath();sc.arc(half,half,half-2,0,Math.PI*2);sc.clip();for(let li=0;li<sandLayers.length;li++){const layer=sandLayers[li],col=SAND_COLORS[layer.colorIdx%SAND_COLORS.length];for(let i=0;i<layer.grains.length;i++){const grain=layer.grains[i],px=Math.round(grain.x),py=Math.round(grain.y),dxc=px-half,dyc=py-half;if(dxc*dxc+dyc*dyc>(half-2)*(half-2))continue;const speed=Math.sqrt(grain.vx*grain.vx+grain.vy*grain.vy),alpha=grain.settled>20?0.85:0.4+0.45*Math.min(1,grain.settled/20),sz=speed>0.2?grain.size*1.3:grain.size;sc.globalAlpha=alpha;sc.fillStyle=`rgb(${col.r},${col.g},${col.b})`;sc.beginPath();sc.arc(px,py,sz,0,Math.PI*2);sc.fill();}}sc.restore();sc.save();sc.beginPath();sc.arc(half,half,half-2,0,Math.PI*2);sc.clip();sc.globalCompositeOperation='screen';for(let li=0;li<sandLayers.length;li++){const layer=sandLayers[li],vibField=vibFieldsByFreq[String(layer.freq)];if(!vibField)continue;const col=SAND_COLORS[layer.colorIdx%SAND_COLORS.length],img=sc.createImageData(SZ,SZ),d=img.data;for(let py=0;py<SZ;py++){for(let px=0;px<SZ;px++){const vib=vibField[py*SZ+px];if(vib<0.08)continue;const i4=(py*SZ+px)*4,glow=Math.pow(vib,2.5)*180;d[i4]=Math.min(255,col.r*glow/255|0);d[i4+1]=Math.min(255,col.g*glow/255|0);d[i4+2]=Math.min(255,col.b*glow/255|0);d[i4+3]=255;}}sc.globalAlpha=0.04;sc.putImageData(img,0,0);}sc.restore();sc.save();sc.beginPath();sc.arc(half,half,half-2,0,Math.PI*2);sc.clip();const vignGrad=sc.createRadialGradient(half,half,half*0.3,half,half,half-2);vignGrad.addColorStop(0,'rgba(0,0,0,0)');vignGrad.addColorStop(1,'rgba(0,0,0,0.35)');sc.fillStyle=vignGrad;sc.fillRect(0,0,SZ,SZ);sc.restore();}
+
+let lastCymFrame=0;
+function startCymatics(freqs){cyFreqs=freqs;const canvas=document.getElementById('cymatics-canvas');if(!canvas)return;if(cyRaf)cancelAnimationFrame(cyRaf);const loop=(ts)=>{cyRaf=requestAnimationFrame(loop);if(ts-lastCymFrame<34)return;lastCymFrame=ts;cyT=ts*0.001;renderCymaticsInto(canvas,CYM_SZ,cyFreqs,cyT);};cyRaf=requestAnimationFrame(loop);}
+function stopCymatics(){if(cyRaf){cancelAnimationFrame(cyRaf);cyRaf=null;}}
+
+let lastPlCymFrame=0;
+function startPlayerCymatics(freqs){plCymFreqs=freqs;const cv=document.getElementById('pl-cym');if(!cv)return;cv.width=cv.height=36;cv.classList.add('on');if(plCymRaf)cancelAnimationFrame(plCymRaf);lastFreqs=[];const loop=(ts)=>{plCymRaf=requestAnimationFrame(loop);if(ts-lastPlCymFrame<50)return;lastPlCymFrame=ts;plCymT=ts*0.001;renderCymaticsInto(cv,36,plCymFreqs,plCymT);};plCymRaf=requestAnimationFrame(loop);}
+function stopPlayerCymatics(){if(plCymRaf){cancelAnimationFrame(plCymRaf);plCymRaf=null;}const cv=document.getElementById('pl-cym');if(cv)cv.classList.remove('on');}
+
+let lastOscFrame=0;
+function startOscilloscope(){const canvas=document.getElementById('pl-osc');if(!canvas||!analyser)return;canvas.classList.add('on');const bufLen=analyser.fftSize,dataBuf=new Float32Array(bufLen),c=canvas.getContext('2d');c.fillStyle='rgb(9,13,22)';c.fillRect(0,0,canvas.width,canvas.height);const loop=(ts)=>{if(!analyser)return;oscRaf=requestAnimationFrame(loop);if(ts-lastOscFrame<80)return;lastOscFrame=ts;analyser.getFloatTimeDomainData(dataBuf);const W=canvas.width,H=canvas.height;c.fillStyle='rgba(9,13,22,0.28)';c.fillRect(0,0,W,H);c.strokeStyle='#a78bfa';c.lineWidth=1;c.shadowColor='#a78bfa';c.shadowBlur=3;c.beginPath();const step=bufLen/W;for(let x=0;x<W;x++){const y=H/2-dataBuf[Math.floor(x*step)]*(H/2-1);x===0?c.moveTo(x,y):c.lineTo(x,y);}c.stroke();c.shadowBlur=0;};oscRaf=requestAnimationFrame(loop);}
+function stopOscilloscope(){if(oscRaf){cancelAnimationFrame(oscRaf);oscRaf=null;}const cv=document.getElementById('pl-osc');if(cv)cv.classList.remove('on');analyser=null;}
+
+let waveParticles=[],MAX_WAVE_PARTICLES=150;
+class MagicParticle{constructor(x,y,color,opts={}){this.x=x;this.y=y;this.color=color;this.vx=opts.vx||(Math.random()-0.5)*2;this.vy=opts.vy||(Math.random()-0.5)*2-1;this.life=opts.life||1;this.decay=opts.decay||0.008+Math.random()*0.012;this.size=opts.size||1+Math.random()*2;this.twinkle=opts.twinkle||0;}update(){this.x+=this.vx;this.y+=this.vy;this.vy+=0.02;this.life-=this.decay;this.twinkle=0.5+0.5*Math.sin(Date.now()*0.01+this.x);return this.life>0;}draw(ctx){const alpha=this.life*this.twinkle;if(alpha<=0)return;ctx.save();ctx.globalAlpha=alpha;ctx.shadowColor=this.color;ctx.shadowBlur=8;ctx.fillStyle=this.color;ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill();ctx.restore();}}
+function spawnWaveParticles(x,y,color,count=2){for(let i=0;i<count;i++){if(waveParticles.length>=MAX_WAVE_PARTICLES)waveParticles.shift();waveParticles.push(new MagicParticle(x,y,color,{vx:(Math.random()-0.5)*1.5,vy:(Math.random()-0.5)*1.5-0.5,size:0.8+Math.random()*1.5,decay:0.015+Math.random()*0.01}));}}
+function updateAndDrawParticles(ctx){waveParticles=waveParticles.filter(p=>p.update());waveParticles.forEach(p=>p.draw(ctx));}
+
+let stars=[];
+function initStars(count=60){stars=[];for(let i=0;i<count;i++)stars.push({x:Math.random()*800,y:Math.random()*200,size:0.3+Math.random()*1.2,twinkleSpeed:0.002+Math.random()*0.004,phase:Math.random()*Math.PI*2});}
+initStars();
+function drawStars(ctx,W,H,t){ctx.save();stars.forEach(s=>{const alpha=0.3+0.4*Math.sin(t*s.twinkleSpeed*1000+s.phase),sx=(s.x/800)*W,sy=(s.y/200)*H;ctx.globalAlpha=alpha;ctx.fillStyle='#c4b5fd';ctx.beginPath();ctx.arc(sx,sy,s.size,0,Math.PI*2);ctx.fill();});ctx.restore();}
+
+function startWaveAnimation(freqs){stopWaveAnimation();const container=document.getElementById('freq-waves');if(!container)return;container.innerHTML='';const cv=document.createElement('canvas');cv.className='wave-overlay-canvas';cv.height=90;container.appendChild(cv);const leg=document.createElement('div');leg.className='wave-legend';freqs.forEach((f,i)=>{const col=FREQ_COLORS[i%FREQ_COLORS.length],item=document.createElement('span');item.className='wave-leg-item';item.style.color=col;item.innerHTML=`<span class="wave-leg-swatch" style="background:${col}"></span>${fmtHz(f)}`;leg.appendChild(item);});container.appendChild(leg);const foundFreq=Math.min(...freqs);let lastParticleTime=0;const loop=(ts)=>{waveAnimRaf=requestAnimationFrame(loop);if(ts-lastWaveFrame<20)return;lastWaveFrame=ts;wavePhase+=0.028;const W=cv.offsetWidth||500;if(cv.width!==W)cv.width=W;const H=cv.height,c=cv.getContext('2d');const bgGrad=c.createLinearGradient(0,0,0,H);bgGrad.addColorStop(0,'#0a0f1e');bgGrad.addColorStop(0.5,'#0d1423');bgGrad.addColorStop(1,'#0a0f1e');c.fillStyle=bgGrad;c.fillRect(0,0,W,H);drawStars(c,W,H,ts);c.save();c.strokeStyle='rgba(124,58,237,.15)';c.shadowColor='#7c3aed';c.shadowBlur=4;c.lineWidth=1;c.beginPath();c.moveTo(0,H/2);c.lineTo(W,H/2);c.stroke();c.restore();freqs.forEach((freq,i)=>{const color=FREQ_COLORS[i%FREQ_COLORS.length],glowBase=FREQ_GLOWS[i%FREQ_GLOWS.length],ratio=freq/foundFreq,cycles=Math.min(2*ratio,14),amp=(H/2-10)/Math.max(1,freqs.length*0.55);c.save();c.strokeStyle=glowBase+'0.15)';c.lineWidth=Math.max(3,5-i*0.5);c.shadowColor=color;c.shadowBlur=15;c.beginPath();for(let x=0;x<=W;x++){const y=H/2-Math.sin((x/W)*cycles*Math.PI*2-wavePhase)*amp;x===0?c.moveTo(x,y):c.lineTo(x,y);}c.stroke();c.restore();c.save();c.strokeStyle=color;c.lineWidth=Math.max(1.2,2.5-i*0.3);c.globalAlpha=Math.max(0.45,0.95-i*0.1);c.shadowColor=color;c.shadowBlur=10;c.beginPath();for(let x=0;x<=W;x++){const y=H/2-Math.sin((x/W)*cycles*Math.PI*2-wavePhase)*amp;x===0?c.moveTo(x,y):c.lineTo(x,y);}c.stroke();c.restore();if(ts-lastParticleTime>80){const peakX=(W/cycles)*0.25,peakY=H/2-amp*Math.sin(0.25*Math.PI*2-wavePhase%(Math.PI*2));spawnWaveParticles(peakX,peakY,color,1);}});updateAndDrawParticles(c);lastParticleTime=ts;drawComposite(freqs,wavePhase,ts);};waveAnimRaf=requestAnimationFrame(loop);}
+function stopWaveAnimation(){if(waveAnimRaf){cancelAnimationFrame(waveAnimRaf);waveAnimRaf=null;}waveParticles=[];}
+
+function drawComposite(freqs,phase=0,ts=0){const canvas=document.getElementById('composite-canvas');if(!canvas||!freqs.length)return;const W=canvas.offsetWidth||600;if(canvas.width!==W)canvas.width=W;const H=64,c=canvas.getContext('2d');const bgGrad=c.createLinearGradient(0,0,0,H);bgGrad.addColorStop(0,'#080c17');bgGrad.addColorStop(0.5,'#0d1423');bgGrad.addColorStop(1,'#080c17');c.fillStyle=bgGrad;c.fillRect(0,0,W,H);drawStars(c,W,H,ts);c.save();c.strokeStyle='rgba(124,58,237,.12)';c.shadowColor='#7c3aed';c.shadowBlur=3;c.lineWidth=1;c.beginPath();c.moveTo(0,H/2);c.lineTo(W,H/2);c.stroke();c.restore();const foundFreq=Math.min(...freqs),points=[];for(let x=0;x<W;x++){const tx=(x/W)*4*2*Math.PI;let val=0;freqs.forEach((freq,i)=>{const ph=i*Math.PI/4;let amp;if(freq===foundFreq||freq<=100)amp=1;else if(freq<=400)amp=0.2;else if(freq<=1000)amp=0.1;else amp=0.05;if(freq!==foundFreq)amp/=freqs.length;val+=Math.sin(tx*(freq/foundFreq)-phase+ph)*amp;});val/=Math.max(1,freqs.length*0.6);const y=H/2-val*(H/2-5);points.push({x,y,val});}c.save();c.strokeStyle='rgba(124,58,237,0.2)';c.lineWidth=8;c.shadowColor='#8b5cf6';c.shadowBlur=20;c.lineCap='round';c.lineJoin='round';c.beginPath();points.forEach((p,i)=>i===0?c.moveTo(p.x,p.y):c.lineTo(p.x,p.y));c.stroke();c.restore();c.save();c.strokeStyle='rgba(6,182,212,0.25)';c.lineWidth=4;c.shadowColor='#06b6d4';c.shadowBlur=12;c.lineCap='round';c.lineJoin='round';c.beginPath();points.forEach((p,i)=>i===0?c.moveTo(p.x,p.y):c.lineTo(p.x,p.y));c.stroke();c.restore();const pulseGlow=0.7+0.3*Math.sin(ts*0.003),grad=c.createLinearGradient(0,0,W,0);grad.addColorStop(0,'#7c3aed');grad.addColorStop(0.25,'#a78bfa');grad.addColorStop(0.5,'#06b6d4');grad.addColorStop(0.75,'#67e8f9');grad.addColorStop(1,'#7c3aed');c.save();c.strokeStyle=grad;c.lineWidth=2;c.shadowColor='#8b5cf6';c.shadowBlur=10*pulseGlow;c.lineCap='round';c.lineJoin='round';c.beginPath();points.forEach((p,i)=>i===0?c.moveTo(p.x,p.y):c.lineTo(p.x,p.y));c.stroke();c.restore();c.save();points.forEach((p,i)=>{if(i===0||i===points.length-1)return;const prev=points[i-1],next=points[i+1];if((p.val>prev.val&&p.val>next.val)||(p.val<prev.val&&p.val<next.val)){const sparkle=0.5+0.5*Math.sin(ts*0.008+i*0.3);c.globalAlpha=0.5+sparkle*0.5;c.shadowColor=Math.abs(p.val)>0.3?'#a78bfa':'#67e8f9';c.shadowBlur=6+sparkle*4;c.fillStyle=c.shadowColor;c.beginPath();c.arc(p.x,p.y,1.5+sparkle,0,Math.PI*2);c.fill();}});c.restore();}
+
+function updateVisuals(freqs){const section=document.getElementById('vis-section');if(!section)return;if(!freqs.length){stopCymatics();stopWaveAnimation();section.classList.remove('on');return;}section.classList.add('on');startWaveAnimation(freqs);startCymatics(freqs);}
+
+// ── Custom Track UI ──
+const freqList=[],SAVED_TRACKS_KEY='qm_saved_tracks';
+(function initFreqInput(){const raw=document.getElementById('freq-raw');let isProcessing=false;raw.addEventListener('keydown',e=>{if(isProcessing)return;if(e.key==='Enter'||e.key===','){e.preventDefault();isProcessing=true;const val=raw.value.replace(',','').trim();if(val)addFreq(val);raw.value='';setTimeout(()=>{isProcessing=false;raw.focus();},10);}else if(e.key==='Backspace'&&raw.value===''&&freqList.length>0){e.preventDefault();freqList.pop();renderFreqs();}});raw.addEventListener('blur',()=>{const val=raw.value.replace(',','').trim();if(val){addFreq(val);raw.value='';}});document.getElementById('freq-box').addEventListener('mousedown',e=>{if(e.target.classList.contains('freq-tag-x'))e.preventDefault();});})();
+function addFreq(raw){const parts=raw.split(',').map(p=>p.trim()).filter(Boolean);for(const p of parts){const f=parseFloat(p);if(isNaN(f)||f<=0){toast('Invalid: '+p,'error');continue;}if(freqList.length>=6){toast('Maximum 6 frequencies','error');break;}if(freqList.includes(f)){toast('Frequency already added: '+fmtHz(f),'info');continue;}freqList.push(f);}renderFreqs();}
+function removeFreq(i){freqList.splice(i,1);renderFreqs();}
+function renderFreqs(){const box=document.getElementById('freq-box'),raw=document.getElementById('freq-raw');box.innerHTML='';freqList.forEach((f,i)=>{const tag=document.createElement('span');tag.className='freq-tag';tag.innerHTML=fmtHz(f)+` <button class="freq-tag-x" onclick="removeFreq(${i})">×</button>`;box.appendChild(tag);});box.appendChild(raw);updateVisuals(freqList);}
+function playCustom(){if(!freqList.length){toast('Add at least one frequency','error');return;}const name=document.getElementById('track-name').value.trim()||'Custom Therapeutic Track',dur=parseDur(document.getElementById('dur-input').value);if(!dur){toast('Invalid duration','error');return;}playAudio([...freqList],name,dur,'play-custom-btn');}
+function downloadCustom(){if(!freqList.length){toast('Add at least one frequency','error');return;}const name=document.getElementById('track-name').value.trim()||'Custom Therapeutic Track',dur=parseDur(document.getElementById('dur-input').value);if(!dur){toast('Invalid duration','error');return;}downloadWAV([...freqList],name,dur,'dl-custom-btn');}
+function saveCurrentTrack(){if(!freqList.length){toast('Add at least one frequency first','error');return;}const name=document.getElementById('track-name').value.trim();if(!name){toast('Please enter a track name','error');return;}const tracks=getSavedTracks();tracks[name]={name,frequencies:[...freqList],duration:document.getElementById('dur-input').value||'96.3',savedAt:Date.now()};try{localStorage.setItem(SAVED_TRACKS_KEY,JSON.stringify(tracks));}catch(e){toast('Storage full — clear some saved data','error');return;}toast('Saved: '+name,'success');renderSavedTracks();}
+function loadTrack(name){const tracks=getSavedTracks(),track=tracks[name];if(!track){toast('Track not found','error');return;}freqList.length=0;track.frequencies.forEach(f=>freqList.push(f));document.getElementById('track-name').value=track.name;document.getElementById('dur-input').value=track.duration||'96.3';renderFreqs();toast('Loaded: '+name,'success');}
+function deleteSavedTrack(name){const tracks=getSavedTracks();delete tracks[name];try{localStorage.setItem(SAVED_TRACKS_KEY,JSON.stringify(tracks));}catch(e){}toast('Deleted: '+name,'info');renderSavedTracks();}
+function getSavedTracks(){try{return JSON.parse(localStorage.getItem(SAVED_TRACKS_KEY)||'{}');}catch{return {};}}
+function renderSavedTracks(){const container=document.getElementById('saved-tracks-container');if(!container)return;const tracks=getSavedTracks(),names=Object.keys(tracks);if(!names.length){container.innerHTML='<div style="font-size:.75rem;color:var(--muted);padding:.5rem 0">No saved tracks yet. Create one and click Save!</div>';return;}container.innerHTML=names.map(name=>{const t=tracks[name],freqStr=t.frequencies.map(fmtHz).join(', '),safe=sanitizeHTML(name),safeFreq=sanitizeHTML(freqStr),attrName=escAttr(JSON.stringify(name));return`<div style="display:flex;align-items:center;gap:.5rem;padding:.45rem .6rem;background:var(--card2);border:1px solid var(--border);border-radius:8px;margin-bottom:.4rem"><div style="flex:1;min-width:0"><div style="font-size:.8rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${safe}</div><div style="font-size:.65rem;color:var(--muted);font-family:monospace">${safeFreq} · ${sanitizeHTML(t.duration||'96.3')}s</div></div><button class="btn btn-primary btn-sm" onclick="playSaved(${attrName})" style="padding:.2rem .5rem;font-size:.65rem">Play</button><button class="btn btn-ghost btn-sm" onclick="loadTrack(${attrName})" style="padding:.2rem .5rem;font-size:.65rem">Load</button><button class="btn btn-ghost btn-sm" onclick="deleteSavedTrack(${attrName})" style="padding:.2rem .5rem;font-size:.65rem;color:var(--danger)">Del</button></div>`;}).join('');}
+function playSaved(name){const tracks=getSavedTracks(),t=tracks[name];if(!t)return;const dur=parseDur(t.duration||'96.3');playAudio(t.frequencies,t.name,dur,null);}
+
+// ── Presets UI ──
+let activeCat='All',searchQ='';
+function initPresets(){const row=document.getElementById('filter-row');Object.keys(PRESET_CATS).forEach(cat=>{const chip=document.createElement('button');chip.className='chip'+(cat==='All'?' on':'');chip.textContent=cat;chip.onclick=()=>{document.querySelectorAll('#filter-row .chip').forEach(c=>c.classList.remove('on'));chip.classList.add('on');activeCat=cat;renderPresets();};row.appendChild(chip);});renderPresets();}
+function filterPresets(){searchQ=document.getElementById('preset-search').value.toLowerCase();renderPresets();}
+function renderPresets(){const grid=document.getElementById('preset-grid');grid.innerHTML='';const catFn=PRESET_CATS[activeCat];Object.entries(PRESETS).forEach(([name,freqs])=>{if(!catFn(name,freqs))return;if(searchQ&&!name.toLowerCase().includes(searchQ)&&!freqs.join(' ').includes(searchQ))return;const meta=getTrackMeta(name),card=document.createElement('div');card.className='preset-card';card.dataset.name=name;const sid=sanitizeId(name),attrName=escAttr(JSON.stringify(name)),attrFreqs=escAttr(JSON.stringify(freqs));card.innerHTML=`<div class="preset-name" style="cursor:pointer" onclick="togglePresetDetail(this)">${name} <span style="font-size:.6rem;color:var(--muted)">▼</span></div><div class="preset-freqs">${fmtList(freqs)}</div><div class="preset-detail" style="display:none;margin-bottom:.5rem;font-size:.65rem;color:var(--dim);line-height:1.4;text-align:left"><p style="margin-bottom:.3rem">${meta.desc}</p><p style="margin-bottom:.3rem"><strong style="color:var(--teal)">Benefits:</strong> ${meta.benefits.join(', ')}</p><p style="margin-bottom:.3rem"><strong style="color:var(--acl)">Who For:</strong> ${meta.whoFor}</p><p style="margin-bottom:.3rem"><strong style="color:var(--teal)">How To Use:</strong> ${meta.howToUse}</p><p style="margin-bottom:.3rem"><strong style="color:var(--acl)">Affirmations:</strong><br>${meta.affirmations.map(a=>`<em style="color:var(--muted)">"${a}"</em>`).join('<br>')}</p></div><div class="preset-btns"><button class="btn btn-primary btn-sm" id="pp-${sid}" onclick="playPreset(${attrName})"><span class="icon-play"></span> Play</button><button class="btn btn-teal btn-sm" id="pd-${sid}" onclick="dlPreset(${attrName})"><span class="icon-download"></span> WAV</button><button class="btn btn-ghost btn-sm" onclick="saveTrackDirect(${attrName}, ${attrFreqs})" title="Save">+ Save</button></div>`;grid.appendChild(card);});}
+function togglePresetDetail(el){const detail=el.parentElement.querySelector('.preset-detail');if(detail)detail.style.display=detail.style.display==='none'?'block':'none';}
+function playPreset(name){const freqs=PRESETS[name];playAudio(freqs,name,getGlobalDur(),'pp-'+sanitizeId(name));}
+function dlPreset(name){const freqs=PRESETS[name];downloadWAV(freqs,name,getGlobalDur(),'pd-'+sanitizeId(name));}
+
+// ── Trinity UI ──
+function initTrinity(){const list=document.getElementById('trinity-list');if(!list)return;TRINITY.forEach((t,i)=>{const row=document.createElement('div');row.className='trinity-row';row.style.cssText='flex-wrap:wrap;';row.dataset.name=t.name;row.id='tr-'+i;const meta=getTrackMeta(t.name),attrName=escAttr(JSON.stringify(t.name)),attrFreqs=escAttr(JSON.stringify(t.freqs));row.innerHTML=`<div class="tn">${String(i+1).padStart(2,'0')}</div><div class="ti" style="flex:1;min-width:0"><div class="ti-name" style="cursor:pointer" onclick="toggleTrackDetail(this)">${t.name} <span style="font-size:.6rem;color:var(--muted)">▼</span></div><div class="ti-freqs">${fmtList(t.freqs)}</div><div class="track-detail" style="display:none;margin-top:.5rem;font-size:.7rem;color:var(--dim);line-height:1.5;text-align:left"><p style="margin-bottom:.4rem"><strong style="color:var(--acl)">Description:</strong> ${meta.desc}</p><p style="margin-bottom:.4rem"><strong style="color:var(--teal)">Benefits:</strong> ${meta.benefits.map(b=>`<span style="display:inline-block;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:4px;padding:.1rem .35rem;margin:.1rem">${b}</span>`).join(' ')}</p><p style="margin-bottom:.4rem"><strong style="color:var(--acl)">Who For:</strong> ${meta.whoFor}</p><p style="margin-bottom:.4rem"><strong style="color:var(--teal)">How To Use:</strong> ${meta.howToUse}</p><p style="margin-bottom:.4rem"><strong style="color:var(--acl)">Affirmations:</strong><br>${meta.affirmations.map(a=>`<em style="color:var(--muted)">"${a}"</em>`).join('<br>')}</p></div></div><div class="ta"><button class="btn btn-primary btn-sm" id="tp-${i}" onclick="playTrinity(${i})"><span class="icon-play"></span> Play</button><button class="btn btn-teal btn-sm" id="td-${i}" onclick="dlTrinity(${i})"><span class="icon-download"></span> WAV</button><button class="btn btn-ghost btn-sm" onclick="saveTrackDirect(${attrName}, ${attrFreqs})" title="Save">+ Save</button></div>`;list.appendChild(row);});}
+function playTrinity(i){const t=TRINITY[i];playAudio(t.freqs,t.name,getGlobalDur(),'tp-'+i);}
+function dlTrinity(i){const t=TRINITY[i];downloadWAV(t.freqs,t.name,getGlobalDur(),'td-'+i);}
+function toggleTrackDetail(el){const detail=el.parentElement.querySelector('.track-detail');if(detail)detail.style.display=detail.style.display==='none'?'block':'none';}
+
+// ── Generic Collection Renderer ──
+const _collReg={};let _collId=0;
+function renderCollection(collection,listId,playPrefix,dlPrefix){const list=document.getElementById(listId);if(!list)return;list.innerHTML='';const regId='_c'+(_collId++);_collReg[regId]=collection;collection.forEach((t,i)=>{const row=document.createElement('div');row.className='trinity-row';row.style.cssText='flex-wrap:wrap;';row.dataset.name=t.name;const sid=sanitizeId(t.name),meta=getTrackMeta(t.name),attrName=escAttr(JSON.stringify(t.name)),attrFreqs=escAttr(JSON.stringify(t.freqs));row.innerHTML=`<div class="tn">${String(i+1).padStart(2,'0')}</div><div class="ti" style="flex:1;min-width:0"><div class="ti-name" style="cursor:pointer" onclick="toggleTrackDetail(this)">${t.name} <span style="font-size:.6rem;color:var(--muted)">▼</span></div><div class="ti-freqs">${fmtList(t.freqs)}</div><div class="track-detail" style="display:none;margin-top:.5rem;font-size:.7rem;color:var(--dim);line-height:1.5;text-align:left"><p style="margin-bottom:.4rem"><strong style="color:var(--acl)">Description:</strong> ${meta.desc}</p><p style="margin-bottom:.4rem"><strong style="color:var(--teal)">Benefits:</strong> ${meta.benefits.map(b=>`<span style="display:inline-block;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);border-radius:4px;padding:.1rem .35rem;margin:.1rem">${b}</span>`).join(' ')}</p><p style="margin-bottom:.4rem"><strong style="color:var(--acl)">Who For:</strong> ${meta.whoFor}</p><p style="margin-bottom:.4rem"><strong style="color:var(--teal)">How To Use:</strong> ${meta.howToUse}</p><p style="margin-bottom:.4rem"><strong style="color:var(--acl)">Affirmations:</strong><br>${meta.affirmations.map(a=>`<em style="color:var(--muted)">"${a}"</em>`).join('<br>')}</p></div></div><div class="ta"><button class="btn btn-primary btn-sm" id="${playPrefix}-${i}" onclick="playCollection('${regId}', ${i}, '${playPrefix}')"><span class="icon-play"></span> Play</button><button class="btn btn-teal btn-sm" id="${dlPrefix}-${i}" onclick="dlCollection('${regId}', ${i}, '${dlPrefix}')"><span class="icon-download"></span> WAV</button><button class="btn btn-ghost btn-sm" onclick="saveTrackDirect(${attrName}, ${attrFreqs})" title="Save track"><span style="font-size:.85rem">+</span> Save</button></div>`;list.appendChild(row);});}
+function playCollection(regId,i,prefix){const coll=_collReg[regId];if(!coll)return;const t=coll[i];playAudio(t.freqs,t.name,getGlobalDur(),prefix+'-'+i);}
+function dlCollection(regId,i,prefix){const coll=_collReg[regId];if(!coll)return;const t=coll[i];downloadWAV(t.freqs,t.name,getGlobalDur(),prefix+'-'+i);}
+function saveTrackDirect(name,freqs){const tracks=getSavedTracks();tracks[name]={name,frequencies:[...freqs],duration:'96.3',savedAt:Date.now()};try{localStorage.setItem(SAVED_TRACKS_KEY,JSON.stringify(tracks));}catch(e){toast('Storage full — clear some saved data','error');return;}toast('Saved: '+name,'success');renderSavedTracks();}
+
+// ── Library ──
+let currentLibCollection=null;
+function initLibrary(){const nav=document.getElementById('library-nav');nav.innerHTML='';Object.keys(ALL_COLLECTIONS).forEach(name=>{const a=document.createElement('a');a.textContent=name;a.onclick=()=>{document.querySelectorAll('#library-nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active');currentLibCollection=name;renderLibraryContent(name);};nav.appendChild(a);});if(Object.keys(ALL_COLLECTIONS).length)nav.querySelector('a').click();}
+function renderLibraryContent(name){const content=document.getElementById('library-content'),coll=ALL_COLLECTIONS[name];if(!coll||!content)return;content.innerHTML=coll.map((t,i)=>{const meta=getTrackMeta(t.name),attrFreqs=escAttr(JSON.stringify(t.freqs)),attrName=escAttr(JSON.stringify(t.name));return`<div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:.85rem;margin-bottom:.65rem"><div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem"><div><div style="font-size:.85rem;font-weight:600;cursor:pointer" onclick="var d=this.parentElement.parentElement.nextElementSibling;d.style.display=d.style.display==='none'?'block':'none'">${t.name} <span style="font-size:.6rem;color:var(--muted)">▼</span></div><div style="font-size:.65rem;color:var(--muted);font-family:monospace">${fmtList(t.freqs)}</div></div><div style="display:flex;gap:.3rem"><button class="btn btn-primary btn-sm" onclick="playAudio(${attrFreqs},${attrName},getGlobalDur(),null)" style="padding:.2rem .6rem;font-size:.65rem">Play</button><button class="btn btn-teal btn-sm" onclick="downloadWAV(${attrFreqs},${attrName},getGlobalDur(),null)" style="padding:.2rem .6rem;font-size:.65rem">WAV</button><button class="btn btn-ghost btn-sm" onclick="saveTrackDirect(${attrName},${attrFreqs})" style="padding:.2rem .6rem;font-size:.65rem">Save</button></div></div><div style="display:none;margin-top:.5rem;font-size:.7rem;color:var(--dim);line-height:1.5"><p style="margin-bottom:.3rem">${meta.desc}</p><p style="margin-bottom:.3rem"><strong style="color:var(--teal)">Benefits:</strong> ${meta.benefits.join(', ')}</p><p style="margin-bottom:.3rem"><strong style="color:var(--acl)">Who For:</strong> ${meta.whoFor}</p><p style="margin-bottom:.3rem"><strong style="color:var(--teal)">How To Use:</strong> ${meta.howToUse}</p><p style="margin-bottom:.3rem"><strong style="color:var(--acl)">Affirmations:</strong> ${meta.affirmations.map(a=>`"${a}"`).join(' · ')}</p></div></div>`;}).join('');}
+function filterLibrary(){const q=document.getElementById('library-search').value.toLowerCase(),content=document.getElementById('library-content');if(!q){if(currentLibCollection)renderLibraryContent(currentLibCollection);return;}let html='';Object.entries(ALL_COLLECTIONS).forEach(([collName,coll])=>{coll.forEach(t=>{if(t.name.toLowerCase().includes(q)||t.freqs.join(' ').includes(q)){const meta=getTrackMeta(t.name),attrFreqs=escAttr(JSON.stringify(t.freqs)),attrName=escAttr(JSON.stringify(t.name));html+=`<div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:.85rem;margin-bottom:.65rem"><div style="font-size:.6rem;color:var(--muted);margin-bottom:.2rem">${collName}</div><div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem"><div><div style="font-size:.85rem;font-weight:600">${t.name}</div><div style="font-size:.65rem;color:var(--muted);font-family:monospace">${fmtList(t.freqs)}</div></div><div style="display:flex;gap:.3rem"><button class="btn btn-primary btn-sm" onclick="playAudio(${attrFreqs},${attrName},getGlobalDur(),null)" style="padding:.2rem .6rem;font-size:.65rem">Play</button><button class="btn btn-teal btn-sm" onclick="downloadWAV(${attrFreqs},${attrName},getGlobalDur(),null)" style="padding:.2rem .6rem;font-size:.65rem">WAV</button><button class="btn btn-ghost btn-sm" onclick="saveTrackDirect(${attrName},${attrFreqs})" style="padding:.2rem .6rem;font-size:.65rem">Save</button></div></div><div style="margin-top:.5rem;font-size:.7rem;color:var(--dim);line-height:1.5"><p style="margin-bottom:.3rem">${meta.desc}</p><p style="margin-bottom:.3rem"><strong style="color:var(--teal)">Benefits:</strong> ${meta.benefits.join(', ')}</p></div></div>`;}});});content.innerHTML=html||'<div style="font-size:.75rem;color:var(--muted)">No tracks found.</div>';}
+
+// ── Quick Start ──
+function quickStart(goal){const tracks=QUICK_START_MAP[goal];if(!tracks)return;const t=tracks[0],coll=ALL_COLLECTIONS[t.c];if(!coll)return;playAudio(coll[t.i].freqs,coll[t.i].name,getGlobalDur(),null);toast('Playing: '+coll[t.i].name,'success');}
+
+// ── Popular Tracks ──
+function renderPopularTracks(){const container=document.getElementById('popular-tracks');if(!container)return;const popular=[{name:"Game Over Protocol",freqs:[7.83,20.3,40]},{name:"DNA Light Codes",freqs:[37,73,528]},{name:"Anxiety Relief",freqs:[6,8,10]},{name:"Deep Sleep Delta",freqs:[2.5]},{name:"Quantum Manifestor",freqs:[37,73,194]},{name:"Pain Relief & Management",freqs:[5,100,174]},{name:"Universal Harmony",freqs:[37,73,432]},{name:"Miracle Frequency",freqs:[8,40,528]}];container.innerHTML=popular.map(t=>`<button class="btn btn-ghost btn-sm" onclick="playAudio(${escAttr(JSON.stringify(t.freqs))},${escAttr(JSON.stringify(t.name))},getGlobalDur(),null)" style="font-size:.7rem">${t.name}</button>`).join('');}
+
+// ── Playlist Manager ──
+const PLAYLISTS_KEY='qm_playlists';
+function getPlaylists(){try{return JSON.parse(localStorage.getItem(PLAYLISTS_KEY)||'{}');}catch{return {};}}
+function savePlaylists(pls){try{localStorage.setItem(PLAYLISTS_KEY,JSON.stringify(pls));}catch(e){toast('Storage full — clear some data','error');}}
+function createPlaylist(){const nameInput=document.getElementById('playlist-name'),name=nameInput.value.trim();if(!name){toast('Enter a playlist name','error');return;}const pls=getPlaylists();if(pls[name]){toast('Playlist already exists','error');return;}pls[name]={name,tracks:[],createdAt:Date.now()};savePlaylists(pls);nameInput.value='';toast('Created playlist: '+name,'success');renderPlaylists();}
+function deletePlaylist(name){const pls=getPlaylists();delete pls[name];savePlaylists(pls);toast('Deleted: '+name,'info');renderPlaylists();}
+function addTrackToPlaylist(playlistName,trackName,freqs){const pls=getPlaylists();if(!pls[playlistName])return;if(pls[playlistName].tracks.some(t=>t.name===trackName)){toast('Track already in playlist','info');return;}pls[playlistName].tracks.push({name:trackName,frequencies:[...freqs],duration:'96.3'});savePlaylists(pls);toast('Added to '+playlistName,'success');renderPlaylists();}
+function removeTrackFromPlaylist(playlistName,trackIndex){const pls=getPlaylists();if(!pls[playlistName])return;pls[playlistName].tracks.splice(trackIndex,1);savePlaylists(pls);renderPlaylists();}
+function playPlaylist(name){const pls=getPlaylists(),pl=pls[name];if(!pl||!pl.tracks.length){toast('Playlist is empty','error');return;}playPlaylistTrack(name,0);}
+function playPlaylistTrack(name,index){const pls=getPlaylists(),pl=pls[name];if(!pl||index>=pl.tracks.length){toast('Playlist complete!','success');return;}const t=pl.tracks[index],dur=parseDur(t.duration||'96.3');playAudio(t.frequencies,t.name,dur,null);const checkEnd=setInterval(()=>{if(!srcNode||actx.currentTime-playStart>=playDuration-0.5){clearInterval(checkEnd);playPlaylistTrack(name,index+1);}},1000);}
+function exportPlaylists(){const pls=getPlaylists(),entries=Object.values(pls);if(!entries.length){toast('No playlists to export','error');return;}const data=JSON.stringify(entries,null,2),blob=new Blob([data],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='quantum_merlin_playlists.json';a.click();URL.revokeObjectURL(url);toast('Playlists exported!','success');}
+function importPlaylists(){const input=document.createElement('input');input.type='file';input.accept='.json';input.onchange=(e)=>{const file=e.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=(ev)=>{try{const imported=JSON.parse(ev.target.result),pls=getPlaylists();function validPl(p){return p&&typeof p.name==='string'&&p.name.length<200&&Array.isArray(p.tracks)&&p.tracks.length<500&&p.tracks.every(t=>t&&typeof t.name==='string'&&Array.isArray(t.frequencies)&&t.frequencies.every(f=>typeof f==='number'&&isFinite(f)));}if(Array.isArray(imported))imported.filter(validPl).forEach(pl=>{pls[pl.name]={name:pl.name,tracks:pl.tracks.slice(0,200),createdAt:pl.createdAt||Date.now()};});else if(typeof imported==='object'&&imported!==null)Object.values(imported).filter(validPl).forEach(pl=>{pls[pl.name]={name:pl.name,tracks:pl.tracks.slice(0,200),createdAt:pl.createdAt||Date.now()};});try{savePlaylists(pls);}catch(se){toast('Storage full — clear some data','error');return;}toast('Playlists imported!','success');renderPlaylists();}catch{toast('Invalid playlist file','error');}};reader.readAsText(file);};input.click();}
+function renderPlaylists(){const container=document.getElementById('playlists-container');if(!container)return;const pls=getPlaylists(),names=Object.keys(pls);if(!names.length){container.innerHTML='<div style="font-size:.75rem;color:var(--muted);padding:.5rem 0">No playlists yet. Create one above!</div>';return;}container.innerHTML=names.map(name=>{const pl=pls[name],safeName=sanitizeHTML(name),attrName=escAttr(JSON.stringify(name)),tracksHtml=pl.tracks.map((t,i)=>`<div style="display:flex;align-items:center;gap:.4rem;padding:.3rem .5rem;background:rgba(124,58,237,.08);border-radius:6px;margin-bottom:.25rem"><span style="font-size:.65rem;color:var(--muted);min-width:1.2rem">${i+1}</span><div style="flex:1;min-width:0"><div style="font-size:.75rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${sanitizeHTML(t.name)}</div><div style="font-size:.6rem;color:var(--muted);font-family:monospace">${t.frequencies.map(fmtHz).join(', ')} · ${t.duration||'96.3'}s</div></div><button class="btn btn-ghost btn-sm" onclick="playSinglePlaylistTrack(${attrName}, ${i})" style="padding:.15rem .4rem;font-size:.6rem">Play</button><button class="btn btn-ghost btn-sm" onclick="removeTrackFromPlaylist(${attrName}, ${i})" style="padding:.15rem .4rem;font-size:.6rem;color:var(--danger)">✕</button></div>`).join('');return`<div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:.85rem;margin-bottom:.75rem"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem"><div style="font-size:.85rem;font-weight:600">${safeName} <span style="font-size:.65rem;color:var(--muted)">(${pl.tracks.length} tracks)</span></div><div style="display:flex;gap:.3rem"><button class="btn btn-primary btn-sm" onclick="playPlaylist(${attrName})" style="padding:.2rem .6rem;font-size:.65rem">Play All</button><button class="btn btn-ghost btn-sm" onclick="deletePlaylist(${attrName})" style="padding:.2rem .6rem;font-size:.65rem;color:var(--danger)">Delete</button></div></div>${tracksHtml||'<div style="font-size:.7rem;color:var(--muted)">No tracks yet. Browse collections and click + Add to add tracks.</div>'}<div style="margin-top:.4rem;display:flex;gap:.3rem;flex-wrap:wrap"><select id="add-select-${sanitizeId(name)}" style="background:var(--card3);border:1px solid var(--border);border-radius:4px;padding:.2rem .4rem;color:var(--text);font-size:.65rem;max-width:180px"><option value="">+ Add track from collection…</option>${Object.entries(ALL_COLLECTIONS).map(([collName,coll])=>`<optgroup label="${sanitizeHTML(collName)}">${coll.map(t=>`<option value="${sanitizeId(collName)}|${coll.indexOf(t)}">${sanitizeHTML(t.name)}</option>`).join('')}</optgroup>`).join('')}</select><button class="btn btn-ghost btn-sm" onclick="addFromSelect(${attrName}, 'add-select-${sanitizeId(name)}')" style="padding:.2rem .5rem;font-size:.65rem">Add</button></div></div>`;}).join('');}
+function addFromSelect(playlistName,selectId){const sel=document.getElementById(selectId);if(!sel||!sel.value){toast('Select a track first','error');return;}const[collKey,idxStr]=sel.value.split('|'),collEntry=Object.entries(ALL_COLLECTIONS).find(([name])=>sanitizeId(name)===collKey);if(!collEntry)return;const coll=collEntry[1],t=coll[parseInt(idxStr)];if(!t)return;addTrackToPlaylist(playlistName,t.name,t.freqs);sel.value='';}
+function playSinglePlaylistTrack(name,index){const pls=getPlaylists(),pl=pls[name];if(!pl||!pl.tracks[index])return;const t=pl.tracks[index],dur=parseDur(t.duration||'96.3');playAudio(t.frequencies,t.name,dur,null);}
+
+// ── Theory ──
+const THEORY_DATA = {
+  solfeggio:[
+    {freq:174,name:"Pain Relief & Security",desc:"The lowest Solfeggio frequency. Believed to act as a natural anesthetic, reducing pain perception. Provides a sense of safety and grounding.",tags:["Pain Relief","Grounding","Security","Foundation"]},
+    {freq:285,name:"Tissue Regeneration",desc:"Thought to influence the body's energy field to promote tissue repair and regeneration. Used for wound healing and cellular rejuvenation.",tags:["Healing","Tissue Repair","Rejuvenation","Cellular Health"]},
+    {freq:396,name:"Fear Release & Guilt Liberation",desc:"Associated with releasing feelings of guilt, fear, and grief. Helps clear subconscious blockages and transforms grief into joy.",tags:["Fear Release","Guilt Liberation","Root Chakra","Emotional Healing"]},
+    {freq:417,name:"Facilitating Change",desc:"Helps clear traumatic experiences and facilitates positive change. Associated with the Sacral Chakra, it supports creative expression and emotional balance.",tags:["Change","Sacral Chakra","Trauma Release","Creativity"]},
+    {freq:528,name:"DNA Repair & Transformation (Love)",desc:"The most famous Solfeggio frequency — the 'Love frequency.' Believed to repair DNA, bring transformation and miracles.",tags:["DNA Repair","Love","Miracles","Solar Plexus","Transformation"]},
+    {freq:639,name:"Relationships & Connection",desc:"Enhances communication, understanding, tolerance, and love in relationships. Balances the Heart Chakra and promotes harmonious connections.",tags:["Relationships","Heart Chakra","Communication","Love","Harmony"]},
+    {freq:741,name:"Expression & Solutions",desc:"Cleanses cells of toxins and electromagnetic radiation. Promotes self-expression, problem-solving, and leads to a cleaner, more stable mind.",tags:["Throat Chakra","Detox","Self-Expression","Problem Solving","Clarity"]},
+    {freq:852,name:"Awakening Intuition",desc:"Raises awareness and opens the ability to experience spiritual order. Associated with the Third Eye Chakra, it enhances intuition and inner vision.",tags:["Third Eye","Intuition","Spiritual Awareness","Inner Vision"]},
+    {freq:963,name:"Divine Consciousness & Pineal Activation",desc:"The highest Solfeggio frequency. Activates the pineal gland and connects to the divine or source energy. Associated with the Crown Chakra and oneness.",tags:["Crown Chakra","Pineal Gland","Divine Connection","Oneness","Enlightenment"]},
+  ],
+  brainwaves:[
+    {name:"Delta",range:"0.5 – 4 Hz",desc:"Deepest meditation, dreamless sleep, healing, regeneration. Associated with unconscious mind and body restoration.",color:"#6366f1"},
+    {name:"Theta",range:"4 – 8 Hz",desc:"Deep meditation, REM sleep, creativity, intuition, emotional healing. Gateway to subconscious mind and vivid imagery.",color:"#8b5cf6"},
+    {name:"Alpha",range:"8 – 14 Hz",desc:"Relaxed alertness, calm focus, stress reduction. Bridge between conscious and subconscious. Ideal for learning.",color:"#06b6d4"},
+    {name:"Beta",range:"14 – 30 Hz",desc:"Active thinking, problem-solving, focused attention, alertness. Normal waking consciousness and analytical thought.",color:"#10b981"},
+    {name:"Gamma",range:"30 – 100 Hz",desc:"Heightened perception, peak awareness, cognitive enhancement, expanded consciousness. Associated with insight and bliss.",color:"#f59e0b"},
+  ],
+  special:[
+    {freq:7.83,name:"Schumann Resonance (Earth's Heartbeat)",desc:"The fundamental electromagnetic resonance of the Earth-ionosphere cavity. Aligns with human brain's natural frequency for grounding, balance, and connection to nature.",tags:["Grounding","Earth Connection","Balance","Nature"]},
+    {freq:432,name:"Nature's Tuning (Verdi's A)",desc:"Mathematically consistent with the universe's patterns. Said to be softer, warmer, and easier on the ears than 440 Hz. Promotes deep peace and natural harmony.",tags:["Peace","Natural Harmony","Universe","Calm"]},
+    {freq:40,name:"Gamma Entrainment (Cognitive Boost)",desc:"Research suggests 40 Hz gamma entrainment may improve memory, focus, and even reduce amyloid plaques associated with Alzheimer's.",tags:["Memory","Focus","Cognitive Enhancement","Neuroplasticity"]},
+    {freq:37,name:"Creation Frequency",desc:"Part of the 37/73 creation pair. Believed to support the manifestation of ideas into reality and connect to creative life force energy.",tags:["Creation","Manifestation","Life Force"]},
+    {freq:73,name:"Manifestation Frequency",desc:"Paired with 37 Hz. Supports the process of bringing ideas from conception to physical reality. Used in abundance and manifestation protocols.",tags:["Manifestation","Abundance","Reality Creation"]},
+    {freq:111,name:"Angelic Gateway",desc:"A sacred number in many spiritual traditions. Opens channels to higher consciousness and angelic realms.",tags:["Spiritual","Angelic","Higher Consciousness"]},
+    {freq:888,name:"Infinite Abundance",desc:"Associated with infinite abundance and divine completeness in numerology. Amplifies prosperity consciousness.",tags:["Abundance","Prosperity","Divine Completeness"]},
+    {freq:777,name:"Luck & Spiritual Insight",desc:"Considered a highly spiritual number. Enhances luck, spiritual insight, and connection to divine guidance.",tags:["Luck","Spiritual Insight","Divine Guidance"]},
+  ],
+  chakras:[
+    {name:"Root (Muladhara)",location:"Base of spine",color:"Red",freq:"396 Hz",desc:"Foundation, survival, security, grounding. When balanced, you feel safe, stable, and connected to the Earth."},
+    {name:"Sacral (Svadhisthana)",location:"Below navel",color:"Orange",freq:"417 Hz",desc:"Creativity, sexuality, emotions, pleasure. Governs creative expression and healthy relationships."},
+    {name:"Solar Plexus (Manipura)",location:"Upper abdomen",color:"Yellow",freq:"528 Hz",desc:"Personal power, confidence, self-esteem, transformation. The center of willpower and personal authority."},
+    {name:"Heart (Anahata)",location:"Center of chest",color:"Green",freq:"639 Hz",desc:"Love, compassion, forgiveness, connection. Bridges the lower physical chakras with the upper spiritual chakras."},
+    {name:"Throat (Vishuddha)",location:"Throat",color:"Blue",freq:"741 Hz",desc:"Communication, self-expression, truth, clarity. Governs authentic expression and active listening."},
+    {name:"Third Eye (Ajna)",location:"Between eyebrows",color:"Indigo",freq:"852 Hz",desc:"Intuition, insight, imagination, wisdom. The center of inner vision, psychic abilities, and deep knowing."},
+    {name:"Crown (Sahasrara)",location:"Top of head",color:"Violet/White",freq:"963 Hz",desc:"Spiritual connection, enlightenment, unity consciousness. The gateway to pure consciousness and divine connection."},
+  ],
+  pemf:[
+    {name:"Cellular Repair",range:"2 – 10 Hz",desc:"PEMF therapy at these frequencies supports cellular repair, ATP production, and tissue regeneration."},
+    {name:"Pain Management",range:"1 – 15 Hz",desc:"Low-frequency PEMF has been shown to reduce chronic pain, arthritis symptoms, and fibromyalgia."},
+    {name:"Bone Density",range:"7.5 – 20 Hz",desc:"NASA research demonstrated that specific PEMF frequencies can prevent bone loss and stimulate osteoblast activity."},
+    {name:"Nerve Regeneration",range:"2 – 10 Hz",desc:"Studies indicate that PEMF at these frequencies can accelerate nerve regeneration and reduce neuropathy symptoms."},
+  ],
+  binaural:[
+    {name:"What Are Binaural Beats?",desc:"When two slightly different frequencies are played in each ear, the brain perceives a third frequency — the difference between the two. This is the basis of brainwave entrainment."},
+    {name:"How Entrainment Works",desc:"The brain has a natural tendency to synchronize with external rhythmic stimuli, called the Frequency Following Response (FFR). By presenting specific frequencies, we can gently guide the brain into desired states."},
+    {name:"Isochronic Tones",desc:"Unlike binaural beats, isochronic tones use a single tone that pulses on and off at a specific rate. They are more distinct and can be effective without headphones."},
+    {name:"Why Headphones Matter",desc:"Binaural beats require stereo headphones to deliver different frequencies to each ear. Single-frequency therapeutic tones work with or without headphones."},
+  ],
+  usage:[
+    {title:"Best Practices",tips:["Use headphones for binaural beat experiences","Start with lower volumes and increase gradually","Sessions of 15-30 minutes are typically effective","Consistency matters — regular use yields better results","Stay hydrated before and after sessions","Find a quiet, comfortable environment"]},
+    {title:"When to Use",tips:["Morning: Alpha/Beta for focus and energy","Afternoon: Schumann/Alpha for grounding and reset","Evening: Theta/Delta for relaxation and sleep prep","Before meditation: Theta to deepen practice","During stress: Alpha/Schumann for calm","For pain: Delta/low Solfeggio for relief"]},
+    {title:"Combining Frequencies",tips:["Layer complementary frequencies for synergistic effects","The 37+73 Hz pair creates a powerful manifestation foundation","Solfeggio combinations address multiple chakras simultaneously","Brainwave + Solfeggio combos enhance both mental state and energy","Start simple (1-3 frequencies) and experiment with combinations","Trust your intuition — your body knows what it needs"]},
+  ]
+};
+
+function renderTheory(){const container=document.getElementById('theory-content');if(!container)return;let html='';html+='<div class="theory-section"><div class="theory-section-title">Introduction to Frequency Therapy</div><div class="theory-card"><div class="theory-desc">Sound frequency therapy, also known as vibrational medicine, uses specific audio frequencies to influence brainwave states, promote healing, and alter consciousness. The practice draws from ancient traditions, modern neuroscience, and physics. When the brain is exposed to specific frequencies, it tends to synchronize with them through a process called entrainment, shifting mental states and promoting various therapeutic effects.</div></div></div>';html+='<div class="theory-section"><div class="theory-section-title">Solfeggio Frequencies</div><div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">The Solfeggio frequencies are a set of ancient musical tones believed to have spiritual and healing properties. Originally used in Gregorian chants, these frequencies were said to promote spiritual awakening and physical healing.</div></div>';THEORY_DATA.solfeggio.forEach(item=>{html+=`<div class="theory-card"><div class="theory-freq">${item.freq} Hz</div><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div><div>${item.tags.map(t=>`<span class="theory-tag">${t}</span>`).join('')}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">Brainwave States</div><div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">Your brain produces electrical activity measured in cycles per second (Hertz). These brainwaves correlate with different states of consciousness, from deep sleep to peak awareness. By exposing the brain to specific frequencies through audio stimulation, we can encourage it to enter desired states — a process called brainwave entrainment.</div></div><div class="theory-brainwave">';THEORY_DATA.brainwaves.forEach(bw=>{html+=`<div class="theory-bw-card" style="border-left:3px solid ${bw.color||'var(--teal)'}"><div class="theory-bw-name">${bw.name}</div><div class="theory-bw-range">${bw.range}</div><div class="theory-bw-desc">${bw.desc}</div></div>`;});html+='</div></div>';html+='<div class="theory-section"><div class="theory-section-title">Chakra System & Frequencies</div><div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">The chakra system originates from ancient Indian tradition and describes seven energy centers along the spine. Each chakra governs specific physical, emotional, and spiritual aspects. Modern frequency therapy maps specific Hz values to each chakra, using sound to balance and activate these energy centers.</div></div>';THEORY_DATA.chakras.forEach((ch,i)=>{html+=`<div class="theory-card"><div class="theory-freq" style="color:${ch.color}">${ch.name} — ${ch.freq}</div><div class="theory-name">Location: ${ch.location}</div><div class="theory-desc">${ch.desc}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">Special Frequencies</div>';THEORY_DATA.special.forEach(item=>{html+=`<div class="theory-card"><div class="theory-freq">${item.freq} Hz</div><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div><div>${item.tags.map(t=>`<span class="theory-tag">${t}</span>`).join('')}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">PEMF Research & Science</div><div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">Pulsed Electromagnetic Field (PEMF) therapy uses specific frequencies to stimulate cellular repair and reduce inflammation. NASA and other research institutions have published studies showing measurable benefits of frequency-based therapies for bone healing, pain management, and nerve regeneration.</div></div>';THEORY_DATA.pemf.forEach(item=>{html+=`<div class="theory-card"><div class="theory-freq">${item.range}</div><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">The Science of Binaural Beats & Entrainment</div>';THEORY_DATA.binaural.forEach(item=>{html+=`<div class="theory-card"><div class="theory-name">${item.name}</div><div class="theory-desc">${item.desc}</div></div>`;});html+='</div>';html+='<div class="theory-section"><div class="theory-section-title">Usage Guide & Best Practices</div>';THEORY_DATA.usage.forEach(section=>{html+=`<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">${section.title}</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.6">${section.tips.map(tip=>`<li>${tip}</li>`).join('')}</ul></div>`;});html+='</div>';
+
+// Water & Crystal Charging Guide
+html+='<div class="theory-section"><div class="theory-section-title">Water & Crystal Charging Guide</div>';
+html+='<div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">Charging water and crystals with frequencies is a powerful practice that extends the benefits of sound therapy beyond the listening session. Water acts as a receptive medium that holds the vibrational imprint, while crystals amplify and store the frequency energy.</div></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">How to Charge Water</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Use spring water</strong> in a glass container — never plastic, as it distorts frequencies</li>';
+html+='<li><strong>Place the glass</strong> directly in front of or on top of your speaker</li>';
+html+='<li><strong>Play your chosen frequency track</strong> for the full duration (15-30 minutes)</li>';
+html+='<li><strong>Set your intention</strong> before starting — speak it aloud or hold it in mind</li>';
+html+='<li><strong>Drink immediately</strong> after charging for maximum potency</li>';
+html+='<li><strong>How long it lasts:</strong> Peak potency is 0-6 hours; effective for up to 24-48 hours if stored in glass away from EMFs</li>';
+html+='<li><strong>Dosage:</strong> 250ml per session; you can drink multiple glasses of the same frequency throughout the day</li>';
+html+='<li><strong>Pro tip:</strong> Charge water with your morning track and sip it throughout the day for sustained effects</li>';
+html+='</ul></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">How to Charge Crystals</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Clear quartz</strong> is the universal amplifier — works with any frequency</li>';
+html+='<li><strong>Place the crystal</strong> directly on or next to the speaker during playback</li>';
+html+='<li><strong>Charge for the full track duration</strong> (15-30 minutes)</li>';
+html+='<li><strong>Set your intention</strong> — hold the crystal and state your purpose</li>';
+html+='<li><strong>Carry it with you</strong> in your pocket or wear it as jewelry for all-day resonance</li>';
+html+='<li><strong>How long it lasts:</strong> A charged crystal holds its frequency for 3-7 days; recharge weekly</li>';
+html+='<li><strong>To cleanse:</strong> Place in sunlight for 1 hour, moonlight overnight, or bury in salt for 24 hours</li>';
+html+='<li><strong>Best crystals:</strong> Clear quartz (amplifier), Amethyst (spiritual), Rose quartz (love), Black tourmaline (protection), Citrine (abundance)</li>';
+html+='</ul></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">Best Practices</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Use wired speakers</strong> — Bluetooth adds digital noise that contaminates the frequency</li>';
+html+='<li><strong>Enable Airplane Mode</strong> on your device to eliminate EMF interference</li>';
+html+='<li><strong>Keep the water/crystal close</strong> to the speaker — within 1-2 inches for best results</li>';
+html+='<li><strong>Match the frequency to your goal</strong> — e.g., 528Hz for healing water, 888Hz for abundance crystal</li>';
+html+='<li><strong>Combine methods</strong> — charge both water AND a crystal simultaneously for amplified effects</li>';
+html+='<li><strong>Label your charged water</strong> with the frequency and date if storing</li>';
+html+='<li><strong>Never use tap water</strong> — its chemical content interferes with frequency structuring</li>';
+html+='<li><strong>Trust your intuition</strong> — if something feels off, adjust your approach</li>';
+html+='</ul></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">Frequency-Water-Crystal Pairing Guide</div>';
+html+='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.5rem;margin-top:.5rem">';
+const pairings=[{freq:"174 Hz",use:"Pain Relief Water",crystal:"Red Jasper"},{freq:"285 Hz",use:"Tissue Repair Water",crystal:"Carnelian"},{freq:"396 Hz",use:"Fear Release Water",crystal:"Smoky Quartz"},{freq:"417 Hz",use:"Change Facilitation",crystal:"Orange Calcite"},{freq:"528 Hz",use:"DNA Repair Water",crystal:"Clear Quartz"},{freq:"639 Hz",use:"Heart Connection Water",crystal:"Rose Quartz"},{freq:"741 Hz",use:"Detox Water",crystal:"Blue Lace Agate"},{freq:"852 Hz",use:"Third Eye Water",crystal:"Amethyst"},{freq:"963 Hz",use:"Crown Activation Water",crystal:"Selenite"},{freq:"7.83 Hz",use:"Grounding Water",crystal:"Hematite"},{freq:"432 Hz",use:"Harmony Water",crystal:"Green Aventurine"},{freq:"888 Hz",use:"Abundance Crystal",crystal:"Citrine"},{freq:"444 Hz",use:"Protection Crystal",crystal:"Black Tourmaline"},{freq:"777 Hz",use:"Luck Crystal",crystal:"Pyrite"}];
+pairings.forEach(p=>{html+=`<div style="background:var(--card3);border:1px solid var(--border);border-radius:6px;padding:.5rem"><div style="font-size:.7rem;font-weight:600;color:var(--teal)">${p.freq}</div><div style="font-size:.65rem;color:var(--dim)">${p.use}</div><div style="font-size:.6rem;color:var(--muted)">Crystal: ${p.crystal}</div></div>`;});
+html+='</div></div></div>';
+
+html+='</div>';
+
+// 7-Day Granthi Immersion Protocol
+html+='<div class="theory-section"><div class="theory-section-title">7-Day Granthi Immersion Protocol</div>';
+html+='<div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">A structured 7-day frequency protocol for deep spiritual transformation. This protocol follows the traditional Granthi (psychic knot) unlocking sequence, progressing from purification to integration. Each day builds upon the previous, creating a cumulative effect on consciousness.</div></div>';
+
+const granthiDays=[
+  {day:1,name:"Purification",freqs:"174 + 417 + 528 Hz",desc:"Clears foundational blockages and prepares the system for deep work. Releases old patterns and creates space for transformation.",tip:"Start your day with this track. Drink charged water throughout the day."},
+  {day:2,name:"Root Release",freqs:"194 + 396 + 8 Hz",desc:"Shatters the first psychic knot (Brahma Granthi). Releases deep-seated survival fears and allows primal energy to rise.",tip:"Ground intensely after listening. Walk barefoot on earth for 20 minutes."},
+  {day:3,name:"Heart Stabilization",freqs:"528 + 639 + 10 Hz",desc:"Integrates the powerful root energy and anchors it in the heart. Prevents imbalance and builds a stable core of compassion.",tip:"Do not skip this day — it's critical for safe progression. Focus on heart-centered meditation."},
+  {day:4,name:"Love & Compassion",freqs:"741 + 852 + 12.5 Hz",desc:"Dissolves the second psychic knot (Vishnu Granthi). Transforms personal power and emotional attachment into universal love.",tip:"This is where healing abilities may emerge. Stay open to insights and synchronicities."},
+  {day:5,name:"Psychic Clarification",freqs:"141 + 963 + 15 Hz",desc:"Purifies the channels of perception (throat and third eye). Prepares for the final ascent with clarity and discernment.",tip:"Journal any visions or insights. Trust your intuitive downloads."},
+  {day:6,name:"Spiritual Dissolution",freqs:"963 + 999 + 4.5 Hz",desc:"Shatters the final knot (Rudra Granthi) of attachment to individuality. Facilitates awareness of non-duality and ego dissolution.",tip:"Advanced day — rest if needed. This can be intense. Ground aggressively afterward."},
+  {day:7,name:"Integration",freqs:"432 + 963 + 40 Hz",desc:"Integrates the entire journey. Stabilizes the connection to the crown chakra and binds the new state of consciousness into your being.",tip:"Celebrate your journey. Set intentions for how you'll use this expanded awareness."},
+];
+
+granthiDays.forEach(d=>{
+  html+=`<div class="theory-card">
+    <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem">
+      <div style="background:var(--accent);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">${d.day}</div>
+      <div><div style="font-size:.85rem;font-weight:600">Day ${d.day}: ${d.name}</div><div style="font-size:.65rem;color:var(--teal);font-family:monospace">${d.freqs}</div></div>
+    </div>
+    <div class="theory-desc" style="margin-bottom:.5rem">${d.desc}</div>
+    <div style="font-size:.7rem;color:var(--muted);background:var(--card3);padding:.4rem .6rem;border-radius:4px">💡 <strong>Tip:</strong> ${d.tip}</div>
+  </div>`;
+});
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">Protocol Guidelines</div><ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Listen daily</strong> for 15-30 minutes per session</li>';
+html+='<li><strong>Use headphones</strong> for the deepest experience</li>';
+html+='<li><strong>Ground after each session</strong> — walk barefoot, eat root vegetables, drink water</li>';
+html+='<li><strong>Journal your experiences</strong> — note dreams, insights, and physical sensations</li>';
+html+='<li><strong>Do not skip Day 3</strong> — it is the critical stabilization day</li>';
+html+='<strong>If you feel overwhelmed</strong>, return to Day 3 frequencies until you feel stable</li>';
+html+='<li><strong>Repeat quarterly</strong> for ongoing spiritual maintenance and deepening</li>';
+html+='<li><strong>Set clear intention</strong> before each session — state your purpose aloud</li>';
+html+='</ul></div></div>';
+
+// Business & Environmental Applications
+html+='<div class="theory-section"><div class="theory-section-title">Business & Environmental Applications</div>';
+html+='<div class="theory-card" style="margin-bottom:.85rem"><div class="theory-desc">Frequencies can be used to enhance business environments, charge products, and clear spaces. These protocols use subtle, continuous frequency playback to create energetic shifts in commercial and personal spaces.</div></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🏪 Fruit Shop / Retail Space Protocol</div>';
+html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Track:</strong> 37 + 73 + 528 Hz (Abundance Repair)</li>';
+html+='<li><strong>How:</strong> Play on loop overnight at low volume through a small speaker</li>';
+html+='<li><strong>Place a clear quartz crystal</strong> near the speaker to store and amplify the intention</li>';
+html+='<li><strong>Intention:</strong> "This space attracts abundance and loyal customers"</li>';
+html+='<li><strong>Duration:</strong> Play from closing time until opening — 8+ hours</li>';
+html+='<li><strong>Result:</strong> Creates an energetic field that attracts customers and promotes positive transactions</li>';
+html+='</ul></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🧃 Juice / Product Charging Protocol</div>';
+html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Track:</strong> 528 Hz (DNA Repair / Love Frequency)</li>';
+html+='<li><strong>How:</strong> Place juice bottles or products near the speaker during playback</li>';
+html+='<li><strong>Duration:</strong> 30-60 minutes of continuous playback</li>';
+html+='<li><strong>Intention:</strong> "This product is charged with healing and vitality"</li>';
+html+='<li><strong>Best frequencies for products:</strong> 528 Hz (healing), 888 Hz (abundance), 432 Hz (harmony)</li>';
+html+='<li><strong>Pro tip:</strong> Charge products before they go on display — the frequency imprint lasts for days</li>';
+html+='</ul></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🏠 Room Clearing & Space Cleansing Protocol</div>';
+html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Track:</strong> 417 + 741 + 432 Hz (Change + Detox + Harmony)</li>';
+html+='<li><strong>How:</strong> Play at medium volume while walking through each room</li>';
+html+='<li><strong>Open windows</strong> to allow stagnant energy to exit</li>';
+html+='<li><strong>Intention:</strong> "This space is cleared of all negative and stagnant energy"</li>';
+html+='<li><strong>Duration:</strong> 20-30 minutes for a standard home</li>';
+html+='<li><strong>Follow up with:</strong> 528 + 639 Hz to fill the cleared space with love and harmony</li>';
+html+='<li><strong>For heavy energy:</strong> Use 396 + 417 Hz first, then follow with clearing</li>';
+html+='</ul></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🌿 Garden & Plant Enhancement</div>';
+html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Track:</strong> 528 Hz (Nature's healing frequency)</li>';
+html+='<li><strong>How:</strong> Play near plants or garden for 30 minutes daily</li>';
+html+='<li><strong>Water plants</strong> with frequency-charged water for enhanced growth</li>';
+html+='<li><strong>Intention:</strong> "These plants grow strong and healthy"</li>';
+html+='<li><strong>Research:</strong> Studies show plants respond positively to specific frequencies</li>';
+html+='</ul></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">💼 Office / Workspace Optimization</div>';
+html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Morning:</strong> 16 + 40 + 100 Hz (Focus & Creative Action) — play during work hours</li>';
+html+='<li><strong>Afternoon slump:</strong> 20.3 + 40 Hz (Hyper-Learning) — 15 minute reset</li>';
+html+='<li><strong>End of day:</strong> 7.83 + 10 Hz (Grounding & Calm) — transition to home mode</li>';
+html+='<li><strong>Place a charged clear quartz</strong> on your desk for sustained focus</li>';
+html+='<li><strong>Charge your water bottle</strong> with focus frequencies each morning</li>';
+html+='</ul></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">🚗 Vehicle / Commute Protocol</div>';
+html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Track:</strong> 7.83 + 10 + 40 Hz (Digital Detox / Grounding)</li>';
+html+='<li><strong>How:</strong> Play through car speakers during commute</li>';
+html+='<li><strong>Intention:</strong> "I arrive calm, focused, and safe"</li>';
+html+='<li><strong>For road rage:</strong> Switch to 174 + 432 Hz (Pain Relief + Harmony)</li>';
+html+='</ul></div>';
+
+html+='<div class="theory-card"><div class="theory-name" style="margin-bottom:.5rem">General Guidelines for Environmental Use</div>';
+html+='<ul style="margin:0;padding-left:1.2rem;font-size:.75rem;color:var(--dim);line-height:1.8">';
+html+='<li><strong>Use wired speakers</strong> for cleanest frequency transmission</li>';
+html+='<li><strong>Low volume is sufficient</strong> — the frequencies work energetically, not just acoustically</li>';
+html+='<li><strong>Set clear intention</strong> before starting — speak it aloud or hold it in mind</li>';
+html+='<li><strong>Use crystals as amplifiers</strong> — place them near the speaker to store and radiate the energy</li>';
+html+='<li><strong>Consistency matters</strong> — daily or nightly protocols build cumulative effects</li>';
+html+='<li><strong>Match the frequency to the goal</strong> — abundance for business, healing for products, clearing for spaces</li>';
+html+='<li><strong>Trust your intuition</strong> — if a space feels heavy, use clearing frequencies first</li>';
+html+='</ul></div></div>';
+
+html+='<div style="margin-top:1.5rem;padding:.85rem 1rem;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:8px;font-size:.72rem;color:var(--dim);line-height:1.5"><strong style="color:#fca5a5">Disclaimer:</strong> The information provided is for educational and entertainment purposes only. Frequency therapy is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions regarding a medical condition.</div>';container.innerHTML=html;}
+
+// ── Legal Pages ──
+const LEGAL_CONTENT = {
+  privacy:`<h3>Privacy Policy</h3><p><strong>Last updated:</strong> ${new Date().toLocaleDateString()}</p><p>Quantum Merlin ("we", "our", or "us") operates this frequency generator application. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our service.</p><h3>Information We Collect</h3><p>We do not collect any personal information from users. All data (saved tracks, playlists) is stored locally on your device using browser localStorage. No data is transmitted to our servers or any third parties.</p><h3>Local Storage</h3><p>Your saved tracks and playlists are stored in your browser's localStorage. This data never leaves your device and is deleted when you clear your browser data.</p><h3>Third-Party Services</h3><p>We may use third-party services such as Google AdSense for advertising. These services may use cookies and web beacons to serve ads based on your prior visits to this and other websites. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" style="color:var(--acl)">Google Ads Settings</a>.</p><h3>Children's Privacy</h3><p>Our service does not address anyone under the age of 13. We do not knowingly collect personal information from children under 13.</p><h3>Changes to This Policy</h3><p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p><h3>Contact Us</h3><p>If you have any questions about this Privacy Policy, please contact us through the application.</p>`,
+  terms:`<h3>Terms of Use</h3><p><strong>Last updated:</strong> ${new Date().toLocaleDateString()}</p><p>By accessing and using this application, you accept and agree to be bound by these Terms of Use.</p><h3>Use License</h3><p>Permission is granted to temporarily download one copy of the materials (audio tracks) on Quantum Merlin's application for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title.</p><h3>Disclaimer</h3><p>The materials on Quantum Merlin's application are provided on an 'as is' basis. Quantum Merlin makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p><h3>Limitations</h3><p>In no event shall Quantum Merlin or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Quantum Merlin's application.</p><h3>Accuracy of Materials</h3><p>The frequency information and therapeutic claims on this application could include technical, typographical, or photographic errors. Quantum Merlin does not warrant that any of the materials on its application are accurate, complete, or current.</p><h3>Links</h3><p>Quantum Merlin has not reviewed all of the sites linked to its application and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Quantum Merlin of the site. Use of any such linked website is at the user's own risk.</p><h3>Modifications</h3><p>Quantum Merlin may revise these terms of use for its application at any time without notice. By using this application you are agreeing to be bound by the then current version of these Terms of Use.</p><h3>Governing Law</h3><p>These terms and conditions are governed by and construed in accordance with the laws and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>`,
+  disclaimer:`<h3>Medical Disclaimer</h3><p><strong>Last updated:</strong> ${new Date().toLocaleDateString()}</p><p>The information provided by Quantum Merlin ("we", "us", or "our") on this application is for general informational and entertainment purposes only. All information on the application is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the application.</p><h3>Not Medical Advice</h3><p>Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the application or reliance on any information provided on the application. Your use of the application and your reliance on any information on the application is solely at your own risk.</p><h3>External Links Disclaimer</h3><p>The application may contain (or you may be sent through the application) links to other websites or content belonging to or originating from third parties or links to websites and features in banners or other advertising. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us.</p><h3>Professional Disclaimer</h3><p>The application cannot and does not contain medical/health advice. The frequency therapy information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals. We do not provide any kind of medical/health advice. The use or reliance of any information contained on the application is solely at your own risk.</p><h3>Testimonials Disclaimer</h3><p>The application may contain testimonials by users of our products and/or services. These testimonials are the subjective opinions of the individuals who provided them and do not represent our opinions. We do not guarantee that any user will achieve the same or similar results.</p><h3>Results Disclaimer</h3><p>Any results described on our application are individual results, and are not necessarily representative of the results that you will experience. There is no guarantee that you will experience the same or similar results. Your results will vary and depend on many factors including but not limited to your background, experience, and work ethic. All purchases and services carry risk and you must do your own due diligence before making any purchase decision.</p>`,
+  cookies:`<h3>Cookie Policy</h3><p><strong>Last updated:</strong> ${new Date().toLocaleDateString()}</p><p>This Cookie Policy explains how Quantum Merlin ("we", "us", or "our") uses cookies and similar technologies to recognize you when you visit our application. It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p><h3>What Are Cookies?</h3><p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information.</p><h3>Why Do We Use Cookies?</h3><p>We use cookies for the following purposes:</p><ul><li><strong>Essential cookies:</strong> These cookies are strictly necessary to provide you with services available through our application and to use some of its features.</li><li><strong>Analytics cookies:</strong> These cookies help us understand how visitors interact with our application, helping us improve our application's functionality.</li><li><strong>Advertising cookies:</strong> These cookies are used to make advertising messages more relevant to you. They perform functions like preventing the same ad from continuously reappearing, ensuring that ads are properly displayed, and in some cases selecting advertisements that are based on your interests.</li></ul><h3>What Cookies Do We Use?</h3><p>We use the following types of cookies:</p><ul><li><strong>Local Storage:</strong> We use browser localStorage to save your tracks and playlists. This is essential for the application to function.</li><li><strong>Third-Party Cookies:</strong> If we serve ads through Google AdSense, Google may use the DART cookie to serve ads based on your prior visits to our application and other sites on the Internet.</li></ul><h3>How Can You Control Cookies?</h3><p>You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by clicking on the appropriate opt-out links provided in our application or by adjusting your browser settings.</p><h3>Changes to This Cookie Policy</h3><p>We may update this Cookie Policy from time to time in order to reflect, for example, changes to the cookies we use or for other operational, legal, or regulatory reasons. Please therefore re-visit this Cookie Policy regularly to stay informed about our use of cookies and related technologies.</p><h3>Contact Us</h3><p>If you have any questions about our use of cookies or other technologies, please contact us through the application.</p>`,
+};
+
+function showLegal(type){const container=document.getElementById('legal-content');if(!container)return;container.innerHTML=LEGAL_CONTENT[type]||'<p>Content not found.</p>';}
+
+// ── Nav Tab Switching ──
+document.querySelectorAll('.nav-tab').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.nav-tab').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));btn.classList.add('active');btn.setAttribute('aria-selected','true');document.getElementById('pane-'+btn.dataset.tab).classList.add('active');});});
+
+// ── Toast ──
+let toastTimer;
+function toast(msg,type='info'){const el=document.getElementById('toast');el.textContent=msg;el.className='toast '+type+' on';clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('on'),3200);}
+
+// ── Background Particles ──
+(function initBgParticles(){const canvas=document.getElementById('bg-particles');if(!canvas)return;const c=canvas.getContext('2d');let W,H;const particles=[];const PARTICLE_COUNT=80;const GRID_SIZE=120;let grid={};function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}resize();window.addEventListener('resize',resize);class BgParticle{constructor(){this.reset();}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.size=0.5+Math.random()*2;this.speedX=(Math.random()-0.5)*0.3;this.speedY=(Math.random()-0.5)*0.3;this.opacity=0.2+Math.random()*0.5;this.pulse=Math.random()*Math.PI*2;this.pulseSpeed=0.005+Math.random()*0.01;this.color=Math.random()>0.5?'124,58,237':'6,182,212';}update(){this.x+=this.speedX;this.y+=this.speedY;this.pulse+=this.pulseSpeed;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();}draw(){const alpha=this.opacity*(0.5+0.5*Math.sin(this.pulse));c.beginPath();c.arc(this.x,this.y,this.size,0,Math.PI*2);c.fillStyle=`rgba(${this.color},${alpha})`;c.fill();}}for(let i=0;i<PARTICLE_COUNT;i++)particles.push(new BgParticle());function buildGrid(){grid={};for(let i=0;i<particles.length;i++){const p=particles[i],cx=Math.floor(p.x/GRID_SIZE),cy=Math.floor(p.y/GRID_SIZE),key=cx+','+cy;if(!grid[key])grid[key]=[];grid[key].push(i);}}function drawConnections(){buildGrid();const drawn=new Set();for(const key in grid){const[cx,cy]=key.split(',').map(Number);for(let dx=-1;dx<=1;dx++){for(let dy=-1;dy<=1;dy++){const nk=(cx+dx)+','+(cy+dy);if(!grid[nk])continue;for(const i of grid[key]){for(const j of grid[nk]){if(i>=j)continue;const pk=i<j?i+','+j:j+','+i;if(drawn.has(pk))continue;drawn.add(pk);const ddx=particles[i].x-particles[j].x,ddy=particles[i].y-particles[j].y,dist2=ddx*ddx+ddy*ddy;if(dist2<14400){const dist=Math.sqrt(dist2),alpha=(1-dist/120)*0.15;c.beginPath();c.moveTo(particles[i].x,particles[i].y);c.lineTo(particles[j].x,particles[j].y);c.strokeStyle=`rgba(124,58,237,${alpha})`;c.lineWidth=0.5;c.stroke();}}}}}}function animate(){c.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw();});drawConnections();requestAnimationFrame(animate);}animate();})();
+
+// ── Ripple Click Effect ──
+(function initRipple(){document.addEventListener('click',function(e){const target=e.target.closest('.btn,.nav-tab,.chip');if(!target)return;const ripple=document.createElement('span');ripple.className='ripple';const rect=target.getBoundingClientRect();const size=Math.max(rect.width,rect.height,20);ripple.style.width=ripple.style.height=size+'px';ripple.style.left=(e.clientX-rect.left-size/2)+'px';ripple.style.top=(e.clientY-rect.top-size/2)+'px';target.style.position=target.style.position||'relative';target.style.overflow='hidden';target.appendChild(ripple);ripple.addEventListener('animationend',()=>ripple.remove());});})();
+
+// ── Button Mouse-Tracking Glow ──
+(function initBtnGlow(){document.querySelectorAll('.btn-primary,.btn-teal').forEach(btn=>{btn.addEventListener('mousemove',e=>{const rect=btn.getBoundingClientRect(),x=((e.clientX-rect.left)/rect.width)*100,y=((e.clientY-rect.top)/rect.height)*100;btn.style.setProperty('--mx',x+'%');btn.style.setProperty('--my',y+'%');});});})();
+
+// ══════════════════════════════════════════════════════════════
+//  BOOT
+// ══════════════════════════════════════════════════════════════
+initPresets();
+initTrinity();
+initLibrary();
+renderSavedTracks();
+renderPlaylists();
+renderTheory();
+renderPopularTracks();
+showLegal('disclaimer');
+
+// Volume slider
+document.getElementById('vol-slider')?.addEventListener('input', function(){ if(gainNode) gainNode.gain.value = parseFloat(this.value); });
+
+// Seekable progress bar
+document.getElementById('prog-track')?.addEventListener('click', function(e){
+  if(!actx||!srcNode||!playDuration) return;
+  const rect=this.getBoundingClientRect(), pct=Math.max(0,Math.min(1,(e.clientX-rect.left)/rect.width));
+  const seekTime=pct*playDuration, buf=srcNode.buffer;
+  try{srcNode.stop();}catch(ex){}
+  srcNode.disconnect();
+  srcNode=actx.createBufferSource(); srcNode.buffer=buf;
+  srcNode.connect(analyser); srcNode.start(0,seekTime);
+  srcNode.onended=stopAudio; playStart=actx.currentTime-seekTime; pauseOffset=0;
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', function(e){
+  if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'||e.target.tagName==='SELECT') return;
+  if(e.code==='Space'&&srcNode){ e.preventDefault(); togglePause(); }
+  if(e.code==='Escape'&&srcNode){ e.preventDefault(); stopAudio(); }
+});
+</script>
+</body>
+</html>
