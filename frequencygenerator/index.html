@@ -1405,7 +1405,7 @@ const QUICK_START_MAP = {
 
 const SR = 44100;
 const SEG_DUR = 96.3;
-let actx = null, srcNode = null, gainNode = null, playStart = 0, playDuration = 0, progTimer = null, pauseOffset = 0;
+let actx = null, srcNode = null, oscNodes = [], gainNode = null, playStart = 0, playDuration = 0, progTimer = null, pauseOffset = 0;
 let _activePlayBtnId = null;
 
 function ctx() {
@@ -1487,23 +1487,35 @@ function setPlayBtnActive(btnId, on) {
 
 function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
   stopAudio();
-  // Create AudioContext during the user gesture (required by iOS/Android autoplay policy)
-  if (!actx || actx.state === 'closed') actx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: SR });
+  // Create AudioContext synchronously during the user gesture (required by iOS/Android autoplay policy)
+  if (!actx || actx.state === 'closed') actx = new (window.AudioContext || window.webkitAudioContext)();
   const c = actx;
   if (triggerBtnId) setBtnLoading(triggerBtnId, true);
-  toast('Generating audio…', 'info');
   const go = () => {
     try {
-      const samples = buildTrack(frequencies, totalDur), ab = c.createBuffer(1, samples.length, SR);
-      ab.copyToChannel(samples, 0);
-      gainNode = c.createGain(); gainNode.gain.value = parseFloat(document.getElementById('vol-slider')?.value||0.8);
-      srcNode = c.createBufferSource(); srcNode.buffer = ab;
-      srcNode.connect(gainNode); gainNode.connect(c.destination);
-      srcNode.start(); srcNode.onended = stopAudio;
+      const vol = parseFloat(document.getElementById('vol-slider')?.value || 0.8);
+      const foundFreq = Math.min(...frequencies);
+      // Master gain + analyser chain
+      gainNode = c.createGain(); gainNode.gain.value = vol;
+      analyser = c.createAnalyser(); analyser.fftSize = 512;
+      gainNode.connect(analyser); analyser.connect(c.destination);
+      // One oscillator per frequency with amplitude matching the original mix logic
+      oscNodes = frequencies.map((freq, i) => {
+        const osc = c.createOscillator(), fg = c.createGain();
+        osc.type = 'sine'; osc.frequency.value = freq;
+        let amp = (freq === foundFreq || freq <= 100) ? 1.0 : (freq <= 400 ? 0.2 : (freq <= 1000 ? 0.1 : 0.05));
+        if (freq !== foundFreq) amp /= frequencies.length;
+        fg.gain.value = amp * 0.8;
+        osc.connect(fg); fg.connect(gainNode);
+        return osc;
+      });
+      const st = c.currentTime;
+      oscNodes.forEach(osc => { osc.start(st); osc.stop(st + totalDur); });
+      srcNode = oscNodes[0]; srcNode.onended = stopAudio;
       currentTrackName = trackName; currentTrackFreqs = frequencies.slice(); _npFreqs = frequencies.slice();
-      _trackPlayStart=Date.now();gta('track_play',{track_name:trackName,frequencies:frequencies.join('+'),duration_min:Math.round(totalDur/60)});
+      _trackPlayStart = Date.now(); gta('track_play', {track_name:trackName, frequencies:frequencies.join('+'), duration_min:Math.round(totalDur/60)});
       acquireWakeLock();
-      playStart = c.currentTime; playDuration = ab.duration;
+      playStart = st; playDuration = totalDur;
       document.getElementById('pl-name').textContent = trackName;
       document.getElementById('pl-freqs').textContent = fmtList(frequencies);
       document.getElementById('player').classList.add('on');
@@ -1516,21 +1528,22 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
         document.getElementById('pl-time').textContent = m + ':' + String(sv).padStart(2,'0');
       }, 200);
       setPlayBtnActive(triggerBtnId, true);
+      startOscilloscope(); startPlayerCymatics(frequencies); startWaveAnimation(frequencies); startCymatics(frequencies);
       toast('Playing: ' + trackName, 'success'); highlightPlaying(trackName);
     } catch (e) { toast('Error: ' + e.message, 'error'); setPlayBtnActive(null, false); }
     finally { if (triggerBtnId) setBtnLoading(triggerBtnId, false); }
   };
-  // Await resume() resolving before playback — fixes iOS/Android silent failure
+  // Resume AudioContext (required on iOS/Android) then start immediately
   if (c.state === 'suspended') {
-    c.resume().then(() => setTimeout(go, 10)).catch(e => { toast('Audio error: ' + e.message, 'error'); if (triggerBtnId) setBtnLoading(triggerBtnId, false); });
+    c.resume().then(go).catch(e => { toast('Audio blocked: tap again to allow audio', 'error'); if (triggerBtnId) setBtnLoading(triggerBtnId, false); });
   } else {
-    setTimeout(go, 10);
+    go();
   }
 }
 
 function stopAudio() {
   if(_trackPlayStart&&currentTrackName){const _ls=Math.round((Date.now()-_trackPlayStart)/1000);if(_ls>2)gta('track_stop',{track_name:currentTrackName,listen_seconds:_ls,completed:_ls>=(Math.round(playDuration||0)-5)});}_trackPlayStart=0;
-  if (srcNode) { try { srcNode.stop(); } catch(e){} srcNode = null; }
+  oscNodes.forEach(o => { try { o.stop(); o.disconnect(); } catch(e){} }); oscNodes = []; srcNode = null;
   gainNode = null; pauseOffset = 0;
   clearInterval(progTimer);
   document.getElementById('player').classList.remove('on');
@@ -1539,7 +1552,7 @@ function stopAudio() {
   setPlayBtnActive(null, false);
   const pi = document.getElementById('pause-icon'); if(pi) pi.textContent = '⏸';
   {const _i=document.getElementById('npo-pause-icon');if(_i)_i.textContent='⏸';}
-  stopCymatics(); stopWaveAnimation();
+  stopOscilloscope(); stopCymatics(); stopWaveAnimation();
   const _npo=document.getElementById('now-playing-overlay');if(_npo)_npo.style.display='none';
   releaseWakeLock();
 }
