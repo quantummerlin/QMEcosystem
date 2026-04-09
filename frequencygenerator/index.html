@@ -363,7 +363,7 @@
     .toast.info { background:rgba(99,102,241,.92); color:#fff; }
     .toast.success { background:rgba(16,185,129,.92); color:#fff; }
     .toast.error { background:rgba(239,68,68,.92); color:#fff; }
-    @media (max-width:600px) { .main { padding:1rem 0.5rem; } .preset-grid { grid-template-columns:1fr; } .player { padding:.6rem 1rem; flex-wrap:wrap; } .pl-info { flex:0 0 130px; } .card { padding:1rem; } .btn-row { justify-content:center; } .library-grid { grid-template-columns:1fr !important; } .library-grid .library-sidebar { max-height:none; overflow-y:visible; } .library-grid .library-sidebar .library-nav-wrap { display:flex; flex-wrap:wrap; gap:.3rem; } .library-grid .library-sidebar .library-nav-wrap a { display:inline-block; } .trinity-row { flex-wrap:wrap; } .ta { width:100%; justify-content:flex-start; } .preset-btns { flex-wrap:wrap; } }
+    @media (max-width:600px) { .main { padding:1rem 0.5rem; } .preset-grid { grid-template-columns:1fr; } .player { padding:.6rem 1rem; flex-wrap:wrap; } .pl-info { flex:0 0 130px; } .card { padding:1rem; } .btn-row { justify-content:center; } .library-grid { grid-template-columns:1fr !important; } .library-grid .library-sidebar { max-height:none; overflow-y:visible; } .library-grid .library-sidebar .library-nav-wrap { display:flex; flex-wrap:wrap; gap:.3rem; } .library-grid .library-sidebar .library-nav-wrap a { display:inline-block; } .trinity-row { flex-wrap:wrap; } .ta { width:100%; justify-content:flex-start; } .preset-btns { flex-wrap:wrap; } #pl-osc { display:none !important; } }
     @media (min-width:768px) { .main { max-width:900px; } }
     ::-webkit-scrollbar { width:5px; }
     ::-webkit-scrollbar-track { background:var(--bg); }
@@ -685,6 +685,8 @@
 </nav>
 <div class="player" id="player">
   <div class="pl-info" onclick="if(srcNode)openNowPlaying()" style="cursor:pointer" title="Tap to expand"><div class="pl-name" id="pl-name">—</div><div class="pl-freqs" id="pl-freqs">—</div></div>
+  <canvas id="pl-cym" width="36" height="36"></canvas>
+  <canvas id="pl-osc" width="74" height="28"></canvas>
   <div class="pl-prog"><div class="prog-track" id="prog-track"><div class="prog-fill" id="prog-fill"></div></div><div class="pl-time" id="pl-time">0:00</div></div>
   <div style="display:flex;align-items:center;gap:.3rem;flex-shrink:0" title="Volume"><span style="font-size:.7rem;color:var(--muted)">🔊</span><input type="range" id="vol-slider" min="0" max="1" step="0.01" value="0.8" style="width:60px"></div>
   <button class="pause-btn" id="pause-btn" onclick="togglePause()"><span id="pause-icon">⏸</span></button>
@@ -1531,7 +1533,7 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
       startOscilloscope(); startPlayerCymatics(frequencies); startWaveAnimation(frequencies); startCymatics(frequencies);
       toast('Playing: ' + trackName, 'success'); highlightPlaying(trackName);
     } catch (e) { toast('Error: ' + e.message, 'error'); setPlayBtnActive(null, false); }
-    finally { if (triggerBtnId) setBtnLoading(triggerBtnId, false); }
+    finally { if (triggerBtnId && _activePlayBtnId !== triggerBtnId) setBtnLoading(triggerBtnId, false); }
   };
   // Resume AudioContext (required on iOS/Android) then start immediately
   if (c.state === 'suspended') {
