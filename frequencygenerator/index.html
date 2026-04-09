@@ -302,6 +302,9 @@
     .icon-stop { background: currentColor; border-radius: 1px; }
     .spin { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.25); border-top-color: #fff; border-radius: 50%; animation: spinning .65s linear infinite; }
     @keyframes spinning { to { transform: rotate(360deg); } }
+    .btn-now-playing { background: linear-gradient(135deg, #059669, #10b981) !important; box-shadow: 0 0 18px rgba(16,185,129,.4) !important; }
+    .playing-dot { display:inline-block; width:6px; height:6px; border-radius:50%; background:#fff; margin-left:5px; vertical-align:middle; animation:playDot .9s ease-in-out infinite; }
+    @keyframes playDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.5)} }
     /* Button press feedback */
     .btn:not(:disabled):active { transform: scale(.95); transition: transform .08s; }
     .bnav-btn:active { opacity: .7; }
@@ -1403,10 +1406,10 @@ const QUICK_START_MAP = {
 const SR = 44100;
 const SEG_DUR = 96.3;
 let actx = null, srcNode = null, gainNode = null, playStart = 0, playDuration = 0, progTimer = null, pauseOffset = 0;
+let _activePlayBtnId = null;
 
 function ctx() {
   if (!actx || actx.state === 'closed') actx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: SR });
-  if (actx.state === 'suspended') actx.resume();
   return actx;
 }
 
@@ -1470,12 +1473,26 @@ function setBtnLoading(id, loading) {
   else { if (b.dataset.label) b.innerHTML = b.dataset.label; b.disabled = false; }
 }
 
+function setPlayBtnActive(btnId, on) {
+  if (_activePlayBtnId) {
+    const prev = document.getElementById(_activePlayBtnId);
+    if (prev) { prev.innerHTML = '<span class="icon-play"></span> Play'; prev.classList.remove('btn-now-playing'); }
+  }
+  _activePlayBtnId = (on && btnId) ? btnId : null;
+  if (on && btnId) {
+    const b = document.getElementById(btnId);
+    if (b) { b.innerHTML = '&#9646;&#9646; Playing<span class="playing-dot"></span>'; b.classList.add('btn-now-playing'); }
+  }
+}
+
 function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
   stopAudio();
-  const c = ctx(); // unlock AudioContext synchronously during user gesture (required on iOS/Android)
+  // Create AudioContext during the user gesture (required by iOS/Android autoplay policy)
+  if (!actx || actx.state === 'closed') actx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: SR });
+  const c = actx;
   if (triggerBtnId) setBtnLoading(triggerBtnId, true);
   toast('Generating audio…', 'info');
-  setTimeout(() => {
+  const go = () => {
     try {
       const samples = buildTrack(frequencies, totalDur), ab = c.createBuffer(1, samples.length, SR);
       ab.copyToChannel(samples, 0);
@@ -1498,10 +1515,17 @@ function playAudio(frequencies, trackName, totalDur, triggerBtnId) {
         const m = Math.floor(el / 60), sv = Math.floor(el % 60);
         document.getElementById('pl-time').textContent = m + ':' + String(sv).padStart(2,'0');
       }, 200);
+      setPlayBtnActive(triggerBtnId, true);
       toast('Playing: ' + trackName, 'success'); highlightPlaying(trackName);
-    } catch (e) { toast('Error: ' + e.message, 'error'); }
+    } catch (e) { toast('Error: ' + e.message, 'error'); setPlayBtnActive(null, false); }
     finally { if (triggerBtnId) setBtnLoading(triggerBtnId, false); }
-  }, 20);
+  };
+  // Await resume() resolving before playback — fixes iOS/Android silent failure
+  if (c.state === 'suspended') {
+    c.resume().then(() => setTimeout(go, 10)).catch(e => { toast('Audio error: ' + e.message, 'error'); if (triggerBtnId) setBtnLoading(triggerBtnId, false); });
+  } else {
+    setTimeout(go, 10);
+  }
 }
 
 function stopAudio() {
@@ -1512,6 +1536,7 @@ function stopAudio() {
   document.getElementById('player').classList.remove('on');
   document.getElementById('prog-fill').style.width = '0%';
   document.querySelectorAll('.preset-card,.trinity-row').forEach(el => el.classList.remove('playing'));
+  setPlayBtnActive(null, false);
   const pi = document.getElementById('pause-icon'); if(pi) pi.textContent = '⏸';
   {const _i=document.getElementById('npo-pause-icon');if(_i)_i.textContent='⏸';}
   stopCymatics(); stopWaveAnimation();
