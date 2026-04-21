@@ -9240,8 +9240,8 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  document.querySelectorAll('.section-content').forEach(section => {
  const id = section.id.replace('section-', '');
  // state[id] = true means expanded, false means collapsed
- // Default to collapsed (false) if no saved state
- const isExpanded = Object.prototype.hasOwnProperty.call(state, id)?!!state[id]: false;
+ // Default to expanded (true) if no saved state — ensures new readings show content immediately
+ const isExpanded = Object.prototype.hasOwnProperty.call(state, id)?!!state[id]: true;
  const isCollapsed =!isExpanded;
  
  section.classList.toggle('collapsed', isCollapsed);
