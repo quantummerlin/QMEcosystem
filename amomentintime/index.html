@@ -8565,7 +8565,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  }
  
  // Create a collapsible sub-section within a main section
- function createSubSection(id, icon, title, startCollapsed = true) {
+ function createSubSection(id, icon, title, startCollapsed = false) {
  const subSection = document.createElement('div');
  subSection.className = 'sub-section' + (startCollapsed? ' collapsed': '');
  subSection.id = `subsection-${id}`;
@@ -9349,7 +9349,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  function createReadingCard(title, value, keywords, content, strengths, challenges, enhancements) {
  const card = document.createElement('div');
  const cardId = `section-${totalSectionCount++}`;
- card.className = 'reading-card';
+ card.className = 'reading-card expanded';
  card.id = cardId;
  card.setAttribute('data-card-id', cardId);
  
@@ -9501,7 +9501,7 @@ ${_showParentContent? '<em>Parenting Guidance:</em> ' + deepLifePath.parentGuida
  function createCustomReadingCard(title, value, icon, bodyHtml) {
  const card = document.createElement('div');
  const cardId = `section-${totalSectionCount++}`;
- card.className = 'reading-card';
+ card.className = 'reading-card expanded';
  card.id = cardId;
  card.setAttribute('data-card-id', cardId);
 
