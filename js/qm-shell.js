@@ -34,49 +34,49 @@
   /* ─── Tool catalogue ──────────────────────────────────────── */
   var TOOLS = [
     // Numerology
-    { n:'Life Path Calculator',     h:'/life-path-calculator.html',      c:'Numerology',    e:'🔢', hot:true },
-    { n:'Birth Sigil Generator',    h:'/birth-sigil.html',               c:'Numerology',    e:'🔯' },
-    { n:'Business Numerology',      h:'/business-numerology.html',       c:'Numerology',    e:'💼' },
-    { n:'Personal Day',             h:'/personal-day.html',              c:'Numerology',    e:'📅' },
-    { n:'Personal Year 2026',       h:'/personal-year-2026.html',        c:'Numerology',    e:'🗓️' },
-    { n:'Forecasts',                h:'/forecasts.html',                 c:'Numerology',    e:'🔭' },
-    { n:'Quantum Sigil Generator',  h:'/quantum-sigil-generator.html',   c:'Numerology',    e:'✡️' },
-    { n:'Quantum Sigil Gallery',    h:'/quantum-sigil-gallery.html',     c:'Numerology',    e:'🖼️' },
+    { n:'Life Path Calculator',     h:'/life-path-calculator.html',      c:'Numerology',    e:'🔢', hot:true, d:'Decode the master number that shapes your entire life journey' },
+    { n:'Birth Sigil Generator',    h:'/birth-sigil.html',               c:'Numerology',    e:'🔯',           d:'Generate your unique quantum sigil from your exact birth date and place' },
+    { n:'Business Numerology',      h:'/business-numerology.html',       c:'Numerology',    e:'💼',           d:'Find the numbers behind your business name and launch date' },
+    { n:'Personal Day',             h:'/personal-day.html',              c:'Numerology',    e:'📅',           d:'Your numerological energy forecast for any given day' },
+    { n:'Personal Year 2026',       h:'/personal-year-2026.html',        c:'Numerology',    e:'🗓️',           d:'What 2026 holds based on your personal year cycle number' },
+    { n:'Forecasts',                h:'/forecasts.html',                 c:'Numerology',    e:'🔭',           d:'Monthly and yearly numerology forecasts for your path' },
+    { n:'Quantum Sigil Generator',  h:'/quantum-sigil-generator.html',   c:'Numerology',    e:'✡️',           d:'Create sacred geometry sigils from names, words, or intentions' },
+    { n:'Quantum Sigil Gallery',    h:'/quantum-sigil-gallery.html',     c:'Numerology',    e:'🖼️',           d:'Browse and save sigils from the community gallery' },
     // Angel Numbers
-    { n:'Angel Number Calculator',  h:'/angel-number-calculator.html',   c:'Angel Numbers', e:'👼', hot:true },
-    { n:'Angel Number Full Reading',h:'/angel-number-full-reading.html', c:'Angel Numbers', e:'📜' },
-    { n:'Angel Numbers Guide',      h:'/angel-numbers/index.html',       c:'Angel Numbers', e:'📖' },
+    { n:'Angel Number Calculator',  h:'/angel-number-calculator.html',   c:'Angel Numbers', e:'👼', hot:true, d:'Enter any number and decode the divine message behind it' },
+    { n:'Angel Number Full Reading',h:'/angel-number-full-reading.html', c:'Angel Numbers', e:'📜',           d:'Deep multi-number reading — patterns, sequences, and full guidance' },
+    { n:'Angel Numbers Guide',      h:'/angel-numbers/index.html',       c:'Angel Numbers', e:'📖',           d:'Complete reference guide to every angel number and its meaning' },
     // Manifestation
-    { n:'Unconscious Contract',     h:'/contract.html',                  c:'Manifestation', e:'📋', hot:true },
-    { n:'Contract Deep Dive',       h:'/contractfull.html',              c:'Manifestation', e:'🔍' },
-    { n:'Energy Leak Detector',     h:'/energyleak.html',                c:'Manifestation', e:'⚡', hot:true },
-    { n:'Energy Leak Deep Dive',    h:'/energyleakfull.html',            c:'Manifestation', e:'🔍' },
-    { n:'Hidden Strengths',         h:'/hidden-strengths-revealer.html', c:'Manifestation', e:'💪' },
-    { n:'Identity Split Detector',  h:'/identity-split-detector.html',   c:'Manifestation', e:'🪞' },
-    { n:'Power Avoidance Pattern',  h:'/power-avoidance-pattern.html',   c:'Manifestation', e:'🚧' },
-    { n:'Manifest',                 h:'/manifest.html',                  c:'Manifestation', e:'✨' },
-    { n:'Manifest Deep Dive',       h:'/manifestfull.html',              c:'Manifestation', e:'🔍' },
-    { n:'Trust Radar',              h:'/trust-radar.html',               c:'Manifestation', e:'🎯' },
-    { n:'Reality Codes',            h:'/Reality codes/index.html',       c:'Manifestation', e:'🌀' },
+    { n:'Unconscious Contract',     h:'/contract.html',                  c:'Manifestation', e:'📋', hot:true, d:'Reveal the hidden life rules you agreed to and don\'t remember signing' },
+    { n:'Contract Deep Dive',       h:'/contractfull.html',              c:'Manifestation', e:'🔍',           d:'Extended unconscious contract analysis with full rewrite protocol' },
+    { n:'Energy Leak Detector',     h:'/energyleak.html',                c:'Manifestation', e:'⚡', hot:true, d:'Find where your energy is quietly draining and why' },
+    { n:'Energy Leak Deep Dive',    h:'/energyleakfull.html',            c:'Manifestation', e:'🔍',           d:'Full energy audit with root-cause mapping and repair guidance' },
+    { n:'Hidden Strengths',         h:'/hidden-strengths-revealer.html', c:'Manifestation', e:'💪',           d:'Uncover the gifts you have but haven\'t been claiming' },
+    { n:'Identity Split Detector',  h:'/identity-split-detector.html',   c:'Manifestation', e:'🪞',           d:'Spot where your inner and outer selves are out of alignment' },
+    { n:'Power Avoidance Pattern',  h:'/power-avoidance-pattern.html',   c:'Manifestation', e:'🚧',           d:'Identify the patterns keeping you small and what\'s driving them' },
+    { n:'Manifest',                 h:'/manifest.html',                  c:'Manifestation', e:'✨',           d:'Quantum manifestation tool — set the field and activate your intention' },
+    { n:'Manifest Deep Dive',       h:'/manifestfull.html',              c:'Manifestation', e:'🔍',           d:'Full manifestation protocol with belief mapping and quantum anchoring' },
+    { n:'Trust Radar',              h:'/trust-radar.html',               c:'Manifestation', e:'🎯',           d:'Map your trust patterns in relationships and where they came from' },
+    { n:'Reality Codes',            h:'/Reality codes/index.html',       c:'Manifestation', e:'🌀',           d:'Decode the subconscious programs running your reality field' },
     // Soul Blueprint
-    { n:'Soul Blueprint',           h:'/soulblueprint/index.html',       c:'Soul Blueprint',e:'🌟', hot:true },
-    { n:'Soul Card',                h:'/soulcard.html',                  c:'Soul Blueprint',e:'🃏' },
-    { n:'Quantum Rose',             h:'/quantum-rose.html',              c:'Soul Blueprint',e:'🌹' },
-    { n:'Reading Generator',        h:'/reading-generator.html',         c:'Soul Blueprint',e:'📿' },
-    { n:'Readings',                 h:'/readings/index.html',            c:'Soul Blueprint',e:'📚' },
+    { n:'Soul Blueprint',           h:'/soulblueprint/index.html',       c:'Soul Blueprint',e:'🌟', hot:true, d:'Your complete soul contract — purpose, lessons, and karmic themes' },
+    { n:'Soul Card',                h:'/soulcard.html',                  c:'Soul Blueprint',e:'🃏',           d:'Draw your soul card and receive a personalised message for today' },
+    { n:'Quantum Rose',             h:'/quantum-rose.html',              c:'Soul Blueprint',e:'🌹',           d:'The rose as a sacred map of your soul\'s unfolding journey' },
+    { n:'Reading Generator',        h:'/reading-generator.html',         c:'Soul Blueprint',e:'📿',           d:'Generate a full personalised reading from your birth data' },
+    { n:'Readings',                 h:'/readings/index.html',            c:'Soul Blueprint',e:'📚',           d:'Your reading archive — past readings saved and accessible anytime' },
     // Frequency
-    { n:'Frequency Generator',      h:'/Frequency Generator/index.html', c:'Frequency',     e:'🎵', hot:true },
-    { n:'40hz Frequency',           h:'/40hz/index.html',                c:'Frequency',     e:'🔊' },
-    { n:'Frequency Generator Alt',  h:'/frequencygenerator/index.html',  c:'Frequency',     e:'🎶' },
+    { n:'Frequency Generator',      h:'/Frequency Generator/index.html', c:'Frequency',     e:'🎵', hot:true, d:'Generate sacred healing frequencies — Solfeggio, Schumann, and more' },
+    { n:'40hz Frequency',           h:'/40hz/index.html',                c:'Frequency',     e:'🔊',           d:'40hz gamma wave entrainment for focus, clarity, and neural activation' },
+    { n:'Frequency Generator Alt',  h:'/frequencygenerator/index.html',  c:'Frequency',     e:'🎶',           d:'Alternative frequency player with extended tone and binaural options' },
     // Zodiac
-    { n:'Chinese Zodiac',           h:'/chinesezodiac/index.html',       c:'Zodiac',        e:'♋', hot:true },
+    { n:'Chinese Zodiac',           h:'/chinesezodiac/index.html',       c:'Zodiac',        e:'♋', hot:true, d:'Your Chinese zodiac animal, element, and full personality profile' },
     // Compatibility
-    { n:'Compatibility',            h:'/compatibility.html',             c:'Compatibility', e:'💞', hot:true },
+    { n:'Compatibility',            h:'/compatibility.html',             c:'Compatibility', e:'💞', hot:true, d:'Quantum compatibility reading — numerology, energy, and life path alignment' },
     // Tools & Guides
-    { n:'Workshop',                 h:'/workshop.html',                  c:'Guides',        e:'🛠️' },
-    { n:'Library',                  h:'/library.html',                   c:'Guides',        e:'📚' },
-    { n:'Guides',                   h:'/guides/index.html',              c:'Guides',        e:'📖' },
-    { n:'Expand',                   h:'/Expand/index.html',              c:'Guides',        e:'🔭' },
+    { n:'Workshop',                 h:'/workshop.html',                  c:'Guides',        e:'🛠️',           d:'Guided exercises and practices to work with your quantum field' },
+    { n:'Library',                  h:'/library.html',                   c:'Guides',        e:'📚',           d:'Full reference library — concepts, glossary, and deep-dive articles' },
+    { n:'Guides',                   h:'/guides/index.html',              c:'Guides',        e:'📖',           d:'Step-by-step guides to using every tool in the ecosystem' },
+    { n:'Expand',                   h:'/Expand/index.html',              c:'Guides',        e:'🔭',           d:'Go deeper — advanced practices for the committed quantum explorer' },
   ];
 
   /* ─── Category config ─────────────────────────────────────── */
@@ -380,6 +380,10 @@ body.qms-desktop .qms-sidebar {
   font-family:"Exo 2",sans-serif;font-size:.82rem;
   font-weight:600;color:rgba(240,230,255,.9);line-height:1.3;
 }
+.qms-more-desc{
+  font-family:"Exo 2",sans-serif;font-size:.7rem;
+  color:rgba(240,230,255,.45);line-height:1.45;
+}
 .qms-more-cat{
   font-family:"Orbitron",sans-serif;font-size:.48rem;
   letter-spacing:.1em;text-transform:uppercase;
@@ -497,7 +501,7 @@ body.qms-desktop.qms-active{
       var isCur = path === th || path === th.replace('/index.html','');
       var col = catColor(t.c);
       return '<a href="' + t.h + '" class="qms-tool-mini' + (isCur?' current':'') + '"' +
-        ' data-cat="' + t.c + '">' +
+        ' data-cat="' + t.c + '"' + (t.d ? ' title="' + t.d + '"' : '') + '>' +
         '<span class="qms-mini-icon">' + t.e + '</span>' +
         '<span class="qms-mini-info">' +
           '<div class="qms-mini-name">' + t.n + '</div>' +
@@ -537,6 +541,7 @@ body.qms-desktop.qms-active{
       return '<a href="' + t.h + '" class="qms-more-card">' +
         '<div class="qms-more-icon">' + t.e + '</div>' +
         '<div class="qms-more-name">' + t.n + '</div>' +
+        (t.d ? '<div class="qms-more-desc">' + t.d + '</div>' : '') +
         '<div class="qms-more-cat" style="color:' + catColor(t.c) + '">' + t.c + '</div>' +
         '<div class="qms-more-cta">Open <span>→</span></div>' +
       '</a>';
