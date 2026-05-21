@@ -188,8 +188,17 @@
   }
 
   /* ── TOOLS GRID ─────────────────────────────────────────── */
+  var EXCLUDED_NAMES = {
+    'index.html': 1, 'hub.html': 1, 'about.html': 1, 'contact.html': 1,
+    'privacy.html': 1, 'terms.html': 1, 'disclaimer.html': 1,
+    'reading-template.html': 1, 'widgets.html': 1, 'qrcodes.html': 1,
+    'qrcodesfull.html': 1, 'quantum-forum.html': 1, 'tools': 1,
+    'Widgets': 1, 'qrcodes-science': 1, 'quantum-merlin-hub': 1,
+    'pt': 1, 'classic': 1, 'stranger': 1
+  };
+
   function buildToolsGrid(container, toolsData) {
-    var allCards = toolsData;
+    var allCards = toolsData.filter(function (t) { return !EXCLUDED_NAMES[t.name]; });
     var filtered = allCards;
     var activeFilter = 'all';
     var searchQuery = '';
