@@ -251,28 +251,86 @@
 
     function getDesc(t) {
       var descs = {
-        'life-path-calculator.html': 'Reveal your core numerological destiny number',
-        'angel-number-calculator.html': 'Decode repeating number sequences',
-        'angel-number-full-reading.html': 'Deep dive into any angel number meaning',
-        'compatibility.html': 'Numerological compatibility between two souls',
-        'birth-sigil.html': 'Generate your unique sacred birth sigil',
-        'business-numerology.html': 'Numerology insights for your business',
-        'personal-day.html': 'Your personal day number and energy forecast',
-        'personal-year-2026.html': 'Your complete 2026 personal year reading',
-        'forecasts.html': 'Numerology forecasts and predictions',
-        'manifest.html': 'Quantum manifestation ritual tool',
-        'energyleak.html': 'Identify and seal your energy leaks',
-        'soulcard.html': 'Read your soul contract blueprint',
-        'compatibility.html': 'Soul and numerology compatibility matrix',
-        '40hz': '40Hz gamma frequency brain entrainment',
-        'genesis': 'Solfeggio frequency healing tones',
-        'chinesezodiac': 'Chinese zodiac compatibility & readings',
-        'kpop': 'K-Pop cosmic energy readings',
-        'amomentintime': 'Capture a quantum moment in time reading',
-        'soulblueprint': 'Complete soul blueprint activation system',
-        'Expand': 'Expand your consciousness toolkit'
+        // Numerology
+        'life-path-calculator.html':      'Decode the master number that shapes your entire life journey',
+        'birth-sigil.html':               'Generate your unique quantum sigil from your exact birth date and place',
+        'business-numerology.html':       'Find the numbers behind your business name and launch date',
+        'personal-day.html':              'Your numerological energy forecast for any given day',
+        'personal-year-2026.html':        'What 2026 holds based on your personal year cycle number',
+        'forecasts.html':                 'Monthly and yearly numerology forecasts for your path',
+        'quantum-sigil-generator.html':   'Create sacred geometry sigils from names, words, or intentions',
+        'quantum-sigil-gallery.html':     'Browse and save sigils from the community sigil gallery',
+        // Angel Numbers
+        'angel-number-calculator.html':   'Enter any number and decode the divine message behind it',
+        'angel-number-full-reading.html': 'Deep multi-number reading — patterns, sequences, and full guidance',
+        'angel-numbers':                  'Complete reference guide to every angel number and its meaning',
+        // Manifestation
+        'contract.html':                  'Reveal the hidden life rules you agreed to and don\'t remember signing',
+        'contractfull.html':              'Extended unconscious contract analysis with full rewrite protocol',
+        'energyleak.html':                'Find where your energy is quietly draining and why',
+        'energyleakfull.html':            'Full energy audit with root-cause mapping and repair guidance',
+        'hidden-strengths-revealer.html': 'Uncover the gifts you have but haven\'t been claiming',
+        'identity-split-detector.html':   'Spot where your inner and outer selves are out of alignment',
+        'identityfull.html':              'Deep identity split analysis with integration protocols and practices',
+        'power-avoidance-pattern.html':   'Identify the patterns keeping you small and what\'s driving them',
+        'powerfull.html':                 'Full power avoidance deep dive — unblock your authentic self-expression',
+        'manifest.html':                  'Quantum manifestation tool — set the field and activate your intention',
+        'manifestfull.html':              'Full manifestation protocol with belief mapping and quantum anchoring',
+        'trust-radar.html':               'Map your trust patterns in relationships and where they came from',
+        'trustfull.html':                 'Complete trust pattern analysis with repair protocols and exercises',
+        'strengthsfull.html':             'Full hidden strengths deep dive with activation practices and exercises',
+        'Reality codes':                  'Decode the subconscious programs running your reality field',
+        // Soul Blueprint
+        'soulblueprint':                  'Your complete soul contract — purpose, lessons, and karmic themes',
+        'soulcard.html':                  'Draw your soul card and receive a personalised message for today',
+        'quantum-rose.html':              'The rose as a sacred map of your soul\'s unfolding journey',
+        'reading-generator.html':         'Generate a full personalised reading from your birth data',
+        'readings':                       'Your reading archive — past readings saved and accessible anytime',
+        'reading-template.html':          'Template for generating custom quantum reading formats',
+        // Frequency
+        'Frequency Generator':            'Generate sacred healing frequencies — Solfeggio, Schumann, and more',
+        '40hz':                           '40Hz gamma wave entrainment for focus, clarity, and neural activation',
+        'frequencygenerator':             'Alternative frequency player with extended tone and binaural options',
+        'genesis':                        'Solfeggio frequency healing tones for deep cellular restoration',
+        // Zodiac
+        'chinesezodiac':                  'Your Chinese zodiac animal, element, and full personality profile',
+        'kosmickpop':                     'Cosmic K-Pop readings — pop culture meets quantum zodiac energy',
+        'kpop':                           'K-Pop quantum readings — cosmic energy aligned with K-Pop archetypes',
+        // Compatibility
+        'compatibility.html':             'Quantum compatibility reading — numerology, energy, and life path alignment',
+        'compatabilty.html':              'Quantum compatibility reading — numerology, energy, and life path alignment',
+        // Tools & Guides
+        'workshop.html':                  'Guided exercises and practices to work with your quantum field',
+        'library.html':                   'Full reference library — concepts, glossary, and deep-dive articles',
+        'guides':                         'Step-by-step guides to using every tool in the ecosystem',
+        'Expand':                         'Go deeper — advanced practices for the committed quantum explorer',
+        'aihub':                          'AI-powered quantum readings — next-generation insight tools',
+        'quantum-merlin-hub':             'Alternative hub experience — immersive quantum portal navigation',
+        'tools':                          'Browse the complete toolkit — all quantum tools in one place',
+        'hub.html':                       'Alternative hub view — all quantum tools at a glance',
+        // Other / Sub-brands
+        'amomentintime':                  'Capture any moment in time and read its quantum energy signature',
+        'lifestrategy':                   'Life strategy mapped through quantum numerology and energy work',
+        'ultimate':                       'The complete advanced practitioner suite — all tools unlocked',
+        'gravity':                        'Quantum Gravity — the energetic forces shaping your reality field',
+        'pt':                             'Personal transformation — guided quantum framework for lasting change',
+        'classic':                        'Classic quantum readings — the original Merlin toolkit archive',
+        'stranger':                       'Another dimension of readings — quantum mysticism beyond the veil',
+        'mocktails&dreams':               'Dream interpretation meets quantum alchemy — decode nightly visions',
+        'qrcodes-science':                'The science behind quantum QR codes and sacred geometry encoding',
+        'qrcodes.html':                   'Generate quantum-encoded QR codes with sacred geometry overlays',
+        'qrcodesfull.html':               'Full QR code analysis — decode the hidden information in any code',
+        'quantum-forum.html':             'Community forum — connect with fellow quantum explorers',
+        'Widgets':                        'Standalone quantum widgets — embeddable tools for any platform',
+        'widgets.html':                   'Embeddable quantum widgets for your website or blog',
+        // Info pages
+        'about.html':                     'Meet Quantum Merlin — the story, the mission, and the ecosystem',
+        'contact.html':                   'Reach the Quantum Merlin team — questions, collaborations, and readings',
+        'privacy.html':                   'Our commitment to your data privacy and information security',
+        'terms.html':                     'Terms of service and usage conditions for Quantum Merlin tools',
+        'disclaimer.html':                'Important information about how to use Quantum Merlin readings'
       };
-      return descs[t.name] || ('Quantum tool: ' + prettify(t.name));
+      return descs[t.name] || ('Explore ' + prettify(t.name));
     }
 
     function renderCards() {
