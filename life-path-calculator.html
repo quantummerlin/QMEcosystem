@@ -1182,7 +1182,7 @@ function calculateLifePath() {
 
   // Scroll to result
   setTimeout(() => {
-    document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    qmScrollTo(document.getElementById('resultSection'), 80);
   }, 300);
 }
 
@@ -1365,19 +1365,42 @@ function buildQuickRef() {
   }).join('');
 }
 
+// ═══════════════════════════════════════════════════════════
+// SCROLL HELPER — accounts for fixed topbar + shell sidebar
+// ═══════════════════════════════════════════════════════════
+function qmScrollTo(el, offset) {
+  if (!el) return;
+  offset = (offset !== undefined) ? offset : 80;
+  var top = el.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - offset;
+  try {
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  } catch (e) {
+    window.scrollTo(0, top);
+  }
+}
+
 function scrollToCalc() {
-  document.querySelector('.calc-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  qmScrollTo(document.querySelector('.calc-card'), 80);
 }
 
 // ═══════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   populateDays();
   buildQuickRef();
   initParticles();
   initScrollReveal();
+  // Safety: calc-card may be stuck at opacity:0 if CSS animation is blocked.
+  // After 1.5s, force it fully visible regardless.
+  setTimeout(function() {
+    var cc = document.querySelector('.calc-card');
+    if (cc) { cc.style.opacity = '1'; cc.style.transform = 'scale(1)'; cc.style.animation = 'none'; }
+    // Also force hero elements in case those are stuck
+    var heroEls = document.querySelectorAll('.hero-badge, .hero h1, .hero-subtitle, .hero-quote');
+    heroEls.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'none'; el.style.animation = 'none'; });
+  }, 1500);
 });
 
 // ═══════════════════════════════════════════════════════════
@@ -1434,7 +1457,15 @@ function initParticles() {
 // ═══════════════════════════════════════════════════════════
 
 function initScrollReveal() {
+  // Safety fallback: force all [data-animate] elements visible after 2.5s
+  // regardless of whether IntersectionObserver fires. This guards against
+  // qm-shell changing the scroll container so IO never intersects.
+  var revealFallback = setTimeout(function() {
+    document.querySelectorAll('[data-animate]').forEach(function(el) { el.classList.add('in'); });
+  }, 2500);
+
   if (!window.IntersectionObserver) {
+    clearTimeout(revealFallback);
     document.querySelectorAll('[data-animate]').forEach(function(el) { el.classList.add('in'); });
     return;
   }
@@ -1445,7 +1476,7 @@ function initScrollReveal() {
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
   document.querySelectorAll('[data-animate]').forEach(function(el) { io.observe(el); });
 }
 
@@ -1469,7 +1500,7 @@ window.addEventListener('qm-profile-apply', function(e) {
   // Auto-calculate after a brief settle
   setTimeout(function() {
     calculateLifePath();
-    document.querySelector('.calc-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    qmScrollTo(document.querySelector('.calc-card'), 80);
   }, 250);
 });
 </script>
@@ -1478,7 +1509,7 @@ window.addEventListener('qm-profile-apply', function(e) {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   initQuantumOnboarding('life-path', function() {
-    document.querySelector('.calc-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    qmScrollTo(document.querySelector('.calc-card'), 80);
   });
 });
 </script>
