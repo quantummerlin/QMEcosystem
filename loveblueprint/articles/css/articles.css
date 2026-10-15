@@ -1,0 +1,136 @@
+/* ============================================================
+   SOUL SPARK — ARTICLE STYLES (dark midnight-rose)
+   Self-contained: no dependency on the main site's articles.css.
+   Matches the tool's design DNA so readers land in one world.
+   ============================================================ */
+:root{
+  color-scheme:dark;
+  --rose:#FF4D6D;
+  --rose-deep:#FF8FA3;
+  --gold:#E8B96A;
+  --bg:#140b15;
+  --card:#1E1322;
+  --card-2:#26172A;
+  --text:#F3E3E9;
+  --muted:#B79AA5;
+  --line:#3A2436;
+  --green:#7BC48A; --yellow:#E0B64A; --red:#FF7B6B;
+  --font-head:'Playfair Display',Georgia,serif;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);color:var(--text);line-height:1.7;
+  background:
+    radial-gradient(1100px 520px at 85% -8%, rgba(255,77,109,.14), transparent 60%),
+    radial-gradient(860px 480px at -8% 16%, rgba(232,185,106,.07), transparent 55%),
+    var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.2}
+a{color:var(--rose-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1040px;margin:0 auto;padding:0 20px}
+.container-narrow{max-width:720px;margin:0 auto;padding:0 20px}
+
+/* Progress bar */
+.reading-progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:100;background:transparent}
+.reading-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--gold));transition:width .1s linear}
+
+/* Header */
+.site-header{border-bottom:1px solid var(--line);background:rgba(20,11,21,.8);backdrop-filter:blur(14px);position:sticky;top:0;z-index:50}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:62px}
+.site-header-brand{font-family:var(--font-head);font-weight:800;font-size:1.15rem;color:var(--text);display:flex;align-items:center;gap:9px}
+.site-header-brand:hover{text-decoration:none}
+.site-header-nav{display:flex;align-items:center;gap:18px;font-size:.88rem}
+.site-header-nav a{color:var(--muted);font-weight:600}
+.site-header-nav a:hover{color:var(--rose-deep);text-decoration:none}
+.header-cta{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff!important;padding:8px 16px;border-radius:999px;font-weight:700}
+@media(max-width:720px){.site-header-nav a:not(.header-cta){display:none}}
+
+/* Hero */
+.article-hero{padding:40px 0 24px;border-bottom:1px solid var(--line)}
+.breadcrumbs{font-size:.78rem;color:var(--muted);margin-bottom:14px}
+.breadcrumbs .sep{opacity:.5;margin:0 5px}
+.pillar-tag{display:inline-block;background:rgba(232,185,106,.16);color:var(--gold);border:1px solid rgba(232,185,106,.4);
+  padding:4px 13px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+.article-hero h1{font-size:clamp(1.8rem,5vw,2.7rem);font-weight:800;color:var(--text);
+  background:linear-gradient(120deg,#FFD3DC,#FF8FA3 55%,#E8B96A);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px}
+.article-meta{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--muted)}
+
+/* Body */
+.article-body{padding:34px 0 20px}
+.article-body h2{font-size:1.5rem;color:var(--rose-deep);margin:34px 0 14px;padding-top:6px}
+.article-body h3{font-size:1.15rem;color:var(--text);margin:24px 0 10px}
+.article-body p{margin-bottom:16px;color:#E7D6DD;font-size:1.01rem}
+.article-body strong{color:var(--text);font-weight:700}
+.article-body ul,.article-body ol{margin:0 0 18px 24px}
+.article-body li{margin-bottom:8px;color:#E7D6DD}
+.article-body blockquote{border-left:3px solid var(--gold);background:rgba(232,185,106,.07);
+  padding:14px 20px;margin:20px 0;border-radius:0 10px 10px 0;font-style:italic;color:var(--text)}
+
+/* Author intro */
+.author-intro{background:linear-gradient(135deg,rgba(255,77,109,.10),rgba(232,185,106,.06));
+  border-left:3px solid var(--rose);padding:16px 20px;border-radius:0 10px 10px 0;margin-bottom:26px;font-style:italic;color:#E7D6DD}
+
+/* Summary box */
+.summary-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;margin:22px 0;box-shadow:var(--shadow)}
+.summary-box h4{font-family:var(--font-head);color:var(--rose-deep);font-size:1.1rem;margin-bottom:10px}
+.summary-box ul{margin-left:20px}
+.summary-box li{margin-bottom:6px;color:var(--text);font-size:.94rem}
+
+/* Sign grid (for the by-sign reference tables) */
+.sign-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:20px 0}
+.sign-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.sign-card h4{font-family:var(--font-head);color:var(--rose-deep);font-size:1.05rem;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.sign-card p{font-size:.86rem;color:var(--muted);line-height:1.6;margin:0}
+
+/* Ad zones — never inside interactive content; placeholders till real slots exist */
+.ad-zone{margin:30px auto;max-width:728px;min-height:90px;display:flex;align-items:center;justify-content:center;
+  border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.ad-zone-label{opacity:.5}
+
+/* Cards / callouts */
+.callout{background:linear-gradient(135deg,rgba(255,77,109,.09),rgba(232,185,106,.05));
+  border:1px solid rgba(255,77,109,.3);border-radius:14px;padding:18px 22px;margin:22px 0}
+.callout h4{color:var(--rose-deep);font-family:var(--font-head);margin-bottom:6px}
+.honesty-note{background:var(--card-2);border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px;margin:24px 0;font-size:.84rem;color:var(--muted);line-height:1.6}
+.honesty-note b{color:var(--gold)}
+
+/* Related cards */
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:20px 0}
+.related a{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:block;transition:transform .2s,border-color .2s}
+.related a:hover{transform:translateY(-3px);border-color:var(--rose);text-decoration:none}
+.related h4{font-family:var(--font-head);color:var(--text);font-size:1rem;margin-bottom:5px}
+.related p{font-size:.82rem;color:var(--muted);margin:0}
+/* Honest "coming soon" card: NOT a link, so it can never 404 */
+.related .soon-card{background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:18px;opacity:.65}
+.related .soon-card .soon-tag{display:inline-block;font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(232,185,106,.4);background:rgba(232,185,106,.12);padding:2px 9px;border-radius:999px;margin-bottom:8px}
+
+/* Generator CTA */
+.generator-cta{text-align:center;padding:46px 20px;margin:30px 0 0;
+  background:linear-gradient(135deg,rgba(142,14,46,.35),rgba(20,11,21,.2));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.generator-cta h2{font-size:1.8rem;color:var(--text);margin-bottom:10px}
+.generator-cta p{color:var(--muted);max-width:520px;margin:0 auto 20px}
+.btn-primary{display:inline-block;background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff!important;
+  padding:14px 30px;border-radius:999px;font-family:var(--font-head);font-weight:700;font-size:1.05rem;
+  box-shadow:0 8px 22px rgba(255,77,109,.35);transition:transform .2s}
+.btn-primary:hover{transform:translateY(-2px);text-decoration:none}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--line);margin-top:20px;padding:34px 0}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;margin-bottom:24px}
+.footer-col h4{font-family:var(--font-head);color:var(--rose-deep);font-size:.95rem;margin-bottom:10px}
+.footer-col a{display:block;color:var(--muted);font-size:.85rem;margin-bottom:6px}
+.footer-col a:hover{color:var(--rose-deep)}
+.footer-bottom{text-align:center;color:var(--muted);font-size:.78rem;opacity:.7;border-top:1px solid var(--line);padding-top:18px}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+  .reading-progress{display:none}
+}

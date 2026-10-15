@@ -1,0 +1,3233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soul Spark — Free Dating Profile Astrology &amp; Compatibility | Quantum Merlin</title>
+<meta name="description" content="Soul Spark turns your birth chart into a real dating playbook: how you love, how you text, who you're wired for — plus exact degree compatibility and copy-paste profile bios. 100% free, calculated on your device, nothing uploaded.">
+<meta name="keywords" content="dating astrology, venus sign dating, compatibility calculator, synastry, dating profile bio, birth chart love, soul spark, quantum merlin">
+<meta name="author" content="Quantum Merlin">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<meta property="og:image" content="https://quantummerlin.com/loveblueprint/assets/og-card.png">
+<link rel="canonical" href="https://quantummerlin.com/loveblueprint/">
+<meta name="theme-color" content="#140b15">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Soul Spark — Your Cosmic Dating Decoder">
+<meta property="og:description" content="How you love, how you text, who you're wired for — computed exactly from your birth chart. Free, private, shareable on Hinge &amp; Bumble.">
+<meta property="og:url" content="https://quantummerlin.com/loveblueprint/">
+<meta property="og:site_name" content="Soul Spark | Quantum Merlin">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://quantummerlin.com/loveblueprint/assets/og-card.png">
+<meta name="twitter:title" content="Soul Spark — Your Cosmic Dating Decoder">
+<meta name="twitter:description" content="Exact birth-chart dating readings + degree compatibility + profile bio writer. Free and private.">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Soul Spark",
+  "url": "https://quantummerlin.com/loveblueprint/",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "Any (web browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
+  "description": "Dating astrology tool that computes exact Venus, Moon, Mars and 7th-House readings from your birth data, compares compatibility with degree-based synastry, and writes profile bios from your chart. All computation runs on-device.",
+  "publisher": { "@type": "Organization", "name": "Quantum Merlin", "url": "https://quantummerlin.com/" },
+  "featureList": [
+    "Exact ephemeris birth-chart readings for dating",
+    "Venus-Mars-Moon-7th House compatibility (degree synastry)",
+    "Privacy-safe shareable spark links",
+    "AI-free profile bio writer from chart placements"
+  ]
+}
+</script>
+
+<!-- Google Analytics (shared with main site) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VW4LGE7L1T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VW4LGE7L1T');
+  function sbTrack(name, params){ try{ gtag('event', name, params || {}); }catch(e){} }
+</script>
+
+<!-- Google AdSense (approved publisher, shared with main site) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3480541530392777" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SOUL SPARK — DESIGN DNA
+   Cohesive tokens. Restrained motion (0.3-0.8s, ease-out).
+   ============================================================ */
+:root{
+  /* DARK THEME — midnight rose. Light rose text on deep plum-black. */
+  color-scheme:dark;
+  --rose:#FF4D6D;          /* primary love red (brighter for dark bg) */
+  --rose-deep:#FF8FA3;     /* accent text — light rose reads on dark */
+  --rose-soft:#FF6B85;
+  --gold:#E8B96A;          /* secondary */
+  --blush:#140b15;         /* page bg: deep plum-black */
+  --card:#1E1322;          /* card surface */
+  --card-2:#261729;        /* raised surface (inputs, fronts) */
+  --text:#F3E3E9;          /* warm near-white */
+  --muted:#B79AA5;
+  --line:#3A2436;          /* borders */
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+  --shadow-lift:0 18px 44px rgba(0,0,0,.6);
+  --green:#7BC48A; --yellow:#E0B64A; --red:#FF7B6B;
+  --radius:18px;
+  --font-head:'Playfair Display',Georgia,serif;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --flip-dur:.72s;
+  --ease:cubic-bezier(.4,.15,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(255,77,109,.14) 0%, transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(232,185,106,.08) 0%, transparent 55%),
+    var(--blush);
+  line-height:1.62;
+  min-height:100vh;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
+
+/* Ambient floating hearts — subtle, one hero motion */
+.heart-field{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.heart-field span{
+  position:absolute;bottom:-40px;color:var(--rose);opacity:.10;
+  animation:floatUp linear infinite;font-size:22px;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0) scale(.8);opacity:0}
+  10%{opacity:.12}
+  90%{opacity:.10}
+  100%{transform:translateY(-108vh) rotate(220deg) scale(1.15);opacity:0}
+}
+
+.wrap{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:0 18px 80px}
+
+/* ---------- HERO ---------- */
+.hero{text-align:center;padding:56px 16px 28px}
+.brand-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,#8E0E2E,var(--rose));
+  color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.14em;
+  text-transform:uppercase;padding:7px 16px;border-radius:999px;
+  box-shadow:0 6px 18px rgba(255,77,109,.35);
+}
+.hero h1{
+  font-size:clamp(2.6rem,8vw,4.4rem);font-weight:800;margin:18px 0 6px;
+  background:linear-gradient(135deg,#FF8FA3,#FF4D6D 45%,#E8B96A);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero .tag{font-size:clamp(1rem,3.4vw,1.25rem);color:var(--muted);max-width:560px;margin:0 auto 6px}
+.hero .sub{font-size:.85rem;color:var(--muted);opacity:.8}
+.beat{display:inline-block;animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.18)}28%{transform:scale(1)}42%{transform:scale(1.12)}}
+
+/* ---------- FORM MOCK ---------- */
+.form-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;margin:28px auto 0;max-width:560px;box-shadow:var(--shadow);text-align:left;
+}
+.form-row{display:flex;gap:12px;flex-wrap:wrap}
+.field{flex:1;min-width:150px}
+.field label,.field .lbl{display:block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:6px}
+.field input{
+  width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;
+  font-family:inherit;font-size:.95rem;color:var(--text);background:var(--card-2);
+  transition:border-color .2s,box-shadow .2s;
+}
+.field input::placeholder{color:var(--muted);opacity:.55}
+.field input:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgba(255,77,109,.18)}
+.field .fhint{font-size:.74rem;color:var(--muted);margin-top:5px;opacity:.85}
+/* Native date/time pickers: force light glyphs on dark inputs */
+.field input[type="date"]::-webkit-calendar-picker-indicator,
+.field input[type="time"]::-webkit-calendar-picker-indicator{filter:invert(1) sepia(.4) saturate(3) hue-rotate(310deg);cursor:pointer}
+.btn{
+  width:100%;margin-top:16px;padding:15px;border:none;border-radius:12px;cursor:pointer;
+  font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,#FF4D6D,#8E0E2E);
+  box-shadow:0 8px 22px rgba(255,77,109,.34);transition:transform .2s var(--ease),box-shadow .2s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(255,77,109,.45)}
+.btn:active{transform:translateY(0)}
+
+/* ---------- AD UNITS ----------
+   Policy placement: between major content sections only — NEVER inside
+   flip cards, compare output, bio drafts, or anything tap-to-reveal
+   (invalid-click risk). 0-1 above the fold. Responsive units. */
+.ad-unit{max-width:728px;margin:28px auto 0;text-align:center;min-height:90px}
+.ad-unit ins{display:block}
+@media print{.ad-unit{display:none!important}}
+
+/* ---------- STATIC SEO CONTENT ---------- */
+.seo-block{margin-top:56px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow)}
+.seo-block h2{font-family:var(--font-head);color:var(--rose-deep);font-size:1.45rem;margin-bottom:12px}
+.seo-block h3{font-family:var(--font-head);color:var(--text);font-size:1.08rem;margin:20px 0 8px}
+.seo-block p{font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:10px}
+.seo-block p b,.seo-block li b{color:var(--text)}
+.seo-block ul{margin:6px 0 12px 20px}
+.seo-block li{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:5px}
+
+/* ---------- FOOTER LINKS ---------- */
+.legal-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin-bottom:14px;font-size:.82rem}
+.legal-nav a{color:var(--rose-deep);text-decoration:none;font-weight:600}
+.legal-nav a:hover{text-decoration:underline}
+.legal-nav .sep{color:var(--muted);opacity:.5}
+
+/* ---------- RESULTS ---------- */
+#results{display:none}
+#results.on{display:block}
+.section{margin-top:52px}
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.section-head .dot{font-size:1.5rem;color:var(--rose)}
+.section-head h2{font-size:1.7rem;color:var(--rose-deep)}
+.section-head p{color:var(--muted);font-size:.92rem;margin-top:2px}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:16px 0}
+
+/* Spark meter badge (Saily energy badge → dating) */
+.spark-badge{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+  background:linear-gradient(135deg,var(--card),var(--card-2));border:1px solid var(--line);
+  border-left:5px solid var(--rose);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);
+}
+.spark-badge .glyph{font-size:2.4rem}
+.spark-badge .big{font-family:var(--font-head);font-size:1.4rem;color:var(--rose-deep);font-weight:700}
+.spark-badge .cap{color:var(--muted);font-size:.9rem}
+.pill{display:inline-block;background:rgba(255,77,109,.14);color:var(--rose-deep);border:1px solid rgba(255,77,109,.35);
+  padding:4px 12px;border-radius:999px;font-size:.78rem;font-weight:600;margin:3px 4px 0 0}
+.pill.intent{background:rgba(232,185,106,.16);color:var(--gold);border-color:rgba(232,185,106,.45)}
+
+/* ---------- INTENT CHIPS (user-chosen, never assumed) ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);background:var(--card-2);
+  color:var(--muted);font-family:inherit;font-size:.83rem;font-weight:600;cursor:pointer;
+  transition:all .2s var(--ease);
+}
+.chip:hover{border-color:var(--rose-soft);color:var(--rose-deep);transform:translateY(-1px)}
+.chip.sel{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);border-color:transparent;color:#fff;box-shadow:0 6px 16px rgba(255,77,109,.3)}
+.chip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.intent-note{font-size:.86rem;margin-top:10px;background:rgba(232,185,106,.12);border:1px solid rgba(232,185,106,.35);border-radius:12px;padding:10px 14px;line-height:1.55}
+
+/* ---------- WORDS vs CHART alignment ---------- */
+.align-vs{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:12px;margin-bottom:18px}
+.align-side{background:var(--card-2);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
+.align-lbl{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}
+.align-val{font-family:var(--font-head);font-size:1.06rem;color:var(--text);line-height:1.3}
+.align-heart{align-self:center;font-size:1.6rem;color:var(--rose)}
+.align-elems{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:16px}
+.align-elem .el-row{display:flex;justify-content:space-between;font-size:.76rem;font-weight:600;color:var(--muted);margin-bottom:4px}
+.align-verdict{display:inline-block;padding:6px 15px;border-radius:999px;font-size:.8rem;font-weight:800;letter-spacing:.03em;margin-bottom:12px}
+.align-verdict.aligned{background:rgba(123,196,138,.16);color:var(--green);border:1px solid rgba(123,196,138,.4)}
+.align-verdict.adjacent{background:rgba(232,185,106,.16);color:var(--gold);border:1px solid rgba(232,185,106,.4)}
+.align-verdict.tension{background:rgba(255,77,109,.16);color:var(--rose);border:1px solid rgba(255,77,109,.45)}
+.align-verdict.open{background:var(--card-2);color:var(--muted);border:1px solid var(--line)}
+.align-msg{font-size:.93rem;line-height:1.7}
+.align-msg b{color:var(--rose-deep);font-weight:700}
+.align-msg em{color:var(--gold);font-style:italic}
+@media(max-width:520px){.align-vs{grid-template-columns:1fr}.align-heart{transform:rotate(90deg);justify-self:center}}
+
+/* ---------- THE DEEPER PULL (nodes + Saturn) ---------- */
+.pull-stack{display:grid;gap:14px;margin-top:14px}
+.pull{
+  background:var(--card-2);border:1px solid var(--line);border-radius:14px;
+  padding:18px 20px;position:relative;overflow:hidden;
+}
+.pull::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}
+.pull.comfort::before{background:var(--muted)}
+.pull.growth::before{background:var(--rose)}
+.pull.lesson::before{background:var(--gold)}
+.pull-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.pull-tag{font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;font-weight:800}
+.pull.comfort .pull-tag{color:var(--muted)}
+.pull.growth .pull-tag{color:var(--rose)}
+.pull.lesson .pull-tag{color:var(--gold)}
+.pull-title{font-family:var(--font-head);font-size:1.08rem;color:var(--text);font-weight:700}
+.pull-sub{font-size:.76rem;color:var(--muted);margin-left:auto}
+.pull-body{font-size:.9rem;line-height:1.72}
+.pull-body b{color:var(--rose-deep);font-weight:700}
+.pull-orb{display:inline-block;font-size:.68rem;font-weight:800;color:var(--gold);background:rgba(232,185,106,.15);border:1px solid rgba(232,185,106,.4);padding:2px 9px;border-radius:999px}
+.pull-synth{
+  margin-top:16px;background:linear-gradient(135deg,rgba(255,77,109,.10),rgba(232,185,106,.07));
+  border:1px solid rgba(255,77,109,.3);border-radius:14px;padding:18px 20px;
+}
+.pull-synth h4{color:var(--rose-deep);font-size:1rem;margin-bottom:8px;display:flex;gap:8px;align-items:center}
+.pull-synth p{font-size:.91rem;line-height:1.75}
+.pull-synth b{color:var(--rose-deep)}
+.pull-arrow{
+  display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  font-size:.8rem;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:12px;
+}
+.pull-arrow .from{color:var(--muted);text-align:center}
+.pull-arrow .to{color:var(--rose);font-weight:700;text-align:center}
+.pull-arrow .ar{font-size:1.4rem;color:var(--rose)}
+
+/* ---------- COMPARE REASON CARDS ---------- */
+.reason-row{margin-bottom:14px}
+.reason-head{display:flex;justify-content:space-between;font-size:.84rem;font-weight:700;margin-bottom:5px}
+.reason-pct{color:var(--gold)}
+.reason-why{font-size:.88rem;line-height:1.55;margin-top:6px}
+.reason-detail{font-size:.72rem;color:var(--muted);margin-top:3px;font-style:italic}
+.pv-compare{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow);margin-top:18px}
+.saved-hint{font-size:.8rem;color:var(--muted);text-align:center;margin-top:10px}
+
+/* ============ SPOTIFY-STYLE MOBILE CHROME ============
+   Sticky glass app bar + horizontal pill rail (snap scrolling,
+   scroll-spy active state) + fixed bottom tab nav. All hidden
+   until a reading exists; safe-area aware for notched phones. */
+#appBar{display:none;position:sticky;top:0;z-index:50}
+#appBar.on{display:block}
+.appbar-inner{
+  background:linear-gradient(rgba(20,11,21,.92),rgba(20,11,21,.78));
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(58,36,54,.5);
+  padding:12px 18px 0;
+  padding-top:calc(12px + env(safe-area-inset-top,0px));
+}
+.appbar-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.appbar-heart{
+  width:42px;height:42px;border-radius:14px;flex-shrink:0;
+  background:linear-gradient(135deg,#FF4D6D,#8E0E2E);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;color:#fff;box-shadow:0 4px 14px rgba(255,77,109,.4);
+}
+.appbar-txt{min-width:0}
+.appbar-greet{font-size:.72rem;color:var(--muted);letter-spacing:.02em}
+.appbar-name{font-family:var(--font-head);font-size:1.05rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.appbar-sub{font-size:.74rem;color:var(--rose-deep);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* pill rail — horizontal snap scroller, scrollbar hidden (Spotify feel) */
+.rail{
+  display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;
+  scroll-snap-type:x proximity;scrollbar-width:none;-ms-overflow-style:none;
+}
+.rail::-webkit-scrollbar{display:none}
+.rail-pill{
+  scroll-snap-align:start;flex-shrink:0;padding:8px 16px;border-radius:999px;
+  border:1.5px solid var(--line);background:var(--card-2);color:var(--muted);
+  font-family:inherit;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;
+  transition:all .22s var(--ease);
+}
+.rail-pill.active{
+  background:linear-gradient(135deg,#FF4D6D,#8E0E2E);border-color:transparent;color:#fff;
+  box-shadow:0 4px 14px rgba(255,77,109,.35);
+}
+/* sections sit below the sticky bar when jumped to */
+.section{scroll-margin-top:calc(118px + env(safe-area-inset-top,0px))}
+/* bottom tab nav */
+#bottomNav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60}
+#bottomNav.on{display:flex}
+.bnav-inner{
+  display:flex;width:100%;background:rgba(20,11,21,.94);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-top:1px solid rgba(58,36,54,.6);
+  padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px));
+}
+.bnav-btn{
+  flex:1;background:none;border:none;cursor:pointer;color:var(--muted);
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  padding:7px 4px;font-family:inherit;transition:color .2s;
+}
+.bnav-btn .ico{font-size:1.25rem;line-height:1}
+.bnav-btn .lbl{font-size:.66rem;font-weight:700;letter-spacing:.03em}
+.bnav-btn.active{color:var(--rose-deep)}
+.bnav-btn:active{transform:scale(.94)}
+/* page leaves room for the fixed nav */
+body.has-bnav{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+@media (prefers-reduced-motion:reduce){
+  .rail-pill,.bnav-btn{transition:none}
+}
+
+/* ============ LIBRARY & RESUME BAR ============ */
+.resume-bar{display:none;margin:18px auto 0;max-width:560px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow);align-items:center;gap:12px}
+.resume-bar.on{display:flex}
+.resume-ico{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#FF4D6D,#8E0E2E);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;flex-shrink:0;box-shadow:0 4px 14px rgba(255,77,109,.35)}
+.resume-txt{min-width:0;flex:1}
+.resume-t{font-weight:700;font-size:.9rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.resume-s{font-size:.76rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.resume-go{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff;border:none;border-radius:999px;padding:9px 16px;font-family:inherit;font-weight:700;font-size:.8rem;cursor:pointer;flex-shrink:0;box-shadow:0 4px 12px rgba(255,77,109,.3)}
+.resume-all{background:none;border:none;color:var(--rose-deep);font-weight:700;font-size:.76rem;cursor:pointer;flex-shrink:0;padding:6px}
+#libraryView{display:none}
+#libraryView.on{display:block}
+.lib-head{margin-top:30px;text-align:left}
+.lib-head h2{font-family:var(--font-head);color:var(--rose-deep);font-size:1.7rem}
+.lib-head p{color:var(--muted);font-size:.85rem;margin-top:4px;max-width:520px}
+.lib-h{display:flex;align-items:baseline;gap:10px;margin:26px 0 12px}
+.lib-h h3{font-size:1.05rem;color:var(--text);font-family:var(--font-head)}
+.lib-h .cnt{font-size:.72rem;color:var(--muted);background:var(--card-2);padding:2px 9px;border-radius:999px}
+.lib-row{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px;box-shadow:var(--shadow);flex-wrap:wrap}
+.lib-ico{width:44px;height:44px;border-radius:12px;background:var(--card-2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--rose);flex-shrink:0;border:1px solid var(--line)}
+.lib-main{flex:1;min-width:140px}
+.lib-t{font-weight:700;font-size:.92rem;color:var(--text)}
+.lib-s{font-size:.75rem;color:var(--muted);margin-top:2px;line-height:1.4}
+.lib-acts{display:flex;gap:6px;flex-shrink:0;flex-wrap:wrap}
+.lib-btn{border-radius:999px;padding:7px 13px;font-family:inherit;font-weight:700;font-size:.74rem;cursor:pointer;border:1.5px solid var(--rose);color:var(--rose-deep);background:none;transition:all .2s}
+.lib-btn.solid{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);border-color:transparent;color:#fff}
+.lib-btn.ghost{border-color:var(--line);color:var(--muted)}
+.lib-btn.del{border-color:transparent;color:var(--muted);opacity:.65}
+.lib-btn:hover{transform:translateY(-1px)}
+.lib-empty{text-align:center;color:var(--muted);font-size:.86rem;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:22px;margin-bottom:10px;line-height:1.6}
+.lib-note{font-size:.75rem;color:var(--muted);line-height:1.65;margin:22px 0 0;border-top:1px solid var(--line);padding-top:14px;max-width:640px}
+.match-badge{display:inline-block;font-size:.6rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:rgba(232,185,106,.16);color:var(--gold);border:1px solid rgba(232,185,106,.4);margin-left:6px;vertical-align:middle}
+/* note sheet (replaces window.prompt — blocked on file:// and ugly on mobile) */
+.sheet-mask{display:none;position:fixed;inset:0;background:rgba(10,4,12,.66);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:100}
+.sheet-mask.on{display:block}
+.sheet{
+  position:fixed;left:50%;bottom:0;transform:translate(-50%,110%);width:100%;max-width:480px;
+  background:var(--card);border:1px solid var(--line);border-radius:22px 22px 0 0;
+  padding:22px 22px calc(22px + env(safe-area-inset-bottom,0px));z-index:101;
+  transition:transform .32s var(--ease);
+}
+.sheet.on{transform:translate(-50%,0)}
+@media(min-width:520px){
+  .sheet{bottom:auto;top:50%;border-radius:22px;transform:translate(-50%,-46%) scale(.96);opacity:0;transition:transform .25s var(--ease),opacity .25s}
+  .sheet.on{transform:translate(-50%,-50%) scale(1);opacity:1}
+}
+.sheet h4{font-family:var(--font-head);color:var(--rose-deep);font-size:1.05rem;margin-bottom:4px}
+.sheet .sh-who{font-size:.8rem;color:var(--muted);margin-bottom:14px}
+.sheet-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+.sheet-chips .chip{font-size:.76rem;padding:7px 13px}
+.sheet textarea{
+  width:100%;min-height:64px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;
+  background:var(--card-2);color:var(--text);font-family:inherit;font-size:.88rem;resize:vertical;
+}
+.sheet textarea:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgba(255,77,109,.18)}
+.sheet-btns{display:flex;gap:10px;margin-top:14px}
+.sheet-btns button{flex:1}
+/* VIEW STATE MACHINE (Spotify-style tab pages) */
+body[data-view="partner"] .form-card,
+body[data-view="partner"] #resumeBar,
+body[data-view="partner"] #results.on,
+body[data-view="partner"] #libraryView.on{display:none!important}
+body[data-view="library"] .form-card,
+body[data-view="library"] #resumeBar,
+body[data-view="library"] #results.on,
+body[data-view="library"] #partnerView.on,
+body[data-view="library"] #rail{display:none!important}
+body[data-view="landing"] #results.on,
+body[data-view="landing"] #partnerView.on,
+body[data-view="landing"] #libraryView.on{display:none!important}
+body[data-view="result"] #partnerView.on,
+body[data-view="result"] #libraryView.on{display:none!important}
+
+/* ---------- FLIP CARDS ---------- */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;margin-top:8px}
+.flip{perspective:1400px;height:340px}
+.flip-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform var(--flip-dur) var(--ease)}
+.flip.flipped .flip-inner{transform:rotateY(180deg)}
+.face{
+  position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:var(--radius);border:1px solid var(--line);overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.face.front{
+  background:linear-gradient(150deg,var(--card-2) 0%,#2B1A2E 100%);
+  align-items:center;justify-content:center;text-align:center;padding:26px 22px;box-shadow:var(--shadow);
+  cursor:pointer;
+}
+.face.front::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(340px 180px at 100% 0%,rgba(255,77,109,.16),transparent 60%);pointer-events:none}
+.face.front .icon{font-size:3rem;margin-bottom:14px;filter:drop-shadow(0 4px 14px rgba(255,77,109,.5))}
+.face.front h3{font-size:1.35rem;color:var(--rose-deep);margin-bottom:4px}
+.face.front .sign{font-size:1.05rem;color:var(--text);font-weight:600;margin-bottom:12px}
+.face.front .hint{margin-top:auto;font-size:.74rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+.flipbtn{
+  margin-top:14px;background:none;border:1.5px solid var(--rose);color:var(--rose-deep);
+  padding:8px 18px;border-radius:999px;font-family:inherit;font-weight:600;font-size:.82rem;cursor:pointer;
+  transition:background .2s,color .2s;
+}
+.flipbtn:hover{background:var(--rose);color:#fff}
+
+.face.back{
+  transform:rotateY(180deg);background:var(--card);padding:22px;box-shadow:var(--shadow-lift);
+  overflow-y:auto;
+}
+.face.back h4{font-size:1.05rem;color:var(--rose-deep);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.face.back .body{font-size:.9rem;color:var(--text);margin:8px 0 12px}
+.face.back .backbtn{
+  display:inline-flex;align-items:center;gap:6px;background:none;border:none;color:var(--rose);
+  font-family:inherit;font-weight:700;font-size:.8rem;cursor:pointer;padding:0;margin-bottom:6px;
+}
+details.why{margin-top:8px;border-top:1px solid var(--line);padding-top:10px}
+details.why summary{
+  cursor:pointer;list-style:none;font-weight:700;font-size:.82rem;color:var(--rose-deep);
+  display:flex;align-items:center;gap:8px;user-select:none;
+}
+details.why summary::-webkit-details-marker{display:none}
+details.why summary .chev{transition:transform .25s var(--ease)}
+details.why[open] summary .chev{transform:rotate(90deg)}
+details.why .why-body{font-size:.82rem;color:var(--muted);margin-top:8px;padding-left:2px}
+
+/* ---------- DATING FLAGS (traffic lights) ---------- */
+.flags{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.flag{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.flag h4{display:flex;align-items:center;gap:8px;font-size:1rem;margin-bottom:10px}
+.flag.g{border-top:4px solid var(--green)} .flag.y{border-top:4px solid var(--yellow)} .flag.r{border-top:4px solid var(--red)}
+.flag ul{list-style:none} .flag li{padding:5px 0 5px 22px;position:relative;font-size:.87rem;color:var(--text)}
+.flag.g li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+.flag.y li::before{content:"!";position:absolute;left:0;color:var(--yellow);font-weight:800}
+.flag.r li::before{content:"✗";position:absolute;left:0;color:var(--red);font-weight:800}
+
+/* ---------- OPTION TABLES (Saily pick-one → dating moves) ---------- */
+.move{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:var(--shadow)}
+.move .mtitle{font-weight:700;font-size:1.02rem;color:var(--rose-deep)}
+.move .mtitle .n{color:var(--gold);font-family:var(--font-head);font-size:1.2rem;margin-right:6px}
+.move .mdesc{font-size:.85rem;color:var(--muted);margin:4px 0 12px}
+.opts{display:grid;gap:8px}
+.opt{
+  display:flex;align-items:center;gap:12px;padding:11px 14px;border:1.5px solid var(--line);
+  border-radius:12px;cursor:pointer;background:var(--card-2);transition:all .2s var(--ease);
+}
+.opt .key{
+  flex-shrink:0;width:26px;height:26px;border-radius:8px;background:rgba(255,77,109,.16);color:var(--rose-deep);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;transition:all .2s;
+}
+.opt .txt{font-size:.88rem}
+.opt:hover{border-color:var(--rose-soft);transform:translateX(3px)}
+.opt.sel{border-color:var(--rose);background:linear-gradient(135deg,rgba(255,77,109,.18),var(--card-2));box-shadow:0 4px 14px rgba(255,77,109,.2)}
+.opt.sel .key{background:var(--rose);color:#fff}
+
+/* Traps */
+.traps{background:linear-gradient(135deg,#2E0A14,#3D0E1C);color:#F7D7DE;border:1px solid rgba(255,107,133,.25);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.traps h3{color:#FFB3C0;margin-bottom:10px;display:flex;gap:8px;align-items:center}
+.traps ul{list-style:none}
+.traps li{padding:6px 0 6px 24px;position:relative;font-size:.89rem;color:#F3C6D0}
+.traps li::before{content:"✗";position:absolute;left:0;color:var(--rose-soft);font-weight:800}
+
+/* ---------- BIO CARD (share preview) ---------- */
+.bio{
+  max-width:340px;margin:0 auto;border-radius:22px;overflow:hidden;box-shadow:var(--shadow-lift);
+  background:linear-gradient(155deg,var(--rose-deep),var(--rose) 55%,var(--gold));color:#fff;padding:30px 26px;position:relative;
+}
+.bio::before{content:"♥";position:absolute;top:-30px;right:-10px;font-size:180px;opacity:.10}
+.bio .bname{font-family:var(--font-head);font-size:1.6rem;font-weight:800}
+.bio .brow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.bio .btag{background:rgba(255,255,255,.16);backdrop-filter:blur(4px);padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:600}
+.bio .bline{font-size:.86rem;opacity:.94;margin-top:6px}
+.bio .bqr{margin-top:16px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.14);border-radius:14px;padding:10px 12px;backdrop-filter:blur(4px)}
+.bio .bqr img{width:84px;height:84px;border-radius:8px;background:#fff;padding:4px;display:block;flex:0 0 auto}
+.bio .bqr-txt{display:flex;flex-direction:column;gap:3px}
+.bio .bqr-txt b{font-size:.86rem}
+.bio .bqr-txt span{opacity:.85;font-size:.7rem}
+.bio .bfoot{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.25);font-size:.72rem;opacity:.85;display:flex;justify-content:space-between;align-items:center;gap:8px}
+
+/* ---------- WHY IT MATTERS (time/place) ---------- */
+.why-box{margin-top:14px;border:1.5px dashed var(--line);border-radius:14px;padding:4px 16px;background:rgba(255,77,109,.05)}
+.why-box summary{cursor:pointer;font-weight:700;font-size:.84rem;color:var(--rose-deep);padding:10px 0;list-style:none;display:flex;gap:8px;align-items:center;user-select:none}
+.why-box summary::-webkit-details-marker{display:none}
+.why-box .why-in{font-size:.84rem;color:var(--muted);padding:0 0 12px}
+.why-box .why-in b{color:var(--text)}
+
+/* Chart accuracy badge */
+.acc{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:.78rem;padding:7px 14px;border-radius:999px;background:rgba(224,182,74,.14);color:var(--gold);border:1px solid rgba(224,182,74,.4);font-weight:700}
+.acc.ok{background:rgba(123,196,138,.14);color:var(--green);border-color:rgba(123,196,138,.4)}
+.est{position:absolute;top:12px;right:12px;background:rgba(224,182,74,.16);color:var(--gold);border:1px solid rgba(224,182,74,.45);font-size:.66rem;font-weight:800;padding:3px 9px;border-radius:999px;letter-spacing:.04em;z-index:2}
+
+/* ---------- SHARE & COMPARE ---------- */
+.share-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.panel h3{color:var(--rose-deep);font-size:1.15rem;margin-bottom:4px}
+.panel .phint{font-size:.82rem;color:var(--muted);margin-bottom:14px}
+.seg{display:flex;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.seg button{flex:1;background:var(--card-2);border:none;padding:10px 6px;font-family:inherit;font-size:.76rem;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s}
+.seg button.on{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff}
+.promise{border-radius:12px;padding:12px 14px;font-size:.8rem;margin-bottom:12px}
+.promise b{display:block;margin-bottom:4px;font-size:.82rem}
+.promise ul{list-style:none;margin:0}
+.promise li{padding:2px 0 2px 20px;position:relative}
+.promise.yes{background:rgba(123,196,138,.09);color:#BFE3C8;border:1px solid rgba(123,196,138,.3)}
+.promise.yes li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+.promise.no{background:rgba(255,123,107,.09);color:#F5C3BB;border:1px solid rgba(255,123,107,.3)}
+.promise.no li::before{content:"✗";position:absolute;left:0;color:var(--red);font-weight:800}
+.code-chip{font-family:'Courier New',monospace;font-size:.7rem;background:#120810;color:#FFC2CE;border:1px solid var(--line);padding:10px 12px;border-radius:10px;word-break:break-all;max-height:64px;overflow:auto;margin:12px 0}
+.share-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn2{flex:1;min-width:130px;padding:12px;border-radius:12px;border:none;cursor:pointer;font-family:inherit;font-weight:700;font-size:.85rem;transition:transform .15s var(--ease),box-shadow .2s}
+.btn2.primary{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff;box-shadow:0 6px 18px rgba(255,77,109,.3)}
+.btn2.ghost{background:var(--card-2);border:1.5px solid var(--rose);color:var(--rose-deep)}
+.btn2:hover{transform:translateY(-2px)}
+input.paste{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font-family:'Courier New',monospace;font-size:.78rem;margin-bottom:12px;color:var(--text);background:var(--card-2)}
+input.paste::placeholder{color:var(--muted);opacity:.55}
+input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgba(255,77,109,.18)}
+
+/* Compare output */
+.spark-total{text-align:center;font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--rose-deep);margin-top:4px}
+.bar-row{margin-bottom:12px}
+.bar-label{display:flex;justify-content:space-between;font-size:.8rem;font-weight:600;margin-bottom:4px}
+.bar-track{height:10px;border-radius:99px;background:var(--card-2);overflow:hidden}
+.bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#FF8FA3,#8E0E2E);width:0;transition:width .9s var(--ease)}
+.caveat{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+
+/* Partner view */
+#partnerView{display:none}
+#partnerView.on{display:block}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease-out,transform .6s ease-out}
+.reveal.shown{opacity:1;transform:none}
+
+.foot{text-align:center;color:var(--muted);font-size:.78rem;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-style:italic}
+
+/* ---------- SOCIAL CARDS (screenshot-ready) ----------
+   Fixed 9:16 ratio, designed to survive an Instagram grid thumbnail.
+   Users screenshot these directly — no download button needed,
+   every card is self-contained (no page chrome inside the card). */
+.social-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin-top:8px}
+.soc{
+  position:relative;aspect-ratio:9/16;border-radius:18px;overflow:hidden;
+  background:
+    radial-gradient(120% 80% at 50% -10%, rgba(255,77,109,.22), transparent 55%),
+    radial-gradient(90% 60% at 90% 110%, rgba(232,185,106,.12), transparent 55%),
+    linear-gradient(170deg,#1B0F1F 0%,#140B15 60%,#190D1A 100%);
+  border:1px solid rgba(232,185,106,.28);
+  box-shadow:var(--shadow-lift);
+  padding:18px 16px;display:flex;flex-direction:column;
+  font-size:12px; /* card content scales via rem-free units below */
+}
+.soc::after{ /* hairline inner frame */
+  content:"";position:absolute;inset:7px;border:1px solid rgba(232,185,106,.18);border-radius:12px;pointer-events:none;
+}
+.soc-stars{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.soc-stars i{position:absolute;color:var(--gold);font-style:normal;font-size:8px}
+.soc-label{
+  font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;
+  color:var(--gold);display:flex;align-items:center;gap:5px;
+}
+.soc-title{
+  font-family:var(--font-head);font-weight:800;color:var(--text);
+  font-size:clamp(1.05rem,5vw,1.4rem);line-height:1.12;margin:8px 0 4px;
+}
+.soc-sub{color:var(--rose-deep);font-weight:700;font-size:.8rem;margin-bottom:auto}
+.soc-art{display:flex;align-items:center;justify-content:center;padding:10px 0;min-height:74px}
+.soc-art svg{width:64px;height:64px;filter:drop-shadow(0 6px 18px rgba(255,77,109,.45))}
+.soc-medal{
+  margin:8px auto 12px;width:72px;height:72px;border-radius:50%;
+  border:1px solid rgba(232,185,106,.45);display:flex;align-items:center;justify-content:center;
+  font-size:1.9rem;color:var(--gold);line-height:1;
+  background:radial-gradient(circle at 50% 35%, rgba(255,77,109,.20), rgba(255,77,109,0) 72%);
+}
+.soc-points{list-style:none;margin:auto 0 10px;padding:0}
+.soc-points li{
+  color:#EEDDE4;font-size:.68rem;line-height:1.45;margin-bottom:5px;
+  padding-left:14px;position:relative;overflow:hidden;
+}
+.soc.clamped .soc-points li{
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+}
+.soc-points li::before{content:"\2665";position:absolute;left:0;color:var(--rose);font-size:.6rem}
+.soc-quote{
+  font-family:var(--font-head);color:var(--text);font-size:clamp(1.05rem,5vw,1.45rem);
+  line-height:1.3;text-align:center;font-weight:700;margin:auto 6px;
+}
+.soc-ring{
+  width:84px;height:84px;margin:0 auto 12px;border-radius:50%;
+  border:1px solid rgba(232,185,106,.5);display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.soc-ring::before,.soc-ring::after{content:"\2665";position:absolute;color:var(--rose);font-size:.7rem}
+.soc-ring::before{top:-6px;left:50%;transform:translateX(-50%)}
+.soc-ring::after{bottom:-6px;left:50%;transform:translateX(-50%)}
+.soc-ring .glyph-in{font-size:1.6rem;color:var(--rose-deep)}
+.soc-foot{
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+  border-top:1px solid rgba(232,185,106,.22);padding-top:8px;
+  color:var(--gold);font-weight:700;
+}
+.soc-url{font-size:.5rem;letter-spacing:.02em;color:var(--gold);opacity:.82;text-align:center;line-height:1.25}
+.soc-footrow{display:flex;align-items:center;gap:7px}
+.soc-foot .soc-h{color:var(--rose);font-size:.7rem}
+.soc-cta{background:rgba(255,77,109,.16);border:1px solid rgba(255,77,109,.5);color:var(--rose-deep);border-radius:999px;padding:3px 10px;font-size:.55rem;letter-spacing:.04em;text-transform:uppercase}
+/* bars variant (flags card) */
+.soc-flagbox{margin-bottom:8px}
+.soc-flagbox .fh{font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;margin-bottom:3px}
+.soc-flagbox.g .fh{color:var(--green)} .soc-flagbox.y .fh{color:var(--yellow)} .soc-flagbox.r .fh{color:var(--rose-soft)}
+.soc-flagbox p{color:#EEDDE4;font-size:.66rem;line-height:1.45;margin:0 0 3px 0;padding-left:12px;position:relative}
+.soc-flagbox p::before{position:absolute;left:0;font-weight:800}
+.soc-flagbox.g p::before{content:"\2713";color:var(--green)}
+.soc-flagbox.y p::before{content:"!";color:var(--yellow)}
+.soc-flagbox.r p::before{content:"\2715";color:var(--rose-soft)}
+/* screenshot hint chip */
+.soc-hint{text-align:center;color:var(--muted);font-size:.74rem;margin-top:12px}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .flip-inner{transition:none}
+  .reveal{opacity:1;transform:none}
+  .heart-field{display:none}
+}
+
+/* ---------- PROFILE BIO WRITER ---------- */
+.bio-controls{display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
+.tone-seg{display:flex;gap:7px;flex-wrap:wrap}
+.tone-seg button{
+  flex:1;min-width:90px;padding:10px 8px;border-radius:12px;border:1.5px solid var(--line);
+  background:var(--card-2);color:var(--muted);font-family:inherit;font-size:.8rem;font-weight:700;
+  cursor:pointer;transition:all .2s var(--ease);
+}
+.tone-seg button:hover{border-color:var(--rose-soft);color:var(--rose-deep)}
+.tone-seg button.on{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);border-color:transparent;color:#fff;box-shadow:0 4px 14px rgba(255,77,109,.3)}
+.bio-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.bf-toggle{
+  display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;
+  border:1.5px solid var(--line);background:var(--card-2);color:var(--muted);
+  font-size:.78rem;font-weight:600;cursor:pointer;user-select:none;transition:all .2s;
+}
+.bf-toggle.on{border-color:var(--rose);color:var(--rose-deep);background:rgba(255,77,109,.08)}
+.bf-toggle .box{
+  width:17px;height:17px;border-radius:5px;border:1.5px solid currentColor;
+  display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:900;flex-shrink:0;
+}
+.bf-toggle.on .box{background:var(--rose);border-color:var(--rose);color:#fff}
+.drafts{display:grid;gap:14px}
+.draft{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:18px;box-shadow:var(--shadow);position:relative;
+}
+.draft-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.draft-badge{
+  font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  padding:4px 11px;border-radius:999px;background:rgba(255,77,109,.14);color:var(--rose-deep);
+  border:1px solid rgba(255,77,109,.35);
+}
+.draft-len{margin-left:auto;font-size:.72rem;color:var(--muted)}
+.draft-text{
+  font-size:.93rem;line-height:1.7;color:var(--text);
+  white-space:pre-wrap;word-wrap:break-word;
+}
+.draft-acts{display:flex;gap:8px;margin-top:14px}
+
+/* ---------- FULL DEGREE SYNASTRY (same device) ---------- */
+.syn{margin-top:20px;background:linear-gradient(135deg,rgba(255,77,109,.06),rgba(232,185,106,.05));border:1px solid rgba(255,77,109,.28);border-radius:16px;padding:20px}
+.syn-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.syn-head h3{font-size:1.1rem;color:var(--rose-deep)}
+.syn-badge{margin-left:auto;font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(232,185,106,.18);color:var(--gold);border:1px solid rgba(232,185,106,.4)}
+.syn-phint{font-size:.82rem;color:var(--muted);margin-bottom:14px;line-height:1.55}
+.syn-form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.syn-form{grid-template-columns:1fr}}
+.syn-form .field label{color:var(--muted)}
+/* axes */
+.syn-axes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+@media(max-width:420px){.syn-axes{grid-template-columns:1fr}}
+.syn-axis{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-align:center}
+.syn-axis .ax-label{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.syn-axis .ax-num{font-family:var(--font-head);font-size:2rem;font-weight:800;color:var(--rose-deep);line-height:1.1;margin:2px 0}
+.syn-axis .ax-sub{font-size:.74rem;color:var(--muted)}
+/* aspect rows */
+.syn-asm{display:flex;align-items:baseline;gap:8px;padding:7px 0;border-bottom:1px solid var(--line);font-size:.84rem}
+.syn-asm:last-child{border-bottom:none}
+.syn-asm .sym{width:20px;text-align:center;font-size:1rem;flex-shrink:0}
+.syn-asm .desc{flex:1;color:var(--text)}
+.syn-asm .meas{font-size:.72rem;color:var(--muted);font-family:'Courier New',monospace;white-space:nowrap}
+.syn-nature-harmonious .sym{color:var(--green)}
+.syn-nature-challenging .sym{color:var(--rose-soft)}
+.syn-nature-neutral .sym{color:var(--gold)}
+/* composite */
+.syn-comp{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.syn-comp .cc{background:rgba(255,77,109,.1);border:1px solid rgba(255,77,109,.3);border-radius:999px;padding:5px 13px;font-size:.76rem;font-weight:600;color:var(--rose-deep)}
+.syn-comp .cc b{color:var(--text)}
+/* best-draft callout inside Moves #1 (linked to Bio Writer) */
+.best-draft{background:linear-gradient(135deg,rgba(255,77,109,.08),rgba(232,185,106,.06));border:1.5px solid rgba(255,77,109,.35);border-radius:14px;padding:14px 16px;margin-top:4px}
+.best-draft .bd-text{font-size:.92rem;line-height:1.7;color:var(--text);font-style:italic}
+.best-draft .bd-acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.best-draft .bd-acts .btn2{flex:1;min-width:120px;padding:10px;font-size:.8rem}
+.draft-btn{
+  flex:1;padding:9px;border-radius:10px;border:1.5px solid var(--rose);background:none;
+  color:var(--rose-deep);font-family:inherit;font-weight:700;font-size:.78rem;cursor:pointer;
+  transition:all .2s;
+}
+.draft-btn:hover{background:var(--rose);color:#fff}
+.draft-btn.alt{border-color:var(--line);color:var(--muted)}
+.draft-btn.alt:hover{border-color:var(--gold);color:var(--gold);background:rgba(232,185,106,.1)}
+.editor-box{width:100%;min-height:110px;margin-top:12px;padding:14px;border:1.5px solid var(--line);
+  border-radius:12px;background:var(--card-2);color:var(--text);font-family:inherit;font-size:.92rem;
+  line-height:1.65;resize:vertical;display:none}
+.editor-box.on{display:block}
+.editor-box:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgba(255,77,109,.15)}
+@media (min-width:700px){.drafts{grid-template-columns:1fr 1fr}}
+/* Small screens: cards a touch shorter */
+@media (max-width:420px){.flip{height:360px}}
+</style>
+</head>
+<body>
+
+<!-- Ambient hearts -->
+<div class="heart-field" id="heartField" aria-hidden="true"></div>
+
+<!-- SPOTIFY-STYLE STICKY APP BAR (appears once a reading exists) -->
+<header id="appBar">
+  <div class="appbar-inner">
+    <div class="appbar-row">
+      <span class="appbar-heart beat"><img src="assets/icon.svg" alt="" style="width:26px;height:26px;display:block"></span>
+      <div class="appbar-txt">
+        <div class="appbar-greet" id="appGreet">Your spark</div>
+        <div class="appbar-name" id="appName">—</div>
+        <div class="appbar-sub" id="appSub">—</div>
+      </div>
+    </div>
+    <nav class="rail" id="rail" aria-label="Jump to section"></nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <span class="brand-chip"><img src="assets/logo.svg" alt="" style="width:22px;height:22px;display:block"> Soul Spark</span>
+    <h1>Your Cosmic Dating Decoder</h1>
+    <p class="tag">Flip a card, find your spark. Astrology + numerology turned into your real dating playbook — how you love, how you text, and who you actually need.</p>
+    <p class="sub">100% private · calculated on your device · share the finished spark, never your birth data</p>
+  </header>
+
+  <!-- RESUME: pick up right where you left off -->
+  <div class="resume-bar" id="resumeBar">
+    <span class="resume-ico beat">♥</span>
+    <div class="resume-txt">
+      <div class="resume-t" id="resumeName">—</div>
+      <div class="resume-s" id="resumeSub">—</div>
+    </div>
+    <button class="resume-go" id="resumeGo" type="button">Resume</button>
+    <button class="resume-all" id="resumeAll" type="button">All</button>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-card">
+    <div class="form-row">
+      <div class="field">
+        <label for="nm">Your full name</label>
+        <input id="nm" type="text" value="Wayne Michael" placeholder="e.g. Wayne Michael">
+        <div class="fhint">Use the full name you were given — numerology counts every letter, so nicknames change your numbers.</div>
+      </div>
+      <div class="field">
+        <label for="bd">Date of birth</label>
+        <input id="bd" type="date" value="1994-11-08">
+      </div>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+      <div class="field">
+        <label for="bt">Time of birth <span style="text-transform:none;font-weight:500;opacity:.55">(optional)</span></label>
+        <input id="bt" type="time" value="02:30">
+      </div>
+      <div class="field">
+        <label for="bp">Place of birth <span style="text-transform:none;font-weight:500;opacity:.55">(optional)</span></label>
+        <input id="bp" type="text" value="Sydney, Australia" placeholder="City, Country">
+      </div>
+    </div>
+    <div class="field" style="margin-top:16px">
+      <span class="lbl" id="intentLbl">What are you here for?</span>
+      <div class="chips" id="intentChips" role="group" aria-labelledby="intentLbl">
+        <button type="button" class="chip" data-intent="A long-term partner" aria-pressed="false">♥ A long-term partner</button>
+        <button type="button" class="chip" data-intent="Something serious, slowly" aria-pressed="false">Something serious, slowly</button>
+        <button type="button" class="chip" data-intent="Dating — open to anything" aria-pressed="false">Dating — open to anything</button>
+        <button type="button" class="chip" data-intent="Short-term &amp; fun" aria-pressed="false">Short-term &amp; fun</button>
+        <button type="button" class="chip" data-intent="New friends first" aria-pressed="false">New friends first</button>
+        <button type="button" class="chip" data-intent="Still figuring it out" aria-pressed="false">Still figuring it out</button>
+      </div>
+      <div class="fhint">Your call — and it never changes a single reading. Pick nothing and your card simply leaves it out. We don't assume everyone's here for commitment.</div>
+    </div>
+    <details class="why-box">
+      <summary><span class="beat">♥</span> Why time &amp; place matter to <em>you</em> <span style="margin-left:auto">▸</span></summary>
+      <div class="why-in">
+        <b>Time of birth</b> unlocks your <b>Rising sign</b> and the exact degree of your <b>7th House</b> — the single most important point for compatibility (it's literally "who you're wired to partner with"). Without it we never guess: those cards stay <b>🔒 locked</b> with a plain explanation of what to add.<br><br>
+        <b>Place of birth</b> sets the real sky and time zone you were born under. Even a perfect time gives a wrong Rising sign if the city is wrong.<br><br>
+        Both stay on your device — and <b>are never included when you share your spark</b> with a date (see Share Without Spilling below).
+      </div>
+    </details>
+    <button class="btn" id="genBtn">Reveal My Spark <span class="beat">♥</span></button>
+  </div>
+
+  <!-- RESULTS -->
+  <section id="results">
+
+    <!-- SPARK BADGE -->
+    <div class="section reveal">
+      <div class="spark-badge">
+        <span class="glyph beat">❤</span>
+        <div>
+          <div class="big" id="sparkName">Boiling Ocean</div>
+          <div class="cap" id="sparkSub">Venus in Scorpio × Mars in Leo → 7th House in Pisces</div>
+          <div>
+            <span class="pill intent" id="sparkIntent" style="display:none"></span><span id="kwPills"><span class="pill">Generate your spark to see your keywords</span></span>
+          </div>
+          <div class="acc" id="chartAcc" style="display:none"></div>
+          <div class="cap" id="accText" style="margin-top:6px;font-size:.8rem"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLIP CARDS -->
+    <div class="section reveal" id="flipSection">
+      <div class="section-head">
+        <span class="dot">♥</span>
+        <div><h2>Your Love Signature</h2><p>Tap any card to flip it over.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="card-grid" id="cardGrid"><!-- injected --></div>
+    </div>
+
+    <!-- YOUR WORDS vs YOUR CHART (intention vs cosmic pull) -->
+    <div class="section reveal" id="alignSection" style="display:none">
+      <div class="section-head">
+        <span class="dot">⚖️</span>
+        <div><h2>Your Words vs Your Chart</h2><p>What you say you're here for — and what your love signature actually pulls toward. Neither is wrong.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="align-vs">
+        <div class="align-side">
+          <div class="align-lbl">You said</div>
+          <div class="align-val" id="alignSaid">—</div>
+        </div>
+        <div class="align-heart beat">♥</div>
+        <div class="align-side">
+          <div class="align-lbl">Your chart leans</div>
+          <div class="align-val" id="alignLean">—</div>
+        </div>
+      </div>
+      <div class="align-elems" id="alignElems"></div>
+      <span class="align-verdict" id="alignVerdict"></span>
+      <p class="align-msg" id="alignMsg"></p>
+      <details class="why" style="margin-top:10px"><summary><span class="chev">▶</span> Why we can say this</summary><div class="why-body" id="alignWhy"></div></details>
+    </div>
+
+    <!-- THE DEEPER PULL: comfort vs growth vs lesson -->
+    <div class="section reveal" id="pullSection" style="display:none">
+      <div class="section-head">
+        <span class="dot">🧭</span>
+        <div><h2>The Deeper Pull</h2><p>What you want isn't always what stretches you — and your chart keeps those two in different places.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="pull-arrow">
+        <span class="from" id="pullFrom">—</span>
+        <span class="ar beat">→</span>
+        <span class="to" id="pullTo">—</span>
+      </div>
+      <div class="pull-stack" id="pullStack"></div>
+      <div class="pull-synth">
+        <h4><span class="beat">♥</span> So what does this actually mean?</h4>
+        <p id="pullSynth"></p>
+      </div>
+      <details class="why" style="margin-top:12px"><summary><span class="chev">▶</span> Why we can say this</summary><div class="why-body" id="pullWhy"></div></details>
+    </div>
+
+    <!-- AD UNIT 1: replace data-ad-slot with your real slot ID from the
+         AdSense dashboard when you create the unit. Placeholder pattern
+         matches MONETIZATION.md (approved on the main site). -->
+    <div class="ad-unit">
+      <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-ad-client="ca-pub-3480541530392777" data-ad-slot="REPLACE_ME_SLOT_1" data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- DATING FLAGS -->
+    <div class="section reveal" id="flagsSection">
+      <div class="section-head">
+        <span class="dot">🚦</span>
+        <div><h2>Your Dating Flags</h2><p>What you bring, what to watch, what to leave.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="flags">
+        <div class="flag g">
+          <h4>🟢 Green flags you give</h4>
+          <ul id="flagG"><li>Computed from your chart when you generate</li></ul>
+        </div>
+        <div class="flag y">
+          <h4>🟡 Watch-points</h4>
+          <ul id="flagY"><li>Computed from your chart when you generate</li></ul>
+        </div>
+        <div class="flag r">
+          <h4>🔴 Leave if you see <span style="font-size:.72em;font-weight:500;color:var(--muted)">(universal — about them, not you)</span></h4>
+          <ul id="flagR"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOVES (option tables) -->
+    <div class="section reveal" id="movesSection">
+      <div class="section-head">
+        <span class="dot">✨</span>
+        <div><h2>Your 3 Best Moves This Week</h2><p>Pick the option that feels most like you — it highlights.</p></div>
+      </div>
+      <div class="divider"></div>
+
+      <div class="move">
+        <div class="mtitle"><span class="n">1.</span>Use your best bio opener <a href="#bioWriterSection" id="movesBioLink" style="font-size:.68em;font-weight:700;color:var(--gold);text-decoration:none;margin-left:8px;border:1px solid rgba(232,185,106,.4);padding:3px 10px;border-radius:999px">✍️ Built by your Bio Writer</a></div>
+        <div class="mdesc" id="mdesc1">Lead with what actually moves you.</div>
+        <div id="movesBestDraft" class="best-draft" style="display:none">
+          <div class="bd-text" id="movesBestText"></div>
+          <div class="bd-acts">
+            <button class="btn2 primary" id="movesCopyBtn" type="button">📋 Copy bio</button>
+            <button class="btn2 ghost" id="movesMoreBtn" type="button">More versions ✍️</button>
+          </div>
+        </div>
+        <div class="opts" data-group="m1" id="movesFallbackOpts">
+          <div class="opt" tabindex="0"><span class="key">A</span><span class="txt">“Looking for someone worth deleting this app for.”</span></div>
+          <div class="opt" tabindex="0"><span class="key">B</span><span class="txt">“Tell me your most irrational belief. I'll go first…”</span></div>
+          <div class="opt" tabindex="0"><span class="key">C</span><span class="txt">“Fluent in deep talks and terrible puns.”</span></div>
+          <div class="opt" tabindex="0"><span class="key">D</span><span class="txt">“Here for the kind of chemistry you can't fake.”</span></div>
+        </div>
+      </div>
+
+      <div class="move">
+        <div class="mtitle"><span class="n">2.</span>Plan the first date</div>
+        <div class="mdesc" id="mdesc2">Choose a first date your chart will actually enjoy.</div>
+        <div class="opts" data-group="m2">
+          <div class="opt" tabindex="0"><span class="key">A</span><span class="txt">Candlelit tasting menu, phones away</span></div>
+          <div class="opt" tabindex="0"><span class="key">B</span><span class="txt">Sunset picnic + a playlist you made</span></div>
+          <div class="opt" tabindex="0"><span class="key">C</span><span class="txt">Something hands-on: pottery or cooking class</span></div>
+          <div class="opt" tabindex="0"><span class="key">D</span><span class="txt">Long walk that ends somewhere warm</span></div>
+        </div>
+      </div>
+
+      <div class="move">
+        <div class="mtitle"><span class="n">3.</span>Your texting rhythm</div>
+        <div class="mdesc" id="mdesc3">Text in your own dialect.</div>
+        <div class="opts" data-group="m3">
+          <div class="opt" tabindex="0"><span class="key">A</span><span class="txt">Reply when you feel it — never play timing games</span></div>
+          <div class="opt" tabindex="0"><span class="key">B</span><span class="txt">Send voice notes; your tone does the flirting</span></div>
+          <div class="opt" tabindex="0"><span class="key">C</span><span class="txt">Ask one real question that skips small talk</span></div>
+          <div class="opt" tabindex="0"><span class="key">D</span><span class="txt">Make plans in text, don't let it idle for days</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRAPS -->
+    <div class="section reveal" id="trapsSection">
+      <div class="section-head">
+        <span class="dot">⚠️</span>
+        <div><h2>Dating Traps to Avoid</h2><p>Your chart's honest shadow side.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="traps">
+        <h3>🕳️ Don't fall for these <span id="trapsSub" style="font-size:.72em;font-weight:500;opacity:.7"></span></h3>
+        <ul id="trapsList"></ul>
+      </div>
+    </div>
+
+    <!-- AD UNIT 2: replace data-ad-slot with your real slot ID. -->
+    <div class="ad-unit">
+      <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-ad-client="ca-pub-3480541530392777" data-ad-slot="REPLACE_ME_SLOT_2" data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- PROFILE BIO WRITER -->
+    <div class="section reveal" id="bioWriterSection">
+      <div class="section-head">
+        <span class="dot">✍️</span>
+        <div><h2>Your Profile Bio Writer</h2><p>Real, copy-paste bios built from your exact chart — not templates everyone gets.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="bio-controls">
+        <div>
+          <div class="align-lbl" style="margin-bottom:7px">Your tone</div>
+          <div class="tone-seg" id="toneSeg" role="group" aria-label="Bio tone">
+            <button type="button" data-tone="punchy" class="on">⚡ Punchy</button>
+            <button type="button" data-tone="playful">😄 Playful</button>
+            <button type="button" data-tone="sincere">💗 Sincere</button>
+            <button type="button" data-tone="bold">🔥 Bold</button>
+          </div>
+        </div>
+        <div>
+          <div class="align-lbl" style="margin-bottom:7px">Include</div>
+          <div class="bio-filters">
+            <span class="bf-toggle on" data-bf="intent" role="checkbox" aria-checked="true" tabindex="0"><span class="box">✓</span> My intention</span>
+            <span class="bf-toggle on" data-bf="venus" role="checkbox" aria-checked="true" tabindex="0"><span class="box">✓</span> Venus hook</span>
+            <span class="bf-toggle" data-bf="astro" role="checkbox" aria-checked="false" tabindex="0"><span class="box"></span> Sign nerd line</span>
+          </div>
+        </div>
+      </div>
+      <div class="drafts" id="bioDrafts"></div>
+      <details class="why" style="margin-top:16px"><summary><span class="chev">▶</span> How your bio was built</summary><div class="why-body" id="bioWhy"></div></details>
+    </div>
+
+    <!-- SHARE & COMPARE -->
+    <div class="section reveal" id="shareSection">
+      <div class="section-head">
+        <span class="dot">🔐</span>
+        <div><h2>Share Without Spilling</h2><p>Show a date part — or all — of your spark. They never see your birth data.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="share-grid">
+        <div class="panel">
+          <h3>1 · Choose what to share</h3>
+          <div class="phint">Pick a level, then send the link or code. Change it any time.</div>
+          <div class="seg" id="shareSeg">
+            <button type="button" data-level="card">Just my card</button>
+            <button type="button" data-level="love" class="on">Love Signature</button>
+            <button type="button" data-level="full">Full playbook</button>
+          </div>
+          <details class="why-box" style="margin:0 0 14px">
+            <summary>👀 What they'll see <span style="margin-left:auto">▸</span></summary>
+            <div class="why-in" id="shareContents">—</div>
+          </details>
+          <div class="promise yes">
+            <b>Inside your share link:</b>
+            <ul>
+              <li>Finished placements (Venus in …, Moon in …)</li>
+              <li>Keywords &amp; flags — whatever level you picked</li>
+              <li>Your stated intention — only if you chose one</li>
+              <li>Your first name, or "Anonymous"</li>
+            </ul>
+          </div>
+          <div class="promise no">
+            <b>Never inside — by design:</b>
+            <ul>
+              <li>Birth date</li>
+              <li>Birth time</li>
+              <li>Birth place</li>
+            </ul>
+          </div>
+          <div class="code-chip" id="shareCode">Generate your spark first…</div>
+          <div class="share-btns">
+            <button class="btn2 primary" id="copyLinkBtn" type="button">🔗 Copy share link</button>
+            <button class="btn2 ghost" id="copyCodeBtn" type="button">Copy code</button>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>2 · Compare sparks</h3>
+          <div class="phint">Ask your match for their Soul Spark code, paste it here. Both of you stay private — only finished readings are compared.</div>
+          <input class="paste" id="partnerCode" type="text" placeholder="Paste their SS1-… code, or try an example" autocomplete="off" spellcheck="false">
+          <div class="share-btns">
+            <button class="btn2 primary" id="compareBtn" type="button">Compare ♥</button>
+            <button class="btn2 ghost" id="demoBtn" type="button">Try Luna's example code</button>
+          </div>
+          <button class="btn2 ghost" id="saveMatchBtn" type="button" style="display:none;width:100%;margin-top:10px">♥ Save this match to my library</button>
+          <div id="compareOut"></div>
+        </div>
+      </div>
+
+      <!-- FULL DEGREE SYNASTRY -->
+      <div class="syn" id="synSection">
+        <div class="syn-head">
+          <span class="dot" style="font-size:1.3rem">✨</span>
+          <h3>3 · Full degree compatibility</h3>
+          <span class="syn-badge">Same device · exact</span>
+        </div>
+        <p class="syn-phint">Share codes carry placements, never degrees — so the deepest reading happens right here, on one phone, together. Enter their birth details and this computes <b>real degree synastry</b>: exact aspects with orbs you can audit, a composite chart, and honest CONTACT / EASE axes. Nothing leaves the device.</p>
+        <div class="syn-form">
+          <div class="field"><label for="synName">Their name</label><input id="synName" type="text" placeholder="e.g. Sam" value="Luna"></div>
+          <div class="field"><label for="synDate">Their birth date</label><input id="synDate" type="date" value="1996-03-12"></div>
+          <div class="field"><label for="synTime">Their birth time <span style="text-transform:none;font-weight:500;opacity:.55">(optional)</span></label><input id="synTime" type="time" value="08:15"></div>
+          <div class="field"><label for="synPlace">Their birth place <span style="text-transform:none;font-weight:500;opacity:.55">(optional)</span></label><input id="synPlace" type="text" placeholder="City, Country" value="Melbourne, Australia"></div>
+        </div>
+        <div class="share-btns" style="margin-top:14px">
+          <button class="btn2 primary" id="synRunBtn" type="button">Run full synastry ♥</button>
+        </div>
+        <div style="font-size:.75rem;color:var(--muted);margin-top:10px;line-height:1.6" id="synPrivacy">Requires your chart to be generated first. Their details are used only to compute this one comparison in your browser — never stored, never in a link, never uploaded. Clear it any time by reloading.</div>
+        <div id="synOut"></div>
+      </div>
+    </div>
+
+    <!-- BIO CARD -->
+    <div class="section reveal" id="bioSection">
+      <div class="section-head">
+        <span class="dot">📸</span>
+        <div><h2>Your Shareable Bio Card</h2><p>Screenshot it straight into your dating profile.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="bio">
+        <div class="bname" id="bioName">Wayne Michael</div>
+        <div class="brow" id="bioTags">
+          <span class="btag">Computed on your device</span>
+        </div>
+        <div class="bline"><strong>My love language:</strong> <span id="bioLoveLang">generated from your chart</span>.</div>
+        <div class="bline" id="bioIntentLine" style="display:none"><strong>Here for:</strong> <span id="bioIntent"></span></div>
+        <div class="bqr">
+          <img src="assets/qr.png" alt="QR code linking to Soul Spark" width="84" height="84" decoding="async">
+          <div class="bqr-txt"><b>Scan to decode yours</b><span>Free &middot; private &middot; nothing uploaded</span></div>
+        </div>
+        <div class="bfoot"><span>Soul Spark</span><span class="beat">♥</span><span>quantummerlin.com/loveblueprint</span></div>
+      </div>
+    </div>
+
+    <!-- SOCIAL CARDS -->
+    <div class="section reveal" id="socialSection">
+      <div class="section-head">
+        <span class="dot">🖼️</span>
+        <div><h2>Your Social Cards</h2><p>Eight screenshot-ready cards built from your real chart. Swipe through on your story, or drop one into your profile.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="social-grid" id="socialGrid"></div>
+      <div class="soc-hint">💛 Screenshot any card — they're sized for stories (9:16) and legible at feed-thumbnail size.</div>
+    </div>
+
+  </section>
+
+  <!-- PARTNER VIEW (opened from a shared #s= link) -->
+  <section id="partnerView">
+    <div class="section" style="margin-top:40px">
+      <div class="spark-badge">
+        <span class="glyph beat">♥</span>
+        <div>
+          <div class="big" id="pvName">Someone shared their spark</div>
+          <div class="cap" id="pvDyn"></div>
+          <div class="cap" id="pvSub"></div>
+          <div class="cap" id="pvIntent" style="margin-top:8px;display:none"><span class="pill intent"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-head">
+        <span class="dot">🔓</span>
+        <div><h2>What they chose to show you</h2><p>No birth data was shared — just their finished readings.</p></div>
+      </div>
+      <div class="divider"></div>
+      <div class="flags" id="pvCards"></div>
+      <div id="pvFlags"></div>
+      <div id="pvCompare"></div>
+    </div>
+    <div class="section" style="text-align:center">
+      <button class="btn" id="pvCta" type="button" style="max-width:460px">♥ Add my spark &amp; compare</button>
+      <button class="btn2 ghost" id="pvSave" type="button" style="display:none;max-width:460px;margin:10px auto 0">♥ Save to my potential matches</button>
+      <p class="sub" style="margin-top:10px;font-size:.8rem;color:var(--muted)">Takes ten seconds — and your birth details never enter the link either.</p>
+    </div>
+  </section>
+
+  <!-- LIBRARY (Spotify "Your Library") -->
+  <section id="libraryView">
+    <div class="lib-head">
+      <h2>Your Library</h2>
+      <p>Everything lives on this device. Reopen any spark in one tap, keep potential matches organised, and compare any of them against your current spark.</p>
+    </div>
+    <div class="lib-h"><h3>Your sparks</h3><span class="cnt" id="libSparksCnt">0</span></div>
+    <div id="libSparks"></div>
+    <div class="lib-h"><h3>Potential matches</h3><span class="cnt" id="libMatchesCnt">0</span></div>
+    <div id="libMatches"></div>
+    <p class="lib-note">🔒 <b>On-device only, with full disclosure.</b> Reopening a spark in one tap requires your birth details, so your <i>own</i> records store them — in this browser only, never uploaded, and never inside share links or match codes. A potential match stores only what they chose to share with you, plus when and how you saved them. Clear your browser data and everything here is gone — nothing lives on a server.</p>
+  </section>
+
+  <!-- STATIC CONTENT (crawlable: what this tool is, how it works, what it does NOT do) -->
+  <div class="seo-block" id="aboutBlock">
+    <h2>What is Soul Spark?</h2>
+    <p><b>Soul Spark is a free dating-profile reading built from your exact birth chart.</b> Instead of a generic horoscope, it computes your real planetary positions — Venus, Moon, Mercury, Mars, your Ascendant and 7th House — and translates them into the things you actually need on a dating app: how you love, how you text, what kind of first date suits you, which red flags to watch for, and a profile bio you can copy straight into Hinge, Bumble or Tinder.</p>
+    <h3>How the calculations work</h3>
+    <p>Every reading on this page is computed <b>in your browser</b>, the moment you press “Reveal My Spark”, using a real astronomical ephemeris (the open-source astronomy-engine library) and exact sidereal-time formulas for the Ascendant and houses. Your birth place is resolved against a 14,133-city dataset with proper IANA time zones, so daylight-saving birthdays are handled correctly.</p>
+    <p>We also hold an accuracy line most sites don’t: <b>anything that can’t be computed exactly from what you gave us is withheld, not estimated.</b> No birth time? Your Rising sign and 7th House stay locked with a plain explanation, because guessing them would be inventing your compatibility profile.</p>
+    <h3>Compatibility, without surrendering your privacy</h3>
+    <p>You can share a “spark” link or code that contains <b>only your finished readings</b> — never your birth date, time or place. The recipient sees what you chose to show, saves you to their potential matches, and can compare sparks. For the deepest reading (exact degree synastry with real aspect orbs, plus a composite chart), both charts are entered on one device, computed, and discarded — degrees are never stored or transmitted, because a full set of degrees could be used to fingerprint a birth chart.</p>
+    <h3>What Soul Spark is not</h3>
+    <ul>
+      <li><b>Not a prediction engine.</b> Nothing here tells you whom you will marry or when. Astrology is a reflective language; we treat it that way.</li>
+      <li><b>Not a verdict on any person.</b> Low “ease” scores describe friction that many lasting couples work through happily. Two humans are more than their degrees.</li>
+      <li><b>Not a data collector.</b> There is no account, no upload, no server-side storage of anything you enter. Your library (saved readings, match notes) lives in this browser’s local storage and disappears if you clear it.</li>
+      <li><b>Not personalised advice.</b> For relationship decisions, talk to the humans in your life — or a qualified counsellor.</li>
+    </ul>
+    <h3>The features</h3>
+    <ul>
+      <li><b>Love Signature</b> — seven flip cards: Venus (how you love), Moon (emotional needs), Mercury (how you text), Mars (chemistry), Rising (first-date vibe), 7th House (who you’re wired for), Sun (your dating superpower).</li>
+      <li><b>Your Words vs Your Chart</b> — you choose what you’re here for; we show (without judging) whether that matches your chart’s pull.</li>
+      <li><b>The Deeper Pull</b> — your North/South Node axis and Saturn contacts: what’s comfortable versus what stretches you.</li>
+      <li><b>Bio Writer</b> — three copy-paste bios composed from your real placements, in your tone, editable before you post.</li>
+      <li><b>Degree synastry</b> — exact aspects between two charts with measurable orbs, honest CONTACT/EASE axes, and a composite chart.</li>
+    </ul>
+    <h3>Want to understand the ideas first?</h3>
+    <p>Our <a href="articles/" style="color:var(--rose-deep);font-weight:600">dating astrology guides</a> explain the reasoning in plain English — <a href="articles/venus-sign-dating-style/" style="color:var(--rose-deep)">how each Venus sign loves</a>, <a href="articles/astrology-compatibility-guide/" style="color:var(--rose-deep)">why compatibility percentages mislead and what synastry actually measures</a>, and <a href="articles/dating-app-bio-ideas/" style="color:var(--rose-deep)">bio ideas that get replies instead of just swipes</a>.</p>
+    <p style="font-size:.8rem;margin-top:14px">Soul Spark is part of the <a href="/soulblueprint/" style="color:var(--rose-deep)">Soul Blueprint</a> family by Quantum Merlin.</p>
+  </div>
+
+  <p class="foot">
+    <nav class="legal-nav" aria-label="Legal">
+      <a href="/about.html">About</a><span class="sep">•</span>
+      <a href="/privacy.html">Privacy Policy</a><span class="sep">•</span>
+      <a href="/terms.html">Terms</a><span class="sep">•</span>
+      <a href="/disclaimer.html">Disclaimer</a><span class="sep">•</span>
+      <a href="/soulblueprint/">Soul Blueprint</a>
+    </nav>
+    Soul Spark — every placement is computed live on your device by a vendored copy of the astronomy-engine ephemeris and exact sidereal-time astronomy. For self-reflection and fun, not fate.<br>
+    Nothing is uploaded. Anything that can’t be computed exactly is withheld, never estimated.<br>
+    <span style="opacity:.6">© 2026 Quantum Merlin. Astrology content is for entertainment and self-reflection.</span>
+  </p>
+</div>
+
+<!-- NOTE SHEET (organize a potential match) -->
+<div class="sheet-mask" id="noteMask">
+  <div class="sheet" id="noteSheet" role="dialog" aria-modal="true" aria-labelledby="noteTitle">
+    <h4 id="noteTitle">✎ Organize this match</h4>
+    <div class="sh-who" id="noteWho"></div>
+    <div class="sheet-chips" id="noteChips"></div>
+    <textarea id="noteArea" maxlength="80" placeholder="Your private note (max 80 chars)"></textarea>
+    <div class="sheet-btns">
+      <button class="btn2 ghost" id="noteCancel" type="button">Cancel</button>
+      <button class="btn2 ghost" id="noteClear" type="button">Clear note</button>
+      <button class="btn2 primary" id="noteSave" type="button">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- SPOTIFY-STYLE BOTTOM TAB NAV -->
+<nav id="bottomNav" aria-label="Primary">
+  <div class="bnav-inner">
+    <button class="bnav-btn active" type="button" data-nav="spark"><span class="ico">♥</span><span class="lbl">Your Spark</span></button>
+    <button class="bnav-btn" type="button" data-nav="library"><span class="ico">📚</span><span class="lbl">Library</span></button>
+    <button class="bnav-btn" type="button" data-nav="compare"><span class="ico">⇄</span><span class="lbl">Compare</span></button>
+    <button class="bnav-btn" type="button" data-nav="bio"><span class="ico">📸</span><span class="lbl">Bio Card</span></button>
+  </div>
+</nav>
+
+<!-- Exact-math stack — same files & order as the verification suite.
+     astronomy-engine is VENDORED (no CDN): the product must never silently
+     lose its ephemeris, and spark-engine refuses without it. -->
+<script src="vendor/astronomy.browser.min.js"></script>
+<script src="/soulblueprint/geo-data.js"></script>
+<script src="/soulblueprint/geocode.js"></script>
+<script src="spark-engine.js"></script>
+<script src="dating-content.js"></script>
+<script src="spark-runtime.js"></script>
+<script src="synastry.js"></script>
+<script>
+/* ============ LIVE CHART DATA ============
+   CARDS and NODES are COMPUTED at generate time by spark-runtime.js:
+   astronomy-engine ephemeris (vendored) + exact sidereal-time angles +
+   the 14,133-city DST-correct geocoder + the 84-entry content library.
+   No sample placements ship in this file any more — under the absolute
+   accuracy standard, nothing renders unless it was exactly computed, and
+   anything not computable is WITHHELD with an explanation. */
+var CARDS = [];
+
+/* ---- Node axis + Saturn: COMPUTED from the live chart ----
+   SOUTH NODE = comfort zone: familiar, easy, where you coast.
+   NORTH NODE = growth edge: what actually stretches you. Exactly 180° away.
+   Everything below — signs, degrees, conjunction orbs — is derived at
+   generate time by buildNodesFromChart(). Orbs are real degree measurements
+   from the exact longitudes, never sign-distance estimates. */
+var NODES = null;
+function buildNodesFromChart(chart){
+  if(!chart || !chart.ok || !chart.placements) return null;
+  var p = chart.placements;
+  var nn = p.northNode, sn = p.southNode, sat = p.saturn;
+  if(!nn || !sn || !sat || !p.sun) return null;
+  var orbSunNN = SoulSpark.separation(p.sun.longitude, nn.longitude);
+  var satDesc = chart.descendant ? SoulSpark.separation(sat.longitude, chart.descendant.longitude) : null;
+  return {
+    north: nn.name, northDeg: nn.degree,
+    south: sn.name, southDeg: sn.degree,
+    sunSign: p.sun.name,
+    sunConjNorthNode: orbSunNN,
+    saturn: sat.name, saturnDeg: sat.degree,
+    descendant: chart.descendant ? chart.descendant.name : null,
+    saturnConjDescendant: satDesc
+  };
+}
+
+/* Node-sign meaning, written for dating: comfort (south) vs growth (north). */
+var NODE_MEANING = {
+  'Aries':      { want:'handling everything alone, never needing anyone',        grow:'let someone support you; ask instead of armoring up' },
+  'Taurus':     { want:'comfort and familiarity — not rocking the boat',         grow:'surrender to depth: change, intensity, emotional truth' },
+  'Gemini':     { want:'staying curious, informed, everywhere at once',          grow:'commit to depth — one person, one truth, all the way down' },
+  'Cancer':     { want:'safety and nesting, holding people close',               grow:'step into a bigger arena; be seen beyond the circle' },
+  'Leo':        { want:'being admired, performing, holding the centre',          grow:'serve quietly; let someone else have the stage' },
+  'Virgo':      { want:'control through fixing, sorting, self-improvement',      grow:'let love be messy; accept people without editing them' },
+  'Libra':      { want:'harmony and pleasing, avoiding every conflict',          grow:'take a stand; choose yourself when it costs the peace' },
+  'Scorpio':    { want:'intensity and control, seeing through everyone',        grow:'lighten up — trust, simplicity, letting love be easy' },
+  'Sagittarius':{ want:'freedom and the next horizon, never tied down',          grow:'commit to one place and person long enough to build' },
+  'Capricorn':  { want:'achievement and status, total self-sufficiency',        grow:'come home to feeling; nurture and be nurtured' },
+  'Aquarius':   { want:'detachment and the group, staying a step removed',       grow:'intimacy — let one person actually know you' },
+  'Pisces':     { want:'dreaming, escaping, dissolving into everyone else',      grow:'build structure, hold boundaries, stay in your own body' }
+};
+
+/* Saturn conjunct a sensitive point: the growth lesson, by sign. */
+var SATURN_MEANING = {
+  'Pisces':     'boundaries and discernment — caring deeply without drowning in someone else\u2019s feelings',
+  'Aries':      'patience with your own pace; leadership earned rather than grabbed',
+  'Taurus':     'security built on your terms, not on someone else\u2019s approval',
+  'Gemini':     'listening deeper than you speak; saying less, but truer',
+  'Cancer':     'creating home without becoming responsible for everyone in it',
+  'Leo':        'being proud without needing applause to feel worth',
+  'Virgo':      'accepting good enough; critique that never becomes cruelty',
+  'Libra':      'fairness that includes you; choosing instead of mirroring',
+  'Scorpio':    'trusting slowly without never; power shared, not hoarded',
+  'Sagittarius':'commitment that doesn\u2019t feel like a cage',
+  'Capricorn':  'ambition that still leaves room for warmth',
+  'Aquarius':   'belonging to somebody, not just to everybody'
+};
+
+
+/* ============ FLIP CARDS ============ */
+function buildCards(){
+  var grid = document.getElementById('cardGrid');
+  grid.innerHTML = '';
+  CARDS.forEach(function(c, i){
+    // 'est' now means WITHHELD: the runtime refused this placement because
+    // the exact inputs are missing. Never an estimate, never a guess.
+    var est = !!c.withheld;
+    var el = document.createElement('div');
+    el.className = 'flip';
+    el.style.setProperty('--i', i);
+    el.innerHTML =
+      '<div class="flip-inner">'+
+        '<div class="face front" data-flip>'+
+          (est ? '<span class="est">🔒 exact details needed</span>' : '')+
+          '<div class="icon">'+c.icon+'</div>'+
+          '<h3>'+c.front+(est ? '' : ' in '+c.sign)+'</h3>'+
+          '<div class="sign">'+c.title+'</div>'+
+          '<button class="flipbtn" type="button" data-flipbtn>Flip ♥</button>'+
+          '<div class="hint">'+(est ? 'locked — see why' : 'tap card to read')+'</div>'+
+        '</div>'+
+        '<div class="face back">'+
+          '<button class="backbtn" type="button" data-flipbtn>← back</button>'+
+          '<h4><span>'+c.icon+'</span> '+c.title+(est ? ' <span class="est" style="position:static;margin-left:6px">🔒 withheld</span>' : '')+'</h4>'+
+          '<div class="body">'+c.body+'</div>'+
+          '<details class="why"><summary><span class="chev">▶</span> Why the stars say this</summary>'+
+          '<div class="why-body">'+c.why+'</div></details>'+
+        '</div>'+
+      '</div>';
+    grid.appendChild(el);
+
+    // Flip on front click / dedicated buttons / keyboard
+    var front = el.querySelector('.front');
+    front.addEventListener('click', function(e){ if(e.target.closest('details'))return; el.classList.add('flipped'); });
+    el.querySelectorAll('[data-flipbtn]').forEach(function(b){
+      b.addEventListener('click', function(e){ e.stopPropagation(); el.classList.toggle('flipped'); });
+    });
+    el.addEventListener('keydown', function(e){
+      if((e.key==='Enter'||e.key===' ') && e.target===front){ e.preventDefault(); el.classList.toggle('flipped'); }
+      if(e.key==='Escape'){ el.classList.remove('flipped'); }
+    });
+    front.setAttribute('tabindex','0');
+    front.setAttribute('role','button');
+    front.setAttribute('aria-label', (est ? c.front+' withheld — '+c.title : c.front+' in '+c.sign+' — '+c.title)+'. Activate to flip and read.');
+  });
+}
+
+/* ============ OPTION PICKERS (single-select per group) ============ */
+function wireOptions(){
+  document.querySelectorAll('.opts').forEach(function(group){
+    group.querySelectorAll('.opt').forEach(function(opt){
+      function pick(){ group.querySelectorAll('.opt').forEach(function(o){o.classList.remove('sel')}); opt.classList.add('sel'); }
+      opt.addEventListener('click', pick);
+      opt.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(); } });
+    });
+  });
+}
+
+/* ============ SCROLL REVEAL (IntersectionObserver, never scroll listeners) ============ */
+function wireReveal(){
+  var els = document.querySelectorAll('.reveal');
+  // Safety net: if IO is unavailable (ancient browsers / hostile embeds),
+  // never leave content invisible.
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('shown'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('shown'); io.unobserve(en.target); } });
+  }, { threshold:.1, rootMargin:'0px 0px -40px 0px' });
+  els.forEach(function(el){ io.observe(el); });
+}
+
+/* ============ AMBIENT HEARTS ============ */
+function spawnHearts(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var field = document.getElementById('heartField');
+  var glyphs = ['♥','❤','❣','♡'];
+  for(var i=0;i<14;i++){
+    var h = document.createElement('span');
+    h.textContent = glyphs[i % glyphs.length];
+    h.style.left = (Math.random()*100)+'vw';
+    h.style.fontSize = (14+Math.random()*22)+'px';
+    h.style.animationDuration = (14+Math.random()*16)+'s';
+    h.style.animationDelay = (-Math.random()*20)+'s';
+    field.appendChild(h);
+  }
+}
+
+/* ============ CHART ACCURACY ============
+   The accuracy badge is driven by the runtime's honest notices (see the
+   generate handler). Nothing is labelled “estimated” any more — because
+   nothing is estimated any more. */
+
+/* ============ PRIVACY SAFE SHARING ============
+   A share code contains ONLY finished reading OUTPUTS
+   (sign names, keywords, flags). Birth date / time / place
+   are NEVER in it — the recipient cannot re-derive the chart. */
+var SIGN_ELEMENT = {
+  Aries:'Fire', Taurus:'Earth', Gemini:'Air', Cancer:'Water',
+  Leo:'Fire', Virgo:'Earth', Libra:'Air', Scorpio:'Water',
+  Sagittarius:'Fire', Capricorn:'Earth', Aquarius:'Air', Pisces:'Water'
+};
+var shareLevel = 'love';
+var PARTNER = null; // snapshot decoded from a #s= link
+
+var LEVEL_COPY = {
+  card:'Only your bio card: spark name + Venus / Moon / Mars tags. Cheeky and minimal.',
+  love:'Your 7 Love Signature card fronts (planet + sign + title). This is what a date sees when they open your link.',
+  full:'Everything in Love Signature PLUS your green / yellow / red flags. Your Traps can never be shared — that shadow work is for your eyes only.'
+};
+
+function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function txtList(sel){ return Array.prototype.slice.call(document.querySelectorAll(sel)).map(function(li){ return li.textContent.trim(); }); }
+
+function b64url(str){ return btoa(unescape(encodeURIComponent(str))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,''); }
+function unb64url(code){
+  var s = String(code).replace(/-/g,'+').replace(/_/g,'/');
+  while(s.length % 4) s += '=';
+  return decodeURIComponent(escape(atob(s)));
+}
+
+function collectSnapshot(){
+  var snap = {
+    v:'SS1',
+    n:(document.getElementById('nm').value.trim() || 'Anonymous'),
+    s:{ dyn:document.getElementById('sparkName').textContent, sub:document.getElementById('sparkSub').textContent }
+  };
+  // Intention is user-stated only. Never inferred, never defaulted.
+  var intent = currentIntent();
+  if(intent) snap.i = intent;
+  if(shareLevel === 'card'){
+    snap.tags = txtList('.bio .btag');
+  } else {
+    // Only placements that were exactly computed are ever shared or
+    // compared — withheld ('—') cards leave the snapshot entirely.
+    snap.c = CARDS.filter(function(c){ return !c.withheld && c.sign && c.sign !== '—'; }).map(function(c){ return { t:c.front, s:c.sign, x:c.title }; });
+    if(shareLevel === 'full'){
+      snap.f = { g:txtList('.flag.g li'), y:txtList('.flag.y li'), r:txtList('.flag.r li') };
+    }
+  }
+  return snap;
+}
+function makeCode(snap){ return 'SS1-' + b64url(JSON.stringify(snap)); }
+function parseCode(str){
+  str = (str || '').trim();
+  if(str.indexOf('SS1-') === 0) str = str.slice(4);
+  return JSON.parse(unb64url(str));
+}
+function refreshShareCode(){
+  window.__lastSnap = collectSnapshot();
+  window.__lastCode = makeCode(window.__lastSnap);
+  document.getElementById('shareCode').textContent = window.__lastCode;
+  return window.__lastCode;
+}
+
+/* ============ COMPATIBILITY (sign-level element comparison —
+   used for CODE/LINK shares, which carry placements but never
+   degrees by design: degrees would fingerprint a birth chart.
+   The exact degree-based analysis lives in the same-device
+   "Full degree compatibility" panel, powered by synastry.js.)
+   Scores are never shown bare: every dimension also produces a
+   plain-language REASON, because "why they might be great for you"
+   is the product, not the percentage. */
+function elementHarmony(s1, s2){
+  var e1 = SIGN_ELEMENT[s1], e2 = SIGN_ELEMENT[s2];
+  if(!e1 || !e2) return .65;
+  if(e1 === e2) return 1;
+  if((e1==='Fire'&&e2==='Air')||(e1==='Air'&&e2==='Fire')||(e1==='Earth'&&e2==='Water')||(e1==='Water'&&e2==='Earth')) return .88;
+  return .45;
+}
+function ELEMENT_OF(s){ return SIGN_ELEMENT[s] || '—'; }
+/* Prose for an element pair — used for every reason line.
+   `text` is a single map with keys: same, fireAir, earthWater,
+   fireEarth, waterAir, other. */
+function pairReason(e1, e2, text){
+  if(e1 === e2)                 return text.same;
+  if((e1==='Fire'&&e2==='Air')||(e1==='Air'&&e2==='Fire'))       return text.fireAir;
+  if((e1==='Earth'&&e2==='Water')||(e1==='Water'&&e2==='Earth')) return text.earthWater;
+  if((e1==='Fire'&&e2==='Earth')||(e1==='Earth'&&e2==='Fire'))   return text.fireEarth;
+  if((e1==='Water'&&e2==='Air')||(e1==='Air'&&e2==='Water'))     return text.waterAir;
+  return text.other;
+}
+var REASON_TEXT = {
+  chem: {
+    same:'You spark in the same currency — instant heat, no translation needed.',
+    fireAir:'Fire and air feed each other. Their chemistry lights up your ideas and you keep it burning.',
+    earthWater:'Water softens earth and earth holds water. The attraction is slow, warm and very real.',
+    fireEarth:'Fire wants to move, earth wants to build. Exciting, but someone has to set the pace.',
+    waterAir:'Feeling meets thinking. Fascinating, as long as neither of you mistakes distance for disinterest.',
+    other:'Different appetites. Not a blocker — just worth being explicit about what each of you actually wants.'
+  },
+  safety: {
+    same:'You both feel safe the same way, so neither of you has to explain the other to themselves.',
+    fireAir:'Both of you need room to breathe. Comfortable silence, no clinginess.',
+    earthWater:'A genuinely steadying match — they can be soft, you can be solid, and nobody panics.',
+    fireEarth:'One of you wants reassurance and the other wants adventure. Both are legitimate; say which you need.',
+    waterAir:'One of you processes out loud, the other needs space to feel. Agree the rhythm early.',
+    other:'Different definitions of safety. Workable, but only if you talk about it instead of assuming.'
+  },
+  talk: {
+    same:'You think and speak the same way — conversations flow without effort.',
+    fireAir:'Fast, funny, endless. You will rarely run out of things to say.',
+    earthWater:'Quiet, intuitive understanding. Less talking, more being understood.',
+    fireEarth:'You jump to the point, they want the details. Slight friction, easily handled.',
+    waterAir:'One of you speaks in feelings, the other in ideas. Learn each other\'s dialect and it becomes a superpower.',
+    other:'Genuinely different communication styles. Ask more than you assume.'
+  },
+  lasting: {
+    same:'What you need in a partner and who they are line up — this fits the long haul.',
+    fireAir:'They give you motion and possibility. Great as long as you both keep choosing each other.',
+    earthWater:'They give you exactly the kind of grounding your chart keeps asking for.',
+    fireEarth:'They are steadier than you expected to want. Give it time before deciding.',
+    waterAir:'They open you up intellectually. The depth comes later, if you let it.',
+    other:'They are not the type your chart predicts you\'d settle into — which is often how the best ones start.'
+  }
+};
+function compareSnapshots(a, b){
+  function sg(list, name){ var m = (list||[]).filter(function(x){ return x.t === name; })[0]; return m ? m.s : null; }
+  function eh(x, y){ return elementHarmony(x, y); }
+  var aVen=sg(a.c,'Venus'), aMar=sg(a.c,'Mars'), aMoo=sg(a.c,'Moon');
+  var a7=sg(a.c,'7th House'), aSun=sg(a.c,'Sun');
+  var bVen=sg(b.c,'Venus'), bMar=sg(b.c,'Mars'), bMoo=sg(b.c,'Moon');
+  var b7=sg(b.c,'7th House'), bSun=sg(b.c,'Sun');
+
+  // STRICT MODE: a dimension exists ONLY when both charts have the exact
+  // placements it needs. Withheld inputs (no birth time, etc.) remove the
+  // dimension and its weight — we never pad a score with a fabricated value.
+  var dims = [];
+  if(aVen && bMar && bVen && aMar){
+    dims.push({ label:'🔥 Chemistry', w:.35, v:(eh(aVen,bMar)+eh(bVen,aMar))/2,
+      why:pairReason(ELEMENT_OF(aVen), ELEMENT_OF(bMar), REASON_TEXT.chem),
+      detail:'your Venus in '+aVen+' × their Mars in '+bMar });
+  }
+  if(aMoo && bMoo){
+    dims.push({ label:'🛡️ Emotional safety', w:.3, v:eh(aMoo,bMoo),
+      why:pairReason(ELEMENT_OF(aMoo), ELEMENT_OF(bMoo), REASON_TEXT.safety),
+      detail:'Moon in '+aMoo+' × Moon in '+bMoo });
+  }
+  if(aSun && bSun && a7 && b7){
+    dims.push({ label:'⏳ Staying power', w:.2, v:(eh(a7,bSun)+eh(b7,aSun))/2,
+      why:pairReason(ELEMENT_OF(a7), ELEMENT_OF(bSun), REASON_TEXT.lasting),
+      detail:'your 7th House ('+a7+') × their Sun in '+bSun });
+  }
+  var merA=sg(a.c,'Mercury'), merB=sg(b.c,'Mercury');
+  if(merA && merB){
+    dims.push({ label:'💬 Communication', w:.15, v:eh(merA,merB),
+      why:pairReason(ELEMENT_OF(merA), ELEMENT_OF(merB), REASON_TEXT.talk),
+      detail:'Mercury in '+merA+' × Mercury in '+merB });
+  }
+  if(!dims.length){
+    return { overall:null, note:null, reasons:[], bars:[],
+      refused:'Neither of you has shared enough exact placements for an honest comparison. Adding a birth time (and place) unlocks the full analysis.' };
+  }
+  // Renormalize weights across the dimensions that DO exist.
+  var wsum = dims.reduce(function(s,d){ return s + d.w; }, 0);
+  var overall = dims.reduce(function(s,d){ return s + d.v * (d.w/wsum); }, 0);
+
+  var note;
+  if(overall >= .85)     note = 'Rare heat — your elements keep landing in each other\'s laps. The real question is whether you can both handle how easy this feels.';
+  else if(overall >= .7) note = 'Strong natural current. Where you do rub, it\'s the interesting kind of friction — expect growth, not grind.';
+  else if(overall >= .55)note = 'Workable with intention: the gaps here are elemental, not personal. Curiosity about each other\'s styles beats any score.';
+  else                   note = 'Big elemental gaps — nothing comes automatic. Plenty of great couples are built across gaps like this, when both people stay curious.';
+
+  var missing = [];
+  dims.forEach(function(){});
+  if(!dims.some(function(d){ return d.label.indexOf('Chemistry')>=0; })) missing.push('chemistry');
+  if(!dims.some(function(d){ return d.label.indexOf('safety')>=0; })) missing.push('emotional safety');
+  if(!dims.some(function(d){ return d.label.indexOf('Staying')>=0; })) missing.push('staying power');
+  if(!dims.some(function(d){ return d.label.indexOf('Communication')>=0; })) missing.push('communication');
+
+  return { overall:overall, note:note, reasons:dims,
+    bars:dims.map(function(d){ return { label:d.label, v:d.v }; }),
+    missing:missing, partial:wsum < .999, covered:Math.round(wsum*100) };
+}
+
+function runCompare(theirs, out){
+  out = out || document.getElementById('compareOut');
+  var mine = window.__lastSnap || collectSnapshot();
+  // Guard on the SNAPSHOT (works in partner view too, where #results is hidden),
+  // not on results visibility.
+  if(!mine || !mine.c){
+    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">Generate your spark first, then come back and compare.</p>';
+    return;
+  }
+  if(!document.getElementById('results').classList.contains('on') && !document.getElementById('partnerView').classList.contains('on')){
+    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">Generate your spark first, then come back and compare.</p>';
+    return;
+  }
+  if(!mine.c || !theirs.c){
+    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">One of you shared only a bio card — there are no placements to score. Re-share at the "Love Signature" level for a real comparison.</p>';
+    return;
+  }
+  var r = compareSnapshots(mine, theirs);
+  if(r.refused){
+    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">'+esc(r.refused)+'</p>';
+    return;
+  }
+  var html = '<div style="margin-top:18px;border-top:1px solid var(--line);padding-top:16px">'+
+    '<div style="display:flex;justify-content:center;align-items:baseline;gap:10px;font-family:var(--font-head)">'+
+      '<span style="font-size:1rem;color:var(--rose-deep)">'+esc(mine.n)+'</span>'+
+      '<span class="beat" style="font-size:1.4rem;color:var(--rose)">♥</span>'+
+      '<span style="font-size:1rem;color:var(--rose-deep)">'+esc(theirs.n)+'</span></div>'+
+    '<div class="spark-total">'+Math.round(r.overall*100)+'%</div>'+
+    '<div style="text-align:center;color:var(--muted);font-size:.76rem;margin:-6px 0 14px">sign-level spark'+(r.partial? ' · based on '+r.covered+'% of the full picture':'')+' · for exact degree synastry use “Full degree compatibility” below</div>';
+  // Plain-language reasons FIRST — "why they might be great for you"
+  html += '<div style="font-weight:700;color:var(--rose-deep);font-size:.95rem;margin:6px 0 10px">Why the two of you might click</div>';
+  r.reasons.forEach(function(rs){
+    html += '<div class="reason-row"><div class="reason-head"><span>'+rs.label+'</span><span class="reason-pct">'+Math.round(rs.v*100)+'%</span></div>'+
+            '<div class="bar-track"><div class="bar-fill" data-w="'+Math.round(rs.v*100)+'"></div></div>'+
+            '<div class="reason-why">'+esc(rs.why)+'</div>'+
+            '<div class="reason-detail">'+esc(rs.detail)+'</div></div>';
+  });
+  html += '<p style="font-size:.86rem;margin-top:8px">' + r.note + '</p>';
+  if(r.partial && r.missing && r.missing.length){
+    html += '<p class="intent-note" style="border-color:rgba(232,185,106,.4)">🔍 <b>Honest scope:</b> this comparison covers '+r.covered+'% of the full picture — '+esc(r.missing.join(', '))+' could not be scored because one of you withheld (or does not have) the exact placements they need. Nothing was padded with a made-up average.</p>';
+  }
+  // Intentions are self-reported, not scored. If they differ, say so plainly
+  // and without judgment — that conversation matters more than any percentage.
+  if(theirs.i && mine.i && theirs.i !== mine.i){
+    html += '<p class="intent-note">⚖️ <b>You\'re here for different things.</b> You said <b>'+esc(mine.i)+'</b>; they said <b>'+esc(theirs.i)+'</b>. Not a dealbreaker — just worth saying out loud early instead of discovering it in month three.</p>';
+  } else if(theirs.i && mine.i){
+    html += '<p class="intent-note" style="background:rgba(123,196,138,.1);border-color:rgba(123,196,138,.3)">✓ <b>Same intention:</b> you both said <b>'+esc(mine.i)+'</b>. That alignment is worth more than the percentage above.</p>';
+  } else {
+    html += '<p class="intent-note">💬 One of you hasn\'t stated an intention, so nothing is assumed here. Asking directly beats any score on this page.</p>';
+  }
+  html += '<p class="caveat">🔒 No birth date, time or place crossed the wire — only finished readings were compared. And two real humans are never just their elements: treat this as a spark, not a sentence.</p></div>';
+  out.innerHTML = html;
+  setTimeout(function(){
+    out.querySelectorAll('.bar-fill').forEach(function(f){ f.style.width = f.dataset.w + '%'; });
+  }, 100);
+}
+
+/* ============ LOCAL PERSISTENCE ============
+   Stores the FINISHED snapshot only — same privacy contract as the share
+   code. NO birth date, time or place ever touches localStorage. A returning
+   user opening a shared link goes STRAIGHT to the comparison. */
+var SPARK_LS_KEY = 'ss-local-snapshot';
+function saveLocalSnapshot(snap){
+  try{ localStorage.setItem(SPARK_LS_KEY, JSON.stringify(snap)); }catch(e){}
+}
+function loadLocalSnapshot(){
+  try{
+    var raw = localStorage.getItem(SPARK_LS_KEY);
+    if(!raw) return null;
+    var s = JSON.parse(raw);
+    return (s && s.v === 'SS1') ? s : null;
+  }catch(e){ return null; }
+}
+/* Refill the form fields from the saved snapshot's *outputs* is impossible
+   (by design — inputs are never stored), so returning users regenerate;
+   but their comparison fires automatically the moment they do. */
+
+/* ============ SPARK LIBRARY ============
+   Two collections, both on THIS device only:
+   • ss-library-sparks  — your own saved readings. These DO store birth
+     details (date/time/place) so "reopen" re-computes an exact chart in
+     one tap. Explicitly disclosed in the library UI; never shared, never
+     uploaded, never inside any share code.
+   • ss-library-matches — potential matches you've saved. These store ONLY
+     the snapshot they shared with you (same content as a share code) plus
+     when/how you saved them. No birth data exists here to store. */
+var SPARKS_KEY = 'ss-library-sparks';
+var MATCHES_KEY = 'ss-library-matches';
+function _readLS(key){ try{ return JSON.parse(localStorage.getItem(key)||'[]'); }catch(e){ return []; } }
+function _writeLS(key, arr){ try{ localStorage.setItem(key, JSON.stringify(arr)); return true; }catch(e){ return false; } }
+
+function librarySaveSpark(input, snapshot, dynName){
+  var sparks = _readLS(SPARKS_KEY);
+  // De-dupe: same person + same birth inputs already saved -> refresh & bump
+  // to the top instead of stacking duplicates on reopen.
+  var dupeIdx = -1;
+  for(var i=0;i<sparks.length;i++){
+    var r = sparks[i];
+    if(r.name === input.name && r.birthDate === input.birthDate &&
+       (r.birthTime||'') === (input.birthTime||'') && (r.birthPlace||'') === (input.birthPlace||'')){
+      dupeIdx = i; break;
+    }
+  }
+  var rec;
+  if(dupeIdx >= 0){
+    rec = sparks.splice(dupeIdx, 1)[0];
+    rec.dyn = dynName || rec.dyn;
+    rec.savedAt = new Date().toISOString();
+  } else {
+    rec = {
+      id: 'sp-' + Date.now().toString(36),
+      name: input.name, birthDate: input.birthDate, birthTime: input.birthTime || '',
+      birthPlace: input.birthPlace || '', dyn: dynName || '', savedAt: new Date().toISOString()
+    };
+  }
+  sparks.unshift(rec);
+  if(sparks.length > 24) sparks.length = 24; // sane cap; oldest rolls off
+  _writeLS(SPARKS_KEY, sparks);
+  return rec.id;
+}
+function libraryGetSpark(id){
+  return _readLS(SPARKS_KEY).filter(function(r){ return r.id === id; })[0] || null;
+}
+function libraryDeleteSpark(id){
+  _writeLS(SPARKS_KEY, _readLS(SPARKS_KEY).filter(function(r){ return r.id !== id; }));
+}
+function librarySaveMatch(snap, source){
+  var matches = _readLS(MATCHES_KEY);
+  // De-dupe: same name+dynamic already saved from same source -> refresh it
+  var dupe = matches.filter(function(m){ return m.snap && m.snap.n === snap.n && m.snap.s && m.snap.s.dyn === (snap.s||{}).dyn; })[0];
+  if(dupe){ dupe.snap = snap; dupe.savedAt = new Date().toISOString(); dupe.source = source || dupe.source; _writeLS(MATCHES_KEY, matches); return dupe.id; }
+  var rec = { id:'mt-'+Date.now().toString(36), snap:snap, source:source||'code', savedAt:new Date().toISOString(), note:'' };
+  matches.unshift(rec);
+  if(matches.length > 40) matches.length = 40;
+  _writeLS(MATCHES_KEY, matches);
+  return rec.id;
+}
+function libraryGetMatch(id){
+  return _readLS(MATCHES_KEY).filter(function(r){ return r.id === id; })[0] || null;
+}
+function libraryDeleteMatch(id){
+  _writeLS(MATCHES_KEY, _readLS(MATCHES_KEY).filter(function(r){ return r.id !== id; }));
+}
+function librarySetNote(id, note){
+  var ms = _readLS(MATCHES_KEY);
+  ms.forEach(function(m){ if(m.id === id) m.note = note; });
+  _writeLS(MATCHES_KEY, ms);
+}
+function _fmtSaved(iso){
+  try{
+    var d = new Date(iso); var now = new Date();
+    var days = Math.floor((now - d)/86400000);
+    if(days === 0) return 'saved today';
+    if(days === 1) return 'saved yesterday';
+    if(days < 7) return 'saved ' + days + ' days ago';
+    return 'saved ' + d.toLocaleDateString('en-AU', { day:'numeric', month:'short' });
+  }catch(e){ return 'saved'; }
+}
+
+/* ---- Resume bar (Spotify "continue where you left off") ---- */
+function renderResume(){
+  var bar = document.getElementById('resumeBar');
+  if(!bar) return;
+  if(window.__view === 'partner'){ bar.classList.remove('on'); return; }
+  var sparks = _readLS(SPARKS_KEY);
+  if(!sparks.length){ bar.classList.remove('on'); return; }
+  var s = sparks[0];
+  document.getElementById('resumeName').textContent = s.name;
+  document.getElementById('resumeSub').textContent = (s.dyn || 'Spark') + ' · ' + _fmtSaved(s.savedAt) + ' · ' + (sparks.length > 1 ? (sparks.length + ' in library') : 'tap to reopen');
+  bar.classList.add('on');
+}
+function wireResume(){
+  document.getElementById('resumeGo').addEventListener('click', function(){
+    var s = _readLS(SPARKS_KEY)[0]; if(!s) return; openSparkRecord(s);
+  });
+  document.getElementById('resumeAll').addEventListener('click', function(){ setView('library'); });
+}
+
+/* ---- ONE-CLICK REOPEN: refill inputs -> click generate ---- */
+function openSparkRecord(rec){
+  if(!rec) return;
+  document.getElementById('nm').value = rec.name || '';
+  document.getElementById('bd').value = rec.birthDate || '';
+  document.getElementById('bt').value = rec.birthTime || '';
+  document.getElementById('bp').value = rec.birthPlace || '';
+  // back to the form's view, then fire the real generate path
+  if(window.__view === 'partner'){ location.hash = ''; window.__partnerCleared = true; }
+  document.querySelector('.form-card').style.display = '';
+  document.getElementById('partnerView').classList.remove('on');
+  setView('landing');
+  document.getElementById('genBtn').click(); // computes exact chart, saves, shows chrome
+  toast('Reopened ' + (rec.name || 'spark') + ' ♥');
+}
+
+/* ---- Library rendering ---- */
+function renderLibrary(){
+  var sparks = _readLS(SPARKS_KEY), matches = _readLS(MATCHES_KEY);
+  document.getElementById('libSparksCnt').textContent = sparks.length;
+  document.getElementById('libMatchesCnt').textContent = matches.length;
+
+  var sp = document.getElementById('libSparks');
+  if(!sparks.length){
+    sp.innerHTML = '<div class="lib-empty">No saved sparks yet.<br>Generate one and it appears here — one tap to reopen.</div>';
+  } else {
+    sp.innerHTML = '';
+    sparks.forEach(function(r){
+      var row = document.createElement('div'); row.className = 'lib-row';
+      row.innerHTML =
+        '<span class="lib-ico beat">♥</span>' +
+        '<div class="lib-main"><div class="lib-t">' + esc(r.name) + '</div>' +
+        '<div class="lib-s">' + esc(r.dyn || 'Spark reading') + ' · ' + _fmtSaved(r.savedAt) +
+        (r.birthTime ? ' · exact chart' : ' · date only') + '</div></div>';
+      var acts = document.createElement('div'); acts.className = 'lib-acts';
+      var open = document.createElement('button'); open.className='lib-btn solid'; open.type='button'; open.textContent='Open';
+      open.addEventListener('click', function(){ openSparkRecord(r); });
+      var del = document.createElement('button'); del.className='lib-btn del'; del.type='button'; del.textContent='Remove';
+      del.addEventListener('click', function(){ libraryDeleteSpark(r.id); renderLibrary(); renderResume(); });
+      acts.appendChild(open); acts.appendChild(del);
+      row.appendChild(acts);
+      sp.appendChild(row);
+    });
+  }
+
+  var mt = document.getElementById('libMatches');
+  if(!matches.length){
+    mt.innerHTML = '<div class="lib-empty">No potential matches saved yet.<br>Open someone\u2019s spark link or paste their code, then hit \u201cSave to my library\u201d.</div>';
+  } else {
+    mt.innerHTML = '';
+    matches.forEach(function(m){
+      var row = document.createElement('div'); row.className = 'lib-row';
+      var dyn = (m.snap && m.snap.s && m.snap.s.dyn) || 'Spark';
+      var intent = m.snap && m.snap.i ? ' \u00B7 ' + esc(m.snap.i) : '';
+      var noteLine = m.note ? '<div class="lib-s" style="color:var(--gold)">\u270E ' + esc(m.note) + '</div>' : '';
+      row.innerHTML =
+        '<span class="lib-ico">\u2661</span>' +
+        '<div class="lib-main"><div class="lib-t">' + esc((m.snap && m.snap.n) || 'Someone') + '<span class="match-badge">&nbsp;match&nbsp;</span></div>' +
+        '<div class="lib-s">' + esc(dyn) + intent + ' \u00B7 ' + _fmtSaved(m.savedAt) + ' \u00B7 via ' + esc(m.source) + '</div>' + noteLine + '</div>';
+      var acts = document.createElement('div'); acts.className = 'lib-acts';
+      var cmp = document.createElement('button'); cmp.className='lib-btn solid'; cmp.type='button'; cmp.textContent='Compare \u2665';
+      cmp.addEventListener('click', function(){ compareWithMatch(m); });
+      var view = document.createElement('button'); view.className='lib-btn'; view.type='button'; view.textContent='View spark';
+      view.addEventListener('click', function(){ viewMatchSpark(m); });
+      var org = document.createElement('button'); org.className='lib-btn ghost'; org.type='button'; org.textContent='Organize';
+      org.addEventListener('click', function(){ noteMatch(m); });
+      var del = document.createElement('button'); del.className='lib-btn del'; del.type='button'; del.textContent='Remove';
+      del.addEventListener('click', function(){ libraryDeleteMatch(m.id); renderLibrary(); });
+      acts.appendChild(cmp); acts.appendChild(view); acts.appendChild(org); acts.appendChild(del);
+      row.appendChild(acts);
+      mt.appendChild(row);
+    });
+  }
+}
+
+/* Compare a saved match against YOUR current spark, wherever it is */
+function compareWithMatch(m){
+  var mine = window.__lastSnap || loadLocalSnapshot();
+  if(!mine || !mine.c){
+    toast('Generate your spark first, then compare \u2665');
+    if(window.__view !== 'result') setView('landing');
+    jumpTo(null);
+    window.__pendingMatch = m; // fire compare once they generate
+    return;
+  }
+  // show results view (or stay), render comparison into the share panel
+  if(window.__view === 'library') setView(window.__hasResult ? 'result' : 'landing');
+  var out = document.getElementById('compareOut');
+  runCompare(m.snap, out);
+  jumpTo('shareSection');
+  toast('Comparing you \u2665 ' + ((m.snap && m.snap.n) || 'match'));
+}
+
+/* Open a saved match's spark in the partner view style (read-only) */
+function viewMatchSpark(m){
+  PARTNER = m.snap;
+  document.querySelector('.form-card').style.display = 'none';
+  document.getElementById('results').classList.remove('on');
+  document.getElementById('libraryView').classList.remove('on');
+  document.getElementById('partnerView').classList.add('on');
+  setView('partner');
+  hideAppChrome();
+  renderPartnerView(PARTNER);
+  var pvC = document.getElementById('pvCompare');
+  var mine = window.__lastSnap || loadLocalSnapshot();
+  if(mine && mine.c){ pvC.className='pv-compare'; window.__lastSnap = mine; runCompare(PARTNER, pvC); }
+  else { pvC.className=''; pvC.innerHTML=''; }
+  window.scrollTo(0,0);
+}
+
+/* Organize: tag a match with a private note via an inline sheet
+   (window.prompt is blocked on file:// and clunky on mobile). */
+var NOTE_PRESETS = ['Met in person','Texting','First date done','Waiting on them','Not feeling it','Ask: what they want'];
+function noteMatch(m){
+  var mask = document.getElementById('noteMask');
+  var sheet = document.getElementById('noteSheet');
+  var area = document.getElementById('noteArea');
+  document.getElementById('noteWho').textContent = 'Private note for ' + ((m.snap && m.snap.n) || 'this match') + ' \u00B7 only on this device';
+  area.value = m.note || '';
+  var chips = document.getElementById('noteChips');
+  chips.innerHTML = '';
+  NOTE_PRESETS.forEach(function(p){
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.textContent = p;
+    b.addEventListener('click', function(){ area.value = p; area.focus(); });
+    chips.appendChild(b);
+  });
+  mask.classList.add('on');
+  requestAnimationFrame(function(){ sheet.classList.add('on'); });
+  function close(){ sheet.classList.remove('on'); setTimeout(function(){ mask.classList.remove('on'); }, 280); }
+  mask.onclick = close;
+  document.getElementById('noteCancel').onclick = close;
+  document.getElementById('noteSave').onclick = function(){
+    librarySetNote(m.id, area.value.trim().slice(0, 80));
+    renderLibrary();
+    toast(area.value.trim() ? 'Note saved \u270E' : 'Note cleared');
+    close();
+  };
+  document.getElementById('noteClear').onclick = function(){
+    librarySetNote(m.id, '');
+    renderLibrary();
+    toast('Note cleared');
+    close();
+  };
+}
+/* ============ CLIPBOARD + TOAST ============ */
+
+/* ============ PARTNER VIEW (opened from a shared link) ============ */
+function handlePartnerLink(){
+  var h = location.hash || '';
+  if(h.indexOf('#s=') !== 0) return;
+  try{
+    PARTNER = parseCode(decodeURIComponent(h.slice(3)));
+  }catch(e){ return; }
+  document.querySelector('.form-card').style.display = 'none';
+  document.getElementById('results').classList.remove('on');
+  document.getElementById('partnerView').classList.add('on');
+  setView('partner');
+  hideAppChrome(); // their page, not yours — no personal chrome
+  renderPartnerView(PARTNER);
+
+  // FRICTIONLESS PATH: if this device already has a saved spark,
+  // compare immediately — they land straight on "why you two might click".
+  var local = loadLocalSnapshot();
+  var pvC = document.getElementById('pvCompare');
+  if(local && local.c){
+    pvC.className = 'pv-compare';
+    window.__lastSnap = local;
+    runCompare(PARTNER, pvC);
+    setTimeout(function(){
+      pvC.scrollIntoView({ behavior:'smooth', block:'start' });
+    }, 400);
+  } else {
+    pvC.className = '';
+    pvC.innerHTML = '<p class="saved-hint">Already made your spark on this device? It would auto-compare here. Otherwise: ' +
+      'generate yours above and the comparison appears instantly.</p>';
+  }
+  window.scrollTo(0, 0);
+}
+function renderPartnerView(p){
+  document.getElementById('pvName').textContent = (p.n || 'Someone') + ' shared their spark with you ♥';
+  document.getElementById('pvDyn').textContent = p.s ? p.s.dyn : '';
+  document.getElementById('pvSub').textContent = p.s ? p.s.sub : 'Bio-card level share';
+  // Their stated intention — shown only if they chose to state one.
+  var pvIn = document.getElementById('pvIntent');
+  if(p.i){
+    pvIn.querySelector('.pill').textContent = '\u2665 Here for: ' + p.i;
+    pvIn.style.display = '';
+  } else {
+    pvIn.style.display = 'none';
+  }
+  var box = document.getElementById('pvCards');
+  var html = '';
+  if(p.tags && p.tags.length){
+    html += '<div style="grid-column:1/-1">' + p.tags.map(function(t){ return '<span class="pill" style="font-size:.9rem;padding:7px 16px">'+esc(t)+'</span>'; }).join('') + '</div>';
+  }
+  (p.c || []).forEach(function(c){
+    html += '<div class="flag" style="border-top:4px solid var(--rose)"><h4>'+esc(c.t)+' in '+esc(c.s)+'</h4><div style="font-size:.8rem;color:var(--muted)">'+esc(c.x)+'</div></div>';
+  });
+  box.innerHTML = html;
+  var fb = document.getElementById('pvFlags');
+  if(p.f){
+    fb.innerHTML = '<div class="flags" style="margin-top:18px">'+
+      flagCol('g','🟢 Their green flags', p.f.g)+
+      flagCol('y','🟡 Watch-points',      p.f.y)+
+      flagCol('r','🔴 Their leave-ifs',   p.f.r)+'</div>';
+  } else { fb.innerHTML = ''; }
+}
+function flagCol(cls, title, arr){
+  if(!arr || !arr.length) return '';
+  return '<div class="flag '+cls+'"><h4>'+title+'</h4><ul>'+arr.map(function(x){ return '<li>'+esc(x)+'</li>'; }).join('')+'</ul></div>';
+}
+
+/* ============ INTENTION (user-chosen; changes nothing about the reading) ============ */
+function currentIntent(){
+  var b = document.querySelector('#intentChips .chip.sel');
+  return b ? b.dataset.intent : '';
+}
+function wireIntent(){
+  document.querySelectorAll('#intentChips .chip').forEach(function(c){
+    c.addEventListener('click', function(){
+      var wasSel = c.classList.contains('sel');
+      // Toggle-off is deliberate: "no answer" is a valid answer.
+      document.querySelectorAll('#intentChips .chip').forEach(function(x){
+        x.classList.remove('sel');
+        x.setAttribute('aria-pressed','false');
+      });
+      if(!wasSel){
+        c.classList.add('sel');
+        c.setAttribute('aria-pressed','true');
+      }
+      applyIntent();
+    });
+  });
+}
+function applyIntent(){
+  var intent = currentIntent();
+  var bLine = document.getElementById('bioIntentLine');
+  var pill  = document.getElementById('sparkIntent');
+  if(intent){
+    document.getElementById('bioIntent').textContent = intent;
+    bLine.style.display = '';
+    pill.textContent = '\u2665 ' + intent;
+    pill.style.display = '';
+  } else {
+    bLine.style.display = 'none';
+    pill.style.display = 'none';
+  }
+  // Keep the share code honest to what's currently chosen
+  if(document.getElementById('results').classList.contains('on')) refreshShareCode();
+  renderAlignment();
+  renderDeeperPull();
+  renderBios();
+}
+
+/* ============ WORDS vs CHART ============
+   What someone SAYS they want and what their chart energetically
+   PULLS toward are two different things — and the gap between them
+   is often the most useful thing this reading can show. This never
+   changes a reading and never judges; it just names the pull. */
+var ELEMENT_PULL = {
+  Water: 'deep bonding — you go all-in and want emotional truth, not surface',
+  Earth: 'slow building — you want steadiness, security, someone who shows up over time',
+  Fire:  'spark and the chase — excitement, novelty, passionate independence',
+  Air:   'freedom and connection — variety, conversation, lightness, laughing together'
+};
+// How strongly each intention WANTS each element (0..1 affinity).
+var INTENT_DRIVES = {
+  'A long-term partner':        { Water:.95, Earth:.90, Air:.35, Fire:.30 },
+  'Something serious, slowly':  { Earth:.95, Water:.80, Air:.40, Fire:.25 },
+  'Dating — open to anything':  { Water:.60, Earth:.60, Air:.60, Fire:.60 },
+  'Short-term & fun':           { Fire:.95, Air:.85, Water:.25, Earth:.30 },
+  'New friends first':          { Air:.95, Water:.40, Fire:.50, Earth:.45 },
+  'Still figuring it out':      { Water:.50, Earth:.50, Air:.50, Fire:.50 }
+};
+// Relational placements and their weight in the pull (Venus & Moon heaviest).
+var PLACEMENT_WEIGHTS = { 'Venus':3, 'Moon':3, 'Mars':2, '7th House':2 };
+
+// Reads the live CARDS deck (built by SparkRuntime.buildCards from the
+// computed chart) -> weighted element tally. Same shape as the engine's
+// SparkRuntime.loveElements; kept here for the intention-alignment model.
+function computeCosmicPull(){
+  var tally = { Water:0, Earth:0, Fire:0, Air:0 }, total = 0;
+  Object.keys(PLACEMENT_WEIGHTS).forEach(function(pname){
+    var w = PLACEMENT_WEIGHTS[pname];
+    var found = null;
+    for(var i=0;i<CARDS.length;i++){ if(CARDS[i].front === pname){ found = CARDS[i]; break; } }
+    if(found && SIGN_ELEMENT[found.sign]){ tally[SIGN_ELEMENT[found.sign]] += w; total += w; }
+  });
+  if(!total) return null;
+  var norm = {};
+  Object.keys(tally).forEach(function(e){ norm[e] = tally[e]/total; });
+  return norm; // element -> 0..1 share, sums to 1
+}
+function intentScore(pull, intent){
+  var d = INTENT_DRIVES[intent];
+  if(!d) return 0;
+  var s = 0;
+  Object.keys(pull).forEach(function(e){ s += pull[e] * d[e]; });
+  return s;
+}
+// Best-fitting POLE intention (the two catch-all/neutral options are excluded
+// so the "lean" is always a real direction, never "open to anything").
+function bestIntent(pull){
+  var best = null, bs = -1;
+  Object.keys(INTENT_DRIVES).forEach(function(k){
+    if(k === 'Dating — open to anything' || k === 'Still figuring it out') return;
+    var sc = intentScore(pull, k);
+    if(sc > bs){ bs = sc; best = k; }
+  });
+  return { intent:best, score:bs };
+}
+// Dominant element(s); allow near-ties to surface a genuine blend.
+function leaningElements(pull){
+  var arr = Object.keys(pull).map(function(e){ return { e:e, v:pull[e] }; })
+    .sort(function(a,b){ return b.v - a.v; });
+  if(arr[0].v - arr[1].v < 0.06) return [arr[0].e, arr[1].e];
+  return [arr[0].e];
+}
+function tensionHint(els, intent){
+  var deep  = els.indexOf('Water') >= 0 || els.indexOf('Earth') >= 0;
+  var light = els.indexOf('Fire')  >= 0 || els.indexOf('Air')   >= 0;
+  var casual  = /short-term|open to anything|friends/i.test(intent);
+  var serious = /long-term|serious/i.test(intent);
+  if(deep && casual)  return "a 'no-strings' situation quietly starts wanting more depth than you signed up to give";
+  if(light && serious)return 'a committed setup starts craving more air and novelty than the plan allowed for';
+  if(deep && serious) return 'your need for depth outpaces the pace you set for it';
+  return 'the pull underneath the label asks for something the label does not quite cover';
+}
+function analyzeIntentAlignment(intent){
+  var pull = computeCosmicPull();
+  if(!pull) return null;
+  var best = bestIntent(pull);
+  var els  = leaningElements(pull);
+  var leanText = (els.length === 2)
+    ? ('a blend — ' + ELEMENT_PULL[els[0]] + ', and ' + ELEMENT_PULL[els[1]])
+    : ELEMENT_PULL[els[0]];
+  if(!intent) return { state:'open', ratio:null, best:best, els:els, leanText:leanText, pull:pull };
+  var stated = intentScore(pull, intent);
+  var ratio  = stated / (best.score || 1);
+  var state  = ratio >= 0.85 ? 'aligned' : (ratio >= 0.62 ? 'adjacent' : 'tension');
+  return { state:state, ratio:ratio, best:best, els:els, leanText:leanText, pull:pull };
+}
+function renderAlignment(){
+  var sec = document.getElementById('alignSection');
+  var on  = document.getElementById('results').classList.contains('on');
+  var intent = currentIntent();
+  var a = on ? analyzeIntentAlignment(intent) : null;
+  if(!a){ sec.style.display = 'none'; return; }
+  sec.style.display = '';
+  document.getElementById('alignSaid').textContent = intent || 'Nothing — left open';
+  document.getElementById('alignLean').textContent = a.best.intent;
+
+  // Element meter
+  var eBox = document.getElementById('alignElems');
+  eBox.innerHTML = '';
+  [['Water','💧'],['Earth','🌱'],['Fire','🔥'],['Air','🌬']].forEach(function(o){
+    var v = a.pull[o[0]] || 0;
+    var d = document.createElement('div');
+    d.className = 'align-elem';
+    d.innerHTML = '<div class="el-row"><span>'+o[1]+' '+o[0]+'</span><span>'+Math.round(v*100)+'%</span></div>'+
+      '<div class="bar-track"><div class="bar-fill" style="width:'+Math.round(v*100)+'%"></div></div>';
+    eBox.appendChild(d);
+  });
+
+  var verdict = document.getElementById('alignVerdict');
+  var msg = document.getElementById('alignMsg');
+  verdict.className = 'align-verdict ' + a.state;
+  var m = '';
+  if(a.state === 'open'){
+    verdict.textContent = '○ Left open';
+    m = 'You didn\'t pick an intention, so nothing is assumed. For what it\'s worth, your chart\'s love pillars lean toward <b>'+esc(a.best.intent)+'</b> — '+a.leanText+'. Take it or leave it; this one\'s yours to decide.';
+  } else if(a.state === 'aligned'){
+    verdict.textContent = '✓ Aligned';
+    m = 'Your words and your chart agree. You said <b>'+esc(intent)+'</b>, and your love pillars (Venus, Moon, Mars, 7th House) lean the same way — '+a.leanText+'. What you\'re chasing and what you\'re wired for are pointing the same direction.';
+  } else if(a.state === 'adjacent'){
+    verdict.textContent = '◐ Mostly aligned';
+    m = 'Close, with a little flex. You said <b>'+esc(intent)+'</b>; your chart leans <b>'+esc(a.best.intent)+'</b> — '+a.leanText+'. Same neighbourhood, slightly different door. You\'ve got real range here, not a conflict.';
+  } else {
+    verdict.textContent = '◆ Two directions';
+    m = 'Worth a quiet look — not a verdict. You said you\'re here for <b>'+esc(intent)+'</b>, but your chart\'s love pillars lean toward <b>'+esc(a.best.intent)+'</b> — '+a.leanText+'. That gap isn\'t a mistake: it\'s the difference between what you\'re <em>choosing</em> and what you <em>default to</em> once someone gets close. Just so it\'s not a surprise when '+tensionHint(a.els, intent)+'.';
+  }
+  m += '<br><br><span style="color:var(--muted);font-size:.9em">You\'re allowed to want what you want. This is a lean, not a leash — and it changes none of your readings.</span>';
+  msg.innerHTML = m;
+  document.getElementById('alignWhy').innerHTML =
+    'We weigh the four placements that govern relating — <b>Venus</b> (how you love), <b>Moon</b> (what makes you feel safe), <b>Mars</b> (chemistry &amp; pursuit) and your <b>7th House</b> (who you attract) — and turn their elements into a pull: Water = depth, Earth = slow build, Fire = spark, Air = freedom. Your stated intention is scored against that pull. It\'s an energetic lean for reflection, never a prediction, and it never edits a single reading.';
+}
+
+/* ============ THE DEEPER PULL ============
+   "What you want might not be what stretches you." Astrology names this
+   tension PRECISELY: the South Node is the comfort zone (familiar, easy,
+   where you coast), the North Node is the growth edge (exactly opposite —
+   never a compromise), and Saturn conjunct a sensitive point is where the
+   lasting version gets built. This section never overrides the intention
+   feature; it shows the axis underneath it. All orbs shown are exact,
+   computed by groundtruth-chart.cjs — and orbs are DISCLOSED. */
+function renderDeeperPull(){
+  var sec = document.getElementById('pullSection');
+  var on  = document.getElementById('results').classList.contains('on');
+  if(!on || !NODES || !NODE_MEANING[NODES.north] || !NODE_MEANING[NODES.south]){
+    if(sec) sec.style.display = 'none';
+    return;
+  }
+  sec.style.display = '';
+
+  var south = NODE_MEANING[NODES.south];
+  var north = NODE_MEANING[NODES.north];
+
+  document.getElementById('pullFrom').innerHTML =
+    'Comfort zone<br><b style="color:var(--text)">South Node in ' + esc(NODES.south) + '</b>';
+  document.getElementById('pullTo').innerHTML =
+    'Growth edge<br><b style="color:var(--text)">North Node in ' + esc(NODES.north) + '</b>';
+
+  var stack = document.getElementById('pullStack');
+  stack.innerHTML = '';
+
+  // 1. Comfort zone — South Node
+  stack.insertAdjacentHTML('beforeend',
+    '<div class="pull comfort">' +
+      '<div class="pull-head"><span class="pull-tag">The pull toward comfort</span>' +
+        '<span class="pull-title">South Node in ' + esc(NODES.south) + '</span>' +
+        '<span class="pull-sub">' + NODES.southDeg.toFixed(2) + '\u00B0</span></div>' +
+      '<div class="pull-body">In love, your default is <b>' + south.want + '</b>. It is not wrong \u2014 it is familiar, and familiar feels safe. This is why the same relationship patterns keep showing up: you keep walking back into the room you already know.</div>' +
+    '</div>');
+
+  // 2. Growth edge — North Node (with Sun conjunction when exact)
+  var sunNote = (NODES.sunConjNorthNode != null && NODES.sunConjNorthNode <= 8)
+    ? ' <span class="pull-orb">Sun conjunct \u2248 ' + NODES.sunConjNorthNode.toFixed(2) + '\u00B0 orb</span>'
+    : '';
+  var sunLine = (NODES.sunConjNorthNode != null && NODES.sunConjNorthNode <= 8)
+    ? ('Your Sun sits within <b>' + NODES.sunConjNorthNode.toFixed(2) + '\u00B0</b> of this North Node \u2014 an exact conjunction (within a tight, disclosed orb). That is rare, and it means the growth edge is not a side-quest: <b>becoming who you actually are runs straight through ' + north.grow + '</b>. Dating situations that keep you in the comfort zone feel like self-betrayal to you, even when they look fine from outside.')
+    : ('The growth edge asks you to ' + north.grow + '. It sits exactly opposite your comfort zone \u2014 the nodes are always 180\u00B0 apart \u2014 so this is never a compromise between the two. It is a direction.');
+  stack.insertAdjacentHTML('beforeend',
+    '<div class="pull growth">' +
+      '<div class="pull-head"><span class="pull-tag">The pull toward growth</span>' +
+        '<span class="pull-title">North Node in ' + esc(NODES.north) + '</span>' + sunNote +
+        '<span class="pull-sub">' + NODES.northDeg.toFixed(2) + '\u00B0</span></div>' +
+      '<div class="pull-body">' + sunLine + '</div>' +
+    '</div>');
+
+  // 3. Saturn conjunct Descendant — the lesson on the relationship axis
+  if(NODES.saturnConjDescendant != null && NODES.saturnConjDescendant <= 8 && SATURN_MEANING[NODES.saturn]){
+    stack.insertAdjacentHTML('beforeend',
+      '<div class="pull lesson">' +
+        '<div class="pull-head"><span class="pull-tag">Where it gets built to last</span>' +
+          '<span class="pull-title">Saturn in ' + esc(NODES.saturn) + ' on your relationship axis</span>' +
+          '<span class="pull-orb">conjunct Descendant \u2248 ' + NODES.saturnConjDescendant.toFixed(2) + '\u00B0 orb</span></div>' +
+        '<div class="pull-body">Saturn resting on your Descendant (the 7th-house cusp \u2014 partnership itself) is the chart saying: <b>your relationships are where you do your real growing</b>, and they are built to last only when you learn ' + SATURN_MEANING[NODES.saturn] + '. Early on this can feel like heaviness or bad luck in love. It is not bad luck \u2014 it is a curriculum. The partners who stay are the ones who respect the lesson.</div>' +
+      '</div>');
+  }
+
+  // 4. Synthesis: want vs stretch, with the intention bridge
+  var intent = currentIntent();
+  var synth = 'Here is the tension you were right about: <b>what you want and what is best for you live in different places in this chart.</b> ' +
+    'Wanting follows the South Node \u2014 ' + south.want + '. Growing follows the North Node \u2014 ' + north.grow + '. ' +
+    'The people who feel instantly easy often pull you backward; the ones who stretch you feel uncomfortable before they feel right. Neither is a rule \u2014 plenty of lasting love is comfortable AND growing.';
+  if(intent){
+    synth += ' You said you\u2019re here for <b>' + esc(intent) + '</b>. That stands \u2014 fully. What the chart adds is a weather report, not a verdict: know which way your own pull runs, so when a relationship starts feeling confusing, you can tell whether it\u2019s genuinely wrong for you or simply doing the thing your North Node came here to do.';
+  } else {
+    synth += ' You didn\u2019t pick an intention, and that\u2019s fine \u2014 none of this forces one. When you do choose, check it against the axis above: choices made from comfort feel easy in week one, choices made toward growth feel right in year one.';
+  }
+  document.getElementById('pullSynth').innerHTML = synth;
+
+  var conjList = 'Sun\u2013North Node ' + NODES.sunConjNorthNode.toFixed(2) + '\u00B0';
+  if(NODES.saturnConjDescendant != null) conjList += ', Saturn\u2013Descendant ' + NODES.saturnConjDescendant.toFixed(2) + '\u00B0';
+  else conjList += ' (Saturn\u2013Descendant withheld \u2014 needs your birth time + place)';
+  document.getElementById('pullWhy').innerHTML =
+    'The nodes are the two points where the Moon\u2019s orbit crosses the ecliptic \u2014 computed here by the <b>standard closed-form mean-node formula</b> (Meeus, accurate to \u003C0.01\u00B0), disclosed convention: mean node. South and North are always exactly 180\u00B0 apart. Conjunctions are <b>actual degree measurements</b> (' + conjList +
+    '), computed by <b>spark-runtime.js</b> against the vendor astronomy-engine ephemeris \u2014 not the legacy sign-distance aspect code this product deliberately never uses. Interpretation (comfort vs growth) is the traditional node framework; the measurements are exact and the orbs are disclosed.';
+}
+
+/* ============ PERSONALIZED SECTIONS ============
+   Flags / traps / moves / love-language are all derived from the LIVE
+   chart: dominant love element (from SparkRuntime.loveElements), exact
+   Venus/Moon/7th placements, and the Moon shadow library. Nothing here
+   ships as static copy — if the data isn't computed, the section says so
+   instead of pretending. */
+function dominantLoveElement(chart){
+  var el = SparkRuntime.loveElements(chart);
+  if(!el) return null;
+  var best = null, bv = -1;
+  Object.keys(el).forEach(function(e){ if(el[e] > bv){ bv = el[e]; best = e; } });
+  return best;
+}
+var MOVE_COPY = {
+  Water: {
+    bio:  'Lead with depth: one real question beats ten clever lines for you.',
+    date: 'Soft lighting, low noise, room to actually talk. Your people open up slowly — pick a place that lets them.',
+    text: 'Say the real thing sooner than feels safe. Depth is your dialect; small talk is your tax.'
+  },
+  Earth: {
+    bio:  'Show reliability as a feature — it is rarer (and sexier) than it sounds.',
+    date: 'Something sensory and unhurried: good food, good views, no rush to the next thing.',
+    text: 'Follow through over fireworks. The "still thinking about what you said" text is your power move.'
+  },
+  Fire:  {
+    bio:  'Lead with the spark, not a résumé. Energy is your best line.',
+    date: 'Do something active or novel — you flirt best in motion, and stillness reads as boredom to you.',
+    text: 'Be direct. You are honest when you want something — say it before the moment passes you by.'
+  },
+  Air:   {
+    bio:  'Make them think. A curious opener outperforms a cute one for you.',
+    date: 'Somewhere with conversation built in — a walk, a gallery, a ridiculous dessert debate.',
+    text: 'Banter is your foreplay, but land the plans. Air signs keep texting; you convert words into dates.'
+  }
+};
+var LOVE_LANG = {
+  Water: 'emotional depth, loyalty, and being truly known',
+  Earth: 'reliability, presence, and affection you can feel in the ordinary',
+  Fire:  'passion, playfulness, and being chosen out loud',
+  Air:   'conversation, freedom, and friendship underneath everything'
+};
+function renderPersonalized(chart){
+  if(!chart || !chart.ok){ return; }
+  var dom = dominantLoveElement(chart);
+
+  // ---- Flags: dominant element (green/yellow) + universal red ----
+  var g = document.getElementById('flagG'), y = document.getElementById('flagY'), r = document.getElementById('flagR');
+  var traits = dom ? SparkContent.elementTraits[dom] : null;
+  g.innerHTML = traits ? traits.green.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')
+                       : '<li>Your placements were withheld — add time/place for personalized flags</li>';
+  y.innerHTML = traits ? traits.yellow.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')
+                       : '<li>Your placements were withheld — add time/place for personalized flags</li>';
+  r.innerHTML = SparkContent.universalRed.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('');
+
+  // ---- Traps: Moon shadow (withheld Moon -> honest empty state) ----
+  var moonSign = chart.moonUncertain ? null : (chart.placements.moon && chart.placements.moon.name);
+  var traps = moonSign ? SparkContent.moonShadow[moonSign] : null;
+  var tSub = document.getElementById('trapsSub');
+  var tList = document.getElementById('trapsList');
+  tSub.textContent = moonSign ? '(from your ' + moonSign + ' Moon)' : '';
+  tList.innerHTML = traps && traps.length
+    ? traps.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')
+    : '<li>Your Moon sign was withheld (add your birth time) — your personal traps appear once it locks in.</li>';
+
+  // ---- Moves: descriptions from dominant element ----
+  var mv = dom ? MOVE_COPY[dom] : null;
+  document.getElementById('mdesc1').textContent = dom
+    ? 'Your Bio Writer composed real openers from your chart. The best one is below \u2014 copy it, or browse all three versions in the Bio Writer. ' + (mv ? mv.bio : '')
+    : 'Add your birth details and your Bio Writer will compose real openers for you here.';
+  document.getElementById('mdesc2').textContent = mv ? mv.date : 'Add your birth details to personalize this.';
+  document.getElementById('mdesc3').textContent = mv ? mv.text : 'Add your birth details to personalize this.';
+
+  // ---- Bio card love language ----
+  document.getElementById('bioLoveLang').textContent =
+    dom ? LOVE_LANG[dom] : 'generated once your chart computes';
+
+  // ---- Profile Bio Writer ----
+  window.__lastChart = chart;
+  renderBios();
+  renderSocialCards(chart);
+}
+
+/* ============ PROFILE BIO WRITER ============
+   Composes three distinct, copy-paste-ready dating bios from the LIVE
+   chart. BUILT ONLY from computed placements — a withheld Rising/7th
+   simply leaves its slot out; nothing is invented. Shaped by the user's
+   chosen tone + intention + include-toggles. No name, no birth data.
+   Drafts are editable before copying. */
+var BIO_TONE = 'punchy';
+var BIO_FILTERS = { intent:true, venus:true, astro:false };
+
+function signLine(chart){
+  // A charming "sign nerd" line naming real placements — only ones we have.
+  var p = chart.placements;
+  var bits = [];
+  if(p.sun)   bits.push('Sun ' + p.sun.name);
+  if(p.venus) bits.push('Venus ' + p.venus.name);
+  if(!chart.moonUncertain && p.moon) bits.push('Moon ' + p.moon.name);
+  if(!bits.length) return null;
+  return bigThreePhrasing(bits);
+}
+// bigThree readout phrased for a bio (not a chart dump)
+function bigThreePhrasing(bits){
+  if(bits.length >= 3) return 'Big three: ' + bits.join(' \u00B7 ') + '.';
+  if(bits.length === 2) return bits[0] + ' and ' + bits[1] + ' \u2014 you have been warned.';
+  return bits[0] + ' energy, mostly.';
+}
+
+function buildBios(chart){
+  var kit = SparkContent.bioKit;
+  var dom = dominantLoveElement(chart);
+  var p = chart.placements;
+
+  var out = [];
+  if(!dom){
+    // No dominant element (everything withheld) — offer nothing rather than
+    // fabricate. The section shows an honest empty state instead.
+    return out;
+  }
+
+  var tone = BIO_TONE;
+  var openers = kit.openers[dom][tone];
+  var vibe = kit.vibe[dom];
+  var venusHook = (p.venus && kit.byVenus[p.venus.name]) || null;
+  var hereFor = currentIntent() ? (kit.hereFor[currentIntent()] || null) : null;
+  var closers = kit.closers[tone];
+  var astroLine = signLine(chart);
+
+  // Deterministic-ish variety: seed from placements so the same chart gives
+  // stable picks, but three drafts still differ from each other.
+  var seed = 0;
+  ['sun','moon','venus','mars','mercury'].forEach(function(k, i){
+    if(p[k] && p[k].degree != null) seed += Math.round(p[k].degree * (i + 1));
+  });
+  function pick(arr, salt){ return arr[(seed + salt) % arr.length]; }
+  // Guarantee the three drafts never open the same way: if two salts land on
+  // the same opener, walk to the next distinct index.
+  function pickDistinct(arr, salt, used){
+    for(var k = 0; k < arr.length; k++){
+      var cand = arr[(seed + salt + k) % arr.length];
+      if(used.indexOf(cand) < 0){ used.push(cand); return cand; }
+    }
+    return arr[(seed + salt) % arr.length];
+  }
+  var usedOpeners = [], usedClosers = [];
+
+  // DRAFT A — "The one-liner": opener + vibe + closer. Short & punchy.
+  var a = [pickDistinct(openers, 1, usedOpeners), vibe.charAt(0).toUpperCase() + vibe.slice(1) + '.'];
+  if(BIO_FILTERS.intent && hereFor) a.push(hereFor);
+  a.push(pickDistinct(closers, 2, usedClosers));
+  out.push({ id:'short', name:'The one-liner', text:a.join(' ') });
+
+  // DRAFT B — "The full picture": opener + venus hook + vibe + astro + closer.
+  var b = [pickDistinct(openers, 3, usedOpeners)];
+  if(BIO_FILTERS.venus && venusHook) b.push(venusHook);
+  b.push('Mostly ' + vibe + '.');
+  if(BIO_FILTERS.astro && astroLine) b.push(astroLine);
+  if(BIO_FILTERS.intent && hereFor) b.push(hereFor);
+  b.push(pickDistinct(closers, 4, usedClosers));
+  out.push({ id:'full', name:'The full picture', text:b.join(' ') });
+
+  // DRAFT C — "The conversation starter": question-led, ends on a prompt.
+  var c = [pickDistinct(kit.openers[dom].playful, 5, usedOpeners)];
+  if(BIO_FILTERS.venus && venusHook) c.push(secondVenusLine(kit, p, venusHook));
+  if(BIO_FILTERS.intent && hereFor) c.push(hereFor);
+  c.push(pickDistinct(kit.closers.playful, 6, usedClosers));
+  out.push({ id:'starter', name:'The conversation starter', text:c.join(' ') });
+
+  return out;
+}
+
+// Draft C reuses the same Venus hook as B by default; if a rising placement
+// was computed, prefer a first-date vibe line instead so drafts differ.
+function secondVenusLine(kit, p, venusHook){
+  if(p.rising && SparkContent.rising[p.rising.name]){
+    var r = SparkContent.rising[p.rising.name].body.split('. ')[0];
+    if(r && r.length < 120) return 'People say ' + r.charAt(0).toLowerCase() + r.slice(1) + '.';
+  }
+  return venusHook;
+}
+
+function renderBios(){
+  var box = document.getElementById('bioDrafts');
+  if(!box) return;
+  var chart = window.__lastChart;
+  var why = document.getElementById('bioWhy');
+  if(!chart || !chart.ok){ box.innerHTML = ''; return; }
+
+  var bios = buildBios(chart);
+  if(!bios.length){
+    box.innerHTML = '<div class="lib-empty">Your placements were withheld, so no bio could be built honestly. ' +
+      'Add your birth time and place and your bios will write themselves.</div>';
+    if(why) why.textContent = '';
+    return;
+  }
+
+  box.innerHTML = '';
+  bios.forEach(function(b){
+    var len = b.text.length;
+    var card = document.createElement('div');
+    card.className = 'draft';
+    card.innerHTML =
+      '<div class="draft-top"><span class="draft-badge">' + esc(b.name) + '</span>' +
+      '<span class="draft-len">' + len + ' chars</span></div>' +
+      '<div class="draft-text">' + esc(b.text) + '</div>' +
+      '<textarea class="editor-box" maxlength="500" aria-label="Edit ' + esc(b.name) + '">' + esc(b.text) + '</textarea>' +
+      '<div class="draft-acts">' +
+        '<button class="draft-btn" data-act="copy" type="button">📋 Copy</button>' +
+        '<button class="draft-btn alt" data-act="edit" type="button">✎ Edit</button>' +
+        '<button class="draft-btn alt" data-act="reroll" type="button">🎲 Another</button>' +
+      '</div>';
+    // wire actions
+    var ta = card.querySelector('.editor-box');
+    var txtEl = card.querySelector('.draft-text');
+    card.querySelector('[data-act="copy"]').addEventListener('click', function(){
+      var val = ta.classList.contains('on') ? ta.value : b.text;
+      sbTrack('bio_copied', { draft: b.id, edited: ta.classList.contains('on') });
+      copyText(val, 'Bio copied \u2014 paste it into your profile \u2665');
+    });
+    card.querySelector('[data-act="edit"]').addEventListener('click', function(){
+      var on = ta.classList.toggle('on');
+      this.textContent = on ? '✓ Done' : '✎ Edit';
+      if(on){ ta.focus(); }
+    });
+    card.querySelector('[data-act="reroll"]').addEventListener('click', function(){
+      b.text = rerollBio(chart, b.id);
+      txtEl.textContent = b.text;
+      ta.value = b.text;
+      card.querySelector('.draft-len').textContent = b.text.length + ' chars';
+      toast('Fresh version \u2728');
+    });
+    ta.addEventListener('input', function(){
+      b.text = ta.value;
+      card.querySelector('.draft-len').textContent = ta.value.length + ' chars';
+    });
+    box.appendChild(card);
+  });
+
+  var dom = dominantLoveElement(chart);
+  // Surface the best draft (longest of the three — the "full picture" is
+  // usually the richest) in Moves #1 as a one-tap "use this" action.
+  var bestDraft = bios.slice().sort(function(a,b){ return b.text.length - a.text.length; })[0] || null;
+  window.__bestBio = bestDraft ? bestDraft.text : null;
+  var bd = document.getElementById('movesBestDraft');
+  var fb = document.getElementById('movesFallbackOpts');
+  if(bestDraft){
+    document.getElementById('movesBestText').textContent = '\u201C' + bestDraft.text + '\u201D';
+    bd.style.display = 'block';
+    fb.style.display = 'none';
+    // keep the one-tap actions pointing at the CURRENT best draft
+    document.getElementById('movesCopyBtn').onclick = function(){
+      sbTrack('bio_copied', { draft: 'best-move', edited: false });
+      copyText(window.__bestBio, 'Bio copied \u2014 paste it into your profile \u2665');
+    };
+    document.getElementById('movesMoreBtn').onclick = function(){
+      document.getElementById('bioWriterSection').scrollIntoView({ behavior:'smooth', block:'start' });
+    };
+  } else {
+    bd.style.display = 'none';
+    fb.style.display = '';
+  }
+  if(why) why.innerHTML =
+    'These bios are composed from <b>your computed chart</b> — your dominant love element (' +
+    (dom || 'n/a') + ') sets the voice, your Venus sign sets the hook, your chosen tone and intention set the framing. ' +
+    'Only <b>real placements</b> are used: if your Rising or 7th House is withheld, those lines are simply left out rather than guessed. ' +
+    'No birth data appears in any draft, and every line is yours to edit before you copy it.';
+}
+
+// "Another" — rotate to different opener/closer picks for one draft.
+var rerollSalt = { short:0, full:0, starter:0 };
+function rerollBio(chart, id){
+  rerollSalt[id] = (rerollSalt[id] || 0) + 1;
+  var kit = SparkContent.bioKit, dom = dominantLoveElement(chart), p = chart.placements;
+  var tone = BIO_TONE;
+  var hereFor = currentIntent() ? (kit.hereFor[currentIntent()] || null) : null;
+  var venusHook = (p.venus && kit.byVenus[p.venus.name]) || null;
+  var openers = kit.openers[dom][tone], closers = kit.closers[tone];
+  var salt = rerollSalt[id];
+  function pick(arr, s){ return arr[(s + salt * 3) % arr.length]; }
+  var vibe = kit.vibe[dom];
+  var astroLine = signLine(chart);
+  if(id === 'short'){
+    var a = [pick(openers,7), vibe.charAt(0).toUpperCase()+vibe.slice(1)+'.'];
+    if(BIO_FILTERS.intent && hereFor) a.push(hereFor);
+    a.push(pick(closers,8));
+    return a.join(' ');
+  }
+  if(id === 'full'){
+    var b = [pick(openers,9)];
+    if(BIO_FILTERS.venus && venusHook) b.push(venusHook);
+    b.push('Mostly ' + vibe + '.');
+    if(BIO_FILTERS.astro && astroLine) b.push(astroLine);
+    if(BIO_FILTERS.intent && hereFor) b.push(hereFor);
+    b.push(pick(closers,10));
+    return b.join(' ');
+  }
+  if(id === 'starter'){
+    var c = [pick(kit.openers[dom].playful,11)];
+    if(BIO_FILTERS.venus && venusHook) c.push(secondVenusLine(kit, chart.placements, venusHook));
+    if(BIO_FILTERS.intent && hereFor) c.push(hereFor);
+    c.push(pick(kit.closers.playful,12));
+    return c.join(' ');
+  }
+  return '';
+}
+
+function wireBioWriter(){
+  if(window.__bioWired) return;
+  window.__bioWired = true;
+  document.querySelectorAll('#toneSeg button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('#toneSeg button').forEach(function(x){ x.classList.remove('on'); });
+      btn.classList.add('on');
+      BIO_TONE = btn.dataset.tone;
+      renderBios();
+    });
+  });
+  document.querySelectorAll('.bf-toggle').forEach(function(t){
+    function toggle(){
+      var on = t.classList.toggle('on');
+      t.setAttribute('aria-checked', on ? 'true' : 'false');
+      t.querySelector('.box').textContent = on ? '\u2713' : '';
+      BIO_FILTERS[t.dataset.bf] = on;
+      renderBios();
+    }
+    t.addEventListener('click', toggle);
+    t.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
+  });
+}
+/* ============ FULL DEGREE SYNASTRY (same device) ============
+   Computes Person B's exact chart in-browser and runs the
+   degree-based analysis. Their inputs are NEVER stored and NEVER
+   shared — this is the privacy-safe way to get exact synastry. */
+var SYN_SYMBOLS = { conjunction:'\u260C', sextile:'\u26B9', square:'\u25A1', trine:'\u25B3', opposition:'\u260D' };
+function renderSynastry(r){
+  var out = document.getElementById('synOut');
+  if(!r || !r.ok){
+    out.innerHTML = '<div class="lib-empty" style="margin-top:14px">' + esc(r && r.reason ? r.reason : 'Run your own spark first, then theirs.') + '</div>';
+    return;
+  }
+  var html = '';
+  // Header
+  html += '<div style="margin-top:18px;border-top:1px solid rgba(255,77,109,.25);padding-top:16px">' +
+    '<div style="display:flex;justify-content:center;align-items:baseline;gap:10px;font-family:var(--font-head)">' +
+      '<span style="font-size:1.05rem;color:var(--rose-deep)">' + esc(r.nameA) + '</span>' +
+      '<span class="beat" style="font-size:1.5rem;color:var(--rose)">\u2665</span>' +
+      '<span style="font-size:1.05rem;color:var(--rose-deep)">' + esc(r.nameB) + '</span></div>' +
+    '<div style="text-align:center;font-size:.74rem;color:var(--muted);margin-top:2px">' +
+      r.aspectsFound + ' exact aspect' + (r.aspectsFound === 1 ? '' : 's') + ' found \u00B7 ' + r.coverage + '% of the framework scored \u00B7 orbs: conj/opp ' + r.orbs.conjunction + '\u00B0, trine/sq ' + r.orbs.trine + '\u00B0, sextile ' + r.orbs.sextile + '\u00B0</div>';
+  // The two honest axes
+  html += '<div class="syn-axes">' +
+    '<div class="syn-axis"><div class="ax-label">\u26A1 Contact</div><div class="ax-num">' + r.contact + '</div>' +
+      '<div class="ax-sub">How much exact angular binding your charts have. High = you keep landing on each other\u2019s planets, for better or worse.</div></div>' +
+    '<div class="syn-axis"><div class="ax-label">🕊 Ease</div><div class="ax-num">' + (r.ease == null ? '\u2014' : r.ease) + '</div>' +
+      '<div class="ax-sub">Harmonious vs charged balance of that contact. Low ease with high contact is not a verdict \u2014 it is a relationship that takes conscious effort and rewards it.</div></div>' +
+  '</div>';
+  // Dimensions
+  html += '<div style="font-weight:700;color:var(--rose-deep);font-size:.95rem;margin:4px 0 10px">The four dimensions</div>';
+  r.dims.forEach(function(d){
+    html += '<div class="reason-row"><div class="reason-head"><span>' + d.label + '</span>' +
+      '<span class="reason-pct">' + (d.contacted ? d.score + '%' : 'no contact') + '</span></div>';
+    if(d.contacted){
+      html += '<div class="bar-track"><div class="bar-fill" data-w="' + d.score + '"></div></div>';
+    }
+    html += '<div class="reason-why">' + esc(d.readout) + '</div>';
+    if(d.hits.length){
+      d.hits.forEach(function(h){
+        html += '<div class="syn-asm syn-nature-' + h.nature + '">' +
+          '<span class="sym">' + (SYN_SYMBOLS[h.type] || '\u2217') + '</span>' +
+          '<span class="desc">your ' + esc(h.a) + ' <b>' + esc(h.type) + '</b> their ' + esc(h.b) + '</span>' +
+          '<span class="meas">' + h.separation.toFixed(2) + '\u00B0 \u00B1' + h.orb.toFixed(2) + '\u00B0</span></div>';
+      });
+    }
+    html += '</div>';
+  });
+  // Composite
+  if(r.composite){
+    html += '<div style="margin-top:16px;font-weight:700;color:var(--rose-deep);font-size:.95rem">Your composite \u2014 the relationship\u2019s own chart</div>' +
+      '<div style="font-size:.78rem;color:var(--muted);margin:4px 0 8px">Midpoint method: each point is the exact halfway between your two longitudes. It is how the pairing itself behaves, separate from either of you.</div>' +
+      '<div class="syn-comp">' +
+      Object.keys(r.composite).map(function(k){
+        return '<span class="cc"><b>' + k + '</b> ' + esc(r.composite[k].name) + ' ' + r.composite[k].degree.toFixed(1) + '\u00B0</span>';
+      }).join('') + '</div>';
+  }
+  html += '<p class="caveat" style="margin-top:14px">\uD83D\uDD12 Their birth details were used for this one computation in your browser, then discarded \u2014 not stored, not in any link. \u2696\uFE0F Two humans are more than their degrees: treat CONTACT and EASE as a map, not a verdict.</p></div>';
+  out.innerHTML = html;
+  setTimeout(function(){
+    out.querySelectorAll('.bar-fill').forEach(function(f){ f.style.width = f.dataset.w + '%'; });
+  }, 60);
+}
+function wireSynastry(){
+  var btn = document.getElementById('synRunBtn');
+  if(!btn || btn.dataset.wired) return;
+  btn.dataset.wired = '1';
+  btn.addEventListener('click', function(){
+    if(!window.__lastChart || !window.__lastChart.ok){
+      toast('Generate your spark first \u2665');
+      return;
+    }
+    var name  = (document.getElementById('synName').value || 'Them').trim();
+    var date  = document.getElementById('synDate').value;
+    var time  = document.getElementById('synTime').value || null;
+    var place = (document.getElementById('synPlace').value || '').trim() || null;
+    if(!date){ toast('Their birth date is required'); return; }
+    btn.textContent = 'Computing exact charts\u2026';
+    // Yield one frame so the button state paints before the math runs.
+    setTimeout(function(){
+      try{
+        var chartB = SparkRuntime.computeChart({ name:name, birthDate:date, birthTime:time, birthPlace:place });
+        if(!chartB.ok){
+          renderSynastry({ ok:false, reason: chartB.errors.join(' ') });
+          btn.textContent = 'Run full synastry \u2665';
+          return;
+        }
+        var r = SoulSparkSynastry.analyze(window.__lastChart, chartB);
+        renderSynastry(r);
+        if(r.ok){ sbTrack('synastry_degrees_run', { aspects: r.aspectsFound, coverage: r.coverage }); }
+        if(r.ok && r.notable && r.notable.length){
+          toast(r.notable.length + ' exact aspect' + (r.notable.length === 1 ? '' : 's') + ' between you \u2728');
+        }
+      }catch(e){
+        renderSynastry({ ok:false, reason:'The comparison hit an error and refused rather than guess. Check their details and try again.' });
+      }
+      btn.textContent = 'Run full synastry \u2665';
+    }, 30);
+  });
+}
+
+/* ============ SOCIAL CARDS ============
+   Eight 9:16 cards generated ONLY from computed placements — same
+   absolute-accuracy rule as everything else: a withheld placement
+   means that card simply doesn't render. Text-safe glyphs only.
+   Users screenshot these; every card is self-contained branding. */
+function socStars(){
+  // deterministic-looking scatter of tiny gold stars
+  var pts = [[8,60],[88,38],[16,190],[84,210],[50,96],[92,300],[10,330],[70,86],[30,240],[86,150]];
+  var g = ['✦','✧','★','·'];
+  var h = '<div class="soc-stars" aria-hidden="true">';
+  pts.forEach(function(p,i){ h += '<i style="left:'+p[0]+'%;top:'+p[1]+'px">'+g[i%4]+'</i>'; });
+  return h + '</div>';
+}
+function socCard(opts){
+  var h = '<div class="soc">' + socStars();
+  h += '<div class="soc-label">' + (opts.glyph ? opts.glyph + ' ' : '') + esc(opts.label) + '</div>';
+  if(opts.title) h += '<div class="soc-title">' + esc(opts.title) + '</div>';
+  if(opts.sub)   h += '<div class="soc-sub">' + esc(opts.sub) + '</div>';
+  if(opts.medal) h += '<div class="soc-medal" aria-hidden="true">' + opts.medal + '</div>';
+  if(opts.body)  h += opts.body; // pre-escaped HTML for ring/quote/flag variants
+  if(opts.points && opts.points.length){
+    h += '<ul class="soc-points">' + opts.points.map(function(p){ return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>';
+  }
+  h += '<div class="soc-foot">' +
+       '<span class="soc-url">quantummerlin.com/loveblueprint</span>' +
+       '<span class="soc-footrow"><span class="soc-h">' + '\u2665' + '</span>' +
+       '<span class="soc-cta">decode yours</span></span></div>';
+  return h + '</div>';
+}
+function renderSocialCards(chart){
+  var grid = document.getElementById('socialGrid');
+  if(!grid) return;
+  if(!chart || !chart.ok){ grid.innerHTML = ''; return; }
+  var p = chart.placements;
+  var dom = dominantLoveElement(chart);
+  var traits = dom ? SparkContent.elementTraits[dom] : null;
+  var name = (document.getElementById('nm').value || 'You').trim().split(' ')[0];
+  var intent = currentIntent();
+  var cards = [];
+
+  // 1 — MY SPARK (identity): big three pills, always renderable
+  var pills = [];
+  if(p.sun) pills.push(p.sun.name + ' Sun');
+  if(p.venus) pills.push(p.venus.name + ' Venus');
+  if(p.moon && !chart.moonUncertain) pills.push(p.moon.name + ' Moon');
+  cards.push(socCard({
+    label:'My Spark', title:name,
+    body:'<div class="soc-ring"><span class="glyph-in beat">♥</span></div>' +
+         '<div style="text-align:center;margin-bottom:12px">' + pills.map(function(t){
+           return '<span class="pill" style="font-size:.6rem;padding:3px 9px">' + esc(t) + '</span>'; }).join('') +
+         '</div>' +
+         '<div class="soc-sub" style="text-align:center;margin-bottom:0">' + esc((SparkRuntime.sparkDynamic(chart)||{}).dyn || '') + '</div>'
+  }));
+
+  // 2–6 — placement cards, ONLY when computed
+  // ES5-safe sentence splitter (no lookbehind — older Safari throws on parse)
+  function socSentences(text){
+    var parts = String(text).split(/\.(?=\s|$)/).filter(function(s){ return s.trim().length; });
+    return parts.slice(0,2).map(function(s){ return s.trim().replace(/[.,]$/, ''); });
+  }
+  function capFirst(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
+  var SIGN_GLYPHS = ['\u2648','\u2649','\u264A','\u264B','\u264C','\u264D','\u264E','\u264F','\u2650','\u2651','\u2652','\u2653'];
+  var SIGN_NAMES = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
+  function signGlyph(name){ var i = SIGN_NAMES.indexOf(name); return i < 0 ? '' : SIGN_GLYPHS[i]; }
+  // cardFor handles the standard single-placement cards (Venus, Mars)
+  function cardFor(key, glyph, label, titleKey){
+    var sObj = p[key];
+    if(!sObj || !sObj.name) return;
+    var lib = SparkContent[titleKey][sObj.name];
+    if(!lib) return;
+    cards.push(socCard({
+      glyph:glyph, label:label, title:capFirst(titleKey) + ' in ' + sObj.name,
+      sub: SparkContent.titles[titleKey] || '',
+      medal: signGlyph(sObj.name),
+      points: socSentences(lib.body)
+    }));
+  }
+  cardFor('venus','♀','How I Love','venus');
+  if(p.moon && !chart.moonUncertain && SparkContent.moon[p.moon.name]){
+    cards.push(socCard({ glyph:'☾', label:'What Makes Me Feel Safe', title:'Moon in ' + p.moon.name,
+      sub:'Emotional Needs', medal: signGlyph(p.moon.name), points: socSentences(SparkContent.moon[p.moon.name].body) }));
+  }
+  cardFor('mars','♂','My Chemistry','mars');
+  if(p.mercury && SparkContent.mercury[p.mercury.name]){
+    cards.push(socCard({ glyph:'☿', label:'How I Text', title:'Mercury in ' + p.mercury.name,
+      sub:'Communication', medal: signGlyph(p.mercury.name), points: socSentences(SparkContent.mercury[p.mercury.name].body) }));
+  }
+  if(chart.descendant && SparkContent.descendant[chart.descendant.name]){
+    cards.push(socCard({ glyph:'⌂', label:"Who I'm Wired For", title:'7th House in ' + chart.descendant.name,
+      sub:'My ideal partner', medal: signGlyph(chart.descendant.name), points: socSentences(SparkContent.descendant[chart.descendant.name].body) }));
+  }
+
+  // 7 — FLAGS (honest card) — needs traits + traps from live data
+  if(traits){
+    var moonSign = (!chart.moonUncertain && p.moon) ? p.moon.name : null;
+    var traps = moonSign && SparkContent.moonShadow[moonSign] ? SparkContent.moonShadow[moonSign] : [];
+    var flagBody =
+      '<div class="soc-flagbox g"><div class="fh">Green Flags</div>' + traits.green.slice(0,2).map(function(t){return '<p>'+esc(t)+'</p>';}).join('') + '</div>' +
+      '<div class="soc-flagbox y"><div class="fh">Watch-Points</div>' + traits.yellow.slice(0,2).map(function(t){return '<p>'+esc(t)+'</p>';}).join('') + '</div>' +
+      (traps.length ? '<div class="soc-flagbox r"><div class="fh">My Honest Traps</div><p>' + esc(traps[0]) + '</p></div>' : '');
+    cards.push(socCard({ glyph:'🚦', label:'The Honest Part', title:'My Flags', body: flagBody }));
+  }
+
+  // 8 — INTENTION closer — user's own chosen words
+  if(intent){
+    cards.push(socCard({ label:"So, What I'm Here For",
+      body:'<div class="soc-ring"><span class="glyph-in beat">♥</span></div><div class="soc-quote">' + esc(intent) + '</div>' }));
+  } else if(dom){
+    cards.push(socCard({ label:'My Love Language',
+      body:'<div class="soc-quote" style="font-size:clamp(.95rem,4.4vw,1.2rem)">' + esc(LOVE_LANG[dom] || '') + '</div>' }));
+  }
+
+  grid.innerHTML = cards.join('');
+  fitSocialCards(grid);
+}
+
+/* Font-fit pass: cards are screenshotted, so text must NEVER be cut.
+   Shrinks bullet type in 0.02rem steps until everything fits the 9:16
+   box; clamping (ellipsis) is only a last-resort safety net. */
+function fitSocialCards(grid){
+  var cards = grid.querySelectorAll('.soc');
+  for(var i=0;i<cards.length;i++){
+    var c = cards[i];
+    var li = c.querySelector('.soc-points li, .soc-flagbox p');
+    if(!li) continue;
+    var size = 0.68;
+    while(size > 0.5 && c.scrollHeight > c.clientHeight + 1){
+      size -= 0.02;
+      var lis = c.querySelectorAll('.soc-points li, .soc-flagbox p');
+      for(var j=0;j<lis.length;j++) lis[j].style.fontSize = size.toFixed(2) + 'rem';
+    }
+    if(c.scrollHeight > c.clientHeight + 1) c.classList.add('clamped');
+  }
+}
+
+/* ============ SPOTIFY-STYLE CHROME ============
+   Pill rail + scroll-spy + bottom tabs. Only shown once a reading
+   exists; hidden entirely in the partner view (their page, not yours). */
+var RAIL_SECTIONS = [
+  { id:'flipSection',  label:'♥ Love Signature', nav:'spark'   },
+  { id:'alignSection', label:'⚖️ Your Words'   , nav:'spark'   },
+  { id:'pullSection',  label:'🧭 Deeper Pull'  , nav:'spark'   },
+  { id:'flagsSection', label:'🚦 Flags'        , nav:'spark'   },
+  { id:'movesSection', label:'✨ Moves'         , nav:'spark'   },
+  { id:'trapsSection', label:'⚠️ Traps'         , nav:'spark'   },
+  { id:'bioWriterSection', label:'✍️ Bio Writer' , nav:'spark'  },
+  { id:'shareSection', label:'🔐 Share'        , nav:'share'   },
+  { id:'bioSection',   label:'📸 Bio Card'     , nav:'bio'     },
+  { id:'socialSection',label:'🖼️ Social Cards' , nav:'bio'     }
+];
+var railObserver = null;
+function buildRail(){
+  var rail = document.getElementById('rail');
+  rail.innerHTML = '';
+  RAIL_SECTIONS.forEach(function(sec, i){
+    var el = document.getElementById(sec.id);
+    if(!el || el.style.display === 'none') return; // skip withheld sections
+    var pill = document.createElement('button');
+    pill.type = 'button';
+    pill.className = 'rail-pill' + (i === 0 ? ' active' : '');
+    pill.textContent = sec.label;
+    pill.addEventListener('click', function(){
+      document.getElementById(sec.id).scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+    rail.appendChild(pill);
+  });
+  // scroll-spy: nearest-in-view section wins the active pill
+  if(railObserver) railObserver.disconnect();
+  var visible = {};
+  railObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      visible[en.target.id] = en.isIntersecting ? en.intersectionRatio : 0;
+    });
+    var bestId = null, bestV = 0;
+    Object.keys(visible).forEach(function(id){
+      if(visible[id] > bestV){ bestV = visible[id]; bestId = id; }
+    });
+    if(bestId) setActiveRail(bestId);
+  }, { threshold:[0, .1, .25, .5], rootMargin:'-120px 0px -45% 0px' });
+  RAIL_SECTIONS.forEach(function(sec){
+    var el = document.getElementById(sec.id);
+    if(el && el.style.display !== 'none') railObserver.observe(el);
+  });
+}
+function setActiveRail(sectionId){
+  var pills = document.querySelectorAll('#rail .rail-pill');
+  var idx = -1;
+  RAIL_SECTIONS.forEach(function(sec, i){ if(sec.id === sectionId) idx = i; });
+  var pi = 0;
+  pills.forEach(function(p){
+    // pills only exist for visible sections; map by label instead of index
+    p.classList.toggle('active', p.textContent === (RAIL_SECTIONS[idx] ? RAIL_SECTIONS[idx].label : ''));
+  });
+  // centre the active pill in the rail (Spotify behaviour)
+  var active = document.querySelector('#rail .rail-pill.active');
+  if(active) active.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
+}
+function showBottomNav(){
+  document.getElementById('bottomNav').classList.add('on');
+  document.body.classList.add('has-bnav');
+  wireBottomNav();
+}
+function showAppChrome(name, dynName, sub){
+  var h = new Date().getHours();
+  var greet = h < 12 ? 'Good morning' : (h < 18 ? 'Good afternoon' : 'Good evening');
+  document.getElementById('appGreet').textContent = greet;
+  document.getElementById('appName').textContent = name || 'Your spark';
+  document.getElementById('appSub').textContent = dynName || '';
+  document.getElementById('appBar').classList.add('on');
+  showBottomNav();
+  buildRail();
+}
+function hideAppChrome(){
+  document.getElementById('appBar').classList.remove('on');
+  document.getElementById('bottomNav').classList.remove('on');
+  document.body.classList.remove('has-bnav');
+}
+function wireBottomNav(){
+  if(window.__bnavWired) return;
+  window.__bnavWired = true;
+  document.querySelectorAll('.bnav-btn').forEach(function(b){
+    b.addEventListener('click', function(){
+      setBnavActive(b.dataset.nav);
+      switch(b.dataset.nav){
+        case 'library': setView('library'); break;
+        case 'spark':   setView(window.__hasResult ? 'result' : 'landing'); break;
+        case 'compare': setView(window.__hasResult ? 'result' : 'landing');
+                        jumpTo(window.__hasResult ? 'shareSection' : null); break;
+        case 'bio':     setView(window.__hasResult ? 'result' : 'landing');
+                        jumpTo(window.__hasResult ? 'bioSection' : null); break;
+      }
+    });
+  });
+}
+function setBnavActive(nav){
+  document.querySelectorAll('.bnav-btn').forEach(function(x){
+    x.classList.toggle('active', x.dataset.nav === nav);
+  });
+}
+// View state machine: one of landing | result | partner | library
+function setView(v){
+  window.__view = v;
+  document.body.setAttribute('data-view', v);
+  document.getElementById('libraryView').classList.toggle('on', v === 'library');
+  if(v === 'library'){ setBnavActive('library'); renderLibrary(); }
+  if(v === 'result')  setBnavActive('spark');
+  if(v === 'landing') setBnavActive('spark');
+  if(v === 'partner') setBnavActive('spark');
+}
+function jumpTo(id){ if(id){ var el=document.getElementById(id); if(el) setTimeout(function(){ el.scrollIntoView({behavior:'smooth',block:'start'}); },120); } else { window.scrollTo({top:0,behavior:'smooth'}); } }
+
+/* ============ CLIPBOARD + TOAST ============ */
+function toast(msg){
+  var t = document.createElement('div');
+  t.textContent = msg;
+  t.style.cssText = 'position:fixed;top:22px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#E8384F,#B3123A);color:#fff;padding:12px 24px;border-radius:999px;font-weight:700;font-size:.88rem;z-index:999;box-shadow:0 10px 30px rgba(179,18,58,.4);text-align:center;max-width:90vw';
+  document.body.appendChild(t);
+  setTimeout(function(){ t.style.transition='opacity .4s'; t.style.opacity='0'; setTimeout(function(){ t.remove(); }, 450); }, 2000);
+}
+function copyText(text, msg){
+  function fb(){
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); toast(msg); }catch(e){ toast('Copy failed — select the code manually'); }
+    ta.remove();
+  }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(function(){ toast(msg); }).catch(fb);
+  } else fb();
+}
+
+/* ============ SHARE PANEL WIRING ============ */
+function makeDemoCode(){
+  /* Luna's demo chart is ALSO ground truth, not invented: computed by
+     tests/groundtruth-chart.cjs for 1996-03-12 08:15, Melbourne
+     (lat -37.8136, lon 144.9631, AEDT UTC+11 -> 1996-03-11T21:15Z).
+     Venus Taurus (Earth) x Mars Pisces (Water) = "Fertile Garden";
+     Rising Aries 2.87deg -> Descendant/7th Libra 2.87deg. */
+  var demo = { v:'SS1', n:'Luna', i:'Something serious, slowly',
+    s:{ dyn:'Fertile Garden', sub:'Venus in Taurus \u00D7 Mars in Pisces \u2192 7th House in Libra' },
+    c:[
+      { t:'Venus',     s:'Taurus',  x:'How They Love' },
+      { t:'Moon',      s:'Sagittarius', x:'Emotional Needs' },
+      { t:'Mercury',   s:'Pisces',  x:'How They Text' },
+      { t:'Mars',      s:'Pisces',  x:'Their Chemistry' },
+      { t:'Rising',    s:'Aries',   x:'First-Date Vibe' },
+      { t:'7th House', s:'Libra',   x:'Who They Need' },
+      { t:'Sun',       s:'Pisces',  x:'Dating Superpower' }
+    ],
+    f:{ g:['Deeply nurturing','Genuinely kind, not performatively','Makes you feel safe fast'],
+        y:['Absorbs your moods as their own','Retreats instead of confronting'],
+        r:['The silent treatment','Scorekeeping old hurts'] }
+  };
+  return makeCode(demo);
+}
+function wireShare(){
+  document.querySelectorAll('#shareSeg button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('#shareSeg button').forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+      shareLevel = b.dataset.level;
+      document.getElementById('shareContents').textContent = LEVEL_COPY[shareLevel];
+      if(document.getElementById('results').classList.contains('on')) refreshShareCode();
+    });
+  });
+  document.getElementById('shareContents').textContent = LEVEL_COPY[shareLevel];
+  document.getElementById('copyLinkBtn').addEventListener('click', function(){
+    var code = window.__lastCode || refreshShareCode();
+    sbTrack('share_link_copied', { level: shareLevel });
+    copyText(location.origin + location.pathname + '#s=' + encodeURIComponent(code), 'Share link copied — send it to your spark ♥');
+  });
+  document.getElementById('copyCodeBtn').addEventListener('click', function(){
+    copyText(window.__lastCode || refreshShareCode(), 'Code copied — paste it in any chat');
+  });
+  document.getElementById('compareBtn').addEventListener('click', function(){
+    try{ runCompare(parseCode(document.getElementById('partnerCode').value)); }
+    catch(e){ toast("That code doesn't look quite right ♥"); }
+  });
+  document.getElementById('demoBtn').addEventListener('click', function(){
+    document.getElementById('partnerCode').value = makeDemoCode();
+    try{ runCompare(parseCode(document.getElementById('partnerCode').value)); }catch(e){}
+  });
+  document.getElementById('pvCta').addEventListener('click', function(){
+    var fc = document.querySelector('.form-card');
+    fc.style.display = '';
+    fc.scrollIntoView({ behavior:'smooth', block:'center' });
+    this.textContent = 'Fill in the form above — the compare happens automatically ♥';
+  });
+}
+
+/* ============ GENERATE ============ */
+document.getElementById('genBtn').addEventListener('click', function(){
+  var name  = (document.getElementById('nm').value || 'You').trim();
+  var time  = document.getElementById('bt').value || '';
+  var place = (document.getElementById('bp').value || '').trim();
+  var date  = document.getElementById('bd').value || '';
+  window.__lastTime = time;
+  document.getElementById('bioName').textContent = name;
+
+  var accEl = document.getElementById('chartAcc');
+
+  // ---- Compute the REAL chart (exact ephemeris, or refuse) ----
+  var chart = SparkRuntime.computeChart({
+    name: name, birthDate: date, birthTime: time || null, birthPlace: place || null
+  });
+
+  if(!chart.ok){
+    // Hard refusal — show the reason, render nothing fake.
+    accEl.style.display = 'inline-flex';
+    accEl.className = 'acc';
+    accEl.textContent = '⛔ Not computed';
+    document.getElementById('accText').textContent = chart.errors.join(' ');
+    var resErr = document.getElementById('results');
+    resErr.classList.remove('on');
+    CARDS = []; NODES = null;
+    toast(chart.errors[0]);
+    return;
+  }
+
+  // ---- Build live card deck + node axis from the computed chart ----
+  CARDS = SparkRuntime.buildCards(chart);
+  NODES = buildNodesFromChart(chart);
+
+  // ---- Spark badge (dynamic name + keywords from real Venus x Mars) ----
+  var dyn = SparkRuntime.sparkDynamic(chart);
+  if(dyn){
+    document.getElementById('sparkName').textContent = dyn.dyn;
+    document.getElementById('sparkSub').textContent = dyn.sub;
+    document.getElementById('kwPills').innerHTML =
+      dyn.keywords.map(function(k){ return '<span class="pill">'+esc(k)+'</span>'; }).join('');
+  }
+
+  // ---- Bio card tags from the computed big-three ----
+  var bioTags = document.getElementById('bioTags');
+  var bt = [];
+  chart.placements.venus && bt.push('♥ Venus ' + chart.placements.venus.name);
+  (!chart.moonUncertain && chart.placements.moon) && bt.push('☾ Moon ' + chart.placements.moon.name);
+  chart.placements.mars && bt.push('♂ Mars ' + chart.placements.mars.name);
+  bioTags.innerHTML = bt.length
+    ? bt.map(function(t){ return '<span class="btag">'+esc(t)+'</span>'; }).join('')
+    : '<span class="btag">Computed on your device</span>';
+
+  // ---- Accuracy badge driven by the runtime's honest notices ----
+  var locked = CARDS.filter(function(c){ return c.withheld; }).length;
+  accEl.style.display = 'inline-flex';
+  if(chart.hasTime && chart.hasPlace){
+    accEl.className = 'acc ok';
+    accEl.textContent = '🎯 Exact chart';
+    document.getElementById('accText').textContent =
+      'Real ephemeris + resolved birth place: every placement below is computed to the exact degree. UTC instant ' + chart.utcInstant + '.';
+  } else if(locked > 0){
+    accEl.className = 'acc';
+    accEl.textContent = '🔓 Partial — ' + locked + ' locked';
+    document.getElementById('accText').textContent =
+      'Everything shown is exact; ' + locked + ' placement' + (locked > 1 ? 's are' : ' is') + ' withheld (never estimated) because an input is missing. ' + (chart.notices[0] || '');
+  } else {
+    accEl.className = 'acc ok';
+    accEl.textContent = '🎯 Exact (date only)';
+    document.getElementById('accText').textContent =
+      'Sign-only placements computed exactly via noon-UT convention; angle-based points withheld. ' + (chart.notices[0] || '');
+  }
+
+  var res = document.getElementById('results');
+  res.classList.add('on');
+  applyIntent();
+  buildCards();
+  renderPersonalized(chart);
+  window.__hasResult = true;
+  setView('result');
+  // Spotify-style chrome: sticky header + rail + bottom tabs
+  var dynObj = window.SparkRuntime.sparkDynamic(chart) || {};
+  showAppChrome(
+    (document.getElementById('nm').value || 'You').trim().split(' ')[0],
+    dynObj.dyn || '',
+    ''
+  );
+  // Persist: quick-snapshot (compat) + full library record (exact reopen)
+  saveLocalSnapshot(collectSnapshot());
+  librarySaveSpark({
+    name: name,
+    birthDate: date,
+    birthTime: time || null,
+    birthPlace: place || null
+  }, collectSnapshot(), dynObj.dyn || '');
+  renderResume();
+  wireOptions();
+  wireReveal();
+  refreshShareCode();
+  sbTrack('spark_generated', { exact: !!(chart.hasTime && chart.hasPlace), locked: locked });
+  this.textContent = 'Regenerate ♥';
+
+  if(PARTNER){
+    // Returning user regenerated: fire the partner-view comparison too
+    var pvC = document.getElementById('pvCompare');
+    if(document.getElementById('partnerView').classList.contains('on') && pvC){
+      pvC.className = 'pv-compare';
+      runCompare(PARTNER, pvC);
+      setTimeout(function(){ pvC.scrollIntoView({ behavior:'smooth', block:'start' }); }, 300);
+      toast('Your spark compare is ready ♥');
+    } else {
+      runCompare(PARTNER);
+      setTimeout(function(){ document.getElementById('shareSection').scrollIntoView({ behavior:'smooth', block:'center' }); }, 300);
+      toast('Your spark compare is ready ♥');
+    }
+  } else {
+    setTimeout(function(){ res.scrollIntoView({ behavior:'smooth', block:'start' }); }, 60);
+  }
+  // A library match was waiting for this user's spark
+  if(window.__pendingMatch){
+    var pm = window.__pendingMatch; window.__pendingMatch = null;
+    setTimeout(function(){ compareWithMatch(pm); }, 900);
+  }
+});
+
+wireShare();
+wireIntent();
+wireResume();
+wireBioWriter();
+wireSynastry();
+
+/* AdSense: push each unit, skipping ones still carrying the placeholder
+   slot ID so an uncreated unit can never throw an error on the page. */
+(function initAds(){
+  document.querySelectorAll('.ad-unit ins.adsbygoogle').forEach(function(ins){
+    if((ins.getAttribute('data-ad-slot')||'').indexOf('REPLACE_ME') === 0) return;
+    try{ (window.adsbygoogle = window.adsbygoogle || []).push({}); }catch(e){}
+  });
+})();
+// Save-match buttons: appear whenever there IS a comparison source
+function showSaveMatchBtn(snap, source){
+  if(!snap) return;
+  // In-page compare panel button
+  var smb = document.getElementById('saveMatchBtn');
+  if(smb){
+    smb.style.display = 'block';
+    smb.textContent = '♥ Save ' + ((snap.n) || 'match') + ' to my library';
+    smb.onclick = function(){
+      librarySaveMatch(snap, source);
+      renderLibrary();
+      sbTrack('match_saved', { source: source });
+      toast('Saved to Potential matches ♥');
+      this.style.display = 'none';
+    };
+  }
+  // Partner-view save button (only when the partner snapshot is the current one)
+  var pv = document.getElementById('pvSave');
+  if(pv && window.__view === 'partner' && PARTNER && PARTNER.n === snap.n){
+    pv.style.display = 'block';
+    pv.onclick = function(){
+      librarySaveMatch(PARTNER, 'link');
+      renderLibrary();
+      sbTrack('match_saved', { source: 'link' });
+      toast('Saved to Potential matches ♥');
+      pv.style.display = 'none';
+    };
+  }
+}
+// Hook: every successful compare offers to save that match
+(function(){
+  var origRunCompare = window.runCompare;
+  window.runCompare = function(theirs, out){
+    origRunCompare(theirs, out);
+    if(theirs && theirs.c) showSaveMatchBtn(theirs, out === document.getElementById('pvCompare') ? 'link' : 'code');
+  };
+})();
+// Landing state
+setView('landing');
+renderResume();
+// Persistent tab bar whenever there is anything to navigate to:
+// a generated result OR saved library content (Spotify keeps its tabs too).
+(function initChrome(){
+  wireBottomNav();
+  var hasLibrary = (function(){
+    try{
+      var s = JSON.parse(localStorage.getItem('ss-library-sparks')||'[]');
+      var m = JSON.parse(localStorage.getItem('ss-library-matches')||'[]');
+      return (s.length + m.length) > 0;
+    }catch(e){ return false; }
+  })();
+  if(hasLibrary && window.__view !== 'partner') showBottomNav();
+})();
+handlePartnerLink();
+spawnHearts();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Soul Spark">
+  <defs>
+    <linearGradient id="iHeart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8E0E2E"/><stop offset="55%" stop-color="#FF4D6D"/><stop offset="100%" stop-color="#FF8FA3"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 51 C32 51, 13 39, 13 27 C13 20, 18 15, 24 15 C28 15, 31 17, 32 20 C33 17, 36 15, 40 15 C46 15, 51 20, 51 27 C51 39, 32 51, 32 51 Z" fill="url(#iHeart)"/>
+  <path d="M32 24 L34.6 31.4 L42 34 L34.6 36.6 L32 44 L29.4 36.6 L22 34 L29.4 31.4 Z" fill="#FFF3F6"/>
+</svg>
