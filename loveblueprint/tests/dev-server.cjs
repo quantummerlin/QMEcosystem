@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // ============================================================
-// SOUL SPARK — LAN DEV SERVER (mobile testing)
+// LOVE BLUEPRINT — LAN DEV SERVER (mobile testing)
 // ============================================================
 // Serves the soulblueprint/ folder on every interface so a phone
 // on the same Wi-Fi can open the REAL prototype over HTTP:
@@ -88,7 +88,7 @@ server.on('error', (e) => {
 server.listen(PORT, HOST, () => {
     const ips = lanIps();
     console.log('');
-    console.log('  SOUL SPARK DEV SERVER — serving repo root (mirrors production)');
+    console.log('  LOVE BLUEPRINT DEV SERVER — serving repo root (mirrors production)');
     console.log('  ===================================================');
     console.log('  On this PC :  http://localhost:' + PORT + '/loveblueprint/prototype.html');
     if (ips.length) {

@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Soul Spark — Free Dating Profile Astrology &amp; Compatibility | Quantum Merlin</title>
-<meta name="description" content="Soul Spark turns your birth chart into a real dating playbook: how you love, how you text, who you're wired for — plus exact degree compatibility and copy-paste profile bios. 100% free, calculated on your device, nothing uploaded.">
-<meta name="keywords" content="dating astrology, venus sign dating, compatibility calculator, synastry, dating profile bio, birth chart love, soul spark, quantum merlin">
+<title>Love Blueprint: Free Dating Profile Astrology &amp; Compatibility | Quantum Merlin</title>
+<meta name="description" content="Love Blueprint turns your birth chart into a real dating playbook: how you love, how you text, who you're wired for: plus exact degree compatibility and copy-paste profile bios. 100% free, calculated on your device, nothing uploaded.">
+<meta name="keywords" content="dating astrology, venus sign dating, compatibility calculator, synastry, dating profile bio, birth chart love, love blueprint, soul blueprint, quantum merlin">
 <meta name="author" content="Quantum Merlin">
 <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
 <link rel="apple-touch-icon" href="assets/icon.svg">
@@ -15,15 +15,15 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Soul Spark — Your Cosmic Dating Decoder">
-<meta property="og:description" content="How you love, how you text, who you're wired for — computed exactly from your birth chart. Free, private, shareable on Hinge &amp; Bumble.">
+<meta property="og:title" content="Love Blueprint: Your Cosmic Dating Decoder">
+<meta property="og:description" content="How you love, how you text, who you're wired for: computed exactly from your birth chart. Free, private, shareable on Hinge &amp; Bumble.">
 <meta property="og:url" content="https://quantummerlin.com/loveblueprint/">
-<meta property="og:site_name" content="Soul Spark | Quantum Merlin">
+<meta property="og:site_name" content="Love Blueprint | Quantum Merlin">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://quantummerlin.com/loveblueprint/assets/og-card.png">
-<meta name="twitter:title" content="Soul Spark — Your Cosmic Dating Decoder">
+<meta name="twitter:title" content="Love Blueprint: Your Cosmic Dating Decoder">
 <meta name="twitter:description" content="Exact birth-chart dating readings + degree compatibility + profile bio writer. Free and private.">
 
 <!-- Structured data -->
@@ -31,7 +31,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Soul Spark",
+  "name": "Love Blueprint",
   "url": "https://quantummerlin.com/loveblueprint/",
   "applicationCategory": "LifestyleApplication",
   "operatingSystem": "Any (web browser)",
@@ -41,7 +41,7 @@
   "featureList": [
     "Exact ephemeris birth-chart readings for dating",
     "Venus-Mars-Moon-7th House compatibility (degree synastry)",
-    "Privacy-safe shareable spark links",
+    "Privacy-safe shareable blueprint links",
     "AI-free profile bio writer from chart placements"
   ]
 }
@@ -65,14 +65,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   SOUL SPARK — DESIGN DNA
+   LOVE BLUEPRINT — DESIGN DNA
    Cohesive tokens. Restrained motion (0.3-0.8s, ease-out).
    ============================================================ */
 :root{
-  /* DARK THEME — midnight rose. Light rose text on deep plum-black. */
+  /* DARK THEME: midnight rose. Light rose text on deep plum-black. */
   color-scheme:dark;
   --rose:#FF4D6D;          /* primary love red (brighter for dark bg) */
-  --rose-deep:#FF8FA3;     /* accent text — light rose reads on dark */
+  --rose-deep:#FF8FA3;     /* accent text: light rose reads on dark */
   --rose-soft:#FF6B85;
   --gold:#E8B96A;          /* secondary */
   --blush:#140b15;         /* page bg: deep plum-black */
@@ -89,6 +89,10 @@
   --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
   --flip-dur:.72s;
   --ease:cubic-bezier(.4,.15,.2,1);
+  /* Motion system: restrained + cohesive. 0.3-0.8s, ease-out, one hero per section. */
+  --t-fast:.18s; --t-base:.32s; --t-slow:.62s;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --stagger:70ms;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -106,7 +110,7 @@ body{
 }
 h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 
-/* Ambient floating hearts — subtle, one hero motion */
+/* Ambient floating hearts: subtle, one hero motion */
 .heart-field{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
 .heart-field span{
   position:absolute;bottom:-40px;color:var(--rose);opacity:.10;
@@ -169,8 +173,8 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 .btn:active{transform:translateY(0)}
 
 /* ---------- AD UNITS ----------
-   Policy placement: between major content sections only — NEVER inside
-   flip cards, compare output, bio drafts, or anything tap-to-reveal
+   Policy placement: between major content sections only, never inside
+   flip cards, compare output, bio drafts or anything tap-to-reveal
    (invalid-click risk). 0-1 above the fold. Responsive units. */
 .ad-unit{max-width:728px;margin:28px auto 0;text-align:center;min-height:90px}
 .ad-unit ins{display:block}
@@ -312,7 +316,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 .appbar-greet{font-size:.72rem;color:var(--muted);letter-spacing:.02em}
 .appbar-name{font-family:var(--font-head);font-size:1.05rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .appbar-sub{font-size:.74rem;color:var(--rose-deep);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-/* pill rail — horizontal snap scroller, scrollbar hidden (Spotify feel) */
+/* pill rail: horizontal snap scroller, scrollbar hidden (Spotify feel) */
 .rail{
   display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;
   scroll-snap-type:x proximity;scrollbar-width:none;-ms-overflow-style:none;
@@ -385,7 +389,7 @@ body.has-bnav{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
 .lib-empty{text-align:center;color:var(--muted);font-size:.86rem;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:22px;margin-bottom:10px;line-height:1.6}
 .lib-note{font-size:.75rem;color:var(--muted);line-height:1.65;margin:22px 0 0;border-top:1px solid var(--line);padding-top:14px;max-width:640px}
 .match-badge{display:inline-block;font-size:.6rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:rgba(232,185,106,.16);color:var(--gold);border:1px solid rgba(232,185,106,.4);margin-left:6px;vertical-align:middle}
-/* note sheet (replaces window.prompt — blocked on file:// and ugly on mobile) */
+/* note sheet (replaces window.prompt: blocked on file:// and ugly on mobile) */
 .sheet-mask{display:none;position:fixed;inset:0;background:rgba(10,4,12,.66);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:100}
 .sheet-mask.on{display:block}
 .sheet{
@@ -459,7 +463,21 @@ body[data-view="result"] #libraryView.on{display:none!important}
   overflow-y:auto;
 }
 .face.back h4{font-size:1.05rem;color:var(--rose-deep);margin-bottom:4px;display:flex;align-items:center;gap:8px}
-.face.back .body{font-size:.9rem;color:var(--text);margin:8px 0 12px}
+.face.back .body{
+  font-family:var(--font-head);font-size:.94rem;color:var(--text);
+  margin:10px 0 12px;line-height:1.75;text-align:left;max-width:46ch;
+}
+.face.back .body .stanza{
+  opacity:0;transform:translateY(10px);
+  transition:opacity var(--t-slow) var(--ease-out), transform var(--t-slow) var(--t-fast);
+  transition-timing-function:var(--ease-out),var(--ease-out);
+}
+.face.back .body .stanza.shown{opacity:1;transform:none}
+.face.back .body .stanza + .stanza{margin-top:12px;position:relative;padding-top:12px}
+.face.back .body .stanza + .stanza::before{
+  content:"\2766";position:absolute;top:-5px;left:50%;transform:translateX(-50%);
+  color:var(--gold);opacity:.45;font-size:.72rem;
+}
 .face.back .backbtn{
   display:inline-flex;align-items:center;gap:6px;background:none;border:none;color:var(--rose);
   font-family:inherit;font-weight:700;font-size:.8rem;cursor:pointer;padding:0;margin-bottom:6px;
@@ -585,7 +603,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 
 /* ---------- SOCIAL CARDS (screenshot-ready) ----------
    Fixed 9:16 ratio, designed to survive an Instagram grid thumbnail.
-   Users screenshot these directly — no download button needed,
+   Users screenshot these directly: no download button needed,
    every card is self-contained (no page chrome inside the card). */
 .social-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin-top:8px}
 .soc{
@@ -668,6 +686,78 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
   .flip-inner{transition:none}
   .reveal{opacity:1;transform:none}
   .heart-field{display:none}
+}
+
+/* ---------- COMPUTE REVEAL (the honest hero moment) ---------- */
+.compute-veil{
+  position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(700px 420px at 50% 42%, rgba(255,77,109,.16), rgba(20,11,21,.97) 70%);
+  opacity:0;pointer-events:none;transition:opacity var(--t-base) var(--ease-out);
+}
+.compute-veil.on{opacity:1;pointer-events:auto}
+.compute-in{text-align:center;padding:24px}
+.compute-line{
+  font-family:var(--font-head);font-size:clamp(1.05rem,4.6vw,1.5rem);color:var(--text);
+  opacity:0;transform:translateY(8px);transition:opacity var(--t-slow) var(--ease-out),transform var(--t-slow) var(--ease-out);
+}
+.compute-line.on{opacity:1;transform:none}
+.compute-line .gold{color:var(--gold)}
+.compute-ring{
+  width:120px;height:120px;margin:18px auto 14px;position:relative;
+}
+.compute-ring i{
+  position:absolute;top:50%;left:50%;width:8px;height:8px;margin:-4px;
+  color:var(--gold);font-style:normal;font-size:.7rem;line-height:1;
+  opacity:0;transition:transform .5s var(--ease-out),opacity .4s var(--ease-out);
+}
+.compute-ring i.on{opacity:1}
+.compute-sub{color:var(--muted);font-size:.78rem;opacity:0;transition:opacity var(--t-slow) var(--ease-out) .15s}
+.compute-sub.on{opacity:.9}
+
+/* ---------- ONBOARDING SHEET ---------- */
+.onboard{
+  position:fixed;inset:0;z-index:95;display:flex;align-items:flex-end;justify-content:center;
+  background:rgba(10,5,12,.66);backdrop-filter:blur(3px);
+  opacity:0;pointer-events:none;transition:opacity var(--t-base) var(--ease-out);
+}
+.onboard.on{opacity:1;pointer-events:auto}
+.onboard-card{
+  width:min(560px,94vw);margin:0 auto 22px;background:var(--card);border:1px solid var(--line);
+  border-radius:22px;padding:26px 24px;box-shadow:var(--shadow-lift);
+  transform:translateY(16px);transition:transform var(--t-base) var(--ease-out);
+}
+.onboard.on .onboard-card{transform:none}
+.onboard-card h3{font-size:1.35rem;margin-bottom:6px}
+.onboard-card p{color:var(--muted);font-size:.88rem;line-height:1.6;margin-bottom:14px}
+.onboard-list{list-style:none;margin:0 0 18px}
+.onboard-list li{padding:7px 0 7px 26px;position:relative;font-size:.86rem;color:var(--text)}
+.onboard-list li::before{content:"\2665";position:absolute;left:2px;color:var(--rose);font-size:.7rem;top:10px}
+.onboard-list li b{color:var(--rose-deep)}
+.onboard-btns{display:flex;gap:10px;flex-wrap:wrap}
+.onboard-btns .btn{flex:1;min-width:150px}
+.onboard-btns .ghost{background:transparent;border:1.5px solid var(--line);color:var(--muted)}
+
+/* ---------- STATION CHAINING + COMPLETION ---------- */
+.next-stop{display:flex;justify-content:center;margin:22px 0 4px}
+.next-stop button{
+  background:transparent;border:1px solid rgba(232,185,106,.4);color:var(--gold);
+  border-radius:999px;padding:9px 20px;font-family:inherit;font-size:.8rem;font-weight:700;
+  cursor:pointer;transition:background var(--t-fast) var(--ease-out),transform var(--t-fast) var(--ease-out);
+}
+.next-stop button:hover{background:rgba(232,185,106,.1);transform:translateY(-1px)}
+.done-card{
+  background:linear-gradient(150deg,rgba(255,77,109,.10),rgba(232,185,106,.06));
+  border:1px solid rgba(232,185,106,.3);border-radius:20px;padding:24px;text-align:center;
+}
+.done-card h3{font-size:1.3rem;margin-bottom:6px}
+.done-card p{color:var(--muted);font-size:.88rem;margin-bottom:16px}
+.done-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.done-btns .btn{flex:0 1 auto;min-width:150px}
+.flip.pulse-hint .front{animation:pulseHint 1.6s var(--ease-out) 2}
+@keyframes pulseHint{
+  0%{box-shadow:0 0 0 0 rgba(255,77,109,.5)}
+  70%{box-shadow:0 0 0 14px rgba(255,77,109,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,77,109,0)}
 }
 
 /* ---------- PROFILE BIO WRITER ---------- */
@@ -764,6 +854,36 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 </head>
 <body>
 
+<!-- COMPUTE REVEAL: the honest hero moment. Real ephemeris runs while
+     the sky is described; never a fake preloader. -->
+<div class="compute-veil" id="computeVeil" aria-hidden="true">
+  <div class="compute-in">
+    <div class="compute-line" id="cvLine1">Locating the exact sky</div>
+    <div class="compute-ring" id="cvRing"></div>
+    <div class="compute-line" id="cvLine2"><span class="gold" id="cvPlace"></span></div>
+    <div class="compute-sub" id="cvSub">computing your placements to the exact degree</div>
+  </div>
+</div>
+
+<!-- ONBOARDING: shown once, after the first blueprint is generated. -->
+<div class="onboard" id="onboard" role="dialog" aria-modal="true" aria-labelledby="obTitle">
+  <div class="onboard-card">
+    <h3 id="obTitle">Your Love Blueprint is ready ♥</h3>
+    <p>Seven stations, then three ways to use it. Read it like a letter, not a report. Nothing here is fate; it is a mirror with coordinates.</p>
+    <ul class="onboard-list">
+      <li><b>Love Signature.</b> Flip each card to read how you love, feel safe, pursue and text.</li>
+      <li><b>Your Words vs Your Chart.</b> What you say you want, next to what your chart pulls toward.</li>
+      <li><b>The Deeper Pull.</b> Your comfort node and your growth node, measured to the degree.</li>
+      <li><b>Flags, Moves, Traps.</b> What you bring, what to try this week, what to watch.</li>
+      <li><b>Bio Writer + cards.</b> Copy-paste bios and screenshot-ready cards for your profile.</li>
+    </ul>
+    <div class="onboard-btns">
+      <button class="btn" id="obTour" type="button">Begin the tour ♥</button>
+      <button class="btn ghost" id="obSkip" type="button">Just let me read</button>
+    </div>
+  </div>
+</div>
+
 <!-- Ambient hearts -->
 <div class="heart-field" id="heartField" aria-hidden="true"></div>
 
@@ -773,7 +893,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="appbar-row">
       <span class="appbar-heart beat"><img src="assets/icon.svg" alt="" style="width:26px;height:26px;display:block"></span>
       <div class="appbar-txt">
-        <div class="appbar-greet" id="appGreet">Your spark</div>
+        <div class="appbar-greet" id="appGreet">Your blueprint</div>
         <div class="appbar-name" id="appName">—</div>
         <div class="appbar-sub" id="appSub">—</div>
       </div>
@@ -786,10 +906,10 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 
   <!-- HERO -->
   <header class="hero">
-    <span class="brand-chip"><img src="assets/logo.svg" alt="" style="width:22px;height:22px;display:block"> Soul Spark</span>
+    <span class="brand-chip"><img src="assets/logo.svg" alt="" style="width:22px;height:22px;display:block"> Love Blueprint</span>
     <h1>Your Cosmic Dating Decoder</h1>
-    <p class="tag">Flip a card, find your spark. Astrology + numerology turned into your real dating playbook — how you love, how you text, and who you actually need.</p>
-    <p class="sub">100% private · calculated on your device · share the finished spark, never your birth data</p>
+    <p class="tag">Flip a card, read your blueprint. Astrology + numerology turned into your real dating playbook: how you love, how you text and who you actually need.</p>
+    <p class="sub">100% private · calculated on your device · share the finished blueprint, never your birth data</p>
   </header>
 
   <!-- RESUME: pick up right where you left off -->
@@ -809,7 +929,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       <div class="field">
         <label for="nm">Your full name</label>
         <input id="nm" type="text" value="Wayne Michael" placeholder="e.g. Wayne Michael">
-        <div class="fhint">Use the full name you were given — numerology counts every letter, so nicknames change your numbers.</div>
+        <div class="fhint">Use the full name you were given: numerology counts every letter, so nicknames change your numbers.</div>
       </div>
       <div class="field">
         <label for="bd">Date of birth</label>
@@ -831,22 +951,22 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       <div class="chips" id="intentChips" role="group" aria-labelledby="intentLbl">
         <button type="button" class="chip" data-intent="A long-term partner" aria-pressed="false">♥ A long-term partner</button>
         <button type="button" class="chip" data-intent="Something serious, slowly" aria-pressed="false">Something serious, slowly</button>
-        <button type="button" class="chip" data-intent="Dating — open to anything" aria-pressed="false">Dating — open to anything</button>
+        <button type="button" class="chip" data-intent="Dating, open to anything" aria-pressed="false">Dating, open to anything</button>
         <button type="button" class="chip" data-intent="Short-term &amp; fun" aria-pressed="false">Short-term &amp; fun</button>
         <button type="button" class="chip" data-intent="New friends first" aria-pressed="false">New friends first</button>
         <button type="button" class="chip" data-intent="Still figuring it out" aria-pressed="false">Still figuring it out</button>
       </div>
-      <div class="fhint">Your call — and it never changes a single reading. Pick nothing and your card simply leaves it out. We don't assume everyone's here for commitment.</div>
+      <div class="fhint">Your call, and it never changes a single reading. Pick nothing and your card simply leaves it out. We don't assume everyone's here for commitment.</div>
     </div>
     <details class="why-box">
       <summary><span class="beat">♥</span> Why time &amp; place matter to <em>you</em> <span style="margin-left:auto">▸</span></summary>
       <div class="why-in">
-        <b>Time of birth</b> unlocks your <b>Rising sign</b> and the exact degree of your <b>7th House</b> — the single most important point for compatibility (it's literally "who you're wired to partner with"). Without it we never guess: those cards stay <b>🔒 locked</b> with a plain explanation of what to add.<br><br>
+        <b>Time of birth</b> unlocks your <b>Rising sign</b> and the exact degree of your <b>7th House</b> : the single most important point for compatibility (it's literally "who you're wired to partner with"). Without it we never guess: those cards stay <b>🔒 locked</b> with a plain explanation of what to add.<br><br>
         <b>Place of birth</b> sets the real sky and time zone you were born under. Even a perfect time gives a wrong Rising sign if the city is wrong.<br><br>
-        Both stay on your device — and <b>are never included when you share your spark</b> with a date (see Share Without Spilling below).
+        Both stay on your device, and <b>are never included when you share your blueprint</b> with a date (see Share Without Spilling below).
       </div>
     </details>
-    <button class="btn" id="genBtn">Reveal My Spark <span class="beat">♥</span></button>
+    <button class="btn" id="genBtn">Reveal My Blueprint <span class="beat">♥</span></button>
   </div>
 
   <!-- RESULTS -->
@@ -882,7 +1002,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="alignSection" style="display:none">
       <div class="section-head">
         <span class="dot">⚖️</span>
-        <div><h2>Your Words vs Your Chart</h2><p>What you say you're here for — and what your love signature actually pulls toward. Neither is wrong.</p></div>
+        <div><h2>Your Words vs Your Chart</h2><p>What you say you're here for, and what your love signature actually pulls toward. Neither is wrong.</p></div>
       </div>
       <div class="divider"></div>
       <div class="align-vs">
@@ -906,7 +1026,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="pullSection" style="display:none">
       <div class="section-head">
         <span class="dot">🧭</span>
-        <div><h2>The Deeper Pull</h2><p>What you want isn't always what stretches you — and your chart keeps those two in different places.</p></div>
+        <div><h2>The Deeper Pull</h2><p>What you want isn't always what stretches you, and your chart keeps those two in different places.</p></div>
       </div>
       <div class="divider"></div>
       <div class="pull-arrow">
@@ -946,7 +1066,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
           <ul id="flagY"><li>Computed from your chart when you generate</li></ul>
         </div>
         <div class="flag r">
-          <h4>🔴 Leave if you see <span style="font-size:.72em;font-weight:500;color:var(--muted)">(universal — about them, not you)</span></h4>
+          <h4>🔴 Leave if you see <span style="font-size:.72em;font-weight:500;color:var(--muted)">(universal: about them, not you)</span></h4>
           <ul id="flagR"></ul>
         </div>
       </div>
@@ -956,7 +1076,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="movesSection">
       <div class="section-head">
         <span class="dot">✨</span>
-        <div><h2>Your 3 Best Moves This Week</h2><p>Pick the option that feels most like you — it highlights.</p></div>
+        <div><h2>Your 3 Best Moves This Week</h2><p>Pick the option that feels most like you. It highlights.</p></div>
       </div>
       <div class="divider"></div>
 
@@ -993,7 +1113,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
         <div class="mtitle"><span class="n">3.</span>Your texting rhythm</div>
         <div class="mdesc" id="mdesc3">Text in your own dialect.</div>
         <div class="opts" data-group="m3">
-          <div class="opt" tabindex="0"><span class="key">A</span><span class="txt">Reply when you feel it — never play timing games</span></div>
+          <div class="opt" tabindex="0"><span class="key">A</span><span class="txt">Reply when you feel it: never play timing games</span></div>
           <div class="opt" tabindex="0"><span class="key">B</span><span class="txt">Send voice notes; your tone does the flirting</span></div>
           <div class="opt" tabindex="0"><span class="key">C</span><span class="txt">Ask one real question that skips small talk</span></div>
           <div class="opt" tabindex="0"><span class="key">D</span><span class="txt">Make plans in text, don't let it idle for days</span></div>
@@ -1023,7 +1143,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="bioWriterSection">
       <div class="section-head">
         <span class="dot">✍️</span>
-        <div><h2>Your Profile Bio Writer</h2><p>Real, copy-paste bios built from your exact chart — not templates everyone gets.</p></div>
+        <div><h2>Your Profile Bio Writer</h2><p>Real, copy-paste bios built from your exact chart, not templates everyone gets.</p></div>
       </div>
       <div class="divider"></div>
       <div class="bio-controls">
@@ -1053,7 +1173,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="shareSection">
       <div class="section-head">
         <span class="dot">🔐</span>
-        <div><h2>Share Without Spilling</h2><p>Show a date part — or all — of your spark. They never see your birth data.</p></div>
+        <div><h2>Share Without Spilling</h2><p>Show a date part, or all, of your blueprint. They never see your birth data.</p></div>
       </div>
       <div class="divider"></div>
       <div class="share-grid">
@@ -1073,29 +1193,29 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
             <b>Inside your share link:</b>
             <ul>
               <li>Finished placements (Venus in …, Moon in …)</li>
-              <li>Keywords &amp; flags — whatever level you picked</li>
-              <li>Your stated intention — only if you chose one</li>
+              <li>Keywords &amp; flags: whatever level you picked</li>
+              <li>Your stated intention: only if you chose one</li>
               <li>Your first name, or "Anonymous"</li>
             </ul>
           </div>
           <div class="promise no">
-            <b>Never inside — by design:</b>
+            <b>Never inside: by design:</b>
             <ul>
               <li>Birth date</li>
               <li>Birth time</li>
               <li>Birth place</li>
             </ul>
           </div>
-          <div class="code-chip" id="shareCode">Generate your spark first…</div>
+          <div class="code-chip" id="shareCode">Generate your blueprint first…</div>
           <div class="share-btns">
             <button class="btn2 primary" id="copyLinkBtn" type="button">🔗 Copy share link</button>
             <button class="btn2 ghost" id="copyCodeBtn" type="button">Copy code</button>
           </div>
         </div>
         <div class="panel">
-          <h3>2 · Compare sparks</h3>
-          <div class="phint">Ask your match for their Soul Spark code, paste it here. Both of you stay private — only finished readings are compared.</div>
-          <input class="paste" id="partnerCode" type="text" placeholder="Paste their SS1-… code, or try an example" autocomplete="off" spellcheck="false">
+          <h3>2 · Compare blueprints</h3>
+          <div class="phint">Ask your match for their Love Blueprint code, paste it here. Both of you stay private: only finished readings are compared.</div>
+          <input class="paste" id="partnerCode" type="text" placeholder="Paste their shared code, or try an example" autocomplete="off" spellcheck="false">
           <div class="share-btns">
             <button class="btn2 primary" id="compareBtn" type="button">Compare ♥</button>
             <button class="btn2 ghost" id="demoBtn" type="button">Try Luna's example code</button>
@@ -1112,7 +1232,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
           <h3>3 · Full degree compatibility</h3>
           <span class="syn-badge">Same device · exact</span>
         </div>
-        <p class="syn-phint">Share codes carry placements, never degrees — so the deepest reading happens right here, on one phone, together. Enter their birth details and this computes <b>real degree synastry</b>: exact aspects with orbs you can audit, a composite chart, and honest CONTACT / EASE axes. Nothing leaves the device.</p>
+        <p class="syn-phint">Share codes carry placements, never degrees, so the deepest reading happens right here, on one phone, together. Enter their birth details and this computes <b>real degree synastry</b>: exact aspects with orbs you can audit, a composite chart and honest CONTACT / EASE axes. Nothing leaves the device.</p>
         <div class="syn-form">
           <div class="field"><label for="synName">Their name</label><input id="synName" type="text" placeholder="e.g. Sam" value="Luna"></div>
           <div class="field"><label for="synDate">Their birth date</label><input id="synDate" type="date" value="1996-03-12"></div>
@@ -1122,7 +1242,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
         <div class="share-btns" style="margin-top:14px">
           <button class="btn2 primary" id="synRunBtn" type="button">Run full synastry ♥</button>
         </div>
-        <div style="font-size:.75rem;color:var(--muted);margin-top:10px;line-height:1.6" id="synPrivacy">Requires your chart to be generated first. Their details are used only to compute this one comparison in your browser — never stored, never in a link, never uploaded. Clear it any time by reloading.</div>
+        <div style="font-size:.75rem;color:var(--muted);margin-top:10px;line-height:1.6" id="synPrivacy">Requires your chart to be generated first. Their details are used only to compute this one comparison in your browser: never stored, never in a link, never uploaded. Clear it any time by reloading.</div>
         <div id="synOut"></div>
       </div>
     </div>
@@ -1142,10 +1262,10 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
         <div class="bline"><strong>My love language:</strong> <span id="bioLoveLang">generated from your chart</span>.</div>
         <div class="bline" id="bioIntentLine" style="display:none"><strong>Here for:</strong> <span id="bioIntent"></span></div>
         <div class="bqr">
-          <img src="assets/qr.png" alt="QR code linking to Soul Spark" width="84" height="84" decoding="async">
+          <img src="assets/qr.png" alt="QR code linking to Love Blueprint" width="84" height="84" decoding="async">
           <div class="bqr-txt"><b>Scan to decode yours</b><span>Free &middot; private &middot; nothing uploaded</span></div>
         </div>
-        <div class="bfoot"><span>Soul Spark</span><span class="beat">♥</span><span>quantummerlin.com/loveblueprint</span></div>
+        <div class="bfoot"><span>Love Blueprint</span><span class="beat">♥</span><span>quantummerlin.com/loveblueprint</span></div>
       </div>
     </div>
 
@@ -1157,7 +1277,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       </div>
       <div class="divider"></div>
       <div class="social-grid" id="socialGrid"></div>
-      <div class="soc-hint">💛 Screenshot any card — they're sized for stories (9:16) and legible at feed-thumbnail size.</div>
+      <div class="soc-hint">💛 Screenshot any card. They're sized for stories (9:16) and legible at feed-thumbnail size.</div>
     </div>
 
   </section>
@@ -1168,7 +1288,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       <div class="spark-badge">
         <span class="glyph beat">♥</span>
         <div>
-          <div class="big" id="pvName">Someone shared their spark</div>
+          <div class="big" id="pvName">Someone shared their blueprint</div>
           <div class="cap" id="pvDyn"></div>
           <div class="cap" id="pvSub"></div>
           <div class="cap" id="pvIntent" style="margin-top:8px;display:none"><span class="pill intent"></span></div>
@@ -1178,7 +1298,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section">
       <div class="section-head">
         <span class="dot">🔓</span>
-        <div><h2>What they chose to show you</h2><p>No birth data was shared — just their finished readings.</p></div>
+        <div><h2>What they chose to show you</h2><p>No birth data was shared: just their finished readings.</p></div>
       </div>
       <div class="divider"></div>
       <div class="flags" id="pvCards"></div>
@@ -1186,9 +1306,9 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       <div id="pvCompare"></div>
     </div>
     <div class="section" style="text-align:center">
-      <button class="btn" id="pvCta" type="button" style="max-width:460px">♥ Add my spark &amp; compare</button>
+      <button class="btn" id="pvCta" type="button" style="max-width:460px">♥ Add my blueprint &amp; compare</button>
       <button class="btn2 ghost" id="pvSave" type="button" style="display:none;max-width:460px;margin:10px auto 0">♥ Save to my potential matches</button>
-      <p class="sub" style="margin-top:10px;font-size:.8rem;color:var(--muted)">Takes ten seconds — and your birth details never enter the link either.</p>
+      <p class="sub" style="margin-top:10px;font-size:.8rem;color:var(--muted)">Takes ten seconds, and your birth details never enter the link either.</p>
     </div>
   </section>
 
@@ -1196,42 +1316,42 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
   <section id="libraryView">
     <div class="lib-head">
       <h2>Your Library</h2>
-      <p>Everything lives on this device. Reopen any spark in one tap, keep potential matches organised, and compare any of them against your current spark.</p>
+      <p>Everything lives on this device. Reopen any blueprint in one tap, keep potential matches organised and compare any of them against your current spark.</p>
     </div>
-    <div class="lib-h"><h3>Your sparks</h3><span class="cnt" id="libSparksCnt">0</span></div>
+    <div class="lib-h"><h3>Your blueprints</h3><span class="cnt" id="libSparksCnt">0</span></div>
     <div id="libSparks"></div>
     <div class="lib-h"><h3>Potential matches</h3><span class="cnt" id="libMatchesCnt">0</span></div>
     <div id="libMatches"></div>
-    <p class="lib-note">🔒 <b>On-device only, with full disclosure.</b> Reopening a spark in one tap requires your birth details, so your <i>own</i> records store them — in this browser only, never uploaded, and never inside share links or match codes. A potential match stores only what they chose to share with you, plus when and how you saved them. Clear your browser data and everything here is gone — nothing lives on a server.</p>
+    <p class="lib-note">🔒 <b>On-device only, with full disclosure.</b> Reopening a blueprint in one tap requires your birth details, so your <i>own</i> records store them: in this browser only, never uploaded and never inside share links or match codes. A potential match stores only what they chose to share with you, plus when and how you saved them. Clear your browser data and everything here is gone: nothing lives on a server.</p>
   </section>
 
   <!-- STATIC CONTENT (crawlable: what this tool is, how it works, what it does NOT do) -->
   <div class="seo-block" id="aboutBlock">
-    <h2>What is Soul Spark?</h2>
-    <p><b>Soul Spark is a free dating-profile reading built from your exact birth chart.</b> Instead of a generic horoscope, it computes your real planetary positions — Venus, Moon, Mercury, Mars, your Ascendant and 7th House — and translates them into the things you actually need on a dating app: how you love, how you text, what kind of first date suits you, which red flags to watch for, and a profile bio you can copy straight into Hinge, Bumble or Tinder.</p>
+    <h2>What is Love Blueprint?</h2>
+    <p><b>Love Blueprint is a free dating-profile reading built from your exact birth chart.</b> Instead of a generic horoscope, it computes your real planetary positions, Venus, Moon, Mercury, Mars, your Ascendant and 7th House and translates them into the things you actually need on a dating app: how you love, how you text, what kind of first date suits you, which red flags to watch for and a profile bio you can copy straight into Hinge, Bumble or Tinder.</p>
     <h3>How the calculations work</h3>
-    <p>Every reading on this page is computed <b>in your browser</b>, the moment you press “Reveal My Spark”, using a real astronomical ephemeris (the open-source astronomy-engine library) and exact sidereal-time formulas for the Ascendant and houses. Your birth place is resolved against a 14,133-city dataset with proper IANA time zones, so daylight-saving birthdays are handled correctly.</p>
+    <p>Every reading on this page is computed <b>in your browser</b>, the moment you press “Reveal My Blueprint”, using a real astronomical ephemeris (the open-source astronomy-engine library) and exact sidereal-time formulas for the Ascendant and houses. Your birth place is resolved against a 14,133-city dataset with proper IANA time zones, so daylight-saving birthdays are handled correctly.</p>
     <p>We also hold an accuracy line most sites don’t: <b>anything that can’t be computed exactly from what you gave us is withheld, not estimated.</b> No birth time? Your Rising sign and 7th House stay locked with a plain explanation, because guessing them would be inventing your compatibility profile.</p>
     <h3>Compatibility, without surrendering your privacy</h3>
-    <p>You can share a “spark” link or code that contains <b>only your finished readings</b> — never your birth date, time or place. The recipient sees what you chose to show, saves you to their potential matches, and can compare sparks. For the deepest reading (exact degree synastry with real aspect orbs, plus a composite chart), both charts are entered on one device, computed, and discarded — degrees are never stored or transmitted, because a full set of degrees could be used to fingerprint a birth chart.</p>
-    <h3>What Soul Spark is not</h3>
+    <p>You can share a “blueprint” link or code that contains <b>only your finished readings</b> : never your birth date, time or place. The recipient sees what you chose to show, saves you to their potential matches and can compare sparks. For the deepest reading (exact degree synastry with real aspect orbs, plus a composite chart), both charts are entered on one device, computed and discarded: degrees are never stored or transmitted, because a full set of degrees could be used to fingerprint a birth chart.</p>
+    <h3>What Love Blueprint is not</h3>
     <ul>
       <li><b>Not a prediction engine.</b> Nothing here tells you whom you will marry or when. Astrology is a reflective language; we treat it that way.</li>
       <li><b>Not a verdict on any person.</b> Low “ease” scores describe friction that many lasting couples work through happily. Two humans are more than their degrees.</li>
       <li><b>Not a data collector.</b> There is no account, no upload, no server-side storage of anything you enter. Your library (saved readings, match notes) lives in this browser’s local storage and disappears if you clear it.</li>
-      <li><b>Not personalised advice.</b> For relationship decisions, talk to the humans in your life — or a qualified counsellor.</li>
+      <li><b>Not personalised advice.</b> For relationship decisions, talk to the humans in your life or a qualified counsellor.</li>
     </ul>
     <h3>The features</h3>
     <ul>
-      <li><b>Love Signature</b> — seven flip cards: Venus (how you love), Moon (emotional needs), Mercury (how you text), Mars (chemistry), Rising (first-date vibe), 7th House (who you’re wired for), Sun (your dating superpower).</li>
-      <li><b>Your Words vs Your Chart</b> — you choose what you’re here for; we show (without judging) whether that matches your chart’s pull.</li>
-      <li><b>The Deeper Pull</b> — your North/South Node axis and Saturn contacts: what’s comfortable versus what stretches you.</li>
-      <li><b>Bio Writer</b> — three copy-paste bios composed from your real placements, in your tone, editable before you post.</li>
-      <li><b>Degree synastry</b> — exact aspects between two charts with measurable orbs, honest CONTACT/EASE axes, and a composite chart.</li>
+      <li><b>Love Signature</b> : seven flip cards: Venus (how you love), Moon (emotional needs), Mercury (how you text), Mars (chemistry), Rising (first-date vibe), 7th House (who you’re wired for), Sun (your dating superpower).</li>
+      <li><b>Your Words vs Your Chart</b>. You choose what you’re here for; we show (without judging) whether that matches your chart’s pull.</li>
+      <li><b>The Deeper Pull</b>. Your North/South Node axis and Saturn contacts: what’s comfortable versus what stretches you.</li>
+      <li><b>Bio Writer</b> : three copy-paste bios composed from your real placements, in your tone, editable before you post.</li>
+      <li><b>Degree synastry</b> : exact aspects between two charts with measurable orbs, honest CONTACT/EASE axes and a composite chart.</li>
     </ul>
     <h3>Want to understand the ideas first?</h3>
-    <p>Our <a href="articles/" style="color:var(--rose-deep);font-weight:600">dating astrology guides</a> explain the reasoning in plain English — <a href="articles/venus-sign-dating-style/" style="color:var(--rose-deep)">how each Venus sign loves</a>, <a href="articles/astrology-compatibility-guide/" style="color:var(--rose-deep)">why compatibility percentages mislead and what synastry actually measures</a>, and <a href="articles/dating-app-bio-ideas/" style="color:var(--rose-deep)">bio ideas that get replies instead of just swipes</a>.</p>
-    <p style="font-size:.8rem;margin-top:14px">Soul Spark is part of the <a href="/soulblueprint/" style="color:var(--rose-deep)">Soul Blueprint</a> family by Quantum Merlin.</p>
+    <p>Our <a href="articles/" style="color:var(--rose-deep);font-weight:600">dating astrology guides</a> explain the reasoning in plain English  <a href="articles/venus-sign-dating-style/" style="color:var(--rose-deep)">how each Venus sign loves</a>, <a href="articles/astrology-compatibility-guide/" style="color:var(--rose-deep)">why compatibility percentages mislead and what synastry actually measures</a>, and <a href="articles/dating-app-bio-ideas/" style="color:var(--rose-deep)">bio ideas that get replies instead of just swipes</a>.</p>
+    <p style="font-size:.8rem;margin-top:14px">Love Blueprint is part of the <a href="/soulblueprint/" style="color:var(--rose-deep)">Soul Blueprint</a> family by Quantum Merlin.</p>
   </div>
 
   <p class="foot">
@@ -1242,7 +1362,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       <a href="/disclaimer.html">Disclaimer</a><span class="sep">•</span>
       <a href="/soulblueprint/">Soul Blueprint</a>
     </nav>
-    Soul Spark — every placement is computed live on your device by a vendored copy of the astronomy-engine ephemeris and exact sidereal-time astronomy. For self-reflection and fun, not fate.<br>
+    Love Blueprint: every placement is computed live on your device by a vendored copy of the astronomy-engine ephemeris and exact sidereal-time astronomy. For self-reflection and fun, not fate.<br>
     Nothing is uploaded. Anything that can’t be computed exactly is withheld, never estimated.<br>
     <span style="opacity:.6">© 2026 Quantum Merlin. Astrology content is for entertainment and self-reflection.</span>
   </p>
@@ -1266,14 +1386,14 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 <!-- SPOTIFY-STYLE BOTTOM TAB NAV -->
 <nav id="bottomNav" aria-label="Primary">
   <div class="bnav-inner">
-    <button class="bnav-btn active" type="button" data-nav="spark"><span class="ico">♥</span><span class="lbl">Your Spark</span></button>
+    <button class="bnav-btn active" type="button" data-nav="spark"><span class="ico">♥</span><span class="lbl">Blueprint</span></button>
     <button class="bnav-btn" type="button" data-nav="library"><span class="ico">📚</span><span class="lbl">Library</span></button>
     <button class="bnav-btn" type="button" data-nav="compare"><span class="ico">⇄</span><span class="lbl">Compare</span></button>
     <button class="bnav-btn" type="button" data-nav="bio"><span class="ico">📸</span><span class="lbl">Bio Card</span></button>
   </div>
 </nav>
 
-<!-- Exact-math stack — same files & order as the verification suite.
+<!-- Exact-math stack: same files & order as the verification suite.
      astronomy-engine is VENDORED (no CDN): the product must never silently
      lose its ephemeris, and spark-engine refuses without it. -->
 <script src="vendor/astronomy.browser.min.js"></script>
@@ -1288,7 +1408,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
    CARDS and NODES are COMPUTED at generate time by spark-runtime.js:
    astronomy-engine ephemeris (vendored) + exact sidereal-time angles +
    the 14,133-city DST-correct geocoder + the 84-entry content library.
-   No sample placements ship in this file any more — under the absolute
+   No sample placements ship in this file any more: under the absolute
    accuracy standard, nothing renders unless it was exactly computed, and
    anything not computable is WITHHELD with an explanation. */
 var CARDS = [];
@@ -1296,7 +1416,7 @@ var CARDS = [];
 /* ---- Node axis + Saturn: COMPUTED from the live chart ----
    SOUTH NODE = comfort zone: familiar, easy, where you coast.
    NORTH NODE = growth edge: what actually stretches you. Exactly 180° away.
-   Everything below — signs, degrees, conjunction orbs — is derived at
+   Everything below, signs, degrees, conjunction orbs, is derived at
    generate time by buildNodesFromChart(). Orbs are real degree measurements
    from the exact longitudes, never sign-distance estimates. */
 var NODES = null;
@@ -1321,22 +1441,22 @@ function buildNodesFromChart(chart){
 /* Node-sign meaning, written for dating: comfort (south) vs growth (north). */
 var NODE_MEANING = {
   'Aries':      { want:'handling everything alone, never needing anyone',        grow:'let someone support you; ask instead of armoring up' },
-  'Taurus':     { want:'comfort and familiarity — not rocking the boat',         grow:'surrender to depth: change, intensity, emotional truth' },
-  'Gemini':     { want:'staying curious, informed, everywhere at once',          grow:'commit to depth — one person, one truth, all the way down' },
+  'Taurus':     { want:'comfort and familiarity, not rocking the boat',         grow:'surrender to depth: change, intensity, emotional truth' },
+  'Gemini':     { want:'staying curious, informed, everywhere at once',          grow:'commit to depth: one person, one truth, all the way down' },
   'Cancer':     { want:'safety and nesting, holding people close',               grow:'step into a bigger arena; be seen beyond the circle' },
   'Leo':        { want:'being admired, performing, holding the centre',          grow:'serve quietly; let someone else have the stage' },
   'Virgo':      { want:'control through fixing, sorting, self-improvement',      grow:'let love be messy; accept people without editing them' },
   'Libra':      { want:'harmony and pleasing, avoiding every conflict',          grow:'take a stand; choose yourself when it costs the peace' },
-  'Scorpio':    { want:'intensity and control, seeing through everyone',        grow:'lighten up — trust, simplicity, letting love be easy' },
+  'Scorpio':    { want:'intensity and control, seeing through everyone',        grow:'lighten up: trust, simplicity, letting love be easy' },
   'Sagittarius':{ want:'freedom and the next horizon, never tied down',          grow:'commit to one place and person long enough to build' },
   'Capricorn':  { want:'achievement and status, total self-sufficiency',        grow:'come home to feeling; nurture and be nurtured' },
-  'Aquarius':   { want:'detachment and the group, staying a step removed',       grow:'intimacy — let one person actually know you' },
+  'Aquarius':   { want:'detachment and the group, staying a step removed',       grow:'intimacy: let one person actually know you' },
   'Pisces':     { want:'dreaming, escaping, dissolving into everyone else',      grow:'build structure, hold boundaries, stay in your own body' }
 };
 
 /* Saturn conjunct a sensitive point: the growth lesson, by sign. */
 var SATURN_MEANING = {
-  'Pisces':     'boundaries and discernment — caring deeply without drowning in someone else\u2019s feelings',
+  'Pisces':     'boundaries and discernment: caring deeply without drowning in someone else\u2019s feelings',
   'Aries':      'patience with your own pace; leadership earned rather than grabbed',
   'Taurus':     'security built on your terms, not on someone else\u2019s approval',
   'Gemini':     'listening deeper than you speak; saying less, but truer',
@@ -1370,12 +1490,12 @@ function buildCards(){
           '<h3>'+c.front+(est ? '' : ' in '+c.sign)+'</h3>'+
           '<div class="sign">'+c.title+'</div>'+
           '<button class="flipbtn" type="button" data-flipbtn>Flip ♥</button>'+
-          '<div class="hint">'+(est ? 'locked — see why' : 'tap card to read')+'</div>'+
+          '<div class="hint">'+(est ? 'locked : see why' : 'tap card to read')+'</div>'+
         '</div>'+
         '<div class="face back">'+
           '<button class="backbtn" type="button" data-flipbtn>← back</button>'+
           '<h4><span>'+c.icon+'</span> '+c.title+(est ? ' <span class="est" style="position:static;margin-left:6px">🔒 withheld</span>' : '')+'</h4>'+
-          '<div class="body">'+c.body+'</div>'+
+          '<div class="body">'+toStanzas(c.body)+'</div>'+
           '<details class="why"><summary><span class="chev">▶</span> Why the stars say this</summary>'+
           '<div class="why-body">'+c.why+'</div></details>'+
         '</div>'+
@@ -1384,18 +1504,152 @@ function buildCards(){
 
     // Flip on front click / dedicated buttons / keyboard
     var front = el.querySelector('.front');
-    front.addEventListener('click', function(e){ if(e.target.closest('details'))return; el.classList.add('flipped'); });
+    front.addEventListener('click', function(e){ if(e.target.closest('details'))return; el.classList.add('flipped'); revealStanzas(el); });
     el.querySelectorAll('[data-flipbtn]').forEach(function(b){
-      b.addEventListener('click', function(e){ e.stopPropagation(); el.classList.toggle('flipped'); });
+      b.addEventListener('click', function(e){ e.stopPropagation(); el.classList.toggle('flipped'); revealStanzas(el); });
     });
     el.addEventListener('keydown', function(e){
-      if((e.key==='Enter'||e.key===' ') && e.target===front){ e.preventDefault(); el.classList.toggle('flipped'); }
+      if((e.key==='Enter'||e.key===' ') && e.target===front){ e.preventDefault(); el.classList.toggle('flipped'); revealStanzas(el); }
       if(e.key==='Escape'){ el.classList.remove('flipped'); }
     });
     front.setAttribute('tabindex','0');
     front.setAttribute('role','button');
-    front.setAttribute('aria-label', (est ? c.front+' withheld — '+c.title : c.front+' in '+c.sign+' — '+c.title)+'. Activate to flip and read.');
+    front.setAttribute('aria-label', (est ? c.front+' withheld, '+c.title : c.front+' in '+c.sign+', '+c.title)+'. Activate to flip and read.');
   });
+}
+
+/* ============ EXPERIENCE LAYER (v2) ============
+   Stanzas, compute reveal, onboarding, station chaining, completion.
+   Motion only: transform/opacity. IO only. Reduced-motion respected. */
+
+// Split a reading body into 2-4 short stanzas for the verse cascade.
+// Sentences are grouped in pairs so each stanza breathes on its own.
+function toStanzas(text){
+  var raw = String(text || '');
+  // Lossless sentence split (no lookbehind: older Safari throws on parse).
+  var parts = (raw.match(/[^.!?]+[.!?]*/g) || []).map(function(s){ return s.trim(); })
+    .filter(function(s){ return s.length; });
+  if(parts.length < 3) return '<div class="stanza shown">' + esc(raw) + '</div>';
+  var out = [], buf = [];
+  parts.forEach(function(p){
+    buf.push(p);
+    if(buf.length === 2){ out.push(buf.join(' ')); buf = []; }
+  });
+  if(buf.length) out.push(buf.join(' '));
+  return out.slice(0,4).map(function(s){ return '<div class="stanza">' + esc(s) + '</div>'; }).join('');
+}
+
+// Cascade the stanzas of a card once its back face is visible.
+function revealStanzas(card){
+  var st = card.querySelectorAll('.stanza:not(.shown)');
+  for(var i=0;i<st.length;i++){
+    (function(el, idx){ setTimeout(function(){ el.classList.add('shown'); }, idx*60); })(st[i], i);
+  }
+}
+
+// ---- Compute veil: describes the real work while it happens ----
+var VEIL_GLYPHS = ['\u2640','\u263E','\u2642','\u263F','\u2600','\u2643','\u2644','\u2645'];
+function showComputeVeil(place, time){
+  var veil = document.getElementById('computeVeil');
+  var ring = document.getElementById('cvRing');
+  ring.innerHTML = '';
+  VEIL_GLYPHS.forEach(function(g, i){
+    var el = document.createElement('i');
+    el.textContent = g;
+    var a = (i / VEIL_GLYPHS.length) * Math.PI * 2 - Math.PI/2;
+    el.style.transform = 'translate(' + Math.round(Math.cos(a)*52) + 'px,' + Math.round(Math.sin(a)*52) + 'px) scale(.4)';
+    ring.appendChild(el);
+    setTimeout(function(){
+      el.classList.add('on');
+      el.style.transform = 'translate(' + Math.round(Math.cos(a)*52) + 'px,' + Math.round(Math.sin(a)*52) + 'px) scale(1)';
+    }, 120 + i*70);
+  });
+  document.getElementById('cvPlace').textContent = (place || 'your birth place') + (time ? ' · ' + time : '');
+  document.getElementById('cvLine1').classList.add('on');
+  setTimeout(function(){ document.getElementById('cvLine2').classList.add('on'); }, 260);
+  setTimeout(function(){ document.getElementById('cvSub').classList.add('on'); }, 520);
+  veil.classList.add('on');
+}
+function hideComputeVeil(){
+  var veil = document.getElementById('computeVeil');
+  veil.classList.remove('on');
+  setTimeout(function(){
+    document.getElementById('cvLine1').classList.remove('on');
+    document.getElementById('cvLine2').classList.remove('on');
+    document.getElementById('cvSub').classList.remove('on');
+  }, 400);
+}
+
+// ---- Onboarding: once per browser, after first generate ----
+function maybeOnboard(){
+  var seen = false;
+  try{ seen = localStorage.getItem('lb-onboarded') === '1'; }catch(e){}
+  if(seen) return;
+  var sheet = document.getElementById('onboard');
+  sheet.classList.add('on');
+  var done = function(tour){
+    sheet.classList.remove('on');
+    try{ localStorage.setItem('lb-onboarded','1'); }catch(e){}
+    if(tour){ jumpTo('flipSection'); pulseFirstCard(); }
+  };
+  document.getElementById('obTour').addEventListener('click', function(){ done(true); });
+  document.getElementById('obSkip').addEventListener('click', function(){ done(false); });
+}
+function pulseFirstCard(){
+  var first = document.querySelector('#cardGrid .flip');
+  if(!first) return;
+  first.classList.add('pulse-hint');
+  setTimeout(function(){ first.classList.remove('pulse-hint'); }, 3400);
+}
+
+// ---- Station chaining: a hand from section to section ----
+var STATIONS = [
+  ['flipSection','Love Signature'], ['alignSection','Your Words vs Your Chart'],
+  ['pullSection','The Deeper Pull'], ['flagsSection','Your Flags'],
+  ['movesSection','Your Moves'], ['trapsSection','Your Traps'],
+  ['bioWriterSection','The Bio Writer']
+];
+function wireNextStops(){
+  document.querySelectorAll('.next-stop').forEach(function(n){ n.remove(); });
+  STATIONS.forEach(function(pair, i){
+    var sec = document.getElementById(pair[0]);
+    if(!sec) return;
+    var next = STATIONS[i+1];
+    var wrap = document.createElement('div');
+    wrap.className = 'next-stop';
+    if(next){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = 'Next \u2192 ' + next[1];
+      b.addEventListener('click', function(){ jumpTo(next[0]); });
+      wrap.appendChild(b);
+    } else {
+      var b2 = document.createElement('button');
+      b2.type = 'button';
+      b2.textContent = 'Now use it \u2192 Bio Writer done? Share it \u2665';
+      b2.addEventListener('click', function(){ jumpTo('shareSection'); });
+      wrap.appendChild(b2);
+    }
+    sec.appendChild(wrap);
+  });
+  // Completion card after the last station
+  var traps = document.getElementById('trapsSection');
+  if(traps && !document.getElementById('doneCard')){
+    var dc = document.createElement('div');
+    dc.className = 'done-card';
+    dc.id = 'doneCard';
+    dc.innerHTML = '<h3>You have read your blueprint \u2665</h3>' +
+      '<p>Now make it work for you. Write the bio, screenshot a card, or share a private link. Your birth data never leaves this device.</p>' +
+      '<div class="done-btns">' +
+      '<button class="btn" type="button" data-done="bioWriterSection">\u270D\uFE0F Write my bio</button>' +
+      '<button class="btn" type="button" data-done="socialSection">\uD83D\uDCF8 Grab a card</button>' +
+      '<button class="btn" type="button" data-done="shareSection">\uD83D\uDD10 Share privately</button>' +
+      '</div>';
+    traps.appendChild(dc);
+    dc.querySelectorAll('[data-done]').forEach(function(b){
+      b.addEventListener('click', function(){ jumpTo(b.getAttribute('data-done')); });
+    });
+  }
 }
 
 /* ============ OPTION PICKERS (single-select per group) ============ */
@@ -1442,13 +1696,13 @@ function spawnHearts(){
 
 /* ============ CHART ACCURACY ============
    The accuracy badge is driven by the runtime's honest notices (see the
-   generate handler). Nothing is labelled “estimated” any more — because
+   generate handler). Nothing is labelled “estimated” any more: because
    nothing is estimated any more. */
 
 /* ============ PRIVACY SAFE SHARING ============
    A share code contains ONLY finished reading OUTPUTS
    (sign names, keywords, flags). Birth date / time / place
-   are NEVER in it — the recipient cannot re-derive the chart. */
+   are NEVER in it: the recipient cannot re-derive the chart. */
 var SIGN_ELEMENT = {
   Aries:'Fire', Taurus:'Earth', Gemini:'Air', Cancer:'Water',
   Leo:'Fire', Virgo:'Earth', Libra:'Air', Scorpio:'Water',
@@ -1458,9 +1712,9 @@ var shareLevel = 'love';
 var PARTNER = null; // snapshot decoded from a #s= link
 
 var LEVEL_COPY = {
-  card:'Only your bio card: spark name + Venus / Moon / Mars tags. Cheeky and minimal.',
+  card:'Only your bio card: blueprint name + Venus / Moon / Mars tags. Cheeky and minimal.',
   love:'Your 7 Love Signature card fronts (planet + sign + title). This is what a date sees when they open your link.',
-  full:'Everything in Love Signature PLUS your green / yellow / red flags. Your Traps can never be shared — that shadow work is for your eyes only.'
+  full:'Everything in Love Signature PLUS your green / yellow / red flags. Your Traps can never be shared: that shadow work is for your eyes only.'
 };
 
 function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
@@ -1475,7 +1729,7 @@ function unb64url(code){
 
 function collectSnapshot(){
   var snap = {
-    v:'SS1',
+    v:'LB1',
     n:(document.getElementById('nm').value.trim() || 'Anonymous'),
     s:{ dyn:document.getElementById('sparkName').textContent, sub:document.getElementById('sparkSub').textContent }
   };
@@ -1486,7 +1740,7 @@ function collectSnapshot(){
     snap.tags = txtList('.bio .btag');
   } else {
     // Only placements that were exactly computed are ever shared or
-    // compared — withheld ('—') cards leave the snapshot entirely.
+    // compared: withheld ('—') cards leave the snapshot entirely.
     snap.c = CARDS.filter(function(c){ return !c.withheld && c.sign && c.sign !== '—'; }).map(function(c){ return { t:c.front, s:c.sign, x:c.title }; });
     if(shareLevel === 'full'){
       snap.f = { g:txtList('.flag.g li'), y:txtList('.flag.y li'), r:txtList('.flag.r li') };
@@ -1494,10 +1748,11 @@ function collectSnapshot(){
   }
   return snap;
 }
-function makeCode(snap){ return 'SS1-' + b64url(JSON.stringify(snap)); }
+function makeCode(snap){ return 'LB1-' + b64url(JSON.stringify(snap)); }
 function parseCode(str){
   str = (str || '').trim();
-  if(str.indexOf('SS1-') === 0) str = str.slice(4);
+  // LB1 is current; SS1 still parses so links shared before the rebrand work.
+  if(str.indexOf('LB1-') === 0 || str.indexOf('SS1-') === 0) str = str.slice(4);
   return JSON.parse(unb64url(str));
 }
 function refreshShareCode(){
@@ -1523,7 +1778,7 @@ function elementHarmony(s1, s2){
   return .45;
 }
 function ELEMENT_OF(s){ return SIGN_ELEMENT[s] || '—'; }
-/* Prose for an element pair — used for every reason line.
+/* Prose for an element pair: used for every reason line.
    `text` is a single map with keys: same, fireAir, earthWater,
    fireEarth, waterAir, other. */
 function pairReason(e1, e2, text){
@@ -1536,23 +1791,23 @@ function pairReason(e1, e2, text){
 }
 var REASON_TEXT = {
   chem: {
-    same:'You spark in the same currency — instant heat, no translation needed.',
+    same:'You spark in the same currency: instant heat, no translation needed.',
     fireAir:'Fire and air feed each other. Their chemistry lights up your ideas and you keep it burning.',
     earthWater:'Water softens earth and earth holds water. The attraction is slow, warm and very real.',
     fireEarth:'Fire wants to move, earth wants to build. Exciting, but someone has to set the pace.',
     waterAir:'Feeling meets thinking. Fascinating, as long as neither of you mistakes distance for disinterest.',
-    other:'Different appetites. Not a blocker — just worth being explicit about what each of you actually wants.'
+    other:'Different appetites. Not a blocker: just worth being explicit about what each of you actually wants.'
   },
   safety: {
     same:'You both feel safe the same way, so neither of you has to explain the other to themselves.',
     fireAir:'Both of you need room to breathe. Comfortable silence, no clinginess.',
-    earthWater:'A genuinely steadying match — they can be soft, you can be solid, and nobody panics.',
+    earthWater:'A genuinely steadying match. They can be soft, you can be solid and nobody panics.',
     fireEarth:'One of you wants reassurance and the other wants adventure. Both are legitimate; say which you need.',
     waterAir:'One of you processes out loud, the other needs space to feel. Agree the rhythm early.',
     other:'Different definitions of safety. Workable, but only if you talk about it instead of assuming.'
   },
   talk: {
-    same:'You think and speak the same way — conversations flow without effort.',
+    same:'You think and speak the same way: conversations flow without effort.',
     fireAir:'Fast, funny, endless. You will rarely run out of things to say.',
     earthWater:'Quiet, intuitive understanding. Less talking, more being understood.',
     fireEarth:'You jump to the point, they want the details. Slight friction, easily handled.',
@@ -1560,12 +1815,12 @@ var REASON_TEXT = {
     other:'Genuinely different communication styles. Ask more than you assume.'
   },
   lasting: {
-    same:'What you need in a partner and who they are line up — this fits the long haul.',
+    same:'What you need in a partner and who they are line up: this fits the long haul.',
     fireAir:'They give you motion and possibility. Great as long as you both keep choosing each other.',
     earthWater:'They give you exactly the kind of grounding your chart keeps asking for.',
     fireEarth:'They are steadier than you expected to want. Give it time before deciding.',
     waterAir:'They open you up intellectually. The depth comes later, if you let it.',
-    other:'They are not the type your chart predicts you\'d settle into — which is often how the best ones start.'
+    other:'They are not the type your chart predicts you\'d settle into, which is often how the best ones start.'
   }
 };
 function compareSnapshots(a, b){
@@ -1578,7 +1833,7 @@ function compareSnapshots(a, b){
 
   // STRICT MODE: a dimension exists ONLY when both charts have the exact
   // placements it needs. Withheld inputs (no birth time, etc.) remove the
-  // dimension and its weight — we never pad a score with a fabricated value.
+  // dimension and its weight. We never pad a score with a fabricated value.
   var dims = [];
   if(aVen && bMar && bVen && aMar){
     dims.push({ label:'🔥 Chemistry', w:.35, v:(eh(aVen,bMar)+eh(bVen,aMar))/2,
@@ -1610,10 +1865,10 @@ function compareSnapshots(a, b){
   var overall = dims.reduce(function(s,d){ return s + d.v * (d.w/wsum); }, 0);
 
   var note;
-  if(overall >= .85)     note = 'Rare heat — your elements keep landing in each other\'s laps. The real question is whether you can both handle how easy this feels.';
-  else if(overall >= .7) note = 'Strong natural current. Where you do rub, it\'s the interesting kind of friction — expect growth, not grind.';
+  if(overall >= .85)     note = 'Rare heat. Your elements keep landing in each other\'s laps. The real question is whether you can both handle how easy this feels.';
+  else if(overall >= .7) note = 'Strong natural current. Where you do rub, it\'s the interesting kind of friction: expect growth, not grind.';
   else if(overall >= .55)note = 'Workable with intention: the gaps here are elemental, not personal. Curiosity about each other\'s styles beats any score.';
-  else                   note = 'Big elemental gaps — nothing comes automatic. Plenty of great couples are built across gaps like this, when both people stay curious.';
+  else                   note = 'Big elemental gaps: nothing comes automatic. Plenty of great couples are built across gaps like this, when both people stay curious.';
 
   var missing = [];
   dims.forEach(function(){});
@@ -1633,15 +1888,15 @@ function runCompare(theirs, out){
   // Guard on the SNAPSHOT (works in partner view too, where #results is hidden),
   // not on results visibility.
   if(!mine || !mine.c){
-    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">Generate your spark first, then come back and compare.</p>';
+    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">Generate your blueprint first, then come back and compare.</p>';
     return;
   }
   if(!document.getElementById('results').classList.contains('on') && !document.getElementById('partnerView').classList.contains('on')){
-    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">Generate your spark first, then come back and compare.</p>';
+    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">Generate your blueprint first, then come back and compare.</p>';
     return;
   }
   if(!mine.c || !theirs.c){
-    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">One of you shared only a bio card — there are no placements to score. Re-share at the "Love Signature" level for a real comparison.</p>';
+    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">One of you shared only a bio card. There are no placements to score. Re-share at the "Love Signature" level for a real comparison.</p>';
     return;
   }
   var r = compareSnapshots(mine, theirs);
@@ -1655,8 +1910,8 @@ function runCompare(theirs, out){
       '<span class="beat" style="font-size:1.4rem;color:var(--rose)">♥</span>'+
       '<span style="font-size:1rem;color:var(--rose-deep)">'+esc(theirs.n)+'</span></div>'+
     '<div class="spark-total">'+Math.round(r.overall*100)+'%</div>'+
-    '<div style="text-align:center;color:var(--muted);font-size:.76rem;margin:-6px 0 14px">sign-level spark'+(r.partial? ' · based on '+r.covered+'% of the full picture':'')+' · for exact degree synastry use “Full degree compatibility” below</div>';
-  // Plain-language reasons FIRST — "why they might be great for you"
+    '<div style="text-align:center;color:var(--muted);font-size:.76rem;margin:-6px 0 14px">sign-level blueprint'+(r.partial? ' · based on '+r.covered+'% of the full picture':'')+' · for exact degree synastry use “Full degree compatibility” below</div>';
+  // Plain-language reasons FIRST  "why they might be great for you"
   html += '<div style="font-weight:700;color:var(--rose-deep);font-size:.95rem;margin:6px 0 10px">Why the two of you might click</div>';
   r.reasons.forEach(function(rs){
     html += '<div class="reason-row"><div class="reason-head"><span>'+rs.label+'</span><span class="reason-pct">'+Math.round(rs.v*100)+'%</span></div>'+
@@ -1666,18 +1921,18 @@ function runCompare(theirs, out){
   });
   html += '<p style="font-size:.86rem;margin-top:8px">' + r.note + '</p>';
   if(r.partial && r.missing && r.missing.length){
-    html += '<p class="intent-note" style="border-color:rgba(232,185,106,.4)">🔍 <b>Honest scope:</b> this comparison covers '+r.covered+'% of the full picture — '+esc(r.missing.join(', '))+' could not be scored because one of you withheld (or does not have) the exact placements they need. Nothing was padded with a made-up average.</p>';
+    html += '<p class="intent-note" style="border-color:rgba(232,185,106,.4)">🔍 <b>Honest scope:</b> this comparison covers '+r.covered+'% of the full picture  '+esc(r.missing.join(', '))+' could not be scored because one of you withheld (or does not have) the exact placements they need. Nothing was padded with a made-up average.</p>';
   }
   // Intentions are self-reported, not scored. If they differ, say so plainly
-  // and without judgment — that conversation matters more than any percentage.
+  // and without judgment: that conversation matters more than any percentage.
   if(theirs.i && mine.i && theirs.i !== mine.i){
-    html += '<p class="intent-note">⚖️ <b>You\'re here for different things.</b> You said <b>'+esc(mine.i)+'</b>; they said <b>'+esc(theirs.i)+'</b>. Not a dealbreaker — just worth saying out loud early instead of discovering it in month three.</p>';
+    html += '<p class="intent-note">⚖️ <b>You\'re here for different things.</b> You said <b>'+esc(mine.i)+'</b>; they said <b>'+esc(theirs.i)+'</b>. Not a dealbreaker: just worth saying out loud early instead of discovering it in month three.</p>';
   } else if(theirs.i && mine.i){
     html += '<p class="intent-note" style="background:rgba(123,196,138,.1);border-color:rgba(123,196,138,.3)">✓ <b>Same intention:</b> you both said <b>'+esc(mine.i)+'</b>. That alignment is worth more than the percentage above.</p>';
   } else {
     html += '<p class="intent-note">💬 One of you hasn\'t stated an intention, so nothing is assumed here. Asking directly beats any score on this page.</p>';
   }
-  html += '<p class="caveat">🔒 No birth date, time or place crossed the wire — only finished readings were compared. And two real humans are never just their elements: treat this as a spark, not a sentence.</p></div>';
+  html += '<p class="caveat">🔒 No birth date, time or place crossed the wire: only finished readings were compared. And two real humans are never just their elements: treat this as a spark, not a sentence.</p></div>';
   out.innerHTML = html;
   setTimeout(function(){
     out.querySelectorAll('.bar-fill').forEach(function(f){ f.style.width = f.dataset.w + '%'; });
@@ -1685,7 +1940,7 @@ function runCompare(theirs, out){
 }
 
 /* ============ LOCAL PERSISTENCE ============
-   Stores the FINISHED snapshot only — same privacy contract as the share
+   Stores the FINISHED snapshot only: same privacy contract as the share
    code. NO birth date, time or place ever touches localStorage. A returning
    user opening a shared link goes STRAIGHT to the comparison. */
 var SPARK_LS_KEY = 'ss-local-snapshot';
@@ -1697,20 +1952,21 @@ function loadLocalSnapshot(){
     var raw = localStorage.getItem(SPARK_LS_KEY);
     if(!raw) return null;
     var s = JSON.parse(raw);
-    return (s && s.v === 'SS1') ? s : null;
+    // Accept both versions so a snapshot saved before the rebrand still loads.
+    return (s && (s.v === 'LB1' || s.v === 'SS1')) ? s : null;
   }catch(e){ return null; }
 }
 /* Refill the form fields from the saved snapshot's *outputs* is impossible
-   (by design — inputs are never stored), so returning users regenerate;
+   (by design: inputs are never stored), so returning users regenerate;
    but their comparison fires automatically the moment they do. */
 
 /* ============ SPARK LIBRARY ============
    Two collections, both on THIS device only:
-   • ss-library-sparks  — your own saved readings. These DO store birth
+   • ss-library-sparks: your own saved readings. These DO store birth
      details (date/time/place) so "reopen" re-computes an exact chart in
      one tap. Explicitly disclosed in the library UI; never shared, never
      uploaded, never inside any share code.
-   • ss-library-matches — potential matches you've saved. These store ONLY
+   • ss-library-matches: potential matches you've saved. These store ONLY
      the snapshot they shared with you (same content as a share code) plus
      when/how you saved them. No birth data exists here to store. */
 var SPARKS_KEY = 'ss-library-sparks';
@@ -1795,7 +2051,7 @@ function renderResume(){
   if(!sparks.length){ bar.classList.remove('on'); return; }
   var s = sparks[0];
   document.getElementById('resumeName').textContent = s.name;
-  document.getElementById('resumeSub').textContent = (s.dyn || 'Spark') + ' · ' + _fmtSaved(s.savedAt) + ' · ' + (sparks.length > 1 ? (sparks.length + ' in library') : 'tap to reopen');
+  document.getElementById('resumeSub').textContent = (s.dyn || 'Blueprint') + ' · ' + _fmtSaved(s.savedAt) + ' · ' + (sparks.length > 1 ? (sparks.length + ' in library') : 'tap to reopen');
   bar.classList.add('on');
 }
 function wireResume(){
@@ -1818,7 +2074,7 @@ function openSparkRecord(rec){
   document.getElementById('partnerView').classList.remove('on');
   setView('landing');
   document.getElementById('genBtn').click(); // computes exact chart, saves, shows chrome
-  toast('Reopened ' + (rec.name || 'spark') + ' ♥');
+  toast('Reopened ' + (rec.name || 'blueprint') + ' ♥');
 }
 
 /* ---- Library rendering ---- */
@@ -1829,7 +2085,7 @@ function renderLibrary(){
 
   var sp = document.getElementById('libSparks');
   if(!sparks.length){
-    sp.innerHTML = '<div class="lib-empty">No saved sparks yet.<br>Generate one and it appears here — one tap to reopen.</div>';
+    sp.innerHTML = '<div class="lib-empty">No saved blueprints yet.<br>Generate one and it appears here: one tap to reopen.</div>';
   } else {
     sp.innerHTML = '';
     sparks.forEach(function(r){
@@ -1837,7 +2093,7 @@ function renderLibrary(){
       row.innerHTML =
         '<span class="lib-ico beat">♥</span>' +
         '<div class="lib-main"><div class="lib-t">' + esc(r.name) + '</div>' +
-        '<div class="lib-s">' + esc(r.dyn || 'Spark reading') + ' · ' + _fmtSaved(r.savedAt) +
+        '<div class="lib-s">' + esc(r.dyn || 'Blueprint') + ' · ' + _fmtSaved(r.savedAt) +
         (r.birthTime ? ' · exact chart' : ' · date only') + '</div></div>';
       var acts = document.createElement('div'); acts.className = 'lib-acts';
       var open = document.createElement('button'); open.className='lib-btn solid'; open.type='button'; open.textContent='Open';
@@ -1852,12 +2108,12 @@ function renderLibrary(){
 
   var mt = document.getElementById('libMatches');
   if(!matches.length){
-    mt.innerHTML = '<div class="lib-empty">No potential matches saved yet.<br>Open someone\u2019s spark link or paste their code, then hit \u201cSave to my library\u201d.</div>';
+    mt.innerHTML = '<div class="lib-empty">No potential matches saved yet.<br>Open someone\u2019s blueprint link or paste their code, then hit \u201cSave to my library\u201d.</div>';
   } else {
     mt.innerHTML = '';
     matches.forEach(function(m){
       var row = document.createElement('div'); row.className = 'lib-row';
-      var dyn = (m.snap && m.snap.s && m.snap.s.dyn) || 'Spark';
+      var dyn = (m.snap && m.snap.s && m.snap.s.dyn) || 'Blueprint';
       var intent = m.snap && m.snap.i ? ' \u00B7 ' + esc(m.snap.i) : '';
       var noteLine = m.note ? '<div class="lib-s" style="color:var(--gold)">\u270E ' + esc(m.note) + '</div>' : '';
       row.innerHTML =
@@ -1884,7 +2140,7 @@ function renderLibrary(){
 function compareWithMatch(m){
   var mine = window.__lastSnap || loadLocalSnapshot();
   if(!mine || !mine.c){
-    toast('Generate your spark first, then compare \u2665');
+    toast('Generate your blueprint first, then compare \u2665');
     if(window.__view !== 'result') setView('landing');
     jumpTo(null);
     window.__pendingMatch = m; // fire compare once they generate
@@ -1963,11 +2219,11 @@ function handlePartnerLink(){
   document.getElementById('results').classList.remove('on');
   document.getElementById('partnerView').classList.add('on');
   setView('partner');
-  hideAppChrome(); // their page, not yours — no personal chrome
+  hideAppChrome(); // their page, not yours: no personal chrome
   renderPartnerView(PARTNER);
 
   // FRICTIONLESS PATH: if this device already has a saved spark,
-  // compare immediately — they land straight on "why you two might click".
+  // compare immediately. They land straight on "why you two might click".
   var local = loadLocalSnapshot();
   var pvC = document.getElementById('pvCompare');
   if(local && local.c){
@@ -1979,16 +2235,16 @@ function handlePartnerLink(){
     }, 400);
   } else {
     pvC.className = '';
-    pvC.innerHTML = '<p class="saved-hint">Already made your spark on this device? It would auto-compare here. Otherwise: ' +
+    pvC.innerHTML = '<p class="saved-hint">Already made your blueprint on this device? It would auto-compare here. Otherwise: ' +
       'generate yours above and the comparison appears instantly.</p>';
   }
   window.scrollTo(0, 0);
 }
 function renderPartnerView(p){
-  document.getElementById('pvName').textContent = (p.n || 'Someone') + ' shared their spark with you ♥';
+  document.getElementById('pvName').textContent = (p.n || 'Someone') + ' shared their blueprint with you ♥';
   document.getElementById('pvDyn').textContent = p.s ? p.s.dyn : '';
   document.getElementById('pvSub').textContent = p.s ? p.s.sub : 'Bio-card level share';
-  // Their stated intention — shown only if they chose to state one.
+  // Their stated intention: shown only if they chose to state one.
   var pvIn = document.getElementById('pvIntent');
   if(p.i){
     pvIn.querySelector('.pill').textContent = '\u2665 Here for: ' + p.i;
@@ -2062,20 +2318,20 @@ function applyIntent(){
 
 /* ============ WORDS vs CHART ============
    What someone SAYS they want and what their chart energetically
-   PULLS toward are two different things — and the gap between them
+   PULLS toward are two different things, and the gap between them
    is often the most useful thing this reading can show. This never
    changes a reading and never judges; it just names the pull. */
 var ELEMENT_PULL = {
-  Water: 'deep bonding — you go all-in and want emotional truth, not surface',
-  Earth: 'slow building — you want steadiness, security, someone who shows up over time',
-  Fire:  'spark and the chase — excitement, novelty, passionate independence',
-  Air:   'freedom and connection — variety, conversation, lightness, laughing together'
+  Water: 'deep bonding. You go all-in and want emotional truth, not surface',
+  Earth: 'slow building. You want steadiness, security, someone who shows up over time',
+  Fire:  'spark and the chase: excitement, novelty, passionate independence',
+  Air:   'freedom and connection: variety, conversation, lightness, laughing together'
 };
 // How strongly each intention WANTS each element (0..1 affinity).
 var INTENT_DRIVES = {
   'A long-term partner':        { Water:.95, Earth:.90, Air:.35, Fire:.30 },
   'Something serious, slowly':  { Earth:.95, Water:.80, Air:.40, Fire:.25 },
-  'Dating — open to anything':  { Water:.60, Earth:.60, Air:.60, Fire:.60 },
+  'Dating, open to anything':  { Water:.60, Earth:.60, Air:.60, Fire:.60 },
   'Short-term & fun':           { Fire:.95, Air:.85, Water:.25, Earth:.30 },
   'New friends first':          { Air:.95, Water:.40, Fire:.50, Earth:.45 },
   'Still figuring it out':      { Water:.50, Earth:.50, Air:.50, Fire:.50 }
@@ -2111,7 +2367,7 @@ function intentScore(pull, intent){
 function bestIntent(pull){
   var best = null, bs = -1;
   Object.keys(INTENT_DRIVES).forEach(function(k){
-    if(k === 'Dating — open to anything' || k === 'Still figuring it out') return;
+    if(k === 'Dating, open to anything' || k === 'Still figuring it out') return;
     var sc = intentScore(pull, k);
     if(sc > bs){ bs = sc; best = k; }
   });
@@ -2140,7 +2396,7 @@ function analyzeIntentAlignment(intent){
   var best = bestIntent(pull);
   var els  = leaningElements(pull);
   var leanText = (els.length === 2)
-    ? ('a blend — ' + ELEMENT_PULL[els[0]] + ', and ' + ELEMENT_PULL[els[1]])
+    ? ('a blend  ' + ELEMENT_PULL[els[0]] + ', and ' + ELEMENT_PULL[els[1]])
     : ELEMENT_PULL[els[0]];
   if(!intent) return { state:'open', ratio:null, best:best, els:els, leanText:leanText, pull:pull };
   var stated = intentScore(pull, intent);
@@ -2155,7 +2411,7 @@ function renderAlignment(){
   var a = on ? analyzeIntentAlignment(intent) : null;
   if(!a){ sec.style.display = 'none'; return; }
   sec.style.display = '';
-  document.getElementById('alignSaid').textContent = intent || 'Nothing — left open';
+  document.getElementById('alignSaid').textContent = intent || 'Nothing: left open';
   document.getElementById('alignLean').textContent = a.best.intent;
 
   // Element meter
@@ -2176,21 +2432,21 @@ function renderAlignment(){
   var m = '';
   if(a.state === 'open'){
     verdict.textContent = '○ Left open';
-    m = 'You didn\'t pick an intention, so nothing is assumed. For what it\'s worth, your chart\'s love pillars lean toward <b>'+esc(a.best.intent)+'</b> — '+a.leanText+'. Take it or leave it; this one\'s yours to decide.';
+    m = 'You didn\'t pick an intention, so nothing is assumed. For what it\'s worth, your chart\'s love pillars lean toward <b>'+esc(a.best.intent)+'</b>  '+a.leanText+'. Take it or leave it; this one\'s yours to decide.';
   } else if(a.state === 'aligned'){
     verdict.textContent = '✓ Aligned';
-    m = 'Your words and your chart agree. You said <b>'+esc(intent)+'</b>, and your love pillars (Venus, Moon, Mars, 7th House) lean the same way — '+a.leanText+'. What you\'re chasing and what you\'re wired for are pointing the same direction.';
+    m = 'Your words and your chart agree. You said <b>'+esc(intent)+'</b>, and your love pillars (Venus, Moon, Mars, 7th House) lean the same way  '+a.leanText+'. What you\'re chasing and what you\'re wired for are pointing the same direction.';
   } else if(a.state === 'adjacent'){
     verdict.textContent = '◐ Mostly aligned';
-    m = 'Close, with a little flex. You said <b>'+esc(intent)+'</b>; your chart leans <b>'+esc(a.best.intent)+'</b> — '+a.leanText+'. Same neighbourhood, slightly different door. You\'ve got real range here, not a conflict.';
+    m = 'Close, with a little flex. You said <b>'+esc(intent)+'</b>; your chart leans <b>'+esc(a.best.intent)+'</b>  '+a.leanText+'. Same neighbourhood, slightly different door. You\'ve got real range here, not a conflict.';
   } else {
     verdict.textContent = '◆ Two directions';
-    m = 'Worth a quiet look — not a verdict. You said you\'re here for <b>'+esc(intent)+'</b>, but your chart\'s love pillars lean toward <b>'+esc(a.best.intent)+'</b> — '+a.leanText+'. That gap isn\'t a mistake: it\'s the difference between what you\'re <em>choosing</em> and what you <em>default to</em> once someone gets close. Just so it\'s not a surprise when '+tensionHint(a.els, intent)+'.';
+    m = 'Worth a quiet look, not a verdict. You said you\'re here for <b>'+esc(intent)+'</b>, but your chart\'s love pillars lean toward <b>'+esc(a.best.intent)+'</b>  '+a.leanText+'. That gap isn\'t a mistake: it\'s the difference between what you\'re <em>choosing</em> and what you <em>default to</em> once someone gets close. Just so it\'s not a surprise when '+tensionHint(a.els, intent)+'.';
   }
-  m += '<br><br><span style="color:var(--muted);font-size:.9em">You\'re allowed to want what you want. This is a lean, not a leash — and it changes none of your readings.</span>';
+  m += '<br><br><span style="color:var(--muted);font-size:.9em">You\'re allowed to want what you want. This is a lean, not a leash and it changes none of your readings.</span>';
   msg.innerHTML = m;
   document.getElementById('alignWhy').innerHTML =
-    'We weigh the four placements that govern relating — <b>Venus</b> (how you love), <b>Moon</b> (what makes you feel safe), <b>Mars</b> (chemistry &amp; pursuit) and your <b>7th House</b> (who you attract) — and turn their elements into a pull: Water = depth, Earth = slow build, Fire = spark, Air = freedom. Your stated intention is scored against that pull. It\'s an energetic lean for reflection, never a prediction, and it never edits a single reading.';
+    'We weigh the four placements that govern relating  <b>Venus</b> (how you love), <b>Moon</b> (what makes you feel safe), <b>Mars</b> (chemistry &amp; pursuit) and your <b>7th House</b> (who you attract), and turn their elements into a pull: Water = depth, Earth = slow build, Fire = spark, Air = freedom. Your stated intention is scored against that pull. It\'s an energetic lean for reflection, never a prediction and it never edits a single reading.';
 }
 
 /* ============ THE DEEPER PULL ============
@@ -2200,7 +2456,7 @@ function renderAlignment(){
    never a compromise), and Saturn conjunct a sensitive point is where the
    lasting version gets built. This section never overrides the intention
    feature; it shows the axis underneath it. All orbs shown are exact,
-   computed by groundtruth-chart.cjs — and orbs are DISCLOSED. */
+   computed by groundtruth-chart.cjs, and orbs are DISCLOSED. */
 function renderDeeperPull(){
   var sec = document.getElementById('pullSection');
   var on  = document.getElementById('results').classList.contains('on');
@@ -2221,22 +2477,22 @@ function renderDeeperPull(){
   var stack = document.getElementById('pullStack');
   stack.innerHTML = '';
 
-  // 1. Comfort zone — South Node
+  // 1. Comfort zone: South Node
   stack.insertAdjacentHTML('beforeend',
     '<div class="pull comfort">' +
       '<div class="pull-head"><span class="pull-tag">The pull toward comfort</span>' +
         '<span class="pull-title">South Node in ' + esc(NODES.south) + '</span>' +
         '<span class="pull-sub">' + NODES.southDeg.toFixed(2) + '\u00B0</span></div>' +
-      '<div class="pull-body">In love, your default is <b>' + south.want + '</b>. It is not wrong \u2014 it is familiar, and familiar feels safe. This is why the same relationship patterns keep showing up: you keep walking back into the room you already know.</div>' +
+      '<div class="pull-body">In love, your default is <b>' + south.want + '</b>. It is not wrong. It is familiar, and familiar feels safe. This is why the same relationship patterns keep showing up: you keep walking back into the room you already know.</div>' +
     '</div>');
 
-  // 2. Growth edge — North Node (with Sun conjunction when exact)
+  // 2. Growth edge: North Node (with Sun conjunction when exact)
   var sunNote = (NODES.sunConjNorthNode != null && NODES.sunConjNorthNode <= 8)
     ? ' <span class="pull-orb">Sun conjunct \u2248 ' + NODES.sunConjNorthNode.toFixed(2) + '\u00B0 orb</span>'
     : '';
   var sunLine = (NODES.sunConjNorthNode != null && NODES.sunConjNorthNode <= 8)
-    ? ('Your Sun sits within <b>' + NODES.sunConjNorthNode.toFixed(2) + '\u00B0</b> of this North Node \u2014 an exact conjunction (within a tight, disclosed orb). That is rare, and it means the growth edge is not a side-quest: <b>becoming who you actually are runs straight through ' + north.grow + '</b>. Dating situations that keep you in the comfort zone feel like self-betrayal to you, even when they look fine from outside.')
-    : ('The growth edge asks you to ' + north.grow + '. It sits exactly opposite your comfort zone \u2014 the nodes are always 180\u00B0 apart \u2014 so this is never a compromise between the two. It is a direction.');
+    ? ('Your Sun sits within <b>' + NODES.sunConjNorthNode.toFixed(2) + '\u00B0</b> of this North Node: an exact conjunction (within a tight, disclosed orb). That is rare, and it means the growth edge is not a side-quest: <b>becoming who you actually are runs straight through ' + north.grow + '</b>. Dating situations that keep you in the comfort zone feel like self-betrayal to you, even when they look fine from outside.')
+    : ('The growth edge asks you to ' + north.grow + '. It sits exactly opposite your comfort zone. The nodes are always 180\u00B0 apart, so this is never a compromise between the two. It is a direction.');
   stack.insertAdjacentHTML('beforeend',
     '<div class="pull growth">' +
       '<div class="pull-head"><span class="pull-tag">The pull toward growth</span>' +
@@ -2245,42 +2501,42 @@ function renderDeeperPull(){
       '<div class="pull-body">' + sunLine + '</div>' +
     '</div>');
 
-  // 3. Saturn conjunct Descendant — the lesson on the relationship axis
+  // 3. Saturn conjunct Descendant: the lesson on the relationship axis
   if(NODES.saturnConjDescendant != null && NODES.saturnConjDescendant <= 8 && SATURN_MEANING[NODES.saturn]){
     stack.insertAdjacentHTML('beforeend',
       '<div class="pull lesson">' +
         '<div class="pull-head"><span class="pull-tag">Where it gets built to last</span>' +
           '<span class="pull-title">Saturn in ' + esc(NODES.saturn) + ' on your relationship axis</span>' +
           '<span class="pull-orb">conjunct Descendant \u2248 ' + NODES.saturnConjDescendant.toFixed(2) + '\u00B0 orb</span></div>' +
-        '<div class="pull-body">Saturn resting on your Descendant (the 7th-house cusp \u2014 partnership itself) is the chart saying: <b>your relationships are where you do your real growing</b>, and they are built to last only when you learn ' + SATURN_MEANING[NODES.saturn] + '. Early on this can feel like heaviness or bad luck in love. It is not bad luck \u2014 it is a curriculum. The partners who stay are the ones who respect the lesson.</div>' +
+        '<div class="pull-body">Saturn resting on your Descendant (the 7th-house cusp, partnership itself) is the chart saying: <b>your relationships are where you do your real growing</b>, and they are built to last only when you learn ' + SATURN_MEANING[NODES.saturn] + '. Early on this can feel like heaviness or bad luck in love. It is not bad luck. It is a curriculum. The partners who stay are the ones who respect the lesson.</div>' +
       '</div>');
   }
 
   // 4. Synthesis: want vs stretch, with the intention bridge
   var intent = currentIntent();
   var synth = 'Here is the tension you were right about: <b>what you want and what is best for you live in different places in this chart.</b> ' +
-    'Wanting follows the South Node \u2014 ' + south.want + '. Growing follows the North Node \u2014 ' + north.grow + '. ' +
-    'The people who feel instantly easy often pull you backward; the ones who stretch you feel uncomfortable before they feel right. Neither is a rule \u2014 plenty of lasting love is comfortable AND growing.';
+    'Wanting follows the South Node: ' + south.want + '. Growing follows the North Node: ' + north.grow + '. ' +
+    'The people who feel instantly easy often pull you backward; the ones who stretch you feel uncomfortable before they feel right. Neither is a rule. Plenty of lasting love is comfortable AND growing.';
   if(intent){
-    synth += ' You said you\u2019re here for <b>' + esc(intent) + '</b>. That stands \u2014 fully. What the chart adds is a weather report, not a verdict: know which way your own pull runs, so when a relationship starts feeling confusing, you can tell whether it\u2019s genuinely wrong for you or simply doing the thing your North Node came here to do.';
+    synth += ' You said you\u2019re here for <b>' + esc(intent) + '</b>. That stands, fully. What the chart adds is a weather report, not a verdict: know which way your own pull runs, so when a relationship starts feeling confusing, you can tell whether it\u2019s genuinely wrong for you or simply doing the thing your North Node came here to do.';
   } else {
-    synth += ' You didn\u2019t pick an intention, and that\u2019s fine \u2014 none of this forces one. When you do choose, check it against the axis above: choices made from comfort feel easy in week one, choices made toward growth feel right in year one.';
+    synth += ' You didn\u2019t pick an intention, and that\u2019s fine. None of this forces one. When you do choose, check it against the axis above: choices made from comfort feel easy in week one, choices made toward growth feel right in year one.';
   }
   document.getElementById('pullSynth').innerHTML = synth;
 
   var conjList = 'Sun\u2013North Node ' + NODES.sunConjNorthNode.toFixed(2) + '\u00B0';
   if(NODES.saturnConjDescendant != null) conjList += ', Saturn\u2013Descendant ' + NODES.saturnConjDescendant.toFixed(2) + '\u00B0';
-  else conjList += ' (Saturn\u2013Descendant withheld \u2014 needs your birth time + place)';
+  else conjList += ' (Saturn\u2013Descendant withheld; needs your birth time + place)';
   document.getElementById('pullWhy').innerHTML =
-    'The nodes are the two points where the Moon\u2019s orbit crosses the ecliptic \u2014 computed here by the <b>standard closed-form mean-node formula</b> (Meeus, accurate to \u003C0.01\u00B0), disclosed convention: mean node. South and North are always exactly 180\u00B0 apart. Conjunctions are <b>actual degree measurements</b> (' + conjList +
-    '), computed by <b>spark-runtime.js</b> against the vendor astronomy-engine ephemeris \u2014 not the legacy sign-distance aspect code this product deliberately never uses. Interpretation (comfort vs growth) is the traditional node framework; the measurements are exact and the orbs are disclosed.';
+    'The nodes are the two points where the Moon\u2019s orbit crosses the ecliptic, computed here by the <b>standard closed-form mean-node formula</b> (Meeus, accurate to \u003C0.01\u00B0), disclosed convention: mean node. South and North are always exactly 180\u00B0 apart. Conjunctions are <b>actual degree measurements</b> (' + conjList +
+    '), computed by <b>spark-runtime.js</b> against the vendor astronomy-engine ephemeris, not the legacy sign-distance aspect code this product deliberately never uses. Interpretation (comfort vs growth) is the traditional node framework; the measurements are exact and the orbs are disclosed.';
 }
 
 /* ============ PERSONALIZED SECTIONS ============
    Flags / traps / moves / love-language are all derived from the LIVE
    chart: dominant love element (from SparkRuntime.loveElements), exact
    Venus/Moon/7th placements, and the Moon shadow library. Nothing here
-   ships as static copy — if the data isn't computed, the section says so
+   ships as static copy: if the data isn't computed, the section says so
    instead of pretending. */
 function dominantLoveElement(chart){
   var el = SparkRuntime.loveElements(chart);
@@ -2292,30 +2548,30 @@ function dominantLoveElement(chart){
 var MOVE_COPY = {
   Water: {
     bio:  'Lead with depth: one real question beats ten clever lines for you.',
-    date: 'Soft lighting, low noise, room to actually talk. Your people open up slowly — pick a place that lets them.',
+    date: 'Soft lighting, low noise, room to actually talk. Your people open up slowly: pick a place that lets them.',
     text: 'Say the real thing sooner than feels safe. Depth is your dialect; small talk is your tax.'
   },
   Earth: {
-    bio:  'Show reliability as a feature — it is rarer (and sexier) than it sounds.',
+    bio:  'Show reliability as a feature. It is rarer (and sexier) than it sounds.',
     date: 'Something sensory and unhurried: good food, good views, no rush to the next thing.',
     text: 'Follow through over fireworks. The "still thinking about what you said" text is your power move.'
   },
   Fire:  {
     bio:  'Lead with the spark, not a résumé. Energy is your best line.',
-    date: 'Do something active or novel — you flirt best in motion, and stillness reads as boredom to you.',
-    text: 'Be direct. You are honest when you want something — say it before the moment passes you by.'
+    date: 'Do something active or novel. You flirt best in motion, and stillness reads as boredom to you.',
+    text: 'Be direct. You are honest when you want something: say it before the moment passes you by.'
   },
   Air:   {
     bio:  'Make them think. A curious opener outperforms a cute one for you.',
-    date: 'Somewhere with conversation built in — a walk, a gallery, a ridiculous dessert debate.',
+    date: 'Somewhere with conversation built in: a walk, a gallery, a ridiculous dessert debate.',
     text: 'Banter is your foreplay, but land the plans. Air signs keep texting; you convert words into dates.'
   }
 };
 var LOVE_LANG = {
-  Water: 'emotional depth, loyalty, and being truly known',
-  Earth: 'reliability, presence, and affection you can feel in the ordinary',
-  Fire:  'passion, playfulness, and being chosen out loud',
-  Air:   'conversation, freedom, and friendship underneath everything'
+  Water: 'emotional depth, loyalty and being truly known',
+  Earth: 'reliability, presence and affection you can feel in the ordinary',
+  Fire:  'passion, playfulness and being chosen out loud',
+  Air:   'conversation, freedom and friendship underneath everything'
 };
 function renderPersonalized(chart){
   if(!chart || !chart.ok){ return; }
@@ -2325,9 +2581,9 @@ function renderPersonalized(chart){
   var g = document.getElementById('flagG'), y = document.getElementById('flagY'), r = document.getElementById('flagR');
   var traits = dom ? SparkContent.elementTraits[dom] : null;
   g.innerHTML = traits ? traits.green.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')
-                       : '<li>Your placements were withheld — add time/place for personalized flags</li>';
+                       : '<li>Your placements were withheld: add time/place for personalized flags</li>';
   y.innerHTML = traits ? traits.yellow.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')
-                       : '<li>Your placements were withheld — add time/place for personalized flags</li>';
+                       : '<li>Your placements were withheld: add time/place for personalized flags</li>';
   r.innerHTML = SparkContent.universalRed.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('');
 
   // ---- Traps: Moon shadow (withheld Moon -> honest empty state) ----
@@ -2338,12 +2594,12 @@ function renderPersonalized(chart){
   tSub.textContent = moonSign ? '(from your ' + moonSign + ' Moon)' : '';
   tList.innerHTML = traps && traps.length
     ? traps.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')
-    : '<li>Your Moon sign was withheld (add your birth time) — your personal traps appear once it locks in.</li>';
+    : '<li>Your Moon sign was withheld (add your birth time). Your personal traps appear once it locks in.</li>';
 
   // ---- Moves: descriptions from dominant element ----
   var mv = dom ? MOVE_COPY[dom] : null;
   document.getElementById('mdesc1').textContent = dom
-    ? 'Your Bio Writer composed real openers from your chart. The best one is below \u2014 copy it, or browse all three versions in the Bio Writer. ' + (mv ? mv.bio : '')
+    ? 'Your Bio Writer composed real openers from your chart. The best one is below. Copy it, or browse all three versions in the Bio Writer. ' + (mv ? mv.bio : '')
     : 'Add your birth details and your Bio Writer will compose real openers for you here.';
   document.getElementById('mdesc2').textContent = mv ? mv.date : 'Add your birth details to personalize this.';
   document.getElementById('mdesc3').textContent = mv ? mv.text : 'Add your birth details to personalize this.';
@@ -2360,7 +2616,7 @@ function renderPersonalized(chart){
 
 /* ============ PROFILE BIO WRITER ============
    Composes three distinct, copy-paste-ready dating bios from the LIVE
-   chart. BUILT ONLY from computed placements — a withheld Rising/7th
+   chart. BUILT ONLY from computed placements: a withheld Rising/7th
    simply leaves its slot out; nothing is invented. Shaped by the user's
    chosen tone + intention + include-toggles. No name, no birth data.
    Drafts are editable before copying. */
@@ -2368,7 +2624,7 @@ var BIO_TONE = 'punchy';
 var BIO_FILTERS = { intent:true, venus:true, astro:false };
 
 function signLine(chart){
-  // A charming "sign nerd" line naming real placements — only ones we have.
+  // A charming "sign nerd" line naming real placements: only ones we have.
   var p = chart.placements;
   var bits = [];
   if(p.sun)   bits.push('Sun ' + p.sun.name);
@@ -2380,7 +2636,7 @@ function signLine(chart){
 // bigThree readout phrased for a bio (not a chart dump)
 function bigThreePhrasing(bits){
   if(bits.length >= 3) return 'Big three: ' + bits.join(' \u00B7 ') + '.';
-  if(bits.length === 2) return bits[0] + ' and ' + bits[1] + ' \u2014 you have been warned.';
+  if(bits.length === 2) return bits[0] + ' and ' + bits[1] + '. You have been warned.';
   return bits[0] + ' energy, mostly.';
 }
 
@@ -2391,7 +2647,7 @@ function buildBios(chart){
 
   var out = [];
   if(!dom){
-    // No dominant element (everything withheld) — offer nothing rather than
+    // No dominant element (everything withheld): offer nothing rather than
     // fabricate. The section shows an honest empty state instead.
     return out;
   }
@@ -2422,13 +2678,13 @@ function buildBios(chart){
   }
   var usedOpeners = [], usedClosers = [];
 
-  // DRAFT A — "The one-liner": opener + vibe + closer. Short & punchy.
+  // DRAFT A  "The one-liner": opener + vibe + closer. Short & punchy.
   var a = [pickDistinct(openers, 1, usedOpeners), vibe.charAt(0).toUpperCase() + vibe.slice(1) + '.'];
   if(BIO_FILTERS.intent && hereFor) a.push(hereFor);
   a.push(pickDistinct(closers, 2, usedClosers));
   out.push({ id:'short', name:'The one-liner', text:a.join(' ') });
 
-  // DRAFT B — "The full picture": opener + venus hook + vibe + astro + closer.
+  // DRAFT B  "The full picture": opener + venus hook + vibe + astro + closer.
   var b = [pickDistinct(openers, 3, usedOpeners)];
   if(BIO_FILTERS.venus && venusHook) b.push(venusHook);
   b.push('Mostly ' + vibe + '.');
@@ -2437,7 +2693,7 @@ function buildBios(chart){
   b.push(pickDistinct(closers, 4, usedClosers));
   out.push({ id:'full', name:'The full picture', text:b.join(' ') });
 
-  // DRAFT C — "The conversation starter": question-led, ends on a prompt.
+  // DRAFT C  "The conversation starter": question-led, ends on a prompt.
   var c = [pickDistinct(kit.openers[dom].playful, 5, usedOpeners)];
   if(BIO_FILTERS.venus && venusHook) c.push(secondVenusLine(kit, p, venusHook));
   if(BIO_FILTERS.intent && hereFor) c.push(hereFor);
@@ -2493,7 +2749,7 @@ function renderBios(){
     card.querySelector('[data-act="copy"]').addEventListener('click', function(){
       var val = ta.classList.contains('on') ? ta.value : b.text;
       sbTrack('bio_copied', { draft: b.id, edited: ta.classList.contains('on') });
-      copyText(val, 'Bio copied \u2014 paste it into your profile \u2665');
+      copyText(val, 'Bio copied. Paste it into your profile \u2665');
     });
     card.querySelector('[data-act="edit"]').addEventListener('click', function(){
       var on = ta.classList.toggle('on');
@@ -2515,7 +2771,7 @@ function renderBios(){
   });
 
   var dom = dominantLoveElement(chart);
-  // Surface the best draft (longest of the three — the "full picture" is
+  // Surface the best draft (longest of the three: the "full picture" is
   // usually the richest) in Moves #1 as a one-tap "use this" action.
   var bestDraft = bios.slice().sort(function(a,b){ return b.text.length - a.text.length; })[0] || null;
   window.__bestBio = bestDraft ? bestDraft.text : null;
@@ -2528,7 +2784,7 @@ function renderBios(){
     // keep the one-tap actions pointing at the CURRENT best draft
     document.getElementById('movesCopyBtn').onclick = function(){
       sbTrack('bio_copied', { draft: 'best-move', edited: false });
-      copyText(window.__bestBio, 'Bio copied \u2014 paste it into your profile \u2665');
+      copyText(window.__bestBio, 'Bio copied. Paste it into your profile \u2665');
     };
     document.getElementById('movesMoreBtn').onclick = function(){
       document.getElementById('bioWriterSection').scrollIntoView({ behavior:'smooth', block:'start' });
@@ -2538,13 +2794,13 @@ function renderBios(){
     fb.style.display = '';
   }
   if(why) why.innerHTML =
-    'These bios are composed from <b>your computed chart</b> — your dominant love element (' +
+    'These bios are composed from <b>your computed chart</b>. Your dominant love element (' +
     (dom || 'n/a') + ') sets the voice, your Venus sign sets the hook, your chosen tone and intention set the framing. ' +
     'Only <b>real placements</b> are used: if your Rising or 7th House is withheld, those lines are simply left out rather than guessed. ' +
     'No birth data appears in any draft, and every line is yours to edit before you copy it.';
 }
 
-// "Another" — rotate to different opener/closer picks for one draft.
+// "Another" : rotate to different opener/closer picks for one draft.
 var rerollSalt = { short:0, full:0, starter:0 };
 function rerollBio(chart, id){
   rerollSalt[id] = (rerollSalt[id] || 0) + 1;
@@ -2608,7 +2864,7 @@ function wireBioWriter(){
 /* ============ FULL DEGREE SYNASTRY (same device) ============
    Computes Person B's exact chart in-browser and runs the
    degree-based analysis. Their inputs are NEVER stored and NEVER
-   shared — this is the privacy-safe way to get exact synastry. */
+   shared: this is the privacy-safe way to get exact synastry. */
 var SYN_SYMBOLS = { conjunction:'\u260C', sextile:'\u26B9', square:'\u25A1', trine:'\u25B3', opposition:'\u260D' };
 function renderSynastry(r){
   var out = document.getElementById('synOut');
@@ -2630,7 +2886,7 @@ function renderSynastry(r){
     '<div class="syn-axis"><div class="ax-label">\u26A1 Contact</div><div class="ax-num">' + r.contact + '</div>' +
       '<div class="ax-sub">How much exact angular binding your charts have. High = you keep landing on each other\u2019s planets, for better or worse.</div></div>' +
     '<div class="syn-axis"><div class="ax-label">🕊 Ease</div><div class="ax-num">' + (r.ease == null ? '\u2014' : r.ease) + '</div>' +
-      '<div class="ax-sub">Harmonious vs charged balance of that contact. Low ease with high contact is not a verdict \u2014 it is a relationship that takes conscious effort and rewards it.</div></div>' +
+      '<div class="ax-sub">Harmonious vs charged balance of that contact. Low ease with high contact is not a verdict. It is a relationship that takes conscious effort and rewards it.</div></div>' +
   '</div>';
   // Dimensions
   html += '<div style="font-weight:700;color:var(--rose-deep);font-size:.95rem;margin:4px 0 10px">The four dimensions</div>';
@@ -2653,14 +2909,14 @@ function renderSynastry(r){
   });
   // Composite
   if(r.composite){
-    html += '<div style="margin-top:16px;font-weight:700;color:var(--rose-deep);font-size:.95rem">Your composite \u2014 the relationship\u2019s own chart</div>' +
+    html += '<div style="margin-top:16px;font-weight:700;color:var(--rose-deep);font-size:.95rem">Your composite: the relationship\u2019s own chart</div>' +
       '<div style="font-size:.78rem;color:var(--muted);margin:4px 0 8px">Midpoint method: each point is the exact halfway between your two longitudes. It is how the pairing itself behaves, separate from either of you.</div>' +
       '<div class="syn-comp">' +
       Object.keys(r.composite).map(function(k){
         return '<span class="cc"><b>' + k + '</b> ' + esc(r.composite[k].name) + ' ' + r.composite[k].degree.toFixed(1) + '\u00B0</span>';
       }).join('') + '</div>';
   }
-  html += '<p class="caveat" style="margin-top:14px">\uD83D\uDD12 Their birth details were used for this one computation in your browser, then discarded \u2014 not stored, not in any link. \u2696\uFE0F Two humans are more than their degrees: treat CONTACT and EASE as a map, not a verdict.</p></div>';
+  html += '<p class="caveat" style="margin-top:14px">\uD83D\uDD12 Their birth details were used for this one computation in your browser, then discarded. Not stored, not in any link. \u2696\uFE0F Two humans are more than their degrees: treat CONTACT and EASE as a map, not a verdict.</p></div>';
   out.innerHTML = html;
   setTimeout(function(){
     out.querySelectorAll('.bar-fill').forEach(function(f){ f.style.width = f.dataset.w + '%'; });
@@ -2672,7 +2928,7 @@ function wireSynastry(){
   btn.dataset.wired = '1';
   btn.addEventListener('click', function(){
     if(!window.__lastChart || !window.__lastChart.ok){
-      toast('Generate your spark first \u2665');
+      toast('Generate your blueprint first \u2665');
       return;
     }
     var name  = (document.getElementById('synName').value || 'Them').trim();
@@ -2705,7 +2961,7 @@ function wireSynastry(){
 }
 
 /* ============ SOCIAL CARDS ============
-   Eight 9:16 cards generated ONLY from computed placements — same
+   Eight 9:16 cards generated ONLY from computed placements: same
    absolute-accuracy rule as everything else: a withheld placement
    means that card simply doesn't render. Text-safe glyphs only.
    Users screenshot these; every card is self-contained branding. */
@@ -2744,13 +3000,13 @@ function renderSocialCards(chart){
   var intent = currentIntent();
   var cards = [];
 
-  // 1 — MY SPARK (identity): big three pills, always renderable
+  // 1. MY SPARK (identity): big three pills, always renderable
   var pills = [];
   if(p.sun) pills.push(p.sun.name + ' Sun');
   if(p.venus) pills.push(p.venus.name + ' Venus');
   if(p.moon && !chart.moonUncertain) pills.push(p.moon.name + ' Moon');
   cards.push(socCard({
-    label:'My Spark', title:name,
+    label:'My Blueprint', title:name,
     body:'<div class="soc-ring"><span class="glyph-in beat">♥</span></div>' +
          '<div style="text-align:center;margin-bottom:12px">' + pills.map(function(t){
            return '<span class="pill" style="font-size:.6rem;padding:3px 9px">' + esc(t) + '</span>'; }).join('') +
@@ -2758,8 +3014,8 @@ function renderSocialCards(chart){
          '<div class="soc-sub" style="text-align:center;margin-bottom:0">' + esc((SparkRuntime.sparkDynamic(chart)||{}).dyn || '') + '</div>'
   }));
 
-  // 2–6 — placement cards, ONLY when computed
-  // ES5-safe sentence splitter (no lookbehind — older Safari throws on parse)
+  // 2–6: placement cards, ONLY when computed
+  // ES5-safe sentence splitter (no lookbehind: older Safari throws on parse)
   function socSentences(text){
     var parts = String(text).split(/\.(?=\s|$)/).filter(function(s){ return s.trim().length; });
     return parts.slice(0,2).map(function(s){ return s.trim().replace(/[.,]$/, ''); });
@@ -2796,7 +3052,7 @@ function renderSocialCards(chart){
       sub:'My ideal partner', medal: signGlyph(chart.descendant.name), points: socSentences(SparkContent.descendant[chart.descendant.name].body) }));
   }
 
-  // 7 — FLAGS (honest card) — needs traits + traps from live data
+  // 7, FLAGS (honest card), needs traits + traps from live data
   if(traits){
     var moonSign = (!chart.moonUncertain && p.moon) ? p.moon.name : null;
     var traps = moonSign && SparkContent.moonShadow[moonSign] ? SparkContent.moonShadow[moonSign] : [];
@@ -2807,7 +3063,7 @@ function renderSocialCards(chart){
     cards.push(socCard({ glyph:'🚦', label:'The Honest Part', title:'My Flags', body: flagBody }));
   }
 
-  // 8 — INTENTION closer — user's own chosen words
+  // 8, INTENTION closer, user's own chosen words
   if(intent){
     cards.push(socCard({ label:"So, What I'm Here For",
       body:'<div class="soc-ring"><span class="glyph-in beat">♥</span></div><div class="soc-quote">' + esc(intent) + '</div>' }));
@@ -2968,7 +3224,7 @@ function copyText(text, msg){
     var ta = document.createElement('textarea');
     ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
     document.body.appendChild(ta); ta.select();
-    try{ document.execCommand('copy'); toast(msg); }catch(e){ toast('Copy failed — select the code manually'); }
+    try{ document.execCommand('copy'); toast(msg); }catch(e){ toast('Copy failed: select the code manually'); }
     ta.remove();
   }
   if(navigator.clipboard && navigator.clipboard.writeText){
@@ -2983,7 +3239,7 @@ function makeDemoCode(){
      (lat -37.8136, lon 144.9631, AEDT UTC+11 -> 1996-03-11T21:15Z).
      Venus Taurus (Earth) x Mars Pisces (Water) = "Fertile Garden";
      Rising Aries 2.87deg -> Descendant/7th Libra 2.87deg. */
-  var demo = { v:'SS1', n:'Luna', i:'Something serious, slowly',
+  var demo = { v:'LB1', n:'Luna', i:'Something serious, slowly',
     s:{ dyn:'Fertile Garden', sub:'Venus in Taurus \u00D7 Mars in Pisces \u2192 7th House in Libra' },
     c:[
       { t:'Venus',     s:'Taurus',  x:'How They Love' },
@@ -3014,10 +3270,10 @@ function wireShare(){
   document.getElementById('copyLinkBtn').addEventListener('click', function(){
     var code = window.__lastCode || refreshShareCode();
     sbTrack('share_link_copied', { level: shareLevel });
-    copyText(location.origin + location.pathname + '#s=' + encodeURIComponent(code), 'Share link copied — send it to your spark ♥');
+    copyText(location.origin + location.pathname + '#s=' + encodeURIComponent(code), 'Share link copied: send it to your spark ♥');
   });
   document.getElementById('copyCodeBtn').addEventListener('click', function(){
-    copyText(window.__lastCode || refreshShareCode(), 'Code copied — paste it in any chat');
+    copyText(window.__lastCode || refreshShareCode(), 'Code copied: paste it in any chat');
   });
   document.getElementById('compareBtn').addEventListener('click', function(){
     try{ runCompare(parseCode(document.getElementById('partnerCode').value)); }
@@ -3031,12 +3287,17 @@ function wireShare(){
     var fc = document.querySelector('.form-card');
     fc.style.display = '';
     fc.scrollIntoView({ behavior:'smooth', block:'center' });
-    this.textContent = 'Fill in the form above — the compare happens automatically ♥';
+    this.textContent = 'Fill in the form above: the compare happens automatically ♥';
   });
 }
 
 /* ============ GENERATE ============ */
-document.getElementById('genBtn').addEventListener('click', function(){
+document.getElementById('genBtn').addEventListener('click', doGenerate);
+function doGenerate(){
+  var btn = document.getElementById('genBtn');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var __run = function(){
+  hideComputeVeil();
   var name  = (document.getElementById('nm').value || 'You').trim();
   var time  = document.getElementById('bt').value || '';
   var place = (document.getElementById('bp').value || '').trim();
@@ -3052,7 +3313,7 @@ document.getElementById('genBtn').addEventListener('click', function(){
   });
 
   if(!chart.ok){
-    // Hard refusal — show the reason, render nothing fake.
+    // Hard refusal: show the reason, render nothing fake.
     accEl.style.display = 'inline-flex';
     accEl.className = 'acc';
     accEl.textContent = '⛔ Not computed';
@@ -3097,7 +3358,7 @@ document.getElementById('genBtn').addEventListener('click', function(){
       'Real ephemeris + resolved birth place: every placement below is computed to the exact degree. UTC instant ' + chart.utcInstant + '.';
   } else if(locked > 0){
     accEl.className = 'acc';
-    accEl.textContent = '🔓 Partial — ' + locked + ' locked';
+    accEl.textContent = '🔓 Partial  ' + locked + ' locked';
     document.getElementById('accText').textContent =
       'Everything shown is exact; ' + locked + ' placement' + (locked > 1 ? 's are' : ' is') + ' withheld (never estimated) because an input is missing. ' + (chart.notices[0] || '');
   } else {
@@ -3111,6 +3372,7 @@ document.getElementById('genBtn').addEventListener('click', function(){
   res.classList.add('on');
   applyIntent();
   buildCards();
+  wireNextStops();
   renderPersonalized(chart);
   window.__hasResult = true;
   setView('result');
@@ -3134,7 +3396,7 @@ document.getElementById('genBtn').addEventListener('click', function(){
   wireReveal();
   refreshShareCode();
   sbTrack('spark_generated', { exact: !!(chart.hasTime && chart.hasPlace), locked: locked });
-  this.textContent = 'Regenerate ♥';
+  btn.textContent = 'Regenerate ♥';
 
   if(PARTNER){
     // Returning user regenerated: fire the partner-view comparison too
@@ -3157,7 +3419,12 @@ document.getElementById('genBtn').addEventListener('click', function(){
     var pm = window.__pendingMatch; window.__pendingMatch = null;
     setTimeout(function(){ compareWithMatch(pm); }, 900);
   }
-});
+  if(!PARTNER && !window.__onboardShown){ window.__onboardShown = true; maybeOnboard(); }
+  };
+  if(reduceMotion){ __run(); return; }
+  showComputeVeil((document.getElementById('bp').value||'').trim(), document.getElementById('bt').value||'');
+  setTimeout(__run, 1150);
+}
 
 wireShare();
 wireIntent();

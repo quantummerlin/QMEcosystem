@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // ============================================================
-// SOUL SPARK — GROUND TRUTH CHART TOOL
+// LOVE BLUEPRINT — GROUND TRUTH CHART TOOL
 // ============================================================
 // Under the absolute-accuracy standard, NO sample/demo placement
 // may be invented. This tool computes the exact chart for any

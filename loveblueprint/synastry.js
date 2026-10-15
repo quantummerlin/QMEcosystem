@@ -1,23 +1,23 @@
 // ============================================================
-// SOUL SPARK — SYNASTRY ENGINE v1.0.0
+// LOVE BLUEPRINT . SYNASTRY ENGINE v1.0.0
 // ============================================================
 // Degree-based relationship astrology between two EXACT charts.
 // Built on SoulSpark.computeAspects (real angular separation with
-// disclosed orbs) — never the legacy sign-distance method.
+// disclosed orbs): never the legacy sign-distance method.
 //
 // ACCURACY CONTRACT
 //   * Requires exact longitudes for both people. If a dimension has
 //     NO aspect within orb, it reports "no strong contact" and is
-//     EXCLUDED from the overall score — absence of contact is
-//     information, not a zero, and is never padded.
+//     EXCLUDED from the overall score: absence of contact is
+//     information, not a zero and is never padded.
 //   * Every claimed aspect is reported with its measured separation
 //     and orb so the user can audit it.
 //   * Orbs are an interpretive convention (synastry-tightened vs
 //     natal) and are disclosed in the UI.
 //
 // Two honest axes instead of one fake number:
-//   CONTACT — how much exact angular binding exists between charts
-//   EASE    — the harmonious/challenging balance of that contact
+//   CONTACT: how much exact angular binding exists between charts
+//   EASE    : the harmonious/challenging balance of that contact
 // ============================================================
 
 (function (global) {
@@ -169,7 +169,7 @@
                 dims.push({
                     key: dim.key, label: dim.label, weight: dim.weight,
                     contacted: false, score: null, hits: [],
-                    readout: 'No exact aspect within orb touches this dimension. That is information, not a bad sign — and nothing here was forced to a number.'
+                    readout: 'No exact aspect within orb touches this dimension. That is information, not a bad sign and nothing here was forced to a number.'
                 });
                 return;
             }
@@ -208,7 +208,7 @@
 
         // CONTACT axis: normalized binding density, 0-100.
         var contact = contacted.length ? Math.round(Math.max(0, Math.min(100,
-            contacted.reduce(function (s, d) { return s + Math.min(1, d.strength) * (d.weight / wsum); }, 0) * 100))) : 0;
+            contacted.reduce(function (s, d) { return s + Math.min(1, d.strength) * (d.weight / wsum); }, 0) * 100))): 0;
 
         return {
             ok: true,

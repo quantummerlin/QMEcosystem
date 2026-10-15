@@ -1,5 +1,5 @@
 // ============================================================
-// SOUL SPARK — STRICT ENGINE VERIFICATION SUITE
+// LOVE BLUEPRINT — STRICT ENGINE VERIFICATION SUITE
 // ============================================================
 // Run: node loveblueprint/tests/test-spark-engine.cjs  (from soulblueprint/)
 // Ground truths cross-checked against published reference values
@@ -52,7 +52,7 @@ function eq(actual, expected, label) {
     }
 }
 
-console.log('=== SOUL SPARK STRICT ENGINE v' + SPARK.VERSION + ' ===\n');
+console.log('=== LOVE BLUEPRINT STRICT ENGINE v' + SPARK.VERSION + ' ===\n');
 
 // ---------- 1. Sign math (deterministic) ----------
 check('signFromLongitude: 0° = Aries 0°', () => {

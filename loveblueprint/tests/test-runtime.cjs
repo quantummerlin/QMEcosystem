@@ -1,5 +1,5 @@
 // ============================================================
-// SOUL SPARK — RUNTIME INTEGRATION SUITE
+// LOVE BLUEPRINT — RUNTIME INTEGRATION SUITE
 // ============================================================
 // Loads the SAME files the browser loads, in the SAME order:
 //   vendor/astronomy.browser.min.js  (window.Astronomy)
@@ -75,7 +75,7 @@ function approx(a, b, tol, label) {
 }
 function ok(v, label) { if (!v) throw new Error((label || 'condition') + ' was falsy'); }
 
-console.log('=== SOUL SPARK RUNTIME INTEGRATION ===');
+console.log('=== LOVE BLUEPRINT RUNTIME INTEGRATION ===');
 console.log('engine ready: ' + S.engineReady() + ' | geocoder ready: ' + !!(GEO && DATA) + '\n');
 
 // ---------- prerequisites ----------

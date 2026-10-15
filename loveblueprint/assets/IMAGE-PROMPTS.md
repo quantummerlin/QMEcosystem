@@ -1,8 +1,8 @@
-# Soul Spark — Social Visual Kit: Image Generation Prompts
+# Love Blueprint — Social Visual Kit: Image Generation Prompts
 
 **Purpose:** Fill photos for dating-app posts, Instagram/TikTok carousels, and
 profile promotion. Each card must (a) look premium standalone, (b) carry real
-astrological information, and (c) be instantly recognisable as Soul Spark.
+astrological information, and (c) be instantly recognisable as Love Blueprint.
 
 **Global style rules — paste these into EVERY prompt:**
 > Flat vector illustration, no photorealism, no people's faces. Deep plum-black
@@ -175,13 +175,13 @@ web/favicon. If you want a painterly hero version for launch posts ONLY:
 
 And a wordmark lockup (text rendered separately is safer):
 
-> Elegant modern serif wordmark "SOUL SPARK" in warm near-white, letters
+> Elegant modern serif wordmark "LOVE BLUEPRINT" in warm near-white, letters
 > slightly spaced, with a small gradient rose heart replacing the dot above
 > nothing—just centered above the word. Deep plum-black background. Minimal,
 > luxury, flat vector, perfectly centered, no other elements.
 
 **Warning:** image models misspell text constantly. Generate wordmarks with
-the text area EMPTY and set "SOUL SPARK" in Playfair Display yourself
+the text area EMPTY and set "LOVE BLUEPRINT" in Playfair Display yourself
 (Canva/Figma). Same for every card that has real text: prefer generating
 background+illustration and adding text in your editor.
 

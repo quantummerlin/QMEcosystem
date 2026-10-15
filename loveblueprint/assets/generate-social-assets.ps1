@@ -1,5 +1,5 @@
 # ============================================================
-# SOUL SPARK — social/share asset generator
+# LOVE BLUEPRINT — social/share asset generator
 # ------------------------------------------------------------
 # Produces the two raster assets the page's <meta> tags need but
 # SVG cannot provide (Facebook/X/Instagram/iMessage all reject
@@ -26,7 +26,7 @@ $assetsDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 $TARGET_URL = 'https://quantummerlin.com/loveblueprint/'
 
-Write-Host "`n=== SOUL SPARK OG CARD ===" -ForegroundColor Magenta
+Write-Host "`n=== LOVE BLUEPRINT OG CARD ===" -ForegroundColor Magenta
 Write-Host "Target URL : $TARGET_URL"
 Write-Host "Assets dir : $assetsDir`n"
 
@@ -50,7 +50,7 @@ function New-Color([int]$r,[int]$gr,[int]$b,[int]$a=255) {
     return [System.Drawing.Color]::FromArgb($a,$r,$gr,$b)
 }
 
-# -- Plum/rose gradient background (matches Soul Spark dark theme) --
+# -- Plum/rose gradient background (matches Love Blueprint dark theme) --
 $bgRect = New-Object System.Drawing.Rectangle(0,0,$W,$H)
 $bg = New-Object System.Drawing.Drawing2D.LinearGradientBrush(
     $bgRect,
@@ -150,7 +150,7 @@ $sans  = 'Segoe UI'
 
 $titleFont = New-Object System.Drawing.Font($serif, 62, [System.Drawing.FontStyle]::Bold)
 $titleBrush = New-Object System.Drawing.SolidBrush(New-Color 243 227 233)
-$g.DrawString('Soul Spark', $titleFont, $titleBrush, [float]($W/2), 322.0, $sfmt)
+$g.DrawString('Love Blueprint', $titleFont, $titleBrush, [float]($W/2), 322.0, $sfmt)
 
 $tagFont = New-Object System.Drawing.Font($sans, 25, [System.Drawing.FontStyle]::Regular)
 $tagBrush = New-Object System.Drawing.SolidBrush(New-Color 255 143 163)

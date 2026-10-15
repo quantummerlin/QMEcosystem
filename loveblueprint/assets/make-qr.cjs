@@ -1,5 +1,5 @@
 // ============================================================
-// SOUL SPARK — QR generator (local build tool only)
+// LOVE BLUEPRINT — QR generator (local build tool only)
 // ------------------------------------------------------------
 // The bio card tells users to "scan to decode yours", so it needs
 // a REAL qr image. Because the URL is static, we bake one PNG at
@@ -25,7 +25,7 @@ QRCode.toFile(OUT, TARGET_URL, {
   type: 'png',
   width: 512,
   margin: 2,
-  // Soul Spark palette: plum bg, gold modules
+  // Love Blueprint palette: plum bg, gold modules
   color: {
     dark: '#1E0E22',
     light: '#E8B96A'

@@ -1,4 +1,4 @@
-# Soul Spark — SEO Content Plan
+# Love Blueprint — SEO Content Plan
 
 **Goal:** the compounding distribution asset that makes the Base-case growth
 projection (1,000–4,000 visits/mo by month 12) actually happen. No product
@@ -23,7 +23,7 @@ high-volume head terms; supporting pages catch long-tail.
 - GA4 `G-VW4LGE7L1T` + AdSense `ca-pub-3480541530392777`
 - Canonical + OG + Twitter + JSON-LD Article
 - Breadcrumbs, generator CTA, legal footer links
-- Dark-rose Soul Spark theme (`../css/articles.css`), self-contained
+- Dark-rose Love Blueprint theme (`../css/articles.css`), self-contained
 - Honesty line: entertainment/self-reflection, no deterministic claims
   (protects AdSense + matches the product's own no-fabrication ethics)
 
@@ -55,7 +55,7 @@ structure is now reusable.
 
 ## Why these three first
 - **#1 Venus sign dating style** — highest commercial-adjacent intent; Venus
-  is literally Soul Spark's core placement. Every sign section links the tool.
+  is literally Love Blueprint's core placement. Every sign section links the tool.
 - **#2 Compatibility guide** — captures "am I compatible with X" (huge volume),
   explains synastry in plain English, and sets up the degree-synastry feature
   as the payoff. This is the top-of-funnel page.

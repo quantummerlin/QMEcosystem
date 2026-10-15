@@ -1,5 +1,5 @@
 // ============================================================
-// SOUL SPARK — SYNASTRY VERIFICATION SUITE
+// LOVE BLUEPRINT — SYNASTRY VERIFICATION SUITE
 // ============================================================
 // Ground-truth based. Expected values BELOW were HAND-COMPUTED
 // from the ephemeris longitudes verified by groundtruth-chart.cjs:
@@ -78,7 +78,7 @@ function eq(a, b, label) { if (a !== b) throw new Error((label || 'value') + ': 
 function approx(a, b, tol, label) { if (!isFinite(a) || Math.abs(a - b) > tol) throw new Error((label || 'value') + ': expected ' + b + ' \u00B1' + tol + ', got ' + a); }
 function ok(v, label) { if (!v) throw new Error((label || 'condition') + ' was falsy'); }
 
-console.log('=== SOUL SPARK SYNASTRY SUITE v' + '1.0.0' + ' ===\n');
+console.log('=== LOVE BLUEPRINT SYNASTRY SUITE v' + '1.0.0' + ' ===\n');
 
 // ---------- Real charts (same inputs as ground truth tools) ----------
 const WAYNE = RT.computeChart({ name: 'Wayne Michael', birthDate: '1994-11-08', birthTime: '02:30', birthPlace: 'Sydney, Australia' });

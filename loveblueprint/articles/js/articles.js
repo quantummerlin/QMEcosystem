@@ -1,5 +1,5 @@
 /* ============================================================
-   SOUL SPARK — SHARED ARTICLE SCRIPTS
+   LOVE BLUEPRINT — SHARED ARTICLE SCRIPTS
    Reading-progress bar + guarded AdSense slot activation.
    Vanilla, no dependencies, reduced-motion aware.
    ============================================================ */

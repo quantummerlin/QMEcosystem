@@ -1,5 +1,5 @@
 // ============================================================
-// SOUL SPARK — RUNTIME ORCHESTRATOR v1.0.0
+// LOVE BLUEPRINT . RUNTIME ORCHESTRATOR v1.0.0
 // ============================================================
 // Glue between the strict engine (spark-engine.js), the geocoder
 // (../geo-data.js + ../geocode.js, shared with the main site) and
@@ -14,7 +14,7 @@
 //   3. Missing time = angles + 7th house withheld (not estimated);
 //      sign-only placements remain exact (noon-UT convention,
 //      disclosed) EXCEPT Moon, whose degree depends on the instant
-//      — Moon without time is flagged as "date-only" honestly.
+//      . Moon without time is flagged as "date-only" honestly.
 //   4. Every placement returned carries its exact longitude so
 //      downstream features (synastry, alignment) use degrees.
 // ============================================================
@@ -29,7 +29,7 @@
 
     // Resolve a typed place via the site geocoder (14,133 cities,
     // IANA zones). Mirrors calculations.js findLocation() priority:
-    // SBGeo/SB_GEO when loaded; otherwise refuse — no 25-city fallback.
+    // SBGeo/SB_GEO when loaded; otherwise refuse: no 25-city fallback.
     RT.resolvePlace = function (placeText, whenParts) {
         if (!placeText) return { found: false, reason: 'no-place' };
         if (!(global.SBGeo && global.SB_GEO && typeof global.SBGeo.geocode === 'function')) {
@@ -74,7 +74,7 @@
 
         var hour = hasTime ? hp.hour : 12;
         var minute = hasTime ? hp.minute : 0;
-        if (!hasTime) notices.push('No birth time given: planetary SIGNS use the noon-UT convention (disclosed) and angle-based points are withheld entirely. The Moon moves ~13°/day, so its sign is date-only reliable near month edges — noted where it applies.');
+        if (!hasTime) notices.push('No birth time given: planetary SIGNS use the noon-UT convention (disclosed) and angle-based points are withheld entirely. The Moon moves ~13°/day, so its sign is date-only reliable near month edges: noted where it applies.');
 
         // ---- Place resolution (required for time-dependent math) ----
         var loc = null;
@@ -142,7 +142,7 @@
             descendant = S.signFromLongitude(ascLon + 180);
         }
         // (Refusal notices for missing time/place were already recorded when
-        // the input was first inspected — never duplicated here.)
+        // the input was first inspected: never duplicated here.)
 
         // ---- Part of Fortune: exact, requires angles ----
         var pof = null;
@@ -189,8 +189,8 @@
             if (!signObj || !signObj.name) {
                 entry.withheld = true;
                 entry.sign = '—';
-                entry.body = opts.withheldBody || 'Withheld — not exactly computable from what you gave us. Nothing is guessed here.';
-                entry.why = opts.withheldWhy || 'Soul Spark shows a placement only when it can compute it exactly. Add the missing input and this card fills in itself.';
+                entry.body = opts.withheldBody || 'Withheld, not exactly computable from what you gave us. Nothing is guessed here.';
+                entry.why = opts.withheldWhy || 'Love Blueprint shows a placement only when it can compute it exactly. Add the missing input and this card fills in itself.';
                 entry.needsTime = !!opts.needsTime;
                 cards.push(entry);
                 return;
@@ -201,7 +201,7 @@
                 // Content gap = refuse that card too. Never show wrong copy.
                 entry.withheld = true;
                 entry.sign = signObj.name;
-                entry.body = 'This reading is still being written for your exact placement — it will appear in the next content update rather than showing you approximate copy.';
+                entry.body = 'This reading is still being written for your exact placement. It will appear in the next content update rather than showing you approximate copy.';
                 entry.why = 'Absolute-accuracy standard: placements render only when complete, verified copy exists.';
                 cards.push(entry);
                 return;
@@ -216,19 +216,19 @@
         }
         addPoint('venus', 'Venus', chart.placements.venus);
         addPoint('moon', 'Moon', chart.moonUncertain ? null : chart.placements.moon, {
-            withheldBody: 'Your Moon changes sign during your birth day, so its sign cannot be pinned without a birth time. Nothing is guessed here — add your time and this card fills in exactly.',
-            withheldWhy: 'The Moon moves ~13°/day. Near sign boundaries a date-only chart is genuinely ambiguous; Soul Spark withholds rather than coin-flips.'
+            withheldBody: 'Your Moon changes sign during your birth day, so its sign cannot be pinned without a birth time. Nothing is guessed here: add your time and this card fills in exactly.',
+            withheldWhy: 'The Moon moves ~13°/day. Near sign boundaries a date-only chart is genuinely ambiguous; Love Blueprint withholds rather than coin-flips.'
         });
         addPoint('mercury', 'Mercury', chart.placements.mercury);
         addPoint('mars', 'Mars', chart.placements.mars);
         addPoint('rising', 'Rising', chart.angles ? chart.angles.ascendant : null, {
             needsTime: true,
-            withheldBody: 'Rising needs your exact birth time AND place — it changes sign roughly every two hours. Add both and this locks in to the degree.',
-            withheldWhy: 'Without time+place the Ascendant is unknowable, and Soul Spark refuses to estimate it.'
+            withheldBody: 'Rising needs your exact birth time AND place. It changes sign roughly every two hours. Add both and this locks in to the degree.',
+            withheldWhy: 'Without time+place the Ascendant is unknowable, and Love Blueprint refuses to estimate it.'
         });
         addPoint('descendant', '7th House', chart.descendant, {
             needsTime: true,
-            withheldBody: 'The 7th House is the exact opposite of your Rising sign, so it needs the same inputs: birth time AND place. This is your single most important compatibility point — worth chasing down your birth certificate for.',
+            withheldBody: 'The 7th House is the exact opposite of your Rising sign, so it needs the same inputs: birth time AND place. This is your single most important compatibility point: worth chasing down your birth certificate for.',
             withheldWhy: 'Descendant = Ascendant + 180°, both computed from sidereal time at the resolved birth location. Withheld, never estimated.'
         });
         addPoint('sun', 'Sun', chart.placements.sun);
@@ -250,7 +250,7 @@
         };
     };
 
-    // Numerology — deterministic integer math (reuse the site's proven
+    // Numerology: deterministic integer math (reuse the site's proven
     // partition when calculations.js is loaded; else the identical
     // implementation below, kept in lockstep with the repo invariant:
     // Destiny = Soul Urge + Personality before final reduction).

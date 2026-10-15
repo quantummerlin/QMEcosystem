@@ -1,5 +1,5 @@
 // ============================================================
-// SOUL SPARK — STRICT ACCURACY ENGINE v1.0.0
+// LOVE BLUEPRINT — STRICT ACCURACY ENGINE v1.0.0
 // ============================================================
 // STANDARD: every astronomical output must be exact (real
 // ephemeris via astronomy-engine, or closed-form formulas
@@ -40,9 +40,9 @@
         engineMissing: 'The exact ephemeris (astronomy-engine) did not load, so no chart was computed. Nothing was guessed. Check the connection and try again.',
         placeUnresolved: 'We could not resolve that birth place to exact coordinates, and an exact chart is impossible without them. Nothing was guessed. Try the nearest large city.',
         timeMissingForAngles: 'Birth time is required for the Ascendant and house-based points. Sign-only placements below are exact; angle-dependent cards are withheld, not estimated.',
-        chiron: 'Chiron is excluded from Soul Spark: no exact minor-body ephemeris runs on-device.',
-        lilith: 'Lilith is excluded from Soul Spark: mean-apogee drift formulas available here are approximate.',
-        vertex: 'Vertex is excluded from Soul Spark v1: the exact prime-vertical formula is not yet verified against reference software.'
+        chiron: 'Chiron is excluded from Love Blueprint: no exact minor-body ephemeris runs on-device.',
+        lilith: 'Lilith is excluded from Love Blueprint: mean-apogee drift formulas available here are approximate.',
+        vertex: 'Vertex is excluded from Love Blueprint v1: the exact prime-vertical formula is not yet verified against reference software.'
     };
 
     function norm360(x) { return ((x % 360) + 360) % 360; }
