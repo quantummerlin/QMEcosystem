@@ -92,6 +92,7 @@
 /* CUSTOM ICON SYSTEM: hand-drawn set from icons.js. One stroke language,
    currentColor, never font-dependent, never OS emoji. */
 .ic{width:1em;height:1em;vertical-align:-.15em;flex:none}
+[data-icon]:empty{display:none!important}
 .btn,.btn2,.flipbtn,.chip,.next-stop button,.done-btns .btn,.onboard-btns .btn,.tone-seg button,.draft-btn,.lib-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px}
 .dot{display:inline-flex}
 .dot .ic{width:1.25em;height:1.25em}
@@ -1452,7 +1453,36 @@ text-align:center}
 <script src="vendor/astronomy.browser.min.js"></script>
 <script src="/soulblueprint/geo-data.js"></script>
 <script src="/soulblueprint/geocode.js"></script>
-<script src="icons.js"></script>
+<script>
+/* Icon resilience: icons.js is a separate file, so guard against it
+   failing to load (CDN edge lag right after a deploy, flaky network).
+   Shim keeps every builder safe; retry restores the real set. */
+(function(){
+  if(typeof window.LBIcon === 'function') return;
+  window.__lbIconsPending = true;
+  window.LBIcon = window.LBIcon || function(){ return ''; };
+  window.__lbIconShim = true;
+})();
+</script>
+<script src="icons.js" onerror="window.__lbIconsFailed=true"></script>
+<script>
+/* If the real set did not load, retry once with a cache-buster. */
+(function(){
+  function real(){ return typeof window.LBIcons === 'object' && window.LBIcons && window.LBIcons.heart; }
+  if(real()){ window.__lbIconShim = false; return; }
+  function retry(){
+    if(real()) return;
+    var s = document.createElement('script');
+    s.src = 'icons.js?r=' + Date.now();
+    s.onload = function(){
+      if(real()){ window.__lbIconShim = false; if(typeof window.mountIcons === 'function') window.mountIcons(); }
+    };
+    document.head.appendChild(s);
+  }
+  window.addEventListener('DOMContentLoaded', retry);
+  setTimeout(retry, 2500);
+})();
+</script>
 <script src="spark-engine.js"></script>
 <script src="dating-content.js"></script>
 <script src="spark-runtime.js"></script>
@@ -1584,7 +1614,7 @@ function svgGlyph(tok){
   return (typeof LBIcon === 'function') ? LBIcon(name) : '';
 }
 function mountIcons(){
-  if(typeof LBIcon !== 'function') return;
+  if(typeof LBIcon !== 'function' || window.__lbIconShim) return;
   var els = document.querySelectorAll('[data-icon]');
   for(var i = 0; i < els.length; i++){
     if(els[i].firstElementChild) continue;

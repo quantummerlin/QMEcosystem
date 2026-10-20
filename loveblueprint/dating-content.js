@@ -278,8 +278,11 @@
         rising: '\u2191', descendant: '\u2302', sun: '\u2600'
     };
     // Production loads icons.js first, so card faces use the hand-drawn SVG
-    // set. In bare-Node tests LBIcon is absent and the text glyphs above stay.
-    if (typeof global.LBIcon === 'function') {
+    // set. In bare-Node tests (or if icons.js failed to load) the real set
+    // is absent and the text glyphs above stay. Test for the REAL set
+    // (global.LBIcons), never just the LBIcon function: a safety shim may
+    // define LBIcon as a no-op and must not blank the card faces.
+    if (typeof global.LBIcon === 'function' && global.LBIcons && global.LBIcons.venus) {
         var ICON_NAME = { venus: 'venus', moon: 'moon', mercury: 'mercury', mars: 'mars',
                           rising: 'ascArrow', descendant: 'house', sun: 'sun' };
         Object.keys(ICON_NAME).forEach(function (k) {
