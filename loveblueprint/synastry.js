@@ -35,7 +35,7 @@
     // counts. Derived from standard synastry practice.
     SYN.DIMENSIONS = [
         {
-            key: 'chemistry', label: '\uD83D\uDD25 Chemistry', weight: 0.30,
+            key: 'chemistry', label: 'Chemistry', weight: 0.30,
             pairs: [
                 { a: 'Venus', b: 'Mars', w: 1.0 },
                 { a: 'Mars',  b: 'Venus', w: 1.0 },
@@ -44,7 +44,7 @@
             ]
         },
         {
-            key: 'safety', label: '\uD83D\uDEE1\uFE0F Emotional safety', weight: 0.28,
+            key: 'safety', label: 'Emotional safety', weight: 0.28,
             pairs: [
                 { a: 'Moon',  b: 'Moon', w: 1.0 },
                 { a: 'Moon',  b: 'Venus', w: 0.8 },
@@ -55,7 +55,7 @@
             ]
         },
         {
-            key: 'communication', label: '\uD83D\uDCAC Communication', weight: 0.17,
+            key: 'communication', label: 'Communication', weight: 0.17,
             pairs: [
                 { a: 'Mercury', b: 'Mercury', w: 1.0 },
                 { a: 'Mercury', b: 'Venus', w: 0.6 },
@@ -65,7 +65,7 @@
             ]
         },
         {
-            key: 'longevity', label: '\u23F3 Staying power', weight: 0.25,
+            key: 'longevity', label: 'Staying power', weight: 0.25,
             pairs: [
                 { a: 'Saturn', b: 'Sun', w: 0.9 },
                 { a: 'Saturn', b: 'Moon', w: 0.9 },

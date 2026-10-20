@@ -277,6 +277,15 @@
         venus: '\u2640', moon: '\u263E', mercury: '\u263F', mars: '\u2642',
         rising: '\u2191', descendant: '\u2302', sun: '\u2600'
     };
+    // Production loads icons.js first, so card faces use the hand-drawn SVG
+    // set. In bare-Node tests LBIcon is absent and the text glyphs above stay.
+    if (typeof global.LBIcon === 'function') {
+        var ICON_NAME = { venus: 'venus', moon: 'moon', mercury: 'mercury', mars: 'mars',
+                          rising: 'ascArrow', descendant: 'house', sun: 'sun' };
+        Object.keys(ICON_NAME).forEach(function (k) {
+            CONTENT.icons[k] = global.LBIcon(ICON_NAME[k]);
+        });
+    }
 
     global.SparkContent = CONTENT;
     if (typeof module !== 'undefined' && module.exports) module.exports = CONTENT;
