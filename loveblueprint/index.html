@@ -15,7 +15,7 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Love Blueprint: Your Cosmic Dating Decoder">
+<meta property="og:title" content="Love Blueprint: Your Love Story, Read From the Real Sky">
 <meta property="og:description" content="How you love, how you text, who you're wired for: computed exactly from your birth chart. Free, private, shareable on Hinge &amp; Bumble.">
 <meta property="og:url" content="https://quantummerlin.com/loveblueprint/">
 <meta property="og:site_name" content="Love Blueprint | Quantum Merlin">
@@ -23,7 +23,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://quantummerlin.com/loveblueprint/assets/og-card.png">
-<meta name="twitter:title" content="Love Blueprint: Your Cosmic Dating Decoder">
+<meta name="twitter:title" content="Love Blueprint: Your Love Story, Read From the Real Sky">
 <meta name="twitter:description" content="Exact birth-chart dating readings + degree compatibility + profile bio writer. Free and private.">
 
 <!-- Structured data -->
@@ -199,7 +199,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 #results{display:none}
 #results.on{display:block}
 .section{margin-top:52px}
-.section-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.section-head{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:8px;text-align:center}
 .section-head .dot{font-size:1.5rem;color:var(--rose)}
 .section-head h2{font-size:1.7rem;color:var(--rose-deep)}
 .section-head p{color:var(--muted);font-size:.92rem;margin-top:2px}
@@ -207,7 +207,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 
 /* Spark meter badge (Saily energy badge → dating) */
 .spark-badge{
-  display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px;text-align:center;
   background:linear-gradient(135deg,var(--card),var(--card-2));border:1px solid var(--line);
   border-left:5px solid var(--rose);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);
 }
@@ -228,7 +228,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 .chip:hover{border-color:var(--rose-soft);color:var(--rose-deep);transform:translateY(-1px)}
 .chip.sel{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);border-color:transparent;color:#fff;box-shadow:0 6px 16px rgba(255,77,109,.3)}
 .chip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.intent-note{font-size:.86rem;margin-top:10px;background:rgba(232,185,106,.12);border:1px solid rgba(232,185,106,.35);border-radius:12px;padding:10px 14px;line-height:1.55}
+.intent-note{font-size:.86rem;margin-top:10px;background:rgba(232,185,106,.12);border:1px solid rgba(232,185,106,.35);border-radius:12px;padding:10px 14px;line-height:1.55;text-align:center}
 
 /* ---------- WORDS vs CHART alignment ---------- */
 .align-vs{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:12px;margin-bottom:18px}
@@ -243,9 +243,11 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 .align-verdict.adjacent{background:rgba(232,185,106,.16);color:var(--gold);border:1px solid rgba(232,185,106,.4)}
 .align-verdict.tension{background:rgba(255,77,109,.16);color:var(--rose);border:1px solid rgba(255,77,109,.45)}
 .align-verdict.open{background:var(--card-2);color:var(--muted);border:1px solid var(--line)}
-.align-msg{font-size:.93rem;line-height:1.7}
+.align-msg{font-size:.93rem;line-height:1.7;text-align:center}
 .align-msg b{color:var(--rose-deep);font-weight:700}
 .align-msg em{color:var(--gold);font-style:italic}
+#alignSection{text-align:center}
+.align-elems .el-row,.align-elems .el-row span{text-align:left}
 @media(max-width:520px){.align-vs{grid-template-columns:1fr}.align-heart{transform:rotate(90deg);justify-self:center}}
 
 /* ---------- THE DEEPER PULL (nodes + Saturn) ---------- */
@@ -265,15 +267,15 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 .pull.lesson .pull-tag{color:var(--gold)}
 .pull-title{font-family:var(--font-head);font-size:1.08rem;color:var(--text);font-weight:700}
 .pull-sub{font-size:.76rem;color:var(--muted);margin-left:auto}
-.pull-body{font-size:.9rem;line-height:1.72}
+.pull-body{font-size:.9rem;line-height:1.72;text-align:center}
 .pull-body b{color:var(--rose-deep);font-weight:700}
 .pull-orb{display:inline-block;font-size:.68rem;font-weight:800;color:var(--gold);background:rgba(232,185,106,.15);border:1px solid rgba(232,185,106,.4);padding:2px 9px;border-radius:999px}
 .pull-synth{
   margin-top:16px;background:linear-gradient(135deg,rgba(255,77,109,.10),rgba(232,185,106,.07));
   border:1px solid rgba(255,77,109,.3);border-radius:14px;padding:18px 20px;
 }
-.pull-synth h4{color:var(--rose-deep);font-size:1rem;margin-bottom:8px;display:flex;gap:8px;align-items:center}
-.pull-synth p{font-size:.91rem;line-height:1.75}
+.pull-synth h4{color:var(--rose-deep);font-size:1rem;margin-bottom:8px;display:flex;gap:8px;align-items:center;justify-content:center;text-align:center}
+.pull-synth p{font-size:.91rem;line-height:1.75;text-align:center}
 .pull-synth b{color:var(--rose-deep)}
 .pull-arrow{
   display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
@@ -369,10 +371,10 @@ body.has-bnav{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
 .resume-all{background:none;border:none;color:var(--rose-deep);font-weight:700;font-size:.76rem;cursor:pointer;flex-shrink:0;padding:6px}
 #libraryView{display:none}
 #libraryView.on{display:block}
-.lib-head{margin-top:30px;text-align:left}
+.lib-head{margin-top:30px;text-align:center}
 .lib-head h2{font-family:var(--font-head);color:var(--rose-deep);font-size:1.7rem}
 .lib-head p{color:var(--muted);font-size:.85rem;margin-top:4px;max-width:520px}
-.lib-h{display:flex;align-items:baseline;gap:10px;margin:26px 0 12px}
+.lib-h{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:26px 0 12px}
 .lib-h h3{font-size:1.05rem;color:var(--text);font-family:var(--font-head)}
 .lib-h .cnt{font-size:.72rem;color:var(--muted);background:var(--card-2);padding:2px 9px;border-radius:999px}
 .lib-row{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px;box-shadow:var(--shadow);flex-wrap:wrap}
@@ -403,7 +405,7 @@ body.has-bnav{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
   .sheet{bottom:auto;top:50%;border-radius:22px;transform:translate(-50%,-46%) scale(.96);opacity:0;transition:transform .25s var(--ease),opacity .25s}
   .sheet.on{transform:translate(-50%,-50%) scale(1);opacity:1}
 }
-.sheet h4{font-family:var(--font-head);color:var(--rose-deep);font-size:1.05rem;margin-bottom:4px}
+.sheet h4{font-family:var(--font-head);color:var(--rose-deep);font-size:1.05rem;margin-bottom:4px;text-align:center}
 .sheet .sh-who{font-size:.8rem;color:var(--muted);margin-bottom:14px}
 .sheet-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
 .sheet-chips .chip{font-size:.76rem;padding:7px 13px}
@@ -450,7 +452,7 @@ body[data-view="result"] #libraryView.on{display:none!important}
 .face.front .icon{font-size:3rem;margin-bottom:14px;filter:drop-shadow(0 4px 14px rgba(255,77,109,.5))}
 .face.front h3{font-size:1.35rem;color:var(--rose-deep);margin-bottom:4px}
 .face.front .sign{font-size:1.05rem;color:var(--text);font-weight:600;margin-bottom:12px}
-.face.front .hint{margin-top:auto;font-size:.74rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+.face.front .hint{margin-top:auto;font-size:.74rem;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:6px}
 .flipbtn{
   margin-top:14px;background:none;border:1.5px solid var(--rose);color:var(--rose-deep);
   padding:8px 18px;border-radius:999px;font-family:inherit;font-weight:600;font-size:.82rem;cursor:pointer;
@@ -462,10 +464,10 @@ body[data-view="result"] #libraryView.on{display:none!important}
   transform:rotateY(180deg);background:var(--card);padding:22px;box-shadow:var(--shadow-lift);
   overflow-y:auto;
 }
-.face.back h4{font-size:1.05rem;color:var(--rose-deep);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.face.back h4{font-size:1.05rem;color:var(--rose-deep);margin-bottom:4px;display:flex;align-items:center;justify-content:center;gap:8px;text-align:center}
 .face.back .body{
   font-family:var(--font-head);font-size:.94rem;color:var(--text);
-  margin:10px 0 12px;line-height:1.75;text-align:left;max-width:46ch;
+  margin:10px auto 12px;line-height:1.8;text-align:center;max-width:44ch;
 }
 .face.back .body .stanza{
   opacity:0;transform:translateY(10px);
@@ -485,28 +487,31 @@ body[data-view="result"] #libraryView.on{display:none!important}
 details.why{margin-top:8px;border-top:1px solid var(--line);padding-top:10px}
 details.why summary{
   cursor:pointer;list-style:none;font-weight:700;font-size:.82rem;color:var(--rose-deep);
-  display:flex;align-items:center;gap:8px;user-select:none;
+  display:flex;align-items:center;justify-content:center;gap:8px;user-select:none;text-align:center;
 }
 details.why summary::-webkit-details-marker{display:none}
 details.why summary .chev{transition:transform .25s var(--ease)}
 details.why[open] summary .chev{transform:rotate(90deg)}
-details.why .why-body{font-size:.82rem;color:var(--muted);margin-top:8px;padding-left:2px}
+details.why .why-body{font-size:.82rem;color:var(--muted);margin-top:8px;padding-left:2px;text-align:center}
 
 /* ---------- DATING FLAGS (traffic lights) ---------- */
 .flags{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
 .flag{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-.flag h4{display:flex;align-items:center;gap:8px;font-size:1rem;margin-bottom:10px}
+.flag h4{display:flex;align-items:center;justify-content:center;gap:8px;font-size:1rem;margin-bottom:10px;text-align:center}
 .flag.g{border-top:4px solid var(--green)} .flag.y{border-top:4px solid var(--yellow)} .flag.r{border-top:4px solid var(--red)}
-.flag ul{list-style:none} .flag li{padding:5px 0 5px 22px;position:relative;font-size:.87rem;color:var(--text)}
-.flag.g li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
-.flag.y li::before{content:"!";position:absolute;left:0;color:var(--yellow);font-weight:800}
-.flag.r li::before{content:"✗";position:absolute;left:0;color:var(--red);font-weight:800}
+.flag ul{list-style:none} .flag li{display:flex;align-items:baseline;gap:9px;padding:5px 0;font-size:.87rem;color:var(--text)}
+.flag.g li::before{content:"✓";color:var(--green);font-weight:800;flex:none}
+.flag.g li::after{content:"✓";color:var(--green);font-weight:800;flex:none;margin-left:auto}
+.flag.y li::before{content:"!";color:var(--yellow);font-weight:800;flex:none}
+.flag.y li::after{content:"!";color:var(--yellow);font-weight:800;flex:none;margin-left:auto}
+.flag.r li::before{content:"✗";color:var(--red);font-weight:800;flex:none}
+.flag.r li::after{content:"✗";color:var(--red);font-weight:800;flex:none;margin-left:auto}
 
 /* ---------- OPTION TABLES (Saily pick-one → dating moves) ---------- */
 .move{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:var(--shadow)}
-.move .mtitle{font-weight:700;font-size:1.02rem;color:var(--rose-deep)}
+.move .mtitle{font-weight:700;font-size:1.02rem;color:var(--rose-deep);text-align:center}
 .move .mtitle .n{color:var(--gold);font-family:var(--font-head);font-size:1.2rem;margin-right:6px}
-.move .mdesc{font-size:.85rem;color:var(--muted);margin:4px 0 12px}
+.move .mdesc{font-size:.85rem;color:var(--muted);margin:4px 0 12px;text-align:center}
 .opts{display:grid;gap:8px}
 .opt{
   display:flex;align-items:center;gap:12px;padding:11px 14px;border:1.5px solid var(--line);
@@ -523,33 +528,35 @@ details.why .why-body{font-size:.82rem;color:var(--muted);margin-top:8px;padding
 
 /* Traps */
 .traps{background:linear-gradient(135deg,#2E0A14,#3D0E1C);color:#F7D7DE;border:1px solid rgba(255,107,133,.25);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
-.traps h3{color:#FFB3C0;margin-bottom:10px;display:flex;gap:8px;align-items:center}
+.traps h3{color:#FFB3C0;margin-bottom:10px;display:flex;gap:8px;align-items:center;justify-content:center;text-align:center}
 .traps ul{list-style:none}
-.traps li{padding:6px 0 6px 24px;position:relative;font-size:.89rem;color:#F3C6D0}
-.traps li::before{content:"✗";position:absolute;left:0;color:var(--rose-soft);font-weight:800}
+.traps li{display:flex;align-items:baseline;gap:9px;padding:6px 0;font-size:.89rem;color:#F3C6D0}
+.traps li::before{content:"✗";color:var(--rose-soft);font-weight:800;flex:none}
+.traps li::after{content:"✗";color:var(--rose-soft);font-weight:800;flex:none;margin-left:auto}
 
 /* ---------- BIO CARD (share preview) ---------- */
 .bio{
   max-width:340px;margin:0 auto;border-radius:22px;overflow:hidden;box-shadow:var(--shadow-lift);
   background:linear-gradient(155deg,var(--rose-deep),var(--rose) 55%,var(--gold));color:#fff;padding:30px 26px;position:relative;
-}
+text-align:center}
 .bio::before{content:"♥";position:absolute;top:-30px;right:-10px;font-size:180px;opacity:.10}
+.bio::after{content:"♥";position:absolute;bottom:-40px;left:-14px;font-size:180px;opacity:.10;pointer-events:none}
 .bio .bname{font-family:var(--font-head);font-size:1.6rem;font-weight:800}
 .bio .brow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
 .bio .btag{background:rgba(255,255,255,.16);backdrop-filter:blur(4px);padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:600}
 .bio .bline{font-size:.86rem;opacity:.94;margin-top:6px}
-.bio .bqr{margin-top:16px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.14);border-radius:14px;padding:10px 12px;backdrop-filter:blur(4px)}
+.bio .bqr{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:12px;background:rgba(255,255,255,.14);border-radius:14px;padding:10px 12px;backdrop-filter:blur(4px)}
 .bio .bqr img{width:84px;height:84px;border-radius:8px;background:#fff;padding:4px;display:block;flex:0 0 auto}
-.bio .bqr-txt{display:flex;flex-direction:column;gap:3px}
+.bio .bqr-txt{display:flex;flex-direction:column;gap:3px;text-align:left}
 .bio .bqr-txt b{font-size:.86rem}
 .bio .bqr-txt span{opacity:.85;font-size:.7rem}
 .bio .bfoot{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.25);font-size:.72rem;opacity:.85;display:flex;justify-content:space-between;align-items:center;gap:8px}
 
 /* ---------- WHY IT MATTERS (time/place) ---------- */
 .why-box{margin-top:14px;border:1.5px dashed var(--line);border-radius:14px;padding:4px 16px;background:rgba(255,77,109,.05)}
-.why-box summary{cursor:pointer;font-weight:700;font-size:.84rem;color:var(--rose-deep);padding:10px 0;list-style:none;display:flex;gap:8px;align-items:center;user-select:none}
+.why-box summary{cursor:pointer;font-weight:700;font-size:.84rem;color:var(--rose-deep);padding:10px 0;list-style:none;display:flex;gap:8px;align-items:center;justify-content:center;user-select:none;text-align:center}
 .why-box summary::-webkit-details-marker{display:none}
-.why-box .why-in{font-size:.84rem;color:var(--muted);padding:0 0 12px}
+.why-box .why-in{font-size:.84rem;color:var(--muted);padding:0 0 12px;text-align:center}
 .why-box .why-in b{color:var(--text)}
 
 /* Chart accuracy badge */
@@ -560,21 +567,23 @@ details.why .why-body{font-size:.82rem;color:var(--muted);margin-top:8px;padding
 /* ---------- SHARE & COMPARE ---------- */
 .share-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
-.panel h3{color:var(--rose-deep);font-size:1.15rem;margin-bottom:4px}
-.panel .phint{font-size:.82rem;color:var(--muted);margin-bottom:14px}
+.panel h3{color:var(--rose-deep);font-size:1.15rem;margin-bottom:4px;text-align:center}
+.panel .phint{font-size:.82rem;color:var(--muted);margin-bottom:14px;text-align:center}
 .seg{display:flex;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
 .seg button{flex:1;background:var(--card-2);border:none;padding:10px 6px;font-family:inherit;font-size:.76rem;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s}
 .seg button.on{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff}
 .promise{border-radius:12px;padding:12px 14px;font-size:.8rem;margin-bottom:12px}
 .promise b{display:block;margin-bottom:4px;font-size:.82rem}
 .promise ul{list-style:none;margin:0}
-.promise li{padding:2px 0 2px 20px;position:relative}
+.promise li{padding:2px 0;display:flex;align-items:baseline;gap:9px}
 .promise.yes{background:rgba(123,196,138,.09);color:#BFE3C8;border:1px solid rgba(123,196,138,.3)}
-.promise.yes li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+.promise.yes li::before{content:"✓";color:var(--green);font-weight:800;flex:none}
+.promise.yes li::after{content:"✓";color:var(--green);font-weight:800;flex:none;margin-left:auto}
 .promise.no{background:rgba(255,123,107,.09);color:#F5C3BB;border:1px solid rgba(255,123,107,.3)}
-.promise.no li::before{content:"✗";position:absolute;left:0;color:var(--red);font-weight:800}
+.promise.no li::before{content:"✗";color:var(--red);font-weight:800;flex:none}
+.promise.no li::after{content:"✗";color:var(--red);font-weight:800;flex:none;margin-left:auto}
 .code-chip{font-family:'Courier New',monospace;font-size:.7rem;background:#120810;color:#FFC2CE;border:1px solid var(--line);padding:10px 12px;border-radius:10px;word-break:break-all;max-height:64px;overflow:auto;margin:12px 0}
-.share-btns{display:flex;gap:10px;flex-wrap:wrap}
+.share-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 .btn2{flex:1;min-width:130px;padding:12px;border-radius:12px;border:none;cursor:pointer;font-family:inherit;font-weight:700;font-size:.85rem;transition:transform .15s var(--ease),box-shadow .2s}
 .btn2.primary{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff;box-shadow:0 6px 18px rgba(255,77,109,.3)}
 .btn2.ghost{background:var(--card-2);border:1.5px solid var(--rose);color:var(--rose-deep)}
@@ -624,13 +633,14 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 .soc-stars i{position:absolute;color:var(--gold);font-style:normal;font-size:8px}
 .soc-label{
   font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;
-  color:var(--gold);display:flex;align-items:center;gap:5px;
+  color:var(--gold);display:flex;align-items:center;justify-content:center;gap:5px;text-align:center;
 }
 .soc-title{
   font-family:var(--font-head);font-weight:800;color:var(--text);
-  font-size:clamp(1.05rem,5vw,1.4rem);line-height:1.12;margin:8px 0 4px;
+  font-size:clamp(1.05rem,5vw,1.4rem);line-height:1.12;margin:8px 0 4px;;
+  text-align:center
 }
-.soc-sub{color:var(--rose-deep);font-weight:700;font-size:.8rem;margin-bottom:auto}
+.soc-sub{color:var(--rose-deep);font-weight:700;font-size:.8rem;margin-bottom:auto;text-align:center}
 .soc-art{display:flex;align-items:center;justify-content:center;padding:10px 0;min-height:74px}
 .soc-art svg{width:64px;height:64px;filter:drop-shadow(0 6px 18px rgba(255,77,109,.45))}
 .soc-medal{
@@ -641,13 +651,14 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 }
 .soc-points{list-style:none;margin:auto 0 10px;padding:0}
 .soc-points li{
-  color:#EEDDE4;font-size:.68rem;line-height:1.45;margin-bottom:5px;
-  padding-left:14px;position:relative;overflow:hidden;
+  color:#EEDDE4;font-size:.68rem;line-height:1.45;margin-bottom:5px;overflow:hidden;
+  display:flex;align-items:baseline;justify-content:center;gap:6px;text-align:center;
 }
 .soc.clamped .soc-points li{
-  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;text-align:center;
 }
-.soc-points li::before{content:"\2665";position:absolute;left:0;color:var(--rose);font-size:.6rem}
+.soc-points li::before{content:"\2665";color:var(--rose);font-size:.6rem;flex:none}
+.soc-points li::after{content:"\2665";color:var(--rose);font-size:.6rem;flex:none}
 .soc-quote{
   font-family:var(--font-head);color:var(--text);font-size:clamp(1.05rem,5vw,1.45rem);
   line-height:1.3;text-align:center;font-weight:700;margin:auto 6px;
@@ -674,11 +685,15 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 .soc-flagbox{margin-bottom:8px}
 .soc-flagbox .fh{font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;margin-bottom:3px}
 .soc-flagbox.g .fh{color:var(--green)} .soc-flagbox.y .fh{color:var(--yellow)} .soc-flagbox.r .fh{color:var(--rose-soft)}
-.soc-flagbox p{color:#EEDDE4;font-size:.66rem;line-height:1.45;margin:0 0 3px 0;padding-left:12px;position:relative}
-.soc-flagbox p::before{position:absolute;left:0;font-weight:800}
+.soc-flagbox p{color:#EEDDE4;font-size:.66rem;line-height:1.45;margin:0 0 3px 0;display:flex;align-items:baseline;justify-content:center;gap:6px;text-align:center}
+.soc-flagbox p::before{font-weight:800;flex:none}
+.soc-flagbox p::after{font-weight:800;flex:none}
 .soc-flagbox.g p::before{content:"\2713";color:var(--green)}
+.soc-flagbox.g p::after{content:"\2713";color:var(--green)}
 .soc-flagbox.y p::before{content:"!";color:var(--yellow)}
+.soc-flagbox.y p::after{content:"!";color:var(--yellow)}
 .soc-flagbox.r p::before{content:"\2715";color:var(--rose-soft)}
+.soc-flagbox.r p::after{content:"\2715";color:var(--rose-soft)}
 /* screenshot hint chip */
 .soc-hint{text-align:center;color:var(--muted);font-size:.74rem;margin-top:12px}
 @media (prefers-reduced-motion:reduce){
@@ -727,11 +742,12 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
   transform:translateY(16px);transition:transform var(--t-base) var(--ease-out);
 }
 .onboard.on .onboard-card{transform:none}
-.onboard-card h3{font-size:1.35rem;margin-bottom:6px}
-.onboard-card p{color:var(--muted);font-size:.88rem;line-height:1.6;margin-bottom:14px}
+.onboard-card h3{font-size:1.35rem;margin-bottom:6px;text-align:center}
+.onboard-card p{color:var(--muted);font-size:.88rem;line-height:1.6;margin-bottom:14px;text-align:center}
 .onboard-list{list-style:none;margin:0 0 18px}
-.onboard-list li{padding:7px 0 7px 26px;position:relative;font-size:.86rem;color:var(--text)}
-.onboard-list li::before{content:"\2665";position:absolute;left:2px;color:var(--rose);font-size:.7rem;top:10px}
+.onboard-list li{padding:7px 0;font-size:.86rem;color:var(--text);text-align:center}
+.onboard-list li::before{content:"\2665 ";color:var(--rose);font-size:.7rem}
+.onboard-list li::after{content:" \2665";color:var(--rose);font-size:.7rem}
 .onboard-list li b{color:var(--rose-deep)}
 .onboard-btns{display:flex;gap:10px;flex-wrap:wrap}
 .onboard-btns .btn{flex:1;min-width:150px}
@@ -797,15 +813,15 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 .draft-text{
   font-size:.93rem;line-height:1.7;color:var(--text);
   white-space:pre-wrap;word-wrap:break-word;
-}
-.draft-acts{display:flex;gap:8px;margin-top:14px}
+text-align:center}
+.draft-acts{display:flex;gap:8px;margin-top:14px;justify-content:center}
 
 /* ---------- FULL DEGREE SYNASTRY (same device) ---------- */
 .syn{margin-top:20px;background:linear-gradient(135deg,rgba(255,77,109,.06),rgba(232,185,106,.05));border:1px solid rgba(255,77,109,.28);border-radius:16px;padding:20px}
-.syn-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.syn-head{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px;text-align:center}
 .syn-head h3{font-size:1.1rem;color:var(--rose-deep)}
 .syn-badge{margin-left:auto;font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(232,185,106,.18);color:var(--gold);border:1px solid rgba(232,185,106,.4)}
-.syn-phint{font-size:.82rem;color:var(--muted);margin-bottom:14px;line-height:1.55}
+.syn-phint{font-size:.82rem;color:var(--muted);margin-bottom:14px;line-height:1.55;text-align:center}
 .syn-form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 @media(max-width:560px){.syn-form{grid-template-columns:1fr}}
 .syn-form .field label{color:var(--muted)}
@@ -831,8 +847,8 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 .syn-comp .cc b{color:var(--text)}
 /* best-draft callout inside Moves #1 (linked to Bio Writer) */
 .best-draft{background:linear-gradient(135deg,rgba(255,77,109,.08),rgba(232,185,106,.06));border:1.5px solid rgba(255,77,109,.35);border-radius:14px;padding:14px 16px;margin-top:4px}
-.best-draft .bd-text{font-size:.92rem;line-height:1.7;color:var(--text);font-style:italic}
-.best-draft .bd-acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.best-draft .bd-text{font-size:.92rem;line-height:1.7;color:var(--text);font-style:italic;text-align:center}
+.best-draft .bd-acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;justify-content:center}
 .best-draft .bd-acts .btn2{flex:1;min-width:120px;padding:10px;font-size:.8rem}
 .draft-btn{
   flex:1;padding:9px;border-radius:10px;border:1.5px solid var(--rose);background:none;
@@ -868,7 +884,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 <!-- ONBOARDING: shown once, after the first blueprint is generated. -->
 <div class="onboard" id="onboard" role="dialog" aria-modal="true" aria-labelledby="obTitle">
   <div class="onboard-card">
-    <h3 id="obTitle">Your Love Blueprint is ready ♥</h3>
+    <h3 id="obTitle">♥ Your Love Blueprint is ready ♥</h3>
     <p>Seven stations, then three ways to use it. Read it like a letter, not a report. Nothing here is fate; it is a mirror with coordinates.</p>
     <ul class="onboard-list">
       <li><b>Love Signature.</b> Flip each card to read how you love, feel safe, pursue and text.</li>
@@ -878,7 +894,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       <li><b>Bio Writer + cards.</b> Copy-paste bios and screenshot-ready cards for your profile.</li>
     </ul>
     <div class="onboard-btns">
-      <button class="btn" id="obTour" type="button">Begin the tour ♥</button>
+      <button class="btn" id="obTour" type="button">♥ Begin the tour ♥</button>
       <button class="btn ghost" id="obSkip" type="button">Just let me read</button>
     </div>
   </div>
@@ -907,8 +923,8 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
   <!-- HERO -->
   <header class="hero">
     <span class="brand-chip"><img src="assets/logo.svg" alt="" style="width:22px;height:22px;display:block"> Love Blueprint</span>
-    <h1>Your Cosmic Dating Decoder</h1>
-    <p class="tag">Flip a card, read your blueprint. Astrology + numerology turned into your real dating playbook: how you love, how you text and who you actually need.</p>
+    <h1>Your love story, read from the real sky</h1>
+    <p class="tag">Seven sealed letters about your heart. Flip them one by one: how you love, how you flirt, what feels like home, and who your chart keeps pointing to.</p>
     <p class="sub">100% private · calculated on your device · share the finished blueprint, never your birth data</p>
   </header>
 
@@ -919,6 +935,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       <div class="resume-t" id="resumeName">—</div>
       <div class="resume-s" id="resumeSub">—</div>
     </div>
+    <span class="resume-ico beat" aria-hidden="true">♥</span>
     <button class="resume-go" id="resumeGo" type="button">Resume</button>
     <button class="resume-all" id="resumeAll" type="button">All</button>
   </div>
@@ -949,7 +966,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="field" style="margin-top:16px">
       <span class="lbl" id="intentLbl">What are you here for?</span>
       <div class="chips" id="intentChips" role="group" aria-labelledby="intentLbl">
-        <button type="button" class="chip" data-intent="A long-term partner" aria-pressed="false">♥ A long-term partner</button>
+        <button type="button" class="chip" data-intent="A long-term partner" aria-pressed="false">♥ A long-term partner ♥</button>
         <button type="button" class="chip" data-intent="Something serious, slowly" aria-pressed="false">Something serious, slowly</button>
         <button type="button" class="chip" data-intent="Dating, open to anything" aria-pressed="false">Dating, open to anything</button>
         <button type="button" class="chip" data-intent="Short-term &amp; fun" aria-pressed="false">Short-term &amp; fun</button>
@@ -959,14 +976,14 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       <div class="fhint">Your call, and it never changes a single reading. Pick nothing and your card simply leaves it out. We don't assume everyone's here for commitment.</div>
     </div>
     <details class="why-box">
-      <summary><span class="beat">♥</span> Why time &amp; place matter to <em>you</em> <span style="margin-left:auto">▸</span></summary>
+      <summary><span class="beat">♥</span> Why time &amp; place matter to <em>you</em> <span class="beat" aria-hidden="true">♥</span> <span style="margin-left:auto">▸</span></summary>
       <div class="why-in">
         <b>Time of birth</b> unlocks your <b>Rising sign</b> and the exact degree of your <b>7th House</b> : the single most important point for compatibility (it's literally "who you're wired to partner with"). Without it we never guess: those cards stay <b>🔒 locked</b> with a plain explanation of what to add.<br><br>
         <b>Place of birth</b> sets the real sky and time zone you were born under. Even a perfect time gives a wrong Rising sign if the city is wrong.<br><br>
         Both stay on your device, and <b>are never included when you share your blueprint</b> with a date (see Share Without Spilling below).
       </div>
     </details>
-    <button class="btn" id="genBtn">Reveal My Blueprint <span class="beat">♥</span></button>
+    <button class="btn" id="genBtn"><span class="beat">♥</span> Reveal My Blueprint <span class="beat">♥</span></button>
   </div>
 
   <!-- RESULTS -->
@@ -985,14 +1002,15 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
           <div class="acc" id="chartAcc" style="display:none"></div>
           <div class="cap" id="accText" style="margin-top:6px;font-size:.8rem"></div>
         </div>
-      </div>
+      <span class="glyph beat" aria-hidden="true">❤</span>
     </div>
 
     <!-- FLIP CARDS -->
     <div class="section reveal" id="flipSection">
       <div class="section-head">
         <span class="dot">♥</span>
-        <div><h2>Your Love Signature</h2><p>Tap any card to flip it over.</p></div>
+        <div><h2>Your Love Signature</h2><p>Seven sealed letters from the sky. Tap one open.</p></div>
+        <span class="dot" aria-hidden="true">♥</span>
       </div>
       <div class="divider"></div>
       <div class="card-grid" id="cardGrid"><!-- injected --></div>
@@ -1002,7 +1020,8 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="alignSection" style="display:none">
       <div class="section-head">
         <span class="dot">⚖️</span>
-        <div><h2>Your Words vs Your Chart</h2><p>What you say you're here for, and what your love signature actually pulls toward. Neither is wrong.</p></div>
+        <div><h2>Your Words vs Your Chart</h2><p>What you tell the apps, and what your heart quietly leans toward. Neither of them is wrong.</p></div>
+        <span class="dot" aria-hidden="true">⚖️</span>
       </div>
       <div class="divider"></div>
       <div class="align-vs">
@@ -1026,7 +1045,8 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="pullSection" style="display:none">
       <div class="section-head">
         <span class="dot">🧭</span>
-        <div><h2>The Deeper Pull</h2><p>What you want isn't always what stretches you, and your chart keeps those two in different places.</p></div>
+        <div><h2>The Deeper Pull</h2><p>What you chase and what changes you rarely sit in the same place. Your chart keeps both coordinates, honestly.</p></div>
+        <span class="dot" aria-hidden="true">🧭</span>
       </div>
       <div class="divider"></div>
       <div class="pull-arrow">
@@ -1036,7 +1056,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       </div>
       <div class="pull-stack" id="pullStack"></div>
       <div class="pull-synth">
-        <h4><span class="beat">♥</span> So what does this actually mean?</h4>
+        <h4><span class="beat">♥</span> So what does this actually mean? <span class="beat" aria-hidden="true">♥</span></h4>
         <p id="pullSynth"></p>
       </div>
       <details class="why" style="margin-top:12px"><summary><span class="chev">▶</span> Why we can say this</summary><div class="why-body" id="pullWhy"></div></details>
@@ -1053,20 +1073,21 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="flagsSection">
       <div class="section-head">
         <span class="dot">🚦</span>
-        <div><h2>Your Dating Flags</h2><p>What you bring, what to watch, what to leave.</p></div>
+        <div><h2>Your Dating Flags</h2><p>The love you give freely, the pattern to catch yourself in, and the thing worth walking away from.</p></div>
+        <span class="dot" aria-hidden="true">🚦</span>
       </div>
       <div class="divider"></div>
       <div class="flags">
         <div class="flag g">
-          <h4>🟢 Green flags you give</h4>
+          <h4>🟢 Green flags you give 🟢</h4>
           <ul id="flagG"><li>Computed from your chart when you generate</li></ul>
         </div>
         <div class="flag y">
-          <h4>🟡 Watch-points</h4>
+          <h4>🟡 Watch-points 🟡</h4>
           <ul id="flagY"><li>Computed from your chart when you generate</li></ul>
         </div>
         <div class="flag r">
-          <h4>🔴 Leave if you see <span style="font-size:.72em;font-weight:500;color:var(--muted)">(universal: about them, not you)</span></h4>
+          <h4>🔴 Leave if you see <span style="font-size:.72em;font-weight:500;color:var(--muted)">(universal: about them, not you)</span> 🔴</h4>
           <ul id="flagR"></ul>
         </div>
       </div>
@@ -1076,18 +1097,19 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="movesSection">
       <div class="section-head">
         <span class="dot">✨</span>
-        <div><h2>Your 3 Best Moves This Week</h2><p>Pick the option that feels most like you. It highlights.</p></div>
+        <div><h2>Your 3 Best Moves This Week</h2><p>Don't overthink it. Pick what makes you smile and it lights up.</p></div>
+        <span class="dot" aria-hidden="true">✨</span>
       </div>
       <div class="divider"></div>
 
       <div class="move">
-        <div class="mtitle"><span class="n">1.</span>Use your best bio opener <a href="#bioWriterSection" id="movesBioLink" style="font-size:.68em;font-weight:700;color:var(--gold);text-decoration:none;margin-left:8px;border:1px solid rgba(232,185,106,.4);padding:3px 10px;border-radius:999px">✍️ Built by your Bio Writer</a></div>
+        <div class="mtitle"><span class="n">1.</span>Use your best bio opener <a href="#bioWriterSection" id="movesBioLink" style="font-size:.68em;font-weight:700;color:var(--gold);text-decoration:none;margin-left:8px;border:1px solid rgba(232,185,106,.4);padding:3px 10px;border-radius:999px">✍️ Built by your Bio Writer ✍️</a></div>
         <div class="mdesc" id="mdesc1">Lead with what actually moves you.</div>
         <div id="movesBestDraft" class="best-draft" style="display:none">
           <div class="bd-text" id="movesBestText"></div>
           <div class="bd-acts">
-            <button class="btn2 primary" id="movesCopyBtn" type="button">📋 Copy bio</button>
-            <button class="btn2 ghost" id="movesMoreBtn" type="button">More versions ✍️</button>
+            <button class="btn2 primary" id="movesCopyBtn" type="button">📋 Copy bio 📋</button>
+            <button class="btn2 ghost" id="movesMoreBtn" type="button">✍️ More versions ✍️</button>
           </div>
         </div>
         <div class="opts" data-group="m1" id="movesFallbackOpts">
@@ -1125,11 +1147,12 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="trapsSection">
       <div class="section-head">
         <span class="dot">⚠️</span>
-        <div><h2>Dating Traps to Avoid</h2><p>Your chart's honest shadow side.</p></div>
+        <div><h2>Dating Traps to Avoid</h2><p>Every sign casts a shadow. Yours is named here kindly, which is how it loses power.</p></div>
+        <span class="dot" aria-hidden="true">⚠️</span>
       </div>
       <div class="divider"></div>
       <div class="traps">
-        <h3>🕳️ Don't fall for these <span id="trapsSub" style="font-size:.72em;font-weight:500;opacity:.7"></span></h3>
+        <h3>🕳️ Don't fall for these <span id="trapsSub" style="font-size:.72em;font-weight:500;opacity:.7"></span> 🕳️</h3>
         <ul id="trapsList"></ul>
       </div>
     </div>
@@ -1143,17 +1166,18 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="bioWriterSection">
       <div class="section-head">
         <span class="dot">✍️</span>
-        <div><h2>Your Profile Bio Writer</h2><p>Real, copy-paste bios built from your exact chart, not templates everyone gets.</p></div>
+        <div><h2>Your Profile Bio Writer</h2><p>Three real bios written from your sky, not a template everyone else gets. Copy them, edit them, make them yours.</p></div>
+        <span class="dot" aria-hidden="true">✍️</span>
       </div>
       <div class="divider"></div>
       <div class="bio-controls">
         <div>
           <div class="align-lbl" style="margin-bottom:7px">Your tone</div>
           <div class="tone-seg" id="toneSeg" role="group" aria-label="Bio tone">
-            <button type="button" data-tone="punchy" class="on">⚡ Punchy</button>
-            <button type="button" data-tone="playful">😄 Playful</button>
-            <button type="button" data-tone="sincere">💗 Sincere</button>
-            <button type="button" data-tone="bold">🔥 Bold</button>
+            <button type="button" data-tone="punchy" class="on">⚡ Punchy ⚡</button>
+            <button type="button" data-tone="playful">😄 Playful 😄</button>
+            <button type="button" data-tone="sincere">💗 Sincere 💗</button>
+            <button type="button" data-tone="bold">🔥 Bold 🔥</button>
           </div>
         </div>
         <div>
@@ -1173,7 +1197,8 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="shareSection">
       <div class="section-head">
         <span class="dot">🔐</span>
-        <div><h2>Share Without Spilling</h2><p>Show a date part, or all, of your blueprint. They never see your birth data.</p></div>
+        <div><h2>Share Without Spilling</h2><p>Share a taste or the whole reading. Your birth data never travels with it.</p></div>
+        <span class="dot" aria-hidden="true">🔐</span>
       </div>
       <div class="divider"></div>
       <div class="share-grid">
@@ -1186,7 +1211,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
             <button type="button" data-level="full">Full playbook</button>
           </div>
           <details class="why-box" style="margin:0 0 14px">
-            <summary>👀 What they'll see <span style="margin-left:auto">▸</span></summary>
+            <summary>👀 What they'll see 👀 <span style="margin-left:auto">▸</span></summary>
             <div class="why-in" id="shareContents">—</div>
           </details>
           <div class="promise yes">
@@ -1217,10 +1242,10 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
           <div class="phint">Ask your match for their Love Blueprint code, paste it here. Both of you stay private: only finished readings are compared.</div>
           <input class="paste" id="partnerCode" type="text" placeholder="Paste their shared code, or try an example" autocomplete="off" spellcheck="false">
           <div class="share-btns">
-            <button class="btn2 primary" id="compareBtn" type="button">Compare ♥</button>
+            <button class="btn2 primary" id="compareBtn" type="button">♥ Compare ♥</button>
             <button class="btn2 ghost" id="demoBtn" type="button">Try Luna's example code</button>
           </div>
-          <button class="btn2 ghost" id="saveMatchBtn" type="button" style="display:none;width:100%;margin-top:10px">♥ Save this match to my library</button>
+          <button class="btn2 ghost" id="saveMatchBtn" type="button" style="display:none;width:100%;margin-top:10px">♥ Save this match to my library ♥</button>
           <div id="compareOut"></div>
         </div>
       </div>
@@ -1230,6 +1255,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
         <div class="syn-head">
           <span class="dot" style="font-size:1.3rem">✨</span>
           <h3>3 · Full degree compatibility</h3>
+          <span class="dot" style="font-size:1.3rem" aria-hidden="true">✨</span>
           <span class="syn-badge">Same device · exact</span>
         </div>
         <p class="syn-phint">Share codes carry placements, never degrees, so the deepest reading happens right here, on one phone, together. Enter their birth details and this computes <b>real degree synastry</b>: exact aspects with orbs you can audit, a composite chart and honest CONTACT / EASE axes. Nothing leaves the device.</p>
@@ -1240,7 +1266,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
           <div class="field"><label for="synPlace">Their birth place <span style="text-transform:none;font-weight:500;opacity:.55">(optional)</span></label><input id="synPlace" type="text" placeholder="City, Country" value="Melbourne, Australia"></div>
         </div>
         <div class="share-btns" style="margin-top:14px">
-          <button class="btn2 primary" id="synRunBtn" type="button">Run full synastry ♥</button>
+          <button class="btn2 primary" id="synRunBtn" type="button">♥ Run full synastry ♥</button>
         </div>
         <div style="font-size:.75rem;color:var(--muted);margin-top:10px;line-height:1.6" id="synPrivacy">Requires your chart to be generated first. Their details are used only to compute this one comparison in your browser: never stored, never in a link, never uploaded. Clear it any time by reloading.</div>
         <div id="synOut"></div>
@@ -1251,7 +1277,8 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="bioSection">
       <div class="section-head">
         <span class="dot">📸</span>
-        <div><h2>Your Shareable Bio Card</h2><p>Screenshot it straight into your dating profile.</p></div>
+        <div><h2>Your Shareable Bio Card</h2><p>Made for your profile. Screenshot it and let it flirt for you.</p></div>
+        <span class="dot" aria-hidden="true">📸</span>
       </div>
       <div class="divider"></div>
       <div class="bio">
@@ -1273,11 +1300,12 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div class="section reveal" id="socialSection">
       <div class="section-head">
         <span class="dot">🖼️</span>
-        <div><h2>Your Social Cards</h2><p>Eight screenshot-ready cards built from your real chart. Swipe through on your story, or drop one into your profile.</p></div>
+        <div><h2>Your Social Cards</h2><p>Eight cards made from your real chart, sized for stories. Post one, hint with one, or hand someone your whole sky.</p></div>
+        <span class="dot" aria-hidden="true">🖼️</span>
       </div>
       <div class="divider"></div>
       <div class="social-grid" id="socialGrid"></div>
-      <div class="soc-hint">💛 Screenshot any card. They're sized for stories (9:16) and legible at feed-thumbnail size.</div>
+      <div class="soc-hint">💛 Screenshot any card. They're sized for stories and legible at thumbnail size. 💛</div>
     </div>
 
   </section>
@@ -1293,12 +1321,14 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
           <div class="cap" id="pvSub"></div>
           <div class="cap" id="pvIntent" style="margin-top:8px;display:none"><span class="pill intent"></span></div>
         </div>
+      <span class="glyph beat" aria-hidden="true">♥</span>
       </div>
     </div>
     <div class="section">
       <div class="section-head">
         <span class="dot">🔓</span>
-        <div><h2>What they chose to show you</h2><p>No birth data was shared: just their finished readings.</p></div>
+        <div><h2>What they chose to show you</h2><p>No birth data crossed over. Just the reading they chose to trust you with.</p></div>
+        <span class="dot" aria-hidden="true">🔓</span>
       </div>
       <div class="divider"></div>
       <div class="flags" id="pvCards"></div>
@@ -1306,8 +1336,8 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
       <div id="pvCompare"></div>
     </div>
     <div class="section" style="text-align:center">
-      <button class="btn" id="pvCta" type="button" style="max-width:460px">♥ Add my blueprint &amp; compare</button>
-      <button class="btn2 ghost" id="pvSave" type="button" style="display:none;max-width:460px;margin:10px auto 0">♥ Save to my potential matches</button>
+      <button class="btn" id="pvCta" type="button" style="max-width:460px">♥ Add my blueprint &amp; compare ♥</button>
+      <button class="btn2 ghost" id="pvSave" type="button" style="display:none;max-width:460px;margin:10px auto 0">♥ Save to my potential matches ♥</button>
       <p class="sub" style="margin-top:10px;font-size:.8rem;color:var(--muted)">Takes ten seconds, and your birth details never enter the link either.</p>
     </div>
   </section>
@@ -1322,7 +1352,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
     <div id="libSparks"></div>
     <div class="lib-h"><h3>Potential matches</h3><span class="cnt" id="libMatchesCnt">0</span></div>
     <div id="libMatches"></div>
-    <p class="lib-note">🔒 <b>On-device only, with full disclosure.</b> Reopening a blueprint in one tap requires your birth details, so your <i>own</i> records store them: in this browser only, never uploaded and never inside share links or match codes. A potential match stores only what they chose to share with you, plus when and how you saved them. Clear your browser data and everything here is gone: nothing lives on a server.</p>
+    <p class="lib-note">🔒 <b>On-device only, with full disclosure.</b> Reopening a blueprint in one tap requires your birth details, so your <i>own</i> records store them: in this browser only, never uploaded and never inside share links or match codes. A potential match stores only what they chose to share with you, plus when and how you saved them. Clear your browser data and everything here is gone: nothing lives on a server. 🔒</p>
   </section>
 
   <!-- STATIC CONTENT (crawlable: what this tool is, how it works, what it does NOT do) -->
@@ -1371,7 +1401,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 <!-- NOTE SHEET (organize a potential match) -->
 <div class="sheet-mask" id="noteMask">
   <div class="sheet" id="noteSheet" role="dialog" aria-modal="true" aria-labelledby="noteTitle">
-    <h4 id="noteTitle">✎ Organize this match</h4>
+    <h4 id="noteTitle">✎ Organize this match ✎</h4>
     <div class="sh-who" id="noteWho"></div>
     <div class="sheet-chips" id="noteChips"></div>
     <textarea id="noteArea" maxlength="80" placeholder="Your private note (max 80 chars)"></textarea>
@@ -1485,16 +1515,16 @@ function buildCards(){
     el.innerHTML =
       '<div class="flip-inner">'+
         '<div class="face front" data-flip>'+
-          (est ? '<span class="est">🔒 exact details needed</span>' : '')+
+          (est ? '<span class="est">🔒 exact details needed 🔒</span>' : '')+
           '<div class="icon">'+c.icon+'</div>'+
           '<h3>'+c.front+(est ? '' : ' in '+c.sign)+'</h3>'+
           '<div class="sign">'+c.title+'</div>'+
-          '<button class="flipbtn" type="button" data-flipbtn>Flip ♥</button>'+
+          '<button class="flipbtn" type="button" data-flipbtn>♥ Flip ♥</button>'+
           '<div class="hint">'+(est ? 'locked : see why' : 'tap card to read')+'</div>'+
         '</div>'+
         '<div class="face back">'+
           '<button class="backbtn" type="button" data-flipbtn>← back</button>'+
-          '<h4><span>'+c.icon+'</span> '+c.title+(est ? ' <span class="est" style="position:static;margin-left:6px">🔒 withheld</span>' : '')+'</h4>'+
+          '<h4><span>'+c.icon+'</span> '+c.title+(est ? ' <span class="est" style="position:static;margin-left:6px">🔒 withheld 🔒</span>' : '')+'</h4>'+
           '<div class="body">'+toStanzas(c.body)+'</div>'+
           '<details class="why"><summary><span class="chev">▶</span> Why the stars say this</summary>'+
           '<div class="why-body">'+c.why+'</div></details>'+
@@ -1626,7 +1656,7 @@ function wireNextStops(){
     } else {
       var b2 = document.createElement('button');
       b2.type = 'button';
-      b2.textContent = 'Now use it \u2192 Bio Writer done? Share it \u2665';
+      b2.textContent = '\u2665 You have read your sky, now share it \u2665';
       b2.addEventListener('click', function(){ jumpTo('shareSection'); });
       wrap.appendChild(b2);
     }
@@ -1638,12 +1668,12 @@ function wireNextStops(){
     var dc = document.createElement('div');
     dc.className = 'done-card';
     dc.id = 'doneCard';
-    dc.innerHTML = '<h3>You have read your blueprint \u2665</h3>' +
+    dc.innerHTML = '<h3>\u2665 You have read your blueprint \u2665</h3>' +
       '<p>Now make it work for you. Write the bio, screenshot a card, or share a private link. Your birth data never leaves this device.</p>' +
       '<div class="done-btns">' +
-      '<button class="btn" type="button" data-done="bioWriterSection">\u270D\uFE0F Write my bio</button>' +
-      '<button class="btn" type="button" data-done="socialSection">\uD83D\uDCF8 Grab a card</button>' +
-      '<button class="btn" type="button" data-done="shareSection">\uD83D\uDD10 Share privately</button>' +
+      '<button class="btn" type="button" data-done="bioWriterSection">\u270D\uFE0F Write my bio \u270D\uFE0F</button>' +
+      '<button class="btn" type="button" data-done="socialSection">\uD83D\uDCF8 Grab a card \uD83D\uDCF8</button>' +
+      '<button class="btn" type="button" data-done="shareSection">\uD83D\uDD10 Share privately \uD83D\uDD10</button>' +
       '</div>';
     traps.appendChild(dc);
     dc.querySelectorAll('[data-done]').forEach(function(b){
@@ -1888,11 +1918,11 @@ function runCompare(theirs, out){
   // Guard on the SNAPSHOT (works in partner view too, where #results is hidden),
   // not on results visibility.
   if(!mine || !mine.c){
-    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">Generate your blueprint first, then come back and compare.</p>';
+    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">\u2665 Generate your blueprint first, then come back and compare \u2665</p>';
     return;
   }
   if(!document.getElementById('results').classList.contains('on') && !document.getElementById('partnerView').classList.contains('on')){
-    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">Generate your blueprint first, then come back and compare.</p>';
+    out.innerHTML = '<p class="caveat" style="border-top:none;margin-top:14px">\u2665 Generate your blueprint first, then come back and compare \u2665</p>';
     return;
   }
   if(!mine.c || !theirs.c){
@@ -1921,18 +1951,18 @@ function runCompare(theirs, out){
   });
   html += '<p style="font-size:.86rem;margin-top:8px">' + r.note + '</p>';
   if(r.partial && r.missing && r.missing.length){
-    html += '<p class="intent-note" style="border-color:rgba(232,185,106,.4)">🔍 <b>Honest scope:</b> this comparison covers '+r.covered+'% of the full picture  '+esc(r.missing.join(', '))+' could not be scored because one of you withheld (or does not have) the exact placements they need. Nothing was padded with a made-up average.</p>';
+    html += '<p class="intent-note" style="border-color:rgba(232,185,106,.4)">🔍 <b>Honest scope:</b> this comparison covers '+r.covered+'% of the full picture  '+esc(r.missing.join(', '))+' could not be scored because one of you withheld (or does not have) the exact placements they need. Nothing was padded with a made-up average. 🔍</p>';
   }
   // Intentions are self-reported, not scored. If they differ, say so plainly
   // and without judgment: that conversation matters more than any percentage.
   if(theirs.i && mine.i && theirs.i !== mine.i){
-    html += '<p class="intent-note">⚖️ <b>You\'re here for different things.</b> You said <b>'+esc(mine.i)+'</b>; they said <b>'+esc(theirs.i)+'</b>. Not a dealbreaker: just worth saying out loud early instead of discovering it in month three.</p>';
+    html += '<p class="intent-note">⚖️ <b>You\'re here for different things.</b> You said <b>'+esc(mine.i)+'</b>; they said <b>'+esc(theirs.i)+'</b>. Not a dealbreaker: just worth saying out loud early instead of discovering it in month three. ⚖️</p>';
   } else if(theirs.i && mine.i){
-    html += '<p class="intent-note" style="background:rgba(123,196,138,.1);border-color:rgba(123,196,138,.3)">✓ <b>Same intention:</b> you both said <b>'+esc(mine.i)+'</b>. That alignment is worth more than the percentage above.</p>';
+    html += '<p class="intent-note" style="background:rgba(123,196,138,.1);border-color:rgba(123,196,138,.3)">✓ <b>Same intention:</b> you both said <b>'+esc(mine.i)+'</b>. That alignment is worth more than the percentage above. ✓</p>';
   } else {
-    html += '<p class="intent-note">💬 One of you hasn\'t stated an intention, so nothing is assumed here. Asking directly beats any score on this page.</p>';
+    html += '<p class="intent-note">💬 One of you hasn\'t stated an intention, so nothing is assumed here. Asking directly beats any score on this page. 💬</p>';
   }
-  html += '<p class="caveat">🔒 No birth date, time or place crossed the wire: only finished readings were compared. And two real humans are never just their elements: treat this as a spark, not a sentence.</p></div>';
+  html += '<p class="caveat">🔒 No birth date, time or place crossed the wire: only finished readings were compared. And two real humans are never just their elements: treat this as a spark, not a sentence. 🔒</p></div>';
   out.innerHTML = html;
   setTimeout(function(){
     out.querySelectorAll('.bar-fill').forEach(function(f){ f.style.width = f.dataset.w + '%'; });
@@ -2074,7 +2104,7 @@ function openSparkRecord(rec){
   document.getElementById('partnerView').classList.remove('on');
   setView('landing');
   document.getElementById('genBtn').click(); // computes exact chart, saves, shows chrome
-  toast('Reopened ' + (rec.name || 'blueprint') + ' ♥');
+  toast('♥ Reopened ' + (rec.name || 'blueprint') + ' ♥');
 }
 
 /* ---- Library rendering ---- */
@@ -2094,7 +2124,8 @@ function renderLibrary(){
         '<span class="lib-ico beat">♥</span>' +
         '<div class="lib-main"><div class="lib-t">' + esc(r.name) + '</div>' +
         '<div class="lib-s">' + esc(r.dyn || 'Blueprint') + ' · ' + _fmtSaved(r.savedAt) +
-        (r.birthTime ? ' · exact chart' : ' · date only') + '</div></div>';
+        (r.birthTime ? ' · exact chart' : ' · date only') + '</div></div>' +
+        '<span class="lib-ico beat" aria-hidden="true">♥</span>';
       var acts = document.createElement('div'); acts.className = 'lib-acts';
       var open = document.createElement('button'); open.className='lib-btn solid'; open.type='button'; open.textContent='Open';
       open.addEventListener('click', function(){ openSparkRecord(r); });
@@ -2140,7 +2171,7 @@ function renderLibrary(){
 function compareWithMatch(m){
   var mine = window.__lastSnap || loadLocalSnapshot();
   if(!mine || !mine.c){
-    toast('Generate your blueprint first, then compare \u2665');
+    toast('\u2665 Generate your blueprint first, then compare \u2665');
     if(window.__view !== 'result') setView('landing');
     jumpTo(null);
     window.__pendingMatch = m; // fire compare once they generate
@@ -2241,7 +2272,7 @@ function handlePartnerLink(){
   window.scrollTo(0, 0);
 }
 function renderPartnerView(p){
-  document.getElementById('pvName').textContent = (p.n || 'Someone') + ' shared their blueprint with you ♥';
+  document.getElementById('pvName').textContent = '♥ ' + (p.n || 'Someone') + ' shared their blueprint with you ♥';
   document.getElementById('pvDyn').textContent = p.s ? p.s.dyn : '';
   document.getElementById('pvSub').textContent = p.s ? p.s.sub : 'Bio-card level share';
   // Their stated intention: shown only if they chose to state one.
@@ -2431,16 +2462,16 @@ function renderAlignment(){
   verdict.className = 'align-verdict ' + a.state;
   var m = '';
   if(a.state === 'open'){
-    verdict.textContent = '○ Left open';
+    verdict.textContent = '○ Left open ○';
     m = 'You didn\'t pick an intention, so nothing is assumed. For what it\'s worth, your chart\'s love pillars lean toward <b>'+esc(a.best.intent)+'</b>  '+a.leanText+'. Take it or leave it; this one\'s yours to decide.';
   } else if(a.state === 'aligned'){
-    verdict.textContent = '✓ Aligned';
+    verdict.textContent = '✓ Aligned ✓';
     m = 'Your words and your chart agree. You said <b>'+esc(intent)+'</b>, and your love pillars (Venus, Moon, Mars, 7th House) lean the same way  '+a.leanText+'. What you\'re chasing and what you\'re wired for are pointing the same direction.';
   } else if(a.state === 'adjacent'){
-    verdict.textContent = '◐ Mostly aligned';
+    verdict.textContent = '◐ Mostly aligned ◐';
     m = 'Close, with a little flex. You said <b>'+esc(intent)+'</b>; your chart leans <b>'+esc(a.best.intent)+'</b>  '+a.leanText+'. Same neighbourhood, slightly different door. You\'ve got real range here, not a conflict.';
   } else {
-    verdict.textContent = '◆ Two directions';
+    verdict.textContent = '◆ Two directions ◆';
     m = 'Worth a quiet look, not a verdict. You said you\'re here for <b>'+esc(intent)+'</b>, but your chart\'s love pillars lean toward <b>'+esc(a.best.intent)+'</b>  '+a.leanText+'. That gap isn\'t a mistake: it\'s the difference between what you\'re <em>choosing</em> and what you <em>default to</em> once someone gets close. Just so it\'s not a surprise when '+tensionHint(a.els, intent)+'.';
   }
   m += '<br><br><span style="color:var(--muted);font-size:.9em">You\'re allowed to want what you want. This is a lean, not a leash and it changes none of your readings.</span>';
@@ -2740,7 +2771,7 @@ function renderBios(){
       '<textarea class="editor-box" maxlength="500" aria-label="Edit ' + esc(b.name) + '">' + esc(b.text) + '</textarea>' +
       '<div class="draft-acts">' +
         '<button class="draft-btn" data-act="copy" type="button">📋 Copy</button>' +
-        '<button class="draft-btn alt" data-act="edit" type="button">✎ Edit</button>' +
+        '<button class="draft-btn alt" data-act="edit" type="button">✎ Edit ✎</button>' +
         '<button class="draft-btn alt" data-act="reroll" type="button">🎲 Another</button>' +
       '</div>';
     // wire actions
@@ -2753,7 +2784,7 @@ function renderBios(){
     });
     card.querySelector('[data-act="edit"]').addEventListener('click', function(){
       var on = ta.classList.toggle('on');
-      this.textContent = on ? '✓ Done' : '✎ Edit';
+      this.textContent = on ? '✓ Done ✓' : '✎ Edit ✎';
       if(on){ ta.focus(); }
     });
     card.querySelector('[data-act="reroll"]').addEventListener('click', function(){
@@ -2761,7 +2792,7 @@ function renderBios(){
       txtEl.textContent = b.text;
       ta.value = b.text;
       card.querySelector('.draft-len').textContent = b.text.length + ' chars';
-      toast('Fresh version \u2728');
+      toast('\u2728 Fresh version \u2728');
     });
     ta.addEventListener('input', function(){
       b.text = ta.value;
@@ -2928,7 +2959,7 @@ function wireSynastry(){
   btn.dataset.wired = '1';
   btn.addEventListener('click', function(){
     if(!window.__lastChart || !window.__lastChart.ok){
-      toast('Generate your blueprint first \u2665');
+      toast('\u2665 Generate your blueprint first \u2665');
       return;
     }
     var name  = (document.getElementById('synName').value || 'Them').trim();
@@ -2975,7 +3006,7 @@ function socStars(){
 }
 function socCard(opts){
   var h = '<div class="soc">' + socStars();
-  h += '<div class="soc-label">' + (opts.glyph ? opts.glyph + ' ' : '') + esc(opts.label) + '</div>';
+  h += '<div class="soc-label">' + (opts.glyph ? opts.glyph + ' ' : '') + esc(opts.label) + (opts.glyph ? ' ' + opts.glyph : '') + '</div>';
   if(opts.title) h += '<div class="soc-title">' + esc(opts.title) + '</div>';
   if(opts.sub)   h += '<div class="soc-sub">' + esc(opts.sub) + '</div>';
   if(opts.medal) h += '<div class="soc-medal" aria-hidden="true">' + opts.medal + '</div>';
@@ -2986,7 +3017,7 @@ function socCard(opts){
   h += '<div class="soc-foot">' +
        '<span class="soc-url">quantummerlin.com/loveblueprint</span>' +
        '<span class="soc-footrow"><span class="soc-h">' + '\u2665' + '</span>' +
-       '<span class="soc-cta">decode yours</span></span></div>';
+       '<span class="soc-cta">decode yours</span><span class="soc-h">' + '\u2665' + '</span></span></div>';
   return h + '</div>';
 }
 function renderSocialCards(chart){
@@ -3040,16 +3071,16 @@ function renderSocialCards(chart){
   cardFor('venus','♀','How I Love','venus');
   if(p.moon && !chart.moonUncertain && SparkContent.moon[p.moon.name]){
     cards.push(socCard({ glyph:'☾', label:'What Makes Me Feel Safe', title:'Moon in ' + p.moon.name,
-      sub:'Emotional Needs', medal: signGlyph(p.moon.name), points: socSentences(SparkContent.moon[p.moon.name].body) }));
+      sub:'What makes you feel safe', medal: signGlyph(p.moon.name), points: socSentences(SparkContent.moon[p.moon.name].body) }));
   }
   cardFor('mars','♂','My Chemistry','mars');
   if(p.mercury && SparkContent.mercury[p.mercury.name]){
     cards.push(socCard({ glyph:'☿', label:'How I Text', title:'Mercury in ' + p.mercury.name,
-      sub:'Communication', medal: signGlyph(p.mercury.name), points: socSentences(SparkContent.mercury[p.mercury.name].body) }));
+      sub:'How you talk and text', medal: signGlyph(p.mercury.name), points: socSentences(SparkContent.mercury[p.mercury.name].body) }));
   }
   if(chart.descendant && SparkContent.descendant[chart.descendant.name]){
     cards.push(socCard({ glyph:'⌂', label:"Who I'm Wired For", title:'7th House in ' + chart.descendant.name,
-      sub:'My ideal partner', medal: signGlyph(chart.descendant.name), points: socSentences(SparkContent.descendant[chart.descendant.name].body) }));
+      sub:'Who your heart looks for', medal: signGlyph(chart.descendant.name), points: socSentences(SparkContent.descendant[chart.descendant.name].body) }));
   }
 
   // 7, FLAGS (honest card), needs traits + traps from live data
@@ -3099,16 +3130,16 @@ function fitSocialCards(grid){
    Pill rail + scroll-spy + bottom tabs. Only shown once a reading
    exists; hidden entirely in the partner view (their page, not yours). */
 var RAIL_SECTIONS = [
-  { id:'flipSection',  label:'♥ Love Signature', nav:'spark'   },
-  { id:'alignSection', label:'⚖️ Your Words'   , nav:'spark'   },
-  { id:'pullSection',  label:'🧭 Deeper Pull'  , nav:'spark'   },
-  { id:'flagsSection', label:'🚦 Flags'        , nav:'spark'   },
-  { id:'movesSection', label:'✨ Moves'         , nav:'spark'   },
-  { id:'trapsSection', label:'⚠️ Traps'         , nav:'spark'   },
-  { id:'bioWriterSection', label:'✍️ Bio Writer' , nav:'spark'  },
-  { id:'shareSection', label:'🔐 Share'        , nav:'share'   },
-  { id:'bioSection',   label:'📸 Bio Card'     , nav:'bio'     },
-  { id:'socialSection',label:'🖼️ Social Cards' , nav:'bio'     }
+  { id:'flipSection',  label:'♥ Love Signature ♥', nav:'spark'   },
+  { id:'alignSection', label:'⚖️ Your Words ⚖️'   , nav:'spark'   },
+  { id:'pullSection',  label:'🧭 Deeper Pull 🧭'  , nav:'spark'   },
+  { id:'flagsSection', label:'🚦 Flags 🚦'        , nav:'spark'   },
+  { id:'movesSection', label:'✨ Moves ✨'         , nav:'spark'   },
+  { id:'trapsSection', label:'⚠️ Traps ⚠️'         , nav:'spark'   },
+  { id:'bioWriterSection', label:'✍️ Bio Writer ✍️' , nav:'spark'  },
+  { id:'shareSection', label:'🔐 Share 🔐'        , nav:'share'   },
+  { id:'bioSection',   label:'📸 Bio Card 📸'     , nav:'bio'     },
+  { id:'socialSection',label:'🖼️ Social Cards 🖼️' , nav:'bio'     }
 ];
 var railObserver = null;
 function buildRail(){
@@ -3270,14 +3301,14 @@ function wireShare(){
   document.getElementById('copyLinkBtn').addEventListener('click', function(){
     var code = window.__lastCode || refreshShareCode();
     sbTrack('share_link_copied', { level: shareLevel });
-    copyText(location.origin + location.pathname + '#s=' + encodeURIComponent(code), 'Share link copied: send it to your spark ♥');
+    copyText(location.origin + location.pathname + '#s=' + encodeURIComponent(code), '♥ Share link copied: send it to your spark ♥');
   });
   document.getElementById('copyCodeBtn').addEventListener('click', function(){
     copyText(window.__lastCode || refreshShareCode(), 'Code copied: paste it in any chat');
   });
   document.getElementById('compareBtn').addEventListener('click', function(){
     try{ runCompare(parseCode(document.getElementById('partnerCode').value)); }
-    catch(e){ toast("That code doesn't look quite right ♥"); }
+    catch(e){ toast("♥ That code doesn't look quite right ♥"); }
   });
   document.getElementById('demoBtn').addEventListener('click', function(){
     document.getElementById('partnerCode').value = makeDemoCode();
@@ -3287,7 +3318,7 @@ function wireShare(){
     var fc = document.querySelector('.form-card');
     fc.style.display = '';
     fc.scrollIntoView({ behavior:'smooth', block:'center' });
-    this.textContent = 'Fill in the form above: the compare happens automatically ♥';
+    this.textContent = '♥ Fill in the form above, and the compare happens automatically ♥';
   });
 }
 
@@ -3316,7 +3347,7 @@ function doGenerate(){
     // Hard refusal: show the reason, render nothing fake.
     accEl.style.display = 'inline-flex';
     accEl.className = 'acc';
-    accEl.textContent = '⛔ Not computed';
+    accEl.textContent = '⛔ Not computed ⛔';
     document.getElementById('accText').textContent = chart.errors.join(' ');
     var resErr = document.getElementById('results');
     resErr.classList.remove('on');
@@ -3341,9 +3372,9 @@ function doGenerate(){
   // ---- Bio card tags from the computed big-three ----
   var bioTags = document.getElementById('bioTags');
   var bt = [];
-  chart.placements.venus && bt.push('♥ Venus ' + chart.placements.venus.name);
-  (!chart.moonUncertain && chart.placements.moon) && bt.push('☾ Moon ' + chart.placements.moon.name);
-  chart.placements.mars && bt.push('♂ Mars ' + chart.placements.mars.name);
+  chart.placements.venus && bt.push('♥ Venus ' + chart.placements.venus.name + ' ♥');
+  (!chart.moonUncertain && chart.placements.moon) && bt.push('☾ Moon ' + chart.placements.moon.name + ' ☾');
+  chart.placements.mars && bt.push('♂ Mars ' + chart.placements.mars.name + ' ♂');
   bioTags.innerHTML = bt.length
     ? bt.map(function(t){ return '<span class="btag">'+esc(t)+'</span>'; }).join('')
     : '<span class="btag">Computed on your device</span>';
@@ -3353,17 +3384,17 @@ function doGenerate(){
   accEl.style.display = 'inline-flex';
   if(chart.hasTime && chart.hasPlace){
     accEl.className = 'acc ok';
-    accEl.textContent = '🎯 Exact chart';
+    accEl.textContent = '🎯 Exact chart 🎯';
     document.getElementById('accText').textContent =
       'Real ephemeris + resolved birth place: every placement below is computed to the exact degree. UTC instant ' + chart.utcInstant + '.';
   } else if(locked > 0){
     accEl.className = 'acc';
-    accEl.textContent = '🔓 Partial  ' + locked + ' locked';
+    accEl.textContent = '🔓 Partial, ' + locked + ' locked 🔓';
     document.getElementById('accText').textContent =
       'Everything shown is exact; ' + locked + ' placement' + (locked > 1 ? 's are' : ' is') + ' withheld (never estimated) because an input is missing. ' + (chart.notices[0] || '');
   } else {
     accEl.className = 'acc ok';
-    accEl.textContent = '🎯 Exact (date only)';
+    accEl.textContent = '🎯 Exact (date only) 🎯';
     document.getElementById('accText').textContent =
       'Sign-only placements computed exactly via noon-UT convention; angle-based points withheld. ' + (chart.notices[0] || '');
   }
@@ -3396,7 +3427,7 @@ function doGenerate(){
   wireReveal();
   refreshShareCode();
   sbTrack('spark_generated', { exact: !!(chart.hasTime && chart.hasPlace), locked: locked });
-  btn.textContent = 'Regenerate ♥';
+  btn.textContent = '\u2665 Regenerate \u2665';
 
   if(PARTNER){
     // Returning user regenerated: fire the partner-view comparison too
@@ -3405,11 +3436,11 @@ function doGenerate(){
       pvC.className = 'pv-compare';
       runCompare(PARTNER, pvC);
       setTimeout(function(){ pvC.scrollIntoView({ behavior:'smooth', block:'start' }); }, 300);
-      toast('Your spark compare is ready ♥');
+      toast('♥ Your compare is ready ♥');
     } else {
       runCompare(PARTNER);
       setTimeout(function(){ document.getElementById('shareSection').scrollIntoView({ behavior:'smooth', block:'center' }); }, 300);
-      toast('Your spark compare is ready ♥');
+      toast('♥ Your compare is ready ♥');
     }
   } else {
     setTimeout(function(){ res.scrollIntoView({ behavior:'smooth', block:'start' }); }, 60);
@@ -3447,12 +3478,12 @@ function showSaveMatchBtn(snap, source){
   var smb = document.getElementById('saveMatchBtn');
   if(smb){
     smb.style.display = 'block';
-    smb.textContent = '♥ Save ' + ((snap.n) || 'match') + ' to my library';
+    smb.textContent = '♥ Save ' + ((snap.n) || 'match') + ' to my library ♥';
     smb.onclick = function(){
       librarySaveMatch(snap, source);
       renderLibrary();
       sbTrack('match_saved', { source: source });
-      toast('Saved to Potential matches ♥');
+      toast('♥ Saved to your potential matches ♥');
       this.style.display = 'none';
     };
   }
@@ -3464,7 +3495,7 @@ function showSaveMatchBtn(snap, source){
       librarySaveMatch(PARTNER, 'link');
       renderLibrary();
       sbTrack('match_saved', { source: 'link' });
-      toast('Saved to Potential matches ♥');
+      toast('♥ Saved to your potential matches ♥');
       pv.style.display = 'none';
     };
   }
