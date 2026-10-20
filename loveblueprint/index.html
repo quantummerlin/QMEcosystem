@@ -90,6 +90,8 @@
   --flip-dur:.72s;
   --ease:cubic-bezier(.4,.15,.2,1);
   /* Motion system: restrained + cohesive. 0.3-0.8s, ease-out, one hero per section. */
+  --ink-rose:#C22A4A;      /* flat editorial rose (buttons, active) */
+  --ink-rose-dk:#A21F3C;
   --t-fast:.18s; --t-base:.32s; --t-slow:.62s;
   --ease-out:cubic-bezier(.16,1,.3,1);
   --stagger:70ms;
@@ -100,8 +102,6 @@ body{
   font-family:var(--font-body);
   color:var(--text);
   background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(255,77,109,.14) 0%, transparent 60%),
-    radial-gradient(900px 500px at -10% 20%, rgba(232,185,106,.08) 0%, transparent 55%),
     var(--blush);
   line-height:1.62;
   min-height:100vh;
@@ -111,7 +111,7 @@ body{
 h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 
 /* Ambient floating hearts: subtle, one hero motion */
-.heart-field{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.heart-field{display:none}
 .heart-field span{
   position:absolute;bottom:-40px;color:var(--rose);opacity:.10;
   animation:floatUp linear infinite;font-size:22px;
@@ -129,19 +129,18 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 .hero{text-align:center;padding:56px 16px 28px}
 .brand-chip{
   display:inline-flex;align-items:center;gap:8px;
-  background:linear-gradient(135deg,#8E0E2E,var(--rose));
-  color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.14em;
-  text-transform:uppercase;padding:7px 16px;border-radius:999px;
-  box-shadow:0 6px 18px rgba(255,77,109,.35);
+  background:transparent;border:1px solid rgba(232,185,106,.45);
+  color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:.22em;
+  text-transform:uppercase;padding:7px 18px;border-radius:2px;
 }
 .hero h1{
-  font-size:clamp(2.6rem,8vw,4.4rem);font-weight:800;margin:18px 0 6px;
-  background:linear-gradient(135deg,#FF8FA3,#FF4D6D 45%,#E8B96A);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  font-size:clamp(2.3rem,7vw,3.8rem);font-weight:600;margin:20px 0 0;color:var(--text);
+  letter-spacing:-.015em;line-height:1.08;
 }
+.flourish{display:block;margin:6px auto 12px;width:min(300px,64vw);height:24px;color:var(--gold);opacity:.8}
 .hero .tag{font-size:clamp(1rem,3.4vw,1.25rem);color:var(--muted);max-width:560px;margin:0 auto 6px}
 .hero .sub{font-size:.85rem;color:var(--muted);opacity:.8}
-.beat{display:inline-block;animation:beat 1.6s ease-in-out infinite}
+.beat{display:inline-block}
 @keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.18)}28%{transform:scale(1)}42%{transform:scale(1.12)}}
 
 /* ---------- FORM MOCK ---------- */
@@ -166,10 +165,10 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 .btn{
   width:100%;margin-top:16px;padding:15px;border:none;border-radius:12px;cursor:pointer;
   font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:#fff;
-  background:linear-gradient(135deg,#FF4D6D,#8E0E2E);
-  box-shadow:0 8px 22px rgba(255,77,109,.34);transition:transform .2s var(--ease),box-shadow .2s;
+  background:var(--ink-rose);
+  box-shadow:none;transition:background .2s var(--ease),transform .2s var(--ease);
 }
-.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(255,77,109,.45)}
+.btn:hover{background:var(--ink-rose-dk)}
 .btn:active{transform:translateY(0)}
 
 /* ---------- AD UNITS ----------
@@ -208,8 +207,8 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 /* Spark meter badge (Saily energy badge → dating) */
 .spark-badge{
   display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px;text-align:center;
-  background:linear-gradient(135deg,var(--card),var(--card-2));border:1px solid var(--line);
-  border-left:5px solid var(--rose);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);
+  background:var(--card);border:1px solid var(--line);
+  border-left:3px solid var(--ink-rose);border-radius:6px;padding:18px 20px;box-shadow:none;
 }
 .spark-badge .glyph{font-size:2.4rem}
 .spark-badge .big{font-family:var(--font-head);font-size:1.4rem;color:var(--rose-deep);font-weight:700}
@@ -226,7 +225,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
   transition:all .2s var(--ease);
 }
 .chip:hover{border-color:var(--rose-soft);color:var(--rose-deep);transform:translateY(-1px)}
-.chip.sel{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);border-color:transparent;color:#fff;box-shadow:0 6px 16px rgba(255,77,109,.3)}
+.chip.sel{background:var(--ink-rose);border-color:transparent;color:#fff}
 .chip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .intent-note{font-size:.86rem;margin-top:10px;background:rgba(232,185,106,.12);border:1px solid rgba(232,185,106,.35);border-radius:12px;padding:10px 14px;line-height:1.55;text-align:center}
 
@@ -271,7 +270,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 .pull-body b{color:var(--rose-deep);font-weight:700}
 .pull-orb{display:inline-block;font-size:.68rem;font-weight:800;color:var(--gold);background:rgba(232,185,106,.15);border:1px solid rgba(232,185,106,.4);padding:2px 9px;border-radius:999px}
 .pull-synth{
-  margin-top:16px;background:linear-gradient(135deg,rgba(255,77,109,.10),rgba(232,185,106,.07));
+  margin-top:16px;background:rgba(255,77,109,.07);
   border:1px solid rgba(255,77,109,.3);border-radius:14px;padding:18px 20px;
 }
 .pull-synth h4{color:var(--rose-deep);font-size:1rem;margin-bottom:8px;display:flex;gap:8px;align-items:center;justify-content:center;text-align:center}
@@ -301,8 +300,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 #appBar{display:none;position:sticky;top:0;z-index:50}
 #appBar.on{display:block}
 .appbar-inner{
-  background:linear-gradient(rgba(20,11,21,.92),rgba(20,11,21,.78));
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  background:rgba(18,10,19,.98);
   border-bottom:1px solid rgba(58,36,54,.5);
   padding:12px 18px 0;
   padding-top:calc(12px + env(safe-area-inset-top,0px));
@@ -310,9 +308,9 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 .appbar-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
 .appbar-heart{
   width:42px;height:42px;border-radius:14px;flex-shrink:0;
-  background:linear-gradient(135deg,#FF4D6D,#8E0E2E);
+  background:var(--ink-rose);
   display:flex;align-items:center;justify-content:center;
-  font-size:1.3rem;color:#fff;box-shadow:0 4px 14px rgba(255,77,109,.4);
+  font-size:1.3rem;color:#fff;
 }
 .appbar-txt{min-width:0}
 .appbar-greet{font-size:.72rem;color:var(--muted);letter-spacing:.02em}
@@ -331,8 +329,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
   transition:all .22s var(--ease);
 }
 .rail-pill.active{
-  background:linear-gradient(135deg,#FF4D6D,#8E0E2E);border-color:transparent;color:#fff;
-  box-shadow:0 4px 14px rgba(255,77,109,.35);
+  background:var(--ink-rose);border-color:transparent;color:#fff;
 }
 /* sections sit below the sticky bar when jumped to */
 .section{scroll-margin-top:calc(118px + env(safe-area-inset-top,0px))}
@@ -340,8 +337,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15}
 #bottomNav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60}
 #bottomNav.on{display:flex}
 .bnav-inner{
-  display:flex;width:100%;background:rgba(20,11,21,.94);
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  display:flex;width:100%;background:rgba(18,10,19,.99);
   border-top:1px solid rgba(58,36,54,.6);
   padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px));
 }
@@ -363,11 +359,11 @@ body.has-bnav{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
 /* ============ LIBRARY & RESUME BAR ============ */
 .resume-bar{display:none;margin:18px auto 0;max-width:560px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow);align-items:center;gap:12px}
 .resume-bar.on{display:flex}
-.resume-ico{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#FF4D6D,#8E0E2E);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;flex-shrink:0;box-shadow:0 4px 14px rgba(255,77,109,.35)}
+.resume-ico{width:44px;height:44px;border-radius:12px;background:var(--ink-rose);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;flex-shrink:0;box-shadow:0 4px 14px rgba(255,77,109,.35)}
 .resume-txt{min-width:0;flex:1}
 .resume-t{font-weight:700;font-size:.9rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .resume-s{font-size:.76rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.resume-go{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff;border:none;border-radius:999px;padding:9px 16px;font-family:inherit;font-weight:700;font-size:.8rem;cursor:pointer;flex-shrink:0;box-shadow:0 4px 12px rgba(255,77,109,.3)}
+.resume-go{background:var(--ink-rose);color:#fff;border:none;border-radius:999px;padding:9px 16px;font-family:inherit;font-weight:700;font-size:.8rem;cursor:pointer;flex-shrink:0;box-shadow:0 4px 12px rgba(255,77,109,.3)}
 .resume-all{background:none;border:none;color:var(--rose-deep);font-weight:700;font-size:.76rem;cursor:pointer;flex-shrink:0;padding:6px}
 #libraryView{display:none}
 #libraryView.on{display:block}
@@ -384,7 +380,7 @@ body.has-bnav{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
 .lib-s{font-size:.75rem;color:var(--muted);margin-top:2px;line-height:1.4}
 .lib-acts{display:flex;gap:6px;flex-shrink:0;flex-wrap:wrap}
 .lib-btn{border-radius:999px;padding:7px 13px;font-family:inherit;font-weight:700;font-size:.74rem;cursor:pointer;border:1.5px solid var(--rose);color:var(--rose-deep);background:none;transition:all .2s}
-.lib-btn.solid{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);border-color:transparent;color:#fff}
+.lib-btn.solid{background:var(--ink-rose);border-color:transparent;color:#fff}
 .lib-btn.ghost{border-color:var(--line);color:var(--muted)}
 .lib-btn.del{border-color:transparent;color:var(--muted);opacity:.65}
 .lib-btn:hover{transform:translateY(-1px)}
@@ -392,7 +388,7 @@ body.has-bnav{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
 .lib-note{font-size:.75rem;color:var(--muted);line-height:1.65;margin:22px 0 0;border-top:1px solid var(--line);padding-top:14px;max-width:640px}
 .match-badge{display:inline-block;font-size:.6rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:rgba(232,185,106,.16);color:var(--gold);border:1px solid rgba(232,185,106,.4);margin-left:6px;vertical-align:middle}
 /* note sheet (replaces window.prompt: blocked on file:// and ugly on mobile) */
-.sheet-mask{display:none;position:fixed;inset:0;background:rgba(10,4,12,.66);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:100}
+.sheet-mask{display:none;position:fixed;inset:0;background:rgba(10,4,12,.72);;z-index:100}
 .sheet-mask.on{display:block}
 .sheet{
   position:fixed;left:50%;bottom:0;transform:translate(-50%,110%);width:100%;max-width:480px;
@@ -443,13 +439,12 @@ body[data-view="result"] #libraryView.on{display:none!important}
   display:flex;flex-direction:column;
 }
 .face.front{
-  background:linear-gradient(150deg,var(--card-2) 0%,#2B1A2E 100%);
+  background:var(--card-2);
   align-items:center;justify-content:center;text-align:center;padding:26px 22px;box-shadow:var(--shadow);
   cursor:pointer;
 }
-.face.front::after{content:"";position:absolute;inset:0;background:
-  radial-gradient(340px 180px at 100% 0%,rgba(255,77,109,.16),transparent 60%);pointer-events:none}
-.face.front .icon{font-size:3rem;margin-bottom:14px;filter:drop-shadow(0 4px 14px rgba(255,77,109,.5))}
+.face.front::after{content:"";position:absolute;left:14px;right:14px;bottom:12px;height:1px;background:rgba(232,185,106,.25);pointer-events:none}
+.face.front .icon{font-size:2.6rem;margin-bottom:14px;color:var(--rose-deep)}
 .face.front h3{font-size:1.35rem;color:var(--rose-deep);margin-bottom:4px}
 .face.front .sign{font-size:1.05rem;color:var(--text);font-weight:600;margin-bottom:12px}
 .face.front .hint{margin-top:auto;font-size:.74rem;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:6px}
@@ -458,7 +453,7 @@ body[data-view="result"] #libraryView.on{display:none!important}
   padding:8px 18px;border-radius:999px;font-family:inherit;font-weight:600;font-size:.82rem;cursor:pointer;
   transition:background .2s,color .2s;
 }
-.flipbtn:hover{background:var(--rose);color:#fff}
+.flipbtn:hover{background:var(--ink-rose);color:#fff}
 
 .face.back{
   transform:rotateY(180deg);background:var(--card);padding:22px;box-shadow:var(--shadow-lift);
@@ -523,11 +518,11 @@ details.why .why-body{font-size:.82rem;color:var(--muted);margin-top:8px;padding
 }
 .opt .txt{font-size:.88rem}
 .opt:hover{border-color:var(--rose-soft);transform:translateX(3px)}
-.opt.sel{border-color:var(--rose);background:linear-gradient(135deg,rgba(255,77,109,.18),var(--card-2));box-shadow:0 4px 14px rgba(255,77,109,.2)}
+.opt.sel{border-color:var(--rose);background:rgba(255,77,109,.12)}
 .opt.sel .key{background:var(--rose);color:#fff}
 
 /* Traps */
-.traps{background:linear-gradient(135deg,#2E0A14,#3D0E1C);color:#F7D7DE;border:1px solid rgba(255,107,133,.25);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.traps{background:#240910;color:#F7D7DE;border:1px solid rgba(255,107,133,.25);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
 .traps h3{color:#FFB3C0;margin-bottom:10px;display:flex;gap:8px;align-items:center;justify-content:center;text-align:center}
 .traps ul{list-style:none}
 .traps li{display:flex;align-items:baseline;gap:9px;padding:6px 0;font-size:.89rem;color:#F3C6D0}
@@ -537,15 +532,15 @@ details.why .why-body{font-size:.82rem;color:var(--muted);margin-top:8px;padding
 /* ---------- BIO CARD (share preview) ---------- */
 .bio{
   max-width:340px;margin:0 auto;border-radius:22px;overflow:hidden;box-shadow:var(--shadow-lift);
-  background:linear-gradient(155deg,var(--rose-deep),var(--rose) 55%,var(--gold));color:#fff;padding:30px 26px;position:relative;
+  background:#8E0E2E;border:1px solid rgba(232,185,106,.5);color:#fff;padding:30px 26px;position:relative;
 text-align:center}
 .bio::before{content:"♥";position:absolute;top:-30px;right:-10px;font-size:180px;opacity:.10}
 .bio::after{content:"♥";position:absolute;bottom:-40px;left:-14px;font-size:180px;opacity:.10;pointer-events:none}
 .bio .bname{font-family:var(--font-head);font-size:1.6rem;font-weight:800}
 .bio .brow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
-.bio .btag{background:rgba(255,255,255,.16);backdrop-filter:blur(4px);padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:600}
+.bio .btag{background:rgba(255,255,255,.14);padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:600}
 .bio .bline{font-size:.86rem;opacity:.94;margin-top:6px}
-.bio .bqr{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:12px;background:rgba(255,255,255,.14);border-radius:14px;padding:10px 12px;backdrop-filter:blur(4px)}
+.bio .bqr{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:12px;background:rgba(255,255,255,.14);border-radius:14px;padding:10px 12px}
 .bio .bqr img{width:84px;height:84px;border-radius:8px;background:#fff;padding:4px;display:block;flex:0 0 auto}
 .bio .bqr-txt{display:flex;flex-direction:column;gap:3px;text-align:left}
 .bio .bqr-txt b{font-size:.86rem}
@@ -571,7 +566,7 @@ text-align:center}
 .panel .phint{font-size:.82rem;color:var(--muted);margin-bottom:14px;text-align:center}
 .seg{display:flex;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
 .seg button{flex:1;background:var(--card-2);border:none;padding:10px 6px;font-family:inherit;font-size:.76rem;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s}
-.seg button.on{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff}
+.seg button.on{background:var(--ink-rose);color:#fff}
 .promise{border-radius:12px;padding:12px 14px;font-size:.8rem;margin-bottom:12px}
 .promise b{display:block;margin-bottom:4px;font-size:.82rem}
 .promise ul{list-style:none;margin:0}
@@ -585,7 +580,7 @@ text-align:center}
 .code-chip{font-family:'Courier New',monospace;font-size:.7rem;background:#120810;color:#FFC2CE;border:1px solid var(--line);padding:10px 12px;border-radius:10px;word-break:break-all;max-height:64px;overflow:auto;margin:12px 0}
 .share-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 .btn2{flex:1;min-width:130px;padding:12px;border-radius:12px;border:none;cursor:pointer;font-family:inherit;font-weight:700;font-size:.85rem;transition:transform .15s var(--ease),box-shadow .2s}
-.btn2.primary{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);color:#fff;box-shadow:0 6px 18px rgba(255,77,109,.3)}
+.btn2.primary{background:var(--ink-rose);color:#fff}
 .btn2.ghost{background:var(--card-2);border:1.5px solid var(--rose);color:var(--rose-deep)}
 .btn2:hover{transform:translateY(-2px)}
 input.paste{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font-family:'Courier New',monospace;font-size:.78rem;margin-bottom:12px;color:var(--text);background:var(--card-2)}
@@ -597,7 +592,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 .bar-row{margin-bottom:12px}
 .bar-label{display:flex;justify-content:space-between;font-size:.8rem;font-weight:600;margin-bottom:4px}
 .bar-track{height:10px;border-radius:99px;background:var(--card-2);overflow:hidden}
-.bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#FF8FA3,#8E0E2E);width:0;transition:width .9s var(--ease)}
+.bar-fill{height:100%;border-radius:99px;background:var(--ink-rose);width:0;transition:width .9s var(--ease)}
 .caveat{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
 
 /* Partner view */
@@ -618,9 +613,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 .soc{
   position:relative;aspect-ratio:9/16;border-radius:18px;overflow:hidden;
   background:
-    radial-gradient(120% 80% at 50% -10%, rgba(255,77,109,.22), transparent 55%),
-    radial-gradient(90% 60% at 90% 110%, rgba(232,185,106,.12), transparent 55%),
-    linear-gradient(170deg,#1B0F1F 0%,#140B15 60%,#190D1A 100%);
+    linear-gradient(178deg,#1A0E1D 0%,#150B16 100%);
   border:1px solid rgba(232,185,106,.28);
   box-shadow:var(--shadow-lift);
   padding:18px 16px;display:flex;flex-direction:column;
@@ -642,12 +635,11 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 }
 .soc-sub{color:var(--rose-deep);font-weight:700;font-size:.8rem;margin-bottom:auto;text-align:center}
 .soc-art{display:flex;align-items:center;justify-content:center;padding:10px 0;min-height:74px}
-.soc-art svg{width:64px;height:64px;filter:drop-shadow(0 6px 18px rgba(255,77,109,.45))}
+.soc-art svg{width:64px;height:64px}
 .soc-medal{
   margin:8px auto 12px;width:72px;height:72px;border-radius:50%;
   border:1px solid rgba(232,185,106,.45);display:flex;align-items:center;justify-content:center;
-  font-size:1.9rem;color:var(--gold);line-height:1;
-  background:radial-gradient(circle at 50% 35%, rgba(255,77,109,.20), rgba(255,77,109,0) 72%);
+  font-size:1.9rem;color:var(--gold);line-height:1;background:transparent;
 }
 .soc-points{list-style:none;margin:auto 0 10px;padding:0}
 .soc-points li{
@@ -706,7 +698,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 /* ---------- COMPUTE REVEAL (the honest hero moment) ---------- */
 .compute-veil{
   position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;
-  background:radial-gradient(700px 420px at 50% 42%, rgba(255,77,109,.16), rgba(20,11,21,.97) 70%);
+  background:rgba(16,9,17,.97);
   opacity:0;pointer-events:none;transition:opacity var(--t-base) var(--ease-out);
 }
 .compute-veil.on{opacity:1;pointer-events:auto}
@@ -732,7 +724,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 /* ---------- ONBOARDING SHEET ---------- */
 .onboard{
   position:fixed;inset:0;z-index:95;display:flex;align-items:flex-end;justify-content:center;
-  background:rgba(10,5,12,.66);backdrop-filter:blur(3px);
+  background:rgba(10,5,12,.78);
   opacity:0;pointer-events:none;transition:opacity var(--t-base) var(--ease-out);
 }
 .onboard.on{opacity:1;pointer-events:auto}
@@ -762,7 +754,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
 }
 .next-stop button:hover{background:rgba(232,185,106,.1);transform:translateY(-1px)}
 .done-card{
-  background:linear-gradient(150deg,rgba(255,77,109,.10),rgba(232,185,106,.06));
+  background:rgba(255,77,109,.07);
   border:1px solid rgba(232,185,106,.3);border-radius:20px;padding:24px;text-align:center;
 }
 .done-card h3{font-size:1.3rem;margin-bottom:6px}
@@ -785,7 +777,7 @@ input.paste:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 4px rgb
   cursor:pointer;transition:all .2s var(--ease);
 }
 .tone-seg button:hover{border-color:var(--rose-soft);color:var(--rose-deep)}
-.tone-seg button.on{background:linear-gradient(135deg,#FF4D6D,#8E0E2E);border-color:transparent;color:#fff;box-shadow:0 4px 14px rgba(255,77,109,.3)}
+.tone-seg button.on{background:var(--ink-rose);border-color:transparent;color:#fff}
 .bio-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .bf-toggle{
   display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;
@@ -817,7 +809,7 @@ text-align:center}
 .draft-acts{display:flex;gap:8px;margin-top:14px;justify-content:center}
 
 /* ---------- FULL DEGREE SYNASTRY (same device) ---------- */
-.syn{margin-top:20px;background:linear-gradient(135deg,rgba(255,77,109,.06),rgba(232,185,106,.05));border:1px solid rgba(255,77,109,.28);border-radius:16px;padding:20px}
+.syn{margin-top:20px;background:rgba(255,77,109,.05);border:1px solid rgba(255,77,109,.28);border-radius:16px;padding:20px}
 .syn-head{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px;text-align:center}
 .syn-head h3{font-size:1.1rem;color:var(--rose-deep)}
 .syn-badge{margin-left:auto;font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(232,185,106,.18);color:var(--gold);border:1px solid rgba(232,185,106,.4)}
@@ -846,7 +838,7 @@ text-align:center}
 .syn-comp .cc{background:rgba(255,77,109,.1);border:1px solid rgba(255,77,109,.3);border-radius:999px;padding:5px 13px;font-size:.76rem;font-weight:600;color:var(--rose-deep)}
 .syn-comp .cc b{color:var(--text)}
 /* best-draft callout inside Moves #1 (linked to Bio Writer) */
-.best-draft{background:linear-gradient(135deg,rgba(255,77,109,.08),rgba(232,185,106,.06));border:1.5px solid rgba(255,77,109,.35);border-radius:14px;padding:14px 16px;margin-top:4px}
+.best-draft{background:rgba(255,77,109,.06);border:1.5px solid rgba(255,77,109,.35);border-radius:14px;padding:14px 16px;margin-top:4px}
 .best-draft .bd-text{font-size:.92rem;line-height:1.7;color:var(--text);font-style:italic;text-align:center}
 .best-draft .bd-acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;justify-content:center}
 .best-draft .bd-acts .btn2{flex:1;min-width:120px;padding:10px;font-size:.8rem}
@@ -924,6 +916,7 @@ text-align:center}
   <header class="hero">
     <span class="brand-chip"><img src="assets/logo.svg" alt="" style="width:22px;height:22px;display:block"> Love Blueprint</span>
     <h1>Your love story, read from the real sky</h1>
+    <svg class="flourish" viewBox="0 0 300 24" fill="none" aria-hidden="true"><path d="M8 16 C 52 4, 96 22, 148 12 C 196 3, 236 20, 274 10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M274 10 c 3 -5, 10 -4, 10 1 c 0 5, -7 8, -10 10 c -3 -2, -10 -5, -10 -10 c 0 -5, 7 -6, 10 -1 z" fill="currentColor" opacity=".9"/><path d="M26 19 c 8 3, 18 3, 26 0" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity=".55"/></svg>
     <p class="tag">Seven sealed letters about your heart. Flip them one by one: how you love, how you flirt, what feels like home, and who your chart keeps pointing to.</p>
     <p class="sub">100% private · calculated on your device · share the finished blueprint, never your birth data</p>
   </header>
@@ -1019,7 +1012,7 @@ text-align:center}
     <!-- YOUR WORDS vs YOUR CHART (intention vs cosmic pull) -->
     <div class="section reveal" id="alignSection" style="display:none">
       <div class="section-head">
-        <span class="dot">⚖️</span>
+        <span class="dot">⚖︎</span>
         <div><h2>Your Words vs Your Chart</h2><p>What you tell the apps, and what your heart quietly leans toward. Neither of them is wrong.</p></div>
         <span class="dot" aria-hidden="true">⚖️</span>
       </div>
@@ -1044,7 +1037,7 @@ text-align:center}
     <!-- THE DEEPER PULL: comfort vs growth vs lesson -->
     <div class="section reveal" id="pullSection" style="display:none">
       <div class="section-head">
-        <span class="dot">🧭</span>
+        <span class="dot">✦</span>
         <div><h2>The Deeper Pull</h2><p>What you chase and what changes you rarely sit in the same place. Your chart keeps both coordinates, honestly.</p></div>
         <span class="dot" aria-hidden="true">🧭</span>
       </div>
@@ -1072,22 +1065,22 @@ text-align:center}
     <!-- DATING FLAGS -->
     <div class="section reveal" id="flagsSection">
       <div class="section-head">
-        <span class="dot">🚦</span>
+        <span class="dot">⚑</span>
         <div><h2>Your Dating Flags</h2><p>The love you give freely, the pattern to catch yourself in, and the thing worth walking away from.</p></div>
         <span class="dot" aria-hidden="true">🚦</span>
       </div>
       <div class="divider"></div>
       <div class="flags">
         <div class="flag g">
-          <h4>🟢 Green flags you give 🟢</h4>
+          <h4><span style="color:var(--green)">●</span> Green flags you give <span style="color:var(--green)">●</span></h4>
           <ul id="flagG"><li>Computed from your chart when you generate</li></ul>
         </div>
         <div class="flag y">
-          <h4>🟡 Watch-points 🟡</h4>
+          <h4><span style="color:var(--yellow)">●</span> Watch-points <span style="color:var(--yellow)">●</span></h4>
           <ul id="flagY"><li>Computed from your chart when you generate</li></ul>
         </div>
         <div class="flag r">
-          <h4>🔴 Leave if you see <span style="font-size:.72em;font-weight:500;color:var(--muted)">(universal: about them, not you)</span> 🔴</h4>
+          <h4><span style="color:var(--red)">●</span> Leave if you see <span style="font-size:.72em;font-weight:500;color:var(--muted)">(universal: about them, not you)</span> <span style="color:var(--red)">●</span></h4>
           <ul id="flagR"></ul>
         </div>
       </div>
@@ -1096,20 +1089,20 @@ text-align:center}
     <!-- MOVES (option tables) -->
     <div class="section reveal" id="movesSection">
       <div class="section-head">
-        <span class="dot">✨</span>
+        <span class="dot">✧</span>
         <div><h2>Your 3 Best Moves This Week</h2><p>Don't overthink it. Pick what makes you smile and it lights up.</p></div>
         <span class="dot" aria-hidden="true">✨</span>
       </div>
       <div class="divider"></div>
 
       <div class="move">
-        <div class="mtitle"><span class="n">1.</span>Use your best bio opener <a href="#bioWriterSection" id="movesBioLink" style="font-size:.68em;font-weight:700;color:var(--gold);text-decoration:none;margin-left:8px;border:1px solid rgba(232,185,106,.4);padding:3px 10px;border-radius:999px">✍️ Built by your Bio Writer ✍️</a></div>
+        <div class="mtitle"><span class="n">1.</span>Use your best bio opener <a href="#bioWriterSection" id="movesBioLink" style="font-size:.68em;font-weight:700;color:var(--gold);text-decoration:none;margin-left:8px;border:1px solid rgba(232,185,106,.4);padding:3px 10px;border-radius:999px">✎ Built by your Bio Writer ✎</a></div>
         <div class="mdesc" id="mdesc1">Lead with what actually moves you.</div>
         <div id="movesBestDraft" class="best-draft" style="display:none">
           <div class="bd-text" id="movesBestText"></div>
           <div class="bd-acts">
-            <button class="btn2 primary" id="movesCopyBtn" type="button">📋 Copy bio 📋</button>
-            <button class="btn2 ghost" id="movesMoreBtn" type="button">✍️ More versions ✍️</button>
+            <button class="btn2 primary" id="movesCopyBtn" type="button">❐ Copy bio ❐</button>
+            <button class="btn2 ghost" id="movesMoreBtn" type="button">✎ More versions ✎</button>
           </div>
         </div>
         <div class="opts" data-group="m1" id="movesFallbackOpts">
@@ -1146,13 +1139,13 @@ text-align:center}
     <!-- TRAPS -->
     <div class="section reveal" id="trapsSection">
       <div class="section-head">
-        <span class="dot">⚠️</span>
+        <span class="dot">⚠︎</span>
         <div><h2>Dating Traps to Avoid</h2><p>Every sign casts a shadow. Yours is named here kindly, which is how it loses power.</p></div>
         <span class="dot" aria-hidden="true">⚠️</span>
       </div>
       <div class="divider"></div>
       <div class="traps">
-        <h3>🕳️ Don't fall for these <span id="trapsSub" style="font-size:.72em;font-weight:500;opacity:.7"></span> 🕳️</h3>
+        <h3>⚠︎ Don't fall for these <span id="trapsSub" style="font-size:.72em;font-weight:500;opacity:.7"></span> ⚠︎</h3>
         <ul id="trapsList"></ul>
       </div>
     </div>
@@ -1165,7 +1158,7 @@ text-align:center}
     <!-- PROFILE BIO WRITER -->
     <div class="section reveal" id="bioWriterSection">
       <div class="section-head">
-        <span class="dot">✍️</span>
+        <span class="dot">✎</span>
         <div><h2>Your Profile Bio Writer</h2><p>Three real bios written from your sky, not a template everyone else gets. Copy them, edit them, make them yours.</p></div>
         <span class="dot" aria-hidden="true">✍️</span>
       </div>
@@ -1174,10 +1167,10 @@ text-align:center}
         <div>
           <div class="align-lbl" style="margin-bottom:7px">Your tone</div>
           <div class="tone-seg" id="toneSeg" role="group" aria-label="Bio tone">
-            <button type="button" data-tone="punchy" class="on">⚡ Punchy ⚡</button>
-            <button type="button" data-tone="playful">😄 Playful 😄</button>
-            <button type="button" data-tone="sincere">💗 Sincere 💗</button>
-            <button type="button" data-tone="bold">🔥 Bold 🔥</button>
+            <button type="button" data-tone="punchy" class="on">⚡︎ Punchy ⚡︎</button>
+            <button type="button" data-tone="playful">☺︎ Playful ☺︎</button>
+            <button type="button" data-tone="sincere">♥ Sincere ♥</button>
+            <button type="button" data-tone="bold">✦ Bold ✦</button>
           </div>
         </div>
         <div>
@@ -1196,7 +1189,7 @@ text-align:center}
     <!-- SHARE & COMPARE -->
     <div class="section reveal" id="shareSection">
       <div class="section-head">
-        <span class="dot">🔐</span>
+        <span class="dot">✉︎</span>
         <div><h2>Share Without Spilling</h2><p>Share a taste or the whole reading. Your birth data never travels with it.</p></div>
         <span class="dot" aria-hidden="true">🔐</span>
       </div>
@@ -1211,7 +1204,7 @@ text-align:center}
             <button type="button" data-level="full">Full playbook</button>
           </div>
           <details class="why-box" style="margin:0 0 14px">
-            <summary>👀 What they'll see 👀 <span style="margin-left:auto">▸</span></summary>
+            <summary>◉ What they'll see ◉ <span style="margin-left:auto">▸</span></summary>
             <div class="why-in" id="shareContents">—</div>
           </details>
           <div class="promise yes">
@@ -1233,7 +1226,7 @@ text-align:center}
           </div>
           <div class="code-chip" id="shareCode">Generate your blueprint first…</div>
           <div class="share-btns">
-            <button class="btn2 primary" id="copyLinkBtn" type="button">🔗 Copy share link</button>
+            <button class="btn2 primary" id="copyLinkBtn" type="button">✉︎ Copy share link ✉︎</button>
             <button class="btn2 ghost" id="copyCodeBtn" type="button">Copy code</button>
           </div>
         </div>
@@ -1253,7 +1246,7 @@ text-align:center}
       <!-- FULL DEGREE SYNASTRY -->
       <div class="syn" id="synSection">
         <div class="syn-head">
-          <span class="dot" style="font-size:1.3rem">✨</span>
+          <span class="dot" style="font-size:1.3rem">✧</span>
           <h3>3 · Full degree compatibility</h3>
           <span class="dot" style="font-size:1.3rem" aria-hidden="true">✨</span>
           <span class="syn-badge">Same device · exact</span>
@@ -1276,7 +1269,7 @@ text-align:center}
     <!-- BIO CARD -->
     <div class="section reveal" id="bioSection">
       <div class="section-head">
-        <span class="dot">📸</span>
+        <span class="dot">❏</span>
         <div><h2>Your Shareable Bio Card</h2><p>Made for your profile. Screenshot it and let it flirt for you.</p></div>
         <span class="dot" aria-hidden="true">📸</span>
       </div>
@@ -1299,13 +1292,13 @@ text-align:center}
     <!-- SOCIAL CARDS -->
     <div class="section reveal" id="socialSection">
       <div class="section-head">
-        <span class="dot">🖼️</span>
+        <span class="dot">❐</span>
         <div><h2>Your Social Cards</h2><p>Eight cards made from your real chart, sized for stories. Post one, hint with one, or hand someone your whole sky.</p></div>
         <span class="dot" aria-hidden="true">🖼️</span>
       </div>
       <div class="divider"></div>
       <div class="social-grid" id="socialGrid"></div>
-      <div class="soc-hint">💛 Screenshot any card. They're sized for stories and legible at thumbnail size. 💛</div>
+      <div class="soc-hint"><span style="color:var(--gold)">♥</span> Screenshot any card. They're sized for stories and legible at thumbnail size. <span style="color:var(--gold)">♥</span></div>
     </div>
 
   </section>
@@ -1326,7 +1319,7 @@ text-align:center}
     </div>
     <div class="section">
       <div class="section-head">
-        <span class="dot">🔓</span>
+        <span class="dot">❍</span>
         <div><h2>What they chose to show you</h2><p>No birth data crossed over. Just the reading they chose to trust you with.</p></div>
         <span class="dot" aria-hidden="true">🔓</span>
       </div>
@@ -1352,7 +1345,7 @@ text-align:center}
     <div id="libSparks"></div>
     <div class="lib-h"><h3>Potential matches</h3><span class="cnt" id="libMatchesCnt">0</span></div>
     <div id="libMatches"></div>
-    <p class="lib-note">🔒 <b>On-device only, with full disclosure.</b> Reopening a blueprint in one tap requires your birth details, so your <i>own</i> records store them: in this browser only, never uploaded and never inside share links or match codes. A potential match stores only what they chose to share with you, plus when and how you saved them. Clear your browser data and everything here is gone: nothing lives on a server. 🔒</p>
+    <p class="lib-note">\u25CC <b>On-device only, with full disclosure.</b> Reopening a blueprint in one tap requires your birth details, so your <i>own</i> records store them: in this browser only, never uploaded and never inside share links or match codes. A potential match stores only what they chose to share with you, plus when and how you saved them. Clear your browser data and everything here is gone: nothing lives on a server. \u25CC</p>
   </section>
 
   <!-- STATIC CONTENT (crawlable: what this tool is, how it works, what it does NOT do) -->
@@ -1417,9 +1410,9 @@ text-align:center}
 <nav id="bottomNav" aria-label="Primary">
   <div class="bnav-inner">
     <button class="bnav-btn active" type="button" data-nav="spark"><span class="ico">♥</span><span class="lbl">Blueprint</span></button>
-    <button class="bnav-btn" type="button" data-nav="library"><span class="ico">📚</span><span class="lbl">Library</span></button>
+    <button class="bnav-btn" type="button" data-nav="library"><span class="ico">❏</span><span class="lbl">Library</span></button>
     <button class="bnav-btn" type="button" data-nav="compare"><span class="ico">⇄</span><span class="lbl">Compare</span></button>
-    <button class="bnav-btn" type="button" data-nav="bio"><span class="ico">📸</span><span class="lbl">Bio Card</span></button>
+    <button class="bnav-btn" type="button" data-nav="bio"><span class="ico">❏</span><span class="lbl">Bio Card</span></button>
   </div>
 </nav>
 
@@ -1515,7 +1508,7 @@ function buildCards(){
     el.innerHTML =
       '<div class="flip-inner">'+
         '<div class="face front" data-flip>'+
-          (est ? '<span class="est">🔒 exact details needed 🔒</span>' : '')+
+          (est ? '<span class="est">\u25CC exact details needed \u25CC</span>' : '')+
           '<div class="icon">'+c.icon+'</div>'+
           '<h3>'+c.front+(est ? '' : ' in '+c.sign)+'</h3>'+
           '<div class="sign">'+c.title+'</div>'+
@@ -1524,7 +1517,7 @@ function buildCards(){
         '</div>'+
         '<div class="face back">'+
           '<button class="backbtn" type="button" data-flipbtn>← back</button>'+
-          '<h4><span>'+c.icon+'</span> '+c.title+(est ? ' <span class="est" style="position:static;margin-left:6px">🔒 withheld 🔒</span>' : '')+'</h4>'+
+          '<h4><span>'+c.icon+'</span> '+c.title+(est ? ' <span class="est" style="position:static;margin-left:6px">\u25CC withheld \u25CC</span>' : '')+'</h4>'+
           '<div class="body">'+toStanzas(c.body)+'</div>'+
           '<details class="why"><summary><span class="chev">▶</span> Why the stars say this</summary>'+
           '<div class="why-body">'+c.why+'</div></details>'+
@@ -1671,9 +1664,9 @@ function wireNextStops(){
     dc.innerHTML = '<h3>\u2665 You have read your blueprint \u2665</h3>' +
       '<p>Now make it work for you. Write the bio, screenshot a card, or share a private link. Your birth data never leaves this device.</p>' +
       '<div class="done-btns">' +
-      '<button class="btn" type="button" data-done="bioWriterSection">\u270D\uFE0F Write my bio \u270D\uFE0F</button>' +
-      '<button class="btn" type="button" data-done="socialSection">\uD83D\uDCF8 Grab a card \uD83D\uDCF8</button>' +
-      '<button class="btn" type="button" data-done="shareSection">\uD83D\uDD10 Share privately \uD83D\uDD10</button>' +
+      '<button class="btn" type="button" data-done="bioWriterSection">\u270E Write my bio \u270E</button>' +
+      '<button class="btn" type="button" data-done="socialSection">\u274F Grab a card \u274F</button>' +
+      '<button class="btn" type="button" data-done="shareSection">\u2709\uFE0E Share privately \u2709\uFE0E</button>' +
       '</div>';
     traps.appendChild(dc);
     dc.querySelectorAll('[data-done]').forEach(function(b){
@@ -1951,18 +1944,18 @@ function runCompare(theirs, out){
   });
   html += '<p style="font-size:.86rem;margin-top:8px">' + r.note + '</p>';
   if(r.partial && r.missing && r.missing.length){
-    html += '<p class="intent-note" style="border-color:rgba(232,185,106,.4)">🔍 <b>Honest scope:</b> this comparison covers '+r.covered+'% of the full picture  '+esc(r.missing.join(', '))+' could not be scored because one of you withheld (or does not have) the exact placements they need. Nothing was padded with a made-up average. 🔍</p>';
+    html += '<p class="intent-note" style="border-color:rgba(232,185,106,.4)">\u25CE <b>Honest scope:</b> this comparison covers '+r.covered+'% of the full picture  '+esc(r.missing.join(', '))+' could not be scored because one of you withheld (or does not have) the exact placements they need. Nothing was padded with a made-up average. \u25CE</p>';
   }
   // Intentions are self-reported, not scored. If they differ, say so plainly
   // and without judgment: that conversation matters more than any percentage.
   if(theirs.i && mine.i && theirs.i !== mine.i){
-    html += '<p class="intent-note">⚖️ <b>You\'re here for different things.</b> You said <b>'+esc(mine.i)+'</b>; they said <b>'+esc(theirs.i)+'</b>. Not a dealbreaker: just worth saying out loud early instead of discovering it in month three. ⚖️</p>';
+    html += '<p class="intent-note">\u2696\uFE0E <b>You\'re here for different things.</b> You said <b>'+esc(mine.i)+'</b>; they said <b>'+esc(theirs.i)+'</b>. Not a dealbreaker: just worth saying out loud early instead of discovering it in month three. \u2696\uFE0E</p>';
   } else if(theirs.i && mine.i){
     html += '<p class="intent-note" style="background:rgba(123,196,138,.1);border-color:rgba(123,196,138,.3)">✓ <b>Same intention:</b> you both said <b>'+esc(mine.i)+'</b>. That alignment is worth more than the percentage above. ✓</p>';
   } else {
-    html += '<p class="intent-note">💬 One of you hasn\'t stated an intention, so nothing is assumed here. Asking directly beats any score on this page. 💬</p>';
+    html += '<p class="intent-note">\u25CB One of you hasn\'t stated an intention, so nothing is assumed here. Asking directly beats any score on this page. \u25CB</p>';
   }
-  html += '<p class="caveat">🔒 No birth date, time or place crossed the wire: only finished readings were compared. And two real humans are never just their elements: treat this as a spark, not a sentence. 🔒</p></div>';
+  html += '<p class="caveat">\u25CC No birth date, time or place crossed the wire: only finished readings were compared. And two real humans are never just their elements: treat this as a spark, not a sentence. \u25CC</p></div>';
   out.innerHTML = html;
   setTimeout(function(){
     out.querySelectorAll('.bar-fill').forEach(function(f){ f.style.width = f.dataset.w + '%'; });
@@ -2295,9 +2288,9 @@ function renderPartnerView(p){
   var fb = document.getElementById('pvFlags');
   if(p.f){
     fb.innerHTML = '<div class="flags" style="margin-top:18px">'+
-      flagCol('g','🟢 Their green flags', p.f.g)+
-      flagCol('y','🟡 Watch-points',      p.f.y)+
-      flagCol('r','🔴 Their leave-ifs',   p.f.r)+'</div>';
+      flagCol('g','<span style="color:var(--green)">●</span> Their green flags', p.f.g)+
+      flagCol('y','<span style="color:var(--yellow)">●</span> Watch-points',      p.f.y)+
+      flagCol('r','<span style="color:var(--red)">●</span> Their leave-ifs',   p.f.r)+'</div>';
   } else { fb.innerHTML = ''; }
 }
 function flagCol(cls, title, arr){
@@ -2792,7 +2785,7 @@ function renderBios(){
       txtEl.textContent = b.text;
       ta.value = b.text;
       card.querySelector('.draft-len').textContent = b.text.length + ' chars';
-      toast('\u2728 Fresh version \u2728');
+      toast('\u2726 Fresh version \u2726');
     });
     ta.addEventListener('input', function(){
       b.text = ta.value;
@@ -2914,9 +2907,9 @@ function renderSynastry(r){
       r.aspectsFound + ' exact aspect' + (r.aspectsFound === 1 ? '' : 's') + ' found \u00B7 ' + r.coverage + '% of the framework scored \u00B7 orbs: conj/opp ' + r.orbs.conjunction + '\u00B0, trine/sq ' + r.orbs.trine + '\u00B0, sextile ' + r.orbs.sextile + '\u00B0</div>';
   // The two honest axes
   html += '<div class="syn-axes">' +
-    '<div class="syn-axis"><div class="ax-label">\u26A1 Contact</div><div class="ax-num">' + r.contact + '</div>' +
+    '<div class="syn-axis"><div class="ax-label">\u26A1\uFE0E Contact</div><div class="ax-num">' + r.contact + '</div>' +
       '<div class="ax-sub">How much exact angular binding your charts have. High = you keep landing on each other\u2019s planets, for better or worse.</div></div>' +
-    '<div class="syn-axis"><div class="ax-label">🕊 Ease</div><div class="ax-num">' + (r.ease == null ? '\u2014' : r.ease) + '</div>' +
+    '<div class="syn-axis"><div class="ax-label">\u2727 Ease</div><div class="ax-num">' + (r.ease == null ? '\u2014' : r.ease) + '</div>' +
       '<div class="ax-sub">Harmonious vs charged balance of that contact. Low ease with high contact is not a verdict. It is a relationship that takes conscious effort and rewards it.</div></div>' +
   '</div>';
   // Dimensions
@@ -3091,7 +3084,7 @@ function renderSocialCards(chart){
       '<div class="soc-flagbox g"><div class="fh">Green Flags</div>' + traits.green.slice(0,2).map(function(t){return '<p>'+esc(t)+'</p>';}).join('') + '</div>' +
       '<div class="soc-flagbox y"><div class="fh">Watch-Points</div>' + traits.yellow.slice(0,2).map(function(t){return '<p>'+esc(t)+'</p>';}).join('') + '</div>' +
       (traps.length ? '<div class="soc-flagbox r"><div class="fh">My Honest Traps</div><p>' + esc(traps[0]) + '</p></div>' : '');
-    cards.push(socCard({ glyph:'🚦', label:'The Honest Part', title:'My Flags', body: flagBody }));
+    cards.push(socCard({ glyph:'\u2691', label:'The Honest Part', title:'My Flags', body: flagBody }));
   }
 
   // 8, INTENTION closer, user's own chosen words
@@ -3131,15 +3124,15 @@ function fitSocialCards(grid){
    exists; hidden entirely in the partner view (their page, not yours). */
 var RAIL_SECTIONS = [
   { id:'flipSection',  label:'♥ Love Signature ♥', nav:'spark'   },
-  { id:'alignSection', label:'⚖️ Your Words ⚖️'   , nav:'spark'   },
-  { id:'pullSection',  label:'🧭 Deeper Pull 🧭'  , nav:'spark'   },
-  { id:'flagsSection', label:'🚦 Flags 🚦'        , nav:'spark'   },
-  { id:'movesSection', label:'✨ Moves ✨'         , nav:'spark'   },
-  { id:'trapsSection', label:'⚠️ Traps ⚠️'         , nav:'spark'   },
-  { id:'bioWriterSection', label:'✍️ Bio Writer ✍️' , nav:'spark'  },
-  { id:'shareSection', label:'🔐 Share 🔐'        , nav:'share'   },
-  { id:'bioSection',   label:'📸 Bio Card 📸'     , nav:'bio'     },
-  { id:'socialSection',label:'🖼️ Social Cards 🖼️' , nav:'bio'     }
+  { id:'alignSection', label:'\u2696\uFE0E Your Words \u2696\uFE0E'   , nav:'spark'   },
+  { id:'pullSection',  label:'\u2726 Deeper Pull \u2726'  , nav:'spark'   },
+  { id:'flagsSection', label:'\u2691 Flags \u2691'        , nav:'spark'   },
+  { id:'movesSection', label:'\u2727 Moves \u2727'         , nav:'spark'   },
+  { id:'trapsSection', label:'\u26A0\uFE0E Traps \u26A0\uFE0E'         , nav:'spark'   },
+  { id:'bioWriterSection', label:'\u270E Bio Writer \u270E' , nav:'spark'  },
+  { id:'shareSection', label:'\u2709\uFE0E Share \u2709\uFE0E'        , nav:'share'   },
+  { id:'bioSection',   label:'\u274F Bio Card \u274F'     , nav:'bio'     },
+  { id:'socialSection',label:'\u2750 Social Cards \u2750' , nav:'bio'     }
 ];
 var railObserver = null;
 function buildRail(){
@@ -3246,7 +3239,7 @@ function jumpTo(id){ if(id){ var el=document.getElementById(id); if(el) setTimeo
 function toast(msg){
   var t = document.createElement('div');
   t.textContent = msg;
-  t.style.cssText = 'position:fixed;top:22px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#E8384F,#B3123A);color:#fff;padding:12px 24px;border-radius:999px;font-weight:700;font-size:.88rem;z-index:999;box-shadow:0 10px 30px rgba(179,18,58,.4);text-align:center;max-width:90vw';
+  t.style.cssText = 'position:fixed;top:22px;left:50%;transform:translateX(-50%);background:#8E0E2E;border:1px solid rgba(232,185,106,.4);color:#fff;padding:12px 24px;border-radius:4px;font-weight:700;font-size:.88rem;z-index:999;box-shadow:none;text-align:center;max-width:90vw';
   document.body.appendChild(t);
   setTimeout(function(){ t.style.transition='opacity .4s'; t.style.opacity='0'; setTimeout(function(){ t.remove(); }, 450); }, 2000);
 }
@@ -3347,7 +3340,7 @@ function doGenerate(){
     // Hard refusal: show the reason, render nothing fake.
     accEl.style.display = 'inline-flex';
     accEl.className = 'acc';
-    accEl.textContent = '⛔ Not computed ⛔';
+    accEl.textContent = '\u2715 Not computed \u2715';
     document.getElementById('accText').textContent = chart.errors.join(' ');
     var resErr = document.getElementById('results');
     resErr.classList.remove('on');
@@ -3384,17 +3377,17 @@ function doGenerate(){
   accEl.style.display = 'inline-flex';
   if(chart.hasTime && chart.hasPlace){
     accEl.className = 'acc ok';
-    accEl.textContent = '🎯 Exact chart 🎯';
+    accEl.textContent = '\u25CE Exact chart \u25CE';
     document.getElementById('accText').textContent =
       'Real ephemeris + resolved birth place: every placement below is computed to the exact degree. UTC instant ' + chart.utcInstant + '.';
   } else if(locked > 0){
     accEl.className = 'acc';
-    accEl.textContent = '🔓 Partial, ' + locked + ' locked 🔓';
+    accEl.textContent = '\u25D0 Partial, ' + locked + ' locked \u25D0';
     document.getElementById('accText').textContent =
       'Everything shown is exact; ' + locked + ' placement' + (locked > 1 ? 's are' : ' is') + ' withheld (never estimated) because an input is missing. ' + (chart.notices[0] || '');
   } else {
     accEl.className = 'acc ok';
-    accEl.textContent = '🎯 Exact (date only) 🎯';
+    accEl.textContent = '\u25CE Exact (date only) \u25CE';
     document.getElementById('accText').textContent =
       'Sign-only placements computed exactly via noon-UT convention; angle-based points withheld. ' + (chart.notices[0] || '');
   }
