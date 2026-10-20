@@ -104,3 +104,29 @@ SVG flourish, monochrome dingbats with VS15 (balance/sparkle/flag/pencil/envelop
 colour emoji, particles removed, beat static, blur removed (app bar/nav solid), articles.css same.
 Tools: tests/deslop.cjs + deslop2.cjs (regex-robust, miss-reporting).
 LESSON: 'looks AI' is a VISUAL judgement - screenshot first, audit second; never iterate taste from DOM.
+
+## Phase 9 - CUSTOM ICON SYSTEM (DONE 2026-10-20, deployed f53444c3 + 1be27deb)
+User: 'the icons and emojis are very ai like, can we customise that'.
+Diagnosis: after de-slop the remaining dingbats still rendered in whatever OS fallback font - inconsistent
+weights, platform-dependent, generic. Fix = one custom icon family.
+- icons.js: 48 hand-drawn icons, one stroke language (24px grid, 1.6 stroke, round caps/joins, currentColor).
+- Used via <span data-icon="x"> (static) + LBIcon('x') (JS builders); MutationObserver mounts late inserts.
+- CSS pseudo markers (check/cross/bang, bullets, watermark hearts, stanza ornament) -> data-URI SVG generated
+  FROM icons.js path data (tests/icons-css.cjs reads icons.js) so CSS and JS cannot drift.
+- Solid font triangles -> drawn chevron that rotates when open. 0 font glyphs in CSS, 0 emoji in UI.
+- Flip-card planet faces use the set; dating-content.js falls back to text glyphs in bare Node.
+LESSONS (hard-won):
+1. NEVER use String.replace callbacks whose parameter list differs from the regex capture count - the
+   extra params become (match OFFSET, string). It deleted 15 button labels and inserted numbers like
+   54690. Use plain string replace; add a POST-CONDITION audit that REFUSES to write on failure
+   (tests/icons-migrate.cjs does this).
+2. Audits must check LABELS, not just icon counts. Icon-count audits passed on corrupted buttons.
+3. Source files hold the same glyph as literal chars OR backslash-u escapes OR CSS escapes. Dump real
+   codepoints first and match all spellings.
+4. Deploy race: HTML can reach one CDN edge before a NEW sibling file does. icons.js 404'd for the page
+   load while 200 elsewhere -> 108 empty slots. A single external file must never blank the UI:
+   inline shim + cache-busted retry + empty-slot collapse (tests/icons-resilience.cjs). Verified by
+   simulating the 404 in the browser.
+5. A safety shim that defines LBIcon as a no-op must not defeat feature checks: test for the REAL set
+   (LBIcons.venus), not just the function.
+6. PowerShell inline node -e mangles quotes/regex - always use a temp .cjs file.
