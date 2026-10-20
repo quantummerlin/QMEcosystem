@@ -94,3 +94,13 @@ it is on both sides of the writing on each line or it looks stupid.'
   (opacity stuck at 0 mid-transition) - force-settle with getAnimations().finish() before asserting.
 - Gate: 88/88 tests, inline scripts parse, browser DOM audit (heads dots=2 centered, stanzas
   centered, foot hearts=2, rail pills mirrored, genBtn mirrored), production 200 + markers live.
+
+## Phase 8 - DE-SLOP (DONE 2026-10-20, deployed f332dd2e)
+User: 'it still looks very ai'. Diagnosed by SCREENSHOT, not audit: gradient-text headline, glowing
+gradient pills/badges, rainbow OS emoji over serif brand, drifting heart particles, glass blur,
+infinite pulse, glow shadows = default AI-dashboard aesthetic.
+Fix = editorial love-letter system: flat ink (--ink-rose #C22A4A), hairlines, solid h1 + hand-drawn
+SVG flourish, monochrome dingbats with VS15 (balance/sparkle/flag/pencil/envelope/frame) replacing
+colour emoji, particles removed, beat static, blur removed (app bar/nav solid), articles.css same.
+Tools: tests/deslop.cjs + deslop2.cjs (regex-robust, miss-reporting).
+LESSON: 'looks AI' is a VISUAL judgement - screenshot first, audit second; never iterate taste from DOM.
