@@ -71,3 +71,26 @@ _Locked 2026-10-15. Sibling of Soul Blueprint. URL = brand: quantummerlin.com/lo
 - Ads never inside interactive output; .ad-zone rules stay.
 - Do NOT touch U+FFFD bytes in soulblueprint/index.html; hrefs only.
 - Test scripts are .cjs; inline node -e hangs PowerShell; grep scoped (node_modules timeouts).
+
+## Phase 7 - POETRY PASS (DONE 2026-10-20, deployed 69e5cebb)
+User feedback on v2: 'clinical, not poetic... nothing is centre aligned... mirror every emoji so
+it is on both sides of the writing on each line or it looks stupid.'
+- CENTRED: section heads, flip-card back bodies + stanzas (44ch), pull/align panels, why-drawers,
+  flag/trap/move titles, panels, bio card, social card labels/titles/bodies, library head, done card.
+  Functional dense tables (option rows, bar rows) kept left for readability.
+- MIRRORED: every decorative emoji on a line - section dots (markup regex adds trailing dot),
+  rail pills, all toasts, verdicts ('V Aligned V'), badges ('Exact chart X2'), flip/CTA buttons,
+  intent chips, flag/trap/promise li markers via CSS ::before+::after pairs, social-card bullet
+  hearts + foot 'H decode yours H', onboard list items + buttons, library rows, bio tags
+  ('Venus in X' wrapped in glyphs). 158 + 9 (CRLF part-2) + 56 article headings.
+- WARMed: h1 'Your love story, read from the real sky' (OG/Twitter titles too), tagline 'Seven
+  sealed letters about your heart', section subs rewritten as invitations ('Seven sealed letters
+  from the sky. Tap one open.', 'every sign casts a shadow... named here kindly').
+- Article headings: leading-only emoji mirrored; ' . ' de-AI artifacts in headings -> ': '.
+- Tools: tests/poetry-pass.cjs, tests/poetry-pass2.cjs, tests/article-mirror.cjs (all report misses).
+- LESSONS: (1) repo HTML files are CRLF - multi-line exact-match replaces silently miss; use
+  regex with \r?\n. (2) scripted string replaces can create syntax breaks ('\u2665''') - ALWAYS run
+  the vm.Script inline-parse gate after mass edits. (3) hidden browser tab pauses CSS transitions
+  (opacity stuck at 0 mid-transition) - force-settle with getAnimations().finish() before asserting.
+- Gate: 88/88 tests, inline scripts parse, browser DOM audit (heads dots=2 centered, stanzas
+  centered, foot hearts=2, rail pills mirrored, genBtn mirrored), production 200 + markers live.
